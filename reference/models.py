@@ -3,6 +3,7 @@ import uuid
 from django.core.exceptions import ValidationError
 from django.db import models
 from django.utils.text import slugify
+from django.urls import reverse
 
 
 class Manufacturer(models.Model):
@@ -57,6 +58,11 @@ class Manufacturer(models.Model):
     def __str__(self) -> str:
         return self.name
 
+    def get_absolute_url(self) -> str:
+        return reverse(
+            "reference:manufacturer-detail",
+            kwargs={"manufacturer_slug": self.slug},
+        )
 
 class VehicleModel(models.Model):
     """
@@ -113,6 +119,14 @@ class VehicleModel(models.Model):
     def __str__(self) -> str:
         return f"{self.manufacturer.name} {self.name}"
 
+    def get_absolute_url(self) -> str:
+        return reverse(
+            "reference:vehicle-model-detail",
+            kwargs={
+                "manufacturer_slug": self.manufacturer.slug,
+                "vehicle_model_slug": self.slug,
+            },
+        )
 
 class Generation(models.Model):
     """
@@ -206,6 +220,15 @@ class Generation(models.Model):
 
         return f"{self.vehicle_model} — {self.name} ({years})"
 
+    def get_absolute_url(self) -> str:
+        return reverse(
+            "reference:generation-detail",
+            kwargs={
+                "manufacturer_slug": self.vehicle_model.manufacturer.slug,
+                "vehicle_model_slug": self.vehicle_model.slug,
+                "generation_slug": self.slug,
+            },
+        )
 
 class VehicleDefinition(models.Model):
     """
@@ -370,3 +393,16 @@ class VehicleDefinition(models.Model):
         ]
 
         return " ".join(detail for detail in details if detail)
+
+    def get_absolute_url(self) -> str:
+        return reverse(
+            "reference:vehicle-definition-detail",
+            kwargs={
+                "manufacturer_slug": (
+                    self.generation.vehicle_model.manufacturer.slug
+                ),
+                "vehicle_model_slug": self.generation.vehicle_model.slug,
+                "generation_slug": self.generation.slug,
+                "vehicle_definition_slug": self.slug,
+            },
+        )

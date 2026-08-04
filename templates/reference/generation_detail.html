@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block title %}
+    {{ generation }} | RigArchive
+{% endblock %}
+
+{% block breadcrumbs %}
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+    <a href="{% url 'home' %}">Home</a>
+    <span aria-hidden="true">/</span>
+    <a href="{% url 'reference:manufacturer-list' %}">
+        Vehicles
+    </a>
+    <span aria-hidden="true">/</span>
+    <a href="{{ generation.vehicle_model.manufacturer.get_absolute_url }}">
+        {{ generation.vehicle_model.manufacturer.name }}
+    </a>
+    <span aria-hidden="true">/</span>
+    <a href="{{ generation.vehicle_model.get_absolute_url }}">
+        {{ generation.vehicle_model.name }}
+    </a>
+    <span aria-hidden="true">/</span>
+    <span>{{ generation.name }}</span>
+</nav>
+{% endblock %}
+
+{% block content %}
+<h1>
+    {{ generation.vehicle_model }} — {{ generation.name }}
+</h1>
+
+<dl class="record-details">
+    {% if generation.generation_number %}
+        <div>
+            <dt>Generation</dt>
+            <dd>{{ generation.generation_number }}</dd>
+        </div>
+    {% endif %}
+
+    <div>
+        <dt>Production years</dt>
+        <dd>
+            {{ generation.start_year }}–
+            {% if generation.end_year %}
+                {{ generation.end_year }}
+            {% else %}
+                present
+            {% endif %}
+        </dd>
+    </div>
+</dl>
+
+{% if generation.notes %}
+    <section>
+        <h2>Notes</h2>
+        {{ generation.notes|linebreaks }}
+    </section>
+{% endif %}
+
+<section>
+    <h2>Vehicle definitions</h2>
+
+    {% if vehicle_definitions %}
+        <ul class="record-list">
+            {% for vehicle_definition in vehicle_definitions %}
+                <li>
+                    <a href="{{ vehicle_definition.get_absolute_url }}">
+                        {{ vehicle_definition }}
+                    </a>
+
+                    <span class="secondary">
+                        {{ vehicle_definition.get_market_display }}
+                    </span>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No vehicle definitions are currently available.</p>
+    {% endif %}
+</section>
+{% endblock %}

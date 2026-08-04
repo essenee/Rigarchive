@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+
+{% block title %}
+    {{ vehicle_definition }} | RigArchive
+{% endblock %}
+
+{% block breadcrumbs %}
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+    <a href="{% url 'home' %}">Home</a>
+
+    <span aria-hidden="true">/</span>
+
+    <a href="{% url 'reference:manufacturer-list' %}">
+        Vehicles
+    </a>
+
+    <span aria-hidden="true">/</span>
+
+    <a href="{{ vehicle_definition.generation.vehicle_model.manufacturer.get_absolute_url }}">
+        {{ vehicle_definition.generation.vehicle_model.manufacturer.name }}
+    </a>
+
+    <span aria-hidden="true">/</span>
+
+    <a href="{{ vehicle_definition.generation.vehicle_model.get_absolute_url }}">
+        {{ vehicle_definition.generation.vehicle_model.name }}
+    </a>
+
+    <span aria-hidden="true">/</span>
+
+    <a href="{{ vehicle_definition.generation.get_absolute_url }}">
+        {{ vehicle_definition.generation.name }}
+    </a>
+
+    <span aria-hidden="true">/</span>
+
+    <span>{{ vehicle_definition.model_year }}</span>
+</nav>
+{% endblock %}
+
+{% block content %}
+<h1>{{ vehicle_definition }}</h1>
+
+<section>
+    <h2>Reference information</h2>
+
+    <dl class="record-details">
+        <div>
+            <dt>Manufacturer</dt>
+            <dd>{{ vehicle_definition.generation.vehicle_model.manufacturer.name }}</dd>
+        </div>
+
+        <div>
+            <dt>Vehicle model</dt>
+            <dd>{{ vehicle_definition.generation.vehicle_model.name }}</dd>
+        </div>
+
+        <div>
+            <dt>Generation</dt>
+            <dd>{{ vehicle_definition.generation.name }}</dd>
+        </div>
+
+        <div>
+            <dt>Model year</dt>
+            <dd>{{ vehicle_definition.model_year }}</dd>
+        </div>
+
+        <div>
+            <dt>Trim</dt>
+            <dd>{{ vehicle_definition.trim_name|default:"Not specified" }}</dd>
+        </div>
+
+        <div>
+            <dt>Engine</dt>
+            <dd>{{ vehicle_definition.engine_name|default:"Not specified" }}</dd>
+        </div>
+
+        <div>
+            <dt>Drivetrain</dt>
+            <dd>{{ vehicle_definition.get_drivetrain_display }}</dd>
+        </div>
+
+        <div>
+            <dt>Market</dt>
+            <dd>{{ vehicle_definition.get_market_display }}</dd>
+        </div>
+    </dl>
+</section>
+
+{% if vehicle_definition.notes %}
+<section>
+    <h2>Notes</h2>
+
+    {{ vehicle_definition.notes|linebreaks }}
+</section>
+{% endif %}
+
+<section>
+    <h2>Archive content</h2>
+
+    <p>
+        Measurements, modifications, maintenance records, and supporting
+        evidence will appear here as those domains are implemented.
+    </p>
+</section>
+{% endblock %}
