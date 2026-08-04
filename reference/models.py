@@ -1,5 +1,8 @@
+import uuid
+
 from django.core.exceptions import ValidationError
 from django.db import models
+from django.utils.text import slugify
 
 
 class Manufacturer(models.Model):
@@ -10,8 +13,20 @@ class Manufacturer(models.Model):
     hierarchy and owns one or more vehicle models.
     """
 
+    uuid = models.UUIDField(
+        default=uuid.uuid4,
+        editable=False,
+        unique=True,
+    )
+
     name = models.CharField(max_length=100, unique=True)
-    slug = models.SlugField(max_length=120, unique=True)
+
+    slug = models.SlugField(
+        max_length=120,
+        unique=True,
+        editable=False,
+        blank=True,
+    )
 
     country_code = models.CharField(
         max_length=2,
@@ -21,7 +36,10 @@ class Manufacturer(models.Model):
 
     is_active = models.BooleanField(
         default=True,
-        help_text="Inactive manufacturers remain preserved but are not normally displayed.",
+        help_text=(
+            "Inactive manufacturers remain preserved but are not "
+            "normally displayed."
+        ),
     )
 
     created_at = models.DateTimeField(auto_now_add=True)
@@ -29,6 +47,12 @@ class Manufacturer(models.Model):
 
     class Meta:
         ordering = ("name",)
+
+    def save(self, *args, **kwargs) -> None:
+        if not self.slug:
+            self.slug = slugify(self.name)
+
+        super().save(*args, **kwargs)
 
     def __str__(self) -> str:
         return self.name
@@ -41,6 +65,12 @@ class VehicleModel(models.Model):
     Examples include Toyota 4Runner, Ford Transit, and Jeep Wrangler.
     """
 
+    uuid = models.UUIDField(
+        default=uuid.uuid4,
+        editable=False,
+        unique=True,
+    )
+
     manufacturer = models.ForeignKey(
         Manufacturer,
         on_delete=models.PROTECT,
@@ -48,7 +78,12 @@ class VehicleModel(models.Model):
     )
 
     name = models.CharField(max_length=100)
-    slug = models.SlugField(max_length=120)
+
+    slug = models.SlugField(
+        max_length=120,
+        editable=False,
+        blank=True,
+    )
 
     is_active = models.BooleanField(default=True)
 
@@ -57,6 +92,7 @@ class VehicleModel(models.Model):
 
     class Meta:
         ordering = ("manufacturer__name", "name")
+
         constraints = [
             models.UniqueConstraint(
                 fields=("manufacturer", "name"),
@@ -67,6 +103,12 @@ class VehicleModel(models.Model):
                 name="reference_unique_vehicle_model_slug_per_manufacturer",
             ),
         ]
+
+    def save(self, *args, **kwargs) -> None:
+        if not self.slug:
+            self.slug = slugify(self.name)
+
+        super().save(*args, **kwargs)
 
     def __str__(self) -> str:
         return f"{self.manufacturer.name} {self.name}"
@@ -80,6 +122,12 @@ class Generation(models.Model):
     manufacturer-defined or historically recognized product lifecycle.
     """
 
+    uuid = models.UUIDField(
+        default=uuid.uuid4,
+        editable=False,
+        unique=True,
+    )
+
     vehicle_model = models.ForeignKey(
         VehicleModel,
         on_delete=models.PROTECT,
@@ -91,7 +139,11 @@ class Generation(models.Model):
         help_text="Human-readable name, such as Fourth Generation.",
     )
 
-    slug = models.SlugField(max_length=120)
+    slug = models.SlugField(
+        max_length=120,
+        editable=False,
+        blank=True,
+    )
 
     generation_number = models.PositiveSmallIntegerField(
         null=True,
@@ -100,6 +152,7 @@ class Generation(models.Model):
     )
 
     start_year = models.PositiveSmallIntegerField()
+
     end_year = models.PositiveSmallIntegerField(
         null=True,
         blank=True,
@@ -118,6 +171,7 @@ class Generation(models.Model):
             "vehicle_model__name",
             "start_year",
         )
+
         constraints = [
             models.UniqueConstraint(
                 fields=("vehicle_model", "slug"),
@@ -130,8 +184,18 @@ class Generation(models.Model):
 
         if self.end_year is not None and self.end_year < self.start_year:
             raise ValidationError(
-                {"end_year": "End year cannot be earlier than start year."}
+                {
+                    "end_year": (
+                        "End year cannot be earlier than start year."
+                    )
+                }
             )
+
+    def save(self, *args, **kwargs) -> None:
+        if not self.slug:
+            self.slug = slugify(self.name)
+
+        super().save(*args, **kwargs)
 
     def __str__(self) -> str:
         years = (
@@ -162,6 +226,12 @@ class VehicleDefinition(models.Model):
         ALL_WHEEL_DRIVE = "AWD", "All-wheel drive"
         UNKNOWN = "UNK", "Unknown"
 
+    uuid = models.UUIDField(
+        default=uuid.uuid4,
+        editable=False,
+        unique=True,
+    )
+
     generation = models.ForeignKey(
         Generation,
         on_delete=models.PROTECT,
@@ -173,13 +243,19 @@ class VehicleDefinition(models.Model):
     trim_name = models.CharField(
         max_length=100,
         blank=True,
-        help_text="Manufacturer trim name, such as SR5, Sport Edition, or Limited.",
+        help_text=(
+            "Manufacturer trim name, such as SR5, Sport Edition, "
+            "or Limited."
+        ),
     )
 
     engine_name = models.CharField(
         max_length=100,
         blank=True,
-        help_text="Human-readable engine description.",
+        help_text=(
+            "Human-readable engine description. This remains free text "
+            "until a shared engine-definition domain is justified."
+        ),
     )
 
     drivetrain = models.CharField(
@@ -194,7 +270,11 @@ class VehicleDefinition(models.Model):
         default=Market.UNITED_STATES,
     )
 
-    slug = models.SlugField(max_length=180)
+    slug = models.SlugField(
+        max_length=180,
+        editable=False,
+        blank=True,
+    )
 
     notes = models.TextField(blank=True)
     is_active = models.BooleanField(default=True)
@@ -211,10 +291,13 @@ class VehicleDefinition(models.Model):
             "engine_name",
             "drivetrain",
         )
+
         constraints = [
             models.UniqueConstraint(
                 fields=("generation", "slug"),
-                name="reference_unique_vehicle_definition_slug_per_generation",
+                name=(
+                    "reference_unique_vehicle_definition_slug_per_generation"
+                ),
             ),
         ]
 
@@ -228,7 +311,8 @@ class VehicleDefinition(models.Model):
             raise ValidationError(
                 {
                     "model_year": (
-                        "Model year cannot be earlier than the generation start year."
+                        "Model year cannot be earlier than the "
+                        "generation start year."
                     )
                 }
             )
@@ -240,10 +324,41 @@ class VehicleDefinition(models.Model):
             raise ValidationError(
                 {
                     "model_year": (
-                        "Model year cannot be later than the generation end year."
+                        "Model year cannot be later than the "
+                        "generation end year."
                     )
                 }
             )
+
+    def build_slug(self) -> str:
+        """
+        Build the initial URL slug from canonical configuration fields.
+
+        The slug is generated only for a record that does not already have
+        one. Subsequent edits therefore do not silently change its URL.
+        """
+
+        parts = [
+            str(self.model_year),
+            self.trim_name,
+            self.engine_name,
+            self.drivetrain,
+            self.market,
+        ]
+
+        source = "-".join(
+            str(part).strip()
+            for part in parts
+            if str(part).strip()
+        )
+
+        return slugify(source)
+
+    def save(self, *args, **kwargs) -> None:
+        if not self.slug:
+            self.slug = self.build_slug()
+
+        super().save(*args, **kwargs)
 
     def __str__(self) -> str:
         details = [
