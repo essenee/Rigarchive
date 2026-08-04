@@ -1,17 +1,3 @@
-## 2026-08-04
-
-### Added
-- Reference Domain public browser.
-- UUID identity for reference entities.
-- Automatic immutable slug generation.
-
-### Changed
-- Slugs are now generated automatically and are no longer editable.
-- Vehicle definitions retain integer primary keys while exposing UUIDs for stable external identity.
-
-### Planned
-- Introduce `core` app with shared model mixins.
-
 # Changelog
 
 All notable changes to RigArchive will be documented in this file.
@@ -21,18 +7,31 @@ All notable changes to RigArchive will be documented in this file.
 ### Added
 
 - Django project foundation using Python 3.14 and Django 6.0.
-- Custom user model.
-- Reference Domain models for manufacturers, vehicle models, generations, and vehicle definitions.
-- UUID-based external identities.
-- Automatically generated stable slugs.
+- Custom user model (`accounts.User`).
+- Reference Domain models (`Manufacturer`, `VehicleModel`, `Generation`, `VehicleDefinition`).
+- UUID-based external identities for reference entities.
+- Automatically generated stable, immutable slugs.
 - Django Admin interfaces for Reference Domain records.
-- Public reference vehicle browser.
-- Shared templates, breadcrumb navigation, and base stylesheet.
-- Model and public-view tests.
-- Gemini CLI project instructions.
-- Task-based implementation workflow.
+- Public reference vehicle browser with nested URL routing and breadcrumb navigation.
+- Shared base template, navigation, and core CSS stylesheet.
+- Complete test suite covering models, views, and URLs (12 tests passing).
+- Gemini CLI project instructions (`GEMINI.md`).
+- Task-based implementation workflow specification.
+- Architecture Decision Records (`ADR-0001-Entity-Identity-Strategy.md`, `ADR-0002-Immutable-Automatic-Slugs.md`).
 
 ### Changed
 
-- Reference slugs are generated automatically and are not editable through Django Admin.
-- Reference records retain integer database primary keys while exposing UUIDs as stable external identifiers.
+- Reference slugs are generated automatically and are non-editable (`editable=False`) to guarantee public URL stability.
+- Reference records retain integer database primary keys for performance while exposing UUIDs as stable external identifiers.
+
+### Fixed
+
+- Consolidated documentation hierarchy and populated initial Architecture Decision Records.
+
+### Removed
+
+- Removed obsolete `docs/decisions.md` script file containing duplicate model definitions.
+
+### Security
+
+- Enforced protected deletion (`on_delete=models.PROTECT`) on reference model relationships.
