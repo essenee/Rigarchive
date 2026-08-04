@@ -15,11 +15,14 @@ Create a reusable core application for shared model infrastructure.
 ## Files expected to change
 
 - config/settings.py
+- core/__init__.py
 - core/apps.py
 - core/models.py
+- core/tests.py
 - reference/models.py
-- reference/tests/test_models.py
-- relevant migration files
+- docs/implementation/CURRENT_STATE.md
+- CHANGELOG.md
+- docs/architecture/ADR/ADR-0003-Core-Infrastructure.md
 
 ## Acceptance criteria
 
@@ -58,21 +61,40 @@ Do not describe incomplete or failing behavior as implemented.
 
 ## Completion record
 
-Status: Planned
+Status: Completed
 
-Completion date: Not completed
+Completion date: 2026-08-04
 
-Files changed: Not completed
+Files changed:
+- `config/settings.py` (Registered `core.apps.CoreConfig` in `INSTALLED_APPS`)
+- `core/__init__.py` (Created package init)
+- `core/apps.py` (Created AppConfig)
+- `core/models.py` (Created abstract mixins `UUIDModel`, `TimestampedModel`, and `BaseModel`)
+- `core/tests.py` (Created tests for mixin abstraction, table non-existence, and inheritance)
+- `reference/models.py` (Refactored `Manufacturer`, `VehicleModel`, `Generation`, and `VehicleDefinition` to inherit from `BaseModel`)
+- `docs/architecture/ADR/ADR-0003-Core-Infrastructure.md` (Created accepted ADR)
+- `docs/implementation/CURRENT_STATE.md` (Updated status, apps, ADRs, test counts, structure)
+- `CHANGELOG.md` (Recorded RA-003 completion under Unreleased)
+- `docs/implementation/tasks/RA-003-core-foundation.md` (Updated task completion record)
 
-Migrations created: Not completed
+Migrations created:
+- None required (`No changes detected`). Moving field definitions to abstract base classes preserved exact field names and types.
 
-Verification results: Not completed
+Verification results:
+- `.venv/bin/python manage.py check`: Passed (`System check identified no issues (0 silenced)`).
+- `.venv/bin/python manage.py makemigrations --check`: Passed (`No changes detected`).
+- `.venv/bin/python manage.py test`: Passed (`Ran 18 tests in 0.038s — OK`).
 
-Documentation updated: Not completed
+Documentation updated:
+- `docs/implementation/CURRENT_STATE.md`
+- `CHANGELOG.md`
+- `docs/implementation/tasks/RA-003-core-foundation.md`
 
-ADRs created or updated: Not completed
+ADRs created or updated:
+- `docs/architecture/ADR/ADR-0003-Core-Infrastructure.md` (Status: Accepted)
 
-Deviations and follow-up work: Not completed
+Deviations and follow-up work:
+- None. Implementation adhered strictly to specification.
 
 
 ## Architecture decision record
