@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}
+    {{ vehicle_model }} | RigArchive
+{% endblock %}
+
+{% block breadcrumbs %}
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+    <a href="{% url 'home' %}">Home</a>
+    <span aria-hidden="true">/</span>
+    <a href="{% url 'reference:manufacturer-list' %}">
+        Vehicles
+    </a>
+    <span aria-hidden="true">/</span>
+    <a href="{{ vehicle_model.manufacturer.get_absolute_url }}">
+        {{ vehicle_model.manufacturer.name }}
+    </a>
+    <span aria-hidden="true">/</span>
+    <span>{{ vehicle_model.name }}</span>
+</nav>
+{% endblock %}
+
+{% block content %}
+<h1>{{ vehicle_model }}</h1>
+
+<h2>Generations</h2>
+
+{% if generations %}
+    <ul class="record-list">
+        {% for generation in generations %}
+            <li>
+                <a href="{{ generation.get_absolute_url }}">
+                    {{ generation.name }}
+                </a>
+
+                <span class="secondary">
+                    {{ generation.start_year }}–
+                    {% if generation.end_year %}
+                        {{ generation.end_year }}
+                    {% else %}
+                        present
+                    {% endif %}
+                </span>
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No generations are currently available.</p>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}Vehicle manufacturers | RigArchive{% endblock %}
+
+{% block breadcrumbs %}
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+    <a href="{% url 'home' %}">Home</a>
+    <span aria-hidden="true">/</span>
+    <span>Vehicles</span>
+</nav>
+{% endblock %}
+
+{% block content %}
+<h1>Vehicle manufacturers</h1>
+
+{% if manufacturers %}
+    <ul class="record-list">
+        {% for manufacturer in manufacturers %}
+            <li>
+                <a href="{{ manufacturer.get_absolute_url }}">
+                    {{ manufacturer.name }}
+                </a>
+
+                {% if manufacturer.country_code %}
+                    <span class="secondary">
+                        {{ manufacturer.country_code }}
+                    </span>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>manufacturer_detail.html
+{% else %}
+    <p>No manufacturers are currently available.</p>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}RigArchive{% endblock %}
+
+{% block content %}
+<section>
+    <h1>RigArchive</h1>
+
+    <p>
+        A technical archive of vehicles, modifications, maintenance,
+        measurements, and supporting evidence.
+    </p>
+
+    <p>
+        <a class="button" href="{% url 'reference:manufacturer-list' %}">
+            Browse vehicles
+        </a>
+    </p>
+</section>
+{% endblock %}

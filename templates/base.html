@@ -1,0 +1,43 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        {% block title %}RigArchive{% endblock %}
+    </title>
+    <link rel="stylesheet" href="{% static 'css/site.css' %}">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a class="site-name" href="{% url 'home' %}">
+                RigArchive
+            </a>
+
+            <nav aria-label="Primary navigation">
+                <a href="{% url 'reference:manufacturer-list' %}">
+                    Vehicles
+                </a>
+                <a href="{% url 'admin:index' %}">
+                    Admin
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        {% block breadcrumbs %}{% endblock %}
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>
+                RigArchive reference implementation
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
