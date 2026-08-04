@@ -12,10 +12,46 @@ class ManufacturerAdmin(admin.ModelAdmin):
         "updated_at",
     )
 
-    list_filter = ("is_active", "country_code")
-    search_fields = ("name",)
-    prepopulated_fields = {"slug": ("name",)}
-    readonly_fields = ("created_at", "updated_at")
+    list_filter = (
+        "is_active",
+        "country_code",
+    )
+
+    search_fields = (
+        "name",
+    )
+
+    readonly_fields = (
+        "uuid",
+        "slug",
+        "created_at",
+        "updated_at",
+    )
+
+    fieldsets = (
+        (
+            None,
+            {
+                "fields": (
+                    "name",
+                    "country_code",
+                    "is_active",
+                )
+            },
+        ),
+        (
+            "System information",
+            {
+                "fields": (
+                    "uuid",
+                    "slug",
+                    "created_at",
+                    "updated_at",
+                ),
+                "classes": ("collapse",),
+            },
+        ),
+    )
 
 
 @admin.register(VehicleModel)
@@ -27,11 +63,51 @@ class VehicleModelAdmin(admin.ModelAdmin):
         "updated_at",
     )
 
-    list_filter = ("is_active", "manufacturer")
-    search_fields = ("name", "manufacturer__name")
-    autocomplete_fields = ("manufacturer",)
-    prepopulated_fields = {"slug": ("name",)}
-    readonly_fields = ("created_at", "updated_at")
+    list_filter = (
+        "is_active",
+        "manufacturer",
+    )
+
+    search_fields = (
+        "name",
+        "manufacturer__name",
+    )
+
+    autocomplete_fields = (
+        "manufacturer",
+    )
+
+    readonly_fields = (
+        "uuid",
+        "slug",
+        "created_at",
+        "updated_at",
+    )
+
+    fieldsets = (
+        (
+            None,
+            {
+                "fields": (
+                    "manufacturer",
+                    "name",
+                    "is_active",
+                )
+            },
+        ),
+        (
+            "System information",
+            {
+                "fields": (
+                    "uuid",
+                    "slug",
+                    "created_at",
+                    "updated_at",
+                ),
+                "classes": ("collapse",),
+            },
+        ),
+    )
 
 
 @admin.register(Generation)
@@ -57,9 +133,45 @@ class GenerationAdmin(admin.ModelAdmin):
         "vehicle_model__manufacturer__name",
     )
 
-    autocomplete_fields = ("vehicle_model",)
-    prepopulated_fields = {"slug": ("name",)}
-    readonly_fields = ("created_at", "updated_at")
+    autocomplete_fields = (
+        "vehicle_model",
+    )
+
+    readonly_fields = (
+        "uuid",
+        "slug",
+        "created_at",
+        "updated_at",
+    )
+
+    fieldsets = (
+        (
+            None,
+            {
+                "fields": (
+                    "vehicle_model",
+                    "name",
+                    "generation_number",
+                    "start_year",
+                    "end_year",
+                    "notes",
+                    "is_active",
+                )
+            },
+        ),
+        (
+            "System information",
+            {
+                "fields": (
+                    "uuid",
+                    "slug",
+                    "created_at",
+                    "updated_at",
+                ),
+                "classes": ("collapse",),
+            },
+        ),
+    )
 
 
 @admin.register(VehicleDefinition)
@@ -85,10 +197,56 @@ class VehicleDefinitionAdmin(admin.ModelAdmin):
     search_fields = (
         "trim_name",
         "engine_name",
+        "slug",
         "generation__name",
         "generation__vehicle_model__name",
         "generation__vehicle_model__manufacturer__name",
     )
 
-    autocomplete_fields = ("generation",)
-    readonly_fields = ("created_at", "updated_at")
+    autocomplete_fields = (
+        "generation",
+    )
+
+    readonly_fields = (
+        "uuid",
+        "slug",
+        "created_at",
+        "updated_at",
+    )
+
+    fieldsets = (
+        (
+            "Vehicle configuration",
+            {
+                "fields": (
+                    "generation",
+                    "model_year",
+                    "trim_name",
+                    "engine_name",
+                    "drivetrain",
+                    "market",
+                )
+            },
+        ),
+        (
+            "Record details",
+            {
+                "fields": (
+                    "notes",
+                    "is_active",
+                )
+            },
+        ),
+        (
+            "System information",
+            {
+                "fields": (
+                    "uuid",
+                    "slug",
+                    "created_at",
+                    "updated_at",
+                ),
+                "classes": ("collapse",),
+            },
+        ),
+    )
