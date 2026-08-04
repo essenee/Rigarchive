@@ -1,5 +1,5 @@
 RigArchive Project Status Document
-Version: 1.0
+Version: 1.1
 Last Updated: 2026-08-04
 Purpose: Current implementation status and development roadmap
 
@@ -60,11 +60,11 @@ Infrastructure remains replaceable.
 
 5. Current Django Apps
 Implemented:
-- accounts
-- reference
+- core (Shared abstract infrastructure mixins: UUIDModel, TimestampedModel, BaseModel)
+- accounts (Custom user identity)
+- reference (Canonical vehicle reference domain)
 
 Planned:
-- core
 - knowledge
 - evidence
 - media
@@ -87,30 +87,35 @@ Milestone 2 — Reference Domain (Completed)
 - Models: Manufacturer, VehicleModel, Generation, VehicleDefinition
 - Features: UUID identity, Integer DB PKs, Automatic immutable slug generation, Protected foreign keys, Validation rules, Django Admin, Unit tests
 
-Milestone 3 — Public Reference Browser (Completed)
+Milestone 2A — Public Reference Browser (Completed)
 - Views: Homepage, Manufacturer list/detail, Vehicle model detail, Generation detail, Vehicle definition detail
 - Features: Nested URLs, Breadcrumb navigation, Responsive layout, Base template, Shared CSS, Public navigation
 - Example URL: /vehicles/toyota/4runner/fourth-generation/2007-sr5-40l-v6-4wd-us/
+
+Milestone 3 — Core Infrastructure (Completed — RA-003)
+- App: core (`core.apps.CoreConfig`)
+- Shared abstract model mixins: `UUIDModel`, `TimestampedModel`, `BaseModel`
+- Refactored `reference` domain models to inherit from shared `core` mixins
+- Added unit tests for abstract core mixins and inherited behavior
 
 7. Architectural Decision Records (ADRs)
 Implemented and Accepted:
 - ADR-0001: Entity Identity Strategy (Dual Integer PK + UUID)
 - ADR-0002: Immutable Automatic Slugs (Non-editable, auto-generated on creation)
+- ADR-0003: Core Infrastructure Application (Shared abstract base models in `core`, domain isolation)
 
 8. Current Testing
 Implemented:
-- Model tests
-- View tests
-- URL tests
+- Core mixin & inheritance tests (`core/tests.py`)
+- Reference Model tests (`reference/tests/test_models.py`)
+- Public Reference View & URL tests (`reference/tests/test_views.py`)
 Current status:
-- All 12 tests passing.
-- Command: .venv/bin/python manage.py test
+- All 18 tests passing.
+- Verification command: `.venv/bin/python manage.py test`
 
 9. Current Coding Standards
-Every model includes:
-- UUID
-- created_at
-- updated_at
+The four Reference Domain models inherit shared UUID and timestamp infrastructure through `core.models.BaseModel`.
+Domain entities requiring both UUID identity and timestamps should normally inherit from `BaseModel`. Specialized models may inherit directly from the focused mixins (`UUIDModel`, `TimestampedModel`) where appropriate.
 Public URLs use stable slugs.
 UUIDs are permanent external identities.
 Database relations use integer primary keys.
@@ -121,12 +126,16 @@ Services encapsulate business workflows and orchestrate domain operations.
 10. Git & Gemini CLI Workflow
 - Instructions defined in GEMINI.md.
 - Task specs stored under docs/implementation/tasks/.
-- Next approved implementation task: RA-003 — Core Foundation.
+- Completed tasks: RA-003 — Core Foundation.
 
 11. Current Repository Structure
 RigArchive/
 │
 ├── accounts/
+├── core/
+│   ├── apps.py
+│   ├── models.py
+│   └── tests.py
 ├── reference/
 ├── config/
 │
@@ -137,7 +146,8 @@ RigArchive/
 │   ├── architecture/
 │   │   └── ADR/
 │   │       ├── ADR-0001-Entity-Identity-Strategy.md
-│   │       └── ADR-0002-Immutable-Automatic-Slugs.md
+│   │       ├── ADR-0002-Immutable-Automatic-Slugs.md
+│   │       └── ADR-0003-Core-Infrastructure.md
 │   ├── blueprint/
 │   ├── handbook/
 │   └── implementation/
@@ -159,7 +169,7 @@ RigArchive/
 - Milestone 1: Project foundation (✅ Complete)
 - Milestone 2: Reference Domain (✅ Complete)
 - Milestone 2A: Public Reference Browser (✅ Complete)
-- Milestone 3: Core Infrastructure (Planned — RA-003)
+- Milestone 3: Core Infrastructure (✅ Complete — RA-003)
 - Milestone 4: Knowledge Domain (Planned)
 - Milestone 5: Evidence Domain (Planned)
 - Milestone 6: Media Domain (Planned)
@@ -170,28 +180,12 @@ RigArchive/
 13. Current Repository Status
 The repository currently contains:
 - Functional Django project
-- Passing test suite (12 tests passing)
+- Passing test suite (18 tests passing)
+- Shared core infrastructure (`core` app with `UUIDModel`, `TimestampedModel`, `BaseModel`)
 - Public reference browser
 - Admin interface
 - Stable migration history
-- Populated Architectural Decision Records (ADR-0001, ADR-0002)
+- Populated Architectural Decision Records (ADR-0001, ADR-0002, ADR-0003)
 - Gemini CLI project instructions (GEMINI.md)
 - Task-based implementation workflow (docs/implementation/tasks/)
-- AI-assisted engineering workflow established
-
-The next approved task is RA-003 — Core Foundation.
-
-
-Current Focus
-
-RA-003 — Core Foundation
-
-Status:
-Approved
-
-Branch:
-main
-
-Next Action:
-Implement shared core infrastructure and refactor existing applications to use
-shared model mixins.
+- Completed implementation task RA-003 — Core Foundation

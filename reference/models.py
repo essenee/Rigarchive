@@ -1,24 +1,18 @@
-import uuid
-
 from django.core.exceptions import ValidationError
 from django.db import models
-from django.utils.text import slugify
 from django.urls import reverse
+from django.utils.text import slugify
+
+from core.models import BaseModel
 
 
-class Manufacturer(models.Model):
+class Manufacturer(BaseModel):
     """
     Represents a vehicle manufacturer in the Reference Domain.
 
     A manufacturer is the highest level of the canonical vehicle
     hierarchy and owns one or more vehicle models.
     """
-
-    uuid = models.UUIDField(
-        default=uuid.uuid4,
-        editable=False,
-        unique=True,
-    )
 
     name = models.CharField(max_length=100, unique=True)
 
@@ -43,9 +37,6 @@ class Manufacturer(models.Model):
         ),
     )
 
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-
     class Meta:
         ordering = ("name",)
 
@@ -64,18 +55,13 @@ class Manufacturer(models.Model):
             kwargs={"manufacturer_slug": self.slug},
         )
 
-class VehicleModel(models.Model):
+
+class VehicleModel(BaseModel):
     """
     Represents a named vehicle model produced by a manufacturer.
 
     Examples include Toyota 4Runner, Ford Transit, and Jeep Wrangler.
     """
-
-    uuid = models.UUIDField(
-        default=uuid.uuid4,
-        editable=False,
-        unique=True,
-    )
 
     manufacturer = models.ForeignKey(
         Manufacturer,
@@ -92,9 +78,6 @@ class VehicleModel(models.Model):
     )
 
     is_active = models.BooleanField(default=True)
-
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
         ordering = ("manufacturer__name", "name")
@@ -128,19 +111,14 @@ class VehicleModel(models.Model):
             },
         )
 
-class Generation(models.Model):
+
+class Generation(BaseModel):
     """
     Represents a recognized generation of a vehicle model.
 
     A generation groups vehicle definitions that share a meaningful
     manufacturer-defined or historically recognized product lifecycle.
     """
-
-    uuid = models.UUIDField(
-        default=uuid.uuid4,
-        editable=False,
-        unique=True,
-    )
 
     vehicle_model = models.ForeignKey(
         VehicleModel,
@@ -175,9 +153,6 @@ class Generation(models.Model):
 
     notes = models.TextField(blank=True)
     is_active = models.BooleanField(default=True)
-
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
         ordering = (
@@ -230,7 +205,8 @@ class Generation(models.Model):
             },
         )
 
-class VehicleDefinition(models.Model):
+
+class VehicleDefinition(BaseModel):
     """
     Represents a canonical vehicle configuration in the Reference Domain.
 
@@ -248,12 +224,6 @@ class VehicleDefinition(models.Model):
         FOUR_WHEEL_DRIVE = "4WD", "Four-wheel drive"
         ALL_WHEEL_DRIVE = "AWD", "All-wheel drive"
         UNKNOWN = "UNK", "Unknown"
-
-    uuid = models.UUIDField(
-        default=uuid.uuid4,
-        editable=False,
-        unique=True,
-    )
 
     generation = models.ForeignKey(
         Generation,
@@ -301,9 +271,6 @@ class VehicleDefinition(models.Model):
 
     notes = models.TextField(blank=True)
     is_active = models.BooleanField(default=True)
-
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
         ordering = (
