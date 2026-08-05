@@ -6,6 +6,12 @@ All notable changes to RigArchive will be documented in this file.
 
 ### Added
 
+- Observation Domain application (`observation.apps.ObservationConfig`).
+- `Observation` model in `observation/models.py` inheriting from `core.models.BaseModel`, providing dual identity (Integer PK + UUIDField), timestamps, and `PROTECT` foreign keys to `reference.VehicleDefinition` and `accounts.User`.
+- Django Admin interface `ObservationAdmin` in `observation/admin.py` for administrator observation record management.
+- Initial database migration `observation/migrations/0001_initial.py`.
+- Observation domain test suite (`observation/tests.py`) covering validation, dual identity, `PROTECT` deletion, reference non-mutation, and admin integration (32 total tests passing).
+- Architecture Design Document `RA-006-Observation-Foundation-Architecture.md`.
 - Accessible application shell in `templates/base.html` featuring primary navigation (Home, Vehicles, About, Admin), skip-to-content link (`<a class="skip-link" href="#main-content">`), and `<main id="main-content" tabindex="-1">` target.
 - Project-level presentation views (`about`, `custom_404`, `custom_500`) in `config/views.py`.
 - About page (`templates/about.html`) presenting canonical vehicle identity, factory configuration reference, and evidence and provenance supporting technical understanding.
@@ -25,7 +31,7 @@ All notable changes to RigArchive will be documented in this file.
 - Django Admin interfaces for Reference Domain records.
 - Public reference vehicle browser with nested URL routing and breadcrumb navigation.
 - Shared base template, navigation, and core CSS stylesheet.
-- Complete test suite covering models, views, core mixins, shell UX, and URLs (23 tests passing).
+- Complete test suite covering models, views, core mixins, shell UX, observations, and URLs (32 tests passing).
 - Gemini CLI project instructions (`GEMINI.md`).
 - Task-based implementation workflow specification.
 - Architecture Decision Records (`ADR-0001-Entity-Identity-Strategy.md`, `ADR-0002-Immutable-Automatic-Slugs.md`).

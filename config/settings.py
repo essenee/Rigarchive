@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     "core.apps.CoreConfig",
     "accounts.apps.AccountsConfig",
     "reference.apps.ReferenceConfig",
+    "observation.apps.ObservationConfig",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
