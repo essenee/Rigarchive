@@ -1,20 +1,19 @@
 {% extends "base.html" %}
 
-{% block title %}RigArchive{% endblock %}
+{% block title %}RigArchive — Technical Vehicle Archive{% endblock %}
 
 {% block content %}
-<section>
+<section class="hero">
     <h1>RigArchive</h1>
 
-    <p>
-        A technical archive of vehicles, modifications, maintenance,
-        measurements, and supporting evidence.
+    <p class="lead">
+        A technical archive for canonical vehicle identity, factory configuration reference, and evidence-aware technical knowledge.
     </p>
 
-    <p>
+    <div class="actions">
         <a class="button" href="{% url 'reference:manufacturer-list' %}">
             Browse vehicles
         </a>
-    </p>
+    </div>
 </section>
 {% endblock %}

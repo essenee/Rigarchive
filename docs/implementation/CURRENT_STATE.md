@@ -98,6 +98,16 @@ Milestone 3 — Core Infrastructure (Completed — RA-003)
 - Refactored `reference` domain models to inherit from shared `core` mixins
 - Added unit tests for abstract core mixins and inherited behavior
 
+Milestone 3A — Application Shell & UX Foundation
+
+Implementation Task:
+RA-005 — Application Shell & UX Foundation (Completed)
+- Views: Project-level presentation views (`about`, `custom_404`, `custom_500`) in `config/views.py`
+- Shell: Accessible header, skip link (`<a class="skip-link" href="#main-content">`), main target (`<main id="main-content" tabindex="-1">`), non-numeric footer description
+- Navigation: Primary nav linking Home, Vehicles, About, and Admin
+- Error handling: Resilient custom 404 (`templates/404.html`) and custom 500 (`templates/500.html`) pages
+- CSS: Accessible focus rings, breadcrumb list styles, hero/button styling, responsive 320px support in `static/css/site.css`
+
 7. Architectural Decision Records (ADRs)
 Implemented and Accepted:
 - ADR-0001: Entity Identity Strategy (Dual Integer PK + UUID)
@@ -106,11 +116,12 @@ Implemented and Accepted:
 
 8. Current Testing
 Implemented:
+- Application Shell & UX tests (`config/tests.py`)
 - Core mixin & inheritance tests (`core/tests.py`)
 - Reference Model tests (`reference/tests/test_models.py`)
 - Public Reference View & URL tests (`reference/tests/test_views.py`)
 Current status:
-- All 18 tests passing.
+- All 23 tests passing.
 - Verification command: `.venv/bin/python manage.py test`
 
 9. Current Coding Standards
@@ -121,12 +132,13 @@ UUIDs are permanent external identities.
 Database relations use integer primary keys.
 Reference data uses PROTECT deletion.
 Views remain thin; business logic resides in services.
+Project-level presentation views reside in `config/views.py`; domain views belong in domain applications.
 Services encapsulate business workflows and orchestrate domain operations.
 
 10. Git & Gemini CLI Workflow
 - Instructions defined in GEMINI.md.
 - Task specs stored under docs/implementation/tasks/.
-- Completed tasks: RA-003 — Core Foundation.
+- Completed tasks: RA-003 — Core Foundation, RA-005 — Application Shell & UX Foundation.
 
 11. Current Repository Structure
 RigArchive/
@@ -138,9 +150,24 @@ RigArchive/
 │   └── tests.py
 ├── reference/
 ├── config/
+│   ├── settings.py
+│   ├── urls.py
+│   ├── views.py
+│   ├── tests.py
+│   └── wsgi.py
 │
 ├── templates/
+│   ├── base.html
+│   ├── home.html
+│   ├── about.html
+│   ├── 404.html
+│   ├── 500.html
+│   ├── includes/
+│   │   └── breadcrumbs.html
+│   └── reference/
 ├── static/
+│   └── css/
+│       └── site.css
 │
 ├── docs/
 │   ├── architecture/
@@ -155,7 +182,8 @@ RigArchive/
 │       ├── ROADMAP.md
 │       └── tasks/
 │           ├── TASK_TEMPLATE.md
-│           └── RA-003-core-foundation.md
+│           ├── RA-003-core-foundation.md
+│           └── RA-005-application-shell-ux-foundation.md
 │
 ├── tests/
 │
@@ -170,6 +198,7 @@ RigArchive/
 - Milestone 2: Reference Domain (✅ Complete)
 - Milestone 2A: Public Reference Browser (✅ Complete)
 - Milestone 3: Core Infrastructure (✅ Complete — RA-003)
+- Milestone 3A: Application Shell & UX Foundation (✅ Complete)
 - Milestone 4: Knowledge Domain (Planned)
 - Milestone 5: Evidence Domain (Planned)
 - Milestone 6: Media Domain (Planned)
@@ -180,12 +209,13 @@ RigArchive/
 13. Current Repository Status
 The repository currently contains:
 - Functional Django project
-- Passing test suite (18 tests passing)
+- Passing test suite (23 tests passing)
 - Shared core infrastructure (`core` app with `UUIDModel`, `TimestampedModel`, `BaseModel`)
+- Accessible application shell and UX foundation (`templates/base.html`, `about.html`, `404.html`, `500.html`)
 - Public reference browser
 - Admin interface
 - Stable migration history
 - Populated Architectural Decision Records (ADR-0001, ADR-0002, ADR-0003)
 - Gemini CLI project instructions (GEMINI.md)
 - Task-based implementation workflow (docs/implementation/tasks/)
-- Completed implementation task RA-003 — Core Foundation
+- Completed implementation tasks: RA-003 — Core Foundation, RA-005 — Application Shell & UX Foundation
