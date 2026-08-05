@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}About | RigArchive{% endblock %}
+
+{% block breadcrumbs %}
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+    <ol class="breadcrumb-list">
+        <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+        <li class="breadcrumb-item"><span aria-current="page">About</span></li>
+    </ol>
+</nav>
+{% endblock %}
+
+{% block content %}
+<article class="prose">
+    <h1>About RigArchive</h1>
+
+    <p class="lead">
+        RigArchive preserves vehicle reference information together with the evidence and provenance needed to support technical understanding.
+    </p>
+
+    <section>
+        <h2>Core Data Philosophy</h2>
+        <p>
+            Automotive technical information is often fragmented across service manuals, manufacturer bulletins, professional trade publications, and dedicated enthusiast communities. RigArchive brings structure and longevity to this information while respecting its origin and evidence.
+        </p>
+        <ul>
+            <li>
+                <strong>Canonical Vehicle Identity:</strong> Establishing unambiguous reference hierarchies from vehicle manufacturers to specific models, generations, and factory definitions.
+            </li>
+            <li>
+                <strong>Factory Configuration Reference:</strong> Documenting original manufacturer specifications, structural variants, standard equipment, and option codes.
+            </li>
+            <li>
+                <strong>Evidence & Provenance:</strong> Preserving manufacturer documentation, professional technical insights, and community knowledge alongside source lineage and verification context.
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Provenance & Context</h2>
+        <p>
+            RigArchive preserves valuable manufacturer specs, professional expertise, and community knowledge with clear context, source lineage, and supporting evidence. Rather than treating technical data as static claims, our architecture links technical records to verifiable documentation and clear provenance.
+        </p>
+    </section>
+</article>
+{% endblock %}

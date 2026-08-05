@@ -3,10 +3,11 @@ Current milestone
 RA-003
 Core Infrastructure
 
-Next
+Milestone 4
+Knowledge & Evidence Architecture Design
 
-RA-004
-Knowledge Domain
+Milestone 5
+Knowledge / Evidence implementation
 
 Future
 

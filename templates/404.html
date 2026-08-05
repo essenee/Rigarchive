@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Page Not Found | RigArchive{% endblock %}
+
+{% block content %}
+<section class="error-page">
+    <h1>Page Not Found (404)</h1>
+    <p>
+        The page you requested could not be found. It may have been moved, renamed, or does not exist.
+    </p>
+    <p>
+        <a class="button" href="{% url 'home' %}">Return to Home</a>
+        <a class="button button-secondary" href="{% url 'reference:manufacturer-list' %}">Browse Vehicles</a>
+    </p>
+</section>
+{% endblock %}
