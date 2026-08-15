@@ -207,7 +207,22 @@ RA-015 — Source Assertion Normalization Implementation & Fixture Validation (C
 - Testing & Offline Validation: 9 comprehensive automated test methods in `reference/tests/test_normalization.py` verifying contract dispatch, Category C mappings, drivetrain safety, unmapped handling, parsing failure handling, determinism, and offline adapter integration (67 total tests passing)
 - Zero ORM / Migration Impact: Pure Python dataclasses; 0 Django ORM models, 0 migrations, 0 database writes
 - Documentation & Task Record: `docs/implementation/tasks/RA-015-source-assertion-normalization-implementation.md`
-- Next Proposed Milestone: Architectural Planning / Design for Candidate Configuration Construction & Aggregation (RA-016 Design)
+Milestone 12 — Candidate Configuration Construction & Aggregation Architecture
+
+Architecture Task:
+RA-016 — Candidate Configuration Construction & Aggregation Architecture (Approved Architecture)
+- Design Document Location: `docs/architecture/designs/RA-016-Candidate-Configuration-Construction-Aggregation-Architecture.md`
+- Candidate Configuration Boundary: Transient, non-canonical, JSON-serializable artifact (`CandidateConfigurationDocument`) representing an evidence-backed hypothesis; completely separate from persistent canonical database entities (`VehicleDefinition`)
+- Hybrid Context/Evidence Grouping Model: Caller-supplied `CandidateIdentity` provides workflow aggregation context, but is NOT source evidence and NOT canonical truth; normalized source evidence may support, contradict, or leave context unverified
+- Separation of Evidence Reconciliation from Context Verification: `reconciliation_state = "conflicting"` is strictly reserved for evidence-to-evidence conflicts (2+ independent lineages disagreeing); candidate-context contradiction does not alter or manufacture evidence states, while context contradiction triggers top-level human review
+- Lineage-Based Corroboration: `corroborated` requires 2+ independent evidence lineages (e.g. `nhtsa_vpic` vs `epa_fueleconomy`); repeated retrieval of the same source record yields `single_source`; multiple interpretations derived from one assertion represent one lineage
+- No Tier 1 Normalization Bypass: Candidate attributes and `factory_technical_features` are projected ONLY from approved mapped `NormalizedInterpretation` objects emitted by RA-015; current RA-015 mappings yield `factory_technical_features = []`
+- Conflict-Safe Projection & No Winner Selection: Under evidence conflict, scalar projected fields are left UNSET (`None`) while ALL conflicting interpretations, provenance links, and `conflicting` states are retained; winner selection is strictly prohibited
+- Review Policy Consistency: `incomplete` state alone does NOT trigger human review (`requires_human_review = False`); automatic review is triggered strictly by evidence conflict (`conflicting`), evidence ambiguity (`ambiguous`), or context contradiction (`contradicted`)
+- Transient Non-Semantic `candidate_reference`: Opaque, non-semantic workflow identifier; no semantic hashing from identity fields
+- Semantic Determinism: Identical semantic inputs produce identical projected attributes, evidence states, provenance maps, and deterministic array ordering; artifact-generation metadata (`created_at`) may vary per instantiation
+- Outcome B Contract Support: Existing RA-011/RA-012 contract is 100% sufficient using implementation conventions; zero contract modifications required for RA-017; formal context-verification enum persistence remains deferred
+- Next Proposed Milestone: RA-017 — Candidate Configuration Construction & Aggregation Implementation
 
 7. Architectural Decision Records (ADRs)
 Implemented and Accepted:
@@ -346,7 +361,8 @@ RigArchive/
 │   │       ├── RA-008-Development-Data-Preservation-Architecture.md
 │   │       ├── RA-010-Reference-Ingestion-Source-Mapping-Architecture.md
 │   │       ├── RA-011-Ingestion-Schema-Intermediate-Serialization-Design.md
-│   │       └── RA-014-Source-Assertion-Normalization-Mapping-Architecture.md
+│   │       ├── RA-014-Source-Assertion-Normalization-Mapping-Architecture.md
+│   │       └── RA-016-Candidate-Configuration-Construction-Aggregation-Architecture.md
 │   ├── blueprint/
 │   ├── development/
 │   │   └── DATA_PRESERVATION.md
@@ -386,6 +402,7 @@ RigArchive/
 - Milestone 9: Public Source Acquisition Adapters (✅ Complete — RA-013)
 - Milestone 10: Source Assertion Normalization & Mapping Architecture (✅ Approved Architecture — RA-014)
 - Milestone 11: Source Assertion Normalization Implementation & Fixture Validation (✅ Complete — RA-015)
+- Milestone 12: Candidate Configuration Construction & Aggregation Architecture (✅ Approved Architecture — RA-016)
 
 Candidate future domains include:
 - Evidence
@@ -408,8 +425,8 @@ The repository currently contains:
 - Admin interface
 - Stable migration history
 - Populated Architectural Decision Records (ADR-0001, ADR-0002, ADR-0003)
-- Approved Architecture Design Documents (RA-006, RA-008, RA-010, RA-011, RA-014)
+- Approved Architecture Design Documents (RA-006, RA-008, RA-010, RA-011, RA-014, RA-016)
 - Gemini CLI project instructions (GEMINI.md)
 - Task-based implementation workflow (docs/implementation/tasks/)
 - Completed implementation tasks: RA-003 — Core Foundation, RA-005 — Application Shell & UX Foundation, RA-007 — Observation Domain Foundation, RA-009 — Development Data Preservation and Recovery Implementation, RA-012 — Intermediate Serialization Contract Implementation & Fixture Validation, RA-013 — Public Source Acquisition Adapters, RA-015 — Source Assertion Normalization Implementation & Fixture Validation
-- Approved Architecture/Research tasks: RA-010 — Reference Data Ingestion Source & Mapping Architecture, RA-011 — Ingestion Schema & Intermediate Serialization Design, RA-014 — Source Assertion Normalization & Mapping Architecture
+- Approved Architecture/Research tasks: RA-010 — Reference Data Ingestion Source & Mapping Architecture, RA-011 — Ingestion Schema & Intermediate Serialization Design, RA-014 — Source Assertion Normalization & Mapping Architecture, RA-016 — Candidate Configuration Construction & Aggregation Architecture
