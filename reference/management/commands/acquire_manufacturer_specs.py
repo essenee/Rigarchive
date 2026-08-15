@@ -8,13 +8,16 @@ assertions, normalizing, constructing candidates, and rendering dry-run import p
 GUARANTEE: Dry-run planning only. NEVER invokes execute_candidate_import().
 """
 
+from dataclasses import asdict
 import json
 from pathlib import Path
 
 from django.conf import settings
 from django.core.management.base import BaseCommand, CommandError
 from reference.ingestion.acquisition.profiles import ToyotaUSAPressroomProfile
+from reference.ingestion.manifest import build_review_manifest, manifest_to_dict
 from reference.ingestion.orchestration.manufacturer import ProductionManufacturerOrchestrator
+
 
 
 class Command(BaseCommand):
@@ -50,8 +53,14 @@ class Command(BaseCommand):
             type=str,
             help="Optional output file path to save machine-readable dry-run JSON report.",
         )
+        parser.add_argument(
+            "--output-manifest",
+            type=str,
+            help="Optional output file path to save executable CanonicalImportReviewManifest JSON artifact.",
+        )
 
     def handle(self, *args, **options):
+
         file_arg = options.get("file")
         url_arg = options.get("url")
         profile_name = options.get("profile", "toyota_usa")
@@ -178,3 +187,30 @@ class Command(BaseCommand):
             }
             output_path.write_text(json.dumps(json_report, indent=2), encoding="utf-8")
             self.stdout.write(self.style.SUCCESS(f"Saved dry-run JSON report to '{output_path}'."))
+
+        # Write optional executable review manifest JSON artifact
+        if options.get("output_manifest"):
+            manifest_path = Path(options["output_manifest"]).resolve()
+            plans = [cr.plan for cr in result.candidate_results]
+            native_map = {cr.plan.candidate_reference: cr.native_identifier for cr in result.candidate_results}
+
+            ext_prov = {
+                "raw_artifact_hash": result.snapshot_meta.content_hash,
+                "raw_artifact_reference": result.snapshot_meta.storage_path,
+                "extractor_id": "toyota_pressroom_extractor",
+                "extractor_version": "0.1.0",
+                "extraction_mode": "manually_verified_transcription",
+            }
+
+            manifest = build_review_manifest(
+                source_id=result.source_id,
+                raw_artifact_hash=result.snapshot_meta.content_hash,
+                raw_artifact_reference=result.snapshot_meta.storage_path,
+                extraction_provenance=ext_prov,
+                plans=plans,
+                native_identifiers=native_map,
+            )
+
+            manifest_dict = manifest_to_dict(manifest)
+            manifest_path.write_text(json.dumps(manifest_dict, indent=2, ensure_ascii=False), encoding="utf-8")
+            self.stdout.write(self.style.SUCCESS(f"Saved executable review manifest to '{manifest_path}'."))

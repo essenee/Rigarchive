@@ -1,6 +1,7 @@
 from django.contrib import admin
 
-from .models import Generation, Manufacturer, VehicleDefinition, VehicleModel
+from .models import Generation, ImportExecutionReceipt, Manufacturer, VehicleDefinition, VehicleModel
+
 
 
 @admin.register(Manufacturer)
@@ -250,3 +251,75 @@ class VehicleDefinitionAdmin(admin.ModelAdmin):
             },
         ),
     )
+
+
+@admin.register(ImportExecutionReceipt)
+class ImportExecutionReceiptAdmin(admin.ModelAdmin):
+    list_display = (
+        "executed_at",
+        "operator_label",
+        "planned_action",
+        "execution_outcome",
+        "target_slug",
+        "source_id",
+    )
+
+    list_filter = (
+        "execution_outcome",
+        "planned_action",
+        "execution_channel",
+    )
+
+    search_fields = (
+        "manifest_hash",
+        "raw_artifact_hash",
+        "candidate_reference",
+        "target_slug",
+        "operator_label",
+    )
+
+    readonly_fields = [
+        "id",
+        "uuid",
+        "created_at",
+        "updated_at",
+        "executed_at",
+        "execution_channel",
+        "operator_label",
+        "manifest_hash",
+        "candidate_reference",
+        "planned_action",
+        "create_basis",
+        "source_id",
+        "raw_artifact_hash",
+        "raw_artifact_reference",
+        "source_identity_type",
+        "native_identifier",
+        "resolved_generation_id",
+        "target_slug",
+        "target_model_year",
+        "target_trim_name",
+        "target_engine_name",
+        "target_drivetrain",
+        "target_market",
+        "target_fields_json",
+        "execution_outcome",
+        "messages_json",
+        "created_vehicle_definition",
+        "existing_vehicle_definition",
+        "created_vehicle_definition_pk_snapshot",
+        "created_vehicle_definition_uuid_snapshot",
+        "created_vehicle_definition_slug_snapshot",
+        "existing_vehicle_definition_pk_snapshot",
+        "existing_vehicle_definition_uuid_snapshot",
+        "existing_vehicle_definition_slug_snapshot",
+    ]
+
+    def has_add_permission(self, request) -> bool:
+        return False
+
+    def has_delete_permission(self, request, obj=None) -> bool:
+        return False
+
+    def has_change_permission(self, request, obj=None) -> bool:
+        return False
