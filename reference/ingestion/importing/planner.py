@@ -198,6 +198,11 @@ def plan_candidate_import(
         reasons.append(f"CandidateIdentity model '{cid.vehicle_model_name}' contradicts evidence '{evidence_model}'.")
     if cid.model_year is not None and cid.model_year != evidence_year:
         reasons.append(f"CandidateIdentity model_year {cid.model_year} contradicts evidence {evidence_year}.")
+    if cid.trim_name and cid.trim_name.strip().lower() != evidence_trim.strip().lower():
+        reasons.append(f"CandidateIdentity trim_name '{cid.trim_name}' contradicts evidence '{evidence_trim}'.")
+    if cid.market and cid.market.strip().upper() != evidence_market.strip().upper():
+        reasons.append(f"CandidateIdentity market '{cid.market}' contradicts evidence '{evidence_market}'.")
+
 
     if reasons:
         return CanonicalImportPlan(

@@ -50,12 +50,26 @@ def validate_envelope(envelope, expected_type: str) -> None:
         )
 
 
+def validate_source_applicability(sa) -> None:
+    """Validate SourceApplicability provenance scope."""
+    if sa.market is not None:
+        valid_markets = {"US", "CA", "OT"}
+        if sa.market not in valid_markets:
+            raise IngestionValidationError(
+                f"SourceApplicability 'market' '{sa.market}' must be one of {sorted(valid_markets)}."
+            )
+
+
 def validate_source_assertion_set(obj: SourceAssertionSet) -> None:
     """Validate structural and semantic rules for a Tier 1 SourceAssertionSet."""
     validate_envelope(obj.envelope, ArtifactType.SOURCE_ASSERTION_SET.value)
 
     if not obj.provenance.source_id:
         raise IngestionValidationError("SourceMetadata 'source_id' is required and cannot be empty.")
+
+    if obj.provenance.source_applicability is not None:
+        validate_source_applicability(obj.provenance.source_applicability)
+
 
     seen_assertion_ids: Set[str] = set()
     for ast in obj.source_assertions:

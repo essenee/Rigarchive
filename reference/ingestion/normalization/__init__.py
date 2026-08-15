@@ -14,12 +14,19 @@ from reference.ingestion.normalization.base import (
     register_normalizer,
 )
 from reference.ingestion.normalization.epa import EPANormalizer
+from reference.ingestion.normalization.manufacturer import ManufacturerNormalizer
 from reference.ingestion.normalization.nhtsa import NHTSANormalizer
+
+# Register normalizers
+register_normalizer(NHTSANormalizer)
+register_normalizer(EPANormalizer)
+register_normalizer(ManufacturerNormalizer)
 
 __all__ = [
     "BaseSourceNormalizer",
     "NHTSANormalizer",
     "EPANormalizer",
+    "ManufacturerNormalizer",
     "NormalizationError",
     "UnsupportedSourceError",
     "normalize_source_assertions",

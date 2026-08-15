@@ -13,6 +13,7 @@ from reference.ingestion.acquisition.base import (
     default_http_transport,
 )
 from reference.ingestion.acquisition.epa import EPAAdapter
+from reference.ingestion.acquisition.manufacturer import ManufacturerSpecificationAdapter
 from reference.ingestion.acquisition.nhtsa import NHTSAAdapter
 from reference.ingestion.acquisition.smoke_test import (
     run_all_live_smoke_tests,
@@ -28,6 +29,7 @@ __all__ = [
     "default_http_transport",
     "NHTSAAdapter",
     "EPAAdapter",
+    "ManufacturerSpecificationAdapter",
     "run_live_nhtsa_smoke_test",
     "run_live_epa_smoke_test",
     "run_all_live_smoke_tests",

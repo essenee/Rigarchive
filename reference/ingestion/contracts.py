@@ -58,6 +58,14 @@ class Envelope:
 
 
 @dataclass
+class SourceApplicability:
+    market: Optional[str] = None
+    applicability_basis: Optional[str] = None
+    publisher_jurisdiction: Optional[str] = None
+    unknown_fields: Dict[str, Any] = field(default_factory=dict)
+
+
+@dataclass
 class SourceMetadata:
     source_id: str  # RigArchive-local stable source identifier
     source_type: Optional[str] = None
@@ -68,7 +76,9 @@ class SourceMetadata:
     source_use_notes: Optional[str] = None
     review_status: Optional[str] = None
     target_context: Dict[str, Any] = field(default_factory=dict)
+    source_applicability: Optional[SourceApplicability] = None
     unknown_fields: Dict[str, Any] = field(default_factory=dict)
+
 
 
 @dataclass

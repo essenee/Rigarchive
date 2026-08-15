@@ -24,6 +24,7 @@ from reference.ingestion.contracts import (
     PackageOrOption,
     ReconciliationAndReview,
     SemanticMissingValue,
+    SourceApplicability,
     SourceAssertion,
     SourceAssertionSet,
     SourceConfigurationIdentity,
@@ -31,6 +32,7 @@ from reference.ingestion.contracts import (
     TechnicalValue,
     TransmissionDetails,
 )
+
 
 
 def _sort_dict_keys(d: Any) -> Any:
@@ -59,6 +61,18 @@ def envelope_to_dict(envelope: Envelope) -> Dict[str, Any]:
     return res
 
 
+def source_applicability_to_dict(sa: SourceApplicability) -> Dict[str, Any]:
+    res: Dict[str, Any] = {}
+    if sa.market is not None:
+        res["market"] = sa.market
+    if sa.applicability_basis is not None:
+        res["applicability_basis"] = sa.applicability_basis
+    if sa.publisher_jurisdiction is not None:
+        res["publisher_jurisdiction"] = sa.publisher_jurisdiction
+    res.update(sa.unknown_fields)
+    return res
+
+
 def source_metadata_to_dict(prov: SourceMetadata) -> Dict[str, Any]:
     res: Dict[str, Any] = {
         "source_id": prov.source_id,
@@ -79,8 +93,11 @@ def source_metadata_to_dict(prov: SourceMetadata) -> Dict[str, Any]:
         res["review_status"] = prov.review_status
     if prov.target_context:
         res["target_context"] = prov.target_context
+    if prov.source_applicability is not None:
+        res["source_applicability"] = source_applicability_to_dict(prov.source_applicability)
     res.update(prov.unknown_fields)
     return res
+
 
 
 def source_assertion_to_dict(ast: SourceAssertion) -> Dict[str, Any]:
@@ -369,13 +386,26 @@ def envelope_from_dict(d: Dict[str, Any]) -> Envelope:
     )
 
 
+def source_applicability_from_dict(d: Dict[str, Any]) -> SourceApplicability:
+    known_keys = {"market", "applicability_basis", "publisher_jurisdiction"}
+    unknown = {k: v for k, v in d.items() if k not in known_keys}
+    return SourceApplicability(
+        market=d.get("market"),
+        applicability_basis=d.get("applicability_basis"),
+        publisher_jurisdiction=d.get("publisher_jurisdiction"),
+        unknown_fields=unknown,
+    )
+
+
 def source_metadata_from_dict(d: Dict[str, Any]) -> SourceMetadata:
     known_keys = {
         "source_id", "source_type", "source_locator", "retrieved_at",
         "native_record_id", "acquisition_method", "source_use_notes",
-        "review_status", "target_context"
+        "review_status", "target_context", "source_applicability"
     }
     unknown = {k: v for k, v in d.items() if k not in known_keys}
+    sa_dict = d.get("source_applicability")
+    sa_obj = source_applicability_from_dict(sa_dict) if isinstance(sa_dict, dict) else None
     return SourceMetadata(
         source_id=d.get("source_id", ""),
         source_type=d.get("source_type"),
@@ -386,8 +416,10 @@ def source_metadata_from_dict(d: Dict[str, Any]) -> SourceMetadata:
         source_use_notes=d.get("source_use_notes"),
         review_status=d.get("review_status"),
         target_context=d.get("target_context", {}),
+        source_applicability=sa_obj,
         unknown_fields=unknown,
     )
+
 
 
 def source_assertion_from_dict(d: Dict[str, Any]) -> SourceAssertion:
