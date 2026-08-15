@@ -110,8 +110,9 @@ class EPAAdapter(BaseSourceAdapter):
             ("trany", "transmission_descriptor", "ast_epa_trans_01"),
             ("vClass", "vehicle_class", "ast_epa_class_01"),
             ("eng_dscr", "engine_description", "ast_epa_eng_dscr_01"),
-            ("city08", "city_mpg_unadjusted", "ast_epa_city_mpg_01"),
-            ("highway08", "highway_mpg_unadjusted", "ast_epa_hwy_mpg_01"),
+            ("city08", "city_mpg_epa_rating", "ast_epa_city_mpg_01"),
+            ("highway08", "highway_mpg_epa_rating", "ast_epa_hwy_mpg_01"),
+
         ]
 
         for source_key, attr_key, ast_id in field_mappings:

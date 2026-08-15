@@ -16,8 +16,9 @@ Governed by the approved [RA-010 Source Mapping Architecture](file:///Users/esse
    * *Access*: Public REST web service payload requiring no API key or authentication for the selected endpoint during RA-013. Broader legal/source-use status was not independently adjudicated by RA-013.
 2. **EPA / FuelEconomy.gov REST Web Services**:
    * *Endpoint*: `https://www.fueleconomy.gov/ws/rest/vehicle/{vehicle_id}`
-   * *Contract*: Returns JSON vehicle payload containing `id`, `year`, `make`, `model`, `drive`, `displ`, `cyl`, `trany`, `vClass`, `city08`, `highway08`.
+   * *Contract*: Returns JSON vehicle payload containing `id`, `year`, `make`, `model`, `drive`, `displ`, `cyl`, `trany`, `vClass`, `city08`, `highway08`. Maps `city08` → `city_mpg_epa_rating` and `highway08` → `highway_mpg_epa_rating`.
    * *Access*: Public REST web service payload requiring no API key or authentication for the selected endpoint during RA-013. Broader legal/source-use status was not independently adjudicated by RA-013.
+
 
 ## Implementation Design & Module Placement
 

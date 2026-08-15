@@ -165,8 +165,6 @@ RA-012 — Intermediate Serialization Contract Implementation & Fixture Validati
 - Deterministic Serialization: `serialize_artifact` and `deserialize_artifact` enforcing alphabetical key sorting, 2-space indentation, UTF-8 encoding, ISO-8601 UTC timestamps, and lossless round-trips
 - Unknown Field Preservation: Forward-compatible parser preserving unmodeled JSON fields in `unknown_fields` container without data loss upon re-serialization
 - Contract Validation: `validate_artifact`, `validate_envelope`, `validate_source_assertion_set`, `validate_candidate_configuration`, and `validate_semantic_missing_value` with actionable error reporting
-- Controlled Fixtures: 4 test-owned fixture files in `reference/tests/fixtures/ingestion/` (`source_assertion_set_4runner_2020.json`, `candidate_configuration_4runner_2020_trd_offroad.json`, `candidate_configuration_4runner_2020_trim_conflict.json`, `candidate_configuration_4runner_2010_i4_2wd.json`)
-- Zero ORM / Migration Impact: Pure Python dataclasses; 0 Django ORM staging models, 0 migrations, 0 database writes, 0 external acquisition calls
 - Documentation & Task Record: `docs/implementation/tasks/RA-012-intermediate-serialization-implementation.md`
 
 Milestone 9 — Public Source Acquisition Adapters (NHTSA & EPA)
@@ -176,17 +174,26 @@ RA-013 — Public Source Acquisition Adapters (Completed)
 - Package Location: `reference/ingestion/acquisition/` (`__init__.py`, `base.py`, `nhtsa.py`, `epa.py`, `smoke_test.py`)
 - Adapters Implemented: `NHTSAAdapter` (NHTSA vPIC REST API `GetModelsForMakeYear`) and `EPAAdapter` (EPA FuelEconomy.gov REST API `vehicle/{id}`)
 - Transport Isolation & Security: `default_http_transport` using standard library `urllib.request` with strict TLS certificate verification (`ssl.create_default_context()`), finite timeouts, and explicit User-Agent headers (`RigArchive-Ingestion/0.1.0`); unit tests use mock transport loading test fixtures with zero network calls
-- Tier 1 Payload Construction: Converts acquired raw source payloads into valid RA-012 `SourceAssertionSet` objects preserving provenance (`source_id`, `source_type`, `source_locator`, `retrieved_at`, `native_record_id`, `target_context`) and raw factual assertions without candidate normalization
+- Tier 1 Payload Construction: Converts acquired raw source payloads into valid RA-012 `SourceAssertionSet` objects preserving provenance (`source_id`, `source_type`, `source_locator`, `retrieved_at`, `native_record_id`, `target_context`) and raw factual assertions without candidate normalization. FuelEconomy.gov `city08` and `highway08` map to Tier 1 keys `city_mpg_epa_rating` and `highway_mpg_epa_rating`.
 - Response Fixtures: 2 acquisition response fixtures in `reference/tests/fixtures/acquisition/` (`nhtsa/get_models_toyota_2020.json`, `epa/vehicle_42101.json`)
 - Live Smoke Test Utility: `smoke_test.py` (`run_all_live_smoke_tests`) for on-demand live API connectivity verification
 - Zero ORM / Migration Impact: Pure Python data structures; 0 Django ORM staging models, 0 migrations, 0 database writes, 0 production storage path decisions
 - Documentation & Task Record: `docs/implementation/tasks/RA-013-public-source-acquisition-implementation.md`
-- Next Proposed Milestone: RA-014 — Toyota 4Runner Ingestion Normalizer & Candidate Generator
 
+Milestone 10 — Source Assertion Normalization & Mapping Architecture
 
-
-
-
+Architecture Task:
+RA-014 — Source Assertion Normalization & Mapping Architecture (Approved Architecture)
+- Design Document Location: `docs/architecture/designs/RA-014-Source-Assertion-Normalization-Mapping-Architecture.md`
+- Source-Specific Normalization Ownership: Logic partitioned by source behind shared normalization contract (`NHTSANormalizer`, `EPANormalizer` in `reference/ingestion/normalization/`)
+- Evidence-Bounded Normalization Rule: Normalization may only add semantic specificity supported by source assertions + explicit mapping rules; manufacturing unsupported drivetrain modes, ratios, lock states, or capabilities is prohibited
+- Transformation Taxonomy: 6 explicit categories (`direct_copy`, `exact_mapping`, `parsed`, `converted`, `interpreted`, `unmapped`)
+- Concept Key Strategy: Stable lower_snake_case keys decoupled from Django ORM field names; current concept set treated as provisional
+- Semantic Qualifier Preservation: Technical qualifiers (`epa_rating`, `unadjusted`, `measured`, `estimated`) must not be stripped during normalization
+- Redesigned Unmapped Behavior: Explicit separation of Case A (known concept, unmapped value) from Case B (unknown concept) without pseudonormalizing raw values
+- Drivetrain & Feature Boundaries: 7-dimension drivetrain boundary enforced; unclassified features (KDSS, A-TRAC) remain under `factory_technical_features` as unresolved
+- Category C Mappings Authorized for RA-015: 12 empirically validated mappings (`nhtsa_make_id`, `make`, `nhtsa_model_id`, `model`, `model_year`, `generic_drive_classification`, `drivetrain_architecture`, `engine_displacement_liters`, `engine_cylinders`, `city_mpg_epa_rating`, `highway_mpg_epa_rating`)
+- Next Proposed Milestone: RA-015 — Source Assertion Normalization Implementation & Fixture Validation
 
 7. Architectural Decision Records (ADRs)
 Implemented and Accepted:
@@ -263,7 +270,6 @@ RigArchive/
 │   │   │   │   │   └── vehicle_42101.json
 │   │   │   │   └── nhtsa/
 │   │   │   │       └── get_models_toyota_2020.json
-
 │   │   │   └── ingestion/
 │   │   │       ├── candidate_configuration_4runner_2010_i4_2wd.json
 │   │   │       ├── candidate_configuration_4runner_2020_trd_offroad.json
@@ -312,7 +318,8 @@ RigArchive/
 │   │       ├── RA-006-Observation-Foundation-Architecture.md
 │   │       ├── RA-008-Development-Data-Preservation-Architecture.md
 │   │       ├── RA-010-Reference-Ingestion-Source-Mapping-Architecture.md
-│   │       └── RA-011-Ingestion-Schema-Intermediate-Serialization-Design.md
+│   │       ├── RA-011-Ingestion-Schema-Intermediate-Serialization-Design.md
+│   │       └── RA-014-Source-Assertion-Normalization-Mapping-Architecture.md
 │   ├── blueprint/
 │   ├── development/
 │   │   └── DATA_PRESERVATION.md
@@ -349,6 +356,7 @@ RigArchive/
 - Milestone 7: Ingestion Schema & Intermediate Serialization Design (✅ Approved Architecture — RA-011)
 - Milestone 8: Intermediate Serialization Contract Implementation & Fixture Validation (✅ Complete — RA-012)
 - Milestone 9: Public Source Acquisition Adapters (✅ Complete — RA-013)
+- Milestone 10: Source Assertion Normalization & Mapping Architecture (✅ Approved Architecture — RA-014)
 
 Candidate future domains include:
 - Evidence
@@ -371,8 +379,8 @@ The repository currently contains:
 - Admin interface
 - Stable migration history
 - Populated Architectural Decision Records (ADR-0001, ADR-0002, ADR-0003)
-- Approved Architecture Design Documents (RA-006, RA-008, RA-010, RA-011)
+- Approved Architecture Design Documents (RA-006, RA-008, RA-010, RA-011, RA-014)
 - Gemini CLI project instructions (GEMINI.md)
 - Task-based implementation workflow (docs/implementation/tasks/)
 - Completed implementation tasks: RA-003 — Core Foundation, RA-005 — Application Shell & UX Foundation, RA-007 — Observation Domain Foundation, RA-009 — Development Data Preservation and Recovery Implementation, RA-012 — Intermediate Serialization Contract Implementation & Fixture Validation, RA-013 — Public Source Acquisition Adapters
-- Approved Architecture/Research tasks: RA-010 — Reference Data Ingestion Source & Mapping Architecture, RA-011 — Ingestion Schema & Intermediate Serialization Design
+- Approved Architecture/Research tasks: RA-010 — Reference Data Ingestion Source & Mapping Architecture, RA-011 — Ingestion Schema & Intermediate Serialization Design, RA-014 — Source Assertion Normalization & Mapping Architecture
