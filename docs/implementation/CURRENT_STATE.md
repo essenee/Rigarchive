@@ -1,7 +1,8 @@
 RigArchive Project Status Document
-Version: 1.1
-Last Updated: 2026-08-04
+Version: 1.2
+Last Updated: 2026-08-15
 Purpose: Current implementation status and development roadmap
+
 
 1. Project Overview
 RigArchive is a long-term engineering project whose purpose is to build the world's most trusted technical archive of vehicles and their modifications, maintenance, compatibility, measurements, and supporting evidence.
@@ -251,7 +252,24 @@ RA-018 — Canonical Reference Matching & Import Architecture (Approved Architec
 - Plan-First Architecture: Transient in-process `CanonicalImportPlan` handles read-only eligibility and parent resolution prior to transactional execution
 - Controlled 2020 4Runner Assessment: Current NHTSA/EPA evidence lacks normalized trim, planning cleanly into `REQUIRES_HUMAN_REVIEW` (no-write), safely protecting canonical Reference data
 - Zero ORM / Migration Impact: Architecture and design document pass; 0 Django ORM models, 0 migrations, 0 database writes, 0 application code changes
-- Proposed Next Milestone: RA-019 — Canonical Reference Import Planning & Create-Only Execution Implementation
+Milestone 15 — Canonical Reference Import Planning & Create-Only Execution Implementation
+
+Implementation Task:
+RA-019 — Canonical Reference Import Planning & Create-Only Execution Implementation (Completed)
+- Package Location: `reference/ingestion/importing/` (`__init__.py`, `planner.py`, `importer.py`)
+- Promotion Pipeline: Implemented pure Python read-only planning `plan_candidate_import(candidate)` and transactional create-only execution `execute_candidate_import(plan)` promoting `CandidateConfigurationDocument` artifacts into canonical `VehicleDefinition` records
+- Transient Import Types: `ImportEligibilityStatus`, `ImportPlannedAction`, `ImportExecutionOutcome`, `ImportCreateBasis`, `CanonicalImportPlan`, `CanonicalImportResult` re-exported in `reference/ingestion/__init__.py`. `CanonicalImportPlan` remains transient, non-persistent, and in-process
+- Strict Evidence Trust Boundary: Canonical facts are derived strictly from mapped `candidate.normalized_assertions` across 8 required concepts (`make`, `model`, `model_year`, `generic_drive_classification`, `engine_displacement_liters`, `engine_cylinders`, `trim`, `market`). Caller-supplied `CandidateIdentity` context (`manufacturer_name`, `vehicle_model_name`, `trim_name`, `market`) is checked ONLY for contradiction signaling and does NOT supply missing canonical evidence
+- Direct Evidence Consistency: Evaluates mapped values directly as sets (`len(distinct)`). Multiple unequal normalized values for any concept flag `REQUIRES_REVIEW` (`FLAG_REVIEW`). Zero source precedence or winner selection
+- Parent Resolution: Deterministic lookup against active database records (`Manufacturer`, `VehicleModel`, `Generation`). Exactly 1 match resolves; 0 or >1 matches trigger `INELIGIBLE` or `REQUIRES_REVIEW`. Importer NEVER automatically creates parent entities
+- Target Field & Engine Representation: Target dictionary contains ONLY current `VehicleDefinition` fields (`model_year`, `trim_name`, `engine_name`, `drivetrain`, `market`). Engine display string formatted via `_format_engine_name` (e.g. `"4.0L V6"`). Free-text `engine_name` string inequality is NOT used as proof of mechanical distinctness
+- Drivetrain Mechanical Dimension: `drivetrain` (`2WD`, `4WD`, `AWD`) is the ONLY approved structured mechanical dimension establishing `MECHANICAL_DIMENSION` `CREATE` against existing same-trim rows
+- Controlled Production 4Runner Behavior: Default production NHTSA/EPA candidates (lacking mapped `trim` and `market`) plan to `REQUIRES_REVIEW` / `FLAG_REVIEW` performing ZERO database writes
+- Stale-Plan Revalidation: Inside `transaction.atomic()`, `FIRST_REPRESENTATION` plans verify namespace `(generation_id, model_year, market)` remains empty. `MECHANICAL_DIMENSION` plans verify `mechanical_basis_existing_id` record remains unchanged in generation, model_year, market, trim_name, drivetrain, and namespace count. Changed namespaces or modified basis records return `ABORTED_STALE_PLAN`
+- Transaction & IntegrityError Safety: Execution runs inside `transaction.atomic()` with pre-save `full_clean()`. `IntegrityError` caught outside failed atomic block after rollback completes: exact field match yields `NO_OP_EXACT_MATCH`; conflicting fields yield `REJECTED`
+- Create-Only Policy: Zero automatic `VehicleDefinition` updates, zero deletes, zero parent auto-creations
+- Testing & Verification: 26 focused test methods in `reference/tests/test_canonical_import.py` (106 total project tests passing)
+- Zero ORM / Migration Impact: Pure Python import engines; 0 Django ORM schema changes, 0 migrations
 
 7. Architectural Decision Records (ADRs)
 Implemented and Accepted:
@@ -273,9 +291,11 @@ Implemented:
 - Public Source Acquisition Adapter tests (`reference/tests/test_acquisition_adapters.py`)
 - Source Assertion Normalization tests (`reference/tests/test_normalization.py`)
 - Candidate Configuration Construction tests (`reference/tests/test_candidate_construction.py`)
+- Canonical Reference Import tests (`reference/tests/test_canonical_import.py`)
 Current status:
-- All 80 tests passing.
+- All 106 tests passing.
 - Verification command: `.venv/bin/python manage.py test`
+
 
 9. Current Coding Standards
 The four Reference Domain models and the Observation Domain model inherit shared UUID and timestamp infrastructure through `core.models.BaseModel`.
@@ -290,7 +310,7 @@ Project-level presentation views reside in `config/views.py`; domain views belon
 10. Git & Gemini CLI Workflow
 - Instructions defined in GEMINI.md.
 - Task specs stored under docs/implementation/tasks/.
-- Completed tasks: RA-003 — Core Foundation, RA-005 — Application Shell & UX Foundation, RA-007 — Observation Domain Foundation, RA-009 — Development Data Preservation and Recovery Implementation, RA-012 — Intermediate Serialization Contract Implementation & Fixture Validation, RA-013 — Public Source Acquisition Adapters, RA-015 — Source Assertion Normalization Implementation & Fixture Validation, RA-017 — Candidate Configuration Construction & Aggregation Implementation.
+- Completed tasks: RA-003 — Core Foundation, RA-005 — Application Shell & UX Foundation, RA-007 — Observation Domain Foundation, RA-009 — Development Data Preservation and Recovery Implementation, RA-012 — Intermediate Serialization Contract Implementation & Fixture Validation, RA-013 — Public Source Acquisition Adapters, RA-015 — Source Assertion Normalization Implementation & Fixture Validation, RA-017 — Candidate Configuration Construction & Aggregation Implementation, RA-019 — Canonical Reference Import Planning & Create-Only Execution Implementation.
 
 
 11. Current Repository Structure
@@ -326,6 +346,10 @@ RigArchive/
 │   │   ├── candidate/
 │   │   │   ├── __init__.py
 │   │   │   └── builder.py
+│   │   ├── importing/
+│   │   │   ├── __init__.py
+│   │   │   ├── importer.py
+│   │   │   └── planner.py
 │   │   ├── normalization/
 │   │   │   ├── __init__.py
 │   │   │   ├── base.py
@@ -354,11 +378,11 @@ RigArchive/
 │   │   │       └── source_assertion_set_4runner_2020.json
 │   │   ├── test_acquisition_adapters.py
 │   │   ├── test_candidate_construction.py
+│   │   ├── test_canonical_import.py
 │   │   ├── test_ingestion_serialization.py
 │   │   ├── test_models.py
 │   │   ├── test_normalization.py
 │   │   └── test_views.py
-
 │   ├── urls.py
 │   └── views.py
 ├── observation/
@@ -393,14 +417,16 @@ RigArchive/
 │   │   ├── ADR/
 │   │   │   ├── ADR-0001-Entity-Identity-Strategy.md
 │   │   │   ├── ADR-0002-Immutable-Automatic-Slugs.md
-│   │   │   └── ADR-0003-Core-Infrastructure.md
+│   │   │   ├── ADR-0003-Core-Infrastructure.md
+│   │   │   └── ADR-0004-Canonical-Reference-Matching-Import-Promotion-Strategy.md
 │   │   └── designs/
 │   │       ├── RA-006-Observation-Foundation-Architecture.md
 │   │       ├── RA-008-Development-Data-Preservation-Architecture.md
 │   │       ├── RA-010-Reference-Ingestion-Source-Mapping-Architecture.md
 │   │       ├── RA-011-Ingestion-Schema-Intermediate-Serialization-Design.md
 │   │       ├── RA-014-Source-Assertion-Normalization-Mapping-Architecture.md
-│   │       └── RA-016-Candidate-Configuration-Construction-Aggregation-Architecture.md
+│   │       ├── RA-016-Candidate-Configuration-Construction-Aggregation-Architecture.md
+│   │       └── RA-018-Canonical-Reference-Matching-Import-Architecture.md
 │   ├── blueprint/
 │   ├── development/
 │   │   └── DATA_PRESERVATION.md
@@ -416,7 +442,9 @@ RigArchive/
 │           ├── RA-009-development-data-preservation-implementation.md
 │           ├── RA-012-intermediate-serialization-implementation.md
 │           ├── RA-013-public-source-acquisition-implementation.md
-│           └── RA-015-source-assertion-normalization-implementation.md
+│           ├── RA-015-source-assertion-normalization-implementation.md
+│           ├── RA-017-candidate-configuration-construction-aggregation-implementation.md
+│           └── RA-019-canonical-reference-import-planning-create-only-execution-implementation.md
 │
 ├── tests/
 │
@@ -441,30 +469,27 @@ RigArchive/
 - Milestone 10: Source Assertion Normalization & Mapping Architecture (✅ Approved Architecture — RA-014)
 - Milestone 11: Source Assertion Normalization Implementation & Fixture Validation (✅ Complete — RA-015)
 - Milestone 12: Candidate Configuration Construction & Aggregation Architecture (✅ Approved Architecture — RA-016)
+- Milestone 13: Candidate Configuration Construction & Aggregation Implementation (✅ Complete — RA-017)
+- Milestone 14: Canonical Reference Matching & Import Architecture (✅ Approved Architecture — RA-018 / ADR-0004)
+- Milestone 15: Canonical Reference Import Planning & Create-Only Execution Implementation (✅ Complete — RA-019)
 
-Candidate future domains include:
-- Evidence
-- Knowledge
-- Media / Assets
-- Compatibility
-- Maintenance
-- Projects
+Proposed Next Milestone: Source & Normalization Expansion Architecture (establishing evidence-backed trim and market applicability normalization to enable automated canonical promotion).
 
 13. Current Repository Status
 The repository currently contains:
 - Functional Django project
-- Passing test suite (67 tests passing)
+- Passing test suite (106 tests passing)
 - Shared core infrastructure (`core` app with `UUIDModel`, `TimestampedModel`, `BaseModel`)
-- Reference Data Ingestion package (`reference/ingestion/` with contracts, serialization, validation, `acquisition/` adapters, and `normalization/` normalizers)
+- Reference Data Ingestion package (`reference/ingestion/` with contracts, serialization, validation, `acquisition/` adapters, `normalization/` normalizers, `candidate/` builder, and `importing/` importer)
 - Development data preservation tooling (`snapshot_db`, `export_dev_data`, `verify_dev_data`)
 - Accessible application shell and UX foundation (`templates/base.html`, `about.html`, `404.html`, `500.html`)
 - Observation Domain foundation (`observation` app with `Observation` model)
 - Public reference browser
 - Admin interface
 - Stable migration history
-- Populated Architectural Decision Records (ADR-0001, ADR-0002, ADR-0003)
-- Approved Architecture Design Documents (RA-006, RA-008, RA-010, RA-011, RA-014, RA-016)
+- Populated Architectural Decision Records (ADR-0001, ADR-0002, ADR-0003, ADR-0004)
+- Approved Architecture Design Documents (RA-006, RA-008, RA-010, RA-011, RA-014, RA-016, RA-018)
 - Gemini CLI project instructions (GEMINI.md)
 - Task-based implementation workflow (docs/implementation/tasks/)
-- Completed implementation tasks: RA-003 — Core Foundation, RA-005 — Application Shell & UX Foundation, RA-007 — Observation Domain Foundation, RA-009 — Development Data Preservation and Recovery Implementation, RA-012 — Intermediate Serialization Contract Implementation & Fixture Validation, RA-013 — Public Source Acquisition Adapters, RA-015 — Source Assertion Normalization Implementation & Fixture Validation
-- Approved Architecture/Research tasks: RA-010 — Reference Data Ingestion Source & Mapping Architecture, RA-011 — Ingestion Schema & Intermediate Serialization Design, RA-014 — Source Assertion Normalization & Mapping Architecture, RA-016 — Candidate Configuration Construction & Aggregation Architecture
+- Completed implementation tasks: RA-003 — Core Foundation, RA-005 — Application Shell & UX Foundation, RA-007 — Observation Domain Foundation, RA-009 — Development Data Preservation and Recovery Implementation, RA-012 — Intermediate Serialization Contract Implementation & Fixture Validation, RA-013 — Public Source Acquisition Adapters, RA-015 — Source Assertion Normalization Implementation & Fixture Validation, RA-017 — Candidate Configuration Construction & Aggregation Implementation, RA-019 — Canonical Reference Import Planning & Create-Only Execution Implementation
+- Approved Architecture/Research tasks: RA-010 — Reference Data Ingestion Source & Mapping Architecture, RA-011 — Ingestion Schema & Intermediate Serialization Design, RA-014 — Source Assertion Normalization & Mapping Architecture, RA-016 — Candidate Configuration Construction & Aggregation Architecture, RA-018 — Canonical Reference Matching & Import Architecture
