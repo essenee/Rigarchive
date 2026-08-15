@@ -121,6 +121,9 @@ class AcquisitionAdaptersTestCase(TestCase):
         self.assertEqual(assertion_map["engine_cylinders"], "6")
         self.assertEqual(assertion_map["transmission_descriptor"], "Automatic 5-spd")
         self.assertEqual(assertion_map["vehicle_class"], "Small Sport Utility Vehicle 4WD")
+        self.assertEqual(assertion_map["city_mpg_epa_rating"], "16")
+        self.assertEqual(assertion_map["highway_mpg_epa_rating"], "19")
+
 
     def test_epa_transport_error_handling(self):
         mock_transport = self._create_error_transport(404, b"Not Found")
