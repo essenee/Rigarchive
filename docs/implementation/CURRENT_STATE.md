@@ -477,34 +477,40 @@ RigArchive/
 │   │       ├── acquire_manufacturer_specs.py
 │   │       └── execute_canonical_import.py
 │   ├── migrations/
-│   │   ├── 0001_initial.py
-│   │   └── 0002_importexecutionreceipt.py
-│   ├── models.py
-│   ├── tests/
-│   │   ├── __init__.py
-│   │   ├── fixtures/
-│   │   │   ├── acquisition/
-│   │   │   │   ├── epa/
-│   │   │   │   │   └── vehicle_42101.json
-│   │   │   │   ├── nhtsa/
-│   │   │   │   │   └── get_models_toyota_2020.json
-│   │   │   │   └── toyota/
-│   │   │   │       └── 2020_4runner_specs.json
-│   │   │   └── ingestion/
-│   │   │       ├── candidate_configuration_4runner_2010_i4_2wd.json
-│   │   │       ├── candidate_configuration_4runner_2020_trd_offroad.json
-│   │   │       ├── candidate_configuration_4runner_2020_trim_conflict.json
-│   │   │       └── source_assertion_set_4runner_2020.json
-│   │   ├── test_acquisition_adapters.py
-│   │   ├── test_candidate_construction.py
-│   │   ├── test_canonical_import.py
-│   │   ├── test_canonical_import_execution.py
-│   │   ├── test_ingestion_serialization.py
-│   │   ├── test_manufacturer_ingestion.py
-│   │   ├── test_models.py
-│   │   ├── test_normalization.py
-│   │   ├── test_production_manufacturer_acquisition.py
-│   │   └── test_views.py
+│   │   ├── migrations/
+│   │   │   ├── 0001_initial.py
+│   │   │   ├── 0002_importexecutionreceipt.py
+│   │   │   └── 0003_importexecutionreceipt_adjudication_hash.py
+│   │   ├── models.py
+│   │   ├── tests/
+│   │   │   ├── __init__.py
+│   │   │   ├── fixtures/
+│   │   │   │   ├── acquisition/
+│   │   │   │   │   ├── epa/
+│   │   │   │   │   │   └── vehicle_42101.json
+│   │   │   │   │   ├── nhtsa/
+│   │   │   │   │   │   └── get_models_toyota_2020.json
+│   │   │   │   │   └── toyota/
+│   │   │   │   │       ├── 2020_4runner_pricing.pdf
+│   │   │   │   │       ├── 2020_4runner_specs.pdf
+│   │   │   │   │       └── 2020_4runner_specs.json
+│   │   │   │   └── ingestion/
+│   │   │   │       ├── candidate_configuration_4runner_2010_i4_2wd.json
+│   │   │   │       ├── candidate_configuration_4runner_2020_trd_offroad.json
+│   │   │   │       ├── candidate_configuration_4runner_2020_trim_conflict.json
+│   │   │   │       └── source_assertion_set_4runner_2020.json
+│   │   │   ├── test_acquisition_adapters.py
+│   │   │   ├── test_adjudication_workflow.py
+│   │   │   ├── test_candidate_construction.py
+│   │   │   ├── test_canonical_import.py
+│   │   │   ├── test_canonical_import_execution.py
+│   │   │   ├── test_ingestion_serialization.py
+│   │   │   ├── test_manufacturer_ingestion.py
+│   │   │   ├── test_models.py
+│   │   │   ├── test_normalization.py
+│   │   │   ├── test_production_manufacturer_acquisition.py
+│   │   │   ├── test_toyota_extractor.py
+│   │   │   └── test_views.py
 │   ├── urls.py
 │   └── views.py
 ├── observation/
@@ -546,7 +552,8 @@ RigArchive/
 │           ├── RA-019-canonical-reference-import-planning-create-only-execution-implementation.md
 │           ├── RA-021-manufacturer-specification-evidence-acquisition-normalization-implementation.md
 │           ├── RA-023-production-manufacturer-artifact-acquisition-dry-run-orchestration-implementation.md
-│           └── RA-024-canonical-reference-import-execution-execution-provenance-workflow-implementation.md
+│           ├── RA-024-canonical-reference-import-execution-execution-provenance-workflow-implementation.md
+│           └── RA-026-deterministic-toyota-extraction-review-adjudication-implementation.md
 │
 ├── tests/
 │
@@ -580,25 +587,26 @@ RigArchive/
 - Milestone 19: Production Manufacturer Artifact Acquisition & Dry-Run Orchestration Implementation (✅ Complete — RA-023)
 - Milestone 20: Canonical Reference Import Execution & Execution Provenance Workflow Architecture & Implementation (✅ Complete — RA-024 / ADR-0007)
 - Milestone 21: Production Manufacturer Extraction & Review-Adjudication Architecture (✅ Approved Architecture — RA-025 / ADR-0008)
+- Milestone 22: Deterministic Toyota Extraction & Review-Adjudication Implementation (✅ Complete — RA-026 / ADR-0008)
 
-The next planned milestone is RA-026 — Deterministic Toyota Extraction & Review-Adjudication Implementation.
+The next proposed operational follow-up is Controlled Toyota 4Runner Canonical Population.
 
 
 13. Current Repository Status
 The repository currently contains:
 - Functional Django project
-- Passing test suite (164 tests passing)
+- Passing test suite (185 tests passing)
 - Shared core infrastructure (`core` app with `UUIDModel`, `TimestampedModel`, `BaseModel`)
-- Reference Data Ingestion package (`reference/ingestion/` with contracts, serialization, validation, `acquisition/` adapters, `normalization/` normalizers, `candidate/` builder, `importing/` importer, `manifest/` review manifest, and `orchestration/` orchestrator)
+- Reference Data Ingestion package (`reference/ingestion/` with contracts, serialization, validation, `acquisition/` adapters & PDF strategies, `normalization/` normalizers, `candidate/` builder, `importing/` importer & planner, `manifest/` review manifest, and `orchestration/` orchestrator)
 - Development data preservation tooling (`snapshot_db`, `export_dev_data`, `verify_dev_data`)
 - Accessible application shell and UX foundation (`templates/base.html`, `about.html`, `404.html`, `500.html`)
 - Observation Domain foundation (`observation` app with `Observation` model)
 - Public reference browser
 - Admin interface with read-only audit log viewer (`ImportExecutionReceiptAdmin`)
-- Stable migration history (0001_initial, 0002_importexecutionreceipt)
-- Populated Architectural Decision Records (ADR-0001, ADR-0002, ADR-0003, ADR-0004, ADR-0005, ADR-0006, ADR-0007, ADR-0008)
+- Stable migration history (0001_initial, 0002_importexecutionreceipt, 0003_importexecutionreceipt_adjudication_hash)
+- Populated Architectural Decision Records (ADR-0001 through ADR-0008)
 - Approved Architecture Design Documents (RA-006, RA-008, RA-010, RA-011, RA-014, RA-016, RA-018, RA-020, RA-022, RA-024, RA-025)
 - Gemini CLI project instructions (GEMINI.md)
 - Task-based implementation workflow (docs/implementation/tasks/)
-- Completed implementation tasks: RA-003 — Core Foundation, RA-005 — Application Shell & UX Foundation, RA-007 — Observation Domain Foundation, RA-009 — Development Data Preservation and Recovery Implementation, RA-012 — Intermediate Serialization Contract Implementation & Fixture Validation, RA-013 — Public Source Acquisition Adapters, RA-015 — Source Assertion Normalization Implementation & Fixture Validation, RA-017 — Candidate Configuration Construction & Aggregation Implementation, RA-019 — Canonical Reference Import Planning & Create-Only Execution Implementation, RA-021 — Manufacturer Specification Evidence Acquisition & Normalization Implementation, RA-023 — Production Manufacturer Artifact Acquisition & Dry-Run Orchestration Implementation, RA-024 — Canonical Reference Import Execution & Execution Provenance Workflow Implementation
-- Approved Architecture/Research tasks: RA-010 — Reference Data Ingestion Source & Mapping Architecture, RA-011 — Ingestion Schema & Intermediate Serialization Design, RA-014 — Source Assertion Normalization & Mapping Architecture, RA-016 — Candidate Configuration Construction & Aggregation Architecture, RA-018 — Canonical Reference Matching & Import Architecture, RA-020 — Trim/Grade & Market Applicability Source and Normalization Architecture, RA-022 — Production Manufacturer Evidence Acquisition & Orchestration Architecture, RA-024 — Canonical Reference Import Execution & Execution Provenance Workflow Architecture, RA-025 — Production Manufacturer Extraction & Review-Adjudication Architecture
+- Completed implementation tasks: RA-003, RA-005, RA-007, RA-009, RA-012, RA-013, RA-015, RA-017, RA-019, RA-021, RA-023, RA-024, RA-026 — Deterministic Toyota Extraction & Review-Adjudication Implementation
+- Approved Architecture/Research tasks: RA-010, RA-011, RA-014, RA-016, RA-018, RA-020, RA-022, RA-024, RA-025

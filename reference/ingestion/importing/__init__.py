@@ -38,6 +38,18 @@ class ImportExecutionOutcome(str, Enum):
 class ImportCreateBasis(str, Enum):
     FIRST_REPRESENTATION = "first_representation"
     MECHANICAL_DIMENSION = "mechanical_dimension"
+    ADJUDICATED_DISTINCT_GRADE = "adjudicated_distinct_grade"
+
+
+class ImportReviewCategory(str, Enum):
+    DISTINCT_FACTORY_GRADE = "distinct_factory_grade"
+    SPECIAL_EDITION_GRADE = "special_edition_grade"
+    CONTEXT_CONTRADICTION = "context_contradiction"
+    EVIDENCE_CONFLICT = "evidence_conflict"
+    MISSING_EVIDENCE = "missing_evidence"
+    MULTIPLE_OVERLAPPING_GENERATIONS = "multiple_overlapping_generations"
+    SLUG_CONFLICT = "slug_conflict"
+    UNFORMATTED_ENGINE_LABEL = "unformatted_engine_label"
 
 
 # --- Dataclasses ---
@@ -48,6 +60,7 @@ class CanonicalImportPlan:
     eligibility_status: ImportEligibilityStatus
     planned_action: ImportPlannedAction
     create_basis: Optional[ImportCreateBasis] = None
+    review_category: Optional[ImportReviewCategory] = None
     namespace_snapshot_count: Optional[int] = None
     mechanical_basis_existing_id: Optional[int] = None
     resolved_manufacturer_id: Optional[int] = None
@@ -58,6 +71,9 @@ class CanonicalImportPlan:
     target_slug: Optional[str] = None
     existing_vehicle_definition_id: Optional[int] = None
     reasons: List[str] = field(default_factory=list)
+    adjudication_reference: Optional[str] = None
+    adjudication_hash: Optional[str] = None
+
 
 
 @dataclass

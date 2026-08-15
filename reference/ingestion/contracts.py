@@ -267,5 +267,24 @@ class CandidateConfigurationDocument:
     factory_technical_features: List[FactoryTechnicalFeature] = field(default_factory=list)
     packages_and_options: List[PackageOrOption] = field(default_factory=list)
     attribute_provenance: Dict[str, List[str]] = field(default_factory=dict)
+    evidence_raw_hashes: List[str] = field(default_factory=list)
     reconciliation_and_review: Optional[ReconciliationAndReview] = None
+    unknown_fields: Dict[str, Any] = field(default_factory=dict)
+
+
+@dataclass
+class CanonicalImportAdjudication:
+    adjudication_version: str = "1.0"
+    created_at: str = ""
+    operator_label: str = ""
+    original_manifest_hash: str = ""
+    candidate_reference: str = ""
+    source_identity: Dict[str, Any] = field(default_factory=dict)
+    original_review_category: str = ""
+    adjudication_category: str = ""  # "distinct_factory_grade" or "special_edition_grade"
+    adjudication_decision: str = ""  # "approved_distinct_trim"
+    adjudicated_trim_name: str = ""
+    adjudication_notes: str = ""
+    evidence_anchors: Optional[Dict[str, Any]] = None
+    adjudication_hash: Optional[str] = None
     unknown_fields: Dict[str, Any] = field(default_factory=dict)

@@ -433,6 +433,13 @@ def construct_candidate_configuration(
     cand_ref = candidate_reference or f"cand_ref_{uuid.uuid4().hex[:12]}"
     env_created_at = created_at or datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
+    # Collect unique material raw artifact hashes across source_assertion_sets
+    raw_hashes_set: Set[str] = set()
+    for sas in source_assertion_sets:
+        if sas.provenance and sas.provenance.extraction_provenance and sas.provenance.extraction_provenance.raw_artifact_hash:
+            raw_hashes_set.add(sas.provenance.extraction_provenance.raw_artifact_hash)
+    evidence_raw_hashes = sorted(raw_hashes_set)
+
     doc = CandidateConfigurationDocument(
         envelope=Envelope(
             artifact_type=ArtifactType.CANDIDATE_CONFIGURATION.value,
@@ -449,6 +456,7 @@ def construct_candidate_configuration(
         factory_technical_features=sorted_features,
         packages_and_options=[],
         attribute_provenance=sorted_attr_provenance,
+        evidence_raw_hashes=evidence_raw_hashes,
         reconciliation_and_review=rec_and_review,
     )
 

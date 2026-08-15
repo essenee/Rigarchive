@@ -92,13 +92,11 @@ class ProductionManufacturerOrchestrator:
         acq_status, snapshot_meta = self.snapshot_manager.store_snapshot(acq_result)
 
         # 3. Extract Tier 1 SourceAssertionSets (bound to raw snapshot hash)
-        if transcription_data is None:
-            raise ValueError("Transcription data must be supplied for Toyota pressroom extraction.")
-
         assertion_sets = self.profile.extract(
             snapshot_meta=snapshot_meta,
             transcription_data=transcription_data,
             override_expected_hash=override_expected_hash,
+            raw_bytes=acq_result.raw_bytes,
         )
 
         candidate_results: List[CandidateDryRunResult] = []

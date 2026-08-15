@@ -392,6 +392,13 @@ class ImportExecutionReceipt(BaseModel):
     candidate_reference = models.CharField(max_length=150)
     planned_action = models.CharField(max_length=30)
     create_basis = models.CharField(max_length=30, blank=True)
+    adjudication_hash = models.CharField(
+        max_length=71,
+        blank=True,
+        default="",
+        help_text="SHA-256 digest of verified human adjudication artifact.",
+    )
+
 
     # Primary Evidence Anchors
     source_id = models.CharField(max_length=100)

@@ -13,6 +13,7 @@ from reference.ingestion.contracts import (
     AttributeReconciliationState,
     CandidateConfigurationDocument,
     CandidateIdentity,
+    CanonicalImportAdjudication,
     DrivetrainComponent,
     DrivetrainDetails,
     DrivetrainMode,
@@ -777,3 +778,80 @@ def deserialize_artifact(json_input: Union[str, Dict[str, Any]]) -> Union[Source
         return candidate_config_doc_from_dict(data)
     else:
         raise ValueError(f"Unknown or missing artifact_type in envelope: {artifact_type}")
+
+
+# --- Adjudication Serialization & Deterministic Hashing (RA-025 / RA-026) ---
+
+def compute_adjudication_hash(adjudication_dict: Dict[str, Any]) -> str:
+    """
+    Compute full SHA-256 digest over canonical UTF-8 JSON representation of an adjudication payload,
+    excluding any existing adjudication_hash field.
+    Returns digest in 'sha256:<64_hex>' format.
+    """
+    import hashlib
+
+    clean_dict = {k: v for k, v in adjudication_dict.items() if k != "adjudication_hash"}
+    sorted_dict = _sort_dict_keys(clean_dict)
+    compact_json = json.dumps(sorted_dict, separators=(",", ":"), ensure_ascii=False)
+    digest = hashlib.sha256(compact_json.encode("utf-8")).hexdigest()
+    return f"sha256:{digest}"
+
+
+def adjudication_to_dict(adj: CanonicalImportAdjudication) -> Dict[str, Any]:
+    res: Dict[str, Any] = {
+        "adjudication_version": adj.adjudication_version,
+        "created_at": adj.created_at,
+        "operator_label": adj.operator_label,
+        "original_manifest_hash": adj.original_manifest_hash,
+        "candidate_reference": adj.candidate_reference,
+        "source_identity": adj.source_identity,
+        "original_review_category": adj.original_review_category,
+        "adjudication_category": adj.adjudication_category,
+        "adjudication_decision": adj.adjudication_decision,
+        "adjudicated_trim_name": adj.adjudicated_trim_name,
+        "adjudication_notes": adj.adjudication_notes,
+    }
+    if adj.evidence_anchors is not None:
+        res["evidence_anchors"] = adj.evidence_anchors
+    if adj.adjudication_hash is not None:
+        res["adjudication_hash"] = adj.adjudication_hash
+
+    if adj.unknown_fields:
+        res.update(adj.unknown_fields)
+    return res
+
+
+def adjudication_from_dict(d: Dict[str, Any]) -> CanonicalImportAdjudication:
+    known = {
+        "adjudication_version",
+        "created_at",
+        "operator_label",
+        "original_manifest_hash",
+        "candidate_reference",
+        "source_identity",
+        "original_review_category",
+        "adjudication_category",
+        "adjudication_decision",
+        "adjudicated_trim_name",
+        "adjudication_notes",
+        "evidence_anchors",
+        "adjudication_hash",
+    }
+    unknown = {k: v for k, v in d.items() if k not in known}
+
+    return CanonicalImportAdjudication(
+        adjudication_version=d.get("adjudication_version", "1.0"),
+        created_at=d.get("created_at", ""),
+        operator_label=d.get("operator_label", ""),
+        original_manifest_hash=d.get("original_manifest_hash", ""),
+        candidate_reference=d.get("candidate_reference", ""),
+        source_identity=d.get("source_identity", {}),
+        original_review_category=d.get("original_review_category", ""),
+        adjudication_category=d.get("adjudication_category", ""),
+        adjudication_decision=d.get("adjudication_decision", ""),
+        adjudicated_trim_name=d.get("adjudicated_trim_name", ""),
+        adjudication_notes=d.get("adjudication_notes", ""),
+        evidence_anchors=d.get("evidence_anchors"),
+        adjudication_hash=d.get("adjudication_hash"),
+        unknown_fields=unknown,
+    )
