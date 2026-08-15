@@ -6,7 +6,9 @@ All notable changes to RigArchive will be documented in this file.
 
 ### Added
 
+- Architecture Design Document `RA-011-Ingestion-Schema-Intermediate-Serialization-Design.md` defining versioned JSON logical contracts (`SourceAssertionSet` and `CandidateConfigurationDocument`), explicit normalized interpretation layers, envelope metadata standards (`artifact_type`, `schema_version`), candidate configuration contexts, high-fidelity 7-dimension drivetrain contracts, preserved unclassified technical features (`factory_technical_features`), and separated reconciliation and review workflow states.
 - Architecture Design Document `RA-010-Reference-Ingestion-Source-Mapping-Architecture.md` defining Reference data ingestion source assessment (NHTSA, EPA, Toyota USA, J.D. Power), non-lossy 7-dimension drivetrain normalization, manufacturer-taxonomy trim mapping rules, candidate configuration representations, and attribute-level reconciliation precedence.
+
 - Development Data Preservation & Recovery tooling (`snapshot_db`, `export_dev_data`, `verify_dev_data`) in `core/management/commands/`.
 
 - Isolated test database support (`RIGARCHIVE_TEST_DB_PATH`) in `config/settings.py` for safe temporary verification.

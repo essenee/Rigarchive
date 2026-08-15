@@ -141,7 +141,22 @@ RA-010 — Reference Data Ingestion Source & Mapping Architecture (Approved Arch
 - Source Authority & Reconciliation: Attribute-specific source precedence hypotheses (Manufacturer, EPA, NHTSA, J.D. Power) with categorical reconciliation status states (`corroborated`, `single_source`, `conflicting`, `ambiguous`, `incomplete`, `requires_review`)
 - Idempotency & Protection: Future canonical import must be deterministic, duplicate-safe, and idempotent without creating duplicate records or overwriting manually validated Reference data (exact matching key/mechanism unresolved)
 - Code / Schema Status: Architecture and research only. No Django models, migrations, acquisition tools, scrapers, DB records, or ingestion artifacts created
-- Next Proposed Milestone: RA-011 — Ingestion Schema & Intermediate Serialization Design
+
+Milestone 7 — Ingestion Schema & Intermediate Serialization Design
+
+Architecture/Research Task:
+RA-011 — Ingestion Schema & Intermediate Serialization Design (Approved Architecture)
+- Design document: `docs/architecture/designs/RA-011-Ingestion-Schema-Intermediate-Serialization-Design.md`
+- Serialization Format & Versioning: JSON logical contracts with mandatory self-describing envelope (`artifact_type`, `schema_version` SemVer) supporting controlled schema evolution
+- Two-Tier Serialization Architecture: Tier 1 `SourceAssertionSet` (<ingestion-runtime-root>/<source-artifacts>/) and Tier 2 `CandidateConfigurationDocument` (<ingestion-runtime-root>/<candidate-artifacts>/)
+- Embedded Interpretation Layer: Traceable transformation from raw source assertion → normalized interpretation → candidate attribute
+- Decoupled Candidate Context: Real-world vehicle context (`candidate_identity`) and source-specific configuration IDs preserved without mirroring database columns or fixing a canonical import matching key
+- High-Fidelity Technical Representation: 7-dimension drivetrain contract, standard units + raw source strings, and preserved `factory_technical_features` (A-TRAC, CRAWL Control, KDSS, X-REAS) carrying both source presentation and unresolved classification status
+- Separated Reconciliation & Review: Primary attribute evidence states (`corroborated`, `single_source`, `conflicting`, `ambiguous`, `incomplete`) logically separated from workflow review dispositions (`not_required`, `pending_review`, `resolved`, `rejected_excluded`)
+- Deterministic Conventions: Alphabetical key sorting, ISO-8601 UTC timestamps, 2-space indentation, UTF-8 encoding for diffability
+- Code / Schema Status: Architecture and research only. No Django models, migrations, serializers, acquisition tools, scrapers, DB records, or ingestion artifacts created
+- Next Proposed Milestone: RA-012 — Intermediate Serialization Contract Implementation & Fixture Validation
+
 
 
 
@@ -234,7 +249,8 @@ RigArchive/
 │   │   └── designs/
 │   │       ├── RA-006-Observation-Foundation-Architecture.md
 │   │       ├── RA-008-Development-Data-Preservation-Architecture.md
-│   │       └── RA-010-Reference-Ingestion-Source-Mapping-Architecture.md
+│   │       ├── RA-010-Reference-Ingestion-Source-Mapping-Architecture.md
+│   │       └── RA-011-Ingestion-Schema-Intermediate-Serialization-Design.md
 │   ├── blueprint/
 │   ├── development/
 │   │   └── DATA_PRESERVATION.md
@@ -266,6 +282,7 @@ RigArchive/
 - Milestone 4: Observation Domain Foundation (✅ Complete — RA-007)
 - Milestone 5: Development Data Preservation & Recovery (✅ Complete — RA-009)
 - Milestone 6: Reference Data Ingestion Source & Mapping Architecture (✅ Approved Architecture — RA-010)
+- Milestone 7: Ingestion Schema & Intermediate Serialization Design (✅ Approved Architecture — RA-011)
 
 Candidate future domains include:
 - Evidence
@@ -287,8 +304,8 @@ The repository currently contains:
 - Admin interface
 - Stable migration history
 - Populated Architectural Decision Records (ADR-0001, ADR-0002, ADR-0003)
-- Approved Architecture Design Documents (RA-006, RA-008, RA-010)
+- Approved Architecture Design Documents (RA-006, RA-008, RA-010, RA-011)
 - Gemini CLI project instructions (GEMINI.md)
 - Task-based implementation workflow (docs/implementation/tasks/)
 - Completed implementation tasks: RA-003 — Core Foundation, RA-005 — Application Shell & UX Foundation, RA-007 — Observation Domain Foundation, RA-009 — Development Data Preservation and Recovery Implementation
-- Approved Architecture/Research tasks: RA-010 — Reference Data Ingestion Source & Mapping Architecture
+- Approved Architecture/Research tasks: RA-010 — Reference Data Ingestion Source & Mapping Architecture, RA-011 — Ingestion Schema & Intermediate Serialization Design
