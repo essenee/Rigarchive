@@ -27,6 +27,20 @@ from reference.ingestion.importing import (
     execute_candidate_import,
     plan_candidate_import,
 )
+from reference.ingestion.importing.workflow import (
+    CanonicalExecutionWorkflowError,
+    execute_canonical_import_workflow,
+)
+from reference.ingestion.manifest import (
+    CanonicalImportReviewManifest,
+    CanonicalImportReviewPlan,
+    ManifestValidationError,
+    build_review_manifest,
+    dict_to_manifest,
+    manifest_to_dict,
+    reconstruct_plan_from_manifest,
+)
+
 
 from reference.ingestion.contracts import (
     ArtifactType,
@@ -139,4 +153,14 @@ __all__ = [
     "CanonicalImportResult",
     "plan_candidate_import",
     "execute_candidate_import",
+    "execute_canonical_import_workflow",
+    "CanonicalExecutionWorkflowError",
+    # Review Manifest Contract
+    "CanonicalImportReviewPlan",
+    "CanonicalImportReviewManifest",
+    "ManifestValidationError",
+    "build_review_manifest",
+    "dict_to_manifest",
+    "manifest_to_dict",
+    "reconstruct_plan_from_manifest",
 ]

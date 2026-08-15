@@ -373,3 +373,74 @@ class VehicleDefinition(BaseModel):
                 "vehicle_definition_slug": self.slug,
             },
         )
+
+
+class ImportExecutionReceipt(BaseModel):
+    """
+    Durable execution audit record detailing an authorized canonical promotion attempt.
+
+    Captures reviewed plan provenance, evidence anchors, target configuration snapshot,
+    actual domain execution outcome, and canonical result identity snapshots.
+    """
+
+    executed_at = models.DateTimeField(auto_now_add=True)
+    execution_channel = models.CharField(max_length=50, default="cli")
+    operator_label = models.CharField(max_length=150)
+
+    # Reviewed Plan & Manifest Provenance
+    manifest_hash = models.CharField(max_length=71)
+    candidate_reference = models.CharField(max_length=150)
+    planned_action = models.CharField(max_length=30)
+    create_basis = models.CharField(max_length=30, blank=True)
+
+    # Primary Evidence Anchors
+    source_id = models.CharField(max_length=100)
+    raw_artifact_hash = models.CharField(max_length=71)
+    raw_artifact_reference = models.CharField(max_length=255)
+    source_identity_type = models.CharField(max_length=50, default="record_id")
+    native_identifier = models.CharField(max_length=100)
+
+    # Target Configuration Snapshot
+    resolved_generation_id = models.IntegerField(null=True, blank=True)
+    target_slug = models.CharField(max_length=180)
+    target_model_year = models.PositiveSmallIntegerField(null=True, blank=True)
+    target_trim_name = models.CharField(max_length=100, blank=True)
+    target_engine_name = models.CharField(max_length=100, blank=True)
+    target_drivetrain = models.CharField(max_length=3, blank=True)
+    target_market = models.CharField(max_length=2, blank=True)
+    target_fields_json = models.JSONField(default=dict)
+
+    # Actual Domain Execution Outcome
+    execution_outcome = models.CharField(max_length=30)
+    messages_json = models.JSONField(default=list)
+
+    # Canonical Result Identity (ForeignKeys + Immutable Snapshots)
+    created_vehicle_definition = models.ForeignKey(
+        VehicleDefinition,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name="creation_receipts",
+    )
+    existing_vehicle_definition = models.ForeignKey(
+        VehicleDefinition,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name="matched_receipts",
+    )
+    created_vehicle_definition_pk_snapshot = models.IntegerField(null=True, blank=True)
+    created_vehicle_definition_uuid_snapshot = models.CharField(max_length=36, blank=True)
+    created_vehicle_definition_slug_snapshot = models.CharField(max_length=180, blank=True)
+    existing_vehicle_definition_pk_snapshot = models.IntegerField(null=True, blank=True)
+    existing_vehicle_definition_uuid_snapshot = models.CharField(max_length=36, blank=True)
+    existing_vehicle_definition_slug_snapshot = models.CharField(max_length=180, blank=True)
+
+    class Meta:
+        ordering = ("-executed_at",)
+
+    def __str__(self) -> str:
+        return (
+            f"ImportExecutionReceipt {self.uuid} ({self.execution_outcome} - "
+            f"{self.target_slug})"
+        )
