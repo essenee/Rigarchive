@@ -307,6 +307,21 @@ RA-021 — Manufacturer Specification Evidence Acquisition & Normalization Imple
 - Test Baseline: 16 focused tests in `reference/tests/test_manufacturer_ingestion.py` (122 total project tests passing)
 - Zero ORM / Migration Impact: Pure Python ingestion adapters and normalizers; 0 Django ORM schema changes, 0 migrations, 0 database writes
 
+Milestone 18 — Production Manufacturer Evidence Acquisition & Orchestration Architecture
+
+Architecture Task:
+RA-022 — Production Manufacturer Evidence Acquisition & Orchestration Architecture (Approved Architecture)
+- Design Document Location: `docs/architecture/designs/RA-022-Production-Manufacturer-Evidence-Acquisition-Orchestration-Architecture.md`
+- Architectural Decision Record: `docs/architecture/ADR/ADR-0006-Immutable-Raw-Acquisition-Snapshots-Layered-Manufacturer-Profiles.md`
+- Empirical Cross-Manufacturer Validation: RA-022A research study validated profile layering across Toyota USA, Ford Motor Company, Jeep/Stellantis, and Mercedes-Benz USA, confirming that publication structures and taxonomy vocabulary vary across and within manufacturer ecosystems
+- Layered Profile Architecture: Separates `ManufacturerProfile` (taxonomy mappings, package classification, identity semantics) from `PublicationSourceProfile` (locators, fetch options, snapshot capture, extractors). Rejects monolithic per-manufacturer adapters
+- Immutable Raw Source Snapshots: Requires all production acquisition operations to retain acquired raw source payloads (HTML, JSON, PDF, CSV, XLS) immutably in raw source artifact storage (`storage/raw_source_artifacts/`) before extraction occurs. Changed locators/content generate new snapshots
+- Full SHA-256 Content Hashing & Revisions: Uses full 64-character SHA-256 hex digest for durable content hashing and revision tracking. Shortened hashes are display-only
+- Source-Native & Structural Row Identity: Explicit codes (Toyota `8666`, Ford `E5B`, Jeep `JLJL74`) populate `SourceConfigurationIdentity` (`identity_type = "model_code"`). Uncoded sources (Mercedes-Benz `media.mbusa.com`) use source-local structural row identity (`identity_type = "structural_row"`). Rejects synthetic attribute-derived `composite_row` identity
+- Explicit Multi-Document Linking: Cross-document configuration joins require explicit, evidence-backed manufacturer cross-reference keys. Joining unlinked documents via matching string names is strictly prohibited
+- Plan-First Production Orchestration Boundary: Production acquisition orchestration stops automatically at `plan_candidate_import()`, producing an in-memory `CanonicalImportPlan` dry-run report. Zero automatic database writes (`execute_candidate_import`) are performed
+- Initial Operating Mode: Operator-invoked CLI execution. Schedulers, crawlers, and dynamic headless browsers are excluded from initial scope
+- Proposed Next Milestone: RA-023 — Production Manufacturer Artifact Acquisition & Dry-Run Orchestration Implementation
 
 7. Architectural Decision Records (ADRs)
 Implemented and Accepted:
@@ -315,6 +330,8 @@ Implemented and Accepted:
 - ADR-0003: Core Infrastructure Application (Shared abstract base models in `core`, domain isolation)
 - ADR-0004: Canonical Reference Matching & Import Promotion Strategy (Candidate-to-canonical tiers, Evidence Trust Boundary, Create-Only initial policy)
 - ADR-0005: Manufacturer Grade Taxonomy and Market Applicability Normalization Strategy (Factory grade taxonomy, Source-Independence Test, commercial sales market, Cartesian prohibition)
+- ADR-0006: Immutable Raw Acquisition Snapshots and Layered Manufacturer Profile Architecture (Immutable raw snapshots, full SHA-256 hashing, layered profiles, structural-row identity, explicit-key multi-document linking, plan-first dry-run orchestration)
+
 
 
 
@@ -491,8 +508,10 @@ RigArchive/
 - Milestone 15: Canonical Reference Import Planning & Create-Only Execution Implementation (✅ Complete — RA-019)
 - Milestone 16: Trim/Grade & Market Applicability Source & Normalization Architecture (✅ Approved Architecture — RA-020 / ADR-0005)
 - Milestone 17: Manufacturer Specification Evidence Acquisition & Normalization Implementation (✅ Complete — RA-021)
+- Milestone 18: Production Manufacturer Evidence Acquisition & Orchestration Architecture (✅ Approved Architecture — RA-022 / RA-022A / ADR-0006)
 
-Proposed Next Milestone: Production Acquisition & Orchestration Pipeline (ingesting external manufacturer specification datasets at scale with persistent artifact storage and scheduling).
+Proposed Next Milestone: RA-023 — Production Manufacturer Artifact Acquisition & Dry-Run Orchestration Implementation (implementing operator-invoked raw artifact capture, SHA-256 snapshot retention, deterministic extraction, normalization, candidate building, and dry-run import plan reporting).
+
 
 13. Current Repository Status
 The repository currently contains:
@@ -506,9 +525,9 @@ The repository currently contains:
 - Public reference browser
 - Admin interface
 - Stable migration history
-- Populated Architectural Decision Records (ADR-0001, ADR-0002, ADR-0003, ADR-0004, ADR-0005)
-- Approved Architecture Design Documents (RA-006, RA-008, RA-010, RA-011, RA-014, RA-016, RA-018, RA-020)
+- Populated Architectural Decision Records (ADR-0001, ADR-0002, ADR-0003, ADR-0004, ADR-0005, ADR-0006)
+- Approved Architecture Design Documents (RA-006, RA-008, RA-010, RA-011, RA-014, RA-016, RA-018, RA-020, RA-022)
 - Gemini CLI project instructions (GEMINI.md)
 - Task-based implementation workflow (docs/implementation/tasks/)
 - Completed implementation tasks: RA-003 — Core Foundation, RA-005 — Application Shell & UX Foundation, RA-007 — Observation Domain Foundation, RA-009 — Development Data Preservation and Recovery Implementation, RA-012 — Intermediate Serialization Contract Implementation & Fixture Validation, RA-013 — Public Source Acquisition Adapters, RA-015 — Source Assertion Normalization Implementation & Fixture Validation, RA-017 — Candidate Configuration Construction & Aggregation Implementation, RA-019 — Canonical Reference Import Planning & Create-Only Execution Implementation, RA-021 — Manufacturer Specification Evidence Acquisition & Normalization Implementation
-- Approved Architecture/Research tasks: RA-010 — Reference Data Ingestion Source & Mapping Architecture, RA-011 — Ingestion Schema & Intermediate Serialization Design, RA-014 — Source Assertion Normalization & Mapping Architecture, RA-016 — Candidate Configuration Construction & Aggregation Architecture, RA-018 — Canonical Reference Matching & Import Architecture, RA-020 — Trim/Grade & Market Applicability Source and Normalization Architecture
+- Approved Architecture/Research tasks: RA-010 — Reference Data Ingestion Source & Mapping Architecture, RA-011 — Ingestion Schema & Intermediate Serialization Design, RA-014 — Source Assertion Normalization & Mapping Architecture, RA-016 — Candidate Configuration Construction & Aggregation Architecture, RA-018 — Canonical Reference Matching & Import Architecture, RA-020 — Trim/Grade & Market Applicability Source and Normalization Architecture, RA-022 — Production Manufacturer Evidence Acquisition & Orchestration Architecture
