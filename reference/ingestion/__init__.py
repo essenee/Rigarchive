@@ -8,6 +8,7 @@ and contract validation for reference ingestion intermediate artifacts.
 from reference.ingestion.acquisition import (
     AcquisitionError,
     EPAAdapter,
+    ManufacturerSpecificationAdapter,
     NHTSAAdapter,
     SourceParseError,
     TransportError,
@@ -28,7 +29,6 @@ from reference.ingestion.importing import (
 )
 
 from reference.ingestion.contracts import (
-
     ArtifactType,
     AttributeReconciliationState,
     CandidateConfigurationDocument,
@@ -47,6 +47,7 @@ from reference.ingestion.contracts import (
     ReconciliationState,
     ReviewDisposition,
     SemanticMissingValue,
+    SourceApplicability,
     SourceAssertion,
     SourceAssertionSet,
     SourceConfigurationIdentity,
@@ -57,6 +58,7 @@ from reference.ingestion.contracts import (
 from reference.ingestion.normalization import (
     BaseSourceNormalizer,
     EPANormalizer,
+    ManufacturerNormalizer,
     NHTSANormalizer,
     NormalizationError,
     UnsupportedSourceError,
@@ -95,6 +97,7 @@ __all__ = [
     "ReconciliationState",
     "ReviewDisposition",
     "SemanticMissingValue",
+    "SourceApplicability",
     "SourceAssertion",
     "SourceAssertionSet",
     "SourceConfigurationIdentity",
@@ -113,6 +116,7 @@ __all__ = [
     # Acquisition Adapters
     "NHTSAAdapter",
     "EPAAdapter",
+    "ManufacturerSpecificationAdapter",
     "AcquisitionError",
     "TransportError",
     "SourceParseError",
@@ -120,6 +124,7 @@ __all__ = [
     "BaseSourceNormalizer",
     "NHTSANormalizer",
     "EPANormalizer",
+    "ManufacturerNormalizer",
     "NormalizationError",
     "UnsupportedSourceError",
     # Candidate Construction Engine

@@ -1,0 +1,157 @@
+{
+  "_provenance": {
+    "publisher": "Toyota Motor Sales, U.S.A., Inc.",
+    "source_title": "Toyota Motor Sales, U.S.A., Inc. 2020 4Runner Product Lineup & Technical Specification Matrix",
+    "source_reference": "Official Toyota USA Newsroom (pressroom.toyota.com) Model Year 2020 Product Press Kit and Technical Specification Matrix",
+    "model_year": 2020,
+    "publication_scope": "US",
+    "publication_date": "2019-09-01",
+    "transcription_note": "Structured derivative transcription of official first-party Toyota USA model-year product specifications for offline deterministic testing under RA-021."
+  },
+  "configurations": [
+    {
+      "model_code": "8664",
+      "make": "Toyota",
+      "model": "4Runner",
+      "model_year": 2020,
+      "grade": "SR5",
+      "drivetrain": "2WD",
+      "engine_displacement_liters": 4.0,
+      "engine_cylinders": 6,
+      "transmission": "5-speed ECT-i automatic",
+      "market": "US"
+    },
+    {
+      "model_code": "8666",
+      "make": "Toyota",
+      "model": "4Runner",
+      "model_year": 2020,
+      "grade": "SR5",
+      "drivetrain": "Part-Time 4WD",
+      "engine_displacement_liters": 4.0,
+      "engine_cylinders": 6,
+      "transmission": "5-speed ECT-i automatic",
+      "market": "US"
+    },
+    {
+      "model_code": "8670",
+      "make": "Toyota",
+      "model": "4Runner",
+      "model_year": 2020,
+      "grade": "SR5 Premium",
+      "drivetrain": "2WD",
+      "engine_displacement_liters": 4.0,
+      "engine_cylinders": 6,
+      "transmission": "5-speed ECT-i automatic",
+      "market": "US"
+    },
+    {
+      "model_code": "8672",
+      "make": "Toyota",
+      "model": "4Runner",
+      "model_year": 2020,
+      "grade": "SR5 Premium",
+      "drivetrain": "Part-Time 4WD",
+      "engine_displacement_liters": 4.0,
+      "engine_cylinders": 6,
+      "transmission": "5-speed ECT-i automatic",
+      "market": "US"
+    },
+    {
+      "model_code": "8674",
+      "make": "Toyota",
+      "model": "4Runner",
+      "model_year": 2020,
+      "grade": "TRD Off-Road",
+      "drivetrain": "Part-Time 4WD",
+      "engine_displacement_liters": 4.0,
+      "engine_cylinders": 6,
+      "transmission": "5-speed ECT-i automatic",
+      "market": "US"
+    },
+    {
+      "model_code": "8676",
+      "make": "Toyota",
+      "model": "4Runner",
+      "model_year": 2020,
+      "grade": "TRD Off-Road Premium",
+      "drivetrain": "Part-Time 4WD",
+      "engine_displacement_liters": 4.0,
+      "engine_cylinders": 6,
+      "transmission": "5-speed ECT-i automatic",
+      "market": "US"
+    },
+    {
+      "model_code": "8682",
+      "make": "Toyota",
+      "model": "4Runner",
+      "model_year": 2020,
+      "grade": "Venture Special Edition",
+      "drivetrain": "Part-Time 4WD",
+      "engine_displacement_liters": 4.0,
+      "engine_cylinders": 6,
+      "transmission": "5-speed ECT-i automatic",
+      "market": "US"
+    },
+    {
+      "model_code": "8686",
+      "make": "Toyota",
+      "model": "4Runner",
+      "model_year": 2020,
+      "grade": "Limited",
+      "drivetrain": "2WD",
+      "engine_displacement_liters": 4.0,
+      "engine_cylinders": 6,
+      "transmission": "5-speed ECT-i automatic",
+      "market": "US"
+    },
+    {
+      "model_code": "8688",
+      "make": "Toyota",
+      "model": "4Runner",
+      "model_year": 2020,
+      "grade": "Limited",
+      "drivetrain": "Full-Time 4WD",
+      "engine_displacement_liters": 4.0,
+      "engine_cylinders": 6,
+      "transmission": "5-speed ECT-i automatic",
+      "market": "US"
+    },
+    {
+      "model_code": "8690",
+      "make": "Toyota",
+      "model": "4Runner",
+      "model_year": 2020,
+      "grade": "Nightshade Special Edition",
+      "drivetrain": "2WD",
+      "engine_displacement_liters": 4.0,
+      "engine_cylinders": 6,
+      "transmission": "5-speed ECT-i automatic",
+      "market": "US"
+    },
+    {
+      "model_code": "8692",
+      "make": "Toyota",
+      "model": "4Runner",
+      "model_year": 2020,
+      "grade": "Nightshade Special Edition",
+      "drivetrain": "Full-Time 4WD",
+      "engine_displacement_liters": 4.0,
+      "engine_cylinders": 6,
+      "transmission": "5-speed ECT-i automatic",
+      "market": "US"
+    },
+    {
+      "model_code": "8680",
+      "make": "Toyota",
+      "model": "4Runner",
+      "model_year": 2020,
+      "grade": "TRD Pro",
+      "drivetrain": "Part-Time 4WD",
+      "engine_displacement_liters": 4.0,
+      "engine_cylinders": 6,
+      "transmission": "5-speed ECT-i automatic",
+      "market": "US"
+    }
+  ]
+}

@@ -285,7 +285,28 @@ RA-020 — Trim/Grade & Market Applicability Source and Normalization Architectu
 - Cross-Source JOIN Rule & Cartesian Prohibition: Attribute equality alone is NOT a configuration join key. Candidate construction MUST NOT generate unsupported Cartesian combinations (8 grades x 3 EPA records != 24 candidates). Requires evidence-backed configuration correspondence
 - Manufacturer Acquisition Abstraction: Recommends reusable `ManufacturerSpecificationAdapter` / `StructuredDatasetAdapter` decoupling generic acquisition from manufacturer-specific mapping/taxonomy rules
 - Controlled 2020 4Runner Study: Verified 8 U.S. factory grades, Toyota terminology ("Grade"), and 4-digit order model codes (`8666`) providing source-native configuration identity (`SourceConfigurationIdentity`)
-- Proposed Next Milestone: RA-021 — Manufacturer Specification Evidence Acquisition & Normalization Implementation
+
+Milestone 17 — Manufacturer Specification Evidence Acquisition & Normalization Implementation
+
+Implementation Task:
+RA-021 — Manufacturer Specification Evidence Acquisition & Normalization Implementation (Completed)
+- Task Record Location: `docs/implementation/tasks/RA-021-manufacturer-specification-evidence-acquisition-normalization-implementation.md`
+- Package Components: `reference/ingestion/acquisition/manufacturer.py`, `reference/ingestion/normalization/manufacturer.py`, `reference/ingestion/normalization/rules/toyota_rules.py`, `reference/tests/fixtures/acquisition/toyota/2020_4runner_specs.json`, `reference/tests/test_manufacturer_ingestion.py`
+- SourceApplicability Contract: Implemented `SourceApplicability` dataclass (`market`, `applicability_basis`, `publisher_jurisdiction`, `unknown_fields`) attached to `SourceMetadata`. Decoupled from `target_context` with zero automatic context-to-applicability conversion
+- Schema Backward Compatibility: Retained major `schema_version = "1.0.0"`. Optional metadata field addition is 100% backward-compatible with legacy deserialization (`source_applicability = None`) and positional constructor safety
+- Controlled Toyota USA Fixture: Added `2020_4runner_specs.json` containing 12 official Toyota US model-code configurations (`8664`–`8692`) and complete first-party pressroom provenance metadata
+- One SourceAssertionSet Per Configuration: `ManufacturerSpecificationAdapter` emits one `SourceAssertionSet` per model-code configuration row, preserving `provenance.native_record_id` and attribute coexistence without list-order inference
+- SourceConfigurationIdentity Preservation: Candidate builder extracts `SourceConfigurationIdentity` (`source_id = "toyota_usa"`, `identity_type = "record_id"`, `native_identifier = "8666"`)
+- Manufacturer Normalization & Toyota Rules: `ManufacturerNormalizer` and `toyota_rules.py` enforce exact uppercase factory grade lookup (`SR5`, `TRD Off-Road`, `Limited`, `TRD Pro`). Dealer option packages (`XP PREDATOR`, `PREMIUM AUDIO`) default safely to `mapping_status = "unmapped"`
+- Source-Independence Test Enforcement: Mapped `market` normalized assertion (`"US"`) is emitted ONLY when `source_applicability` is present and matches the market assertion. `target_context` market alone is rejected
+- Concept & Drivetrain Reuse: Reuses standard `make`, `model`, `model_year`, `generic_drive_classification`, `drivetrain_architecture` (`Full-Time 4WD` $\rightarrow$ `AWD`), `engine_displacement_liters` (`TechnicalValue`), and `engine_cylinders`. `transmission_descriptor` remains raw/unmapped
+- Preserved-Only Projection & Candidate Building: `construct_candidate_configuration` aggregates mapped `trim` and `market` as preserved-only mapped assertions (Category B) with zero candidate builder contract changes
+- Zero Cross-Source Joins & Cartesian Safety: Zero automatic Toyota/EPA/NHTSA joins. 12 configuration rows produce exactly 12 candidate documents without Cartesian expansion
+- RA-019 Downstream Planning Reachability: Fully evidenced candidates supply all 8 required concepts (`make`, `model`, `model_year`, `generic_drive_classification`, `engine_displacement_liters`, `engine_cylinders`, `trim`, `market`), reaching `ImportEligibilityStatus.ELIGIBLE` / `ImportPlannedAction.CREATE` / `ImportCreateBasis.FIRST_REPRESENTATION` under `plan_candidate_import`
+- Context Contradiction Correction: Extended `planner.py` to check `CandidateIdentity.trim_name` and `CandidateIdentity.market` against mapped evidence. Contradictions trigger `REQUIRES_REVIEW` / `FLAG_REVIEW`
+- Test Baseline: 16 focused tests in `reference/tests/test_manufacturer_ingestion.py` (122 total project tests passing)
+- Zero ORM / Migration Impact: Pure Python ingestion adapters and normalizers; 0 Django ORM schema changes, 0 migrations, 0 database writes
+
 
 7. Architectural Decision Records (ADRs)
 Implemented and Accepted:
@@ -418,42 +439,18 @@ RigArchive/
 │   └── wsgi.py
 │
 ├── templates/
-│   ├── base.html
-│   ├── home.html
-│   ├── about.html
-│   ├── 404.html
-│   ├── 500.html
-│   ├── includes/
-│   │   └── breadcrumbs.html
-│   └── reference/
-├── static/
-│   └── css/
-│       └── site.css
-│
+│   └── urls.py
+├── observation/
 ├── docs/
 │   ├── architecture/
 │   │   ├── ADR/
-│   │   │   ├── ADR-0001-Entity-Identity-Strategy.md
-│   │   │   ├── ADR-0002-Immutable-Automatic-Slugs.md
-│   │   │   ├── ADR-0003-Core-Infrastructure.md
-│   │   │   └── ADR-0004-Canonical-Reference-Matching-Import-Promotion-Strategy.md
 │   │   └── designs/
-│   │       ├── RA-006-Observation-Foundation-Architecture.md
-│   │       ├── RA-008-Development-Data-Preservation-Architecture.md
-│   │       ├── RA-010-Reference-Ingestion-Source-Mapping-Architecture.md
-│   │       ├── RA-011-Ingestion-Schema-Intermediate-Serialization-Design.md
-│   │       ├── RA-014-Source-Assertion-Normalization-Mapping-Architecture.md
-│   │       ├── RA-016-Candidate-Configuration-Construction-Aggregation-Architecture.md
-│   │       └── RA-018-Canonical-Reference-Matching-Import-Architecture.md
-│   ├── blueprint/
 │   ├── development/
 │   │   └── DATA_PRESERVATION.md
 │   ├── handbook/
 │   └── implementation/
 │       ├── CURRENT_STATE.md
-│       ├── ROADMAP.md
 │       └── tasks/
-│           ├── TASK_TEMPLATE.md
 │           ├── RA-003-core-foundation.md
 │           ├── RA-005-application-shell-ux-foundation.md
 │           ├── RA-007-observation-domain-foundation.md
@@ -462,7 +459,8 @@ RigArchive/
 │           ├── RA-013-public-source-acquisition-implementation.md
 │           ├── RA-015-source-assertion-normalization-implementation.md
 │           ├── RA-017-candidate-configuration-construction-aggregation-implementation.md
-│           └── RA-019-canonical-reference-import-planning-create-only-execution-implementation.md
+│           ├── RA-019-canonical-reference-import-planning-create-only-execution-implementation.md
+│           └── RA-021-manufacturer-specification-evidence-acquisition-normalization-implementation.md
 │
 ├── tests/
 │
@@ -471,6 +469,7 @@ RigArchive/
 ├── README.md
 ├── requirements.txt
 └── manage.py
+```
 
 12. Planned Milestone Map
 - Milestone 1: Project foundation (✅ Complete)
@@ -490,13 +489,15 @@ RigArchive/
 - Milestone 13: Candidate Configuration Construction & Aggregation Implementation (✅ Complete — RA-017)
 - Milestone 14: Canonical Reference Matching & Import Architecture (✅ Approved Architecture — RA-018 / ADR-0004)
 - Milestone 15: Canonical Reference Import Planning & Create-Only Execution Implementation (✅ Complete — RA-019)
+- Milestone 16: Trim/Grade & Market Applicability Source & Normalization Architecture (✅ Approved Architecture — RA-020 / ADR-0005)
+- Milestone 17: Manufacturer Specification Evidence Acquisition & Normalization Implementation (✅ Complete — RA-021)
 
-Proposed Next Milestone: Source & Normalization Expansion Architecture (establishing evidence-backed trim and market applicability normalization to enable automated canonical promotion).
+Proposed Next Milestone: Production Acquisition & Orchestration Pipeline (ingesting external manufacturer specification datasets at scale with persistent artifact storage and scheduling).
 
 13. Current Repository Status
 The repository currently contains:
 - Functional Django project
-- Passing test suite (106 tests passing)
+- Passing test suite (122 tests passing)
 - Shared core infrastructure (`core` app with `UUIDModel`, `TimestampedModel`, `BaseModel`)
 - Reference Data Ingestion package (`reference/ingestion/` with contracts, serialization, validation, `acquisition/` adapters, `normalization/` normalizers, `candidate/` builder, and `importing/` importer)
 - Development data preservation tooling (`snapshot_db`, `export_dev_data`, `verify_dev_data`)
@@ -505,9 +506,9 @@ The repository currently contains:
 - Public reference browser
 - Admin interface
 - Stable migration history
-- Populated Architectural Decision Records (ADR-0001, ADR-0002, ADR-0003, ADR-0004)
-- Approved Architecture Design Documents (RA-006, RA-008, RA-010, RA-011, RA-014, RA-016, RA-018)
+- Populated Architectural Decision Records (ADR-0001, ADR-0002, ADR-0003, ADR-0004, ADR-0005)
+- Approved Architecture Design Documents (RA-006, RA-008, RA-010, RA-011, RA-014, RA-016, RA-018, RA-020)
 - Gemini CLI project instructions (GEMINI.md)
 - Task-based implementation workflow (docs/implementation/tasks/)
-- Completed implementation tasks: RA-003 — Core Foundation, RA-005 — Application Shell & UX Foundation, RA-007 — Observation Domain Foundation, RA-009 — Development Data Preservation and Recovery Implementation, RA-012 — Intermediate Serialization Contract Implementation & Fixture Validation, RA-013 — Public Source Acquisition Adapters, RA-015 — Source Assertion Normalization Implementation & Fixture Validation, RA-017 — Candidate Configuration Construction & Aggregation Implementation, RA-019 — Canonical Reference Import Planning & Create-Only Execution Implementation
-- Approved Architecture/Research tasks: RA-010 — Reference Data Ingestion Source & Mapping Architecture, RA-011 — Ingestion Schema & Intermediate Serialization Design, RA-014 — Source Assertion Normalization & Mapping Architecture, RA-016 — Candidate Configuration Construction & Aggregation Architecture, RA-018 — Canonical Reference Matching & Import Architecture
+- Completed implementation tasks: RA-003 — Core Foundation, RA-005 — Application Shell & UX Foundation, RA-007 — Observation Domain Foundation, RA-009 — Development Data Preservation and Recovery Implementation, RA-012 — Intermediate Serialization Contract Implementation & Fixture Validation, RA-013 — Public Source Acquisition Adapters, RA-015 — Source Assertion Normalization Implementation & Fixture Validation, RA-017 — Candidate Configuration Construction & Aggregation Implementation, RA-019 — Canonical Reference Import Planning & Create-Only Execution Implementation, RA-021 — Manufacturer Specification Evidence Acquisition & Normalization Implementation
+- Approved Architecture/Research tasks: RA-010 — Reference Data Ingestion Source & Mapping Architecture, RA-011 — Ingestion Schema & Intermediate Serialization Design, RA-014 — Source Assertion Normalization & Mapping Architecture, RA-016 — Candidate Configuration Construction & Aggregation Architecture, RA-018 — Canonical Reference Matching & Import Architecture, RA-020 — Trim/Grade & Market Applicability Source and Normalization Architecture
