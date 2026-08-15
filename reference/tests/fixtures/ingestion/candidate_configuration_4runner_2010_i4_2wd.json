@@ -1,0 +1,87 @@
+{
+  "attribute_provenance": {
+    "drivetrain_architecture": [
+      "interp_2010_drive_01"
+    ],
+    "engine_displacement": [
+      "interp_2010_eng_01"
+    ]
+  },
+  "candidate_identity": {
+    "generation_name": "Fifth Generation",
+    "manufacturer_name": "Toyota",
+    "market": "US",
+    "model_year": 2010,
+    "trim_name": "SR5",
+    "vehicle_model_name": "4Runner"
+  },
+  "candidate_reference": "cand_ref_2010_toyota_4runner_sr5_i4_2wd",
+  "envelope": {
+    "artifact_type": "rigarchive.candidate_configuration.v1",
+    "created_at": "2026-08-15T09:30:00Z",
+    "generator": "rigarchive-normalizer/0.1.0",
+    "schema_version": "1.0.0"
+  },
+  "normalized_assertions": [
+    {
+      "interpretation_id": "interp_2010_drive_01",
+      "mapping_status": "mapped",
+      "normalized_concept": "rear-wheel drive",
+      "raw_source_value": "4x2 RWD",
+      "source_assertion_ref": "ast_epa_drive_01",
+      "target_attribute_key": "drivetrain.architecture"
+    },
+    {
+      "interpretation_id": "interp_2010_eng_01",
+      "mapping_status": "mapped",
+      "normalized_concept": "2.7L I4",
+      "raw_source_value": "2.7L DOHC 4-Cylinder (2TR-FE)",
+      "source_assertion_ref": "ast_epa_eng_01",
+      "target_attribute_key": "engine.description"
+    }
+  ],
+  "normalized_technical_details": {
+    "drivetrain_details": {
+      "architecture": "rear-wheel drive",
+      "capabilities": [
+        "2wd_operation"
+      ],
+      "generic_classification": "two-wheel drive",
+      "manufacturer_terminology": "2WD rear wheel drive with Automatic Limited-Slip Differential (Auto LSD)"
+    },
+    "engine": {
+      "code": "2TR-FE",
+      "cylinders": 4,
+      "displacement": {
+        "normalized_unit": "L",
+        "normalized_value": 2.7,
+        "raw_source_string": "2.7 L"
+      },
+      "horsepower": {
+        "normalized_unit": "hp",
+        "normalized_value": 157,
+        "raw_source_string": "157 hp @ 5200 rpm",
+        "rpm_normalized": 5200
+      }
+    },
+    "transmission": {
+      "code": "A340E",
+      "speeds": 4,
+      "type": "Automatic"
+    }
+  },
+  "reconciliation_and_review": {
+    "attribute_states": {
+      "drivetrain_architecture": {
+        "reconciliation_state": "corroborated",
+        "review_disposition": "not_required"
+      },
+      "engine_displacement": {
+        "reconciliation_state": "corroborated",
+        "review_disposition": "not_required"
+      }
+    },
+    "requires_human_review": false,
+    "review_workflow_disposition": "not_required"
+  }
+}
