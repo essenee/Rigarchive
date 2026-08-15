@@ -155,7 +155,21 @@ RA-011 — Ingestion Schema & Intermediate Serialization Design (Approved Archit
 - Separated Reconciliation & Review: Primary attribute evidence states (`corroborated`, `single_source`, `conflicting`, `ambiguous`, `incomplete`) logically separated from workflow review dispositions (`not_required`, `pending_review`, `resolved`, `rejected_excluded`)
 - Deterministic Conventions: Alphabetical key sorting, ISO-8601 UTC timestamps, 2-space indentation, UTF-8 encoding for diffability
 - Code / Schema Status: Architecture and research only. No Django models, migrations, serializers, acquisition tools, scrapers, DB records, or ingestion artifacts created
-- Next Proposed Milestone: RA-012 — Intermediate Serialization Contract Implementation & Fixture Validation
+
+Milestone 8 — Intermediate Serialization Contract Implementation & Fixture Validation
+
+Implementation Task:
+RA-012 — Intermediate Serialization Contract Implementation & Fixture Validation (Completed)
+- Package Location: `reference/ingestion/` (`__init__.py`, `contracts.py`, `serialization.py`, `validation.py`)
+- Executable Contracts: Pure Python dataclasses representing Tier 1 `SourceAssertionSet` and Tier 2 `CandidateConfigurationDocument` with embedded `normalized_assertions`, 7-dimension drivetrain, preserved `factory_technical_features`, and separated reconciliation/review states
+- Deterministic Serialization: `serialize_artifact` and `deserialize_artifact` enforcing alphabetical key sorting, 2-space indentation, UTF-8 encoding, ISO-8601 UTC timestamps, and lossless round-trips
+- Unknown Field Preservation: Forward-compatible parser preserving unmodeled JSON fields in `unknown_fields` container without data loss upon re-serialization
+- Contract Validation: `validate_artifact`, `validate_envelope`, `validate_source_assertion_set`, `validate_candidate_configuration`, and `validate_semantic_missing_value` with actionable error reporting
+- Controlled Fixtures: 4 test-owned fixture files in `reference/tests/fixtures/ingestion/` (`source_assertion_set_4runner_2020.json`, `candidate_configuration_4runner_2020_trd_offroad.json`, `candidate_configuration_4runner_2020_trim_conflict.json`, `candidate_configuration_4runner_2010_i4_2wd.json`)
+- Zero ORM / Migration Impact: Pure Python dataclasses; 0 Django ORM staging models, 0 migrations, 0 database writes, 0 external acquisition calls
+- Documentation & Task Record: `docs/implementation/tasks/RA-012-intermediate-serialization-implementation.md`
+- Next Proposed Milestone: RA-013 — Public Source Acquisition Adapters (NHTSA & EPA)
+
 
 
 
@@ -213,6 +227,27 @@ RigArchive/
 │   ├── models.py
 │   └── tests.py
 ├── reference/
+│   ├── admin.py
+│   ├── apps.py
+│   ├── ingestion/
+│   │   ├── __init__.py
+│   │   ├── contracts.py
+│   │   ├── serialization.py
+│   │   └── validation.py
+│   ├── models.py
+│   ├── tests/
+│   │   ├── __init__.py
+│   │   ├── fixtures/
+│   │   │   └── ingestion/
+│   │   │       ├── candidate_configuration_4runner_2010_i4_2wd.json
+│   │   │       ├── candidate_configuration_4runner_2020_trd_offroad.json
+│   │   │       ├── candidate_configuration_4runner_2020_trim_conflict.json
+│   │   │       └── source_assertion_set_4runner_2020.json
+│   │   ├── test_ingestion_serialization.py
+│   │   ├── test_models.py
+│   │   └── test_views.py
+│   ├── urls.py
+│   └── views.py
 ├── observation/
 │   ├── admin.py
 │   ├── apps.py
@@ -263,7 +298,8 @@ RigArchive/
 │           ├── RA-003-core-foundation.md
 │           ├── RA-005-application-shell-ux-foundation.md
 │           ├── RA-007-observation-domain-foundation.md
-│           └── RA-009-development-data-preservation-implementation.md
+│           ├── RA-009-development-data-preservation-implementation.md
+│           └── RA-012-intermediate-serialization-implementation.md
 │
 ├── tests/
 │
@@ -283,6 +319,7 @@ RigArchive/
 - Milestone 5: Development Data Preservation & Recovery (✅ Complete — RA-009)
 - Milestone 6: Reference Data Ingestion Source & Mapping Architecture (✅ Approved Architecture — RA-010)
 - Milestone 7: Ingestion Schema & Intermediate Serialization Design (✅ Approved Architecture — RA-011)
+- Milestone 8: Intermediate Serialization Contract Implementation & Fixture Validation (✅ Complete — RA-012)
 
 Candidate future domains include:
 - Evidence
@@ -295,8 +332,9 @@ Candidate future domains include:
 13. Current Repository Status
 The repository currently contains:
 - Functional Django project
-- Passing test suite (34 tests passing)
+- Passing test suite (50 tests passing)
 - Shared core infrastructure (`core` app with `UUIDModel`, `TimestampedModel`, `BaseModel`)
+- Reference Data Ingestion Serialization package (`reference/ingestion/` with `contracts.py`, `serialization.py`, `validation.py`, and controlled test fixtures)
 - Development data preservation tooling (`snapshot_db`, `export_dev_data`, `verify_dev_data`)
 - Accessible application shell and UX foundation (`templates/base.html`, `about.html`, `404.html`, `500.html`)
 - Observation Domain foundation (`observation` app with `Observation` model)
@@ -307,5 +345,5 @@ The repository currently contains:
 - Approved Architecture Design Documents (RA-006, RA-008, RA-010, RA-011)
 - Gemini CLI project instructions (GEMINI.md)
 - Task-based implementation workflow (docs/implementation/tasks/)
-- Completed implementation tasks: RA-003 — Core Foundation, RA-005 — Application Shell & UX Foundation, RA-007 — Observation Domain Foundation, RA-009 — Development Data Preservation and Recovery Implementation
+- Completed implementation tasks: RA-003 — Core Foundation, RA-005 — Application Shell & UX Foundation, RA-007 — Observation Domain Foundation, RA-009 — Development Data Preservation and Recovery Implementation, RA-012 — Intermediate Serialization Contract Implementation & Fixture Validation
 - Approved Architecture/Research tasks: RA-010 — Reference Data Ingestion Source & Mapping Architecture, RA-011 — Ingestion Schema & Intermediate Serialization Design

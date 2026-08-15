@@ -1,0 +1,157 @@
+{
+  "attribute_provenance": {
+    "drivetrain_architecture": [
+      "interp_drive_arch_01"
+    ],
+    "engine_displacement": [
+      "interp_eng_disp_01"
+    ]
+  },
+  "candidate_identity": {
+    "generation_name": "Fifth Generation",
+    "manufacturer_name": "Toyota",
+    "market": "US",
+    "model_year": 2020,
+    "trim_name": "TRD Off-Road Premium",
+    "vehicle_model_name": "4Runner"
+  },
+  "candidate_reference": "cand_ref_2020_toyota_4runner_trd_off_road_premium_4wd",
+  "envelope": {
+    "artifact_type": "rigarchive.candidate_configuration.v1",
+    "created_at": "2026-08-15T09:20:00Z",
+    "generator": "rigarchive-normalizer/0.1.0",
+    "schema_version": "1.0.0"
+  },
+  "factory_technical_features": [
+    {
+      "category_status": "unclassified_feature",
+      "feature_name": "Active Traction Control (A-TRAC)",
+      "normalized_classification_status": "unresolved",
+      "source_assertion_ref": "ast_toyota_atrac_01",
+      "source_classification": "standard_feature"
+    },
+    {
+      "category_status": "unclassified_feature",
+      "feature_name": "Kinetic Dynamic Suspension System (KDSS)",
+      "normalized_classification_status": "unresolved",
+      "source_assertion_ref": "ast_toyota_kdss_01",
+      "source_classification": "option_package"
+    }
+  ],
+  "normalized_assertions": [
+    {
+      "interpretation_id": "interp_drive_arch_01",
+      "manufacturer_term": "Part-time 4WD System",
+      "mapping_status": "mapped",
+      "normalization_notes": "Mapped directly from EPA drive descriptor",
+      "normalized_concept": "part-time 4WD",
+      "raw_source_value": "Part-time 4WD",
+      "source_assertion_ref": "ast_epa_drive_01",
+      "target_attribute_key": "drivetrain.architecture"
+    },
+    {
+      "interpretation_id": "interp_eng_disp_01",
+      "manufacturer_term": "4.0L DOHC V6",
+      "mapping_status": "mapped",
+      "normalization_notes": "Extracted displacement from EPA engine string",
+      "normalized_concept": "4.0L",
+      "raw_source_value": "4.0 L, 6 cyl",
+      "source_assertion_ref": "ast_epa_eng_01",
+      "target_attribute_key": "engine.displacement"
+    }
+  ],
+  "normalized_technical_details": {
+    "drivetrain_details": {
+      "architecture": "part-time 4WD",
+      "capabilities": [
+        "selectable_2wd",
+        "selectable_4wd",
+        "low_range",
+        "rear_differential_lock"
+      ],
+      "components": [
+        {
+          "component_type": "transfer_case",
+          "low_range_ratio": 2.566,
+          "name": "VF2A Manual Lever Transfer Case"
+        },
+        {
+          "component_type": "rear_differential",
+          "has_locking_feature": true,
+          "name": "Electronic Locking Rear Differential"
+        }
+      ],
+      "generic_classification": "four-wheel drive",
+      "manufacturer_terminology": "Part-time 4WD with Active Traction Control and Rear Differential Lock",
+      "operating_modes": [
+        {
+          "center_coupling": "unlocked",
+          "mode_code": "2H",
+          "name": "2WD High"
+        },
+        {
+          "center_coupling": "locked",
+          "mode_code": "4H",
+          "name": "4WD High"
+        },
+        {
+          "center_coupling": "locked",
+          "low_range": true,
+          "mode_code": "4L",
+          "name": "4WD Low"
+        }
+      ]
+    },
+    "engine": {
+      "code": "1GR-FE",
+      "cylinders": 6,
+      "displacement": {
+        "normalized_unit": "L",
+        "normalized_value": 4.0,
+        "raw_source_string": "4.0 L"
+      },
+      "horsepower": {
+        "normalized_unit": "hp",
+        "normalized_value": 270,
+        "raw_source_string": "270 hp @ 5600 rpm",
+        "rpm_normalized": 5600
+      }
+    },
+    "transmission": {
+      "code": "A750F",
+      "speeds": 5,
+      "type": "Automatic"
+    }
+  },
+  "packages_and_options": [
+    {
+      "is_distinct_trim_identity": false,
+      "name": "Premium Audio with Dynamic Navigation",
+      "normalized_classification_status": "package",
+      "source_classification": "option_package"
+    }
+  ],
+  "reconciliation_and_review": {
+    "attribute_states": {
+      "drivetrain_architecture": {
+        "reconciliation_state": "corroborated",
+        "review_disposition": "not_required"
+      },
+      "engine_displacement": {
+        "reconciliation_state": "corroborated",
+        "review_disposition": "not_required"
+      }
+    },
+    "reconciliation_notes": "All core attributes corroborated",
+    "requires_human_review": false,
+    "review_workflow_disposition": "not_required"
+  },
+  "source_configuration_identities": [
+    {
+      "identity_type": "epa_vehicle_id",
+      "native_identifier": "42101",
+      "source_description": "2020 Toyota 4Runner 4WD 6 cyl 4.0 L Automatic 5-spd",
+      "source_id": "epa_fueleconomy"
+    }
+  ]
+}
