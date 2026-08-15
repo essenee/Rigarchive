@@ -118,14 +118,18 @@ RA-005 — Application Shell & UX Foundation (Completed)
 - Error handling: Resilient custom 404 (`templates/404.html`) and custom 500 (`templates/500.html`) pages
 - CSS: Accessible focus rings, breadcrumb list styles, hero/button styling, responsive 320px support in `static/css/site.css`
 
-Milestone 4 — Observation Domain Foundation
+Milestone 5 — Development Data Preservation & Recovery Implementation
 
 Implementation Task:
-RA-007 — Observation Domain Foundation (Completed)
-- App: observation (`observation.apps.ObservationConfig`)
-- Models: `Observation` (inheriting from `core.models.BaseModel`, referencing `reference.VehicleDefinition` and `accounts.User` via `PROTECT`)
-- Admin: `ObservationAdmin` registration in `observation/admin.py`
-- Tests: Unit test suite in `observation/tests.py` verifying model validation, dual identity, `PROTECT` deletion, non-mutation of reference data, and admin integration
+RA-009 — Development Data Preservation and Recovery Implementation (Completed)
+- Management commands in `core/management/commands/`: `snapshot_db` (Layer 1 SQLite `VACUUM INTO` physical recovery snapshot with integrity verification), `export_dev_data` (Layer 2 natural-key JSON logical export), `verify_dev_data` (isolated OS temporary database restoration verification)
+- Isolation: `RIGARCHIVE_TEST_DB_PATH` environment variable support in `config/settings.py` for isolated temporary database test execution
+- Ignored storage: Local `backups/` directory (`backups/snapshots/` and `backups/logical/`) with `backups/.gitignore`
+- Git hygiene: Safely untracked `db.sqlite3` and all 26 compiled `.pyc` / `__pycache__` files from Git tracking while preserving local development files (zero `.pyc` or `__pycache__` files remain tracked in Git)
+- Preserved Database State: 2 Users, 1 Manufacturer, 1 VehicleModel, 1 Generation, 1 VehicleDefinition, 3 Observations
+- Documentation: `docs/development/DATA_PRESERVATION.md` developer guide
+- Design document: `docs/architecture/designs/RA-008-Development-Data-Preservation-Architecture.md`
+
 
 7. Architectural Decision Records (ADRs)
 Implemented and Accepted:
@@ -135,13 +139,14 @@ Implemented and Accepted:
 
 8. Current Testing
 Implemented:
+- Development Data Preservation tests (`core/tests.py`)
 - Observation Domain tests (`observation/tests.py`)
 - Application Shell & UX tests (`config/tests.py`)
 - Core mixin & inheritance tests (`core/tests.py`)
 - Reference Model tests (`reference/tests/test_models.py`)
 - Public Reference View & URL tests (`reference/tests/test_views.py`)
 Current status:
-- All 32 tests passing.
+- All 34 tests passing.
 - Verification command: `.venv/bin/python manage.py test`
 
 9. Current Coding Standards
@@ -157,14 +162,25 @@ Project-level presentation views reside in `config/views.py`; domain views belon
 10. Git & Gemini CLI Workflow
 - Instructions defined in GEMINI.md.
 - Task specs stored under docs/implementation/tasks/.
-- Completed tasks: RA-003 — Core Foundation, RA-005 — Application Shell & UX Foundation, RA-007 — Observation Domain Foundation.
+- Completed tasks: RA-003 — Core Foundation, RA-005 — Application Shell & UX Foundation, RA-007 — Observation Domain Foundation, RA-009 — Development Data Preservation and Recovery Implementation.
 
 11. Current Repository Structure
 RigArchive/
 │
 ├── accounts/
+├── backups/
+│   ├── .gitignore
+│   ├── logical/
+│   └── snapshots/
 ├── core/
 │   ├── apps.py
+│   ├── management/
+│   │   ├── __init__.py
+│   │   └── commands/
+│   │       ├── __init__.py
+│   │       ├── export_dev_data.py
+│   │       ├── snapshot_db.py
+│   │       └── verify_dev_data.py
 │   ├── models.py
 │   └── tests.py
 ├── reference/
@@ -202,8 +218,11 @@ RigArchive/
 │   │   │   ├── ADR-0002-Immutable-Automatic-Slugs.md
 │   │   │   └── ADR-0003-Core-Infrastructure.md
 │   │   └── designs/
-│   │       └── RA-006-Observation-Foundation-Architecture.md
+│   │       ├── RA-006-Observation-Foundation-Architecture.md
+│   │       └── RA-008-Development-Data-Preservation-Architecture.md
 │   ├── blueprint/
+│   ├── development/
+│   │   └── DATA_PRESERVATION.md
 │   ├── handbook/
 │   └── implementation/
 │       ├── CURRENT_STATE.md
@@ -212,7 +231,8 @@ RigArchive/
 │           ├── TASK_TEMPLATE.md
 │           ├── RA-003-core-foundation.md
 │           ├── RA-005-application-shell-ux-foundation.md
-│           └── RA-007-observation-domain-foundation.md
+│           ├── RA-007-observation-domain-foundation.md
+│           └── RA-009-development-data-preservation-implementation.md
 │
 ├── tests/
 │
@@ -229,6 +249,7 @@ RigArchive/
 - Milestone 3: Core Infrastructure (✅ Complete — RA-003)
 - Milestone 3A: Application Shell & UX Foundation (✅ Complete)
 - Milestone 4: Observation Domain Foundation (✅ Complete — RA-007)
+- Milestone 5: Development Data Preservation & Recovery (✅ Complete — RA-009)
 
 Candidate future domains include:
 - Evidence
@@ -241,15 +262,16 @@ Candidate future domains include:
 13. Current Repository Status
 The repository currently contains:
 - Functional Django project
-- Passing test suite (32 tests passing)
+- Passing test suite (34 tests passing)
 - Shared core infrastructure (`core` app with `UUIDModel`, `TimestampedModel`, `BaseModel`)
+- Development data preservation tooling (`snapshot_db`, `export_dev_data`, `verify_dev_data`)
 - Accessible application shell and UX foundation (`templates/base.html`, `about.html`, `404.html`, `500.html`)
 - Observation Domain foundation (`observation` app with `Observation` model)
 - Public reference browser
 - Admin interface
 - Stable migration history
 - Populated Architectural Decision Records (ADR-0001, ADR-0002, ADR-0003)
-- Approved Architecture Design Documents (RA-006)
+- Approved Architecture Design Documents (RA-006, RA-008)
 - Gemini CLI project instructions (GEMINI.md)
 - Task-based implementation workflow (docs/implementation/tasks/)
-- Completed implementation tasks: RA-003 — Core Foundation, RA-005 — Application Shell & UX Foundation, RA-007 — Observation Domain Foundation
+- Completed implementation tasks: RA-003 — Core Foundation, RA-005 — Application Shell & UX Foundation, RA-007 — Observation Domain Foundation, RA-009 — Development Data Preservation and Recovery Implementation

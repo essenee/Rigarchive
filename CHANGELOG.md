@@ -6,7 +6,14 @@ All notable changes to RigArchive will be documented in this file.
 
 ### Added
 
+- Development Data Preservation & Recovery tooling (`snapshot_db`, `export_dev_data`, `verify_dev_data`) in `core/management/commands/`.
+- Isolated test database support (`RIGARCHIVE_TEST_DB_PATH`) in `config/settings.py` for safe temporary verification.
+- Local ignored preservation storage directory `backups/` (`backups/snapshots/` and `backups/logical/`) with `backups/.gitignore`.
+- Automated synthetic unit test suite `DataPreservationTestCase` in `core/tests.py` verifying preservation, restoration, and authorization linkages (34 total tests passing).
+- Developer guide `docs/development/DATA_PRESERVATION.md`.
+- Architecture Design Document `RA-008-Development-Data-Preservation-Architecture.md`.
 - Observation Domain application (`observation.apps.ObservationConfig`).
+
 - `Observation` model in `observation/models.py` inheriting from `core.models.BaseModel`, providing dual identity (Integer PK + UUIDField), timestamps, and `PROTECT` foreign keys to `reference.VehicleDefinition` and `accounts.User`.
 - Django Admin interface `ObservationAdmin` in `observation/admin.py` for administrator observation record management.
 - Initial database migration `observation/migrations/0001_initial.py`.

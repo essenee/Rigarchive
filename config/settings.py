@@ -78,12 +78,18 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+import os
+
+_test_db_path = os.environ.get("RIGARCHIVE_TEST_DB_PATH")
+_db_name = Path(_test_db_path) if _test_db_path else BASE_DIR / "db.sqlite3"
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": _db_name,
     }
 }
+
 
 
 # Password validation
