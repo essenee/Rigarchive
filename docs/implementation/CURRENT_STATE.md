@@ -1,5 +1,5 @@
 RigArchive Project Status Document
-Version: 1.2
+Version: 1.3
 Last Updated: 2026-08-15
 Purpose: Current implementation status and development roadmap
 
@@ -321,7 +321,43 @@ RA-022 — Production Manufacturer Evidence Acquisition & Orchestration Architec
 - Explicit Multi-Document Linking: Cross-document configuration joins require explicit, evidence-backed manufacturer cross-reference keys. Joining unlinked documents via matching string names is strictly prohibited
 - Plan-First Production Orchestration Boundary: Production acquisition orchestration stops automatically at `plan_candidate_import()`, producing an in-memory `CanonicalImportPlan` dry-run report. Zero automatic database writes (`execute_candidate_import`) are performed
 - Initial Operating Mode: Operator-invoked CLI execution. Schedulers, crawlers, and dynamic headless browsers are excluded from initial scope
-- Proposed Next Milestone: RA-023 — Production Manufacturer Artifact Acquisition & Dry-Run Orchestration Implementation
+- Proposed Next Milestone: RA-024 — Canonical Reference Import Execution & Execution Provenance Workflow Architecture & Implementation
+
+Milestone 20 — Canonical Reference Import Execution & Execution Provenance Workflow Implementation
+
+Implementation Task:
+RA-024 — Canonical Reference Import Execution & Execution Provenance Workflow Implementation (Completed)
+- Design Document: `docs/architecture/designs/RA-024-Canonical-Reference-Import-Execution-Execution-Provenance-Workflow-Architecture.md`
+- Architectural Decision Record: `docs/architecture/ADR/ADR-0007-Explicit-Human-Authorization-Execution-Audit-Receipts-Canonical-Promotion.md`
+- Review Manifest Contract: Pure-Python dataclasses (`CanonicalImportReviewPlan`, `CanonicalImportReviewManifest`, `v1.0`) for serializing, validating, and reconstructing operator-reviewed import plans prior to execution dispatch (`reference/ingestion/manifest.py`)
+- Deterministic Compact SHA-256 Hashing: `compute_manifest_hash()` computes a deterministic digest (`sha256:<64_hex>`) over sorted UTF-8 JSON key canonicalization (`separators=(",", ":")`). File indentation does not invalidate parsed dictionary hash; payload modification invalidates hash
+- Strict Validation & Type Safety: `dict_to_manifest()` rejects unknown top-level and per-plan fields, duplicate candidate references, and invalid enum values. Integer fields (`namespace_snapshot_count`, `mechanical_basis_existing_id`, `resolved_manufacturer_id`, `resolved_vehicle_model_id`, `resolved_generation_id`, `existing_vehicle_definition_id`) accept strictly `int` or `None`, explicitly rejecting `bool` (`True`, `False`), `float` (`1.0`), and numeric strings (`"1"`)
+- Exact Plan Reconstruction: `reconstruct_plan_from_manifest()` instantiates `CanonicalImportPlan` directly from reviewed manifest fields with **ZERO** dynamic re-planning calls (`plan_candidate_import`)
+- Execution Audit Receipts: Created `ImportExecutionReceipt` ORM model (`reference/models.py`) and migration `0002_importexecutionreceipt.py`. Captures `executed_at`, `operator_label`, `manifest_hash`, evidence anchors (`source_id`, `raw_artifact_hash`, `raw_artifact_reference`, `source_identity_type`, `native_identifier`), target configuration snapshot, actual outcome (`CREATED`, `NO_OP_EXACT_MATCH`, `ABORTED_STALE_PLAN`, `REJECTED`), output messages, and `on_delete=models.SET_NULL` FKs + primary identity snapshots (`pk_snapshot`, `uuid_snapshot`, `slug_snapshot`) guaranteeing audit log survival
+- Read-Only Django Admin Viewer: `ImportExecutionReceiptAdmin` (`reference/admin.py`) sets `has_add_permission = False`, `has_change_permission = False`, `has_delete_permission = False`, with all fields read-only
+- Transactional Workflow Engine: `execute_canonical_import_workflow()` (`reference/ingestion/importing/workflow.py`) wraps `CREATE` operations inside `transaction.atomic()`, ensuring `VehicleDefinition` creation and `ImportExecutionReceipt` persistence succeed together or roll back cleanly
+- Explicit Human Authorization CLI: `execute_canonical_import` management command (`reference/management/commands/execute_canonical_import.py`) enforces mandatory interactive operator confirmation (`input("Do you authorize... [y/N]")`) on every run. Intentionally omits `--no-input` flag to guarantee human confirmation
+- Production Acquisition Dry-Run Manifest Output: Extended `acquire_manufacturer_specs` (`reference/management/commands/acquire_manufacturer_specs.py`) with `--output-manifest <path>` to emit executable review manifests during production dry-runs with guaranteed **ZERO** canonical database writes
+- Test Baseline: 16 focused tests in `reference/tests/test_canonical_import_execution.py` (164 total project tests passing)
+
+Milestone 21 — Production Manufacturer Extraction & Review-Adjudication Architecture
+
+Architecture Task:
+RA-025 — Production Manufacturer Extraction & Review-Adjudication Architecture (Approved Architecture)
+- Design Document Location: `docs/architecture/designs/RA-025-Production-Manufacturer-Extraction-Review-Adjudication-Architecture.md`
+- Architectural Decision Record: `docs/architecture/ADR/ADR-0008-Deterministic-Extraction-Review-Adjudication-Adjudicated-Grade-Promotion.md`
+- Deterministic Extraction Boundary: Eliminates runtime sidecar JSON file (`2020_4runner_specs.json`) from production candidate construction path, operating deterministically from retained raw publisher snapshots via versioned strategy extractors (e.g. `ToyotaPressroomHtmlTableStrategy`)
+- Golden Test Fixture Strategy: Retains `2020_4runner_specs.json` in `reference/tests/fixtures/` strictly as golden test benchmarks to validate extractor `SourceAssertionSet` outputs against raw publisher snapshots
+- Review-Adjudication Boundary: Formalizes `CanonicalImportAdjudication` contract as a durable human domain finding (`adjudication_hash = "sha256:<64_hex>"`) for bounded adjudicable review conditions (`distinct_factory_grade`, `special_edition_grade`)
+- Five-Stage Promotion Lifecycle: Establishes explicit lifecycle (`Planning` -> `Adjudication` -> `Re-planning` -> `Execution Authorization` -> `Execution`). Adjudication does NOT execute directly and does NOT inherit old authorizations
+- Third Epistemic Basis (`ADJUDICATED_DISTINCT_GRADE`): Introduces `ImportCreateBasis.ADJUDICATED_DISTINCT_GRADE` to represent human-reviewed proof of a legitimate factory grade in a populated namespace, preserving existing `FIRST_REPRESENTATION` and `MECHANICAL_DIMENSION` semantics
+- Exact-Plan Preservation: Execution NEVER converts one `create_basis` into another. Stale database conditions abort with `ABORTED_STALE_PLAN`, requiring fresh planning and a NEW review manifest
+- Stale Revalidation Rules: An `ADJUDICATED_DISTINCT_GRADE` plan is stale if parent entities become inactive or a same-trim canonical row appears prior to execution. Unrelated trim growth is non-material
+- Review Manifest Versioning (v1.1): Supports optional per-plan `adjudication_reference` and `adjudication_hash` while maintaining 100% executable backward compatibility for v1.0 manifests
+- Execution Receipt Linkage: Extends `ImportExecutionReceipt` with optional `adjudication_hash` to record complete audit lineage from raw snapshot to canonical creation
+- Controlled 2020 Toyota Study: Establishes that populating 12 2020 4Runner configurations requires **12 separately authorized executions** under RA-024 (`[y/N]`), of which **7 require human domain adjudications** and 5 derive from automated bases (1 `FIRST_REP` + 4 `MECH_DIM`)
+- Next Planned Milestone: RA-026 — Deterministic Toyota Extraction & Review-Adjudication Implementation
+
 
 7. Architectural Decision Records (ADRs)
 Implemented and Accepted:
@@ -331,6 +367,8 @@ Implemented and Accepted:
 - ADR-0004: Canonical Reference Matching & Import Promotion Strategy (Candidate-to-canonical tiers, Evidence Trust Boundary, Create-Only initial policy)
 - ADR-0005: Manufacturer Grade Taxonomy and Market Applicability Normalization Strategy (Factory grade taxonomy, Source-Independence Test, commercial sales market, Cartesian prohibition)
 - ADR-0006: Immutable Raw Acquisition Snapshots and Layered Manufacturer Profile Architecture (Immutable raw snapshots, full SHA-256 hashing, layered profiles, structural-row identity, explicit-key multi-document linking, plan-first dry-run orchestration)
+- ADR-0007: Explicit Human Authorization & Execution Audit Receipts for Canonical Promotion (Review manifest contract, exact-plan authorization boundary, stale plan aborts, durable execution audit receipts, transactional atomicity)
+- ADR-0008: Deterministic Extraction, Review Adjudication & Adjudicated Grade Promotion (Deterministic extraction strategies, golden fixture testing, 5-stage lifecycle, bounded human domain adjudications, `ADJUDICATED_DISTINCT_GRADE` basis, exact-plan preservation, same-trim stale checks, manifest v1.1 linkage, audit receipt linkage)
 
 
 
@@ -350,9 +388,11 @@ Implemented:
 - Manufacturer Specification Ingestion tests (`reference/tests/test_manufacturer_ingestion.py`)
 - Production Manufacturer Acquisition & Orchestration tests (`reference/tests/test_production_manufacturer_acquisition.py`)
 - Canonical Reference Import tests (`reference/tests/test_canonical_import.py`)
+- Canonical Import Execution & Execution Provenance tests (`reference/tests/test_canonical_import_execution.py`)
 Current status:
-- All 148 tests passing.
+- All 164 tests passing.
 - Verification command: `.venv/bin/python manage.py test`
+
 
 
 9. Current Coding Standards
@@ -368,7 +408,8 @@ Project-level presentation views reside in `config/views.py`; domain views belon
 10. Git & Gemini CLI Workflow
 - Instructions defined in GEMINI.md.
 - Task specs stored under docs/implementation/tasks/.
-- Completed tasks: RA-003 — Core Foundation, RA-005 — Application Shell & UX Foundation, RA-007 — Observation Domain Foundation, RA-009 — Development Data Preservation and Recovery Implementation, RA-012 — Intermediate Serialization Contract Implementation & Fixture Validation, RA-013 — Public Source Acquisition Adapters, RA-015 — Source Assertion Normalization Implementation & Fixture Validation, RA-017 — Candidate Configuration Construction & Aggregation Implementation, RA-019 — Canonical Reference Import Planning & Create-Only Execution Implementation, RA-021 — Manufacturer Specification Evidence Acquisition & Normalization Implementation, RA-023 — Production Manufacturer Artifact Acquisition & Dry-Run Orchestration Implementation.
+- Completed tasks: RA-003 — Core Foundation, RA-005 — Application Shell & UX Foundation, RA-007 — Observation Domain Foundation, RA-009 — Development Data Preservation and Recovery Implementation, RA-012 — Intermediate Serialization Contract Implementation & Fixture Validation, RA-013 — Public Source Acquisition Adapters, RA-015 — Source Assertion Normalization Implementation & Fixture Validation, RA-017 — Candidate Configuration Construction & Aggregation Implementation, RA-019 — Canonical Reference Import Planning & Create-Only Execution Implementation, RA-021 — Manufacturer Specification Evidence Acquisition & Normalization Implementation, RA-023 — Production Manufacturer Artifact Acquisition & Dry-Run Orchestration Implementation, RA-024 — Canonical Reference Import Execution & Execution Provenance Workflow Implementation.
+
 
 
 
@@ -433,7 +474,11 @@ RigArchive/
 │   │   ├── __init__.py
 │   │   └── commands/
 │   │       ├── __init__.py
-│   │       └── acquire_manufacturer_specs.py
+│   │       ├── acquire_manufacturer_specs.py
+│   │       └── execute_canonical_import.py
+│   ├── migrations/
+│   │   ├── 0001_initial.py
+│   │   └── 0002_importexecutionreceipt.py
 │   ├── models.py
 │   ├── tests/
 │   │   ├── __init__.py
@@ -453,6 +498,7 @@ RigArchive/
 │   │   ├── test_acquisition_adapters.py
 │   │   ├── test_candidate_construction.py
 │   │   ├── test_canonical_import.py
+│   │   ├── test_canonical_import_execution.py
 │   │   ├── test_ingestion_serialization.py
 │   │   ├── test_manufacturer_ingestion.py
 │   │   ├── test_models.py
@@ -499,7 +545,8 @@ RigArchive/
 │           ├── RA-017-candidate-configuration-construction-aggregation-implementation.md
 │           ├── RA-019-canonical-reference-import-planning-create-only-execution-implementation.md
 │           ├── RA-021-manufacturer-specification-evidence-acquisition-normalization-implementation.md
-│           └── RA-023-production-manufacturer-artifact-acquisition-dry-run-orchestration-implementation.md
+│           ├── RA-023-production-manufacturer-artifact-acquisition-dry-run-orchestration-implementation.md
+│           └── RA-024-canonical-reference-import-execution-execution-provenance-workflow-implementation.md
 │
 ├── tests/
 │
@@ -531,26 +578,27 @@ RigArchive/
 - Milestone 17: Manufacturer Specification Evidence Acquisition & Normalization Implementation (✅ Complete — RA-021)
 - Milestone 18: Production Manufacturer Evidence Acquisition & Orchestration Architecture (✅ Approved Architecture — RA-022 / RA-022A / ADR-0006)
 - Milestone 19: Production Manufacturer Artifact Acquisition & Dry-Run Orchestration Implementation (✅ Complete — RA-023)
-- Milestone 20: Canonical Reference Import Execution & Execution Provenance Workflow Architecture (✅ Approved Architecture — RA-024 / ADR-0007)
+- Milestone 20: Canonical Reference Import Execution & Execution Provenance Workflow Architecture & Implementation (✅ Complete — RA-024 / ADR-0007)
+- Milestone 21: Production Manufacturer Extraction & Review-Adjudication Architecture (✅ Approved Architecture — RA-025 / ADR-0008)
 
-Proposed Next Milestone: RA-024 — Canonical Reference Import Execution & Execution Provenance Workflow Implementation (implementing review manifests, single-plan human authorization, execution workflow service, and ImportExecutionReceipt audit persistence).
+The next planned milestone is RA-026 — Deterministic Toyota Extraction & Review-Adjudication Implementation.
 
 
 13. Current Repository Status
 The repository currently contains:
 - Functional Django project
-- Passing test suite (148 tests passing)
+- Passing test suite (164 tests passing)
 - Shared core infrastructure (`core` app with `UUIDModel`, `TimestampedModel`, `BaseModel`)
-- Reference Data Ingestion package (`reference/ingestion/` with contracts, serialization, validation, `acquisition/` adapters, `normalization/` normalizers, `candidate/` builder, `importing/` importer, and `orchestration/` orchestrator)
+- Reference Data Ingestion package (`reference/ingestion/` with contracts, serialization, validation, `acquisition/` adapters, `normalization/` normalizers, `candidate/` builder, `importing/` importer, `manifest/` review manifest, and `orchestration/` orchestrator)
 - Development data preservation tooling (`snapshot_db`, `export_dev_data`, `verify_dev_data`)
 - Accessible application shell and UX foundation (`templates/base.html`, `about.html`, `404.html`, `500.html`)
 - Observation Domain foundation (`observation` app with `Observation` model)
 - Public reference browser
-- Admin interface
-- Stable migration history
-- Populated Architectural Decision Records (ADR-0001, ADR-0002, ADR-0003, ADR-0004, ADR-0005, ADR-0006, ADR-0007)
-- Approved Architecture Design Documents (RA-006, RA-008, RA-010, RA-011, RA-014, RA-016, RA-018, RA-020, RA-022, RA-024)
+- Admin interface with read-only audit log viewer (`ImportExecutionReceiptAdmin`)
+- Stable migration history (0001_initial, 0002_importexecutionreceipt)
+- Populated Architectural Decision Records (ADR-0001, ADR-0002, ADR-0003, ADR-0004, ADR-0005, ADR-0006, ADR-0007, ADR-0008)
+- Approved Architecture Design Documents (RA-006, RA-008, RA-010, RA-011, RA-014, RA-016, RA-018, RA-020, RA-022, RA-024, RA-025)
 - Gemini CLI project instructions (GEMINI.md)
 - Task-based implementation workflow (docs/implementation/tasks/)
-- Completed implementation tasks: RA-003 — Core Foundation, RA-005 — Application Shell & UX Foundation, RA-007 — Observation Domain Foundation, RA-009 — Development Data Preservation and Recovery Implementation, RA-012 — Intermediate Serialization Contract Implementation & Fixture Validation, RA-013 — Public Source Acquisition Adapters, RA-015 — Source Assertion Normalization Implementation & Fixture Validation, RA-017 — Candidate Configuration Construction & Aggregation Implementation, RA-019 — Canonical Reference Import Planning & Create-Only Execution Implementation, RA-021 — Manufacturer Specification Evidence Acquisition & Normalization Implementation, RA-023 — Production Manufacturer Artifact Acquisition & Dry-Run Orchestration Implementation
-- Approved Architecture/Research tasks: RA-010 — Reference Data Ingestion Source & Mapping Architecture, RA-011 — Ingestion Schema & Intermediate Serialization Design, RA-014 — Source Assertion Normalization & Mapping Architecture, RA-016 — Candidate Configuration Construction & Aggregation Architecture, RA-018 — Canonical Reference Matching & Import Architecture, RA-020 — Trim/Grade & Market Applicability Source and Normalization Architecture, RA-022 — Production Manufacturer Evidence Acquisition & Orchestration Architecture, RA-024 — Canonical Reference Import Execution & Execution Provenance Workflow Architecture
+- Completed implementation tasks: RA-003 — Core Foundation, RA-005 — Application Shell & UX Foundation, RA-007 — Observation Domain Foundation, RA-009 — Development Data Preservation and Recovery Implementation, RA-012 — Intermediate Serialization Contract Implementation & Fixture Validation, RA-013 — Public Source Acquisition Adapters, RA-015 — Source Assertion Normalization Implementation & Fixture Validation, RA-017 — Candidate Configuration Construction & Aggregation Implementation, RA-019 — Canonical Reference Import Planning & Create-Only Execution Implementation, RA-021 — Manufacturer Specification Evidence Acquisition & Normalization Implementation, RA-023 — Production Manufacturer Artifact Acquisition & Dry-Run Orchestration Implementation, RA-024 — Canonical Reference Import Execution & Execution Provenance Workflow Implementation
+- Approved Architecture/Research tasks: RA-010 — Reference Data Ingestion Source & Mapping Architecture, RA-011 — Ingestion Schema & Intermediate Serialization Design, RA-014 — Source Assertion Normalization & Mapping Architecture, RA-016 — Candidate Configuration Construction & Aggregation Architecture, RA-018 — Canonical Reference Matching & Import Architecture, RA-020 — Trim/Grade & Market Applicability Source and Normalization Architecture, RA-022 — Production Manufacturer Evidence Acquisition & Orchestration Architecture, RA-024 — Canonical Reference Import Execution & Execution Provenance Workflow Architecture, RA-025 — Production Manufacturer Extraction & Review-Adjudication Architecture
