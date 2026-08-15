@@ -110,12 +110,17 @@ def source_assertion_set_to_dict(obj: SourceAssertionSet) -> Dict[str, Any]:
 
 
 def normalized_interpretation_to_dict(interp: NormalizedInterpretation) -> Dict[str, Any]:
+    concept_val = interp.normalized_concept
+    if isinstance(concept_val, TechnicalValue):
+        concept_val = technical_value_to_dict(concept_val)
+
     res: Dict[str, Any] = {
         "interpretation_id": interp.interpretation_id,
         "source_assertion_ref": interp.source_assertion_ref,
         "target_attribute_key": interp.target_attribute_key,
-        "normalized_concept": interp.normalized_concept,
+        "normalized_concept": concept_val,
     }
+
     if interp.raw_source_value is not None:
         res["raw_source_value"] = interp.raw_source_value
     if interp.manufacturer_term is not None:
@@ -419,17 +424,23 @@ def normalized_interpretation_from_dict(d: Dict[str, Any]) -> NormalizedInterpre
         "mapping_status", "normalization_notes"
     }
     unknown = {k: v for k, v in d.items() if k not in known_keys}
+
+    concept_val = d.get("normalized_concept")
+    if isinstance(concept_val, dict) and "normalized_value" in concept_val:
+        concept_val = technical_value_from_dict(concept_val)
+
     return NormalizedInterpretation(
         interpretation_id=d.get("interpretation_id", ""),
         source_assertion_ref=d.get("source_assertion_ref", ""),
         target_attribute_key=d.get("target_attribute_key", ""),
-        normalized_concept=d.get("normalized_concept"),
+        normalized_concept=concept_val,
         raw_source_value=d.get("raw_source_value"),
         manufacturer_term=d.get("manufacturer_term"),
         mapping_status=d.get("mapping_status", "mapped"),
         normalization_notes=d.get("normalization_notes"),
         unknown_fields=unknown,
     )
+
 
 
 def candidate_identity_from_dict(d: Dict[str, Any]) -> CandidateIdentity:
