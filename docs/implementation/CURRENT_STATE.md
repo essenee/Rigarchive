@@ -271,12 +271,30 @@ RA-019 — Canonical Reference Import Planning & Create-Only Execution Implement
 - Testing & Verification: 26 focused test methods in `reference/tests/test_canonical_import.py` (106 total project tests passing)
 - Zero ORM / Migration Impact: Pure Python import engines; 0 Django ORM schema changes, 0 migrations
 
+Milestone 16 — Trim/Grade & Market Applicability Source and Normalization Architecture
+
+Architecture Task:
+RA-020 — Trim/Grade & Market Applicability Source and Normalization Architecture (Approved Architecture)
+- Design Document Location: `docs/architecture/designs/RA-020-Trim-Grade-Market-Applicability-Source-Normalization-Architecture.md`
+- Architectural Decision Record: `docs/architecture/ADR/ADR-0005-Manufacturer-Grade-Taxonomy-Market-Applicability-Normalization.md`
+- Manufacturer Grade Taxonomy: Defines `trim` as manufacturer-recognized factory grade/trim identity (`SR5`, `SR5 Premium`, `TRD Off-Road`, `Limited`). Disambiguates factory grades from dealer accessory packages (e.g. `XP Predator`) which belong in Observation/Knowledge domains
+- Commercial Sales Market Definition: Defines `VehicleDefinition.market` as manufacturer commercial sales/applicability market (`US`, `CA`, `OT`), distinguishing commercial market from regulatory jurisdiction
+- Source-Independence Test: Enforces that market applicability may become normalized evidence ONLY when independently established by the source artifact or acquisition definition. Prohibits laundering caller request context (`CandidateIdentity` or `target_context`) into canonical facts
+- Explicit Source Applicability Provenance: Recommends `source_applicability` provenance metadata structure (`market`, `applicability_basis`, `publisher_jurisdiction`) attached to `SourceMetadata`
+- Preserved-Only Candidate Projection: Retains `trim` and `market` as preserved-only mapped normalized assertions in `normalized_assertions` (Category B), satisfying RA-019 promotion without requiring contract changes
+- Cross-Source JOIN Rule & Cartesian Prohibition: Attribute equality alone is NOT a configuration join key. Candidate construction MUST NOT generate unsupported Cartesian combinations (8 grades x 3 EPA records != 24 candidates). Requires evidence-backed configuration correspondence
+- Manufacturer Acquisition Abstraction: Recommends reusable `ManufacturerSpecificationAdapter` / `StructuredDatasetAdapter` decoupling generic acquisition from manufacturer-specific mapping/taxonomy rules
+- Controlled 2020 4Runner Study: Verified 8 U.S. factory grades, Toyota terminology ("Grade"), and 4-digit order model codes (`8666`) providing source-native configuration identity (`SourceConfigurationIdentity`)
+- Proposed Next Milestone: RA-021 — Manufacturer Specification Evidence Acquisition & Normalization Implementation
+
 7. Architectural Decision Records (ADRs)
 Implemented and Accepted:
 - ADR-0001: Entity Identity Strategy (Dual Integer PK + UUID)
 - ADR-0002: Immutable Automatic Slugs (Non-editable, auto-generated on creation)
 - ADR-0003: Core Infrastructure Application (Shared abstract base models in `core`, domain isolation)
 - ADR-0004: Canonical Reference Matching & Import Promotion Strategy (Candidate-to-canonical tiers, Evidence Trust Boundary, Create-Only initial policy)
+- ADR-0005: Manufacturer Grade Taxonomy and Market Applicability Normalization Strategy (Factory grade taxonomy, Source-Independence Test, commercial sales market, Cartesian prohibition)
+
 
 
 8. Current Testing
