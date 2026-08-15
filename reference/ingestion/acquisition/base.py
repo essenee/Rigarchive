@@ -30,14 +30,15 @@ class SourceParseError(AcquisitionError):
     pass
 
 
-# Transport callable signature: (url, headers, timeout_seconds) -> (status_code, body_bytes, headers_dict)
-TransportCallable = Callable[[str, Dict[str, str], int], Tuple[int, bytes, Dict[str, str]]]
+# Transport callable signature: (url, headers, timeout_seconds) -> (status_code, body_bytes, headers_dict, final_url)
+TransportCallable = Callable[..., Any]
 
 
-def default_http_transport(url: str, headers: Dict[str, str], timeout_seconds: int = 10) -> Tuple[int, bytes, Dict[str, str]]:
+def default_http_transport(url: str, headers: Dict[str, str], timeout_seconds: int = 10) -> Tuple[int, bytes, Dict[str, str], str]:
     """
     Default HTTP transport using Python standard library urllib.request.
-    Enforces a finite timeout, explicit User-Agent header, and strict TLS certificate verification.
+    Enforces a finite timeout, explicit User-Agent header, strict TLS certificate verification,
+    and returns final effective response URL after redirects.
     """
     req = urllib.request.Request(url, headers=headers, method="GET")
     ssl_context = ssl.create_default_context()
@@ -47,12 +48,15 @@ def default_http_transport(url: str, headers: Dict[str, str], timeout_seconds: i
             status_code = response.status
             body = response.read()
             resp_headers = dict(response.headers)
-            return status_code, body, resp_headers
+            final_url = response.geturl()
+            return status_code, body, resp_headers, final_url
     except urllib.error.HTTPError as e:
         body = e.read() if e.fp else b""
-        return e.code, body, dict(e.headers)
+        final_url = e.geturl() if hasattr(e, "geturl") else url
+        return e.code, body, dict(e.headers), final_url
     except (urllib.error.URLError, TimeoutError, OSError) as e:
         raise TransportError(f"HTTP request failed to '{url}': {str(e)}") from e
+
 
 
 

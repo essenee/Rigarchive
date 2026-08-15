@@ -60,6 +60,26 @@ def validate_source_applicability(sa) -> None:
             )
 
 
+def validate_extraction_provenance(ep) -> None:
+    """Validate ExtractionProvenance rules."""
+    if not ep.raw_artifact_hash or not re.match(r"^sha256:[0-9a-f]{64}$", ep.raw_artifact_hash):
+        raise IngestionValidationError(
+            f"ExtractionProvenance 'raw_artifact_hash' '{ep.raw_artifact_hash}' must be in format 'sha256:<64_lowercase_hex_chars>'."
+        )
+
+    if not ep.raw_artifact_reference:
+        raise IngestionValidationError("ExtractionProvenance 'raw_artifact_reference' cannot be empty.")
+    if not ep.extractor_id:
+        raise IngestionValidationError("ExtractionProvenance 'extractor_id' cannot be empty.")
+    if not ep.extractor_version:
+        raise IngestionValidationError("ExtractionProvenance 'extractor_version' cannot be empty.")
+    valid_modes = {"deterministic_structured_parser", "source_specific_parser", "manually_verified_transcription"}
+    if ep.extraction_mode not in valid_modes:
+        raise IngestionValidationError(
+            f"ExtractionProvenance 'extraction_mode' '{ep.extraction_mode}' must be one of {sorted(valid_modes)}."
+        )
+
+
 def validate_source_assertion_set(obj: SourceAssertionSet) -> None:
     """Validate structural and semantic rules for a Tier 1 SourceAssertionSet."""
     validate_envelope(obj.envelope, ArtifactType.SOURCE_ASSERTION_SET.value)
@@ -69,6 +89,10 @@ def validate_source_assertion_set(obj: SourceAssertionSet) -> None:
 
     if obj.provenance.source_applicability is not None:
         validate_source_applicability(obj.provenance.source_applicability)
+
+    if obj.provenance.extraction_provenance is not None:
+        validate_extraction_provenance(obj.provenance.extraction_provenance)
+
 
 
     seen_assertion_ids: Set[str] = set()

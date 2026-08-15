@@ -18,6 +18,7 @@ from reference.ingestion.contracts import (
     DrivetrainMode,
     EngineDetails,
     Envelope,
+    ExtractionProvenance,
     FactoryTechnicalFeature,
     NormalizedInterpretation,
     NormalizedTechnicalDetails,
@@ -28,6 +29,7 @@ from reference.ingestion.contracts import (
     SourceAssertion,
     SourceAssertionSet,
     SourceConfigurationIdentity,
+
     SourceMetadata,
     TechnicalValue,
     TransmissionDetails,
@@ -73,6 +75,18 @@ def source_applicability_to_dict(sa: SourceApplicability) -> Dict[str, Any]:
     return res
 
 
+def extraction_provenance_to_dict(ep: ExtractionProvenance) -> Dict[str, Any]:
+    res: Dict[str, Any] = {
+        "raw_artifact_hash": ep.raw_artifact_hash,
+        "raw_artifact_reference": ep.raw_artifact_reference,
+        "extractor_id": ep.extractor_id,
+        "extractor_version": ep.extractor_version,
+        "extraction_mode": ep.extraction_mode,
+    }
+    res.update(ep.unknown_fields)
+    return res
+
+
 def source_metadata_to_dict(prov: SourceMetadata) -> Dict[str, Any]:
     res: Dict[str, Any] = {
         "source_id": prov.source_id,
@@ -95,8 +109,11 @@ def source_metadata_to_dict(prov: SourceMetadata) -> Dict[str, Any]:
         res["target_context"] = prov.target_context
     if prov.source_applicability is not None:
         res["source_applicability"] = source_applicability_to_dict(prov.source_applicability)
+    if prov.extraction_provenance is not None:
+        res["extraction_provenance"] = extraction_provenance_to_dict(prov.extraction_provenance)
     res.update(prov.unknown_fields)
     return res
+
 
 
 
@@ -397,15 +414,34 @@ def source_applicability_from_dict(d: Dict[str, Any]) -> SourceApplicability:
     )
 
 
+def extraction_provenance_from_dict(d: Dict[str, Any]) -> ExtractionProvenance:
+    known_keys = {
+        "raw_artifact_hash", "raw_artifact_reference", "extractor_id",
+        "extractor_version", "extraction_mode"
+    }
+    unknown = {k: v for k, v in d.items() if k not in known_keys}
+    return ExtractionProvenance(
+        raw_artifact_hash=d.get("raw_artifact_hash", ""),
+        raw_artifact_reference=d.get("raw_artifact_reference", ""),
+        extractor_id=d.get("extractor_id", ""),
+        extractor_version=d.get("extractor_version", ""),
+        extraction_mode=d.get("extraction_mode", ""),
+        unknown_fields=unknown,
+    )
+
+
 def source_metadata_from_dict(d: Dict[str, Any]) -> SourceMetadata:
     known_keys = {
         "source_id", "source_type", "source_locator", "retrieved_at",
         "native_record_id", "acquisition_method", "source_use_notes",
-        "review_status", "target_context", "source_applicability"
+        "review_status", "target_context", "source_applicability",
+        "extraction_provenance"
     }
     unknown = {k: v for k, v in d.items() if k not in known_keys}
     sa_dict = d.get("source_applicability")
     sa_obj = source_applicability_from_dict(sa_dict) if isinstance(sa_dict, dict) else None
+    ep_dict = d.get("extraction_provenance")
+    ep_obj = extraction_provenance_from_dict(ep_dict) if isinstance(ep_dict, dict) else None
     return SourceMetadata(
         source_id=d.get("source_id", ""),
         source_type=d.get("source_type"),
@@ -417,8 +453,10 @@ def source_metadata_from_dict(d: Dict[str, Any]) -> SourceMetadata:
         review_status=d.get("review_status"),
         target_context=d.get("target_context", {}),
         source_applicability=sa_obj,
+        extraction_provenance=ep_obj,
         unknown_fields=unknown,
     )
+
 
 
 
