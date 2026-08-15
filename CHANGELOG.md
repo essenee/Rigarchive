@@ -6,9 +6,12 @@ All notable changes to RigArchive will be documented in this file.
 
 ### Added
 
+- Public Source Acquisition Adapters package `reference/ingestion/acquisition/` (`base.py`, `nhtsa.py`, `epa.py`, `smoke_test.py`) implementing `NHTSAAdapter` (NHTSA vPIC REST API `GetModelsForMakeYear`) and `EPAAdapter` (EPA FuelEconomy.gov REST API `vehicle/{id}`), standard library `urllib.request` HTTP transport isolation with strict TLS certificate verification (`ssl.create_default_context()`), raw assertion extraction into Tier 1 `SourceAssertionSet` objects, 2 test response fixtures in `reference/tests/fixtures/acquisition/`, and 8 automated unit tests (58 total tests passing).
+
 - Executable Python intermediate serialization contract package `reference/ingestion/` (`contracts.py`, `serialization.py`, `validation.py`) implementing Tier 1 `SourceAssertionSet` and Tier 2 `CandidateConfigurationDocument` logical schemas, embedded normalized interpretation layers, 7-dimension drivetrain details, preserved `factory_technical_features`, separated reconciliation/review states, semantic missing-value handling, deterministic JSON round-trip serialization, forward-compatible unknown-field preservation, and 4 controlled test fixtures in `reference/tests/fixtures/ingestion/` (50 total unit tests passing).
 - Architecture Design Document `RA-011-Ingestion-Schema-Intermediate-Serialization-Design.md` defining versioned JSON logical contracts (`SourceAssertionSet` and `CandidateConfigurationDocument`), explicit normalized interpretation layers, envelope metadata standards (`artifact_type`, `schema_version`), candidate configuration contexts, high-fidelity 7-dimension drivetrain contracts, preserved unclassified technical features (`factory_technical_features`), and separated reconciliation and review workflow states.
 - Architecture Design Document `RA-010-Reference-Ingestion-Source-Mapping-Architecture.md` defining Reference data ingestion source assessment (NHTSA, EPA, Toyota USA, J.D. Power), non-lossy 7-dimension drivetrain normalization, manufacturer-taxonomy trim mapping rules, candidate configuration representations, and attribute-level reconciliation precedence.
+
 
 
 - Development Data Preservation & Recovery tooling (`snapshot_db`, `export_dev_data`, `verify_dev_data`) in `core/management/commands/`.

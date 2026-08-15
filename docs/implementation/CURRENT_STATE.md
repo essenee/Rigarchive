@@ -168,7 +168,21 @@ RA-012 — Intermediate Serialization Contract Implementation & Fixture Validati
 - Controlled Fixtures: 4 test-owned fixture files in `reference/tests/fixtures/ingestion/` (`source_assertion_set_4runner_2020.json`, `candidate_configuration_4runner_2020_trd_offroad.json`, `candidate_configuration_4runner_2020_trim_conflict.json`, `candidate_configuration_4runner_2010_i4_2wd.json`)
 - Zero ORM / Migration Impact: Pure Python dataclasses; 0 Django ORM staging models, 0 migrations, 0 database writes, 0 external acquisition calls
 - Documentation & Task Record: `docs/implementation/tasks/RA-012-intermediate-serialization-implementation.md`
-- Next Proposed Milestone: RA-013 — Public Source Acquisition Adapters (NHTSA & EPA)
+
+Milestone 9 — Public Source Acquisition Adapters (NHTSA & EPA)
+
+Implementation Task:
+RA-013 — Public Source Acquisition Adapters (Completed)
+- Package Location: `reference/ingestion/acquisition/` (`__init__.py`, `base.py`, `nhtsa.py`, `epa.py`, `smoke_test.py`)
+- Adapters Implemented: `NHTSAAdapter` (NHTSA vPIC REST API `GetModelsForMakeYear`) and `EPAAdapter` (EPA FuelEconomy.gov REST API `vehicle/{id}`)
+- Transport Isolation & Security: `default_http_transport` using standard library `urllib.request` with strict TLS certificate verification (`ssl.create_default_context()`), finite timeouts, and explicit User-Agent headers (`RigArchive-Ingestion/0.1.0`); unit tests use mock transport loading test fixtures with zero network calls
+- Tier 1 Payload Construction: Converts acquired raw source payloads into valid RA-012 `SourceAssertionSet` objects preserving provenance (`source_id`, `source_type`, `source_locator`, `retrieved_at`, `native_record_id`, `target_context`) and raw factual assertions without candidate normalization
+- Response Fixtures: 2 acquisition response fixtures in `reference/tests/fixtures/acquisition/` (`nhtsa/get_models_toyota_2020.json`, `epa/vehicle_42101.json`)
+- Live Smoke Test Utility: `smoke_test.py` (`run_all_live_smoke_tests`) for on-demand live API connectivity verification
+- Zero ORM / Migration Impact: Pure Python data structures; 0 Django ORM staging models, 0 migrations, 0 database writes, 0 production storage path decisions
+- Documentation & Task Record: `docs/implementation/tasks/RA-013-public-source-acquisition-implementation.md`
+- Next Proposed Milestone: RA-014 — Toyota 4Runner Ingestion Normalizer & Candidate Generator
+
 
 
 
@@ -231,6 +245,12 @@ RigArchive/
 │   ├── apps.py
 │   ├── ingestion/
 │   │   ├── __init__.py
+│   │   ├── acquisition/
+│   │   │   ├── __init__.py
+│   │   │   ├── base.py
+│   │   │   ├── epa.py
+│   │   │   ├── nhtsa.py
+│   │   │   └── smoke_test.py
 │   │   ├── contracts.py
 │   │   ├── serialization.py
 │   │   └── validation.py
@@ -238,11 +258,18 @@ RigArchive/
 │   ├── tests/
 │   │   ├── __init__.py
 │   │   ├── fixtures/
+│   │   │   ├── acquisition/
+│   │   │   │   ├── epa/
+│   │   │   │   │   └── vehicle_42101.json
+│   │   │   │   └── nhtsa/
+│   │   │   │       └── get_models_toyota_2020.json
+
 │   │   │   └── ingestion/
 │   │   │       ├── candidate_configuration_4runner_2010_i4_2wd.json
 │   │   │       ├── candidate_configuration_4runner_2020_trd_offroad.json
 │   │   │       ├── candidate_configuration_4runner_2020_trim_conflict.json
 │   │   │       └── source_assertion_set_4runner_2020.json
+│   │   ├── test_acquisition_adapters.py
 │   │   ├── test_ingestion_serialization.py
 │   │   ├── test_models.py
 │   │   └── test_views.py
@@ -299,7 +326,8 @@ RigArchive/
 │           ├── RA-005-application-shell-ux-foundation.md
 │           ├── RA-007-observation-domain-foundation.md
 │           ├── RA-009-development-data-preservation-implementation.md
-│           └── RA-012-intermediate-serialization-implementation.md
+│           ├── RA-012-intermediate-serialization-implementation.md
+│           └── RA-013-public-source-acquisition-implementation.md
 │
 ├── tests/
 │
@@ -320,6 +348,7 @@ RigArchive/
 - Milestone 6: Reference Data Ingestion Source & Mapping Architecture (✅ Approved Architecture — RA-010)
 - Milestone 7: Ingestion Schema & Intermediate Serialization Design (✅ Approved Architecture — RA-011)
 - Milestone 8: Intermediate Serialization Contract Implementation & Fixture Validation (✅ Complete — RA-012)
+- Milestone 9: Public Source Acquisition Adapters (✅ Complete — RA-013)
 
 Candidate future domains include:
 - Evidence
@@ -332,9 +361,9 @@ Candidate future domains include:
 13. Current Repository Status
 The repository currently contains:
 - Functional Django project
-- Passing test suite (50 tests passing)
+- Passing test suite (58 tests passing)
 - Shared core infrastructure (`core` app with `UUIDModel`, `TimestampedModel`, `BaseModel`)
-- Reference Data Ingestion Serialization package (`reference/ingestion/` with `contracts.py`, `serialization.py`, `validation.py`, and controlled test fixtures)
+- Reference Data Ingestion package (`reference/ingestion/` with contracts, serialization, validation, and `acquisition/` NHTSA & EPA adapters)
 - Development data preservation tooling (`snapshot_db`, `export_dev_data`, `verify_dev_data`)
 - Accessible application shell and UX foundation (`templates/base.html`, `about.html`, `404.html`, `500.html`)
 - Observation Domain foundation (`observation` app with `Observation` model)
@@ -345,5 +374,5 @@ The repository currently contains:
 - Approved Architecture Design Documents (RA-006, RA-008, RA-010, RA-011)
 - Gemini CLI project instructions (GEMINI.md)
 - Task-based implementation workflow (docs/implementation/tasks/)
-- Completed implementation tasks: RA-003 — Core Foundation, RA-005 — Application Shell & UX Foundation, RA-007 — Observation Domain Foundation, RA-009 — Development Data Preservation and Recovery Implementation, RA-012 — Intermediate Serialization Contract Implementation & Fixture Validation
+- Completed implementation tasks: RA-003 — Core Foundation, RA-005 — Application Shell & UX Foundation, RA-007 — Observation Domain Foundation, RA-009 — Development Data Preservation and Recovery Implementation, RA-012 — Intermediate Serialization Contract Implementation & Fixture Validation, RA-013 — Public Source Acquisition Adapters
 - Approved Architecture/Research tasks: RA-010 — Reference Data Ingestion Source & Mapping Architecture, RA-011 — Ingestion Schema & Intermediate Serialization Design

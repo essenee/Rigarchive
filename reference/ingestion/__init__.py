@@ -5,6 +5,13 @@ Provides pure Python serialization contracts, deterministic JSON round-trip util
 and contract validation for reference ingestion intermediate artifacts.
 """
 
+from reference.ingestion.acquisition import (
+    AcquisitionError,
+    EPAAdapter,
+    NHTSAAdapter,
+    SourceParseError,
+    TransportError,
+)
 from reference.ingestion.contracts import (
     ArtifactType,
     AttributeReconciliationState,
@@ -70,7 +77,7 @@ __all__ = [
     "SourceMetadata",
     "TechnicalValue",
     "TransmissionDetails",
-    # Functions
+    # Functions & Utilities
     "serialize_artifact",
     "deserialize_artifact",
     "validate_artifact",
@@ -79,4 +86,10 @@ __all__ = [
     "validate_candidate_configuration",
     "validate_semantic_missing_value",
     "IngestionValidationError",
+    # Acquisition Adapters
+    "NHTSAAdapter",
+    "EPAAdapter",
+    "AcquisitionError",
+    "TransportError",
+    "SourceParseError",
 ]

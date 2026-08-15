@@ -1,0 +1,19 @@
+{
+  "Count": 2,
+  "Message": "Results returned successfully",
+  "SearchCriteria": "Make:Toyota | ModelYear:2020",
+  "Results": [
+    {
+      "Make_ID": 448,
+      "Make_Name": "Toyota",
+      "Model_ID": 11982,
+      "Model_Name": "4Runner"
+    },
+    {
+      "Make_ID": 448,
+      "Make_Name": "Toyota",
+      "Model_ID": 1863,
+      "Model_Name": "Tacoma"
+    }
+  ]
+}
