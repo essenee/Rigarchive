@@ -38,6 +38,14 @@ from reference.ingestion.contracts import (
     TechnicalValue,
     TransmissionDetails,
 )
+from reference.ingestion.normalization import (
+    BaseSourceNormalizer,
+    EPANormalizer,
+    NHTSANormalizer,
+    NormalizationError,
+    UnsupportedSourceError,
+    normalize_source_assertions,
+)
 from reference.ingestion.serialization import (
     deserialize_artifact,
     serialize_artifact,
@@ -92,4 +100,11 @@ __all__ = [
     "AcquisitionError",
     "TransportError",
     "SourceParseError",
+    # Normalization Layer
+    "BaseSourceNormalizer",
+    "NHTSANormalizer",
+    "EPANormalizer",
+    "NormalizationError",
+    "UnsupportedSourceError",
+    "normalize_source_assertions",
 ]
