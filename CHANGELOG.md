@@ -6,7 +6,9 @@ All notable changes to RigArchive will be documented in this file.
 
 ### Added
 
+- Architecture Design Document `RA-010-Reference-Ingestion-Source-Mapping-Architecture.md` defining Reference data ingestion source assessment (NHTSA, EPA, Toyota USA, J.D. Power), non-lossy 7-dimension drivetrain normalization, manufacturer-taxonomy trim mapping rules, candidate configuration representations, and attribute-level reconciliation precedence.
 - Development Data Preservation & Recovery tooling (`snapshot_db`, `export_dev_data`, `verify_dev_data`) in `core/management/commands/`.
+
 - Isolated test database support (`RIGARCHIVE_TEST_DB_PATH`) in `config/settings.py` for safe temporary verification.
 - Local ignored preservation storage directory `backups/` (`backups/snapshots/` and `backups/logical/`) with `backups/.gitignore`.
 - Automated synthetic unit test suite `DataPreservationTestCase` in `core/tests.py` verifying preservation, restoration, and authorization linkages (34 total tests passing).

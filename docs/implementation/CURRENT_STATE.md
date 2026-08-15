@@ -130,6 +130,20 @@ RA-009 — Development Data Preservation and Recovery Implementation (Completed)
 - Documentation: `docs/development/DATA_PRESERVATION.md` developer guide
 - Design document: `docs/architecture/designs/RA-008-Development-Data-Preservation-Architecture.md`
 
+Milestone 6 — Reference Data Ingestion Source & Mapping Architecture
+
+Architecture/Research Task:
+RA-010 — Reference Data Ingestion Source & Mapping Architecture (Approved Architecture)
+- Design document: `docs/architecture/designs/RA-010-Reference-Ingestion-Source-Mapping-Architecture.md`
+- Ingestion Pipeline Architecture: Decouples Source Acquisition -> Preserved Source Assertions -> Token-Based Normalization -> Candidate Configurations -> Reconciliation / Validation -> Human Review -> Approved Canonical Import -> Reference Domain
+- Manufacturer Taxonomy Rule: Manufacturer's own market-specific configuration taxonomy governs trim/grade identity. Sub-grades (`SR5 Premium`, `Trail Premium`) are preserved as distinct trims. Packages/options not recognized by the manufacturer as distinct trims/grades do not independently create `VehicleDefinition` records
+- Non-Lossy Normalization: Preserves rich technical specificity across 7 conceptual drivetrain dimensions (Classification, Architecture, Components, Operating Modes, Mode-Specific States, Capabilities, Manufacturer Terminology) regardless of primary model choice field bounds
+- Source Authority & Reconciliation: Attribute-specific source precedence hypotheses (Manufacturer, EPA, NHTSA, J.D. Power) with categorical reconciliation status states (`corroborated`, `single_source`, `conflicting`, `ambiguous`, `incomplete`, `requires_review`)
+- Idempotency & Protection: Future canonical import must be deterministic, duplicate-safe, and idempotent without creating duplicate records or overwriting manually validated Reference data (exact matching key/mechanism unresolved)
+- Code / Schema Status: Architecture and research only. No Django models, migrations, acquisition tools, scrapers, DB records, or ingestion artifacts created
+- Next Proposed Milestone: RA-011 — Ingestion Schema & Intermediate Serialization Design
+
+
 
 7. Architectural Decision Records (ADRs)
 Implemented and Accepted:
@@ -219,7 +233,8 @@ RigArchive/
 │   │   │   └── ADR-0003-Core-Infrastructure.md
 │   │   └── designs/
 │   │       ├── RA-006-Observation-Foundation-Architecture.md
-│   │       └── RA-008-Development-Data-Preservation-Architecture.md
+│   │       ├── RA-008-Development-Data-Preservation-Architecture.md
+│   │       └── RA-010-Reference-Ingestion-Source-Mapping-Architecture.md
 │   ├── blueprint/
 │   ├── development/
 │   │   └── DATA_PRESERVATION.md
@@ -250,6 +265,7 @@ RigArchive/
 - Milestone 3A: Application Shell & UX Foundation (✅ Complete)
 - Milestone 4: Observation Domain Foundation (✅ Complete — RA-007)
 - Milestone 5: Development Data Preservation & Recovery (✅ Complete — RA-009)
+- Milestone 6: Reference Data Ingestion Source & Mapping Architecture (✅ Approved Architecture — RA-010)
 
 Candidate future domains include:
 - Evidence
@@ -271,7 +287,8 @@ The repository currently contains:
 - Admin interface
 - Stable migration history
 - Populated Architectural Decision Records (ADR-0001, ADR-0002, ADR-0003)
-- Approved Architecture Design Documents (RA-006, RA-008)
+- Approved Architecture Design Documents (RA-006, RA-008, RA-010)
 - Gemini CLI project instructions (GEMINI.md)
 - Task-based implementation workflow (docs/implementation/tasks/)
 - Completed implementation tasks: RA-003 — Core Foundation, RA-005 — Application Shell & UX Foundation, RA-007 — Observation Domain Foundation, RA-009 — Development Data Preservation and Recovery Implementation
+- Approved Architecture/Research tasks: RA-010 — Reference Data Ingestion Source & Mapping Architecture
