@@ -66,7 +66,7 @@ class Command(BaseCommand):
         profile_name = options.get("profile", "toyota_usa")
 
         if not file_arg and not url_arg:
-            # Default to controlled Toyota fixture path if no input specified
+            # Default to authentic raw Toyota pricing PDF fixture if no input specified
             default_fixture = (
                 settings.BASE_DIR
                 / "reference"
@@ -74,25 +74,27 @@ class Command(BaseCommand):
                 / "fixtures"
                 / "acquisition"
                 / "toyota"
-                / "2020_4runner_specs.json"
+                / "2020_4runner_pricing.pdf"
             )
             file_arg = str(default_fixture)
 
         if profile_name != "toyota_usa":
             raise CommandError(f"Unsupported publication profile '{profile_name}'. Approved profile: 'toyota_usa'.")
 
-        transcription_path = options.get("transcription-file") or file_arg
-        if not transcription_path:
-            raise CommandError("A valid structured derivative transcription file must be specified.")
+        transcription_path = options.get("transcription_file") or options.get("transcription-file")
+        if not transcription_path and file_arg and file_arg.endswith(".json"):
+            transcription_path = file_arg
 
-        try:
-            with open(transcription_path, "r", encoding="utf-8") as f:
-                transcription_data = json.load(f)
-        except Exception as e:
-            raise CommandError(f"Failed to read derivative transcription file '{transcription_path}': {str(e)}") from e
+        transcription_data = None
+        expected_raw_hash = None
 
-        # Extract expected raw artifact hash if present in transcription provenance
-        expected_raw_hash = transcription_data.get("_provenance", {}).get("expected_raw_artifact_hash")
+        if transcription_path:
+            try:
+                with open(transcription_path, "r", encoding="utf-8") as f:
+                    transcription_data = json.load(f)
+                expected_raw_hash = transcription_data.get("_provenance", {}).get("expected_raw_artifact_hash")
+            except Exception as e:
+                raise CommandError(f"Failed to read derivative transcription file '{transcription_path}': {str(e)}") from e
 
         orchestrator = ProductionManufacturerOrchestrator()
 

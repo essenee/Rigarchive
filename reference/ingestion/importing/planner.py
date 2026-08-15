@@ -19,6 +19,7 @@ from reference.ingestion.importing import (
     ImportCreateBasis,
     ImportEligibilityStatus,
     ImportPlannedAction,
+    ImportReviewCategory,
 )
 from reference.models import (
     Generation,
@@ -119,6 +120,7 @@ def plan_candidate_import(
             candidate_reference=ref_id,
             eligibility_status=ImportEligibilityStatus.REQUIRES_REVIEW,
             planned_action=ImportPlannedAction.FLAG_REVIEW,
+            review_category=ImportReviewCategory.EVIDENCE_CONFLICT,
             reasons=reasons,
         )
 
@@ -151,6 +153,7 @@ def plan_candidate_import(
                 candidate_reference=ref_id,
                 eligibility_status=ImportEligibilityStatus.REQUIRES_REVIEW,
                 planned_action=ImportPlannedAction.FLAG_REVIEW,
+                review_category=ImportReviewCategory.EVIDENCE_CONFLICT,
                 reasons=[f"Multiple conflicting normalized values present for key '{key_name}': {distinct}"],
             )
 
@@ -178,6 +181,7 @@ def plan_candidate_import(
             candidate_reference=ref_id,
             eligibility_status=ImportEligibilityStatus.REQUIRES_REVIEW,
             planned_action=ImportPlannedAction.FLAG_REVIEW,
+            review_category=ImportReviewCategory.MISSING_EVIDENCE,
             reasons=[f"Candidate lacks complete evidence-backed normalized attributes: missing {missing_evidence}."],
         )
 
@@ -209,6 +213,7 @@ def plan_candidate_import(
             candidate_reference=ref_id,
             eligibility_status=ImportEligibilityStatus.REQUIRES_REVIEW,
             planned_action=ImportPlannedAction.FLAG_REVIEW,
+            review_category=ImportReviewCategory.CONTEXT_CONTRADICTION,
             reasons=reasons,
         )
 
@@ -269,6 +274,7 @@ def plan_candidate_import(
             candidate_reference=ref_id,
             eligibility_status=ImportEligibilityStatus.REQUIRES_REVIEW,
             planned_action=ImportPlannedAction.FLAG_REVIEW,
+            review_category=ImportReviewCategory.MULTIPLE_OVERLAPPING_GENERATIONS,
             reasons=[f"Multiple overlapping Generations match model year {evidence_year}."],
         )
 
@@ -281,6 +287,7 @@ def plan_candidate_import(
             candidate_reference=ref_id,
             eligibility_status=ImportEligibilityStatus.REQUIRES_REVIEW,
             planned_action=ImportPlannedAction.FLAG_REVIEW,
+            review_category=ImportReviewCategory.UNFORMATTED_ENGINE_LABEL,
             reasons=["Unable to format descriptive engine display label from displacement and cylinders."],
         )
 
@@ -322,6 +329,7 @@ def plan_candidate_import(
                 candidate_reference=ref_id,
                 eligibility_status=ImportEligibilityStatus.REQUIRES_REVIEW,
                 planned_action=ImportPlannedAction.FLAG_REVIEW,
+                review_category=ImportReviewCategory.SLUG_CONFLICT,
                 resolved_manufacturer_id=mfr.id,
                 resolved_vehicle_model_id=vm.id,
                 resolved_generation_id=resolved_gen.id,
@@ -384,6 +392,7 @@ def plan_candidate_import(
         candidate_reference=ref_id,
         eligibility_status=ImportEligibilityStatus.REQUIRES_REVIEW,
         planned_action=ImportPlannedAction.FLAG_REVIEW,
+        review_category=ImportReviewCategory.DISTINCT_FACTORY_GRADE,
         resolved_manufacturer_id=mfr.id,
         resolved_vehicle_model_id=vm.id,
         resolved_generation_id=resolved_gen.id,
@@ -391,3 +400,110 @@ def plan_candidate_import(
         target_slug=target_slug,
         reasons=["Candidate differs from existing rows only by trim string or engine display label; requires human review."],
     )
+
+
+def plan_candidate_import_with_adjudications(
+    candidate: CandidateConfigurationDocument,
+    adjudications: List[Any],
+) -> CanonicalImportPlan:
+    """
+    Adjudication-aware import planning entry point (RA-025 / RA-026).
+    Enforces a strict trust boundary: validates adjudication artifact integrity, SHA-256 hash digest,
+    category eligibility, and candidate trim binding before promoting a FLAG_REVIEW candidate
+    to ImportCreateBasis.ADJUDICATED_DISTINCT_GRADE.
+    """
+    from reference.ingestion.contracts import CanonicalImportAdjudication
+    from reference.ingestion.serialization import adjudication_to_dict, compute_adjudication_hash
+    from reference.ingestion.validation import validate_adjudication
+
+    base_plan = plan_candidate_import(candidate)
+
+    if base_plan.planned_action != ImportPlannedAction.FLAG_REVIEW:
+        return base_plan
+
+    if not adjudications:
+        return base_plan
+
+    # Enforce typed review category eligibility (must be DISTINCT_FACTORY_GRADE)
+    if base_plan.review_category != ImportReviewCategory.DISTINCT_FACTORY_GRADE:
+        return base_plan
+
+    target_trim = base_plan.target_vehicle_definition_fields.get("trim_name")
+
+    # Extract candidate raw artifact hash set
+    cand_raw_hashes = set()
+    if hasattr(candidate, "evidence_raw_hashes") and candidate.evidence_raw_hashes:
+        cand_raw_hashes = set(candidate.evidence_raw_hashes)
+    elif hasattr(candidate, "source_assertion_sets") and getattr(candidate, "source_assertion_sets", None):
+        cand_raw_hashes = {
+            sas.provenance.extraction_provenance.raw_artifact_hash
+            for sas in candidate.source_assertion_sets
+            if sas.provenance and sas.provenance.extraction_provenance and sas.provenance.extraction_provenance.raw_artifact_hash
+        }
+    elif hasattr(candidate, "raw_artifact_hash") and candidate.raw_artifact_hash:
+        cand_raw_hashes = {candidate.raw_artifact_hash}
+
+    for adj in adjudications:
+        if not isinstance(adj, CanonicalImportAdjudication):
+            continue
+
+        # Trust Boundary Step 1: Validate adjudication artifact fields and hash
+        try:
+            validate_adjudication(adj)
+        except Exception:
+            continue
+
+        # Trust Boundary Step 2: Typed original review category match
+        if adj.original_review_category != base_plan.review_category.value:
+            continue
+
+        # Trust Boundary Step 3: Candidate reference & trim name binding
+        ref_matches = (adj.candidate_reference == candidate.candidate_reference)
+        trim_matches = (adj.adjudicated_trim_name == target_trim)
+
+        if not (ref_matches and trim_matches):
+            continue
+
+        # Trust Boundary Step 4: Multi-Artifact Evidence Revision Set Binding
+        adj_anchors = adj.evidence_anchors or {}
+        adj_raw_hashes = set()
+        if "raw_artifact_hashes" in adj_anchors and isinstance(adj_anchors["raw_artifact_hashes"], list):
+            adj_raw_hashes = set(adj_anchors["raw_artifact_hashes"])
+        elif "raw_artifact_hash" in adj_anchors and adj_anchors["raw_artifact_hash"]:
+            adj_raw_hashes = {adj_anchors["raw_artifact_hash"]}
+        elif "raw_artifact_hash" in adj.source_identity and adj.source_identity.get("raw_artifact_hash"):
+            adj_raw_hashes = {adj.source_identity["raw_artifact_hash"]}
+
+        if cand_raw_hashes and adj_raw_hashes and cand_raw_hashes != adj_raw_hashes:
+            continue
+
+        # Trust Boundary Step 5: Verify SHA-256 hash digest
+        expected_hash = compute_adjudication_hash(adjudication_to_dict(adj))
+        if adj.adjudication_hash != expected_hash:
+            continue
+
+        # Trust Boundary Step 6: Approved adjudicable categories for DISTINCT_FACTORY_GRADE
+        if adj.adjudication_category not in {"distinct_factory_grade", "special_edition_grade"}:
+            continue
+
+        adj_ref_name = f"adjudication_{candidate.candidate_reference}.json"
+
+        return CanonicalImportPlan(
+            candidate_reference=base_plan.candidate_reference,
+            eligibility_status=ImportEligibilityStatus.ELIGIBLE,
+            planned_action=ImportPlannedAction.CREATE,
+            create_basis=ImportCreateBasis.ADJUDICATED_DISTINCT_GRADE,
+            review_category=base_plan.review_category,
+            namespace_snapshot_count=base_plan.namespace_snapshot_count,
+            resolved_manufacturer_id=base_plan.resolved_manufacturer_id,
+            resolved_vehicle_model_id=base_plan.resolved_vehicle_model_id,
+            resolved_generation_id=base_plan.resolved_generation_id,
+            target_vehicle_definition_fields=base_plan.target_vehicle_definition_fields,
+            target_slug=base_plan.target_slug,
+            existing_vehicle_definition_id=base_plan.existing_vehicle_definition_id,
+            reasons=[f"Validated human domain adjudication ({adj.adjudication_category}) proves distinct factory grade."],
+            adjudication_reference=adj_ref_name,
+            adjudication_hash=adj.adjudication_hash,
+        )
+
+    return base_plan

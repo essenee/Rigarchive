@@ -177,15 +177,54 @@ class ToyotaUSAPressroomProfile:
     def extract(
         self,
         snapshot_meta: RawSourceSnapshotMetadata,
-        transcription_data: Dict[str, Any],
+        transcription_data: Optional[Dict[str, Any]] = None,
         override_expected_hash: Optional[str] = None,
+        raw_bytes: Optional[bytes] = None,
     ) -> List[SourceAssertionSet]:
         """
-        Extract Tier 1 SourceAssertionSets from a verified structured derivative transcription,
-        strictly enforcing mechanical binding to the stored raw snapshot's content hash.
+        Extract Tier 1 SourceAssertionSets directly from retained raw publisher snapshots (PDF/HTML),
+        or from verified structured derivative transcriptions for test benchmarks.
         """
+        from pathlib import Path
+        from reference.ingestion.acquisition.toyota_extractor import ToyotaPricingMasterPdfStrategy
+
+        # 1. Production Runtime Extraction Path (from authentic raw PDF/HTML snapshot bytes)
+        bytes_to_extract = raw_bytes
+        if not bytes_to_extract and snapshot_meta and snapshot_meta.storage_path:
+            p = Path(snapshot_meta.storage_path)
+            if p.exists() and p.is_file():
+                bytes_to_extract = p.read_bytes()
+
+        if bytes_to_extract and (bytes_to_extract.startswith(b"%PDF") or snapshot_meta.storage_path.endswith(".pdf")):
+            from reference.ingestion.acquisition.toyota_extractor import ToyotaProductInformationPdfStrategy
+            pricing_strategy = ToyotaPricingMasterPdfStrategy()
+            sets = pricing_strategy.extract(bytes_to_extract, snapshot_meta)
+
+            # Check if Product Information specs PDF is present alongside pricing PDF
+            specs_path = Path(snapshot_meta.storage_path).parent / "2020_4runner_specs.pdf"
+            if specs_path.exists() and specs_path.is_file():
+                specs_bytes = specs_path.read_bytes()
+                from reference.ingestion.acquisition.snapshots import compute_content_hash
+                specs_hash = compute_content_hash(specs_bytes)
+                specs_meta = RawSourceSnapshotMetadata(
+                    source_id=snapshot_meta.source_id,
+                    publisher_locator="https://pressroom.toyota.com/vehicle/2020-toyota-4runner/",
+                    acquired_at=snapshot_meta.acquired_at,
+                    content_type="application/pdf",
+                    content_hash=specs_hash,
+                    storage_path=str(specs_path),
+                    source_applicability=snapshot_meta.source_applicability,
+                    acquisition_method=snapshot_meta.acquisition_method,
+                )
+                info_strategy = ToyotaProductInformationPdfStrategy()
+                tech_sets = info_strategy.extract(specs_bytes, specs_meta)
+                sets.extend(tech_sets)
+
+            return sets
+
+        # 2. Benchmark / Transcription Extraction Path
         if not transcription_data or not isinstance(transcription_data, dict):
-            raise AcquisitionError("Transcription payload is empty or invalid.")
+            raise AcquisitionError("No raw PDF bytes or transcription payload provided for extraction.")
 
         configs = transcription_data.get("configurations")
         if configs is None or not isinstance(configs, list):
@@ -200,6 +239,7 @@ class ToyotaUSAPressroomProfile:
                 f"Current stored raw snapshot hash '{snapshot_meta.content_hash}' does not match "
                 f"derivative transcription expected hash '{expected_hash}'. Extraction requires reverification."
             )
+
 
         pub_scope = prov_meta.get("publication_scope", "US")
         publisher = prov_meta.get("publisher", "Toyota Motor Sales, U.S.A., Inc.")

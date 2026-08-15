@@ -32,7 +32,8 @@ class ManifestValidationError(Exception):
 class CanonicalImportReviewPlan:
     """
     Serializable review artifact representation of a single CanonicalImportPlan.
-    Contains all 13 fields required for exact plan reconstruction plus source identity metadata.
+    Contains all 13 fields required for exact plan reconstruction plus source identity metadata
+    and optional adjudication linkage provenance.
     """
     candidate_reference: str
     source_identity_type: str
@@ -40,6 +41,7 @@ class CanonicalImportReviewPlan:
     eligibility_status: str
     planned_action: str
     create_basis: Optional[str] = None
+    review_category: Optional[str] = None
     namespace_snapshot_count: Optional[int] = None
     mechanical_basis_existing_id: Optional[int] = None
     resolved_manufacturer_id: Optional[int] = None
@@ -49,6 +51,9 @@ class CanonicalImportReviewPlan:
     target_slug: Optional[str] = None
     existing_vehicle_definition_id: Optional[int] = None
     reasons: List[str] = field(default_factory=list)
+    adjudication_reference: Optional[str] = None
+    adjudication_hash: Optional[str] = None
+
 
 
 @dataclass
@@ -108,6 +113,7 @@ def build_review_manifest(
             eligibility_status=plan.eligibility_status.value,
             planned_action=plan.planned_action.value,
             create_basis=plan.create_basis.value if plan.create_basis else None,
+            review_category=plan.review_category.value if plan.review_category else None,
             namespace_snapshot_count=plan.namespace_snapshot_count,
             mechanical_basis_existing_id=plan.mechanical_basis_existing_id,
             resolved_manufacturer_id=plan.resolved_manufacturer_id,
@@ -117,17 +123,31 @@ def build_review_manifest(
             target_slug=plan.target_slug,
             existing_vehicle_definition_id=plan.existing_vehicle_definition_id,
             reasons=list(plan.reasons),
+            adjudication_reference=plan.adjudication_reference,
+            adjudication_hash=plan.adjudication_hash,
         )
         review_plans.append(rp)
 
+    # Automatically promote manifest version to 1.1 if any plan has adjudication fields
+    has_adjudication = any(p.adjudication_hash for p in review_plans)
+    version = "1.1" if has_adjudication else MANIFEST_VERSION
+
+    serialized_plans = []
+    for rp in review_plans:
+        p_dict = asdict(rp)
+        if version == "1.0":
+            p_dict.pop("adjudication_reference", None)
+            p_dict.pop("adjudication_hash", None)
+        serialized_plans.append(p_dict)
+
     manifest_dict_no_hash = {
-        "manifest_version": MANIFEST_VERSION,
+        "manifest_version": version,
         "created_at": datetime.now(timezone.utc).isoformat(),
         "source_id": source_id,
         "raw_artifact_hash": raw_artifact_hash,
         "raw_artifact_reference": raw_artifact_reference,
         "extraction_provenance": extraction_provenance,
-        "plans": [asdict(p) for p in review_plans],
+        "plans": serialized_plans,
     }
 
     manifest_hash = compute_manifest_hash(manifest_dict_no_hash)
@@ -146,7 +166,12 @@ def build_review_manifest(
 
 def manifest_to_dict(manifest: CanonicalImportReviewManifest) -> Dict[str, Any]:
     """Converts a CanonicalImportReviewManifest object to a serializable dictionary."""
-    return asdict(manifest)
+    d = asdict(manifest)
+    if manifest.manifest_version == "1.0":
+        for p in d.get("plans", []):
+            p.pop("adjudication_reference", None)
+            p.pop("adjudication_hash", None)
+    return d
 
 
 def dict_to_manifest(d: Dict[str, Any]) -> CanonicalImportReviewManifest:
@@ -177,9 +202,10 @@ def dict_to_manifest(d: Dict[str, Any]) -> CanonicalImportReviewManifest:
     if missing_keys:
         raise ManifestValidationError(f"Missing required top-level fields: {sorted(list(missing_keys))}")
 
-    if d["manifest_version"] != MANIFEST_VERSION:
+    m_ver = str(d["manifest_version"])
+    if m_ver not in ("1.0", "1.1"):
         raise ManifestValidationError(
-            f"Unsupported manifest version '{d['manifest_version']}'. Expected '{MANIFEST_VERSION}'."
+            f"Unsupported manifest version '{m_ver}'. Supported versions: '1.0', '1.1'."
         )
 
     if not SHA256_REGEX.match(str(d["raw_artifact_hash"])):
@@ -201,13 +227,14 @@ def dict_to_manifest(d: Dict[str, Any]) -> CanonicalImportReviewManifest:
             f"Manifest hash mismatch: computed '{computed_hash}', supplied '{supplied_hash}'."
         )
 
-    allowed_plan_keys = {
+    base_plan_keys = {
         "candidate_reference",
         "source_identity_type",
         "native_identifier",
         "eligibility_status",
         "planned_action",
         "create_basis",
+        "review_category",
         "namespace_snapshot_count",
         "mechanical_basis_existing_id",
         "resolved_manufacturer_id",
@@ -218,6 +245,11 @@ def dict_to_manifest(d: Dict[str, Any]) -> CanonicalImportReviewManifest:
         "existing_vehicle_definition_id",
         "reasons",
     }
+
+    if m_ver == "1.0":
+        allowed_plan_keys = set(base_plan_keys)
+    else:
+        allowed_plan_keys = set(base_plan_keys) | {"adjudication_reference", "adjudication_hash"}
 
     seen_refs = set()
     review_plans: List[CanonicalImportReviewPlan] = []
@@ -234,6 +266,11 @@ def dict_to_manifest(d: Dict[str, Any]) -> CanonicalImportReviewManifest:
         if extra_p_keys:
             raise ManifestValidationError(
                 f"Unknown plan fields in plan index {idx}: {sorted(list(extra_p_keys))}"
+            )
+
+        if m_ver == "1.0" and ("adjudication_reference" in p_dict or "adjudication_hash" in p_dict):
+            raise ManifestValidationError(
+                f"Manifest version 1.0 plan at index {idx} contains forbidden adjudication fields."
             )
 
         missing_p_keys = allowed_plan_keys - set(p_dict.keys())
@@ -293,6 +330,29 @@ def dict_to_manifest(d: Dict[str, Any]) -> CanonicalImportReviewManifest:
         if not isinstance(p_dict["reasons"], list):
             raise ManifestValidationError(f"reasons in plan '{ref}' must be a list.")
 
+        adj_ref = p_dict.get("adjudication_reference")
+        adj_hash = p_dict.get("adjudication_hash")
+
+        if m_ver == "1.1":
+            has_hash = bool(adj_hash)
+            has_ref = bool(adj_ref)
+
+            if has_hash and not has_ref:
+                raise ManifestValidationError(f"Manifest v1.1 plan '{ref}' has adjudication_hash but missing adjudication_reference.")
+            if has_ref and not has_hash:
+                raise ManifestValidationError(f"Manifest v1.1 plan '{ref}' has adjudication_reference but missing adjudication_hash.")
+
+            if cb == ImportCreateBasis.ADJUDICATED_DISTINCT_GRADE.value and not (has_hash and has_ref):
+                raise ManifestValidationError(f"ADJUDICATED_DISTINCT_GRADE plan '{ref}' requires complete adjudication linkage.")
+
+            if cb in (ImportCreateBasis.FIRST_REPRESENTATION.value, ImportCreateBasis.MECHANICAL_DIMENSION.value) and (has_hash or has_ref):
+                raise ManifestValidationError(f"Basis '{cb}' in plan '{ref}' must not contain adjudication linkage.")
+
+        if adj_hash is not None:
+            if not SHA256_REGEX.match(str(adj_hash)):
+                raise ManifestValidationError(f"Invalid adjudication_hash format '{adj_hash}' in plan '{ref}'.")
+
+        rc = p_dict.get("review_category")
 
         rp = CanonicalImportReviewPlan(
             candidate_reference=ref,
@@ -301,6 +361,7 @@ def dict_to_manifest(d: Dict[str, Any]) -> CanonicalImportReviewManifest:
             eligibility_status=str(p_dict["eligibility_status"]),
             planned_action=str(p_dict["planned_action"]),
             create_basis=cb,
+            review_category=rc,
             namespace_snapshot_count=p_dict["namespace_snapshot_count"],
             mechanical_basis_existing_id=p_dict["mechanical_basis_existing_id"],
             resolved_manufacturer_id=p_dict["resolved_manufacturer_id"],
@@ -310,6 +371,8 @@ def dict_to_manifest(d: Dict[str, Any]) -> CanonicalImportReviewManifest:
             target_slug=p_dict["target_slug"],
             existing_vehicle_definition_id=p_dict["existing_vehicle_definition_id"],
             reasons=list(p_dict["reasons"]),
+            adjudication_reference=adj_ref,
+            adjudication_hash=adj_hash,
         )
         review_plans.append(rp)
 
@@ -325,16 +388,19 @@ def dict_to_manifest(d: Dict[str, Any]) -> CanonicalImportReviewManifest:
     )
 
 
+
 def reconstruct_plan_from_manifest(review_plan: CanonicalImportReviewPlan) -> CanonicalImportPlan:
     """
     Reconstructs an exact executable CanonicalImportPlan object from a reviewed CanonicalImportReviewPlan.
     Performs zero dynamic re-planning calls to plan_candidate_import().
     """
+    from reference.ingestion.importing import ImportReviewCategory
     return CanonicalImportPlan(
         candidate_reference=review_plan.candidate_reference,
         eligibility_status=ImportEligibilityStatus(review_plan.eligibility_status),
         planned_action=ImportPlannedAction(review_plan.planned_action),
         create_basis=ImportCreateBasis(review_plan.create_basis) if review_plan.create_basis else None,
+        review_category=ImportReviewCategory(review_plan.review_category) if review_plan.review_category else None,
         namespace_snapshot_count=review_plan.namespace_snapshot_count,
         mechanical_basis_existing_id=review_plan.mechanical_basis_existing_id,
         resolved_manufacturer_id=review_plan.resolved_manufacturer_id,
@@ -344,4 +410,6 @@ def reconstruct_plan_from_manifest(review_plan: CanonicalImportReviewPlan) -> Ca
         target_slug=review_plan.target_slug,
         existing_vehicle_definition_id=review_plan.existing_vehicle_definition_id,
         reasons=list(review_plan.reasons),
+        adjudication_reference=review_plan.adjudication_reference,
+        adjudication_hash=review_plan.adjudication_hash,
     )

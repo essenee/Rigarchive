@@ -200,7 +200,23 @@ def execute_candidate_import(
                         messages=["Original mechanical basis record was modified prior to execution."],
                     )
 
+            elif plan.create_basis == ImportCreateBasis.ADJUDICATED_DISTINCT_GRADE:
+                if not plan.adjudication_hash:
+                    return CanonicalImportResult(
+                        candidate_reference=ref_id,
+                        outcome=ImportExecutionOutcome.ABORTED_STALE_PLAN,
+                        messages=["Adjudicated CREATE plan missing adjudication_hash provenance."],
+                    )
 
+                target_trim = plan.target_vehicle_definition_fields.get("trim_name")
+                same_trim_exists = any(row.trim_name == target_trim for row in current_namespace_rows)
+
+                if same_trim_exists:
+                    return CanonicalImportResult(
+                        candidate_reference=ref_id,
+                        outcome=ImportExecutionOutcome.ABORTED_STALE_PLAN,
+                        messages=["Adjudicated CREATE plan is stale because a canonical record with matching trim now exists."],
+                    )
 
             # Instantiate new VehicleDefinition instance
             vd = VehicleDefinition(

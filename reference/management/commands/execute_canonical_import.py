@@ -49,11 +49,18 @@ class Command(BaseCommand):
             default="",
             help="Optional operator attribution label override (default: 'cli:<local_user>').",
         )
+        parser.add_argument(
+            "--adjudication-file",
+            type=str,
+            default="",
+            help="Optional path to CanonicalImportAdjudication JSON file for adjudicated plans.",
+        )
 
     def handle(self, *args, **options):
         manifest_path = Path(options["manifest"]).resolve()
         plan_ref = options["plan_ref"]
         operator_label = options.get("operator", "")
+        adj_file_arg = options.get("adjudication_file", "")
 
         if not manifest_path.exists():
             raise CommandError(f"Review manifest file '{manifest_path}' does not exist.")
@@ -80,6 +87,26 @@ class Command(BaseCommand):
                 f"Candidate plan '{plan_ref}' has non-executable planned action "
                 f"'{review_plan.planned_action}' and cannot be executed."
             )
+
+        # Load adjudication artifact if plan specifies ADJUDICATED_DISTINCT_GRADE
+        adjudication_artifact = None
+        if review_plan.create_basis == "adjudicated_distinct_grade":
+            adj_path = Path(adj_file_arg).resolve() if adj_file_arg else None
+            if not adj_path or not adj_path.exists():
+                # Attempt default resolution in manifest directory
+                ref_name = review_plan.adjudication_reference or f"adjudication_{plan_ref}.json"
+                default_adj_path = manifest_path.parent / ref_name
+                if default_adj_path.exists():
+                    adj_path = default_adj_path
+
+            if adj_path and adj_path.exists() and adj_path.is_file():
+                try:
+                    with open(adj_path, "r", encoding="utf-8") as f:
+                        adj_dict = json.load(f)
+                    from reference.ingestion.serialization import adjudication_from_dict
+                    adjudication_artifact = adjudication_from_dict(adj_dict)
+                except Exception as e:
+                    raise CommandError(f"Failed to read adjudication artifact '{adj_path}': {str(e)}") from e
 
         # Display exact target configuration details for operator review
         self.stdout.write(self.style.MIGRATE_HEADING("=" * 80))
@@ -120,6 +147,7 @@ class Command(BaseCommand):
                 manifest=manifest,
                 review_plan=review_plan,
                 operator_label=operator_label,
+                adjudication_artifact=adjudication_artifact,
             )
         except CanonicalExecutionWorkflowError as e:
             raise CommandError(f"Canonical execution workflow failed: {str(e)}") from e

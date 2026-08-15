@@ -290,6 +290,7 @@ class ImportExecutionReceiptAdmin(admin.ModelAdmin):
         "candidate_reference",
         "planned_action",
         "create_basis",
+        "adjudication_hash",
         "source_id",
         "raw_artifact_hash",
         "raw_artifact_reference",

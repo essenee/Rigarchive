@@ -17,12 +17,14 @@ from reference.ingestion.contracts import (
     ReviewDisposition,
     SemanticMissingValue,
     SourceAssertionSet,
+    CanonicalImportAdjudication,
 )
 
 
 class IngestionValidationError(ValueError):
     """Raised when an ingestion artifact fails structural or semantic contract validation."""
     pass
+
 
 
 def validate_envelope(envelope, expected_type: str) -> None:
@@ -212,3 +214,39 @@ def validate_artifact(
         validate_candidate_configuration(obj, source_assertion_set=source_assertion_set)
     else:
         raise IngestionValidationError(f"Unsupported object type for validation: {type(obj)}")
+
+
+def validate_adjudication(adj: CanonicalImportAdjudication) -> None:
+    """Validate human adjudication contract attributes, category eligibility, and hash integrity."""
+    from reference.ingestion.serialization import adjudication_to_dict, compute_adjudication_hash
+
+    if adj.adjudication_version != "1.0":
+        raise IngestionValidationError(f"Unsupported adjudication_version '{adj.adjudication_version}'. Expected '1.0'.")
+
+    if not adj.candidate_reference:
+        raise IngestionValidationError("Adjudication 'candidate_reference' is required.")
+
+    if not adj.operator_label:
+        raise IngestionValidationError("Adjudication 'operator_label' is required.")
+
+    if not adj.adjudicated_trim_name:
+        raise IngestionValidationError("Adjudication 'adjudicated_trim_name' is required.")
+
+    allowed_categories = {"distinct_factory_grade", "special_edition_grade"}
+    if adj.adjudication_category not in allowed_categories:
+        raise IngestionValidationError(
+            f"Adjudication category '{adj.adjudication_category}' is not adjudicable. "
+            f"Approved categories: {sorted(allowed_categories)}."
+        )
+
+    if adj.adjudication_decision != "approved_distinct_trim":
+        raise IngestionValidationError(
+            f"Unsupported adjudication decision '{adj.adjudication_decision}'. Approved: 'approved_distinct_trim'."
+        )
+
+    if adj.adjudication_hash:
+        expected = compute_adjudication_hash(adjudication_to_dict(adj))
+        if adj.adjudication_hash != expected:
+            raise IngestionValidationError(
+                f"Adjudication hash mismatch: stored '{adj.adjudication_hash}' != computed '{expected}'."
+            )

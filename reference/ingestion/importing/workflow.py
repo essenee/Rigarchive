@@ -13,6 +13,7 @@ from django.db import transaction
 from reference.ingestion.importing import (
     CanonicalImportPlan,
     CanonicalImportResult,
+    ImportCreateBasis,
     ImportExecutionOutcome,
     ImportPlannedAction,
     execute_candidate_import,
@@ -34,6 +35,7 @@ def execute_canonical_import_workflow(
     manifest: CanonicalImportReviewManifest,
     review_plan: CanonicalImportReviewPlan,
     operator_label: str = "",
+    adjudication_artifact: Optional[Any] = None,
 ) -> Tuple[CanonicalImportResult, ImportExecutionReceipt]:
     """
     Executes an authorized CanonicalImportPlan and persists a durable ImportExecutionReceipt audit record.
@@ -47,6 +49,59 @@ def execute_canonical_import_workflow(
             f"Candidate plan '{review_plan.candidate_reference}' has non-executable action "
             f"'{review_plan.planned_action}' and cannot be executed."
         )
+
+    # Cryptographic & Structural Adjudication Artifact Verification for ADJUDICATED_DISTINCT_GRADE plans
+    if review_plan.create_basis == ImportCreateBasis.ADJUDICATED_DISTINCT_GRADE.value or plan.create_basis == ImportCreateBasis.ADJUDICATED_DISTINCT_GRADE:
+        if not adjudication_artifact:
+            raise CanonicalExecutionWorkflowError(
+                f"Execution refused: Plan '{review_plan.candidate_reference}' specifies ADJUDICATED_DISTINCT_GRADE "
+                "basis but no validated CanonicalImportAdjudication artifact was provided to the workflow."
+            )
+
+        from reference.ingestion.contracts import CanonicalImportAdjudication
+        from reference.ingestion.serialization import adjudication_to_dict, compute_adjudication_hash
+        from reference.ingestion.validation import validate_adjudication
+
+        if not isinstance(adjudication_artifact, CanonicalImportAdjudication):
+            raise CanonicalExecutionWorkflowError(
+                "Execution refused: Provided adjudication_artifact is not a CanonicalImportAdjudication instance."
+            )
+
+        try:
+            validate_adjudication(adjudication_artifact)
+        except Exception as ve:
+            raise CanonicalExecutionWorkflowError(
+                f"Execution refused: Adjudication artifact contract validation failed: {str(ve)}"
+            ) from ve
+
+        computed_hash = compute_adjudication_hash(adjudication_to_dict(adjudication_artifact))
+        if computed_hash != adjudication_artifact.adjudication_hash:
+            raise CanonicalExecutionWorkflowError(
+                f"Execution refused: Adjudication artifact content hash mismatch: computed '{computed_hash}', stored '{adjudication_artifact.adjudication_hash}'."
+            )
+
+        if adjudication_artifact.adjudication_hash != review_plan.adjudication_hash or adjudication_artifact.adjudication_hash != plan.adjudication_hash:
+            raise CanonicalExecutionWorkflowError(
+                "Execution refused: Adjudication artifact hash does not match plan adjudication_hash."
+            )
+
+        if adjudication_artifact.candidate_reference != review_plan.candidate_reference:
+            raise CanonicalExecutionWorkflowError(
+                f"Execution refused: Adjudication candidate_reference '{adjudication_artifact.candidate_reference}' does not match plan '{review_plan.candidate_reference}'."
+            )
+
+        target_trim = (plan.target_vehicle_definition_fields or {}).get("trim_name")
+        if target_trim and adjudication_artifact.adjudicated_trim_name != target_trim:
+            raise CanonicalExecutionWorkflowError(
+                f"Execution refused: Adjudication trim '{adjudication_artifact.adjudicated_trim_name}' does not match plan target trim '{target_trim}'."
+            )
+
+        if review_plan.adjudication_reference:
+            expected_ref_name = f"adjudication_{review_plan.candidate_reference}.json"
+            if review_plan.adjudication_reference != expected_ref_name:
+                raise CanonicalExecutionWorkflowError(
+                    f"Execution refused: Review plan adjudication_reference '{review_plan.adjudication_reference}' does not match expected '{expected_ref_name}'."
+                )
 
     op_label = operator_label or f"cli:{getpass.getuser()}"
 
@@ -73,6 +128,7 @@ def execute_canonical_import_workflow(
             candidate_reference=review_plan.candidate_reference,
             planned_action=review_plan.planned_action,
             create_basis=review_plan.create_basis or "",
+            adjudication_hash=review_plan.adjudication_hash or "",
             source_id=manifest.source_id,
             raw_artifact_hash=manifest.raw_artifact_hash,
             raw_artifact_reference=manifest.raw_artifact_reference,
