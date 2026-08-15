@@ -531,8 +531,9 @@ RigArchive/
 - Milestone 17: Manufacturer Specification Evidence Acquisition & Normalization Implementation (✅ Complete — RA-021)
 - Milestone 18: Production Manufacturer Evidence Acquisition & Orchestration Architecture (✅ Approved Architecture — RA-022 / RA-022A / ADR-0006)
 - Milestone 19: Production Manufacturer Artifact Acquisition & Dry-Run Orchestration Implementation (✅ Complete — RA-023)
+- Milestone 20: Canonical Reference Import Execution & Execution Provenance Workflow Architecture (✅ Approved Architecture — RA-024 / ADR-0007)
 
-Proposed Next Milestone: RA-024 — Canonical Reference Import Execution & Execution Provenance Workflow Implementation (implementing explicit operator approval and transactional creation execution for ELIGIBLE CanonicalImportPlans).
+Proposed Next Milestone: RA-024 — Canonical Reference Import Execution & Execution Provenance Workflow Implementation (implementing review manifests, single-plan human authorization, execution workflow service, and ImportExecutionReceipt audit persistence).
 
 
 13. Current Repository Status
@@ -547,9 +548,9 @@ The repository currently contains:
 - Public reference browser
 - Admin interface
 - Stable migration history
-- Populated Architectural Decision Records (ADR-0001, ADR-0002, ADR-0003, ADR-0004, ADR-0005, ADR-0006)
-- Approved Architecture Design Documents (RA-006, RA-008, RA-010, RA-011, RA-014, RA-016, RA-018, RA-020, RA-022)
+- Populated Architectural Decision Records (ADR-0001, ADR-0002, ADR-0003, ADR-0004, ADR-0005, ADR-0006, ADR-0007)
+- Approved Architecture Design Documents (RA-006, RA-008, RA-010, RA-011, RA-014, RA-016, RA-018, RA-020, RA-022, RA-024)
 - Gemini CLI project instructions (GEMINI.md)
 - Task-based implementation workflow (docs/implementation/tasks/)
 - Completed implementation tasks: RA-003 — Core Foundation, RA-005 — Application Shell & UX Foundation, RA-007 — Observation Domain Foundation, RA-009 — Development Data Preservation and Recovery Implementation, RA-012 — Intermediate Serialization Contract Implementation & Fixture Validation, RA-013 — Public Source Acquisition Adapters, RA-015 — Source Assertion Normalization Implementation & Fixture Validation, RA-017 — Candidate Configuration Construction & Aggregation Implementation, RA-019 — Canonical Reference Import Planning & Create-Only Execution Implementation, RA-021 — Manufacturer Specification Evidence Acquisition & Normalization Implementation, RA-023 — Production Manufacturer Artifact Acquisition & Dry-Run Orchestration Implementation
-- Approved Architecture/Research tasks: RA-010 — Reference Data Ingestion Source & Mapping Architecture, RA-011 — Ingestion Schema & Intermediate Serialization Design, RA-014 — Source Assertion Normalization & Mapping Architecture, RA-016 — Candidate Configuration Construction & Aggregation Architecture, RA-018 — Canonical Reference Matching & Import Architecture, RA-020 — Trim/Grade & Market Applicability Source and Normalization Architecture, RA-022 — Production Manufacturer Evidence Acquisition & Orchestration Architecture
+- Approved Architecture/Research tasks: RA-010 — Reference Data Ingestion Source & Mapping Architecture, RA-011 — Ingestion Schema & Intermediate Serialization Design, RA-014 — Source Assertion Normalization & Mapping Architecture, RA-016 — Candidate Configuration Construction & Aggregation Architecture, RA-018 — Canonical Reference Matching & Import Architecture, RA-020 — Trim/Grade & Market Applicability Source and Normalization Architecture, RA-022 — Production Manufacturer Evidence Acquisition & Orchestration Architecture, RA-024 — Canonical Reference Import Execution & Execution Provenance Workflow Architecture
