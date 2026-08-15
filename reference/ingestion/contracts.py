@@ -66,6 +66,16 @@ class SourceApplicability:
 
 
 @dataclass
+class ExtractionProvenance:
+    raw_artifact_hash: str
+    raw_artifact_reference: str
+    extractor_id: str
+    extractor_version: str
+    extraction_mode: str
+    unknown_fields: Dict[str, Any] = field(default_factory=dict)
+
+
+@dataclass
 class SourceMetadata:
     source_id: str  # RigArchive-local stable source identifier
     source_type: Optional[str] = None
@@ -77,7 +87,9 @@ class SourceMetadata:
     review_status: Optional[str] = None
     target_context: Dict[str, Any] = field(default_factory=dict)
     source_applicability: Optional[SourceApplicability] = None
+    extraction_provenance: Optional[ExtractionProvenance] = None
     unknown_fields: Dict[str, Any] = field(default_factory=dict)
+
 
 
 

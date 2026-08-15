@@ -347,9 +347,11 @@ Implemented:
 - Public Source Acquisition Adapter tests (`reference/tests/test_acquisition_adapters.py`)
 - Source Assertion Normalization tests (`reference/tests/test_normalization.py`)
 - Candidate Configuration Construction tests (`reference/tests/test_candidate_construction.py`)
+- Manufacturer Specification Ingestion tests (`reference/tests/test_manufacturer_ingestion.py`)
+- Production Manufacturer Acquisition & Orchestration tests (`reference/tests/test_production_manufacturer_acquisition.py`)
 - Canonical Reference Import tests (`reference/tests/test_canonical_import.py`)
 Current status:
-- All 106 tests passing.
+- All 148 tests passing.
 - Verification command: `.venv/bin/python manage.py test`
 
 
@@ -366,7 +368,8 @@ Project-level presentation views reside in `config/views.py`; domain views belon
 10. Git & Gemini CLI Workflow
 - Instructions defined in GEMINI.md.
 - Task specs stored under docs/implementation/tasks/.
-- Completed tasks: RA-003 — Core Foundation, RA-005 — Application Shell & UX Foundation, RA-007 — Observation Domain Foundation, RA-009 — Development Data Preservation and Recovery Implementation, RA-012 — Intermediate Serialization Contract Implementation & Fixture Validation, RA-013 — Public Source Acquisition Adapters, RA-015 — Source Assertion Normalization Implementation & Fixture Validation, RA-017 — Candidate Configuration Construction & Aggregation Implementation, RA-019 — Canonical Reference Import Planning & Create-Only Execution Implementation.
+- Completed tasks: RA-003 — Core Foundation, RA-005 — Application Shell & UX Foundation, RA-007 — Observation Domain Foundation, RA-009 — Development Data Preservation and Recovery Implementation, RA-012 — Intermediate Serialization Contract Implementation & Fixture Validation, RA-013 — Public Source Acquisition Adapters, RA-015 — Source Assertion Normalization Implementation & Fixture Validation, RA-017 — Candidate Configuration Construction & Aggregation Implementation, RA-019 — Canonical Reference Import Planning & Create-Only Execution Implementation, RA-021 — Manufacturer Specification Evidence Acquisition & Normalization Implementation, RA-023 — Production Manufacturer Artifact Acquisition & Dry-Run Orchestration Implementation.
+
 
 
 11. Current Repository Structure
@@ -397,8 +400,11 @@ RigArchive/
 │   │   │   ├── __init__.py
 │   │   │   ├── base.py
 │   │   │   ├── epa.py
+│   │   │   ├── manufacturer.py
 │   │   │   ├── nhtsa.py
-│   │   │   └── smoke_test.py
+│   │   │   ├── profiles.py
+│   │   │   ├── smoke_test.py
+│   │   │   └── snapshots.py
 │   │   ├── candidate/
 │   │   │   ├── __init__.py
 │   │   │   └── builder.py
@@ -410,14 +416,24 @@ RigArchive/
 │   │   │   ├── __init__.py
 │   │   │   ├── base.py
 │   │   │   ├── epa.py
+│   │   │   ├── manufacturer.py
 │   │   │   ├── nhtsa.py
 │   │   │   └── rules/
 │   │   │       ├── __init__.py
 │   │   │       ├── epa_rules.py
-│   │   │       └── nhtsa_rules.py
+│   │   │       ├── nhtsa_rules.py
+│   │   │       └── toyota_rules.py
+│   │   ├── orchestration/
+│   │   │   ├── __init__.py
+│   │   │   └── manufacturer.py
 │   │   ├── contracts.py
 │   │   ├── serialization.py
 │   │   └── validation.py
+│   ├── management/
+│   │   ├── __init__.py
+│   │   └── commands/
+│   │       ├── __init__.py
+│   │       └── acquire_manufacturer_specs.py
 │   ├── models.py
 │   ├── tests/
 │   │   ├── __init__.py
@@ -425,8 +441,10 @@ RigArchive/
 │   │   │   ├── acquisition/
 │   │   │   │   ├── epa/
 │   │   │   │   │   └── vehicle_42101.json
-│   │   │   │   └── nhtsa/
-│   │   │   │       └── get_models_toyota_2020.json
+│   │   │   │   ├── nhtsa/
+│   │   │   │   │   └── get_models_toyota_2020.json
+│   │   │   │   └── toyota/
+│   │   │   │       └── 2020_4runner_specs.json
 │   │   │   └── ingestion/
 │   │   │       ├── candidate_configuration_4runner_2010_i4_2wd.json
 │   │   │       ├── candidate_configuration_4runner_2020_trd_offroad.json
@@ -436,8 +454,10 @@ RigArchive/
 │   │   ├── test_candidate_construction.py
 │   │   ├── test_canonical_import.py
 │   │   ├── test_ingestion_serialization.py
+│   │   ├── test_manufacturer_ingestion.py
 │   │   ├── test_models.py
 │   │   ├── test_normalization.py
+│   │   ├── test_production_manufacturer_acquisition.py
 │   │   └── test_views.py
 │   ├── urls.py
 │   └── views.py
@@ -455,9 +475,10 @@ RigArchive/
 │   ├── tests.py
 │   └── wsgi.py
 │
+├── storage/
+│   └── raw_source_artifacts/
 ├── templates/
 │   └── urls.py
-├── observation/
 ├── docs/
 │   ├── architecture/
 │   │   ├── ADR/
@@ -477,7 +498,8 @@ RigArchive/
 │           ├── RA-015-source-assertion-normalization-implementation.md
 │           ├── RA-017-candidate-configuration-construction-aggregation-implementation.md
 │           ├── RA-019-canonical-reference-import-planning-create-only-execution-implementation.md
-│           └── RA-021-manufacturer-specification-evidence-acquisition-normalization-implementation.md
+│           ├── RA-021-manufacturer-specification-evidence-acquisition-normalization-implementation.md
+│           └── RA-023-production-manufacturer-artifact-acquisition-dry-run-orchestration-implementation.md
 │
 ├── tests/
 │
@@ -486,7 +508,6 @@ RigArchive/
 ├── README.md
 ├── requirements.txt
 └── manage.py
-```
 
 12. Planned Milestone Map
 - Milestone 1: Project foundation (✅ Complete)
@@ -509,16 +530,17 @@ RigArchive/
 - Milestone 16: Trim/Grade & Market Applicability Source & Normalization Architecture (✅ Approved Architecture — RA-020 / ADR-0005)
 - Milestone 17: Manufacturer Specification Evidence Acquisition & Normalization Implementation (✅ Complete — RA-021)
 - Milestone 18: Production Manufacturer Evidence Acquisition & Orchestration Architecture (✅ Approved Architecture — RA-022 / RA-022A / ADR-0006)
+- Milestone 19: Production Manufacturer Artifact Acquisition & Dry-Run Orchestration Implementation (✅ Complete — RA-023)
 
-Proposed Next Milestone: RA-023 — Production Manufacturer Artifact Acquisition & Dry-Run Orchestration Implementation (implementing operator-invoked raw artifact capture, SHA-256 snapshot retention, deterministic extraction, normalization, candidate building, and dry-run import plan reporting).
+Proposed Next Milestone: RA-024 — Canonical Reference Import Execution & Execution Provenance Workflow Implementation (implementing explicit operator approval and transactional creation execution for ELIGIBLE CanonicalImportPlans).
 
 
 13. Current Repository Status
 The repository currently contains:
 - Functional Django project
-- Passing test suite (122 tests passing)
+- Passing test suite (148 tests passing)
 - Shared core infrastructure (`core` app with `UUIDModel`, `TimestampedModel`, `BaseModel`)
-- Reference Data Ingestion package (`reference/ingestion/` with contracts, serialization, validation, `acquisition/` adapters, `normalization/` normalizers, `candidate/` builder, and `importing/` importer)
+- Reference Data Ingestion package (`reference/ingestion/` with contracts, serialization, validation, `acquisition/` adapters, `normalization/` normalizers, `candidate/` builder, `importing/` importer, and `orchestration/` orchestrator)
 - Development data preservation tooling (`snapshot_db`, `export_dev_data`, `verify_dev_data`)
 - Accessible application shell and UX foundation (`templates/base.html`, `about.html`, `404.html`, `500.html`)
 - Observation Domain foundation (`observation` app with `Observation` model)
@@ -529,5 +551,5 @@ The repository currently contains:
 - Approved Architecture Design Documents (RA-006, RA-008, RA-010, RA-011, RA-014, RA-016, RA-018, RA-020, RA-022)
 - Gemini CLI project instructions (GEMINI.md)
 - Task-based implementation workflow (docs/implementation/tasks/)
-- Completed implementation tasks: RA-003 — Core Foundation, RA-005 — Application Shell & UX Foundation, RA-007 — Observation Domain Foundation, RA-009 — Development Data Preservation and Recovery Implementation, RA-012 — Intermediate Serialization Contract Implementation & Fixture Validation, RA-013 — Public Source Acquisition Adapters, RA-015 — Source Assertion Normalization Implementation & Fixture Validation, RA-017 — Candidate Configuration Construction & Aggregation Implementation, RA-019 — Canonical Reference Import Planning & Create-Only Execution Implementation, RA-021 — Manufacturer Specification Evidence Acquisition & Normalization Implementation
+- Completed implementation tasks: RA-003 — Core Foundation, RA-005 — Application Shell & UX Foundation, RA-007 — Observation Domain Foundation, RA-009 — Development Data Preservation and Recovery Implementation, RA-012 — Intermediate Serialization Contract Implementation & Fixture Validation, RA-013 — Public Source Acquisition Adapters, RA-015 — Source Assertion Normalization Implementation & Fixture Validation, RA-017 — Candidate Configuration Construction & Aggregation Implementation, RA-019 — Canonical Reference Import Planning & Create-Only Execution Implementation, RA-021 — Manufacturer Specification Evidence Acquisition & Normalization Implementation, RA-023 — Production Manufacturer Artifact Acquisition & Dry-Run Orchestration Implementation
 - Approved Architecture/Research tasks: RA-010 — Reference Data Ingestion Source & Mapping Architecture, RA-011 — Ingestion Schema & Intermediate Serialization Design, RA-014 — Source Assertion Normalization & Mapping Architecture, RA-016 — Candidate Configuration Construction & Aggregation Architecture, RA-018 — Canonical Reference Matching & Import Architecture, RA-020 — Trim/Grade & Market Applicability Source and Normalization Architecture, RA-022 — Production Manufacturer Evidence Acquisition & Orchestration Architecture
