@@ -12,7 +12,12 @@ from reference.ingestion.acquisition import (
     SourceParseError,
     TransportError,
 )
+from reference.ingestion.candidate import (
+    CandidateConstructionError,
+    construct_candidate_configuration,
+)
 from reference.ingestion.contracts import (
+
     ArtifactType,
     AttributeReconciliationState,
     CandidateConfigurationDocument,
@@ -106,5 +111,7 @@ __all__ = [
     "EPANormalizer",
     "NormalizationError",
     "UnsupportedSourceError",
-    "normalize_source_assertions",
+    # Candidate Construction Engine
+    "CandidateConstructionError",
+    "construct_candidate_configuration",
 ]

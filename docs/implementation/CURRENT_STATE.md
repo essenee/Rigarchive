@@ -222,7 +222,22 @@ RA-016 — Candidate Configuration Construction & Aggregation Architecture (Appr
 - Transient Non-Semantic `candidate_reference`: Opaque, non-semantic workflow identifier; no semantic hashing from identity fields
 - Semantic Determinism: Identical semantic inputs produce identical projected attributes, evidence states, provenance maps, and deterministic array ordering; artifact-generation metadata (`created_at`) may vary per instantiation
 - Outcome B Contract Support: Existing RA-011/RA-012 contract is 100% sufficient using implementation conventions; zero contract modifications required for RA-017; formal context-verification enum persistence remains deferred
-- Next Proposed Milestone: RA-017 — Candidate Configuration Construction & Aggregation Implementation
+Milestone 13 — Candidate Configuration Construction & Aggregation Implementation
+
+Implementation Task:
+RA-017 — Candidate Configuration Construction & Aggregation Implementation (Completed)
+- Package Location: `reference/ingestion/candidate/` (`__init__.py`, `builder.py`)
+- Candidate Builder Implemented: Pure Python `construct_candidate_configuration` transforming caller `CandidateIdentity` workflow context, Tier 1 `SourceAssertionSet` artifacts, and Tier 2 `NormalizedInterpretation` objects into transient, non-canonical `CandidateConfigurationDocument` artifacts
+- Context vs Evidence Separation: Caller-supplied `CandidateIdentity` is aggregation context, not source evidence; evidence (`make`, `model`, `model_year`) verifies or contradicts context without overwriting `CandidateIdentity`
+- Lineage & Corroboration Boundary: `corroborated` requires 2+ independent `source_id` authorities; repeated retrieval of same record yields `single_source`; multiple records from same source yield `single_source` (same-source multi-record independence deferred)
+- Conflict-Safe Projection & No Winner Selection: Under true independent-source conflict, scalar projected fields (`engine.cylinders`, `drivetrain.architecture`) are left UNSET (`None`), all evidence is preserved, and human review is required
+- Concept Handling: Category A projected concepts receive typed destinations, `attribute_provenance`, and `attribute_states`; Category B mapped-but-not-projected concepts (`city_mpg_epa_rating`, `highway_mpg_epa_rating`) and Category C unmapped concepts remain preserved in `normalized_assertions` without fake candidate fields
+- Tier 1 Bypass Prohibition: Consumes only approved mapped interpretations; raw Tier 1 descriptor strings (KDSS, A-TRAC) produce `factory_technical_features = []`
+- Context Contradiction & Review Workflow: Contradictory evidence flags `requires_human_review = True`, sets `review_workflow_disposition = "pending_review"`, and records notes in `reconciliation_notes` without altering evidence reconciliation states
+- Provenance & Serialization: Transitive assertion lookup verifies all `source_assertion_ref` links across multi-source payloads; includes `TechnicalValue` serialization interoperability fix in `reference/ingestion/serialization.py`
+- Testing & Offline Validation: 13 comprehensive test methods in `reference/tests/test_candidate_construction.py` (80 total project tests passing)
+- Zero ORM / Migration Impact: Pure Python dataclasses; 0 Django ORM models, 0 migrations, 0 database writes
+- Documentation & Task Record: `docs/implementation/tasks/RA-017-candidate-configuration-construction-aggregation-implementation.md`
 
 7. Architectural Decision Records (ADRs)
 Implemented and Accepted:
@@ -241,8 +256,9 @@ Implemented:
 - Intermediate Serialization tests (`reference/tests/test_ingestion_serialization.py`)
 - Public Source Acquisition Adapter tests (`reference/tests/test_acquisition_adapters.py`)
 - Source Assertion Normalization tests (`reference/tests/test_normalization.py`)
+- Candidate Configuration Construction tests (`reference/tests/test_candidate_construction.py`)
 Current status:
-- All 67 tests passing.
+- All 80 tests passing.
 - Verification command: `.venv/bin/python manage.py test`
 
 9. Current Coding Standards
@@ -258,7 +274,8 @@ Project-level presentation views reside in `config/views.py`; domain views belon
 10. Git & Gemini CLI Workflow
 - Instructions defined in GEMINI.md.
 - Task specs stored under docs/implementation/tasks/.
-- Completed tasks: RA-003 — Core Foundation, RA-005 — Application Shell & UX Foundation, RA-007 — Observation Domain Foundation, RA-009 — Development Data Preservation and Recovery Implementation, RA-012 — Intermediate Serialization Contract Implementation & Fixture Validation, RA-013 — Public Source Acquisition Adapters, RA-015 — Source Assertion Normalization Implementation & Fixture Validation.
+- Completed tasks: RA-003 — Core Foundation, RA-005 — Application Shell & UX Foundation, RA-007 — Observation Domain Foundation, RA-009 — Development Data Preservation and Recovery Implementation, RA-012 — Intermediate Serialization Contract Implementation & Fixture Validation, RA-013 — Public Source Acquisition Adapters, RA-015 — Source Assertion Normalization Implementation & Fixture Validation, RA-017 — Candidate Configuration Construction & Aggregation Implementation.
+
 
 11. Current Repository Structure
 RigArchive/
@@ -290,6 +307,9 @@ RigArchive/
 │   │   │   ├── epa.py
 │   │   │   ├── nhtsa.py
 │   │   │   └── smoke_test.py
+│   │   ├── candidate/
+│   │   │   ├── __init__.py
+│   │   │   └── builder.py
 │   │   ├── normalization/
 │   │   │   ├── __init__.py
 │   │   │   ├── base.py
@@ -317,10 +337,12 @@ RigArchive/
 │   │   │       ├── candidate_configuration_4runner_2020_trim_conflict.json
 │   │   │       └── source_assertion_set_4runner_2020.json
 │   │   ├── test_acquisition_adapters.py
+│   │   ├── test_candidate_construction.py
 │   │   ├── test_ingestion_serialization.py
 │   │   ├── test_models.py
 │   │   ├── test_normalization.py
 │   │   └── test_views.py
+
 │   ├── urls.py
 │   └── views.py
 ├── observation/
