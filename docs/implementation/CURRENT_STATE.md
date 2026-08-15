@@ -193,7 +193,21 @@ RA-014 — Source Assertion Normalization & Mapping Architecture (Approved Archi
 - Redesigned Unmapped Behavior: Explicit separation of Case A (known concept, unmapped value) from Case B (unknown concept) without pseudonormalizing raw values
 - Drivetrain & Feature Boundaries: 7-dimension drivetrain boundary enforced; unclassified features (KDSS, A-TRAC) remain under `factory_technical_features` as unresolved
 - Category C Mappings Authorized for RA-015: 12 empirically validated mappings (`nhtsa_make_id`, `make`, `nhtsa_model_id`, `model`, `model_year`, `generic_drive_classification`, `drivetrain_architecture`, `engine_displacement_liters`, `engine_cylinders`, `city_mpg_epa_rating`, `highway_mpg_epa_rating`)
-- Next Proposed Milestone: RA-015 — Source Assertion Normalization Implementation & Fixture Validation
+
+Milestone 11 — Source Assertion Normalization Implementation & Fixture Validation
+
+Implementation Task:
+RA-015 — Source Assertion Normalization Implementation & Fixture Validation (Completed)
+- Package Location: `reference/ingestion/normalization/` (`__init__.py`, `base.py`, `nhtsa.py`, `epa.py`, `rules/__init__.py`, `rules/nhtsa_rules.py`, `rules/epa_rules.py`)
+- Source Normalizers Implemented: `NHTSANormalizer` (`source_id: "nhtsa_vpic"`) and `EPANormalizer` (`source_id: "epa_fueleconomy"`) extending `BaseSourceNormalizer` and dispatched via top-level function `normalize_source_assertions(assertion_set)`
+- Implemented Mappings: Strictly the 12 Category C mappings authorized by RA-014 (NHTSA: `make_id` -> `nhtsa_make_id`, `make_name` -> `make`, `model_id` -> `nhtsa_model_id`, `model_name` -> `model`; EPA: `model_year` -> integer, `make` -> direct copy, `drive_descriptor` -> `generic_drive_classification: "4WD"` & `drivetrain_architecture: "part_time_4wd"`, `engine_displacement_liters` -> `TechnicalValue`, `engine_cylinders` -> integer, `city_mpg_epa_rating` -> integer, `highway_mpg_epa_rating` -> integer)
+- Evidence Safety Enforcement: Zero unsupported drivetrain modes (`2H`, `4H`, `4L`), low-range ratios, lock states, or capabilities manufactured; zero Category B mappings implemented
+- Unmapped & Error Handling: Case A (known concept, unmapped value) preserves target concept key with `mapping_status: "unmapped"`; Case B (unknown attribute key) emits no `NormalizedInterpretation` while preserving the `SourceAssertion` unchanged in `SourceAssertionSet`; parsing failures fail gracefully into `unmapped` status; unsupported sources raise `UnsupportedSourceError`
+
+- Testing & Offline Validation: 9 comprehensive automated test methods in `reference/tests/test_normalization.py` verifying contract dispatch, Category C mappings, drivetrain safety, unmapped handling, parsing failure handling, determinism, and offline adapter integration (67 total tests passing)
+- Zero ORM / Migration Impact: Pure Python dataclasses; 0 Django ORM models, 0 migrations, 0 database writes
+- Documentation & Task Record: `docs/implementation/tasks/RA-015-source-assertion-normalization-implementation.md`
+- Next Proposed Milestone: Architectural Planning / Design for Candidate Configuration Construction & Aggregation (RA-016 Design)
 
 7. Architectural Decision Records (ADRs)
 Implemented and Accepted:
@@ -209,8 +223,11 @@ Implemented:
 - Core mixin & inheritance tests (`core/tests.py`)
 - Reference Model tests (`reference/tests/test_models.py`)
 - Public Reference View & URL tests (`reference/tests/test_views.py`)
+- Intermediate Serialization tests (`reference/tests/test_ingestion_serialization.py`)
+- Public Source Acquisition Adapter tests (`reference/tests/test_acquisition_adapters.py`)
+- Source Assertion Normalization tests (`reference/tests/test_normalization.py`)
 Current status:
-- All 34 tests passing.
+- All 67 tests passing.
 - Verification command: `.venv/bin/python manage.py test`
 
 9. Current Coding Standards
@@ -226,7 +243,7 @@ Project-level presentation views reside in `config/views.py`; domain views belon
 10. Git & Gemini CLI Workflow
 - Instructions defined in GEMINI.md.
 - Task specs stored under docs/implementation/tasks/.
-- Completed tasks: RA-003 — Core Foundation, RA-005 — Application Shell & UX Foundation, RA-007 — Observation Domain Foundation, RA-009 — Development Data Preservation and Recovery Implementation.
+- Completed tasks: RA-003 — Core Foundation, RA-005 — Application Shell & UX Foundation, RA-007 — Observation Domain Foundation, RA-009 — Development Data Preservation and Recovery Implementation, RA-012 — Intermediate Serialization Contract Implementation & Fixture Validation, RA-013 — Public Source Acquisition Adapters, RA-015 — Source Assertion Normalization Implementation & Fixture Validation.
 
 11. Current Repository Structure
 RigArchive/
@@ -258,6 +275,15 @@ RigArchive/
 │   │   │   ├── epa.py
 │   │   │   ├── nhtsa.py
 │   │   │   └── smoke_test.py
+│   │   ├── normalization/
+│   │   │   ├── __init__.py
+│   │   │   ├── base.py
+│   │   │   ├── epa.py
+│   │   │   ├── nhtsa.py
+│   │   │   └── rules/
+│   │   │       ├── __init__.py
+│   │   │       ├── epa_rules.py
+│   │   │       └── nhtsa_rules.py
 │   │   ├── contracts.py
 │   │   ├── serialization.py
 │   │   └── validation.py
@@ -278,6 +304,7 @@ RigArchive/
 │   │   ├── test_acquisition_adapters.py
 │   │   ├── test_ingestion_serialization.py
 │   │   ├── test_models.py
+│   │   ├── test_normalization.py
 │   │   └── test_views.py
 │   ├── urls.py
 │   └── views.py
@@ -334,7 +361,8 @@ RigArchive/
 │           ├── RA-007-observation-domain-foundation.md
 │           ├── RA-009-development-data-preservation-implementation.md
 │           ├── RA-012-intermediate-serialization-implementation.md
-│           └── RA-013-public-source-acquisition-implementation.md
+│           ├── RA-013-public-source-acquisition-implementation.md
+│           └── RA-015-source-assertion-normalization-implementation.md
 │
 ├── tests/
 │
@@ -357,6 +385,7 @@ RigArchive/
 - Milestone 8: Intermediate Serialization Contract Implementation & Fixture Validation (✅ Complete — RA-012)
 - Milestone 9: Public Source Acquisition Adapters (✅ Complete — RA-013)
 - Milestone 10: Source Assertion Normalization & Mapping Architecture (✅ Approved Architecture — RA-014)
+- Milestone 11: Source Assertion Normalization Implementation & Fixture Validation (✅ Complete — RA-015)
 
 Candidate future domains include:
 - Evidence
@@ -369,9 +398,9 @@ Candidate future domains include:
 13. Current Repository Status
 The repository currently contains:
 - Functional Django project
-- Passing test suite (58 tests passing)
+- Passing test suite (67 tests passing)
 - Shared core infrastructure (`core` app with `UUIDModel`, `TimestampedModel`, `BaseModel`)
-- Reference Data Ingestion package (`reference/ingestion/` with contracts, serialization, validation, and `acquisition/` NHTSA & EPA adapters)
+- Reference Data Ingestion package (`reference/ingestion/` with contracts, serialization, validation, `acquisition/` adapters, and `normalization/` normalizers)
 - Development data preservation tooling (`snapshot_db`, `export_dev_data`, `verify_dev_data`)
 - Accessible application shell and UX foundation (`templates/base.html`, `about.html`, `404.html`, `500.html`)
 - Observation Domain foundation (`observation` app with `Observation` model)
@@ -382,5 +411,5 @@ The repository currently contains:
 - Approved Architecture Design Documents (RA-006, RA-008, RA-010, RA-011, RA-014)
 - Gemini CLI project instructions (GEMINI.md)
 - Task-based implementation workflow (docs/implementation/tasks/)
-- Completed implementation tasks: RA-003 — Core Foundation, RA-005 — Application Shell & UX Foundation, RA-007 — Observation Domain Foundation, RA-009 — Development Data Preservation and Recovery Implementation, RA-012 — Intermediate Serialization Contract Implementation & Fixture Validation, RA-013 — Public Source Acquisition Adapters
+- Completed implementation tasks: RA-003 — Core Foundation, RA-005 — Application Shell & UX Foundation, RA-007 — Observation Domain Foundation, RA-009 — Development Data Preservation and Recovery Implementation, RA-012 — Intermediate Serialization Contract Implementation & Fixture Validation, RA-013 — Public Source Acquisition Adapters, RA-015 — Source Assertion Normalization Implementation & Fixture Validation
 - Approved Architecture/Research tasks: RA-010 — Reference Data Ingestion Source & Mapping Architecture, RA-011 — Ingestion Schema & Intermediate Serialization Design, RA-014 — Source Assertion Normalization & Mapping Architecture
