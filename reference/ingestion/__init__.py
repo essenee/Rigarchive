@@ -16,6 +16,17 @@ from reference.ingestion.candidate import (
     CandidateConstructionError,
     construct_candidate_configuration,
 )
+from reference.ingestion.importing import (
+    CanonicalImportPlan,
+    CanonicalImportResult,
+    ImportCreateBasis,
+    ImportEligibilityStatus,
+    ImportExecutionOutcome,
+    ImportPlannedAction,
+    execute_candidate_import,
+    plan_candidate_import,
+)
+
 from reference.ingestion.contracts import (
 
     ArtifactType,
@@ -114,4 +125,13 @@ __all__ = [
     # Candidate Construction Engine
     "CandidateConstructionError",
     "construct_candidate_configuration",
+    # Canonical Import Engine
+    "ImportEligibilityStatus",
+    "ImportPlannedAction",
+    "ImportExecutionOutcome",
+    "ImportCreateBasis",
+    "CanonicalImportPlan",
+    "CanonicalImportResult",
+    "plan_candidate_import",
+    "execute_candidate_import",
 ]
