@@ -237,13 +237,29 @@ RA-017 — Candidate Configuration Construction & Aggregation Implementation (Co
 - Provenance & Serialization: Transitive assertion lookup verifies all `source_assertion_ref` links across multi-source payloads; includes `TechnicalValue` serialization interoperability fix in `reference/ingestion/serialization.py`
 - Testing & Offline Validation: 13 comprehensive test methods in `reference/tests/test_candidate_construction.py` (80 total project tests passing)
 - Zero ORM / Migration Impact: Pure Python dataclasses; 0 Django ORM models, 0 migrations, 0 database writes
-- Documentation & Task Record: `docs/implementation/tasks/RA-017-candidate-configuration-construction-aggregation-implementation.md`
+Milestone 14 — Canonical Reference Matching & Import Architecture
+
+Architecture Task:
+RA-018 — Canonical Reference Matching & Import Architecture (Approved Architecture)
+- Design Document Location: `docs/architecture/designs/RA-018-Canonical-Reference-Matching-Import-Architecture.md`
+- Architectural Decision Record: `docs/architecture/ADR/ADR-0004-Canonical-Reference-Matching-Import-Promotion-Strategy.md`
+- Candidate-to-Canonical Promotion Boundary: Two-tier architecture separating transient non-canonical `CandidateConfigurationDocument` artifacts from persistent database `VehicleDefinition` records
+- Strict Evidence Trust Boundary: Source evidence governs canonical data; caller `CandidateIdentity` context cannot be written into canonical fields as source evidence. `CandidateIdentity.trim_name = "SR5"` without normalized evidence requires review and blocks auto-creation
+- Database Representation Key vs Identity: `(generation_id, slug)` is current storage uniqueness key and deterministic representation key for identical current representations; it is not universal real-world identity
+- Trim Sufficiency Policy: `trim_name = ""` represents missing trim evidence; candidates lacking normalized trim on multi-trim model years require human review (`REQUIRES_HUMAN_REVIEW`)
+- Initial Create-Only & No-Op Policy: Automated importer creates proven-distinct new records and executes no-ops on exact existing matches; NEVER updates existing records, NEVER deletes records, and NEVER automatically creates parent `Manufacturer`, `VehicleModel`, or `Generation` entities
+- Plan-First Architecture: Transient in-process `CanonicalImportPlan` handles read-only eligibility and parent resolution prior to transactional execution
+- Controlled 2020 4Runner Assessment: Current NHTSA/EPA evidence lacks normalized trim, planning cleanly into `REQUIRES_HUMAN_REVIEW` (no-write), safely protecting canonical Reference data
+- Zero ORM / Migration Impact: Architecture and design document pass; 0 Django ORM models, 0 migrations, 0 database writes, 0 application code changes
+- Proposed Next Milestone: RA-019 — Canonical Reference Import Planning & Create-Only Execution Implementation
 
 7. Architectural Decision Records (ADRs)
 Implemented and Accepted:
 - ADR-0001: Entity Identity Strategy (Dual Integer PK + UUID)
 - ADR-0002: Immutable Automatic Slugs (Non-editable, auto-generated on creation)
 - ADR-0003: Core Infrastructure Application (Shared abstract base models in `core`, domain isolation)
+- ADR-0004: Canonical Reference Matching & Import Promotion Strategy (Candidate-to-canonical tiers, Evidence Trust Boundary, Create-Only initial policy)
+
 
 8. Current Testing
 Implemented:
