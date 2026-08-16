@@ -1,3 +1,4 @@
+from django.db.models import Prefetch
 from django.views.generic import DetailView, ListView
 
 from .models import Generation, Manufacturer, VehicleDefinition, VehicleModel
@@ -5,7 +6,7 @@ from .models import Generation, Manufacturer, VehicleDefinition, VehicleModel
 
 class ManufacturerListView(ListView):
     """
-    Display active vehicle manufacturers in the Reference Domain.
+    Display active vehicle manufacturers and their active models in the Reference Domain.
     """
 
     model = Manufacturer
@@ -13,12 +14,18 @@ class ManufacturerListView(ListView):
     context_object_name = "manufacturers"
 
     def get_queryset(self):
-        return Manufacturer.objects.filter(is_active=True)
+        return Manufacturer.objects.filter(is_active=True).prefetch_related(
+            Prefetch(
+                "vehicle_models",
+                queryset=VehicleModel.objects.filter(is_active=True),
+                to_attr="active_vehicle_models",
+            )
+        )
 
 
 class ManufacturerDetailView(DetailView):
     """
-    Display one manufacturer and its active vehicle models.
+    Display one manufacturer, its active vehicle models, and their active generations.
     """
 
     model = Manufacturer
@@ -28,13 +35,23 @@ class ManufacturerDetailView(DetailView):
 
     def get_queryset(self):
         return Manufacturer.objects.filter(is_active=True).prefetch_related(
-            "vehicle_models"
+            Prefetch(
+                "vehicle_models",
+                queryset=VehicleModel.objects.filter(is_active=True).prefetch_related(
+                    Prefetch(
+                        "generations",
+                        queryset=Generation.objects.filter(is_active=True),
+                        to_attr="active_generations",
+                    )
+                ),
+                to_attr="active_vehicle_models",
+            )
         )
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context["vehicle_models"] = self.object.vehicle_models.filter(
-            is_active=True
+        context["vehicle_models"] = getattr(
+            self.object, "active_vehicle_models", []
         )
         return context
 
