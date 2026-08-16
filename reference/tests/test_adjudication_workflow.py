@@ -16,10 +16,14 @@ from django.test import TestCase
 
 from reference.ingestion.candidate.builder import construct_candidate_configuration
 from reference.ingestion.contracts import (
+    AttributeReconciliationState,
     CandidateIdentity,
     CanonicalImportAdjudication,
     Envelope,
     ExtractionProvenance,
+    ReconciliationAndReview,
+    ReconciliationState,
+    ReviewDisposition,
     SourceApplicability,
     SourceAssertion,
     SourceAssertionSet,
@@ -60,7 +64,7 @@ class AdjudicationWorkflowTests(TestCase):
 
         self.normalizer = ManufacturerNormalizer()
 
-    def _make_candidate(self, grade: str, drive: str, model_code: str = "8670", raw_artifact_hash: Optional[str] = None) -> Any:
+    def _make_candidate(self, grade: str, drive: str, model_code: str = "8670", raw_artifact_hash: Optional[str] = None, requires_review: bool = False) -> Any:
         art_hash = raw_artifact_hash or ("sha256:" + "a" * 64)
         prov = SourceMetadata(
             source_id="toyota_usa",
@@ -101,6 +105,18 @@ class AdjudicationWorkflowTests(TestCase):
         )
         doc = construct_candidate_configuration(cand_id, [asset], normalized)
         doc.raw_artifact_hash = art_hash
+
+        if requires_review:
+            doc.reconciliation_and_review = ReconciliationAndReview(
+                requires_human_review=True,
+                attribute_states={
+                    "trim": AttributeReconciliationState(
+                        reconciliation_state=ReconciliationState.AMBIGUOUS.value,
+                        review_disposition=ReviewDisposition.UNDER_REVIEW.value,
+                    )
+                },
+            )
+
         return doc
 
     def test_adjudication_hash_computation_and_validation(self):
@@ -159,7 +175,7 @@ class AdjudicationWorkflowTests(TestCase):
         )
 
         # 2. Candidate SR5 Premium 2WD requires review under base planner
-        cand = self._make_candidate("SR5 Premium", "2WD", "8670")
+        cand = self._make_candidate("SR5 Premium", "2WD", "8670", requires_review=True)
         base_plan = plan_candidate_import(cand)
         self.assertEqual(base_plan.planned_action, ImportPlannedAction.FLAG_REVIEW)
 
@@ -198,7 +214,7 @@ class AdjudicationWorkflowTests(TestCase):
         self.assertEqual(bad_plan.planned_action, ImportPlannedAction.FLAG_REVIEW)
 
     def test_manifest_v1_1_and_v1_0_compatibility(self):
-        cand = self._make_candidate("SR5 Premium", "2WD", "8670")
+        cand = self._make_candidate("SR5 Premium", "2WD", "8670", requires_review=True)
         plan = CanonicalImportPlan(
             candidate_reference=cand.candidate_reference,
             eligibility_status=ImportEligibilityStatus.ELIGIBLE,
@@ -321,7 +337,7 @@ class AdjudicationWorkflowTests(TestCase):
 
     def test_cli_adjudicate_canonical_import_command(self):
         # Build manifest with 1 flagged review plan
-        cand = self._make_candidate("SR5 Premium", "2WD", "8670")
+        cand = self._make_candidate("SR5 Premium", "2WD", "8670", requires_review=True)
         plan = CanonicalImportPlan(
             candidate_reference=cand.candidate_reference,
             eligibility_status=ImportEligibilityStatus.REQUIRES_REVIEW,
@@ -394,6 +410,7 @@ class AdjudicationWorkflowTests(TestCase):
             ("8680", "TRD Pro", "Part-Time 4WD"),
         ]
 
+        source_established_bases = 0
         adjudication_bases = 0
         mechanical_bases = 0
         first_rep_bases = 0
@@ -404,6 +421,7 @@ class AdjudicationWorkflowTests(TestCase):
             # Stage 1: Initial Planning
             init_plan = plan_candidate_import(cand)
 
+            adj = None
             if init_plan.planned_action == ImportPlannedAction.FLAG_REVIEW:
                 # Stage 2: Human Adjudication
                 raw_adj = {
@@ -434,6 +452,8 @@ class AdjudicationWorkflowTests(TestCase):
                 first_rep_bases += 1
             elif exec_plan.create_basis == ImportCreateBasis.MECHANICAL_DIMENSION:
                 mechanical_bases += 1
+            elif exec_plan.create_basis == ImportCreateBasis.SOURCE_ESTABLISHED_GRADE:
+                source_established_bases += 1
             elif exec_plan.create_basis == ImportCreateBasis.ADJUDICATED_DISTINCT_GRADE:
                 adjudication_bases += 1
 
@@ -466,7 +486,7 @@ class AdjudicationWorkflowTests(TestCase):
         self.assertEqual(VehicleDefinition.objects.count(), 12)
         self.assertEqual(first_rep_bases, 1)
         self.assertEqual(mechanical_bases, 4)
-        self.assertEqual(adjudication_bases, 7)
+        self.assertEqual(source_established_bases, 7)
 
     def test_forged_manifest_attack_refused(self):
         """
@@ -575,7 +595,7 @@ class AdjudicationWorkflowTests(TestCase):
             market="US",
             slug="2020-sr5-40l-v6-2wd-us",
         )
-        cand_rev_a = self._make_candidate("SR5 Premium", "2WD", "8670")
+        cand_rev_a = self._make_candidate("SR5 Premium", "2WD", "8670", requires_review=True)
         hash_a = "sha256:" + "a" * 64
 
         adj_dict = {
@@ -596,7 +616,7 @@ class AdjudicationWorkflowTests(TestCase):
         adj_a = adjudication_from_dict(adj_dict)
 
         # Candidate constructed from revised raw snapshot B
-        cand_rev_b = self._make_candidate("SR5 Premium", "2WD", "8670", raw_artifact_hash="sha256:" + "b" * 64)
+        cand_rev_b = self._make_candidate("SR5 Premium", "2WD", "8670", raw_artifact_hash="sha256:" + "b" * 64, requires_review=True)
 
         res_plan = plan_candidate_import_with_adjudications(cand_rev_b, [adj_a])
         self.assertEqual(res_plan.planned_action, ImportPlannedAction.FLAG_REVIEW)
@@ -637,7 +657,7 @@ class AdjudicationWorkflowTests(TestCase):
             acquisition_method="local_file",
         )
 
-        cand = self._make_candidate("SR5 Premium", "2WD", "8670")
+        cand = self._make_candidate("SR5 Premium", "2WD", "8670", requires_review=True)
         pricing_hash = cand.raw_artifact_hash
 
         # Stage 1: Initial Planning -> FLAG_REVIEW
@@ -714,7 +734,7 @@ class AdjudicationWorkflowTests(TestCase):
         hash_p_rev = "sha256:" + "3" * 64
 
         # Candidate A built from Pricing Master P1 + Product Information P2
-        cand_a = self._make_candidate("SR5 Premium", "2WD", "8670")
+        cand_a = self._make_candidate("SR5 Premium", "2WD", "8670", requires_review=True)
         cand_a.evidence_raw_hashes = [hash_p1, hash_p2]
 
         adj_dict = {
@@ -739,7 +759,7 @@ class AdjudicationWorkflowTests(TestCase):
         self.assertEqual(plan_ok.create_basis, ImportCreateBasis.ADJUDICATED_DISTINCT_GRADE)
 
         # Test Case 1: Pricing Master P1 + Product Information REVISED (P_rev)
-        cand_second_changed = self._make_candidate("SR5 Premium", "2WD", "8670")
+        cand_second_changed = self._make_candidate("SR5 Premium", "2WD", "8670", requires_review=True)
         cand_second_changed.candidate_reference = cand_a.candidate_reference
         cand_second_changed.evidence_raw_hashes = [hash_p1, hash_p_rev]
 
@@ -747,7 +767,7 @@ class AdjudicationWorkflowTests(TestCase):
         self.assertEqual(plan_fail1.planned_action, ImportPlannedAction.FLAG_REVIEW)
 
         # Test Case 2: Pricing Master REVISED (P_rev) + Product Information P2
-        cand_first_changed = self._make_candidate("SR5 Premium", "2WD", "8670")
+        cand_first_changed = self._make_candidate("SR5 Premium", "2WD", "8670", requires_review=True)
         cand_first_changed.candidate_reference = cand_a.candidate_reference
         cand_first_changed.evidence_raw_hashes = [hash_p_rev, hash_p2]
 
@@ -776,7 +796,7 @@ class AdjudicationWorkflowTests(TestCase):
             slug="2020-sr5-40l-v6-2wd-us",
         )
 
-        cand = self._make_candidate("SR5 Premium", "2WD", "8670")
+        cand = self._make_candidate("SR5 Premium", "2WD", "8670", requires_review=True)
         cand_ref = cand.candidate_reference
 
         # Forged review plan with ADJUDICATED_DISTINCT_GRADE basis and fake adjudication_hash
@@ -929,7 +949,7 @@ class AdjudicationWorkflowTests(TestCase):
             slug="2020-sr5-40l-v6-2wd-us",
         )
 
-        cand = self._make_candidate("SR5 Premium", "2WD", "8670")
+        cand = self._make_candidate("SR5 Premium", "2WD", "8670", requires_review=True)
         cand_ref = cand.candidate_reference
         plan = plan_candidate_import(cand)
         self.assertEqual(plan.planned_action, ImportPlannedAction.FLAG_REVIEW)

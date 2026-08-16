@@ -624,8 +624,9 @@ class MultiCandidate4RunnerControlStudyTests(CanonicalImportExecutionTestCase):
             self.assertEqual(plan_8664.planned_action, "create")
             self.assertEqual(plan_8664.create_basis, "mechanical_dimension")
 
-            # 8646 (SR5 Premium 2WD - trim difference only) is FLAG_REVIEW
-            self.assertEqual(plan_8646.planned_action, "flag_review")
+            # 8646 (SR5 Premium 2WD) is SOURCE_ESTABLISHED_GRADE CREATE
+            self.assertEqual(plan_8646.planned_action, "create")
+            self.assertEqual(plan_8646.create_basis, "source_established_grade")
 
             # Step 4: Execute fresh plan for 8664 (SR5 4WD)
             out3 = StringIO()

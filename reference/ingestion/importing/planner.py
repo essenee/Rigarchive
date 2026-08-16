@@ -99,32 +99,7 @@ def plan_candidate_import(
             reasons=["Unsupported candidate schema version. Requires major version 1."],
         )
 
-    # 2. Review Flag & Reconciliation Check
-    reasons: List[str] = []
-    rar = candidate.reconciliation_and_review
-    if rar is not None:
-        if rar.requires_human_review:
-            reasons.append("Candidate configuration document is flagged for human review.")
-
-        for attr_key, attr_state in rar.attribute_states.items():
-            if attr_state.reconciliation_state in (
-                ReconciliationState.CONFLICTING.value,
-                ReconciliationState.AMBIGUOUS.value,
-            ):
-                reasons.append(
-                    f"Attribute '{attr_key}' has conflicting/ambiguous evidence state '{attr_state.reconciliation_state}'."
-                )
-
-    if reasons:
-        return CanonicalImportPlan(
-            candidate_reference=ref_id,
-            eligibility_status=ImportEligibilityStatus.REQUIRES_REVIEW,
-            planned_action=ImportPlannedAction.FLAG_REVIEW,
-            review_category=ImportReviewCategory.EVIDENCE_CONFLICT,
-            reasons=reasons,
-        )
-
-    # 3. Extract Mapped Normalized Evidence from normalized_assertions
+    # 2. Extract Mapped Normalized Evidence from normalized_assertions
     norm_interps = candidate.normalized_assertions or []
 
     makes = _extract_mapped_concept_values(norm_interps, "make")
@@ -195,6 +170,7 @@ def plan_candidate_import(
     evidence_market = str(markets[0])
 
     # Context contradiction verification (CandidateIdentity vs Source Evidence)
+    reasons: List[str] = []
     cid = candidate.candidate_identity
     if cid.manufacturer_name and cid.manufacturer_name.lower() != evidence_make.lower():
         reasons.append(f"CandidateIdentity manufacturer '{cid.manufacturer_name}' contradicts evidence '{evidence_make}'.")
@@ -207,7 +183,6 @@ def plan_candidate_import(
     if cid.market and cid.market.strip().upper() != evidence_market.strip().upper():
         reasons.append(f"CandidateIdentity market '{cid.market}' contradicts evidence '{evidence_market}'.")
 
-
     if reasons:
         return CanonicalImportPlan(
             candidate_reference=ref_id,
@@ -217,8 +192,7 @@ def plan_candidate_import(
             reasons=reasons,
         )
 
-    # 4. Parent Entity Resolution (Manufacturer -> VehicleModel -> Generation)
-    # A. Manufacturer
+    # 3. Parent Entity Resolution (Manufacturer -> VehicleModel -> Generation)
     try:
         mfr = Manufacturer.objects.get(name__iexact=evidence_make, is_active=True)
     except Manufacturer.DoesNotExist:
@@ -236,7 +210,6 @@ def plan_candidate_import(
             reasons=[f"Multiple active Manufacturers match '{evidence_make}'."],
         )
 
-    # B. VehicleModel
     try:
         vm = VehicleModel.objects.get(manufacturer=mfr, name__iexact=evidence_model, is_active=True)
     except VehicleModel.DoesNotExist:
@@ -254,7 +227,6 @@ def plan_candidate_import(
             reasons=[f"Multiple active VehicleModels match '{evidence_model}'."],
         )
 
-    # C. Generation (by model_year range)
     gen_qs = Generation.objects.filter(
         vehicle_model=vm,
         start_year__lte=evidence_year,
@@ -280,7 +252,6 @@ def plan_candidate_import(
 
     resolved_gen = gens[0]
 
-    # Format engine display label
     engine_label = _format_engine_name(evidence_displ, evidence_cyls)
     if not engine_label:
         return CanonicalImportPlan(
@@ -291,7 +262,6 @@ def plan_candidate_import(
             reasons=["Unable to format descriptive engine display label from displacement and cylinders."],
         )
 
-    # Construct target VehicleDefinition fields dictionary
     target_fields = {
         "model_year": evidence_year,
         "trim_name": evidence_trim,
@@ -300,9 +270,47 @@ def plan_candidate_import(
         "market": evidence_market,
     }
 
-    # Compute target slug deterministically via temporary VehicleDefinition instance
     temp_vd = VehicleDefinition(generation=resolved_gen, **target_fields)
     target_slug = temp_vd.build_slug()
+
+    # 4. Review Flag & Reconciliation Check
+    rar = candidate.reconciliation_and_review
+    if rar is not None:
+        rar_reasons = []
+        if rar.requires_human_review:
+            rar_reasons.append("Candidate configuration document is flagged for human review.")
+
+        for attr_key, attr_state in rar.attribute_states.items():
+            if attr_state.reconciliation_state in (
+                ReconciliationState.CONFLICTING.value,
+                ReconciliationState.AMBIGUOUS.value,
+            ):
+                rar_reasons.append(
+                    f"Attribute '{attr_key}' has conflicting/ambiguous evidence state '{attr_state.reconciliation_state}'."
+                )
+
+        if rar_reasons:
+            review_cat = ImportReviewCategory.EVIDENCE_CONFLICT
+            if rar.attribute_states:
+                trim_state = rar.attribute_states.get("trim")
+                if trim_state and trim_state.reconciliation_state in (
+                    ReconciliationState.AMBIGUOUS.value,
+                    ReconciliationState.CONFLICTING.value,
+                ):
+                    review_cat = ImportReviewCategory.DISTINCT_FACTORY_GRADE
+
+            return CanonicalImportPlan(
+                candidate_reference=ref_id,
+                eligibility_status=ImportEligibilityStatus.REQUIRES_REVIEW,
+                planned_action=ImportPlannedAction.FLAG_REVIEW,
+                review_category=review_cat,
+                resolved_manufacturer_id=mfr.id,
+                resolved_vehicle_model_id=vm.id,
+                resolved_generation_id=resolved_gen.id,
+                target_vehicle_definition_fields=target_fields,
+                target_slug=target_slug,
+                reasons=rar_reasons,
+            )
 
     # 5. Canonical Match Classification against DB
     existing_exact = VehicleDefinition.objects.filter(
@@ -364,11 +372,10 @@ def plan_candidate_import(
             reasons=["First representation in generation/year/market namespace."],
         )
 
-    # Namespace contains existing rows: evaluate mechanical dimensional distinctness
-    for row in namespace_rows:
-        if row.trim_name == evidence_trim:
-            # Shared evidence-backed trim name: check for mechanical dimensional difference (drivetrain)
-            # Free-text engine_name string inequality is NOT used as proof of mechanical distinctness
+    # Namespace contains existing rows: evaluate trim and drivetrain matching
+    same_trim_rows = [row for row in namespace_rows if row.trim_name == evidence_trim]
+    if same_trim_rows:
+        for row in same_trim_rows:
             if row.drivetrain != evidence_drive:
                 # Proven Mechanical Dimensional Difference (Drivetrain)
                 return CanonicalImportPlan(
@@ -386,8 +393,42 @@ def plan_candidate_import(
                     reasons=["Proven mechanical dimensional difference (drivetrain) with matching trim."],
                 )
 
+        # Same trim and same drivetrain already exists in namespace (candidate differs only by engine label string)
+        return CanonicalImportPlan(
+            candidate_reference=ref_id,
+            eligibility_status=ImportEligibilityStatus.REQUIRES_REVIEW,
+            planned_action=ImportPlannedAction.FLAG_REVIEW,
+            review_category=ImportReviewCategory.DISTINCT_FACTORY_GRADE,
+            resolved_manufacturer_id=mfr.id,
+            resolved_vehicle_model_id=vm.id,
+            resolved_generation_id=resolved_gen.id,
+            target_vehicle_definition_fields=target_fields,
+            target_slug=target_slug,
+            reasons=["Candidate differs from existing same-trim, same-drivetrain row only by engine display label; requires human review."],
+        )
 
-    # Candidate differs from existing rows only by trim string (e.g. SR5 vs SR5 Premium) or engine display label
+    # No existing row with this trim name exists in namespace: check if distinct factory grade is established by mapped qualified source evidence
+    trim_mapped = any(
+        i.target_attribute_key == "trim" and i.mapping_status == "mapped" and i.normalized_concept is not None
+        for i in norm_interps
+    )
+
+    if trim_mapped:
+        return CanonicalImportPlan(
+            candidate_reference=ref_id,
+            eligibility_status=ImportEligibilityStatus.ELIGIBLE,
+            planned_action=ImportPlannedAction.CREATE,
+            create_basis=ImportCreateBasis.SOURCE_ESTABLISHED_GRADE,
+            namespace_snapshot_count=len(namespace_rows),
+            resolved_manufacturer_id=mfr.id,
+            resolved_vehicle_model_id=vm.id,
+            resolved_generation_id=resolved_gen.id,
+            target_vehicle_definition_fields=target_fields,
+            target_slug=target_slug,
+            reasons=["Qualified source evidence explicitly establishes distinct factory grade configuration."],
+        )
+
+    # Candidate differs from existing rows only by unmapped/ambiguous trim string or engine display label
     return CanonicalImportPlan(
         candidate_reference=ref_id,
         eligibility_status=ImportEligibilityStatus.REQUIRES_REVIEW,
