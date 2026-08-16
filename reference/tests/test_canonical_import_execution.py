@@ -51,22 +51,19 @@ from reference.models import (
 class CanonicalImportExecutionTestCase(TestCase):
     def setUp(self):
         super().setUp()
-        self.manufacturer = Manufacturer.objects.create(
+        self.manufacturer, _ = Manufacturer.objects.get_or_create(
             name="Toyota",
-            country_code="JP",
-            is_active=True,
+            defaults={"country_code": "JP", "is_active": True},
         )
-        self.vehicle_model = VehicleModel.objects.create(
+        self.vehicle_model, _ = VehicleModel.objects.get_or_create(
             manufacturer=self.manufacturer,
             name="4Runner",
-            is_active=True,
+            defaults={"is_active": True},
         )
-        self.generation = Generation.objects.create(
+        self.generation, _ = Generation.objects.get_or_create(
             vehicle_model=self.vehicle_model,
             name="Fifth Generation N280",
-            start_year=2010,
-            end_year=2024,
-            is_active=True,
+            defaults={"start_year": 2010, "end_year": 2024, "is_active": True},
         )
 
         self.sample_plan = CanonicalImportPlan(
@@ -576,26 +573,26 @@ class MultiCandidate4RunnerControlStudyTests(CanonicalImportExecutionTestCase):
                 m1_data = json.load(f)
             manifest_1 = dict_to_manifest(m1_data)
 
+            ref_8642_plan1 = [p for p in manifest_1.plans if p.native_identifier == "8642"][0].candidate_reference
             ref_8664_plan1 = [p for p in manifest_1.plans if p.native_identifier == "8664"][0].candidate_reference
-            ref_8666_plan1 = [p for p in manifest_1.plans if p.native_identifier == "8666"][0].candidate_reference
 
-            # Execute Plan 1 (8664 - SR5 2WD)
+            # Execute Plan 1 (8642 - SR5 2WD)
             with patch("builtins.input", return_value="y"):
                 call_command(
                     "execute_canonical_import",
                     "--manifest", manifest_path_1,
-                    "--plan-ref", ref_8664_plan1,
+                    "--plan-ref", ref_8642_plan1,
                 )
             self.assertEqual(VehicleDefinition.objects.count(), 1)
             self.assertEqual(ImportExecutionReceipt.objects.count(), 1)
 
-            # Step 2: Attempt executing Plan 2 (8666 - SR5 4WD) from OLD manifest (planned against empty namespace)
+            # Step 2: Attempt executing Plan 2 (8664 - SR5 4WD) from OLD manifest (planned against empty namespace)
             out2 = StringIO()
             with patch("builtins.input", return_value="y"):
                 call_command(
                     "execute_canonical_import",
                     "--manifest", manifest_path_1,
-                    "--plan-ref", ref_8666_plan1,
+                    "--plan-ref", ref_8664_plan1,
                     stdout=out2,
                 )
 
@@ -616,27 +613,27 @@ class MultiCandidate4RunnerControlStudyTests(CanonicalImportExecutionTestCase):
                 manifest2_dict = json.load(f)
             manifest2 = dict_to_manifest(manifest2_dict)
 
+            plan_8642 = [p for p in manifest2.plans if p.native_identifier == "8642"][0]
             plan_8664 = [p for p in manifest2.plans if p.native_identifier == "8664"][0]
-            plan_8666 = [p for p in manifest2.plans if p.native_identifier == "8666"][0]
-            plan_8670 = [p for p in manifest2.plans if p.native_identifier == "8670"][0]
+            plan_8646 = [p for p in manifest2.plans if p.native_identifier == "8646"][0]
 
-            # 8664 is now NO_OP_EXACT_MATCH
-            self.assertEqual(plan_8664.planned_action, "no_op_exact_match")
+            # 8642 is now NO_OP_EXACT_MATCH
+            self.assertEqual(plan_8642.planned_action, "no_op_exact_match")
 
-            # 8666 (SR5 4WD) is now MECHANICAL_DIMENSION CREATE
-            self.assertEqual(plan_8666.planned_action, "create")
-            self.assertEqual(plan_8666.create_basis, "mechanical_dimension")
+            # 8664 (SR5 4WD) is now MECHANICAL_DIMENSION CREATE
+            self.assertEqual(plan_8664.planned_action, "create")
+            self.assertEqual(plan_8664.create_basis, "mechanical_dimension")
 
-            # 8670 (SR5 Premium 2WD - trim difference only) is FLAG_REVIEW
-            self.assertEqual(plan_8670.planned_action, "flag_review")
+            # 8646 (SR5 Premium 2WD - trim difference only) is FLAG_REVIEW
+            self.assertEqual(plan_8646.planned_action, "flag_review")
 
-            # Step 4: Execute fresh plan for 8666 (SR5 4WD)
+            # Step 4: Execute fresh plan for 8664 (SR5 4WD)
             out3 = StringIO()
             with patch("builtins.input", return_value="y"):
                 call_command(
                     "execute_canonical_import",
                     "--manifest", manifest_path_2,
-                    "--plan-ref", plan_8666.candidate_reference,
+                    "--plan-ref", plan_8664.candidate_reference,
                     stdout=out3,
                 )
 

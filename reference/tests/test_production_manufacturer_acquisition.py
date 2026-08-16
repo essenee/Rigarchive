@@ -32,6 +32,7 @@ from reference.ingestion.acquisition.snapshots import (
 )
 
 from reference.ingestion.contracts import (
+    ApplicabilityScope,
     ArtifactType,
     CandidateIdentity,
     Envelope,
@@ -519,4 +520,150 @@ class ProductionAcquisitionTests(TestCase):
         finally:
             if real_storage_dir.exists():
                 shutil.rmtree(real_storage_dir, ignore_errors=True)
+
+    def test_authentic_pdf_production_dry_run_end_to_end(self):
+        """
+        Verifies end-to-end multi-artifact production dry-run pipeline using authentic publisher PDFs
+        without runtime dependency on JSON benchmark fixtures.
+        """
+        fixtures_dir = Path(__file__).resolve().parent / "fixtures" / "acquisition" / "toyota"
+        pdf_path = fixtures_dir / "2020_4runner_pricing.pdf"
+        specs_pdf_path = fixtures_dir / "2020_4runner_specs.pdf"
+
+        # Seed required parent entities
+        mfr, _ = Manufacturer.objects.get_or_create(name="Toyota", defaults={"slug": "toyota"})
+        model, _ = VehicleModel.objects.get_or_create(manufacturer=mfr, name="4Runner", defaults={"slug": "4runner"})
+        Generation.objects.get_or_create(
+            vehicle_model=model,
+            name="Fifth Generation",
+            defaults={
+                "slug": "fifth-generation",
+                "start_year": 2010,
+                "end_year": 2024,
+                "is_active": True,
+            },
+        )
+
+        profile = ToyotaUSAPressroomProfile()
+        orchestrator = ProductionManufacturerOrchestrator(
+            profile=profile, snapshot_manager=self.snapshot_manager
+        )
+
+        # Run dry run pipeline passing PDF file path and auxiliary specs PDF WITHOUT transcription_data
+        result = orchestrator.run_dry_run_pipeline(
+            source_input=str(pdf_path),
+            auxiliary_inputs=[str(specs_pdf_path)],
+        )
+
+        self.assertEqual(result.total_extracted_sets, 13)
+        self.assertEqual(len(result.candidate_results), 12)
+
+        pricing_hash = compute_content_hash(pdf_path.read_bytes())
+        specs_hash = compute_content_hash(specs_pdf_path.read_bytes())
+        expected_hashes = sorted([pricing_hash, specs_hash])
+
+        extracted_model_codes = [cr.native_identifier for cr in result.candidate_results]
+        expected_codes = ["8642", "8664", "8646", "8666", "8667", "8670", "8672", "8648", "8668", "8649", "8669", "8674"]
+        self.assertEqual(extracted_model_codes, expected_codes)
+
+        for cr in result.candidate_results:
+            cand = cr.candidate_doc
+            self.assertEqual(cand.evidence_raw_hashes, expected_hashes)
+            self.assertEqual(cand.source_configuration_identities[0].source_id, "toyota_usa")
+            # Ensure JSON fixture hash is not in evidence
+            for h in cand.evidence_raw_hashes:
+                self.assertNotIn("2020_4runner_specs.json", h)
+
+            # Universal engine specs aggregated from specs PDF
+            norm_keys = [i.target_attribute_key for i in cand.normalized_assertions]
+            self.assertIn("engine_displacement_liters", norm_keys)
+            self.assertIn("engine_cylinders", norm_keys)
+
+    def test_broad_scope_isolation_mismatched_context(self):
+        """
+        Verifies that a broad model-year assertion set with a mismatched target_context (e.g. model="Tacoma")
+        is NOT aggregated into a candidate configuration for "4Runner".
+        """
+        config_env = Envelope(artifact_type=ArtifactType.SOURCE_ASSERTION_SET.value, schema_version="1.1.0")
+        config_prov = SourceMetadata(
+            source_id="toyota_usa",
+            native_record_id="8664",
+            target_context={"make": "Toyota", "model": "4Runner", "model_year": 2020, "market": "US"},
+            source_applicability=SourceApplicability(market="US", applicability_scope=ApplicabilityScope.CONFIGURATION.value),
+        )
+        config_set = SourceAssertionSet(
+            envelope=config_env,
+            provenance=config_prov,
+            source_assertions=[
+                SourceAssertion(assertion_id="1", attribute_key="make_name", raw_value="Toyota"),
+                SourceAssertion(assertion_id="2", attribute_key="model_name", raw_value="4Runner"),
+                SourceAssertion(assertion_id="3", attribute_key="model_year", raw_value="2020"),
+                SourceAssertion(assertion_id="4", attribute_key="manufacturer_grade", raw_value="SR5"),
+            ],
+        )
+
+        broad_mismatched_prov = SourceMetadata(
+            source_id="toyota_usa",
+            native_record_id="tacoma_broad_specs",
+            target_context={"make": "Toyota", "model": "Tacoma", "model_year": 2020, "market": "US"},
+            source_applicability=SourceApplicability(market="US", applicability_scope=ApplicabilityScope.MODEL_YEAR.value),
+        )
+        broad_mismatched_set = SourceAssertionSet(
+            envelope=config_env,
+            provenance=broad_mismatched_prov,
+            source_assertions=[
+                SourceAssertion(assertion_id="5", attribute_key="engine_displacement_liters", raw_value="3.5"),
+            ],
+        )
+
+        matches = ProductionManufacturerOrchestrator._target_context_matches(
+            broad_mismatched_set.provenance.target_context,
+            config_set.provenance.target_context,
+        )
+        self.assertFalse(matches)
+
+    def test_native_record_id_independence(self):
+        """
+        Verifies that aggregation depends on explicit ApplicabilityScope.MODEL_YEAR and target context matching,
+        not on native_record_id starting with 'universal_'.
+        """
+        config_env = Envelope(artifact_type=ArtifactType.SOURCE_ASSERTION_SET.value, schema_version="1.1.0")
+        config_prov = SourceMetadata(
+            source_id="toyota_usa",
+            native_record_id="8664",
+            target_context={"make": "Toyota", "model": "4Runner", "model_year": 2020, "market": "US"},
+            source_applicability=SourceApplicability(market="US", applicability_scope=ApplicabilityScope.CONFIGURATION.value),
+        )
+        config_set = SourceAssertionSet(
+            envelope=config_env,
+            provenance=config_prov,
+            source_assertions=[
+                SourceAssertion(assertion_id="1", attribute_key="make_name", raw_value="Toyota"),
+                SourceAssertion(assertion_id="2", attribute_key="model_name", raw_value="4Runner"),
+                SourceAssertion(assertion_id="3", attribute_key="model_year", raw_value="2020"),
+                SourceAssertion(assertion_id="4", attribute_key="manufacturer_grade", raw_value="SR5"),
+            ],
+        )
+
+        custom_broad_prov = SourceMetadata(
+            source_id="toyota_usa",
+            native_record_id="custom_spec_record_999",  # Does NOT start with 'universal_'
+            target_context={"make": "Toyota", "model": "4Runner", "model_year": 2020, "market": "US"},
+            source_applicability=SourceApplicability(market="US", applicability_scope=ApplicabilityScope.MODEL_YEAR.value),
+        )
+        custom_broad_set = SourceAssertionSet(
+            envelope=config_env,
+            provenance=custom_broad_prov,
+            source_assertions=[
+                SourceAssertion(assertion_id="5", attribute_key="engine_displacement_liters", raw_value="4.0"),
+            ],
+        )
+
+        matches = ProductionManufacturerOrchestrator._target_context_matches(
+            custom_broad_set.provenance.target_context,
+            config_set.provenance.target_context,
+        )
+        self.assertTrue(matches)
+        self.assertTrue(ProductionManufacturerOrchestrator._is_broad_model_year_scope(custom_broad_set))
+        self.assertFalse(ProductionManufacturerOrchestrator._is_broad_model_year_scope(config_set))
 

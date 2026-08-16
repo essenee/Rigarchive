@@ -10,11 +10,35 @@
   },
   "configurations": [
     {
+      "model_code": "8642",
+      "make": "Toyota",
+      "model": "4Runner",
+      "model_year": 2020,
+      "grade": "SR5",
+      "drivetrain": "2WD",
+      "engine_displacement_liters": 4.0,
+      "engine_cylinders": 6,
+      "transmission": "5-speed ECT-i automatic",
+      "market": "US"
+    },
+    {
       "model_code": "8664",
       "make": "Toyota",
       "model": "4Runner",
       "model_year": 2020,
       "grade": "SR5",
+      "drivetrain": "Part-Time 4WD",
+      "engine_displacement_liters": 4.0,
+      "engine_cylinders": 6,
+      "transmission": "5-speed ECT-i automatic",
+      "market": "US"
+    },
+    {
+      "model_code": "8646",
+      "make": "Toyota",
+      "model": "4Runner",
+      "model_year": 2020,
+      "grade": "SR5 Premium",
       "drivetrain": "2WD",
       "engine_displacement_liters": 4.0,
       "engine_cylinders": 6,
@@ -26,8 +50,19 @@
       "make": "Toyota",
       "model": "4Runner",
       "model_year": 2020,
-      "grade": "SR5",
+      "grade": "SR5 Premium",
       "drivetrain": "Part-Time 4WD",
+      "engine_displacement_liters": 4.0,
+      "engine_cylinders": 6,
+      "transmission": "5-speed ECT-i automatic",
+      "market": "US"
+    },
+    {
+      "model_code": "8667",
+      "make": "Toyota",
+      "model": "4Runner",
+      "model_year": 2020,
+      "grade": "Venture Edition",
       "engine_displacement_liters": 4.0,
       "engine_cylinders": 6,
       "transmission": "5-speed ECT-i automatic",
@@ -35,30 +70,6 @@
     },
     {
       "model_code": "8670",
-      "make": "Toyota",
-      "model": "4Runner",
-      "model_year": 2020,
-      "grade": "SR5 Premium",
-      "drivetrain": "2WD",
-      "engine_displacement_liters": 4.0,
-      "engine_cylinders": 6,
-      "transmission": "5-speed ECT-i automatic",
-      "market": "US"
-    },
-    {
-      "model_code": "8672",
-      "make": "Toyota",
-      "model": "4Runner",
-      "model_year": 2020,
-      "grade": "SR5 Premium",
-      "drivetrain": "Part-Time 4WD",
-      "engine_displacement_liters": 4.0,
-      "engine_cylinders": 6,
-      "transmission": "5-speed ECT-i automatic",
-      "market": "US"
-    },
-    {
-      "model_code": "8674",
       "make": "Toyota",
       "model": "4Runner",
       "model_year": 2020,
@@ -70,7 +81,7 @@
       "market": "US"
     },
     {
-      "model_code": "8676",
+      "model_code": "8672",
       "make": "Toyota",
       "model": "4Runner",
       "model_year": 2020,
@@ -82,19 +93,7 @@
       "market": "US"
     },
     {
-      "model_code": "8682",
-      "make": "Toyota",
-      "model": "4Runner",
-      "model_year": 2020,
-      "grade": "Venture Special Edition",
-      "drivetrain": "Part-Time 4WD",
-      "engine_displacement_liters": 4.0,
-      "engine_cylinders": 6,
-      "transmission": "5-speed ECT-i automatic",
-      "market": "US"
-    },
-    {
-      "model_code": "8686",
+      "model_code": "8648",
       "make": "Toyota",
       "model": "4Runner",
       "model_year": 2020,
@@ -106,7 +105,7 @@
       "market": "US"
     },
     {
-      "model_code": "8688",
+      "model_code": "8668",
       "make": "Toyota",
       "model": "4Runner",
       "model_year": 2020,
@@ -118,11 +117,11 @@
       "market": "US"
     },
     {
-      "model_code": "8690",
+      "model_code": "8649",
       "make": "Toyota",
       "model": "4Runner",
       "model_year": 2020,
-      "grade": "Nightshade Special Edition",
+      "grade": "Nightshade",
       "drivetrain": "2WD",
       "engine_displacement_liters": 4.0,
       "engine_cylinders": 6,
@@ -130,11 +129,11 @@
       "market": "US"
     },
     {
-      "model_code": "8692",
+      "model_code": "8669",
       "make": "Toyota",
       "model": "4Runner",
       "model_year": 2020,
-      "grade": "Nightshade Special Edition",
+      "grade": "Nightshade",
       "drivetrain": "Full-Time 4WD",
       "engine_displacement_liters": 4.0,
       "engine_cylinders": 6,
@@ -142,7 +141,7 @@
       "market": "US"
     },
     {
-      "model_code": "8680",
+      "model_code": "8674",
       "make": "Toyota",
       "model": "4Runner",
       "model_year": 2020,

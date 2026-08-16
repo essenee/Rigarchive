@@ -72,6 +72,8 @@ def source_applicability_to_dict(sa: SourceApplicability) -> Dict[str, Any]:
         res["applicability_basis"] = sa.applicability_basis
     if sa.publisher_jurisdiction is not None:
         res["publisher_jurisdiction"] = sa.publisher_jurisdiction
+    if sa.applicability_scope is not None:
+        res["applicability_scope"] = sa.applicability_scope
     res.update(sa.unknown_fields)
     return res
 
@@ -405,12 +407,13 @@ def envelope_from_dict(d: Dict[str, Any]) -> Envelope:
 
 
 def source_applicability_from_dict(d: Dict[str, Any]) -> SourceApplicability:
-    known_keys = {"market", "applicability_basis", "publisher_jurisdiction"}
+    known_keys = {"market", "applicability_basis", "publisher_jurisdiction", "applicability_scope"}
     unknown = {k: v for k, v in d.items() if k not in known_keys}
     return SourceApplicability(
         market=d.get("market"),
         applicability_basis=d.get("applicability_basis"),
         publisher_jurisdiction=d.get("publisher_jurisdiction"),
+        applicability_scope=d.get("applicability_scope"),
         unknown_fields=unknown,
     )
 

@@ -45,6 +45,11 @@ class MissingValueStatus(str, Enum):
     INTENTIONALLY_EXCLUDED = "intentionally_excluded"
 
 
+class ApplicabilityScope(str, Enum):
+    CONFIGURATION = "configuration"
+    MODEL_YEAR = "model_year"
+
+
 # --- Helper Data Classes ---
 
 @dataclass
@@ -62,6 +67,7 @@ class SourceApplicability:
     market: Optional[str] = None
     applicability_basis: Optional[str] = None
     publisher_jurisdiction: Optional[str] = None
+    applicability_scope: Optional[str] = None
     unknown_fields: Dict[str, Any] = field(default_factory=dict)
 
 
