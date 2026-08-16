@@ -23,28 +23,24 @@
 {% block content %}
 <h1>{{ vehicle_model }}</h1>
 
-<h2>Generations</h2>
+<section class="archive-section">
+    <h2>Generations</h2>
 
-{% if generations %}
-    <ul class="record-list">
-        {% for generation in generations %}
-            <li>
-                <a href="{{ generation.get_absolute_url }}">
-                    {{ generation.name }}
-                </a>
-
-                <span class="secondary">
-                    {{ generation.start_year }}–
-                    {% if generation.end_year %}
-                        {{ generation.end_year }}
-                    {% else %}
-                        present
-                    {% endif %}
-                </span>
-            </li>
-        {% endfor %}
-    </ul>
-{% else %}
-    <p>No generations are currently available.</p>
-{% endif %}
+    {% if generations %}
+        <ul class="archive-nav-grid" aria-label="Generations for {{ vehicle_model.name }}">
+            {% for generation in generations %}
+                <li>
+                    <a class="archive-nav-card" href="{{ generation.get_absolute_url }}">
+                        <span class="archive-card-title">{{ generation.name }}</span>
+                        <span class="archive-card-subtitle">
+                            {{ generation.start_year }}–{% if generation.end_year %}{{ generation.end_year }}{% else %}present{% endif %}
+                        </span>
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No generations are currently available.</p>
+    {% endif %}
+</section>
 {% endblock %}

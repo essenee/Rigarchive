@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}{{ manufacturer.name }} | RigArchive{% endblock %}
+{% block title %}{{ manufacturer.name }} Models | RigArchive{% endblock %}
 
 {% block breadcrumbs %}
 <nav class="breadcrumbs" aria-label="Breadcrumb">
@@ -15,7 +15,7 @@
 {% endblock %}
 
 {% block content %}
-<h1>{{ manufacturer.name }}</h1>
+<h1>{{ manufacturer.name }} Models</h1>
 
 {% if manufacturer.country_code %}
     <dl class="record-details">
@@ -26,18 +26,35 @@
     </dl>
 {% endif %}
 
-<h2>Vehicle models</h2>
-
 {% if vehicle_models %}
-    <ul class="record-list">
+    <div class="archive-group-list">
         {% for vehicle_model in vehicle_models %}
-            <li>
-                <a href="{{ vehicle_model.get_absolute_url }}">
-                    {{ vehicle_model.name }}
-                </a>
-            </li>
+            <section class="archive-group-card">
+                <h2 class="archive-group-title">
+                    <a href="{{ vehicle_model.get_absolute_url }}">
+                        {{ vehicle_model.name }}
+                    </a>
+                </h2>
+
+                {% if vehicle_model.active_generations %}
+                    <ul class="generation-card-grid" aria-label="Generations for {{ vehicle_model.name }}">
+                        {% for generation in vehicle_model.active_generations %}
+                            <li>
+                                <a class="generation-nav-card" href="{{ generation.get_absolute_url }}">
+                                    <span class="generation-title">{{ generation.name }}</span>
+                                    <span class="generation-years">
+                                        {{ generation.start_year }}–{% if generation.end_year %}{{ generation.end_year }}{% else %}present{% endif %}
+                                    </span>
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <p class="secondary">No generations currently available.</p>
+                {% endif %}
+            </section>
         {% endfor %}
-    </ul>
+    </div>
 {% else %}
     <p>No vehicle models are currently available.</p>
 {% endif %}

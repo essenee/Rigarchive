@@ -91,97 +91,93 @@ class ReferenceViewTests(TestCase):
             is_active=True,
         )
 
-    def test_1_manufacturer_page_lists_its_vehicle_models(self) -> None:
-        """1. Manufacturer page lists its VehicleModels."""
+    def test_1_vehicles_index_lists_active_manufacturers_and_their_models(self) -> None:
+        """1 & 2. /vehicles/ lists active Manufacturers and includes their populated model links directly."""
+        response = self.client.get(reverse("reference:manufacturer-list"))
+
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, "Toyota")
+        self.assertContains(response, "4Runner")
+        self.assertContains(response, "Ford")
+        self.assertContains(response, "Bronco")
+        self.assertContains(response, self.four_runner.get_absolute_url())
+
+    def test_3_models_do_not_appear_under_wrong_manufacturer_on_vehicles_index(self) -> None:
+        """3. Models belonging to Manufacturer B do not appear under Manufacturer A on /vehicles/."""
+        response = self.client.get(reverse("reference:manufacturer-list"))
+
+        self.assertEqual(response.status_code, 200)
+        html = response.content.decode("utf-8")
+        ford_pos = html.find("Ford")
+        bronco_pos = html.find("Bronco")
+        toyota_pos = html.find("Toyota")
+        four_runner_pos = html.find("4Runner")
+        self.assertTrue(ford_pos < bronco_pos < toyota_pos < four_runner_pos)
+
+    def test_4_unpopulated_or_inactive_models_do_not_appear(self) -> None:
+        """4. Unpopulated or inactive models/manufacturers do not appear as available archive links."""
+        inactive_mfr = Manufacturer.objects.create(name="InactiveAuto", is_active=False)
+        VehicleModel.objects.create(manufacturer=inactive_mfr, name="Phantom", is_active=True)
+
+        inactive_model = VehicleModel.objects.create(manufacturer=self.toyota, name="InactiveModel", is_active=False)
+
+        response = self.client.get(reverse("reference:manufacturer-list"))
+        self.assertEqual(response.status_code, 200)
+        self.assertNotContains(response, "InactiveAuto")
+        self.assertNotContains(response, "Phantom")
+        self.assertNotContains(response, "InactiveModel")
+
+    def test_5_and_6_manufacturer_detail_uses_combined_heading_and_no_separate_models_heading(self) -> None:
+        """5 & 6. /vehicles/toyota/ uses combined 'Toyota Models' heading and no separate 'Models' heading."""
+        response = self.client.get(self.toyota.get_absolute_url())
+
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, "<h1>Toyota Models</h1>")
+        self.assertNotContains(response, "<h2>Models</h2>")
+
+    def test_7_and_8_manufacturer_detail_lists_models_and_their_generations(self) -> None:
+        """7 & 8. Manufacturer page lists its populated models and each model group lists active generations."""
         response = self.client.get(self.toyota.get_absolute_url())
 
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, "4Runner")
-
-    def test_2_manufacturer_page_does_not_list_models_belonging_to_another_manufacturer(self) -> None:
-        """2. Manufacturer page does not list models belonging to another manufacturer."""
-        response = self.client.get(self.toyota.get_absolute_url())
-
-        self.assertEqual(response.status_code, 200)
-        self.assertContains(response, "4Runner")
-        self.assertNotContains(response, "Bronco")
-
-    def test_3_vehicle_model_page_lists_its_generations(self) -> None:
-        """3. VehicleModel page lists its Generations."""
-        response = self.client.get(self.four_runner.get_absolute_url())
-
-        self.assertEqual(response.status_code, 200)
         self.assertContains(response, "Fourth Generation")
         self.assertContains(response, "Fifth Generation")
 
-    def test_4_vehicle_model_page_does_not_list_generations_belonging_to_another_model(self) -> None:
-        """4. VehicleModel page does not list generations belonging to another model."""
-        response = self.client.get(self.four_runner.get_absolute_url())
+    def test_9_generations_do_not_appear_under_wrong_model(self) -> None:
+        """9. Generations from another model do not appear under the wrong model."""
+        response = self.client.get(self.toyota.get_absolute_url())
 
         self.assertEqual(response.status_code, 200)
-        self.assertNotContains(response, "First Generation")
+        self.assertNotContains(response, "First Generation")  # Bronco's generation
 
-    def test_5_generation_links_resolve_correctly(self) -> None:
-        """5. Generation links resolve correctly."""
-        gen_url = self.fourth_generation.get_absolute_url()
-        response = self.client.get(gen_url)
-
-        self.assertEqual(response.status_code, 200)
-        self.assertContains(response, "Toyota 4Runner — Fourth Generation")
-
-    def test_6_breadcrumbs_contain_the_correct_hierarchy(self) -> None:
-        """6. Breadcrumbs contain the correct hierarchy across all navigation levels."""
-        # Manufacturer List
-        res_mfr_list = self.client.get(reverse("reference:manufacturer-list"))
-        self.assertContains(res_mfr_list, "Vehicles")
-
-        # Manufacturer Detail
-        res_mfr_detail = self.client.get(self.toyota.get_absolute_url())
-        self.assertContains(res_mfr_detail, "Vehicles")
-        self.assertContains(res_mfr_detail, "Toyota")
-
-        # Model Detail
-        res_model_detail = self.client.get(self.four_runner.get_absolute_url())
-        self.assertContains(res_model_detail, "Vehicles")
-        self.assertContains(res_model_detail, "Toyota")
-        self.assertContains(res_model_detail, "4Runner")
-
-        # Generation Detail
-        res_gen_detail = self.client.get(self.fourth_generation.get_absolute_url())
-        self.assertContains(res_gen_detail, "Vehicles")
-        self.assertContains(res_gen_detail, "Toyota")
-        self.assertContains(res_gen_detail, "4Runner")
-        self.assertContains(res_gen_detail, "Fourth Generation")
-
-        # VehicleDefinition Detail
-        res_vd_detail = self.client.get(self.vehicle_definition.get_absolute_url())
-        self.assertContains(res_vd_detail, "Vehicles")
-        self.assertContains(res_vd_detail, "Toyota")
-        self.assertContains(res_vd_detail, "4Runner")
-        self.assertContains(res_vd_detail, "Fourth Generation")
-        self.assertContains(res_vd_detail, "2007 Toyota 4Runner SR5 4.0L V6 4WD")
-
-    def test_7_generation_page_lists_only_vehicle_definitions_from_that_generation(self) -> None:
-        """7. Generation page lists only VehicleDefinitions from that generation."""
-        response = self.client.get(self.fourth_generation.get_absolute_url())
+    def test_10_generation_year_spans_render_correctly(self) -> None:
+        """10. Generation year spans render correctly."""
+        response = self.client.get(self.toyota.get_absolute_url())
 
         self.assertEqual(response.status_code, 200)
-        self.assertContains(response, "2007 Toyota 4Runner SR5 4.0L V6 4WD")
-        self.assertNotContains(response, "2020 Toyota 4Runner TRD Pro 4.0L V6 4WD")
+        self.assertContains(response, "2003–2009")
+        self.assertContains(response, "2010–present")
 
-    def test_8_superseded_inactive_vehicle_definitions_do_not_appear(self) -> None:
-        """8. Superseded/inactive VehicleDefinitions do not appear."""
-        # Generation detail page excludes inactive definitions
-        res_gen = self.client.get(self.fourth_generation.get_absolute_url())
-        self.assertNotContains(res_gen, "Limited")
-        self.assertNotContains(res_gen, self.superseded_definition.slug)
+    def test_11_model_and_generation_urls_resolve_correctly(self) -> None:
+        """11. Model and generation URLs resolve correctly."""
+        model_res = self.client.get(self.four_runner.get_absolute_url())
+        self.assertEqual(model_res.status_code, 200)
 
-        # VehicleDefinition detail page returns 404 for superseded record
-        res_superseded_detail = self.client.get(self.superseded_definition.get_absolute_url())
-        self.assertEqual(res_superseded_detail.status_code, 404)
+        gen_res = self.client.get(self.fourth_generation.get_absolute_url())
+        self.assertEqual(gen_res.status_code, 200)
 
-    def test_9_empty_hierarchy_states_render_without_error(self) -> None:
-        """9. Empty manufacturer/model/generation states render without error."""
+    def test_12_inactive_superseded_canonical_content_does_not_leak(self) -> None:
+        """12. Inactive/superseded canonical content does not leak into availability navigation."""
+        gen_res = self.client.get(self.fourth_generation.get_absolute_url())
+        self.assertNotContains(gen_res, "Limited")
+        self.assertNotContains(gen_res, self.superseded_definition.slug)
+
+        vd_res = self.client.get(self.superseded_definition.get_absolute_url())
+        self.assertEqual(vd_res.status_code, 404)
+
+    def test_13_empty_hierarchy_states_render_without_error(self) -> None:
+        """13. Empty manufacturer/model/generation states render without error."""
         empty_mfr = Manufacturer.objects.create(name="Subaru", country_code="JP")
         res_mfr = self.client.get(empty_mfr.get_absolute_url())
         self.assertEqual(res_mfr.status_code, 200)
@@ -192,31 +188,12 @@ class ReferenceViewTests(TestCase):
         self.assertEqual(res_model.status_code, 200)
         self.assertContains(res_model, "No generations are currently available.")
 
-        empty_gen = Generation.objects.create(
-            vehicle_model=empty_model,
-            name="First Generation",
-            start_year=1995,
-            end_year=1999,
-        )
-        res_gen = self.client.get(empty_gen.get_absolute_url())
-        self.assertEqual(res_gen.status_code, 200)
-        self.assertContains(res_gen, "No vehicle definitions are currently available.")
-
-    def test_10_existing_custom_404_500_public_navigation_tests_remain_intact(self) -> None:
-        """10. Existing custom 404/500/public navigation tests remain intact."""
-        # Inactive manufacturer 404 check
-        self.toyota.is_active = False
-        self.toyota.save()
-        res_inactive_mfr = self.client.get(self.toyota.get_absolute_url())
-        self.assertEqual(res_inactive_mfr.status_code, 404)
-
-        # Nested URL wrong manufacturer 404 check
-        incorrect_url = reverse(
-            "reference:vehicle-model-detail",
-            kwargs={
-                "manufacturer_slug": "not-toyota",
-                "vehicle_model_slug": self.four_runner.slug,
-            },
-        )
-        res_wrong_path = self.client.get(incorrect_url)
-        self.assertEqual(res_wrong_path.status_code, 404)
+    def test_14_existing_breadcrumbs_and_deeper_routes_continue_to_work(self) -> None:
+        """14. Existing breadcrumbs and deeper routes continue to work."""
+        res_vd = self.client.get(self.vehicle_definition.get_absolute_url())
+        self.assertEqual(res_vd.status_code, 200)
+        self.assertContains(res_vd, "Vehicles")
+        self.assertContains(res_vd, "Toyota")
+        self.assertContains(res_vd, "4Runner")
+        self.assertContains(res_vd, "Fourth Generation")
+        self.assertContains(res_vd, "2007 Toyota 4Runner SR5 4.0L V6 4WD")

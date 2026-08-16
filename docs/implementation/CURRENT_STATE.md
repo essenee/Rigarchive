@@ -602,7 +602,7 @@ The repository currently contains:
 - Development data preservation tooling (`snapshot_db`, `export_dev_data`, `verify_dev_data`)
 - Accessible application shell and UX foundation (`templates/base.html`, `about.html`, `404.html`, `500.html`)
 - Observation Domain foundation (`observation` app with `Observation` model)
-- Public reference browser (`templates/reference/` with progressive Manufacturer → Model → Generation → Configuration navigation hierarchy and breadcrumb navigation)
+- Public reference browser (`templates/reference/` with progressive Manufacturer → Model → Generation → Configuration navigation hierarchy, grid card component presentation, and breadcrumb navigation)
 - Admin interface with read-only audit log viewers (`ImportExecutionReceiptAdmin`, `CanonicalRecordCorrectionAdmin`)
 - Stable migration history (0001_initial, 0002_importexecutionreceipt, 0003_importexecutionreceipt_adjudication_hash, 0004_alter_vehicledefinition_drivetrain, 0005_canonicalrecordcorrection)
 - Populated Architectural Decision Records (ADR-0001 through ADR-0008)

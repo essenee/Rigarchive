@@ -14,21 +14,34 @@
 <h1>Vehicle manufacturers</h1>
 
 {% if manufacturers %}
-    <ul class="record-list">
+    <div class="archive-manufacturer-list" aria-label="Vehicle manufacturers and models">
         {% for manufacturer in manufacturers %}
-            <li>
-                <a href="{{ manufacturer.get_absolute_url }}">
-                    {{ manufacturer.name }}
-                </a>
+            <div class="archive-manufacturer-row">
+                <h2 class="archive-manufacturer-name">
+                    <a href="{{ manufacturer.get_absolute_url }}">
+                        {{ manufacturer.name }}
+                    </a>
+                    {% if manufacturer.country_code %}
+                        <span class="secondary">({{ manufacturer.country_code }})</span>
+                    {% endif %}
+                </h2>
 
-                {% if manufacturer.country_code %}
-                    <span class="secondary">
-                        {{ manufacturer.country_code }}
-                    </span>
+                {% if manufacturer.active_vehicle_models %}
+                    <ul class="archive-subgroup-list" aria-label="Models for {{ manufacturer.name }}">
+                        {% for vehicle_model in manufacturer.active_vehicle_models %}
+                            <li class="archive-subgroup-item">
+                                <a href="{{ vehicle_model.get_absolute_url }}">
+                                    {{ vehicle_model.name }}
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <p class="secondary">No vehicle models currently available.</p>
                 {% endif %}
-            </li>
+            </div>
         {% endfor %}
-    </ul>
+    </div>
 {% else %}
     <p>No manufacturers are currently available.</p>
 {% endif %}
