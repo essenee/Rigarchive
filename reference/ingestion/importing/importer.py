@@ -66,7 +66,7 @@ def execute_candidate_import(
                 messages=["No-Op plan missing existing_vehicle_definition_id."],
             )
 
-        existing = VehicleDefinition.objects.filter(id=plan.existing_vehicle_definition_id).first()
+        existing = VehicleDefinition.objects.filter(id=plan.existing_vehicle_definition_id, is_active=True).first()
         if (
             existing
             and existing.generation_id == plan.resolved_generation_id
@@ -85,7 +85,7 @@ def execute_candidate_import(
             return CanonicalImportResult(
                 candidate_reference=ref_id,
                 outcome=ImportExecutionOutcome.ABORTED_STALE_PLAN,
-                messages=["Existing record was deleted or modified prior to execution."],
+                messages=["Existing record was deleted, deactivated, or modified prior to execution."],
             )
 
     # 3. Create Execution (Create-Only)
@@ -125,6 +125,7 @@ def execute_candidate_import(
             existing_concurrent = VehicleDefinition.objects.filter(
                 generation_id=plan.resolved_generation_id,
                 slug=plan.target_slug,
+                is_active=True,
             ).first()
 
             if existing_concurrent:
@@ -152,6 +153,7 @@ def execute_candidate_import(
                     generation_id=plan.resolved_generation_id,
                     model_year=target_year,
                     market=target_market,
+                    is_active=True,
                 )
             )
 
@@ -179,7 +181,7 @@ def execute_candidate_import(
                         messages=["Mechanical-dimension CREATE plan missing mechanical_basis_existing_id."],
                     )
 
-                basis_vd = VehicleDefinition.objects.filter(id=plan.mechanical_basis_existing_id).first()
+                basis_vd = VehicleDefinition.objects.filter(id=plan.mechanical_basis_existing_id, is_active=True).first()
                 if not basis_vd:
                     return CanonicalImportResult(
                         candidate_reference=ref_id,
@@ -259,6 +261,7 @@ def execute_candidate_import(
         existing_after = VehicleDefinition.objects.filter(
             generation_id=plan.resolved_generation_id,
             slug=plan.target_slug,
+            is_active=True,
         ).first()
 
         if existing_after and _fields_match_exact(existing_after, plan.target_vehicle_definition_fields):

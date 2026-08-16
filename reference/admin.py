@@ -1,6 +1,13 @@
 from django.contrib import admin
 
-from .models import Generation, ImportExecutionReceipt, Manufacturer, VehicleDefinition, VehicleModel
+from .models import (
+    CanonicalRecordCorrection,
+    Generation,
+    ImportExecutionReceipt,
+    Manufacturer,
+    VehicleDefinition,
+    VehicleModel,
+)
 
 
 
@@ -314,6 +321,59 @@ class ImportExecutionReceiptAdmin(admin.ModelAdmin):
         "existing_vehicle_definition_pk_snapshot",
         "existing_vehicle_definition_uuid_snapshot",
         "existing_vehicle_definition_slug_snapshot",
+    ]
+
+    def has_add_permission(self, request) -> bool:
+        return False
+
+    def has_delete_permission(self, request, obj=None) -> bool:
+        return False
+
+    def has_change_permission(self, request, obj=None) -> bool:
+        return False
+
+
+@admin.register(CanonicalRecordCorrection)
+class CanonicalRecordCorrectionAdmin(admin.ModelAdmin):
+    list_display = (
+        "created_at",
+        "operator_label",
+        "correction_reason",
+        "superseded_vehicle_definition_slug_snapshot",
+        "replacement_vehicle_definition_slug_snapshot",
+    )
+
+    list_filter = (
+        "correction_reason",
+        "operator_label",
+    )
+
+    search_fields = (
+        "superseded_vehicle_definition_slug_snapshot",
+        "replacement_vehicle_definition_slug_snapshot",
+        "superseded_vehicle_definition_uuid_snapshot",
+        "replacement_vehicle_definition_uuid_snapshot",
+        "operator_label",
+        "correction_reason",
+    )
+
+    readonly_fields = [
+        "id",
+        "uuid",
+        "created_at",
+        "updated_at",
+        "superseded_vehicle_definition",
+        "replacement_vehicle_definition",
+        "superseded_vehicle_definition_pk_snapshot",
+        "superseded_vehicle_definition_uuid_snapshot",
+        "superseded_vehicle_definition_slug_snapshot",
+        "replacement_vehicle_definition_pk_snapshot",
+        "replacement_vehicle_definition_uuid_snapshot",
+        "replacement_vehicle_definition_slug_snapshot",
+        "correction_reason",
+        "operator_label",
+        "notes",
+        "execution_receipt",
     ]
 
     def has_add_permission(self, request) -> bool:

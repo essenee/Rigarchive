@@ -316,6 +316,7 @@ def plan_candidate_import(
     existing_exact = VehicleDefinition.objects.filter(
         generation=resolved_gen,
         slug=target_slug,
+        is_active=True,
     ).first()
 
     if existing_exact:
@@ -353,6 +354,7 @@ def plan_candidate_import(
             generation=resolved_gen,
             model_year=evidence_year,
             market=evidence_market,
+            is_active=True,
         )
     )
 
