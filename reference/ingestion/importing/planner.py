@@ -51,7 +51,7 @@ def _extract_mapped_concept_values(
 
 
 def _format_engine_name(displacement: Any, cylinders: Any) -> Optional[str]:
-    """Format standard descriptive engine display string (e.g. '4.0L V6')."""
+    """Format standard descriptive engine display string (e.g. '4.0L V6', '2.7L I4')."""
     displ_val = None
     if isinstance(displacement, TechnicalValue):
         displ_val = displacement.normalized_value
@@ -62,6 +62,9 @@ def _format_engine_name(displacement: Any, cylinders: Any) -> Optional[str]:
 
     if displ_val is None or cyls_val is None:
         return None
+
+    if cyls_val == 4:
+        return f"{displ_val:.1f}L I4"
 
     return f"{displ_val:.1f}L V{cyls_val}"
 

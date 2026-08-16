@@ -1,0 +1,23 @@
+{
+  "_provenance": {
+    "source_id": "volkswagen_usa",
+    "source_type": "manufacturer_order_guide",
+    "source_locator": "volkswagen_order_guide_2004_touareg_v8_x.pdf",
+    "native_record_id": "vw_2004_touareg_v8_x",
+    "completeness_provenance": "source_asserted"
+  },
+  "configurations": [
+    {
+      "make": "Volkswagen",
+      "model": "Touareg",
+      "model_year": 2004,
+      "trim": "V8 X",
+      "drivetrain": "4MOTION",
+      "engine_displacement_liters": 4.2,
+      "engine_cylinders": 8,
+      "transmission": "6-Speed Automatic",
+      "market": "US",
+      "native_trim_id": "vw_2004_touareg_v8_x"
+    }
+  ]
+}

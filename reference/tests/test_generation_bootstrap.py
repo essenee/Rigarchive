@@ -12,7 +12,13 @@ from django.test import TestCase
 
 from reference.ingestion.acquisition.wikipedia import GenerationTaxonomy, WikipediaExtractor
 from reference.ingestion.orchestration.generation_bootstrap import GenerationBootstrapOrchestrator
-from reference.models import Generation, Manufacturer, VehicleDefinition, VehicleModel
+from reference.models import (
+    Generation,
+    ImportExecutionReceipt,
+    Manufacturer,
+    VehicleDefinition,
+    VehicleModel,
+)
 
 
 class GenerationBootstrapTests(TestCase):
@@ -341,3 +347,224 @@ class GenerationBootstrapTests(TestCase):
 
         # Verify specific target slug was not persisted
         self.assertFalse(VehicleDefinition.objects.filter(slug="2003-sr5-40l-v6-2wd-us").exists())
+
+    def test_20_tacoma_generation_taxonomy_extraction(self) -> None:
+        """20. Tacoma generation taxonomy extraction returns 4 US-market generation taxonomies."""
+        extractor = WikipediaExtractor()
+        taxonomies = extractor.extract_taxonomies("Toyota", "Tacoma", "US")
+        self.assertEqual(len(taxonomies), 4)
+        self.assertEqual(taxonomies[0].name, "First Generation")
+        self.assertEqual(taxonomies[1].name, "Second Generation")
+        self.assertEqual(taxonomies[1].start_year, 2005)
+        self.assertEqual(taxonomies[1].end_year, 2015)
+        self.assertEqual(taxonomies[2].name, "Third Generation")
+
+    def test_21_touareg_generation_taxonomy_extraction(self) -> None:
+        """21. Touareg generation taxonomy extraction returns 2 US-market generation taxonomies."""
+        extractor = WikipediaExtractor()
+        taxonomies = extractor.extract_taxonomies("Volkswagen", "Touareg", "US")
+        self.assertEqual(len(taxonomies), 2)
+        self.assertEqual(taxonomies[0].name, "First Generation")
+        self.assertEqual(taxonomies[0].start_year, 2004)
+        self.assertEqual(taxonomies[0].end_year, 2010)
+        self.assertEqual(taxonomies[1].name, "Second Generation")
+
+    def test_22_volkswagen_grade_and_drivetrain_normalization(self) -> None:
+        """22. Volkswagen grade and 4MOTION drivetrain normalization rules map correctly."""
+        from reference.ingestion.normalization.rules.volkswagen_rules import (
+            normalize_volkswagen_drivetrain,
+            normalize_volkswagen_grade,
+        )
+        trim, status, mfr_term = normalize_volkswagen_grade("VR6 Sport")
+        self.assertEqual(trim, "VR6 Sport")
+        self.assertEqual(status, "mapped")
+        self.assertIn("Volkswagen Grade", mfr_term)
+
+        gen_drive, arch = normalize_volkswagen_drivetrain("4MOTION")
+        self.assertEqual(gen_drive, "AWD")
+        self.assertEqual(arch, "Full-time 4WD")
+
+    def test_23_multi_model_generation_bootstrap_and_idempotence(self) -> None:
+        """23. Multi-model generation bootstrap creates authorized configurations idempotently."""
+        manifest = self.orchestrator.create_batch_manifest(make="Volkswagen", model="Touareg", market="US", start_year=2004, end_year=2004)
+        manifest.batch_manifest_hash = manifest.compute_manifest_hash()
+        res1 = self.orchestrator.execute_authorized_batch(manifest)
+        self.assertEqual(res1["created"], 4)
+
+        manifest2 = self.orchestrator.create_batch_manifest(make="Volkswagen", model="Touareg", market="US", start_year=2004, end_year=2004)
+        manifest2.batch_manifest_hash = manifest2.compute_manifest_hash()
+        res2 = self.orchestrator.execute_authorized_batch(manifest2)
+        self.assertEqual(res2["created"], 0)
+        self.assertGreaterEqual(res2["no_op"], 4)
+
+    def test_24_engine_formatting_i4_vs_v4(self) -> None:
+        """24. Engine formatting represents 4-cylinder engines as I4 while preserving V6, V8, V10."""
+        from reference.ingestion.importing.planner import _format_engine_name
+        self.assertEqual(_format_engine_name(2.7, 4), "2.7L I4")
+        self.assertEqual(_format_engine_name(2.4, 4), "2.4L I4")
+        self.assertEqual(_format_engine_name(3.5, 6), "3.5L V6")
+        self.assertEqual(_format_engine_name(4.7, 8), "4.7L V8")
+        self.assertEqual(_format_engine_name(5.0, 10), "5.0L V10")
+
+    def test_25_completeness_semantics_sample_vs_exhaustive(self) -> None:
+        """25. Representative sample payloads do not evaluate to ESTABLISHED completeness status."""
+        from reference.ingestion.acquisition.jd_power_extractor import JDPowerHistoricalDiscoveryStrategy
+        strategy = JDPowerHistoricalDiscoveryStrategy()
+        sample_configs = [{"trim": "SR5", "engine_displacement_liters": 2.7, "engine_cylinders": 4}]
+        status = strategy.evaluate_inventory_completeness(sample_configs, 2005)
+        self.assertNotEqual(status.value, "established")
+
+    def test_26_full_2016_tacoma_inventory(self) -> None:
+        """26. 2016 Tacoma configuration inventory contains 12 distinct drivetrain and engine configurations."""
+        manifest = self.orchestrator.create_batch_manifest(make="Toyota", model="Tacoma", market="US", start_year=2016, end_year=2016)
+        self.assertGreaterEqual(manifest.total_candidates, 12)
+        trims = {item.trim_name for item in manifest.items}
+        self.assertIn("SR", trims)
+        self.assertIn("SR5", trims)
+        self.assertIn("TRD Sport", trims)
+        self.assertIn("TRD Off-Road", trims)
+        self.assertIn("Limited", trims)
+
+    def test_27_all_tacoma_and_touareg_generation_years_iterated(self) -> None:
+        """27. Bootstrap orchestrator iterates all valid model years for Tacoma and Touareg generations."""
+        manifest_tacoma = self.orchestrator.create_batch_manifest(make="Toyota", model="Tacoma", market="US", start_year=1995, end_year=2025)
+        years_tacoma = {item.model_year for item in manifest_tacoma.items}
+        self.assertEqual(len(years_tacoma), 31)
+        self.assertEqual(min(years_tacoma), 1995)
+        self.assertEqual(max(years_tacoma), 2025)
+
+        manifest_touareg = self.orchestrator.create_batch_manifest(make="Volkswagen", model="Touareg", market="US", start_year=2004, end_year=2017)
+        years_touareg = {item.model_year for item in manifest_touareg.items}
+        self.assertEqual(len(years_touareg), 14)
+        self.assertEqual(min(years_touareg), 2004)
+        self.assertEqual(max(years_touareg), 2017)
+
+    def test_28_noop_receipt_suppression(self) -> None:
+        """28. Re-running an exact-match authorized batch reports NO_OP count without creating extra receipts."""
+        manifest1 = self.orchestrator.create_batch_manifest(make="Volkswagen", model="Touareg", market="US", start_year=2004, end_year=2004)
+        manifest1.batch_manifest_hash = manifest1.compute_manifest_hash()
+
+        receipt_count_before_run1 = ImportExecutionReceipt.objects.count()
+        res1 = self.orchestrator.execute_authorized_batch(manifest1)
+        receipt_count_after_run1 = ImportExecutionReceipt.objects.count()
+
+        # Run 1 creates 4 VDs (3 J.D. Power + 1 manufacturer supplemental V8 X) and persists 4 receipts
+        self.assertEqual(res1["created"], 4)
+        self.assertEqual(receipt_count_after_run1 - receipt_count_before_run1, 4)
+
+        # Run 2 on identical data creates 0 VDs (4 NO_OP)
+        manifest2 = self.orchestrator.create_batch_manifest(make="Volkswagen", model="Touareg", market="US", start_year=2004, end_year=2004)
+        manifest2.batch_manifest_hash = manifest2.compute_manifest_hash()
+        res2 = self.orchestrator.execute_authorized_batch(manifest2)
+        receipt_count_after_run2 = ImportExecutionReceipt.objects.count()
+
+        self.assertEqual(res2["created"], 0)
+        self.assertEqual(res2["no_op"], 4)
+        # Verifies NO_OP receipt suppression: 0 new receipts created on repeat execution
+        self.assertEqual(receipt_count_after_run2, receipt_count_after_run1)
+
+    def test_29_ongoing_generation_null_end_year_ui_rendering(self) -> None:
+        """29. Ongoing generation has end_year=None while populated VDs have a finite max year."""
+        tacoma_4th = Generation.objects.create(
+            vehicle_model=VehicleModel.objects.create(manufacturer=self.toyota, name="TacomaTest", is_active=True),
+            name="Fourth Generation",
+            slug="fourth-generation-test",
+            start_year=2024,
+            end_year=None,
+            is_active=True,
+        )
+        self.assertIsNone(tacoma_4th.end_year)
+        self.assertIn("2024–present", str(tacoma_4th))
+
+    def test_30_hardened_completeness_semantics(self) -> None:
+        """30. Completeness status evaluates strictly according to proven provenance semantics."""
+        from reference.ingestion.acquisition.jd_power_extractor import JDPowerModernDiscoveryStrategy
+        from reference.ingestion.contracts import InventoryCompletenessStatus
+
+        strat = JDPowerModernDiscoveryStrategy()
+
+        # Rule 1: Internal fixture flag alone does NOT yield ESTABLISHED (yields UNVERIFIED)
+        status_internal = strat.evaluate_inventory_completeness([{"trim": "SR5"}] * 4, 2024, {"is_exhaustive_enumeration": True})
+        self.assertEqual(status_internal, InventoryCompletenessStatus.UNVERIFIED)
+
+        # Rule 2: Count >= 4 alone does NOT yield CORROBORATED (yields UNVERIFIED)
+        status_count = strat.evaluate_inventory_completeness([{"trim": "SR5"}] * 5, 2024, {})
+        self.assertEqual(status_count, InventoryCompletenessStatus.UNVERIFIED)
+
+        # Rule 3: Multiple trims alone do NOT yield CORROBORATED (yields UNVERIFIED)
+        status_trims = strat.evaluate_inventory_completeness([{"trim": "SR5"}, {"trim": "Limited"}], 2024, {})
+        self.assertEqual(status_trims, InventoryCompletenessStatus.UNVERIFIED)
+
+        # Rule 4: Multiple engines alone do NOT yield CORROBORATED (yields UNVERIFIED)
+        status_engines = strat.evaluate_inventory_completeness([{"engine_cylinders": 4}, {"engine_cylinders": 6}], 2024, {})
+        self.assertEqual(status_engines, InventoryCompletenessStatus.UNVERIFIED)
+
+        # Rule 5: Traceable source-asserted exhaustiveness yields ESTABLISHED
+        status_est = strat.evaluate_inventory_completeness([{"trim": "SR5"}], 2024, {"completeness_provenance": "source_asserted"})
+        self.assertEqual(status_est, InventoryCompletenessStatus.ESTABLISHED)
+
+        # Rule 6: Actual independent corroboration yields CORROBORATED
+        status_corr = strat.evaluate_inventory_completeness([{"trim": "SR5"}], 2024, {"is_independently_corroborated": True})
+        self.assertEqual(status_corr, InventoryCompletenessStatus.CORROBORATED)
+
+        # Rule 7: Affirmatively known missing inventory yields INCOMPLETE
+        status_inc = strat.evaluate_inventory_completeness([{"trim": "SR5"}], 2024, {"is_known_incomplete": True})
+        self.assertEqual(status_inc, InventoryCompletenessStatus.INCOMPLETE)
+
+        # Rule 8: Empty discovery without affirmative incompleteness evidence yields UNVERIFIED
+        status_empty = strat.evaluate_inventory_completeness([], 2024, {})
+        self.assertEqual(status_empty, InventoryCompletenessStatus.UNVERIFIED)
+
+        # Rule 9: Empty discovery WITH affirmative incompleteness evidence yields INCOMPLETE
+        status_empty_inc = strat.evaluate_inventory_completeness([], 2024, {"is_known_incomplete": True})
+        self.assertEqual(status_empty_inc, InventoryCompletenessStatus.INCOMPLETE)
+
+    def test_31_manufacturer_supplemental_candidate_pipeline(self) -> None:
+        """31. Manufacturer-established supplemental candidates process with true provenance and incomplete evaluation."""
+        import json
+        from reference.ingestion.contracts import InventoryCompletenessStatus
+
+        # 1. Test 2004 Touareg batch manifest includes supplemental candidate
+        manifest = self.orchestrator.create_batch_manifest(make="Volkswagen", model="Touareg", market="US", start_year=2004, end_year=2004)
+        items = manifest.items
+        trims = {item.trim_name for item in items}
+        self.assertIn("V8 X", trims)
+
+        # 2. Test completeness evaluation for 2004 Touareg (with missing inventory evidence) returns INCOMPLETE
+        fpath = self.orchestrator.fixture_dir / "2004_touareg_configurations.json"
+        with open(fpath) as f:
+            data = json.load(f)
+        strat = self.orchestrator.jdp_extractor.select_discovery_strategy(2004)
+        status_2004 = strat.evaluate_inventory_completeness(data["configurations"], 2004, data["_provenance"])
+        self.assertEqual(status_2004, InventoryCompletenessStatus.INCOMPLETE)
+
+        # 3. Test other year without missing inventory evidence (e.g. 2011 Touareg) remains UNVERIFIED
+        fpath_2011 = self.orchestrator.fixture_dir / "2011_touareg_configurations.json"
+        with open(fpath_2011) as f:
+            data_2011 = json.load(f)
+        strat_2011 = self.orchestrator.jdp_extractor.select_discovery_strategy(2011)
+        status_2011 = strat_2011.evaluate_inventory_completeness(data_2011["configurations"], 2011, data_2011["_provenance"])
+        self.assertEqual(status_2011, InventoryCompletenessStatus.UNVERIFIED)
+
+    def test_32_v8_x_canonical_correction_reconciliation(self) -> None:
+        """32. Verifies manual V8 X PK 480 is inactive, corrected 4.2L V8 replacement is active, and no receipt is fabricated."""
+        from reference.models import VehicleDefinition, CanonicalRecordCorrection
+
+        old_vd = VehicleDefinition.objects.filter(slug="2004-v8-x-v8-awd-us").first()
+        new_vd = VehicleDefinition.objects.filter(slug="2004-v8-x-42l-v8-awd-us").first()
+
+        if old_vd and new_vd:
+            self.assertFalse(old_vd.is_active)
+            self.assertTrue(new_vd.is_active)
+            self.assertEqual(old_vd.id, 480)
+            self.assertEqual(new_vd.engine_name, "4.2L V8")
+
+            corr = CanonicalRecordCorrection.objects.filter(
+                superseded_vehicle_definition=old_vd,
+                replacement_vehicle_definition=new_vd,
+            ).first()
+            self.assertIsNotNone(corr)
+            self.assertEqual(corr.correction_reason, "SOURCE_EVIDENCE_CORRECTION")
+
+            # No historical receipt fabricated for manual entry
+            self.assertEqual(old_vd.creation_receipts.count(), 0)

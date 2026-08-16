@@ -1,0 +1,58 @@
+{
+  "_provenance": {
+    "publisher": "J.D. Power",
+    "source_id": "jd_power",
+    "source_type": "third_party_reference",
+    "source_title": "J.D. Power 2004 Volkswagen Touareg Trim & Configuration Enumeration",
+    "source_reference": "J.D. Power Automotive Reference (jdpower.com) 2004 Volkswagen Touareg Factory Configuration Directory",
+    "model_year": 2004,
+    "publication_scope": "US",
+    "publication_date": "2003-10-01",
+    "evidentiary_role": "configuration_enumeration",
+    "inventory_completeness": "incomplete",
+    "is_exhaustive_enumeration": false,
+    "is_known_incomplete": true,
+    "missing_inventory_evidence": [
+      "Volkswagen 2004 Touareg V8 X factory trim model code 7LA0X1 omitted from secondary J.D. Power enumeration"
+    ],
+    "transcription_note": "J.D. Power 2004 Volkswagen Touareg configuration inventory (omits manufacturer-established V8 X trim)."
+  },
+  "configurations": [
+    {
+      "native_trim_id": "2004_v6_awd_32l",
+      "make": "Volkswagen",
+      "model": "Touareg",
+      "model_year": 2004,
+      "trim": "V6",
+      "drivetrain": "4MOTION",
+      "engine_displacement_liters": 3.2,
+      "engine_cylinders": 6,
+      "transmission": "6-Speed Automatic",
+      "market": "US"
+    },
+    {
+      "native_trim_id": "2004_v8_awd_42l",
+      "make": "Volkswagen",
+      "model": "Touareg",
+      "model_year": 2004,
+      "trim": "V8",
+      "drivetrain": "4MOTION",
+      "engine_displacement_liters": 4.2,
+      "engine_cylinders": 8,
+      "transmission": "6-Speed Automatic",
+      "market": "US"
+    },
+    {
+      "native_trim_id": "2004_v10_tdi_awd_50l",
+      "make": "Volkswagen",
+      "model": "Touareg",
+      "model_year": 2004,
+      "trim": "V10 TDI",
+      "drivetrain": "4MOTION",
+      "engine_displacement_liters": 5.0,
+      "engine_cylinders": 10,
+      "transmission": "6-Speed Automatic",
+      "market": "US"
+    }
+  ]
+}

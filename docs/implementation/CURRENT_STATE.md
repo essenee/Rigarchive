@@ -594,14 +594,15 @@ RigArchive/
 - Milestone 26: US-Market Generation Bootstrap & Full Configuration Population (✅ Complete — RA-031)
 - Milestone 27: Generation Landing Pages, Model-Year Overview & Detailed Specs Navigation (✅ Complete — RA-032)
 - Milestone 28: Canonical Import Receipt Coverage Audit & Batch Execution Atomicity Hardening (✅ Complete — RA-034)
+- Milestone 29: Multi-Model Generation Bootstrap & Complete Configuration Population for Toyota Tacoma & Volkswagen Touareg (✅ Complete — RA-036)
 
 
 13. Current Repository Status
 The repository currently contains:
 - Functional Django project
-- Passing test suite (241 tests passing cleanly across full test suite)
+- Passing test suite (257 tests passing cleanly across full test suite)
 - Shared core infrastructure (`core` app with `UUIDModel`, `TimestampedModel`, `BaseModel`)
-- Reference Data Ingestion package (`reference/ingestion/` with contracts, serialization, validation, `acquisition/` adapters, profiles & extractors including `JDPowerProfile`, `JDPowerExtractor`, `WikipediaExtractor`, `normalization/` normalizers including `JDPowerNormalizer`, `candidate/` builder, `importing/` importer, planner, & `correction.py` correction workflow, `manifest.py` review manifest & `PopulationBatchManifest`, and `orchestration/` `MultiSourceOrchestrator` & `GenerationBootstrapOrchestrator`)
+- Reference Data Ingestion package (`reference/ingestion/` with contracts, serialization, validation, `acquisition/` adapters, profiles & extractors including `JDPowerProfile`, `JDPowerExtractor`, `WikipediaExtractor`, `normalization/` normalizers including `JDPowerNormalizer`, `rules/` for `toyota_rules.py` and `volkswagen_rules.py`, `candidate/` builder, `importing/` importer, planner, & `correction.py` correction workflow, `manifest.py` review manifest & `PopulationBatchManifest`, and `orchestration/` `MultiSourceOrchestrator` & `GenerationBootstrapOrchestrator`)
 - Safe read-only inspection and batch execution tooling (`inspect_reference_state`, `execute_population_batch`, `snapshot_db`, `export_dev_data`, `verify_dev_data`)
 - Accessible application shell and UX foundation (`templates/base.html`, `about.html`, `404.html`, `500.html`)
 - Observation Domain foundation (`observation` app with `Observation` model)
@@ -612,5 +613,5 @@ The repository currently contains:
 - Approved Architecture Design Documents (RA-006, RA-008, RA-010, RA-011, RA-014, RA-016, RA-018, RA-020, RA-022, RA-024, RA-025)
 - Gemini CLI project instructions (GEMINI.md)
 - Task-based implementation workflow (docs/implementation/tasks/)
-- Completed implementation tasks: RA-003, RA-005, RA-007, RA-009, RA-012, RA-013, RA-015, RA-017, RA-019, RA-021, RA-023, RA-024, RA-026, RA-027, RA-028, RA-029, RA-030, RA-031, RA-032, RA-034 — Canonical Import Receipt Coverage Audit & Batch Execution Atomicity Hardening
+- Completed implementation tasks: RA-003, RA-005, RA-007, RA-009, RA-012, RA-013, RA-015, RA-017, RA-019, RA-021, RA-023, RA-024, RA-026, RA-027, RA-028, RA-029, RA-030, RA-031, RA-032, RA-034, RA-036 — Multi-Model Generation Bootstrap & Complete Configuration Population
 - Approved Architecture/Research tasks: RA-010, RA-011, RA-014, RA-016, RA-018, RA-020, RA-022, RA-024, RA-025
