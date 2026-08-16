@@ -1,15 +1,19 @@
 """
-J.D. Power Configuration Enumeration Extractor (RA-028).
+J.D. Power Configuration Enumeration Extractor & Discovery Strategy Adapters (RA-028 / RA-031).
 
 Extracts Tier 1 SourceAssertionSet artifacts representing factory configuration enumerations
 from J.D. Power structured vehicle inventory data (JSON or structured HTML payload).
 
+Implements source-format discovery strategies:
+- JDPowerHistoricalDiscoveryStrategy (pre-2010 historical trim/style/engine enumeration)
+- JDPowerModernDiscoveryStrategy (2010+ modern trim/style enumeration)
+
 Preserves explicit evidentiary role (configuration_enumeration), third-party source identity (jd_power),
 and source authority (third_party_reference) independently without Toyota source conflation.
-Does not require Toyota internal model codes.
 """
 
 import json
+from abc import ABC, abstractmethod
 from datetime import datetime, timezone
 from typing import Any, Dict, List, Optional, Union
 
@@ -17,6 +21,7 @@ from reference.ingestion.contracts import (
     ArtifactType,
     Envelope,
     ExtractionProvenance,
+    InventoryCompletenessStatus,
     SourceApplicability,
     SourceAssertion,
     SourceAssertionSet,
@@ -30,13 +35,82 @@ class JDPowerExtractorError(ValueError):
     pass
 
 
+class BaseJDPowerDiscoveryStrategy(ABC):
+    """Abstract base discovery strategy for J.D. Power automotive reference payloads."""
+
+    @abstractmethod
+    def evaluate_inventory_completeness(
+        self,
+        configurations: List[Dict[str, Any]],
+        model_year: int,
+    ) -> InventoryCompletenessStatus:
+        """Evaluate whether discovered configurations represent a complete model-year inventory."""
+        pass
+
+
+class JDPowerHistoricalDiscoveryStrategy(BaseJDPowerDiscoveryStrategy):
+    """
+    Discovery strategy for historical J.D. Power payloads (pre-2010).
+    Verifies multi-engine (V6 / V8) and factory grade (SR5, Sport, Limited) completeness envelope.
+    """
+
+    def evaluate_inventory_completeness(
+        self,
+        configurations: List[Dict[str, Any]],
+        model_year: int,
+    ) -> InventoryCompletenessStatus:
+        if not configurations:
+            return InventoryCompletenessStatus.INCOMPLETE
+
+        trims = {str(c.get("trim", "")).strip().upper() for c in configurations}
+        engines = {float(c.get("engine_displacement_liters", 0)) for c in configurations if c.get("engine_displacement_liters")}
+
+        # Historical 4Runner expected envelope (2003-2009): SR5, Sport/Sport Edition, Limited + V6 (4.0) & V8 (4.7)
+        has_sport = any("SPORT" in t for t in trims)
+        has_sr5 = any("SR5" in t for t in trims)
+        has_limited = any("LIMITED" in t for t in trims)
+        has_v8 = 4.7 in engines or any(c.get("engine_cylinders") == 8 for c in configurations)
+        has_v6 = 4.0 in engines or any(c.get("engine_cylinders") == 6 for c in configurations)
+
+        if has_sport and has_sr5 and has_limited and has_v8 and has_v6:
+            return InventoryCompletenessStatus.ESTABLISHED
+        elif (has_sr5 or has_limited) and (has_v6 or has_v8):
+            return InventoryCompletenessStatus.CORROBORATED
+
+        return InventoryCompletenessStatus.INCOMPLETE
+
+
+class JDPowerModernDiscoveryStrategy(BaseJDPowerDiscoveryStrategy):
+    """
+    Discovery strategy for modern J.D. Power payloads (2010+).
+    """
+
+    def evaluate_inventory_completeness(
+        self,
+        configurations: List[Dict[str, Any]],
+        model_year: int,
+    ) -> InventoryCompletenessStatus:
+        if not configurations:
+            return InventoryCompletenessStatus.INCOMPLETE
+
+        if len(configurations) >= 4:
+            return InventoryCompletenessStatus.ESTABLISHED
+        return InventoryCompletenessStatus.CORROBORATED
+
+
 class JDPowerExtractor:
     """
     Extractor strategy for J.D. Power automotive reference configuration enumerations.
     """
 
     EXTRACTOR_ID = "jd_power_configuration_extractor"
-    EXTRACTOR_VERSION = "1.0.0"
+    EXTRACTOR_VERSION = "1.1.0"
+
+    def select_discovery_strategy(self, model_year: int) -> BaseJDPowerDiscoveryStrategy:
+        """Select appropriate discovery strategy based on historical model-year boundary."""
+        if model_year < 2010:
+            return JDPowerHistoricalDiscoveryStrategy()
+        return JDPowerModernDiscoveryStrategy()
 
     def extract(
         self,
@@ -46,7 +120,6 @@ class JDPowerExtractor:
         """
         Extract Tier 1 SourceAssertionSets from J.D. Power payload.
         """
-        # Parse payload if bytes or str
         if isinstance(raw_bytes_or_dict, (bytes, bytearray)):
             try:
                 data = json.loads(raw_bytes_or_dict.decode("utf-8"))
@@ -106,7 +179,7 @@ class JDPowerExtractor:
                 artifact_type=ArtifactType.SOURCE_ASSERTION_SET.value,
                 schema_version="1.1.0",
                 created_at=extracted_at,
-                generator="rigarchive-acquisition-jdpower/1.0.0",
+                generator="rigarchive-acquisition-jdpower/1.1.0",
             )
 
             applicability = SourceApplicability(
@@ -116,7 +189,7 @@ class JDPowerExtractor:
                 applicability_scope="configuration",
             )
 
-            locator = getattr(snapshot_meta, "publisher_locator", None) or getattr(snapshot_meta, "source_locator", "https://www.jdpower.com/cars/2019/toyota/4runner")
+            locator = getattr(snapshot_meta, "publisher_locator", None) or getattr(snapshot_meta, "source_locator", f"https://www.jdpower.com/cars/{model_year}/toyota/4runner")
             acq_method = getattr(snapshot_meta, "acquisition_method", None) or "local_file"
 
             prov = SourceMetadata(

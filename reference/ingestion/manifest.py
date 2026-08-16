@@ -417,3 +417,89 @@ def reconstruct_plan_from_manifest(review_plan: CanonicalImportReviewPlan) -> Ca
         adjudication_reference=review_plan.adjudication_reference,
         adjudication_hash=review_plan.adjudication_hash,
     )
+
+
+@dataclass
+class PopulationBatchItem:
+    """Representation of a single candidate plan within a population batch."""
+    candidate_reference: str
+    native_identifier: str
+    model_year: int
+    trim_name: Optional[str]
+    engine_name: Optional[str]
+    drivetrain: Optional[str]
+    planned_action: str
+    create_basis: Optional[str]
+    target_slug: str
+
+
+@dataclass
+class PopulationBatchManifest:
+    """
+    Deterministic, reviewable manifest summarizing a multi-configuration population batch.
+    """
+    batch_id: str
+    manufacturer_name: str
+    vehicle_model_name: str
+    market: str
+    start_year: int
+    end_year: int
+    total_candidates: int
+    create_count: int
+    no_op_count: int
+    review_count: int
+    items: List[PopulationBatchItem] = field(default_factory=list)
+    created_at: str = field(default_factory=lambda: datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"))
+    batch_manifest_hash: str = ""
+
+    def __post_init__(self) -> None:
+        if not self.batch_manifest_hash:
+            self.batch_manifest_hash = self.compute_manifest_hash()
+
+    def compute_manifest_hash(self) -> str:
+        """Compute deterministic SHA-256 hash over batch fields and items."""
+        raw_payload = {
+            "manufacturer_name": self.manufacturer_name,
+            "vehicle_model_name": self.vehicle_model_name,
+            "market": self.market,
+            "start_year": self.start_year,
+            "end_year": self.end_year,
+            "total_candidates": self.total_candidates,
+            "create_count": self.create_count,
+            "no_op_count": self.no_op_count,
+            "items": [
+                {
+                    "ref": it.candidate_reference,
+                    "year": it.model_year,
+                    "action": it.planned_action,
+                    "slug": it.target_slug,
+                }
+                for it in self.items
+            ],
+        }
+        encoded = json.dumps(raw_payload, sort_keys=True).encode("utf-8")
+        return "sha256:" + hashlib.sha256(encoded).hexdigest()
+
+    def summary_text(self) -> str:
+        """Return human-readable summary for operator review prior to authorization."""
+        lines = [
+            "================================================================================",
+            "RIGARCHIVE POPULATION BATCH REVIEW MANIFEST",
+            "================================================================================",
+            f"Batch ID:              {self.batch_id}",
+            f"Batch Manifest Hash:   {self.batch_manifest_hash}",
+            f"Manufacturer / Model:  {self.manufacturer_name} {self.vehicle_model_name} [{self.market}]",
+            f"Model Year Range:      {self.start_year}–{self.end_year}",
+            f"Total Candidates:      {self.total_candidates}",
+            f"Proposed CREATE:       {self.create_count}",
+            f"Proposed NO_OP:        {self.no_op_count}",
+            f"Requires Review:       {self.review_count}",
+            "--------------------------------------------------------------------------------",
+        ]
+        for idx, item in enumerate(self.items, start=1):
+            lines.append(
+                f"{idx:2d}. [{item.planned_action.upper()}] {item.model_year} {item.trim_name or 'N/A'} "
+                f"| Engine: {item.engine_name or 'N/A'} | Drive: {item.drivetrain or 'N/A'} | Slug: {item.target_slug}"
+            )
+        lines.append("================================================================================")
+        return "\n".join(lines)

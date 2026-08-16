@@ -10,6 +10,8 @@ from typing import Any, Optional, Tuple
 TOYOTA_FACTORY_GRADES = {
     "SR5": "SR5",
     "SR5 PREMIUM": "SR5 Premium",
+    "SPORT": "Sport Edition",
+    "SPORT EDITION": "Sport Edition",
     "TRD OFF-ROAD": "TRD Off-Road",
     "TRD OFF-ROAD PREMIUM": "TRD Off-Road Premium",
     "VENTURE EDITION": "Venture Edition",
@@ -18,6 +20,9 @@ TOYOTA_FACTORY_GRADES = {
     "NIGHTSHADE": "Nightshade",
     "NIGHTSHADE SPECIAL EDITION": "Nightshade Special Edition",
     "TRD PRO": "TRD Pro",
+    "TRAIL": "Trail Edition",
+    "TRAIL EDITION": "Trail Edition",
+    "BASE": "Base",
 }
 
 TOYOTA_NON_GRADE_PACKAGES = {

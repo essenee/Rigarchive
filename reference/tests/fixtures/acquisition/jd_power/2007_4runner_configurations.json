@@ -1,0 +1,160 @@
+{
+  "_provenance": {
+    "publisher": "J.D. Power",
+    "source_id": "jd_power",
+    "source_type": "third_party_reference",
+    "source_title": "J.D. Power 2007 Toyota 4Runner Trim & Configuration Enumeration",
+    "source_reference": "J.D. Power Automotive Reference (jdpower.com) 2007 Toyota 4Runner Factory Configuration Directory",
+    "model_year": 2007,
+    "publication_scope": "US",
+    "publication_date": "2006-10-01",
+    "evidentiary_role": "configuration_enumeration",
+    "transcription_note": "Exhaustive snapshot of J.D. Power 2007 Toyota 4Runner factory configuration inventory including SR5, Sport Edition, and Limited V6/V8 configurations under RA-031."
+  },
+  "configurations": [
+    {
+      "native_trim_id": "2007_sr5_2wd_v6",
+      "make": "Toyota",
+      "model": "4Runner",
+      "model_year": 2007,
+      "trim": "SR5",
+      "drivetrain": "2WD",
+      "engine_displacement_liters": 4.0,
+      "engine_cylinders": 6,
+      "transmission": "5-Speed Automatic",
+      "market": "US"
+    },
+    {
+      "native_trim_id": "2007_sr5_4wd_v6",
+      "make": "Toyota",
+      "model": "4Runner",
+      "model_year": 2007,
+      "trim": "SR5",
+      "drivetrain": "4WD",
+      "engine_displacement_liters": 4.0,
+      "engine_cylinders": 6,
+      "transmission": "5-Speed Automatic",
+      "market": "US"
+    },
+    {
+      "native_trim_id": "2007_sr5_2wd_v8",
+      "make": "Toyota",
+      "model": "4Runner",
+      "model_year": 2007,
+      "trim": "SR5",
+      "drivetrain": "2WD",
+      "engine_displacement_liters": 4.7,
+      "engine_cylinders": 8,
+      "transmission": "5-Speed Automatic",
+      "market": "US"
+    },
+    {
+      "native_trim_id": "2007_sr5_4wd_v8",
+      "make": "Toyota",
+      "model": "4Runner",
+      "model_year": 2007,
+      "trim": "SR5",
+      "drivetrain": "4WD",
+      "engine_displacement_liters": 4.7,
+      "engine_cylinders": 8,
+      "transmission": "5-Speed Automatic",
+      "market": "US"
+    },
+    {
+      "native_trim_id": "2007_sport_edition_2wd_v6",
+      "make": "Toyota",
+      "model": "4Runner",
+      "model_year": 2007,
+      "trim": "Sport Edition",
+      "drivetrain": "2WD",
+      "engine_displacement_liters": 4.0,
+      "engine_cylinders": 6,
+      "transmission": "5-Speed Automatic",
+      "market": "US"
+    },
+    {
+      "native_trim_id": "2007_sport_edition_4wd_v6",
+      "make": "Toyota",
+      "model": "4Runner",
+      "model_year": 2007,
+      "trim": "Sport Edition",
+      "drivetrain": "4WD",
+      "engine_displacement_liters": 4.0,
+      "engine_cylinders": 6,
+      "transmission": "5-Speed Automatic",
+      "market": "US"
+    },
+    {
+      "native_trim_id": "2007_sport_edition_2wd_v8",
+      "make": "Toyota",
+      "model": "4Runner",
+      "model_year": 2007,
+      "trim": "Sport Edition",
+      "drivetrain": "2WD",
+      "engine_displacement_liters": 4.7,
+      "engine_cylinders": 8,
+      "transmission": "5-Speed Automatic",
+      "market": "US"
+    },
+    {
+      "native_trim_id": "2007_sport_edition_4wd_v8",
+      "make": "Toyota",
+      "model": "4Runner",
+      "model_year": 2007,
+      "trim": "Sport Edition",
+      "drivetrain": "4WD",
+      "engine_displacement_liters": 4.7,
+      "engine_cylinders": 8,
+      "transmission": "5-Speed Automatic",
+      "market": "US"
+    },
+    {
+      "native_trim_id": "2007_limited_2wd_v6",
+      "make": "Toyota",
+      "model": "4Runner",
+      "model_year": 2007,
+      "trim": "Limited",
+      "drivetrain": "2WD",
+      "engine_displacement_liters": 4.0,
+      "engine_cylinders": 6,
+      "transmission": "5-Speed Automatic",
+      "market": "US"
+    },
+    {
+      "native_trim_id": "2007_limited_4wd_v6",
+      "make": "Toyota",
+      "model": "4Runner",
+      "model_year": 2007,
+      "trim": "Limited",
+      "drivetrain": "Full-Time 4WD",
+      "engine_displacement_liters": 4.0,
+      "engine_cylinders": 6,
+      "transmission": "5-Speed Automatic",
+      "market": "US"
+    },
+    {
+      "native_trim_id": "2007_limited_2wd_v8",
+      "make": "Toyota",
+      "model": "4Runner",
+      "model_year": 2007,
+      "trim": "Limited",
+      "drivetrain": "2WD",
+      "engine_displacement_liters": 4.7,
+      "engine_cylinders": 8,
+      "transmission": "5-Speed Automatic",
+      "market": "US"
+    },
+    {
+      "native_trim_id": "2007_limited_4wd_v8",
+      "make": "Toyota",
+      "model": "4Runner",
+      "model_year": 2007,
+      "trim": "Limited",
+      "drivetrain": "Full-Time 4WD",
+      "engine_displacement_liters": 4.7,
+      "engine_cylinders": 8,
+      "transmission": "5-Speed Automatic",
+      "market": "US"
+    }
+  ]
+}

@@ -29,6 +29,12 @@ class ReconciliationState(str, Enum):
     INCOMPLETE = "incomplete"
 
 
+class InventoryCompletenessStatus(str, Enum):
+    ESTABLISHED = "established"
+    CORROBORATED = "corroborated"
+    INCOMPLETE = "incomplete"
+
+
 class ReviewDisposition(str, Enum):
     NOT_REQUIRED = "not_required"
     PENDING_REVIEW = "pending_review"
