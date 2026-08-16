@@ -285,40 +285,42 @@ class GenerationBootstrapOrchestrator:
                         continue
 
                     if plan.planned_action.value in ("create", "adjudicated_distinct_grade", "no_op_exact_match"):
-                        exec_res = execute_candidate_import(plan)
-                        if exec_res.outcome.value == "created":
-                            created_count += 1
-                        elif exec_res.outcome.value == "no_op_exact_match":
-                            no_op_count += 1
-                        else:
-                            blocked_count += 1
+                        with transaction.atomic():
+                            exec_res = execute_candidate_import(plan)
 
-                        # Save individual execution receipt linked to batch manifest hash
-                        ImportExecutionReceipt.objects.create(
-                            operator_label="cli:batch_executor",
-                            execution_channel="cli",
-                            manifest_hash=manifest.batch_manifest_hash,
-                            candidate_reference=cand_doc.candidate_reference,
-                            planned_action=plan.planned_action.value,
-                            create_basis=plan.create_basis.value if plan.create_basis else "",
-                            source_id="jd_power",
-                            raw_artifact_hash=artifact_hash,
-                            raw_artifact_reference=str(fixture_path),
-                            source_identity_type="record_id",
-                            native_identifier=aset.provenance.native_record_id or "unknown",
-                            resolved_generation_id=plan.resolved_generation_id,
-                            target_slug=plan.target_slug or "",
-                            target_model_year=yr,
-                            target_trim_name=trim_raw or "",
-                            target_engine_name=next((str(i.normalized_concept) for i in norm_interps if i.target_attribute_key == "engine_displacement_liters"), ""),
-                            target_drivetrain=next((str(i.normalized_concept) for i in norm_interps if i.target_attribute_key == "generic_drive_classification"), ""),
-                            target_market=manifest.market,
-                            target_fields_json=plan.target_vehicle_definition_fields,
-                            execution_outcome=exec_res.outcome.value,
-                            messages_json=exec_res.messages,
-                            created_vehicle_definition_id=exec_res.vehicle_definition_id if exec_res.outcome.value == "created" else None,
-                            existing_vehicle_definition_id=exec_res.vehicle_definition_id if exec_res.outcome.value == "no_op_exact_match" else None,
-                        )
+                            # Save individual execution receipt linked to batch manifest hash
+                            ImportExecutionReceipt.objects.create(
+                                operator_label="cli:batch_executor",
+                                execution_channel="cli",
+                                manifest_hash=manifest.batch_manifest_hash,
+                                candidate_reference=cand_doc.candidate_reference,
+                                planned_action=plan.planned_action.value,
+                                create_basis=plan.create_basis.value if plan.create_basis else "",
+                                source_id="jd_power",
+                                raw_artifact_hash=artifact_hash,
+                                raw_artifact_reference=str(fixture_path),
+                                source_identity_type="record_id",
+                                native_identifier=aset.provenance.native_record_id or "unknown",
+                                resolved_generation_id=plan.resolved_generation_id,
+                                target_slug=plan.target_slug or "",
+                                target_model_year=yr,
+                                target_trim_name=trim_raw or "",
+                                target_engine_name=next((str(i.normalized_concept) for i in norm_interps if i.target_attribute_key == "engine_displacement_liters"), ""),
+                                target_drivetrain=next((str(i.normalized_concept) for i in norm_interps if i.target_attribute_key == "generic_drive_classification"), ""),
+                                target_market=manifest.market,
+                                target_fields_json=plan.target_vehicle_definition_fields,
+                                execution_outcome=exec_res.outcome.value,
+                                messages_json=exec_res.messages,
+                                created_vehicle_definition_id=exec_res.vehicle_definition_id if exec_res.outcome.value == "created" else None,
+                                existing_vehicle_definition_id=exec_res.vehicle_definition_id if exec_res.outcome.value == "no_op_exact_match" else None,
+                            )
+
+                            if exec_res.outcome.value == "created":
+                                created_count += 1
+                            elif exec_res.outcome.value == "no_op_exact_match":
+                                no_op_count += 1
+                            else:
+                                blocked_count += 1
                     else:
                         blocked_count += 1
                 except Exception as e:

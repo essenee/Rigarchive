@@ -311,3 +311,33 @@ class GenerationBootstrapTests(TestCase):
             import os
             if os.path.exists(tf_path):
                 os.remove(tf_path)
+
+    def test_19_atomicity_receipt_failure_rolls_back_vehicle_definition(self) -> None:
+        """19. Atomicity Regression Test: ImportExecutionReceipt creation failure rolls back VehicleDefinition creation cleanly."""
+        from unittest.mock import patch
+        from reference.models import ImportExecutionReceipt, VehicleDefinition
+
+        # Clear Fourth Generation records for controlled test isolation
+        VehicleDefinition.objects.filter(generation__slug="fourth-generation").delete()
+        initial_vd_count = VehicleDefinition.objects.count()
+        initial_receipt_count = ImportExecutionReceipt.objects.count()
+
+        manifest = self.orchestrator.create_batch_manifest(make="Toyota", model="4Runner", market="US", start_year=2003, end_year=2003)
+        self.assertGreater(manifest.create_count, 0)
+
+        # Force ImportExecutionReceipt.objects.create to raise a database exception
+        with patch.object(ImportExecutionReceipt.objects, "create", side_effect=RuntimeError("Simulated receipt DB failure")):
+            res = self.orchestrator.execute_authorized_batch(manifest)
+
+        # Verify batch report reflects that creations were blocked due to failure
+        self.assertEqual(res["created"], 0)
+        self.assertEqual(res["blocked"], manifest.total_candidates)
+
+        # Verify VehicleDefinition count is completely unchanged (0 orphan VDs created)
+        self.assertEqual(VehicleDefinition.objects.count(), initial_vd_count)
+
+        # Verify no ImportExecutionReceipt records were persisted
+        self.assertEqual(ImportExecutionReceipt.objects.count(), initial_receipt_count)
+
+        # Verify specific target slug was not persisted
+        self.assertFalse(VehicleDefinition.objects.filter(slug="2003-sr5-40l-v6-2wd-us").exists())
