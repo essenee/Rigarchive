@@ -17,6 +17,10 @@ from reference.ingestion.normalization.rules.toyota_rules import (
     normalize_toyota_drivetrain,
     normalize_toyota_grade,
 )
+from reference.ingestion.normalization.rules.volkswagen_rules import (
+    normalize_volkswagen_drivetrain,
+    normalize_volkswagen_grade,
+)
 from reference.ingestion.validation import validate_source_assertion_set
 
 
@@ -37,6 +41,14 @@ class JDPowerNormalizer(BaseSourceNormalizer):
         interpretations: List[NormalizedInterpretation] = []
         source_app = assertion_set.provenance.source_applicability
         native_id = assertion_set.provenance.native_record_id or "unknown"
+        target_ctx = assertion_set.provenance.target_context or {}
+        make_context = str(target_ctx.get("make", "")).strip().lower()
+
+        # Check if make_name assertion is present
+        for a in assertion_set.source_assertions:
+            if a.attribute_key == "make_name" and a.raw_value:
+                make_context = str(a.raw_value).strip().lower()
+                break
 
         interp_counter = 1
 
@@ -91,7 +103,11 @@ class JDPowerNormalizer(BaseSourceNormalizer):
                     pass
 
             elif key in ("manufacturer_grade", "trim") and val is not None:
-                norm_trim, status, mfr_term = normalize_toyota_grade(val)
+                if make_context in ("volkswagen", "vw"):
+                    norm_trim, status, mfr_term = normalize_volkswagen_grade(val)
+                else:
+                    norm_trim, status, mfr_term = normalize_toyota_grade(val)
+
                 interpretations.append(
                     NormalizedInterpretation(
                         interpretation_id=_next_id(),
@@ -105,7 +121,11 @@ class JDPowerNormalizer(BaseSourceNormalizer):
                 )
 
             elif key == "drive_descriptor" and val is not None:
-                generic_drive, drive_arch = normalize_toyota_drivetrain(val)
+                if make_context in ("volkswagen", "vw"):
+                    generic_drive, drive_arch = normalize_volkswagen_drivetrain(val)
+                else:
+                    generic_drive, drive_arch = normalize_toyota_drivetrain(val)
+
                 if generic_drive:
                     interpretations.append(
                         NormalizedInterpretation(

@@ -1,0 +1,150 @@
+{
+  "_provenance": {
+    "publisher": "J.D. Power",
+    "source_id": "jd_power",
+    "source_type": "third_party_reference",
+    "source_title": "J.D. Power 2024 Toyota Tacoma Trim & Configuration Enumeration",
+    "source_reference": "J.D. Power Automotive Reference (jdpower.com) 2024 Toyota Tacoma Factory Configuration Directory",
+    "model_year": 2024,
+    "publication_scope": "US",
+    "publication_date": "2023-10-01",
+    "evidentiary_role": "configuration_enumeration",
+    "inventory_completeness": "exhaustive",
+    "is_exhaustive_enumeration": true,
+    "transcription_note": "Exhaustive snapshot of J.D. Power 2024 Toyota Tacoma factory configuration inventory."
+  },
+  "configurations": [
+    {
+      "native_trim_id": "2024_sr_2wd_24l",
+      "make": "Toyota",
+      "model": "Tacoma",
+      "model_year": 2024,
+      "trim": "SR",
+      "drivetrain": "2WD",
+      "engine_displacement_liters": 2.4,
+      "engine_cylinders": 4,
+      "transmission": "8-Speed Automatic",
+      "market": "US"
+    },
+    {
+      "native_trim_id": "2024_sr_4wd_24l",
+      "make": "Toyota",
+      "model": "Tacoma",
+      "model_year": 2024,
+      "trim": "SR",
+      "drivetrain": "4WD",
+      "engine_displacement_liters": 2.4,
+      "engine_cylinders": 4,
+      "transmission": "8-Speed Automatic",
+      "market": "US"
+    },
+    {
+      "native_trim_id": "2024_sr5_2wd_24l",
+      "make": "Toyota",
+      "model": "Tacoma",
+      "model_year": 2024,
+      "trim": "SR5",
+      "drivetrain": "2WD",
+      "engine_displacement_liters": 2.4,
+      "engine_cylinders": 4,
+      "transmission": "8-Speed Automatic",
+      "market": "US"
+    },
+    {
+      "native_trim_id": "2024_sr5_4wd_24l",
+      "make": "Toyota",
+      "model": "Tacoma",
+      "model_year": 2024,
+      "trim": "SR5",
+      "drivetrain": "4WD",
+      "engine_displacement_liters": 2.4,
+      "engine_cylinders": 4,
+      "transmission": "8-Speed Automatic",
+      "market": "US"
+    },
+    {
+      "native_trim_id": "2024_trd_prerunner_2wd_24l",
+      "make": "Toyota",
+      "model": "Tacoma",
+      "model_year": 2024,
+      "trim": "TRD PreRunner",
+      "drivetrain": "2WD",
+      "engine_displacement_liters": 2.4,
+      "engine_cylinders": 4,
+      "transmission": "8-Speed Automatic",
+      "market": "US"
+    },
+    {
+      "native_trim_id": "2024_trd_sport_2wd_24l",
+      "make": "Toyota",
+      "model": "Tacoma",
+      "model_year": 2024,
+      "trim": "TRD Sport",
+      "drivetrain": "2WD",
+      "engine_displacement_liters": 2.4,
+      "engine_cylinders": 4,
+      "transmission": "8-Speed Automatic",
+      "market": "US"
+    },
+    {
+      "native_trim_id": "2024_trd_sport_4wd_24l",
+      "make": "Toyota",
+      "model": "Tacoma",
+      "model_year": 2024,
+      "trim": "TRD Sport",
+      "drivetrain": "4WD",
+      "engine_displacement_liters": 2.4,
+      "engine_cylinders": 4,
+      "transmission": "6-Speed Manual",
+      "market": "US"
+    },
+    {
+      "native_trim_id": "2024_trd_off_road_4wd_24l",
+      "make": "Toyota",
+      "model": "Tacoma",
+      "model_year": 2024,
+      "trim": "TRD Off-Road",
+      "drivetrain": "4WD",
+      "engine_displacement_liters": 2.4,
+      "engine_cylinders": 4,
+      "transmission": "8-Speed Automatic",
+      "market": "US"
+    },
+    {
+      "native_trim_id": "2024_limited_4wd_24l",
+      "make": "Toyota",
+      "model": "Tacoma",
+      "model_year": 2024,
+      "trim": "Limited",
+      "drivetrain": "4WD",
+      "engine_displacement_liters": 2.4,
+      "engine_cylinders": 4,
+      "transmission": "8-Speed Automatic",
+      "market": "US"
+    },
+    {
+      "native_trim_id": "2024_trailhunter_4wd_24l",
+      "make": "Toyota",
+      "model": "Tacoma",
+      "model_year": 2024,
+      "trim": "Trailhunter",
+      "drivetrain": "4WD",
+      "engine_displacement_liters": 2.4,
+      "engine_cylinders": 4,
+      "transmission": "8-Speed Automatic",
+      "market": "US"
+    },
+    {
+      "native_trim_id": "2024_trd_pro_4wd_24l",
+      "make": "Toyota",
+      "model": "Tacoma",
+      "model_year": 2024,
+      "trim": "TRD Pro",
+      "drivetrain": "4WD",
+      "engine_displacement_liters": 2.4,
+      "engine_cylinders": 4,
+      "transmission": "8-Speed Automatic",
+      "market": "US"
+    }
+  ]
+}

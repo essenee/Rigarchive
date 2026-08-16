@@ -84,16 +84,41 @@ class GenerationBootstrapOrchestrator:
             / "jd_power"
         )
 
-    def _locate_jd_power_fixture_for_year(self, year: int) -> Optional[Path]:
+    def _locate_jd_power_fixture_for_year(self, year: int, model: Optional[str] = None) -> Optional[Path]:
         """Locate retained J.D. Power configuration JSON fixture for a given model year."""
-        candidates = [
-            self.fixture_dir / f"{year}_4runner_configurations.json",
-            self.fixture_dir / f"jd_power_{year}.json",
-        ]
+        candidates = []
+        if model:
+            m_slug = model.lower().replace(" ", "_")
+            candidates.append(self.fixture_dir / f"{year}_{m_slug}_configurations.json")
+            candidates.append(self.fixture_dir / f"jd_power_{m_slug}_{year}.json")
+            if m_slug == "4runner":
+                candidates.extend([
+                    self.fixture_dir / f"{year}_4runner_configurations.json",
+                    self.fixture_dir / f"jd_power_{year}.json",
+                ])
+        else:
+            candidates.extend([
+                self.fixture_dir / f"{year}_4runner_configurations.json",
+                self.fixture_dir / f"jd_power_{year}.json",
+            ])
         for path in candidates:
             if path.exists():
                 return path
         return None
+
+    def _locate_supplemental_fixtures_for_year(self, year: int, model: Optional[str] = None) -> List[Path]:
+        """Locate retained manufacturer-supplemental configuration JSON fixtures for a given model year."""
+        results = []
+        if model:
+            m_slug = model.lower().replace(" ", "_")
+            patterns = [
+                self.fixture_dir / f"{year}_{m_slug}_supplemental.json",
+                self.fixture_dir / f"supplemental_{year}_{m_slug}.json",
+            ]
+            for p in patterns:
+                if p.exists() and p not in results:
+                    results.append(p)
+        return results
 
     def create_batch_manifest(
         self,
@@ -132,56 +157,66 @@ class GenerationBootstrapOrchestrator:
             pass
 
         for yr in range(start_year, end_year + 1):
-            fixture_path = self._locate_jd_power_fixture_for_year(yr)
-            if not fixture_path:
+            fixture_paths = []
+            primary_path = self._locate_jd_power_fixture_for_year(yr, model=model)
+            if primary_path:
+                fixture_paths.append(primary_path)
+            fixture_paths.extend(self._locate_supplemental_fixtures_for_year(yr, model=model))
+
+            if not fixture_paths:
                 continue
 
-            with open(fixture_path, "r", encoding="utf-8") as f:
-                raw_dict = json.load(f)
+            for fixture_path in fixture_paths:
+                with open(fixture_path, "r", encoding="utf-8") as f:
+                    raw_dict = json.load(f)
 
-            meta = SourceMetadata(
-                source_id="jd_power",
-                source_type="third_party_reference",
-                source_locator=f"file://{fixture_path}",
-                native_record_id=f"jdp_file_{yr}",
-                target_context={"make": make, "model": model, "model_year": yr, "market": market},
-            )
+                prov_meta = raw_dict.get("_provenance", {})
+                source_id = prov_meta.get("source_id", "jd_power")
+                source_type = prov_meta.get("source_type", "third_party_reference")
 
-            assertion_sets = self.jdp_extractor.extract(raw_dict, meta)
-            for aset in assertion_sets:
-                try:
-                    norm_interps = self.jdp_normalizer.normalize(aset)
-                    trim_raw = next((ast.raw_value for ast in aset.source_assertions if ast.attribute_key in ("trim", "manufacturer_grade")), None)
-                    cand_identity = CandidateIdentity(manufacturer_name=make, vehicle_model_name=model, model_year=yr, market=market, trim_name=trim_raw)
-                    cand_doc = construct_candidate_configuration(candidate_identity=cand_identity, source_assertion_sets=[aset], normalized_assertions=norm_interps)
-                    plan = plan_candidate_import(cand_doc)
+                meta = SourceMetadata(
+                    source_id=source_id,
+                    source_type=source_type,
+                    source_locator=prov_meta.get("source_locator") or f"file://{fixture_path}",
+                    native_record_id=prov_meta.get("native_record_id") or f"file_{yr}",
+                    target_context={"make": make, "model": model, "model_year": yr, "market": market},
+                )
 
-                    action_str = plan.planned_action.value
-                    if action_str in ("create", "adjudicated_distinct_grade"):
-                        create_count += 1
-                    elif action_str == "no_op_exact_match":
-                        no_op_count += 1
-                    else:
-                        review_count += 1
+                assertion_sets = self.jdp_extractor.extract(raw_dict, meta)
+                for aset in assertion_sets:
+                    try:
+                        norm_interps = self.jdp_normalizer.normalize(aset)
+                        trim_raw = next((ast.raw_value for ast in aset.source_assertions if ast.attribute_key in ("trim", "manufacturer_grade")), None)
+                        cand_identity = CandidateIdentity(manufacturer_name=make, vehicle_model_name=model, model_year=yr, market=market, trim_name=trim_raw)
+                        cand_doc = construct_candidate_configuration(candidate_identity=cand_identity, source_assertion_sets=[aset], normalized_assertions=norm_interps)
+                        plan = plan_candidate_import(cand_doc)
 
-                    eng_val = next((str(interp.normalized_concept) for interp in norm_interps if interp.target_attribute_key == "engine_displacement_liters"), None)
-                    drv_val = next((str(interp.normalized_concept) for interp in norm_interps if interp.target_attribute_key == "generic_drive_classification"), None)
+                        action_str = plan.planned_action.value
+                        if action_str in ("create", "adjudicated_distinct_grade"):
+                            create_count += 1
+                        elif action_str == "no_op_exact_match":
+                            no_op_count += 1
+                        else:
+                            review_count += 1
 
-                    items.append(
-                        PopulationBatchItem(
-                            candidate_reference=cand_doc.candidate_reference,
-                            native_identifier=aset.provenance.native_record_id or "unknown",
-                            model_year=yr,
-                            trim_name=cand_identity.trim_name,
-                            engine_name=eng_val,
-                            drivetrain=drv_val,
-                            planned_action=action_str,
-                            create_basis=plan.create_basis.value if plan.create_basis else None,
-                            target_slug=plan.target_slug or "unknown",
+                        eng_val = next((str(interp.normalized_concept) for interp in norm_interps if interp.target_attribute_key == "engine_displacement_liters"), None)
+                        drv_val = next((str(interp.normalized_concept) for interp in norm_interps if interp.target_attribute_key == "generic_drive_classification"), None)
+
+                        items.append(
+                            PopulationBatchItem(
+                                candidate_reference=cand_doc.candidate_reference,
+                                native_identifier=aset.provenance.native_record_id or "unknown",
+                                model_year=yr,
+                                trim_name=cand_identity.trim_name,
+                                engine_name=eng_val,
+                                drivetrain=drv_val,
+                                planned_action=action_str,
+                                create_basis=plan.create_basis.value if plan.create_basis else None,
+                                target_slug=plan.target_slug or "unknown",
+                            )
                         )
-                    )
-                except Exception:
-                    review_count += 1
+                    except Exception:
+                        review_count += 1
 
         batch_id = f"batch_{make.lower()}_{model.lower()}_{start_year}_{end_year}"
         manifest = PopulationBatchManifest(
@@ -242,89 +277,98 @@ class GenerationBootstrapOrchestrator:
         outside_count = 0
 
         for yr in range(manifest.start_year, manifest.end_year + 1):
-            fixture_path = self._locate_jd_power_fixture_for_year(yr)
-            if not fixture_path:
+            fixture_paths = []
+            primary_path = self._locate_jd_power_fixture_for_year(yr, model=manifest.vehicle_model_name)
+            if primary_path:
+                fixture_paths.append(primary_path)
+            fixture_paths.extend(self._locate_supplemental_fixtures_for_year(yr, model=manifest.vehicle_model_name))
+
+            if not fixture_paths:
                 continue
 
-            with open(fixture_path, "r", encoding="utf-8") as f:
-                raw_dict = json.load(f)
+            for fixture_path in fixture_paths:
+                with open(fixture_path, "r", encoding="utf-8") as f:
+                    raw_dict = json.load(f)
 
-            raw_bytes = open(fixture_path, "rb").read()
-            artifact_hash = "sha256:" + hashlib.sha256(raw_bytes).hexdigest()
+                raw_bytes = open(fixture_path, "rb").read()
+                artifact_hash = "sha256:" + hashlib.sha256(raw_bytes).hexdigest()
 
-            meta = SourceMetadata(
-                source_id="jd_power",
-                source_type="third_party_reference",
-                source_locator=f"file://{fixture_path}",
-                native_record_id=f"jdp_file_{yr}",
-                target_context={"make": manifest.manufacturer_name, "model": manifest.vehicle_model_name, "model_year": yr, "market": manifest.market},
-            )
+                prov_meta = raw_dict.get("_provenance", {})
+                source_id = prov_meta.get("source_id", "jd_power")
+                source_type = prov_meta.get("source_type", "third_party_reference")
 
-            assertion_sets = self.jdp_extractor.extract(raw_dict, meta)
-            for aset in assertion_sets:
-                try:
-                    norm_interps = self.jdp_normalizer.normalize(aset)
-                    trim_raw = next((ast.raw_value for ast in aset.source_assertions if ast.attribute_key in ("trim", "manufacturer_grade")), None)
-                    cand_identity = CandidateIdentity(
-                        manufacturer_name=manifest.manufacturer_name,
-                        vehicle_model_name=manifest.vehicle_model_name,
-                        model_year=yr,
-                        market=manifest.market,
-                        trim_name=trim_raw,
-                    )
-                    cand_doc = construct_candidate_configuration(
-                        candidate_identity=cand_identity,
-                        source_assertion_sets=[aset],
-                        normalized_assertions=norm_interps,
-                    )
-                    plan = plan_candidate_import(cand_doc)
+                meta = SourceMetadata(
+                    source_id=source_id,
+                    source_type=source_type,
+                    source_locator=prov_meta.get("source_locator") or f"file://{fixture_path}",
+                    native_record_id=prov_meta.get("native_record_id") or f"file_{yr}",
+                    target_context={"make": manifest.manufacturer_name, "model": manifest.vehicle_model_name, "model_year": yr, "market": manifest.market},
+                )
 
-                    # Authorization Envelope Check
-                    if plan.target_slug not in authorized_slugs:
-                        outside_count += 1
-                        continue
+                assertion_sets = self.jdp_extractor.extract(raw_dict, meta)
+                for aset in assertion_sets:
+                    try:
+                        norm_interps = self.jdp_normalizer.normalize(aset)
+                        trim_raw = next((ast.raw_value for ast in aset.source_assertions if ast.attribute_key in ("trim", "manufacturer_grade")), None)
+                        cand_identity = CandidateIdentity(
+                            manufacturer_name=manifest.manufacturer_name,
+                            vehicle_model_name=manifest.vehicle_model_name,
+                            model_year=yr,
+                            market=manifest.market,
+                            trim_name=trim_raw,
+                        )
+                        cand_doc = construct_candidate_configuration(
+                            candidate_identity=cand_identity,
+                            source_assertion_sets=[aset],
+                            normalized_assertions=norm_interps,
+                        )
+                        plan = plan_candidate_import(cand_doc)
 
-                    if plan.planned_action.value in ("create", "adjudicated_distinct_grade", "no_op_exact_match"):
-                        with transaction.atomic():
-                            exec_res = execute_candidate_import(plan)
+                        # Authorization Envelope Check
+                        if plan.target_slug not in authorized_slugs:
+                            outside_count += 1
+                            continue
 
-                            # Save individual execution receipt linked to batch manifest hash
-                            ImportExecutionReceipt.objects.create(
-                                operator_label="cli:batch_executor",
-                                execution_channel="cli",
-                                manifest_hash=manifest.batch_manifest_hash,
-                                candidate_reference=cand_doc.candidate_reference,
-                                planned_action=plan.planned_action.value,
-                                create_basis=plan.create_basis.value if plan.create_basis else "",
-                                source_id="jd_power",
-                                raw_artifact_hash=artifact_hash,
-                                raw_artifact_reference=str(fixture_path),
-                                source_identity_type="record_id",
-                                native_identifier=aset.provenance.native_record_id or "unknown",
-                                resolved_generation_id=plan.resolved_generation_id,
-                                target_slug=plan.target_slug or "",
-                                target_model_year=yr,
-                                target_trim_name=trim_raw or "",
-                                target_engine_name=next((str(i.normalized_concept) for i in norm_interps if i.target_attribute_key == "engine_displacement_liters"), ""),
-                                target_drivetrain=next((str(i.normalized_concept) for i in norm_interps if i.target_attribute_key == "generic_drive_classification"), ""),
-                                target_market=manifest.market,
-                                target_fields_json=plan.target_vehicle_definition_fields,
-                                execution_outcome=exec_res.outcome.value,
-                                messages_json=exec_res.messages,
-                                created_vehicle_definition_id=exec_res.vehicle_definition_id if exec_res.outcome.value == "created" else None,
-                                existing_vehicle_definition_id=exec_res.vehicle_definition_id if exec_res.outcome.value == "no_op_exact_match" else None,
-                            )
+                        if plan.planned_action.value in ("create", "adjudicated_distinct_grade", "no_op_exact_match"):
+                            with transaction.atomic():
+                                exec_res = execute_candidate_import(plan)
 
-                            if exec_res.outcome.value == "created":
-                                created_count += 1
-                            elif exec_res.outcome.value == "no_op_exact_match":
-                                no_op_count += 1
-                            else:
-                                blocked_count += 1
-                    else:
+                                if exec_res.outcome.value == "created":
+                                    # Save individual execution receipt linked to batch manifest hash inside transaction
+                                    ImportExecutionReceipt.objects.create(
+                                        operator_label="cli:batch_executor",
+                                        execution_channel="cli",
+                                        manifest_hash=manifest.batch_manifest_hash,
+                                        candidate_reference=cand_doc.candidate_reference,
+                                        planned_action=plan.planned_action.value,
+                                        create_basis=plan.create_basis.value if plan.create_basis else "",
+                                        source_id=aset.provenance.source_id or source_id,
+                                        raw_artifact_hash=artifact_hash,
+                                        raw_artifact_reference=str(fixture_path),
+                                        source_identity_type="record_id",
+                                        native_identifier=aset.provenance.native_record_id or "unknown",
+                                        resolved_generation_id=plan.resolved_generation_id,
+                                        target_slug=plan.target_slug or "",
+                                        target_model_year=yr,
+                                        target_trim_name=trim_raw or "",
+                                        target_engine_name=next((str(i.normalized_concept) for i in norm_interps if i.target_attribute_key == "engine_displacement_liters"), ""),
+                                        target_drivetrain=next((str(i.normalized_concept) for i in norm_interps if i.target_attribute_key == "generic_drive_classification"), ""),
+                                        target_market=manifest.market,
+                                        target_fields_json=plan.target_vehicle_definition_fields,
+                                        execution_outcome=exec_res.outcome.value,
+                                        messages_json=exec_res.messages,
+                                        created_vehicle_definition_id=exec_res.vehicle_definition_id,
+                                        existing_vehicle_definition_id=None,
+                                    )
+                                    created_count += 1
+                                elif exec_res.outcome.value == "no_op_exact_match":
+                                    no_op_count += 1
+                                else:
+                                    blocked_count += 1
+                        else:
+                            blocked_count += 1
+                    except Exception as e:
                         blocked_count += 1
-                except Exception as e:
-                    blocked_count += 1
 
         return {
             "total_attempted": len(manifest.items),
@@ -474,7 +518,7 @@ class GenerationBootstrapOrchestrator:
         exceptions: List[str] = []
 
         for yr in years_to_process:
-            fixture_path = self._locate_jd_power_fixture_for_year(yr)
+            fixture_path = self._locate_jd_power_fixture_for_year(yr, model=vmodel.name)
             if not fixture_path:
                 exceptions.append(f"Year {yr}: No J.D. Power configuration fixture found.")
                 continue

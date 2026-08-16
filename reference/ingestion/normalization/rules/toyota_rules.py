@@ -8,10 +8,12 @@ drivetrain descriptors in compliance with RA-020 and ADR-0005.
 from typing import Any, Optional, Tuple
 
 TOYOTA_FACTORY_GRADES = {
+    "SR": "SR",
     "SR5": "SR5",
     "SR5 PREMIUM": "SR5 Premium",
     "SPORT": "Sport Edition",
     "SPORT EDITION": "Sport Edition",
+    "TRD SPORT": "TRD Sport",
     "TRD OFF-ROAD": "TRD Off-Road",
     "TRD OFF-ROAD PREMIUM": "TRD Off-Road Premium",
     "VENTURE EDITION": "Venture Edition",
@@ -22,6 +24,12 @@ TOYOTA_FACTORY_GRADES = {
     "TRD PRO": "TRD Pro",
     "TRAIL": "Trail Edition",
     "TRAIL EDITION": "Trail Edition",
+    "PRERUNNER": "PreRunner",
+    "TRD PRERUNNER": "TRD PreRunner",
+    "TRAILHUNTER": "Trailhunter",
+    "DLX": "DLX",
+    "X-RUNNER": "X-Runner",
+    "S-RUNNER": "S-Runner",
     "BASE": "Base",
 }
 

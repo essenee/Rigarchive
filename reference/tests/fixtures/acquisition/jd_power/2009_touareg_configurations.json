@@ -1,0 +1,54 @@
+{
+  "_provenance": {
+    "publisher": "J.D. Power",
+    "source_id": "jd_power",
+    "source_type": "third_party_reference",
+    "source_title": "J.D. Power 2009 Volkswagen Touareg Trim & Configuration Enumeration",
+    "source_reference": "J.D. Power Automotive Reference (jdpower.com) 2009 Volkswagen Touareg Factory Configuration Directory",
+    "model_year": 2009,
+    "publication_scope": "US",
+    "publication_date": "2008-10-01",
+    "evidentiary_role": "configuration_enumeration",
+    "inventory_completeness": "exhaustive",
+    "is_exhaustive_enumeration": true,
+    "transcription_note": "Exhaustive snapshot of J.D. Power 2009 Volkswagen Touareg factory configuration inventory."
+  },
+  "configurations": [
+    {
+      "native_trim_id": "2009_vr6_awd_36l",
+      "make": "Volkswagen",
+      "model": "Touareg",
+      "model_year": 2009,
+      "trim": "VR6",
+      "drivetrain": "4MOTION",
+      "engine_displacement_liters": 3.6,
+      "engine_cylinders": 6,
+      "transmission": "6-Speed Automatic",
+      "market": "US"
+    },
+    {
+      "native_trim_id": "2009_v8_awd_42l",
+      "make": "Volkswagen",
+      "model": "Touareg",
+      "model_year": 2009,
+      "trim": "V8",
+      "drivetrain": "4MOTION",
+      "engine_displacement_liters": 4.2,
+      "engine_cylinders": 8,
+      "transmission": "6-Speed Automatic",
+      "market": "US"
+    },
+    {
+      "native_trim_id": "2009_tdi_awd_30l",
+      "make": "Volkswagen",
+      "model": "Touareg",
+      "model_year": 2009,
+      "trim": "TDI",
+      "drivetrain": "4MOTION",
+      "engine_displacement_liters": 3.0,
+      "engine_cylinders": 6,
+      "transmission": "6-Speed Automatic",
+      "market": "US"
+    }
+  ]
+}

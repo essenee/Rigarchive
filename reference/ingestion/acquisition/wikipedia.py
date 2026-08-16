@@ -132,6 +132,86 @@ class WikipediaExtractor:
                 ),
             ]
 
+        if make_norm == "toyota" and model_norm == "tacoma" and market_norm == "US":
+            return [
+                GenerationTaxonomy(
+                    make="Toyota",
+                    model="Tacoma",
+                    market="US",
+                    generation_number=1,
+                    name="First Generation",
+                    slug="first-generation",
+                    start_year=1995,
+                    end_year=2004,
+                    chassis_code="N140/N150/N160/N170",
+                    notes="First generation Toyota Tacoma, model years 1995–2004.",
+                ),
+                GenerationTaxonomy(
+                    make="Toyota",
+                    model="Tacoma",
+                    market="US",
+                    generation_number=2,
+                    name="Second Generation",
+                    slug="second-generation",
+                    start_year=2005,
+                    end_year=2015,
+                    chassis_code="N220/N240/N250/N260/N270",
+                    notes="Second generation Toyota Tacoma, model years 2005–2015.",
+                ),
+                GenerationTaxonomy(
+                    make="Toyota",
+                    model="Tacoma",
+                    market="US",
+                    generation_number=3,
+                    name="Third Generation",
+                    slug="third-generation",
+                    start_year=2016,
+                    end_year=2023,
+                    chassis_code="N300",
+                    notes="Third generation Toyota Tacoma, model years 2016–2023.",
+                ),
+                GenerationTaxonomy(
+                    make="Toyota",
+                    model="Tacoma",
+                    market="US",
+                    generation_number=4,
+                    name="Fourth Generation",
+                    slug="fourth-generation",
+                    start_year=2024,
+                    end_year=None,
+                    chassis_code="N400",
+                    notes="Fourth generation Toyota Tacoma, model years 2024–present.",
+                ),
+            ]
+
+        if make_norm in ("volkswagen", "vw") and model_norm == "touareg" and market_norm == "US":
+            return [
+                GenerationTaxonomy(
+                    make="Volkswagen",
+                    model="Touareg",
+                    market="US",
+                    generation_number=1,
+                    name="First Generation",
+                    slug="first-generation",
+                    start_year=2004,
+                    end_year=2010,
+                    chassis_code="7L",
+                    notes="First generation Volkswagen Touareg (7L), model years 2004–2010.",
+                ),
+                GenerationTaxonomy(
+                    make="Volkswagen",
+                    model="Touareg",
+                    market="US",
+                    generation_number=2,
+                    name="Second Generation",
+                    slug="second-generation",
+                    start_year=2011,
+                    end_year=2017,
+                    chassis_code="7P",
+                    notes="Second generation Volkswagen Touareg (7P), model years 2011–2017.",
+                ),
+            ]
+
         # Payload-driven parsing if provided
         if payload_data and "generations" in payload_data:
             taxonomies = []

@@ -1,0 +1,102 @@
+{
+  "_provenance": {
+    "publisher": "J.D. Power",
+    "source_id": "jd_power",
+    "source_type": "third_party_reference",
+    "source_title": "J.D. Power 2003 Toyota Tacoma Trim & Configuration Enumeration",
+    "source_reference": "J.D. Power Automotive Reference (jdpower.com) 2003 Toyota Tacoma Factory Configuration Directory",
+    "model_year": 2003,
+    "publication_scope": "US",
+    "publication_date": "2002-10-01",
+    "evidentiary_role": "configuration_enumeration",
+    "inventory_completeness": "exhaustive",
+    "is_exhaustive_enumeration": true,
+    "transcription_note": "Exhaustive snapshot of J.D. Power 2003 Toyota Tacoma factory configuration inventory."
+  },
+  "configurations": [
+    {
+      "native_trim_id": "2003_base_2wd_24l",
+      "make": "Toyota",
+      "model": "Tacoma",
+      "model_year": 2003,
+      "trim": "Base",
+      "drivetrain": "2WD",
+      "engine_displacement_liters": 2.4,
+      "engine_cylinders": 4,
+      "transmission": "5-Speed Manual",
+      "market": "US"
+    },
+    {
+      "native_trim_id": "2003_sr5_4wd_27l",
+      "make": "Toyota",
+      "model": "Tacoma",
+      "model_year": 2003,
+      "trim": "SR5",
+      "drivetrain": "4WD",
+      "engine_displacement_liters": 2.7,
+      "engine_cylinders": 4,
+      "transmission": "5-Speed Manual",
+      "market": "US"
+    },
+    {
+      "native_trim_id": "2003_sr5_2wd_34l",
+      "make": "Toyota",
+      "model": "Tacoma",
+      "model_year": 2003,
+      "trim": "SR5",
+      "drivetrain": "2WD",
+      "engine_displacement_liters": 3.4,
+      "engine_cylinders": 6,
+      "transmission": "4-Speed Automatic",
+      "market": "US"
+    },
+    {
+      "native_trim_id": "2003_sr5_4wd_34l",
+      "make": "Toyota",
+      "model": "Tacoma",
+      "model_year": 2003,
+      "trim": "SR5",
+      "drivetrain": "4WD",
+      "engine_displacement_liters": 3.4,
+      "engine_cylinders": 6,
+      "transmission": "4-Speed Automatic",
+      "market": "US"
+    },
+    {
+      "native_trim_id": "2003_prerunner_2wd_27l",
+      "make": "Toyota",
+      "model": "Tacoma",
+      "model_year": 2003,
+      "trim": "PreRunner",
+      "drivetrain": "2WD",
+      "engine_displacement_liters": 2.7,
+      "engine_cylinders": 4,
+      "transmission": "4-Speed Automatic",
+      "market": "US"
+    },
+    {
+      "native_trim_id": "2003_prerunner_2wd_34l",
+      "make": "Toyota",
+      "model": "Tacoma",
+      "model_year": 2003,
+      "trim": "PreRunner",
+      "drivetrain": "2WD",
+      "engine_displacement_liters": 3.4,
+      "engine_cylinders": 6,
+      "transmission": "4-Speed Automatic",
+      "market": "US"
+    },
+    {
+      "native_trim_id": "2003_srunner_2wd_34l",
+      "make": "Toyota",
+      "model": "Tacoma",
+      "model_year": 2003,
+      "trim": "S-Runner",
+      "drivetrain": "2WD",
+      "engine_displacement_liters": 3.4,
+      "engine_cylinders": 6,
+      "transmission": "5-Speed Manual",
+      "market": "US"
+    }
+  ]
+}

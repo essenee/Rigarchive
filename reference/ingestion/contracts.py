@@ -33,6 +33,7 @@ class InventoryCompletenessStatus(str, Enum):
     ESTABLISHED = "established"
     CORROBORATED = "corroborated"
     INCOMPLETE = "incomplete"
+    UNVERIFIED = "unverified"
 
 
 class ReviewDisposition(str, Enum):

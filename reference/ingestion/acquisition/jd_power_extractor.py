@@ -51,33 +51,36 @@ class BaseJDPowerDiscoveryStrategy(ABC):
 class JDPowerHistoricalDiscoveryStrategy(BaseJDPowerDiscoveryStrategy):
     """
     Discovery strategy for historical J.D. Power payloads (pre-2010).
-    Verifies multi-engine (V6 / V8) and factory grade (SR5, Sport, Limited) completeness envelope.
+    Enforces proven completeness semantics: ESTABLISHED requires SOURCE_ASSERTED or
+    EVIDENCE_ESTABLISHED completeness provenance. CORROBORATED requires independent
+    corroborating evidence. Internal fixture flags and count heuristics yield UNVERIFIED.
     """
 
     def evaluate_inventory_completeness(
         self,
         configurations: List[Dict[str, Any]],
         model_year: int,
+        raw_source_metadata: Optional[Dict[str, Any]] = None,
     ) -> InventoryCompletenessStatus:
+        meta = raw_source_metadata or {}
         if not configurations:
-            return InventoryCompletenessStatus.INCOMPLETE
+            if meta.get("is_known_incomplete") or meta.get("missing_inventory_evidence"):
+                return InventoryCompletenessStatus.INCOMPLETE
+            return InventoryCompletenessStatus.UNVERIFIED
 
-        trims = {str(c.get("trim", "")).strip().upper() for c in configurations}
-        engines = {float(c.get("engine_displacement_liters", 0)) for c in configurations if c.get("engine_displacement_liters")}
+        comp_prov = str(meta.get("completeness_provenance", "")).lower()
+        is_corroborated = meta.get("is_independently_corroborated", False) or bool(meta.get("corroborating_sources"))
 
-        # Historical 4Runner expected envelope (2003-2009): SR5, Sport/Sport Edition, Limited + V6 (4.0) & V8 (4.7)
-        has_sport = any("SPORT" in t for t in trims)
-        has_sr5 = any("SR5" in t for t in trims)
-        has_limited = any("LIMITED" in t for t in trims)
-        has_v8 = 4.7 in engines or any(c.get("engine_cylinders") == 8 for c in configurations)
-        has_v6 = 4.0 in engines or any(c.get("engine_cylinders") == 6 for c in configurations)
-
-        if has_sport and has_sr5 and has_limited and has_v8 and has_v6:
+        if comp_prov in ("source_asserted", "evidence_established"):
             return InventoryCompletenessStatus.ESTABLISHED
-        elif (has_sr5 or has_limited) and (has_v6 or has_v8):
+
+        if is_corroborated:
             return InventoryCompletenessStatus.CORROBORATED
 
-        return InventoryCompletenessStatus.INCOMPLETE
+        if meta.get("is_known_incomplete"):
+            return InventoryCompletenessStatus.INCOMPLETE
+
+        return InventoryCompletenessStatus.UNVERIFIED
 
 
 class JDPowerModernDiscoveryStrategy(BaseJDPowerDiscoveryStrategy):
@@ -89,13 +92,27 @@ class JDPowerModernDiscoveryStrategy(BaseJDPowerDiscoveryStrategy):
         self,
         configurations: List[Dict[str, Any]],
         model_year: int,
+        raw_source_metadata: Optional[Dict[str, Any]] = None,
     ) -> InventoryCompletenessStatus:
+        meta = raw_source_metadata or {}
         if not configurations:
+            if meta.get("is_known_incomplete") or meta.get("missing_inventory_evidence"):
+                return InventoryCompletenessStatus.INCOMPLETE
+            return InventoryCompletenessStatus.UNVERIFIED
+
+        comp_prov = str(meta.get("completeness_provenance", "")).lower()
+        is_corroborated = meta.get("is_independently_corroborated", False) or bool(meta.get("corroborating_sources"))
+
+        if comp_prov in ("source_asserted", "evidence_established"):
+            return InventoryCompletenessStatus.ESTABLISHED
+
+        if is_corroborated:
+            return InventoryCompletenessStatus.CORROBORATED
+
+        if meta.get("is_known_incomplete"):
             return InventoryCompletenessStatus.INCOMPLETE
 
-        if len(configurations) >= 4:
-            return InventoryCompletenessStatus.ESTABLISHED
-        return InventoryCompletenessStatus.CORROBORATED
+        return InventoryCompletenessStatus.UNVERIFIED
 
 
 class JDPowerExtractor:
@@ -192,9 +209,12 @@ class JDPowerExtractor:
             locator = getattr(snapshot_meta, "publisher_locator", None) or getattr(snapshot_meta, "source_locator", f"https://www.jdpower.com/cars/{model_year}/toyota/4runner")
             acq_method = getattr(snapshot_meta, "acquisition_method", None) or "local_file"
 
+            s_id = getattr(snapshot_meta, "source_id", None) or "jd_power"
+            s_type = getattr(snapshot_meta, "source_type", None) or "third_party_reference"
+
             prov = SourceMetadata(
-                source_id="jd_power",
-                source_type="third_party_reference",
+                source_id=s_id,
+                source_type=s_type,
                 source_locator=locator,
                 retrieved_at=getattr(snapshot_meta, "acquired_at", None) or getattr(snapshot_meta, "retrieved_at", None) or extracted_at,
                 native_record_id=native_id,
