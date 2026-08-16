@@ -593,6 +593,7 @@ RigArchive/
 - Milestone 25: Public Vehicle Navigation Hierarchy (✅ Complete — RA-030)
 - Milestone 26: US-Market Generation Bootstrap & Full Configuration Population (✅ Complete — RA-031)
 - Milestone 27: Generation Landing Pages, Model-Year Overview & Detailed Specs Navigation (✅ Complete — RA-032)
+- Milestone 28: Canonical Import Receipt Coverage Audit & Batch Execution Atomicity Hardening (✅ Complete — RA-034)
 
 
 13. Current Repository Status
@@ -611,5 +612,5 @@ The repository currently contains:
 - Approved Architecture Design Documents (RA-006, RA-008, RA-010, RA-011, RA-014, RA-016, RA-018, RA-020, RA-022, RA-024, RA-025)
 - Gemini CLI project instructions (GEMINI.md)
 - Task-based implementation workflow (docs/implementation/tasks/)
-- Completed implementation tasks: RA-003, RA-005, RA-007, RA-009, RA-012, RA-013, RA-015, RA-017, RA-019, RA-021, RA-023, RA-024, RA-026, RA-027, RA-028, RA-029, RA-030, RA-031, RA-032 — Generation Landing Pages, Model-Year Overview & Detailed Specs Navigation
+- Completed implementation tasks: RA-003, RA-005, RA-007, RA-009, RA-012, RA-013, RA-015, RA-017, RA-019, RA-021, RA-023, RA-024, RA-026, RA-027, RA-028, RA-029, RA-030, RA-031, RA-032, RA-034 — Canonical Import Receipt Coverage Audit & Batch Execution Atomicity Hardening
 - Approved Architecture/Research tasks: RA-010, RA-011, RA-014, RA-016, RA-018, RA-020, RA-022, RA-024, RA-025
