@@ -38,6 +38,7 @@ class ImportExecutionOutcome(str, Enum):
 class ImportCreateBasis(str, Enum):
     FIRST_REPRESENTATION = "first_representation"
     MECHANICAL_DIMENSION = "mechanical_dimension"
+    SOURCE_ESTABLISHED_GRADE = "source_established_grade"
     ADJUDICATED_DISTINCT_GRADE = "adjudicated_distinct_grade"
 
 

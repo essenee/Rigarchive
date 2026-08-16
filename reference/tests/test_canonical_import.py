@@ -14,6 +14,7 @@ from django.test import TestCase
 
 from reference.ingestion.contracts import (
     ArtifactType,
+    AttributeReconciliationState,
     CandidateConfigurationDocument,
     CandidateIdentity,
     Envelope,
@@ -26,9 +27,11 @@ from reference.ingestion.contracts import (
 from reference.ingestion.importing import (
     CanonicalImportPlan,
     CanonicalImportResult,
+    ImportCreateBasis,
     ImportEligibilityStatus,
     ImportExecutionOutcome,
     ImportPlannedAction,
+    ImportReviewCategory,
     execute_candidate_import,
     plan_candidate_import,
 )
@@ -338,17 +341,47 @@ class CanonicalImportTestCase(TestCase):
             market="US",
         )
 
-        # Candidate asserts SR5 Premium
+        # Candidate asserts SR5 Premium (mapped trim from qualified source evidence -> SOURCE_ESTABLISHED_GRADE)
         assertions, cid = self._build_full_synthetic_assertions(trim="SR5 Premium")
         candidate = self._build_candidate_doc(normalized_assertions=assertions, candidate_identity=cid)
 
         plan = plan_candidate_import(candidate)
-        self.assertEqual(plan.eligibility_status, ImportEligibilityStatus.REQUIRES_REVIEW)
-        self.assertEqual(plan.planned_action, ImportPlannedAction.FLAG_REVIEW)
+        self.assertEqual(plan.eligibility_status, ImportEligibilityStatus.ELIGIBLE)
+        self.assertEqual(plan.planned_action, ImportPlannedAction.CREATE)
+        self.assertEqual(plan.create_basis, ImportCreateBasis.SOURCE_ESTABLISHED_GRADE)
 
         result = execute_candidate_import(plan)
-        self.assertEqual(result.outcome, ImportExecutionOutcome.FLAGGED_REVIEW)
-        self.assertEqual(VehicleDefinition.objects.count(), 1)
+        self.assertEqual(result.outcome, ImportExecutionOutcome.CREATED)
+        self.assertEqual(VehicleDefinition.objects.count(), 2)
+
+    def test_unmapped_trim_string_flags_review(self) -> None:
+        """Candidate with unmapped/ambiguous trim string in populated namespace flags REQUIRES_REVIEW."""
+        # Existing SR5 row in DB
+        VehicleDefinition.objects.create(
+            generation=self.generation,
+            model_year=2020,
+            trim_name="SR5",
+            engine_name="4.0L V6",
+            drivetrain="4WD",
+            market="US",
+        )
+
+        assertions, cid = self._build_full_synthetic_assertions(trim="Ambiguous Trim Package")
+        candidate = self._build_candidate_doc(normalized_assertions=assertions, candidate_identity=cid)
+        candidate.reconciliation_and_review = ReconciliationAndReview(
+            requires_human_review=True,
+            attribute_states={
+                "trim": AttributeReconciliationState(
+                    reconciliation_state=ReconciliationState.AMBIGUOUS.value,
+                    review_disposition=ReviewDisposition.UNDER_REVIEW.value,
+                )
+            },
+        )
+
+        plan = plan_candidate_import(candidate)
+        self.assertEqual(plan.eligibility_status, ImportEligibilityStatus.REQUIRES_REVIEW)
+        self.assertEqual(plan.planned_action, ImportPlannedAction.FLAG_REVIEW)
+        self.assertEqual(plan.review_category, ImportReviewCategory.DISTINCT_FACTORY_GRADE)
 
     def test_first_representation_plan_becomes_stale_when_namespace_changes(self) -> None:
         """First-representation CREATE plan returns ABORTED_STALE_PLAN if a new row appears in namespace before execution."""

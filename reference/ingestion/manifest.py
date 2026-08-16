@@ -345,7 +345,11 @@ def dict_to_manifest(d: Dict[str, Any]) -> CanonicalImportReviewManifest:
             if cb == ImportCreateBasis.ADJUDICATED_DISTINCT_GRADE.value and not (has_hash and has_ref):
                 raise ManifestValidationError(f"ADJUDICATED_DISTINCT_GRADE plan '{ref}' requires complete adjudication linkage.")
 
-            if cb in (ImportCreateBasis.FIRST_REPRESENTATION.value, ImportCreateBasis.MECHANICAL_DIMENSION.value) and (has_hash or has_ref):
+            if cb in (
+                ImportCreateBasis.FIRST_REPRESENTATION.value,
+                ImportCreateBasis.MECHANICAL_DIMENSION.value,
+                ImportCreateBasis.SOURCE_ESTABLISHED_GRADE.value,
+            ) and (has_hash or has_ref):
                 raise ManifestValidationError(f"Basis '{cb}' in plan '{ref}' must not contain adjudication linkage.")
 
         if adj_hash is not None:

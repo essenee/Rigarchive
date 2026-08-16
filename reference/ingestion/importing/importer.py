@@ -200,6 +200,15 @@ def execute_candidate_import(
                         messages=["Original mechanical basis record was modified prior to execution."],
                     )
 
+            elif plan.create_basis == ImportCreateBasis.SOURCE_ESTABLISHED_GRADE:
+                expected_count = plan.namespace_snapshot_count or 0
+                if len(current_namespace_rows) != expected_count:
+                    return CanonicalImportResult(
+                        candidate_reference=ref_id,
+                        outcome=ImportExecutionOutcome.ABORTED_STALE_PLAN,
+                        messages=["Source-established grade CREATE plan is stale because canonical namespace count changed."],
+                    )
+
             elif plan.create_basis == ImportCreateBasis.ADJUDICATED_DISTINCT_GRADE:
                 if not plan.adjudication_hash:
                     return CanonicalImportResult(
