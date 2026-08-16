@@ -6,6 +6,8 @@ All notable changes to RigArchive will be documented in this file.
 
 ### Added
 
+- Public Vehicle Navigation Hierarchy package (`templates/reference/vehicle_definition_detail.html`, `reference/tests/test_views.py`), establishing progressive Manufacturer → Model → Generation → Configuration navigation and breadcrumb hierarchy (`Vehicles > [Manufacturer] > [Model] > [Generation] > [Configuration]`).
+- Comprehensive navigation view test suite in `reference/tests/test_views.py`, covering 10 navigation requirements (model list by manufacturer, generation list by model, generation resolution, breadcrumb hierarchy, generation definition isolation, active/superseded filtering, and empty hierarchy states) bringing test suite to **219/219 tests passing**.
 - General Canonical Record Correction Lifecycle package (`reference/models.py` `CanonicalRecordCorrection`, `reference/migrations/0005_canonicalrecordcorrection.py`, `reference/ingestion/importing/correction.py` `execute_canonical_record_correction`, `reference/management/commands/execute_canonical_correction.py`, `reference/tests/test_canonical_correction_lifecycle.py`).
 - Durable correction audit model (`CanonicalRecordCorrection`), capturing foreign keys to superseded (`is_active=False`) and replacement `VehicleDefinition` records, immutable identity snapshots, correction reason classification (`NORMALIZATION_RULE_CORRECTION`), operator attribution, and execution receipt linkages.
 - Deliberate operator-authorized correction command (`execute_canonical_correction`), providing dry-run review and requiring explicit `--authorize` flags before executing atomic database record supersession and replacement.

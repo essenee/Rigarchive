@@ -590,23 +590,24 @@ RigArchive/
 - Milestone 22: Deterministic Toyota Extraction & Review-Adjudication Implementation (✅ Complete — RA-026 / ADR-0008)
 - Milestone 23: Scalable Reference Population Source Model (✅ Complete — RA-028)
 - Milestone 24: Drivetrain Semantic Preservation, Public Display & Canonical Record Correction Lifecycle (✅ Complete — RA-029)
+- Milestone 25: Public Vehicle Navigation Hierarchy (✅ Complete — RA-030)
 
 
 13. Current Repository Status
 The repository currently contains:
 - Functional Django project
-- Passing test suite (216 tests passing cleanly across full test suite)
+- Passing test suite (219 tests passing cleanly across full test suite)
 - Shared core infrastructure (`core` app with `UUIDModel`, `TimestampedModel`, `BaseModel`)
 - Reference Data Ingestion package (`reference/ingestion/` with contracts, serialization, validation, `acquisition/` adapters, profiles & extractors including `JDPowerProfile` and `JDPowerExtractor`, `normalization/` normalizers including `JDPowerNormalizer`, `candidate/` builder, `importing/` importer, planner, & `correction.py` correction workflow, `manifest/` review manifest, and `orchestration/` `MultiSourceOrchestrator`)
 - Development data preservation tooling (`snapshot_db`, `export_dev_data`, `verify_dev_data`)
 - Accessible application shell and UX foundation (`templates/base.html`, `about.html`, `404.html`, `500.html`)
 - Observation Domain foundation (`observation` app with `Observation` model)
-- Public reference browser
+- Public reference browser (`templates/reference/` with progressive Manufacturer → Model → Generation → Configuration navigation hierarchy and breadcrumb navigation)
 - Admin interface with read-only audit log viewers (`ImportExecutionReceiptAdmin`, `CanonicalRecordCorrectionAdmin`)
 - Stable migration history (0001_initial, 0002_importexecutionreceipt, 0003_importexecutionreceipt_adjudication_hash, 0004_alter_vehicledefinition_drivetrain, 0005_canonicalrecordcorrection)
 - Populated Architectural Decision Records (ADR-0001 through ADR-0008)
 - Approved Architecture Design Documents (RA-006, RA-008, RA-010, RA-011, RA-014, RA-016, RA-018, RA-020, RA-022, RA-024, RA-025)
 - Gemini CLI project instructions (GEMINI.md)
 - Task-based implementation workflow (docs/implementation/tasks/)
-- Completed implementation tasks: RA-003, RA-005, RA-007, RA-009, RA-012, RA-013, RA-015, RA-017, RA-019, RA-021, RA-023, RA-024, RA-026, RA-027, RA-028, RA-029 — Canonical Drivetrain Correction & Record Lifecycle
+- Completed implementation tasks: RA-003, RA-005, RA-007, RA-009, RA-012, RA-013, RA-015, RA-017, RA-019, RA-021, RA-023, RA-024, RA-026, RA-027, RA-028, RA-029, RA-030 — Public Vehicle Navigation Hierarchy
 - Approved Architecture/Research tasks: RA-010, RA-011, RA-014, RA-016, RA-018, RA-020, RA-022, RA-024, RA-025
