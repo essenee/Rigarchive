@@ -393,3 +393,139 @@ class ToyotaUSAPressroomProfile:
             assertion_sets.append(asset)
 
         return assertion_sets
+
+
+class JDPowerProfile:
+    """
+    Concrete publication source profile for J.D. Power automotive reference configuration enumerations.
+    Encapsulates fetch locators, transport constraints, security limits, and snapshot-bound extraction.
+    """
+
+    SOURCE_ID = "jd_power"
+    DEFAULT_PUBLISHER_LOCATOR = "https://www.jdpower.com/cars/2019/toyota/4runner"
+    ALLOWLISTED_HOSTS = {"www.jdpower.com", "jdpower.com"}
+    EXPECTED_CONTENT_TYPE = "application/json"
+    MAX_PAYLOAD_BYTES = 10 * 1024 * 1024
+
+    def __init__(self, transport: Optional[TransportCallable] = None):
+        self.transport = transport or default_http_transport
+
+    @property
+    def source_id(self) -> str:
+        return self.SOURCE_ID
+
+    @property
+    def default_applicability(self) -> SourceApplicability:
+        return SourceApplicability(
+            market="US",
+            applicability_basis="configuration_enumeration",
+            publisher_jurisdiction="US-JDPower",
+            applicability_scope="configuration",
+        )
+
+    def acquire_from_file(
+        self,
+        file_path: Path,
+        publisher_locator: Optional[str] = None,
+    ) -> RawAcquisitionResult:
+        """Acquire raw payload bytes from a local J.D. Power file."""
+        path = Path(file_path).resolve()
+        if not path.exists() or not path.is_file():
+            raise AcquisitionError(f"Local source file does not exist: {path}")
+
+        try:
+            raw_bytes = path.read_bytes()
+        except OSError as e:
+            raise AcquisitionError(f"Failed to read local source file '{path}': {str(e)}") from e
+
+        if len(raw_bytes) > self.MAX_PAYLOAD_BYTES:
+            raise ProfileSecurityError(
+                f"Source payload size ({len(raw_bytes)} bytes) exceeds profile limit ({self.MAX_PAYLOAD_BYTES} bytes)."
+            )
+
+        content_type = "text/html" if path.suffix.lower() in {".html", ".htm"} else "application/json"
+        retrieved_at = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+        locator = publisher_locator or self.DEFAULT_PUBLISHER_LOCATOR
+
+        return RawAcquisitionResult(
+            source_id=self.source_id,
+            source_locator=locator,
+            acquired_at=retrieved_at,
+            content_type=content_type,
+            raw_bytes=raw_bytes,
+            source_applicability=self.default_applicability,
+            acquisition_method="local_file",
+            original_filename=path.name,
+        )
+
+    def acquire_from_url(
+        self,
+        url: str,
+        extra_headers: Optional[Dict[str, str]] = None,
+    ) -> RawAcquisitionResult:
+        """Acquire raw payload bytes from J.D. Power URL."""
+        parsed = urlparse(url)
+        if parsed.scheme != "https":
+            raise ProfileSecurityError(f"Profile requires HTTPS scheme for URL '{url}'.")
+
+        init_host = (parsed.hostname or "").lower()
+        if init_host not in self.ALLOWLISTED_HOSTS:
+            raise ProfileSecurityError(
+                f"Host '{init_host}' is not in profile allowlisted hosts {sorted(self.ALLOWLISTED_HOSTS)}."
+            )
+
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "Accept": "application/json,text/html,application/xhtml+xml",
+        }
+        if extra_headers:
+            headers.update(extra_headers)
+
+        res = self.transport(url, headers, timeout_seconds=10)
+        if len(res) == 4:
+            status_code, body_bytes, resp_headers, final_url = res
+        else:
+            status_code, body_bytes, resp_headers = res
+            final_url = url
+
+        if status_code != 200:
+            raise TransportError(f"J.D. Power returned HTTP {status_code} for URL '{url}'. Live access may require API credentials or cookie bypass.")
+
+        if not body_bytes:
+            raise AcquisitionError(f"J.D. Power returned empty payload for URL '{url}'.")
+
+        ct_header = resp_headers.get("Content-Type", "application/json")
+        retrieved_at = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+        return RawAcquisitionResult(
+            source_id=self.source_id,
+            source_locator=final_url,
+            acquired_at=retrieved_at,
+            content_type=ct_header,
+            raw_bytes=body_bytes,
+            source_applicability=self.default_applicability,
+            acquisition_method="live_http",
+            http_status=status_code,
+            http_headers=resp_headers,
+        )
+
+    def extract(
+        self,
+        snapshot_meta: RawSourceSnapshotMetadata,
+        raw_bytes: Optional[bytes] = None,
+        **kwargs,
+    ) -> List[SourceAssertionSet]:
+        """Extract Tier 1 SourceAssertionSets using JDPowerExtractor."""
+        from reference.ingestion.acquisition.jd_power_extractor import JDPowerExtractor
+
+        bytes_to_extract = raw_bytes
+        if not bytes_to_extract and snapshot_meta and snapshot_meta.storage_path:
+            p = Path(snapshot_meta.storage_path)
+            if p.exists() and p.is_file():
+                bytes_to_extract = p.read_bytes()
+
+        if not bytes_to_extract:
+            raise AcquisitionError("No raw bytes available for J.D. Power extraction.")
+
+        extractor = JDPowerExtractor()
+        return extractor.extract(bytes_to_extract, snapshot_meta)

@@ -1,0 +1,26 @@
+{
+  "_provenance": {
+    "publisher": "Toyota Motor Sales, U.S.A., Inc.",
+    "source_id": "toyota_usa",
+    "source_type": "first_party_manufacturer",
+    "source_title": "2019 Toyota 4Runner Strengthens Legacy in 35th Year",
+    "source_reference": "Official Toyota USA Newsroom (pressroom.toyota.com/2019-toyota-4runner-strengthens-legacy-35-year/)",
+    "model_year": 2019,
+    "publication_scope": "US",
+    "publication_date": "2018-10-17",
+    "evidentiary_role": "manufacturer_specification",
+    "transcription_note": "Structured derivative transcription of official first-party Toyota USA press release product specification for 2019 4Runner under RA-028."
+  },
+  "configurations": [
+    {
+      "model_code": "2019_4runner_lineup_spec",
+      "make": "Toyota",
+      "model": "4Runner",
+      "model_year": 2019,
+      "engine_displacement_liters": 4.0,
+      "engine_cylinders": 6,
+      "transmission": "5-speed ECT-i automatic",
+      "market": "US"
+    }
+  ]
+}

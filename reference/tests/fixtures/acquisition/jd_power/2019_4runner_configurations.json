@@ -1,0 +1,148 @@
+{
+  "_provenance": {
+    "publisher": "J.D. Power",
+    "source_id": "jd_power",
+    "source_type": "third_party_reference",
+    "source_title": "J.D. Power 2019 Toyota 4Runner Trim & Configuration Enumeration",
+    "source_reference": "J.D. Power Automotive Reference (jdpower.com) 2019 Toyota 4Runner Factory Configuration Directory",
+    "model_year": 2019,
+    "publication_scope": "US",
+    "publication_date": "2018-10-01",
+    "evidentiary_role": "configuration_enumeration",
+    "transcription_note": "Retained controlled snapshot fixture of J.D. Power 2019 Toyota 4Runner factory configuration inventory for deterministic offline testing under RA-028."
+  },
+  "configurations": [
+    {
+      "native_trim_id": "sr5_2wd",
+      "make": "Toyota",
+      "model": "4Runner",
+      "model_year": 2019,
+      "trim": "SR5",
+      "drivetrain": "2WD",
+      "engine_displacement_liters": 4.0,
+      "engine_cylinders": 6,
+      "transmission": "5-Speed Automatic",
+      "market": "US"
+    },
+    {
+      "native_trim_id": "sr5_4wd",
+      "make": "Toyota",
+      "model": "4Runner",
+      "model_year": 2019,
+      "trim": "SR5",
+      "drivetrain": "4WD",
+      "engine_displacement_liters": 4.0,
+      "engine_cylinders": 6,
+      "transmission": "5-Speed Automatic",
+      "market": "US"
+    },
+    {
+      "native_trim_id": "sr5_premium_2wd",
+      "make": "Toyota",
+      "model": "4Runner",
+      "model_year": 2019,
+      "trim": "SR5 Premium",
+      "drivetrain": "2WD",
+      "engine_displacement_liters": 4.0,
+      "engine_cylinders": 6,
+      "transmission": "5-Speed Automatic",
+      "market": "US"
+    },
+    {
+      "native_trim_id": "sr5_premium_4wd",
+      "make": "Toyota",
+      "model": "4Runner",
+      "model_year": 2019,
+      "trim": "SR5 Premium",
+      "drivetrain": "4WD",
+      "engine_displacement_liters": 4.0,
+      "engine_cylinders": 6,
+      "transmission": "5-Speed Automatic",
+      "market": "US"
+    },
+    {
+      "native_trim_id": "trd_off_road_4wd",
+      "make": "Toyota",
+      "model": "4Runner",
+      "model_year": 2019,
+      "trim": "TRD Off-Road",
+      "drivetrain": "4WD",
+      "engine_displacement_liters": 4.0,
+      "engine_cylinders": 6,
+      "transmission": "5-Speed Automatic",
+      "market": "US"
+    },
+    {
+      "native_trim_id": "trd_off_road_premium_4wd",
+      "make": "Toyota",
+      "model": "4Runner",
+      "model_year": 2019,
+      "trim": "TRD Off-Road Premium",
+      "drivetrain": "4WD",
+      "engine_displacement_liters": 4.0,
+      "engine_cylinders": 6,
+      "transmission": "5-Speed Automatic",
+      "market": "US"
+    },
+    {
+      "native_trim_id": "limited_2wd",
+      "make": "Toyota",
+      "model": "4Runner",
+      "model_year": 2019,
+      "trim": "Limited",
+      "drivetrain": "2WD",
+      "engine_displacement_liters": 4.0,
+      "engine_cylinders": 6,
+      "transmission": "5-Speed Automatic",
+      "market": "US"
+    },
+    {
+      "native_trim_id": "limited_4wd",
+      "make": "Toyota",
+      "model": "4Runner",
+      "model_year": 2019,
+      "trim": "Limited",
+      "drivetrain": "AWD",
+      "engine_displacement_liters": 4.0,
+      "engine_cylinders": 6,
+      "transmission": "5-Speed Automatic",
+      "market": "US"
+    },
+    {
+      "native_trim_id": "nightshade_2wd",
+      "make": "Toyota",
+      "model": "4Runner",
+      "model_year": 2019,
+      "trim": "Nightshade",
+      "drivetrain": "2WD",
+      "engine_displacement_liters": 4.0,
+      "engine_cylinders": 6,
+      "transmission": "5-Speed Automatic",
+      "market": "US"
+    },
+    {
+      "native_trim_id": "nightshade_4wd",
+      "make": "Toyota",
+      "model": "4Runner",
+      "model_year": 2019,
+      "trim": "Nightshade",
+      "drivetrain": "AWD",
+      "engine_displacement_liters": 4.0,
+      "engine_cylinders": 6,
+      "transmission": "5-Speed Automatic",
+      "market": "US"
+    },
+    {
+      "native_trim_id": "trd_pro_4wd",
+      "make": "Toyota",
+      "model": "4Runner",
+      "model_year": 2019,
+      "trim": "TRD Pro",
+      "drivetrain": "4WD",
+      "engine_displacement_liters": 4.0,
+      "engine_cylinders": 6,
+      "transmission": "5-Speed Automatic",
+      "market": "US"
+    }
+  ]
+}

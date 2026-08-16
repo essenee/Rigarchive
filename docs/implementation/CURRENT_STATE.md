@@ -588,16 +588,15 @@ RigArchive/
 - Milestone 20: Canonical Reference Import Execution & Execution Provenance Workflow Architecture & Implementation (✅ Complete — RA-024 / ADR-0007)
 - Milestone 21: Production Manufacturer Extraction & Review-Adjudication Architecture (✅ Approved Architecture — RA-025 / ADR-0008)
 - Milestone 22: Deterministic Toyota Extraction & Review-Adjudication Implementation (✅ Complete — RA-026 / ADR-0008)
-
-The next proposed operational follow-up is Controlled Toyota 4Runner Canonical Population.
+- Milestone 23: Scalable Reference Population Source Model (✅ Complete — RA-028)
 
 
 13. Current Repository Status
 The repository currently contains:
 - Functional Django project
-- Passing test suite (185 tests passing)
+- Passing test suite (48 tests passing across comprehensive ingestion suite)
 - Shared core infrastructure (`core` app with `UUIDModel`, `TimestampedModel`, `BaseModel`)
-- Reference Data Ingestion package (`reference/ingestion/` with contracts, serialization, validation, `acquisition/` adapters & PDF strategies, `normalization/` normalizers, `candidate/` builder, `importing/` importer & planner, `manifest/` review manifest, and `orchestration/` orchestrator)
+- Reference Data Ingestion package (`reference/ingestion/` with contracts, serialization, validation, `acquisition/` adapters, profiles & extractors including `JDPowerProfile` and `JDPowerExtractor`, `normalization/` normalizers including `JDPowerNormalizer`, `candidate/` builder, `importing/` importer & planner, `manifest/` review manifest, and `orchestration/` `MultiSourceOrchestrator`)
 - Development data preservation tooling (`snapshot_db`, `export_dev_data`, `verify_dev_data`)
 - Accessible application shell and UX foundation (`templates/base.html`, `about.html`, `404.html`, `500.html`)
 - Observation Domain foundation (`observation` app with `Observation` model)
@@ -608,5 +607,5 @@ The repository currently contains:
 - Approved Architecture Design Documents (RA-006, RA-008, RA-010, RA-011, RA-014, RA-016, RA-018, RA-020, RA-022, RA-024, RA-025)
 - Gemini CLI project instructions (GEMINI.md)
 - Task-based implementation workflow (docs/implementation/tasks/)
-- Completed implementation tasks: RA-003, RA-005, RA-007, RA-009, RA-012, RA-013, RA-015, RA-017, RA-019, RA-021, RA-023, RA-024, RA-026 — Deterministic Toyota Extraction & Review-Adjudication Implementation
+- Completed implementation tasks: RA-003, RA-005, RA-007, RA-009, RA-012, RA-013, RA-015, RA-017, RA-019, RA-021, RA-023, RA-024, RA-026, RA-027, RA-028 — Scalable Reference Population Source Model
 - Approved Architecture/Research tasks: RA-010, RA-011, RA-014, RA-016, RA-018, RA-020, RA-022, RA-024, RA-025
