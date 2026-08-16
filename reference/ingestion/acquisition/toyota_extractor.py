@@ -16,6 +16,7 @@ from pypdf import PdfReader
 from reference.ingestion.acquisition.base import AcquisitionError
 from reference.ingestion.acquisition.snapshots import RawSourceSnapshotMetadata
 from reference.ingestion.contracts import (
+    ApplicabilityScope,
     ArtifactType,
     Envelope,
     ExtractionProvenance,
@@ -78,7 +79,7 @@ class ToyotaPricingMasterPdfStrategy:
         # Regex to parse Pricing Master lines:
         # e.g. "8664 2020 4Runner 4x4 SR5 V6 5ECT $37,995"
         pattern = re.compile(
-            r"^(?P<code>\d{4})\s+(?P<year>\d{4})\s+4Runner\s+(?P<drive>4x2|4x4)\s+(?P<grade>.*?)\s+V6\s+5ECT",
+            r"^(?P<code>\d{4})\s+(?P<year>\d{4})\s+4Runner\s+(?:(?P<drive>4x2|4x4)\s+)?(?P<grade>.*?)\s+V6\s+5ECT",
             re.IGNORECASE,
         )
 
@@ -89,12 +90,14 @@ class ToyotaPricingMasterPdfStrategy:
 
             model_code = match.group("code")
             model_year = int(match.group("year"))
-            raw_drive = match.group("drive").upper()
+            raw_drive = match.group("drive")
             raw_grade = match.group("grade").strip()
 
-            drivetrain = "2WD" if raw_drive == "4X2" else "Part-Time 4WD"
-            if "Limited" in raw_grade or "Nightshade" in raw_grade:
-                if raw_drive == "4X4":
+            drivetrain = None
+            if raw_drive:
+                raw_drive_upper = raw_drive.upper()
+                drivetrain = "2WD" if raw_drive_upper == "4X2" else "Part-Time 4WD"
+                if ("Limited" in raw_grade or "Nightshade" in raw_grade) and raw_drive_upper == "4X4":
                     drivetrain = "Full-Time 4WD"
 
             env = Envelope(
@@ -108,6 +111,7 @@ class ToyotaPricingMasterPdfStrategy:
                 market="US",
                 applicability_basis="first_party_publisher_scope",
                 publisher_jurisdiction="US-TMC",
+                applicability_scope=ApplicabilityScope.CONFIGURATION.value,
             )
 
             prov = SourceMetadata(
@@ -160,12 +164,19 @@ class ToyotaPricingMasterPdfStrategy:
                     raw_value=model_code,
                     source_context="Toyota Order Model Code",
                 ),
-                SourceAssertion(
-                    assertion_id=f"{model_code}_drive_descriptor",
-                    attribute_key="drive_descriptor",
-                    raw_value=drivetrain,
-                    source_context="Toyota USA Pricing Matrix Drivetrain Field",
-                ),
+            ]
+
+            if drivetrain:
+                assertions.append(
+                    SourceAssertion(
+                        assertion_id=f"{model_code}_drive_descriptor",
+                        attribute_key="drive_descriptor",
+                        raw_value=drivetrain,
+                        source_context="Toyota USA Pricing Matrix Drivetrain Field",
+                    )
+                )
+
+            assertions.extend([
                 SourceAssertion(
                     assertion_id=f"{model_code}_transmission_descriptor",
                     attribute_key="transmission_descriptor",
@@ -178,7 +189,7 @@ class ToyotaPricingMasterPdfStrategy:
                     raw_value="US",
                     source_context="Toyota Motor Sales, U.S.A., Inc. Publication Scope",
                 ),
-            ]
+            ])
 
             assertion_sets.append(SourceAssertionSet(envelope=env, provenance=prov, source_assertions=assertions))
 
@@ -238,6 +249,7 @@ class ToyotaProductInformationPdfStrategy:
             market="US",
             applicability_basis="first_party_publisher_scope",
             publisher_jurisdiction="US-TMC",
+            applicability_scope=ApplicabilityScope.MODEL_YEAR.value,
         )
 
         prov = SourceMetadata(

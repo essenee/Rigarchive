@@ -180,6 +180,7 @@ class ToyotaUSAPressroomProfile:
         transcription_data: Optional[Dict[str, Any]] = None,
         override_expected_hash: Optional[str] = None,
         raw_bytes: Optional[bytes] = None,
+        auxiliary_inputs: Optional[List[Any]] = None,
     ) -> List[SourceAssertionSet]:
         """
         Extract Tier 1 SourceAssertionSets directly from retained raw publisher snapshots (PDF/HTML),
@@ -200,19 +201,32 @@ class ToyotaUSAPressroomProfile:
             pricing_strategy = ToyotaPricingMasterPdfStrategy()
             sets = pricing_strategy.extract(bytes_to_extract, snapshot_meta)
 
-            # Check if Product Information specs PDF is present alongside pricing PDF
-            specs_path = Path(snapshot_meta.storage_path).parent / "2020_4runner_specs.pdf"
-            if specs_path.exists() and specs_path.is_file():
-                specs_bytes = specs_path.read_bytes()
+            # Discover or extract auxiliary inputs (e.g. Product Information specs PDF)
+            aux_specs: List[Tuple[bytes, str, str]] = []
+
+            if auxiliary_inputs:
+                for item in auxiliary_inputs:
+                    if isinstance(item, (str, Path)):
+                        p = Path(item)
+                        if p.exists() and p.is_file():
+                            aux_specs.append((p.read_bytes(), str(p), "https://pressroom.toyota.com/vehicle/2020-toyota-4runner/"))
+                    elif isinstance(item, bytes):
+                        aux_specs.append((item, "auxiliary_bytes.pdf", "https://pressroom.toyota.com/vehicle/2020-toyota-4runner/"))
+            else:
+                specs_path = Path(snapshot_meta.storage_path).parent / "2020_4runner_specs.pdf"
+                if specs_path.exists() and specs_path.is_file():
+                    aux_specs.append((specs_path.read_bytes(), str(specs_path), "https://pressroom.toyota.com/vehicle/2020-toyota-4runner/"))
+
+            for specs_bytes, specs_storage_path, locator in aux_specs:
                 from reference.ingestion.acquisition.snapshots import compute_content_hash
                 specs_hash = compute_content_hash(specs_bytes)
                 specs_meta = RawSourceSnapshotMetadata(
                     source_id=snapshot_meta.source_id,
-                    publisher_locator="https://pressroom.toyota.com/vehicle/2020-toyota-4runner/",
+                    publisher_locator=locator,
                     acquired_at=snapshot_meta.acquired_at,
                     content_type="application/pdf",
                     content_hash=specs_hash,
-                    storage_path=str(specs_path),
+                    storage_path=specs_storage_path,
                     source_applicability=snapshot_meta.source_applicability,
                     acquisition_method=snapshot_meta.acquisition_method,
                 )

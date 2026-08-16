@@ -83,7 +83,10 @@ class ToyotaExtractorTests(TestCase):
         }
 
         # Validate controlled codes exist in PDF extraction output
-        controlled_codes = ["8664", "8666", "8670", "8672", "8674"]
+        controlled_codes = [
+            "8642", "8664", "8646", "8666", "8667", "8670",
+            "8672", "8648", "8668", "8649", "8669", "8674"
+        ]
         for code in controlled_codes:
             self.assertIn(code, pdf_model_codes)
             attr = pdf_model_codes[code]

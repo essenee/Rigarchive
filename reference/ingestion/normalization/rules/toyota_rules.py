@@ -12,8 +12,10 @@ TOYOTA_FACTORY_GRADES = {
     "SR5 PREMIUM": "SR5 Premium",
     "TRD OFF-ROAD": "TRD Off-Road",
     "TRD OFF-ROAD PREMIUM": "TRD Off-Road Premium",
+    "VENTURE EDITION": "Venture Edition",
     "VENTURE SPECIAL EDITION": "Venture Special Edition",
     "LIMITED": "Limited",
+    "NIGHTSHADE": "Nightshade",
     "NIGHTSHADE SPECIAL EDITION": "Nightshade Special Edition",
     "TRD PRO": "TRD Pro",
 }
