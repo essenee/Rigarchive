@@ -4,6 +4,7 @@ from .views import (
     GenerationDetailView,
     ManufacturerDetailView,
     ManufacturerListView,
+    ModelYearOverviewView,
     VehicleDefinitionDetailView,
     VehicleModelDetailView,
 )
@@ -34,6 +35,16 @@ urlpatterns = [
         ),
         GenerationDetailView.as_view(),
         name="generation-detail",
+    ),
+    path(
+        (
+            "<slug:manufacturer_slug>/"
+            "<slug:vehicle_model_slug>/"
+            "<slug:generation_slug>/"
+            "<int:model_year>/"
+        ),
+        ModelYearOverviewView.as_view(),
+        name="model-year-overview",
     ),
     path(
         (

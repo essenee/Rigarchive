@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block title %}
+    {{ model_year }} {{ manufacturer.name }} {{ vehicle_model.name }} | RigArchive
+{% endblock %}
+
+{% block breadcrumbs %}
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+    <a href="{% url 'home' %}">Home</a>
+    <span aria-hidden="true">/</span>
+    <a href="{% url 'reference:manufacturer-list' %}">
+        Vehicles
+    </a>
+    <span aria-hidden="true">/</span>
+    <a href="{{ manufacturer.get_absolute_url }}">
+        {{ manufacturer.name }}
+    </a>
+    <span aria-hidden="true">/</span>
+    <a href="{{ vehicle_model.get_absolute_url }}">
+        {{ vehicle_model.name }}
+    </a>
+    <span aria-hidden="true">/</span>
+    <a href="{{ generation.get_absolute_url }}">
+        {{ generation.name }}
+    </a>
+    <span aria-hidden="true">/</span>
+    <span>{{ model_year }}</span>
+</nav>
+{% endblock %}
+
+{% block content %}
+<header class="page-header">
+    <h1 class="page-title">{{ model_year }} {{ manufacturer.name }} {{ vehicle_model.name }}</h1>
+    <p class="secondary-header-text">{{ total_configurations }} active factory configurations for {{ model_year }}</p>
+</header>
+
+<section class="archive-section">
+    <h2 class="archive-section-title">Available Configurations</h2>
+
+    {% if trims_dict %}
+        <div class="year-overview-grid">
+            {% for trim_name, config_list in trims_dict.items %}
+                <article class="trim-group-card">
+                    <h3 class="trim-group-title">{{ trim_name }}</h3>
+                    <ul class="config-variant-list">
+                        {% for vd in config_list %}
+                            <li class="config-variant-item">
+                                <a href="{{ vd.get_absolute_url }}" class="config-variant-link">
+                                    <div class="variant-info">
+                                        <span class="variant-drive">{{ vd.drivetrain }}</span>
+                                        <span class="variant-engine">{{ vd.engine_name }}</span>
+                                    </div>
+                                    <span class="variant-market">{{ vd.get_market_display }}</span>
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </article>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p>No configurations are currently available for model year {{ model_year }}.</p>
+    {% endif %}
+</section>
+{% endblock %}

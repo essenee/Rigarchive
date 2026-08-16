@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block title %}
-    {{ generation }} | RigArchive
+    {{ generation.name }} | {{ vehicle_model.name }} | RigArchive
 {% endblock %}
 
 {% block breadcrumbs %}
@@ -12,12 +12,12 @@
         Vehicles
     </a>
     <span aria-hidden="true">/</span>
-    <a href="{{ generation.vehicle_model.manufacturer.get_absolute_url }}">
-        {{ generation.vehicle_model.manufacturer.name }}
+    <a href="{{ manufacturer.get_absolute_url }}">
+        {{ manufacturer.name }}
     </a>
     <span aria-hidden="true">/</span>
-    <a href="{{ generation.vehicle_model.get_absolute_url }}">
-        {{ generation.vehicle_model.name }}
+    <a href="{{ vehicle_model.get_absolute_url }}">
+        {{ vehicle_model.name }}
     </a>
     <span aria-hidden="true">/</span>
     <span>{{ generation.name }}</span>
@@ -25,57 +25,166 @@
 {% endblock %}
 
 {% block content %}
-<h1>
-    {{ generation.vehicle_model }} — {{ generation.name }}
-</h1>
+<h1 class="page-title">{{ vehicle_model.name }} — {{ generation.name }}</h1>
 
-<dl class="record-details">
-    {% if generation.generation_number %}
-        <div>
-            <dt>Generation</dt>
-            <dd>{{ generation.generation_number }}</dd>
-        </div>
-    {% endif %}
+<div class="generation-detail-layout">
+    <!-- Main Content Column (Left) -->
+    <div class="generation-main-content">
+        <!-- Detailed Specs Section & Selector Form -->
+        <section class="archive-section" id="detailed-specs">
+            <h2 class="archive-section-title">Detailed Specs</h2>
+            <p class="archive-section-subtitle">Select a model year to browse configurations, or choose a specific trim combination to view detailed specifications.</p>
 
-    <div>
-        <dt>Production years</dt>
-        <dd>
-            {{ generation.start_year }}–
-            {% if generation.end_year %}
-                {{ generation.end_year }}
+            {% if active_model_years %}
+                <form action="{% url 'reference:generation-detail' manufacturer.slug vehicle_model.slug generation.slug %}" method="get" class="specs-selector-form" id="specsForm">
+                    <div class="specs-selector-group">
+                        <label for="year-select" class="specs-selector-label">Model Year</label>
+                        <select name="year" id="year-select" class="specs-selector-select">
+                            <option value="">Select Year...</option>
+                            {% for yr in active_model_years %}
+                                <option value="{{ yr }}">{{ yr }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <div class="specs-selector-group">
+                        <label for="config-select" class="specs-selector-label">Trim / Configuration (Optional)</label>
+                        <select name="configuration" id="config-select" class="specs-selector-select" disabled>
+                            <option value="">Select model year first</option>
+                            {% for config in active_configurations %}
+                                <option value="{{ config.slug }}" data-year="{{ config.model_year }}" style="display: none;">
+                                    {% if config.trim_name %}{{ config.trim_name }} — {% endif %}{{ config.drivetrain }} — {{ config.engine_name }}
+                                </option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <button type="submit" class="specs-selector-button">View Specs</button>
+                </form>
             {% else %}
-                present
+                <p class="secondary">No active model years or specifications are currently available for this generation.</p>
             {% endif %}
-        </dd>
+        </section>
+
+        <!-- Conditional Measurements Section (Only rendered when populated) -->
+        {% if measurements %}
+            <section class="archive-section" id="measurements">
+                <h2 class="archive-section-title">Measurements</h2>
+                <div class="measurements-grid">
+                    {% for measurement in measurements|slice:":3" %}
+                        <div class="measurement-card">
+                            <h3>{{ measurement.title }}</h3>
+                        </div>
+                    {% endfor %}
+                </div>
+                {% if measurements|length > 3 %}
+                    <a href="#" class="see-more-link">See more measurements</a>
+                {% endif %}
+            </section>
+        {% endif %}
+
+        <!-- Conditional Camping Builds Section (Only rendered when populated) -->
+        {% if camping_builds %}
+            <section class="archive-section" id="camping-builds">
+                <h2 class="archive-section-title">Camping Builds</h2>
+                <div class="builds-grid">
+                    {% for build in camping_builds|slice:":3" %}
+                        <div class="build-card">
+                            <h3>{{ build.title }}</h3>
+                        </div>
+                    {% endfor %}
+                </div>
+                {% if camping_builds|length > 3 %}
+                    <a href="#" class="see-more-link">See more camping builds</a>
+                {% endif %}
+            </section>
+        {% endif %}
     </div>
-</dl>
 
-{% if generation.notes %}
-    <section>
-        <h2>Notes</h2>
-        {{ generation.notes|linebreaks }}
-    </section>
-{% endif %}
+    <!-- Overview Infobox Sidebar (Right) -->
+    <aside class="generation-sidebar">
+        <div class="generation-infobox" aria-label="Generation Overview">
+            <!-- Top: Representative Image -->
+            <div class="infobox-image-wrap">
+                {% if generation_hero_image %}
+                    <img src="{{ generation_hero_image }}" alt="{{ generation.name }} {{ vehicle_model.name }}" class="infobox-img">
+                {% else %}
+                    <div class="infobox-placeholder">
+                        <svg class="infobox-placeholder-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7h8m-8 4h8m-8 4h4m-6 4h12a2 2 0 002-2V5a2 2 0 00-2-2H6a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                        </svg>
+                        <span>{{ generation.name }}</span>
+                    </div>
+                {% endif %}
+            </div>
 
-<section>
-    <h2>Vehicle definitions</h2>
+            <!-- Middle: Visually distinct Overview Heading Bar -->
+            <h2 class="infobox-header">Overview</h2>
 
-    {% if vehicle_definitions %}
-        <ul class="record-list">
-            {% for vehicle_definition in vehicle_definitions %}
-                <li>
-                    <a href="{{ vehicle_definition.get_absolute_url }}">
-                        {{ vehicle_definition }}
-                    </a>
+            <!-- Bottom: Compact Metadata -->
+            <dl class="infobox-meta">
+                <div class="infobox-meta-row">
+                    <dt>Production</dt>
+                    <dd>{{ generation.start_year }}–{% if generation.end_year %}{{ generation.end_year }}{% else %}present{% endif %}</dd>
+                </div>
+                {% if generation.generation_number %}
+                    <div class="infobox-meta-row">
+                        <dt>Generation</dt>
+                        <dd>Generation {{ generation.generation_number }}</dd>
+                    </div>
+                {% endif %}
+                <div class="infobox-meta-row">
+                    <dt>Manufacturer</dt>
+                    <dd>{{ manufacturer.name }}</dd>
+                </div>
+                {% if generation.notes %}
+                    <div class="infobox-meta-row infobox-meta-notes">
+                        <dt>Notes</dt>
+                        <dd>{{ generation.notes }}</dd>
+                    </div>
+                {% endif %}
+            </dl>
+        </div>
+    </aside>
+</div>
 
-                    <span class="secondary">
-                        {{ vehicle_definition.get_market_display }}
-                    </span>
-                </li>
-            {% endfor %}
-        </ul>
-    {% else %}
-        <p>No vehicle definitions are currently available.</p>
-    {% endif %}
-</section>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var yearSelect = document.getElementById('year-select');
+    var configSelect = document.getElementById('config-select');
+
+    if (!yearSelect || !configSelect) return;
+
+    var rawOptions = Array.from(configSelect.querySelectorAll('option[data-year]'));
+
+    function updateConfigDropdown() {
+        var selectedYear = yearSelect.value;
+
+        if (!selectedYear) {
+            configSelect.innerHTML = '<option value="">Select model year first</option>';
+            configSelect.disabled = true;
+            return;
+        }
+
+        configSelect.disabled = false;
+        configSelect.innerHTML = '<option value="">All Configurations (Year Overview)...</option>';
+
+        rawOptions.forEach(function(opt) {
+            if (opt.getAttribute('data-year') === selectedYear) {
+                var clone = opt.cloneNode(true);
+                clone.style.display = '';
+                configSelect.appendChild(clone);
+            }
+        });
+
+        configSelect.selectedIndex = 0;
+    }
+
+    yearSelect.addEventListener('change', updateConfigDropdown);
+
+    if (yearSelect.value) {
+        updateConfigDropdown();
+    }
+});
+</script>
 {% endblock %}

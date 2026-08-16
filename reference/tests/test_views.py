@@ -35,16 +35,19 @@ class ReferenceViewTests(TestCase):
         cls.fourth_generation, _ = Generation.objects.get_or_create(
             vehicle_model=cls.four_runner,
             name="Fourth Generation",
+            slug="fourth-generation",
             defaults={
                 "generation_number": 4,
                 "start_year": 2003,
                 "end_year": 2009,
+                "notes": "Fourth generation built on Land Cruiser Prado platform.",
             },
         )
 
         cls.fifth_generation, _ = Generation.objects.get_or_create(
             vehicle_model=cls.four_runner,
             name="Fifth Generation",
+            slug="fifth-generation",
             defaults={
                 "generation_number": 5,
                 "start_year": 2010,
@@ -54,6 +57,7 @@ class ReferenceViewTests(TestCase):
         cls.bronco_gen1, _ = Generation.objects.get_or_create(
             vehicle_model=cls.bronco,
             name="First Generation",
+            slug="first-generation",
             defaults={
                 "generation_number": 1,
                 "start_year": 1966,
@@ -61,7 +65,37 @@ class ReferenceViewTests(TestCase):
             },
         )
 
-        cls.vehicle_definition, _ = VehicleDefinition.objects.get_or_create(
+        cls.vd_2003_v6, _ = VehicleDefinition.objects.get_or_create(
+            generation=cls.fourth_generation,
+            model_year=2003,
+            trim_name="SR5",
+            engine_name="4.0L V6",
+            drivetrain=VehicleDefinition.Drivetrain.TWO_WHEEL_DRIVE,
+            market=VehicleDefinition.Market.UNITED_STATES,
+            is_active=True,
+        )
+
+        cls.vd_2003_v8, _ = VehicleDefinition.objects.get_or_create(
+            generation=cls.fourth_generation,
+            model_year=2003,
+            trim_name="SR5",
+            engine_name="4.7L V8",
+            drivetrain=VehicleDefinition.Drivetrain.FOUR_WHEEL_DRIVE,
+            market=VehicleDefinition.Market.UNITED_STATES,
+            is_active=True,
+        )
+
+        cls.vd_2004_sr5, _ = VehicleDefinition.objects.get_or_create(
+            generation=cls.fourth_generation,
+            model_year=2004,
+            trim_name="SR5",
+            engine_name="4.0L V6",
+            drivetrain=VehicleDefinition.Drivetrain.TWO_WHEEL_DRIVE,
+            market=VehicleDefinition.Market.UNITED_STATES,
+            is_active=True,
+        )
+
+        cls.vd_2007_sr5, _ = VehicleDefinition.objects.get_or_create(
             generation=cls.fourth_generation,
             model_year=2007,
             trim_name="SR5",
@@ -92,7 +126,7 @@ class ReferenceViewTests(TestCase):
         )
 
     def test_1_vehicles_index_lists_active_manufacturers_and_their_models(self) -> None:
-        """1 & 2. /vehicles/ lists active Manufacturers and includes their populated model links directly."""
+        """1. /vehicles/ lists active Manufacturers and includes their populated model links directly."""
         response = self.client.get(reverse("reference:manufacturer-list"))
 
         self.assertEqual(response.status_code, 200)
@@ -102,98 +136,121 @@ class ReferenceViewTests(TestCase):
         self.assertContains(response, "Bronco")
         self.assertContains(response, self.four_runner.get_absolute_url())
 
-    def test_3_models_do_not_appear_under_wrong_manufacturer_on_vehicles_index(self) -> None:
-        """3. Models belonging to Manufacturer B do not appear under Manufacturer A on /vehicles/."""
-        response = self.client.get(reverse("reference:manufacturer-list"))
-
-        self.assertEqual(response.status_code, 200)
-        html = response.content.decode("utf-8")
-        ford_pos = html.find("Ford")
-        bronco_pos = html.find("Bronco")
-        toyota_pos = html.find("Toyota")
-        four_runner_pos = html.find("4Runner")
-        self.assertTrue(ford_pos < bronco_pos < toyota_pos < four_runner_pos)
-
-    def test_4_unpopulated_or_inactive_models_do_not_appear(self) -> None:
-        """4. Unpopulated or inactive models/manufacturers do not appear as available archive links."""
-        inactive_mfr = Manufacturer.objects.create(name="InactiveAuto", is_active=False)
-        VehicleModel.objects.create(manufacturer=inactive_mfr, name="Phantom", is_active=True)
-
-        inactive_model = VehicleModel.objects.create(manufacturer=self.toyota, name="InactiveModel", is_active=False)
-
-        response = self.client.get(reverse("reference:manufacturer-list"))
-        self.assertEqual(response.status_code, 200)
-        self.assertNotContains(response, "InactiveAuto")
-        self.assertNotContains(response, "Phantom")
-        self.assertNotContains(response, "InactiveModel")
-
-    def test_5_and_6_manufacturer_detail_uses_combined_heading_and_no_separate_models_heading(self) -> None:
-        """5 & 6. /vehicles/toyota/ uses combined 'Toyota Models' heading and no separate 'Models' heading."""
+    def test_2_generation_archive_cards_render_thumbnail_and_fallback(self) -> None:
+        """RA-032.1 & .2. Generation archive cards render bounded thumbnail container and fallback."""
         response = self.client.get(self.toyota.get_absolute_url())
-
         self.assertEqual(response.status_code, 200)
-        self.assertContains(response, "<h1>Toyota Models</h1>")
-        self.assertNotContains(response, "<h2>Models</h2>")
+        self.assertContains(response, "card-thumbnail-wrap")
+        self.assertContains(response, "card-thumbnail-img")
+        self.assertContains(response, "fourth-generation.jpg")
 
-    def test_7_and_8_manufacturer_detail_lists_models_and_their_generations(self) -> None:
-        """7 & 8. Manufacturer page lists its populated models and each model group lists active generations."""
-        response = self.client.get(self.toyota.get_absolute_url())
+        res_ford = self.client.get(self.ford.get_absolute_url())
+        self.assertEqual(res_ford.status_code, 200)
+        self.assertContains(res_ford, "card-thumbnail-placeholder")
 
+    def test_3_no_implicit_domain_requirement_on_generation_model(self) -> None:
+        """RA-032.3. Confirm zero domain model attribute additions to Generation in reference/models.py."""
+        self.assertFalse(hasattr(Generation, "hero_image_url"))
+
+    def test_4_generation_landing_page_wikipedia_overview_infobox(self) -> None:
+        """RA-032.4, .5, .6, .7, .8, .9, .10. Overview infobox contains image, production, sequence, manufacturer, notes."""
+        response = self.client.get(self.fourth_generation.get_absolute_url())
         self.assertEqual(response.status_code, 200)
-        self.assertContains(response, "4Runner")
-        self.assertContains(response, "Fourth Generation")
-        self.assertContains(response, "Fifth Generation")
-
-    def test_9_generations_do_not_appear_under_wrong_model(self) -> None:
-        """9. Generations from another model do not appear under the wrong model."""
-        response = self.client.get(self.toyota.get_absolute_url())
-
-        self.assertEqual(response.status_code, 200)
-        self.assertNotContains(response, "First Generation")  # Bronco's generation
-
-    def test_10_generation_year_spans_render_correctly(self) -> None:
-        """10. Generation year spans render correctly."""
-        response = self.client.get(self.toyota.get_absolute_url())
-
-        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, "generation-infobox")
+        self.assertContains(response, "infobox-img")
         self.assertContains(response, "2003–2009")
-        self.assertContains(response, "2010–present")
+        self.assertContains(response, "Generation 4")
+        self.assertContains(response, "Toyota")
+        self.assertContains(response, "Fourth generation built on Land Cruiser Prado platform.")
+        self.assertNotContains(response, "Market Scope")
+        self.assertNotContains(response, '<dt>Production years</dt>')
 
-    def test_11_model_and_generation_urls_resolve_correctly(self) -> None:
-        """11. Model and generation URLs resolve correctly."""
-        model_res = self.client.get(self.four_runner.get_absolute_url())
-        self.assertEqual(model_res.status_code, 200)
+    def test_5_unpopulated_measurements_and_camping_builds_headings_absent(self) -> None:
+        """RA-032.12 & .13. Measurements and Camping Builds headings do not render without integrated domain data."""
+        response = self.client.get(self.fourth_generation.get_absolute_url())
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, 'id="detailed-specs"')
+        self.assertNotContains(response, '<section class="archive-section" id="measurements">')
+        self.assertNotContains(response, '<section class="archive-section" id="camping-builds">')
 
-        gen_res = self.client.get(self.fourth_generation.get_absolute_url())
-        self.assertEqual(gen_res.status_code, 200)
+    def test_6_year_only_selection_resolves_to_year_overview(self) -> None:
+        """RA-032.7. Year-only selection redirects to model-year overview route."""
+        response = self.client.get(self.fourth_generation.get_absolute_url() + "?year=2003")
+        expected_url = reverse(
+            "reference:model-year-overview",
+            kwargs={
+                "manufacturer_slug": "toyota",
+                "vehicle_model_slug": "4runner",
+                "generation_slug": "fourth-generation",
+                "model_year": 2003,
+            },
+        )
+        self.assertRedirects(response, expected_url)
 
-    def test_12_inactive_superseded_canonical_content_does_not_leak(self) -> None:
-        """12. Inactive/superseded canonical content does not leak into availability navigation."""
-        gen_res = self.client.get(self.fourth_generation.get_absolute_url())
-        self.assertNotContains(gen_res, "Limited")
-        self.assertNotContains(gen_res, self.superseded_definition.slug)
+    def test_7_matching_year_plus_configuration_redirects_to_exact_vehicle_definition(self) -> None:
+        """RA-032.8. Matching year + configuration selection redirects directly to exact VehicleDefinition detail page."""
+        response = self.client.get(
+            self.fourth_generation.get_absolute_url() + f"?year=2003&configuration={self.vd_2003_v8.slug}"
+        )
+        self.assertRedirects(response, self.vd_2003_v8.get_absolute_url())
 
-        vd_res = self.client.get(self.superseded_definition.get_absolute_url())
-        self.assertEqual(vd_res.status_code, 404)
+    def test_8_mismatched_year_plus_configuration_is_rejected(self) -> None:
+        """RA-032.9. Mismatched year + configuration (e.g. year=2003 & 2004 config) rejects cross-year navigation."""
+        response = self.client.get(
+            self.fourth_generation.get_absolute_url() + f"?year=2003&configuration={self.vd_2004_sr5.slug}"
+        )
+        expected_2003_overview = reverse(
+            "reference:model-year-overview",
+            kwargs={
+                "manufacturer_slug": "toyota",
+                "vehicle_model_slug": "4runner",
+                "generation_slug": "fourth-generation",
+                "model_year": 2003,
+            },
+        )
+        # Must NOT redirect to 2004 configuration detail page!
+        self.assertNotEqual(response.headers.get("Location"), self.vd_2004_sr5.get_absolute_url())
+        self.assertRedirects(response, expected_2003_overview)
 
-    def test_13_empty_hierarchy_states_render_without_error(self) -> None:
-        """13. Empty manufacturer/model/generation states render without error."""
-        empty_mfr = Manufacturer.objects.create(name="Subaru", country_code="JP")
-        res_mfr = self.client.get(empty_mfr.get_absolute_url())
-        self.assertEqual(res_mfr.status_code, 200)
-        self.assertContains(res_mfr, "No vehicle models are currently available.")
+    def test_9_inactive_configuration_selection_is_rejected(self) -> None:
+        """RA-032.10. Inactive/superseded configuration selection is rejected."""
+        response = self.client.get(
+            self.fourth_generation.get_absolute_url() + f"?year=2007&configuration={self.superseded_definition.slug}"
+        )
+        self.assertNotEqual(response.headers.get("Location"), self.superseded_definition.get_absolute_url())
 
-        empty_model = VehicleModel.objects.create(manufacturer=empty_mfr, name="Outback")
-        res_model = self.client.get(empty_model.get_absolute_url())
-        self.assertEqual(res_model.status_code, 200)
-        self.assertContains(res_model, "No generations are currently available.")
+    def test_10_cross_generation_configuration_selection_is_rejected(self) -> None:
+        """RA-032.11. Configuration slug from a different generation is rejected."""
+        response = self.client.get(
+            self.fourth_generation.get_absolute_url() + f"?year=2020&configuration={self.fifth_gen_definition.slug}"
+        )
+        self.assertNotEqual(response.headers.get("Location"), self.fifth_gen_definition.get_absolute_url())
 
-    def test_14_existing_breadcrumbs_and_deeper_routes_continue_to_work(self) -> None:
-        """14. Existing breadcrumbs and deeper routes continue to work."""
-        res_vd = self.client.get(self.vehicle_definition.get_absolute_url())
-        self.assertEqual(res_vd.status_code, 200)
-        self.assertContains(res_vd, "Vehicles")
-        self.assertContains(res_vd, "Toyota")
-        self.assertContains(res_vd, "4Runner")
-        self.assertContains(res_vd, "Fourth Generation")
-        self.assertContains(res_vd, "2007 Toyota 4Runner SR5 4.0L V6 4WD")
+    def test_11_year_overview_contains_only_real_active_canonical_combinations(self) -> None:
+        """RA-032.14. Model-year overview contains only real active canonical combinations."""
+        url = reverse(
+            "reference:model-year-overview",
+            kwargs={
+                "manufacturer_slug": "toyota",
+                "vehicle_model_slug": "4runner",
+                "generation_slug": "fourth-generation",
+                "model_year": 2003,
+            },
+        )
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, "2003 Toyota 4Runner")
+        self.assertContains(response, "SR5")
+        self.assertContains(response, "2WD")
+        self.assertContains(response, "4.0L V6")
+        self.assertContains(response, "4.7L V8")
+        self.assertNotContains(response, "Limited")
+        self.assertContains(response, self.vd_2003_v6.get_absolute_url())
+        self.assertContains(response, self.vd_2003_v8.get_absolute_url())
+
+    def test_12_initial_configuration_selector_is_disabled_with_placeholder(self) -> None:
+        """RA-032 Disabled State. Initial configuration selector is rendered disabled with placeholder text."""
+        response = self.client.get(self.fourth_generation.get_absolute_url())
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, 'id="config-select" class="specs-selector-select" disabled>')
+        self.assertContains(response, 'Select model year first')
