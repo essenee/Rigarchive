@@ -22,9 +22,19 @@ class ReferenceViewTests(TestCase):
             defaults={"country_code": "US"},
         )
 
+        cls.unpopulated_mfr, _ = Manufacturer.objects.get_or_create(
+            name="UnpopulatedMfr",
+            defaults={"country_code": "DE"},
+        )
+
         cls.four_runner, _ = VehicleModel.objects.get_or_create(
             manufacturer=cls.toyota,
             name="4Runner",
+        )
+
+        cls.unpopulated_model, _ = VehicleModel.objects.get_or_create(
+            manufacturer=cls.unpopulated_mfr,
+            name="UnpopulatedModel",
         )
 
         cls.bronco, _ = VehicleModel.objects.get_or_create(
@@ -120,6 +130,16 @@ class ReferenceViewTests(TestCase):
             model_year=2020,
             trim_name="TRD Pro",
             engine_name="4.0L V6",
+            drivetrain=VehicleDefinition.Drivetrain.FOUR_WHEEL_DRIVE,
+            market=VehicleDefinition.Market.UNITED_STATES,
+            is_active=True,
+        )
+
+        cls.vd_bronco, _ = VehicleDefinition.objects.get_or_create(
+            generation=cls.bronco_gen1,
+            model_year=1970,
+            trim_name="Base",
+            engine_name="4.9L V8",
             drivetrain=VehicleDefinition.Drivetrain.FOUR_WHEEL_DRIVE,
             market=VehicleDefinition.Market.UNITED_STATES,
             is_active=True,
@@ -254,3 +274,40 @@ class ReferenceViewTests(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, 'id="config-select" class="specs-selector-select" disabled>')
         self.assertContains(response, 'Select model year first')
+
+    def test_13_unpopulated_manufacturers_and_models_are_excluded_from_index(self) -> None:
+        """RA-033 Public Visibility. Unpopulated taxonomy remains in database but is excluded publicly until populated."""
+        # 1. Verify unpopulated entities exist validly in the database
+        self.assertTrue(Manufacturer.objects.filter(name="UnpopulatedMfr").exists())
+        self.assertTrue(VehicleModel.objects.filter(name="UnpopulatedModel").exists())
+
+        # 2. Verify they do NOT render on public /vehicles/ archive index
+        response = self.client.get(reverse("reference:manufacturer-list"))
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, "Toyota")
+        self.assertContains(response, "4Runner")
+        self.assertNotContains(response, "UnpopulatedMfr")
+        self.assertNotContains(response, "UnpopulatedModel")
+
+        # 3. Populate an active VehicleDefinition under UnpopulatedMfr / UnpopulatedModel
+        gen, _ = Generation.objects.get_or_create(
+            vehicle_model=self.unpopulated_model,
+            name="First Generation",
+            slug="first-gen-unpop",
+            defaults={"start_year": 2020},
+        )
+        VehicleDefinition.objects.create(
+            generation=gen,
+            model_year=2020,
+            trim_name="Base",
+            engine_name="2.0L I4",
+            drivetrain=VehicleDefinition.Drivetrain.TWO_WHEEL_DRIVE,
+            market=VehicleDefinition.Market.UNITED_STATES,
+            is_active=True,
+        )
+
+        # 4. Verify they now render on public /vehicles/ archive index
+        pop_response = self.client.get(reverse("reference:manufacturer-list"))
+        self.assertEqual(pop_response.status_code, 200)
+        self.assertContains(pop_response, "UnpopulatedMfr")
+        self.assertContains(pop_response, "UnpopulatedModel")

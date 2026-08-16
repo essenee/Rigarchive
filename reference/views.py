@@ -30,11 +30,24 @@ class ManufacturerListView(ListView):
     context_object_name = "manufacturers"
 
     def get_queryset(self):
-        return Manufacturer.objects.filter(is_active=True).prefetch_related(
-            Prefetch(
-                "vehicle_models",
-                queryset=VehicleModel.objects.filter(is_active=True),
-                to_attr="active_vehicle_models",
+        return (
+            Manufacturer.objects.filter(
+                is_active=True,
+                vehicle_models__is_active=True,
+                vehicle_models__generations__is_active=True,
+                vehicle_models__generations__vehicle_definitions__is_active=True,
+            )
+            .distinct()
+            .prefetch_related(
+                Prefetch(
+                    "vehicle_models",
+                    queryset=VehicleModel.objects.filter(
+                        is_active=True,
+                        generations__is_active=True,
+                        generations__vehicle_definitions__is_active=True,
+                    ).distinct(),
+                    to_attr="active_vehicle_models",
+                )
             )
         )
 
@@ -50,17 +63,29 @@ class ManufacturerDetailView(DetailView):
     slug_url_kwarg = "manufacturer_slug"
 
     def get_queryset(self):
-        return Manufacturer.objects.filter(is_active=True).prefetch_related(
-            Prefetch(
-                "vehicle_models",
-                queryset=VehicleModel.objects.filter(is_active=True).prefetch_related(
-                    Prefetch(
-                        "generations",
-                        queryset=Generation.objects.filter(is_active=True),
-                        to_attr="active_generations",
+        return (
+            Manufacturer.objects.filter(is_active=True)
+            .prefetch_related(
+                Prefetch(
+                    "vehicle_models",
+                    queryset=VehicleModel.objects.filter(
+                        is_active=True,
+                        generations__is_active=True,
+                        generations__vehicle_definitions__is_active=True,
                     )
-                ),
-                to_attr="active_vehicle_models",
+                    .distinct()
+                    .prefetch_related(
+                        Prefetch(
+                            "generations",
+                            queryset=Generation.objects.filter(
+                                is_active=True,
+                                vehicle_definitions__is_active=True,
+                            ).distinct(),
+                            to_attr="active_generations",
+                        )
+                    ),
+                    to_attr="active_vehicle_models",
+                )
             )
         )
 
