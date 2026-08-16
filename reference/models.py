@@ -220,9 +220,9 @@ class VehicleDefinition(BaseModel):
         OTHER = "OT", "Other"
 
     class Drivetrain(models.TextChoices):
-        TWO_WHEEL_DRIVE = "2WD", "Two-wheel drive"
-        FOUR_WHEEL_DRIVE = "4WD", "Four-wheel drive"
-        ALL_WHEEL_DRIVE = "AWD", "All-wheel drive"
+        TWO_WHEEL_DRIVE = "2WD", "2WD"
+        FOUR_WHEEL_DRIVE = "4WD", "4WD"
+        ALL_WHEEL_DRIVE = "AWD", "AWD"
         UNKNOWN = "UNK", "Unknown"
 
     generation = models.ForeignKey(
@@ -450,4 +450,94 @@ class ImportExecutionReceipt(BaseModel):
         return (
             f"ImportExecutionReceipt {self.uuid} ({self.execution_outcome} - "
             f"{self.target_slug})"
+        )
+
+
+class CanonicalRecordCorrection(BaseModel):
+    """
+    Durable audit record detailing the correction and supersession of an invalid or obsolete
+    canonical VehicleDefinition record by a corrected replacement VehicleDefinition record.
+
+    Captures foreign key references to both superseded and replacement records, immutable identity
+    snapshots, correction reason classification, operator label, and linkage to execution receipts.
+    """
+
+    class CorrectionReason(models.TextChoices):
+        NORMALIZATION_RULE_CORRECTION = (
+            "NORMALIZATION_RULE_CORRECTION",
+            "Normalization Rule Correction",
+        )
+        SOURCE_EVIDENCE_CORRECTION = (
+            "SOURCE_EVIDENCE_CORRECTION",
+            "Source Evidence Correction",
+        )
+        ADJUDICATED_SPECIFICATION_CORRECTION = (
+            "ADJUDICATED_SPECIFICATION_CORRECTION",
+            "Adjudicated Specification Correction",
+        )
+        OTHER = "OTHER", "Other"
+
+    superseded_vehicle_definition = models.ForeignKey(
+        VehicleDefinition,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name="superseded_by_corrections",
+        help_text="The historical canonical VehicleDefinition being superseded (is_active=False).",
+    )
+
+    replacement_vehicle_definition = models.ForeignKey(
+        VehicleDefinition,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name="replacement_corrections",
+        help_text="The active replacement canonical VehicleDefinition.",
+    )
+
+    # Immutable Audit Snapshots
+    superseded_vehicle_definition_pk_snapshot = models.IntegerField(
+        null=True, blank=True
+    )
+    superseded_vehicle_definition_uuid_snapshot = models.CharField(
+        max_length=36, blank=True
+    )
+    superseded_vehicle_definition_slug_snapshot = models.CharField(
+        max_length=180, blank=True
+    )
+
+    replacement_vehicle_definition_pk_snapshot = models.IntegerField(
+        null=True, blank=True
+    )
+    replacement_vehicle_definition_uuid_snapshot = models.CharField(
+        max_length=36, blank=True
+    )
+    replacement_vehicle_definition_slug_snapshot = models.CharField(
+        max_length=180, blank=True
+    )
+
+    correction_reason = models.CharField(
+        max_length=100,
+        default=CorrectionReason.NORMALIZATION_RULE_CORRECTION,
+    )
+    operator_label = models.CharField(max_length=150, default="cli")
+    notes = models.TextField(blank=True)
+
+    execution_receipt = models.ForeignKey(
+        ImportExecutionReceipt,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name="correction_audit_records",
+        help_text="The execution receipt associated with the replacement promotion.",
+    )
+
+    class Meta:
+        ordering = ("-created_at",)
+
+    def __str__(self) -> str:
+        return (
+            f"CanonicalRecordCorrection {self.uuid}: "
+            f"{self.superseded_vehicle_definition_slug_snapshot} -> "
+            f"{self.replacement_vehicle_definition_slug_snapshot}"
         )

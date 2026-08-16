@@ -267,7 +267,7 @@ class ManufacturerIngestionTestCase(TestCase):
         self.assertEqual(drive_8664, "4WD")
 
         self.assertEqual(trim_8668, "Limited")
-        self.assertEqual(drive_8668, "AWD")
+        self.assertEqual(drive_8668, "4WD")
 
     def test_candidate_construction_from_manufacturer_spec(self):
         """Test construct_candidate_configuration converts manufacturer assertions into a valid candidate document."""

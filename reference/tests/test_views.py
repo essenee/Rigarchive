@@ -12,25 +12,27 @@ from reference.models import (
 class ReferenceViewTests(TestCase):
     @classmethod
     def setUpTestData(cls) -> None:
-        cls.toyota = Manufacturer.objects.create(
+        cls.toyota, _ = Manufacturer.objects.get_or_create(
             name="Toyota",
-            country_code="JP",
+            defaults={"country_code": "JP"},
         )
 
-        cls.four_runner = VehicleModel.objects.create(
+        cls.four_runner, _ = VehicleModel.objects.get_or_create(
             manufacturer=cls.toyota,
             name="4Runner",
         )
 
-        cls.fourth_generation = Generation.objects.create(
+        cls.fourth_generation, _ = Generation.objects.get_or_create(
             vehicle_model=cls.four_runner,
             name="Fourth Generation",
-            generation_number=4,
-            start_year=2003,
-            end_year=2009,
+            defaults={
+                "generation_number": 4,
+                "start_year": 2003,
+                "end_year": 2009,
+            },
         )
 
-        cls.vehicle_definition = VehicleDefinition.objects.create(
+        cls.vehicle_definition, _ = VehicleDefinition.objects.get_or_create(
             generation=cls.fourth_generation,
             model_year=2007,
             trim_name="SR5",
@@ -81,7 +83,7 @@ class ReferenceViewTests(TestCase):
         self.assertContains(response, "2007")
         self.assertContains(response, "SR5")
         self.assertContains(response, "4.0L V6")
-        self.assertContains(response, "Four-wheel drive")
+        self.assertContains(response, "4WD")
         self.assertContains(response, "United States")
 
     def test_inactive_manufacturer_is_not_public(self) -> None:

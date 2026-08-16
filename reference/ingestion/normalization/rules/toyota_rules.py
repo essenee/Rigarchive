@@ -60,6 +60,7 @@ def normalize_toyota_drivetrain(raw_drive: Any) -> Tuple[Optional[str], Optional
     """
     Normalize Toyota drivetrain descriptor into generic classification and architecture.
     Returns (generic_classification, drivetrain_architecture).
+    Enforces invariant: Full-time 4WD -> generic_drive_classification = 4WD, drivetrain_architecture = Full-time 4WD.
     """
     if not raw_drive or not isinstance(raw_drive, str):
         return None, None
@@ -68,9 +69,13 @@ def normalize_toyota_drivetrain(raw_drive: Any) -> Tuple[Optional[str], Optional
 
     if clean_str in ("2WD", "4X2", "REAR-WHEEL DRIVE"):
         return "2WD", "2WD"
-    elif clean_str in ("PART-TIME 4WD", "PART-TIME 4X4", "4WD", "4X4"):
+    elif clean_str in ("PART-TIME 4WD", "PART-TIME 4X4"):
         return "4WD", "Part-time 4WD"
-    elif clean_str in ("FULL-TIME 4WD", "FULL-TIME 4X4", "AWD", "ALL-WHEEL DRIVE"):
-        return "AWD", "Full-time 4WD"
+    elif clean_str in ("FULL-TIME 4WD", "FULL-TIME 4X4"):
+        return "4WD", "Full-time 4WD"
+    elif clean_str in ("4WD", "4X4"):
+        return "4WD", "4WD"
+    elif clean_str in ("AWD", "ALL-WHEEL DRIVE"):
+        return "AWD", "AWD"
 
     return None, None
