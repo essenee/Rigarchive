@@ -592,23 +592,24 @@ RigArchive/
 - Milestone 24: Drivetrain Semantic Preservation, Public Display & Canonical Record Correction Lifecycle (✅ Complete — RA-029)
 - Milestone 25: Public Vehicle Navigation Hierarchy (✅ Complete — RA-030)
 - Milestone 26: US-Market Generation Bootstrap & Full Configuration Population (✅ Complete — RA-031)
+- Milestone 27: Generation Landing Pages, Model-Year Overview & Detailed Specs Navigation (✅ Complete — RA-032)
 
 
 13. Current Repository Status
 The repository currently contains:
 - Functional Django project
-- Passing test suite (243 tests passing cleanly across full test suite)
+- Passing test suite (241 tests passing cleanly across full test suite)
 - Shared core infrastructure (`core` app with `UUIDModel`, `TimestampedModel`, `BaseModel`)
 - Reference Data Ingestion package (`reference/ingestion/` with contracts, serialization, validation, `acquisition/` adapters, profiles & extractors including `JDPowerProfile`, `JDPowerExtractor`, `WikipediaExtractor`, `normalization/` normalizers including `JDPowerNormalizer`, `candidate/` builder, `importing/` importer, planner, & `correction.py` correction workflow, `manifest.py` review manifest & `PopulationBatchManifest`, and `orchestration/` `MultiSourceOrchestrator` & `GenerationBootstrapOrchestrator`)
 - Safe read-only inspection and batch execution tooling (`inspect_reference_state`, `execute_population_batch`, `snapshot_db`, `export_dev_data`, `verify_dev_data`)
 - Accessible application shell and UX foundation (`templates/base.html`, `about.html`, `404.html`, `500.html`)
 - Observation Domain foundation (`observation` app with `Observation` model)
-- Public reference browser (`templates/reference/` with progressive Manufacturer → Model → Generation → Configuration navigation hierarchy, grid card component presentation, and breadcrumb navigation)
+- Public reference browser (`templates/reference/` with progressive Manufacturer → Model → Generation → Model-Year Overview → Configuration navigation hierarchy, GT Carlot compact thumbnail cards, Wikipedia-style Overview infobox, Detailed Specs selector with dynamic year filtering and initial disabled state, and breadcrumb navigation)
 - Admin interface with read-only audit log viewers (`ImportExecutionReceiptAdmin`, `CanonicalRecordCorrectionAdmin`)
 - Stable migration history (0001_initial, 0002_importexecutionreceipt, 0003_importexecutionreceipt_adjudication_hash, 0004_alter_vehicledefinition_drivetrain, 0005_canonicalrecordcorrection)
 - Populated Architectural Decision Records (ADR-0001 through ADR-0008)
 - Approved Architecture Design Documents (RA-006, RA-008, RA-010, RA-011, RA-014, RA-016, RA-018, RA-020, RA-022, RA-024, RA-025)
 - Gemini CLI project instructions (GEMINI.md)
 - Task-based implementation workflow (docs/implementation/tasks/)
-- Completed implementation tasks: RA-003, RA-005, RA-007, RA-009, RA-012, RA-013, RA-015, RA-017, RA-019, RA-021, RA-023, RA-024, RA-026, RA-027, RA-028, RA-029, RA-030, RA-031 — US-Market Generation Bootstrap & Full Configuration Population
+- Completed implementation tasks: RA-003, RA-005, RA-007, RA-009, RA-012, RA-013, RA-015, RA-017, RA-019, RA-021, RA-023, RA-024, RA-026, RA-027, RA-028, RA-029, RA-030, RA-031, RA-032 — Generation Landing Pages, Model-Year Overview & Detailed Specs Navigation
 - Approved Architecture/Research tasks: RA-010, RA-011, RA-014, RA-016, RA-018, RA-020, RA-022, RA-024, RA-025
