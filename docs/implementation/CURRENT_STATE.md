@@ -393,6 +393,16 @@ Powertrain Display / Identity Semantics — Deferred
   - multi-motor electrified systems.
 - **Semantic Boundary**: This is a DEFERRED modeling decision. Current Sixth Generation 4Runner populated data is not being declared incorrect, RA-039 does not need to be reopened, no schema change or migration is authorized, no normalization redesign is authorized, and existing canonical records remain unchanged. The principal unresolved question is whether `engine_name` should represent a complete powertrain description or whether engine identity, forced induction, and electrification should be independent structured concepts composed for public display.
 
+Milestone 32 — Operator Workflow Hardening
+
+Implementation Task:
+RA-040 — Operator Workflow Hardening: Eliminate Routine Ad-Hoc `python -c` Django Operations (Completed)
+- Implemented `plan_generation_population` management command (`reference/management/commands/plan_generation_population.py`) to build, summarize, and optionally save deterministic `PopulationBatchManifest` JSON files without executing canonical database writes.
+- Extended `inspect_reference_state` management command with `--by-year` flag to group matching `VehicleDefinition` records by `model_year` cleanly in text and JSON formats while preserving strict read-only guarantees.
+- Standardized canonical routine generation ingestion sequence: `inspect_reference_state --by-year` -> `plan_generation_population -o <file>` -> `execute_population_batch --manifest <file>` -> `inspect_reference_state` -> verification commands, eliminating routine dependency on ad-hoc `.venv/bin/python -c` inline scripts.
+- Preserved existing batch authorization boundaries, manifest hash verification, stale-plan revalidation, receipt audit provenance, and execution atomicity.
+- Added comprehensive unit tests in `reference/tests/test_operator_workflow.py` bringing test suite to **272/272 tests passing cleanly**.
+
 
 7. Architectural Decision Records (ADRs)
 Implemented and Accepted:
@@ -632,15 +642,16 @@ RigArchive/
 - Milestone 29: Multi-Model Generation Bootstrap & Complete Configuration Population for Toyota Tacoma & Volkswagen Touareg (✅ Complete — RA-036)
 - Milestone 30: Complete Remaining Toyota 4Runner Generations Bootstrap & Population (✅ Complete — RA-038)
 - Milestone 31: Complete Fifth Generation & Add Sixth Generation Toyota 4Runner (✅ Complete — RA-039)
+- Milestone 32: Operator Workflow Hardening (✅ Complete — RA-040)
 
 
 13. Current Repository Status
 The repository currently contains:
 - Functional Django project
-- Passing test suite (260 tests passing cleanly across full test suite)
+- Passing test suite (272 tests passing cleanly across full test suite)
 - Shared core infrastructure (`core` app with `UUIDModel`, `TimestampedModel`, `BaseModel`)
 - Reference Data Ingestion package (`reference/ingestion/` with contracts, serialization, validation, `acquisition/` adapters, profiles & extractors including `JDPowerProfile`, `JDPowerExtractor`, `WikipediaExtractor`, `normalization/` normalizers including `JDPowerNormalizer`, `rules/` for `toyota_rules.py` and `volkswagen_rules.py`, `candidate/` builder, `importing/` importer, planner, & `correction.py` correction workflow, `manifest.py` review manifest & `PopulationBatchManifest`, and `orchestration/` `MultiSourceOrchestrator` & `GenerationBootstrapOrchestrator`)
-- Safe read-only inspection and batch execution tooling (`inspect_reference_state`, `execute_population_batch`, `snapshot_db`, `export_dev_data`, `verify_dev_data`)
+- Safe read-only inspection, planning, and batch execution tooling (`inspect_reference_state`, `plan_generation_population`, `execute_population_batch`, `snapshot_db`, `export_dev_data`, `verify_dev_data`)
 - Accessible application shell and UX foundation (`templates/base.html`, `about.html`, `404.html`, `500.html`)
 - Observation Domain foundation (`observation` app with `Observation` model)
 - Public reference browser (`templates/reference/` with progressive Manufacturer → Model → Generation → Model-Year Overview → Configuration navigation hierarchy, GT Carlot compact thumbnail cards, Wikipedia-style Overview infobox, Detailed Specs selector with dynamic year filtering and initial disabled state, and breadcrumb navigation)
@@ -650,5 +661,5 @@ The repository currently contains:
 - Approved Architecture Design Documents (RA-006, RA-008, RA-010, RA-011, RA-014, RA-016, RA-018, RA-020, RA-022, RA-024, RA-025)
 - Gemini CLI project instructions (GEMINI.md)
 - Task-based implementation workflow (docs/implementation/tasks/)
-- Completed implementation tasks: RA-003, RA-005, RA-007, RA-009, RA-012, RA-013, RA-015, RA-017, RA-019, RA-021, RA-023, RA-024, RA-026, RA-027, RA-028, RA-029, RA-030, RA-031, RA-032, RA-034, RA-036 — Multi-Model Generation Bootstrap, RA-037 — Generation Image Correction, RA-038 — Complete Remaining Toyota 4Runner Generations, RA-039 — Complete Fifth Generation & Add Sixth Generation Toyota 4Runner
+- Completed implementation tasks: RA-003, RA-005, RA-007, RA-009, RA-012, RA-013, RA-015, RA-017, RA-019, RA-021, RA-023, RA-024, RA-026, RA-027, RA-028, RA-029, RA-030, RA-031, RA-032, RA-034, RA-036 — Multi-Model Generation Bootstrap, RA-037 — Generation Image Correction, RA-038 — Complete Remaining Toyota 4Runner Generations, RA-039 — Complete Fifth Generation & Add Sixth Generation Toyota 4Runner, RA-040 — Operator Workflow Hardening
 - Approved Architecture/Research tasks: RA-010, RA-011, RA-014, RA-016, RA-018, RA-020, RA-022, RA-024, RA-025

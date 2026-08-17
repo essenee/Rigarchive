@@ -79,6 +79,11 @@ class Command(BaseCommand):
             help="Filter by drivetrain (e.g. '4WD').",
         )
         parser.add_argument(
+            "--by-year",
+            action="store_true",
+            help="Group filtered matching VehicleDefinitions by model year.",
+        )
+        parser.add_argument(
             "--include-inactive",
             action="store_true",
             help="Include superseded or inactive VehicleDefinitions in output.",
@@ -123,6 +128,32 @@ class Command(BaseCommand):
             qs = qs.filter(drivetrain__iexact=options["drivetrain"].strip())
 
         qs = qs.order_by("model_year", "trim_name", "engine_name", "drivetrain")
+
+        # Handle By-Year Grouping Mode
+        if options["by_year"]:
+            years = sorted(list(set(qs.values_list("model_year", flat=True))))
+            year_data = []
+            for yr in years:
+                yr_qs = qs.filter(model_year=yr)
+                active_cnt = yr_qs.filter(is_active=True).count()
+                inactive_cnt = yr_qs.filter(is_active=False).count()
+                year_data.append({
+                    "model_year": yr,
+                    "active_count": active_cnt,
+                    "inactive_count": inactive_cnt,
+                    "total_count": yr_qs.count(),
+                })
+
+            if is_json:
+                self.stdout.write(json.dumps({"years": year_data, "total_records": qs.count()}, indent=2))
+            else:
+                self.stdout.write(self.style.SUCCESS(f"=== RIGARCHIVE INVENTORY BY MODEL YEAR ({len(year_data)} model years matching) ==="))
+                for yd in year_data:
+                    self.stdout.write(
+                        f"Year {yd['model_year']}: {yd['active_count']} active / {yd['inactive_count']} inactive (total {yd['total_count']})"
+                    )
+                self.stdout.write(f"Total matching records: {qs.count()}")
+            return
 
         # Handle Summary Mode
         if options["summary"]:
