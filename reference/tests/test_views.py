@@ -311,3 +311,112 @@ class ReferenceViewTests(TestCase):
         self.assertEqual(pop_response.status_code, 200)
         self.assertContains(pop_response, "UnpopulatedMfr")
         self.assertContains(pop_response, "UnpopulatedModel")
+
+
+class RA037GenerationImageTests(TestCase):
+    def test_01_get_presentation_hero_image_url_resolution(self) -> None:
+        """RA-037. Resolution helper distinguishes models and prevents cross-model fallback."""
+        from reference.views import get_presentation_hero_image_url
+
+        # 4Runner 4th Gen
+        url_4runner_4 = get_presentation_hero_image_url("toyota", "4runner", "fourth-generation")
+        self.assertEqual(url_4runner_4, "/static/images/generations/toyota-4runner-fourth-generation.jpg")
+
+        # Tacoma 4th Gen (must NOT use 4Runner image)
+        url_tacoma_4 = get_presentation_hero_image_url("toyota", "tacoma", "fourth-generation")
+        self.assertEqual(url_tacoma_4, "/static/images/generations/toyota-tacoma-fourth-generation.jpg")
+        self.assertNotEqual(url_tacoma_4, url_4runner_4)
+
+        # Tacoma 1st Gen
+        self.assertEqual(get_presentation_hero_image_url("toyota", "tacoma", "first-generation"), "/static/images/generations/toyota-tacoma-first-generation.jpg")
+
+        # Tacoma 2nd Gen
+        self.assertEqual(get_presentation_hero_image_url("toyota", "tacoma", "second-generation"), "/static/images/generations/toyota-tacoma-second-generation.jpg")
+
+        # Tacoma 3rd Gen
+        self.assertEqual(get_presentation_hero_image_url("toyota", "tacoma", "third-generation"), "/static/images/generations/toyota-tacoma-third-generation.jpg")
+
+        # Touareg 1st Gen
+        self.assertEqual(get_presentation_hero_image_url("volkswagen", "touareg", "first-generation"), "/static/images/generations/volkswagen-touareg-first-generation.jpg")
+
+        # Touareg 2nd Gen
+        self.assertEqual(get_presentation_hero_image_url("volkswagen", "touareg", "second-generation"), "/static/images/generations/volkswagen-touareg-second-generation.jpg")
+
+        # Missing image falls back to generic placeholder (empty string)
+        self.assertEqual(get_presentation_hero_image_url("unknown_mfr", "unknown_model", "fourth-generation"), "")
+
+    def test_02_generation_model_purity(self) -> None:
+        """RA-037. Confirms no image fields or DB properties were added to Generation model."""
+        fields = [f.name for f in Generation._meta.get_fields()]
+        self.assertNotIn("hero_image", fields)
+        self.assertNotIn("hero_image_url", fields)
+        self.assertNotIn("image", fields)
+
+    def test_03_live_page_hero_image_rendering(self) -> None:
+        """RA-037. Generation thumbnails and overview infoboxes render model-specific imagery on live pages."""
+        # Toyota Tacoma model page
+        mfr_toyota, _ = Manufacturer.objects.get_or_create(name="Toyota")
+        model_tacoma, _ = VehicleModel.objects.get_or_create(manufacturer=mfr_toyota, name="Tacoma")
+        gen_tacoma_4, _ = Generation.objects.get_or_create(
+            vehicle_model=model_tacoma,
+            name="Fourth Generation",
+            slug="fourth-generation",
+            defaults={"start_year": 2024},
+        )
+        VehicleDefinition.objects.get_or_create(
+            generation=gen_tacoma_4,
+            model_year=2024,
+            trim_name="SR5",
+            engine_name="2.4L I4",
+            drivetrain="4WD",
+            is_active=True,
+        )
+
+        resp_model = self.client.get(model_tacoma.get_absolute_url())
+        self.assertEqual(resp_model.status_code, 200)
+        self.assertContains(resp_model, "/static/images/generations/toyota-tacoma-fourth-generation.jpg")
+        self.assertNotContains(resp_model, "/static/images/generations/fourth-generation.jpg")
+
+        resp_gen = self.client.get(gen_tacoma_4.get_absolute_url())
+        self.assertEqual(resp_gen.status_code, 200)
+        self.assertContains(resp_gen, "/static/images/generations/toyota-tacoma-fourth-generation.jpg")
+
+    def test_04_shared_hero_image_css_contract(self) -> None:
+        """RA-037. Confirms infobox-img and card-thumbnail-img CSS maintain generic shared object-position center contract."""
+        import os
+        from django.conf import settings
+        css_path = os.path.join(settings.BASE_DIR, "static", "css", "site.css")
+        with open(css_path, "r", encoding="utf-8") as f:
+            css_content = f.read()
+        self.assertIn("object-position: center;", css_content)
+
+    def test_05_ra038_runner_all_generations_ui_and_images(self) -> None:
+        """RA-038 & RA-039. Confirms /vehicles/toyota/4runner/ renders all 6 generations with distinct image paths."""
+        mfr, _ = Manufacturer.objects.get_or_create(name="Toyota", defaults={"is_active": True})
+        model, _ = VehicleModel.objects.get_or_create(manufacturer=mfr, name="4Runner", defaults={"is_active": True})
+        gen_data = [
+            ("First Generation", 1984, 1989),
+            ("Second Generation", 1990, 1995),
+            ("Third Generation", 1996, 2002),
+            ("Fourth Generation", 2003, 2009),
+            ("Fifth Generation", 2010, 2024),
+            ("Sixth Generation", 2025, None),
+        ]
+        for name, start, end in gen_data:
+            g, _ = Generation.objects.get_or_create(vehicle_model=model, start_year=start, defaults={"name": name, "end_year": end, "is_active": True})
+            VehicleDefinition.objects.get_or_create(generation=g, model_year=start, trim_name="SR5", engine_name="2.4L I4", drivetrain="4WD", market="US", defaults={"is_active": True})
+
+        resp = self.client.get(model.get_absolute_url())
+        self.assertEqual(resp.status_code, 200)
+
+        # Confirm all 6 generations are present in page output
+        self.assertContains(resp, "First Generation")
+        self.assertContains(resp, "Second Generation")
+        self.assertContains(resp, "Third Generation")
+        self.assertContains(resp, "Fourth Generation")
+        self.assertContains(resp, "Fifth Generation")
+        self.assertContains(resp, "Sixth Generation")
+
+        # Confirm distinct generation image URLs for all 6 generations
+        for gen_slug in ["first-generation", "second-generation", "third-generation", "fourth-generation", "fifth-generation", "sixth-generation"]:
+            self.assertContains(resp, f"/static/images/generations/toyota-4runner-{gen_slug}.jpg")

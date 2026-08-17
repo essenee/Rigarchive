@@ -1,0 +1,127 @@
+{
+  "_provenance": {
+    "source_id": "toyota_usa",
+    "source_type": "manufacturer_pressroom",
+    "source_locator": "https://pressroom.toyota.com/album/2025-toyota-4runner-specs/",
+    "native_record_id": "toyota_4runner_2025_pressroom",
+    "is_exhaustive_enumeration": true
+  },
+  "make": "Toyota",
+  "model": "4Runner",
+  "model_year": 2025,
+  "market": "US",
+  "configurations": [
+    {
+      "trim": "SR5",
+      "engine_name": "2.4L Turbo I4",
+      "engine_displacement_liters": 2.4,
+      "engine_cylinders": 4,
+      "drivetrain": "2WD"
+    },
+    {
+      "trim": "SR5",
+      "engine_name": "2.4L Turbo I4",
+      "engine_displacement_liters": 2.4,
+      "engine_cylinders": 4,
+      "drivetrain": "4WD"
+    },
+    {
+      "trim": "TRD Sport",
+      "engine_name": "2.4L Turbo I4",
+      "engine_displacement_liters": 2.4,
+      "engine_cylinders": 4,
+      "drivetrain": "2WD"
+    },
+    {
+      "trim": "TRD Sport",
+      "engine_name": "2.4L Turbo I4",
+      "engine_displacement_liters": 2.4,
+      "engine_cylinders": 4,
+      "drivetrain": "4WD"
+    },
+    {
+      "trim": "TRD Sport Premium",
+      "engine_name": "2.4L Turbo I4",
+      "engine_displacement_liters": 2.4,
+      "engine_cylinders": 4,
+      "drivetrain": "2WD"
+    },
+    {
+      "trim": "TRD Sport Premium",
+      "engine_name": "2.4L Turbo I4",
+      "engine_displacement_liters": 2.4,
+      "engine_cylinders": 4,
+      "drivetrain": "4WD"
+    },
+    {
+      "trim": "TRD Off-Road",
+      "engine_name": "2.4L Turbo I4",
+      "engine_displacement_liters": 2.4,
+      "engine_cylinders": 4,
+      "drivetrain": "4WD"
+    },
+    {
+      "trim": "TRD Off-Road",
+      "engine_name": "2.4L Turbo Hybrid I4",
+      "engine_displacement_liters": 2.4,
+      "engine_cylinders": 4,
+      "drivetrain": "4WD"
+    },
+    {
+      "trim": "TRD Off-Road Premium",
+      "engine_name": "2.4L Turbo I4",
+      "engine_displacement_liters": 2.4,
+      "engine_cylinders": 4,
+      "drivetrain": "4WD"
+    },
+    {
+      "trim": "TRD Off-Road Premium",
+      "engine_name": "2.4L Turbo Hybrid I4",
+      "engine_displacement_liters": 2.4,
+      "engine_cylinders": 4,
+      "drivetrain": "4WD"
+    },
+    {
+      "trim": "Limited",
+      "engine_name": "2.4L Turbo I4",
+      "engine_displacement_liters": 2.4,
+      "engine_cylinders": 4,
+      "drivetrain": "2WD"
+    },
+    {
+      "trim": "Limited",
+      "engine_name": "2.4L Turbo I4",
+      "engine_displacement_liters": 2.4,
+      "engine_cylinders": 4,
+      "drivetrain": "4WD"
+    },
+    {
+      "trim": "Limited",
+      "engine_name": "2.4L Turbo Hybrid I4",
+      "engine_displacement_liters": 2.4,
+      "engine_cylinders": 4,
+      "drivetrain": "4WD"
+    },
+    {
+      "trim": "Platinum",
+      "engine_name": "2.4L Turbo Hybrid I4",
+      "engine_displacement_liters": 2.4,
+      "engine_cylinders": 4,
+      "drivetrain": "4WD"
+    },
+    {
+      "trim": "TRD Pro",
+      "engine_name": "2.4L Turbo Hybrid I4",
+      "engine_displacement_liters": 2.4,
+      "engine_cylinders": 4,
+      "drivetrain": "4WD"
+    },
+    {
+      "trim": "Trailhunter",
+      "engine_name": "2.4L Turbo Hybrid I4",
+      "engine_displacement_liters": 2.4,
+      "engine_cylinders": 4,
+      "drivetrain": "4WD"
+    }
+  ]
+}

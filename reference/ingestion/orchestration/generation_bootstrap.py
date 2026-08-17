@@ -20,7 +20,7 @@ from django.db import transaction
 from reference.ingestion.acquisition.jd_power_extractor import JDPowerExtractor
 from reference.ingestion.acquisition.wikipedia import GenerationTaxonomy, WikipediaExtractor
 from reference.ingestion.candidate.builder import construct_candidate_configuration
-from reference.ingestion.contracts import CandidateIdentity, SourceMetadata
+from reference.ingestion.contracts import CandidateIdentity, SourceMetadata, SourceApplicability
 from reference.ingestion.importing.importer import execute_candidate_import
 from reference.ingestion.importing.planner import plan_candidate_import
 from reference.ingestion.normalization.jd_power import JDPowerNormalizer
@@ -180,6 +180,12 @@ class GenerationBootstrapOrchestrator:
                     source_locator=prov_meta.get("source_locator") or f"file://{fixture_path}",
                     native_record_id=prov_meta.get("native_record_id") or f"file_{yr}",
                     target_context={"make": make, "model": model, "model_year": yr, "market": market},
+                    source_applicability=SourceApplicability(
+                        market=market,
+                        applicability_basis="configuration_enumeration",
+                        publisher_jurisdiction=f"{market}-JDPower",
+                        applicability_scope="configuration",
+                    ),
                 )
 
                 assertion_sets = self.jdp_extractor.extract(raw_dict, meta)

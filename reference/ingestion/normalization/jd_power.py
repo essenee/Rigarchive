@@ -186,6 +186,18 @@ class JDPowerNormalizer(BaseSourceNormalizer):
                 except (ValueError, TypeError):
                     pass
 
+            elif key in ("engine_name", "engine_type") and val is not None:
+                interpretations.append(
+                    NormalizedInterpretation(
+                        interpretation_id=_next_id(),
+                        source_assertion_ref=ast.assertion_id,
+                        target_attribute_key="engine_name",
+                        normalized_concept=str(val).strip(),
+                        raw_source_value=val,
+                        mapping_status="mapped",
+                    )
+                )
+
             elif key == "market" and val is not None:
                 if source_app is not None and source_app.market == str(val).strip():
                     interpretations.append(

@@ -130,6 +130,18 @@ class WikipediaExtractor:
                     chassis_code="N280",
                     notes="Fifth generation Toyota 4Runner (N280 series), model years 2010–2024.",
                 ),
+                GenerationTaxonomy(
+                    make="Toyota",
+                    model="4Runner",
+                    market="US",
+                    generation_number=6,
+                    name="Sixth Generation",
+                    slug="sixth-generation",
+                    start_year=2025,
+                    end_year=None,
+                    chassis_code="N380",
+                    notes="Sixth generation Toyota 4Runner (N380 series), model years 2025–present.",
+                ),
             ]
 
         if make_norm == "toyota" and model_norm == "tacoma" and market_norm == "US":

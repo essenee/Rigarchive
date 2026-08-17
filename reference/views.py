@@ -8,15 +8,44 @@ from django.views.generic import DetailView, ListView
 from .models import Generation, Manufacturer, VehicleDefinition, VehicleModel
 
 
-def get_presentation_hero_image_url(generation_slug: str) -> str:
+def get_presentation_hero_image_url(
+    mfr_slug_or_gen,
+    model_slug: str = None,
+    generation_slug: str = None,
+) -> str:
     """
     Presentation-local helper resolving static demo images for UI preview.
+    Uses manufacturer + model + generation identity to prevent collision across models.
     Durable Generation <-> Asset association is deferred to future Asset/Media domain architecture.
     """
-    img_filename = f"images/generations/{generation_slug}.jpg"
-    static_path = os.path.join(settings.BASE_DIR, "static", img_filename)
-    if os.path.exists(static_path):
-        return f"/static/{img_filename}"
+    if hasattr(mfr_slug_or_gen, "slug"):
+        gen = mfr_slug_or_gen
+        g_slug = gen.slug
+        m_slug = gen.vehicle_model.slug if getattr(gen, "vehicle_model", None) else ""
+        mfr_s = (
+            gen.vehicle_model.manufacturer.slug
+            if getattr(gen, "vehicle_model", None)
+            and getattr(gen.vehicle_model, "manufacturer", None)
+            else ""
+        )
+    else:
+        mfr_s = str(mfr_slug_or_gen or "")
+        m_slug = str(model_slug or "")
+        g_slug = str(generation_slug or "")
+
+    # Primary model-specific lookup key: static/images/generations/{mfr_s}-{m_slug}-{g_slug}.jpg
+    if mfr_s and m_slug and g_slug:
+        primary_filename = f"images/generations/{mfr_s}-{m_slug}-{g_slug}.jpg"
+        if os.path.exists(os.path.join(settings.BASE_DIR, "static", primary_filename)):
+            return f"/static/{primary_filename}"
+
+    # Legacy fallback strictly for 4runner to preserve existing approved 4Runner images
+    if m_slug == "4runner" and g_slug:
+        legacy_filename = f"images/generations/{g_slug}.jpg"
+        if os.path.exists(os.path.join(settings.BASE_DIR, "static", legacy_filename)):
+            return f"/static/{legacy_filename}"
+
+    # No cross-model fallback: return empty string (templates render default presentation placeholder)
     return ""
 
 
@@ -94,7 +123,7 @@ class ManufacturerDetailView(DetailView):
         vehicle_models = getattr(self.object, "active_vehicle_models", [])
         for model_obj in vehicle_models:
             for gen_obj in getattr(model_obj, "active_generations", []):
-                gen_obj.hero_image_url = get_presentation_hero_image_url(gen_obj.slug)
+                gen_obj.hero_image_url = get_presentation_hero_image_url(gen_obj)
         context["vehicle_models"] = vehicle_models
         return context
 
@@ -124,7 +153,7 @@ class VehicleModelDetailView(DetailView):
         context = super().get_context_data(**kwargs)
         generations = list(self.object.generations.filter(is_active=True))
         for gen_obj in generations:
-            gen_obj.hero_image_url = get_presentation_hero_image_url(gen_obj.slug)
+            gen_obj.hero_image_url = get_presentation_hero_image_url(gen_obj)
         context["generations"] = generations
         return context
 
@@ -178,6 +207,7 @@ class GenerationDetailView(DetailView):
                 generation__slug=gen_slug,
             )
 
+            # Restrict to specified year if year parameter is also present
             if year_str and year_str.isdigit():
                 config_qs = config_qs.filter(model_year=int(year_str))
 
@@ -215,7 +245,7 @@ class GenerationDetailView(DetailView):
         context["manufacturer"] = self.object.vehicle_model.manufacturer
         context["active_model_years"] = active_years
         context["active_configurations"] = active_defs
-        context["generation_hero_image"] = get_presentation_hero_image_url(self.object.slug)
+        context["generation_hero_image"] = get_presentation_hero_image_url(self.object)
 
         # Reserved presentation hooks for future domain model integration
         # (Will require dedicated query/service integration when domains are implemented)
