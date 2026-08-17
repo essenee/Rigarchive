@@ -72,3 +72,5 @@ htmlcov/
 
 *.swp
 *.swo
+# Local acquisition artifacts
+/storage/raw_source_artifacts/
