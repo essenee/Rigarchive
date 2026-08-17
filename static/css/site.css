@@ -467,27 +467,35 @@ main {
     }
 }
 
-/* Card Thumbnail Styles (GT Carlot Compact Presentation) */
+/* Card Thumbnail Styles (GT Carlot Compact Multi-Column Presentation) */
 .generation-card-grid, .archive-nav-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.85rem;
     margin-top: 0.75rem;
     padding: 0;
     list-style: none;
+}
+
+@media (max-width: 58rem) {
+    .generation-card-grid, .archive-nav-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
 
 .generation-nav-card, .archive-nav-card {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 0.65rem 0.85rem;
+    padding: 0.6rem 0.75rem;
     background: #f8f9fa;
     border: 1px solid #e8eaed;
     border-radius: 0.375rem;
     text-decoration: none;
     color: inherit;
-    transition: border-color 0.15s ease, background-color 0.15s ease, transform 0.15s ease;
+    height: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.15s ease, background-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .generation-nav-card:hover, .archive-nav-card:hover {
@@ -504,13 +512,13 @@ main {
 }
 
 .card-thumbnail-wrap {
-    flex: 0 0 9.5rem;
-    width: 9.5rem;
-    height: 5.5rem;
+    flex: 0 0 7.5rem;
+    width: 7.5rem;
+    height: 4.5rem;
     overflow: hidden;
     border-radius: 0.25rem;
     background-color: #e8eaed;
-    margin-right: 1rem;
+    margin-right: 0.75rem;
     margin-bottom: 0;
 }
 
@@ -539,8 +547,8 @@ main {
 }
 
 .card-placeholder-icon {
-    width: 2.25rem;
-    height: 2.25rem;
+    width: 2rem;
+    height: 2rem;
 }
 
 .card-content-wrap {
@@ -551,9 +559,10 @@ main {
 }
 
 .archive-card-title, .generation-title {
-    font-size: 1.05rem;
+    font-size: 0.95rem;
     font-weight: 700;
     color: #174ea6;
+    line-height: 1.25;
 }
 
 .generation-nav-card:hover .generation-title,
@@ -562,7 +571,7 @@ main {
 }
 
 .archive-card-subtitle, .generation-years {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: #5f6368;
     margin-top: 0.2rem;
 }
@@ -836,15 +845,26 @@ main {
     }
 }
 
-@media (max-width: 36rem) {
+@media (max-width: 38rem) {
+    .generation-card-grid, .archive-nav-grid {
+        grid-template-columns: 1fr;
+    }
     .generation-nav-card, .archive-nav-card {
         flex-direction: column;
         align-items: flex-start;
     }
     .card-thumbnail-wrap {
+        flex: none;
         width: 100%;
-        height: 7.5rem;
+        height: auto;
+        aspect-ratio: 16 / 9;
         margin-right: 0;
         margin-bottom: 0.5rem;
+    }
+    .card-thumbnail-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
     }
 }
