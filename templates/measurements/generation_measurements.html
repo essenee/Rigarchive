@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+
+{% block title %}
+    {{ generation.name }} Measurements | {{ vehicle_model.name }} | RigArchive
+{% endblock %}
+
+{% block breadcrumbs %}
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+    <a href="{% url 'home' %}">Home</a>
+    <span aria-hidden="true">/</span>
+    <a href="{% url 'reference:manufacturer-list' %}">
+        Vehicles
+    </a>
+    <span aria-hidden="true">/</span>
+    <a href="{{ manufacturer.get_absolute_url }}">
+        {{ manufacturer.name }}
+    </a>
+    <span aria-hidden="true">/</span>
+    <a href="{{ vehicle_model.get_absolute_url }}">
+        {{ vehicle_model.name }}
+    </a>
+    <span aria-hidden="true">/</span>
+    <a href="{{ generation.get_absolute_url }}">
+        {{ generation.name }}
+    </a>
+    <span aria-hidden="true">/</span>
+    <span>Measurements</span>
+</nav>
+{% endblock %}
+
+{% block content %}
+<div class="generation-header">
+    <h1 class="page-title">{{ vehicle_model.name }} — {{ generation.name }} Measurements</h1>
+    <p class="archive-section-subtitle">
+        Physical vehicle measurements recorded for {{ manufacturer.name }} {{ vehicle_model.name }} ({{ generation.name }}).
+    </p>
+</div>
+
+<section class="archive-section">
+    {% if results %}
+        <div class="measurements-container">
+            <table class="measurements-table">
+                <thead>
+                    <tr>
+                        <th scope="col">Measurement Definition</th>
+                        <th scope="col">Value</th>
+                        <th scope="col">Applicability</th>
+                        <th scope="col">Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for result in results %}
+                        <tr>
+                            <td class="measurement-definition-cell">
+                                <span class="measurement-name">{{ result.definition.name }}</span>
+                                {% if result.definition.description %}
+                                    <div class="measurement-desc">{{ result.definition.description }}</div>
+                                {% endif %}
+                            </td>
+                            <td class="measurement-value-cell">
+                                <strong>{{ result.value }}</strong> <span class="measurement-unit">{{ result.unit }}</span>
+                            </td>
+                            <td class="measurement-applicability-cell">
+                                {% if result.is_generation_wide %}
+                                    <span class="applicability-badge applicability-badge-wide">Generation-wide</span>
+                                {% else %}
+                                    <div class="applicability-badge-list">
+                                        {% for cond in result.conditions.all %}
+                                            <span class="applicability-badge applicability-badge-condition">
+                                                {{ cond.state.feature.name }}: {{ cond.state.name }}
+                                            </span>
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                            </td>
+                            <td class="measurement-notes-cell">
+                                {{ result.notes|default:"—" }}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% else %}
+        <div class="empty-state-card" id="empty-measurements-state">
+            <h2 class="empty-state-title">No Physical Measurements Recorded</h2>
+            <p class="empty-state-text">
+                No physical measurements are currently recorded for this vehicle generation in the archive.
+            </p>
+            <p class="empty-state-subtext">
+                Absence of recorded measurements in RigArchive does not indicate the vehicle has no physical dimensions.
+            </p>
+        </div>
+    {% endif %}
+</section>
+{% endblock %}

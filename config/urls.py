@@ -20,6 +20,10 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path(
         "vehicles/",
+        include("measurements.urls"),
+    ),
+    path(
+        "vehicles/",
         include("reference.urls"),
     ),
 ]

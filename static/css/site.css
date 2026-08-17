@@ -868,3 +868,109 @@ main {
         object-position: center;
     }
 }
+
+/* Measurements Domain Styling */
+.measurements-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 1rem;
+    border: 1px solid var(--border-color, #e2e8f0);
+    border-radius: 6px;
+}
+
+.measurements-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    text-align: left;
+}
+
+.measurements-table th {
+    background-color: var(--table-header-bg, #f8fafc);
+    padding: 0.75rem 1rem;
+    font-weight: 600;
+    border-bottom: 2px solid var(--border-color, #e2e8f0);
+}
+
+.measurements-table td {
+    padding: 0.85rem 1rem;
+    border-bottom: 1px solid var(--border-color, #e2e8f0);
+    vertical-align: top;
+}
+
+.measurements-table tr:last-child td {
+    border-bottom: none;
+}
+
+.measurement-definition-cell .measurement-name {
+    display: block;
+    font-weight: 600;
+    color: var(--text-color, #1e293b);
+}
+
+.measurement-definition-cell .measurement-desc {
+    font-size: 0.85rem;
+    color: var(--text-secondary, #64748b);
+    margin-top: 0.2rem;
+}
+
+.measurement-value-cell {
+    white-space: nowrap;
+}
+
+.measurement-unit {
+    color: var(--text-secondary, #64748b);
+    font-size: 0.9rem;
+}
+
+.applicability-badge-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+}
+
+.applicability-badge {
+    display: inline-block;
+    padding: 0.2rem 0.55rem;
+    border-radius: 4px;
+    font-size: 0.82rem;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.applicability-badge-wide {
+    background-color: #f1f5f9;
+    color: #475569;
+    border: 1px solid #cbd5e1;
+}
+
+.applicability-badge-condition {
+    background-color: #eff6ff;
+    color: #1d4ed8;
+    border: 1px solid #bfdbfe;
+}
+
+.empty-state-card {
+    padding: 2rem;
+    background-color: var(--card-bg, #f8fafc);
+    border: 1px solid var(--border-color, #e2e8f0);
+    border-radius: 6px;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.empty-state-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.empty-state-text {
+    color: var(--text-color, #334155);
+    margin-bottom: 0.35rem;
+}
+
+.empty-state-subtext {
+    font-size: 0.88rem;
+    color: var(--text-secondary, #64748b);
+}
