@@ -137,6 +137,10 @@
                     <dt>Manufacturer</dt>
                     <dd>{{ manufacturer.name }}</dd>
                 </div>
+                <div class="infobox-meta-row">
+                    <dt>Measurements</dt>
+                    <dd><a href="{% url 'measurements:generation-measurements' manufacturer.slug vehicle_model.slug generation.slug %}">View Measurements</a></dd>
+                </div>
                 {% if generation.notes %}
                     <div class="infobox-meta-row infobox-meta-notes">
                         <dt>Notes</dt>

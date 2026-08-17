@@ -428,6 +428,23 @@ RA-042 — Measurements Domain Foundation Architecture (Approved Architecture �
 - Defined provisional v1 cargo-height taxonomy (*Cargo Opening Height*, *Cargo Height Behind Second Row*, *Maximum Cargo Interior Height*).
 - Specified vehicle-first public browser presentation (`GenerationMeasurementsView` at `/vehicles/<mfr>/<model>/<gen>/measurements/`) and designated RA-043 as the implementation milestone.
 
+Milestone 35 — Measurements Domain Foundation Implementation
+
+Implementation Task:
+RA-043 — Measurements Domain Foundation Implementation (Completed)
+- Created top-level `measurements` Django application (`measurements/`) and registered `measurements.apps.MeasurementsConfig` in `config/settings.py`.
+- Implemented models (`MeasurementDefinition`, `ApplicabilityFeature`, `ApplicabilityState`, `MeasurementResult`, `MeasurementResultCondition`) with `BaseModel` dual identity (Integer PK + UUID) and timestamps.
+- Implemented result-owned unit representation (`MeasurementResult.unit`) and protected deletion references to `reference.Generation`.
+- Implemented controlled feature applicability key-value state structure (`ApplicabilityFeature` + `ApplicabilityState`).
+- Implemented zero-condition Generation-wide applicability semantics and conjunctive multi-condition (AND) evaluation (`applicability_summary`).
+- Enforced domain validation rejecting multiple states of the same `ApplicabilityFeature` on a single `MeasurementResult`.
+- Confirmed multi-result coexistence policy (zero uniqueness constraints across `Generation + Definition + applicability`).
+- Registered Django Admin interfaces in `measurements/admin.py` with inline condition and state editors.
+- Created initial database migration `measurements/migrations/0001_initial.py`.
+- Implemented `GenerationMeasurementsView` (`/vehicles/<mfr>/<model>/<gen>/measurements/`) and template `templates/measurements/generation_measurements.html` with empty-state handling and condition badge tags.
+- Added Measurements link in Overview infobox sidebar on `templates/reference/generation_detail.html`.
+- Added comprehensive semantic test suite in `measurements/tests/` bringing total test suite count to **295/295 tests passing cleanly**.
+
 Mobile Archive Card Density & Generation Scrolling — Deferred
 - RA-041 established a compact multi-column desktop layout (`grid-template-columns: repeat(3, minmax(0, 1fr))`) for archive and generation navigation cards.
 - On mobile/narrow viewports, cards stack vertically at full width (`grid-template-columns: 1fr`). This remains functional and readable, but card/image height can produce excessive vertical scrolling for models with many generations (such as Toyota 4Runner) and manufacturers with many populated models.
@@ -686,23 +703,25 @@ RigArchive/
 - Milestone 32: Operator Workflow Hardening (✅ Complete — RA-040)
 - Milestone 33: Compact Multi-Column Archive Navigation Cards (✅ Complete — RA-041)
 - Milestone 34: Measurements Domain Foundation Architecture (✅ Approved Architecture — RA-042 / ADR-0009)
+- Milestone 35: Measurements Domain Foundation Implementation (✅ Complete — RA-043)
 
 
 13. Current Repository Status
 The repository currently contains:
 - Functional Django project
-- Passing test suite (273 tests passing cleanly across full test suite)
+- Passing test suite (295 tests passing cleanly across full test suite)
 - Shared core infrastructure (`core` app with `UUIDModel`, `TimestampedModel`, `BaseModel`)
 - Reference Data Ingestion package (`reference/ingestion/` with contracts, serialization, validation, `acquisition/` adapters, profiles & extractors including `JDPowerProfile`, `JDPowerExtractor`, `WikipediaExtractor`, `normalization/` normalizers including `JDPowerNormalizer`, `rules/` for `toyota_rules.py` and `volkswagen_rules.py`, `candidate/` builder, `importing/` importer, planner, & `correction.py` correction workflow, `manifest.py` review manifest & `PopulationBatchManifest`, and `orchestration/` `MultiSourceOrchestrator` & `GenerationBootstrapOrchestrator`)
 - Safe read-only inspection, planning, and batch execution tooling (`inspect_reference_state`, `plan_generation_population`, `execute_population_batch`, `snapshot_db`, `export_dev_data`, `verify_dev_data`)
 - Accessible application shell and UX foundation (`templates/base.html`, `about.html`, `404.html`, `500.html`)
 - Observation Domain foundation (`observation` app with `Observation` model)
+- Measurements Domain foundation (`measurements` app with `MeasurementDefinition`, `ApplicabilityFeature`, `ApplicabilityState`, `MeasurementResult`, `MeasurementResultCondition` models, admin interfaces, and public browser integration)
 - Public reference browser (`templates/reference/` with progressive Manufacturer → Model → Generation → Model-Year Overview → Configuration navigation hierarchy, GT Carlot compact multi-column thumbnail cards, Wikipedia-style Overview infobox, Detailed Specs selector with dynamic year filtering and initial disabled state, and breadcrumb navigation)
-- Admin interface with read-only audit log viewers (`ImportExecutionReceiptAdmin`, `CanonicalRecordCorrectionAdmin`)
-- Stable migration history (0001_initial, 0002_importexecutionreceipt, 0003_importexecutionreceipt_adjudication_hash, 0004_alter_vehicledefinition_drivetrain, 0005_canonicalrecordcorrection)
+- Admin interface with read-only audit log viewers (`ImportExecutionReceiptAdmin`, `CanonicalRecordCorrectionAdmin`) and Measurements management
+- Stable migration history (0001_initial, 0002_importexecutionreceipt, 0003_importexecutionreceipt_adjudication_hash, 0004_alter_vehicledefinition_drivetrain, 0005_canonicalrecordcorrection, measurements/0001_initial)
 - Populated Architectural Decision Records (ADR-0001 through ADR-0009)
 - Approved Architecture Design Documents (RA-006, RA-008, RA-010, RA-011, RA-014, RA-016, RA-018, RA-020, RA-022, RA-024, RA-025, RA-042)
 - Gemini CLI project instructions (GEMINI.md)
 - Task-based implementation workflow (docs/implementation/tasks/)
-- Completed implementation tasks: RA-003, RA-005, RA-007, RA-009, RA-012, RA-013, RA-015, RA-017, RA-019, RA-021, RA-023, RA-024, RA-026, RA-027, RA-028, RA-029, RA-030, RA-031, RA-032, RA-034, RA-036 — Multi-Model Generation Bootstrap, RA-037 — Generation Image Correction, RA-038 — Complete Remaining Toyota 4Runner Generations, RA-039 — Complete Fifth Generation & Add Sixth Generation Toyota 4Runner, RA-040 — Operator Workflow Hardening, RA-041 — Compact Multi-Column Archive Navigation Cards
+- Completed implementation tasks: RA-003, RA-005, RA-007, RA-009, RA-012, RA-013, RA-015, RA-017, RA-019, RA-021, RA-023, RA-024, RA-026, RA-027, RA-028, RA-029, RA-030, RA-031, RA-032, RA-034, RA-036 — Multi-Model Generation Bootstrap, RA-037 — Generation Image Correction, RA-038 — Complete Remaining Toyota 4Runner Generations, RA-039 — Complete Fifth Generation & Add Sixth Generation Toyota 4Runner, RA-040 — Operator Workflow Hardening, RA-041 — Compact Multi-Column Archive Navigation Cards, RA-043 — Measurements Domain Foundation Implementation
 - Approved Architecture/Research tasks: RA-010, RA-011, RA-014, RA-016, RA-018, RA-020, RA-022, RA-024, RA-025, RA-042 — Measurements Domain Foundation Architecture
