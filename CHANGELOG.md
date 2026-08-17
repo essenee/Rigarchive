@@ -4,6 +4,10 @@ All notable changes to RigArchive will be documented in this file.
 
 ## Unreleased
 
+### Changed
+
+- Compact Multi-Column Archive Navigation Cards (RA-041), converting `.archive-nav-grid` and `.generation-card-grid` containers from single-column vertical flex containers into responsive CSS Grid layouts (`grid-template-columns: repeat(3, minmax(0, 1fr))`) fitting 3 compact cards across desktop viewports, scaling to 2 columns on tablet and 1 column on mobile, refining `.card-thumbnail-wrap` dimensions to 7.5rem (120px) x 4.5rem (72px) maintaining identical aspect ratio, and adding regression tests (`test_06_ra041_compact_multi_column_card_contracts`) bringing test suite to **273/273 tests passing**.
+
 ### Added
 
 - Full US-Market Generation Bootstrap & Configuration Population package for Toyota 4Runner Fifth (2010–2024) and Sixth (2025–present) Generations (RA-039), populating 2026 model year configurations from Toyota pressroom evidence, updating `JDPowerExtractor` and `planner.py` to extract and preserve explicit hybrid powertrain display strings (`2.4L Turbo Hybrid I4` vs `2.4L Turbo I4`), executing canonical record corrections (`CanonicalRecordCorrection`) for 13 imprecise 2025 rows, populating active inventory for 2010–2018, 2021–2024, 2025, and 2026 while preserving existing 2019/2020 canonical records and 1st–4th Gen inventories intact, establishing `Sixth Generation` with ongoing `end_year=None` taxonomy, generating temporary presentation image asset (`toyota-4runner-sixth-generation.jpg`), expanding Toyota grade taxonomy (`Trail Premium`, `Platinum`, `TRD Sport Premium`, `40th Anniversary Special Edition`), and adding regression tests (`test_35_ra039_runner_fifth_and_sixth_generation_population`, `test_05_ra038_runner_all_generations_ui_and_images`) bringing test suite to **260/260 tests passing**.

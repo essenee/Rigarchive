@@ -420,3 +420,34 @@ class RA037GenerationImageTests(TestCase):
         # Confirm distinct generation image URLs for all 6 generations
         for gen_slug in ["first-generation", "second-generation", "third-generation", "fourth-generation", "fifth-generation", "sixth-generation"]:
             self.assertContains(resp, f"/static/images/generations/toyota-4runner-{gen_slug}.jpg")
+
+    def test_06_ra041_compact_multi_column_card_contracts(self) -> None:
+        """RA-041. Confirms multi-column grid containers and compact cards are present in CSS and template markup."""
+        import os
+        from django.conf import settings
+        css_path = os.path.join(settings.BASE_DIR, "static", "css", "site.css")
+        with open(css_path, "r", encoding="utf-8") as f:
+            css_content = f.read()
+
+        # CSS multi-column grid & mobile image responsiveness verification
+        self.assertIn("grid-template-columns: repeat(3, minmax(0, 1fr));", css_content)
+        self.assertIn(".generation-card-grid, .archive-nav-grid", css_content)
+        self.assertIn(".generation-nav-card, .archive-nav-card", css_content)
+        self.assertIn("aspect-ratio: 16 / 9;", css_content)
+        self.assertIn("object-fit: cover;", css_content)
+
+        # Create active test generation & vehicle definition for mfr detail rendering
+        toyota, _ = Manufacturer.objects.get_or_create(name="Toyota", defaults={"is_active": True})
+        model, _ = VehicleModel.objects.get_or_create(manufacturer=toyota, name="4RunnerTestModel", defaults={"is_active": True})
+        gen = Generation.objects.create(vehicle_model=model, name="First Generation", slug="gen1-test-card", start_year=1984, end_year=1989, is_active=True)
+        VehicleDefinition.objects.create(generation=gen, model_year=1984, trim_name="SR5", engine_name="2.4L I4", drivetrain="4WD", market="US", is_active=True)
+
+        resp_mfr = self.client.get(toyota.get_absolute_url())
+        self.assertEqual(resp_mfr.status_code, 200)
+        self.assertContains(resp_mfr, "generation-card-grid")
+        self.assertContains(resp_mfr, "generation-nav-card")
+
+        resp_model = self.client.get(model.get_absolute_url())
+        self.assertEqual(resp_model.status_code, 200)
+        self.assertContains(resp_model, "archive-nav-grid")
+        self.assertContains(resp_model, "archive-nav-card")

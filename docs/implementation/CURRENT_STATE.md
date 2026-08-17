@@ -403,6 +403,31 @@ RA-040 — Operator Workflow Hardening: Eliminate Routine Ad-Hoc `python -c` Dja
 - Preserved existing batch authorization boundaries, manifest hash verification, stale-plan revalidation, receipt audit provenance, and execution atomicity.
 - Added comprehensive unit tests in `reference/tests/test_operator_workflow.py` bringing test suite to **272/272 tests passing cleanly**.
 
+Milestone 33 — Compact Multi-Column Archive Navigation Cards
+
+Implementation Task:
+RA-041 — Compact Multi-Column Archive Navigation Cards (Completed)
+- Converted `.archive-nav-grid` and `.generation-card-grid` navigation containers in `static/css/site.css` into responsive CSS Grid layouts (`grid-template-columns: repeat(3, minmax(0, 1fr))`) displaying 3 cards across desktop viewports.
+- Responsive scaling collapses to 2 columns on tablet (`@media (max-width: 58rem)`) and 1 column on mobile (`@media (max-width: 38rem)`).
+- Refined `.card-thumbnail-wrap` dimensions to 7.5rem (120px) x 4.5rem (72px) maintaining identical representative image aspect ratio and framing.
+- Preserved 100% of existing semantic links, focus indicators, typography, and card click targets without requiring model-specific CSS or JavaScript dependencies.
+- Added regression tests in `reference/tests/test_views.py` (`test_06_ra041_compact_multi_column_card_contracts`) bringing test suite to **273/273 tests passing cleanly**.
+
+Mobile Archive Card Density & Generation Scrolling — Deferred
+- RA-041 established a compact multi-column desktop layout (`grid-template-columns: repeat(3, minmax(0, 1fr))`) for archive and generation navigation cards.
+- On mobile/narrow viewports, cards stack vertically at full width (`grid-template-columns: 1fr`). This remains functional and readable, but card/image height can produce excessive vertical scrolling for models with many generations (such as Toyota 4Runner) and manufacturers with many populated models.
+- Future mobile UX work should evaluate a more compact card treatment optimized for scanability and reduced vertical travel.
+- Potential approaches to evaluate later include:
+  - reduced mobile thumbnail height;
+  - controlled aspect-ratio cropping;
+  - more compact title/year typography and spacing;
+  - horizontally scrollable card rows/carousels where appropriate;
+  - two-column compact cards on sufficiently wide mobile viewports;
+  - progressive disclosure of generation lists;
+  - alternate mobile-only card composition;
+  - responsive image focal-point/crop handling once proper Asset/Media architecture exists.
+- **Semantic Boundary**: This is a DEFERRED UX optimization. Current mobile behavior is acceptable and not considered broken, RA-041 does not need to be reopened, no immediate mobile-specific image assets are required, no CSS one-offs are authorized, no manufacturer/model-specific layout rules are authorized, and future optimization should remain generic and responsive.
+
 
 7. Architectural Decision Records (ADRs)
 Implemented and Accepted:
@@ -643,23 +668,24 @@ RigArchive/
 - Milestone 30: Complete Remaining Toyota 4Runner Generations Bootstrap & Population (✅ Complete — RA-038)
 - Milestone 31: Complete Fifth Generation & Add Sixth Generation Toyota 4Runner (✅ Complete — RA-039)
 - Milestone 32: Operator Workflow Hardening (✅ Complete — RA-040)
+- Milestone 33: Compact Multi-Column Archive Navigation Cards (✅ Complete — RA-041)
 
 
 13. Current Repository Status
 The repository currently contains:
 - Functional Django project
-- Passing test suite (272 tests passing cleanly across full test suite)
+- Passing test suite (273 tests passing cleanly across full test suite)
 - Shared core infrastructure (`core` app with `UUIDModel`, `TimestampedModel`, `BaseModel`)
 - Reference Data Ingestion package (`reference/ingestion/` with contracts, serialization, validation, `acquisition/` adapters, profiles & extractors including `JDPowerProfile`, `JDPowerExtractor`, `WikipediaExtractor`, `normalization/` normalizers including `JDPowerNormalizer`, `rules/` for `toyota_rules.py` and `volkswagen_rules.py`, `candidate/` builder, `importing/` importer, planner, & `correction.py` correction workflow, `manifest.py` review manifest & `PopulationBatchManifest`, and `orchestration/` `MultiSourceOrchestrator` & `GenerationBootstrapOrchestrator`)
 - Safe read-only inspection, planning, and batch execution tooling (`inspect_reference_state`, `plan_generation_population`, `execute_population_batch`, `snapshot_db`, `export_dev_data`, `verify_dev_data`)
 - Accessible application shell and UX foundation (`templates/base.html`, `about.html`, `404.html`, `500.html`)
 - Observation Domain foundation (`observation` app with `Observation` model)
-- Public reference browser (`templates/reference/` with progressive Manufacturer → Model → Generation → Model-Year Overview → Configuration navigation hierarchy, GT Carlot compact thumbnail cards, Wikipedia-style Overview infobox, Detailed Specs selector with dynamic year filtering and initial disabled state, and breadcrumb navigation)
+- Public reference browser (`templates/reference/` with progressive Manufacturer → Model → Generation → Model-Year Overview → Configuration navigation hierarchy, GT Carlot compact multi-column thumbnail cards, Wikipedia-style Overview infobox, Detailed Specs selector with dynamic year filtering and initial disabled state, and breadcrumb navigation)
 - Admin interface with read-only audit log viewers (`ImportExecutionReceiptAdmin`, `CanonicalRecordCorrectionAdmin`)
 - Stable migration history (0001_initial, 0002_importexecutionreceipt, 0003_importexecutionreceipt_adjudication_hash, 0004_alter_vehicledefinition_drivetrain, 0005_canonicalrecordcorrection)
 - Populated Architectural Decision Records (ADR-0001 through ADR-0008)
 - Approved Architecture Design Documents (RA-006, RA-008, RA-010, RA-011, RA-014, RA-016, RA-018, RA-020, RA-022, RA-024, RA-025)
 - Gemini CLI project instructions (GEMINI.md)
 - Task-based implementation workflow (docs/implementation/tasks/)
-- Completed implementation tasks: RA-003, RA-005, RA-007, RA-009, RA-012, RA-013, RA-015, RA-017, RA-019, RA-021, RA-023, RA-024, RA-026, RA-027, RA-028, RA-029, RA-030, RA-031, RA-032, RA-034, RA-036 — Multi-Model Generation Bootstrap, RA-037 — Generation Image Correction, RA-038 — Complete Remaining Toyota 4Runner Generations, RA-039 — Complete Fifth Generation & Add Sixth Generation Toyota 4Runner, RA-040 — Operator Workflow Hardening
+- Completed implementation tasks: RA-003, RA-005, RA-007, RA-009, RA-012, RA-013, RA-015, RA-017, RA-019, RA-021, RA-023, RA-024, RA-026, RA-027, RA-028, RA-029, RA-030, RA-031, RA-032, RA-034, RA-036 — Multi-Model Generation Bootstrap, RA-037 — Generation Image Correction, RA-038 — Complete Remaining Toyota 4Runner Generations, RA-039 — Complete Fifth Generation & Add Sixth Generation Toyota 4Runner, RA-040 — Operator Workflow Hardening, RA-041 — Compact Multi-Column Archive Navigation Cards
 - Approved Architecture/Research tasks: RA-010, RA-011, RA-014, RA-016, RA-018, RA-020, RA-022, RA-024, RA-025
