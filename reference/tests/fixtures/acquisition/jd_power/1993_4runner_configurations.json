@@ -1,0 +1,39 @@
+{
+  "_provenance": {
+    "source_id": "jd_power",
+    "source_type": "third_party_reference",
+    "source_locator": "https://www.jdpower.com/cars/toyota/4runner/1993",
+    "native_record_id": "jdp_toyota_4runner_1993",
+    "is_exhaustive_enumeration": true
+  },
+  "make": "Toyota",
+  "model": "4Runner",
+  "model_year": 1993,
+  "market": "US",
+  "configurations": [
+    {
+      "trim": "Base",
+      "engine_displacement_liters": 2.4,
+      "engine_cylinders": 4,
+      "drivetrain": "4WD"
+    },
+    {
+      "trim": "SR5",
+      "engine_displacement_liters": 2.4,
+      "engine_cylinders": 4,
+      "drivetrain": "4WD"
+    },
+    {
+      "trim": "SR5",
+      "engine_displacement_liters": 3.0,
+      "engine_cylinders": 6,
+      "drivetrain": "4WD"
+    },
+    {
+      "trim": "SR5",
+      "engine_displacement_liters": 3.0,
+      "engine_cylinders": 6,
+      "drivetrain": "2WD"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "_provenance": {
+    "source_id": "toyota_usa",
+    "source_type": "manufacturer_brochure",
+    "source_locator": "toyota_usa_1984_4runner_brochure_specifications",
+    "native_record_id": "toyota_1984_4runner_rn60l_msb",
+    "completeness_provenance": "source_asserted"
+  },
+  "configurations": [
+    {
+      "make": "Toyota",
+      "model": "4Runner",
+      "model_year": 1984,
+      "trim": "SR5",
+      "drivetrain": "4WD",
+      "engine_displacement_liters": 2.4,
+      "engine_cylinders": 4,
+      "transmission": "5-Speed Manual",
+      "market": "US",
+      "native_trim_id": "toyota_1984_4runner_rn60l_msb"
+    }
+  ]
+}

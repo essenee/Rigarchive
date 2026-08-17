@@ -1,0 +1,51 @@
+{
+  "_provenance": {
+    "source_id": "jd_power",
+    "source_type": "third_party_reference",
+    "source_locator": "https://www.jdpower.com/cars/toyota/4runner/1996",
+    "native_record_id": "jdp_toyota_4runner_1996",
+    "is_exhaustive_enumeration": true
+  },
+  "make": "Toyota",
+  "model": "4Runner",
+  "model_year": 1996,
+  "market": "US",
+  "configurations": [
+    {
+      "trim": "Base",
+      "engine_displacement_liters": 2.7,
+      "engine_cylinders": 4,
+      "drivetrain": "2WD"
+    },
+    {
+      "trim": "Base",
+      "engine_displacement_liters": 2.7,
+      "engine_cylinders": 4,
+      "drivetrain": "4WD"
+    },
+    {
+      "trim": "SR5",
+      "engine_displacement_liters": 3.4,
+      "engine_cylinders": 6,
+      "drivetrain": "2WD"
+    },
+    {
+      "trim": "SR5",
+      "engine_displacement_liters": 3.4,
+      "engine_cylinders": 6,
+      "drivetrain": "4WD"
+    },
+    {
+      "trim": "Limited",
+      "engine_displacement_liters": 3.4,
+      "engine_cylinders": 6,
+      "drivetrain": "2WD"
+    },
+    {
+      "trim": "Limited",
+      "engine_displacement_liters": 3.4,
+      "engine_cylinders": 6,
+      "drivetrain": "4WD"
+    }
+  ]
+}

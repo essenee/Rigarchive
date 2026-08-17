@@ -358,6 +358,41 @@ RA-025 — Production Manufacturer Extraction & Review-Adjudication Architecture
 - Controlled 2020 Toyota Study: Establishes that populating 12 2020 4Runner configurations requires **12 separately authorized executions** under RA-024 (`[y/N]`), of which **7 require human domain adjudications** and 5 derive from automated bases (1 `FIRST_REP` + 4 `MECH_DIM`)
 - Next Planned Milestone: RA-026 — Deterministic Toyota Extraction & Review-Adjudication Implementation
 
+Milestone 31 — Complete Fifth Generation & Add Sixth Generation Toyota 4Runner
+
+Implementation Task:
+RA-039 — Complete Fifth Generation & Add Sixth Generation Toyota 4Runner (Completed)
+- Completed US-market Toyota 4Runner archive population across 5th Generation (2010–2024, 137 active canonical `VehicleDefinition` records) and 6th Generation (2025–2026, 28 active canonical `VehicleDefinition` records).
+- Established `Sixth Generation` (`slug="sixth-generation"`, `start_year=2025`, `end_year=None`) taxonomy in Wikipedia extractor and database models, preserving ongoing generation status (`2025–present`).
+- Created 15 evidence-backed J.D. Power configuration fixtures for 2010–2018, 2021–2024, 2025, and 2026.
+- Preserved existing 2019/2020 5th Gen canonical records and 1st–4th Gen inventories 100% intact without unintended overwrite or duplicate creation.
+- Updated `JDPowerExtractor` and `JDPowerNormalizer` to extract and process `engine_name` assertions, and `planner.py` to prefer explicit mapped `engine_name` concepts, correctly distinguishing non-hybrid (`2.4L Turbo I4`) and hybrid (`2.4L Turbo Hybrid I4`) powertrain identities.
+- Executed `CanonicalRecordCorrection` supersession workflow (`correction_reason="SOURCE_EVIDENCE_CORRECTION"`) linking 13 imprecise 2025 rows to evidence-backed replacement rows.
+- Generated temporary presentation image asset (`static/images/generations/toyota-4runner-sixth-generation.jpg`).
+
+Powertrain Display / Identity Semantics — Deferred
+- RA-039 Sixth Generation Toyota 4Runner ingestion exposed a future modeling question concerning the relationship between engine identity and overall powertrain identity.
+- The current implementation composes characteristics such as displacement, forced induction, and electrification into a user-facing `engine_name` description (for example, terminology containing "Turbo" and "Hybrid").
+- This is acceptable for current populated data but is NOT yet an approved long-term domain standard.
+- Future architecture should determine whether characteristics including:
+  - engine displacement;
+  - cylinder/configuration architecture;
+  - aspiration / forced induction;
+  - combustion engine identity;
+  - hybrid/electrification type;
+  - electric motor configuration;
+  - overall manufacturer powertrain/system identity;
+  should remain represented in a composite engine description or instead be stored as independent structured technical attributes and composed into presentation labels.
+- The design should anticipate powertrain types beyond the current Toyota example, including:
+  - naturally aspirated ICE;
+  - turbocharged/supercharged ICE;
+  - conventional hybrids;
+  - mild hybrids;
+  - plug-in hybrids;
+  - battery-electric vehicles;
+  - multi-motor electrified systems.
+- **Semantic Boundary**: This is a DEFERRED modeling decision. Current Sixth Generation 4Runner populated data is not being declared incorrect, RA-039 does not need to be reopened, no schema change or migration is authorized, no normalization redesign is authorized, and existing canonical records remain unchanged. The principal unresolved question is whether `engine_name` should represent a complete powertrain description or whether engine identity, forced induction, and electrification should be independent structured concepts composed for public display.
+
 
 7. Architectural Decision Records (ADRs)
 Implemented and Accepted:
@@ -595,12 +630,14 @@ RigArchive/
 - Milestone 27: Generation Landing Pages, Model-Year Overview & Detailed Specs Navigation (✅ Complete — RA-032)
 - Milestone 28: Canonical Import Receipt Coverage Audit & Batch Execution Atomicity Hardening (✅ Complete — RA-034)
 - Milestone 29: Multi-Model Generation Bootstrap & Complete Configuration Population for Toyota Tacoma & Volkswagen Touareg (✅ Complete — RA-036)
+- Milestone 30: Complete Remaining Toyota 4Runner Generations Bootstrap & Population (✅ Complete — RA-038)
+- Milestone 31: Complete Fifth Generation & Add Sixth Generation Toyota 4Runner (✅ Complete — RA-039)
 
 
 13. Current Repository Status
 The repository currently contains:
 - Functional Django project
-- Passing test suite (257 tests passing cleanly across full test suite)
+- Passing test suite (260 tests passing cleanly across full test suite)
 - Shared core infrastructure (`core` app with `UUIDModel`, `TimestampedModel`, `BaseModel`)
 - Reference Data Ingestion package (`reference/ingestion/` with contracts, serialization, validation, `acquisition/` adapters, profiles & extractors including `JDPowerProfile`, `JDPowerExtractor`, `WikipediaExtractor`, `normalization/` normalizers including `JDPowerNormalizer`, `rules/` for `toyota_rules.py` and `volkswagen_rules.py`, `candidate/` builder, `importing/` importer, planner, & `correction.py` correction workflow, `manifest.py` review manifest & `PopulationBatchManifest`, and `orchestration/` `MultiSourceOrchestrator` & `GenerationBootstrapOrchestrator`)
 - Safe read-only inspection and batch execution tooling (`inspect_reference_state`, `execute_population_batch`, `snapshot_db`, `export_dev_data`, `verify_dev_data`)
@@ -613,5 +650,5 @@ The repository currently contains:
 - Approved Architecture Design Documents (RA-006, RA-008, RA-010, RA-011, RA-014, RA-016, RA-018, RA-020, RA-022, RA-024, RA-025)
 - Gemini CLI project instructions (GEMINI.md)
 - Task-based implementation workflow (docs/implementation/tasks/)
-- Completed implementation tasks: RA-003, RA-005, RA-007, RA-009, RA-012, RA-013, RA-015, RA-017, RA-019, RA-021, RA-023, RA-024, RA-026, RA-027, RA-028, RA-029, RA-030, RA-031, RA-032, RA-034, RA-036 — Multi-Model Generation Bootstrap & Complete Configuration Population
+- Completed implementation tasks: RA-003, RA-005, RA-007, RA-009, RA-012, RA-013, RA-015, RA-017, RA-019, RA-021, RA-023, RA-024, RA-026, RA-027, RA-028, RA-029, RA-030, RA-031, RA-032, RA-034, RA-036 — Multi-Model Generation Bootstrap, RA-037 — Generation Image Correction, RA-038 — Complete Remaining Toyota 4Runner Generations, RA-039 — Complete Fifth Generation & Add Sixth Generation Toyota 4Runner
 - Approved Architecture/Research tasks: RA-010, RA-011, RA-014, RA-016, RA-018, RA-020, RA-022, RA-024, RA-025

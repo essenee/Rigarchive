@@ -187,10 +187,11 @@ class JDPowerExtractor:
                 continue
 
             native_id = str(item.get("native_trim_id") or f"jdp_cfg_{idx+1}")
-            make_name = item.get("make", "Toyota")
-            model_name = item.get("model", "4Runner")
-            model_year = item.get("model_year", 2019)
-            market_str = item.get("market", pub_scope)
+            target_ctx = getattr(snapshot_meta, "target_context", {}) or {}
+            make_name = item.get("make") or data.get("make") or target_ctx.get("make") or "Toyota"
+            model_name = item.get("model") or data.get("model") or target_ctx.get("model") or "4Runner"
+            model_year = item.get("model_year") or data.get("model_year") or target_ctx.get("model_year") or 2019
+            market_str = item.get("market") or data.get("market") or pub_scope
 
             env = Envelope(
                 artifact_type=ArtifactType.SOURCE_ASSERTION_SET.value,
@@ -296,6 +297,17 @@ class JDPowerExtractor:
                     extracted_at=extracted_at,
                 ),
             ]
+
+            if item.get("engine_name"):
+                assertions.append(
+                    SourceAssertion(
+                        assertion_id=f"ast_jdp_{native_id}_engname_01",
+                        attribute_key="engine_name",
+                        raw_value=item.get("engine_name"),
+                        source_context="configurations[].engine_name",
+                        extracted_at=extracted_at,
+                    )
+                )
 
             asset = SourceAssertionSet(
                 envelope=env,

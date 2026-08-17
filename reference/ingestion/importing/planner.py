@@ -255,7 +255,12 @@ def plan_candidate_import(
 
     resolved_gen = gens[0]
 
-    engine_label = _format_engine_name(evidence_displ, evidence_cyls)
+    engine_name_vals = _extract_mapped_concept_values(candidate.normalized_assertions, "engine_name")
+    if engine_name_vals and engine_name_vals[0] is not None:
+        engine_label = str(engine_name_vals[0]).strip()
+    else:
+        engine_label = _format_engine_name(evidence_displ, evidence_cyls)
+
     if not engine_label:
         return CanonicalImportPlan(
             candidate_reference=ref_id,
