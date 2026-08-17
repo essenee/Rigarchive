@@ -413,6 +413,21 @@ RA-041 — Compact Multi-Column Archive Navigation Cards (Completed)
 - Preserved 100% of existing semantic links, focus indicators, typography, and card click targets without requiring model-specific CSS or JavaScript dependencies.
 - Added regression tests in `reference/tests/test_views.py` (`test_06_ra041_compact_multi_column_card_contracts`) bringing test suite to **273/273 tests passing cleanly**.
 
+Milestone 34 — Measurements Domain Foundation Architecture
+
+Implementation Task:
+RA-042 — Measurements Domain Foundation Architecture (Approved Architecture — RA-042 / ADR-0009)
+- Established approved foundation architecture for the Measurements domain ([ADR-0009](file:///Users/esse/dev/Rigarchive/docs/architecture/ADR/ADR-0009-Measurements-Domain-Strategy.md) & [RA-042 Architectural Design Document](file:///Users/esse/dev/Rigarchive/docs/architecture/designs/RA-042-Measurements-Domain-Foundation-Architecture.md)).
+- Defined top-level domain boundary (`measurements/` app) decoupled from factory reference configurations (`reference`).
+- Anchored physical vehicle measurements at `reference.Generation` level (`on_delete=models.PROTECT`).
+- Separated reusable `MeasurementDefinition` (WHAT is measured) from `MeasurementResult` (measured numeric value and unit in a Generation context).
+- Established result-owned unit policy (`MeasurementDefinition` specifies no canonical unit).
+- Established controlled feature applicability model (`ApplicabilityFeature` + `ApplicabilityState`) to represent physical vehicle option factors without database schema changes or manufacturer trim/package duplication.
+- Defined condition semantics: zero conditions = Generation-wide / All configurations; multiple conditions = conjunctive AND.
+- Preserved multi-result evidence architecture (no uniqueness constraint across Generation + Definition + applicability; multiple independent measurements permitted).
+- Defined provisional v1 cargo-height taxonomy (*Cargo Opening Height*, *Cargo Height Behind Second Row*, *Maximum Cargo Interior Height*).
+- Specified vehicle-first public browser presentation (`GenerationMeasurementsView` at `/vehicles/<mfr>/<model>/<gen>/measurements/`) and designated RA-043 as the implementation milestone.
+
 Mobile Archive Card Density & Generation Scrolling — Deferred
 - RA-041 established a compact multi-column desktop layout (`grid-template-columns: repeat(3, minmax(0, 1fr))`) for archive and generation navigation cards.
 - On mobile/narrow viewports, cards stack vertically at full width (`grid-template-columns: 1fr`). This remains functional and readable, but card/image height can produce excessive vertical scrolling for models with many generations (such as Toyota 4Runner) and manufacturers with many populated models.
@@ -439,6 +454,7 @@ Implemented and Accepted:
 - ADR-0006: Immutable Raw Acquisition Snapshots and Layered Manufacturer Profile Architecture (Immutable raw snapshots, full SHA-256 hashing, layered profiles, structural-row identity, explicit-key multi-document linking, plan-first dry-run orchestration)
 - ADR-0007: Explicit Human Authorization & Execution Audit Receipts for Canonical Promotion (Review manifest contract, exact-plan authorization boundary, stale plan aborts, durable execution audit receipts, transactional atomicity)
 - ADR-0008: Deterministic Extraction, Review Adjudication & Adjudicated Grade Promotion (Deterministic extraction strategies, golden fixture testing, 5-stage lifecycle, bounded human domain adjudications, `ADJUDICATED_DISTINCT_GRADE` basis, exact-plan preservation, same-trim stale checks, manifest v1.1 linkage, audit receipt linkage)
+- ADR-0009: Physical Vehicle Measurements & Feature Applicability Domain Strategy (Decoupled top-level `measurements` domain, `reference.Generation` scope anchor, definition vs result separation, result unit ownership, controlled feature/state applicability, zero conditions means Generation-wide, conjunctive AND conditions, multi-result evidence preservation)
 
 
 
@@ -669,6 +685,7 @@ RigArchive/
 - Milestone 31: Complete Fifth Generation & Add Sixth Generation Toyota 4Runner (✅ Complete — RA-039)
 - Milestone 32: Operator Workflow Hardening (✅ Complete — RA-040)
 - Milestone 33: Compact Multi-Column Archive Navigation Cards (✅ Complete — RA-041)
+- Milestone 34: Measurements Domain Foundation Architecture (✅ Approved Architecture — RA-042 / ADR-0009)
 
 
 13. Current Repository Status
@@ -683,9 +700,9 @@ The repository currently contains:
 - Public reference browser (`templates/reference/` with progressive Manufacturer → Model → Generation → Model-Year Overview → Configuration navigation hierarchy, GT Carlot compact multi-column thumbnail cards, Wikipedia-style Overview infobox, Detailed Specs selector with dynamic year filtering and initial disabled state, and breadcrumb navigation)
 - Admin interface with read-only audit log viewers (`ImportExecutionReceiptAdmin`, `CanonicalRecordCorrectionAdmin`)
 - Stable migration history (0001_initial, 0002_importexecutionreceipt, 0003_importexecutionreceipt_adjudication_hash, 0004_alter_vehicledefinition_drivetrain, 0005_canonicalrecordcorrection)
-- Populated Architectural Decision Records (ADR-0001 through ADR-0008)
-- Approved Architecture Design Documents (RA-006, RA-008, RA-010, RA-011, RA-014, RA-016, RA-018, RA-020, RA-022, RA-024, RA-025)
+- Populated Architectural Decision Records (ADR-0001 through ADR-0009)
+- Approved Architecture Design Documents (RA-006, RA-008, RA-010, RA-011, RA-014, RA-016, RA-018, RA-020, RA-022, RA-024, RA-025, RA-042)
 - Gemini CLI project instructions (GEMINI.md)
 - Task-based implementation workflow (docs/implementation/tasks/)
 - Completed implementation tasks: RA-003, RA-005, RA-007, RA-009, RA-012, RA-013, RA-015, RA-017, RA-019, RA-021, RA-023, RA-024, RA-026, RA-027, RA-028, RA-029, RA-030, RA-031, RA-032, RA-034, RA-036 — Multi-Model Generation Bootstrap, RA-037 — Generation Image Correction, RA-038 — Complete Remaining Toyota 4Runner Generations, RA-039 — Complete Fifth Generation & Add Sixth Generation Toyota 4Runner, RA-040 — Operator Workflow Hardening, RA-041 — Compact Multi-Column Archive Navigation Cards
-- Approved Architecture/Research tasks: RA-010, RA-011, RA-014, RA-016, RA-018, RA-020, RA-022, RA-024, RA-025
+- Approved Architecture/Research tasks: RA-010, RA-011, RA-014, RA-016, RA-018, RA-020, RA-022, RA-024, RA-025, RA-042 — Measurements Domain Foundation Architecture
