@@ -28,7 +28,6 @@ psycopg_pool==3.3.3
 pycryptodome==4.2.0
 pylibmc==1.6.3
 pymemcache==4.0.0
-pyodide==0.0.2
 pyOpenSSL==26.4.0
 pywatchman==4.0.0
 PyYAML==6.0.3
