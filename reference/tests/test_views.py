@@ -194,43 +194,40 @@ class ReferenceViewTests(TestCase):
         self.assertNotContains(response, '<section class="archive-section" id="camping-builds">')
 
     def test_6_year_only_selection_resolves_to_year_overview(self) -> None:
-        """RA-032.7. Year-only selection redirects to model-year overview route."""
+        """Experimental Vehicle Hub: Year selection filters Generation page in-place (HTTP 200)."""
         response = self.client.get(self.fourth_generation.get_absolute_url() + "?year=2003")
-        expected_url = reverse(
-            "reference:model-year-overview",
-            kwargs={
-                "manufacturer_slug": "toyota",
-                "vehicle_model_slug": "4runner",
-                "generation_slug": "fourth-generation",
-                "model_year": 2003,
-            },
-        )
-        self.assertRedirects(response, expected_url)
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, "Model Year 2003")
+        self.assertEqual(response.context["selected_year"], 2003)
+        self.assertIsNone(response.context["selected_config"])
+        self.assertTrue(response.context["filter_active"])
+        # Contains 2003 definitions, excludes 2004 definition from displayed configurations
+        self.assertIn(self.vd_2003_v6, response.context["displayed_configurations"])
+        self.assertIn(self.vd_2003_v8, response.context["displayed_configurations"])
+        self.assertNotIn(self.vd_2004_sr5, response.context["displayed_configurations"])
 
     def test_7_matching_year_plus_configuration_redirects_to_exact_vehicle_definition(self) -> None:
-        """RA-032.8. Matching year + configuration selection redirects directly to exact VehicleDefinition detail page."""
+        """Experimental Vehicle Hub: Matching year + configuration filters to exact configuration with Full Specs action."""
         response = self.client.get(
             self.fourth_generation.get_absolute_url() + f"?year=2003&configuration={self.vd_2003_v8.slug}"
         )
-        self.assertRedirects(response, self.vd_2003_v8.get_absolute_url())
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.context["selected_year"], 2003)
+        self.assertEqual(response.context["selected_config"], self.vd_2003_v8)
+        self.assertContains(response, "Selected Configuration Filter")
+        self.assertContains(response, self.vd_2003_v8.get_absolute_url())
+        self.assertContains(response, "View Full Specifications")
 
     def test_8_mismatched_year_plus_configuration_is_rejected(self) -> None:
-        """RA-032.9. Mismatched year + configuration (e.g. year=2003 & 2004 config) rejects cross-year navigation."""
+        """Experimental Vehicle Hub: Mismatched year + configuration rejects cross-year config selection."""
         response = self.client.get(
             self.fourth_generation.get_absolute_url() + f"?year=2003&configuration={self.vd_2004_sr5.slug}"
         )
-        expected_2003_overview = reverse(
-            "reference:model-year-overview",
-            kwargs={
-                "manufacturer_slug": "toyota",
-                "vehicle_model_slug": "4runner",
-                "generation_slug": "fourth-generation",
-                "model_year": 2003,
-            },
-        )
-        # Must NOT redirect to 2004 configuration detail page!
-        self.assertNotEqual(response.headers.get("Location"), self.vd_2004_sr5.get_absolute_url())
-        self.assertRedirects(response, expected_2003_overview)
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.context["selected_year"], 2003)
+        # Mismatched 2004 configuration must NOT be selected under 2003 year filter!
+        self.assertIsNone(response.context["selected_config"])
+        self.assertNotIn(self.vd_2004_sr5, response.context["displayed_configurations"])
 
     def test_9_inactive_configuration_selection_is_rejected(self) -> None:
         """RA-032.10. Inactive/superseded configuration selection is rejected."""

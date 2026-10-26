@@ -1,106 +1,251 @@
 {% extends "base.html" %}
 
 {% block title %}
-    {{ vehicle_definition }} | RigArchive
+    {{ vehicle_definition }} — Full Specifications | RigArchive
 {% endblock %}
 
 {% block breadcrumbs %}
 <nav class="breadcrumbs" aria-label="Breadcrumb">
     <a href="{% url 'home' %}">Home</a>
-
     <span aria-hidden="true">/</span>
-
-    <a href="{% url 'reference:manufacturer-list' %}">
-        Vehicles
-    </a>
-
+    <a href="{% url 'reference:manufacturer-list' %}">Vehicles</a>
     <span aria-hidden="true">/</span>
-
-    <a href="{{ vehicle_definition.generation.vehicle_model.manufacturer.get_absolute_url }}">
-        {{ vehicle_definition.generation.vehicle_model.manufacturer.name }}
-    </a>
-
+    <a href="{{ manufacturer.get_absolute_url }}">{{ manufacturer.name }}</a>
     <span aria-hidden="true">/</span>
-
-    <a href="{{ vehicle_definition.generation.vehicle_model.get_absolute_url }}">
-        {{ vehicle_definition.generation.vehicle_model.name }}
-    </a>
-
+    <a href="{{ vehicle_model.get_absolute_url }}">{{ vehicle_model.name }}</a>
     <span aria-hidden="true">/</span>
-
-    <a href="{{ vehicle_definition.generation.get_absolute_url }}">
-        {{ vehicle_definition.generation.name }}
-    </a>
-
+    <a href="{{ generation.get_absolute_url }}">{{ generation.name }}</a>
     <span aria-hidden="true">/</span>
-
-    <span>{{ vehicle_definition }}</span>
+    <span>{{ vehicle_definition.model_year }} {{ vehicle_definition.trim_name|default:"Base" }}</span>
 </nav>
 {% endblock %}
 
 {% block content %}
-<h1>{{ vehicle_definition }}</h1>
+<article class="specs-sheet-container">
+    <!-- Top Return Bar -->
+    <div class="specs-nav-back-row">
+        <a href="{{ generation.get_absolute_url }}?year={{ vehicle_definition.model_year }}&configuration={{ vehicle_definition.slug }}" class="back-link">
+            ← Return to {{ generation.name }} Hub ({{ vehicle_definition.model_year }})
+        </a>
+    </div>
 
-<section>
-    <h2>Reference information</h2>
-
-    <dl class="record-details">
-        <div>
-            <dt>Manufacturer</dt>
-            <dd>{{ vehicle_definition.generation.vehicle_model.manufacturer.name }}</dd>
+    <!-- Header Block -->
+    <header class="specs-sheet-header">
+        <div class="specs-header-lead">
+            <span class="hub-kicker">{{ manufacturer.name }} {{ vehicle_model.name }} • {{ generation.name }}</span>
+            <h1 class="specs-title">{{ vehicle_definition }}</h1>
+            <p class="specs-subtitle">Canonical Factory Reference Specification</p>
         </div>
 
-        <div>
-            <dt>Vehicle model</dt>
-            <dd>{{ vehicle_definition.generation.vehicle_model.name }}</dd>
+        <div class="specs-badges-bar">
+            <span class="spec-badge spec-badge-year">{{ vehicle_definition.model_year }}</span>
+            <span class="spec-badge spec-badge-trim">{{ vehicle_definition.trim_name|default:"Base / Standard" }}</span>
+            <span class="spec-badge spec-badge-drive">{{ vehicle_definition.get_drivetrain_display }}</span>
+            <span class="spec-badge spec-badge-market">{{ vehicle_definition.get_market_display }} Market</span>
+            <span class="spec-badge spec-badge-status">Active Canonical</span>
+        </div>
+    </header>
+
+    <!-- Canonical Factory Specifications Table -->
+    <section class="archive-section" id="factory-specifications">
+        <div class="section-header-block">
+            <h2 class="archive-section-title">Factory Technical Specifications</h2>
+            <p class="archive-section-subtitle">
+                Canonical manufacturer baseline attributes governing this configuration identity.
+            </p>
         </div>
 
-        <div>
-            <dt>Generation</dt>
-            <dd>{{ vehicle_definition.generation.name }}</dd>
+        <div class="specs-tables-grid">
+            <div class="specs-table-box">
+                <h3 class="specs-table-heading">Configuration & Platform Identity</h3>
+                <dl class="record-details specs-details-list">
+                    <div>
+                        <dt>Manufacturer</dt>
+                        <dd><a href="{{ manufacturer.get_absolute_url }}">{{ manufacturer.name }}</a></dd>
+                    </div>
+                    <div>
+                        <dt>Vehicle Model</dt>
+                        <dd><a href="{{ vehicle_model.get_absolute_url }}">{{ vehicle_model.name }}</a></dd>
+                    </div>
+                    <div>
+                        <dt>Generation</dt>
+                        <dd><a href="{{ generation.get_absolute_url }}">{{ generation.name }}</a></dd>
+                    </div>
+                    <div>
+                        <dt>Model Year</dt>
+                        <dd><strong>{{ vehicle_definition.model_year }}</strong></dd>
+                    </div>
+                    <div>
+                        <dt>Trim / Grade</dt>
+                        <dd><strong>{{ vehicle_definition.trim_name|default:"Not specified" }}</strong></dd>
+                    </div>
+                    <div>
+                        <dt>Commercial Market</dt>
+                        <dd>{{ vehicle_definition.get_market_display }} ({{ vehicle_definition.market }})</dd>
+                    </div>
+                </dl>
+            </div>
+
+            <div class="specs-table-box">
+                <h3 class="specs-table-heading">Powertrain & Running Gear</h3>
+                <dl class="record-details specs-details-list">
+                    <div>
+                        <dt>Engine Descriptor</dt>
+                        <dd><strong>{{ vehicle_definition.engine_name|default:"Not specified" }}</strong></dd>
+                    </div>
+                    <div>
+                        <dt>Drivetrain Architecture</dt>
+                        <dd><span class="variant-drive">{{ vehicle_definition.get_drivetrain_display }}</span></dd>
+                    </div>
+                    <div>
+                        <dt>Canonical Slug</dt>
+                        <dd><code>{{ vehicle_definition.slug }}</code></dd>
+                    </div>
+                    <div>
+                        <dt>Permanent UUID</dt>
+                        <dd><code>{{ vehicle_definition.uuid }}</code></dd>
+                    </div>
+                </dl>
+            </div>
         </div>
 
-        <div>
-            <dt>Model year</dt>
-            <dd>{{ vehicle_definition.model_year }}</dd>
+        {% if vehicle_definition.notes %}
+            <div class="specs-notes-card">
+                <h4 class="specs-notes-title">Configuration Notes</h4>
+                <div class="specs-notes-body">{{ vehicle_definition.notes|linebreaks }}</div>
+            </div>
+        {% endif %}
+    </section>
+
+    <!-- Physical Measurements Domain Section -->
+    <section class="archive-section" id="applicable-measurements">
+        <div class="section-header-block">
+            <div class="section-title-row">
+                <h2 class="archive-section-title">Applicable Physical Measurements</h2>
+                <a href="{% url 'measurements:generation-measurements' manufacturer.slug vehicle_model.slug generation.slug %}" class="section-more-link">
+                    Generation Measurements →
+                </a>
+            </div>
+            <p class="archive-section-subtitle">
+                Physical dimensions from the Measurements domain applicable to this {{ generation.name }} configuration.
+            </p>
         </div>
 
-        <div>
-            <dt>Trim</dt>
-            <dd>{{ vehicle_definition.trim_name|default:"Not specified" }}</dd>
+        {% if applicable_measurements %}
+            <div class="measurements-cards-grid">
+                {% for m in applicable_measurements %}
+                    <div class="hub-measurement-card">
+                        <span class="hub-meas-def">{{ m.definition.name }}</span>
+                        <div class="hub-meas-value">
+                            <span class="val-num">{{ m.value }}</span>
+                            <span class="val-unit">{{ m.unit }}</span>
+                        </div>
+                        {% if m.definition.description %}
+                            <p class="hub-meas-desc">{{ m.definition.description }}</p>
+                        {% endif %}
+                        <div class="hub-meas-applicability">
+                            <span class="applicability-badge applicability-badge-wide">
+                                {{ m.applicability_summary }}
+                            </span>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <div class="empty-archival-card">
+                <h3 class="empty-card-heading">Measurements Under Field Compilation</h3>
+                <p class="empty-card-text">
+                    Physical interior cargo dimensions and sleeping platform lengths for this configuration are currently being recorded in the field archive.
+                </p>
+            </div>
+        {% endif %}
+    </section>
+
+    <!-- Ingestion Audit & Provenance Receipt -->
+    <section class="archive-section" id="audit-provenance">
+        <div class="section-header-block">
+            <h2 class="archive-section-title">Ingestion Audit & Evidence Provenance</h2>
+            <p class="archive-section-subtitle">
+                Durable verification receipt linking this canonical record to immutable source evidence.
+            </p>
         </div>
 
-        <div>
-            <dt>Engine</dt>
-            <dd>{{ vehicle_definition.engine_name|default:"Not specified" }}</dd>
+        {% if receipt %}
+            <div class="audit-receipt-card">
+                <div class="audit-receipt-header">
+                    <span class="audit-status-tag">Audited & Verified</span>
+                    <span class="audit-date">{{ receipt.executed_at|date:"Y-m-d H:i" }} UTC</span>
+                </div>
+                <dl class="record-details audit-details-list">
+                    <div>
+                        <dt>Source Authority</dt>
+                        <dd><strong>{{ receipt.source_id }}</strong></dd>
+                    </div>
+                    <div>
+                        <dt>Native Identifier</dt>
+                        <dd><code>{{ receipt.native_identifier }}</code> ({{ receipt.source_identity_type }})</dd>
+                    </div>
+                    <div>
+                        <dt>Promotion Basis</dt>
+                        <dd>{{ receipt.create_basis|default:"Canonical Promotion" }}</dd>
+                    </div>
+                    <div>
+                        <dt>Review Manifest Hash</dt>
+                        <dd><code class="hash-code">{{ receipt.manifest_hash }}</code></dd>
+                    </div>
+                    {% if receipt.adjudication_hash %}
+                        <div>
+                            <dt>Adjudication Hash</dt>
+                            <dd><code class="hash-code">{{ receipt.adjudication_hash }}</code></dd>
+                        </div>
+                    {% endif %}
+                </dl>
+            </div>
+        {% else %}
+            <div class="audit-receipt-card audit-preserved-card">
+                <div class="audit-receipt-header">
+                    <span class="audit-status-tag tag-neutral">Baseline Canonical Record</span>
+                </div>
+                <p class="audit-preserved-text">
+                    This vehicle definition is an active canonical record within the RigArchive Reference Domain. Direct ingestion provenance is tracked under the canonical record lifecycle.
+                </p>
+            </div>
+        {% endif %}
+    </section>
+
+    <!-- Epistemic Boundary Notice -->
+    <section class="archive-section" id="epistemic-boundary">
+        <div class="epistemic-disclaimer-box">
+            <div class="disclaimer-icon">ℹ</div>
+            <div class="disclaimer-text">
+                <h4 class="disclaimer-heading">Canonical Factory Baseline Reference</h4>
+                <p>
+                    This page documents standard factory equipment and verified physical dimensions. Individual owner builds, aftermarket accessories, suspension lifts, and customized camping setups are maintained in distinct domain records and are never presented as factory equipment.
+                </p>
+            </div>
         </div>
+    </section>
 
-        <div>
-            <dt>Drivetrain</dt>
-            <dd>{{ vehicle_definition.get_drivetrain_display }}</dd>
-        </div>
+    <!-- Sibling Trims / Cross-Configuration Navigation -->
+    {% if sibling_configs %}
+        <section class="archive-section" id="sibling-configurations">
+            <div class="section-header-block">
+                <h2 class="archive-section-title">Other {{ vehicle_definition.model_year }} {{ vehicle_model.name }} Trims</h2>
+                <p class="archive-section-subtitle">
+                    Quickly switch to other factory configurations available for the {{ vehicle_definition.model_year }} model year.
+                </p>
+            </div>
 
-        <div>
-            <dt>Market</dt>
-            <dd>{{ vehicle_definition.get_market_display }}</dd>
-        </div>
-    </dl>
-</section>
-
-{% if vehicle_definition.notes %}
-<section>
-    <h2>Notes</h2>
-
-    {{ vehicle_definition.notes|linebreaks }}
-</section>
-{% endif %}
-
-<section>
-    <h2>Archive content</h2>
-
-    <p>
-        Measurements, modifications, maintenance records, and supporting
-        evidence will appear here as those domains are implemented.
-    </p>
-</section>
+            <div class="sibling-trims-grid">
+                {% for sib in sibling_configs %}
+                    <a href="{{ sib.get_absolute_url }}" class="sibling-trim-chip">
+                        <span class="sib-trim-name">{{ sib.trim_name|default:"Base" }}</span>
+                        <span class="sib-trim-drive">{{ sib.drivetrain }}</span>
+                        <span class="sib-trim-engine">{{ sib.engine_name }}</span>
+                    </a>
+                {% endfor %}
+            </div>
+        </section>
+    {% endif %}
+</article>
 {% endblock %}

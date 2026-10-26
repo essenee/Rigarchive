@@ -9,7 +9,7 @@ handler500 = "config.views.custom_500"
 urlpatterns = [
     path(
         "",
-        TemplateView.as_view(template_name="home.html"),
+        views.home,
         name="home",
     ),
     path(

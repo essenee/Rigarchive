@@ -1,19 +1,313 @@
 {% extends "base.html" %}
+{% load static %}
 
-{% block title %}RigArchive — Technical Vehicle Archive{% endblock %}
+{% block title %}RigArchive — Adventure vehicle technical archive{% endblock %}
 
 {% block content %}
-<section class="hero">
-    <h1>RigArchive</h1>
+<div class="homepage-approved-layout">
+    <!-- Asymmetric Archival Hero Section -->
+    <section class="hero-archival-grid" aria-label="Featured Platform">
+        <!-- Wide Adventure Photograph (~2/3) -->
+        <div class="hero-photo-frame">
+            <div class="photo-tape tape-top-left" aria-hidden="true"></div>
+            <div class="photo-tape tape-top-right" aria-hidden="true"></div>
+            
+            {% if hero_image_url %}
+                <img src="{{ hero_image_url }}" alt="Toyota 4Runner 5th Generation in alpine landscape" class="hero-main-img" loading="eager">
+            {% else %}
+                <div class="hero-img-fallback">
+                    <span>Toyota 4Runner Fifth Generation</span>
+                </div>
+            {% endif %}
 
-    <p class="lead">
-        A technical archive for canonical vehicle identity, factory configuration reference, and evidence-aware technical knowledge.
-    </p>
+            <div class="photo-typewriter-tag">
+                <span class="tag-mfr">TOYOTA 4RUNNER</span>
+                <span class="tag-gen">5TH GENERATION (2010 – 2024)</span>
+            </div>
+        </div>
 
-    <div class="actions">
-        <a class="button" href="{% url 'reference:manufacturer-list' %}">
-            Browse vehicles
-        </a>
-    </div>
-</section>
+        <!-- Narrower Technical Schematic Section (~1/3) -->
+        <div class="hero-schematic-panel">
+            <div class="schematic-inner">
+                <!-- Vehicle Side Profile Diagram -->
+                <div class="schematic-drawing-wrap">
+                    <svg class="schematic-vector" viewBox="0 0 320 180" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Vehicle side profile dimensions">
+                        <!-- Technical Grid Lines -->
+                        <line x1="10" y1="140" x2="310" y2="140" stroke="#c4b8a5" stroke-dasharray="2 2" stroke-width="0.8"/>
+                        <!-- Vehicle Silhouette Contour -->
+                        <path d="M 35 125 
+                                 C 35 110, 42 102, 55 100 
+                                 L 85 96 
+                                 L 115 62 
+                                 L 230 62 
+                                 L 275 80 
+                                 L 282 105 
+                                 L 285 125 
+                                 L 255 125 
+                                 A 20 20 0 0 0 215 125 
+                                 L 105 125 
+                                 A 20 20 0 0 0 65 125 
+                                 Z" 
+                              stroke="#4a4237" stroke-width="1.8" fill="#f4efe6" fill-opacity="0.8"/>
+                        <!-- Roof Rack -->
+                        <rect x="120" y="52" width="105" height="8" rx="2" stroke="#4a4237" stroke-width="1.2" fill="#e8dfcf"/>
+                        <rect x="135" y="44" width="70" height="8" rx="2" stroke="#5a5245" stroke-width="1" fill="#ded4c2"/>
+                        <!-- Wheels -->
+                        <circle cx="85" cy="125" r="18" stroke="#4a4237" stroke-width="2" fill="#3c3730"/>
+                        <circle cx="85" cy="125" r="10" stroke="#8c8273" stroke-width="1.5" fill="#ded5c4"/>
+                        <circle cx="235" cy="125" r="18" stroke="#4a4237" stroke-width="2" fill="#3c3730"/>
+                        <circle cx="235" cy="125" r="10" stroke="#8c8273" stroke-width="1.5" fill="#ded5c4"/>
+                        <!-- Windows -->
+                        <path d="M 118 66 L 165 66 L 165 92 L 95 92 Z" stroke="#685f52" stroke-width="1.2" fill="#ebe4d6"/>
+                        <path d="M 172 66 L 225 66 L 225 92 L 172 92 Z" stroke="#685f52" stroke-width="1.2" fill="#ebe4d6"/>
+                        <path d="M 230 68 L 265 82 L 260 92 L 230 92 Z" stroke="#685f52" stroke-width="1.2" fill="#ebe4d6"/>
+
+                        <!-- Dimension: Wheelbase (109.8") -->
+                        <line x1="85" y1="152" x2="235" y2="152" stroke="#5a5245" stroke-width="1"/>
+                        <path d="M 85 149 L 85 155 M 235 149 L 235 155" stroke="#5a5245" stroke-width="1"/>
+                        <text x="160" y="148" text-anchor="middle" font-family="monospace" font-size="9" fill="#4a4237" font-weight="bold">109.8″</text>
+
+                        <!-- Dimension: Overall Length (189.6") -->
+                        <line x1="35" y1="168" x2="285" y2="168" stroke="#5a5245" stroke-width="1"/>
+                        <path d="M 35 164 L 35 172 M 285 164 L 285 172" stroke="#5a5245" stroke-width="1"/>
+                        <text x="160" y="165" text-anchor="middle" font-family="monospace" font-size="9" fill="#4a4237" font-weight="bold">189.6″</text>
+                        <text x="160" y="177" text-anchor="middle" font-family="monospace" font-size="7" fill="#6c6355">(OVERALL LENGTH)</text>
+
+                        <!-- Dimension: Height (72.2") -->
+                        <line x1="298" y1="52" x2="298" y2="140" stroke="#5a5245" stroke-width="1"/>
+                        <path d="M 295 52 L 301 52 M 295 140 L 301 140" stroke="#5a5245" stroke-width="1"/>
+                        <text x="306" y="98" font-family="monospace" font-size="9" fill="#4a4237" font-weight="bold">72.2″</text>
+                    </svg>
+                </div>
+
+                <!-- Secondary Front and Rear Schematics -->
+                <div class="schematic-subviews-row">
+                    <!-- Front View (66.0" track) -->
+                    <div class="schematic-subview">
+                        <svg viewBox="0 0 140 130" fill="none" class="schematic-vector-sub">
+                            <!-- Grille and hood outline -->
+                            <rect x="25" y="30" width="90" height="60" rx="10" stroke="#4a4237" stroke-width="1.5" fill="#f4efe6"/>
+                            <rect x="35" y="55" width="70" height="20" rx="3" stroke="#5a5245" stroke-width="1.2" fill="#ebe4d6"/>
+                            <!-- Tires -->
+                            <rect x="18" y="70" width="16" height="35" rx="3" stroke="#4a4237" stroke-width="1.5" fill="#3c3730"/>
+                            <rect x="106" y="70" width="16" height="35" rx="3" stroke="#4a4237" stroke-width="1.5" fill="#3c3730"/>
+                            <!-- Dimension: Width (66.0") -->
+                            <line x1="26" y1="116" x2="114" y2="116" stroke="#5a5245" stroke-width="1"/>
+                            <path d="M 26 113 L 26 119 M 114 113 L 114 119" stroke="#5a5245" stroke-width="1"/>
+                            <text x="70" y="112" text-anchor="middle" font-family="monospace" font-size="8.5" fill="#4a4237" font-weight="bold">66.0″</text>
+                        </svg>
+                    </div>
+
+                    <!-- Rear View (Cargo opening 30.5" / 46.0" / 42.5") -->
+                    <div class="schematic-subview">
+                        <svg viewBox="0 0 140 130" fill="none" class="schematic-vector-sub">
+                            <!-- Cargo outline -->
+                            <rect x="25" y="25" width="90" height="68" rx="8" stroke="#4a4237" stroke-width="1.5" fill="#f4efe6"/>
+                            <!-- Cargo Opening -->
+                            <rect x="40" y="42" width="60" height="42" rx="4" stroke="#5a5245" stroke-width="1.2" stroke-dasharray="3 2" fill="#ebe4d6"/>
+                            <!-- Tires -->
+                            <rect x="18" y="70" width="16" height="35" rx="3" stroke="#4a4237" stroke-width="1.5" fill="#3c3730"/>
+                            <rect x="106" y="70" width="16" height="35" rx="3" stroke="#4a4237" stroke-width="1.5" fill="#3c3730"/>
+                            <!-- Dimension: Cargo Opening Width (46.0") -->
+                            <line x1="40" y1="96" x2="100" y2="96" stroke="#5a5245" stroke-width="1"/>
+                            <text x="70" y="93" text-anchor="middle" font-family="monospace" font-size="8" fill="#4a4237" font-weight="bold">46.0″</text>
+                            <text x="70" y="105" text-anchor="middle" font-family="monospace" font-size="6" fill="#6c6355">CARGO OPENING</text>
+                            <!-- Dimension: Cargo Height (30.5") -->
+                            <line x1="108" y1="42" x2="108" y2="84" stroke="#5a5245" stroke-width="0.8"/>
+                            <text x="114" y="66" font-family="monospace" font-size="7.5" fill="#4a4237">30.5″</text>
+                            <!-- Total Height (42.5") -->
+                            <line x1="126" y1="25" x2="126" y2="93" stroke="#5a5245" stroke-width="0.8"/>
+                            <text x="129" y="60" font-family="monospace" font-size="7.5" fill="#4a4237">42.5″</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vehicle Platforms Section -->
+    <section class="archive-section platforms-section" aria-label="Vehicle Platforms">
+        <div class="section-heading-row">
+            <div>
+                <h2 class="section-title-serif">Vehicle Platforms</h2>
+                <p class="section-subtitle-mono">Explore generations, model years, and configurations.</p>
+            </div>
+            <a href="{% url 'reference:manufacturer-list' %}" class="section-action-link">
+                View all vehicles →
+            </a>
+        </div>
+
+        {% if featured_platforms %}
+            <div class="platforms-cards-grid">
+                {% for item in featured_platforms %}
+                    <article class="platform-archival-card">
+                        <div class="card-photo-wrap">
+                            {% if item.hero_image_url %}
+                                <img src="{{ item.hero_image_url }}" alt="{{ item.manufacturer.name }} {{ item.model.name }}" class="card-photo" loading="lazy">
+                            {% else %}
+                                <div class="card-photo-placeholder">
+                                    <span>{{ item.model.name }}</span>
+                                </div>
+                            {% endif %}
+                        </div>
+
+                        <div class="card-content-area">
+                            <span class="card-mfr-label">{{ item.manufacturer.name }}</span>
+                            <h3 class="card-model-title">{{ item.model.name }}</h3>
+                            <p class="card-meta-line">
+                                {{ item.generations_count }} Generations <span class="meta-dot">•</span> {{ item.year_span }}
+                            </p>
+                            <a href="{{ item.model.get_absolute_url }}" class="card-footer-link">
+                                Browse {{ item.model.name }} →
+                            </a>
+                        </div>
+                    </article>
+                {% endfor %}
+            </div>
+        {% else %}
+            <p class="empty-state-notice">No vehicle platforms are currently populated in the archive.</p>
+        {% endif %}
+    </section>
+
+    <!-- Explore the Archive Section -->
+    <section class="archive-section explore-archive-section" aria-label="Explore the Archive">
+        <div class="section-heading-row">
+            <div>
+                <h2 class="section-title-serif">Explore the Archive</h2>
+                <p class="section-subtitle-mono">Different ways to find the information you need.</p>
+            </div>
+        </div>
+
+        <div class="explore-archive-grid">
+            <!-- 1. Factory Specifications -->
+            <article class="explore-category-card">
+                <div class="category-icon-header">
+                    <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                        <polyline points="14 2 14 8 20 8"/>
+                        <line x1="16" y1="13" x2="8" y2="13"/>
+                        <line x1="16" y1="17" x2="8" y2="17"/>
+                        <polyline points="10 9 9 9 8 9"/>
+                    </svg>
+                </div>
+                <h3 class="category-title">Factory Specifications</h3>
+                <p class="category-desc">
+                    Canonical configurations, factory equipment, and technical details.
+                </p>
+                <a href="{% url 'reference:manufacturer-list' %}" class="category-action-link">
+                    Browse specifications →
+                </a>
+            </article>
+
+            <!-- 2. Physical Measurements -->
+            <article class="explore-category-card">
+                <div class="category-icon-header">
+                    <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                        <path d="M21.3 8.7 8.7 21.3c-.4.4-1 .4-1.4 0l-6-6c-.4-.4-.4-1 0-1.4L13.9 1.3c.4-.4 1-.4 1.4 0l6 6c.4.4.4 1 0 1.4z"/>
+                        <line x1="7.5" y1="10.5" x2="10.5" y2="7.5"/>
+                        <line x1="10.5" y1="13.5" x2="13.5" y2="10.5"/>
+                        <line x1="13.5" y1="16.5" x2="16.5" y2="13.5"/>
+                    </svg>
+                </div>
+                <h3 class="category-title">Physical Measurements</h3>
+                <p class="category-desc">
+                    Cargo dimensions, interior measurements, and other real-world data.
+                </p>
+                <a href="{% url 'reference:manufacturer-list' %}?view=measurements" class="category-action-link">
+                    Browse measurements →
+                </a>
+            </article>
+
+            <!-- 3. Builds and Modifications -->
+            <article class="explore-category-card">
+                <div class="category-icon-header">
+                    <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                    </svg>
+                </div>
+                <h3 class="category-title">Builds and Modifications</h3>
+                <p class="category-desc">
+                    Real vehicles, practical modifications, and adventure builds.
+                </p>
+                <a href="#builds" class="category-action-link category-link-unavailable" title="Builds archive coming soon" aria-disabled="true">
+                    Browse builds →
+                </a>
+            </article>
+
+            <!-- 4. Service Guides -->
+            <article class="explore-category-card">
+                <div class="category-icon-header">
+                    <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                    </svg>
+                </div>
+                <h3 class="category-title">Service Guides</h3>
+                <p class="category-desc">
+                    Maintenance and repair guides with supporting evidence.
+                </p>
+                <a href="#service-guides" class="category-action-link category-link-unavailable" title="Service guides coming soon" aria-disabled="true">
+                    Browse service guides →
+                </a>
+            </article>
+        </div>
+    </section>
+
+    <!-- Find a Vehicle & Recently Viewed Dual Panel -->
+    <section class="archive-section search-and-recent-container" aria-label="Find a Vehicle and History">
+        <div class="search-and-recent-grid">
+            <!-- Find a Vehicle Search Box (~3/4) -->
+            <div class="find-vehicle-box">
+                <h2 class="search-box-title">Find a Vehicle</h2>
+                <p class="search-box-subtitle">Search by make, model, generation, or configuration.</p>
+
+                <form action="{% url 'reference:manufacturer-list' %}" method="get" class="find-vehicle-form" role="search">
+                    <div class="search-input-wrap">
+                        <svg class="search-glass-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <circle cx="8.5" cy="8.5" r="5.5" />
+                            <line x1="12.5" y1="12.5" x2="17" y2="17" />
+                        </svg>
+                        <input type="search" name="q" placeholder="e.g. 4Runner 2017 TRD Pro, Toyota Tacoma, Volkswagen Touareg..." class="find-vehicle-input" aria-label="Search vehicles">
+                    </div>
+                    <button type="submit" class="button-search-primary">
+                        Search
+                    </button>
+                </form>
+            </div>
+
+            <!-- Recently Viewed Panel (~1/4) -->
+            <aside class="recently-viewed-panel" aria-label="Recently Viewed Vehicles">
+                <div class="recent-tape recent-tape-top" aria-hidden="true"></div>
+                <div class="recent-tape recent-tape-bottom" aria-hidden="true"></div>
+
+                <h3 class="recently-viewed-heading">Recently Viewed</h3>
+
+                {% if recently_viewed %}
+                    <ul class="recently-viewed-list">
+                        {% for item in recently_viewed %}
+                            <li class="recently-viewed-item">
+                                <a href="{{ item.url }}" class="recently-viewed-link">
+                                    {% if item.image_url %}
+                                        <img src="{{ item.image_url }}" alt="{{ item.model_name }}" class="recently-viewed-thumb">
+                                    {% else %}
+                                        <div class="recently-viewed-thumb-placeholder"></div>
+                                    {% endif %}
+                                    <div class="recently-viewed-info">
+                                        <span class="recent-item-title">{{ item.model_name }} ({% if item.generation_number %}{{ item.generation_number }}th Gen{% else %}{{ item.generation_name }}{% endif %})</span>
+                                        <span class="recent-item-years">{{ item.year_span }}</span>
+                                    </div>
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <div class="recently-viewed-empty">
+                        <p class="recent-empty-text">No recently viewed vehicles.</p>
+                        <span class="recent-empty-hint">Visited generations will appear here as you browse the archive.</span>
+                    </div>
+                {% endif %}
+            </aside>
+        </div>
+    </section>
+</div>
 {% endblock %}

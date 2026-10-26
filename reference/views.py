@@ -1,11 +1,16 @@
 import os
 from django.conf import settings
-from django.db.models import Prefetch
+from django.db.models import Prefetch, Q
 from django.http import Http404
 from django.shortcuts import redirect
 from django.views.generic import DetailView, ListView
 
 from .models import Generation, Manufacturer, VehicleDefinition, VehicleModel
+from .services import (
+    get_full_specifications_context,
+    get_generation_hub_context,
+    record_recently_viewed_generation,
+)
 
 
 def get_presentation_hero_image_url(
@@ -52,6 +57,7 @@ def get_presentation_hero_image_url(
 class ManufacturerListView(ListView):
     """
     Display active vehicle manufacturers and their active models in the Reference Domain.
+    Supports simple search filtering across manufacturer and model names.
     """
 
     model = Manufacturer
@@ -59,7 +65,9 @@ class ManufacturerListView(ListView):
     context_object_name = "manufacturers"
 
     def get_queryset(self):
-        return (
+        query = self.request.GET.get("q", "").strip()
+
+        qs = (
             Manufacturer.objects.filter(
                 is_active=True,
                 vehicle_models__is_active=True,
@@ -67,18 +75,38 @@ class ManufacturerListView(ListView):
                 vehicle_models__generations__vehicle_definitions__is_active=True,
             )
             .distinct()
-            .prefetch_related(
-                Prefetch(
-                    "vehicle_models",
-                    queryset=VehicleModel.objects.filter(
-                        is_active=True,
-                        generations__is_active=True,
-                        generations__vehicle_definitions__is_active=True,
-                    ).distinct(),
-                    to_attr="active_vehicle_models",
-                )
+        )
+
+        if query:
+            qs = qs.filter(
+                Q(name__icontains=query)
+                | Q(vehicle_models__name__icontains=query)
+            ).distinct()
+
+        # Build prefetch matching query if present
+        models_filter = Q(
+            is_active=True,
+            generations__is_active=True,
+            generations__vehicle_definitions__is_active=True,
+        )
+        if query:
+            models_filter &= (
+                Q(name__icontains=query)
+                | Q(manufacturer__name__icontains=query)
+            )
+
+        return qs.prefetch_related(
+            Prefetch(
+                "vehicle_models",
+                queryset=VehicleModel.objects.filter(models_filter).distinct(),
+                to_attr="active_vehicle_models",
             )
         )
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["search_query"] = self.request.GET.get("q", "").strip()
+        return context
 
 
 class ManufacturerDetailView(DetailView):
@@ -160,7 +188,7 @@ class VehicleModelDetailView(DetailView):
 
 class GenerationDetailView(DetailView):
     """
-    Display one generation overview, active model years, and detailed specs selector.
+    Display one generation knowledge hub with interactive year and configuration filtering.
     """
 
     model = Generation
@@ -186,72 +214,23 @@ class GenerationDetailView(DetailView):
             .prefetch_related("vehicle_definitions")
         )
 
-    def get(self, request, *args, **kwargs):
-        config_slug = request.GET.get("configuration")
-        year_str = request.GET.get("year")
-
-        mfr_slug = self.kwargs["manufacturer_slug"]
-        model_slug = self.kwargs["vehicle_model_slug"]
-        gen_slug = self.kwargs["generation_slug"]
-
-        # Validate configuration choice against current hierarchy, generation, active status, and year
-        if config_slug:
-            config_qs = VehicleDefinition.objects.filter(
-                slug=config_slug,
-                is_active=True,
-                generation__is_active=True,
-                generation__vehicle_model__is_active=True,
-                generation__vehicle_model__manufacturer__is_active=True,
-                generation__vehicle_model__manufacturer__slug=mfr_slug,
-                generation__vehicle_model__slug=model_slug,
-                generation__slug=gen_slug,
-            )
-
-            # Restrict to specified year if year parameter is also present
-            if year_str and year_str.isdigit():
-                config_qs = config_qs.filter(model_year=int(year_str))
-
-            matching_vd = config_qs.first()
-            if matching_vd:
-                return redirect(
-                    "reference:vehicle-definition-detail",
-                    manufacturer_slug=mfr_slug,
-                    vehicle_model_slug=model_slug,
-                    generation_slug=gen_slug,
-                    vehicle_definition_slug=matching_vd.slug,
-                )
-
-        # Fallback to year-only redirection if year is valid
-        if year_str and year_str.isdigit():
-            return redirect(
-                "reference:model-year-overview",
-                manufacturer_slug=mfr_slug,
-                vehicle_model_slug=model_slug,
-                generation_slug=gen_slug,
-                model_year=int(year_str),
-            )
-
-        return super().get(request, *args, **kwargs)
-
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        active_defs = self.object.vehicle_definitions.filter(
-            is_active=True
-        ).order_by("model_year", "trim_name", "drivetrain", "engine_name")
+        year_param = self.request.GET.get("year")
+        trim_param = self.request.GET.get("trim")
+        config_param = self.request.GET.get("configuration")
 
-        active_years = sorted(list(set(active_defs.values_list("model_year", flat=True))))
+        # Track session history for Recently Viewed panel
+        record_recently_viewed_generation(self.request, self.object)
 
-        context["vehicle_model"] = self.object.vehicle_model
-        context["manufacturer"] = self.object.vehicle_model.manufacturer
-        context["active_model_years"] = active_years
-        context["active_configurations"] = active_defs
+        hub_context = get_generation_hub_context(
+            self.object,
+            model_year=year_param,
+            trim_name=trim_param,
+            config_slug=config_param,
+        )
+        context.update(hub_context)
         context["generation_hero_image"] = get_presentation_hero_image_url(self.object)
-
-        # Reserved presentation hooks for future domain model integration
-        # (Will require dedicated query/service integration when domains are implemented)
-        context["measurements"] = []
-        context["camping_builds"] = []
-
         return context
 
 
@@ -319,7 +298,7 @@ class ModelYearOverviewView(DetailView):
 
 class VehicleDefinitionDetailView(DetailView):
     """
-    Display one canonical vehicle definition.
+    Display one canonical vehicle definition with full specifications and applicable measurements.
     """
 
     model = VehicleDefinition
@@ -345,3 +324,12 @@ class VehicleDefinitionDetailView(DetailView):
             "generation__vehicle_model",
             "generation__vehicle_model__manufacturer",
         )
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        specs_context = get_full_specifications_context(self.object)
+        context.update(specs_context)
+        context["generation_hero_image"] = get_presentation_hero_image_url(
+            self.object.generation
+        )
+        return context

@@ -4,47 +4,77 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>
-        {% block title %}RigArchive{% endblock %}
-    </title>
+    <title>{% block title %}RigArchive — Technical Vehicle Archive{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'css/site.css' %}">
 </head>
-<body>
+<body class="archival-body">
     <a class="skip-link" href="#main-content">Skip to main content</a>
 
     <header class="site-header">
-        <div class="container">
-            <a class="site-name" href="{% url 'home' %}">
-                RigArchive
-            </a>
+        <div class="header-inner container">
+            <div class="site-branding">
+                <a class="site-logo" href="{% url 'home' %}">RigArchive</a>
+                <span class="site-tagline">Adventure vehicle technical archive.</span>
+            </div>
 
-            <nav aria-label="Primary navigation">
-                <a href="{% url 'home' %}">
-                    Home
-                </a>
-                <a href="{% url 'reference:manufacturer-list' %}">
+            <nav class="site-nav" aria-label="Primary navigation">
+                <a href="{% url 'reference:manufacturer-list' %}" class="nav-link {% if request.resolver_match.app_name == 'reference' or request.resolver_match.app_name == 'measurements' %}nav-link-active{% endif %}">
                     Vehicles
                 </a>
-                <a href="{% url 'about' %}">
+                <a href="{% url 'reference:manufacturer-list' %}?view=measurements" class="nav-link">
+                    Measurements
+                </a>
+                <a href="#builds" class="nav-link nav-link-unavailable" title="Builds and modifications archive coming soon" aria-disabled="true">
+                    Builds
+                </a>
+                <a href="#service-guides" class="nav-link nav-link-unavailable" title="Service guides archive coming soon" aria-disabled="true">
+                    Service Guides
+                </a>
+                <a href="{% url 'about' %}" class="nav-link {% if request.resolver_match.url_name == 'about' %}nav-link-active{% endif %}">
                     About
                 </a>
-                <a href="{% url 'admin:index' %}">
-                    Admin
-                </a>
             </nav>
+
+            <div class="header-search">
+                <form action="{% url 'reference:manufacturer-list' %}" method="get" class="header-search-form" role="search">
+                    <svg class="header-search-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <circle cx="8.5" cy="8.5" r="5.5" />
+                        <line x1="12.5" y1="12.5" x2="17" y2="17" />
+                    </svg>
+                    <input type="search" name="q" placeholder="Search vehicles, configs, or topics..." class="header-search-input" value="{{ search_query|default:'' }}" aria-label="Search archive">
+                </form>
+            </div>
+
+            <div class="header-actions">
+                <a href="{% url 'home' %}#garage" class="button-garage" title="My Garage feature is not yet available" aria-disabled="true">
+                    <svg class="garage-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                        <path d="M9 22V12h6v10"/>
+                    </svg>
+                    <span>My Garage</span>
+                </a>
+            </div>
         </div>
     </header>
 
-    <main id="main-content" class="container" tabindex="-1">
+    <main id="main-content" class="container site-main" tabindex="-1">
         {% block breadcrumbs %}{% endblock %}
         {% block content %}{% endblock %}
     </main>
 
     <footer class="site-footer">
-        <div class="container">
-            <p>
-                RigArchive Reference Implementation
-            </p>
+        <div class="container footer-inner">
+            <div class="footer-col">
+                <span class="footer-title">RigArchive</span>
+                <p class="footer-text">
+                    A technical archive of vehicles, factory configurations, physical measurements, and maintenance evidence.
+                </p>
+            </div>
+            <div class="footer-col footer-links">
+                <a href="{% url 'reference:manufacturer-list' %}">Browse Platforms</a>
+                <a href="{% url 'about' %}">About Archive</a>
+                <a href="{% url 'admin:index' %}">Administrative Access</a>
+            </div>
         </div>
     </footer>
 </body>
