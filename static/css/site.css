@@ -1419,6 +1419,49 @@ select:focus-visible {
     max-width: 440px;
 }
 
+/* Decorative, generation-scoped placeholders; photographs are not records. */
+.builds-guides-grid > .archive-section {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+.builds-guides-grid .generation-domain-placeholder {
+    flex: 1;
+    padding: .5rem;
+    gap: 0;
+    align-items: stretch;
+    overflow: hidden;
+    text-align: left;
+}
+.generation-domain-placeholder-media {
+    flex: none;
+    width: 100%;
+    height: 210px;
+    overflow: hidden;
+}
+.generation-domain-placeholder .generation-domain-placeholder-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-bottom: 1px solid var(--border-color);
+}
+.builds-section .generation-domain-placeholder-image {
+    /* Retain the rear storage system when narrow cards crop the coastal scene. */
+    object-position: left center;
+}
+.generation-domain-placeholder-body {
+    flex: none;
+    display: grid;
+    padding: .65rem .25rem .15rem;
+}
+.generation-domain-placeholder-message {
+    font-size: .86rem;
+    color: var(--text-secondary);
+    overflow-wrap: anywhere;
+}
+
 /* ==========================================================================
    GENERATION PAGE: Configurations Browser (Full-Width 3-Column)
    ========================================================================== */
@@ -2230,4 +2273,60 @@ select:focus-visible {
     .gen-stat-item:nth-child(2) {
         border-right: none;
     }
+}
+
+/* Vehicles selector: native GET discovery, independent of Generation controls. */
+.vehicle-selector-heading { margin-bottom: 1.5rem; }
+.vehicle-selector-heading p { color: var(--text-secondary); }
+.vehicle-selector-search { display: flex; flex-wrap: wrap; align-items: end; gap: 1rem; margin-bottom: 1.25rem; }
+.vehicle-selector-search p { margin: 0; min-width: 0; flex: 1 1 18rem; }
+.vehicle-selector-search label { display: block; margin-bottom: .4rem; }
+.vehicle-selector-search input[type="search"] { width: 100%; box-sizing: border-box; padding: .7rem; font: inherit; color: var(--text-primary); background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-sm); }
+.vehicle-selector-filters { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 2rem; }
+.vehicle-selector-filters a { padding: .45rem .75rem; border: 1px solid var(--border-color); border-radius: var(--radius-sm); text-decoration: none; overflow-wrap: anywhere; }
+.vehicle-selector-filters a[aria-current="true"] { background: var(--text-primary); color: var(--bg-surface); }
+.vehicle-selector-manufacturer { margin: 1.5rem 0 .75rem; }
+.vehicle-selector-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); max-width: 1008px; gap: 1rem; list-style: none; padding: 0; }
+.vehicle-selector-grid > li { min-width: 0; }
+.vehicle-selector-card { display: flex; flex-direction: column; height: 100%; color: var(--text-primary); background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-sm); text-decoration: none; }
+.vehicle-selector-card:hover { border-color: var(--color-blue); }
+.vehicle-selector-photo { display: grid; flex: none; aspect-ratio: 3 / 2; background: var(--bg-paper-subtle); border-radius: var(--radius-sm) var(--radius-sm) 0 0; overflow: hidden; }
+.vehicle-selector-photo img { display: block; width: 100%; height: 100%; object-fit: cover; min-height: 0; }
+.vehicle-selector-no-photo { align-self: center; justify-self: center; color: var(--text-secondary); padding: 1rem; text-align: center; }
+.vehicle-selector-card-body { display: flex; flex: 1; flex-direction: column; gap: .3rem; padding: .75rem; overflow-wrap: anywhere; }
+.vehicle-selector-make { font-family: var(--font-mono); font-size: .8rem; color: var(--text-secondary); }
+.vehicle-selector-model { font-family: var(--font-serif); font-size: 1.15rem; font-weight: 600; }
+.vehicle-selector-action { margin-top: auto; padding-top: .65rem; color: var(--color-blue); }
+@media (max-width: 1024px) {
+    .vehicle-selector-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 768px) {
+    .vehicle-selector-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 380px) {
+    .vehicle-selector-grid { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* Compact Vehicles disclosure; ordinary buttons and links retain native keys. */
+.site-nav { position: relative; }
+.vehicle-quick { position: static; display: flex; align-items: center; gap: .15rem; min-width: 0; }
+.vehicle-quick-toggle { border: 0; background: transparent; color: var(--text-secondary); font: inherit; cursor: pointer; min-width: 2.25rem; min-height: 2.75rem; }
+.vehicle-quick [hidden] { display: none; }
+.vehicle-quick-panel { position: absolute; top: 100%; left: 0; width: min(32rem, calc(100vw - 3rem)); max-width: 100%; max-height: 65vh; overflow: auto; padding: 1rem; box-sizing: border-box; background: var(--bg-surface); border: 1px solid var(--border-color, #ddd); border-radius: .35rem; box-shadow: 0 8px 24px rgba(0, 0, 0, .12); z-index: 110; }
+.vehicle-quick-columns { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1rem; }
+.vehicle-quick-columns section { min-width: 0; }
+.vehicle-quick-panel h2 { font: 600 .85rem var(--font-mono); margin: 0 0 .6rem; }
+.vehicle-quick-list { max-height: 17rem; overflow-y: auto; }
+.vehicle-quick-list button, .vehicle-quick-list a { display: block; width: 100%; box-sizing: border-box; text-align: left; padding: .55rem; border: 0; border-radius: .2rem; background: transparent; color: var(--text-primary); font: inherit; font-size: .9rem; overflow-wrap: anywhere; text-decoration: none; }
+.vehicle-quick-list button { cursor: pointer; }
+.vehicle-quick-list button:hover, .vehicle-quick-list a:hover, .vehicle-quick-list button[aria-pressed="true"] { background: var(--bg-paper-subtle); color: var(--color-blue); }
+.vehicle-quick-panel p { font-size: .85rem; overflow-wrap: anywhere; }
+.vehicle-quick-selected-name { margin: 0 .55rem .3rem; color: var(--text-secondary); }
+.vehicle-quick-footer { display: block; border-top: 1px solid var(--border-color, #ddd); margin-top: .75rem; padding-top: .75rem; font-size: .9rem; }
+@media (max-width: 768px) {
+    .vehicle-quick-panel { width: min(28rem, calc(100vw - 3rem)); }
+}
+@media (max-width: 480px) {
+    .vehicle-quick-columns { grid-template-columns: minmax(0, 1fr); }
+    .vehicle-quick-list { max-height: 8rem; }
 }

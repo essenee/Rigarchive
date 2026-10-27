@@ -243,12 +243,13 @@ class ExperimentalVehicleHubAndHomepageTests(TestCase):
         self.assertContains(r3, "38.60")
 
     # 7. Prevention of unsupported applicability claims (epistemic notices)
-    def test_epistemic_forthcoming_sections_present_clear_disclaimers(self) -> None:
+    def test_forthcoming_sections_present_explicit_empty_states(self) -> None:
         """Adventure Builds and Service Maintenance are clearly framed as forthcoming without fake data."""
         response = self.client.get(self.fourth_generation.get_absolute_url())
-        self.assertContains(response, "No Documented Builds Yet")
-        self.assertContains(response, "No Service Guides Recorded")
-        self.assertContains(response, "strict separation from factory baseline specifications")
+        self.assertContains(response, "No Builds documented yet")
+        self.assertContains(response, "No service guides added yet.")
+        self.assertNotContains(response, "Click to add a build or mod")
+        self.assertNotContains(response, "Click to add a service guide")
 
     # 8. Full Specifications Page
     def test_full_specifications_page_content_and_navigation(self) -> None:
@@ -597,8 +598,54 @@ class ExperimentalVehicleHubAndHomepageTests(TestCase):
         for title in ["Builds and Mods", "Service Guides"]:
             self.assertIn(f'<div class="section-heading-row">\n                <h2 class="section-title-serif">{title}</h2>', html)
         self.assertNotContains(response, "Maintenance and repair information for the")
-        self.assertContains(response, "No Service Guides Recorded")
-        self.assertContains(response, "No Documented Builds Yet")
+        self.assertContains(response, "No service guides added yet.")
+        self.assertContains(response, "No Builds documented yet")
+
+    def test_builds_and_guides_decorative_placeholders_for_two_generations(self):
+        from django.contrib.staticfiles import finders
+        from django.templatetags.static import static
+
+        for generation in (self.fourth_generation, self.fifth_generation):
+            with self.subTest(generation=generation.name):
+                response = self.client.get(generation.get_absolute_url())
+                self.assertEqual(response.status_code, 200)
+                for message in ("No Builds documented yet", "No service guides added yet."):
+                    # The entire caption contains only the requested message:
+                    # no generation identity, extra explanation or contribution CTA.
+                    self.assertContains(
+                        response,
+                        '<div class="generation-domain-placeholder-body">'
+                        f'<p class="generation-domain-placeholder-message">{message}</p></div>',
+                        html=True, count=1,
+                    )
+                self.assertContains(response, 'class="empty-domain-card generation-domain-placeholder"', count=2)
+                for asset, width, height in (
+                    ("images/generation-builds-placeholder-baja.png", 1916, 821),
+                    ("images/generation-service-guides-placeholder.png", 220, 150),
+                ):
+                    self.assertIsNotNone(finders.find(asset))
+                    # Empty alt text keeps the generic photo out of the record's
+                    # accessible description; no generation evidence is implied.
+                    self.assertContains(
+                        response,
+                        f'<img class="generation-domain-placeholder-image" src="{static(asset)}" '
+                        f'alt="" loading="lazy" width="{width}" height="{height}">',
+                        html=True, count=1,
+                    )
+                for removed_text in (
+                    "Future entries will document", "Future entries will cover",
+                    "No builds are currently recorded for", "No service guides are currently available for",
+                    "Click to add a build or mod", "Click to add a service guide",
+                ):
+                    self.assertNotContains(response, removed_text)
+                page = ConfiguratorParser(response.content.decode())
+                section_links = [
+                    link for link in page.links
+                    if link["attrs"].get("href") in ("#builds", "#service-guides")
+                    and "section-action-link" in link["attrs"].get("class", "").split()
+                ]
+                self.assertEqual(len(section_links), 2)
+                self.assertTrue(all(link["attrs"].get("aria-disabled") == "true" for link in section_links))
 
 
     def test_only_filter_links_opt_into_enhancement(self):
