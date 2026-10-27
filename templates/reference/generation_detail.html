@@ -98,85 +98,92 @@
         </div>
     </section>
 
-    <!-- Explore This Generation Section -->
-    <section class="archive-section explore-gen-section" id="explore" aria-label="Explore This Generation">
-        <div class="explore-gen-box">
-            <div class="explore-header-row">
-                <div>
-                    <h2 class="section-title-serif">Explore This Generation</h2>
-                    <p class="section-subtitle-sans">
-                        View information for the entire generation, or narrow to a specific model year and configuration.
-                    </p>
-                </div>
-                {% if full_specs_url %}
-                    <a href="{{ full_specs_url }}" class="button-outline-blue">
-                        View Full Specifications →
-                    </a>
-                {% else %}
-                    <a href="#configurations" class="button-outline-blue">
-                        View Full Specifications →
-                    </a>
-                {% endif %}
-            </div>
+    <!-- Full-Width Configurations Browser (Model Year → Trim → Configuration) -->
+    <section class="archive-section configurations-browser-section" id="configurations" tabindex="-1" aria-label="Configurations &amp; Specs">
+        <p id="generation-filter-status" class="visually-hidden" role="status" aria-live="polite" aria-atomic="true"></p>
+        <div id="configuration-content">
+        <div class="section-header-block">
+            <h2 class="section-title-serif">Configurations &amp; Specs</h2>
+            <p class="section-subtitle-sans">Explore available factory configurations by model year and trim. Select a configuration to view its detailed technical specifications.</p>
+        </div>
 
-            <div class="explore-filter-row">
-                <form action="{{ generation.get_absolute_url }}" method="get" class="explore-filter-form" id="exploreFilterForm">
-                    <!-- Dropdown 1: Model Year -->
-                    <div class="filter-field-group">
-                        <label for="filter-model-year" class="filter-label">Model Year</label>
-                        <select name="year" id="filter-model-year" class="filter-select" onchange="this.form.submit()">
-                            <option value="">All Years ({{ generation.start_year }}–{% if generation.end_year %}{{ generation.end_year }}{% else %}present{% endif %})</option>
-                            {% for yr in active_model_years_asc %}
-                                <option value="{{ yr }}" {% if selected_year == yr %}selected{% endif %}>{{ yr }}</option>
-                            {% endfor %}
-                        </select>
-                    </div>
-
-                    <!-- Dropdown 2: Trim / Configuration -->
-                    <div class="filter-field-group">
-                        <label for="filter-trim" class="filter-label">Trim / Configuration</label>
-                        <select name="trim" id="filter-trim" class="filter-select" onchange="this.form.submit()">
-                            <option value="">All Configurations</option>
-                            {% for t in available_trims %}
-                                <option value="{{ t }}" {% if selected_trim == t %}selected{% endif %}>{{ t }}</option>
-                            {% endfor %}
-                        </select>
-                    </div>
-
-                    {% if filter_active %}
-                        <div class="filter-reset-wrap">
-                            <a href="{{ generation.get_absolute_url }}" class="clear-filters-link">
-                                <svg class="clear-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-                                    <line x1="18" y1="6" x2="6" y2="18"/>
-                                    <line x1="6" y1="6" x2="18" y2="18"/>
-                                </svg>
-                                <span>Clear Filters</span>
+        {% if filter_active or filter_errors %}
+            <a href="{{ generation.get_absolute_url }}#configurations" class="clear-filters-link" data-generation-filter>Clear Filters</a>
+        {% endif %}
+        {% for error in filter_errors %}
+            <p class="section-subtitle-sans" role="status">{{ error }}</p>
+        {% endfor %}
+        <div class="config-browser-panel">
+            <div class="browser-columns-container">
+                <!-- Column 1: Model Year -->
+                <div class="browser-column col-year">
+                    <h3 class="column-title">1. Model Year</h3>
+                    <div class="years-button-grid">
+                        {% for yr in active_model_years %}
+                            <a href="?year={{ yr }}#configurations" data-generation-filter class="year-button {% if selected_year == yr %}is-selected{% endif %}" data-year="{{ yr }}">
+                                {{ yr }}
                             </a>
+                        {% empty %}
+                            <p>No active configurations are available for this generation.</p>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <div class="column-arrow" aria-hidden="true">→</div>
+
+                <!-- Column 2: Trim -->
+                <div class="browser-column col-trim">
+                    <h3 class="column-title">2. Trim</h3>
+                    {% if selected_year %}
+                        {% if available_trims %}
+                            <div class="trims-button-list">
+                                {% for trim_item in available_trims %}
+                                    <a href="?year={{ selected_year }}&amp;trim={{ trim_item|urlencode }}#configurations" data-generation-filter class="trim-button {% if selected_trim == trim_item %}is-selected{% endif %}">
+                                        {{ trim_item|default:"Unnamed trim" }}
+                                    </a>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            <div class="column-empty-state">
+                                <p>Standard baseline trim for {{ selected_year }}.</p>
+                            </div>
+                        {% endif %}
+                    {% else %}
+                        <div class="column-empty-state">
+                            <p>Select a model year to view available trims.</p>
                         </div>
                     {% endif %}
-                </form>
+                </div>
 
-                <!-- Status Indicator Box -->
-                <div class="explore-status-box">
-                    <svg class="vehicle-outline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                        <path d="M5 17h14M5 17a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h1.5L8 4h8l1.5 3H19a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2M5 17a2 2 0 1 0 4 0M19 17a2 2 0 1 0 4 0"/>
-                    </svg>
-                    <div class="status-box-text">
-                        <span class="status-title">Showing:</span>
-                        <span class="status-desc">
-                            {% if selected_year and selected_trim %}
-                                {{ selected_year }} {{ manufacturer.name }} {{ vehicle_model.name }} {{ selected_trim }}
-                            {% elif selected_year %}
-                                All {{ selected_year }} {{ manufacturer.name }} {{ vehicle_model.name }} Configurations
-                            {% elif selected_trim %}
-                                {{ generation.name }} {{ vehicle_model.name }} {{ selected_trim }} Trims
-                            {% else %}
-                                All {{ generation.start_year }}–{% if generation.end_year %}{{ generation.end_year }}{% else %}present{% endif %} {{ manufacturer.name }} {{ vehicle_model.name }}s
-                            {% endif %}
-                        </span>
-                    </div>
+                <div class="column-arrow" aria-hidden="true">→</div>
+
+                <!-- Column 3: Configuration -->
+                <div class="browser-column col-package">
+                    <h3 class="column-title">3. Configuration</h3>
+                    {% if selected_year %}
+                        <div class="package-status-box">
+                            <div class="matching-configs-section">
+                                <span class="matching-configs-label">Factory Configurations:</span>
+                                <ul class="matching-configs-list">
+                                    {% for vd in configuration_browser_choices %}
+                                        <li class="matching-config-item {% if selected_config.pk == vd.pk %}is-selected{% endif %}">
+                                            <a href="?year={{ vd.model_year }}&amp;configuration={{ vd.slug|urlencode }}#configurations" data-generation-filter class="configuration-choice" aria-label="Select {{ vd.model_year }} {{ vd.trim_name|default:'Unnamed trim' }} · {{ vd.choice_label }}" {% if selected_config.pk == vd.pk %}aria-current="true"{% endif %}>{{ vd.choice_label }}</a>
+                                            <a href="{{ vd.get_absolute_url }}" class="configuration-specs-link" aria-label="Full specifications for {{ vd.choice_label }}">Specs →</a>
+                                        </li>
+                                    {% empty %}
+                                        <li class="config-item-empty">No active configurations match this selection.</li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                    {% else %}
+                        <div class="column-empty-state">
+                            <p>Select a model year to view configurations.</p>
+                        </div>
+                    {% endif %}
                 </div>
             </div>
+        </div>
         </div>
     </section>
 
@@ -359,18 +366,15 @@
                 </svg>
                 <h3 class="empty-domain-title">No Documented Builds Yet</h3>
                 <p class="empty-domain-text">
-                    No real-world adventure builds or modifications have been indexed for this generation. RigArchive records real expedition setups, sleeping conversions, and suspension modifications with documented evidence.
+                    No builds or modifications have been indexed for this generation. Owner modifications require strict separation from factory baseline specifications; builds are not factory equipment.
                 </p>
             </div>
         </section>
 
-        <!-- Right: Service Guides (With subtitle) -->
+        <!-- Right: Service Guides -->
         <section class="archive-section guides-section" id="service-guides" aria-label="Service Guides">
             <div class="section-heading-row">
-                <div>
-                    <h2 class="section-title-serif">Service Guides</h2>
-                    <p class="section-subtitle-sans">Maintenance and repair information for the {{ generation.name }}.</p>
-                </div>
+                <h2 class="section-title-serif">Service Guides</h2>
                 <a href="#service-guides" class="section-action-link link-unavailable" title="Service guides domain in development" aria-disabled="true">
                     View all guides →
                 </a>
@@ -390,98 +394,7 @@
         </section>
     </div>
 
-    <!-- Full-Width Configurations Browser (Model Year → Trim → Package) -->
-    <section class="archive-section configurations-browser-section" id="configurations" aria-label="Configurations Browser">
-        <div class="section-header-block">
-            <h2 class="section-title-serif">Configurations</h2>
-            <p class="section-subtitle-sans">Browse factory configurations by model year, trim, and package.</p>
-        </div>
 
-        <div class="config-browser-panel">
-            <div class="browser-columns-container">
-                <!-- Column 1: Model Year -->
-                <div class="browser-column col-year">
-                    <h3 class="column-title">1. Model Year</h3>
-                    <div class="years-button-grid">
-                        {% for yr in active_model_years %}
-                            <a href="?year={{ yr }}#configurations" class="year-button {% if selected_year == yr %}is-selected{% endif %}" data-year="{{ yr }}">
-                                {{ yr }}
-                            </a>
-                        {% endfor %}
-                    </div>
-                </div>
-
-                <div class="column-arrow" aria-hidden="true">→</div>
-
-                <!-- Column 2: Trim -->
-                <div class="browser-column col-trim">
-                    <h3 class="column-title">2. Trim</h3>
-                    {% if selected_year %}
-                        {% if available_trims %}
-                            <div class="trims-button-list">
-                                {% for trim_item in available_trims %}
-                                    <a href="?year={{ selected_year }}&trim={{ trim_item|urlencode }}#configurations" class="trim-button {% if selected_trim == trim_item %}is-selected{% endif %}">
-                                        {{ trim_item }}
-                                    </a>
-                                {% endfor %}
-                            </div>
-                        {% else %}
-                            <div class="column-empty-state">
-                                <p>Standard baseline trim for {{ selected_year }}.</p>
-                            </div>
-                        {% endif %}
-                    {% else %}
-                        <div class="column-empty-state">
-                            <p>Select a model year to view available trims.</p>
-                        </div>
-                    {% endif %}
-                </div>
-
-                <div class="column-arrow" aria-hidden="true">→</div>
-
-                <!-- Column 3: Package -->
-                <div class="browser-column col-package">
-                    <h3 class="column-title">3. Package</h3>
-                    {% if selected_year and selected_trim %}
-                        <div class="package-status-box">
-                            <div class="package-notice">
-                                <span class="notice-badge">Archival Status</span>
-                                <p class="notice-text">
-                                    Factory package breakdown has not been recorded in the canonical reference schema.
-                                </p>
-                            </div>
-
-                            <div class="matching-configs-section">
-                                <span class="matching-configs-label">Matching Factory Configurations:</span>
-                                <ul class="matching-configs-list">
-                                    {% for vd in displayed_configurations %}
-                                        <li class="matching-config-item">
-                                            <a href="{{ vd.get_absolute_url }}" class="config-item-link">
-                                                <div class="config-name">
-                                                    <strong>{{ vd.model_year }} {{ vd.trim_name|default:"Base" }}</strong>
-                                                    <span>{{ vd.drivetrain }} • {{ vd.engine_name }}</span>
-                                                </div>
-                                                <span class="config-arrow">View Specs →</span>
-                                            </a>
-                                        </li>
-                                    {% empty %}
-                                        <li class="config-item-empty">No configurations found matching this trim.</li>
-                                    {% endfor %}
-                                </ul>
-                            </div>
-                        </div>
-                    {% elif selected_year %}
-                        <div class="column-empty-state">
-                            <p>Select a trim to view available packages.</p>
-                        </div>
-                    {% else %}
-                        <div class="column-empty-state">
-                            <p>Select a trim to view available packages.</p>
-                        </div>
-                    {% endif %}
-                </div>
-            </div>
-        </div>
-    </section>
 </div>
+<script src="{% static 'js/generation_configurator.js' %}" defer></script>
 {% endblock %}

@@ -172,32 +172,35 @@ class ReferenceViewTests(TestCase):
         """RA-032.3. Confirm zero domain model attribute additions to Generation in reference/models.py."""
         self.assertFalse(hasattr(Generation, "hero_image_url"))
 
-    def test_4_generation_landing_page_wikipedia_overview_infobox(self) -> None:
-        """RA-032.4, .5, .6, .7, .8, .9, .10. Overview infobox contains image, production, sequence, manufacturer, notes."""
+    def test_4_generation_landing_page_identity_photo_and_backend_notes(self) -> None:
+        """Identity and imagery remain visible; notes remain available in the model."""
         response = self.client.get(self.fourth_generation.get_absolute_url())
         self.assertEqual(response.status_code, 200)
-        self.assertContains(response, "generation-infobox")
-        self.assertContains(response, "infobox-img")
+        self.assertContains(response, "generation-hero-container")
+        self.assertContains(response, "gen-hero-photo")
         self.assertContains(response, "2003–2009")
-        self.assertContains(response, "Generation 4")
+        self.assertContains(response, "Fourth Generation")
         self.assertContains(response, "Toyota")
-        self.assertContains(response, "Fourth generation built on Land Cruiser Prado platform.")
+        self.assertEqual(response.context["generation"].notes, "Fourth generation built on Land Cruiser Prado platform.")
+        self.assertNotContains(response, "Generation Notes")
         self.assertNotContains(response, "Market Scope")
         self.assertNotContains(response, '<dt>Production years</dt>')
 
-    def test_5_unpopulated_measurements_and_camping_builds_headings_absent(self) -> None:
-        """RA-032.12 & .13. Measurements and Camping Builds headings do not render without integrated domain data."""
+    def test_5_unpopulated_domains_have_explicit_empty_states(self) -> None:
+        """Empty sections must not fabricate results, builds or procedures."""
         response = self.client.get(self.fourth_generation.get_absolute_url())
         self.assertEqual(response.status_code, 200)
-        self.assertContains(response, 'id="detailed-specs"')
-        self.assertNotContains(response, '<section class="archive-section" id="measurements">')
-        self.assertNotContains(response, '<section class="archive-section" id="camping-builds">')
+        self.assertContains(response, 'id="configurations"')
+        self.assertContains(response, "No verified manual physical measurements have been recorded")
+        self.assertContains(response, "No Documented Builds Yet")
+        self.assertContains(response, "No Service Guides Recorded")
+        self.assertFalse(response.context["has_measurements"])
 
-    def test_6_year_only_selection_resolves_to_year_overview(self) -> None:
+    def test_6_year_only_selection_filters_hub(self) -> None:
         """Experimental Vehicle Hub: Year selection filters Generation page in-place (HTTP 200)."""
         response = self.client.get(self.fourth_generation.get_absolute_url() + "?year=2003")
         self.assertEqual(response.status_code, 200)
-        self.assertContains(response, "Model Year 2003")
+        self.assertContains(response, 'data-year="2003"')
         self.assertEqual(response.context["selected_year"], 2003)
         self.assertIsNone(response.context["selected_config"])
         self.assertTrue(response.context["filter_active"])
@@ -206,7 +209,7 @@ class ReferenceViewTests(TestCase):
         self.assertIn(self.vd_2003_v8, response.context["displayed_configurations"])
         self.assertNotIn(self.vd_2004_sr5, response.context["displayed_configurations"])
 
-    def test_7_matching_year_plus_configuration_redirects_to_exact_vehicle_definition(self) -> None:
+    def test_7_matching_year_plus_configuration_selects_exact_definition(self) -> None:
         """Experimental Vehicle Hub: Matching year + configuration filters to exact configuration with Full Specs action."""
         response = self.client.get(
             self.fourth_generation.get_absolute_url() + f"?year=2003&configuration={self.vd_2003_v8.slug}"
@@ -214,9 +217,9 @@ class ReferenceViewTests(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.context["selected_year"], 2003)
         self.assertEqual(response.context["selected_config"], self.vd_2003_v8)
-        self.assertContains(response, "Selected Configuration Filter")
+        self.assertContains(response, 'aria-current="true"')
         self.assertContains(response, self.vd_2003_v8.get_absolute_url())
-        self.assertContains(response, "View Full Specifications")
+        self.assertContains(response, 'class="configuration-specs-link"')
 
     def test_8_mismatched_year_plus_configuration_is_rejected(self) -> None:
         """Experimental Vehicle Hub: Mismatched year + configuration rejects cross-year config selection."""
@@ -265,12 +268,12 @@ class ReferenceViewTests(TestCase):
         self.assertContains(response, self.vd_2003_v6.get_absolute_url())
         self.assertContains(response, self.vd_2003_v8.get_absolute_url())
 
-    def test_12_initial_configuration_selector_is_disabled_with_placeholder(self) -> None:
-        """RA-032 Disabled State. Initial configuration selector is rendered disabled with placeholder text."""
+    def test_12_initial_configuration_step_requires_year(self) -> None:
+        """Exact choices are unavailable until a model year is selected."""
         response = self.client.get(self.fourth_generation.get_absolute_url())
         self.assertEqual(response.status_code, 200)
-        self.assertContains(response, 'id="config-select" class="specs-selector-select" disabled>')
-        self.assertContains(response, 'Select model year first')
+        self.assertNotContains(response, 'class="configuration-choice"')
+        self.assertContains(response, "Select a model year to view configurations.")
 
     def test_13_unpopulated_manufacturers_and_models_are_excluded_from_index(self) -> None:
         """RA-033 Public Visibility. Unpopulated taxonomy remains in database but is excluded publicly until populated."""

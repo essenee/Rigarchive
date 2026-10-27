@@ -16,12 +16,13 @@ class ApplicationShellTests(TestCase):
         self.assertContains(response, 'id="main-content"')
         self.assertContains(response, 'tabindex="-1"')
         self.assertContains(response, 'aria-label="Primary navigation"')
-        self.assertContains(response, "RigArchive Reference Implementation")
+        self.assertContains(response, "Vehicle Platforms")
+        self.assertContains(response, "Find a Vehicle")
 
     def test_about_page_renders_cleanly(self):
         response = self.client.get(reverse("about"))
         self.assertEqual(response.status_code, 200)
-        self.assertContains(response, "<title>\n        About | RigArchive\n    </title>", html=False)
+        self.assertContains(response, "<title>About | RigArchive</title>", html=True)
         self.assertContains(response, "<h1>About RigArchive</h1>")
         self.assertContains(response, "Canonical Vehicle Identity")
         self.assertContains(response, "Factory Configuration Reference")

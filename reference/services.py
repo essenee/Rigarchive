@@ -6,6 +6,7 @@ and multi-domain data aggregation for the Generation Knowledge Hub and Homepage.
 Follows the approved wireframes and architectural guidelines.
 """
 
+from collections import Counter
 from typing import Any, Dict, List, Optional
 from django.db.models import Prefetch
 
@@ -15,6 +16,27 @@ from reference.models import (
     VehicleDefinition,
     VehicleModel,
 )
+
+
+def _label_configuration_choices(configurations):
+    """Attach presentation-only labels without collapsing canonical records."""
+    choices = list(configurations)
+    attributes = [
+        lambda vd: vd.trim_name or "Unnamed trim",
+        lambda vd: vd.engine_name or "Engine not specified",
+        lambda vd: vd.get_drivetrain_display(),
+    ]
+    varying = [attribute for attribute in attributes if len({attribute(vd) for vd in choices}) > 1]
+    # A single choice still needs a useful description, even with no variation.
+    fields = varying or attributes[1:]
+    labels = [" · ".join(attribute(vd) for attribute in fields) for vd in choices]
+    counts = Counter(labels)
+    labels = [f"{label} · {vd.get_market_display()} ({vd.market})" if counts[label] > 1 else label
+              for vd, label in zip(choices, labels)]
+    counts = Counter(labels)
+    for vd, label in zip(choices, labels):
+        vd.choice_label = f"{label} · {vd.slug}" if counts[label] > 1 else label
+    return choices
 
 
 def get_generation_hub_context(
@@ -38,76 +60,55 @@ def get_generation_hub_context(
     active_defs = (
         generation.vehicle_definitions.filter(is_active=True)
         .select_related("generation__vehicle_model__manufacturer")
-        .order_by("model_year", "trim_name", "drivetrain", "engine_name")
+        .order_by("-model_year", "trim_name", "drivetrain", "engine_name", "market", "slug")
     )
 
-    # 2. Extract distinct active model years (sorted descending for browsing clarity)
-    active_model_years = sorted(
-        list(set(active_defs.values_list("model_year", flat=True))),
-        reverse=True,
-    )
-    # Also provide ascending list for range displays
+    # Resolve explicit filters before deriving their dependent choices.
+    active_model_years = sorted(set(active_defs.values_list("model_year", flat=True)), reverse=True)
     active_model_years_asc = sorted(active_model_years)
-
-    # 3. Validate and resolve selected model year
-    selected_year: Optional[int] = None
-    if model_year is not None:
+    selected_year = None
+    filter_errors = []
+    if model_year not in (None, ""):
         try:
-            year_int = int(model_year)
-            if year_int in active_model_years:
-                selected_year = year_int
+            year = int(model_year)
         except (ValueError, TypeError):
-            selected_year = None
+            year = None
+        if year in active_model_years:
+            selected_year = year
+        else:
+            filter_errors.append("The requested model year is unavailable. Showing all years.")
 
-    # 4. Filter configurations by selected year if valid
-    year_filtered_defs = (
-        active_defs.filter(model_year=selected_year)
-        if selected_year is not None
-        else active_defs
-    )
+    candidate = active_defs.filter(slug=config_slug).first() if config_slug else None
+    # Only a configuration-only URL may infer a year. An explicit blank year
+    # means All Years; invalid or mismatched years must never be overridden.
+    if candidate is not None and model_year is None:
+        selected_year = candidate.model_year
 
-    # 5. Extract available trims for the selected year (or generation-wide)
-    available_trims: List[str] = []
-    if selected_year is not None:
-        available_trims = sorted(
-            list(
-                set(
-                    vd.trim_name
-                    for vd in year_filtered_defs
-                    if vd.trim_name
-                )
-            )
-        )
+    year_filtered_defs = active_defs.filter(model_year=selected_year) if selected_year is not None else active_defs
+    available_trims = sorted(set(year_filtered_defs.values_list("trim_name", flat=True))) if selected_year is not None else []
+    selected_trim = None
+    if trim_name is not None:
+        # Empty string is an actual unnamed trim, distinct from no trim filter.
+        if selected_year is not None and trim_name in available_trims:
+            selected_trim = trim_name
+        else:
+            filter_errors.append("The requested trim is unavailable for this selection.")
 
-    # 6. Validate and resolve selected trim
-    selected_trim: Optional[str] = None
-    if trim_name and trim_name.strip():
-        clean_trim = trim_name.strip()
-        if clean_trim in available_trims or (selected_year is None and clean_trim in set(active_defs.values_list("trim_name", flat=True))):
-            selected_trim = clean_trim
-
-    # 7. Validate and resolve selected configuration slug
-    selected_config: Optional[VehicleDefinition] = None
+    selected_config = None
     if config_slug:
-        matching_config = active_defs.filter(slug=config_slug).first()
-        if matching_config:
-            if selected_year is not None and matching_config.model_year != selected_year:
-                selected_config = None
-            elif selected_trim is not None and matching_config.trim_name != selected_trim:
-                selected_config = None
-            else:
-                selected_config = matching_config
-                if selected_year is None:
-                    selected_year = matching_config.model_year
-                if selected_trim is None and matching_config.trim_name:
-                    selected_trim = matching_config.trim_name
+        if (candidate is not None and selected_year == candidate.model_year
+                and not filter_errors
+                and (selected_trim is None or candidate.trim_name == selected_trim)):
+            selected_config = candidate
+            selected_trim = candidate.trim_name
+        else:
+            filter_errors.append("The requested configuration is unavailable for this selection.")
 
-    # 8. Configurations displayed in the body content / browser
     displayed_defs = year_filtered_defs
     if selected_trim is not None:
         displayed_defs = displayed_defs.filter(trim_name=selected_trim)
     if selected_config is not None:
-        displayed_defs = active_defs.filter(pk=selected_config.pk)
+        displayed_defs = displayed_defs.filter(pk=selected_config.pk)
 
     # 9. Group displayed configurations by trim name
     trims_dict: Dict[str, List[VehicleDefinition]] = {}
@@ -167,28 +168,22 @@ def get_generation_hub_context(
     except ImportError:
         pass
 
-    # 12. Full specifications URL determination
-    # If selected filters uniquely identify one VehicleDefinition, link directly to it.
-    full_specs_url: Optional[str] = None
-    if selected_config is not None:
-        full_specs_url = selected_config.get_absolute_url()
-    elif displayed_defs.count() == 1:
-        full_specs_url = displayed_defs.first().get_absolute_url()
-    elif selected_year is not None:
-        # Fallback to model-year overview route if available
-        try:
-            from django.urls import reverse
-            full_specs_url = reverse(
-                "reference:model-year-overview",
-                kwargs={
-                    "manufacturer_slug": generation.vehicle_model.manufacturer.slug,
-                    "vehicle_model_slug": generation.vehicle_model.slug,
-                    "generation_slug": generation.slug,
-                    "model_year": selected_year,
-                },
-            )
-        except Exception:
-            full_specs_url = None
+    # A year or trim is never silently promoted to an exact configuration.
+    full_specs_url = selected_config.get_absolute_url() if selected_config is not None else None
+    model_year_url = None
+    if selected_year is not None:
+        from django.urls import reverse
+        model_year_url = reverse("reference:model-year-overview", kwargs={
+            "manufacturer_slug": generation.vehicle_model.manufacturer.slug,
+            "vehicle_model_slug": generation.vehicle_model.slug,
+            "generation_slug": generation.slug,
+            "model_year": selected_year,
+        })
+
+    configuration_choices = _label_configuration_choices(year_filtered_defs) if selected_year is not None else []
+    browser_defs = year_filtered_defs.filter(trim_name=selected_trim) if selected_trim is not None else year_filtered_defs
+    # Keep sibling choices available after exact selection, with a visible marker.
+    browser_choices = _label_configuration_choices(browser_defs) if selected_year is not None else []
 
     filter_active = (
         (selected_year is not None)
@@ -215,6 +210,11 @@ def get_generation_hub_context(
         "has_measurements": has_measurements,
         "filter_active": filter_active,
         "full_specs_url": full_specs_url,
+        "model_year_url": model_year_url,
+        "filter_errors": filter_errors,
+        "trim_filter_active": selected_trim is not None,
+        "configuration_choices": configuration_choices,
+        "configuration_browser_choices": browser_choices,
         "total_generation_configs": active_defs.count(),
         "filtered_configs_count": displayed_defs.count(),
     }
