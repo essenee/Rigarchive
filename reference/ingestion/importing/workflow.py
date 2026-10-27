@@ -6,7 +6,7 @@ boundary while persisting durable ImportExecutionReceipt audit records within at
 """
 
 import getpass
-from typing import Tuple
+from typing import Any, Optional, Tuple
 
 from django.db import transaction
 

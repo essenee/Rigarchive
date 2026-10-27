@@ -46,7 +46,7 @@ Keep views thin and preserve domain boundaries.
 
 Approved technology:
 
-- Python 3.14.
+- Python 3.13.
 - Django 6.0.x.
 - SQLite for current local development.
 - Django templates.
@@ -56,6 +56,8 @@ Approved technology:
 Do not introduce React, a single-page application, or a new frontend framework without explicit architectural approval.
 
 Inspect the repository to determine the current applications and their responsibilities. Do not assume that an application list in older documentation is complete.
+
+Use `venv/py313/bin/python` from the repository root for local development, Codex CLI, and Codex Desktop. The verified environment uses Python 3.13.2, Django 6.0.7, and pypdf 6.16.1. Preserve the legacy `.venv`; do not use its Python 3.14 packages through a `PYTHONPATH` workaround. PythonAnywhere production already runs Python 3.13; no production configuration change is required by this migration.
 
 Preserve Django conventions and avoid unnecessary abstractions.
 
