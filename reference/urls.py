@@ -1,6 +1,7 @@
-from django.urls import path
+from django.urls import include, path
 
 from .views import (
+    vehicle_selector,
     GenerationDetailView,
     ManufacturerDetailView,
     ManufacturerListView,
@@ -11,7 +12,7 @@ from .views import (
 
 app_name = "reference"
 
-urlpatterns = [
+vehicle_patterns = [
     path(
         "",
         ManufacturerListView.as_view(),
@@ -56,4 +57,11 @@ urlpatterns = [
         VehicleDefinitionDetailView.as_view(),
         name="vehicle-definition-detail",
     ),
+]
+
+# A single reference namespace preserves existing reversals and adds a selector
+# outside the manufacturer slug tree. Deferred explore views are not registered.
+urlpatterns = [
+    path("select-vehicle/", vehicle_selector, name="vehicle-selector"),
+    path("vehicles/", include(vehicle_patterns)),
 ]

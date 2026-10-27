@@ -1,4 +1,4 @@
-{% load static %}
+{% load static vehicle_navigation %}
 <!doctype html>
 <html lang="en">
 <head>
@@ -18,9 +18,12 @@
             </div>
 
             <nav class="site-nav" aria-label="Primary navigation">
-                <a href="{% url 'reference:manufacturer-list' %}" class="nav-link {% if request.resolver_match.app_name == 'reference' or request.resolver_match.app_name == 'measurements' %}nav-link-active{% endif %}">
+                <div class="vehicle-quick" data-vehicle-quick>
+                <a href="{% url 'reference:vehicle-selector' %}?destination=generations" class="nav-link {% if request.resolver_match.app_name == 'reference' or request.resolver_match.app_name == 'measurements' %}nav-link-active{% endif %}">
                     Vehicles
                 </a>
+                {% vehicle_quick_selector %}
+                </div>
                 <a href="{% url 'reference:manufacturer-list' %}?view=measurements" class="nav-link">
                     Measurements
                 </a>
@@ -41,7 +44,7 @@
                         <circle cx="8.5" cy="8.5" r="5.5" />
                         <line x1="12.5" y1="12.5" x2="17" y2="17" />
                     </svg>
-                    <input type="search" name="q" placeholder="Search vehicles, configs, or topics..." class="header-search-input" value="{{ search_query|default:'' }}" aria-label="Search archive">
+                    <input type="search" name="q" placeholder="Search manufacturers and models..." class="header-search-input" value="{{ search_query|default:'' }}" aria-label="Search manufacturers and models">
                 </form>
             </div>
 
@@ -77,5 +80,6 @@
             </div>
         </div>
     </footer>
+    <script src="{% static 'js/vehicle_quick_selector.js' %}" defer></script>
 </body>
 </html>

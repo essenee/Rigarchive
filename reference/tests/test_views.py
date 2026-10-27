@@ -192,8 +192,8 @@ class ReferenceViewTests(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, 'id="configurations"')
         self.assertContains(response, "No physical measurements are recorded for this generation.")
-        self.assertContains(response, "No Documented Builds Yet")
-        self.assertContains(response, "No Service Guides Recorded")
+        self.assertContains(response, "No Builds documented yet")
+        self.assertContains(response, "No service guides added yet.")
         self.assertFalse(response.context["has_measurements"])
 
     def test_6_year_only_selection_filters_hub(self) -> None:
@@ -276,7 +276,7 @@ class ReferenceViewTests(TestCase):
         self.assertContains(response, "Select a model year to view configurations.")
 
     def test_13_unpopulated_manufacturers_and_models_are_excluded_from_index(self) -> None:
-        """RA-033 Public Visibility. Unpopulated taxonomy remains in database but is excluded publicly until populated."""
+        """The legacy directory keeps coverage rules independently of header discovery."""
         # 1. Verify unpopulated entities exist validly in the database
         self.assertTrue(Manufacturer.objects.filter(name="UnpopulatedMfr").exists())
         self.assertTrue(VehicleModel.objects.filter(name="UnpopulatedModel").exists())
@@ -284,10 +284,13 @@ class ReferenceViewTests(TestCase):
         # 2. Verify they do NOT render on public /vehicles/ archive index
         response = self.client.get(reverse("reference:manufacturer-list"))
         self.assertEqual(response.status_code, 200)
-        self.assertContains(response, "Toyota")
-        self.assertContains(response, "4Runner")
-        self.assertNotContains(response, "UnpopulatedMfr")
-        self.assertNotContains(response, "UnpopulatedModel")
+        directory = response.content.decode().split('<main ', 1)[1].split('</main>', 1)[0]
+        self.assertIn("Toyota", directory)
+        self.assertIn("4Runner", directory)
+        self.assertNotIn("UnpopulatedMfr", directory)
+        self.assertNotIn("UnpopulatedModel", directory)
+        # The approved selector policy includes active models without definitions.
+        self.assertContains(response, "UnpopulatedModel")
 
         # 3. Populate an active VehicleDefinition under UnpopulatedMfr / UnpopulatedModel
         gen, _ = Generation.objects.get_or_create(
@@ -309,8 +312,9 @@ class ReferenceViewTests(TestCase):
         # 4. Verify they now render on public /vehicles/ archive index
         pop_response = self.client.get(reverse("reference:manufacturer-list"))
         self.assertEqual(pop_response.status_code, 200)
-        self.assertContains(pop_response, "UnpopulatedMfr")
-        self.assertContains(pop_response, "UnpopulatedModel")
+        populated_directory = pop_response.content.decode().split('<main ', 1)[1].split('</main>', 1)[0]
+        self.assertIn("UnpopulatedMfr", populated_directory)
+        self.assertIn("UnpopulatedModel", populated_directory)
 
 
 class RA037GenerationImageTests(TestCase):

@@ -23,7 +23,7 @@ urlpatterns = [
         include("measurements.urls"),
     ),
     path(
-        "vehicles/",
+        "",
         include("reference.urls"),
     ),
 ]

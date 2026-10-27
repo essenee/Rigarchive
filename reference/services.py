@@ -7,8 +7,13 @@ Follows the approved wireframes and architectural guidelines.
 """
 
 from collections import Counter
+from dataclasses import dataclass
+from urllib.parse import urlencode
 from typing import Any, Dict, List, Optional
-from django.db.models import Prefetch
+from django.db.models import Prefetch, Q, prefetch_related_objects
+from django.http import Http404
+from django.shortcuts import get_object_or_404
+from django.urls import reverse
 
 from reference.models import (
     Generation,
@@ -16,6 +21,195 @@ from reference.models import (
     VehicleDefinition,
     VehicleModel,
 )
+
+
+@dataclass(frozen=True)
+class VehicleContext:
+    """Request-local identity from a validated route object, never session state."""
+
+    manufacturer: Manufacturer
+    vehicle_model: VehicleModel
+    generation: Generation | None = None
+    vehicle_definition: VehicleDefinition | None = None
+
+
+def get_vehicle_context(route_object):
+    """Build context from an already resolved object and check active ancestry.
+
+    No URL parsing, year/trim inference, session access, or persistence occurs.
+    Views remain responsible for matching the object to their route kwargs.
+    """
+    definition = route_object if isinstance(route_object, VehicleDefinition) else None
+    generation = definition.generation if definition else (
+        route_object if isinstance(route_object, Generation) else None
+    )
+    model = generation.vehicle_model if generation else route_object
+    if not isinstance(model, VehicleModel):
+        raise TypeError("Vehicle context requires a model, Generation or exact configuration.")
+    manufacturer = model.manufacturer
+    if not all(obj.is_active for obj in (manufacturer, model, generation, definition) if obj is not None):
+        raise Http404("Vehicle context is unavailable.")
+    return VehicleContext(manufacturer, model, generation, definition)
+
+
+def get_active_vehicle_model(manufacturer_slug, vehicle_model_slug):
+    """Resolve a model under its active manufacturer without requiring definitions."""
+    return get_object_or_404(
+        VehicleModel.objects.select_related("manufacturer"),
+        slug=vehicle_model_slug, manufacturer__slug=manufacturer_slug,
+        is_active=True, manufacturer__is_active=True,
+    )
+
+
+def _vehicle_name_filter(query, *, model_field="name", manufacturer_field="manufacturer__name"):
+    return Q(**{f"{model_field}__icontains": query}) | Q(**{f"{manufacturer_field}__icontains": query})
+
+
+def discover_vehicle_models(query="", manufacturer_slug=None, *, populated_only=False):
+    """Shared name search with an explicit legacy canonical-coverage policy."""
+    models = VehicleModel.objects.filter(is_active=True, manufacturer__is_active=True)
+    if populated_only:
+        models = models.filter(generations__is_active=True, generations__vehicle_definitions__is_active=True)
+    if manufacturer_slug:
+        models = models.filter(manufacturer__slug=manufacturer_slug)
+    query = query.strip()
+    if query:
+        models = models.filter(_vehicle_name_filter(query))
+    return models.select_related("manufacturer").distinct()
+
+
+def discover_manufacturers(query="", manufacturer_slug=None, *, populated_only=False):
+    """Group eligible models, preserving legacy populated-directory grouping."""
+    models = discover_vehicle_models(query, manufacturer_slug, populated_only=populated_only)
+    if populated_only:
+        # Preserve the legacy directory's manufacturer eligibility independently
+        # of the filtered model prefetch (including empty matching groups).
+        manufacturers = Manufacturer.objects.filter(
+            is_active=True, vehicle_models__is_active=True,
+            vehicle_models__generations__is_active=True,
+            vehicle_models__generations__vehicle_definitions__is_active=True,
+        )
+        if query.strip():
+            manufacturers = manufacturers.filter(_vehicle_name_filter(
+                query.strip(), model_field="vehicle_models__name", manufacturer_field="name",
+            ))
+    else:
+        manufacturers = Manufacturer.objects.filter(is_active=True, vehicle_models__in=models)
+    if manufacturer_slug:
+        manufacturers = manufacturers.filter(slug=manufacturer_slug)
+    return manufacturers.distinct().prefetch_related(
+        Prefetch("vehicle_models", queryset=models, to_attr="active_vehicle_models")
+    )
+
+
+@dataclass(frozen=True)
+class VehicleDestination:
+    token: str
+    label: str
+    route_name: str
+    pattern: str
+    implemented: bool = False
+
+
+# Contracts only: deferred routes MUST NOT be registered before their views exist.
+VEHICLE_DESTINATIONS = (
+    VehicleDestination("generations", "Generations", "reference:vehicle-model-detail",
+                       "/vehicles/<manufacturer_slug>/<vehicle_model_slug>/", True),
+    VehicleDestination("builds", "Builds", "vehicle-builds-entry",
+                       "/explore/vehicles/<manufacturer_slug>/<vehicle_model_slug>/builds/"),
+    VehicleDestination("maintenance", "Maintenance", "vehicle-maintenance-entry",
+                       "/explore/vehicles/<manufacturer_slug>/<vehicle_model_slug>/maintenance/"),
+    VehicleDestination("measurements", "Measurements", "measurements:model-measurements",
+                       "/explore/vehicles/<manufacturer_slug>/<vehicle_model_slug>/measurements/"),
+    VehicleDestination("full-specs", "Full Specs", "reference:model-full-specs",
+                       "/explore/vehicles/<manufacturer_slug>/<vehicle_model_slug>/full-specs/"),
+)
+
+
+def get_vehicle_destination(token="generations"):
+    """Reject arbitrary targets, including empty tokens and redirect URLs."""
+    for destination in VEHICLE_DESTINATIONS:
+        if destination.token == token:
+            return destination
+    raise ValueError("Choose a valid destination: Generations, Builds, Maintenance, Measurements or Full Specs.")
+
+
+def resolve_vehicle_destination(vehicle_model, token="generations"):
+    """Return a real URL only for implemented contracts; None means pending."""
+    get_vehicle_context(vehicle_model)
+    destination = get_vehicle_destination(token)
+    if not destination.implemented:
+        return None
+    return reverse(destination.route_name, kwargs={
+        "manufacturer_slug": vehicle_model.manufacturer.slug,
+        "vehicle_model_slug": vehicle_model.slug,
+    })
+
+
+def vehicle_selector_url(*, destination="generations", query="", manufacturer="", model=""):
+    """Generate selector links from allowlisted intent, never user-supplied paths."""
+    get_vehicle_destination(destination)
+    params = {"destination": destination}
+    if query:
+        params["q"] = query
+    if manufacturer:
+        params["manufacturer"] = manufacturer
+    if model:
+        params["model"] = model
+    return reverse("reference:vehicle-selector") + "?" + urlencode(params)
+
+
+def get_vehicle_selector_context(*, query="", manufacturer_slug="", model_slug="", token="generations"):
+    """Coordinate selector results and safe continuation links without writes."""
+    destination = get_vehicle_destination(token)
+    manufacturer = (
+        get_object_or_404(Manufacturer, slug=manufacturer_slug, is_active=True)
+        if manufacturer_slug else None
+    )
+    if model_slug and manufacturer is None:
+        raise ValueError("Choose a manufacturer before selecting a model.")
+    selected_model = get_active_vehicle_model(manufacturer_slug, model_slug) if model_slug else None
+    groups = []
+    for group in discover_manufacturers(query, manufacturer_slug):
+        choices = []
+        for model in group.active_vehicle_models:
+            url = resolve_vehicle_destination(model, token)
+            choices.append({
+                "model": model,
+                "url": url or vehicle_selector_url(
+                    destination=token, query=query, manufacturer=group.slug, model=model.slug,
+                ),
+            })
+        groups.append({
+            "manufacturer": group,
+            "filter_url": vehicle_selector_url(destination=token, query=query, manufacturer=group.slug),
+            "choices": choices,
+        })
+    # Canonical Generation chronology is start_year. One windowed prefetch
+    # retrieves only the newest active row per model, independent of coverage.
+    models = [choice["model"] for group in groups for choice in group["choices"]]
+    prefetch_related_objects(models, Prefetch(
+        "generations", queryset=Generation.objects.filter(is_active=True).order_by("-start_year")[:1],
+        to_attr="selector_latest_generations",
+    ))
+    for group in groups:
+        for choice in group["choices"]:
+            choice["generation"] = next(iter(choice["model"].selector_latest_generations), None)
+    return {
+        "groups": groups, "destination": destination,
+        "selected_manufacturer": manufacturer, "selected_model": selected_model,
+        "selected_destination_url": resolve_vehicle_destination(selected_model, token) if selected_model else None,
+        "clear_manufacturer_url": vehicle_selector_url(destination=token, query=query),
+        "reset_selector_url": vehicle_selector_url(destination=token),
+        "manufacturer_filters": [
+            {"manufacturer": item, "url": vehicle_selector_url(
+                destination=token, query=query, manufacturer=item.slug,
+            )}
+            for item in Manufacturer.objects.filter(
+                is_active=True, vehicle_models__is_active=True,
+            ).distinct()
+        ],
+    }
 
 
 def _label_configuration_choices(configurations):
@@ -233,14 +427,7 @@ def get_homepage_context(request: Optional[Any] = None) -> Dict[str, Any]:
 
     # Query active vehicle models populated with canonical definitions
     models_qs = (
-        VehicleModel.objects.filter(
-            is_active=True,
-            manufacturer__is_active=True,
-            generations__is_active=True,
-            generations__vehicle_definitions__is_active=True,
-        )
-        .distinct()
-        .select_related("manufacturer")
+        discover_vehicle_models(populated_only=True)
         .prefetch_related(
             Prefetch(
                 "generations",

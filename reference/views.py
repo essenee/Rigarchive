@@ -1,12 +1,17 @@
 import os
 from django.conf import settings
-from django.db.models import Prefetch, Q
+from django.db.models import Prefetch
 from django.http import Http404
-from django.shortcuts import redirect
+from django.views.decorators.http import require_GET
+from django.shortcuts import render
 from django.views.generic import DetailView, ListView
 
+from .forms import VehicleSelectorForm
 from .models import Generation, Manufacturer, VehicleDefinition, VehicleModel
 from .services import (
+    discover_manufacturers,
+    get_vehicle_context,
+    get_vehicle_selector_context,
     get_full_specifications_context,
     get_generation_hub_context,
     record_recently_viewed_generation,
@@ -65,42 +70,8 @@ class ManufacturerListView(ListView):
     context_object_name = "manufacturers"
 
     def get_queryset(self):
-        query = self.request.GET.get("q", "").strip()
-
-        qs = (
-            Manufacturer.objects.filter(
-                is_active=True,
-                vehicle_models__is_active=True,
-                vehicle_models__generations__is_active=True,
-                vehicle_models__generations__vehicle_definitions__is_active=True,
-            )
-            .distinct()
-        )
-
-        if query:
-            qs = qs.filter(
-                Q(name__icontains=query)
-                | Q(vehicle_models__name__icontains=query)
-            ).distinct()
-
-        # Build prefetch matching query if present
-        models_filter = Q(
-            is_active=True,
-            generations__is_active=True,
-            generations__vehicle_definitions__is_active=True,
-        )
-        if query:
-            models_filter &= (
-                Q(name__icontains=query)
-                | Q(manufacturer__name__icontains=query)
-            )
-
-        return qs.prefetch_related(
-            Prefetch(
-                "vehicle_models",
-                queryset=VehicleModel.objects.filter(models_filter).distinct(),
-                to_attr="active_vehicle_models",
-            )
+        return discover_manufacturers(
+            self.request.GET.get("q", ""), populated_only=True,
         )
 
     def get_context_data(self, **kwargs):
@@ -182,6 +153,7 @@ class VehicleModelDetailView(DetailView):
         generations = list(self.object.generations.filter(is_active=True))
         for gen_obj in generations:
             gen_obj.hero_image_url = get_presentation_hero_image_url(gen_obj)
+        context["vehicle_context"] = get_vehicle_context(self.object)
         context["generations"] = generations
         return context
 
@@ -230,6 +202,8 @@ class GenerationDetailView(DetailView):
             config_slug=config_param,
         )
         context.update(hub_context)
+        # Hub filters do not change the route object into an exact identity.
+        context["vehicle_context"] = get_vehicle_context(self.object)
         context["generation_hero_image"] = get_presentation_hero_image_url(self.object)
         return context
 
@@ -287,6 +261,7 @@ class ModelYearOverviewView(DetailView):
                 trims_dict[t_name] = []
             trims_dict[t_name].append(vd)
 
+        context["vehicle_context"] = get_vehicle_context(self.object)
         context["model_year"] = model_year
         context["vehicle_definitions"] = active_defs
         context["total_configurations"] = len(active_defs)
@@ -329,7 +304,34 @@ class VehicleDefinitionDetailView(DetailView):
         context = super().get_context_data(**kwargs)
         specs_context = get_full_specifications_context(self.object)
         context.update(specs_context)
+        context["vehicle_context"] = get_vehicle_context(self.object)
         context["generation_hero_image"] = get_presentation_hero_image_url(
             self.object.generation
         )
         return context
+
+
+@require_GET
+def vehicle_selector(request):
+    """GET-only baseline selection; deferred categories stay on this real page."""
+    data = request.GET.copy()
+    if "destination" not in data:
+        data["destination"] = "generations"
+    form = VehicleSelectorForm(data)
+    context = {"selector_form": form, "groups": []}
+    if not form.is_valid():
+        return render(request, "reference/vehicle_selector.html", context, status=400)
+
+    fields = form.cleaned_data
+    if fields["model"] and not fields["manufacturer"]:
+        form.add_error("model", "Choose a manufacturer before selecting a model.")
+        return render(request, "reference/vehicle_selector.html", context, status=400)
+    context.update(get_vehicle_selector_context(
+        query=fields["q"], manufacturer_slug=fields["manufacturer"],
+        model_slug=fields["model"], token=fields["destination"],
+    ))
+    for group in context["groups"]:
+        for choice in group["choices"]:
+            newest = choice["generation"]
+            choice["image_url"] = get_presentation_hero_image_url(newest) if newest else ""
+    return render(request, "reference/vehicle_selector.html", context)
