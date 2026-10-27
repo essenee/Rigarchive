@@ -191,7 +191,7 @@ class ReferenceViewTests(TestCase):
         response = self.client.get(self.fourth_generation.get_absolute_url())
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, 'id="configurations"')
-        self.assertContains(response, "No verified manual physical measurements have been recorded")
+        self.assertContains(response, "No physical measurements are recorded for this generation.")
         self.assertContains(response, "No Documented Builds Yet")
         self.assertContains(response, "No Service Guides Recorded")
         self.assertFalse(response.context["has_measurements"])

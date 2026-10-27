@@ -1219,6 +1219,7 @@ select:focus-visible {
 
 .diagram-panel {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -1282,7 +1283,7 @@ select:focus-visible {
 }
 
 /* Verified Measurements Table */
-.verified-measurements-container {
+.recorded-measurements-container {
     background-color: var(--bg-surface);
     border: 1px solid var(--border-color);
     border-radius: var(--radius-sm);
@@ -1290,7 +1291,7 @@ select:focus-visible {
     margin-top: 1rem;
 }
 
-.verified-heading {
+.recorded-heading {
     font-family: var(--font-serif);
     font-size: 1.15rem;
     font-weight: 700;
@@ -2023,7 +2024,7 @@ select:focus-visible {
 .hub-meas-applicability { margin-top: 0.75rem; }
 .measurement-value-cell { white-space: nowrap; font-family: var(--font-mono); }
 .measurements-container,
-.verified-measurements-container { max-width: 100%; overflow-x: auto; }
+.recorded-measurements-container { max-width: 100%; overflow-x: auto; }
 .measurements-table { min-width: 36rem; }
 .measurement-notes-cell { min-width: 10rem; overflow-wrap: anywhere; }
 .epistemic-disclaimer-box {

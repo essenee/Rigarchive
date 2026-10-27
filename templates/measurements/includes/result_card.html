@@ -1,0 +1,12 @@
+<div class="hub-measurement-card measurement-result">
+    <span class="hub-meas-def">{{ result.definition.name }}</span>
+    <div class="hub-meas-value">
+        <span class="val-num">{{ result.value }}</span>
+        <span class="val-unit">{{ result.unit }}</span>
+    </div>
+    {% if result.definition.description %}<p class="hub-meas-desc">{{ result.definition.description }}</p>{% endif %}
+    {% if result.notes %}<p class="hub-meas-desc">{{ result.notes }}</p>{% endif %}
+    <div class="hub-meas-applicability">
+        {% include "measurements/includes/applicability.html" with result=result only %}
+    </div>
+</div>

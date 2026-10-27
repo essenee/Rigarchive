@@ -192,19 +192,21 @@
         <div class="section-heading-row">
             <div>
                 <h2 class="section-title-serif">Key Dimensions</h2>
-                <p class="section-subtitle-sans">Including documented measurements where factory specs are missing.</p>
+                <p class="section-subtitle-sans">Recorded physical measurements and their applicability, separate from factory reference attributes.</p>
             </div>
             <a href="{% url 'measurements:generation-measurements' manufacturer.slug vehicle_model.slug generation.slug %}" class="section-action-link">
                 View all measurements →
             </a>
         </div>
 
+        <p class="measurement-desc" id="dimension-illustration-notice">Illustrative · not to scale.</p>
         <div class="dimensions-schematic-grid">
             <!-- Left & Center: Technical Diagrams -->
             <div class="dimension-diagrams-wrap">
                 <!-- Side Profile Schematic -->
                 <div class="diagram-panel side-panel">
-                    <svg viewBox="0 0 280 150" fill="none" class="dim-vector">
+                    <span class="measurement-desc">Generic side-profile illustration</span>
+                    <svg viewBox="0 0 280 150" fill="none" class="dim-vector" role="img" aria-label="Generic measurement-location illustration, not to scale">
                         <line x1="10" y1="120" x2="270" y2="120" stroke="#d5ccbd" stroke-dasharray="2 2" stroke-width="0.8"/>
                         <!-- Body Outline -->
                         <path d="M 25 105 C 25 90, 32 82, 45 80 L 70 76 L 95 48 L 200 48 L 240 65 L 248 85 L 250 105 L 225 105 A 16 16 0 0 0 193 105 L 85 105 A 16 16 0 0 0 53 105 Z" 
@@ -214,52 +216,46 @@
                         <!-- Dimension Lines -->
                         <line x1="69" y1="130" x2="209" y2="130" stroke="#5a5245" stroke-width="1"/>
                         <path d="M 69 127 L 69 133 M 209 127 L 209 133" stroke="#5a5245" stroke-width="1"/>
-                        <text x="139" y="127" text-anchor="middle" font-family="monospace" font-size="8" fill="#4a4237" font-weight="bold">109.8″</text>
 
                         <line x1="25" y1="142" x2="250" y2="142" stroke="#5a5245" stroke-width="1"/>
-                        <text x="139" y="140" text-anchor="middle" font-family="monospace" font-size="8" fill="#4a4237" font-weight="bold">189.6″ (OVERALL LENGTH)</text>
 
                         <line x1="262" y1="48" x2="262" y2="120" stroke="#5a5245" stroke-width="0.8"/>
-                        <text x="268" y="85" font-family="monospace" font-size="7.5" fill="#4a4237">72.2″</text>
                     </svg>
                 </div>
 
                 <!-- Rear Exterior Schematic -->
                 <div class="diagram-panel rear-panel">
-                    <svg viewBox="0 0 130 150" fill="none" class="dim-vector">
+                    <span class="measurement-desc">Generic rear-exterior illustration</span>
+                    <svg viewBox="0 0 130 150" fill="none" class="dim-vector" role="img" aria-label="Generic measurement-location illustration, not to scale">
                         <rect x="20" y="35" width="85" height="70" rx="8" stroke="#4a4237" stroke-width="1.5" fill="#f4efe6"/>
                         <rect x="14" y="75" width="14" height="30" rx="3" stroke="#4a4237" stroke-width="1.5" fill="#3c3730"/>
                         <rect x="97" y="75" width="14" height="30" rx="3" stroke="#4a4237" stroke-width="1.5" fill="#3c3730"/>
                         <!-- Dimension Lines -->
                         <line x1="21" y1="125" x2="104" y2="125" stroke="#5a5245" stroke-width="1"/>
                         <path d="M 21 122 L 21 128 M 104 122 L 104 128" stroke="#5a5245" stroke-width="1"/>
-                        <text x="62" y="122" text-anchor="middle" font-family="monospace" font-size="8" fill="#4a4237" font-weight="bold">66.0″</text>
                         <!-- Height -->
                         <line x1="116" y1="35" x2="116" y2="105" stroke="#5a5245" stroke-width="0.8"/>
-                        <text x="119" y="70" font-family="monospace" font-size="7" fill="#4a4237">42.5″</text>
                     </svg>
                 </div>
 
                 <!-- Cargo Opening Schematic -->
                 <div class="diagram-panel cargo-panel">
-                    <svg viewBox="0 0 130 150" fill="none" class="dim-vector">
+                    <span class="measurement-desc">Generic cargo-opening illustration</span>
+                    <svg viewBox="0 0 130 150" fill="none" class="dim-vector" role="img" aria-label="Generic measurement-location illustration, not to scale">
                         <rect x="20" y="35" width="85" height="70" rx="8" stroke="#4a4237" stroke-width="1.5" fill="#f4efe6"/>
                         <rect x="32" y="48" width="60" height="42" rx="4" stroke="#5a5245" stroke-width="1.2" stroke-dasharray="2 2" fill="#ebe4d6"/>
-                        <!-- Width Dimension -->
+                        <!-- Cargo-opening location; not wheel-well clearance -->
                         <line x1="32" y1="108" x2="92" y2="108" stroke="#5a5245" stroke-width="1"/>
-                        <text x="62" y="105" text-anchor="middle" font-family="monospace" font-size="7.5" fill="#4a4237" font-weight="bold">46.0″</text>
-                        <text x="62" y="118" text-anchor="middle" font-family="monospace" font-size="5.5" fill="#6c6355">CARGO OPENING</text>
-                        <text x="62" y="125" text-anchor="middle" font-family="monospace" font-size="5" fill="#6c6355">(BETWEEN WHEEL WELLS)</text>
                         <!-- Cargo opening height -->
                         <line x1="97" y1="48" x2="97" y2="90" stroke="#5a5245" stroke-width="0.8"/>
-                        <text x="100" y="70" font-family="monospace" font-size="6.5" fill="#4a4237">30.5″</text>
                     </svg>
                 </div>
             </div>
 
             <!-- Right: More Measurements Card -->
             <aside class="more-measurements-panel">
-                <h3 class="panel-heading">More Measurements</h3>
+                <h3 class="panel-heading">Measurement topics</h3>
+                <p class="measurement-desc">These topics do not indicate recorded coverage.</p>
                 <ul class="measurements-category-list">
                     <li class="category-item">
                         <svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -298,8 +294,8 @@
         </div>
 
         {% if has_measurements %}
-            <div class="verified-measurements-container">
-                <h3 class="verified-heading">Verified Measurements from Archive</h3>
+            <div class="recorded-measurements-container">
+                <h3 class="recorded-heading">Additional Measurements</h3>
                 <table class="measurements-table">
                     <thead>
                         <tr>
@@ -311,7 +307,7 @@
                     </thead>
                     <tbody>
                         {% for result in measurements %}
-                            <tr>
+                            <tr class="measurement-result">
                                 <td class="measurement-name-cell">
                                     <strong>{{ result.definition.name }}</strong>
                                     {% if result.definition.description %}
@@ -322,11 +318,7 @@
                                     {{ result.value }} {{ result.unit }}
                                 </td>
                                 <td class="measurement-app-cell">
-                                    {% if result.is_generation_wide %}
-                                        <span class="badge-gen-wide">Generation-Wide</span>
-                                    {% else %}
-                                        <span class="badge-conditional">Conditional</span>
-                                    {% endif %}
+                                    {% include "measurements/includes/applicability.html" with result=result only %}
                                 </td>
                                 <td class="measurement-notes-cell">
                                     {{ result.notes|default:"—" }}
@@ -339,10 +331,10 @@
         {% else %}
             <div class="empty-measurements-box">
                 <p class="empty-text">
-                    No verified manual physical measurements have been recorded yet for this generation.
+                    No physical measurements are recorded for this generation.
                 </p>
                 <span class="empty-subtext">
-                    Manual interior cargo measurements and sleeping platform evaluations will be documented here once verified under the Measurements domain.
+                    No values or applicability conclusions can be drawn from the absence of records.
                 </span>
             </div>
         {% endif %}
@@ -388,7 +380,7 @@
                 </svg>
                 <h3 class="empty-domain-title">No Service Guides Recorded</h3>
                 <p class="empty-domain-text">
-                    No maintenance or repair procedures are currently indexed for this generation. Procedures with documented evidence and verified applicability will appear here.
+                    No maintenance or repair procedures are currently indexed for this generation.
                 </p>
             </div>
         </section>

@@ -51,7 +51,7 @@
         <div class="section-header-block">
             <h2 class="archive-section-title">Factory Technical Specifications</h2>
             <p class="archive-section-subtitle">
-                Canonical manufacturer baseline attributes governing this configuration identity.
+                Canonical reference attributes for this factory configuration; source assertions and independent verification remain distinct.
             </p>
         </div>
 
@@ -121,42 +121,39 @@
     <section class="archive-section" id="applicable-measurements">
         <div class="section-header-block">
             <div class="section-title-row">
-                <h2 class="archive-section-title">Applicable Physical Measurements</h2>
+                <h2 class="archive-section-title">Recorded Physical Measurements</h2>
                 <a href="{% url 'measurements:generation-measurements' manufacturer.slug vehicle_model.slug generation.slug %}" class="section-more-link">
                     Generation Measurements →
                 </a>
             </div>
             <p class="archive-section-subtitle">
-                Physical dimensions from the Measurements domain applicable to this {{ generation.name }} configuration.
+                Generation-level reports are separate from canonical factory reference attributes. A sales trim does not establish physical feature states.
             </p>
         </div>
 
-        {% if applicable_measurements %}
-            <div class="measurements-cards-grid">
-                {% for m in applicable_measurements %}
-                    <div class="hub-measurement-card">
-                        <span class="hub-meas-def">{{ m.definition.name }}</span>
-                        <div class="hub-meas-value">
-                            <span class="val-num">{{ m.value }}</span>
-                            <span class="val-unit">{{ m.unit }}</span>
-                        </div>
-                        {% if m.definition.description %}
-                            <p class="hub-meas-desc">{{ m.definition.description }}</p>
-                        {% endif %}
-                        <div class="hub-meas-applicability">
-                            <span class="applicability-badge applicability-badge-wide">
-                                {{ m.applicability_summary }}
-                            </span>
-                        </div>
-                    </div>
-                {% endfor %}
-            </div>
+        {% if applicable_measurements or conditional_measurements %}
+            {% if applicable_measurements %}
+                <h3 class="specs-table-heading">Generation-wide results</h3>
+                <div class="measurements-cards-grid">
+                    {% for m in applicable_measurements %}
+                        {% include "measurements/includes/result_card.html" with result=m only %}
+                    {% endfor %}
+                </div>
+            {% else %}
+                <p>No generation-wide results are recorded; conditional reports below require feature information.</p>
+            {% endif %}
+            {% if conditional_measurements %}
+                <h3 class="specs-table-heading">Conditional reports — configuration applicability not established</h3>
+                <div class="measurements-cards-grid">
+                    {% for m in conditional_measurements %}
+                        {% include "measurements/includes/result_card.html" with result=m only %}
+                    {% endfor %}
+                </div>
+            {% endif %}
         {% else %}
             <div class="empty-archival-card">
-                <h3 class="empty-card-heading">Measurements Under Field Compilation</h3>
-                <p class="empty-card-text">
-                    Physical interior cargo dimensions and sleeping platform lengths for this configuration are currently being recorded in the field archive.
-                </p>
+                <h3 class="empty-card-heading">No Physical Measurements Recorded</h3>
+                <p class="empty-card-text">No physical measurements are recorded for this generation. No configuration-specific measurement applicability can be established here.</p>
             </div>
         {% endif %}
     </section>
@@ -164,21 +161,25 @@
     <!-- Ingestion Audit & Provenance Receipt -->
     <section class="archive-section" id="audit-provenance">
         <div class="section-header-block">
-            <h2 class="archive-section-title">Ingestion Audit & Evidence Provenance</h2>
+            <h2 class="archive-section-title">Import Execution Record & Source References</h2>
             <p class="archive-section-subtitle">
-                Durable verification receipt linking this canonical record to immutable source evidence.
+                Import receipts record execution and source identifiers; they do not establish independent verification of every specification.
             </p>
         </div>
 
         {% if receipt %}
             <div class="audit-receipt-card">
                 <div class="audit-receipt-header">
-                    <span class="audit-status-tag">Audited & Verified</span>
+                    <span class="audit-status-tag">Import execution receipt</span>
                     <span class="audit-date">{{ receipt.executed_at|date:"Y-m-d H:i" }} UTC</span>
                 </div>
+                <p class="audit-preserved-text">One associated receipt is shown, not a complete lifecycle history. Source references identify import inputs; source assertions and canonical reference attributes are distinct from independent verification.</p>
                 <dl class="record-details audit-details-list">
+                    <div><dt>Execution Outcome</dt><dd>{{ receipt.execution_outcome }}</dd></div>
+                    <div><dt>Planned Action</dt><dd>{{ receipt.planned_action }}</dd></div>
+                    <div><dt>Recorded Raw Artifact Hash</dt><dd><code class="hash-code">{{ receipt.raw_artifact_hash|default:"Not recorded" }}</code></dd></div>
                     <div>
-                        <dt>Source Authority</dt>
+                        <dt>Recorded Source ID</dt>
                         <dd><strong>{{ receipt.source_id }}</strong></dd>
                     </div>
                     <div>
@@ -186,16 +187,16 @@
                         <dd><code>{{ receipt.native_identifier }}</code> ({{ receipt.source_identity_type }})</dd>
                     </div>
                     <div>
-                        <dt>Promotion Basis</dt>
-                        <dd>{{ receipt.create_basis|default:"Canonical Promotion" }}</dd>
+                        <dt>Recorded Create Basis</dt>
+                        <dd>{{ receipt.create_basis|default:"Not recorded" }}</dd>
                     </div>
                     <div>
-                        <dt>Review Manifest Hash</dt>
+                        <dt>Recorded Manifest Hash</dt>
                         <dd><code class="hash-code">{{ receipt.manifest_hash }}</code></dd>
                     </div>
                     {% if receipt.adjudication_hash %}
                         <div>
-                            <dt>Adjudication Hash</dt>
+                            <dt>Recorded Adjudication Hash</dt>
                             <dd><code class="hash-code">{{ receipt.adjudication_hash }}</code></dd>
                         </div>
                     {% endif %}
@@ -207,7 +208,7 @@
                     <span class="audit-status-tag tag-neutral">Baseline Canonical Record</span>
                 </div>
                 <p class="audit-preserved-text">
-                    This vehicle definition is an active canonical record within the RigArchive Reference Domain. Direct ingestion provenance is tracked under the canonical record lifecycle.
+                    This is a canonical factory reference record. No associated import execution receipt is available on this page; independent verification cannot be inferred.
                 </p>
             </div>
         {% endif %}
@@ -220,7 +221,7 @@
             <div class="disclaimer-text">
                 <h4 class="disclaimer-heading">Canonical Factory Baseline Reference</h4>
                 <p>
-                    This page documents standard factory equipment and verified physical dimensions. Individual owner builds, aftermarket accessories, suspension lifts, and customized camping setups are maintained in distinct domain records and are never presented as factory equipment.
+                    Canonical factory reference attributes, reported physical measurements and import execution records have distinct meanings. Owner modifications are not factory equipment. An import receipt does not establish independent verification of the specifications or measurements.
                 </p>
             </div>
         </div>

@@ -50,7 +50,7 @@
                 </thead>
                 <tbody>
                     {% for result in results %}
-                        <tr>
+                        <tr class="measurement-result">
                             <td class="measurement-definition-cell">
                                 <span class="measurement-name">{{ result.definition.name }}</span>
                                 {% if result.definition.description %}
@@ -61,17 +61,7 @@
                                 <strong>{{ result.value }}</strong> <span class="measurement-unit">{{ result.unit }}</span>
                             </td>
                             <td class="measurement-applicability-cell">
-                                {% if result.is_generation_wide %}
-                                    <span class="applicability-badge applicability-badge-wide">Generation-wide</span>
-                                {% else %}
-                                    <div class="applicability-badge-list">
-                                        {% for cond in result.conditions.all %}
-                                            <span class="applicability-badge applicability-badge-condition">
-                                                {{ cond.state.feature.name }}: {{ cond.state.name }}
-                                            </span>
-                                        {% endfor %}
-                                    </div>
-                                {% endif %}
+                                {% include "measurements/includes/applicability.html" with result=result only %}
                             </td>
                             <td class="measurement-notes-cell">
                                 {{ result.notes|default:"—" }}

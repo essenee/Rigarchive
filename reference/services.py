@@ -161,7 +161,7 @@ def get_generation_hub_context(
             )
             .select_related("definition")
             .prefetch_related("conditions__state__feature")
-            .order_by("definition__name", "value")
+            .order_by("definition__name", "value", "pk")
         )
         generation_measurements = list(measurement_qs)
         has_measurements = len(generation_measurements) > 0
@@ -381,6 +381,7 @@ def get_full_specifications_context(
 
     # Applicable physical measurements
     applicable_measurements = []
+    conditional_measurements = []
     try:
         from measurements.models import MeasurementResult
 
@@ -391,9 +392,11 @@ def get_full_specifications_context(
             )
             .select_related("definition")
             .prefetch_related("conditions__state__feature")
-            .order_by("definition__name", "value")
+            .order_by("definition__name", "value", "pk")
         )
-        applicable_measurements = [m for m in meas_qs if m.is_generation_wide]
+        results = list(meas_qs)
+        applicable_measurements = [m for m in results if m.is_generation_wide]
+        conditional_measurements = [m for m in results if not m.is_generation_wide]
     except ImportError:
         pass
 
@@ -409,5 +412,6 @@ def get_full_specifications_context(
         "manufacturer": manufacturer,
         "sibling_configs": sibling_configs,
         "applicable_measurements": applicable_measurements,
+        "conditional_measurements": conditional_measurements,
         "receipt": receipt,
     }
