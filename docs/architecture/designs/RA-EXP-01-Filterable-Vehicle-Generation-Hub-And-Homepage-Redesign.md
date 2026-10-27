@@ -117,6 +117,14 @@ The project director visually confirmed the restored styling as satisfactory. Th
 
 The experimental UI/CSS WIP checkpoint was committed before Task 1; Task 1 changes remain uncommitted. Neither checkpoint approval nor the passing Task 1 suite constitutes final approval of RA-EXP-01. Git tracks `db.sqlite3`, which has a pre-existing unstaged modification; preserve the local database and exclude it from UI staging using explicit file selection. No database contents or tracking state were changed for this reconciliation. No model/schema rollback is required by the presentation changes, but switching branches is not a safe substitute for preserving unfinished work. RA-EXP-02 vehicle-contextual navigation decisions remain future work and are not implemented here.
 
+### Dated repository-status clarification — 2026-10-27
+
+The preceding uncommitted-Task-1 and future-RA-EXP-02 statements preserve their original checkpoint context. Git history now contains Task 1 in `54ada80`, Task 2 in `1764499`, and provisional Homepage visual design in `5859745`, on `experiment/vehicle-hub-ui`. This does not establish final approval of RA-EXP-01. Subsequently authorized RA-EXP-02B-1 foundations, photographic Explore Vehicles selection, compact thumbnails and the Vehicles quick disclosure are implemented in the working tree; the five-category contextual shell and model category destinations remain deferred. Header search wording now describes manufacturer/model search; earlier unsupported-search findings above are historical.
+
+The current Homepage blueprint asset is `static/images/homepage/Toyota 4Runner Technical Blueprint.png`, as referenced by the tracked template. Latest recorded implementation verification is 350 Django tests and 17 JavaScript tests under Python 3.13; original Task 1/2 results remain historical. Desktop/mobile, zoom/reflow, real keyboard/focus and screen-reader acceptance remain pending. No tests were rerun for this clarification.
+
+The original UI-checkpoint database exclusion was task-specific. Under the temporary development/public-staging policy approved 2026-10-27, `db.sqlite3` remains intentionally tracked and may be deliberately committed/pushed as an authoritative local reference-data snapshot, separately from unrelated code commits. Staging is not independently authoritative. See `../../development/DATA_PRESERVATION.md` for deployment precautions and the future production boundary. No database/Git operation is authorized or performed by this clarification; the unresolved B-1 database fingerprint discrepancy is not explained or erased by the new policy.
+
 ### 7.3 Stakeholder Evaluation Criteria
 Human evaluation should focus on:
 1. Does in-page filtering on the Generation Hub feel more natural than navigating away to separate year pages?
