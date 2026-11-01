@@ -62,7 +62,7 @@
                     <span class="vehicle-selector-card-body">
                         <span class="vehicle-selector-make">{{ group.manufacturer.name }}</span>
                         <span class="vehicle-selector-model">{{ choice.model.name }}</span>
-                        <span class="vehicle-selector-action">{% if destination.implemented %}Explore Generations →{% else %}Select for pending {{ destination.label }} →{% endif %}</span>
+                        <span class="vehicle-selector-action">{% if destination.implemented %}<span class="vehicle-selector-action-desktop">Explore Generations →</span><span class="vehicle-selector-action-mobile">Generations →</span>{% else %}Select for pending {{ destination.label }} →{% endif %}</span>
                         {% if not choice.generation %}<span class="secondary">No active Generations available yet.</span>{% endif %}
                     </span>
                 </a>

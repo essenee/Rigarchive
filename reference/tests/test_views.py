@@ -453,5 +453,5 @@ class RA037GenerationImageTests(TestCase):
 
         resp_model = self.client.get(model.get_absolute_url())
         self.assertEqual(resp_model.status_code, 200)
-        self.assertContains(resp_model, "archive-nav-grid")
-        self.assertContains(resp_model, "archive-nav-card")
+        self.assertContains(resp_model, "generation-photo-grid")
+        self.assertContains(resp_model, "generation-photo-card")

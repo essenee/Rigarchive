@@ -904,6 +904,8 @@ select:focus-visible {
 }
 
 .gen-hero-photo-wrap {
+    grid-column: 1;
+    grid-row: 1;
     background-color: var(--bg-surface);
     border: 1px solid var(--border-color);
     border-radius: var(--radius-sm);
@@ -940,6 +942,8 @@ select:focus-visible {
 }
 
 .gen-hero-info-panel {
+    grid-column: 2;
+    grid-row: 1;
     background-color: var(--bg-surface);
     border: 1px solid var(--border-color);
     border-radius: var(--radius-sm);
@@ -1011,28 +1015,8 @@ select:focus-visible {
     gap: 0.5rem 1rem;
 }
 
-.overview-col {
-    display: flex;
-    flex-direction: column;
-    gap: 0.35rem;
-}
-
-.overview-link {
-    font-size: 0.86rem;
-    font-weight: 500;
-    color: var(--color-blue);
-    text-decoration: none;
-    transition: color 0.15s ease;
-}
-
-.overview-link:hover {
-    text-decoration: underline;
-}
-
-.overview-link-unavailable {
-    color: var(--color-blue);
-    cursor: default;
-}
+.gen-overview-grid { list-style: none; color: var(--text-secondary); font-size: .86rem; }
+.gen-overview-availability { color: var(--text-secondary); font: .75rem var(--font-mono); margin-bottom: .65rem; }
 
 /* Generation Statistics Bar */
 .gen-stats-bar {
@@ -2191,8 +2175,17 @@ select:focus-visible {
         grid-template-columns: 1fr;
     }
 
-    .gen-hero-photo {
-        max-height: 360px;
+    .gen-hero-info-panel { display: contents; }
+    .gen-identity-block { grid-column: 1; grid-row: 1; margin: 0; }
+    .gen-hero-photo-wrap { grid-column: 1; grid-row: 2; }
+    .gen-overview-box { grid-column: 1; grid-row: 3; margin: 0; }
+    .gen-stats-bar { grid-column: 1; grid-row: 4; }
+    .gen-hero-photo, .gen-hero-placeholder {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        max-height: none;
+        aspect-ratio: 3 / 2;
     }
 
     .dimensions-schematic-grid {
@@ -2289,12 +2282,13 @@ select:focus-visible {
 .vehicle-selector-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); max-width: 1008px; gap: 1rem; list-style: none; padding: 0; }
 .vehicle-selector-grid > li { min-width: 0; }
 .vehicle-selector-card { display: flex; flex-direction: column; height: 100%; color: var(--text-primary); background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-sm); text-decoration: none; }
-.vehicle-selector-card:hover { border-color: var(--color-blue); }
+.vehicle-selector-card:hover,
+.generation-photo-card:hover { border-color: var(--color-blue); }
 .vehicle-selector-photo { display: grid; flex: none; aspect-ratio: 3 / 2; background: var(--bg-paper-subtle); border-radius: var(--radius-sm) var(--radius-sm) 0 0; overflow: hidden; }
 .vehicle-selector-photo img { display: block; width: 100%; height: 100%; object-fit: cover; min-height: 0; }
 .vehicle-selector-no-photo { align-self: center; justify-self: center; color: var(--text-secondary); padding: 1rem; text-align: center; }
 .vehicle-selector-card-body { display: flex; flex: 1; flex-direction: column; gap: .3rem; padding: .75rem; overflow-wrap: anywhere; }
-.vehicle-selector-make { font-family: var(--font-mono); font-size: .8rem; color: var(--text-secondary); }
+.vehicle-selector-make { font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--text-secondary); }
 .vehicle-selector-model { font-family: var(--font-serif); font-size: 1.15rem; font-weight: 600; }
 .vehicle-selector-action { margin-top: auto; padding-top: .65rem; color: var(--color-blue); }
 @media (max-width: 1024px) {
@@ -2329,4 +2323,29 @@ select:focus-visible {
 @media (max-width: 480px) {
     .vehicle-quick-columns { grid-template-columns: minmax(0, 1fr); }
     .vehicle-quick-list { max-height: 8rem; }
+}
+
+/* Vehicle hierarchy: compact discovery -> photographic comparison -> detail. */
+.vehicle-selector-heading h1 { font-family: var(--font-serif); }
+.vehicle-selector-action-mobile { display: none; }
+.generation-photo-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; list-style: none; }
+.generation-photo-grid > li { min-width: 0; }
+.generation-photo-card { display: flex; flex-direction: column; height: 100%; color: var(--text-primary); background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-sm); text-decoration: none; }
+.generation-photo-frame { aspect-ratio: 3 / 2; overflow: hidden; background: var(--bg-paper-subtle); border-radius: var(--radius-sm) var(--radius-sm) 0 0; }
+.generation-photo-img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.generation-photo-body { display: flex; flex: 1; flex-direction: column; gap: .3rem; padding: .75rem; overflow-wrap: anywhere; }
+.generation-photo-title { font: 600 1.15rem var(--font-serif); }
+.generation-photo-years { color: var(--text-secondary); font: .85rem var(--font-mono); }
+.generation-photo-action { margin-top: auto; padding-top: .65rem; color: var(--color-blue); }
+/* Keep a generous toggle hit area; place its visible caret 6px after the label. */
+.vehicle-quick { gap: 6px; }
+.vehicle-quick-toggle { display: flex; align-items: center; justify-content: flex-start; padding: 0; }
+@media (max-width: 58rem) {
+    .generation-photo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 38rem) {
+    .generation-photo-grid { grid-template-columns: minmax(0, 1fr); }
+    .gen-overview-grid { grid-template-columns: minmax(0, 1fr); }
+    .vehicle-selector-action-desktop { display: none; }
+    .vehicle-selector-action-mobile { display: inline; }
 }

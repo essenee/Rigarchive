@@ -8,7 +8,7 @@
 <nav class="breadcrumbs" aria-label="Breadcrumb">
     <a href="{% url 'home' %}">Home</a>
     <span aria-hidden="true">/</span>
-    <a href="{% url 'reference:manufacturer-list' %}">
+    <a href="{% url 'reference:vehicle-selector' %}?destination=generations">
         Vehicles
     </a>
     <span aria-hidden="true">/</span>
@@ -27,13 +27,13 @@
     <h2>Generations</h2>
 
     {% if generations %}
-        <ul class="archive-nav-grid" aria-label="Generations for {{ vehicle_model.name }}">
+        <ul class="generation-photo-grid" aria-label="Generations for {{ vehicle_model.name }}">
             {% for generation in generations %}
                 <li>
-                    <a class="archive-nav-card" href="{{ generation.get_absolute_url }}">
-                        <div class="card-thumbnail-wrap">
+                    <a class="generation-photo-card" href="{{ generation.get_absolute_url }}">
+                        <div class="generation-photo-frame">
                             {% if generation.hero_image_url %}
-                                <img src="{{ generation.hero_image_url }}" alt="{{ generation.name }} {{ vehicle_model.name }}" class="card-thumbnail-img" loading="lazy">
+                                <img src="{{ generation.hero_image_url }}" alt="{{ generation.name }} {{ vehicle_model.name }}" class="generation-photo-img" width="600" height="400" loading="lazy">
                             {% else %}
                                 <div class="card-thumbnail-placeholder">
                                     <svg class="card-placeholder-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -42,11 +42,12 @@
                                 </div>
                             {% endif %}
                         </div>
-                        <div class="card-content-wrap">
-                            <span class="archive-card-title">{{ generation.name }}</span>
-                            <span class="archive-card-subtitle">
+                        <div class="generation-photo-body">
+                            <span class="generation-photo-title">{{ generation.name }}</span>
+                            <span class="generation-photo-years">
                                 {{ generation.start_year }}–{% if generation.end_year %}{{ generation.end_year }}{% else %}present{% endif %}
                             </span>
+                            <span class="generation-photo-action">Explore Generation →</span>
                         </div>
                     </a>
                 </li>
