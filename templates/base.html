@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% block title %}RigArchive — Technical Vehicle Archive{% endblock %}</title>
-    <link rel="stylesheet" href="{% static 'css/site.css' %}?v=vehicle-continuity-20261031">
+    <title>{% block title %}RigArchive — Adventure Vehicle Archive{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/site.css' %}?v=responsive-header-hero-20261031-4">
 </head>
 <body class="archival-body">
     <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -14,7 +14,7 @@
         <div class="header-inner container">
             <div class="site-branding">
                 <a class="site-logo" href="{% url 'home' %}">RigArchive</a>
-                <span class="site-tagline">Adventure vehicle technical archive.</span>
+                <span class="site-tagline">Adventure vehicle info archive</span>
             </div>
 
             <nav class="site-nav" aria-label="Primary navigation">
@@ -24,18 +24,26 @@
                 </a>
                 {% vehicle_quick_selector %}
                 </div>
-                <a href="{% url 'reference:manufacturer-list' %}?view=measurements" class="nav-link">
-                    Measurements
-                </a>
-                <a href="#builds" class="nav-link nav-link-unavailable" title="Builds and modifications archive coming soon" aria-disabled="true">
-                    Builds
-                </a>
-                <a href="#service-guides" class="nav-link nav-link-unavailable" title="Service guides archive coming soon" aria-disabled="true">
-                    Service Guides
-                </a>
-                <a href="{% url 'about' %}" class="nav-link {% if request.resolver_match.url_name == 'about' %}nav-link-active{% endif %}">
-                    About
-                </a>
+                <div class="secondary-navigation" data-secondary-navigation>
+                    <button type="button" class="secondary-navigation-toggle" aria-label="More navigation"
+                            title="More navigation" aria-expanded="false" aria-controls="secondary-navigation-panel" hidden>
+                        <span>More</span><span class="secondary-navigation-caret" aria-hidden="true">▾</span>
+                    </button>
+                    <div id="secondary-navigation-panel" class="secondary-navigation-panel">
+                        <a href="{% url 'reference:manufacturer-list' %}?view=measurements" class="nav-link">
+                            Measurements
+                        </a>
+                        <a href="#builds" class="nav-link nav-link-unavailable" title="Builds and modifications archive coming soon" aria-disabled="true">
+                            Builds
+                        </a>
+                        <a href="#service-guides" class="nav-link nav-link-unavailable" title="Service guides archive coming soon" aria-disabled="true">
+                            Service Guides
+                        </a>
+                        <a href="{% url 'about' %}" class="nav-link {% if request.resolver_match.url_name == 'about' %}nav-link-active{% endif %}">
+                            About
+                        </a>
+                    </div>
+                </div>
             </nav>
 
             <div class="header-search">
@@ -81,5 +89,6 @@
         </div>
     </footer>
     <script src="{% static 'js/vehicle_quick_selector.js' %}" defer></script>
+    <script src="{% static 'js/header_navigation.js' %}?v=responsive-20261031-2" defer></script>
 </body>
 </html>

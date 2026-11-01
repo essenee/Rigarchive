@@ -4,7 +4,7 @@
 {% block title %}RigArchive — Adventure vehicle technical archive{% endblock %}
 
 {% block content %}
-<link rel="stylesheet" href="{% static 'css/homepage.css' %}">
+<link rel="stylesheet" href="{% static 'css/homepage.css' %}?v=responsive-header-hero-20261031-4">
 <div class="homepage-approved-layout">
     <!-- Asymmetric Archival Hero Section -->
     <section class="hero-archival-grid" aria-label="Featured Platform">
@@ -21,9 +21,9 @@
         </div>
 
         <!-- Narrower Technical Schematic Section (~1/3) -->
-        <div class="hero-schematic-panel">
+        <div class="hero-schematic-panel" aria-hidden="true">
             <div class="schematic-inner">
-                <img src="{% static 'images/homepage/Toyota 4Runner Technical Blueprint.png' %}" class="vehicle-study" width="1024" height="1535" alt="Illustrative technical drawing of a fifth-generation Toyota 4Runner, showing side, front, and rear elevations. Not to scale.">
+                <img src="{% static 'images/homepage/Toyota 4Runner Technical Blueprint.png' %}" class="vehicle-study" width="1024" height="1535" alt="">
             </div>
         </div>
     </section>

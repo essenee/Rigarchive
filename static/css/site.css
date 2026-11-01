@@ -2337,9 +2337,11 @@ select:focus-visible {
 .generation-photo-title { font: 600 1.15rem var(--font-serif); }
 .generation-photo-years { color: var(--text-secondary); font: .85rem var(--font-mono); }
 .generation-photo-action { margin-top: auto; padding-top: .65rem; color: var(--color-blue); }
-/* Keep a generous toggle hit area; place its visible caret 6px after the label. */
-.vehicle-quick { gap: 6px; }
-.vehicle-quick-toggle { display: flex; align-items: center; justify-content: flex-start; padding: 0; }
+/* The 36px caret target already supplies trailing whitespace: do not add
+   a second navigation gap after it. Targets meet but never overlap. */
+.site-nav { --nav-gap: 1.25rem; gap: var(--nav-gap); }
+.vehicle-quick { gap: 0; margin-inline-end: calc(-1 * var(--nav-gap)); }
+.vehicle-quick-toggle { display: flex; align-items: center; justify-content: flex-start; padding: 0 0 0 6px; }
 @media (max-width: 58rem) {
     .generation-photo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
@@ -2348,4 +2350,35 @@ select:focus-visible {
     .gen-overview-grid { grid-template-columns: minmax(0, 1fr); }
     .vehicle-selector-action-desktop { display: none; }
     .vehicle-selector-action-mobile { display: inline; }
+}
+
+/* Shared responsive header. Unenhanced navigation stays fully visible. */
+.secondary-navigation { min-width: 0; max-width: 100%; }
+.secondary-navigation-panel { display: flex; align-items: center; gap: var(--nav-gap); }
+.secondary-navigation [hidden] { display: none; }
+.secondary-navigation-toggle { display: inline-flex; align-items: center; gap: 4px; min-width: 44px; min-height: 44px; padding: 0 2px; border: 0; background: transparent; color: var(--text-secondary); font: 500 .88rem var(--font-sans); white-space: nowrap; cursor: pointer; }
+.secondary-navigation-caret { font-size: .7rem; }
+html { scroll-padding-top: calc(var(--site-header-height, 90px) + 16px); }
+@media (max-width: 1024px) {
+    .site-header:not(.header-enhanced) { position: static; }
+    .site-header:not(.header-enhanced) .secondary-navigation-panel { flex-wrap: wrap; }
+    .header-enhanced { padding-block: 8px; }
+    .header-enhanced .header-inner { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "brand garage" "nav search"; gap: 8px 16px; align-items: center; }
+    .header-enhanced .site-branding { grid-area: brand; }
+    .header-enhanced .site-nav { position: static; grid-area: nav; --nav-gap: 8px; flex-wrap: nowrap; }
+    .header-enhanced .header-actions { grid-area: garage; }
+    .header-enhanced .header-search { grid-area: search; width: 100%; max-width: none; min-width: 0; }
+    .header-enhanced .header-search-input { min-height: 40px; }
+    .header-enhanced .vehicle-quick-panel { left: 24px; width: calc(100% - 48px); max-width: 28rem; }
+    .header-enhanced .secondary-navigation-panel { position: absolute; top: 100%; left: 24px; display: flex; flex-direction: column; align-items: stretch; gap: 0; width: calc(100% - 48px); max-width: 22rem; max-height: min(60vh, 24rem); overflow: auto; padding: .5rem; background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-sm); box-shadow: 0 8px 24px #0000001f; z-index: 110; }
+    .header-enhanced .secondary-navigation-panel[hidden] { display: none; }
+    .header-enhanced .secondary-navigation-panel .nav-link { display: flex; align-items: center; min-height: 44px; padding: .5rem .75rem; }
+}
+@media (max-width: 600px) {
+    .header-enhanced .header-inner { padding-inline: 12px; grid-template-areas: "brand brand" "nav garage" "search search"; gap: 8px; }
+    .header-enhanced .site-nav { --nav-gap: 4px; }
+    .header-enhanced .header-actions { justify-self: end; }
+    .header-enhanced .button-garage { min-height: 44px; padding-inline: .5rem; white-space: nowrap; }
+    .header-enhanced .vehicle-quick-panel,
+    .header-enhanced .secondary-navigation-panel { left: 12px; width: calc(100% - 24px); max-width: 22rem; }
 }
