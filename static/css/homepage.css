@@ -34,10 +34,11 @@ body:has(.homepage-approved-layout) {
     border-image-slice: 32;
     border-image-width: 1;
     border-image-repeat: round;
-    background: none;
+    background: #fafaf9;
     pointer-events: none;
 }
 .homepage-approved-layout .hero-main-img {
+    border-color: #fafaf9;
     min-height: 0;
     height: 100%;
     aspect-ratio: 1.63;
