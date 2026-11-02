@@ -66,11 +66,54 @@ class ResponsiveHeaderTests(TestCase):
         self.assertContains(response, 'name="q"')
         self.assertContains(response, 'My Garage')
 
-    def test_homepage_keeps_original_images_and_hides_decorative_sketch_from_accessibility(self):
+    def test_homepage_preserves_photo_and_hides_derived_decorative_sketch(self):
         response = self.client.get(reverse('home'))
         self.assertContains(response, '<div class="hero-schematic-panel" aria-hidden="true">')
         self.assertContains(response, '4runner-outdoor-hero.png')
-        self.assertContains(response, 'Toyota%204Runner%20Technical%20Blueprint.png')
-        self.assertContains(response, 'class="vehicle-study" width="1024" height="1535" alt=""')
+        self.assertContains(response, '4runner-diagram-approved-paper-length-corrected.png')
+        self.assertContains(response, 'class="vehicle-study" width="502" height="514" alt=""')
         self.assertContains(response, 'width="1536" height="1024"')
         self.assertContains(response, '<a class="skip-link" href="#main-content">')
+
+
+    def test_annotated_sketch_embeds_the_unchanged_original_without_numeric_labels(self):
+        import base64
+        import re
+        import xml.etree.ElementTree as ET
+        from django.conf import settings
+        root = ET.fromstring((settings.BASE_DIR / 'static/images/homepage/toyota-4runner-technical-annotated.svg').read_text())
+        ns = {'svg': 'http://www.w3.org/2000/svg'}
+        image = root.find('.//svg:image', ns)
+        payload = image.attrib['href'].split(',', 1)[1]
+        self.assertEqual(base64.b64decode(payload), (settings.BASE_DIR / 'static/images/homepage/Toyota 4Runner Technical Blueprint.png').read_bytes())
+        self.assertEqual(root.attrib['viewBox'], '0 60 1200 1340')
+        self.assertEqual(root.findall('.//svg:text', ns), [])
+        self.assertEqual({g.attrib['data-dimension'] for g in root.findall('.//svg:g[@data-dimension]', ns)}, {'overall-length', 'overall-height', 'wheelbase', 'front-tire-width', 'rear-hatch-height'})
+        self.assertEqual(image.attrib['width'], '1024')
+        self.assertEqual(image.attrib['height'], '1535')
+        self.assertEqual(len(root.findall('.//svg:path[@marker-start]', ns)), 5)
+        self.assertEqual(len(root.findall('.//svg:path[@marker-end]', ns)), 5)
+        for group in root.findall('.//svg:g[@data-dimension]', ns):
+            for path in group.findall('svg:path', ns):
+                self.assertLessEqual(set(re.findall(r'[A-Za-z]', path.attrib['d'])), {'M', 'H', 'V'})
+        for crop in root.findall('svg:svg', ns):
+            self.assertEqual(crop.attrib['viewBox'].split()[2:], [crop.attrib['width'], crop.attrib['height']])
+        self.assertIn('no measured dimensions', root.find('svg:desc', ns).text)
+
+    def test_homepage_paper_assets_are_separate_rgba_pngs(self):
+        import struct
+        from django.conf import settings
+        assets = settings.BASE_DIR / 'static/images/homepage'
+        for name, dimensions in {
+            '4runner-diagram-approved-paper.png': (502, 514),
+            'hero-photo-paper.png': (1024, 1024),
+            'topographic-approved-neutral.png': (1536, 1536),
+        }.items():
+            with self.subTest(asset=name):
+                data = (assets / name).read_bytes()
+                self.assertEqual(data[:8], b'\x89PNG\r\n\x1a\n')
+                self.assertEqual(struct.unpack('>II', data[16:24]), dimensions)
+                self.assertEqual(data[24:26], bytes([8, 6]))
+        response = self.client.get(reverse('home'))
+        self.assertNotContains(response, 'technical-annotated.svg')
+        self.assertContains(response, '4runner-outdoor-hero.png')

@@ -1,31 +1,41 @@
-/* Homepage-only visual completion against homepage-approved.png.
-   Raster crops come from that approved artwork; they are decorative, not evidence. */
-.homepage-approved-layout {
-    position: relative;
-    isolation: isolate;
-    padding-top: .5rem;
+/* Homepage paper assets follow homepage_hero_diagram_&background_approved.png.
+   The photograph and extracted diagram remain separate content images. */
+body:has(.homepage-approved-layout) {
+    background-color: var(--bg-paper);
+    background-image: url("../images/homepage/topographic-approved-neutral.png?v=dotted-contours-20261101-reviewed");
+    background-repeat: repeat;
+    background-size: 1536px 1536px;
 }
-.homepage-approved-layout::before {
-    content: "";
-    position: absolute;
-    inset: -1.5rem -.75rem;
-    z-index: -1;
-    /* Transparent contours leave the sitewide paper color unchanged.
-       Use the same denser contour scale on desktop and mobile. */
-    background: url("../images/homepage/topographic-contours.svg") repeat;
-    background-size: 576px 432px;
-    /* The SVG strokes are opaque; apply transparency only here. */
-    opacity: .135;
-    pointer-events: none;
-}
+.homepage-approved-layout { position: relative; isolation: isolate; padding-top: .5rem; }
 .homepage-approved-layout .hero-archival-grid { gap: 1rem; }
 .homepage-approved-layout .hero-photo-frame {
     transform: rotate(-1.25deg);
-    padding: .65rem .65rem .85rem;
-    border-radius: 1px;
-    background: var(--bg-surface);
-    box-shadow: 1px 4px 7px #51452d33, 0 1px 2px #51452d22;
+    --hero-paper-inset: .65rem .65rem .85rem;
+    padding: var(--hero-paper-inset);
+    border-radius: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+    isolation: isolate;
+    filter: drop-shadow(1px 3px 4px #34312a26) drop-shadow(0 1px 1px #34312a12);
     margin: .4rem 0;
+}
+.homepage-approved-layout .hero-photo-frame::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    /* Nine-slice corners stay square; round repeats avoid stretching the edge grain. */
+    box-sizing: border-box;
+    border-style: solid;
+    border-color: transparent;
+    border-width: var(--hero-paper-inset);
+    border-image-source: url("../images/homepage/hero-photo-frame.png");
+    border-image-slice: 32;
+    border-image-width: 1;
+    border-image-repeat: round;
+    background: none;
+    pointer-events: none;
 }
 .homepage-approved-layout .hero-main-img {
     min-height: 0;
@@ -91,9 +101,10 @@
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius-sm);
-    box-shadow: 1px 2px 5px #51452d20;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    filter: drop-shadow(1px 3px 3px #34312a24) drop-shadow(0 1px 1px #34312a12);
 }
 .homepage-approved-layout .explore-category-card { padding: .5rem .5rem 1rem; }
 .homepage-approved-layout .category-photo-header {
@@ -143,9 +154,9 @@
     .homepage-approved-layout .hero-archival-grid { position: relative; display: block; padding-bottom: 24px; }
     .homepage-approved-layout .hero-photo-frame { margin: .4rem 0; }
     .homepage-approved-layout .hero-main-img { height: auto; aspect-ratio: 1.63; }
-    .homepage-approved-layout .hero-schematic-panel { position: absolute; right: 0; bottom: -16px; width: clamp(104px, 30%, 180px); aspect-ratio: 1.09; margin: 0; overflow: hidden; border: 1px solid var(--border-color); background: var(--bg-surface); box-shadow: 1px 2px 5px #51452d20; pointer-events: none; transform: rotate(1deg); }
+    .homepage-approved-layout .hero-schematic-panel { position: absolute; right: 0; bottom: -16px; width: clamp(104px, 30%, 180px); aspect-ratio: 502 / 514; margin: 0; overflow: visible; border: 0; background: transparent; box-shadow: none; pointer-events: none; transform: rotate(1deg); }
     .homepage-approved-layout .schematic-inner { display: block; height: 100%; }
-    .homepage-approved-layout .vehicle-study { position: static; display: block; width: 100%; height: 100%; max-height: none; border: 0; box-shadow: none; object-fit: cover; object-position: center 50%; }
+    .homepage-approved-layout .vehicle-study { position: static; display: block; width: 100%; height: 100%; max-height: none; border: 0; box-shadow: none; object-fit: contain; object-position: center 50%; }
 }
 @media (max-width: 480px) {
     .homepage-approved-layout .hero-photo-frame { transform: rotate(-.5deg); }
@@ -159,4 +170,37 @@
     .homepage-approved-layout .photo-typewriter-tag { padding: .25rem .35rem; }
     .homepage-approved-layout .tag-mfr { font-size: .6rem; }
     .homepage-approved-layout .tag-gen { font-size: .53rem; }
+}
+
+/* Homepage desktop controls share a compact height; phone/tablet rules stay intact. */
+@media (min-width: 1025px) {
+    body:has(.homepage-approved-layout) .header-search-input,
+    body:has(.homepage-approved-layout) .button-garage { height: 36px; min-height: 36px; }
+    body:has(.homepage-approved-layout) .button-garage { justify-content: center; padding-block: 0; line-height: 1.2; }
+}
+
+/* Compact header: 36px visible faces inside 44px interactive boxes.
+   The search's existing 40px row is retained; its hit area extends 2px per side. */
+@media (max-width: 1024px) {
+    body:has(.homepage-approved-layout) .header-search-form { height: 40px; isolation: isolate; }
+    body:has(.homepage-approved-layout) .header-search-form::before {
+        content: ""; position: absolute; inset: 50% 0 auto; height: 36px; box-sizing: border-box; transform: translateY(-50%); z-index: -1; pointer-events: none;
+        border: 1px solid var(--border-color); border-radius: var(--radius-sm); background: var(--bg-paper-subtle);
+    }
+    body:has(.homepage-approved-layout) .header-search-input {
+        height: 44px; min-height: 44px; margin-block: -2px; background: transparent; border-color: transparent;
+    }
+    body:has(.homepage-approved-layout) .header-search-input:focus { background: transparent; border-color: transparent; }
+    body:has(.homepage-approved-layout) .header-search-form:focus-within::before {
+        border-color: var(--color-blue); background: var(--bg-surface-elevated);
+    }
+    body:has(.homepage-approved-layout) .button-garage {
+        position: relative; isolation: isolate; height: 44px; min-height: 44px; padding-block: 0;
+        background: transparent; border-color: transparent; justify-content: center;
+    }
+    body:has(.homepage-approved-layout) .button-garage::before {
+        content: ""; position: absolute; inset: 50% -1px auto; height: 36px; box-sizing: border-box; transform: translateY(-50%); z-index: -1; pointer-events: none;
+        border: 1px solid var(--border-color); border-radius: var(--radius-sm); background: var(--bg-paper-subtle);
+    }
+    body:has(.homepage-approved-layout) .button-garage:hover::before { background: var(--border-light); }
 }
