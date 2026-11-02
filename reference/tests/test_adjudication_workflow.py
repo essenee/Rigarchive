@@ -10,6 +10,7 @@ import json
 import tempfile
 from io import StringIO
 from pathlib import Path
+from typing import Any, Optional
 
 from django.core.management import call_command
 from django.test import TestCase

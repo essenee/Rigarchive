@@ -1,0 +1,11 @@
+{% if result.is_generation_wide %}
+    <span class="applicability-badge applicability-badge-wide">Generation-wide</span>
+{% else %}
+    <div class="applicability-badge-list">
+        {% for condition in result.conditions.all %}
+            {% if not forloop.first %}<span class="measurement-desc">AND</span>{% endif %}
+            <span class="applicability-badge applicability-badge-condition">{{ condition.state.feature.name }}: {{ condition.state.name }}</span>
+        {% endfor %}
+    </div>
+    <p class="measurement-desc">All listed conditions must be satisfied. Applicability to a specific factory configuration has not been established.</p>
+{% endif %}

@@ -305,6 +305,11 @@ class CanonicalCorrectionLifecycleTests(TestCase):
 
         response = self.client.get(self.gen.get_absolute_url())
         self.assertEqual(response.status_code, 200)
+        self.assertNotIn(self.old_vd, response.context["active_configurations"])
+        self.assertNotContains(response, "2020-limited-40l-v6-awd-us")
+        # Configuration choices are exposed after the user selects a year.
+        response = self.client.get(self.gen.get_absolute_url(), {"year": 2020})
+        self.assertEqual(response.status_code, 200)
         self.assertContains(response, "2020-limited-40l-v6-4wd-us")
         self.assertNotContains(response, "2020-limited-40l-v6-awd-us")
 

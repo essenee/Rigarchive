@@ -1,19 +1,212 @@
 {% extends "base.html" %}
+{% load static %}
 
-{% block title %}RigArchive — Technical Vehicle Archive{% endblock %}
+{% block title %}RigArchive — Adventure vehicle technical archive{% endblock %}
 
 {% block content %}
-<section class="hero">
-    <h1>RigArchive</h1>
+<link rel="stylesheet" href="{% static 'css/homepage.css' %}?v=dotted-labels-reusable-frame-20261101-reviewed">
+<div class="homepage-approved-layout">
+    <!-- Asymmetric Archival Hero Section -->
+    <section class="hero-archival-grid" aria-label="Featured Platform">
+        <!-- Wide Adventure Photograph (~2/3) -->
+        <div class="hero-photo-frame">
+            <div class="photo-tape tape-top-left" aria-hidden="true"></div>
+            
+            <img src="{% static 'images/homepage/4runner-outdoor-hero.png' %}" alt="Rear three-quarter view of a dark gray fifth-generation Toyota 4Runner with a deployed rooftop tent and camping gear, facing a mountain lake at sunset." class="hero-main-img" width="1536" height="1024" loading="eager">
 
-    <p class="lead">
-        A technical archive for canonical vehicle identity, factory configuration reference, and evidence-aware technical knowledge.
-    </p>
+            <div class="photo-typewriter-tag">
+                <span class="tag-mfr">TOYOTA 4RUNNER</span>
+                <span class="tag-gen">5TH GENERATION (2010 – 2024)</span>
+            </div>
+        </div>
 
-    <div class="actions">
-        <a class="button" href="{% url 'reference:manufacturer-list' %}">
-            Browse vehicles
-        </a>
-    </div>
-</section>
+        <!-- Narrower Technical Schematic Section (~1/3) -->
+        <div class="hero-schematic-panel" aria-hidden="true">
+            <div class="schematic-inner">
+                <img src="{% static 'images/homepage/4runner-diagram-approved-paper-length-corrected.png' %}" class="vehicle-study" width="502" height="514" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- Vehicle Platforms Section -->
+    <section class="archive-section platforms-section" aria-label="Vehicle Platforms">
+        <div class="section-heading-row">
+            <div>
+                <h2 class="section-title-serif">Vehicle Platforms</h2>
+                <p class="section-subtitle-mono">Explore generations, model years, and configurations.</p>
+            </div>
+            <a href="{% url 'reference:manufacturer-list' %}" class="section-action-link">
+                View all vehicles →
+            </a>
+        </div>
+
+        {% if featured_platforms %}
+            <div class="platforms-cards-grid">
+                {% for item in featured_platforms %}
+                    <article class="platform-archival-card">
+                        <div class="card-photo-wrap">
+                            {% if item.hero_image_url %}
+                                <img src="{{ item.hero_image_url }}" alt="{{ item.manufacturer.name }} {{ item.model.name }}" class="card-photo" loading="lazy">
+                            {% else %}
+                                <div class="card-photo-placeholder">
+                                    <span>{{ item.model.name }}</span>
+                                </div>
+                            {% endif %}
+                        </div>
+
+                        <div class="card-content-area">
+                            <span class="card-mfr-label">{{ item.manufacturer.name }}</span>
+                            <h3 class="card-model-title">{{ item.model.name }}</h3>
+                            <p class="card-meta-line">
+                                {{ item.generations_count }} Generations <span class="meta-dot">•</span> {{ item.year_span }}
+                            </p>
+                            <a href="{{ item.model.get_absolute_url }}" class="card-footer-link">
+                                Browse {{ item.model.name }} →
+                            </a>
+                        </div>
+                    </article>
+                {% endfor %}
+            </div>
+        {% else %}
+            <p class="empty-state-notice">No vehicle platforms are currently populated in the archive.</p>
+        {% endif %}
+    </section>
+
+    <!-- Explore the Archive Section -->
+    <section class="archive-section explore-archive-section" aria-label="Explore the Archive">
+        <div class="section-heading-row">
+            <div>
+                <h2 class="section-title-serif">Explore the Archive</h2>
+                <p class="section-subtitle-mono">Different ways to find the information you need.</p>
+            </div>
+        </div>
+
+        <div class="explore-archive-grid">
+            <!-- 1. Factory Specifications -->
+            <article class="explore-category-card">
+                <div class="category-photo-header">
+                    <img src="{% static 'images/homepage/factory-clean.png' %}" alt="" loading="lazy" width="220" height="150">
+                    <span class="category-icon-badge" aria-hidden="true">
+                        <svg class="category-icon" width="33" height="33" viewBox="0 0 24 24" focusable="false"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v5h4M9 12h6M9 16h6"/></svg>
+                    </span>
+                </div>
+                <h3 class="category-title">Factory Specifications</h3>
+                <p class="category-desc">
+                    Canonical configurations, factory equipment, and technical details.
+                </p>
+                <a href="{% url 'reference:manufacturer-list' %}" class="category-action-link">
+                    Browse specifications →
+                </a>
+            </article>
+
+            <!-- 2. Physical Measurements -->
+            <article class="explore-category-card">
+                <div class="category-photo-header">
+                    <img src="{% static 'images/homepage/measurements-clean.png' %}" alt="" loading="lazy" width="220" height="150">
+                    <span class="category-icon-badge" aria-hidden="true">
+                        <svg class="category-icon" width="33" height="33" viewBox="0 0 24 24" focusable="false"><path d="m3 16 13-13 5 5L8 21zM12 7l2 2M8 11l2 2M4 15l2 2M16 5l2 2"/></svg>
+                    </span>
+                </div>
+                <h3 class="category-title">Physical Measurements</h3>
+                <p class="category-desc">
+                    Cargo dimensions, interior measurements, and other real-world data.
+                </p>
+                <a href="{% url 'reference:manufacturer-list' %}?view=measurements" class="category-action-link">
+                    Browse measurements →
+                </a>
+            </article>
+
+            <!-- 3. Builds and Modifications -->
+            <article class="explore-category-card">
+                <div class="category-photo-header">
+                    <img src="{% static 'images/homepage/builds-clean.png' %}" alt="" loading="lazy" width="220" height="150">
+                    <span class="category-icon-badge" aria-hidden="true">
+                        <svg class="category-icon" width="33" height="33" viewBox="0 0 24 24" focusable="false"><path d="M14 4a5 5 0 0 0-6 6L3 15a3.54 3.54 0 0 0 5 5l5-5a5 5 0 0 0 6-6l-4 4-4-4 4-4z"/><circle cx="5.5" cy="17.5" r=".5"/></svg>
+                    </span>
+                </div>
+                <h3 class="category-title">Builds and Modifications</h3>
+                <p class="category-desc">
+                    Real vehicles, practical modifications, and adventure builds.
+                </p>
+                <a href="#builds" class="category-action-link category-link-unavailable" title="Builds archive coming soon" aria-disabled="true">
+                    Browse builds →
+                </a>
+            </article>
+
+            <!-- 4. Service Guides -->
+            <article class="explore-category-card">
+                <div class="category-photo-header">
+                    <img src="{% static 'images/homepage/service-clean.png' %}" alt="" loading="lazy" width="220" height="150">
+                    <span class="category-icon-badge" aria-hidden="true">
+                        <svg class="category-icon" width="33" height="33" viewBox="0 0 24 24" focusable="false"><path d="M12 5C9 3 6 3 3 4v15c3-1 6-1 9 1 3-2 6-2 9-1V4c-3-1-6-1-9 1zM12 5v15M6 8h3M6 12h3M15 8h3M15 12h3"/></svg>
+                    </span>
+                </div>
+                <h3 class="category-title">Service Guides</h3>
+                <p class="category-desc">
+                    Maintenance and repair guides with supporting evidence.
+                </p>
+                <a href="#service-guides" class="category-action-link category-link-unavailable" title="Service guides coming soon" aria-disabled="true">
+                    Browse service guides →
+                </a>
+            </article>
+        </div>
+    </section>
+
+    <!-- Find a Vehicle & Recently Viewed Dual Panel -->
+    <section class="archive-section search-and-recent-container" aria-label="Find a Vehicle and History">
+        <div class="search-and-recent-grid">
+            <!-- Find a Vehicle Search Box (~3/4) -->
+            <div class="find-vehicle-box">
+                <h2 class="search-box-title">Find a Vehicle</h2>
+                <p class="search-box-subtitle">Search by make, model, generation, or configuration.</p>
+
+                <form action="{% url 'reference:manufacturer-list' %}" method="get" class="find-vehicle-form" role="search">
+                    <div class="search-input-wrap">
+                        <svg class="search-glass-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <circle cx="8.5" cy="8.5" r="5.5" />
+                            <line x1="12.5" y1="12.5" x2="17" y2="17" />
+                        </svg>
+                        <input type="search" name="q" placeholder="e.g. 4Runner 2017 TRD Pro, Toyota Tacoma, Volkswagen Touareg..." class="find-vehicle-input" aria-label="Search vehicles">
+                    </div>
+                    <button type="submit" class="button-search-primary">
+                        Search
+                    </button>
+                </form>
+            </div>
+
+            <!-- Recently Viewed Panel (~1/4) -->
+            <aside class="recently-viewed-panel" aria-label="Recently Viewed Vehicles">
+                <div class="recent-tape recent-tape-top" aria-hidden="true"></div>
+                <div class="recent-tape recent-tape-bottom" aria-hidden="true"></div>
+
+                <h3 class="recently-viewed-heading">Recently Viewed</h3>
+
+                {% if recently_viewed %}
+                    <ul class="recently-viewed-list">
+                        {% for item in recently_viewed %}
+                            <li class="recently-viewed-item">
+                                <a href="{{ item.url }}" class="recently-viewed-link">
+                                    {% if item.image_url %}
+                                        <img src="{{ item.image_url }}" alt="{{ item.model_name }}" class="recently-viewed-thumb">
+                                    {% else %}
+                                        <div class="recently-viewed-thumb-placeholder"></div>
+                                    {% endif %}
+                                    <div class="recently-viewed-info">
+                                        <span class="recent-item-title">{{ item.model_name }} ({% if item.generation_number %}{{ item.generation_number }}th Gen{% else %}{{ item.generation_name }}{% endif %})</span>
+                                        <span class="recent-item-years">{{ item.year_span }}</span>
+                                    </div>
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <div class="recently-viewed-empty">
+                        <p class="recent-empty-text">No recently viewed vehicles.</p>
+                        <span class="recent-empty-hint">Visited generations will appear here as you browse the archive.</span>
+                    </div>
+                {% endif %}
+            </aside>
+        </div>
+    </section>
+</div>
 {% endblock %}

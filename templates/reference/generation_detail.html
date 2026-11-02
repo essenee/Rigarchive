@@ -1,194 +1,360 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}
-    {{ generation.name }} | {{ vehicle_model.name }} | RigArchive
+    {{ vehicle_model.name }} — {{ generation.name }} | RigArchive
 {% endblock %}
 
 {% block breadcrumbs %}
 <nav class="breadcrumbs" aria-label="Breadcrumb">
     <a href="{% url 'home' %}">Home</a>
     <span aria-hidden="true">/</span>
-    <a href="{% url 'reference:manufacturer-list' %}">
-        Vehicles
-    </a>
+    <a href="{% url 'reference:vehicle-selector' %}?destination=generations">Vehicles</a>
     <span aria-hidden="true">/</span>
-    <a href="{{ manufacturer.get_absolute_url }}">
-        {{ manufacturer.name }}
-    </a>
+    <a href="{{ manufacturer.get_absolute_url }}">{{ manufacturer.name }}</a>
     <span aria-hidden="true">/</span>
-    <a href="{{ vehicle_model.get_absolute_url }}">
-        {{ vehicle_model.name }}
-    </a>
+    <a href="{{ vehicle_model.get_absolute_url }}">{{ vehicle_model.name }}</a>
     <span aria-hidden="true">/</span>
-    <span>{{ generation.name }}</span>
+    <span>{{ generation.name }} ({{ generation.start_year }}–{% if generation.end_year %}{{ generation.end_year }}{% else %}present{% endif %})</span>
 </nav>
 {% endblock %}
 
 {% block content %}
-<h1 class="page-title">{{ vehicle_model.name }} — {{ generation.name }}</h1>
-
-<div class="generation-detail-layout">
-    <!-- Main Content Column (Left) -->
-    <div class="generation-main-content">
-        <!-- Detailed Specs Section & Selector Form -->
-        <section class="archive-section" id="detailed-specs">
-            <h2 class="archive-section-title">Detailed Specs</h2>
-            <p class="archive-section-subtitle">Select a model year to browse configurations, or choose a specific trim combination to view detailed specifications.</p>
-
-            {% if active_model_years %}
-                <form action="{% url 'reference:generation-detail' manufacturer.slug vehicle_model.slug generation.slug %}" method="get" class="specs-selector-form" id="specsForm">
-                    <div class="specs-selector-group">
-                        <label for="year-select" class="specs-selector-label">Model Year</label>
-                        <select name="year" id="year-select" class="specs-selector-select">
-                            <option value="">Select Year...</option>
-                            {% for yr in active_model_years %}
-                                <option value="{{ yr }}">{{ yr }}</option>
-                            {% endfor %}
-                        </select>
-                    </div>
-
-                    <div class="specs-selector-group">
-                        <label for="config-select" class="specs-selector-label">Trim / Configuration (Optional)</label>
-                        <select name="configuration" id="config-select" class="specs-selector-select" disabled>
-                            <option value="">Select model year first</option>
-                            {% for config in active_configurations %}
-                                <option value="{{ config.slug }}" data-year="{{ config.model_year }}" style="display: none;">
-                                    {% if config.trim_name %}{{ config.trim_name }} — {% endif %}{{ config.drivetrain }} — {{ config.engine_name }}
-                                </option>
-                            {% endfor %}
-                        </select>
-                    </div>
-
-                    <button type="submit" class="specs-selector-button">View Specs</button>
-                </form>
-            {% else %}
-                <p class="secondary">No active model years or specifications are currently available for this generation.</p>
-            {% endif %}
-        </section>
-
-        <!-- Conditional Measurements Section (Only rendered when populated) -->
-        {% if measurements %}
-            <section class="archive-section" id="measurements">
-                <h2 class="archive-section-title">Measurements</h2>
-                <div class="measurements-grid">
-                    {% for measurement in measurements|slice:":3" %}
-                        <div class="measurement-card">
-                            <h3>{{ measurement.title }}</h3>
-                        </div>
-                    {% endfor %}
-                </div>
-                {% if measurements|length > 3 %}
-                    <a href="#" class="see-more-link">See more measurements</a>
-                {% endif %}
-            </section>
-        {% endif %}
-
-        <!-- Conditional Camping Builds Section (Only rendered when populated) -->
-        {% if camping_builds %}
-            <section class="archive-section" id="camping-builds">
-                <h2 class="archive-section-title">Camping Builds</h2>
-                <div class="builds-grid">
-                    {% for build in camping_builds|slice:":3" %}
-                        <div class="build-card">
-                            <h3>{{ build.title }}</h3>
-                        </div>
-                    {% endfor %}
-                </div>
-                {% if camping_builds|length > 3 %}
-                    <a href="#" class="see-more-link">See more camping builds</a>
-                {% endif %}
-            </section>
-        {% endif %}
-    </div>
-
-    <!-- Overview Infobox Sidebar (Right) -->
-    <aside class="generation-sidebar">
-        <div class="generation-infobox" aria-label="Generation Overview">
-            <!-- Top: Representative Image -->
-            <div class="infobox-image-wrap">
-                {% if generation_hero_image %}
-                    <img src="{{ generation_hero_image }}" alt="{{ generation.name }} {{ vehicle_model.name }}" class="infobox-img">
-                {% else %}
-                    <div class="infobox-placeholder">
-                        <svg class="infobox-placeholder-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7h8m-8 4h8m-8 4h4m-6 4h12a2 2 0 002-2V5a2 2 0 00-2-2H6a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
-                        </svg>
-                        <span>{{ generation.name }}</span>
-                    </div>
-                {% endif %}
+<div class="generation-approved-layout">
+    <!-- Hero Section: Straight Rectangular Photo + Information Panel -->
+    <section class="generation-hero-container" aria-label="Generation Hero">
+        <!-- Right: Information Panel & Metadata -->
+        <div class="gen-hero-info-panel">
+            <div class="gen-identity-block">
+                <span class="gen-make-label">{{ manufacturer.name }}</span>
+                <h1 class="gen-model-title">{{ vehicle_model.name }}</h1>
+                <p class="gen-designation-line">
+                    {{ generation.name }}
+                    <span class="gen-years-span">({{ generation.start_year }} – {% if generation.end_year %}{{ generation.end_year }}{% else %}present{% endif %})</span>
+                </p>
             </div>
 
-            <!-- Middle: Visually distinct Overview Heading Bar -->
-            <h2 class="infobox-header">Overview</h2>
+            <!-- Generation Overview Box -->
+            <div class="gen-overview-box">
+                <h2 class="gen-overview-heading">Generation Overview</h2>
+                <p class="gen-overview-availability">Coming later</p>
+                <ul class="gen-overview-grid">
+                    <li>Generation History</li>
+                    <li>Platform &amp; Design</li>
+                    <li>Powertrain Options</li>
+                    <li>Model Year Changes</li>
+                    <li>Production Numbers</li>
+                </ul>
+            </div>
 
-            <!-- Bottom: Compact Metadata -->
-            <dl class="infobox-meta">
-                <div class="infobox-meta-row">
-                    <dt>Production</dt>
-                    <dd>{{ generation.start_year }}–{% if generation.end_year %}{{ generation.end_year }}{% else %}present{% endif %}</dd>
+            <!-- Generation Statistics Bar -->
+            <div class="gen-stats-bar" aria-label="Generation Statistics">
+                <div class="gen-stat-item">
+                    <span class="gen-stat-val">{{ stats.model_years_count }}</span>
+                    <span class="gen-stat-label">Model Years</span>
                 </div>
-                {% if generation.generation_number %}
-                    <div class="infobox-meta-row">
-                        <dt>Generation</dt>
-                        <dd>Generation {{ generation.generation_number }}</dd>
-                    </div>
-                {% endif %}
-                <div class="infobox-meta-row">
-                    <dt>Manufacturer</dt>
-                    <dd>{{ manufacturer.name }}</dd>
+                <div class="gen-stat-item">
+                    <span class="gen-stat-val">{{ stats.configurations_count }}</span>
+                    <span class="gen-stat-label">Configurations</span>
                 </div>
-                <div class="infobox-meta-row">
-                    <dt>Measurements</dt>
-                    <dd><a href="{% url 'measurements:generation-measurements' manufacturer.slug vehicle_model.slug generation.slug %}">View Measurements</a></dd>
+                <div class="gen-stat-item">
+                    <span class="gen-stat-val">{{ stats.engine_options_count }}</span>
+                    <span class="gen-stat-label">Engine Options</span>
                 </div>
-                {% if generation.notes %}
-                    <div class="infobox-meta-row infobox-meta-notes">
-                        <dt>Notes</dt>
-                        <dd>{{ generation.notes }}</dd>
-                    </div>
-                {% endif %}
-            </dl>
+                <div class="gen-stat-item">
+                    <span class="gen-stat-val">{{ stats.drivetrains_count }}</span>
+                    <span class="gen-stat-label">Drivetrains</span>
+                </div>
+            </div>
         </div>
-    </aside>
+        <!-- Left: Straight, Rectangular Generation Photograph -->
+        <div class="gen-hero-photo-wrap">
+            {% if generation_hero_image %}
+                <img src="{{ generation_hero_image }}" alt="{{ manufacturer.name }} {{ vehicle_model.name }} {{ generation.name }}" class="gen-hero-photo" loading="eager">
+            {% else %}
+                <div class="gen-hero-placeholder">
+                    <svg class="placeholder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="2" y="5" width="20" height="14" rx="2"/>
+                        <circle cx="8" cy="14" r="2"/>
+                        <path d="M14 14l2-3 4 5"/>
+                    </svg>
+                    <span>{{ generation.name }}</span>
+                </div>
+            {% endif %}
+        </div>
+
+    </section>
+
+    <!-- Full-Width Configurations Browser (Model Year → Trim → Configuration) -->
+    <section class="archive-section configurations-browser-section" id="configurations" tabindex="-1" aria-label="Configurations &amp; Specs">
+        <p id="generation-filter-status" class="visually-hidden" role="status" aria-live="polite" aria-atomic="true"></p>
+        <div id="configuration-content">
+        <div class="section-header-block">
+            <h2 class="section-title-serif">Configurations &amp; Specs</h2>
+            <p class="section-subtitle-sans">Explore available factory configurations by model year and trim. Select a configuration to view its detailed technical specifications.</p>
+        </div>
+
+        {% if filter_active or filter_errors %}
+            <a href="{{ generation.get_absolute_url }}#configurations" class="clear-filters-link" data-generation-filter>Clear Filters</a>
+        {% endif %}
+        {% for error in filter_errors %}
+            <p class="section-subtitle-sans" role="status">{{ error }}</p>
+        {% endfor %}
+        <div class="config-browser-panel">
+            <div class="browser-columns-container">
+                <!-- Column 1: Model Year -->
+                <div class="browser-column col-year">
+                    <h3 class="column-title">1. Model Year</h3>
+                    <div class="years-button-grid">
+                        {% for yr in active_model_years %}
+                            <a href="?year={{ yr }}#configurations" data-generation-filter class="year-button {% if selected_year == yr %}is-selected{% endif %}" data-year="{{ yr }}">
+                                {{ yr }}
+                            </a>
+                        {% empty %}
+                            <p>No active configurations are available for this generation.</p>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <div class="column-arrow" aria-hidden="true">→</div>
+
+                <!-- Column 2: Trim -->
+                <div class="browser-column col-trim">
+                    <h3 class="column-title">2. Trim</h3>
+                    {% if selected_year %}
+                        {% if available_trims %}
+                            <div class="trims-button-list">
+                                {% for trim_item in available_trims %}
+                                    <a href="?year={{ selected_year }}&amp;trim={{ trim_item|urlencode }}#configurations" data-generation-filter class="trim-button {% if selected_trim == trim_item %}is-selected{% endif %}">
+                                        {{ trim_item|default:"Unnamed trim" }}
+                                    </a>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            <div class="column-empty-state">
+                                <p>Standard baseline trim for {{ selected_year }}.</p>
+                            </div>
+                        {% endif %}
+                    {% else %}
+                        <div class="column-empty-state">
+                            <p>Select a model year to view available trims.</p>
+                        </div>
+                    {% endif %}
+                </div>
+
+                <div class="column-arrow" aria-hidden="true">→</div>
+
+                <!-- Column 3: Configuration -->
+                <div class="browser-column col-package">
+                    <h3 class="column-title">3. Configuration</h3>
+                    {% if selected_year %}
+                        <div class="package-status-box">
+                            <div class="matching-configs-section">
+                                <span class="matching-configs-label">Factory Configurations:</span>
+                                <ul class="matching-configs-list">
+                                    {% for vd in configuration_browser_choices %}
+                                        <li class="matching-config-item {% if selected_config.pk == vd.pk %}is-selected{% endif %}">
+                                            <a href="?year={{ vd.model_year }}&amp;configuration={{ vd.slug|urlencode }}#configurations" data-generation-filter class="configuration-choice" aria-label="Select {{ vd.model_year }} {{ vd.trim_name|default:'Unnamed trim' }} · {{ vd.choice_label }}" {% if selected_config.pk == vd.pk %}aria-current="true"{% endif %}>{{ vd.choice_label }}</a>
+                                            <a href="{{ vd.get_absolute_url }}" class="configuration-specs-link" aria-label="Full specifications for {{ vd.choice_label }}">Specs →</a>
+                                        </li>
+                                    {% empty %}
+                                        <li class="config-item-empty">No active configurations match this selection.</li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                    {% else %}
+                        <div class="column-empty-state">
+                            <p>Select a model year to view configurations.</p>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Key Dimensions Section -->
+    <section class="archive-section dimensions-section" id="dimensions" aria-label="Key Dimensions">
+        <div class="section-heading-row">
+            <div>
+                <h2 class="section-title-serif">Key Dimensions</h2>
+                <p class="section-subtitle-sans">Recorded physical measurements and their applicability, separate from factory reference attributes.</p>
+            </div>
+            <a href="{% url 'measurements:generation-measurements' manufacturer.slug vehicle_model.slug generation.slug %}" class="section-action-link">
+                View all measurements →
+            </a>
+        </div>
+
+        <p class="measurement-desc" id="dimension-illustration-notice">Illustrative · not to scale.</p>
+        <div class="dimensions-schematic-grid">
+            <!-- Left & Center: Technical Diagrams -->
+            <div class="dimension-diagrams-wrap">
+                <!-- Side Profile Schematic -->
+                <div class="diagram-panel side-panel">
+                    <span class="measurement-desc">Generic side-profile illustration</span>
+                    <svg viewBox="0 0 280 150" fill="none" class="dim-vector" role="img" aria-label="Generic measurement-location illustration, not to scale">
+                        <line x1="10" y1="120" x2="270" y2="120" stroke="#d5ccbd" stroke-dasharray="2 2" stroke-width="0.8"/>
+                        <!-- Body Outline -->
+                        <path d="M 25 105 C 25 90, 32 82, 45 80 L 70 76 L 95 48 L 200 48 L 240 65 L 248 85 L 250 105 L 225 105 A 16 16 0 0 0 193 105 L 85 105 A 16 16 0 0 0 53 105 Z" 
+                              stroke="#4a4237" stroke-width="1.5" fill="#f4efe6"/>
+                        <circle cx="69" cy="105" r="14" stroke="#4a4237" stroke-width="1.8" fill="#3c3730"/>
+                        <circle cx="209" cy="105" r="14" stroke="#4a4237" stroke-width="1.8" fill="#3c3730"/>
+                        <!-- Dimension Lines -->
+                        <line x1="69" y1="130" x2="209" y2="130" stroke="#5a5245" stroke-width="1"/>
+                        <path d="M 69 127 L 69 133 M 209 127 L 209 133" stroke="#5a5245" stroke-width="1"/>
+
+                        <line x1="25" y1="142" x2="250" y2="142" stroke="#5a5245" stroke-width="1"/>
+
+                        <line x1="262" y1="48" x2="262" y2="120" stroke="#5a5245" stroke-width="0.8"/>
+                    </svg>
+                </div>
+
+                <!-- Rear Exterior Schematic -->
+                <div class="diagram-panel rear-panel">
+                    <span class="measurement-desc">Generic rear-exterior illustration</span>
+                    <svg viewBox="0 0 130 150" fill="none" class="dim-vector" role="img" aria-label="Generic measurement-location illustration, not to scale">
+                        <rect x="20" y="35" width="85" height="70" rx="8" stroke="#4a4237" stroke-width="1.5" fill="#f4efe6"/>
+                        <rect x="14" y="75" width="14" height="30" rx="3" stroke="#4a4237" stroke-width="1.5" fill="#3c3730"/>
+                        <rect x="97" y="75" width="14" height="30" rx="3" stroke="#4a4237" stroke-width="1.5" fill="#3c3730"/>
+                        <!-- Dimension Lines -->
+                        <line x1="21" y1="125" x2="104" y2="125" stroke="#5a5245" stroke-width="1"/>
+                        <path d="M 21 122 L 21 128 M 104 122 L 104 128" stroke="#5a5245" stroke-width="1"/>
+                        <!-- Height -->
+                        <line x1="116" y1="35" x2="116" y2="105" stroke="#5a5245" stroke-width="0.8"/>
+                    </svg>
+                </div>
+
+                <!-- Cargo Opening Schematic -->
+                <div class="diagram-panel cargo-panel">
+                    <span class="measurement-desc">Generic cargo-opening illustration</span>
+                    <svg viewBox="0 0 130 150" fill="none" class="dim-vector" role="img" aria-label="Generic measurement-location illustration, not to scale">
+                        <rect x="20" y="35" width="85" height="70" rx="8" stroke="#4a4237" stroke-width="1.5" fill="#f4efe6"/>
+                        <rect x="32" y="48" width="60" height="42" rx="4" stroke="#5a5245" stroke-width="1.2" stroke-dasharray="2 2" fill="#ebe4d6"/>
+                        <!-- Cargo-opening location; not wheel-well clearance -->
+                        <line x1="32" y1="108" x2="92" y2="108" stroke="#5a5245" stroke-width="1"/>
+                        <!-- Cargo opening height -->
+                        <line x1="97" y1="48" x2="97" y2="90" stroke="#5a5245" stroke-width="0.8"/>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Right: More Measurements Card -->
+            <aside class="more-measurements-panel">
+                <h3 class="panel-heading">Measurement topics</h3>
+                <p class="measurement-desc">These topics do not indicate recorded coverage.</p>
+                <ul class="measurements-category-list">
+                    <li class="category-item">
+                        <svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                            <polyline points="2 17 12 22 22 17"/>
+                            <polyline points="2 12 12 17 22 12"/>
+                        </svg>
+                        <span>Cargo Area Dimensions</span>
+                    </li>
+                    <li class="category-item">
+                        <svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="3" y="3" width="18" height="18" rx="2"/>
+                            <circle cx="12" cy="12" r="3"/>
+                        </svg>
+                        <span>Interior Dimensions</span>
+                    </li>
+                    <li class="category-item">
+                        <svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M2 12h20M2 17h20M4 7h16a2 2 0 0 1 2 2v3H2V9a2 2 0 0 1 2-2z"/>
+                        </svg>
+                        <span>Sleeping Platform Data</span>
+                    </li>
+                    <li class="category-item">
+                        <svg class="cat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="7" width="20" height="13" rx="2"/>
+                            <path d="M16 3H8L6 7h12l-2-4z"/>
+                        </svg>
+                        <span>Exterior Dimensions</span>
+                    </li>
+                </ul>
+
+                <a href="{% url 'measurements:generation-measurements' manufacturer.slug vehicle_model.slug generation.slug %}" class="panel-footer-link">
+                    Browse all measurements →
+                </a>
+            </aside>
+        </div>
+
+        {% if has_measurements %}
+            <div class="recorded-measurements-container">
+                <h3 class="recorded-heading">Additional Measurements</h3>
+                <table class="measurements-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Measurement Definition</th>
+                            <th scope="col">Value</th>
+                            <th scope="col">Applicability</th>
+                            <th scope="col">Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for result in measurements %}
+                            <tr class="measurement-result">
+                                <td class="measurement-name-cell">
+                                    <strong>{{ result.definition.name }}</strong>
+                                    {% if result.definition.description %}
+                                        <div class="measurement-desc">{{ result.definition.description }}</div>
+                                    {% endif %}
+                                </td>
+                                <td class="measurement-val-cell">
+                                    {{ result.value }} {{ result.unit }}
+                                </td>
+                                <td class="measurement-app-cell">
+                                    {% include "measurements/includes/applicability.html" with result=result only %}
+                                </td>
+                                <td class="measurement-notes-cell">
+                                    {{ result.notes|default:"—" }}
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        {% else %}
+            <div class="empty-measurements-box">
+                <p class="empty-text">
+                    No physical measurements are recorded for this generation.
+                </p>
+                <span class="empty-subtext">
+                    No values or applicability conclusions can be drawn from the absence of records.
+                </span>
+            </div>
+        {% endif %}
+    </section>
+
+    <!-- Side-by-Side: Builds and Mods & Service Guides -->
+    <div class="builds-guides-grid">
+        <!-- Left: Builds and Mods (Strictly no subtitle!) -->
+        <section class="archive-section builds-section" id="builds" aria-label="Builds and Mods">
+            <div class="section-heading-row">
+                <h2 class="section-title-serif">Builds and Mods</h2>
+                <a href="#builds" class="section-action-link link-unavailable" title="Builds domain in development" aria-disabled="true">
+                    View all builds →
+                </a>
+            </div>
+
+            {% include "reference/partials/generation_domain_placeholder.html" with image_path="images/generation-builds-placeholder-baja.png" image_width=1916 image_height=821 message="No Builds documented yet" %}
+        </section>
+
+        <!-- Right: Service Guides -->
+        <section class="archive-section guides-section" id="service-guides" aria-label="Service Guides">
+            <div class="section-heading-row">
+                <h2 class="section-title-serif">Service Guides</h2>
+                <a href="#service-guides" class="section-action-link link-unavailable" title="Service guides domain in development" aria-disabled="true">
+                    View all guides →
+                </a>
+            </div>
+
+            {% include "reference/partials/generation_domain_placeholder.html" with image_path="images/generation-service-guides-placeholder.png" image_width=220 message="No service guides added yet." %}
+        </section>
+    </div>
+
+
 </div>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    var yearSelect = document.getElementById('year-select');
-    var configSelect = document.getElementById('config-select');
-
-    if (!yearSelect || !configSelect) return;
-
-    var rawOptions = Array.from(configSelect.querySelectorAll('option[data-year]'));
-
-    function updateConfigDropdown() {
-        var selectedYear = yearSelect.value;
-
-        if (!selectedYear) {
-            configSelect.innerHTML = '<option value="">Select model year first</option>';
-            configSelect.disabled = true;
-            return;
-        }
-
-        configSelect.disabled = false;
-        configSelect.innerHTML = '<option value="">All Configurations (Year Overview)...</option>';
-
-        rawOptions.forEach(function(opt) {
-            if (opt.getAttribute('data-year') === selectedYear) {
-                var clone = opt.cloneNode(true);
-                clone.style.display = '';
-                configSelect.appendChild(clone);
-            }
-        });
-
-        configSelect.selectedIndex = 0;
-    }
-
-    yearSelect.addEventListener('change', updateConfigDropdown);
-
-    if (yearSelect.value) {
-        updateConfigDropdown();
-    }
-});
-</script>
+<script src="{% static 'js/generation_configurator.js' %}" defer></script>
 {% endblock %}

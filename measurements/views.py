@@ -2,6 +2,7 @@ from django.shortcuts import get_object_or_404
 from django.views.generic import TemplateView
 
 from reference.models import Generation
+from reference.services import get_vehicle_context
 
 from .models import MeasurementResult
 
@@ -45,6 +46,7 @@ class GenerationMeasurementsView(TemplateView):
 
         context.update(
             {
+                "vehicle_context": get_vehicle_context(generation),
                 "generation": generation,
                 "vehicle_model": vehicle_model,
                 "manufacturer": manufacturer,

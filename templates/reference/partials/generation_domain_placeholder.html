@@ -1,0 +1,9 @@
+{% load static %}
+<div class="empty-domain-card generation-domain-placeholder">
+    <div class="generation-domain-placeholder-media">
+        <img class="generation-domain-placeholder-image" src="{% static image_path %}" alt="" loading="lazy" width="{{ image_width }}" height="{{ image_height|default:150 }}">
+    </div>
+    <div class="generation-domain-placeholder-body">
+        <p class="generation-domain-placeholder-message">{{ message }}</p>
+    </div>
+</div>

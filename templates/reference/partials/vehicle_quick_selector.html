@@ -1,0 +1,34 @@
+<button type="button" class="vehicle-quick-toggle" aria-label="Choose a vehicle"
+        aria-expanded="false" aria-controls="vehicle-quick-panel" hidden>
+    <span aria-hidden="true">⌄</span>
+</button>
+<div id="vehicle-quick-panel" class="vehicle-quick-panel" hidden>
+    <div class="vehicle-quick-columns">
+        <section aria-labelledby="vehicle-quick-manufacturer-label">
+            <h2 id="vehicle-quick-manufacturer-label">Manufacturer</h2>
+            <div class="vehicle-quick-list">
+                {% for manufacturer in quick_manufacturers %}
+                <button type="button" class="vehicle-quick-manufacturer"
+                        aria-controls="vehicle-quick-models-{{ manufacturer.pk }}" aria-pressed="false">{{ manufacturer.name }}</button>
+                {% empty %}
+                <p>No active manufacturers with eligible models are available.</p>
+                {% endfor %}
+            </div>
+        </section>
+        <section aria-labelledby="vehicle-quick-model-label">
+            <h2 id="vehicle-quick-model-label">Model</h2>
+            <p data-quick-prompt>Choose a manufacturer to see models.</p>
+            {% for manufacturer in quick_manufacturers %}
+            <div id="vehicle-quick-models-{{ manufacturer.pk }}" class="vehicle-quick-list" hidden>
+                <p class="vehicle-quick-selected-name">{{ manufacturer.name }}</p>
+                {% for model in manufacturer.active_vehicle_models %}
+                <a href="{{ model.get_absolute_url }}">{{ model.name }}</a>
+                {% empty %}
+                <p>No eligible models are available for this manufacturer.</p>
+                {% endfor %}
+            </div>
+            {% endfor %}
+        </section>
+    </div>
+    <a class="vehicle-quick-footer" href="{% url 'reference:vehicle-selector' %}?destination=generations">Browse all vehicles →</a>
+</div>

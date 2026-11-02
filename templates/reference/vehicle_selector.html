@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% block title %}Explore Vehicles | RigArchive{% endblock %}
+{% block content %}
+<div class="vehicle-selector">
+<header class="vehicle-selector-heading">
+    <h1>Explore Vehicles</h1>
+    <p>Browse vehicle platforms by manufacturer and model.</p>
+</header>
+{% if selector_form.errors %}
+<div role="alert">
+    <h2>Check your selection</h2>
+    {{ selector_form.errors }}
+</div>
+{% endif %}
+<form class="vehicle-selector-search" action="{% url 'reference:vehicle-selector' %}" method="get" role="search" aria-label="Find a manufacturer and model">
+    {{ selector_form.destination }}
+    <p><label for="id_q">Search manufacturers and models</label>
+    <input type="search" id="id_q" name="q" maxlength="200" value="{{ selector_form.q.value|default:'' }}"></p>
+    {% if selected_manufacturer %}
+    <input type="hidden" name="manufacturer" value="{{ selected_manufacturer.slug }}">
+    <p>Manufacturer: {{ selected_manufacturer.name }}. <a href="{{ clear_manufacturer_url }}">Search all manufacturers</a></p>
+    {% endif %}
+    <button type="submit" class="button-search-primary">Search</button>
+    {% if destination %}<a href="{{ reset_selector_url }}">Clear all filters</a>{% endif %}
+</form>
+{% if destination %}
+    <nav class="vehicle-selector-filters" aria-label="Filter by manufacturer">
+        <a href="{{ clear_manufacturer_url }}" {% if not selected_manufacturer %}aria-current="true"{% endif %}>All manufacturers</a>
+        {% for filter in manufacturer_filters %}
+        <a href="{{ filter.url }}" {% if selected_manufacturer.pk == filter.manufacturer.pk %}aria-current="true"{% endif %}>{{ filter.manufacturer.name }}</a>
+        {% endfor %}
+    </nav>
+    {% if not destination.implemented %}
+    <p>{{ destination.label }} navigation is not implemented yet. You can select a model below to retain your pending destination on this selector page.</p>
+    {% endif %}
+    {% if selected_model %}
+    <section aria-labelledby="pending-selection-title">
+        <h2 id="pending-selection-title">Selected for {{ destination.label }}: {{ selected_model.manufacturer.name }} {{ selected_model.name }}</h2>
+        {% if selected_destination_url %}
+        <a href="{{ selected_destination_url }}">Continue to {{ destination.label }}</a>
+        {% else %}
+        <p>Your pending destination is {{ destination.label }}. Its model destination is not implemented yet; selection has not opened that category.</p>
+        <a href="{{ selected_model.get_absolute_url }}">Browse {{ selected_model.name }} Generations instead</a>
+        {% endif %}
+    </section>
+    {% endif %}
+    <section aria-labelledby="vehicle-results-title">
+        <h2 id="vehicle-results-title">Manufacturer and model results</h2>
+        {% for group in groups %}
+        <h3 class="vehicle-selector-manufacturer">{{ group.manufacturer.name }}</h3>
+        <ul class="vehicle-selector-grid">
+            {% for choice in group.choices %}
+            <li>
+                <a class="vehicle-selector-card" href="{{ choice.url }}">
+                    <span class="vehicle-selector-photo">
+                        {% if choice.image_url %}
+                        <img src="{{ choice.image_url }}" alt="{{ group.manufacturer.name }} {{ choice.model.name }} — {{ choice.generation.name }}" width="600" height="400" loading="lazy">
+                        {% else %}
+                        <span class="vehicle-selector-no-photo">Photograph unavailable</span>
+                        {% endif %}
+                    </span>
+                    <span class="vehicle-selector-card-body">
+                        <span class="vehicle-selector-make">{{ group.manufacturer.name }}</span>
+                        <span class="vehicle-selector-model">{{ choice.model.name }}</span>
+                        <span class="vehicle-selector-action">{% if destination.implemented %}<span class="vehicle-selector-action-desktop">Explore Generations →</span><span class="vehicle-selector-action-mobile">Generations →</span>{% else %}Select for pending {{ destination.label }} →{% endif %}</span>
+                        {% if not choice.generation %}<span class="secondary">No active Generations available yet.</span>{% endif %}
+                    </span>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+        {% empty %}
+        {% if selector_form.q.value or selected_manufacturer %}
+        <p>No manufacturers or models match your search and filter. Try another name or clear all filters.</p>
+        {% else %}
+        <p>No active vehicle models are available for selection.</p>
+        {% endif %}
+        {% endfor %}
+    </section>
+{% endif %}
+</div>
+{% endblock %}

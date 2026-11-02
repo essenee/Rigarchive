@@ -1,0 +1,207 @@
+/* Homepage paper assets follow homepage_hero_diagram_&background_approved.png.
+   The photograph and extracted diagram remain separate content images. */
+body:has(.homepage-approved-layout) {
+    background-color: var(--bg-paper);
+    background-image: url("../images/homepage/topographic-approved-neutral.png?v=dotted-contours-20261101-reviewed");
+    background-repeat: repeat;
+    background-size: 1536px 1536px;
+}
+.homepage-approved-layout { position: relative; isolation: isolate; padding-top: .5rem; }
+.homepage-approved-layout .hero-archival-grid { gap: 1rem; }
+.homepage-approved-layout .hero-photo-frame {
+    transform: rotate(-1.25deg);
+    --hero-paper-inset: .65rem .65rem .85rem;
+    padding: var(--hero-paper-inset);
+    border-radius: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+    isolation: isolate;
+    filter: drop-shadow(1px 3px 4px #34312a26) drop-shadow(0 1px 1px #34312a12);
+    margin: .4rem 0;
+}
+.homepage-approved-layout .hero-photo-frame::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    /* Nine-slice corners stay square; round repeats avoid stretching the edge grain. */
+    box-sizing: border-box;
+    border-style: solid;
+    border-color: transparent;
+    border-width: var(--hero-paper-inset);
+    border-image-source: url("../images/homepage/hero-photo-frame.png");
+    border-image-slice: 32;
+    border-image-width: 1;
+    border-image-repeat: round;
+    background: #fafaf9;
+    pointer-events: none;
+}
+.homepage-approved-layout .hero-main-img {
+    border-color: #fafaf9;
+    min-height: 0;
+    height: 100%;
+    aspect-ratio: 1.63;
+    max-height: none;
+    /* Keep the vehicle and tent centered; trim only outer sky/foreground. */
+    object-fit: cover;
+    object-position: center;
+}
+.homepage-approved-layout .photo-typewriter-tag {
+    left: 1.4rem;
+    bottom: 1.4rem;
+    transform: rotate(-2deg);
+    padding: .5rem 1rem;
+    text-align: center;
+    background: #f3e8d2 url("../images/homepage/paper.svg");
+    border: 1px solid #b6a68866;
+    box-shadow: 1px 2px 4px #30281e44;
+}
+.homepage-approved-layout .photo-tape,
+.homepage-approved-layout .recent-tape {
+    background: linear-gradient(90deg, #ae854428, #c7a56b65 12%, #d1b17a70 85%, #ae854428),
+        url("../images/homepage/paper.svg");
+    background-blend-mode: multiply;
+    opacity: .72;
+    clip-path: polygon(2% 0, 98% 3%, 96% 14%, 100% 27%, 97% 41%, 99% 56%, 96% 72%, 99% 90%, 96% 100%, 1% 97%, 3% 82%, 0 68%, 3% 52%, 1% 36%, 4% 20%);
+    border: 0;
+    border-radius: 0;
+}
+.homepage-approved-layout .tape-top-left {
+    width: 100px;
+    height: 32px;
+    top: -13px;
+    left: 6%;
+    transform: rotate(-5deg);
+}
+.homepage-approved-layout .hero-schematic-panel {
+    margin: .4rem 0;
+    min-width: 0;
+    min-height: 0;
+    padding: 0;
+    /* The approved image supplies the entire paper surface. */
+    border: 0;
+    background: none;
+    box-shadow: none;
+}
+.homepage-approved-layout .schematic-inner {
+    position: relative;
+    flex: 1;
+    min-height: 0;
+    height: auto;
+}
+/* Fit the complete portrait within the photograph-driven desktop row.
+   Put the outer frame on the image so no CSS paper surrounds it. */
+.homepage-approved-layout .vehicle-study {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    filter: drop-shadow(1px 3px 3px #34312a24) drop-shadow(0 1px 1px #34312a12);
+}
+.homepage-approved-layout .explore-category-card { padding: .5rem .5rem 1rem; }
+.homepage-approved-layout .category-photo-header {
+    position: relative;
+    aspect-ratio: 1.46;
+    overflow: hidden;
+    margin-bottom: .65rem;
+    border: 1px solid var(--border-color);
+    border-radius: 2px;
+    background: var(--bg-paper-subtle);
+}
+.homepage-approved-layout .category-photo-header img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* Independent icons: fixed dimensions over a fully transparent container. */
+.homepage-approved-layout .category-icon-badge {
+    position: absolute;
+    inset: auto auto 10px 10px;
+    width: 33px;
+    height: 33px;
+    display: grid;
+    place-items: center;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    pointer-events: none;
+}
+.homepage-approved-layout .category-icon {
+    display: block;
+    width: 33px;
+    height: 33px;
+    aspect-ratio: 1;
+    fill: none;
+    stroke: #FFFFFF;
+    stroke-width: 1.75;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+.homepage-approved-layout .category-title,
+.homepage-approved-layout .category-desc,
+.homepage-approved-layout .category-action-link { margin-left: .5rem; margin-right: .5rem; }
+/* Tablet/phone: bound decorative artwork to the photographic composition. */
+@media (max-width: 1024px) {
+    .homepage-approved-layout .hero-archival-grid { position: relative; display: block; padding-bottom: 24px; }
+    .homepage-approved-layout .hero-photo-frame { margin: .4rem 0; }
+    .homepage-approved-layout .hero-main-img { height: auto; aspect-ratio: 1.63; }
+    .homepage-approved-layout .hero-schematic-panel { position: absolute; right: 0; bottom: -16px; width: clamp(104px, 30%, 180px); aspect-ratio: 502 / 514; margin: 0; overflow: visible; border: 0; background: transparent; box-shadow: none; pointer-events: none; transform: rotate(1deg); }
+    .homepage-approved-layout .schematic-inner { display: block; height: 100%; }
+    .homepage-approved-layout .vehicle-study { position: static; display: block; width: 100%; height: 100%; max-height: none; border: 0; box-shadow: none; object-fit: contain; object-position: center 50%; }
+}
+@media (max-width: 480px) {
+    .homepage-approved-layout .hero-photo-frame { transform: rotate(-.5deg); }
+    .homepage-approved-layout .photo-typewriter-tag { left: .75rem; bottom: .9rem; padding: .3rem .4rem; }
+    .homepage-approved-layout .tag-mfr { font-size: .65rem; }
+    .homepage-approved-layout .tag-gen { font-size: .58rem; }
+}
+@media (max-width: 360px) {
+    .homepage-approved-layout .hero-schematic-panel { display: none; }
+    .homepage-approved-layout .hero-archival-grid { padding-bottom: 0; }
+    .homepage-approved-layout .photo-typewriter-tag { padding: .25rem .35rem; }
+    .homepage-approved-layout .tag-mfr { font-size: .6rem; }
+    .homepage-approved-layout .tag-gen { font-size: .53rem; }
+}
+
+/* Homepage desktop controls share a compact height; phone/tablet rules stay intact. */
+@media (min-width: 1025px) {
+    body:has(.homepage-approved-layout) .header-search-input,
+    body:has(.homepage-approved-layout) .button-garage { height: 36px; min-height: 36px; }
+    body:has(.homepage-approved-layout) .button-garage { justify-content: center; padding-block: 0; line-height: 1.2; }
+}
+
+/* Compact header: 36px visible faces inside 44px interactive boxes.
+   The search's existing 40px row is retained; its hit area extends 2px per side. */
+@media (max-width: 1024px) {
+    body:has(.homepage-approved-layout) .header-search-form { height: 40px; isolation: isolate; }
+    body:has(.homepage-approved-layout) .header-search-form::before {
+        content: ""; position: absolute; inset: 50% 0 auto; height: 36px; box-sizing: border-box; transform: translateY(-50%); z-index: -1; pointer-events: none;
+        border: 1px solid var(--border-color); border-radius: var(--radius-sm); background: var(--bg-paper-subtle);
+    }
+    body:has(.homepage-approved-layout) .header-search-input {
+        height: 44px; min-height: 44px; margin-block: -2px; background: transparent; border-color: transparent;
+    }
+    body:has(.homepage-approved-layout) .header-search-input:focus { background: transparent; border-color: transparent; }
+    body:has(.homepage-approved-layout) .header-search-form:focus-within::before {
+        border-color: var(--color-blue); background: var(--bg-surface-elevated);
+    }
+    body:has(.homepage-approved-layout) .button-garage {
+        position: relative; isolation: isolate; height: 44px; min-height: 44px; padding-block: 0;
+        background: transparent; border-color: transparent; justify-content: center;
+    }
+    body:has(.homepage-approved-layout) .button-garage::before {
+        content: ""; position: absolute; inset: 50% -1px auto; height: 36px; box-sizing: border-box; transform: translateY(-50%); z-index: -1; pointer-events: none;
+        border: 1px solid var(--border-color); border-radius: var(--radius-sm); background: var(--bg-paper-subtle);
+    }
+    body:has(.homepage-approved-layout) .button-garage:hover::before { background: var(--border-light); }
+}
