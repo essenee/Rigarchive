@@ -44,6 +44,19 @@ def execute_canonical_import_workflow(
     ImportExecutionReceipt persistence MUST succeed together inside the same transaction.atomic() block.
     If receipt creation fails, the outer transaction rolls back the VehicleDefinition creation cleanly.
     """
+    # Service-level exact-plan validation; callers cannot substitute a freshly planned object.
+    from dataclasses import asdict
+    from reference.ingestion.manifest import dict_to_manifest, manifest_to_dict, reconstruct_plan_from_manifest
+    try:
+        verified = dict_to_manifest(manifest_to_dict(manifest))
+        matching = [p for p in verified.plans if p.candidate_reference == review_plan.candidate_reference]
+        if len(matching) != 1 or asdict(matching[0]) != asdict(review_plan):
+            raise ValueError("Review plan is not the exact manifest member.")
+        if asdict(reconstruct_plan_from_manifest(review_plan)) != asdict(plan):
+            raise ValueError("Execution plan differs from reviewed authorization.")
+    except Exception as exc:
+        raise CanonicalExecutionWorkflowError(f"Exact-plan validation failed: {exc}") from exc
+
     if review_plan.planned_action in (ImportPlannedAction.FLAG_REVIEW.value, ImportPlannedAction.REJECT.value):
         raise CanonicalExecutionWorkflowError(
             f"Candidate plan '{review_plan.candidate_reference}' has non-executable action "
@@ -123,6 +136,11 @@ def execute_canonical_import_workflow(
 
         return ImportExecutionReceipt.objects.create(
             operator_label=op_label,
+            operation_type="vehicle_definition_import",
+            resolution_snapshot_json={
+                "generation_resolution": plan.generation_resolution,
+                "candidate_hash": plan.candidate_hash,
+            } if plan.generation_resolution else {},
             execution_channel="cli",
             manifest_hash=manifest.manifest_hash,
             candidate_reference=review_plan.candidate_reference,
@@ -154,7 +172,7 @@ def execute_canonical_import_workflow(
             existing_vehicle_definition_slug_snapshot=existing_slug,
         )
 
-    if plan.planned_action == ImportPlannedAction.CREATE:
+    if plan.planned_action in (ImportPlannedAction.CREATE, ImportPlannedAction.NO_OP_EXACT_MATCH):
         try:
             with transaction.atomic():
                 result = execute_candidate_import(plan)

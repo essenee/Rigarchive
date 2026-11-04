@@ -1,0 +1,6 @@
+{
+  "designation": "JK",
+  "invalid_year": 2017,
+  "expected": "aborted_stale_plan",
+  "synthetic_test_only": true
+}

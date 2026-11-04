@@ -8,7 +8,7 @@ manufacturer normalization -> candidate construction -> plan_candidate_import() 
 STRICT GUARANTEE: NEVER invokes execute_candidate_import().
 """
 
-from dataclasses import dataclass, field
+from dataclasses import asdict, dataclass, field
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
@@ -51,6 +51,7 @@ class ProductionRunResult:
     total_extracted_sets: int
     candidate_results: List[CandidateDryRunResult] = field(default_factory=list)
     errors: List[str] = field(default_factory=list)
+    extraction_provenance: Dict[str, Any] = field(default_factory=dict)
 
 
 class ProductionManufacturerOrchestrator:
@@ -198,4 +199,9 @@ class ProductionManufacturerOrchestrator:
             total_extracted_sets=len(assertion_sets),
             candidate_results=candidate_results,
             errors=errors,
+            extraction_provenance=next((
+                asdict(s.provenance.extraction_provenance) for s in assertion_sets
+                if s.provenance.extraction_provenance and
+                s.provenance.extraction_provenance.raw_artifact_hash == snapshot_meta.content_hash
+            ), {}),
         )

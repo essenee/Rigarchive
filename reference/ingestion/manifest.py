@@ -53,6 +53,9 @@ class CanonicalImportReviewPlan:
     reasons: List[str] = field(default_factory=list)
     adjudication_reference: Optional[str] = None
     adjudication_hash: Optional[str] = None
+    generation_resolution: Dict[str, Any] = field(default_factory=dict)
+    candidate_snapshot: Dict[str, Any] = field(default_factory=dict)
+    candidate_hash: Optional[str] = None
 
 
 
@@ -105,6 +108,8 @@ def build_review_manifest(
     review_plans: List[CanonicalImportReviewPlan] = []
 
     for plan in plans:
+        if (plan.candidate_snapshot or plan.candidate_hash) and not plan.generation_resolution:
+            raise ManifestValidationError("Generation-aware plan is missing its reviewed resolution.")
         native_id = native_map.get(plan.candidate_reference, "")
         rp = CanonicalImportReviewPlan(
             candidate_reference=plan.candidate_reference,
@@ -125,12 +130,15 @@ def build_review_manifest(
             reasons=list(plan.reasons),
             adjudication_reference=plan.adjudication_reference,
             adjudication_hash=plan.adjudication_hash,
+            generation_resolution=plan.generation_resolution,
+            candidate_snapshot=plan.candidate_snapshot,
+            candidate_hash=plan.candidate_hash,
         )
         review_plans.append(rp)
 
     # Automatically promote manifest version to 1.1 if any plan has adjudication fields
     has_adjudication = any(p.adjudication_hash for p in review_plans)
-    version = "1.1" if has_adjudication else MANIFEST_VERSION
+    version = "2.0" if any(p.generation_resolution for p in review_plans) else ("1.1" if has_adjudication else MANIFEST_VERSION)
 
     serialized_plans = []
     for rp in review_plans:
@@ -138,6 +146,9 @@ def build_review_manifest(
         if version == "1.0":
             p_dict.pop("adjudication_reference", None)
             p_dict.pop("adjudication_hash", None)
+        if version != "2.0":
+            for key in ("generation_resolution", "candidate_snapshot", "candidate_hash"):
+                p_dict.pop(key, None)
         serialized_plans.append(p_dict)
 
     manifest_dict_no_hash = {
@@ -166,11 +177,19 @@ def build_review_manifest(
 
 def manifest_to_dict(manifest: CanonicalImportReviewManifest) -> Dict[str, Any]:
     """Converts a CanonicalImportReviewManifest object to a serializable dictionary."""
+    if manifest.manifest_version != "2.0" and any(
+        p.generation_resolution or p.candidate_snapshot or p.candidate_hash for p in manifest.plans
+    ):
+        raise ManifestValidationError("Legacy serialization cannot discard generation-aware authorization.")
     d = asdict(manifest)
     if manifest.manifest_version == "1.0":
         for p in d.get("plans", []):
             p.pop("adjudication_reference", None)
             p.pop("adjudication_hash", None)
+    if manifest.manifest_version != "2.0":
+        for p in d.get("plans", []):
+            for key in ("generation_resolution", "candidate_snapshot", "candidate_hash"):
+                p.pop(key, None)
     return d
 
 
@@ -203,7 +222,7 @@ def dict_to_manifest(d: Dict[str, Any]) -> CanonicalImportReviewManifest:
         raise ManifestValidationError(f"Missing required top-level fields: {sorted(list(missing_keys))}")
 
     m_ver = str(d["manifest_version"])
-    if m_ver not in ("1.0", "1.1"):
+    if m_ver not in ("1.0", "1.1", "2.0"):
         raise ManifestValidationError(
             f"Unsupported manifest version '{m_ver}'. Supported versions: '1.0', '1.1'."
         )
@@ -250,6 +269,9 @@ def dict_to_manifest(d: Dict[str, Any]) -> CanonicalImportReviewManifest:
         allowed_plan_keys = set(base_plan_keys)
     else:
         allowed_plan_keys = set(base_plan_keys) | {"adjudication_reference", "adjudication_hash"}
+
+    if m_ver == "2.0":
+        allowed_plan_keys |= {"generation_resolution", "candidate_snapshot", "candidate_hash"}
 
     seen_refs = set()
     review_plans: List[CanonicalImportReviewPlan] = []
@@ -333,7 +355,7 @@ def dict_to_manifest(d: Dict[str, Any]) -> CanonicalImportReviewManifest:
         adj_ref = p_dict.get("adjudication_reference")
         adj_hash = p_dict.get("adjudication_hash")
 
-        if m_ver == "1.1":
+        if m_ver in ("1.1", "2.0"):
             has_hash = bool(adj_hash)
             has_ref = bool(adj_ref)
 
@@ -377,7 +399,23 @@ def dict_to_manifest(d: Dict[str, Any]) -> CanonicalImportReviewManifest:
             reasons=list(p_dict["reasons"]),
             adjudication_reference=adj_ref,
             adjudication_hash=adj_hash,
+            generation_resolution=p_dict.get("generation_resolution", {}),
+            candidate_snapshot=p_dict.get("candidate_snapshot", {}),
+            candidate_hash=p_dict.get("candidate_hash"),
         )
+        if m_ver == "2.0" and rp.planned_action in ("create", "no_op_exact_match"):
+            from reference.ingestion.generation_correspondence import validate_bound_plan
+            try:
+                validate_bound_plan(rp)
+                docs = rp.generation_resolution["documents"]
+                primary = [doc for doc in docs if doc["raw_artifact_hash"] == d["raw_artifact_hash"]
+                           and doc["raw_artifact_reference"] == d["raw_artifact_reference"]
+                           and doc["source_id"] == d["source_id"]]
+                if not primary or any(d["extraction_provenance"].get(key) != primary[0][key]
+                                      for key in ("extractor_id", "extractor_version", "extraction_mode")):
+                    raise ValueError("Manifest primary evidence/extraction provenance is not candidate-bound.")
+            except Exception as exc:
+                raise ManifestValidationError(f"Invalid generation-bound plan: {exc}") from exc
         review_plans.append(rp)
 
     return CanonicalImportReviewManifest(
@@ -399,6 +437,12 @@ def reconstruct_plan_from_manifest(review_plan: CanonicalImportReviewPlan) -> Ca
     Performs zero dynamic re-planning calls to plan_candidate_import().
     """
     from reference.ingestion.importing import ImportReviewCategory
+    if review_plan.generation_resolution or review_plan.candidate_snapshot or review_plan.candidate_hash:
+        from reference.ingestion.generation_correspondence import validate_bound_plan
+        try:
+            validate_bound_plan(review_plan)
+        except Exception as exc:
+            raise ManifestValidationError(f"Invalid generation-aware reconstruction: {exc}") from exc
     return CanonicalImportPlan(
         candidate_reference=review_plan.candidate_reference,
         eligibility_status=ImportEligibilityStatus(review_plan.eligibility_status),
@@ -416,6 +460,9 @@ def reconstruct_plan_from_manifest(review_plan: CanonicalImportReviewPlan) -> Ca
         reasons=list(review_plan.reasons),
         adjudication_reference=review_plan.adjudication_reference,
         adjudication_hash=review_plan.adjudication_hash,
+        generation_resolution=review_plan.generation_resolution,
+        candidate_snapshot=review_plan.candidate_snapshot,
+        candidate_hash=review_plan.candidate_hash,
     )
 
 

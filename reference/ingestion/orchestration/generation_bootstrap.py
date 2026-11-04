@@ -84,6 +84,22 @@ class GenerationBootstrapOrchestrator:
             / "jd_power"
         )
 
+    def _guard_legacy_fixtures(self, model, start_year=1886, end_year=2100):
+        from reference.ingestion.generation_correspondence import require
+        from reference.ingestion.normalization.generation import GENERATION_KEYS
+        slug = model.lower().replace(" ", "_")
+        for path in self.fixture_dir.glob(f"*{slug}*.json"):
+            prefix = path.name.split("_", 1)[0]
+            if prefix.isdigit() and not start_year <= int(prefix) <= end_year:
+                continue
+            data = json.loads(path.read_text())
+            require(not GENERATION_KEYS.intersection(data), "Explicit generation evidence requires single-plan authorization.")
+            require(not str(data.get("envelope", {}).get("schema_version", "")).startswith("2."),
+                    "Legacy mutation cannot consume candidate v2.")
+            require(not data.get("generation_evidence") and not any(
+                GENERATION_KEYS.intersection(row) for row in data.get("configurations", []) if isinstance(row, dict)
+            ), "Use the single-plan workflow for explicit generation evidence.")
+
     def _locate_jd_power_fixture_for_year(self, year: int, model: Optional[str] = None) -> Optional[Path]:
         """Locate retained J.D. Power configuration JSON fixture for a given model year."""
         candidates = []
@@ -136,26 +152,7 @@ class GenerationBootstrapOrchestrator:
         no_op_count = 0
         review_count = 0
 
-        # Ensure Manufacturer, VehicleModel, and Generation nodes exist
-        mfr, _ = Manufacturer.objects.get_or_create(name=make, defaults={"is_active": True})
-        vmodel, _ = VehicleModel.objects.get_or_create(manufacturer=mfr, name=model, defaults={"is_active": True})
-        try:
-            taxonomies = self.wiki_extractor.extract_taxonomies(make, model, market)
-            for tax in taxonomies:
-                Generation.objects.get_or_create(
-                    vehicle_model=vmodel,
-                    slug=tax.slug,
-                    defaults={
-                        "name": tax.name,
-                        "generation_number": tax.generation_number,
-                        "start_year": tax.start_year,
-                        "end_year": tax.end_year,
-                        "is_active": True,
-                    },
-                )
-        except Exception:
-            pass
-
+        # Read-only planning: missing parents remain unresolved, never seeded here.
         for yr in range(start_year, end_year + 1):
             fixture_paths = []
             primary_path = self._locate_jd_power_fixture_for_year(yr, model=model)
@@ -251,6 +248,16 @@ class GenerationBootstrapOrchestrator:
         """
         from reference.models import ImportExecutionReceipt
 
+        from reference.ingestion.generation_correspondence import guard_legacy_scope
+        guard_legacy_scope(manifest.manufacturer_name, manifest.vehicle_model_name,
+                           manifest.start_year, manifest.end_year)
+        self._guard_legacy_fixtures(manifest.vehicle_model_name, manifest.start_year, manifest.end_year)
+        from reference.ingestion.generation_correspondence import guard_legacy_taxonomies
+        guard_legacy_taxonomies(self.wiki_extractor.extract_taxonomies(
+            manifest.manufacturer_name, manifest.vehicle_model_name, manifest.market),
+            manifest.start_year, manifest.end_year,
+            Generation.objects.filter(vehicle_model__manufacturer__name__iexact=manifest.manufacturer_name,
+                                      vehicle_model__name__iexact=manifest.vehicle_model_name, is_active=True))
         expected_hash = manifest.compute_manifest_hash()
         if manifest.batch_manifest_hash and manifest.batch_manifest_hash != expected_hash:
             raise ValueError(f"Batch manifest hash mismatch! Refusing execution.")
@@ -394,6 +401,9 @@ class GenerationBootstrapOrchestrator:
         """
         Execute Wikipedia taxonomy discovery and multi-generation configuration population.
         """
+        from reference.ingestion.generation_correspondence import guard_legacy_scope
+        guard_legacy_scope(make, model)
+        self._guard_legacy_fixtures(model)
         system_errors: List[str] = []
         gen_results: List[GenerationPopulationResult] = []
 
@@ -408,6 +418,10 @@ class GenerationBootstrapOrchestrator:
                 generations_discovered=0,
                 system_errors=[f"Wikipedia taxonomy discovery failed: {e}"],
             )
+
+        from reference.ingestion.generation_correspondence import guard_legacy_taxonomies
+        guard_legacy_taxonomies(taxonomies, existing_generations=Generation.objects.filter(
+            vehicle_model__manufacturer__name__iexact=make, vehicle_model__name__iexact=model, is_active=True))
 
         # 2. Resolve Manufacturer and VehicleModel
         mfr, _ = Manufacturer.objects.get_or_create(

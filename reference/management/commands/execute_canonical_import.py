@@ -74,7 +74,7 @@ class Command(BaseCommand):
         try:
             manifest = dict_to_manifest(manifest_dict)
         except ManifestValidationError as e:
-            raise CommandError(f"Manifest validation failed: {str(e)}") from e
+            raise CommandError(f"Execution refused: Manifest validation failed: {str(e)}") from e
 
         matching_plans = [p for p in manifest.plans if p.candidate_reference == plan_ref]
         if not matching_plans:
@@ -121,6 +121,9 @@ class Command(BaseCommand):
         self.stdout.write(f"Planned Action:      {review_plan.planned_action}")
         self.stdout.write(f"Create Basis:        {review_plan.create_basis or 'N/A'}")
         self.stdout.write(f"Target Slug:         {review_plan.target_slug}")
+        if review_plan.generation_resolution:
+            self.stdout.write(f"Reviewed Generation Resolution: {json.dumps(review_plan.generation_resolution, sort_keys=True)}")
+            self.stdout.write(f"Reviewed Candidate Hash: {review_plan.candidate_hash}")
         self.stdout.write(f"Target Fields:       {json.dumps(review_plan.target_vehicle_definition_fields)}")
         if review_plan.reasons:
             self.stdout.write(f"Planner Reasons:     {', '.join(review_plan.reasons)}")

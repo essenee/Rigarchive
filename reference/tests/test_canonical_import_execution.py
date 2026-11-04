@@ -385,7 +385,7 @@ class WorkflowExecutionTests(CanonicalImportExecutionTestCase):
         self.assertEqual(ImportExecutionReceipt.objects.count(), 0)
 
     def test_expected_rejected_receipt(self):
-        # Invalid model year violating generation bounds triggers executor ValidationError -> REJECTED
+        # Invalid legacy resolution is refused before any canonical create attempt.
         invalid_year_plan = CanonicalImportPlan(
             candidate_reference="cand_toyota_usa_invalid",
             eligibility_status=ImportEligibilityStatus.ELIGIBLE,
@@ -423,10 +423,10 @@ class WorkflowExecutionTests(CanonicalImportExecutionTestCase):
             operator_label="cli:testuser",
         )
 
-        self.assertEqual(result.outcome, ImportExecutionOutcome.REJECTED)
+        self.assertEqual(result.outcome, ImportExecutionOutcome.ABORTED_STALE_PLAN)
         self.assertEqual(VehicleDefinition.objects.count(), 0)
         self.assertEqual(ImportExecutionReceipt.objects.count(), 1)
-        self.assertEqual(receipt.execution_outcome, "rejected")
+        self.assertEqual(receipt.execution_outcome, "aborted_stale_plan")
 
 
 

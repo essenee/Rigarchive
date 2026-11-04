@@ -19,6 +19,7 @@ from typing import Any, Dict, List, Optional, Union
 class ArtifactType(str, Enum):
     SOURCE_ASSERTION_SET = "rigarchive.source_assertion_set.v1"
     CANDIDATE_CONFIGURATION = "rigarchive.candidate_configuration.v1"
+    CANDIDATE_CONFIGURATION_V2 = "rigarchive.candidate_configuration.v2"
 
 
 class ReconciliationState(str, Enum):
@@ -283,6 +284,8 @@ class CandidateConfigurationDocument:
     evidence_raw_hashes: List[str] = field(default_factory=list)
     reconciliation_and_review: Optional[ReconciliationAndReview] = None
     unknown_fields: Dict[str, Any] = field(default_factory=dict)
+    generation_evidence: List[Dict[str, Any]] = field(default_factory=list)
+    evidence_documents: List[Dict[str, Any]] = field(default_factory=list)
 
 
 @dataclass

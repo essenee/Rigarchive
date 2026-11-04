@@ -58,6 +58,15 @@ def execute_candidate_import(
         )
 
     # 2. Exact-Match No-Op Handling (0 Writes)
+    from reference.ingestion.generation_correspondence import revalidate_resolution
+    from django.core.exceptions import ObjectDoesNotExist
+    try:
+        revalidate_resolution(plan)
+    except (ValidationError, ObjectDoesNotExist, KeyError, TypeError, ValueError, OSError) as exc:
+        return CanonicalImportResult(
+            candidate_reference=ref_id, outcome=ImportExecutionOutcome.ABORTED_STALE_PLAN,
+            messages=[f"Generation resolution is stale: {exc}"],
+        )
     if plan.planned_action == ImportPlannedAction.NO_OP_EXACT_MATCH:
         if not plan.existing_vehicle_definition_id:
             return CanonicalImportResult(
@@ -99,6 +108,7 @@ def execute_candidate_import(
     # Transactional Create Attempt
     try:
         with transaction.atomic():
+            revalidate_resolution(plan)
             # Revalidate parent entities exist in database
             if not Manufacturer.objects.filter(id=plan.resolved_manufacturer_id, is_active=True).exists():
                 return CanonicalImportResult(

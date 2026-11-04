@@ -196,12 +196,14 @@ class Command(BaseCommand):
             plans = [cr.plan for cr in result.candidate_results]
             native_map = {cr.plan.candidate_reference: cr.native_identifier for cr in result.candidate_results}
 
-            ext_prov = {
+            provenance = next((
+                doc for cr in result.candidate_results for doc in cr.candidate_doc.evidence_documents
+            ), None)
+            ext_prov = provenance or result.extraction_provenance or {
                 "raw_artifact_hash": result.snapshot_meta.content_hash,
                 "raw_artifact_reference": result.snapshot_meta.storage_path,
-                "extractor_id": "toyota_pressroom_extractor",
-                "extractor_version": "0.1.0",
-                "extraction_mode": "manually_verified_transcription",
+                "extractor_id": "not_recorded", "extractor_version": "not_recorded",
+                "extraction_mode": "not_recorded",
             }
 
             manifest = build_review_manifest(

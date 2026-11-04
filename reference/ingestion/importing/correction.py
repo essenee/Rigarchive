@@ -67,6 +67,18 @@ def execute_canonical_record_correction(
     4. Persist durable CanonicalRecordCorrection audit record linking old -> replacement.
     5. Return CanonicalRecordCorrectionResult.
     """
+    from reference.ingestion.generation_correspondence import guard_legacy_scope, require
+    vm = superseded_vehicle_definition.generation.vehicle_model
+    guard_legacy_scope(vm.manufacturer.name, vm.name, candidates=[candidate_document] if candidate_document else [])
+    require(not (replacement_plan and replacement_plan.generation_resolution),
+            "Correspondence-aware correction requires a separately reviewed correction protocol.")
+    if candidate_document:
+        identity = candidate_document.candidate_identity
+        guard_legacy_scope(identity.manufacturer_name, identity.vehicle_model_name, candidates=[candidate_document])
+    if replacement_plan and replacement_plan.resolved_vehicle_model_id:
+        from reference.models import VehicleModel
+        target_model = VehicleModel.objects.get(pk=replacement_plan.resolved_vehicle_model_id)
+        guard_legacy_scope(target_model.manufacturer.name, target_model.name)
     superseded_id = superseded_vehicle_definition.id
     superseded_uuid = str(superseded_vehicle_definition.uuid)
     superseded_slug = superseded_vehicle_definition.slug

@@ -76,7 +76,7 @@ def _resolve_evidence_lineage(
     source_id = assertion_to_source_map.get(interp.source_assertion_ref, "unknown")
     meta = source_metadata_map.get(source_id)
     native_record_id = meta.native_record_id if meta else None
-    return (source_id, native_record_id)
+    return (meta.source_id if meta else source_id, native_record_id)
 
 
 def _extract_source_configuration_identities(
@@ -223,6 +223,7 @@ def construct_candidate_configuration(
     normalized_assertions: List[NormalizedInterpretation],
     candidate_reference: Optional[str] = None,
     created_at: Optional[str] = None,
+    schema_version: Optional[str] = None,
 ) -> CandidateConfigurationDocument:
 
     """
@@ -236,6 +237,38 @@ def construct_candidate_configuration(
     :return: Validated CandidateConfigurationDocument instance.
     :raises CandidateConstructionError: If input structure or provenance validation fails.
     """
+    from reference.ingestion.normalization.generation import GENERATION_KEYS, generation_evidence_from_sets
+    if schema_version not in (None, "1.0.0", "2.0.0"):
+        raise CandidateConstructionError("Unsupported candidate construction schema version.")
+    v2 = schema_version == "2.0.0" or any(
+        a.attribute_key in GENERATION_KEYS for s in source_assertion_sets for a in s.source_assertions
+    )
+    generation_evidence, evidence_documents = generation_evidence_from_sets(source_assertion_sets) if v2 else ([], [])
+    if v2:
+        # Qualify local IDs before aggregation, preserving input artifacts and raw local IDs.
+        import copy
+        source_assertion_sets = copy.deepcopy(source_assertion_sets)
+        normalized_assertions = copy.deepcopy(normalized_assertions)
+        refs = {}
+        for sas in source_assertion_sets:
+            ep = sas.provenance.extraction_provenance
+            prefix = f"{sas.provenance.source_id}|{ep.raw_artifact_hash}|{sas.provenance.native_record_id}|"
+            for ast in sas.source_assertions:
+                refs.setdefault(ast.assertion_id, []).append((prefix, ast))
+        for interp in normalized_assertions:
+            options = refs.get(interp.source_assertion_ref, [])
+            if len(options) != 1:
+                qualifier = interp.unknown_fields.get("document_qualifier")
+                options = [o for o in options if o[0] == qualifier]
+            if len(options) != 1:
+                raise CandidateConstructionError("Ambiguous document-local interpretation reference; supply document_qualifier.")
+            prefix, _ = options[0]
+            interp.source_assertion_ref = prefix + interp.source_assertion_ref
+            interp.interpretation_id = prefix + interp.interpretation_id
+        for options in refs.values():
+            for prefix, ast in options:
+                ast.assertion_id = prefix + ast.assertion_id
+
     # 1. Structural Validation of CandidateIdentity Required Fields
     if not candidate_identity.manufacturer_name or not candidate_identity.manufacturer_name.strip():
         raise CandidateConstructionError("CandidateIdentity 'manufacturer_name' is required and cannot be empty.")
@@ -272,6 +305,8 @@ def construct_candidate_configuration(
             raise CandidateConstructionError("SourceAssertionSet missing valid SourceMetadata provenance.")
         
         src_id = sas.provenance.source_id
+        if v2:
+            src_id += "|" + sas.provenance.extraction_provenance.raw_artifact_hash + "|" + sas.provenance.native_record_id
         source_metadata_map[src_id] = sas.provenance
 
         for ast in sas.source_assertions:
@@ -442,8 +477,8 @@ def construct_candidate_configuration(
 
     doc = CandidateConfigurationDocument(
         envelope=Envelope(
-            artifact_type=ArtifactType.CANDIDATE_CONFIGURATION.value,
-            schema_version="1.0.0",
+            artifact_type=ArtifactType.CANDIDATE_CONFIGURATION_V2.value if v2 else ArtifactType.CANDIDATE_CONFIGURATION.value,
+            schema_version="2.0.0" if v2 else "1.0.0",
             created_at=env_created_at,
             generator="RigArchive-CandidateConstruction/0.1.0",
         ),
@@ -457,6 +492,8 @@ def construct_candidate_configuration(
         packages_and_options=[],
         attribute_provenance=sorted_attr_provenance,
         evidence_raw_hashes=evidence_raw_hashes,
+        generation_evidence=generation_evidence,
+        evidence_documents=evidence_documents,
         reconciliation_and_review=rec_and_review,
     )
 

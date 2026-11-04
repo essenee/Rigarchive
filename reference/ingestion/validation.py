@@ -46,7 +46,7 @@ def validate_envelope(envelope, expected_type: str) -> None:
         )
 
     major_version = semver_match.group(1)
-    if major_version != "1":
+    if major_version != ("2" if expected_type == ArtifactType.CANDIDATE_CONFIGURATION_V2.value else "1"):
         raise IngestionValidationError(
             f"Unsupported major schema_version '{major_version}' (contract supports major version 1)."
         )
@@ -117,7 +117,21 @@ def validate_candidate_configuration(
     source_assertion_set: Optional[SourceAssertionSet] = None,
 ) -> None:
     """Validate structural and semantic rules for a Tier 2 CandidateConfigurationDocument."""
-    validate_envelope(obj.envelope, ArtifactType.CANDIDATE_CONFIGURATION.value)
+    v2 = obj.envelope.schema_version.startswith("2.")
+    validate_envelope(obj.envelope, ArtifactType.CANDIDATE_CONFIGURATION_V2.value if v2 else ArtifactType.CANDIDATE_CONFIGURATION.value)
+    if v2:
+        if obj.envelope.schema_version != "2.0.0":
+            raise IngestionValidationError("Unsupported candidate v2 execution schema.")
+        from reference.ingestion.generation_correspondence import validate_generation_evidence
+        validate_generation_evidence(obj.generation_evidence, obj.evidence_documents)
+        if sorted(set(obj.evidence_raw_hashes)) != sorted({d["raw_artifact_hash"] for d in obj.evidence_documents}):
+            raise IngestionValidationError("Candidate evidence hash inventory contradicts retained documents.")
+        qualified_refs = {
+            f"{d['source_id']}|{d['raw_artifact_hash']}|{d['assertion_set_id']}|{a['assertion_id']}"
+            for d in obj.evidence_documents for a in d["assertions"]
+        }
+        if any(i.source_assertion_ref not in qualified_refs for i in obj.normalized_assertions):
+            raise IngestionValidationError("Broken document-qualified interpretation lineage.")
 
     if not obj.candidate_reference:
         raise IngestionValidationError("CandidateConfigurationDocument 'candidate_reference' is required.")

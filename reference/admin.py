@@ -1,6 +1,7 @@
 from django.contrib import admin
 
 from .models import (
+    GenerationCorrespondenceRevision,
     CanonicalRecordCorrection,
     Generation,
     ImportExecutionReceipt,
@@ -8,6 +9,21 @@ from .models import (
     VehicleDefinition,
     VehicleModel,
 )
+
+
+@admin.register(GenerationCorrespondenceRevision)
+class GenerationCorrespondenceRevisionAdmin(admin.ModelAdmin):
+    list_display = ("correspondence_uuid", "revision_number", "finding", "native_identifier", "reviewer")
+    readonly_fields = tuple(f.name for f in GenerationCorrespondenceRevision._meta.fields)
+
+    def has_add_permission(self, request):
+        return False
+
+    def has_change_permission(self, request, obj=None):
+        return False
+
+    def has_delete_permission(self, request, obj=None):
+        return False
 
 
 
@@ -286,6 +302,7 @@ class ImportExecutionReceiptAdmin(admin.ModelAdmin):
     )
 
     readonly_fields = [
+        "operation_type", "correspondence_revision", "resolution_snapshot_json",
         "id",
         "uuid",
         "created_at",

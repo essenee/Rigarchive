@@ -48,6 +48,15 @@ class GenerationBootstrapTests(TestCase):
         )
 
         cls.orchestrator = GenerationBootstrapOrchestrator()
+        # Parent curation is explicit fixture setup. Planning must never seed it.
+        for make_name, model_name in (("Toyota", "4Runner"), ("Toyota", "Tacoma"), ("Volkswagen", "Touareg")):
+            make, _ = Manufacturer.objects.get_or_create(name=make_name)
+            model, _ = VehicleModel.objects.get_or_create(manufacturer=make, name=model_name)
+            for tax in WikipediaExtractor().extract_taxonomies(make_name, model_name, "US"):
+                Generation.objects.get_or_create(vehicle_model=model, slug=tax.slug, defaults={
+                    "name": tax.name, "generation_number": tax.generation_number,
+                    "start_year": tax.start_year, "end_year": tax.end_year,
+                })
 
     def test_1_wikipedia_generation_taxonomy_extraction(self) -> None:
         """1. Wikipedia generation taxonomy extraction returns valid taxonomy list."""

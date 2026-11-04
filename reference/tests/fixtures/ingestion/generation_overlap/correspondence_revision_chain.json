@@ -1,0 +1,9 @@
+{
+  "designation": "JK",
+  "findings": [
+    "established",
+    "withdrawn"
+  ],
+  "expected": "flag_review",
+  "synthetic_test_only": true
+}

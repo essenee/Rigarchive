@@ -1,3 +1,5 @@
+import uuid
+
 from django.core.exceptions import ValidationError
 from django.db import models
 from django.urls import reverse
@@ -375,6 +377,117 @@ class VehicleDefinition(BaseModel):
         )
 
 
+class ImmutableCorrespondenceQuerySet(models.QuerySet):
+    def update(self, **kwargs):
+        raise ValidationError("Correspondence revisions are append-only.")
+
+    def delete(self):
+        raise ValidationError("Correspondence revisions cannot be deleted.")
+
+    def bulk_create(self, *args, **kwargs):
+        raise ValidationError("Publish revisions individually through the reviewed workflow.")
+
+    def bulk_update(self, *args, **kwargs):
+        raise ValidationError("Correspondence revisions are append-only.")
+
+
+class GenerationCorrespondenceRevision(BaseModel):
+    """One immutable reviewed finding; uuid identifies a revision, correspondence_uuid its chain."""
+
+    correspondence_uuid = models.UUIDField(default=uuid.uuid4, editable=False)
+    revision_number = models.PositiveIntegerField(default=1)
+    supersedes = models.OneToOneField(
+        "self", null=True, blank=True, on_delete=models.PROTECT, related_name="successor",
+    )
+    vehicle_model = models.ForeignKey(VehicleModel, on_delete=models.PROTECT)
+    generation = models.ForeignKey(Generation, null=True, blank=True, on_delete=models.PROTECT)
+    source_id = models.CharField(max_length=100)
+    source_namespace = models.CharField(max_length=100)
+    identity_type = models.CharField(max_length=50)
+    native_identifier = models.CharField(max_length=255)
+    market = models.CharField(max_length=2, choices=VehicleDefinition.Market)
+    start_year = models.PositiveSmallIntegerField()
+    end_year = models.PositiveSmallIntegerField()
+    restrictions = models.JSONField(default=dict, blank=True)
+    evidence = models.JSONField(default=list)
+    finding = models.CharField(max_length=20, choices=[
+        ("established", "Established"), ("ambiguous", "Ambiguous"),
+        ("rejected", "Rejected"), ("withdrawn", "Withdrawn"),
+    ])
+    reviewer = models.CharField(max_length=150)
+    reviewed_at = models.DateTimeField()
+    review_notes = models.TextField()
+    content_hash = models.CharField(max_length=71, editable=False)
+
+    objects = ImmutableCorrespondenceQuerySet.as_manager()
+
+    class Meta:
+        ordering = ("correspondence_uuid", "revision_number")
+        base_manager_name = "objects"
+        constraints = [
+            models.UniqueConstraint(fields=("correspondence_uuid", "revision_number"),
+                                    name="reference_correspondence_revision_unique"),
+            models.CheckConstraint(condition=models.Q(revision_number__gte=1),
+                                   name="reference_correspondence_revision_positive"),
+            models.CheckConstraint(condition=models.Q(end_year__gte=models.F("start_year")),
+                                   name="reference_correspondence_year_order"),
+        ]
+
+    def clean(self):
+        super().clean()
+        from reference.ingestion.generation_correspondence import validate_review_payload
+        validate_review_payload(self.review_payload())
+        if self.generation_id and self.generation.vehicle_model_id != self.vehicle_model_id:
+            raise ValidationError("Generation belongs to another model.")
+        if self.finding == "established":
+            if not self.generation_id or not self.generation.is_active or not self.vehicle_model.is_active:
+                raise ValidationError("Established correspondence requires active parents.")
+            if not self.vehicle_model.manufacturer.is_active:
+                raise ValidationError("Manufacturer is inactive.")
+            if self.start_year < self.generation.start_year or (
+                self.generation.end_year is not None and self.end_year > self.generation.end_year
+            ):
+                raise ValidationError("Correspondence is outside the Generation range.")
+        if self.supersedes_id:
+            previous = self.supersedes
+            if previous.correspondence_uuid != self.correspondence_uuid or self.revision_number != previous.revision_number + 1:
+                raise ValidationError("Invalid correspondence successor.")
+            for name in ("vehicle_model_id", "source_id", "source_namespace", "identity_type", "native_identifier", "market", "start_year", "end_year"):
+                if getattr(previous, name) != getattr(self, name):
+                    raise ValidationError("A successor cannot change correspondence identity/scope.")
+        elif self.revision_number != 1 or type(self).objects.filter(correspondence_uuid=self.correspondence_uuid).exclude(pk=self.pk).exists():
+            raise ValidationError("A revision chain must start at revision 1.")
+
+    def review_payload(self):
+        return {
+            "review_version": "1.0", "revision_uuid": str(self.uuid),
+            "correspondence_uuid": str(self.correspondence_uuid), "revision_number": self.revision_number,
+            "supersedes_uuid": str(self.supersedes.uuid) if self.supersedes_id else None,
+            "vehicle_model_uuid": str(self.vehicle_model.uuid),
+            "generation_uuid": str(self.generation.uuid) if self.generation_id else None,
+            "source_id": self.source_id, "source_namespace": self.source_namespace,
+            "identity_type": self.identity_type, "native_identifier": self.native_identifier,
+            "market": self.market, "start_year": self.start_year, "end_year": self.end_year,
+            "restrictions": self.restrictions, "evidence": self.evidence, "finding": self.finding,
+            "reviewer": self.reviewer, "reviewed_at": self.reviewed_at.isoformat() if self.reviewed_at else None,
+            "review_notes": self.review_notes,
+        }
+
+    def save(self, *args, **kwargs):
+        if not self._state.adding:
+            raise ValidationError("Correspondence revisions are append-only.")
+        from reference.ingestion.generation_correspondence import digest
+        self.full_clean(exclude=["content_hash"])
+        expected = digest(self.review_payload())
+        if self.content_hash and self.content_hash != expected:
+            raise ValidationError("Correspondence content hash mismatch.")
+        self.content_hash = expected
+        return super().save(*args, **kwargs)
+
+    def delete(self, *args, **kwargs):
+        raise ValidationError("Correspondence revisions cannot be deleted.")
+
+
 class ImportExecutionReceipt(BaseModel):
     """
     Durable execution audit record detailing an authorized canonical promotion attempt.
@@ -386,6 +499,14 @@ class ImportExecutionReceipt(BaseModel):
     executed_at = models.DateTimeField(auto_now_add=True)
     execution_channel = models.CharField(max_length=50, default="cli")
     operator_label = models.CharField(max_length=150)
+    operation_type = models.CharField(max_length=40, default="vehicle_definition_import", choices=[
+        ("vehicle_definition_import", "VehicleDefinition import"),
+        ("correspondence_publication", "Correspondence publication"),
+    ])
+    correspondence_revision = models.ForeignKey(
+        GenerationCorrespondenceRevision, null=True, blank=True, on_delete=models.SET_NULL,
+    )
+    resolution_snapshot_json = models.JSONField(default=dict, blank=True)
 
     # Reviewed Plan & Manifest Provenance
     manifest_hash = models.CharField(max_length=71)

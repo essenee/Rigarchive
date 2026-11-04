@@ -387,6 +387,11 @@ def candidate_config_doc_to_dict(obj: CandidateConfigurationDocument) -> Dict[st
         res["attribute_provenance"] = {k: sorted(v) for k, v in obj.attribute_provenance.items()}
     if obj.reconciliation_and_review is not None:
         res["reconciliation_and_review"] = reconciliation_and_review_to_dict(obj.reconciliation_and_review)
+    if obj.evidence_raw_hashes:
+        res["evidence_raw_hashes"] = sorted(obj.evidence_raw_hashes)
+    if obj.envelope.schema_version.startswith("2."):
+        res["generation_evidence"] = obj.generation_evidence
+        res["evidence_documents"] = obj.evidence_documents
     res.update(obj.unknown_fields)
     return res
 
@@ -710,7 +715,8 @@ def candidate_config_doc_from_dict(d: Dict[str, Any]) -> CandidateConfigurationD
         "envelope", "candidate_reference", "candidate_identity",
         "source_configuration_identities", "normalized_assertions",
         "normalized_technical_details", "factory_technical_features",
-        "packages_and_options", "attribute_provenance", "reconciliation_and_review"
+        "packages_and_options", "attribute_provenance", "reconciliation_and_review",
+        "evidence_raw_hashes", "generation_evidence", "evidence_documents"
     }
     unknown = {k: v for k, v in d.items() if k not in known_keys}
     env = envelope_from_dict(d.get("envelope", {}))
@@ -724,7 +730,7 @@ def candidate_config_doc_from_dict(d: Dict[str, Any]) -> CandidateConfigurationD
     prov = d.get("attribute_provenance", {})
     rar = reconciliation_and_review_from_dict(d["reconciliation_and_review"]) if "reconciliation_and_review" in d else None
 
-    return CandidateConfigurationDocument(
+    candidate = CandidateConfigurationDocument(
         envelope=env,
         candidate_reference=cand_ref,
         candidate_identity=ident,
@@ -735,8 +741,15 @@ def candidate_config_doc_from_dict(d: Dict[str, Any]) -> CandidateConfigurationD
         packages_and_options=poos,
         attribute_provenance=prov,
         reconciliation_and_review=rar,
+        evidence_raw_hashes=d.get("evidence_raw_hashes", []),
+        generation_evidence=d.get("generation_evidence", []),
+        evidence_documents=d.get("evidence_documents", []),
         unknown_fields=unknown,
     )
+    if env.schema_version.startswith("2.") or env.artifact_type == ArtifactType.CANDIDATE_CONFIGURATION_V2.value:
+        from reference.ingestion.validation import validate_candidate_configuration
+        validate_candidate_configuration(candidate)
+    return candidate
 
 
 # --- Public Entry Points ---
@@ -749,6 +762,9 @@ def serialize_artifact(obj: Union[SourceAssertionSet, CandidateConfigurationDocu
     if isinstance(obj, SourceAssertionSet):
         raw_dict = source_assertion_set_to_dict(obj)
     elif isinstance(obj, CandidateConfigurationDocument):
+        if obj.envelope.schema_version.startswith("2."):
+            from reference.ingestion.validation import validate_candidate_configuration
+            validate_candidate_configuration(obj)
         raw_dict = candidate_config_doc_to_dict(obj)
     else:
         raise TypeError(f"Unsupported artifact type for serialization: {type(obj)}")
@@ -777,7 +793,7 @@ def deserialize_artifact(json_input: Union[str, Dict[str, Any]]) -> Union[Source
 
     if artifact_type == ArtifactType.SOURCE_ASSERTION_SET.value:
         return source_assertion_set_from_dict(data)
-    elif artifact_type == ArtifactType.CANDIDATE_CONFIGURATION.value:
+    elif artifact_type in (ArtifactType.CANDIDATE_CONFIGURATION.value, ArtifactType.CANDIDATE_CONFIGURATION_V2.value):
         return candidate_config_doc_from_dict(data)
     else:
         raise ValueError(f"Unknown or missing artifact_type in envelope: {artifact_type}")

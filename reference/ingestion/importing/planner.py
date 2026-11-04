@@ -80,7 +80,7 @@ def _fields_match_exact(vd: VehicleDefinition, target_fields: Dict[str, Any]) ->
     )
 
 
-def plan_candidate_import(
+def _plan_candidate_import(
     candidate: CandidateConfigurationDocument,
 ) -> CanonicalImportPlan:
     """
@@ -94,7 +94,7 @@ def plan_candidate_import(
     ref_id = candidate.candidate_reference or "unknown_reference"
 
     # 1. Envelope Schema Check
-    if not candidate.envelope or not candidate.envelope.schema_version or not candidate.envelope.schema_version.startswith("1."):
+    if not candidate.envelope or not candidate.envelope.schema_version or not candidate.envelope.schema_version.startswith(("1.", "2.")):
         return CanonicalImportPlan(
             candidate_reference=ref_id,
             eligibility_status=ImportEligibilityStatus.INELIGIBLE,
@@ -230,30 +230,27 @@ def plan_candidate_import(
             reasons=[f"Multiple active VehicleModels match '{evidence_model}'."],
         )
 
-    gen_qs = Generation.objects.filter(
-        vehicle_model=vm,
-        start_year__lte=evidence_year,
-        is_active=True,
-    )
-    gens = [g for g in gen_qs if g.end_year is None or g.end_year >= evidence_year]
-
-    if len(gens) == 0:
+    from reference.ingestion.generation_correspondence import resolve_generation, _legacy_unique_year_resolution
+    from django.core.exceptions import ValidationError
+    try:
+        scope = {"trim_name": evidence_trim, "drivetrain": evidence_drive,
+                 "engine_name": next(iter(_extract_mapped_concept_values(norm_interps, "engine_name")), None)
+                                or _format_engine_name(evidence_displ, evidence_cyls)}
+        if candidate.envelope.schema_version.startswith("2."):
+            resolution = resolve_generation(vm, evidence_year, evidence_market,
+                                            candidate.generation_evidence, candidate.evidence_documents, scope)
+        else:
+            resolution = _legacy_unique_year_resolution(vm, evidence_year, evidence_market, scope)
+        resolved_gen = Generation.objects.get(pk=resolution["parents"]["generation_id"])
+    except ValidationError as exc:
+        covering = Generation.objects.filter(vehicle_model=vm, is_active=True, start_year__lte=evidence_year)
+        missing = not any(g.end_year is None or g.end_year >= evidence_year for g in covering)
         return CanonicalImportPlan(
-            candidate_reference=ref_id,
-            eligibility_status=ImportEligibilityStatus.INELIGIBLE,
-            planned_action=ImportPlannedAction.REJECT,
-            reasons=[f"No active Generation covering model year {evidence_year} for model '{vm.name}'."],
+            candidate_reference=ref_id, eligibility_status=ImportEligibilityStatus.INELIGIBLE if missing else ImportEligibilityStatus.REQUIRES_REVIEW,
+            planned_action=ImportPlannedAction.REJECT if missing else ImportPlannedAction.FLAG_REVIEW,
+            review_category=ImportReviewCategory.GENERATION_CORRESPONDENCE,
+            reasons=exc.messages,
         )
-    elif len(gens) > 1:
-        return CanonicalImportPlan(
-            candidate_reference=ref_id,
-            eligibility_status=ImportEligibilityStatus.REQUIRES_REVIEW,
-            planned_action=ImportPlannedAction.FLAG_REVIEW,
-            review_category=ImportReviewCategory.MULTIPLE_OVERLAPPING_GENERATIONS,
-            reasons=[f"Multiple overlapping Generations match model year {evidence_year}."],
-        )
-
-    resolved_gen = gens[0]
 
     engine_name_vals = _extract_mapped_concept_values(candidate.normalized_assertions, "engine_name")
     if engine_name_vals and engine_name_vals[0] is not None:
@@ -453,6 +450,43 @@ def plan_candidate_import(
     )
 
 
+
+def plan_candidate_import(candidate: CandidateConfigurationDocument) -> CanonicalImportPlan:
+    from reference.ingestion.generation_correspondence import resolve_generation, digest
+    from reference.ingestion.normalization.generation import GENERATION_KEYS
+    from reference.ingestion.serialization import candidate_config_doc_to_dict
+    from reference.ingestion.validation import validate_candidate_configuration
+    from django.core.exceptions import ValidationError
+    v2 = candidate.envelope.schema_version.startswith("2.")
+    if v2:
+        try:
+            validate_candidate_configuration(candidate)
+        except (ValueError, ValidationError) as exc:
+            return CanonicalImportPlan(candidate.candidate_reference, ImportEligibilityStatus.INELIGIBLE,
+                                       ImportPlannedAction.REJECT, reasons=[str(exc)])
+    elif candidate.generation_evidence or candidate.evidence_documents or any(
+        i.target_attribute_key in GENERATION_KEYS | {"generation", "generation_name"}
+        for i in candidate.normalized_assertions
+    ):
+        return CanonicalImportPlan(candidate.candidate_reference, ImportEligibilityStatus.REQUIRES_REVIEW,
+                                   ImportPlannedAction.FLAG_REVIEW, reasons=["Explicit generation evidence requires candidate v2."])
+    plan = _plan_candidate_import(candidate)
+    if v2 and plan.resolved_generation_id:
+        vm = VehicleModel.objects.get(pk=plan.resolved_vehicle_model_id)
+        plan.generation_resolution = resolve_generation(
+            vm, plan.target_vehicle_definition_fields["model_year"], plan.target_vehicle_definition_fields["market"],
+            candidate.generation_evidence, candidate.evidence_documents,
+            {"trim_name": plan.target_vehicle_definition_fields["trim_name"],
+             "drivetrain": plan.target_vehicle_definition_fields["drivetrain"],
+             "engine_name": plan.target_vehicle_definition_fields["engine_name"]},
+        )
+        if plan.existing_vehicle_definition_id:
+            existing = VehicleDefinition.objects.get(pk=plan.existing_vehicle_definition_id)
+            plan.generation_resolution["target_identity"] = {"uuid": str(existing.uuid), "slug": existing.slug}
+        plan.candidate_snapshot = candidate_config_doc_to_dict(candidate)
+        plan.candidate_hash = digest(plan.candidate_snapshot)
+    return plan
+
 def plan_candidate_import_with_adjudications(
     candidate: CandidateConfigurationDocument,
     adjudications: List[Any],
@@ -555,6 +589,9 @@ def plan_candidate_import_with_adjudications(
             reasons=[f"Validated human domain adjudication ({adj.adjudication_category}) proves distinct factory grade."],
             adjudication_reference=adj_ref_name,
             adjudication_hash=adj.adjudication_hash,
+            generation_resolution=base_plan.generation_resolution,
+            candidate_snapshot=base_plan.candidate_snapshot,
+            candidate_hash=base_plan.candidate_hash,
         )
 
     return base_plan

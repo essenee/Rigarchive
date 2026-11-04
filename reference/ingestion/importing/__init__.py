@@ -51,6 +51,7 @@ class ImportReviewCategory(str, Enum):
     MULTIPLE_OVERLAPPING_GENERATIONS = "multiple_overlapping_generations"
     SLUG_CONFLICT = "slug_conflict"
     UNFORMATTED_ENGINE_LABEL = "unformatted_engine_label"
+    GENERATION_CORRESPONDENCE = "generation_correspondence"
 
 
 # --- Dataclasses ---
@@ -74,6 +75,9 @@ class CanonicalImportPlan:
     reasons: List[str] = field(default_factory=list)
     adjudication_reference: Optional[str] = None
     adjudication_hash: Optional[str] = None
+    generation_resolution: Dict[str, Any] = field(default_factory=dict)
+    candidate_snapshot: Dict[str, Any] = field(default_factory=dict)
+    candidate_hash: Optional[str] = None
 
 
 
