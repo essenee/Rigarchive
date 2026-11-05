@@ -317,15 +317,14 @@ def _plan_candidate_import(
                 reasons=rar_reasons,
             )
 
-    # 5. Canonical Match Classification against DB
-    existing_exact = VehicleDefinition.objects.filter(
+    # 5. Check slug occupancy before reconciling active identity.
+    slug_owner = VehicleDefinition.objects.filter(
         generation=resolved_gen,
         slug=target_slug,
-        is_active=True,
     ).first()
 
-    if existing_exact:
-        if _fields_match_exact(existing_exact, target_fields):
+    if slug_owner:
+        if slug_owner.is_active and _fields_match_exact(slug_owner, target_fields):
             return CanonicalImportPlan(
                 candidate_reference=ref_id,
                 eligibility_status=ImportEligibilityStatus.ELIGIBLE,
@@ -335,23 +334,26 @@ def _plan_candidate_import(
                 resolved_generation_id=resolved_gen.id,
                 target_vehicle_definition_fields=target_fields,
                 target_slug=target_slug,
-                existing_vehicle_definition_id=existing_exact.id,
+                existing_vehicle_definition_id=slug_owner.id,
                 reasons=["Exact match found in canonical Reference database. Zero writes required."],
             )
-        else:
-            return CanonicalImportPlan(
-                candidate_reference=ref_id,
-                eligibility_status=ImportEligibilityStatus.REQUIRES_REVIEW,
-                planned_action=ImportPlannedAction.FLAG_REVIEW,
-                review_category=ImportReviewCategory.SLUG_CONFLICT,
-                resolved_manufacturer_id=mfr.id,
-                resolved_vehicle_model_id=vm.id,
-                resolved_generation_id=resolved_gen.id,
-                target_vehicle_definition_fields=target_fields,
-                target_slug=target_slug,
-                existing_vehicle_definition_id=existing_exact.id,
-                reasons=["Target slug matches an existing record, but current fields conflict."],
-            )
+        return CanonicalImportPlan(
+            candidate_reference=ref_id,
+            eligibility_status=ImportEligibilityStatus.REQUIRES_REVIEW,
+            planned_action=ImportPlannedAction.FLAG_REVIEW,
+            review_category=ImportReviewCategory.SLUG_CONFLICT,
+            resolved_manufacturer_id=mfr.id,
+            resolved_vehicle_model_id=vm.id,
+            resolved_generation_id=resolved_gen.id,
+            target_vehicle_definition_fields=target_fields,
+            target_slug=target_slug,
+            existing_vehicle_definition_id=slug_owner.id,
+            reasons=[
+                "Target slug matches an existing record, but current fields conflict."
+                if slug_owner.is_active else
+                "Historical slug collision: an inactive VehicleDefinition occupies the target slug."
+            ],
+        )
 
     # No exact slug match: inspect existing rows within resolved (generation, model_year, market) namespace
     namespace_rows = list(

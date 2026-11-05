@@ -9,6 +9,7 @@ and Django management command execution.
 
 import json
 import shutil
+from unittest.mock import patch
 import tempfile
 from io import StringIO
 from pathlib import Path
@@ -505,8 +506,13 @@ class ProductionAcquisitionTests(TestCase):
 
     def test_management_command_execution(self):
         out = StringIO()
-        real_storage_dir = Path(settings.BASE_DIR) / "storage"
-        try:
+        # Never acquire into or remove the repository's real evidence directory.
+        command_storage = self.temp_dir / "command_raw"
+        isolated_base = self.temp_dir / "repository"
+        sentinel = isolated_base / "storage" / "preserved-evidence"
+        sentinel.parent.mkdir(parents=True)
+        sentinel.write_bytes(b"existing evidence must survive")
+        with self.settings(BASE_DIR=isolated_base), patch.object(RawSnapshotManager, "DEFAULT_STORAGE_ROOT", command_storage):
             call_command(
                 "acquire_manufacturer_specs",
                 file=str(self.fixture_path),
@@ -517,9 +523,8 @@ class ProductionAcquisitionTests(TestCase):
             self.assertIn("RIGARCHIVE PRODUCTION ACQUISITION DRY-RUN REPORT", output_str)
             self.assertIn("toyota_usa", output_str)
             self.assertIn("Dry-Run Summary", output_str)
-        finally:
-            if real_storage_dir.exists():
-                shutil.rmtree(real_storage_dir, ignore_errors=True)
+        self.assertTrue(command_storage.exists())
+        self.assertEqual(sentinel.read_bytes(), b"existing evidence must survive")
 
     def test_authentic_pdf_production_dry_run_end_to_end(self):
         """

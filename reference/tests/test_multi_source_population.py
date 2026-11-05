@@ -12,11 +12,13 @@ Tests:
 """
 
 from pathlib import Path
+import tempfile
+from unittest.mock import patch
 from django.test import TestCase
 
 from reference.ingestion.acquisition.jd_power_extractor import JDPowerExtractor
 from reference.ingestion.acquisition.profiles import JDPowerProfile, ToyotaUSAPressroomProfile
-from reference.ingestion.acquisition.snapshots import RawSourceSnapshotMetadata
+from reference.ingestion.acquisition.snapshots import RawSourceSnapshotMetadata, RawSnapshotManager
 from reference.ingestion.candidate.builder import construct_candidate_configuration
 from reference.ingestion.contracts import (
     CandidateIdentity,
@@ -73,6 +75,13 @@ class MultiSourceAggregationTests(TestCase):
     """Tests multi-source candidate construction, provenance, and conflict preservation."""
 
     def setUp(self):
+        # Every orchestrator/default manager in this class must retain fixtures
+        # in temporary storage, never the persistent acquisition corpus.
+        self.snapshot_storage = tempfile.TemporaryDirectory(prefix="ra-multi-source-tests-")
+        self.addCleanup(self.snapshot_storage.cleanup)
+        storage_patch = patch.object(RawSnapshotManager, "DEFAULT_STORAGE_ROOT", Path(self.snapshot_storage.name))
+        storage_patch.start()
+        self.addCleanup(storage_patch.stop)
         self.jdp_fixture = Path("reference/tests/fixtures/acquisition/jd_power/2019_4runner_configurations.json")
         self.toyota_fixture = Path("reference/tests/fixtures/acquisition/toyota/2019_4runner_product_info.json")
 

@@ -50,6 +50,9 @@ class JDPowerNormalizer(BaseSourceNormalizer):
                 make_context = str(a.raw_value).strip().lower()
                 break
 
+        if make_context == "jeep":
+            raise ValueError("Jeep J.D. Power payloads require a reviewed Jeep-specific strategy; Toyota/VW fallback is forbidden.")
+
         interp_counter = 1
 
         def _next_id() -> str:

@@ -662,3 +662,18 @@ class CanonicalRecordCorrection(BaseModel):
             f"{self.superseded_vehicle_definition_slug_snapshot} -> "
             f"{self.replacement_vehicle_definition_slug_snapshot}"
         )
+
+# B2 models live in the specification boundary; importing registers them with
+# the existing Reference application without changing baseline model semantics.
+from reference.specifications.models import (  # noqa: E402,F401
+    SpecificationUnitRegistry, EvidenceDocument, EvidenceAssertionReference,
+    SpecificationDefinition, SpecificationDefinitionRevision,
+    SpecificationDefinitionDependency, SpecificationAssertion,
+    SpecificationCatalogue, SpecificationCatalogueRevision,
+    SpecificationCatalogueMembership, SpecificationCatalogueCoverage,
+    SpecificationEvidenceLink, SpecificationPublicationReceipt,
+    TransmissionDescription, TransmissionDescriptionRevision, TransmissionEngineeringAssertion,
+    TransmissionOffering, TransmissionOfferingRevision,
+    EquipmentItem, EquipmentItemRevision, EquipmentOffering, EquipmentOfferingRevision,
+    CompatibilityRule, CompatibilityRuleRevision,
+)

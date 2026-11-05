@@ -36,6 +36,7 @@ from reference.ingestion.importing import (
     plan_candidate_import,
 )
 from reference.models import (
+    CanonicalRecordCorrection,
     Generation,
     Manufacturer,
     VehicleDefinition,
@@ -283,6 +284,73 @@ class CanonicalImportTestCase(TestCase):
         self.assertEqual(plan.target_vehicle_definition_fields["drivetrain"], "4WD")
         self.assertEqual(plan.target_vehicle_definition_fields["market"], "US")
         self.assertEqual(plan.target_slug, "2020-sr5-40l-v6-4wd-us")
+
+    def test_superseded_slug_blocks_create_and_stales_earlier_plan(self):
+        assertions, identity = self._build_full_synthetic_assertions()
+        candidate = self._build_candidate_doc(normalized_assertions=assertions, candidate_identity=identity)
+        earlier = plan_candidate_import(candidate)
+        self.assertEqual(earlier.planned_action, ImportPlannedAction.CREATE)
+        historical = VehicleDefinition.objects.create(
+            generation=self.generation, is_active=False, **earlier.target_vehicle_definition_fields,
+        )
+        replacement = VehicleDefinition.objects.create(
+            generation=self.generation,
+            **(earlier.target_vehicle_definition_fields | {"trim_name": "Corrected SR5"}),
+        )
+        CanonicalRecordCorrection.objects.create(
+            superseded_vehicle_definition=historical, replacement_vehicle_definition=replacement,
+            superseded_vehicle_definition_pk_snapshot=historical.pk,
+            superseded_vehicle_definition_uuid_snapshot=str(historical.uuid),
+            superseded_vehicle_definition_slug_snapshot=historical.slug,
+        )
+
+        plan = plan_candidate_import(candidate)
+        self.assertEqual(plan.eligibility_status, ImportEligibilityStatus.REQUIRES_REVIEW)
+        self.assertEqual(plan.planned_action, ImportPlannedAction.FLAG_REVIEW)
+        self.assertEqual(plan.review_category, ImportReviewCategory.SLUG_CONFLICT)
+        self.assertEqual(plan.existing_vehicle_definition_id, historical.pk)
+        self.assertEqual(plan.target_slug, earlier.target_slug)
+        self.assertIn("Historical slug collision", plan.reasons[0])
+
+        with patch.object(VehicleDefinition, "save", side_effect=AssertionError("Must stop before save")):
+            self.assertEqual(execute_candidate_import(plan).outcome, ImportExecutionOutcome.FLAGGED_REVIEW)
+            stale = execute_candidate_import(earlier)
+        self.assertEqual(stale.outcome, ImportExecutionOutcome.ABORTED_STALE_PLAN)
+        self.assertIn("Historical slug collision", stale.messages[0])
+        historical.refresh_from_db()
+        self.assertFalse(historical.is_active)
+        self.assertEqual(historical.slug, earlier.target_slug)
+        self.assertEqual(VehicleDefinition.objects.count(), 2)
+
+    def test_late_active_conflicting_slug_stales_earlier_plan(self):
+        assertions, identity = self._build_full_synthetic_assertions()
+        candidate = self._build_candidate_doc(normalized_assertions=assertions, candidate_identity=identity)
+        earlier = plan_candidate_import(candidate)
+        VehicleDefinition.objects.create(
+            generation=self.generation, slug=earlier.target_slug,
+            **(earlier.target_vehicle_definition_fields | {"drivetrain": "2WD"}),
+        )
+        conflict = plan_candidate_import(candidate)
+        self.assertEqual(conflict.planned_action, ImportPlannedAction.FLAG_REVIEW)
+        self.assertEqual(conflict.review_category, ImportReviewCategory.SLUG_CONFLICT)
+        self.assertIn("fields conflict", conflict.reasons[0])
+        with patch.object(VehicleDefinition, "save", side_effect=AssertionError("Must stop before save")):
+            self.assertEqual(execute_candidate_import(earlier).outcome, ImportExecutionOutcome.ABORTED_STALE_PLAN)
+
+    def test_historical_slug_in_different_generation_does_not_block_create(self):
+        assertions, identity = self._build_full_synthetic_assertions()
+        candidate = self._build_candidate_doc(normalized_assertions=assertions, candidate_identity=identity)
+        earlier = plan_candidate_import(candidate)
+        other_model = VehicleModel.objects.create(manufacturer=self.manufacturer, name="Other model")
+        other_generation = Generation.objects.create(vehicle_model=other_model, name="Other generation", start_year=2010)
+        VehicleDefinition.objects.create(
+            generation=other_generation, is_active=False, **earlier.target_vehicle_definition_fields,
+        )
+        plan = plan_candidate_import(candidate)
+        self.assertEqual(plan.eligibility_status, ImportEligibilityStatus.ELIGIBLE)
+        self.assertEqual(plan.planned_action, ImportPlannedAction.CREATE)
+        self.assertEqual(plan.target_slug, earlier.target_slug)
+        self.assertEqual(plan.resolved_generation_id, self.generation.pk)
 
     def test_first_representation_create_executes_successfully(self) -> None:
         """First-representation CREATE creates exactly one VehicleDefinition record."""

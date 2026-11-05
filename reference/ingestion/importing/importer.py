@@ -131,14 +131,19 @@ def execute_candidate_import(
                     messages=["Resolved Generation no longer active in database."],
                 )
 
-            # Re-check concurrent insert of target slug inside transaction
+            # Recheck the complete slug namespace inside the create transaction.
             existing_concurrent = VehicleDefinition.objects.filter(
                 generation_id=plan.resolved_generation_id,
                 slug=plan.target_slug,
-                is_active=True,
             ).first()
 
             if existing_concurrent:
+                if not existing_concurrent.is_active:
+                    return CanonicalImportResult(
+                        candidate_reference=ref_id,
+                        outcome=ImportExecutionOutcome.ABORTED_STALE_PLAN,
+                        messages=["Historical slug collision: an inactive VehicleDefinition occupies the target slug."],
+                    )
                 if _fields_match_exact(existing_concurrent, plan.target_vehicle_definition_fields):
                     return CanonicalImportResult(
                         candidate_reference=ref_id,

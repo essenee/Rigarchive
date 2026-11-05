@@ -10,12 +10,15 @@ from io import StringIO
 import json
 import os
 import tempfile
+from pathlib import Path
 from unittest.mock import patch
 
 from django.core.management import call_command
 from django.core.management.base import CommandError
 from django.db import DatabaseError
 from django.test import TestCase
+
+from reference.ingestion.acquisition.snapshots import RawSnapshotManager
 
 from reference.ingestion.importing import (
     CanonicalImportPlan,
@@ -51,6 +54,13 @@ from reference.models import (
 class CanonicalImportExecutionTestCase(TestCase):
     def setUp(self):
         super().setUp()
+        # CLI acquisition in these execution tests must never use persistent
+        # evidence storage, even when a fixture snapshot already exists there.
+        self.snapshot_storage = tempfile.TemporaryDirectory(prefix="ra-execution-tests-")
+        self.addCleanup(self.snapshot_storage.cleanup)
+        storage_patch = patch.object(RawSnapshotManager, "DEFAULT_STORAGE_ROOT", Path(self.snapshot_storage.name))
+        storage_patch.start()
+        self.addCleanup(storage_patch.stop)
         self.manufacturer, _ = Manufacturer.objects.get_or_create(
             name="Toyota",
             defaults={"country_code": "JP", "is_active": True},
