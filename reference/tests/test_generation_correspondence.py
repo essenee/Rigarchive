@@ -46,9 +46,9 @@ class SyntheticWranglerSetup:
         self.jl = Generation.objects.create(vehicle_model=self.model, name="Synthetic JL", start_year=2018, end_year=2018)
         self.candidate = self.make_candidate("JK")
 
-    def make_candidate(self, designation="JK", second=None):
-        fixture = {"synthetic_test_only": True, "make": "Jeep", "model": "Wrangler", "year": 2018,
-                   "trim": "Synthetic Sport", "drive": "4WD", "displacement": 3.6,
+    def make_candidate(self, designation="JK", second=None, *, year=2018, trim="Synthetic Sport", drive="4WD"):
+        fixture = {"synthetic_test_only": True, "make": "Jeep", "model": "Wrangler", "year": year,
+                   "trim": trim, "drive": drive, "displacement": 3.6,
                    "cylinders": 6, "engine_name": "Synthetic 3.6L V6", "market": "US"}
         if designation is not None:
             fixture["generation_designation"] = designation
@@ -74,7 +74,7 @@ class SyntheticWranglerSetup:
                    TechnicalValue(v, "L", str(v)) if k == "displacement" else v)
                    for k, target in concepts.items() for v in [fixture[k]]]
         return construct_candidate_configuration(
-            CandidateIdentity("Jeep", "Wrangler", model_year=2018, market="US", trim_name=fixture["trim"]),
+            CandidateIdentity("Jeep", "Wrangler", model_year=year, market="US", trim_name=fixture["trim"]),
             [sas], interps, schema_version="2.0.0", candidate_reference=f"synthetic-{designation}-{second}",
         )
 

@@ -13,6 +13,7 @@ from reference.ingestion.contracts import (
     TechnicalValue,
 )
 from reference.ingestion.normalization.base import BaseSourceNormalizer
+from reference.ingestion.normalization.rules.jeep_jd_power import wrangler_grade
 from reference.ingestion.normalization.rules.toyota_rules import (
     normalize_toyota_drivetrain,
     normalize_toyota_grade,
@@ -50,8 +51,22 @@ class JDPowerNormalizer(BaseSourceNormalizer):
                 make_context = str(a.raw_value).strip().lower()
                 break
 
+        jeep_trim = None
         if make_context == "jeep":
-            raise ValueError("Jeep J.D. Power payloads require a reviewed Jeep-specific strategy; Toyota/VW fallback is forbidden.")
+            facts = {ast.attribute_key: ast.raw_value for ast in assertion_set.source_assertions}
+            if (len(facts) != len(assertion_set.source_assertions)
+                    or assertion_set.provenance.source_id != self.source_id
+                    or not assertion_set.provenance.extraction_provenance
+                    or facts.get("make_name") != "Jeep"
+                    or facts.get("model_name") not in ("Wrangler", "Wrangler Unlimited")
+                    or facts.get("market") != "US" or not source_app or source_app.market != "US"):
+                raise ValueError("Wrangler normalization requires explicit US source identity.")
+            jeep_trim = wrangler_grade(
+                facts.get("model_year"), facts.get("trim"), facts.get("drive_descriptor"),
+                facts.get("engine_displacement_liters"), facts.get("engine_cylinders"),
+            )
+            if facts["model_name"] == "Wrangler Unlimited" and not jeep_trim.startswith("Unlimited "):
+                raise ValueError("Unlimited model name contradicts the source body.")
 
         interp_counter = 1
 
@@ -83,7 +98,7 @@ class JDPowerNormalizer(BaseSourceNormalizer):
                         interpretation_id=_next_id(),
                         source_assertion_ref=ast.assertion_id,
                         target_attribute_key="model",
-                        normalized_concept=str(val).strip(),
+                        normalized_concept="Wrangler" if jeep_trim else str(val).strip(),
                         raw_source_value=val,
                         mapping_status="mapped",
                     )
@@ -106,7 +121,9 @@ class JDPowerNormalizer(BaseSourceNormalizer):
                     pass
 
             elif key in ("manufacturer_grade", "trim") and val is not None:
-                if make_context in ("volkswagen", "vw"):
+                if jeep_trim:
+                    norm_trim, status, mfr_term = jeep_trim, "mapped", val
+                elif make_context in ("volkswagen", "vw"):
                     norm_trim, status, mfr_term = normalize_volkswagen_grade(val)
                 else:
                     norm_trim, status, mfr_term = normalize_toyota_grade(val)
@@ -124,7 +141,9 @@ class JDPowerNormalizer(BaseSourceNormalizer):
                 )
 
             elif key == "drive_descriptor" and val is not None:
-                if make_context in ("volkswagen", "vw"):
+                if jeep_trim:
+                    generic_drive, drive_arch = val, None
+                elif make_context in ("volkswagen", "vw"):
                     generic_drive, drive_arch = normalize_volkswagen_drivetrain(val)
                 else:
                     generic_drive, drive_arch = normalize_toyota_drivetrain(val)
@@ -189,7 +208,7 @@ class JDPowerNormalizer(BaseSourceNormalizer):
                 except (ValueError, TypeError):
                     pass
 
-            elif key in ("engine_name", "engine_type") and val is not None:
+            elif key in ("engine_name", "engine_type") and val is not None and not jeep_trim:
                 interpretations.append(
                     NormalizedInterpretation(
                         interpretation_id=_next_id(),

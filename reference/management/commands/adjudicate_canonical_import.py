@@ -13,6 +13,7 @@ import json
 from pathlib import Path
 
 from django.core.management.base import BaseCommand, CommandError
+from reference.ingestion.attribution import cli_attribution
 from reference.ingestion.contracts import CanonicalImportAdjudication
 from reference.ingestion.manifest import dict_to_manifest
 from reference.ingestion.serialization import adjudication_to_dict, compute_adjudication_hash
@@ -57,12 +58,7 @@ class Command(BaseCommand):
             required=True,
             help="Verified canonical trim name (e.g. 'SR5 Premium').",
         )
-        parser.add_argument(
-            "--operator",
-            type=str,
-            default="operator",
-            help="Operator identifier for adjudication audit log.",
-        )
+        parser.add_argument("--operator", help="Declared human director role override.")
         parser.add_argument(
             "--notes",
             type=str,
@@ -82,7 +78,7 @@ class Command(BaseCommand):
         category = options["category"]
         decision = options["decision"]
         trim_name = options["trim_name"]
-        operator = options["operator"]
+        operator = cli_attribution(options).director
         notes = options["notes"]
         output_path = Path(options["output"]).resolve()
 

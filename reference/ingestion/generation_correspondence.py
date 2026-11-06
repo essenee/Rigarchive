@@ -118,7 +118,7 @@ def validate_review_payload(payload):
     ), "Reviewed source selector is not established by retained assertions.")
 
 
-def publish_correspondence(payload, content_hash, *, authorized=False, operator_label=""):
+def publish_correspondence(payload, content_hash, *, authorized=False, operator_label="", execution_agent=None):
     """Insert immutable revision + receipt, or persist a stale/rejected attempt only.
 
     Unique chain/revision and predecessor constraints arbitrate concurrent writers.
@@ -130,17 +130,23 @@ def publish_correspondence(payload, content_hash, *, authorized=False, operator_
     validate_review_payload(payload)
     require(content_hash == digest(payload), "Review content hash mismatch.")
 
+    from reference.ingestion.attribution import resolve_attribution
+    attribution = resolve_attribution(operator=operator_label or None, agent=execution_agent)
+
     def _receipt(outcome, revision=None, message=""):
         first = payload["evidence"][0]
         return ImportExecutionReceipt.objects.create(
-            operation_type="correspondence_publication", operator_label=operator_label or payload["reviewer"],
+            operation_type="correspondence_publication", operator_label=attribution.director,
             manifest_hash=content_hash, candidate_reference=payload["revision_uuid"], planned_action="publish",
             source_id=payload["source_id"], raw_artifact_hash=first["raw_artifact_hash"],
             raw_artifact_reference=first["raw_artifact_reference"], native_identifier=payload["native_identifier"],
             source_identity_type=payload["identity_type"], target_slug="",
             execution_outcome=outcome, messages_json=[message] if message else [],
             correspondence_revision=revision,
-            resolution_snapshot_json={"review": payload, "content_hash": content_hash},
+            resolution_snapshot_json={
+                "review": payload, "content_hash": content_hash,
+                "attribution": {"version": "1.0", "execution_agent": attribution.agent},
+            },
         )
 
     def receipt(outcome, revision=None, message=""):

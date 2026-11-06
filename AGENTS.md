@@ -226,6 +226,8 @@ Do not mark an implementation complete when required checks fail.
 
 ## 9. Documentation
 
+Every new ADR, RA, W-series, or other numbered engineering design document must include `Created: YYYY-MM-DD` and `Status: Draft | Proposed | Accepted | Superseded` near the top. Keep `Created` fixed at its original verified date. Record `Last Updated: YYYY-MM-DD` for substantive revisions. Formatting, link, and privacy corrections leave that date unchanged. Do not invent historical dates or rely solely on Git timestamps.
+
 Follow the existing repository rules for:
 
 - `CURRENT_STATE.md`.

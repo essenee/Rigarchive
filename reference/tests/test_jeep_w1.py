@@ -50,7 +50,7 @@ class JeepRuleSafetyTests(SimpleTestCase):
     def test_jdp_jeep_does_not_reach_toyota_fallback(self):
         sas = self.source()
         sas.provenance.source_id = "jd_power"
-        with self.assertRaisesMessage(ValueError, "Toyota/VW fallback is forbidden"):
+        with self.assertRaises(ValueError):
             JDPowerNormalizer().normalize(sas)
 
     def test_local_non_pdf_rejected(self):
@@ -161,7 +161,7 @@ class JeepW1Tests(SimpleTestCase):
     def test_jeep_cannot_enter_toyota_jdp_fallback(self):
         sas = copy.deepcopy(self.sets["jk"])
         sas.provenance.source_id = "jd_power"
-        with self.assertRaisesMessage(ValueError, "Toyota/VW fallback is forbidden"):
+        with self.assertRaises(ValueError):
             JDPowerNormalizer().normalize(sas)
 
     def test_unsupported_grade_stays_unmapped(self):

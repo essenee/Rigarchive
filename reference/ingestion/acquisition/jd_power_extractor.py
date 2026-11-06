@@ -158,7 +158,7 @@ class JDPowerExtractor:
 
         prov_meta = data.get("_provenance", {})
         pub_scope = prov_meta.get("publication_scope", "US")
-        extracted_at = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+        default_extracted_at = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
         content_hash = getattr(snapshot_meta, "content_hash", None) or getattr(snapshot_meta, "raw_artifact_hash", None)
         if not content_hash or not content_hash.startswith("sha256:"):
@@ -185,6 +185,43 @@ class JDPowerExtractor:
         for idx, item in enumerate(configs):
             if not isinstance(item, dict):
                 continue
+
+            extracted_at = default_extracted_at
+            target_ctx = getattr(snapshot_meta, "target_context", {}) or {}
+            if any(str(make).strip().lower() == "jeep" for make in (
+                item.get("make"), data.get("make"), target_ctx.get("make"),
+            )):
+                # Bind the reviewed JSON inventory, independent of webpage retention.
+                from reference.ingestion.acquisition.snapshots import compute_content_hash
+                from reference.ingestion.normalization.rules.jeep_jd_power import wrangler_grade
+
+                extracted_at = getattr(snapshot_meta, "acquired_at", None)
+                year = item.get("model_year")
+                locator = getattr(snapshot_meta, "publisher_locator", None)
+                allowed = {f"https://www.jdpower.com/cars/{year}/jeep/{model}/trim"
+                           for model in ("wrangler", "wrangler-unlimited")}
+                if (item.get("make") != "Jeep" or item.get("model") not in ("Wrangler", "Wrangler Unlimited")
+                        or item.get("market") != "US"
+                        or getattr(snapshot_meta, "source_id", None) != "jd_power"
+                        or locator not in allowed
+                        or not isinstance(extracted_at, str) or not extracted_at
+                        or not isinstance(raw_bytes_or_dict, bytes)
+                        or getattr(snapshot_meta, "content_hash", None) != compute_content_hash(raw_bytes_or_dict)
+                        or not getattr(snapshot_meta, "storage_path", None)
+                        or prov_meta.get("publisher") != "J.D. Power"
+                        or prov_meta.get("source_id") != "jd_power"
+                        or prov_meta.get("publication_scope") != "US"
+                        or ("native_trim_id" in item and (
+                            not isinstance(item["native_trim_id"], str)
+                            or not item["native_trim_id"].strip() or "|" in item["native_trim_id"]
+                        ))):
+                    raise JDPowerExtractorError("Wrangler requires explicit row identity and verified structured-inventory provenance.")
+                wrangler_grade(year, item.get("trim"), item.get("drivetrain"),
+                               item.get("engine_displacement_liters"), item.get("engine_cylinders"))
+                if (item["model"] == "Wrangler Unlimited" or "wrangler-unlimited" in locator) and " 4D " not in item["trim"]:
+                    raise JDPowerExtractorError("Unlimited source scope contradicts the row body.")
+                if any(asset.provenance.native_record_id == (item.get("native_trim_id") or f"jdp_cfg_{idx+1}") for asset in assertion_sets):
+                    raise JDPowerExtractorError("Duplicate Wrangler source selector.")
 
             native_id = str(item.get("native_trim_id") or f"jdp_cfg_{idx+1}")
             target_ctx = getattr(snapshot_meta, "target_context", {}) or {}
@@ -298,6 +335,18 @@ class JDPowerExtractor:
                 ),
             ]
 
+            if make_name == "Jeep" and "source_model_code" in item:
+                code = item["source_model_code"]
+                if not isinstance(code, str) or not code.strip():
+                    raise JDPowerExtractorError("Invalid explicit Wrangler source model code.")
+                assertions.append(SourceAssertion(
+                    assertion_id=f"ast_jdp_{native_id}_model_code_01",
+                    attribute_key="source_model_code",
+                    raw_value=code,
+                    source_context=f"configurations[{idx}].source_model_code",
+                    extracted_at=extracted_at,
+                ))
+
             if item.get("engine_name"):
                 assertions.append(
                     SourceAssertion(
@@ -308,6 +357,26 @@ class JDPowerExtractor:
                         extracted_at=extracted_at,
                     )
                 )
+
+            if make_name == "Jeep":
+                specifications = item.get("specifications_url")
+                if specifications is not None:
+                    if not isinstance(specifications, str):
+                        raise JDPowerExtractorError("Invalid Wrangler specifications citation.")
+                    from urllib.parse import urlsplit
+
+                    location = urlsplit(specifications)
+                    if (location.scheme != "https" or location.netloc != "www.jdpower.com"
+                            or not location.path.startswith(f"/cars/{model_year}/jeep/")
+                            or not location.path.endswith("/specs")):
+                        raise JDPowerExtractorError("Invalid Wrangler specifications citation.")
+                for assertion in assertions:
+                    if assertion.source_context.startswith("configurations[]"):
+                        assertion.source_context = assertion.source_context.replace("[]", f"[{idx}]", 1)
+                    if specifications and assertion.attribute_key in {
+                        "engine_displacement_liters", "engine_cylinders", "engine_name", "drive_descriptor",
+                    }:
+                        assertion.source_context += f"; {specifications}"
 
             asset = SourceAssertionSet(
                 envelope=env,

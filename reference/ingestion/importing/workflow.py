@@ -5,11 +5,11 @@ Coordinates explicit human-authorized promotion attempts across the RA-019 execu
 boundary while persisting durable ImportExecutionReceipt audit records within atomic database transactions.
 """
 
-import getpass
 from typing import Any, Optional, Tuple
 
 from django.db import transaction
 
+from reference.ingestion.attribution import resolve_attribution
 from reference.ingestion.importing import (
     CanonicalImportPlan,
     CanonicalImportResult,
@@ -36,6 +36,8 @@ def execute_canonical_import_workflow(
     review_plan: CanonicalImportReviewPlan,
     operator_label: str = "",
     adjudication_artifact: Optional[Any] = None,
+    *,
+    execution_agent: Optional[str] = None,
 ) -> Tuple[CanonicalImportResult, ImportExecutionReceipt]:
     """
     Executes an authorized CanonicalImportPlan and persists a durable ImportExecutionReceipt audit record.
@@ -116,7 +118,7 @@ def execute_canonical_import_workflow(
                     f"Execution refused: Review plan adjudication_reference '{review_plan.adjudication_reference}' does not match expected '{expected_ref_name}'."
                 )
 
-    op_label = operator_label or f"cli:{getpass.getuser()}"
+    attribution = resolve_attribution(operator=operator_label or None, agent=execution_agent)
 
     def _build_and_save_receipt(res: CanonicalImportResult) -> ImportExecutionReceipt:
         is_created = res.outcome == ImportExecutionOutcome.CREATED
@@ -135,12 +137,13 @@ def execute_canonical_import_workflow(
         target_fields = dict(review_plan.target_vehicle_definition_fields)
 
         return ImportExecutionReceipt.objects.create(
-            operator_label=op_label,
+            operator_label=attribution.director,
             operation_type="vehicle_definition_import",
             resolution_snapshot_json={
-                "generation_resolution": plan.generation_resolution,
-                "candidate_hash": plan.candidate_hash,
-            } if plan.generation_resolution else {},
+                "attribution": {"version": "1.0", "execution_agent": attribution.agent},
+                **({"generation_resolution": plan.generation_resolution, "candidate_hash": plan.candidate_hash}
+                   if plan.generation_resolution else {}),
+            },
             execution_channel="cli",
             manifest_hash=manifest.manifest_hash,
             candidate_reference=review_plan.candidate_reference,

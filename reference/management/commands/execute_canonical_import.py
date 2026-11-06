@@ -13,6 +13,7 @@ import json
 from pathlib import Path
 
 from django.core.management.base import BaseCommand, CommandError
+from reference.ingestion.attribution import add_attribution_arguments, cli_attribution
 from reference.ingestion.importing.workflow import (
     CanonicalExecutionWorkflowError,
     execute_canonical_import_workflow,
@@ -43,12 +44,7 @@ class Command(BaseCommand):
             required=True,
             help="Candidate reference identifier of the exact reviewed plan to execute.",
         )
-        parser.add_argument(
-            "--operator",
-            type=str,
-            default="",
-            help="Optional operator attribution label override (default: 'cli:<local_user>').",
-        )
+        add_attribution_arguments(parser)
         parser.add_argument(
             "--adjudication-file",
             type=str,
@@ -59,7 +55,6 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         manifest_path = Path(options["manifest"]).resolve()
         plan_ref = options["plan_ref"]
-        operator_label = options.get("operator", "")
         adj_file_arg = options.get("adjudication_file", "")
 
         if not manifest_path.exists():
@@ -129,6 +124,9 @@ class Command(BaseCommand):
             self.stdout.write(f"Planner Reasons:     {', '.join(review_plan.reasons)}")
         self.stdout.write(self.style.MIGRATE_HEADING("-" * 80))
 
+        attribution = cli_attribution(options)
+        self.stdout.write(attribution.describe_cli())
+
         # Request explicit human operator authorization
         try:
             confirm = input("Do you authorize executing this canonical import plan? [y/N]: ")
@@ -149,7 +147,8 @@ class Command(BaseCommand):
                 plan=plan,
                 manifest=manifest,
                 review_plan=review_plan,
-                operator_label=operator_label,
+                operator_label=attribution.director,
+                execution_agent=attribution.agent,
                 adjudication_artifact=adjudication_artifact,
             )
         except CanonicalExecutionWorkflowError as e:

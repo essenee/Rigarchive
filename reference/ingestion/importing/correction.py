@@ -56,6 +56,8 @@ def execute_canonical_record_correction(
     manifest: Optional[Any] = None,
     review_plan: Optional[Any] = None,
     candidate_document: Optional[Any] = None,
+    *,
+    execution_agent: Optional[str] = None,
 ) -> CanonicalRecordCorrectionResult:
     """
     Execute a canonical record correction and supersession workflow inside an atomic transaction.
@@ -138,6 +140,7 @@ def execute_canonical_record_correction(
                 review_plan=review_plan,
                 operator_label=operator_label,
                 adjudication_artifact=adjudication_artifact,
+                execution_agent=execution_agent,
             )
         else:
             import_res = execute_candidate_import(effective_plan)

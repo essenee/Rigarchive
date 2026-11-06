@@ -12,6 +12,7 @@ __pycache__/
 
 .venv/
 venv/
+venv-old/
 env/
 ENV/
 
@@ -72,5 +73,10 @@ htmlcov/
 
 *.swp
 *.swo
+
 # Local acquisition artifacts
 /storage/raw_source_artifacts/
+
+.codex-*-test
+# Local audit attribution settings
+/.rigarchive.toml

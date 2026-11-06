@@ -41,6 +41,12 @@ Full original publications may be retained intact even when accessory listings a
 
 This policy authorizes neither permanent package/Full Specifications models nor correspondence publication or canonical import. Accepted ADRs remain unchanged; ADR-0010's subordinate-alternative and accessory boundaries continue to apply.
 
+## J.D. Power core configuration evidence
+
+J.D. Power is independently sufficient for core factory identity when a reviewed structured inventory explicitly binds make, model, year, market, grade, body, engine and relevant mechanical distinctions. Manufacturer corroboration is preferred and optional. Manufacturer technical publications remain preferred. J.D. Power technical values may be used when their exact applicability is explicit.
+
+Record disagreements with authentic manufacturer evidence and defer unresolved rows. Missing manufacturer evidence alone is not a conflict. Record publisher, source ID, retrievable citation, model year, market, original designation and explicit identity fields. A reviewed structured JSON inventory is sufficient. Original HTML, webpage digests and HTML selectors are optional. Retain and hash the structured JSON for Candidate v2 lineage and correspondence integrity. A source-local JSON row identifier is sufficient for that lineage. Keep internal artifact digests, approvals and receipts under their existing contracts. Existing brochure rules still govern optional equipment, packages and accessories.
+
 ## Reviewed correspondence and publication
 
 A reviewed artifact has exactly two top-level fields: `review` and `content_hash`. The latter is `sha256:<64 lowercase hex>` over sorted, compact UTF-8 JSON of `review`, with `ensure_ascii=False`, excluding the hash itself. Hash integrity is not user authentication or execution authorization.
@@ -90,6 +96,12 @@ Preserve legitimate overlapping ranges, UUIDs, slugs and canonical identities. T
 
 Resolution basis is separate from canonical creation basis. Correspondence review/publication does not authorize vehicle import.
 
+## Local audit attribution
+
+Copy `.rigarchive.example.toml` to the ignored `.rigarchive.toml` at the Django project root if you need different attribution defaults. The resolver uses explicit `--operator` and `--agent` overrides, then `[attribution]` settings, then `project_owner` and `codex`. Use nonpersonal role identifiers. The CLI records its actual interface as `cli`. Configuration supplies attribution only. Matrix approval and execution still require separate affirmative confirmation.
+
+Approval v1 stores the human role in `operator`. The approval prompt displays the declared agent and interface. Those display values do not change approval serialization. Execution records the human role in `operator_label`, the interface in `execution_channel`, and the agent in `resolution_snapshot_json.attribution` with `version: "1.0"` and `execution_agent`. Matrix attempt reports also record the execution agent and interface. Existing approval and execution digests retain their meaning.
+
 ## Exact import planning and authorization
 
 Plan a retained candidate offline:
@@ -122,13 +134,22 @@ Receipts retain historical fields and add operation type, optional correspondenc
 
 ## Generation Trim Matrix (Stage 6A)
 
-This is the approved future path under the [ADR-0007 amendment](../architecture/ADR/ADR-0007-Explicit-Human-Authorization-Execution-Audit-Receipts-Canonical-Promotion.md#accepted-stage-6a-amendment). Stage 6B implementation is pending. The existing single-plan authorization, stale-state and receipt rules above continue to apply to single-plan imports.
+This is the dedicated matrix path under the [ADR-0007 amendment](../architecture/ADR/ADR-0007-Explicit-Human-Authorization-Execution-Audit-Receipts-Canonical-Promotion.md#accepted-stage-6a-amendment). The existing single-plan authorization, stale-state and receipt rules above continue to apply to single-plan imports.
 
 ### Review and approval
 
 Review a versioned matrix for one canonical Generation and market. Enumerate each row's stable identity, model year, canonical fields and slug, action, permitted creation bases, candidate reference and digest, and applicable evidence and correspondence bindings. Pin the exact parent identities and the canonical PK and UUID of any explicitly reviewed existing record. Reject duplicate identities or slugs, ambiguous references and wildcard scope.
 
-Hash the immutable matrix using the existing sorted, compact UTF-8 JSON SHA-256 convention. Specify deterministic row and reference ordering and preserve meaningful evidence order. Record an affirmative approval of the exact digest with CLI operator attribution and UTC timestamp in a separate linked approval record. A digest verifies integrity and grants no authority by itself. Retain the matrix, approval and supporting artifacts in backed-up local review storage. Keep live namespace counts, execution manifests and progress outside the immutable authorization payload. Separately approve exact additions, replacements or withdrawals against the original matrix digest. Unchanged rows keep their existing approval.
+Hash the immutable matrix using the existing sorted, compact UTF-8 JSON SHA-256 convention. Specify deterministic row and reference ordering and preserve meaningful evidence order. Record an affirmative approval of the exact digest with declared human operator attribution and UTC timestamp in a separate linked approval record. A digest verifies integrity and grants no authority by itself. Retain the matrix, approval and supporting artifacts in backed-up local review storage. Keep live namespace counts, execution manifests and progress outside the immutable authorization payload. Separately approve exact additions, replacements or withdrawals against the original matrix digest. Unchanged rows keep their existing approval.
+
+### Stage 6C Generation binding
+
+Matrix version `1.0` continues to require nonempty reviewed correspondence pins. Version `2.0` adds a required row `generation_binding` containing `mode`, `strategy`, and `resolution_version`. The binding incorporates the existing matrix parent PKs, UUIDs and slugs, the row year and market, exact candidate and evidence digests, and any correspondence pins. Approval still binds the complete versioned matrix digest.
+
+- `explicit_correspondence` uses `reviewed_source_correspondence` and exact published revision pins.
+- `unique_deterministic` uses `unique_year_range` with empty correspondence pins. It requires an eligible Candidate v2 with explicit make, model, year and market, exactly one active applicable Generation, and no explicit source-generation claim or conflicting applicable correspondence. Matrix approval reviews the exact resolved Generation. Overlap, conflicting or unresolved explicit evidence, and unsupported strategies require review through the existing correspondence process.
+
+For version `2.0`, pass each exact candidate file with repeated `--candidate` arguments to both review and approval. The commands re-plan and display the live validated binding and source identity before approval can be requested. Execution revalidates the binding during preflight and immediately before each create. It never substitutes another mode or strategy. Matrix receipt linkage records the binding alongside the existing plan resolution snapshot. A changed binding requires a new matrix digest and approval. No existing v1 matrix or approval changes meaning.
 
 ### Model-year execution and reconciliation
 
@@ -137,6 +158,21 @@ Hash the immutable matrix using the existing sorted, compact UTF-8 JSON SHA-256 
 3. Execute pending creates in deterministic order inside one transaction for the selected year. Re-plan immediately before each create using the existing planner, including earlier creates in that transaction. Require eligibility and agreement with the authorized row, including action and permitted creation basis. Build and validate the exact Manifest 2.0 and use the existing transactional importer and stale checks. A changed namespace count or execution-manifest digest alone does not invalidate approval of an unchanged row. A stale, rejected or unexpected no-op outcome aborts the year.
 4. Require one matching receipt per new create before commit. Retain its execution-manifest digest and record the matrix digest and row ID in the existing receipt JSON. Reconcile committed rows and receipts after commit. Report the authorized count, reviewed existing rows, skipped prior completions, new creates, blockers, conflicts, canonical and receipt PKs and UUIDs, evidence and approval linkage, unexpected changes and completion status.
 5. On failure, roll back all provisional creates and receipts from the year attempt. Preserve previously committed years. Save a durable human-readable local failure report with matrix digest, year, failed row or operation, reason, rollback status and available plan or manifest digest. Surface a report-write failure as a workflow error. Retry after fresh validation resolves the blocker. Committed receipts and live canonical identities allow report recovery and safe continuation without renewed approval for unchanged rows.
+
+### Stage 6B operator commands
+
+Use backed-up local review storage, such as an existing directory under `backups/review/`. Supply the matrix JSON and exact Candidate v2 files. For each row, evidence references use `source_id|raw_artifact_hash|assertion_set_id` and the digest of the complete evidence document. Correspondence references use the revision UUID and its content digest.
+
+- `review_generation_trim_matrix --matrix MATRIX` validates and displays the scope and digest.
+- `approve_generation_trim_matrix --matrix MATRIX --output APPROVAL` displays the same scope, requires affirmative confirmation and creates a separate approval JSON file exclusively.
+- `reconcile_generation_trim_matrix --matrix MATRIX --approval APPROVAL --year YEAR --candidate CANDIDATE` reports live status without writes. Repeat `--candidate` for each row input. Candidate inputs for other approved years can support failure-report progress checks.
+- `execute_generation_trim_matrix_year` takes the same inputs as reconciliation plus `--output-dir DIRECTORY`. Use `--dry-run` for read-only preflight. Execution requires operator confirmation and retains a separate attempt directory containing the matrix, approval, preflight, candidates, execution manifests and result or failure report.
+
+The attempt records the approval operator from the immutable approval artifact and the executing CLI operator separately. Import receipts attribute execution to the latter. An initial artifact failure stops before canonical execution. If the transaction commits but final reporting fails, the command reports the committed state and attempt location. Run read-only reconciliation with the same matrix, approval and candidates to recover receipt-backed status. A reporting failure does not trigger an automatic retry.
+
+Year reports distinguish years verified complete before the attempt, regardless of model-year order, from the year completed during the attempt. Other years can be pending, blocked, conflicting or unverified when their inputs or state cannot be checked.
+
+The v1 command supports ordinary planner creates and pinned existing identities. Adjudication-backed creates need an exact adjudication binding before they can be admitted. Scoped amendments remain a review procedure. These commands do not merge or supersede approval artifacts.
 
 Architecture approval grants no authority to execute the 74 remaining defined JK core imports.
 

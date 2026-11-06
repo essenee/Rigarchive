@@ -10,6 +10,7 @@ Enforces explicit human authorization (--authorize flag) before performing datab
 from pathlib import Path
 from django.core.management.base import BaseCommand, CommandError
 
+from reference.ingestion.attribution import cli_attribution, add_attribution_arguments
 from reference.ingestion.acquisition.profiles import JDPowerProfile, ToyotaUSAPressroomProfile
 from reference.ingestion.acquisition.snapshots import RawSourceSnapshotMetadata
 from reference.ingestion.candidate.builder import construct_candidate_configuration
@@ -50,12 +51,7 @@ class Command(BaseCommand):
             default=CanonicalRecordCorrection.CorrectionReason.NORMALIZATION_RULE_CORRECTION,
             help="Correction reason classification.",
         )
-        parser.add_argument(
-            "--operator",
-            type=str,
-            default="cli:correction_operator",
-            help="Operator attribution label.",
-        )
+        add_attribution_arguments(parser)
         parser.add_argument(
             "--authorize",
             action="store_true",
@@ -67,7 +63,8 @@ class Command(BaseCommand):
         source_id = options["candidate_source"]
         native_id = options["native_id"]
         reason = options["reason"]
-        operator = options["operator"]
+        attribution = cli_attribution(options)
+        operator = attribution.director
         authorized = options["authorize"]
 
         # 1. Fetch superseded record
@@ -162,7 +159,7 @@ class Command(BaseCommand):
         self.stdout.write(f"Replacement Planned Fields:      {plan.target_vehicle_definition_fields}")
         self.stdout.write(f"Planned Action:                  {plan.planned_action.value}")
         self.stdout.write(f"Correction Reason:               {reason}")
-        self.stdout.write(f"Operator Label:                  {operator}")
+        self.stdout.write(attribution.describe_cli())
         self.stdout.write("=" * 80)
 
         if not authorized:
@@ -177,6 +174,7 @@ class Command(BaseCommand):
             replacement_plan=plan,
             correction_reason=reason,
             operator_label=operator,
+            execution_agent=attribution.agent,
         )
 
         self.stdout.write(self.style.SUCCESS("=" * 80))
