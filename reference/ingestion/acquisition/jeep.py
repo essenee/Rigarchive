@@ -6,6 +6,7 @@ schema or a claim that PDF text extraction captures artwork and reading order.
 import hashlib
 import io
 import re
+from dataclasses import replace
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -227,3 +228,80 @@ def extract_jk_remaining_grade(raw, metadata, configuration):
         raw, metadata, record_id=f"pdf-page-9-{configuration}",
         extractor_id=JK_REMAINING_GRADES_EXTRACTOR, prefix=configuration.replace("-", "_"), rows=rows,
     )
+
+
+JL_ORDER_GUIDE_INVENTORY = "backups/review/jeep_jl_my2018_jdpower_pilot/order-guide-inventory.json"
+JL_ORDER_GUIDE_HASH = "sha256:aa811c2553ef62d57d8b922e12aef664ea9e3be8ab9540636be80f27d360ba66"
+JL_MOAB_INVENTORY = "backups/review/jeep_jl_my2018_jdpower_pilot/moab-order-guide-supplement.json"
+JL_MOAB_HASH = "sha256:4a3812f8fe0f44db36e2324cc87495fbda6b510cf7945629c4ed83eb8a9d21fc"
+JL_ORDER_GUIDE_EXTRACTOR = "jeep_2018_jl_order_guide_inventory"
+
+
+def extract_jl_order_guide_inventory(raw):
+    """Convert the exact reviewed FCA order-guide transcription to assertion sets."""
+    import json
+
+    actual = "sha256:" + hashlib.sha256(raw).hexdigest()
+    paths = {JL_ORDER_GUIDE_HASH: JL_ORDER_GUIDE_INVENTORY, JL_MOAB_HASH: JL_MOAB_INVENTORY}
+    if actual not in paths:
+        raise AcquisitionError("Exact reviewed MY2018 JL order-guide inventory required.")
+    data = json.loads(raw)
+    result = []
+    for row in data["configurations"]:
+        body = "Wrangler" if row["doors"] == 2 else "Wrangler Unlimited"
+        grade = row["proposed_trim"].removeprefix("Unlimited ")
+        record = f"jl-{row['doors']}d-{grade.lower().replace(' ', '-')}-{row['engine_code'].lower()}"
+        provenance = SourceMetadata(
+            source_id="jeep_usa", source_type="manufacturer_specification",
+            source_locator=row["guide_url"], native_record_id=record,
+            acquisition_method="local_file",
+            source_applicability=SourceApplicability(
+                market="US", applicability_basis="official_jeep_en_us_publication",
+                publisher_jurisdiction="FCA US LLC", applicability_scope="configuration",
+            ),
+            extraction_provenance=ExtractionProvenance(
+                actual, paths[actual], JL_ORDER_GUIDE_EXTRACTOR,
+                "1.0.0", "manually_verified_transcription",
+            ),
+            unknown_fields={"publication_revision": data["guide_reissue_date"], "publisher": data["publisher"]},
+        )
+        context = f"page {row['guide_page']}; {row['model_code']}; {data['section']}"
+        facts = [
+            ("make_name", "Jeep"), ("model_name", "Wrangler"), ("model_year", "2018"),
+            ("market", "US"), ("manufacturer_model_code", row["model_code"]),
+            ("body_designation", body), ("manufacturer_grade", row.get("manufacturer_grade", grade)),
+            ("engine_descriptor", row["engine"]), ("drive_descriptor", "4WD"),
+        ]
+        facts.extend((f"order_code_{transmission}", code)
+                     for transmission, code in row["order_codes"].items())
+        if actual == JL_MOAB_HASH:
+            facts.extend((key, row[key]) for key in ("edition_code", "transfer_case", "rear_differential"))
+        source = SourceAssertionSet(
+            Envelope("rigarchive.source_assertion_set.v1", "1.1.0"), provenance,
+            [SourceAssertion(f"{record}_{key}", key, value, context) for key, value in facts],
+        )
+        validate_source_assertion_set(source)
+        result.append(source)
+    return result
+
+def jl_order_guide_generation_sets(configurations):
+    """Derive one stable correspondence evidence document per FCA model code."""
+    by_code = {}
+    for source in configurations:
+        model_code = next(row for row in source.source_assertions
+                          if row.attribute_key == "manufacturer_model_code")
+        if model_code.raw_value in by_code:
+            continue
+        record = f"jl-guide-{model_code.raw_value.lower()}"
+        provenance = replace(source.provenance, native_record_id=record)
+        rows = [
+            replace(row, assertion_id=f"{record}_{row.attribute_key}")
+            for row in source.source_assertions
+            if row.attribute_key in {"make_name", "model_name", "model_year", "market", "body_designation"}
+        ]
+        rows.append(replace(model_code, assertion_id=f"{record}_source_model_code",
+                            attribute_key="source_model_code"))
+        evidence = SourceAssertionSet(source.envelope, provenance, rows)
+        validate_source_assertion_set(evidence)
+        by_code[model_code.raw_value] = evidence
+    return by_code

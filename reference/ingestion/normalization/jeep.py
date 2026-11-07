@@ -1,7 +1,9 @@
 """Evidence-scoped Jeep Wrangler rules and legacy W1 normalization."""
 import re
+from pathlib import Path
 
 from reference.ingestion.acquisition.jeep import (
+    JL_MOAB_HASH, JL_MOAB_INVENTORY, JL_ORDER_GUIDE_EXTRACTOR, JL_ORDER_GUIDE_INVENTORY, extract_jl_order_guide_inventory,
     JK_REMAINING_GRADES_EXTRACTOR, JK_UNLIMITED_SPORT_HASH, JK_UNLIMITED_SPORT_REVISION, PUBLICATIONS,
 )
 from reference.ingestion.contracts import NormalizedInterpretation, TechnicalValue
@@ -128,12 +130,42 @@ def _normalize_reviewed_jk_row(rows):
     ]
 
 
+def _normalize_jl_order_guide(assertions):
+    is_moab = assertions.provenance.extraction_provenance.raw_artifact_hash == JL_MOAB_HASH
+    retained = Path(__file__).resolve().parents[3] / (JL_MOAB_INVENTORY if is_moab else JL_ORDER_GUIDE_INVENTORY)
+    if assertions not in extract_jl_order_guide_inventory(retained.read_bytes()):
+        raise ValueError("Exact reviewed JL order-guide assertion set required.")
+    rows = {row.attribute_key: row for row in assertions.source_assertions}
+    trim = "Moab" if is_moab else rows["manufacturer_grade"].raw_value
+    if rows["body_designation"].raw_value == "Wrangler Unlimited":
+        trim = f"Unlimited {trim}"
+    engine = rows["engine_descriptor"].raw_value
+    displacement, cylinders = {"3.6L Pentastar V6": (3.6, 6), "2.0L Turbo I4 eTorque": (2.0, 4)}[engine]
+    mappings = (
+        ("make_name", "make", "Jeep"), ("model_name", "model", "Wrangler"),
+        ("model_year", "model_year", 2018), ("market", "market", "US"),
+        ("manufacturer_grade", "trim", trim),
+        ("engine_descriptor", "engine_displacement_liters", TechnicalValue(displacement, "L", engine)),
+        ("engine_descriptor", "engine_cylinders", cylinders),
+        ("drive_descriptor", "generic_drive_classification", "4WD"),
+    )
+    return [
+        NormalizedInterpretation(
+            f"{rows[source].assertion_id}_{target}", rows[source].assertion_id, target, value,
+            raw_source_value=rows[source].raw_value, manufacturer_term=rows[source].raw_value,
+        )
+        for source, target, value in mappings
+    ]
+
+
 def normalize_jeep(assertions):
     validate_source_assertion_set(assertions)
     if assertions.provenance.source_id != "jeep_usa":
         raise ValueError("Jeep manufacturer assertions required.")
     provenance = assertions.provenance
     ep = provenance.extraction_provenance
+    if ep and ep.extractor_id == JL_ORDER_GUIDE_EXTRACTOR:
+        return _normalize_jl_order_guide(assertions)
     if provenance.native_record_id in _REVIEWED_JK_ROWS or (
         ep and ep.extractor_id in {_STAGE1_EXTRACTOR, JK_REMAINING_GRADES_EXTRACTOR}
     ):

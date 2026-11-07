@@ -217,8 +217,9 @@ class JDPowerExtractor:
                         ))):
                     raise JDPowerExtractorError("Wrangler requires explicit row identity and verified structured-inventory provenance.")
                 wrangler_grade(year, item.get("trim"), item.get("drivetrain"),
-                               item.get("engine_displacement_liters"), item.get("engine_cylinders"))
-                if (item["model"] == "Wrangler Unlimited" or "wrangler-unlimited" in locator) and " 4D " not in item["trim"]:
+                               item.get("engine_displacement_liters"), item.get("engine_cylinders"),
+                               source_locator=locator)
+                if (item["model"] == "Wrangler Unlimited" or "wrangler-unlimited" in locator) and not item["trim"].startswith("Utility 4D "):
                     raise JDPowerExtractorError("Unlimited source scope contradicts the row body.")
                 if any(asset.provenance.native_record_id == (item.get("native_trim_id") or f"jdp_cfg_{idx+1}") for asset in assertion_sets):
                     raise JDPowerExtractorError("Duplicate Wrangler source selector.")

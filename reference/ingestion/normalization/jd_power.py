@@ -64,6 +64,7 @@ class JDPowerNormalizer(BaseSourceNormalizer):
             jeep_trim = wrangler_grade(
                 facts.get("model_year"), facts.get("trim"), facts.get("drive_descriptor"),
                 facts.get("engine_displacement_liters"), facts.get("engine_cylinders"),
+                source_locator=assertion_set.provenance.source_locator,
             )
             if facts["model_name"] == "Wrangler Unlimited" and not jeep_trim.startswith("Unlimited "):
                 raise ValueError("Unlimited model name contradicts the source body.")

@@ -17,12 +17,12 @@ class WranglerJDPowerTests(SimpleTestCase):
                     trim="Utility 4D Unlimited X 2WD", drivetrain="2WD", native_trim_id="row-1",
                     engine_displacement_liters=3.8, engine_cylinders=6) | changes
 
-    def extract(self, rows, *, hash_override=None, year=2007):
+    def extract(self, rows, *, hash_override=None, year=2007, route="wrangler"):
         raw = json.dumps({"_provenance": {"publisher": "J.D. Power", "source_id": "jd_power",
                                               "publication_scope": "US"}, "configurations": rows}).encode()
         meta = SimpleNamespace(source_id="jd_power", content_hash=hash_override or compute_content_hash(raw),
                                storage_path="storage/synthetic.json", acquired_at="2026-11-05T00:00:00Z",
-                               publisher_locator=f"https://www.jdpower.com/cars/{year}/jeep/wrangler/trim")
+                               publisher_locator=f"https://www.jdpower.com/cars/{year}/jeep/{route}/trim")
         return JDPowerExtractor().extract(raw, meta)
 
     def test_eight_explicit_rows_and_candidate_lineage(self):
@@ -77,3 +77,37 @@ class WranglerJDPowerTests(SimpleTestCase):
         self.assertEqual(first, second)
         self.assertEqual(first.provenance.native_record_id, "jdp_cfg_1")
         self.assertEqual(JDPowerNormalizer().normalize(first)[1].normalized_concept, "Wrangler")
+
+    def test_my2018_jl_listings_preserve_body_without_claiming_generation(self):
+        for body, route, grades in (
+            ("2D", "wrangler", ("Sport", "Rubicon")),
+            ("4D", "wrangler-unlimited", ("Sport", "Sahara", "Rubicon")),
+        ):
+            for grade in grades:
+                with self.subTest(body=body, grade=grade):
+                    row = self.row(model_year=2018, trim=f"Utility {body} {grade} 4WD V6",
+                                   drivetrain="4WD", engine_displacement_liters=3.6)
+                    source, = self.extract([row], year=2018, route=route)
+                    interpretations = JDPowerNormalizer().normalize(source)
+                    trim = ("Unlimited " if body == "4D" else "") + grade
+                    candidate = construct_candidate_configuration(
+                        CandidateIdentity("Jeep", "Wrangler", model_year=2018, market="US", trim_name=trim),
+                        [source], interpretations, schema_version="2.0.0",
+                        candidate_reference="synthetic-jl", created_at="2026-11-05T00:00:00Z",
+                    )
+                    facts = {item.target_attribute_key: item.normalized_concept for item in interpretations}
+                    self.assertEqual(facts["trim"], trim)
+                    self.assertFalse(candidate.generation_evidence)
+
+    def test_my2018_jl_rejects_jk_locator_wrong_body_and_unsupported_mechanics(self):
+        row = self.row(model_year=2018, trim="Utility 2D Sport 4WD V6",
+                       drivetrain="4WD", engine_displacement_liters=3.6)
+        for route, changes in (
+            ("wrangler-jk", {}),
+            ("wrangler-unlimited", {}),
+            ("wrangler", {"engine_displacement_liters": 2.0, "engine_cylinders": 4}),
+            ("wrangler", {"trim": "Utility 2D Sport S 4WD V6"}),
+            ("wrangler", {"drivetrain": "2WD"}),
+        ):
+            with self.subTest(route=route, changes=changes), self.assertRaises(ValueError):
+                self.extract([row | changes], year=2018, route=route)
