@@ -191,3 +191,17 @@ Existing Toyota and Volkswagen baselines, navigation and unambiguous generation 
 Migration `reference/0006_generationcorrespondencerevision_and_receipt_resolution` is additive. It creates no correspondence or vehicle data and does not modify Generation ranges or VehicleDefinition identities. Apply it to development/production only after separate database-write authorization. Retained evidence publication/import requires separately reviewed data operations.
 
 Tests use isolated databases and temporary media/raw storage. Synthetic JK/JL fixtures validate protocol behavior only and are not manufacturer evidence. Required checks include deterministic resolution, invalid scope/conflicts, v2 lineage and manifest integrity, stale state before create/no-op, concurrent successors, receipt rollback, auditable repeats, pre-write guards, zero-write planning, legacy parsing, and Toyota/Volkswagen regressions.
+
+
+## Codex Django verification on macOS
+
+When the managed Codex session cannot load the Python.org framework used by the local virtual environment, use the verified Homebrew Python 3.13.2 executable with the current project's Python 3.13 packages. This command is scoped to Codex verification. The project virtual environment and normal Terminal workflow remain unchanged.
+
+```sh
+PYTHONDONTWRITEBYTECODE=1 \
+PYTHONPATH="$PWD/venv/lib/python3.13/site-packages" \
+RIGARCHIVE_TEST_DB_PATH=:memory: \
+/opt/homebrew/bin/python3.13 manage.py test
+```
+
+Run from the repository root. `RIGARCHIVE_TEST_DB_PATH` sets Django's default SQLite name. For execution rehearsals, use a read-only snapshot of development data and explicitly verify that the Django connection targets a disposable copy before invoking the execution service. Keep rehearsal approvals, manifests, snapshots, and receipts separate from live authorization artifacts.

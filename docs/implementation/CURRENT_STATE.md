@@ -1,7 +1,13 @@
 RigArchive Project Status Document
 Version: 1.3
-Last Updated: 2026-11-05
+Last Updated: 2026-11-06
 Purpose: Current implementation status and development roadmap
+
+## MY2018 US Wrangler JL canonical import completed (2026-11-06 local)
+
+Matrix v2 `sha256:f8386d4a98892ddcbd096c375a72ece93b15a99ee951a4b71cbcc8e1d8bdf241` completed in one model-year transaction under JL Generation PK `32`, UUID `38d3c3ac-f825-4406-abb5-c2d12b9129a4`. The final scope contains 15 active configurations. VehicleDefinitions `795–808` and execution receipts `2843–2856` were created. Existing Sport V6 PK `715` retained its UUID, slug, and canonical fields. SQLite integrity and foreign-key checks passed. Comparison with the pre-import snapshot found no changes to existing application records, including JK and generation correspondence.
+
+The idempotent retry reported 14 previously completed rows and one reviewed existing row with zero additional definitions or receipts. The database SHA-256 remained `554ad78185062eca135c49a934fb4c4eeba423dd9c4b3dd325f9d93f292e9eab` across the retry. The private artifact directory is `backups/review/jeep_jl_my2018_jdpower_pilot/live-import-20261107T013404Z/`. It contains `pre-import.sqlite3`, `approval.json`, `reconciliation.json`, the execution result and manifests under `matrix-2018-bawfg0jb/`, and the retry result under `matrix-2018-qz845cju/`.
 
 ## W2 B4 factory equipment and compatibility — corrections verified, pending independent architectural acceptance (2026-11-04)
 
@@ -413,7 +419,7 @@ RA-019 — Canonical Reference Import Planning & Create-Only Execution Implement
 - Direct Evidence Consistency: Evaluates mapped values directly as sets (`len(distinct)`). Multiple unequal normalized values for any concept flag `REQUIRES_REVIEW` (`FLAG_REVIEW`). Zero source precedence or winner selection
 - Parent Resolution: Deterministic lookup against active database records (`Manufacturer`, `VehicleModel`, `Generation`). Exactly 1 match resolves; 0 or >1 matches trigger `INELIGIBLE` or `REQUIRES_REVIEW`. Importer NEVER automatically creates parent entities
 - Target Field & Engine Representation: Target dictionary contains ONLY current `VehicleDefinition` fields (`model_year`, `trim_name`, `engine_name`, `drivetrain`, `market`). Engine display string formatted via `_format_engine_name` (e.g. `"4.0L V6"`). Free-text `engine_name` string inequality is NOT used as proof of mechanical distinctness
-- Drivetrain Mechanical Dimension: `drivetrain` (`2WD`, `4WD`, `AWD`) is the ONLY approved structured mechanical dimension establishing `MECHANICAL_DIMENSION` `CREATE` against existing same-trim rows
+- Mechanical Dimension: Candidate v1 retains the legacy drivetrain comparison, including mixed-drive namespaces used by the historical bootstrap. It cannot establish an engine-based create from display labels. Candidate v2 uses the drivetrain basis when no same-drive peer exists. When a same-drive peer exists, the candidate must supply structured displacement and cylinder count linked to retained descriptor evidence, and every active same-trim, same-drive peer must have a matching creation receipt with retained engine evidence. Different displacement or cylinder count can establish the distinction. Equal, missing, or conflicting dimensions remain review-required. Manifest 2.0 binds the proof, and the importer recomputes it inside the create transaction. The JL rehearsal and live import verified sequential mechanical creates.
 - Controlled Production 4Runner Behavior: Default production NHTSA/EPA candidates (lacking mapped `trim` and `market`) plan to `REQUIRES_REVIEW` / `FLAG_REVIEW` performing ZERO database writes
 - Stale-Plan Revalidation: Inside `transaction.atomic()`, `FIRST_REPRESENTATION` plans verify namespace `(generation_id, model_year, market)` remains empty. `MECHANICAL_DIMENSION` plans verify `mechanical_basis_existing_id` record remains unchanged in generation, model_year, market, trim_name, drivetrain, and namespace count. Changed namespaces or modified basis records return `ABORTED_STALE_PLAN`
 - Transaction & IntegrityError Safety: Execution runs inside `transaction.atomic()` with pre-save `full_clean()`. `IntegrityError` caught outside failed atomic block after rollback completes: exact field match yields `NO_OP_EXACT_MATCH`; conflicting fields yield `REJECTED`
