@@ -204,12 +204,30 @@ def execute_candidate_import(
                         messages=["Original mechanical basis record was deleted prior to execution."],
                     )
 
+                proof = plan.generation_resolution.get("engine_distinction")
+                if proof is not None:
+                    from reference.ingestion.importing.engine_distinction import engine_distinction_proof
+                    from reference.ingestion.serialization import candidate_config_doc_from_dict
+
+                    peers = [row for row in current_namespace_rows
+                             if row.trim_name == plan.target_vehicle_definition_fields["trim_name"]
+                             and row.drivetrain == plan.target_vehicle_definition_fields["drivetrain"]]
+                    current_proof = engine_distinction_proof(
+                        candidate_config_doc_from_dict(plan.candidate_snapshot), peers,
+                    )
+                    if current_proof is None or current_proof != proof or basis_vd.pk != peers[0].pk:
+                        return CanonicalImportResult(
+                            candidate_reference=ref_id,
+                            outcome=ImportExecutionOutcome.ABORTED_STALE_PLAN,
+                            messages=["Mechanical engine evidence or its canonical basis changed."],
+                        )
+
                 if (
                     basis_vd.generation_id != plan.resolved_generation_id
                     or basis_vd.model_year != target_year
                     or basis_vd.market != target_market
                     or basis_vd.trim_name != plan.target_vehicle_definition_fields.get("trim_name")
-                    or basis_vd.drivetrain == plan.target_vehicle_definition_fields.get("drivetrain")
+                    or (proof is None and basis_vd.drivetrain == plan.target_vehicle_definition_fields.get("drivetrain"))
                 ):
                     return CanonicalImportResult(
                         candidate_reference=ref_id,

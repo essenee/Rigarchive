@@ -2,6 +2,7 @@
 
 **Status**: Accepted  
 **Date**: 2026-08-15  
+**Last Updated:** 2026-11-06
 **Domain**: Reference Domain — Data Ingestion Pipeline  
 
 ---
@@ -144,6 +145,9 @@ $$\text{Source Evidence} \longrightarrow \text{Candidate Aggregation} \longright
    * Displacement and cylinder count alone do not distinguish every engine option (e.g., naturally aspirated vs turbocharged variants).
    * Synthesized `engine_name` alone does not establish complete real-world engine identity.
 3. **Evidence Integration**: If an explicit mapped engine designation is emitted by normalization, it will integrate according to approved mapping/reconciliation rules without introducing undocumented canonical-import precedence shortcuts.
+
+4. **Engine mechanical creation**: For a same-trim, same-drivetrain Candidate v2 create, require a retained, unambiguous engine descriptor with explicit displacement and cylinder layout/count. Both normalized mechanical values must trace to retained descriptor assertions. For every active same-drive peer, require a unique successful creation receipt that binds the current canonical identity and retained descriptor bytes. The receipt descriptor must agree with the stored canonical engine label. Different displacement or cylinder count establishes a distinction. Equal dimensions, missing or contradictory evidence, layout alone, and identifier or label differences remain review-required under this conservative rule.
+5. **Execution binding**: Manifest 2.0 binds the candidate and a versioned engine proof within its resolution snapshot. The proof identifies each peer and its receipt evidence digest. The importer rebuilds the proof from the current namespace and verified bytes inside the create transaction. Existing drivetrain proofs and historical resolution snapshots retain their prior interpretation. Matrix review must explicitly permit mechanical creation when a same-trim peer may be created earlier in the approved year.
 
 ---
 

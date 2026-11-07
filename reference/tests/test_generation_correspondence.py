@@ -46,15 +46,20 @@ class SyntheticWranglerSetup:
         self.jl = Generation.objects.create(vehicle_model=self.model, name="Synthetic JL", start_year=2018, end_year=2018)
         self.candidate = self.make_candidate("JK")
 
-    def make_candidate(self, designation="JK", second=None, *, year=2018, trim="Synthetic Sport", drive="4WD"):
+    def make_candidate(self, designation="JK", second=None, *, year=2018, trim="Synthetic Sport", drive="4WD", engine=None):
         fixture = {"synthetic_test_only": True, "make": "Jeep", "model": "Wrangler", "year": year,
                    "trim": trim, "drive": drive, "displacement": 3.6,
                    "cylinders": 6, "engine_name": "Synthetic 3.6L V6", "market": "US"}
+        if engine:
+            displacement, cylinders, descriptor = engine
+            fixture.update(displacement=displacement, cylinders=cylinders,
+                           engine_name=descriptor, engine_descriptor=descriptor)
         if designation is not None:
             fixture["generation_designation"] = designation
         if second:
             fixture["generation_code"] = second
-        path = self.root / f"source-{designation}-{second}.json"
+        suffix = f"-{fixture['displacement']}-{fixture['engine_name'].replace(' ', '-')}" if engine else ""
+        path = self.root / f"source-{designation}-{second}{suffix}.json"
         raw = json.dumps(fixture, sort_keys=True).encode()
         path.write_bytes(raw)
         import hashlib
@@ -70,12 +75,13 @@ class SyntheticWranglerSetup:
         concepts = {"make": "make", "model": "model", "year": "model_year", "trim": "trim",
                     "drive": "generic_drive_classification", "displacement": "engine_displacement_liters",
                     "cylinders": "engine_cylinders", "engine_name": "engine_name", "market": "market"}
-        interps = [NormalizedInterpretation("i-" + k, k, target,
+        interps = [NormalizedInterpretation("i-" + k,
+                   "engine_descriptor" if engine and k in {"displacement", "cylinders"} else k, target,
                    TechnicalValue(v, "L", str(v)) if k == "displacement" else v)
                    for k, target in concepts.items() for v in [fixture[k]]]
         return construct_candidate_configuration(
             CandidateIdentity("Jeep", "Wrangler", model_year=year, market="US", trim_name=fixture["trim"]),
-            [sas], interps, schema_version="2.0.0", candidate_reference=f"synthetic-{designation}-{second}",
+            [sas], interps, schema_version="2.0.0", candidate_reference=f"synthetic-{designation}-{second}{suffix}",
         )
 
     def review(self, candidate=None, generation=None, previous=None, **changes):

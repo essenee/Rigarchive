@@ -384,8 +384,12 @@ def _plan_candidate_import(
     # Namespace contains existing rows: evaluate trim and drivetrain matching
     same_trim_rows = [row for row in namespace_rows if row.trim_name == evidence_trim]
     if same_trim_rows:
+        same_drive_rows = [row for row in same_trim_rows if row.drivetrain == evidence_drive]
+        # Legacy population uses the original drivetrain basis. Candidate v2
+        # must prove engine distinctness when the target drive already exists.
+        legacy = candidate.envelope.schema_version.startswith("1.")
         for row in same_trim_rows:
-            if row.drivetrain != evidence_drive:
+            if (legacy or not same_drive_rows) and row.drivetrain != evidence_drive:
                 # Proven Mechanical Dimensional Difference (Drivetrain)
                 return CanonicalImportPlan(
                     candidate_reference=ref_id,
@@ -402,7 +406,25 @@ def _plan_candidate_import(
                     reasons=["Proven mechanical dimensional difference (drivetrain) with matching trim."],
                 )
 
-        # Same trim and same drivetrain already exists in namespace (candidate differs only by engine label string)
+        from reference.ingestion.importing.engine_distinction import engine_distinction_proof
+        proof = engine_distinction_proof(candidate, same_drive_rows)
+        if proof:
+            return CanonicalImportPlan(
+                candidate_reference=ref_id,
+                eligibility_status=ImportEligibilityStatus.ELIGIBLE,
+                planned_action=ImportPlannedAction.CREATE,
+                create_basis=ImportCreateBasis.MECHANICAL_DIMENSION,
+                namespace_snapshot_count=len(namespace_rows),
+                mechanical_basis_existing_id=proof["peers"][0]["record_pk"],
+                resolved_manufacturer_id=mfr.id,
+                resolved_vehicle_model_id=vm.id,
+                resolved_generation_id=resolved_gen.id,
+                target_vehicle_definition_fields=target_fields,
+                target_slug=target_slug,
+                generation_resolution={"engine_distinction": proof},
+                reasons=["Retained factory engine evidence establishes a mechanical distinction."],
+            )
+
         return CanonicalImportPlan(
             candidate_reference=ref_id,
             eligibility_status=ImportEligibilityStatus.REQUIRES_REVIEW,
@@ -413,7 +435,7 @@ def _plan_candidate_import(
             resolved_generation_id=resolved_gen.id,
             target_vehicle_definition_fields=target_fields,
             target_slug=target_slug,
-            reasons=["Candidate differs from existing same-trim, same-drivetrain row only by engine display label; requires human review."],
+            reasons=["Same-trim, same-drivetrain engine distinctness is not proven by retained evidence; requires human review."],
         )
 
     # No existing row with this trim name exists in namespace: check if distinct factory grade is established by mapped qualified source evidence
@@ -475,6 +497,7 @@ def plan_candidate_import(candidate: CandidateConfigurationDocument) -> Canonica
     plan = _plan_candidate_import(candidate)
     if v2 and plan.resolved_generation_id:
         vm = VehicleModel.objects.get(pk=plan.resolved_vehicle_model_id)
+        engine_proof = plan.generation_resolution.get("engine_distinction")
         plan.generation_resolution = resolve_generation(
             vm, plan.target_vehicle_definition_fields["model_year"], plan.target_vehicle_definition_fields["market"],
             candidate.generation_evidence, candidate.evidence_documents,
@@ -482,6 +505,8 @@ def plan_candidate_import(candidate: CandidateConfigurationDocument) -> Canonica
              "drivetrain": plan.target_vehicle_definition_fields["drivetrain"],
              "engine_name": plan.target_vehicle_definition_fields["engine_name"]},
         )
+        if engine_proof:
+            plan.generation_resolution["engine_distinction"] = engine_proof
         if plan.existing_vehicle_definition_id:
             existing = VehicleDefinition.objects.get(pk=plan.existing_vehicle_definition_id)
             plan.generation_resolution["target_identity"] = {"uuid": str(existing.uuid), "slug": existing.slug}

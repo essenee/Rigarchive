@@ -333,7 +333,8 @@ def revalidate_resolution(plan):
         from reference.models import VehicleDefinition
         existing = VehicleDefinition.objects.get(pk=plan.existing_vehicle_definition_id)
         current["target_identity"] = {"uuid": str(existing.uuid), "slug": existing.slug}
-    require(current == snapshot, "Generation correspondence/resolution became stale.")
+    require(current == {k: v for k, v in snapshot.items() if k != "engine_distinction"},
+            "Generation correspondence/resolution became stale.")
 
 
 def validate_bound_plan(plan):
@@ -347,10 +348,14 @@ def validate_bound_plan(plan):
     validate_candidate_configuration(candidate)
     require(candidate.candidate_reference == plan.candidate_reference, "Candidate reference binding mismatch.")
     snapshot = plan.generation_resolution
-    require(isinstance(snapshot, dict) and set(snapshot) == {
+    require(isinstance(snapshot, dict) and set(snapshot) - {"engine_distinction"} == {
         "resolution_version", "basis", "parents", "model_year", "market", "fields",
         "generation_evidence", "documents", "correspondences", "target_identity",
     }, "Invalid generation resolution contract.")
+    if "engine_distinction" in snapshot:
+        require(plan.create_basis == "mechanical_dimension" and plan.planned_action == "create"
+                and isinstance(snapshot["engine_distinction"], dict),
+                "Engine proof requires a mechanical create.")
     require(snapshot["resolution_version"] == "1.0" and snapshot["basis"] in (
         "unique_year_range", "reviewed_source_correspondence"), "Unsupported resolution semantics.")
     parents = snapshot["parents"]
