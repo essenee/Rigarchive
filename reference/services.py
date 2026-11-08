@@ -15,6 +15,7 @@ from django.http import Http404
 from django.shortcuts import get_object_or_404
 from django.urls import reverse
 
+from reference.powertrain import engine_label
 from reference.models import (
     Generation,
     Manufacturer,
@@ -217,7 +218,7 @@ def _label_configuration_choices(configurations):
     choices = list(configurations)
     attributes = [
         lambda vd: vd.trim_name or "Unnamed trim",
-        lambda vd: vd.engine_name or "Engine not specified",
+        lambda vd: engine_label(vd, short=True),
         lambda vd: vd.get_drivetrain_display(),
     ]
     varying = [attribute for attribute in attributes if len({attribute(vd) for vd in choices}) > 1]

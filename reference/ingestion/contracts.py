@@ -160,7 +160,7 @@ class SourceConfigurationIdentity:
 
 @dataclass
 class TechnicalValue:
-    normalized_value: Optional[Union[int, float]] = None
+    normalized_value: Optional[Union[int, float, str]] = None
     normalized_unit: Optional[str] = None
     raw_source_string: Optional[str] = None
     rpm_normalized: Optional[int] = None
@@ -286,10 +286,16 @@ class CandidateConfigurationDocument:
     unknown_fields: Dict[str, Any] = field(default_factory=dict)
     generation_evidence: List[Dict[str, Any]] = field(default_factory=list)
     evidence_documents: List[Dict[str, Any]] = field(default_factory=list)
+    canonical_powertrain: Optional[Dict[str, Any]] = None
 
 
 @dataclass
 class CanonicalImportAdjudication:
+    """1.0 retains grade findings; 1.1 binds human classifications in evidence_anchors.
+
+    Classification decisions distinguish proposals from approved findings. They
+    neither impersonate manufacturer assertions nor authorize canonical imports.
+    """
     adjudication_version: str = "1.0"
     created_at: str = ""
     operator_label: str = ""

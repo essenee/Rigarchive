@@ -115,7 +115,7 @@ class MatrixYear:
     def _row(self, generation, row):
         candidate = self.candidates.get(row["candidate_reference"])
         if (not isinstance(candidate, CandidateConfigurationDocument)
-                or candidate.envelope.schema_version != "2.0.0"
+                or candidate.envelope.schema_version != ("2.1.0" if self.matrix["matrix_version"] == "2.1" else "2.0.0")
                 or candidate.candidate_reference != row["candidate_reference"]
                 or digest(candidate_config_doc_to_dict(candidate)) != row["candidate_digest"]):
             raise MatrixExecutionError("Candidate does not match the approved row.")
@@ -131,9 +131,8 @@ class MatrixYear:
         existing = row["action"] == "reviewed_existing"
         receipt = None
         if existing or record or receipts:
-            exact = record and record.is_active and all(
-                getattr(record, key) == value for key, value in row["target_fields"].items()
-            )
+            from reference.ingestion.importing.planner import _fields_match_exact
+            exact = record and record.is_active and _fields_match_exact(record, row["target_fields"])
             if existing and exact and _identity(record) == row["existing_record"]:
                 status = "reviewed_existing"
             elif not existing and exact and len(receipts) == 1:

@@ -21,7 +21,7 @@ class Command(BaseCommand):
             candidate = deserialize_artifact(Path(options["candidate"]).read_text())
             if not isinstance(candidate, CandidateConfigurationDocument):
                 raise ValueError("Expected CandidateConfigurationDocument.")
-            if candidate.envelope.schema_version != "2.0.0":
+            if candidate.envelope.schema_version not in ("2.0.0", "2.1.0"):
                 raise ValueError("Offline execution planning requires candidate v2; legacy inspection remains supported.")
             plan = plan_candidate_import(candidate)
             doc = candidate.evidence_documents[0]

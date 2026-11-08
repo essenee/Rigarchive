@@ -120,7 +120,7 @@ def validate_candidate_configuration(
     v2 = obj.envelope.schema_version.startswith("2.")
     validate_envelope(obj.envelope, ArtifactType.CANDIDATE_CONFIGURATION_V2.value if v2 else ArtifactType.CANDIDATE_CONFIGURATION.value)
     if v2:
-        if obj.envelope.schema_version != "2.0.0":
+        if obj.envelope.schema_version not in ("2.0.0", "2.1.0"):
             raise IngestionValidationError("Unsupported candidate v2 execution schema.")
         from reference.ingestion.generation_correspondence import validate_generation_evidence
         validate_generation_evidence(obj.generation_evidence, obj.evidence_documents)
@@ -132,6 +132,14 @@ def validate_candidate_configuration(
         }
         if any(i.source_assertion_ref not in qualified_refs for i in obj.normalized_assertions):
             raise IngestionValidationError("Broken document-qualified interpretation lineage.")
+
+    if obj.envelope.schema_version == "2.1.0":
+        from reference.ingestion.importing.powertrain_identity import candidate_powertrain
+        if "canonical_powertrain" in obj.unknown_fields:
+            raise IngestionValidationError("Reserved canonical_powertrain cannot be supplied through unknown_fields.")
+        candidate_powertrain(obj)
+    elif obj.canonical_powertrain is not None or "canonical_powertrain" in obj.unknown_fields:
+        raise IngestionValidationError("Structured powertrain requires Candidate schema 2.1.0.")
 
     if not obj.candidate_reference:
         raise IngestionValidationError("CandidateConfigurationDocument 'candidate_reference' is required.")
@@ -233,6 +241,11 @@ def validate_artifact(
 def validate_adjudication(adj: CanonicalImportAdjudication) -> None:
     """Validate human adjudication contract attributes, category eligibility, and hash integrity."""
     from reference.ingestion.serialization import adjudication_to_dict, compute_adjudication_hash
+
+    if adj.adjudication_version == "1.1":
+        from reference.ingestion.classification_adjudication import validate_classification_adjudication
+        validate_classification_adjudication(adj)
+        return
 
     if adj.adjudication_version != "1.0":
         raise IngestionValidationError(f"Unsupported adjudication_version '{adj.adjudication_version}'. Expected '1.0'.")

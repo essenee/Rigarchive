@@ -89,6 +89,13 @@ def engine_distinction_proof(candidate, peers):
     Equal dimensions leave identity unresolved. Labels, layout alone, boost and
     identifier spellings cannot establish an engine-based create under this rule.
     """
+    if candidate.envelope.schema_version == "2.1.0":
+        from .powertrain_identity import identity_proof
+        try:
+            proof = identity_proof(candidate, peers)
+            return proof if peers and all(p["canonical_powertrain"] != proof["canonical_powertrain"] for p in proof["peers"]) else None
+        except (ValidationError, OSError, ValueError, KeyError, TypeError):
+            return None
     if candidate.envelope.schema_version != "2.0.0" or not peers:
         return None
     try:

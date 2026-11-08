@@ -205,7 +205,7 @@ def execute_candidate_import(
                     )
 
                 proof = plan.generation_resolution.get("engine_distinction")
-                if proof is not None:
+                if proof is not None and proof.get("version") != "2.0":
                     from reference.ingestion.importing.engine_distinction import engine_distinction_proof
                     from reference.ingestion.serialization import candidate_config_doc_from_dict
 
@@ -268,6 +268,9 @@ def execute_candidate_import(
                 **plan.target_vehicle_definition_fields,
             )
 
+            if plan.generation_resolution.get("resolution_version") == "1.1":
+                vd.slug = plan.target_slug
+
             # Model validation before save
             try:
                 vd.full_clean()
@@ -289,6 +292,9 @@ def execute_candidate_import(
             )
 
 
+    except (ValidationError, ObjectDoesNotExist, KeyError, TypeError, ValueError, OSError) as exc:
+        return CanonicalImportResult(candidate_reference=ref_id,
+            outcome=ImportExecutionOutcome.ABORTED_STALE_PLAN, messages=[f"Structured plan became stale: {exc}"])
     except IntegrityError:
         # Atomic block has exited and rolled back cleanly. Re-query outside atomic block.
         existing_after = VehicleDefinition.objects.filter(

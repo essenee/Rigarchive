@@ -392,6 +392,8 @@ def candidate_config_doc_to_dict(obj: CandidateConfigurationDocument) -> Dict[st
     if obj.envelope.schema_version.startswith("2."):
         res["generation_evidence"] = obj.generation_evidence
         res["evidence_documents"] = obj.evidence_documents
+    if obj.envelope.schema_version == "2.1.0":
+        res["canonical_powertrain"] = obj.canonical_powertrain
     res.update(obj.unknown_fields)
     return res
 
@@ -718,6 +720,8 @@ def candidate_config_doc_from_dict(d: Dict[str, Any]) -> CandidateConfigurationD
         "packages_and_options", "attribute_provenance", "reconciliation_and_review",
         "evidence_raw_hashes", "generation_evidence", "evidence_documents"
     }
+    if d.get("envelope", {}).get("schema_version") == "2.1.0":
+        known_keys.add("canonical_powertrain")
     unknown = {k: v for k, v in d.items() if k not in known_keys}
     env = envelope_from_dict(d.get("envelope", {}))
     cand_ref = d.get("candidate_reference", "")
@@ -744,6 +748,7 @@ def candidate_config_doc_from_dict(d: Dict[str, Any]) -> CandidateConfigurationD
         evidence_raw_hashes=d.get("evidence_raw_hashes", []),
         generation_evidence=d.get("generation_evidence", []),
         evidence_documents=d.get("evidence_documents", []),
+        canonical_powertrain=d.get("canonical_powertrain") if env.schema_version == "2.1.0" else None,
         unknown_fields=unknown,
     )
     if env.schema_version.startswith("2.") or env.artifact_type == ArtifactType.CANDIDATE_CONFIGURATION_V2.value:

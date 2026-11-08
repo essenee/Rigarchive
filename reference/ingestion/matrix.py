@@ -15,6 +15,7 @@ from uuid import UUID
 
 MATRIX_VERSION = "1.0"
 MATRIX_RESOLUTION_VERSION = "2.0"
+MATRIX_POWERTRAIN_VERSION = "2.1"
 _DIGEST = re.compile(r"^sha256:[0-9a-f]{64}$")
 _SLUG = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 _CREATE_BASES = frozenset({
@@ -94,7 +95,7 @@ def validate_matrix(matrix: Mapping[str, Any]) -> None:
     """Validate exact v1 schema; reject execution/approval fields in scope."""
     _keys(matrix, _MATRIX_KEYS, "matrix")
     version = matrix["matrix_version"]
-    if version not in (MATRIX_VERSION, MATRIX_RESOLUTION_VERSION):
+    if version not in (MATRIX_VERSION, MATRIX_RESOLUTION_VERSION, MATRIX_POWERTRAIN_VERSION):
         _fail("Unsupported matrix version")
     _keys(matrix["parents"], set(_PARENT_KEYS), "parents")
     for key in _PARENT_KEYS:
@@ -111,7 +112,7 @@ def validate_matrix(matrix: Mapping[str, Any]) -> None:
     ids, slugs, identities = set(), set(), set()
     for i, row in enumerate(rows):
         path = f"rows[{i}]"
-        _keys(row, _ROW_KEYS | ({"generation_binding"} if version == MATRIX_RESOLUTION_VERSION else set()), path)
+        _keys(row, _ROW_KEYS | ({"generation_binding"} if version != MATRIX_VERSION else set()), path)
         row_id = _string(row["row_id"], f"{path}.row_id")
         if row_id in ids:
             _fail(f"Duplicate row_id: {row_id}")
@@ -119,7 +120,15 @@ def validate_matrix(matrix: Mapping[str, Any]) -> None:
         year = row["model_year"]
         if type(year) is not int or year not in years:
             _fail(f"{path}.model_year: outside matrix scope")
-        _keys(row["target_fields"], _FIELDS, f"{path}.target_fields")
+        from reference.powertrain import FIELDS, validate_powertrain
+        target_keys = _FIELDS | set(FIELDS) if version == MATRIX_POWERTRAIN_VERSION else _FIELDS
+        _keys(row["target_fields"], target_keys, f"{path}.target_fields")
+        if version == MATRIX_POWERTRAIN_VERSION:
+            from django.core.exceptions import ValidationError
+            try:
+                validate_powertrain({k: row["target_fields"][k] for k in FIELDS}, complete=True)
+            except ValidationError as exc:
+                _fail(str(exc))
         fields = row["target_fields"]
         if fields["model_year"] != year or type(fields["model_year"]) is not int or fields["market"] != market:
             _fail(f"{path}: target year/market mismatch")
@@ -129,7 +138,8 @@ def validate_matrix(matrix: Mapping[str, Any]) -> None:
         if slug in slugs:
             _fail(f"Duplicate target slug: {slug}")
         slugs.add(slug)
-        identity = tuple(fields[k] for k in sorted(_FIELDS))
+        identity_keys = (target_keys - {"engine_name"}) if version == MATRIX_POWERTRAIN_VERSION else _FIELDS
+        identity = tuple(fields[k] for k in sorted(identity_keys))
         if identity in identities:
             _fail(f"Duplicate canonical identity in {path}")
         identities.add(identity)
@@ -163,7 +173,7 @@ def validate_matrix(matrix: Mapping[str, Any]) -> None:
             expected = ("explicit_correspondence", "reviewed_source_correspondence") if row["correspondence"] else (
                 "unique_deterministic", "unique_year_range",
             )
-            if (binding["mode"], binding["strategy"]) != expected or binding["resolution_version"] != "1.0":
+            if (binding["mode"], binding["strategy"]) != expected or binding["resolution_version"] != ("1.1" if version == MATRIX_POWERTRAIN_VERSION else "1.0"):
                 _fail(f"{path}: incompatible Generation binding mode, strategy or correspondence pins")
 
 

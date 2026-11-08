@@ -6,6 +6,7 @@ documents against canonical Reference database entities without performing datab
 """
 
 from typing import Any, Dict, List, Optional, Set, Tuple
+from django.core.exceptions import ValidationError
 
 from reference.ingestion.contracts import (
     CandidateConfigurationDocument,
@@ -50,34 +51,44 @@ def _extract_mapped_concept_values(
     ]
 
 
-def _format_engine_name(displacement: Any, cylinders: Any) -> Optional[str]:
+def _format_engine_name(displacement: Any, cylinders: Any, *, structured=False) -> Optional[str]:
     """Format standard descriptive engine display string (e.g. '4.0L V6', '2.7L I4')."""
     displ_val = None
     if isinstance(displacement, TechnicalValue):
         displ_val = displacement.normalized_value
-    elif isinstance(displacement, (int, float)):
+    elif isinstance(displacement, (int, float)) or (structured and isinstance(displacement, str)):
         displ_val = displacement
 
     cyls_val = cylinders if isinstance(cylinders, int) else None
 
+    marketed_label = None
+    if structured and isinstance(displ_val, str):
+        from reference.powertrain import decimal_string
+        marketed_label = decimal_string(displ_val)
+        if "." not in marketed_label:
+            marketed_label += ".0"
     if displ_val is None or cyls_val is None:
         return None
 
+    label = marketed_label or f"{displ_val:.1f}"
     if cyls_val == 4:
-        return f"{displ_val:.1f}L I4"
+        return f"{label}L I4"
 
-    return f"{displ_val:.1f}L V{cyls_val}"
+    return f"{label}L V{cyls_val}"
 
 
 def _fields_match_exact(vd: VehicleDefinition, target_fields: Dict[str, Any]) -> bool:
-    """Verify exact equality across all current VehicleDefinition target fields."""
-    return (
-        vd.model_year == target_fields.get("model_year")
-        and vd.trim_name == target_fields.get("trim_name")
-        and vd.engine_name == target_fields.get("engine_name")
-        and vd.drivetrain == target_fields.get("drivetrain")
-        and vd.market == target_fields.get("market")
-    )
+    from reference.powertrain import BASE_FIELDS, FIELDS
+    if not all(getattr(vd, k) == target_fields.get(k) for k in BASE_FIELDS):
+        return False
+    if FIELDS[0] in target_fields:
+        from reference.ingestion.importing.powertrain_identity import assess_peer
+        try:
+            values, _ = assess_peer(vd)
+            return values == {k: target_fields[k] for k in FIELDS}
+        except (ValidationError, ValueError, KeyError, TypeError, OSError):
+            return False
+    return True
 
 
 def _plan_candidate_import(
@@ -235,7 +246,7 @@ def _plan_candidate_import(
     try:
         scope = {"trim_name": evidence_trim, "drivetrain": evidence_drive,
                  "engine_name": next(iter(_extract_mapped_concept_values(norm_interps, "engine_name")), None)
-                                or _format_engine_name(evidence_displ, evidence_cyls)}
+                                or _format_engine_name(evidence_displ, evidence_cyls, structured=candidate.envelope.schema_version == "2.1.0")}
         if candidate.envelope.schema_version.startswith("2."):
             resolution = resolve_generation(vm, evidence_year, evidence_market,
                                             candidate.generation_evidence, candidate.evidence_documents, scope)
@@ -256,7 +267,7 @@ def _plan_candidate_import(
     if engine_name_vals and engine_name_vals[0] is not None:
         engine_label = str(engine_name_vals[0]).strip()
     else:
-        engine_label = _format_engine_name(evidence_displ, evidence_cyls)
+        engine_label = _format_engine_name(evidence_displ, evidence_cyls, structured=candidate.envelope.schema_version == "2.1.0")
 
     if not engine_label:
         return CanonicalImportPlan(
@@ -316,6 +327,10 @@ def _plan_candidate_import(
                 target_slug=target_slug,
                 reasons=rar_reasons,
             )
+
+    if candidate.envelope.schema_version == "2.1.0":
+        from reference.ingestion.importing.powertrain_identity import plan_structured_identity
+        return plan_structured_identity(candidate, resolved_gen, target_fields, target_slug, mfr, vm)
 
     # 5. Check slug occupancy before reconciling active identity.
     slug_owner = VehicleDefinition.objects.filter(
@@ -481,6 +496,12 @@ def plan_candidate_import(candidate: CandidateConfigurationDocument) -> Canonica
     from reference.ingestion.serialization import candidate_config_doc_to_dict
     from reference.ingestion.validation import validate_candidate_configuration
     from django.core.exceptions import ValidationError
+    if candidate.envelope.schema_version != "2.1.0" and (
+        candidate.canonical_powertrain is not None or "canonical_powertrain" in candidate.unknown_fields
+    ):
+        return CanonicalImportPlan(candidate.candidate_reference, ImportEligibilityStatus.INELIGIBLE,
+                                   ImportPlannedAction.REJECT,
+                                   reasons=["Structured powertrain requires Candidate schema 2.1.0."])
     v2 = candidate.envelope.schema_version.startswith("2.")
     if v2:
         try:
@@ -505,6 +526,9 @@ def plan_candidate_import(candidate: CandidateConfigurationDocument) -> Canonica
              "drivetrain": plan.target_vehicle_definition_fields["drivetrain"],
              "engine_name": plan.target_vehicle_definition_fields["engine_name"]},
         )
+        if candidate.envelope.schema_version == "2.1.0":
+            plan.generation_resolution["resolution_version"] = "1.1"
+            plan.generation_resolution["fields"] = dict(plan.target_vehicle_definition_fields)
         if engine_proof:
             plan.generation_resolution["engine_distinction"] = engine_proof
         if plan.existing_vehicle_definition_id:

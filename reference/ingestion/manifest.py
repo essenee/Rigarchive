@@ -138,7 +138,8 @@ def build_review_manifest(
 
     # Automatically promote manifest version to 1.1 if any plan has adjudication fields
     has_adjudication = any(p.adjudication_hash for p in review_plans)
-    version = "2.0" if any(p.generation_resolution for p in review_plans) else ("1.1" if has_adjudication else MANIFEST_VERSION)
+    version = ("2.1" if any(p.generation_resolution.get("resolution_version") == "1.1" for p in review_plans) else
+               "2.0" if any(p.generation_resolution for p in review_plans) else "1.1" if has_adjudication else MANIFEST_VERSION)
 
     serialized_plans = []
     for rp in review_plans:
@@ -146,7 +147,7 @@ def build_review_manifest(
         if version == "1.0":
             p_dict.pop("adjudication_reference", None)
             p_dict.pop("adjudication_hash", None)
-        if version != "2.0":
+        if version not in ("2.0", "2.1"):
             for key in ("generation_resolution", "candidate_snapshot", "candidate_hash"):
                 p_dict.pop(key, None)
         serialized_plans.append(p_dict)
@@ -177,7 +178,7 @@ def build_review_manifest(
 
 def manifest_to_dict(manifest: CanonicalImportReviewManifest) -> Dict[str, Any]:
     """Converts a CanonicalImportReviewManifest object to a serializable dictionary."""
-    if manifest.manifest_version != "2.0" and any(
+    if manifest.manifest_version not in ("2.0", "2.1") and any(
         p.generation_resolution or p.candidate_snapshot or p.candidate_hash for p in manifest.plans
     ):
         raise ManifestValidationError("Legacy serialization cannot discard generation-aware authorization.")
@@ -186,7 +187,7 @@ def manifest_to_dict(manifest: CanonicalImportReviewManifest) -> Dict[str, Any]:
         for p in d.get("plans", []):
             p.pop("adjudication_reference", None)
             p.pop("adjudication_hash", None)
-    if manifest.manifest_version != "2.0":
+    if manifest.manifest_version not in ("2.0", "2.1"):
         for p in d.get("plans", []):
             for key in ("generation_resolution", "candidate_snapshot", "candidate_hash"):
                 p.pop(key, None)
@@ -222,7 +223,7 @@ def dict_to_manifest(d: Dict[str, Any]) -> CanonicalImportReviewManifest:
         raise ManifestValidationError(f"Missing required top-level fields: {sorted(list(missing_keys))}")
 
     m_ver = str(d["manifest_version"])
-    if m_ver not in ("1.0", "1.1", "2.0"):
+    if m_ver not in ("1.0", "1.1", "2.0", "2.1"):
         raise ManifestValidationError(
             f"Unsupported manifest version '{m_ver}'. Supported versions: '1.0', '1.1'."
         )
@@ -270,7 +271,7 @@ def dict_to_manifest(d: Dict[str, Any]) -> CanonicalImportReviewManifest:
     else:
         allowed_plan_keys = set(base_plan_keys) | {"adjudication_reference", "adjudication_hash"}
 
-    if m_ver == "2.0":
+    if m_ver in ("2.0", "2.1"):
         allowed_plan_keys |= {"generation_resolution", "candidate_snapshot", "candidate_hash"}
 
     seen_refs = set()
@@ -355,7 +356,7 @@ def dict_to_manifest(d: Dict[str, Any]) -> CanonicalImportReviewManifest:
         adj_ref = p_dict.get("adjudication_reference")
         adj_hash = p_dict.get("adjudication_hash")
 
-        if m_ver in ("1.1", "2.0"):
+        if m_ver in ("1.1", "2.0", "2.1"):
             has_hash = bool(adj_hash)
             has_ref = bool(adj_ref)
 
@@ -403,7 +404,11 @@ def dict_to_manifest(d: Dict[str, Any]) -> CanonicalImportReviewManifest:
             candidate_snapshot=p_dict.get("candidate_snapshot", {}),
             candidate_hash=p_dict.get("candidate_hash"),
         )
-        if m_ver == "2.0" and rp.planned_action in ("create", "no_op_exact_match"):
+        if rp.generation_resolution:
+            expected_version = "2.1" if rp.candidate_snapshot.get("envelope", {}).get("schema_version") == "2.1.0" else "2.0"
+            if m_ver != expected_version:
+                raise ManifestValidationError("Manifest/candidate version mismatch; mixed executable versions are unsupported.")
+        if m_ver in ("2.0", "2.1") and rp.planned_action in ("create", "no_op_exact_match"):
             from reference.ingestion.generation_correspondence import validate_bound_plan
             try:
                 validate_bound_plan(rp)

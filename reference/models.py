@@ -1,6 +1,9 @@
 import uuid
+from decimal import Decimal
 
 from django.core.exceptions import ValidationError
+from django.core.validators import MinValueValidator
+from reference.powertrain import ASPIRATION, FUEL, ELECTRIFICATION, FIELDS, TAXONOMIES, engine_label
 from django.db import models
 from django.urls import reverse
 from django.utils.text import slugify
@@ -253,6 +256,20 @@ class VehicleDefinition(BaseModel):
         ),
     )
 
+    engine_displacement_liters = models.DecimalField(
+        max_digits=5, decimal_places=2, null=True, blank=True,
+        validators=[MinValueValidator(Decimal("0.01"))],
+    )
+    engine_cylinders = models.PositiveSmallIntegerField(
+        null=True, blank=True, validators=[MinValueValidator(1)],
+    )
+    engine_aspiration = models.CharField(max_length=24, null=True, blank=True, choices=list(ASPIRATION.items()))
+    fuel_type = models.CharField(max_length=24, null=True, blank=True, choices=list(FUEL.items()))
+    electrification_type = models.CharField(
+        max_length=24, null=True, blank=True,
+        choices=[(key, labels[0]) for key, labels in ELECTRIFICATION.items()],
+    )
+
     drivetrain = models.CharField(
         max_length=3,
         choices=Drivetrain,
@@ -285,6 +302,9 @@ class VehicleDefinition(BaseModel):
         )
 
         constraints = [
+            models.CheckConstraint(condition=models.Q(engine_displacement_liters__isnull=True) | models.Q(engine_displacement_liters__gt=0), name="reference_powertrain_displacement_positive"),
+            models.CheckConstraint(condition=models.Q(engine_cylinders__isnull=True) | models.Q(engine_cylinders__gt=0), name="reference_powertrain_cylinders_positive"),
+            *[models.CheckConstraint(condition=models.Q(**{key + "__isnull": True}) | models.Q(**{key + "__in": list(values)}), name="reference_powertrain_" + key) for key, values in TAXONOMIES.items()],
             models.UniqueConstraint(
                 fields=("generation", "slug"),
                 name=(
@@ -293,8 +313,22 @@ class VehicleDefinition(BaseModel):
             ),
         ]
 
+    def clean_fields(self, exclude=None):
+        for key in FIELDS:
+            if key not in (exclude or ()) and isinstance(getattr(self, key), bool):
+                raise ValidationError({key: "Boolean is not a powertrain value."})
+            if getattr(self, key) == "":
+                setattr(self, key, None)
+        return super().clean_fields(exclude=exclude)
+
     def clean(self) -> None:
         super().clean()
+        for key in FIELDS:
+            value = getattr(self, key)
+            if value == "":
+                setattr(self, key, None)
+            elif isinstance(value, bool):
+                raise ValidationError({key: "Boolean is not a powertrain value."})
 
         if not self.generation_id:
             return
@@ -344,7 +378,11 @@ class VehicleDefinition(BaseModel):
             if str(part).strip()
         )
 
-        return slugify(source)
+        base = slugify(source)
+        if all(getattr(self, key) is not None for key in FIELDS):
+            from reference.powertrain import qualified_slug, record_powertrain
+            return qualified_slug(base, record_powertrain(self), self.engine_name)
+        return base
 
     def save(self, *args, **kwargs) -> None:
         if not self.slug:
@@ -352,12 +390,16 @@ class VehicleDefinition(BaseModel):
 
         super().save(*args, **kwargs)
 
+    @property
+    def engine_description(self):
+        return engine_label(self) if self.engine_name else ""
+
     def __str__(self) -> str:
         details = [
             str(self.model_year),
             str(self.generation.vehicle_model),
             self.trim_name,
-            self.engine_name,
+            self.engine_description,
             self.get_drivetrain_display(),
         ]
 

@@ -17,7 +17,7 @@ class Command(MatrixCommand):
 
     def run_matrix(self, matrix, options):
         result = {"matrix_digest": compute_matrix_digest(matrix), "matrix": matrix}
-        if matrix["matrix_version"] == MATRIX_RESOLUTION_VERSION:
+        if matrix["matrix_version"] in (MATRIX_RESOLUTION_VERSION, "2.1"):
             candidates = load_candidates(options["candidate"])
             result["validation"] = [
                 MatrixYear(matrix, None, year, candidates, review_only=True).status()

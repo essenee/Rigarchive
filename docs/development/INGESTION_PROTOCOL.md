@@ -16,6 +16,55 @@ Retained assertion binding supports original SourceAssertionSet v1 (schema 1.0.0
 
 ## Evidence and interpretation boundaries
 
+### Owner-approved classification adjudication policy (2026-11-08)
+
+Manufacturer technical specifications are preferred evidence, not mandatory.
+Sources need not use RigArchive's internal classification terminology. Seek
+applicable explicit documentation when reasonably available; otherwise assemble
+the best available evidence and present derived conclusions for human review,
+including exact source references, reasoning, applicability, limitations,
+confidence and unresolved contradictions. Human adjudication is the normal
+resolution path for supported classifications that lack explicit source wording.
+Unsupported, materially contradictory or unapproved conclusions remain blocked.
+Never rewrite an inference as a manufacturer's raw assertion.
+
+`CanonicalImportAdjudication` 1.0 grade decisions retain their original semantics
+and hashes. Version 1.1 adds `evidence_backed_classification`, with explicit
+`proposed_classifications` and `approved_classifications` decisions. Its existing
+`evidence_anchors` bind the exact retained original candidate digest/path,
+qualified supporting documents and each value's rationale, applicability,
+limitations, confidence, source references and evidence status. This is a finding
+about facts, separate from import authorization and generation publication.
+
+The initial consumer fills unknown `engine_aspiration`, `fuel_type` and
+`electrification_type` on Candidate 2.1.0 for any manufacturer; it cannot replace
+established values, adjudicate unrepresented attributes or bypass other identity
+and generation controls. Other classification consumers can reuse the same
+review mechanism when explicitly implemented; they are not implicitly enabled.
+Candidate/Manifest/Matrix wire versions and existing direct-source validation are
+unchanged. Approved declarations use a visibly human evidence source, structured
+conclusions and a distinct extractor, rather than forged manufacturer terms or
+executable `unknown_fields` extensions.
+
+The existing `adjudicate_canonical_import` command accepts `--classification-review`
+with a retained proposal and requires `--output`, `--candidate-output`, a declared
+human `--operator`, and exact interactive `APPROVE CLASSIFICATIONS` confirmation.
+Decline/EOF creates no files or records. New output paths are exclusive and must
+remain inside the repository. On confirmation, it writes a separate approved
+artifact and candidate revision, preserving the unapproved proposal and original
+candidate. Do not run this mode until the human owner approves the classifications.
+Artifact hashes and declared roles are audit records, not cryptographic identity
+authentication. The later exact import-manifest/matrix approval is still required.
+
+The ordinary planner and executor consume the classified candidate. Existing
+candidate digests, generation-resolution documents, engine proofs, manifests and
+receipts retain the approved declaration's semantic hash, original byte hash,
+reviewer/time and supporting lineage. Validation and execution recheck the exact
+projection, original candidate and retained evidence; stale/changed approvals or
+premises block. Human declarations cannot be silently relabelled as direct-source
+claims. Historical receipts are not rewritten. See the
+[implementation/review record](../implementation/tasks/MY2019-erc-classification-adjudication.md).
+
 Retain original source bytes before extraction. Preserve source ID, locator, retrieval metadata, full SHA-256 hash, document revision and commercial market applicability. A caller's make/model/year/Generation request is context, not evidence. A source code is never a canonical primary key.
 
 SourceAssertionSet remains v1. Extract generation statements verbatim using `generation_designation`, `generation_code`, `source_model_code`, or `generation_section` where the source actually supplies them. Keep document-local assertion IDs and meaningful source locations. Empty explicit identities are errors, not absence of evidence. Do not infer a Generation from a trim name or manufacture an identifier from configuration attributes.
@@ -205,3 +254,14 @@ RIGARCHIVE_TEST_DB_PATH=:memory: \
 ```
 
 Run from the repository root. `RIGARCHIVE_TEST_DB_PATH` sets Django's default SQLite name. For execution rehearsals, use a read-only snapshot of development data and explicitly verify that the Django connection targets a disposable copy before invoking the execution service. Keep rehearsal approvals, manifests, snapshots, and receipts separate from live authorization artifacts.
+
+
+## RA-044 structured powertrain path (2026-11-07)
+
+The [RA-044 implementation record](../implementation/tasks/RA-044-structured-powertrain-identity-implementation.md) documents the explicitly versioned Candidate 2.1.0 / Manifest 2.1 / Matrix 2.1 path. New structured candidates retain exactly five canonical powertrain attributes and qualified normalized source lineage. Marketed liters use canonical decimal strings; cylinders are positive integers; aspiration, fuel and electrification use the controlled vocabulary. Unknown remains null during preparation and cannot authorize a create. One applicable authoritative source can establish several attributes; explicitly joined sources may jointly establish a tuple. No absent hybrid label, ESS label or engine-code spelling establishes a missing classification.
+
+Read-only planning uses the existing `plan_canonical_import` and Matrix review commands. Complete assessed semantic identity precedes locator matching. Peer source bytes and unique successful receipt bindings must establish the relevant structured premises, including nonpersistent assessment of legacy null records. Missing evidence or unrepresented distinctions remain review-required. New-create slugs use the accepted fixed qualifier recipe; conflicting active or inactive slugs block without renaming. Candidate v1 and schema 2.0.0 retain their established compatibility behavior.
+
+Resolution 1.1 and engine proof 2.0 bind the ten target fields and peer premises. Existing approval and execution commands retain affirmative human authorization, exact digest binding, transaction-time revalidation and model-year rollback. Approval v1 is unchanged. Matrix 2.1 must use schema 2.1.0 candidates and resolution 1.1; mixed executable versions are not silently converted. Historical artifacts are not regenerated or upgraded.
+
+The additive migration `reference.0010` is verified as applied to the development database. Assigning historical attributes and executing imports each require separate authorization. Implementation acceptance does not authorize Wrangler JL MY2019–2026 ingestion. W2 subordinate configurations and specifications remain deferred.

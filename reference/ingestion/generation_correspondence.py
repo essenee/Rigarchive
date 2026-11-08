@@ -333,6 +333,11 @@ def revalidate_resolution(plan):
         from reference.models import VehicleDefinition
         existing = VehicleDefinition.objects.get(pk=plan.existing_vehicle_definition_id)
         current["target_identity"] = {"uuid": str(existing.uuid), "slug": existing.slug}
+    if snapshot["resolution_version"] == "1.1":
+        from reference.ingestion.serialization import candidate_config_doc_from_dict
+        from reference.ingestion.importing.powertrain_identity import revalidate_identity
+        current["resolution_version"] = "1.1"
+        revalidate_identity(plan, candidate_config_doc_from_dict(plan.candidate_snapshot))
     require(current == {k: v for k, v in snapshot.items() if k != "engine_distinction"},
             "Generation correspondence/resolution became stale.")
 
@@ -344,7 +349,7 @@ def validate_bound_plan(plan):
     from reference.ingestion.importing.planner import _format_engine_name
     require(plan.candidate_hash == digest(plan.candidate_snapshot), "Candidate content hash mismatch.")
     candidate = candidate_config_doc_from_dict(plan.candidate_snapshot)
-    require(candidate.envelope.schema_version == "2.0.0", "Unsupported execution candidate version.")
+    require(candidate.envelope.schema_version in ("2.0.0", "2.1.0"), "Unsupported execution candidate version.")
     validate_candidate_configuration(candidate)
     require(candidate.candidate_reference == plan.candidate_reference, "Candidate reference binding mismatch.")
     snapshot = plan.generation_resolution
@@ -352,11 +357,12 @@ def validate_bound_plan(plan):
         "resolution_version", "basis", "parents", "model_year", "market", "fields",
         "generation_evidence", "documents", "correspondences", "target_identity",
     }, "Invalid generation resolution contract.")
-    if "engine_distinction" in snapshot:
+    structured = candidate.envelope.schema_version == "2.1.0"
+    if "engine_distinction" in snapshot and not structured:
         require(plan.create_basis == "mechanical_dimension" and plan.planned_action == "create"
                 and isinstance(snapshot["engine_distinction"], dict),
                 "Engine proof requires a mechanical create.")
-    require(snapshot["resolution_version"] == "1.0" and snapshot["basis"] in (
+    require(snapshot["resolution_version"] == ("1.1" if structured else "1.0") and snapshot["basis"] in (
         "unique_year_range", "reviewed_source_correspondence"), "Unsupported resolution semantics.")
     parents = snapshot["parents"]
     require(isinstance(parents, dict) and set(parents) == {
@@ -381,24 +387,42 @@ def validate_bound_plan(plan):
         require(all(v == values[0] for v in values), f"Candidate has conflicting {key} evidence.")
         return values[0]
     fields = plan.target_vehicle_definition_fields
-    require(set(fields) == {"model_year", "trim_name", "engine_name", "drivetrain", "market"},
+    from reference.powertrain import BASE_FIELDS, FIELDS, qualified_slug
+    require(set(fields) == set(BASE_FIELDS + FIELDS if structured else BASE_FIELDS),
             "Unsupported canonical target fields.")
-    require(snapshot["fields"] == {k: fields[k] for k in ("trim_name", "engine_name", "drivetrain")},
+    require(snapshot["fields"] == (fields if structured else {k: fields[k] for k in ("trim_name", "engine_name", "drivetrain")}),
             "Resolution restriction fields contradict target.")
     for field, concept in (("model_year", "model_year"), ("trim_name", "trim"),
                            ("drivetrain", "generic_drive_classification"), ("market", "market")):
         require(fields[field] == value(concept), "Target contradicts candidate evidence.")
     labels = [i.normalized_concept for i in candidate.normalized_assertions
               if i.target_attribute_key == "engine_name" and i.mapping_status == "mapped"]
-    engine = value("engine_name") if labels else _format_engine_name(value("engine_displacement_liters"), value("engine_cylinders"))
-    require(fields["engine_name"] == engine, "Engine target binding mismatch.")
+    engine = value("engine_name") if labels else _format_engine_name(value("engine_displacement_liters"), value("engine_cylinders"), structured=structured)
+    if not structured or plan.planned_action != "no_op_exact_match":
+        require(fields["engine_name"] == engine, "Engine target binding mismatch.")
+    if structured:
+        from reference.ingestion.importing.powertrain_identity import candidate_powertrain
+        values = candidate_powertrain(candidate, complete=True)
+        require({k: fields[k] for k in FIELDS} == values, "Structured target contradicts candidate.")
+        proof = snapshot.get("engine_distinction")
+        require(isinstance(proof, dict) and set(proof) == {"version", "canonical_powertrain", "peers"}
+                and proof["version"] == "2.0" and proof["canonical_powertrain"] == values,
+                "Structured target requires the versioned engine proof.")
+        if plan.planned_action == "no_op_exact_match":
+            matching = [p for p in proof["peers"] if p["record_pk"] == plan.existing_vehicle_definition_id
+                        and p["canonical_powertrain"] == values]
+            require(len(matching) == 1 and matching[0]["record_slug"] == plan.target_slug
+                    and matching[0]["record_uuid"] == snapshot["target_identity"].get("uuid")
+                    and matching[0]["canonical_state"]["engine_name"] == fields["engine_name"],
+                    "Existing assessed identity is not pinned.")
     require(snapshot["parents"]["manufacturer_name"].lower() == str(value("make")).lower() and
             snapshot["parents"]["vehicle_model_name"].lower() == str(value("model")).lower(),
             "Parent identity contradicts candidate.")
     from django.utils.text import slugify
-    require(plan.target_slug == slugify("-".join(str(fields[k]) for k in (
-        "model_year", "trim_name", "engine_name", "drivetrain", "market") if str(fields[k]).strip())),
-        "Target slug binding mismatch.")
+    base_slug = slugify("-".join(str(fields[k]) for k in BASE_FIELDS if str(fields[k]).strip()))
+    if not structured or plan.planned_action != "no_op_exact_match":
+        expected_slug = qualified_slug(base_slug, values, fields["engine_name"]) if structured else base_slug
+        require(plan.target_slug == expected_slug, "Target slug binding mismatch.")
 
 
 def guard_legacy_scope(make, model, start_year=None, end_year=None, candidates=()):

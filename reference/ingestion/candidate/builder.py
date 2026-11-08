@@ -238,9 +238,9 @@ def construct_candidate_configuration(
     :raises CandidateConstructionError: If input structure or provenance validation fails.
     """
     from reference.ingestion.normalization.generation import GENERATION_KEYS, generation_evidence_from_sets
-    if schema_version not in (None, "1.0.0", "2.0.0"):
+    if schema_version not in (None, "1.0.0", "2.0.0", "2.1.0"):
         raise CandidateConstructionError("Unsupported candidate construction schema version.")
-    v2 = schema_version == "2.0.0" or any(
+    v2 = schema_version in ("2.0.0", "2.1.0") or any(
         a.attribute_key in GENERATION_KEYS for s in source_assertion_sets for a in s.source_assertions
     )
     generation_evidence, evidence_documents = generation_evidence_from_sets(source_assertion_sets) if v2 else ([], [])
@@ -268,6 +268,11 @@ def construct_candidate_configuration(
         for options in refs.values():
             for prefix, ast in options:
                 ast.assertion_id = prefix + ast.assertion_id
+
+    if schema_version == "2.1.0":
+        from reference.ingestion.normalization.powertrain import normalize_powertrain_interpretations
+        from reference.ingestion.importing.powertrain_identity import project_powertrain
+        normalized_assertions = normalize_powertrain_interpretations(normalized_assertions)
 
     # 1. Structural Validation of CandidateIdentity Required Fields
     if not candidate_identity.manufacturer_name or not candidate_identity.manufacturer_name.strip():
@@ -478,7 +483,7 @@ def construct_candidate_configuration(
     doc = CandidateConfigurationDocument(
         envelope=Envelope(
             artifact_type=ArtifactType.CANDIDATE_CONFIGURATION_V2.value if v2 else ArtifactType.CANDIDATE_CONFIGURATION.value,
-            schema_version="2.0.0" if v2 else "1.0.0",
+            schema_version=(schema_version or "2.0.0") if v2 else "1.0.0",
             created_at=env_created_at,
             generator="RigArchive-CandidateConstruction/0.1.0",
         ),
@@ -496,6 +501,9 @@ def construct_candidate_configuration(
         evidence_documents=evidence_documents,
         reconciliation_and_review=rec_and_review,
     )
+
+    if schema_version == "2.1.0":
+        doc.canonical_powertrain = project_powertrain(doc.normalized_assertions)
 
     # Run contract validation
     validate_candidate_configuration(doc)
