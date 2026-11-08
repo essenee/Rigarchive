@@ -1,0 +1,21 @@
+{
+  "source_id": "reviewed_jeep_order_guide_inventory",
+  "publisher_locator": "docs/implementation/handoffs/MY2019_JL/MY2019_JL_CODEX_HANDOFF.md",
+  "acquired_at": "2026-11-07T16:57:20.747181+00:00",
+  "content_type": "application/json",
+  "content_hash": "sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3",
+  "storage_path": "storage/raw_source_artifacts/reviewed_jeep_order_guide_inventory/44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3.json",
+  "source_applicability": {
+    "market": "US",
+    "applicability_basis": "director_accepted_MY2019_US_JL_research_inventory",
+    "publisher_jurisdiction": null,
+    "applicability_scope": "model_year",
+    "unknown_fields": {}
+  },
+  "acquisition_method": "local_file",
+  "transport_metadata": {
+    "http_status": null,
+    "original_filename": "director_accepted_research_snapshot.json"
+  },
+  "unknown_fields": {}
+}

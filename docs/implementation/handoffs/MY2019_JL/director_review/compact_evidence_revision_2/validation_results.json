@@ -1,0 +1,446 @@
+{
+  "database_sha256_before_and_after": "b045601a33811b44a443b7c0cc78ce916e9af476cb3c5f4c5b94dc2fdf18e26f",
+  "pdf_hash_computed": false,
+  "pdf_copied": false,
+  "research_snapshot_hash": "sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3",
+  "guide_excerpt_hash": "sha256:3a3e829b87591583ffd6902a5ddd694be7d47fd815fd10813cb1e28a36a8938f",
+  "results": [
+    {
+      "review_id": "JL19-01",
+      "source_model_code": "JLJL72",
+      "candidate_validated": true,
+      "retained_bytes_verified": true,
+      "round_trip_verified": true,
+      "guide_excerpt_bound": false,
+      "drive_classification": null,
+      "canonical_powertrain": {
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": null,
+        "fuel_type": null,
+        "electrification_type": null
+      },
+      "completeness_error": [
+        "Missing evidenced powertrain attribute: engine_aspiration."
+      ],
+      "planner_action": "flag_review",
+      "planner_reasons": [
+        "Candidate lacks complete evidence-backed normalized attributes: missing ['generic_drive_classification']."
+      ]
+    },
+    {
+      "review_id": "JL19-02",
+      "source_model_code": "JLJL72",
+      "candidate_validated": true,
+      "retained_bytes_verified": true,
+      "round_trip_verified": true,
+      "guide_excerpt_bound": false,
+      "drive_classification": null,
+      "canonical_powertrain": {
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": null,
+        "electrification_type": "mild_hybrid"
+      },
+      "completeness_error": [
+        "Missing evidenced powertrain attribute: fuel_type."
+      ],
+      "planner_action": "flag_review",
+      "planner_reasons": [
+        "Candidate lacks complete evidence-backed normalized attributes: missing ['generic_drive_classification']."
+      ]
+    },
+    {
+      "review_id": "JL19-03",
+      "source_model_code": "JLJL72",
+      "candidate_validated": true,
+      "retained_bytes_verified": true,
+      "round_trip_verified": true,
+      "guide_excerpt_bound": false,
+      "drive_classification": null,
+      "canonical_powertrain": {
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": null,
+        "fuel_type": null,
+        "electrification_type": null
+      },
+      "completeness_error": [
+        "Missing evidenced powertrain attribute: engine_aspiration."
+      ],
+      "planner_action": "flag_review",
+      "planner_reasons": [
+        "Candidate lacks complete evidence-backed normalized attributes: missing ['generic_drive_classification']."
+      ]
+    },
+    {
+      "review_id": "JL19-04",
+      "source_model_code": "JLJL72",
+      "candidate_validated": true,
+      "retained_bytes_verified": true,
+      "round_trip_verified": true,
+      "guide_excerpt_bound": false,
+      "drive_classification": null,
+      "canonical_powertrain": {
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": null,
+        "electrification_type": "mild_hybrid"
+      },
+      "completeness_error": [
+        "Missing evidenced powertrain attribute: fuel_type."
+      ],
+      "planner_action": "flag_review",
+      "planner_reasons": [
+        "Candidate lacks complete evidence-backed normalized attributes: missing ['generic_drive_classification']."
+      ]
+    },
+    {
+      "review_id": "JL19-05",
+      "source_model_code": "JLJS72",
+      "candidate_validated": true,
+      "retained_bytes_verified": true,
+      "round_trip_verified": true,
+      "guide_excerpt_bound": false,
+      "drive_classification": null,
+      "canonical_powertrain": {
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": null,
+        "fuel_type": null,
+        "electrification_type": null
+      },
+      "completeness_error": [
+        "Missing evidenced powertrain attribute: engine_aspiration."
+      ],
+      "planner_action": "flag_review",
+      "planner_reasons": [
+        "Candidate lacks complete evidence-backed normalized attributes: missing ['generic_drive_classification']."
+      ]
+    },
+    {
+      "review_id": "JL19-06",
+      "source_model_code": "JLJS72",
+      "candidate_validated": true,
+      "retained_bytes_verified": true,
+      "round_trip_verified": true,
+      "guide_excerpt_bound": false,
+      "drive_classification": null,
+      "canonical_powertrain": {
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": null,
+        "electrification_type": "mild_hybrid"
+      },
+      "completeness_error": [
+        "Missing evidenced powertrain attribute: fuel_type."
+      ],
+      "planner_action": "flag_review",
+      "planner_reasons": [
+        "Candidate lacks complete evidence-backed normalized attributes: missing ['generic_drive_classification']."
+      ]
+    },
+    {
+      "review_id": "JL19-07",
+      "source_model_code": "JLJL74",
+      "candidate_validated": true,
+      "retained_bytes_verified": true,
+      "round_trip_verified": true,
+      "guide_excerpt_bound": true,
+      "drive_classification": "4WD",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": null,
+        "fuel_type": null,
+        "electrification_type": null
+      },
+      "completeness_error": [
+        "Missing evidenced powertrain attribute: engine_aspiration."
+      ],
+      "planner_action": "flag_review",
+      "planner_reasons": [
+        "Missing reviewed generation correspondence."
+      ]
+    },
+    {
+      "review_id": "JL19-08",
+      "source_model_code": "JLJL74",
+      "candidate_validated": true,
+      "retained_bytes_verified": true,
+      "round_trip_verified": true,
+      "guide_excerpt_bound": true,
+      "drive_classification": "4WD",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": null,
+        "electrification_type": "mild_hybrid"
+      },
+      "completeness_error": [
+        "Missing evidenced powertrain attribute: fuel_type."
+      ],
+      "planner_action": "flag_review",
+      "planner_reasons": [
+        "Missing reviewed generation correspondence."
+      ]
+    },
+    {
+      "review_id": "JL19-09",
+      "source_model_code": "JLJL74",
+      "candidate_validated": true,
+      "retained_bytes_verified": true,
+      "round_trip_verified": true,
+      "guide_excerpt_bound": true,
+      "drive_classification": "4WD",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": null,
+        "fuel_type": null,
+        "electrification_type": null
+      },
+      "completeness_error": [
+        "Missing evidenced powertrain attribute: engine_aspiration."
+      ],
+      "planner_action": "flag_review",
+      "planner_reasons": [
+        "Missing reviewed generation correspondence."
+      ]
+    },
+    {
+      "review_id": "JL19-10",
+      "source_model_code": "JLJL74",
+      "candidate_validated": true,
+      "retained_bytes_verified": true,
+      "round_trip_verified": true,
+      "guide_excerpt_bound": true,
+      "drive_classification": "4WD",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": null,
+        "electrification_type": "mild_hybrid"
+      },
+      "completeness_error": [
+        "Missing evidenced powertrain attribute: fuel_type."
+      ],
+      "planner_action": "flag_review",
+      "planner_reasons": [
+        "Missing reviewed generation correspondence."
+      ]
+    },
+    {
+      "review_id": "JL19-11",
+      "source_model_code": "JLJL74",
+      "candidate_validated": true,
+      "retained_bytes_verified": true,
+      "round_trip_verified": true,
+      "guide_excerpt_bound": true,
+      "drive_classification": "4WD",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": null,
+        "fuel_type": null,
+        "electrification_type": null
+      },
+      "completeness_error": [
+        "Missing evidenced powertrain attribute: engine_aspiration."
+      ],
+      "planner_action": "flag_review",
+      "planner_reasons": [
+        "Missing reviewed generation correspondence."
+      ]
+    },
+    {
+      "review_id": "JL19-12",
+      "source_model_code": "JLJL74",
+      "candidate_validated": true,
+      "retained_bytes_verified": true,
+      "round_trip_verified": true,
+      "guide_excerpt_bound": true,
+      "drive_classification": "4WD",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": null,
+        "electrification_type": "mild_hybrid"
+      },
+      "completeness_error": [
+        "Missing evidenced powertrain attribute: fuel_type."
+      ],
+      "planner_action": "flag_review",
+      "planner_reasons": [
+        "Missing reviewed generation correspondence."
+      ]
+    },
+    {
+      "review_id": "JL19-13",
+      "source_model_code": "JLJP74",
+      "candidate_validated": true,
+      "retained_bytes_verified": true,
+      "round_trip_verified": true,
+      "guide_excerpt_bound": true,
+      "drive_classification": "4WD",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": null,
+        "fuel_type": null,
+        "electrification_type": null
+      },
+      "completeness_error": [
+        "Missing evidenced powertrain attribute: engine_aspiration."
+      ],
+      "planner_action": "flag_review",
+      "planner_reasons": [
+        "Missing reviewed generation correspondence."
+      ]
+    },
+    {
+      "review_id": "JL19-14",
+      "source_model_code": "JLJP74",
+      "candidate_validated": true,
+      "retained_bytes_verified": true,
+      "round_trip_verified": true,
+      "guide_excerpt_bound": true,
+      "drive_classification": "4WD",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": null,
+        "electrification_type": "mild_hybrid"
+      },
+      "completeness_error": [
+        "Missing evidenced powertrain attribute: fuel_type."
+      ],
+      "planner_action": "flag_review",
+      "planner_reasons": [
+        "Missing reviewed generation correspondence."
+      ]
+    },
+    {
+      "review_id": "JL19-15",
+      "source_model_code": "JLJP74",
+      "candidate_validated": true,
+      "retained_bytes_verified": true,
+      "round_trip_verified": true,
+      "guide_excerpt_bound": true,
+      "drive_classification": "4WD",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": null,
+        "fuel_type": null,
+        "electrification_type": null
+      },
+      "completeness_error": [
+        "Missing evidenced powertrain attribute: engine_aspiration."
+      ],
+      "planner_action": "flag_review",
+      "planner_reasons": [
+        "Missing reviewed generation correspondence."
+      ]
+    },
+    {
+      "review_id": "JL19-16",
+      "source_model_code": "JLJP74",
+      "candidate_validated": true,
+      "retained_bytes_verified": true,
+      "round_trip_verified": true,
+      "guide_excerpt_bound": true,
+      "drive_classification": "4WD",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": null,
+        "electrification_type": "mild_hybrid"
+      },
+      "completeness_error": [
+        "Missing evidenced powertrain attribute: fuel_type."
+      ],
+      "planner_action": "flag_review",
+      "planner_reasons": [
+        "Missing reviewed generation correspondence."
+      ]
+    },
+    {
+      "review_id": "JL19-17",
+      "source_model_code": "JLJP74",
+      "candidate_validated": true,
+      "retained_bytes_verified": true,
+      "round_trip_verified": true,
+      "guide_excerpt_bound": true,
+      "drive_classification": "4WD",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": null,
+        "fuel_type": null,
+        "electrification_type": null
+      },
+      "completeness_error": [
+        "Missing evidenced powertrain attribute: engine_aspiration."
+      ],
+      "planner_action": "flag_review",
+      "planner_reasons": [
+        "Missing reviewed generation correspondence."
+      ]
+    },
+    {
+      "review_id": "JL19-18",
+      "source_model_code": "JLJS74",
+      "candidate_validated": true,
+      "retained_bytes_verified": true,
+      "round_trip_verified": true,
+      "guide_excerpt_bound": true,
+      "drive_classification": "4WD",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": null,
+        "fuel_type": null,
+        "electrification_type": null
+      },
+      "completeness_error": [
+        "Missing evidenced powertrain attribute: engine_aspiration."
+      ],
+      "planner_action": "flag_review",
+      "planner_reasons": [
+        "Missing reviewed generation correspondence."
+      ]
+    },
+    {
+      "review_id": "JL19-19",
+      "source_model_code": "JLJS74",
+      "candidate_validated": true,
+      "retained_bytes_verified": true,
+      "round_trip_verified": true,
+      "guide_excerpt_bound": true,
+      "drive_classification": "4WD",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": null,
+        "electrification_type": "mild_hybrid"
+      },
+      "completeness_error": [
+        "Missing evidenced powertrain attribute: fuel_type."
+      ],
+      "planner_action": "flag_review",
+      "planner_reasons": [
+        "Missing reviewed generation correspondence."
+      ]
+    }
+  ]
+}

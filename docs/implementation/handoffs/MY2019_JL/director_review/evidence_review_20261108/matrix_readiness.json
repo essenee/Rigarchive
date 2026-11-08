@@ -1,0 +1,11 @@
+{
+  "blocked": 19,
+  "created_at": "2026-11-08T18:20:55.097237+00:00",
+  "eligible": 0,
+  "matrix_generated": false,
+  "reason": "All 19 rows lack published correspondence; 10 ERC rows also lack a complete five-field tuple. Matrix 2.1 requires complete target tuples and cannot express blocked rows. No unknown was replaced by a guessed value, and no unpublished proposal was represented as a live correspondence.",
+  "requested_contract": "Matrix 2.1",
+  "resolution_contract": "1.1",
+  "resolved_plans": 0,
+  "status": "blocked"
+}

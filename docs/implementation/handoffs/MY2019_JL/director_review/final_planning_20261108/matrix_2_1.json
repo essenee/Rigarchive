@@ -1,0 +1,1383 @@
+{
+  "market": "US",
+  "matrix_version": "2.1",
+  "model_years": [
+    2019
+  ],
+  "parents": {
+    "generation": {
+      "pk": 32,
+      "slug": "jl",
+      "uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4"
+    },
+    "manufacturer": {
+      "pk": 20,
+      "slug": "jeep",
+      "uuid": "42eefe42-0f2f-4e31-b4b2-f3e520ea0e50"
+    },
+    "vehicle_model": {
+      "pk": 21,
+      "slug": "wrangler",
+      "uuid": "5ec5f58a-b140-484c-97f0-c90ec9c134d6"
+    }
+  },
+  "rows": [
+    {
+      "action": "create",
+      "candidate_digest": "sha256:4b051830ca189e2784199f29749acb3d7337eb6891fb3a4f3e1d57fde30ff406",
+      "candidate_reference": "MY2019-JL-JL19-01-preparatory-compact-r2-review-r3",
+      "correspondence": [
+        {
+          "digest": "sha256:a4ae81e161d90a182880790d585ce9083304ee91a35818bba6791bf636ce1130",
+          "reference": "98fc7eb1-f684-413d-be4f-77193bf12fe6"
+        }
+      ],
+      "evidence": [
+        {
+          "digest": "sha256:e77eb9ff1e5a2ea0ce3bd55a998aaa91389e2f74593feb758af649108168e161",
+          "reference": "carb_2019_3_6_hev|sha256:c82e4ddc543e0142628e1cf66f1ff6e38e233eff474e6b1b93e0c2dd0eae64e6|carb_2019_3_6_hev"
+        },
+        {
+          "digest": "sha256:17cf8da8b111f4618fe0e93dcd36d52bb25335e98f708ed21bb41ac8e5cd6004",
+          "reference": "fca_pentastar_family_facts|sha256:7e16f753401a6711b78b510ad4cf35cecdaa775b7ce719b0050fd6db72dabfef|MY19-family"
+        },
+        {
+          "digest": "sha256:bbf871d779bd095741e08a623319dd708f298aafc2367b2664cce2b743b9ba6a",
+          "reference": "fca_y40_scope|sha256:6af1557c414a22a709a7a0d9d50767ef55f7fc885dab3fe26bbcf8dd35b9c2d7|fca_y40_scope"
+        },
+        {
+          "digest": "sha256:695fefea80eebab79cc8030778ee9a461919c5f95a92757a858ed3729cc50e63",
+          "reference": "human_classification_adjudication|sha256:709d8fa99dd479a1aa558442f10b44e8280800198d2f9c7c772f30ff586af5be|sha256:fdaabde206436bdae5a83013eac54f86f12aae17459af6c894f2b1cb73f51127"
+        },
+        {
+          "digest": "sha256:942ffe6e484b6e4a96f4db457d40f2eb1c280b32e594d2fa97d4a63784e8a9f4",
+          "reference": "jeep_2019_wrangler_specifications|sha256:84bb3faf505332a2799830563cb1863621385b96430585e1a03216924596fd40|MY2019-JL-drive"
+        },
+        {
+          "digest": "sha256:3a6633707f5c36f984b133927aeebb28390cc2c89e9e114b88102cf04be84a6a",
+          "reference": "jeeppartsdeal_oe_catalog|sha256:e558fc4e27edf7f39a04332fadbd65930ee038b76f1377f84be23f0ac4c42843|MY19-alternator"
+        },
+        {
+          "digest": "sha256:c4de38c375603b2e503728c8f8ce92ff40aae9acb009f16f0dba3a045549f3b6",
+          "reference": "mopar_2019_hardware_excerpts|sha256:456d7554534a5dae9f0ecf9ca6ae5f74f634d28d841f0c7a62c44fa0e1cfca75|US-MY19-hardware"
+        },
+        {
+          "digest": "sha256:fb1d1d6b134ca3472b923f803a68e232f34b6a2f96d2a05f9de70b89ac9e6d55",
+          "reference": "mopar_2019_wrangler_user_guide|sha256:0435598871bae4ab42e91f52f689331447ecfdb3d56644c3f9aac4274645cd0e|MY2019-JL-fuel"
+        },
+        {
+          "digest": "sha256:449695deb40c8b481063b441689576beb46d79b9bedf5e68762cf436cfaea30e",
+          "reference": "my2019_erc_research_review|sha256:df1686c6c360f451a8c10b94e4c4b6dafc5cabced607e2ecac6f0be8d4521443|ERC-review-synthesis"
+        },
+        {
+          "digest": "sha256:029f52c18ad1be737098b6474ef30c6c1547d52161b95c44093f1bd264bef040",
+          "reference": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-01"
+        },
+        {
+          "digest": "sha256:822cbe3422e71e74723ee58aa593a006a2ce8a1df0d15784e7e77c26caea9939",
+          "reference": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|MY2019-common-JLJL72"
+        }
+      ],
+      "existing_record": null,
+      "generation_binding": {
+        "mode": "explicit_correspondence",
+        "resolution_version": "1.1",
+        "strategy": "reviewed_source_correspondence"
+      },
+      "model_year": 2019,
+      "permitted_create_bases": [
+        "first_representation"
+      ],
+      "row_id": "JL19-01",
+      "target_fields": {
+        "drivetrain": "4WD",
+        "electrification_type": "none",
+        "engine_aspiration": "naturally_aspirated",
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "engine_name": "3.6L V6",
+        "fuel_type": "gasoline",
+        "market": "US",
+        "model_year": 2019,
+        "trim_name": "Sport"
+      },
+      "target_slug": "2019-sport-36l-v6-4wd-us"
+    },
+    {
+      "action": "create",
+      "candidate_digest": "sha256:2d4c76e2571661a894807f6f85a923089a03da2b034a27134a11367a216832d6",
+      "candidate_reference": "MY2019-JL-JL19-02-preparatory-compact-r2-review-r3",
+      "correspondence": [
+        {
+          "digest": "sha256:a4ae81e161d90a182880790d585ce9083304ee91a35818bba6791bf636ce1130",
+          "reference": "98fc7eb1-f684-413d-be4f-77193bf12fe6"
+        }
+      ],
+      "evidence": [
+        {
+          "digest": "sha256:942ffe6e484b6e4a96f4db457d40f2eb1c280b32e594d2fa97d4a63784e8a9f4",
+          "reference": "jeep_2019_wrangler_specifications|sha256:84bb3faf505332a2799830563cb1863621385b96430585e1a03216924596fd40|MY2019-JL-drive"
+        },
+        {
+          "digest": "sha256:fb1d1d6b134ca3472b923f803a68e232f34b6a2f96d2a05f9de70b89ac9e6d55",
+          "reference": "mopar_2019_wrangler_user_guide|sha256:0435598871bae4ab42e91f52f689331447ecfdb3d56644c3f9aac4274645cd0e|MY2019-JL-fuel"
+        },
+        {
+          "digest": "sha256:0b432eb8457cab7c90e0b75d5fd174ef22b36740dac85d6f24a528ec91895cbd",
+          "reference": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-02"
+        },
+        {
+          "digest": "sha256:822cbe3422e71e74723ee58aa593a006a2ce8a1df0d15784e7e77c26caea9939",
+          "reference": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|MY2019-common-JLJL72"
+        }
+      ],
+      "existing_record": null,
+      "generation_binding": {
+        "mode": "explicit_correspondence",
+        "resolution_version": "1.1",
+        "strategy": "reviewed_source_correspondence"
+      },
+      "model_year": 2019,
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "row_id": "JL19-02",
+      "target_fields": {
+        "drivetrain": "4WD",
+        "electrification_type": "mild_hybrid",
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 4,
+        "engine_displacement_liters": "2",
+        "engine_name": "2.0L I4",
+        "fuel_type": "gasoline",
+        "market": "US",
+        "model_year": 2019,
+        "trim_name": "Sport"
+      },
+      "target_slug": "2019-sport-20l-i4-4wd-us-turbo-mhev"
+    },
+    {
+      "action": "create",
+      "candidate_digest": "sha256:6fc3f01e272e9f209b55a2900cef3cecf2268aa18ffbeff32240d57410aa2aa6",
+      "candidate_reference": "MY2019-JL-JL19-03-preparatory-compact-r2-review-r3",
+      "correspondence": [
+        {
+          "digest": "sha256:a4ae81e161d90a182880790d585ce9083304ee91a35818bba6791bf636ce1130",
+          "reference": "98fc7eb1-f684-413d-be4f-77193bf12fe6"
+        }
+      ],
+      "evidence": [
+        {
+          "digest": "sha256:e77eb9ff1e5a2ea0ce3bd55a998aaa91389e2f74593feb758af649108168e161",
+          "reference": "carb_2019_3_6_hev|sha256:c82e4ddc543e0142628e1cf66f1ff6e38e233eff474e6b1b93e0c2dd0eae64e6|carb_2019_3_6_hev"
+        },
+        {
+          "digest": "sha256:17cf8da8b111f4618fe0e93dcd36d52bb25335e98f708ed21bb41ac8e5cd6004",
+          "reference": "fca_pentastar_family_facts|sha256:7e16f753401a6711b78b510ad4cf35cecdaa775b7ce719b0050fd6db72dabfef|MY19-family"
+        },
+        {
+          "digest": "sha256:bbf871d779bd095741e08a623319dd708f298aafc2367b2664cce2b743b9ba6a",
+          "reference": "fca_y40_scope|sha256:6af1557c414a22a709a7a0d9d50767ef55f7fc885dab3fe26bbcf8dd35b9c2d7|fca_y40_scope"
+        },
+        {
+          "digest": "sha256:db1ebc82a665808507996ef111fe4d9699abb6ddf071dadcffe8ea85cd8c0f33",
+          "reference": "human_classification_adjudication|sha256:ca7fc746a94c09e77f72c35e667292a4b88d55c4a298b0cbb95042959b11da10|sha256:1c836ae669279447a86bbc395b159f6dbd74a14ef1a5c300ae547d885a68a9a7"
+        },
+        {
+          "digest": "sha256:942ffe6e484b6e4a96f4db457d40f2eb1c280b32e594d2fa97d4a63784e8a9f4",
+          "reference": "jeep_2019_wrangler_specifications|sha256:84bb3faf505332a2799830563cb1863621385b96430585e1a03216924596fd40|MY2019-JL-drive"
+        },
+        {
+          "digest": "sha256:3a6633707f5c36f984b133927aeebb28390cc2c89e9e114b88102cf04be84a6a",
+          "reference": "jeeppartsdeal_oe_catalog|sha256:e558fc4e27edf7f39a04332fadbd65930ee038b76f1377f84be23f0ac4c42843|MY19-alternator"
+        },
+        {
+          "digest": "sha256:c4de38c375603b2e503728c8f8ce92ff40aae9acb009f16f0dba3a045549f3b6",
+          "reference": "mopar_2019_hardware_excerpts|sha256:456d7554534a5dae9f0ecf9ca6ae5f74f634d28d841f0c7a62c44fa0e1cfca75|US-MY19-hardware"
+        },
+        {
+          "digest": "sha256:fb1d1d6b134ca3472b923f803a68e232f34b6a2f96d2a05f9de70b89ac9e6d55",
+          "reference": "mopar_2019_wrangler_user_guide|sha256:0435598871bae4ab42e91f52f689331447ecfdb3d56644c3f9aac4274645cd0e|MY2019-JL-fuel"
+        },
+        {
+          "digest": "sha256:449695deb40c8b481063b441689576beb46d79b9bedf5e68762cf436cfaea30e",
+          "reference": "my2019_erc_research_review|sha256:df1686c6c360f451a8c10b94e4c4b6dafc5cabced607e2ecac6f0be8d4521443|ERC-review-synthesis"
+        },
+        {
+          "digest": "sha256:7c797a07f5dad6122b3ec4d45a706d431358033ec36462646302138c4c6b4a13",
+          "reference": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-03"
+        },
+        {
+          "digest": "sha256:822cbe3422e71e74723ee58aa593a006a2ce8a1df0d15784e7e77c26caea9939",
+          "reference": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|MY2019-common-JLJL72"
+        }
+      ],
+      "existing_record": null,
+      "generation_binding": {
+        "mode": "explicit_correspondence",
+        "resolution_version": "1.1",
+        "strategy": "reviewed_source_correspondence"
+      },
+      "model_year": 2019,
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ],
+      "row_id": "JL19-03",
+      "target_fields": {
+        "drivetrain": "4WD",
+        "electrification_type": "none",
+        "engine_aspiration": "naturally_aspirated",
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "engine_name": "3.6L V6",
+        "fuel_type": "gasoline",
+        "market": "US",
+        "model_year": 2019,
+        "trim_name": "Sport S"
+      },
+      "target_slug": "2019-sport-s-36l-v6-4wd-us"
+    },
+    {
+      "action": "create",
+      "candidate_digest": "sha256:e2366bf8ebddbd0557ab74d6f9de0fbd73fe5287e048c94c6411770421180ab5",
+      "candidate_reference": "MY2019-JL-JL19-04-preparatory-compact-r2-review-r3",
+      "correspondence": [
+        {
+          "digest": "sha256:a4ae81e161d90a182880790d585ce9083304ee91a35818bba6791bf636ce1130",
+          "reference": "98fc7eb1-f684-413d-be4f-77193bf12fe6"
+        }
+      ],
+      "evidence": [
+        {
+          "digest": "sha256:942ffe6e484b6e4a96f4db457d40f2eb1c280b32e594d2fa97d4a63784e8a9f4",
+          "reference": "jeep_2019_wrangler_specifications|sha256:84bb3faf505332a2799830563cb1863621385b96430585e1a03216924596fd40|MY2019-JL-drive"
+        },
+        {
+          "digest": "sha256:fb1d1d6b134ca3472b923f803a68e232f34b6a2f96d2a05f9de70b89ac9e6d55",
+          "reference": "mopar_2019_wrangler_user_guide|sha256:0435598871bae4ab42e91f52f689331447ecfdb3d56644c3f9aac4274645cd0e|MY2019-JL-fuel"
+        },
+        {
+          "digest": "sha256:a5cdd2f2b3f2913db5de4106a0df609f4b04ee052b3bedec23d35efe1fec4838",
+          "reference": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-04"
+        },
+        {
+          "digest": "sha256:822cbe3422e71e74723ee58aa593a006a2ce8a1df0d15784e7e77c26caea9939",
+          "reference": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|MY2019-common-JLJL72"
+        }
+      ],
+      "existing_record": null,
+      "generation_binding": {
+        "mode": "explicit_correspondence",
+        "resolution_version": "1.1",
+        "strategy": "reviewed_source_correspondence"
+      },
+      "model_year": 2019,
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "row_id": "JL19-04",
+      "target_fields": {
+        "drivetrain": "4WD",
+        "electrification_type": "mild_hybrid",
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 4,
+        "engine_displacement_liters": "2",
+        "engine_name": "2.0L I4",
+        "fuel_type": "gasoline",
+        "market": "US",
+        "model_year": 2019,
+        "trim_name": "Sport S"
+      },
+      "target_slug": "2019-sport-s-20l-i4-4wd-us-turbo-mhev"
+    },
+    {
+      "action": "create",
+      "candidate_digest": "sha256:fedc8013ef72f51d589b057c3b44ebd9d892557369a95245b5a330d79bf2843c",
+      "candidate_reference": "MY2019-JL-JL19-05-preparatory-compact-r2-review-r3",
+      "correspondence": [
+        {
+          "digest": "sha256:def5ebea00410ce4cb662a53d9fd4c481927d6a628e27d5ce434f69cf8ded6ef",
+          "reference": "c636ab1b-bed8-4943-a1b0-385a9d3d1ca3"
+        }
+      ],
+      "evidence": [
+        {
+          "digest": "sha256:e77eb9ff1e5a2ea0ce3bd55a998aaa91389e2f74593feb758af649108168e161",
+          "reference": "carb_2019_3_6_hev|sha256:c82e4ddc543e0142628e1cf66f1ff6e38e233eff474e6b1b93e0c2dd0eae64e6|carb_2019_3_6_hev"
+        },
+        {
+          "digest": "sha256:17cf8da8b111f4618fe0e93dcd36d52bb25335e98f708ed21bb41ac8e5cd6004",
+          "reference": "fca_pentastar_family_facts|sha256:7e16f753401a6711b78b510ad4cf35cecdaa775b7ce719b0050fd6db72dabfef|MY19-family"
+        },
+        {
+          "digest": "sha256:bbf871d779bd095741e08a623319dd708f298aafc2367b2664cce2b743b9ba6a",
+          "reference": "fca_y40_scope|sha256:6af1557c414a22a709a7a0d9d50767ef55f7fc885dab3fe26bbcf8dd35b9c2d7|fca_y40_scope"
+        },
+        {
+          "digest": "sha256:a80e2f42c941e363f4edb9dbaa787912c7bd145da751222b2b30a53e0acb5b61",
+          "reference": "human_classification_adjudication|sha256:60905a45e8eb6d8ba2877090f2bba9aa6e6d5c81189f5ca69eda27e8464aa39a|sha256:266ce1c5ac5672a208914c28d47446b92b9b543a03fabe0c2d69cf9d06a6f291"
+        },
+        {
+          "digest": "sha256:942ffe6e484b6e4a96f4db457d40f2eb1c280b32e594d2fa97d4a63784e8a9f4",
+          "reference": "jeep_2019_wrangler_specifications|sha256:84bb3faf505332a2799830563cb1863621385b96430585e1a03216924596fd40|MY2019-JL-drive"
+        },
+        {
+          "digest": "sha256:3a6633707f5c36f984b133927aeebb28390cc2c89e9e114b88102cf04be84a6a",
+          "reference": "jeeppartsdeal_oe_catalog|sha256:e558fc4e27edf7f39a04332fadbd65930ee038b76f1377f84be23f0ac4c42843|MY19-alternator"
+        },
+        {
+          "digest": "sha256:c4de38c375603b2e503728c8f8ce92ff40aae9acb009f16f0dba3a045549f3b6",
+          "reference": "mopar_2019_hardware_excerpts|sha256:456d7554534a5dae9f0ecf9ca6ae5f74f634d28d841f0c7a62c44fa0e1cfca75|US-MY19-hardware"
+        },
+        {
+          "digest": "sha256:fb1d1d6b134ca3472b923f803a68e232f34b6a2f96d2a05f9de70b89ac9e6d55",
+          "reference": "mopar_2019_wrangler_user_guide|sha256:0435598871bae4ab42e91f52f689331447ecfdb3d56644c3f9aac4274645cd0e|MY2019-JL-fuel"
+        },
+        {
+          "digest": "sha256:449695deb40c8b481063b441689576beb46d79b9bedf5e68762cf436cfaea30e",
+          "reference": "my2019_erc_research_review|sha256:df1686c6c360f451a8c10b94e4c4b6dafc5cabced607e2ecac6f0be8d4521443|ERC-review-synthesis"
+        },
+        {
+          "digest": "sha256:cb58dcb7aebca0681fe7a1539d02d2929a6afbd5b4cdae849f1b35f37d56c936",
+          "reference": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-05"
+        },
+        {
+          "digest": "sha256:c4be8b5726eff17a473abebb8ef1353401b10f870466d1613c5a53c3a1574dfe",
+          "reference": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|MY2019-common-JLJS72"
+        }
+      ],
+      "existing_record": null,
+      "generation_binding": {
+        "mode": "explicit_correspondence",
+        "resolution_version": "1.1",
+        "strategy": "reviewed_source_correspondence"
+      },
+      "model_year": 2019,
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ],
+      "row_id": "JL19-05",
+      "target_fields": {
+        "drivetrain": "4WD",
+        "electrification_type": "none",
+        "engine_aspiration": "naturally_aspirated",
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "engine_name": "3.6L V6",
+        "fuel_type": "gasoline",
+        "market": "US",
+        "model_year": 2019,
+        "trim_name": "Rubicon"
+      },
+      "target_slug": "2019-rubicon-36l-v6-4wd-us"
+    },
+    {
+      "action": "create",
+      "candidate_digest": "sha256:5d533cd574e35a07c7778e1f2be2120edea44e76a42688c03067084e70635d51",
+      "candidate_reference": "MY2019-JL-JL19-06-preparatory-compact-r2-review-r3",
+      "correspondence": [
+        {
+          "digest": "sha256:def5ebea00410ce4cb662a53d9fd4c481927d6a628e27d5ce434f69cf8ded6ef",
+          "reference": "c636ab1b-bed8-4943-a1b0-385a9d3d1ca3"
+        }
+      ],
+      "evidence": [
+        {
+          "digest": "sha256:942ffe6e484b6e4a96f4db457d40f2eb1c280b32e594d2fa97d4a63784e8a9f4",
+          "reference": "jeep_2019_wrangler_specifications|sha256:84bb3faf505332a2799830563cb1863621385b96430585e1a03216924596fd40|MY2019-JL-drive"
+        },
+        {
+          "digest": "sha256:fb1d1d6b134ca3472b923f803a68e232f34b6a2f96d2a05f9de70b89ac9e6d55",
+          "reference": "mopar_2019_wrangler_user_guide|sha256:0435598871bae4ab42e91f52f689331447ecfdb3d56644c3f9aac4274645cd0e|MY2019-JL-fuel"
+        },
+        {
+          "digest": "sha256:7b1188513f90f7c4e165906d6851e36f5e64fe6ad92f363c6b503778e3ccb602",
+          "reference": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-06"
+        },
+        {
+          "digest": "sha256:c4be8b5726eff17a473abebb8ef1353401b10f870466d1613c5a53c3a1574dfe",
+          "reference": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|MY2019-common-JLJS72"
+        }
+      ],
+      "existing_record": null,
+      "generation_binding": {
+        "mode": "explicit_correspondence",
+        "resolution_version": "1.1",
+        "strategy": "reviewed_source_correspondence"
+      },
+      "model_year": 2019,
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "row_id": "JL19-06",
+      "target_fields": {
+        "drivetrain": "4WD",
+        "electrification_type": "mild_hybrid",
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 4,
+        "engine_displacement_liters": "2",
+        "engine_name": "2.0L I4",
+        "fuel_type": "gasoline",
+        "market": "US",
+        "model_year": 2019,
+        "trim_name": "Rubicon"
+      },
+      "target_slug": "2019-rubicon-20l-i4-4wd-us-turbo-mhev"
+    },
+    {
+      "action": "create",
+      "candidate_digest": "sha256:48c999af9b2ee2a8fbcde64129d3f98dd5e6aa3bfbe189fc3a03fb235522a101",
+      "candidate_reference": "MY2019-JL-JL19-07-preparatory-compact-r2-review-r3",
+      "correspondence": [
+        {
+          "digest": "sha256:16638781801556503d6723591f7d82292d6d020f197ca4f35b9ccb99987fdd23",
+          "reference": "c1b9b744-b447-4f6c-9c0c-0960f6482bb1"
+        }
+      ],
+      "evidence": [
+        {
+          "digest": "sha256:e77eb9ff1e5a2ea0ce3bd55a998aaa91389e2f74593feb758af649108168e161",
+          "reference": "carb_2019_3_6_hev|sha256:c82e4ddc543e0142628e1cf66f1ff6e38e233eff474e6b1b93e0c2dd0eae64e6|carb_2019_3_6_hev"
+        },
+        {
+          "digest": "sha256:17cf8da8b111f4618fe0e93dcd36d52bb25335e98f708ed21bb41ac8e5cd6004",
+          "reference": "fca_pentastar_family_facts|sha256:7e16f753401a6711b78b510ad4cf35cecdaa775b7ce719b0050fd6db72dabfef|MY19-family"
+        },
+        {
+          "digest": "sha256:bbf871d779bd095741e08a623319dd708f298aafc2367b2664cce2b743b9ba6a",
+          "reference": "fca_y40_scope|sha256:6af1557c414a22a709a7a0d9d50767ef55f7fc885dab3fe26bbcf8dd35b9c2d7|fca_y40_scope"
+        },
+        {
+          "digest": "sha256:4062700cbf2287cf04018ee75f32d4e1172e6a2177c37b8c55fd45392ae26b80",
+          "reference": "human_classification_adjudication|sha256:1930f97074852114f64fc946882807064e289673ce15e408678420592ac90686|sha256:a585d36de7e341ecbb2877f81334debcdcecbb3aa4433613856640063651b6a4"
+        },
+        {
+          "digest": "sha256:942ffe6e484b6e4a96f4db457d40f2eb1c280b32e594d2fa97d4a63784e8a9f4",
+          "reference": "jeep_2019_wrangler_specifications|sha256:84bb3faf505332a2799830563cb1863621385b96430585e1a03216924596fd40|MY2019-JL-drive"
+        },
+        {
+          "digest": "sha256:95a6724b8256aba66506ac32797ac6ce3458275b93c10389d2d5bb4e266acdba",
+          "reference": "jeep_usa_order_guide_excerpts|sha256:3a3e829b87591583ffd6902a5ddd694be7d47fd815fd10813cb1e28a36a8938f|JL19-07-june-guide-excerpt"
+        },
+        {
+          "digest": "sha256:3a6633707f5c36f984b133927aeebb28390cc2c89e9e114b88102cf04be84a6a",
+          "reference": "jeeppartsdeal_oe_catalog|sha256:e558fc4e27edf7f39a04332fadbd65930ee038b76f1377f84be23f0ac4c42843|MY19-alternator"
+        },
+        {
+          "digest": "sha256:c4de38c375603b2e503728c8f8ce92ff40aae9acb009f16f0dba3a045549f3b6",
+          "reference": "mopar_2019_hardware_excerpts|sha256:456d7554534a5dae9f0ecf9ca6ae5f74f634d28d841f0c7a62c44fa0e1cfca75|US-MY19-hardware"
+        },
+        {
+          "digest": "sha256:fb1d1d6b134ca3472b923f803a68e232f34b6a2f96d2a05f9de70b89ac9e6d55",
+          "reference": "mopar_2019_wrangler_user_guide|sha256:0435598871bae4ab42e91f52f689331447ecfdb3d56644c3f9aac4274645cd0e|MY2019-JL-fuel"
+        },
+        {
+          "digest": "sha256:449695deb40c8b481063b441689576beb46d79b9bedf5e68762cf436cfaea30e",
+          "reference": "my2019_erc_research_review|sha256:df1686c6c360f451a8c10b94e4c4b6dafc5cabced607e2ecac6f0be8d4521443|ERC-review-synthesis"
+        },
+        {
+          "digest": "sha256:ac7cceaac9c8675fe2c65a766033b5c7c89d4309be5099b15b6ab1c4205eb4ee",
+          "reference": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-07"
+        },
+        {
+          "digest": "sha256:8baa399e9b3a23c3b5fa959731e276f4e4e0f4660f3515d43f346c09a4894c9e",
+          "reference": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|MY2019-common-JLJL74"
+        }
+      ],
+      "existing_record": null,
+      "generation_binding": {
+        "mode": "explicit_correspondence",
+        "resolution_version": "1.1",
+        "strategy": "reviewed_source_correspondence"
+      },
+      "model_year": 2019,
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ],
+      "row_id": "JL19-07",
+      "target_fields": {
+        "drivetrain": "4WD",
+        "electrification_type": "none",
+        "engine_aspiration": "naturally_aspirated",
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "engine_name": "3.6L V6",
+        "fuel_type": "gasoline",
+        "market": "US",
+        "model_year": 2019,
+        "trim_name": "Unlimited Sport"
+      },
+      "target_slug": "2019-unlimited-sport-36l-v6-4wd-us"
+    },
+    {
+      "action": "create",
+      "candidate_digest": "sha256:d2cef6f3c3de7487e94aed4295a097be4471622dcbcb3ad2a15aafb9b3384224",
+      "candidate_reference": "MY2019-JL-JL19-08-preparatory-compact-r2-review-r3",
+      "correspondence": [
+        {
+          "digest": "sha256:16638781801556503d6723591f7d82292d6d020f197ca4f35b9ccb99987fdd23",
+          "reference": "c1b9b744-b447-4f6c-9c0c-0960f6482bb1"
+        }
+      ],
+      "evidence": [
+        {
+          "digest": "sha256:942ffe6e484b6e4a96f4db457d40f2eb1c280b32e594d2fa97d4a63784e8a9f4",
+          "reference": "jeep_2019_wrangler_specifications|sha256:84bb3faf505332a2799830563cb1863621385b96430585e1a03216924596fd40|MY2019-JL-drive"
+        },
+        {
+          "digest": "sha256:6d9c7838f9a6eaf2f3cf3e33f6913acc160c2418d1adce5af275f7167330d8d5",
+          "reference": "jeep_usa_order_guide_excerpts|sha256:3a3e829b87591583ffd6902a5ddd694be7d47fd815fd10813cb1e28a36a8938f|JL19-08-june-guide-excerpt"
+        },
+        {
+          "digest": "sha256:fb1d1d6b134ca3472b923f803a68e232f34b6a2f96d2a05f9de70b89ac9e6d55",
+          "reference": "mopar_2019_wrangler_user_guide|sha256:0435598871bae4ab42e91f52f689331447ecfdb3d56644c3f9aac4274645cd0e|MY2019-JL-fuel"
+        },
+        {
+          "digest": "sha256:14a6b3337db41ffd13425e4e88c6143a1edb5d09d6436f03675421529bb5f71d",
+          "reference": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-08"
+        },
+        {
+          "digest": "sha256:8baa399e9b3a23c3b5fa959731e276f4e4e0f4660f3515d43f346c09a4894c9e",
+          "reference": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|MY2019-common-JLJL74"
+        }
+      ],
+      "existing_record": null,
+      "generation_binding": {
+        "mode": "explicit_correspondence",
+        "resolution_version": "1.1",
+        "strategy": "reviewed_source_correspondence"
+      },
+      "model_year": 2019,
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "row_id": "JL19-08",
+      "target_fields": {
+        "drivetrain": "4WD",
+        "electrification_type": "mild_hybrid",
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 4,
+        "engine_displacement_liters": "2",
+        "engine_name": "2.0L I4",
+        "fuel_type": "gasoline",
+        "market": "US",
+        "model_year": 2019,
+        "trim_name": "Unlimited Sport"
+      },
+      "target_slug": "2019-unlimited-sport-20l-i4-4wd-us-turbo-mhev"
+    },
+    {
+      "action": "create",
+      "candidate_digest": "sha256:bf4117a243b4771b3600c88e887d082cc16d60a8a6e2562b2f1665ef4a41f10d",
+      "candidate_reference": "MY2019-JL-JL19-09-preparatory-compact-r2-review-r3",
+      "correspondence": [
+        {
+          "digest": "sha256:16638781801556503d6723591f7d82292d6d020f197ca4f35b9ccb99987fdd23",
+          "reference": "c1b9b744-b447-4f6c-9c0c-0960f6482bb1"
+        }
+      ],
+      "evidence": [
+        {
+          "digest": "sha256:e77eb9ff1e5a2ea0ce3bd55a998aaa91389e2f74593feb758af649108168e161",
+          "reference": "carb_2019_3_6_hev|sha256:c82e4ddc543e0142628e1cf66f1ff6e38e233eff474e6b1b93e0c2dd0eae64e6|carb_2019_3_6_hev"
+        },
+        {
+          "digest": "sha256:17cf8da8b111f4618fe0e93dcd36d52bb25335e98f708ed21bb41ac8e5cd6004",
+          "reference": "fca_pentastar_family_facts|sha256:7e16f753401a6711b78b510ad4cf35cecdaa775b7ce719b0050fd6db72dabfef|MY19-family"
+        },
+        {
+          "digest": "sha256:bbf871d779bd095741e08a623319dd708f298aafc2367b2664cce2b743b9ba6a",
+          "reference": "fca_y40_scope|sha256:6af1557c414a22a709a7a0d9d50767ef55f7fc885dab3fe26bbcf8dd35b9c2d7|fca_y40_scope"
+        },
+        {
+          "digest": "sha256:c1d1cc0f89f4b74caeafac03b7a80ae56f4a6ccafcd08afba6dec61843209dc8",
+          "reference": "human_classification_adjudication|sha256:ebfbb2742d3fafff480a1a8af32ac6e3dd1ab48b5c0e402294ab83760323ee59|sha256:02cba460eade09f0b99ac1a0f92b5747529da236beae020be7385557c09f31f3"
+        },
+        {
+          "digest": "sha256:942ffe6e484b6e4a96f4db457d40f2eb1c280b32e594d2fa97d4a63784e8a9f4",
+          "reference": "jeep_2019_wrangler_specifications|sha256:84bb3faf505332a2799830563cb1863621385b96430585e1a03216924596fd40|MY2019-JL-drive"
+        },
+        {
+          "digest": "sha256:8828159c63dae7c29f9adbc2d3353005d54bd9dcc89ec681b7a9a402611c8bbf",
+          "reference": "jeep_usa_order_guide_excerpts|sha256:3a3e829b87591583ffd6902a5ddd694be7d47fd815fd10813cb1e28a36a8938f|JL19-09-june-guide-excerpt"
+        },
+        {
+          "digest": "sha256:3a6633707f5c36f984b133927aeebb28390cc2c89e9e114b88102cf04be84a6a",
+          "reference": "jeeppartsdeal_oe_catalog|sha256:e558fc4e27edf7f39a04332fadbd65930ee038b76f1377f84be23f0ac4c42843|MY19-alternator"
+        },
+        {
+          "digest": "sha256:c4de38c375603b2e503728c8f8ce92ff40aae9acb009f16f0dba3a045549f3b6",
+          "reference": "mopar_2019_hardware_excerpts|sha256:456d7554534a5dae9f0ecf9ca6ae5f74f634d28d841f0c7a62c44fa0e1cfca75|US-MY19-hardware"
+        },
+        {
+          "digest": "sha256:fb1d1d6b134ca3472b923f803a68e232f34b6a2f96d2a05f9de70b89ac9e6d55",
+          "reference": "mopar_2019_wrangler_user_guide|sha256:0435598871bae4ab42e91f52f689331447ecfdb3d56644c3f9aac4274645cd0e|MY2019-JL-fuel"
+        },
+        {
+          "digest": "sha256:449695deb40c8b481063b441689576beb46d79b9bedf5e68762cf436cfaea30e",
+          "reference": "my2019_erc_research_review|sha256:df1686c6c360f451a8c10b94e4c4b6dafc5cabced607e2ecac6f0be8d4521443|ERC-review-synthesis"
+        },
+        {
+          "digest": "sha256:e689ba3c4fe2fcd2946e644d9320833f081df91529053415bc11e4e82c0110a4",
+          "reference": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-09"
+        },
+        {
+          "digest": "sha256:8baa399e9b3a23c3b5fa959731e276f4e4e0f4660f3515d43f346c09a4894c9e",
+          "reference": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|MY2019-common-JLJL74"
+        }
+      ],
+      "existing_record": null,
+      "generation_binding": {
+        "mode": "explicit_correspondence",
+        "resolution_version": "1.1",
+        "strategy": "reviewed_source_correspondence"
+      },
+      "model_year": 2019,
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ],
+      "row_id": "JL19-09",
+      "target_fields": {
+        "drivetrain": "4WD",
+        "electrification_type": "none",
+        "engine_aspiration": "naturally_aspirated",
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "engine_name": "3.6L V6",
+        "fuel_type": "gasoline",
+        "market": "US",
+        "model_year": 2019,
+        "trim_name": "Unlimited Sport S"
+      },
+      "target_slug": "2019-unlimited-sport-s-36l-v6-4wd-us"
+    },
+    {
+      "action": "create",
+      "candidate_digest": "sha256:ccb451844b1d240bfa71a683783749d192bbcfee62086607f32766b64b2b473c",
+      "candidate_reference": "MY2019-JL-JL19-10-preparatory-compact-r2-review-r3",
+      "correspondence": [
+        {
+          "digest": "sha256:16638781801556503d6723591f7d82292d6d020f197ca4f35b9ccb99987fdd23",
+          "reference": "c1b9b744-b447-4f6c-9c0c-0960f6482bb1"
+        }
+      ],
+      "evidence": [
+        {
+          "digest": "sha256:942ffe6e484b6e4a96f4db457d40f2eb1c280b32e594d2fa97d4a63784e8a9f4",
+          "reference": "jeep_2019_wrangler_specifications|sha256:84bb3faf505332a2799830563cb1863621385b96430585e1a03216924596fd40|MY2019-JL-drive"
+        },
+        {
+          "digest": "sha256:5809eac8e46efb251d92bd0fe52baf2ecbe71f8c96fffefb4a5204910cb3c120",
+          "reference": "jeep_usa_order_guide_excerpts|sha256:3a3e829b87591583ffd6902a5ddd694be7d47fd815fd10813cb1e28a36a8938f|JL19-10-june-guide-excerpt"
+        },
+        {
+          "digest": "sha256:fb1d1d6b134ca3472b923f803a68e232f34b6a2f96d2a05f9de70b89ac9e6d55",
+          "reference": "mopar_2019_wrangler_user_guide|sha256:0435598871bae4ab42e91f52f689331447ecfdb3d56644c3f9aac4274645cd0e|MY2019-JL-fuel"
+        },
+        {
+          "digest": "sha256:6fe5f96cfcc8e617dfe78defbfa5a6a7d2a0eabf7f2ed33051ba0c672f207d57",
+          "reference": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-10"
+        },
+        {
+          "digest": "sha256:8baa399e9b3a23c3b5fa959731e276f4e4e0f4660f3515d43f346c09a4894c9e",
+          "reference": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|MY2019-common-JLJL74"
+        }
+      ],
+      "existing_record": null,
+      "generation_binding": {
+        "mode": "explicit_correspondence",
+        "resolution_version": "1.1",
+        "strategy": "reviewed_source_correspondence"
+      },
+      "model_year": 2019,
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "row_id": "JL19-10",
+      "target_fields": {
+        "drivetrain": "4WD",
+        "electrification_type": "mild_hybrid",
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 4,
+        "engine_displacement_liters": "2",
+        "engine_name": "2.0L I4",
+        "fuel_type": "gasoline",
+        "market": "US",
+        "model_year": 2019,
+        "trim_name": "Unlimited Sport S"
+      },
+      "target_slug": "2019-unlimited-sport-s-20l-i4-4wd-us-turbo-mhev"
+    },
+    {
+      "action": "create",
+      "candidate_digest": "sha256:4ac2842b6f712817a33018ff1a70138582f8daa981570112701edf6b66f483e4",
+      "candidate_reference": "MY2019-JL-JL19-11-preparatory-compact-r2-review-r3",
+      "correspondence": [
+        {
+          "digest": "sha256:16638781801556503d6723591f7d82292d6d020f197ca4f35b9ccb99987fdd23",
+          "reference": "c1b9b744-b447-4f6c-9c0c-0960f6482bb1"
+        }
+      ],
+      "evidence": [
+        {
+          "digest": "sha256:e77eb9ff1e5a2ea0ce3bd55a998aaa91389e2f74593feb758af649108168e161",
+          "reference": "carb_2019_3_6_hev|sha256:c82e4ddc543e0142628e1cf66f1ff6e38e233eff474e6b1b93e0c2dd0eae64e6|carb_2019_3_6_hev"
+        },
+        {
+          "digest": "sha256:17cf8da8b111f4618fe0e93dcd36d52bb25335e98f708ed21bb41ac8e5cd6004",
+          "reference": "fca_pentastar_family_facts|sha256:7e16f753401a6711b78b510ad4cf35cecdaa775b7ce719b0050fd6db72dabfef|MY19-family"
+        },
+        {
+          "digest": "sha256:bbf871d779bd095741e08a623319dd708f298aafc2367b2664cce2b743b9ba6a",
+          "reference": "fca_y40_scope|sha256:6af1557c414a22a709a7a0d9d50767ef55f7fc885dab3fe26bbcf8dd35b9c2d7|fca_y40_scope"
+        },
+        {
+          "digest": "sha256:1c77ff20192313216bf80cab1ef57bb2ac611c63b86f52eb77f9e33244bec9c1",
+          "reference": "human_classification_adjudication|sha256:96ead3202da5203f00a0d2e12831719720068dce4a2daf1660ef0f01e7d89bde|sha256:ea3847fe0f233e906cfc9c2da9a8c3a89c1dbaa2e8ac8d25721503944f0c65af"
+        },
+        {
+          "digest": "sha256:942ffe6e484b6e4a96f4db457d40f2eb1c280b32e594d2fa97d4a63784e8a9f4",
+          "reference": "jeep_2019_wrangler_specifications|sha256:84bb3faf505332a2799830563cb1863621385b96430585e1a03216924596fd40|MY2019-JL-drive"
+        },
+        {
+          "digest": "sha256:14e28534ad7fbf3ac63f01678439b98237616a90a54c51bf17fc38339992c585",
+          "reference": "jeep_usa_order_guide_excerpts|sha256:3a3e829b87591583ffd6902a5ddd694be7d47fd815fd10813cb1e28a36a8938f|JL19-11-june-guide-excerpt"
+        },
+        {
+          "digest": "sha256:3a6633707f5c36f984b133927aeebb28390cc2c89e9e114b88102cf04be84a6a",
+          "reference": "jeeppartsdeal_oe_catalog|sha256:e558fc4e27edf7f39a04332fadbd65930ee038b76f1377f84be23f0ac4c42843|MY19-alternator"
+        },
+        {
+          "digest": "sha256:c4de38c375603b2e503728c8f8ce92ff40aae9acb009f16f0dba3a045549f3b6",
+          "reference": "mopar_2019_hardware_excerpts|sha256:456d7554534a5dae9f0ecf9ca6ae5f74f634d28d841f0c7a62c44fa0e1cfca75|US-MY19-hardware"
+        },
+        {
+          "digest": "sha256:fb1d1d6b134ca3472b923f803a68e232f34b6a2f96d2a05f9de70b89ac9e6d55",
+          "reference": "mopar_2019_wrangler_user_guide|sha256:0435598871bae4ab42e91f52f689331447ecfdb3d56644c3f9aac4274645cd0e|MY2019-JL-fuel"
+        },
+        {
+          "digest": "sha256:449695deb40c8b481063b441689576beb46d79b9bedf5e68762cf436cfaea30e",
+          "reference": "my2019_erc_research_review|sha256:df1686c6c360f451a8c10b94e4c4b6dafc5cabced607e2ecac6f0be8d4521443|ERC-review-synthesis"
+        },
+        {
+          "digest": "sha256:9da9578492507ae4feff4d60d9fc8d2c2157c053bdcbaed5b7c066737c9d1d58",
+          "reference": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-11"
+        },
+        {
+          "digest": "sha256:8baa399e9b3a23c3b5fa959731e276f4e4e0f4660f3515d43f346c09a4894c9e",
+          "reference": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|MY2019-common-JLJL74"
+        }
+      ],
+      "existing_record": null,
+      "generation_binding": {
+        "mode": "explicit_correspondence",
+        "resolution_version": "1.1",
+        "strategy": "reviewed_source_correspondence"
+      },
+      "model_year": 2019,
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ],
+      "row_id": "JL19-11",
+      "target_fields": {
+        "drivetrain": "4WD",
+        "electrification_type": "none",
+        "engine_aspiration": "naturally_aspirated",
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "engine_name": "3.6L V6",
+        "fuel_type": "gasoline",
+        "market": "US",
+        "model_year": 2019,
+        "trim_name": "Unlimited Sport Altitude"
+      },
+      "target_slug": "2019-unlimited-sport-altitude-36l-v6-4wd-us"
+    },
+    {
+      "action": "create",
+      "candidate_digest": "sha256:ccb8eee562dc6bf0ec48259b6bd3367b7b0ac7ece31b722664238e5b6c1cc360",
+      "candidate_reference": "MY2019-JL-JL19-12-preparatory-compact-r2-review-r3",
+      "correspondence": [
+        {
+          "digest": "sha256:16638781801556503d6723591f7d82292d6d020f197ca4f35b9ccb99987fdd23",
+          "reference": "c1b9b744-b447-4f6c-9c0c-0960f6482bb1"
+        }
+      ],
+      "evidence": [
+        {
+          "digest": "sha256:942ffe6e484b6e4a96f4db457d40f2eb1c280b32e594d2fa97d4a63784e8a9f4",
+          "reference": "jeep_2019_wrangler_specifications|sha256:84bb3faf505332a2799830563cb1863621385b96430585e1a03216924596fd40|MY2019-JL-drive"
+        },
+        {
+          "digest": "sha256:95dc566cadbdabe5dc475bd87c0c3da43c234335f75365e8800cebbf51d2686c",
+          "reference": "jeep_usa_order_guide_excerpts|sha256:3a3e829b87591583ffd6902a5ddd694be7d47fd815fd10813cb1e28a36a8938f|JL19-12-june-guide-excerpt"
+        },
+        {
+          "digest": "sha256:fb1d1d6b134ca3472b923f803a68e232f34b6a2f96d2a05f9de70b89ac9e6d55",
+          "reference": "mopar_2019_wrangler_user_guide|sha256:0435598871bae4ab42e91f52f689331447ecfdb3d56644c3f9aac4274645cd0e|MY2019-JL-fuel"
+        },
+        {
+          "digest": "sha256:2c2195f0da9d165b6c7217deb5d833e99bfa4b894f8b243b12a430ec51c19046",
+          "reference": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-12"
+        },
+        {
+          "digest": "sha256:8baa399e9b3a23c3b5fa959731e276f4e4e0f4660f3515d43f346c09a4894c9e",
+          "reference": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|MY2019-common-JLJL74"
+        }
+      ],
+      "existing_record": null,
+      "generation_binding": {
+        "mode": "explicit_correspondence",
+        "resolution_version": "1.1",
+        "strategy": "reviewed_source_correspondence"
+      },
+      "model_year": 2019,
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "row_id": "JL19-12",
+      "target_fields": {
+        "drivetrain": "4WD",
+        "electrification_type": "mild_hybrid",
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 4,
+        "engine_displacement_liters": "2",
+        "engine_name": "2.0L I4",
+        "fuel_type": "gasoline",
+        "market": "US",
+        "model_year": 2019,
+        "trim_name": "Unlimited Sport Altitude"
+      },
+      "target_slug": "2019-unlimited-sport-altitude-20l-i4-4wd-us-turbo-mhev"
+    },
+    {
+      "action": "create",
+      "candidate_digest": "sha256:caaf4b18512dc7d0ceff2261e153ab351fab89eedf3cf164f3f16f2634371f42",
+      "candidate_reference": "MY2019-JL-JL19-13-preparatory-compact-r2-review-r3",
+      "correspondence": [
+        {
+          "digest": "sha256:46fe14559da3d434e671d5d14187eabba86acf8d205e17d536fbe1c4b75619d6",
+          "reference": "f2abb41d-7f25-46f6-9205-b04bec7886e0"
+        }
+      ],
+      "evidence": [
+        {
+          "digest": "sha256:e77eb9ff1e5a2ea0ce3bd55a998aaa91389e2f74593feb758af649108168e161",
+          "reference": "carb_2019_3_6_hev|sha256:c82e4ddc543e0142628e1cf66f1ff6e38e233eff474e6b1b93e0c2dd0eae64e6|carb_2019_3_6_hev"
+        },
+        {
+          "digest": "sha256:17cf8da8b111f4618fe0e93dcd36d52bb25335e98f708ed21bb41ac8e5cd6004",
+          "reference": "fca_pentastar_family_facts|sha256:7e16f753401a6711b78b510ad4cf35cecdaa775b7ce719b0050fd6db72dabfef|MY19-family"
+        },
+        {
+          "digest": "sha256:bbf871d779bd095741e08a623319dd708f298aafc2367b2664cce2b743b9ba6a",
+          "reference": "fca_y40_scope|sha256:6af1557c414a22a709a7a0d9d50767ef55f7fc885dab3fe26bbcf8dd35b9c2d7|fca_y40_scope"
+        },
+        {
+          "digest": "sha256:d613e8cfb75b697b1c60f014d61cabc494298a751f7ad70418072bcbbca31886",
+          "reference": "human_classification_adjudication|sha256:f73e24575dd4ae5104671c955f23d2cceb6af1eefff4a530299dd40d0b7b8698|sha256:c5da82dcf5e98c23d68831b6cd380d71f84f75a9f97a495a14ffe63668d896e7"
+        },
+        {
+          "digest": "sha256:942ffe6e484b6e4a96f4db457d40f2eb1c280b32e594d2fa97d4a63784e8a9f4",
+          "reference": "jeep_2019_wrangler_specifications|sha256:84bb3faf505332a2799830563cb1863621385b96430585e1a03216924596fd40|MY2019-JL-drive"
+        },
+        {
+          "digest": "sha256:e2db096bd7b144c1025bb4cb652d2744e140ae790ca8b4397c870aeb8ca543dc",
+          "reference": "jeep_usa_order_guide_excerpts|sha256:3a3e829b87591583ffd6902a5ddd694be7d47fd815fd10813cb1e28a36a8938f|JL19-13-june-guide-excerpt"
+        },
+        {
+          "digest": "sha256:3a6633707f5c36f984b133927aeebb28390cc2c89e9e114b88102cf04be84a6a",
+          "reference": "jeeppartsdeal_oe_catalog|sha256:e558fc4e27edf7f39a04332fadbd65930ee038b76f1377f84be23f0ac4c42843|MY19-alternator"
+        },
+        {
+          "digest": "sha256:c4de38c375603b2e503728c8f8ce92ff40aae9acb009f16f0dba3a045549f3b6",
+          "reference": "mopar_2019_hardware_excerpts|sha256:456d7554534a5dae9f0ecf9ca6ae5f74f634d28d841f0c7a62c44fa0e1cfca75|US-MY19-hardware"
+        },
+        {
+          "digest": "sha256:fb1d1d6b134ca3472b923f803a68e232f34b6a2f96d2a05f9de70b89ac9e6d55",
+          "reference": "mopar_2019_wrangler_user_guide|sha256:0435598871bae4ab42e91f52f689331447ecfdb3d56644c3f9aac4274645cd0e|MY2019-JL-fuel"
+        },
+        {
+          "digest": "sha256:449695deb40c8b481063b441689576beb46d79b9bedf5e68762cf436cfaea30e",
+          "reference": "my2019_erc_research_review|sha256:df1686c6c360f451a8c10b94e4c4b6dafc5cabced607e2ecac6f0be8d4521443|ERC-review-synthesis"
+        },
+        {
+          "digest": "sha256:e089b9e492e69d358f3597f88c4e87e2a28d88aa2c382f781815176b8a0aeb50",
+          "reference": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-13"
+        },
+        {
+          "digest": "sha256:293459ea30e8c57f6f762a7ab0ee998704e14df8ea77a82d3942e51d6f05d4c3",
+          "reference": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|MY2019-common-JLJP74"
+        }
+      ],
+      "existing_record": null,
+      "generation_binding": {
+        "mode": "explicit_correspondence",
+        "resolution_version": "1.1",
+        "strategy": "reviewed_source_correspondence"
+      },
+      "model_year": 2019,
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ],
+      "row_id": "JL19-13",
+      "target_fields": {
+        "drivetrain": "4WD",
+        "electrification_type": "none",
+        "engine_aspiration": "naturally_aspirated",
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "engine_name": "3.6L V6",
+        "fuel_type": "gasoline",
+        "market": "US",
+        "model_year": 2019,
+        "trim_name": "Unlimited Sahara"
+      },
+      "target_slug": "2019-unlimited-sahara-36l-v6-4wd-us"
+    },
+    {
+      "action": "create",
+      "candidate_digest": "sha256:fe95dbc320f88fdd77a8dfcfbec295a2450bcbcda2b6ebbf250023b2cb262f7d",
+      "candidate_reference": "MY2019-JL-JL19-14-preparatory-compact-r2-review-r3",
+      "correspondence": [
+        {
+          "digest": "sha256:46fe14559da3d434e671d5d14187eabba86acf8d205e17d536fbe1c4b75619d6",
+          "reference": "f2abb41d-7f25-46f6-9205-b04bec7886e0"
+        }
+      ],
+      "evidence": [
+        {
+          "digest": "sha256:942ffe6e484b6e4a96f4db457d40f2eb1c280b32e594d2fa97d4a63784e8a9f4",
+          "reference": "jeep_2019_wrangler_specifications|sha256:84bb3faf505332a2799830563cb1863621385b96430585e1a03216924596fd40|MY2019-JL-drive"
+        },
+        {
+          "digest": "sha256:786cfdcb217a4baf64e9673b8c2cc21cfc21192af814ba95a9de0e066453abbd",
+          "reference": "jeep_usa_order_guide_excerpts|sha256:3a3e829b87591583ffd6902a5ddd694be7d47fd815fd10813cb1e28a36a8938f|JL19-14-june-guide-excerpt"
+        },
+        {
+          "digest": "sha256:fb1d1d6b134ca3472b923f803a68e232f34b6a2f96d2a05f9de70b89ac9e6d55",
+          "reference": "mopar_2019_wrangler_user_guide|sha256:0435598871bae4ab42e91f52f689331447ecfdb3d56644c3f9aac4274645cd0e|MY2019-JL-fuel"
+        },
+        {
+          "digest": "sha256:9ed5b1ed994296780e90601fbad753cf4b3170172894f178e2ad351c712e5886",
+          "reference": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-14"
+        },
+        {
+          "digest": "sha256:293459ea30e8c57f6f762a7ab0ee998704e14df8ea77a82d3942e51d6f05d4c3",
+          "reference": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|MY2019-common-JLJP74"
+        }
+      ],
+      "existing_record": null,
+      "generation_binding": {
+        "mode": "explicit_correspondence",
+        "resolution_version": "1.1",
+        "strategy": "reviewed_source_correspondence"
+      },
+      "model_year": 2019,
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "row_id": "JL19-14",
+      "target_fields": {
+        "drivetrain": "4WD",
+        "electrification_type": "mild_hybrid",
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 4,
+        "engine_displacement_liters": "2",
+        "engine_name": "2.0L I4",
+        "fuel_type": "gasoline",
+        "market": "US",
+        "model_year": 2019,
+        "trim_name": "Unlimited Sahara"
+      },
+      "target_slug": "2019-unlimited-sahara-20l-i4-4wd-us-turbo-mhev"
+    },
+    {
+      "action": "create",
+      "candidate_digest": "sha256:8e37a7fb55d608a4b95446811477ee5db2c3d085ef90f7ce05b9e90ff0176ec4",
+      "candidate_reference": "MY2019-JL-JL19-15-preparatory-compact-r2-review-r3",
+      "correspondence": [
+        {
+          "digest": "sha256:46fe14559da3d434e671d5d14187eabba86acf8d205e17d536fbe1c4b75619d6",
+          "reference": "f2abb41d-7f25-46f6-9205-b04bec7886e0"
+        }
+      ],
+      "evidence": [
+        {
+          "digest": "sha256:e77eb9ff1e5a2ea0ce3bd55a998aaa91389e2f74593feb758af649108168e161",
+          "reference": "carb_2019_3_6_hev|sha256:c82e4ddc543e0142628e1cf66f1ff6e38e233eff474e6b1b93e0c2dd0eae64e6|carb_2019_3_6_hev"
+        },
+        {
+          "digest": "sha256:17cf8da8b111f4618fe0e93dcd36d52bb25335e98f708ed21bb41ac8e5cd6004",
+          "reference": "fca_pentastar_family_facts|sha256:7e16f753401a6711b78b510ad4cf35cecdaa775b7ce719b0050fd6db72dabfef|MY19-family"
+        },
+        {
+          "digest": "sha256:bbf871d779bd095741e08a623319dd708f298aafc2367b2664cce2b743b9ba6a",
+          "reference": "fca_y40_scope|sha256:6af1557c414a22a709a7a0d9d50767ef55f7fc885dab3fe26bbcf8dd35b9c2d7|fca_y40_scope"
+        },
+        {
+          "digest": "sha256:eebc34869cb8ef8ed187a4972cc030873265f050b46f217ad345a88fa039700d",
+          "reference": "human_classification_adjudication|sha256:12d513952a1b5093a6a47a180215801c8d312da67199e2fda6ce927d6796ed9f|sha256:43118ff96aa9ff80b41922e8f743768260b7ea3edd36c036c68860ac04b8f2af"
+        },
+        {
+          "digest": "sha256:942ffe6e484b6e4a96f4db457d40f2eb1c280b32e594d2fa97d4a63784e8a9f4",
+          "reference": "jeep_2019_wrangler_specifications|sha256:84bb3faf505332a2799830563cb1863621385b96430585e1a03216924596fd40|MY2019-JL-drive"
+        },
+        {
+          "digest": "sha256:172206d28e443c87f609e24779214010bb97408afcd4044d8779f08463954e37",
+          "reference": "jeep_usa_order_guide_excerpts|sha256:3a3e829b87591583ffd6902a5ddd694be7d47fd815fd10813cb1e28a36a8938f|JL19-15-june-guide-excerpt"
+        },
+        {
+          "digest": "sha256:3a6633707f5c36f984b133927aeebb28390cc2c89e9e114b88102cf04be84a6a",
+          "reference": "jeeppartsdeal_oe_catalog|sha256:e558fc4e27edf7f39a04332fadbd65930ee038b76f1377f84be23f0ac4c42843|MY19-alternator"
+        },
+        {
+          "digest": "sha256:c4de38c375603b2e503728c8f8ce92ff40aae9acb009f16f0dba3a045549f3b6",
+          "reference": "mopar_2019_hardware_excerpts|sha256:456d7554534a5dae9f0ecf9ca6ae5f74f634d28d841f0c7a62c44fa0e1cfca75|US-MY19-hardware"
+        },
+        {
+          "digest": "sha256:fb1d1d6b134ca3472b923f803a68e232f34b6a2f96d2a05f9de70b89ac9e6d55",
+          "reference": "mopar_2019_wrangler_user_guide|sha256:0435598871bae4ab42e91f52f689331447ecfdb3d56644c3f9aac4274645cd0e|MY2019-JL-fuel"
+        },
+        {
+          "digest": "sha256:449695deb40c8b481063b441689576beb46d79b9bedf5e68762cf436cfaea30e",
+          "reference": "my2019_erc_research_review|sha256:df1686c6c360f451a8c10b94e4c4b6dafc5cabced607e2ecac6f0be8d4521443|ERC-review-synthesis"
+        },
+        {
+          "digest": "sha256:f0c8323b59d25e627dab378f4504fe0f5fba32e660dd1305e3a8096b5c807033",
+          "reference": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-15"
+        },
+        {
+          "digest": "sha256:293459ea30e8c57f6f762a7ab0ee998704e14df8ea77a82d3942e51d6f05d4c3",
+          "reference": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|MY2019-common-JLJP74"
+        }
+      ],
+      "existing_record": null,
+      "generation_binding": {
+        "mode": "explicit_correspondence",
+        "resolution_version": "1.1",
+        "strategy": "reviewed_source_correspondence"
+      },
+      "model_year": 2019,
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ],
+      "row_id": "JL19-15",
+      "target_fields": {
+        "drivetrain": "4WD",
+        "electrification_type": "none",
+        "engine_aspiration": "naturally_aspirated",
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "engine_name": "3.6L V6",
+        "fuel_type": "gasoline",
+        "market": "US",
+        "model_year": 2019,
+        "trim_name": "Unlimited Sahara Altitude"
+      },
+      "target_slug": "2019-unlimited-sahara-altitude-36l-v6-4wd-us"
+    },
+    {
+      "action": "create",
+      "candidate_digest": "sha256:81aea90b0cc366923ce77e95a8327b7a880ce437d4ddf0f5418a674c113dc90d",
+      "candidate_reference": "MY2019-JL-JL19-16-preparatory-compact-r2-review-r3",
+      "correspondence": [
+        {
+          "digest": "sha256:46fe14559da3d434e671d5d14187eabba86acf8d205e17d536fbe1c4b75619d6",
+          "reference": "f2abb41d-7f25-46f6-9205-b04bec7886e0"
+        }
+      ],
+      "evidence": [
+        {
+          "digest": "sha256:942ffe6e484b6e4a96f4db457d40f2eb1c280b32e594d2fa97d4a63784e8a9f4",
+          "reference": "jeep_2019_wrangler_specifications|sha256:84bb3faf505332a2799830563cb1863621385b96430585e1a03216924596fd40|MY2019-JL-drive"
+        },
+        {
+          "digest": "sha256:9da5a36160d13f1a065f12937b1b7ddb6b30e5d9f61989d75dbe6798573af7f6",
+          "reference": "jeep_usa_order_guide_excerpts|sha256:3a3e829b87591583ffd6902a5ddd694be7d47fd815fd10813cb1e28a36a8938f|JL19-16-june-guide-excerpt"
+        },
+        {
+          "digest": "sha256:fb1d1d6b134ca3472b923f803a68e232f34b6a2f96d2a05f9de70b89ac9e6d55",
+          "reference": "mopar_2019_wrangler_user_guide|sha256:0435598871bae4ab42e91f52f689331447ecfdb3d56644c3f9aac4274645cd0e|MY2019-JL-fuel"
+        },
+        {
+          "digest": "sha256:862a9ffa00c5f7c788f56e38bd7c072971dea6ddcf343a0a5e49437dcd847225",
+          "reference": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-16"
+        },
+        {
+          "digest": "sha256:293459ea30e8c57f6f762a7ab0ee998704e14df8ea77a82d3942e51d6f05d4c3",
+          "reference": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|MY2019-common-JLJP74"
+        }
+      ],
+      "existing_record": null,
+      "generation_binding": {
+        "mode": "explicit_correspondence",
+        "resolution_version": "1.1",
+        "strategy": "reviewed_source_correspondence"
+      },
+      "model_year": 2019,
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "row_id": "JL19-16",
+      "target_fields": {
+        "drivetrain": "4WD",
+        "electrification_type": "mild_hybrid",
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 4,
+        "engine_displacement_liters": "2",
+        "engine_name": "2.0L I4",
+        "fuel_type": "gasoline",
+        "market": "US",
+        "model_year": 2019,
+        "trim_name": "Unlimited Sahara Altitude"
+      },
+      "target_slug": "2019-unlimited-sahara-altitude-20l-i4-4wd-us-turbo-mhev"
+    },
+    {
+      "action": "create",
+      "candidate_digest": "sha256:b1f691977f696210f96ce073e275fffe29613ac9f4eed27abf190298a33b7de7",
+      "candidate_reference": "MY2019-JL-JL19-17-preparatory-compact-r2-review-r3",
+      "correspondence": [
+        {
+          "digest": "sha256:46fe14559da3d434e671d5d14187eabba86acf8d205e17d536fbe1c4b75619d6",
+          "reference": "f2abb41d-7f25-46f6-9205-b04bec7886e0"
+        }
+      ],
+      "evidence": [
+        {
+          "digest": "sha256:e77eb9ff1e5a2ea0ce3bd55a998aaa91389e2f74593feb758af649108168e161",
+          "reference": "carb_2019_3_6_hev|sha256:c82e4ddc543e0142628e1cf66f1ff6e38e233eff474e6b1b93e0c2dd0eae64e6|carb_2019_3_6_hev"
+        },
+        {
+          "digest": "sha256:17cf8da8b111f4618fe0e93dcd36d52bb25335e98f708ed21bb41ac8e5cd6004",
+          "reference": "fca_pentastar_family_facts|sha256:7e16f753401a6711b78b510ad4cf35cecdaa775b7ce719b0050fd6db72dabfef|MY19-family"
+        },
+        {
+          "digest": "sha256:bbf871d779bd095741e08a623319dd708f298aafc2367b2664cce2b743b9ba6a",
+          "reference": "fca_y40_scope|sha256:6af1557c414a22a709a7a0d9d50767ef55f7fc885dab3fe26bbcf8dd35b9c2d7|fca_y40_scope"
+        },
+        {
+          "digest": "sha256:5c547e79368e3950d9001ea6e1800b19beb2aaf059941df3f89bd7ab37da547b",
+          "reference": "human_classification_adjudication|sha256:fd282eac931fc8ecf3d09c30b7787d86b3c70a225ef5dbdcdca0ab752454e5e0|sha256:cbc2a3d119d254bccaecd161240b47cd569ed14c0ceac318f1588f45df047e0b"
+        },
+        {
+          "digest": "sha256:942ffe6e484b6e4a96f4db457d40f2eb1c280b32e594d2fa97d4a63784e8a9f4",
+          "reference": "jeep_2019_wrangler_specifications|sha256:84bb3faf505332a2799830563cb1863621385b96430585e1a03216924596fd40|MY2019-JL-drive"
+        },
+        {
+          "digest": "sha256:777037b549a79545975a2ce7627ffe5e2a8cc89fa20a3fd5760393bd5e58f41b",
+          "reference": "jeep_usa_order_guide_excerpts|sha256:3a3e829b87591583ffd6902a5ddd694be7d47fd815fd10813cb1e28a36a8938f|JL19-17-june-guide-excerpt"
+        },
+        {
+          "digest": "sha256:3a6633707f5c36f984b133927aeebb28390cc2c89e9e114b88102cf04be84a6a",
+          "reference": "jeeppartsdeal_oe_catalog|sha256:e558fc4e27edf7f39a04332fadbd65930ee038b76f1377f84be23f0ac4c42843|MY19-alternator"
+        },
+        {
+          "digest": "sha256:c4de38c375603b2e503728c8f8ce92ff40aae9acb009f16f0dba3a045549f3b6",
+          "reference": "mopar_2019_hardware_excerpts|sha256:456d7554534a5dae9f0ecf9ca6ae5f74f634d28d841f0c7a62c44fa0e1cfca75|US-MY19-hardware"
+        },
+        {
+          "digest": "sha256:fb1d1d6b134ca3472b923f803a68e232f34b6a2f96d2a05f9de70b89ac9e6d55",
+          "reference": "mopar_2019_wrangler_user_guide|sha256:0435598871bae4ab42e91f52f689331447ecfdb3d56644c3f9aac4274645cd0e|MY2019-JL-fuel"
+        },
+        {
+          "digest": "sha256:449695deb40c8b481063b441689576beb46d79b9bedf5e68762cf436cfaea30e",
+          "reference": "my2019_erc_research_review|sha256:df1686c6c360f451a8c10b94e4c4b6dafc5cabced607e2ecac6f0be8d4521443|ERC-review-synthesis"
+        },
+        {
+          "digest": "sha256:48cb2fbd7a865f56627b5d2b6f53eec599bd9467e7ab9944aa4a329c8afd2344",
+          "reference": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-17"
+        },
+        {
+          "digest": "sha256:293459ea30e8c57f6f762a7ab0ee998704e14df8ea77a82d3942e51d6f05d4c3",
+          "reference": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|MY2019-common-JLJP74"
+        }
+      ],
+      "existing_record": null,
+      "generation_binding": {
+        "mode": "explicit_correspondence",
+        "resolution_version": "1.1",
+        "strategy": "reviewed_source_correspondence"
+      },
+      "model_year": 2019,
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ],
+      "row_id": "JL19-17",
+      "target_fields": {
+        "drivetrain": "4WD",
+        "electrification_type": "none",
+        "engine_aspiration": "naturally_aspirated",
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "engine_name": "3.6L V6",
+        "fuel_type": "gasoline",
+        "market": "US",
+        "model_year": 2019,
+        "trim_name": "Unlimited Moab"
+      },
+      "target_slug": "2019-unlimited-moab-36l-v6-4wd-us"
+    },
+    {
+      "action": "create",
+      "candidate_digest": "sha256:ab8023ccc084a0e8a31438e04eae8cd13aff09f69291313e2e6fe10b29d2a3f7",
+      "candidate_reference": "MY2019-JL-JL19-18-preparatory-compact-r2-review-r3",
+      "correspondence": [
+        {
+          "digest": "sha256:70544663f878db979874e4b2ea817a098ce7a95f2835e7774f55b66663a7686d",
+          "reference": "a2b7fdee-4c7b-4b4c-b537-e08f08e7413b"
+        }
+      ],
+      "evidence": [
+        {
+          "digest": "sha256:e77eb9ff1e5a2ea0ce3bd55a998aaa91389e2f74593feb758af649108168e161",
+          "reference": "carb_2019_3_6_hev|sha256:c82e4ddc543e0142628e1cf66f1ff6e38e233eff474e6b1b93e0c2dd0eae64e6|carb_2019_3_6_hev"
+        },
+        {
+          "digest": "sha256:17cf8da8b111f4618fe0e93dcd36d52bb25335e98f708ed21bb41ac8e5cd6004",
+          "reference": "fca_pentastar_family_facts|sha256:7e16f753401a6711b78b510ad4cf35cecdaa775b7ce719b0050fd6db72dabfef|MY19-family"
+        },
+        {
+          "digest": "sha256:bbf871d779bd095741e08a623319dd708f298aafc2367b2664cce2b743b9ba6a",
+          "reference": "fca_y40_scope|sha256:6af1557c414a22a709a7a0d9d50767ef55f7fc885dab3fe26bbcf8dd35b9c2d7|fca_y40_scope"
+        },
+        {
+          "digest": "sha256:3579ffc0168e73a5b59fdc7163170ca2ece5a218235eb35068eec98df41b4455",
+          "reference": "human_classification_adjudication|sha256:837a1da50c86e2f505979efb1aaf1a25073ec77e6de43140f509dff4c2b9a9ab|sha256:980a2a8698d97bda869d9b5ad676ecc1b4fc949764bb207904f30399f062127a"
+        },
+        {
+          "digest": "sha256:942ffe6e484b6e4a96f4db457d40f2eb1c280b32e594d2fa97d4a63784e8a9f4",
+          "reference": "jeep_2019_wrangler_specifications|sha256:84bb3faf505332a2799830563cb1863621385b96430585e1a03216924596fd40|MY2019-JL-drive"
+        },
+        {
+          "digest": "sha256:df4456aad001c5ba542dc0d45ca83d14d97c41baafc46fd7eba8b4ee5f2f8f2a",
+          "reference": "jeep_usa_order_guide_excerpts|sha256:3a3e829b87591583ffd6902a5ddd694be7d47fd815fd10813cb1e28a36a8938f|JL19-18-june-guide-excerpt"
+        },
+        {
+          "digest": "sha256:3a6633707f5c36f984b133927aeebb28390cc2c89e9e114b88102cf04be84a6a",
+          "reference": "jeeppartsdeal_oe_catalog|sha256:e558fc4e27edf7f39a04332fadbd65930ee038b76f1377f84be23f0ac4c42843|MY19-alternator"
+        },
+        {
+          "digest": "sha256:c4de38c375603b2e503728c8f8ce92ff40aae9acb009f16f0dba3a045549f3b6",
+          "reference": "mopar_2019_hardware_excerpts|sha256:456d7554534a5dae9f0ecf9ca6ae5f74f634d28d841f0c7a62c44fa0e1cfca75|US-MY19-hardware"
+        },
+        {
+          "digest": "sha256:fb1d1d6b134ca3472b923f803a68e232f34b6a2f96d2a05f9de70b89ac9e6d55",
+          "reference": "mopar_2019_wrangler_user_guide|sha256:0435598871bae4ab42e91f52f689331447ecfdb3d56644c3f9aac4274645cd0e|MY2019-JL-fuel"
+        },
+        {
+          "digest": "sha256:449695deb40c8b481063b441689576beb46d79b9bedf5e68762cf436cfaea30e",
+          "reference": "my2019_erc_research_review|sha256:df1686c6c360f451a8c10b94e4c4b6dafc5cabced607e2ecac6f0be8d4521443|ERC-review-synthesis"
+        },
+        {
+          "digest": "sha256:9b91f95d553ef299b7085a6753c7bca4ec5a7ed2b4e0c200aab800dbbdd4ec73",
+          "reference": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-18"
+        },
+        {
+          "digest": "sha256:69e676f2d68a7a4e67e6a233ab06894549c2b732306f41330254058fb1902647",
+          "reference": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|MY2019-common-JLJS74"
+        }
+      ],
+      "existing_record": null,
+      "generation_binding": {
+        "mode": "explicit_correspondence",
+        "resolution_version": "1.1",
+        "strategy": "reviewed_source_correspondence"
+      },
+      "model_year": 2019,
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ],
+      "row_id": "JL19-18",
+      "target_fields": {
+        "drivetrain": "4WD",
+        "electrification_type": "none",
+        "engine_aspiration": "naturally_aspirated",
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "engine_name": "3.6L V6",
+        "fuel_type": "gasoline",
+        "market": "US",
+        "model_year": 2019,
+        "trim_name": "Unlimited Rubicon"
+      },
+      "target_slug": "2019-unlimited-rubicon-36l-v6-4wd-us"
+    },
+    {
+      "action": "create",
+      "candidate_digest": "sha256:7ab768e39cc66d32b1e9626a1bd182e9386691ebf5612c5ae81b99eaeb695757",
+      "candidate_reference": "MY2019-JL-JL19-19-preparatory-compact-r2-review-r3",
+      "correspondence": [
+        {
+          "digest": "sha256:70544663f878db979874e4b2ea817a098ce7a95f2835e7774f55b66663a7686d",
+          "reference": "a2b7fdee-4c7b-4b4c-b537-e08f08e7413b"
+        }
+      ],
+      "evidence": [
+        {
+          "digest": "sha256:942ffe6e484b6e4a96f4db457d40f2eb1c280b32e594d2fa97d4a63784e8a9f4",
+          "reference": "jeep_2019_wrangler_specifications|sha256:84bb3faf505332a2799830563cb1863621385b96430585e1a03216924596fd40|MY2019-JL-drive"
+        },
+        {
+          "digest": "sha256:c285357969014d818539cad8600a145364e4c213f6a78733c5a280d5ce2642c1",
+          "reference": "jeep_usa_order_guide_excerpts|sha256:3a3e829b87591583ffd6902a5ddd694be7d47fd815fd10813cb1e28a36a8938f|JL19-19-june-guide-excerpt"
+        },
+        {
+          "digest": "sha256:fb1d1d6b134ca3472b923f803a68e232f34b6a2f96d2a05f9de70b89ac9e6d55",
+          "reference": "mopar_2019_wrangler_user_guide|sha256:0435598871bae4ab42e91f52f689331447ecfdb3d56644c3f9aac4274645cd0e|MY2019-JL-fuel"
+        },
+        {
+          "digest": "sha256:3fce09b5a063598139828f89be756d88756656df3c136bdb911eca78102f8e80",
+          "reference": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-19"
+        },
+        {
+          "digest": "sha256:69e676f2d68a7a4e67e6a233ab06894549c2b732306f41330254058fb1902647",
+          "reference": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|MY2019-common-JLJS74"
+        }
+      ],
+      "existing_record": null,
+      "generation_binding": {
+        "mode": "explicit_correspondence",
+        "resolution_version": "1.1",
+        "strategy": "reviewed_source_correspondence"
+      },
+      "model_year": 2019,
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "row_id": "JL19-19",
+      "target_fields": {
+        "drivetrain": "4WD",
+        "electrification_type": "mild_hybrid",
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 4,
+        "engine_displacement_liters": "2",
+        "engine_name": "2.0L I4",
+        "fuel_type": "gasoline",
+        "market": "US",
+        "model_year": 2019,
+        "trim_name": "Unlimited Rubicon"
+      },
+      "target_slug": "2019-unlimited-rubicon-20l-i4-4wd-us-turbo-mhev"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "content_hash": "sha256:70544663f878db979874e4b2ea817a098ce7a95f2835e7774f55b66663a7686d",
+  "review": {
+    "correspondence_uuid": "318e4ae1-344d-40ad-85c4-56b3503487a4",
+    "end_year": 2019,
+    "evidence": [
+      {
+        "assertion_set_id": "MY2019-common-JLJS74",
+        "assertions": [
+          {
+            "assertion_id": "common_model_code",
+            "attribute_key": "source_model_code",
+            "raw_value": "JLJS74",
+            "source_context": "Accepted MY2019 US JL inventory, manufacturer model-code column; common selector shared across this model-code group."
+          }
+        ],
+        "extraction_mode": "manually_verified_transcription",
+        "extractor_id": "my2019_reviewed_selected_facts",
+        "extractor_version": "1.0.0",
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "publication_revision": "Accepted MY2019 union; historical edition details remain in original inventory",
+        "raw_artifact_hash": "sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/evidence/accepted_research_snapshot.json",
+        "retrieved_at": "2026-11-08T18:20:55.097237+00:00",
+        "source_applicability": {
+          "applicability_basis": "Director-accepted MY2019 US JL dated-revision inventory; scope is exactly this retained manufacturer model code.",
+          "applicability_scope": "model_year",
+          "market": "US",
+          "publisher_jurisdiction": null,
+          "unknown_fields": {}
+        },
+        "source_id": "reviewed_jeep_order_guide_inventory",
+        "source_locator": "docs/implementation/handoffs/MY2019_JL/MY2019_JL_CODEX_HANDOFF.md"
+      }
+    ],
+    "finding": "established",
+    "generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+    "identity_type": "model_code",
+    "market": "US",
+    "native_identifier": "JLJS74",
+    "restrictions": {},
+    "review_notes": "MY2019 JL inventory explicitly accepted by director; retained exact manufacturer model code agrees with the verified MY2018 published code-to-JL correspondence c01af849-2765-44e2-97b8-40c46b583d1c (sha256:64f6a42d0a0751583cf6082b5cd2813cb44fbdeb7ca2d3607ad0de83f94517ac). Same existing JL target and parents; fresh 2019-only chain, not reuse of the 2018 source revision. Group common document retains the identical inventory bytes. No finding based solely on Wrangler/JL name similarity. No publication or human authorization is claimed.",
+    "review_version": "1.0",
+    "reviewed_at": "2026-11-08T18:20:55.097237+00:00",
+    "reviewer": "Codex implementation evidence review; unpublished proposal for human review",
+    "revision_number": 1,
+    "revision_uuid": "a2b7fdee-4c7b-4b4c-b537-e08f08e7413b",
+    "source_id": "reviewed_jeep_order_guide_inventory",
+    "source_namespace": "source_model_code",
+    "start_year": 2019,
+    "supersedes_uuid": null,
+    "vehicle_model_uuid": "5ec5f58a-b140-484c-97f0-c90ec9c134d6"
+  }
+}

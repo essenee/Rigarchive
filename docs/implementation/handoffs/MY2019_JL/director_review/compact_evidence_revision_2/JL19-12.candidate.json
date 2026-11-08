@@ -1,0 +1,337 @@
+{
+  "attribute_provenance": {
+    "engine_cylinders": [
+      "jeep_usa_order_guide_excerpts|sha256:3a3e829b87591583ffd6902a5ddd694be7d47fd815fd10813cb1e28a36a8938f|JL19-12-june-guide-excerpt|i_engine_cylinders"
+    ],
+    "engine_displacement_liters": [
+      "jeep_usa_order_guide_excerpts|sha256:3a3e829b87591583ffd6902a5ddd694be7d47fd815fd10813cb1e28a36a8938f|JL19-12-june-guide-excerpt|i_engine_displacement_liters"
+    ],
+    "generic_drive_classification": [
+      "jeep_usa_order_guide_excerpts|sha256:3a3e829b87591583ffd6902a5ddd694be7d47fd815fd10813cb1e28a36a8938f|JL19-12-june-guide-excerpt|i_generic_drive"
+    ],
+    "make": [
+      "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-12|i_make"
+    ],
+    "model": [
+      "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-12|i_model"
+    ],
+    "model_year": [
+      "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-12|i_model_year"
+    ]
+  },
+  "candidate_identity": {
+    "manufacturer_name": "Jeep",
+    "market": "US",
+    "model_year": 2019,
+    "trim_name": "Unlimited Sport Altitude",
+    "vehicle_model_name": "Wrangler"
+  },
+  "candidate_reference": "MY2019-JL-JL19-12-preparatory-compact-r2",
+  "canonical_powertrain": {
+    "electrification_type": "mild_hybrid",
+    "engine_aspiration": "turbocharged",
+    "engine_cylinders": 4,
+    "engine_displacement_liters": "2",
+    "fuel_type": null
+  },
+  "envelope": {
+    "artifact_type": "rigarchive.candidate_configuration.v2",
+    "created_at": "2026-11-07T17:04:24.836847+00:00",
+    "generator": "RigArchive-CandidateConstruction/0.1.0",
+    "schema_version": "2.1.0"
+  },
+  "evidence_documents": [
+    {
+      "assertion_set_id": "JL19-12",
+      "assertions": [
+        {
+          "assertion_id": "engine_cylinders",
+          "attribute_key": "engine_cylinders",
+          "raw_value": 4,
+          "source_context": "Director-accepted research inventory row JL19-12; https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/; reported page 2. Page references are inherited research, not a new PDF inspection."
+        },
+        {
+          "assertion_id": "engine_displacement_liters",
+          "attribute_key": "engine_displacement_liters",
+          "raw_value": "2.00",
+          "source_context": "Director-accepted research inventory row JL19-12; https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/; reported page 2. Page references are inherited research, not a new PDF inspection."
+        },
+        {
+          "assertion_id": "engine_offering",
+          "attribute_key": "engine_offering",
+          "raw_value": "EC3 2.0L turbo eTorque",
+          "source_context": "Director-accepted research inventory row JL19-12; https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/; reported page 2. Page references are inherited research, not a new PDF inspection."
+        },
+        {
+          "assertion_id": "make",
+          "attribute_key": "make",
+          "raw_value": "Jeep",
+          "source_context": "Director-accepted research inventory row JL19-12; https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/; reported page 2. Page references are inherited research, not a new PDF inspection."
+        },
+        {
+          "assertion_id": "market",
+          "attribute_key": "market",
+          "raw_value": "US",
+          "source_context": "Director-accepted research inventory row JL19-12; https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/; reported page 2. Page references are inherited research, not a new PDF inspection."
+        },
+        {
+          "assertion_id": "model",
+          "attribute_key": "model",
+          "raw_value": "Wrangler",
+          "source_context": "Director-accepted research inventory row JL19-12; https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/; reported page 2. Page references are inherited research, not a new PDF inspection."
+        },
+        {
+          "assertion_id": "model_year",
+          "attribute_key": "model_year",
+          "raw_value": 2019,
+          "source_context": "Director-accepted research inventory row JL19-12; https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/; reported page 2. Page references are inherited research, not a new PDF inspection."
+        },
+        {
+          "assertion_id": "source_model_code",
+          "attribute_key": "source_model_code",
+          "raw_value": "JLJL74",
+          "source_context": "Director-accepted research inventory row JL19-12; https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/; reported page 2. Page references are inherited research, not a new PDF inspection."
+        },
+        {
+          "assertion_id": "trim",
+          "attribute_key": "trim",
+          "raw_value": "Unlimited Sport Altitude",
+          "source_context": "Director-accepted research inventory row JL19-12; https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/; reported page 2. Page references are inherited research, not a new PDF inspection."
+        }
+      ],
+      "extraction_mode": "manually_verified_transcription",
+      "extractor_id": "director_accepted_jl_inventory_projection",
+      "extractor_version": "1.0.0",
+      "generation_normalizer": {
+        "id": "explicit_generation_identity",
+        "version": "1.0.0"
+      },
+      "publication_revision": "MY2019 dated-revision union accepted by director; individual printed dates not newly verified",
+      "raw_artifact_hash": "sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/evidence/accepted_research_snapshot.json",
+      "retrieved_at": "2026-11-07T16:57:20.747181+00:00",
+      "source_applicability": {
+        "applicability_basis": "director_accepted_MY2019_US_JL_research_inventory",
+        "applicability_scope": "model_year",
+        "market": "US",
+        "publisher_jurisdiction": null,
+        "unknown_fields": {}
+      },
+      "source_id": "reviewed_jeep_order_guide_inventory",
+      "source_locator": "docs/implementation/handoffs/MY2019_JL/MY2019_JL_CODEX_HANDOFF.md"
+    },
+    {
+      "assertion_set_id": "JL19-12-june-guide-excerpt",
+      "assertions": [
+        {
+          "assertion_id": "guide_engine_descriptor",
+          "attribute_key": "engine_descriptor",
+          "raw_value": "2.0L I4 DOHC DI TURBO ETORQUE ENGINE (EC3)",
+          "source_context": "https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/; printed page 2; JLJL74 powertrain table"
+        },
+        {
+          "assertion_id": "guide_drive",
+          "attribute_key": "drive_descriptor",
+          "raw_value": "COMMAND-TRAC PART TIME 4WD SYSTEM (DHN)",
+          "source_context": "https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/; printed page 15; JLJL74 column; standard equipment unless replaced by optional equipment"
+        },
+        {
+          "assertion_id": "guide_offering_table",
+          "attribute_key": "offering_table",
+          "raw_value": "STEP #1 SELECT - MODEL CODE\n$FWP $MSRP\nWRANGLER UNLIMITED SPORT 31,007 31,545 JLJL74\nDESTINATION CHARGE 1,495\n1,545 IN HI\nSTEP #2 SELECT - QUICK ORDER PACKAGE CODE\nPOWERTRAIN AVAILABILITY\nENGINE $FWP $MSRP TRANSMISSION $FWP $MSRP\nSPORT S\nALTITUDE\nM/H PRC or PSC\nor PW7 or PX8 or\nPAU or PDN\n3.6L V6 24V VVT ENGINE UPG\nI W/ESS (ERC)\nN/C N/C 8-SPD AUTO 850RE\nTRANS (MAKE) (DFT)\n1,780 2,000 24B 24S 24L\n6-SPEED MANUAL\nTRANSMISSION (DEM)\nN/C N/C 23B 23S 23L\n2.0L I4 DOHC DI TURBO\nETORQUE ENGINE (EC3)\n890 1,000 8-SPD AUTO 850RE\nTRANS (MAKE) (DFT)\n1,780 2,000 28B 28S 28L",
+          "source_context": "https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/; printed page 2; model code and quick-order package columns retained"
+        }
+      ],
+      "extraction_mode": "manually_verified_transcription",
+      "extractor_id": "reviewed_2019_jlu_selected_text",
+      "extractor_version": "1.0.0",
+      "generation_normalizer": {
+        "id": "explicit_generation_identity",
+        "version": "1.0.0"
+      },
+      "publication_revision": "REISSUED 06/04/2019",
+      "raw_artifact_hash": "sha256:3a3e829b87591583ffd6902a5ddd694be7d47fd815fd10813cb1e28a36a8938f",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/evidence/jlu_2019_06_04_selected_excerpts.json",
+      "retrieved_at": "2026-11-07T17:04:24.836847+00:00",
+      "source_applicability": {
+        "applicability_basis": "MY2019 four-door JLJL74; offering page 2 and standard equipment page 15",
+        "applicability_scope": "configuration",
+        "market": "US",
+        "publisher_jurisdiction": null,
+        "unknown_fields": {}
+      },
+      "source_id": "jeep_usa_order_guide_excerpts",
+      "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/"
+    }
+  ],
+  "evidence_raw_hashes": [
+    "sha256:3a3e829b87591583ffd6902a5ddd694be7d47fd815fd10813cb1e28a36a8938f",
+    "sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3"
+  ],
+  "generation_evidence": [
+    {
+      "assertion_id": "source_model_code",
+      "assertion_set_id": "JL19-12",
+      "document_hash": "sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3",
+      "identity_type": "model_code",
+      "native_identifier": "JLJL74",
+      "normalizer_id": "explicit_generation_identity",
+      "normalizer_version": "1.0.0",
+      "source_id": "reviewed_jeep_order_guide_inventory",
+      "source_namespace": "source_model_code"
+    }
+  ],
+  "normalized_assertions": [
+    {
+      "interpretation_id": "jeep_usa_order_guide_excerpts|sha256:3a3e829b87591583ffd6902a5ddd694be7d47fd815fd10813cb1e28a36a8938f|JL19-12-june-guide-excerpt|i_electrification_type",
+      "mapping_status": "mapped",
+      "normalization_notes": "Literal applicable June guide engine description; no missing classification inferred.",
+      "normalized_concept": "mild_hybrid",
+      "raw_source_value": "2.0L I4 DOHC DI TURBO ETORQUE ENGINE (EC3)",
+      "source_assertion_ref": "jeep_usa_order_guide_excerpts|sha256:3a3e829b87591583ffd6902a5ddd694be7d47fd815fd10813cb1e28a36a8938f|JL19-12-june-guide-excerpt|guide_engine_descriptor",
+      "target_attribute_key": "electrification_type"
+    },
+    {
+      "interpretation_id": "jeep_usa_order_guide_excerpts|sha256:3a3e829b87591583ffd6902a5ddd694be7d47fd815fd10813cb1e28a36a8938f|JL19-12-june-guide-excerpt|i_engine_aspiration",
+      "mapping_status": "mapped",
+      "normalization_notes": "Literal applicable June guide engine description; no missing classification inferred.",
+      "normalized_concept": "turbocharged",
+      "raw_source_value": "2.0L I4 DOHC DI TURBO ETORQUE ENGINE (EC3)",
+      "source_assertion_ref": "jeep_usa_order_guide_excerpts|sha256:3a3e829b87591583ffd6902a5ddd694be7d47fd815fd10813cb1e28a36a8938f|JL19-12-june-guide-excerpt|guide_engine_descriptor",
+      "target_attribute_key": "engine_aspiration"
+    },
+    {
+      "interpretation_id": "jeep_usa_order_guide_excerpts|sha256:3a3e829b87591583ffd6902a5ddd694be7d47fd815fd10813cb1e28a36a8938f|JL19-12-june-guide-excerpt|i_engine_cylinders",
+      "mapping_status": "mapped",
+      "normalization_notes": "Literal applicable June guide engine description; no missing classification inferred.",
+      "normalized_concept": 4,
+      "raw_source_value": "2.0L I4 DOHC DI TURBO ETORQUE ENGINE (EC3)",
+      "source_assertion_ref": "jeep_usa_order_guide_excerpts|sha256:3a3e829b87591583ffd6902a5ddd694be7d47fd815fd10813cb1e28a36a8938f|JL19-12-june-guide-excerpt|guide_engine_descriptor",
+      "target_attribute_key": "engine_cylinders"
+    },
+    {
+      "interpretation_id": "jeep_usa_order_guide_excerpts|sha256:3a3e829b87591583ffd6902a5ddd694be7d47fd815fd10813cb1e28a36a8938f|JL19-12-june-guide-excerpt|i_engine_displacement_liters",
+      "mapping_status": "mapped",
+      "normalization_notes": "Literal applicable June guide engine description; no missing classification inferred.",
+      "normalized_concept": {
+        "normalized_unit": "L",
+        "normalized_value": "2",
+        "raw_source_string": "2.00"
+      },
+      "raw_source_value": "2.0L I4 DOHC DI TURBO ETORQUE ENGINE (EC3)",
+      "source_assertion_ref": "jeep_usa_order_guide_excerpts|sha256:3a3e829b87591583ffd6902a5ddd694be7d47fd815fd10813cb1e28a36a8938f|JL19-12-june-guide-excerpt|guide_engine_descriptor",
+      "target_attribute_key": "engine_displacement_liters"
+    },
+    {
+      "interpretation_id": "jeep_usa_order_guide_excerpts|sha256:3a3e829b87591583ffd6902a5ddd694be7d47fd815fd10813cb1e28a36a8938f|JL19-12-june-guide-excerpt|i_generic_drive",
+      "mapping_status": "mapped",
+      "normalization_notes": "Explicit 4WD standard equipment for this manufacturer model code; subtype is not a canonical identity split.",
+      "normalized_concept": "4WD",
+      "raw_source_value": "COMMAND-TRAC PART TIME 4WD SYSTEM (DHN)",
+      "source_assertion_ref": "jeep_usa_order_guide_excerpts|sha256:3a3e829b87591583ffd6902a5ddd694be7d47fd815fd10813cb1e28a36a8938f|JL19-12-june-guide-excerpt|guide_drive",
+      "target_attribute_key": "generic_drive_classification"
+    },
+    {
+      "interpretation_id": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-12|i_make",
+      "mapping_status": "mapped",
+      "normalization_notes": "Accepted inventory projection; no code-derived classifications.",
+      "normalized_concept": "Jeep",
+      "raw_source_value": "Jeep",
+      "source_assertion_ref": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-12|make",
+      "target_attribute_key": "make"
+    },
+    {
+      "interpretation_id": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-12|i_market",
+      "mapping_status": "mapped",
+      "normalization_notes": "Accepted inventory projection; no code-derived classifications.",
+      "normalized_concept": "US",
+      "raw_source_value": "US",
+      "source_assertion_ref": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-12|market",
+      "target_attribute_key": "market"
+    },
+    {
+      "interpretation_id": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-12|i_model",
+      "mapping_status": "mapped",
+      "normalization_notes": "Accepted inventory projection; no code-derived classifications.",
+      "normalized_concept": "Wrangler",
+      "raw_source_value": "Wrangler",
+      "source_assertion_ref": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-12|model",
+      "target_attribute_key": "model"
+    },
+    {
+      "interpretation_id": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-12|i_model_year",
+      "mapping_status": "mapped",
+      "normalization_notes": "Accepted inventory projection; no code-derived classifications.",
+      "normalized_concept": 2019,
+      "raw_source_value": 2019,
+      "source_assertion_ref": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-12|model_year",
+      "target_attribute_key": "model_year"
+    },
+    {
+      "interpretation_id": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-12|i_trim",
+      "mapping_status": "mapped",
+      "normalization_notes": "Accepted inventory projection; no code-derived classifications.",
+      "normalized_concept": "Unlimited Sport Altitude",
+      "raw_source_value": "Unlimited Sport Altitude",
+      "source_assertion_ref": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-12|trim",
+      "target_attribute_key": "trim"
+    }
+  ],
+  "normalized_technical_details": {
+    "drivetrain_details": {
+      "generic_classification": "4WD"
+    },
+    "engine": {
+      "cylinders": 4,
+      "displacement": {
+        "normalized_unit": "L",
+        "normalized_value": "2",
+        "raw_source_string": "2.00"
+      }
+    }
+  },
+  "reconciliation_and_review": {
+    "attribute_states": {
+      "engine_cylinders": {
+        "reconciliation_state": "single_source",
+        "review_disposition": "not_required"
+      },
+      "engine_displacement_liters": {
+        "reconciliation_state": "single_source",
+        "review_disposition": "not_required"
+      },
+      "generic_drive_classification": {
+        "reconciliation_state": "single_source",
+        "review_disposition": "not_required"
+      },
+      "make": {
+        "reconciliation_state": "single_source",
+        "review_disposition": "not_required"
+      },
+      "model": {
+        "reconciliation_state": "single_source",
+        "review_disposition": "not_required"
+      },
+      "model_year": {
+        "reconciliation_state": "single_source",
+        "review_disposition": "not_required"
+      }
+    },
+    "requires_human_review": false,
+    "review_workflow_disposition": "not_required"
+  },
+  "source_configuration_identities": [
+    {
+      "identity_type": "record_id",
+      "native_identifier": "JL19-12-june-guide-excerpt",
+      "source_description": "jeep_usa_order_guide_excerpts record_id JL19-12-june-guide-excerpt",
+      "source_id": "jeep_usa_order_guide_excerpts"
+    },
+    {
+      "identity_type": "record_id",
+      "native_identifier": "JL19-12",
+      "source_description": "reviewed_jeep_order_guide_inventory record_id JL19-12",
+      "source_id": "reviewed_jeep_order_guide_inventory"
+    }
+  ]
+}

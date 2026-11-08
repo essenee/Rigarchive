@@ -1,0 +1,20 @@
+row_id,body,trim_name,engine_code,source_model_code,candidate_valid,engine_tuple_complete,planner_action,status,blockers
+JL19-01,two-door,Sport,ERC,JLJL72,True,False,flag_review,blocked,ERC naturally aspirated evidence; ERC nonhybrid evidence; Unpublished MY2019 generation correspondence
+JL19-02,two-door,Sport,EC3,JLJL72,True,True,flag_review,blocked,Unpublished MY2019 generation correspondence
+JL19-03,two-door,Sport S,ERC,JLJL72,True,False,flag_review,blocked,ERC naturally aspirated evidence; ERC nonhybrid evidence; Unpublished MY2019 generation correspondence
+JL19-04,two-door,Sport S,EC3,JLJL72,True,True,flag_review,blocked,Unpublished MY2019 generation correspondence
+JL19-05,two-door,Rubicon,ERC,JLJS72,True,False,flag_review,blocked,ERC naturally aspirated evidence; ERC nonhybrid evidence; Unpublished MY2019 generation correspondence
+JL19-06,two-door,Rubicon,EC3,JLJS72,True,True,flag_review,blocked,Unpublished MY2019 generation correspondence
+JL19-07,four-door,Unlimited Sport,ERC,JLJL74,True,False,flag_review,blocked,ERC naturally aspirated evidence; ERC nonhybrid evidence; Unpublished MY2019 generation correspondence
+JL19-08,four-door,Unlimited Sport,EC3,JLJL74,True,True,flag_review,blocked,Unpublished MY2019 generation correspondence
+JL19-09,four-door,Unlimited Sport S,ERC,JLJL74,True,False,flag_review,blocked,ERC naturally aspirated evidence; ERC nonhybrid evidence; Unpublished MY2019 generation correspondence
+JL19-10,four-door,Unlimited Sport S,EC3,JLJL74,True,True,flag_review,blocked,Unpublished MY2019 generation correspondence
+JL19-11,four-door,Unlimited Sport Altitude,ERC,JLJL74,True,False,flag_review,blocked,ERC naturally aspirated evidence; ERC nonhybrid evidence; Unpublished MY2019 generation correspondence
+JL19-12,four-door,Unlimited Sport Altitude,EC3,JLJL74,True,True,flag_review,blocked,Unpublished MY2019 generation correspondence
+JL19-13,four-door,Unlimited Sahara,ERC,JLJP74,True,False,flag_review,blocked,ERC naturally aspirated evidence; ERC nonhybrid evidence; Unpublished MY2019 generation correspondence
+JL19-14,four-door,Unlimited Sahara,EC3,JLJP74,True,True,flag_review,blocked,Unpublished MY2019 generation correspondence
+JL19-15,four-door,Unlimited Sahara Altitude,ERC,JLJP74,True,False,flag_review,blocked,ERC naturally aspirated evidence; ERC nonhybrid evidence; Unpublished MY2019 generation correspondence
+JL19-16,four-door,Unlimited Sahara Altitude,EC3,JLJP74,True,True,flag_review,blocked,Unpublished MY2019 generation correspondence
+JL19-17,four-door,Unlimited Moab,ERC,JLJP74,True,False,flag_review,blocked,ERC naturally aspirated evidence; ERC nonhybrid evidence; Unpublished MY2019 generation correspondence
+JL19-18,four-door,Unlimited Rubicon,ERC,JLJS74,True,False,flag_review,blocked,ERC naturally aspirated evidence; ERC nonhybrid evidence; Unpublished MY2019 generation correspondence
+JL19-19,four-door,Unlimited Rubicon,EC3,JLJS74,True,True,flag_review,blocked,Unpublished MY2019 generation correspondence

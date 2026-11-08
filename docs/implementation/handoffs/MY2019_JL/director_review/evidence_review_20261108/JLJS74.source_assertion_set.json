@@ -1,0 +1,38 @@
+{
+  "envelope": {
+    "artifact_type": "rigarchive.source_assertion_set.v1",
+    "created_at": "2026-11-08T18:20:55.097237+00:00",
+    "schema_version": "1.1.0"
+  },
+  "provenance": {
+    "acquisition_method": "local_file",
+    "extraction_provenance": {
+      "extraction_mode": "manually_verified_transcription",
+      "extractor_id": "my2019_reviewed_selected_facts",
+      "extractor_version": "1.0.0",
+      "raw_artifact_hash": "sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/evidence/accepted_research_snapshot.json"
+    },
+    "native_record_id": "MY2019-common-JLJS74",
+    "publication_revision": "Accepted MY2019 union; historical edition details remain in original inventory",
+    "retrieved_at": "2026-11-08T18:20:55.097237+00:00",
+    "review_status": "reviewed_selected_facts",
+    "source_applicability": {
+      "applicability_basis": "Director-accepted MY2019 US JL dated-revision inventory; scope is exactly this retained manufacturer model code.",
+      "applicability_scope": "model_year",
+      "market": "US"
+    },
+    "source_id": "reviewed_jeep_order_guide_inventory",
+    "source_locator": "docs/implementation/handoffs/MY2019_JL/MY2019_JL_CODEX_HANDOFF.md",
+    "source_type": "reviewed_research_transcription",
+    "source_use_notes": "Hash verifies retained representation; not a PDF hash or independent corroboration."
+  },
+  "source_assertions": [
+    {
+      "assertion_id": "common_model_code",
+      "attribute_key": "source_model_code",
+      "raw_value": "JLJS74",
+      "source_context": "Accepted MY2019 US JL inventory, manufacturer model-code column; common selector shared across this model-code group."
+    }
+  ]
+}

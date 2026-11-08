@@ -1,0 +1,732 @@
+{
+  "assessed": 19,
+  "complete": 19,
+  "current_canonical_peers": 0,
+  "limitations": "ERC aspiration and electrification are approved human conclusions with moderate confidence and original limitations; not direct manufacturer assertions. Empty canonical peer lists describe current database state only.",
+  "rows": [
+    {
+      "candidate_digest": "sha256:4b051830ca189e2784199f29749acb3d7337eb6891fb3a4f3e1d57fde30ff406",
+      "classification_basis": "approved_human_adjudication_plus_retained_sources",
+      "human_provenance": [
+        {
+          "assertion_set_id": "sha256:fdaabde206436bdae5a83013eac54f86f12aae17459af6c894f2b1cb73f51127",
+          "assertions": [
+            {
+              "assertion_id": "electrification_type",
+              "attribute_key": "electrification_type",
+              "raw_value": {
+                "classification": "electrification_type",
+                "provenance": "human_adjudicated",
+                "value": "none"
+              },
+              "source_context": "Human-adjudicated conclusion by project_owner: Propose none for the ten offered ERC configurations. US manual hardware descriptions distinguish conventional ESS starting equipment from an eTorque motor-generator with hybrid battery and launch assistance; the MY2019 catalog positively identifies conventional without-eTorque alternator applications and a separate ERG BSG application. US offering lineage binds the ten rows to ERC ESS; contemporary MY2020 powertrain materials separately introduce/describe V6 eTorque Sahara. The combined architecture/applicability judgment requires human adjudication; neither ESS terminology, missing eTorque words nor introduction chronology alone establishes nonhybrid status."
+            },
+            {
+              "assertion_id": "engine_aspiration",
+              "attribute_key": "engine_aspiration",
+              "raw_value": {
+                "classification": "engine_aspiration",
+                "provenance": "human_adjudicated",
+                "value": "naturally_aspirated"
+              },
+              "source_context": "Human-adjudicated conclusion by project_owner: Propose naturally_aspirated for the offered ERC 3.6L Pentastar V6 ESS. The MY19 technical guide positively classifies the same marketed family/ESS architecture as naturally aspirated; applicable US guide/specification lineage identifies ERC, its marketed dimensions and trim/body offerings. Induction continuity across these regional implementations is an engineering judgment supported by the combined evidence, not a direct US manufacturer assertion, code-equality proof or inference from absent turbo words alone."
+            }
+          ],
+          "extraction_mode": "manually_verified_transcription",
+          "extractor_id": "approved_human_classification",
+          "extractor_version": "1.1",
+          "publication_revision": "Human classification adjudication 1.1; not manufacturer assertions",
+          "raw_artifact_hash": "sha256:709d8fa99dd479a1aa558442f10b44e8280800198d2f9c7c772f30ff586af5be",
+          "raw_artifact_reference": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/adjudications/JL19-01.approved.json",
+          "retrieved_at": "2026-11-08T20:17:11.111738+00:00",
+          "source_applicability": {
+            "applicability_basis": "Exact candidate digest; approved human conclusion",
+            "applicability_scope": "configuration",
+            "market": "US"
+          },
+          "source_id": "human_classification_adjudication",
+          "source_locator": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/adjudications/JL19-01.approved.json"
+        }
+      ],
+      "proof": {
+        "canonical_powertrain": {
+          "electrification_type": "none",
+          "engine_aspiration": "naturally_aspirated",
+          "engine_cylinders": 6,
+          "engine_displacement_liters": "3.6",
+          "fuel_type": "gasoline"
+        },
+        "peers": [],
+        "version": "2.0"
+      },
+      "row_id": "JL19-01"
+    },
+    {
+      "candidate_digest": "sha256:2d4c76e2571661a894807f6f85a923089a03da2b034a27134a11367a216832d6",
+      "classification_basis": "retained_direct_source_evidence",
+      "human_provenance": [],
+      "proof": {
+        "canonical_powertrain": {
+          "electrification_type": "mild_hybrid",
+          "engine_aspiration": "turbocharged",
+          "engine_cylinders": 4,
+          "engine_displacement_liters": "2",
+          "fuel_type": "gasoline"
+        },
+        "peers": [],
+        "version": "2.0"
+      },
+      "row_id": "JL19-02"
+    },
+    {
+      "candidate_digest": "sha256:6fc3f01e272e9f209b55a2900cef3cecf2268aa18ffbeff32240d57410aa2aa6",
+      "classification_basis": "approved_human_adjudication_plus_retained_sources",
+      "human_provenance": [
+        {
+          "assertion_set_id": "sha256:1c836ae669279447a86bbc395b159f6dbd74a14ef1a5c300ae547d885a68a9a7",
+          "assertions": [
+            {
+              "assertion_id": "electrification_type",
+              "attribute_key": "electrification_type",
+              "raw_value": {
+                "classification": "electrification_type",
+                "provenance": "human_adjudicated",
+                "value": "none"
+              },
+              "source_context": "Human-adjudicated conclusion by project_owner: Propose none for the ten offered ERC configurations. US manual hardware descriptions distinguish conventional ESS starting equipment from an eTorque motor-generator with hybrid battery and launch assistance; the MY2019 catalog positively identifies conventional without-eTorque alternator applications and a separate ERG BSG application. US offering lineage binds the ten rows to ERC ESS; contemporary MY2020 powertrain materials separately introduce/describe V6 eTorque Sahara. The combined architecture/applicability judgment requires human adjudication; neither ESS terminology, missing eTorque words nor introduction chronology alone establishes nonhybrid status."
+            },
+            {
+              "assertion_id": "engine_aspiration",
+              "attribute_key": "engine_aspiration",
+              "raw_value": {
+                "classification": "engine_aspiration",
+                "provenance": "human_adjudicated",
+                "value": "naturally_aspirated"
+              },
+              "source_context": "Human-adjudicated conclusion by project_owner: Propose naturally_aspirated for the offered ERC 3.6L Pentastar V6 ESS. The MY19 technical guide positively classifies the same marketed family/ESS architecture as naturally aspirated; applicable US guide/specification lineage identifies ERC, its marketed dimensions and trim/body offerings. Induction continuity across these regional implementations is an engineering judgment supported by the combined evidence, not a direct US manufacturer assertion, code-equality proof or inference from absent turbo words alone."
+            }
+          ],
+          "extraction_mode": "manually_verified_transcription",
+          "extractor_id": "approved_human_classification",
+          "extractor_version": "1.1",
+          "publication_revision": "Human classification adjudication 1.1; not manufacturer assertions",
+          "raw_artifact_hash": "sha256:ca7fc746a94c09e77f72c35e667292a4b88d55c4a298b0cbb95042959b11da10",
+          "raw_artifact_reference": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/adjudications/JL19-03.approved.json",
+          "retrieved_at": "2026-11-08T20:17:11.445933+00:00",
+          "source_applicability": {
+            "applicability_basis": "Exact candidate digest; approved human conclusion",
+            "applicability_scope": "configuration",
+            "market": "US"
+          },
+          "source_id": "human_classification_adjudication",
+          "source_locator": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/adjudications/JL19-03.approved.json"
+        }
+      ],
+      "proof": {
+        "canonical_powertrain": {
+          "electrification_type": "none",
+          "engine_aspiration": "naturally_aspirated",
+          "engine_cylinders": 6,
+          "engine_displacement_liters": "3.6",
+          "fuel_type": "gasoline"
+        },
+        "peers": [],
+        "version": "2.0"
+      },
+      "row_id": "JL19-03"
+    },
+    {
+      "candidate_digest": "sha256:e2366bf8ebddbd0557ab74d6f9de0fbd73fe5287e048c94c6411770421180ab5",
+      "classification_basis": "retained_direct_source_evidence",
+      "human_provenance": [],
+      "proof": {
+        "canonical_powertrain": {
+          "electrification_type": "mild_hybrid",
+          "engine_aspiration": "turbocharged",
+          "engine_cylinders": 4,
+          "engine_displacement_liters": "2",
+          "fuel_type": "gasoline"
+        },
+        "peers": [],
+        "version": "2.0"
+      },
+      "row_id": "JL19-04"
+    },
+    {
+      "candidate_digest": "sha256:fedc8013ef72f51d589b057c3b44ebd9d892557369a95245b5a330d79bf2843c",
+      "classification_basis": "approved_human_adjudication_plus_retained_sources",
+      "human_provenance": [
+        {
+          "assertion_set_id": "sha256:266ce1c5ac5672a208914c28d47446b92b9b543a03fabe0c2d69cf9d06a6f291",
+          "assertions": [
+            {
+              "assertion_id": "electrification_type",
+              "attribute_key": "electrification_type",
+              "raw_value": {
+                "classification": "electrification_type",
+                "provenance": "human_adjudicated",
+                "value": "none"
+              },
+              "source_context": "Human-adjudicated conclusion by project_owner: Propose none for the ten offered ERC configurations. US manual hardware descriptions distinguish conventional ESS starting equipment from an eTorque motor-generator with hybrid battery and launch assistance; the MY2019 catalog positively identifies conventional without-eTorque alternator applications and a separate ERG BSG application. US offering lineage binds the ten rows to ERC ESS; contemporary MY2020 powertrain materials separately introduce/describe V6 eTorque Sahara. The combined architecture/applicability judgment requires human adjudication; neither ESS terminology, missing eTorque words nor introduction chronology alone establishes nonhybrid status."
+            },
+            {
+              "assertion_id": "engine_aspiration",
+              "attribute_key": "engine_aspiration",
+              "raw_value": {
+                "classification": "engine_aspiration",
+                "provenance": "human_adjudicated",
+                "value": "naturally_aspirated"
+              },
+              "source_context": "Human-adjudicated conclusion by project_owner: Propose naturally_aspirated for the offered ERC 3.6L Pentastar V6 ESS. The MY19 technical guide positively classifies the same marketed family/ESS architecture as naturally aspirated; applicable US guide/specification lineage identifies ERC, its marketed dimensions and trim/body offerings. Induction continuity across these regional implementations is an engineering judgment supported by the combined evidence, not a direct US manufacturer assertion, code-equality proof or inference from absent turbo words alone."
+            }
+          ],
+          "extraction_mode": "manually_verified_transcription",
+          "extractor_id": "approved_human_classification",
+          "extractor_version": "1.1",
+          "publication_revision": "Human classification adjudication 1.1; not manufacturer assertions",
+          "raw_artifact_hash": "sha256:60905a45e8eb6d8ba2877090f2bba9aa6e6d5c81189f5ca69eda27e8464aa39a",
+          "raw_artifact_reference": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/adjudications/JL19-05.approved.json",
+          "retrieved_at": "2026-11-08T20:17:11.784372+00:00",
+          "source_applicability": {
+            "applicability_basis": "Exact candidate digest; approved human conclusion",
+            "applicability_scope": "configuration",
+            "market": "US"
+          },
+          "source_id": "human_classification_adjudication",
+          "source_locator": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/adjudications/JL19-05.approved.json"
+        }
+      ],
+      "proof": {
+        "canonical_powertrain": {
+          "electrification_type": "none",
+          "engine_aspiration": "naturally_aspirated",
+          "engine_cylinders": 6,
+          "engine_displacement_liters": "3.6",
+          "fuel_type": "gasoline"
+        },
+        "peers": [],
+        "version": "2.0"
+      },
+      "row_id": "JL19-05"
+    },
+    {
+      "candidate_digest": "sha256:5d533cd574e35a07c7778e1f2be2120edea44e76a42688c03067084e70635d51",
+      "classification_basis": "retained_direct_source_evidence",
+      "human_provenance": [],
+      "proof": {
+        "canonical_powertrain": {
+          "electrification_type": "mild_hybrid",
+          "engine_aspiration": "turbocharged",
+          "engine_cylinders": 4,
+          "engine_displacement_liters": "2",
+          "fuel_type": "gasoline"
+        },
+        "peers": [],
+        "version": "2.0"
+      },
+      "row_id": "JL19-06"
+    },
+    {
+      "candidate_digest": "sha256:48c999af9b2ee2a8fbcde64129d3f98dd5e6aa3bfbe189fc3a03fb235522a101",
+      "classification_basis": "approved_human_adjudication_plus_retained_sources",
+      "human_provenance": [
+        {
+          "assertion_set_id": "sha256:a585d36de7e341ecbb2877f81334debcdcecbb3aa4433613856640063651b6a4",
+          "assertions": [
+            {
+              "assertion_id": "electrification_type",
+              "attribute_key": "electrification_type",
+              "raw_value": {
+                "classification": "electrification_type",
+                "provenance": "human_adjudicated",
+                "value": "none"
+              },
+              "source_context": "Human-adjudicated conclusion by project_owner: Propose none for the ten offered ERC configurations. US manual hardware descriptions distinguish conventional ESS starting equipment from an eTorque motor-generator with hybrid battery and launch assistance; the MY2019 catalog positively identifies conventional without-eTorque alternator applications and a separate ERG BSG application. US offering lineage binds the ten rows to ERC ESS; contemporary MY2020 powertrain materials separately introduce/describe V6 eTorque Sahara. The combined architecture/applicability judgment requires human adjudication; neither ESS terminology, missing eTorque words nor introduction chronology alone establishes nonhybrid status."
+            },
+            {
+              "assertion_id": "engine_aspiration",
+              "attribute_key": "engine_aspiration",
+              "raw_value": {
+                "classification": "engine_aspiration",
+                "provenance": "human_adjudicated",
+                "value": "naturally_aspirated"
+              },
+              "source_context": "Human-adjudicated conclusion by project_owner: Propose naturally_aspirated for the offered ERC 3.6L Pentastar V6 ESS. The MY19 technical guide positively classifies the same marketed family/ESS architecture as naturally aspirated; applicable US guide/specification lineage identifies ERC, its marketed dimensions and trim/body offerings. Induction continuity across these regional implementations is an engineering judgment supported by the combined evidence, not a direct US manufacturer assertion, code-equality proof or inference from absent turbo words alone."
+            }
+          ],
+          "extraction_mode": "manually_verified_transcription",
+          "extractor_id": "approved_human_classification",
+          "extractor_version": "1.1",
+          "publication_revision": "Human classification adjudication 1.1; not manufacturer assertions",
+          "raw_artifact_hash": "sha256:1930f97074852114f64fc946882807064e289673ce15e408678420592ac90686",
+          "raw_artifact_reference": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/adjudications/JL19-07.approved.json",
+          "retrieved_at": "2026-11-08T20:17:12.112729+00:00",
+          "source_applicability": {
+            "applicability_basis": "Exact candidate digest; approved human conclusion",
+            "applicability_scope": "configuration",
+            "market": "US"
+          },
+          "source_id": "human_classification_adjudication",
+          "source_locator": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/adjudications/JL19-07.approved.json"
+        }
+      ],
+      "proof": {
+        "canonical_powertrain": {
+          "electrification_type": "none",
+          "engine_aspiration": "naturally_aspirated",
+          "engine_cylinders": 6,
+          "engine_displacement_liters": "3.6",
+          "fuel_type": "gasoline"
+        },
+        "peers": [],
+        "version": "2.0"
+      },
+      "row_id": "JL19-07"
+    },
+    {
+      "candidate_digest": "sha256:d2cef6f3c3de7487e94aed4295a097be4471622dcbcb3ad2a15aafb9b3384224",
+      "classification_basis": "retained_direct_source_evidence",
+      "human_provenance": [],
+      "proof": {
+        "canonical_powertrain": {
+          "electrification_type": "mild_hybrid",
+          "engine_aspiration": "turbocharged",
+          "engine_cylinders": 4,
+          "engine_displacement_liters": "2",
+          "fuel_type": "gasoline"
+        },
+        "peers": [],
+        "version": "2.0"
+      },
+      "row_id": "JL19-08"
+    },
+    {
+      "candidate_digest": "sha256:bf4117a243b4771b3600c88e887d082cc16d60a8a6e2562b2f1665ef4a41f10d",
+      "classification_basis": "approved_human_adjudication_plus_retained_sources",
+      "human_provenance": [
+        {
+          "assertion_set_id": "sha256:02cba460eade09f0b99ac1a0f92b5747529da236beae020be7385557c09f31f3",
+          "assertions": [
+            {
+              "assertion_id": "electrification_type",
+              "attribute_key": "electrification_type",
+              "raw_value": {
+                "classification": "electrification_type",
+                "provenance": "human_adjudicated",
+                "value": "none"
+              },
+              "source_context": "Human-adjudicated conclusion by project_owner: Propose none for the ten offered ERC configurations. US manual hardware descriptions distinguish conventional ESS starting equipment from an eTorque motor-generator with hybrid battery and launch assistance; the MY2019 catalog positively identifies conventional without-eTorque alternator applications and a separate ERG BSG application. US offering lineage binds the ten rows to ERC ESS; contemporary MY2020 powertrain materials separately introduce/describe V6 eTorque Sahara. The combined architecture/applicability judgment requires human adjudication; neither ESS terminology, missing eTorque words nor introduction chronology alone establishes nonhybrid status."
+            },
+            {
+              "assertion_id": "engine_aspiration",
+              "attribute_key": "engine_aspiration",
+              "raw_value": {
+                "classification": "engine_aspiration",
+                "provenance": "human_adjudicated",
+                "value": "naturally_aspirated"
+              },
+              "source_context": "Human-adjudicated conclusion by project_owner: Propose naturally_aspirated for the offered ERC 3.6L Pentastar V6 ESS. The MY19 technical guide positively classifies the same marketed family/ESS architecture as naturally aspirated; applicable US guide/specification lineage identifies ERC, its marketed dimensions and trim/body offerings. Induction continuity across these regional implementations is an engineering judgment supported by the combined evidence, not a direct US manufacturer assertion, code-equality proof or inference from absent turbo words alone."
+            }
+          ],
+          "extraction_mode": "manually_verified_transcription",
+          "extractor_id": "approved_human_classification",
+          "extractor_version": "1.1",
+          "publication_revision": "Human classification adjudication 1.1; not manufacturer assertions",
+          "raw_artifact_hash": "sha256:ebfbb2742d3fafff480a1a8af32ac6e3dd1ab48b5c0e402294ab83760323ee59",
+          "raw_artifact_reference": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/adjudications/JL19-09.approved.json",
+          "retrieved_at": "2026-11-08T20:17:12.449248+00:00",
+          "source_applicability": {
+            "applicability_basis": "Exact candidate digest; approved human conclusion",
+            "applicability_scope": "configuration",
+            "market": "US"
+          },
+          "source_id": "human_classification_adjudication",
+          "source_locator": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/adjudications/JL19-09.approved.json"
+        }
+      ],
+      "proof": {
+        "canonical_powertrain": {
+          "electrification_type": "none",
+          "engine_aspiration": "naturally_aspirated",
+          "engine_cylinders": 6,
+          "engine_displacement_liters": "3.6",
+          "fuel_type": "gasoline"
+        },
+        "peers": [],
+        "version": "2.0"
+      },
+      "row_id": "JL19-09"
+    },
+    {
+      "candidate_digest": "sha256:ccb451844b1d240bfa71a683783749d192bbcfee62086607f32766b64b2b473c",
+      "classification_basis": "retained_direct_source_evidence",
+      "human_provenance": [],
+      "proof": {
+        "canonical_powertrain": {
+          "electrification_type": "mild_hybrid",
+          "engine_aspiration": "turbocharged",
+          "engine_cylinders": 4,
+          "engine_displacement_liters": "2",
+          "fuel_type": "gasoline"
+        },
+        "peers": [],
+        "version": "2.0"
+      },
+      "row_id": "JL19-10"
+    },
+    {
+      "candidate_digest": "sha256:4ac2842b6f712817a33018ff1a70138582f8daa981570112701edf6b66f483e4",
+      "classification_basis": "approved_human_adjudication_plus_retained_sources",
+      "human_provenance": [
+        {
+          "assertion_set_id": "sha256:ea3847fe0f233e906cfc9c2da9a8c3a89c1dbaa2e8ac8d25721503944f0c65af",
+          "assertions": [
+            {
+              "assertion_id": "electrification_type",
+              "attribute_key": "electrification_type",
+              "raw_value": {
+                "classification": "electrification_type",
+                "provenance": "human_adjudicated",
+                "value": "none"
+              },
+              "source_context": "Human-adjudicated conclusion by project_owner: Propose none for the ten offered ERC configurations. US manual hardware descriptions distinguish conventional ESS starting equipment from an eTorque motor-generator with hybrid battery and launch assistance; the MY2019 catalog positively identifies conventional without-eTorque alternator applications and a separate ERG BSG application. US offering lineage binds the ten rows to ERC ESS; contemporary MY2020 powertrain materials separately introduce/describe V6 eTorque Sahara. The combined architecture/applicability judgment requires human adjudication; neither ESS terminology, missing eTorque words nor introduction chronology alone establishes nonhybrid status."
+            },
+            {
+              "assertion_id": "engine_aspiration",
+              "attribute_key": "engine_aspiration",
+              "raw_value": {
+                "classification": "engine_aspiration",
+                "provenance": "human_adjudicated",
+                "value": "naturally_aspirated"
+              },
+              "source_context": "Human-adjudicated conclusion by project_owner: Propose naturally_aspirated for the offered ERC 3.6L Pentastar V6 ESS. The MY19 technical guide positively classifies the same marketed family/ESS architecture as naturally aspirated; applicable US guide/specification lineage identifies ERC, its marketed dimensions and trim/body offerings. Induction continuity across these regional implementations is an engineering judgment supported by the combined evidence, not a direct US manufacturer assertion, code-equality proof or inference from absent turbo words alone."
+            }
+          ],
+          "extraction_mode": "manually_verified_transcription",
+          "extractor_id": "approved_human_classification",
+          "extractor_version": "1.1",
+          "publication_revision": "Human classification adjudication 1.1; not manufacturer assertions",
+          "raw_artifact_hash": "sha256:96ead3202da5203f00a0d2e12831719720068dce4a2daf1660ef0f01e7d89bde",
+          "raw_artifact_reference": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/adjudications/JL19-11.approved.json",
+          "retrieved_at": "2026-11-08T20:17:12.782499+00:00",
+          "source_applicability": {
+            "applicability_basis": "Exact candidate digest; approved human conclusion",
+            "applicability_scope": "configuration",
+            "market": "US"
+          },
+          "source_id": "human_classification_adjudication",
+          "source_locator": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/adjudications/JL19-11.approved.json"
+        }
+      ],
+      "proof": {
+        "canonical_powertrain": {
+          "electrification_type": "none",
+          "engine_aspiration": "naturally_aspirated",
+          "engine_cylinders": 6,
+          "engine_displacement_liters": "3.6",
+          "fuel_type": "gasoline"
+        },
+        "peers": [],
+        "version": "2.0"
+      },
+      "row_id": "JL19-11"
+    },
+    {
+      "candidate_digest": "sha256:ccb8eee562dc6bf0ec48259b6bd3367b7b0ac7ece31b722664238e5b6c1cc360",
+      "classification_basis": "retained_direct_source_evidence",
+      "human_provenance": [],
+      "proof": {
+        "canonical_powertrain": {
+          "electrification_type": "mild_hybrid",
+          "engine_aspiration": "turbocharged",
+          "engine_cylinders": 4,
+          "engine_displacement_liters": "2",
+          "fuel_type": "gasoline"
+        },
+        "peers": [],
+        "version": "2.0"
+      },
+      "row_id": "JL19-12"
+    },
+    {
+      "candidate_digest": "sha256:caaf4b18512dc7d0ceff2261e153ab351fab89eedf3cf164f3f16f2634371f42",
+      "classification_basis": "approved_human_adjudication_plus_retained_sources",
+      "human_provenance": [
+        {
+          "assertion_set_id": "sha256:c5da82dcf5e98c23d68831b6cd380d71f84f75a9f97a495a14ffe63668d896e7",
+          "assertions": [
+            {
+              "assertion_id": "electrification_type",
+              "attribute_key": "electrification_type",
+              "raw_value": {
+                "classification": "electrification_type",
+                "provenance": "human_adjudicated",
+                "value": "none"
+              },
+              "source_context": "Human-adjudicated conclusion by project_owner: Propose none for the ten offered ERC configurations. US manual hardware descriptions distinguish conventional ESS starting equipment from an eTorque motor-generator with hybrid battery and launch assistance; the MY2019 catalog positively identifies conventional without-eTorque alternator applications and a separate ERG BSG application. US offering lineage binds the ten rows to ERC ESS; contemporary MY2020 powertrain materials separately introduce/describe V6 eTorque Sahara. The combined architecture/applicability judgment requires human adjudication; neither ESS terminology, missing eTorque words nor introduction chronology alone establishes nonhybrid status."
+            },
+            {
+              "assertion_id": "engine_aspiration",
+              "attribute_key": "engine_aspiration",
+              "raw_value": {
+                "classification": "engine_aspiration",
+                "provenance": "human_adjudicated",
+                "value": "naturally_aspirated"
+              },
+              "source_context": "Human-adjudicated conclusion by project_owner: Propose naturally_aspirated for the offered ERC 3.6L Pentastar V6 ESS. The MY19 technical guide positively classifies the same marketed family/ESS architecture as naturally aspirated; applicable US guide/specification lineage identifies ERC, its marketed dimensions and trim/body offerings. Induction continuity across these regional implementations is an engineering judgment supported by the combined evidence, not a direct US manufacturer assertion, code-equality proof or inference from absent turbo words alone."
+            }
+          ],
+          "extraction_mode": "manually_verified_transcription",
+          "extractor_id": "approved_human_classification",
+          "extractor_version": "1.1",
+          "publication_revision": "Human classification adjudication 1.1; not manufacturer assertions",
+          "raw_artifact_hash": "sha256:f73e24575dd4ae5104671c955f23d2cceb6af1eefff4a530299dd40d0b7b8698",
+          "raw_artifact_reference": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/adjudications/JL19-13.approved.json",
+          "retrieved_at": "2026-11-08T20:17:13.120322+00:00",
+          "source_applicability": {
+            "applicability_basis": "Exact candidate digest; approved human conclusion",
+            "applicability_scope": "configuration",
+            "market": "US"
+          },
+          "source_id": "human_classification_adjudication",
+          "source_locator": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/adjudications/JL19-13.approved.json"
+        }
+      ],
+      "proof": {
+        "canonical_powertrain": {
+          "electrification_type": "none",
+          "engine_aspiration": "naturally_aspirated",
+          "engine_cylinders": 6,
+          "engine_displacement_liters": "3.6",
+          "fuel_type": "gasoline"
+        },
+        "peers": [],
+        "version": "2.0"
+      },
+      "row_id": "JL19-13"
+    },
+    {
+      "candidate_digest": "sha256:fe95dbc320f88fdd77a8dfcfbec295a2450bcbcda2b6ebbf250023b2cb262f7d",
+      "classification_basis": "retained_direct_source_evidence",
+      "human_provenance": [],
+      "proof": {
+        "canonical_powertrain": {
+          "electrification_type": "mild_hybrid",
+          "engine_aspiration": "turbocharged",
+          "engine_cylinders": 4,
+          "engine_displacement_liters": "2",
+          "fuel_type": "gasoline"
+        },
+        "peers": [],
+        "version": "2.0"
+      },
+      "row_id": "JL19-14"
+    },
+    {
+      "candidate_digest": "sha256:8e37a7fb55d608a4b95446811477ee5db2c3d085ef90f7ce05b9e90ff0176ec4",
+      "classification_basis": "approved_human_adjudication_plus_retained_sources",
+      "human_provenance": [
+        {
+          "assertion_set_id": "sha256:43118ff96aa9ff80b41922e8f743768260b7ea3edd36c036c68860ac04b8f2af",
+          "assertions": [
+            {
+              "assertion_id": "electrification_type",
+              "attribute_key": "electrification_type",
+              "raw_value": {
+                "classification": "electrification_type",
+                "provenance": "human_adjudicated",
+                "value": "none"
+              },
+              "source_context": "Human-adjudicated conclusion by project_owner: Propose none for the ten offered ERC configurations. US manual hardware descriptions distinguish conventional ESS starting equipment from an eTorque motor-generator with hybrid battery and launch assistance; the MY2019 catalog positively identifies conventional without-eTorque alternator applications and a separate ERG BSG application. US offering lineage binds the ten rows to ERC ESS; contemporary MY2020 powertrain materials separately introduce/describe V6 eTorque Sahara. The combined architecture/applicability judgment requires human adjudication; neither ESS terminology, missing eTorque words nor introduction chronology alone establishes nonhybrid status."
+            },
+            {
+              "assertion_id": "engine_aspiration",
+              "attribute_key": "engine_aspiration",
+              "raw_value": {
+                "classification": "engine_aspiration",
+                "provenance": "human_adjudicated",
+                "value": "naturally_aspirated"
+              },
+              "source_context": "Human-adjudicated conclusion by project_owner: Propose naturally_aspirated for the offered ERC 3.6L Pentastar V6 ESS. The MY19 technical guide positively classifies the same marketed family/ESS architecture as naturally aspirated; applicable US guide/specification lineage identifies ERC, its marketed dimensions and trim/body offerings. Induction continuity across these regional implementations is an engineering judgment supported by the combined evidence, not a direct US manufacturer assertion, code-equality proof or inference from absent turbo words alone."
+            }
+          ],
+          "extraction_mode": "manually_verified_transcription",
+          "extractor_id": "approved_human_classification",
+          "extractor_version": "1.1",
+          "publication_revision": "Human classification adjudication 1.1; not manufacturer assertions",
+          "raw_artifact_hash": "sha256:12d513952a1b5093a6a47a180215801c8d312da67199e2fda6ce927d6796ed9f",
+          "raw_artifact_reference": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/adjudications/JL19-15.approved.json",
+          "retrieved_at": "2026-11-08T20:17:13.457926+00:00",
+          "source_applicability": {
+            "applicability_basis": "Exact candidate digest; approved human conclusion",
+            "applicability_scope": "configuration",
+            "market": "US"
+          },
+          "source_id": "human_classification_adjudication",
+          "source_locator": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/adjudications/JL19-15.approved.json"
+        }
+      ],
+      "proof": {
+        "canonical_powertrain": {
+          "electrification_type": "none",
+          "engine_aspiration": "naturally_aspirated",
+          "engine_cylinders": 6,
+          "engine_displacement_liters": "3.6",
+          "fuel_type": "gasoline"
+        },
+        "peers": [],
+        "version": "2.0"
+      },
+      "row_id": "JL19-15"
+    },
+    {
+      "candidate_digest": "sha256:81aea90b0cc366923ce77e95a8327b7a880ce437d4ddf0f5418a674c113dc90d",
+      "classification_basis": "retained_direct_source_evidence",
+      "human_provenance": [],
+      "proof": {
+        "canonical_powertrain": {
+          "electrification_type": "mild_hybrid",
+          "engine_aspiration": "turbocharged",
+          "engine_cylinders": 4,
+          "engine_displacement_liters": "2",
+          "fuel_type": "gasoline"
+        },
+        "peers": [],
+        "version": "2.0"
+      },
+      "row_id": "JL19-16"
+    },
+    {
+      "candidate_digest": "sha256:b1f691977f696210f96ce073e275fffe29613ac9f4eed27abf190298a33b7de7",
+      "classification_basis": "approved_human_adjudication_plus_retained_sources",
+      "human_provenance": [
+        {
+          "assertion_set_id": "sha256:cbc2a3d119d254bccaecd161240b47cd569ed14c0ceac318f1588f45df047e0b",
+          "assertions": [
+            {
+              "assertion_id": "electrification_type",
+              "attribute_key": "electrification_type",
+              "raw_value": {
+                "classification": "electrification_type",
+                "provenance": "human_adjudicated",
+                "value": "none"
+              },
+              "source_context": "Human-adjudicated conclusion by project_owner: Propose none for the ten offered ERC configurations. US manual hardware descriptions distinguish conventional ESS starting equipment from an eTorque motor-generator with hybrid battery and launch assistance; the MY2019 catalog positively identifies conventional without-eTorque alternator applications and a separate ERG BSG application. US offering lineage binds the ten rows to ERC ESS; contemporary MY2020 powertrain materials separately introduce/describe V6 eTorque Sahara. The combined architecture/applicability judgment requires human adjudication; neither ESS terminology, missing eTorque words nor introduction chronology alone establishes nonhybrid status."
+            },
+            {
+              "assertion_id": "engine_aspiration",
+              "attribute_key": "engine_aspiration",
+              "raw_value": {
+                "classification": "engine_aspiration",
+                "provenance": "human_adjudicated",
+                "value": "naturally_aspirated"
+              },
+              "source_context": "Human-adjudicated conclusion by project_owner: Propose naturally_aspirated for the offered ERC 3.6L Pentastar V6 ESS. The MY19 technical guide positively classifies the same marketed family/ESS architecture as naturally aspirated; applicable US guide/specification lineage identifies ERC, its marketed dimensions and trim/body offerings. Induction continuity across these regional implementations is an engineering judgment supported by the combined evidence, not a direct US manufacturer assertion, code-equality proof or inference from absent turbo words alone."
+            }
+          ],
+          "extraction_mode": "manually_verified_transcription",
+          "extractor_id": "approved_human_classification",
+          "extractor_version": "1.1",
+          "publication_revision": "Human classification adjudication 1.1; not manufacturer assertions",
+          "raw_artifact_hash": "sha256:fd282eac931fc8ecf3d09c30b7787d86b3c70a225ef5dbdcdca0ab752454e5e0",
+          "raw_artifact_reference": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/adjudications/JL19-17.approved.json",
+          "retrieved_at": "2026-11-08T20:17:13.795145+00:00",
+          "source_applicability": {
+            "applicability_basis": "Exact candidate digest; approved human conclusion",
+            "applicability_scope": "configuration",
+            "market": "US"
+          },
+          "source_id": "human_classification_adjudication",
+          "source_locator": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/adjudications/JL19-17.approved.json"
+        }
+      ],
+      "proof": {
+        "canonical_powertrain": {
+          "electrification_type": "none",
+          "engine_aspiration": "naturally_aspirated",
+          "engine_cylinders": 6,
+          "engine_displacement_liters": "3.6",
+          "fuel_type": "gasoline"
+        },
+        "peers": [],
+        "version": "2.0"
+      },
+      "row_id": "JL19-17"
+    },
+    {
+      "candidate_digest": "sha256:ab8023ccc084a0e8a31438e04eae8cd13aff09f69291313e2e6fe10b29d2a3f7",
+      "classification_basis": "approved_human_adjudication_plus_retained_sources",
+      "human_provenance": [
+        {
+          "assertion_set_id": "sha256:980a2a8698d97bda869d9b5ad676ecc1b4fc949764bb207904f30399f062127a",
+          "assertions": [
+            {
+              "assertion_id": "electrification_type",
+              "attribute_key": "electrification_type",
+              "raw_value": {
+                "classification": "electrification_type",
+                "provenance": "human_adjudicated",
+                "value": "none"
+              },
+              "source_context": "Human-adjudicated conclusion by project_owner: Propose none for the ten offered ERC configurations. US manual hardware descriptions distinguish conventional ESS starting equipment from an eTorque motor-generator with hybrid battery and launch assistance; the MY2019 catalog positively identifies conventional without-eTorque alternator applications and a separate ERG BSG application. US offering lineage binds the ten rows to ERC ESS; contemporary MY2020 powertrain materials separately introduce/describe V6 eTorque Sahara. The combined architecture/applicability judgment requires human adjudication; neither ESS terminology, missing eTorque words nor introduction chronology alone establishes nonhybrid status."
+            },
+            {
+              "assertion_id": "engine_aspiration",
+              "attribute_key": "engine_aspiration",
+              "raw_value": {
+                "classification": "engine_aspiration",
+                "provenance": "human_adjudicated",
+                "value": "naturally_aspirated"
+              },
+              "source_context": "Human-adjudicated conclusion by project_owner: Propose naturally_aspirated for the offered ERC 3.6L Pentastar V6 ESS. The MY19 technical guide positively classifies the same marketed family/ESS architecture as naturally aspirated; applicable US guide/specification lineage identifies ERC, its marketed dimensions and trim/body offerings. Induction continuity across these regional implementations is an engineering judgment supported by the combined evidence, not a direct US manufacturer assertion, code-equality proof or inference from absent turbo words alone."
+            }
+          ],
+          "extraction_mode": "manually_verified_transcription",
+          "extractor_id": "approved_human_classification",
+          "extractor_version": "1.1",
+          "publication_revision": "Human classification adjudication 1.1; not manufacturer assertions",
+          "raw_artifact_hash": "sha256:837a1da50c86e2f505979efb1aaf1a25073ec77e6de43140f509dff4c2b9a9ab",
+          "raw_artifact_reference": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/adjudications/JL19-18.approved.json",
+          "retrieved_at": "2026-11-08T20:17:14.145835+00:00",
+          "source_applicability": {
+            "applicability_basis": "Exact candidate digest; approved human conclusion",
+            "applicability_scope": "configuration",
+            "market": "US"
+          },
+          "source_id": "human_classification_adjudication",
+          "source_locator": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/adjudications/JL19-18.approved.json"
+        }
+      ],
+      "proof": {
+        "canonical_powertrain": {
+          "electrification_type": "none",
+          "engine_aspiration": "naturally_aspirated",
+          "engine_cylinders": 6,
+          "engine_displacement_liters": "3.6",
+          "fuel_type": "gasoline"
+        },
+        "peers": [],
+        "version": "2.0"
+      },
+      "row_id": "JL19-18"
+    },
+    {
+      "candidate_digest": "sha256:7ab768e39cc66d32b1e9626a1bd182e9386691ebf5612c5ae81b99eaeb695757",
+      "classification_basis": "retained_direct_source_evidence",
+      "human_provenance": [],
+      "proof": {
+        "canonical_powertrain": {
+          "electrification_type": "mild_hybrid",
+          "engine_aspiration": "turbocharged",
+          "engine_cylinders": 4,
+          "engine_displacement_liters": "2",
+          "fuel_type": "gasoline"
+        },
+        "peers": [],
+        "version": "2.0"
+      },
+      "row_id": "JL19-19"
+    }
+  ],
+  "version": "2.0"
+}

@@ -1,0 +1,11 @@
+{
+  "command": "PYTHONDONTWRITEBYTECODE=1 RIGARCHIVE_TEST_DB_PATH=:memory: .venv/bin/python -B manage.py test reference.tests.test_classification_adjudication reference.tests.test_structured_powertrain.StructuredPowertrainTests reference.tests.test_generation_projection_completeness reference.tests.test_generation_trim_matrix reference.tests.test_generation_trim_matrix_approval reference.tests.test_matrix_execution --verbosity 1",
+  "tests": 98,
+  "failures": 0,
+  "errors": 0,
+  "result": "OK",
+  "elapsed_seconds": 3.668,
+  "isolation": "Django isolated in-memory test database; synthetic fixtures only",
+  "database_after_tests_sha256": "sha256:bde5218712398f0c7b5251abaefa3182f99ea43fd037c442c04518f01b59f410",
+  "development_schema_migrations": false
+}

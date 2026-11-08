@@ -1,0 +1,214 @@
+{
+  "adjudication_version": "1.1",
+  "created_at": "2026-11-08T20:17:13.120322+00:00",
+  "operator_label": "project_owner",
+  "original_manifest_hash": "",
+  "candidate_reference": "MY2019-JL-JL19-13-preparatory-compact-r2-review-r3",
+  "source_identity": {
+    "native_identifier": "sha256:a50f891053b5615c7aba52cc6b053a63b90bba3ae530208fab384827c2494a65",
+    "source_id": "human_classification_adjudication",
+    "source_identity_type": "candidate_digest"
+  },
+  "original_review_category": "missing_classification",
+  "adjudication_category": "evidence_backed_classification",
+  "adjudication_decision": "approved_classifications",
+  "adjudicated_trim_name": "Unlimited Sahara",
+  "adjudication_notes": "Owner authorized policy adjustment and proposal preparation, not these final facts. Both values are evidence-backed human conclusions awaiting sign-off; source assertions remain unchanged.",
+  "evidence_anchors": {
+    "candidate_artifact_reference": "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/candidates/JL19-13.candidate.json",
+    "candidate_hash": "sha256:a50f891053b5615c7aba52cc6b053a63b90bba3ae530208fab384827c2494a65",
+    "classifications": {
+      "electrification_type": {
+        "applicability": "Exactly Unlimited Sahara, US MY2019 Wrangler JL ERC offering, candidate digest sha256:a50f891053b5615c7aba52cc6b053a63b90bba3ae530208fab384827c2494a65; inherited body/model-code and engine-offering lineage remains in the pinned candidate. No ERG/eTorque, EC3, other model year, or tuning identity is classified.",
+        "confidence": "moderate",
+        "evidence_status": "supported",
+        "limitations": "No explicit US ERC naturally aspirated/nonhybrid statement was found. Australian-to-US induction continuity and the ERC conventional-hardware association are derived. Catalog provenance and MY2020 introduction chronology are not conclusive alone. Regulatory material and retrospective FCA Y40 also describe MY2019 3.6L hybrid/eTorque applications without establishing that they are ERC; the proposal is restricted to the ten retained ERC offerings, not all MY2019 3.6L Wranglers.",
+        "reasoning": "Propose none for the ten offered ERC configurations. US manual hardware descriptions distinguish conventional ESS starting equipment from an eTorque motor-generator with hybrid battery and launch assistance; the MY2019 catalog positively identifies conventional without-eTorque alternator applications and a separate ERG BSG application. US offering lineage binds the ten rows to ERC ESS; contemporary MY2020 powertrain materials separately introduce/describe V6 eTorque Sahara. The combined architecture/applicability judgment requires human adjudication; neither ESS terminology, missing eTorque words nor introduction chronology alone establishes nonhybrid status.",
+        "source_assertion_refs": [
+          "my2019_erc_research_review|sha256:df1686c6c360f451a8c10b94e4c4b6dafc5cabced607e2ecac6f0be8d4521443|ERC-review-synthesis|aspiration_reasoning",
+          "mopar_2019_hardware_excerpts|sha256:456d7554534a5dae9f0ecf9ca6ae5f74f634d28d841f0c7a62c44fa0e1cfca75|US-MY19-hardware|reviewed_context",
+          "jeeppartsdeal_oe_catalog|sha256:e558fc4e27edf7f39a04332fadbd65930ee038b76f1377f84be23f0ac4c42843|MY19-alternator|reviewed_context",
+          "fca_pentastar_family_facts|sha256:7e16f753401a6711b78b510ad4cf35cecdaa775b7ce719b0050fd6db72dabfef|MY19-family|reviewed_context",
+          "carb_2019_3_6_hev|sha256:c82e4ddc543e0142628e1cf66f1ff6e38e233eff474e6b1b93e0c2dd0eae64e6|carb_2019_3_6_hev|scope_caution",
+          "fca_y40_scope|sha256:6af1557c414a22a709a7a0d9d50767ef55f7fc885dab3fe26bbcf8dd35b9c2d7|fca_y40_scope|scope_caution"
+        ],
+        "value": "none"
+      },
+      "engine_aspiration": {
+        "applicability": "Exactly Unlimited Sahara, US MY2019 Wrangler JL ERC offering, candidate digest sha256:a50f891053b5615c7aba52cc6b053a63b90bba3ae530208fab384827c2494a65; inherited body/model-code and engine-offering lineage remains in the pinned candidate. No ERG/eTorque, EC3, other model year, or tuning identity is classified.",
+        "confidence": "moderate",
+        "evidence_status": "supported",
+        "limitations": "No explicit US ERC naturally aspirated/nonhybrid statement was found. Australian-to-US induction continuity and the ERC conventional-hardware association are derived. Catalog provenance and MY2020 introduction chronology are not conclusive alone. Regulatory material and retrospective FCA Y40 also describe MY2019 3.6L hybrid/eTorque applications without establishing that they are ERC; the proposal is restricted to the ten retained ERC offerings, not all MY2019 3.6L Wranglers.",
+        "reasoning": "Propose naturally_aspirated for the offered ERC 3.6L Pentastar V6 ESS. The MY19 technical guide positively classifies the same marketed family/ESS architecture as naturally aspirated; applicable US guide/specification lineage identifies ERC, its marketed dimensions and trim/body offerings. Induction continuity across these regional implementations is an engineering judgment supported by the combined evidence, not a direct US manufacturer assertion, code-equality proof or inference from absent turbo words alone.",
+        "source_assertion_refs": [
+          "my2019_erc_research_review|sha256:df1686c6c360f451a8c10b94e4c4b6dafc5cabced607e2ecac6f0be8d4521443|ERC-review-synthesis|aspiration_reasoning",
+          "mopar_2019_hardware_excerpts|sha256:456d7554534a5dae9f0ecf9ca6ae5f74f634d28d841f0c7a62c44fa0e1cfca75|US-MY19-hardware|reviewed_context",
+          "jeeppartsdeal_oe_catalog|sha256:e558fc4e27edf7f39a04332fadbd65930ee038b76f1377f84be23f0ac4c42843|MY19-alternator|reviewed_context",
+          "fca_pentastar_family_facts|sha256:7e16f753401a6711b78b510ad4cf35cecdaa775b7ce719b0050fd6db72dabfef|MY19-family|reviewed_context",
+          "carb_2019_3_6_hev|sha256:c82e4ddc543e0142628e1cf66f1ff6e38e233eff474e6b1b93e0c2dd0eae64e6|carb_2019_3_6_hev|scope_caution",
+          "fca_y40_scope|sha256:6af1557c414a22a709a7a0d9d50767ef55f7fc885dab3fe26bbcf8dd35b9c2d7|fca_y40_scope|scope_caution"
+        ],
+        "value": "naturally_aspirated"
+      }
+    },
+    "supporting_documents": [
+      {
+        "assertion_set_id": "ERC-review-synthesis",
+        "assertions": [
+          {
+            "assertion_id": "aspiration_reasoning",
+            "attribute_key": "classification_review_support",
+            "raw_value": "Propose naturally_aspirated for the offered ERC 3.6L Pentastar V6 ESS. The MY19 technical guide positively classifies the same marketed family/ESS architecture as naturally aspirated; applicable US guide/specification lineage identifies ERC, its marketed dimensions and trim/body offerings. Induction continuity across these regional implementations is an engineering judgment supported by the combined evidence, not a direct US manufacturer assertion, code-equality proof or inference from absent turbo words alone.",
+            "source_context": "Research synthesis; AU p10 and pinned US offering evidence. Human conclusion, not manufacturer text."
+          },
+          {
+            "assertion_id": "electrification_reasoning",
+            "attribute_key": "classification_review_support",
+            "raw_value": "Propose none for the ten offered ERC configurations. US manual hardware descriptions distinguish conventional ESS starting equipment from an eTorque motor-generator with hybrid battery and launch assistance; the MY2019 catalog positively identifies conventional without-eTorque alternator applications and a separate ERG BSG application. US offering lineage binds the ten rows to ERC ESS; contemporary MY2020 powertrain materials separately introduce/describe V6 eTorque Sahara. The combined architecture/applicability judgment requires human adjudication; neither ESS terminology, missing eTorque words nor introduction chronology alone establishes nonhybrid status.",
+            "source_context": "Research synthesis; US manual hardware, catalog applications and MY2020 press context."
+          },
+          {
+            "assertion_id": "scope_limitations",
+            "attribute_key": "classification_review_support",
+            "raw_value": "No explicit US ERC naturally aspirated/nonhybrid statement was found. Australian-to-US induction continuity and the ERC conventional-hardware association are derived. Catalog provenance and MY2020 introduction chronology are not conclusive alone. Regulatory material and retrospective FCA Y40 also describe MY2019 3.6L hybrid/eTorque applications without establishing that they are ERC; the proposal is restricted to the ten retained ERC offerings, not all MY2019 3.6L Wranglers.",
+            "source_context": "All limitations must remain visible to the human reviewer."
+          }
+        ],
+        "extraction_mode": "manually_verified_transcription",
+        "extractor_id": "reviewed_classification_support",
+        "extractor_version": "1.0",
+        "raw_artifact_hash": "sha256:df1686c6c360f451a8c10b94e4c4b6dafc5cabced607e2ecac6f0be8d4521443",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2019_JL/director_review/erc_classification_proposals_20261108/evidence/erc_research_dossier.json",
+        "retrieved_at": "2026-11-08T20:06:44.639511+00:00",
+        "source_applicability": {
+          "applicability_basis": "Targeted review of ten retained US MY2019 ERC offerings; regional source scope remains explicit in dossier.",
+          "applicability_scope": "model_year",
+          "market": "US"
+        },
+        "source_id": "my2019_erc_research_review",
+        "source_locator": "docs/implementation/handoffs/MY2019_JL/director_review/erc_classification_proposals_20261108/evidence/erc_research_dossier.json"
+      },
+      {
+        "assertion_set_id": "US-MY19-hardware",
+        "assertions": [
+          {
+            "assertion_id": "reviewed_context",
+            "attribute_key": "classification_review_support",
+            "raw_value": "ESS versus eTorque hardware distinction; original source lexemes and pages retained.",
+            "source_context": "Context summarized for human review; not an internal-schema manufacturer classification."
+          }
+        ],
+        "extraction_mode": "manually_verified_transcription",
+        "extractor_id": "reviewed_classification_support",
+        "extractor_version": "1.0",
+        "raw_artifact_hash": "sha256:456d7554534a5dae9f0ecf9ca6ae5f74f634d28d841f0c7a62c44fa0e1cfca75",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2019_JL/director_review/erc_supplied_sources_20261108/sources/mopar_hardware_selected_facts.json",
+        "retrieved_at": "2026-11-08T20:06:44.639511+00:00",
+        "source_applicability": {
+          "applicability_basis": "Manufacturer/retailer source scope described in ERC dossier; no unsupported cross-market fact promoted.",
+          "applicability_scope": "model_year",
+          "market": "US"
+        },
+        "source_id": "mopar_2019_hardware_excerpts",
+        "source_locator": "https://vehicleinfo.mopar.com/assets/publications/en-ca/Jeep/2019/Wrangler/10387.pdf"
+      },
+      {
+        "assertion_set_id": "MY19-alternator",
+        "assertions": [
+          {
+            "assertion_id": "reviewed_context",
+            "attribute_key": "classification_review_support",
+            "raw_value": "Without-eTorque 3.6L alternator subset plus separate ERG BSG entry; no explicit ERC token.",
+            "source_context": "Context summarized for human review; not an internal-schema manufacturer classification."
+          }
+        ],
+        "extraction_mode": "manually_verified_transcription",
+        "extractor_id": "reviewed_classification_support",
+        "extractor_version": "1.0",
+        "raw_artifact_hash": "sha256:e558fc4e27edf7f39a04332fadbd65930ee038b76f1377f84be23f0ac4c42843",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2019_JL/director_review/erc_supplied_sources_20261108/sources/alternator-catalog.html",
+        "retrieved_at": "2026-11-08T20:06:44.639511+00:00",
+        "source_applicability": {
+          "applicability_basis": "Manufacturer/retailer source scope described in ERC dossier; no unsupported cross-market fact promoted.",
+          "applicability_scope": "model_year",
+          "market": "US"
+        },
+        "source_id": "jeeppartsdeal_oe_catalog",
+        "source_locator": "https://www.jeeppartsdeal.com/parts-list/2019-jeep-wrangler/charging-starting/alternator"
+      },
+      {
+        "assertion_set_id": "MY19-family",
+        "assertions": [
+          {
+            "assertion_id": "reviewed_context",
+            "attribute_key": "classification_review_support",
+            "raw_value": "MY2019 Wrangler family availability, with distinct hybrid/eTorque family applications.",
+            "source_context": "Context summarized for human review; not an internal-schema manufacturer classification."
+          }
+        ],
+        "extraction_mode": "manually_verified_transcription",
+        "extractor_id": "reviewed_classification_support",
+        "extractor_version": "1.0",
+        "raw_artifact_hash": "sha256:7e16f753401a6711b78b510ad4cf35cecdaa775b7ce719b0050fd6db72dabfef",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2019_JL/director_review/erc_supplied_sources_20261108/sources/pentastar-family-facts.pdf",
+        "retrieved_at": "2026-11-08T20:06:44.639511+00:00",
+        "source_applicability": {
+          "applicability_basis": "Manufacturer/retailer source scope described in ERC dossier; no unsupported cross-market fact promoted.",
+          "applicability_scope": "model_year",
+          "market": "US"
+        },
+        "source_id": "fca_pentastar_family_facts",
+        "source_locator": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/attachments/Pentastar_V-6_facts1suaud45cdq3l94ji0b4a7550n.pdf"
+      },
+      {
+        "assertion_set_id": "carb_2019_3_6_hev",
+        "assertions": [
+          {
+            "assertion_id": "scope_caution",
+            "attribute_key": "classification_review_support",
+            "raw_value": "MY2019 3.6L test group KCRXT03.65P7 is hybrid-electric and lists Wrangler models; no ERC identifier established.",
+            "source_context": "Printed p1; broad model-year scope must not be equated with the targeted ERC offering."
+          }
+        ],
+        "extraction_mode": "manually_verified_transcription",
+        "extractor_id": "reviewed_classification_support",
+        "extractor_version": "1.0",
+        "raw_artifact_hash": "sha256:c82e4ddc543e0142628e1cf66f1ff6e38e233eff474e6b1b93e0c2dd0eae64e6",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2019_JL/director_review/erc_classification_proposals_20261108/evidence/carb-2019-a0091433.pdf",
+        "retrieved_at": "2026-11-08T20:06:44.639511+00:00",
+        "source_applicability": {
+          "applicability_basis": "US certification/service scope; retained as limitation, not as proof of target ERC classification.",
+          "applicability_scope": "model_year",
+          "market": "US"
+        },
+        "source_id": "carb_2019_3_6_hev",
+        "source_locator": "https://ww2.arb.ca.gov/sites/default/files/classic/msprog/nvepb/executive_orders/EO%20Web%20Files/PC-LDT-MDV/2019/0002/pc-ldt-mdv_ldt_a-9-1433__sdt--20180905.pdf"
+      },
+      {
+        "assertion_set_id": "fca_y40_scope",
+        "assertions": [
+          {
+            "assertion_id": "scope_caution",
+            "attribute_key": "classification_review_support",
+            "raw_value": "Retrospective FCA Y40 lists MY2019-2021 Wrangler 3.6L eTorque ERG; does not state ERC is hybrid.",
+            "source_context": "Printed p1; broad model-year scope must not be equated with the targeted ERC offering."
+          }
+        ],
+        "extraction_mode": "manually_verified_transcription",
+        "extractor_id": "reviewed_classification_support",
+        "extractor_version": "1.0",
+        "raw_artifact_hash": "sha256:6af1557c414a22a709a7a0d9d50767ef55f7fc885dab3fe26bbcf8dd35b9c2d7",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2019_JL/director_review/erc_classification_proposals_20261108/evidence/fca-y40-bulletin.pdf",
+        "retrieved_at": "2026-11-08T20:06:44.639511+00:00",
+        "source_applicability": {
+          "applicability_basis": "US certification/service scope; retained as limitation, not as proof of target ERC classification.",
+          "applicability_scope": "model_year",
+          "market": "US"
+        },
+        "source_id": "fca_y40_scope",
+        "source_locator": "https://static.nhtsa.gov/odi/tsbs/2024/MC-10251816-9999.pdf"
+      }
+    ]
+  },
+  "adjudication_hash": "sha256:c5da82dcf5e98c23d68831b6cd380d71f84f75a9f97a495a14ffe63668d896e7"
+}

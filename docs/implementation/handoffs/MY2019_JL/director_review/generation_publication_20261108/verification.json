@@ -1,0 +1,338 @@
+{
+  "backup": "backups/review/my2019_jl_correspondence_20261108T203329215652Z/pre-publication.sqlite3",
+  "backup_sha256": "fdb018c70dc2594394313817879752ac0c221d78f013d8acb229b5ec896aec62",
+  "canonical_import_plans_generated": 0,
+  "canonical_vehicle_imports_executed": 0,
+  "counts_after": {
+    "correspondences": 13,
+    "receipts": 2861,
+    "vehicle_definitions": 793
+  },
+  "covered_candidates": 19,
+  "database_sha256_after_publication": "f3d188bfabed8c67c4ec198bc33199767c9748778fabe34f141e00cc490dca25",
+  "database_table_changes": {
+    "reference_generationcorrespondencerevision": {
+      "added_primary_keys": [
+        "10",
+        "11",
+        "12",
+        "13",
+        "9"
+      ],
+      "modified_keys": []
+    },
+    "reference_importexecutionreceipt": {
+      "added_primary_keys": [
+        "2857",
+        "2858",
+        "2859",
+        "2860",
+        "2861"
+      ],
+      "modified_keys": []
+    },
+    "sqlite_sequence": {
+      "added_primary_keys": [],
+      "modified_keys": [
+        "reference_generationcorrespondencerevision",
+        "reference_importexecutionreceipt"
+      ]
+    }
+  },
+  "foreign_key_violations": [],
+  "future_duplicate_publication_detection": "All five exact revision UUID/content hashes found once; each has one original created receipt. No second publication/no-op invocation performed.",
+  "integrity_check": [
+    "ok"
+  ],
+  "preexisting_rows_preserved": true,
+  "prior_handoff_files_preserved": 209,
+  "read_only_verification": true,
+  "rows": [
+    {
+      "basis": "reviewed_source_correspondence",
+      "candidate": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/candidates/JL19-01.candidate.json",
+      "candidate_digest": "sha256:4b051830ca189e2784199f29749acb3d7337eb6891fb3a4f3e1d57fde30ff406",
+      "correspondence": {
+        "hash": "sha256:a4ae81e161d90a182880790d585ce9083304ee91a35818bba6791bf636ce1130",
+        "uuid": "98fc7eb1-f684-413d-be4f-77193bf12fe6"
+      },
+      "generation_pk": 32,
+      "generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "row_id": "JL19-01",
+      "source_model_codes": [
+        "JLJL72"
+      ]
+    },
+    {
+      "basis": "reviewed_source_correspondence",
+      "candidate": "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/candidates/JL19-02.candidate.json",
+      "candidate_digest": "sha256:2d4c76e2571661a894807f6f85a923089a03da2b034a27134a11367a216832d6",
+      "correspondence": {
+        "hash": "sha256:a4ae81e161d90a182880790d585ce9083304ee91a35818bba6791bf636ce1130",
+        "uuid": "98fc7eb1-f684-413d-be4f-77193bf12fe6"
+      },
+      "generation_pk": 32,
+      "generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "row_id": "JL19-02",
+      "source_model_codes": [
+        "JLJL72"
+      ]
+    },
+    {
+      "basis": "reviewed_source_correspondence",
+      "candidate": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/candidates/JL19-03.candidate.json",
+      "candidate_digest": "sha256:6fc3f01e272e9f209b55a2900cef3cecf2268aa18ffbeff32240d57410aa2aa6",
+      "correspondence": {
+        "hash": "sha256:a4ae81e161d90a182880790d585ce9083304ee91a35818bba6791bf636ce1130",
+        "uuid": "98fc7eb1-f684-413d-be4f-77193bf12fe6"
+      },
+      "generation_pk": 32,
+      "generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "row_id": "JL19-03",
+      "source_model_codes": [
+        "JLJL72"
+      ]
+    },
+    {
+      "basis": "reviewed_source_correspondence",
+      "candidate": "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/candidates/JL19-04.candidate.json",
+      "candidate_digest": "sha256:e2366bf8ebddbd0557ab74d6f9de0fbd73fe5287e048c94c6411770421180ab5",
+      "correspondence": {
+        "hash": "sha256:a4ae81e161d90a182880790d585ce9083304ee91a35818bba6791bf636ce1130",
+        "uuid": "98fc7eb1-f684-413d-be4f-77193bf12fe6"
+      },
+      "generation_pk": 32,
+      "generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "row_id": "JL19-04",
+      "source_model_codes": [
+        "JLJL72"
+      ]
+    },
+    {
+      "basis": "reviewed_source_correspondence",
+      "candidate": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/candidates/JL19-05.candidate.json",
+      "candidate_digest": "sha256:fedc8013ef72f51d589b057c3b44ebd9d892557369a95245b5a330d79bf2843c",
+      "correspondence": {
+        "hash": "sha256:def5ebea00410ce4cb662a53d9fd4c481927d6a628e27d5ce434f69cf8ded6ef",
+        "uuid": "c636ab1b-bed8-4943-a1b0-385a9d3d1ca3"
+      },
+      "generation_pk": 32,
+      "generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "row_id": "JL19-05",
+      "source_model_codes": [
+        "JLJS72"
+      ]
+    },
+    {
+      "basis": "reviewed_source_correspondence",
+      "candidate": "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/candidates/JL19-06.candidate.json",
+      "candidate_digest": "sha256:5d533cd574e35a07c7778e1f2be2120edea44e76a42688c03067084e70635d51",
+      "correspondence": {
+        "hash": "sha256:def5ebea00410ce4cb662a53d9fd4c481927d6a628e27d5ce434f69cf8ded6ef",
+        "uuid": "c636ab1b-bed8-4943-a1b0-385a9d3d1ca3"
+      },
+      "generation_pk": 32,
+      "generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "row_id": "JL19-06",
+      "source_model_codes": [
+        "JLJS72"
+      ]
+    },
+    {
+      "basis": "reviewed_source_correspondence",
+      "candidate": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/candidates/JL19-07.candidate.json",
+      "candidate_digest": "sha256:48c999af9b2ee2a8fbcde64129d3f98dd5e6aa3bfbe189fc3a03fb235522a101",
+      "correspondence": {
+        "hash": "sha256:16638781801556503d6723591f7d82292d6d020f197ca4f35b9ccb99987fdd23",
+        "uuid": "c1b9b744-b447-4f6c-9c0c-0960f6482bb1"
+      },
+      "generation_pk": 32,
+      "generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "row_id": "JL19-07",
+      "source_model_codes": [
+        "JLJL74"
+      ]
+    },
+    {
+      "basis": "reviewed_source_correspondence",
+      "candidate": "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/candidates/JL19-08.candidate.json",
+      "candidate_digest": "sha256:d2cef6f3c3de7487e94aed4295a097be4471622dcbcb3ad2a15aafb9b3384224",
+      "correspondence": {
+        "hash": "sha256:16638781801556503d6723591f7d82292d6d020f197ca4f35b9ccb99987fdd23",
+        "uuid": "c1b9b744-b447-4f6c-9c0c-0960f6482bb1"
+      },
+      "generation_pk": 32,
+      "generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "row_id": "JL19-08",
+      "source_model_codes": [
+        "JLJL74"
+      ]
+    },
+    {
+      "basis": "reviewed_source_correspondence",
+      "candidate": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/candidates/JL19-09.candidate.json",
+      "candidate_digest": "sha256:bf4117a243b4771b3600c88e887d082cc16d60a8a6e2562b2f1665ef4a41f10d",
+      "correspondence": {
+        "hash": "sha256:16638781801556503d6723591f7d82292d6d020f197ca4f35b9ccb99987fdd23",
+        "uuid": "c1b9b744-b447-4f6c-9c0c-0960f6482bb1"
+      },
+      "generation_pk": 32,
+      "generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "row_id": "JL19-09",
+      "source_model_codes": [
+        "JLJL74"
+      ]
+    },
+    {
+      "basis": "reviewed_source_correspondence",
+      "candidate": "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/candidates/JL19-10.candidate.json",
+      "candidate_digest": "sha256:ccb451844b1d240bfa71a683783749d192bbcfee62086607f32766b64b2b473c",
+      "correspondence": {
+        "hash": "sha256:16638781801556503d6723591f7d82292d6d020f197ca4f35b9ccb99987fdd23",
+        "uuid": "c1b9b744-b447-4f6c-9c0c-0960f6482bb1"
+      },
+      "generation_pk": 32,
+      "generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "row_id": "JL19-10",
+      "source_model_codes": [
+        "JLJL74"
+      ]
+    },
+    {
+      "basis": "reviewed_source_correspondence",
+      "candidate": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/candidates/JL19-11.candidate.json",
+      "candidate_digest": "sha256:4ac2842b6f712817a33018ff1a70138582f8daa981570112701edf6b66f483e4",
+      "correspondence": {
+        "hash": "sha256:16638781801556503d6723591f7d82292d6d020f197ca4f35b9ccb99987fdd23",
+        "uuid": "c1b9b744-b447-4f6c-9c0c-0960f6482bb1"
+      },
+      "generation_pk": 32,
+      "generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "row_id": "JL19-11",
+      "source_model_codes": [
+        "JLJL74"
+      ]
+    },
+    {
+      "basis": "reviewed_source_correspondence",
+      "candidate": "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/candidates/JL19-12.candidate.json",
+      "candidate_digest": "sha256:ccb8eee562dc6bf0ec48259b6bd3367b7b0ac7ece31b722664238e5b6c1cc360",
+      "correspondence": {
+        "hash": "sha256:16638781801556503d6723591f7d82292d6d020f197ca4f35b9ccb99987fdd23",
+        "uuid": "c1b9b744-b447-4f6c-9c0c-0960f6482bb1"
+      },
+      "generation_pk": 32,
+      "generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "row_id": "JL19-12",
+      "source_model_codes": [
+        "JLJL74"
+      ]
+    },
+    {
+      "basis": "reviewed_source_correspondence",
+      "candidate": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/candidates/JL19-13.candidate.json",
+      "candidate_digest": "sha256:caaf4b18512dc7d0ceff2261e153ab351fab89eedf3cf164f3f16f2634371f42",
+      "correspondence": {
+        "hash": "sha256:46fe14559da3d434e671d5d14187eabba86acf8d205e17d536fbe1c4b75619d6",
+        "uuid": "f2abb41d-7f25-46f6-9205-b04bec7886e0"
+      },
+      "generation_pk": 32,
+      "generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "row_id": "JL19-13",
+      "source_model_codes": [
+        "JLJP74"
+      ]
+    },
+    {
+      "basis": "reviewed_source_correspondence",
+      "candidate": "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/candidates/JL19-14.candidate.json",
+      "candidate_digest": "sha256:fe95dbc320f88fdd77a8dfcfbec295a2450bcbcda2b6ebbf250023b2cb262f7d",
+      "correspondence": {
+        "hash": "sha256:46fe14559da3d434e671d5d14187eabba86acf8d205e17d536fbe1c4b75619d6",
+        "uuid": "f2abb41d-7f25-46f6-9205-b04bec7886e0"
+      },
+      "generation_pk": 32,
+      "generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "row_id": "JL19-14",
+      "source_model_codes": [
+        "JLJP74"
+      ]
+    },
+    {
+      "basis": "reviewed_source_correspondence",
+      "candidate": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/candidates/JL19-15.candidate.json",
+      "candidate_digest": "sha256:8e37a7fb55d608a4b95446811477ee5db2c3d085ef90f7ce05b9e90ff0176ec4",
+      "correspondence": {
+        "hash": "sha256:46fe14559da3d434e671d5d14187eabba86acf8d205e17d536fbe1c4b75619d6",
+        "uuid": "f2abb41d-7f25-46f6-9205-b04bec7886e0"
+      },
+      "generation_pk": 32,
+      "generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "row_id": "JL19-15",
+      "source_model_codes": [
+        "JLJP74"
+      ]
+    },
+    {
+      "basis": "reviewed_source_correspondence",
+      "candidate": "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/candidates/JL19-16.candidate.json",
+      "candidate_digest": "sha256:81aea90b0cc366923ce77e95a8327b7a880ce437d4ddf0f5418a674c113dc90d",
+      "correspondence": {
+        "hash": "sha256:46fe14559da3d434e671d5d14187eabba86acf8d205e17d536fbe1c4b75619d6",
+        "uuid": "f2abb41d-7f25-46f6-9205-b04bec7886e0"
+      },
+      "generation_pk": 32,
+      "generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "row_id": "JL19-16",
+      "source_model_codes": [
+        "JLJP74"
+      ]
+    },
+    {
+      "basis": "reviewed_source_correspondence",
+      "candidate": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/candidates/JL19-17.candidate.json",
+      "candidate_digest": "sha256:b1f691977f696210f96ce073e275fffe29613ac9f4eed27abf190298a33b7de7",
+      "correspondence": {
+        "hash": "sha256:46fe14559da3d434e671d5d14187eabba86acf8d205e17d536fbe1c4b75619d6",
+        "uuid": "f2abb41d-7f25-46f6-9205-b04bec7886e0"
+      },
+      "generation_pk": 32,
+      "generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "row_id": "JL19-17",
+      "source_model_codes": [
+        "JLJP74"
+      ]
+    },
+    {
+      "basis": "reviewed_source_correspondence",
+      "candidate": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/candidates/JL19-18.candidate.json",
+      "candidate_digest": "sha256:ab8023ccc084a0e8a31438e04eae8cd13aff09f69291313e2e6fe10b29d2a3f7",
+      "correspondence": {
+        "hash": "sha256:70544663f878db979874e4b2ea817a098ce7a95f2835e7774f55b66663a7686d",
+        "uuid": "a2b7fdee-4c7b-4b4c-b537-e08f08e7413b"
+      },
+      "generation_pk": 32,
+      "generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "row_id": "JL19-18",
+      "source_model_codes": [
+        "JLJS74"
+      ]
+    },
+    {
+      "basis": "reviewed_source_correspondence",
+      "candidate": "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/candidates/JL19-19.candidate.json",
+      "candidate_digest": "sha256:7ab768e39cc66d32b1e9626a1bd182e9386691ebf5612c5ae81b99eaeb695757",
+      "correspondence": {
+        "hash": "sha256:70544663f878db979874e4b2ea817a098ce7a95f2835e7774f55b66663a7686d",
+        "uuid": "a2b7fdee-4c7b-4b4c-b537-e08f08e7413b"
+      },
+      "generation_pk": 32,
+      "generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "row_id": "JL19-19",
+      "source_model_codes": [
+        "JLJS74"
+      ]
+    }
+  ],
+  "verified_at": "2026-11-08T20:34:34.430433+00:00"
+}

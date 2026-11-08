@@ -1,0 +1,22 @@
+{
+  "authenticity_basis": "Published order guide accepted by director; no independent authentication required.",
+  "extraction": "pypdf text; layout extraction for page 15 preserves model-code column alignment",
+  "issued": "2018-09-11",
+  "limitations": "Selected text is not the complete guide. No gasoline/aspiration/nonhybrid fact inferred from missing words.",
+  "local_input": "docs/implementation/handoffs/MY2019_JL/source_pdfs/4 Door 6-4-19.pdf",
+  "market": "US",
+  "original_pdf_hash_computed": false,
+  "original_pdf_retained_for_contract": false,
+  "pages": {
+    "1": "REISSUED: 06/04/2019\nISSUED: 09/11/2018\nPAGE: 1\nUnited States\n2019\nJEEP WRANGLER 4 DOOR\nCUSTOMER PREFERRED CODE GUIDE\nMODEL CODE PAGES\nWRANGLER UNLIMITED SPORT JLJL74 2\nWRANGLER UNLIMITED SAHARA JLJP74 5\nWRANGLER UNLIMITED RUBICON JLJS74 9",
+    "15": "JEEP United States                                   REISSUED: 06/04/2019                                                                                         PAGE: 15\nFIRM                                                                ISSUED:      09/11/2018                                                 2019 WRANGLER 4 DOOR\nSTANDARD EQUIPMENT (UNLESS REPLACED                                       JLJL74                        JLJP74                         JLJS74\nBY OPTIONAL EQUIPMENT)\n4:1 ROCK-TRAC HD PART TIME 4WD SYS (DHW)                                                                                              X\nCOMMAND-TRAC PART TIME 4WD SYSTEM (DHN)                                   X                             X",
+    "2": "STEP #1 SELECT - MODEL CODE\n$FWP $MSRP\nWRANGLER UNLIMITED SPORT 31,007 31,545 JLJL74\nDESTINATION CHARGE 1,495\n1,545 IN HI\nSTEP #2 SELECT - QUICK ORDER PACKAGE CODE\nPOWERTRAIN AVAILABILITY\nENGINE $FWP $MSRP TRANSMISSION $FWP $MSRP\nSPORT S\nALTITUDE\nM/H PRC or PSC\nor PW7 or PX8 or\nPAU or PDN\n3.6L V6 24V VVT ENGINE UPG\nI W/ESS (ERC)\nN/C N/C 8-SPD AUTO 850RE\nTRANS (MAKE) (DFT)\n1,780 2,000 24B 24S 24L\n6-SPEED MANUAL\nTRANSMISSION (DEM)\nN/C N/C 23B 23S 23L\n2.0L I4 DOHC DI TURBO\nETORQUE ENGINE (EC3)\n890 1,000 8-SPD AUTO 850RE\nTRANS (MAKE) (DFT)\n1,780 2,000 28B 28S 28L",
+    "5": "STEP #1 SELECT - MODEL CODE\n$FWP $MSRP\nWRANGLER UNLIMITED SAHARA 36,679 38,395 JLJP74\nDESTINATION CHARGE 1,495\n1,545 IN HI\nSTEP #2 SELECT - QUICK ORDER PACKAGE CODE\nPOWERTRAIN AVAILABILITY\nENGINE $FWP $MSRP TRANSMISSION $FWP $MSRP ALTITUDE MOAB\n3.6L V6 24V VVT ENGINE UPG\nI W/ESS (ERC)\nN/C N/C 8-SPD AUTO 850RE\nTRANS (MAKE) (DFT)\n1,780 2,000 24G 24L 24M\nN/A W/M9E OR\nM9D\nN/A for Fleet or\nw/PGE Mojito\n6-SPEED MANUAL\nTRANSMISSION (DEM)\nN/C N/C 23G 23L\n2.0L I4 DOHC DI TURBO\nETORQUE ENGINE (EC3)\n890 1,000 8-SPD AUTO 850RE\nTRANS (MAKE) (DFT)\n1,780 2,000 28G 28L",
+    "9": "STEP #1 SELECT - MODEL CODE\n$FWP $MSRP\nWRANGLER UNLIMITED RUBICON 39,576 41,545 JLJS74\nDESTINATION CHARGE 1,495\n1,545 IN HI\nSTEP #2 SELECT - QUICK ORDER PACKAGE CODE\nPOWERTRAIN AVAILABILITY\nENGINE $FWP $MSRP TRANSMISSION $FWP $MSRP\n3.6L V6 24V VVT ENGINE UPG\nI W/ESS (ERC)\nN/C N/C 8-SPD AUTO 850RE\nTRANS (MAKE) (DFT)\n1,780 2,000 24R\n6-SPEED MANUAL\nTRANSMISSION (DEM)\nN/C N/C 23R\n2.0L I4 DOHC DI TURBO\nETORQUE ENGINE (EC3)\n890 1,000 8-SPD AUTO 850RE\nTRANS (MAKE) (DFT)\n1,780 2,000 28R"
+  },
+  "publisher": "FCA US LLC / Jeep",
+  "reissued": "2019-06-04",
+  "representation": "selected PDF text-layer excerpts; NOT original PDF bytes",
+  "source_url": "https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/",
+  "title": "2019 JEEP WRANGLER 4 DOOR CUSTOMER PREFERRED CODE GUIDE"
+}

@@ -1,0 +1,20 @@
+model_year,market,generation,body,marketed_trim,manufacturer_model_code,powertrain_label,engine_displacement_liters,engine_cylinders,engine_aspiration,fuel_type,electrification_type,inventory_status,revision_union_status,source_document_sha256,source_revision_date,source_page,source_assertion_id,five_field_evidence_status,canonical_import_authorized
+2019,US,JL,2-door,Sport,JLJL72,ERC 3.6L V6 ESS,3.60,6,naturally_aspirated,gasoline,none,PROVISIONAL_NOT_CERTIFIED,INCOMPLETE,,,,,NOT_BOUND,NO
+2019,US,JL,2-door,Sport,JLJL72,EC3 2.0L turbo eTorque,2.00,4,turbocharged,gasoline,mild_hybrid,PROVISIONAL_NOT_CERTIFIED,INCOMPLETE,,,,,NOT_BOUND,NO
+2019,US,JL,2-door,Sport S,JLJL72,ERC 3.6L V6 ESS,3.60,6,naturally_aspirated,gasoline,none,PROVISIONAL_NOT_CERTIFIED,INCOMPLETE,,,,,NOT_BOUND,NO
+2019,US,JL,2-door,Sport S,JLJL72,EC3 2.0L turbo eTorque,2.00,4,turbocharged,gasoline,mild_hybrid,PROVISIONAL_NOT_CERTIFIED,INCOMPLETE,,,,,NOT_BOUND,NO
+2019,US,JL,2-door,Rubicon,JLJS72,ERC 3.6L V6 ESS,3.60,6,naturally_aspirated,gasoline,none,PROVISIONAL_NOT_CERTIFIED,INCOMPLETE,,,,,NOT_BOUND,NO
+2019,US,JL,2-door,Rubicon,JLJS72,EC3 2.0L turbo eTorque,2.00,4,turbocharged,gasoline,mild_hybrid,PROVISIONAL_NOT_CERTIFIED,INCOMPLETE,,,,,NOT_BOUND,NO
+2019,US,JL,4-door,Unlimited Sport,JLJL74,ERC 3.6L V6 ESS,3.60,6,naturally_aspirated,gasoline,none,PROVISIONAL_NOT_CERTIFIED,INCOMPLETE,,,,,NOT_BOUND,NO
+2019,US,JL,4-door,Unlimited Sport,JLJL74,EC3 2.0L turbo eTorque,2.00,4,turbocharged,gasoline,mild_hybrid,PROVISIONAL_NOT_CERTIFIED,INCOMPLETE,,,,,NOT_BOUND,NO
+2019,US,JL,4-door,Unlimited Sport S,JLJL74,ERC 3.6L V6 ESS,3.60,6,naturally_aspirated,gasoline,none,PROVISIONAL_NOT_CERTIFIED,INCOMPLETE,,,,,NOT_BOUND,NO
+2019,US,JL,4-door,Unlimited Sport S,JLJL74,EC3 2.0L turbo eTorque,2.00,4,turbocharged,gasoline,mild_hybrid,PROVISIONAL_NOT_CERTIFIED,INCOMPLETE,,,,,NOT_BOUND,NO
+2019,US,JL,4-door,Unlimited Sport Altitude,JLJL74,ERC 3.6L V6 ESS,3.60,6,naturally_aspirated,gasoline,none,PROVISIONAL_NOT_CERTIFIED,INCOMPLETE,,,,,NOT_BOUND,NO
+2019,US,JL,4-door,Unlimited Sport Altitude,JLJL74,EC3 2.0L turbo eTorque,2.00,4,turbocharged,gasoline,mild_hybrid,PROVISIONAL_NOT_CERTIFIED,INCOMPLETE,,,,,NOT_BOUND,NO
+2019,US,JL,4-door,Unlimited Sahara,JLJP74,ERC 3.6L V6 ESS,3.60,6,naturally_aspirated,gasoline,none,PROVISIONAL_NOT_CERTIFIED,INCOMPLETE,,,,,NOT_BOUND,NO
+2019,US,JL,4-door,Unlimited Sahara,JLJP74,EC3 2.0L turbo eTorque,2.00,4,turbocharged,gasoline,mild_hybrid,PROVISIONAL_NOT_CERTIFIED,INCOMPLETE,,,,,NOT_BOUND,NO
+2019,US,JL,4-door,Unlimited Sahara Altitude,JLJP74,ERC 3.6L V6 ESS,3.60,6,naturally_aspirated,gasoline,none,PROVISIONAL_NOT_CERTIFIED,INCOMPLETE,,,,,NOT_BOUND,NO
+2019,US,JL,4-door,Unlimited Sahara Altitude,JLJP74,EC3 2.0L turbo eTorque,2.00,4,turbocharged,gasoline,mild_hybrid,PROVISIONAL_NOT_CERTIFIED,INCOMPLETE,,,,,NOT_BOUND,NO
+2019,US,JL,4-door,Unlimited Moab,JLJP74,ERC 3.6L V6 ESS,3.60,6,naturally_aspirated,gasoline,none,PROVISIONAL_NOT_CERTIFIED,INCOMPLETE,,,,,NOT_BOUND,NO
+2019,US,JL,4-door,Unlimited Rubicon,JLJS74,ERC 3.6L V6 ESS,3.60,6,naturally_aspirated,gasoline,none,PROVISIONAL_NOT_CERTIFIED,INCOMPLETE,,,,,NOT_BOUND,NO
+2019,US,JL,4-door,Unlimited Rubicon,JLJS74,EC3 2.0L turbo eTorque,2.00,4,turbocharged,gasoline,mild_hybrid,PROVISIONAL_NOT_CERTIFIED,INCOMPLETE,,,,,NOT_BOUND,NO

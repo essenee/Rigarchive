@@ -1,0 +1,86 @@
+{
+  "envelope": {
+    "artifact_type": "rigarchive.source_assertion_set.v1",
+    "created_at": "2026-11-07T16:57:20.747181+00:00",
+    "schema_version": "1.1.0"
+  },
+  "provenance": {
+    "acquisition_method": "local_file",
+    "extraction_provenance": {
+      "extraction_mode": "manually_verified_transcription",
+      "extractor_id": "director_accepted_jl_inventory_projection",
+      "extractor_version": "1.0.0",
+      "raw_artifact_hash": "sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/evidence/accepted_research_snapshot.json"
+    },
+    "native_record_id": "JL19-03",
+    "publication_revision": "MY2019 dated-revision union accepted by director; individual printed dates not newly verified",
+    "retrieved_at": "2026-11-07T16:57:20.747181+00:00",
+    "review_status": "director_accepted_inventory_only",
+    "source_applicability": {
+      "applicability_basis": "director_accepted_MY2019_US_JL_research_inventory",
+      "applicability_scope": "model_year",
+      "market": "US"
+    },
+    "source_id": "reviewed_jeep_order_guide_inventory",
+    "source_locator": "docs/implementation/handoffs/MY2019_JL/MY2019_JL_CODEX_HANDOFF.md",
+    "source_type": "reviewed_research_transcription",
+    "source_use_notes": "Prior manufacturer research accepted by director. Not an original PDF; no assertion that all five classifications are certified."
+  },
+  "source_assertions": [
+    {
+      "assertion_id": "engine_cylinders",
+      "attribute_key": "engine_cylinders",
+      "raw_value": 6,
+      "source_context": "Director-accepted research inventory row JL19-03; https://www.jlwranglerforums.com/forum/threads/2019-jeep-wrangler-2-door-jl-order-guide-and-pricing-u-s.15025/; reported page 2 or 5 (prior review; not revalidated). Page references are inherited research, not a new PDF inspection."
+    },
+    {
+      "assertion_id": "engine_displacement_liters",
+      "attribute_key": "engine_displacement_liters",
+      "raw_value": "3.60",
+      "source_context": "Director-accepted research inventory row JL19-03; https://www.jlwranglerforums.com/forum/threads/2019-jeep-wrangler-2-door-jl-order-guide-and-pricing-u-s.15025/; reported page 2 or 5 (prior review; not revalidated). Page references are inherited research, not a new PDF inspection."
+    },
+    {
+      "assertion_id": "engine_offering",
+      "attribute_key": "engine_offering",
+      "raw_value": "ERC 3.6L V6 ESS",
+      "source_context": "Director-accepted research inventory row JL19-03; https://www.jlwranglerforums.com/forum/threads/2019-jeep-wrangler-2-door-jl-order-guide-and-pricing-u-s.15025/; reported page 2 or 5 (prior review; not revalidated). Page references are inherited research, not a new PDF inspection."
+    },
+    {
+      "assertion_id": "make",
+      "attribute_key": "make",
+      "raw_value": "Jeep",
+      "source_context": "Director-accepted research inventory row JL19-03; https://www.jlwranglerforums.com/forum/threads/2019-jeep-wrangler-2-door-jl-order-guide-and-pricing-u-s.15025/; reported page 2 or 5 (prior review; not revalidated). Page references are inherited research, not a new PDF inspection."
+    },
+    {
+      "assertion_id": "market",
+      "attribute_key": "market",
+      "raw_value": "US",
+      "source_context": "Director-accepted research inventory row JL19-03; https://www.jlwranglerforums.com/forum/threads/2019-jeep-wrangler-2-door-jl-order-guide-and-pricing-u-s.15025/; reported page 2 or 5 (prior review; not revalidated). Page references are inherited research, not a new PDF inspection."
+    },
+    {
+      "assertion_id": "model",
+      "attribute_key": "model",
+      "raw_value": "Wrangler",
+      "source_context": "Director-accepted research inventory row JL19-03; https://www.jlwranglerforums.com/forum/threads/2019-jeep-wrangler-2-door-jl-order-guide-and-pricing-u-s.15025/; reported page 2 or 5 (prior review; not revalidated). Page references are inherited research, not a new PDF inspection."
+    },
+    {
+      "assertion_id": "model_year",
+      "attribute_key": "model_year",
+      "raw_value": 2019,
+      "source_context": "Director-accepted research inventory row JL19-03; https://www.jlwranglerforums.com/forum/threads/2019-jeep-wrangler-2-door-jl-order-guide-and-pricing-u-s.15025/; reported page 2 or 5 (prior review; not revalidated). Page references are inherited research, not a new PDF inspection."
+    },
+    {
+      "assertion_id": "source_model_code",
+      "attribute_key": "source_model_code",
+      "raw_value": "JLJL72",
+      "source_context": "Director-accepted research inventory row JL19-03; https://www.jlwranglerforums.com/forum/threads/2019-jeep-wrangler-2-door-jl-order-guide-and-pricing-u-s.15025/; reported page 2 or 5 (prior review; not revalidated). Page references are inherited research, not a new PDF inspection."
+    },
+    {
+      "assertion_id": "trim",
+      "attribute_key": "trim",
+      "raw_value": "Sport S",
+      "source_context": "Director-accepted research inventory row JL19-03; https://www.jlwranglerforums.com/forum/threads/2019-jeep-wrangler-2-door-jl-order-guide-and-pricing-u-s.15025/; reported page 2 or 5 (prior review; not revalidated). Page references are inherited research, not a new PDF inspection."
+    }
+  ]
+}

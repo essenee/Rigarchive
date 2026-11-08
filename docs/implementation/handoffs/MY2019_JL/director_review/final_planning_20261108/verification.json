@@ -1,0 +1,16 @@
+{
+  "focused_test_command": "PYTHONDONTWRITEBYTECODE=1 RIGARCHIVE_TEST_DB_PATH=:memory: .venv/bin/python -B manage.py test reference.tests.test_classification_adjudication reference.tests.test_structured_powertrain.StructuredPowertrainTests reference.tests.test_generation_projection_completeness reference.tests.test_generation_trim_matrix reference.tests.test_generation_trim_matrix_approval reference.tests.test_matrix_execution --verbosity 1",
+  "tests_run": 98,
+  "failures": 0,
+  "errors": 0,
+  "result": "OK",
+  "database_isolation": "Django isolated in-memory test database; synthetic fixtures only",
+  "system_check": "System check identified no issues (0 silenced).",
+  "python": "3.13.1",
+  "django": "6.0.7",
+  "pypdf": "6.16.1",
+  "database_after_all_checks_sha256": "sha256:c0ee965ce9d741c68850b440065876e2f223cc4648006a4bff1c431712a48686",
+  "database_unchanged": true,
+  "development_migrations_run": false,
+  "real_imports_or_rehearsals_run": false
+}

@@ -1,0 +1,38 @@
+{
+  "envelope": {
+    "artifact_type": "rigarchive.source_assertion_set.v1",
+    "created_at": "2026-11-08T18:20:55.097237+00:00",
+    "schema_version": "1.1.0"
+  },
+  "provenance": {
+    "acquisition_method": "local_file",
+    "extraction_provenance": {
+      "extraction_mode": "manually_verified_transcription",
+      "extractor_id": "my2019_reviewed_selected_facts",
+      "extractor_version": "1.0.0",
+      "raw_artifact_hash": "sha256:84bb3faf505332a2799830563cb1863621385b96430585e1a03216924596fd40",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/evidence/jeep_2019_specification_selected_facts.json"
+    },
+    "native_record_id": "MY2019-JL-drive",
+    "publication_revision": "MY2019; no printed revision date",
+    "retrieved_at": "2026-11-08T18:20:55.097237+00:00",
+    "review_status": "reviewed_selected_facts",
+    "source_applicability": {
+      "applicability_basis": "MY2019 US manufacturer model specifications, all models and both bodies; commercial market independently established by retained US order guides.",
+      "applicability_scope": "model_year",
+      "market": "US"
+    },
+    "source_id": "jeep_2019_wrangler_specifications",
+    "source_locator": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/specs/2019_JP_Wrangler_SPmk1alba10mregeqq9v39oek881.pdf",
+    "source_type": "manufacturer_specification",
+    "source_use_notes": "Hash verifies retained representation; not a PDF hash or independent corroboration."
+  },
+  "source_assertions": [
+    {
+      "assertion_id": "drive_all_models",
+      "attribute_key": "drive_descriptor",
+      "raw_value": "Longitudinal front engine, four-wheel drive",
+      "source_context": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/specs/2019_JP_Wrangler_SPmk1alba10mregeqq9v39oek881.pdf; printed p1 BODY/CHASSIS Layout; same page explicitly covers both body styles"
+    }
+  ]
+}

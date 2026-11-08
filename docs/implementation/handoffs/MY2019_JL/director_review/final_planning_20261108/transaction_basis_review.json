@@ -1,0 +1,175 @@
+{
+  "notice": "Standalone manifests bind the current empty namespace and all use first_representation. They become stale as peers are created. Do not execute them sequentially unchanged. The accepted Matrix workflow freshly plans each row in fixed row_id order within one model-year transaction. No execution, including rehearsal, was performed. Anticipated bases are planning analysis, not simulated results. Matrix allows only current and anticipated bases per row; exact matrix human authorization remains required.",
+  "rows": [
+    {
+      "anticipated_basis_in_fixed_matrix_order": "first_representation",
+      "current_basis": "first_representation",
+      "permitted_create_bases": [
+        "first_representation"
+      ],
+      "row_id": "JL19-01"
+    },
+    {
+      "anticipated_basis_in_fixed_matrix_order": "mechanical_dimension",
+      "current_basis": "first_representation",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "row_id": "JL19-02"
+    },
+    {
+      "anticipated_basis_in_fixed_matrix_order": "source_established_grade",
+      "current_basis": "first_representation",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ],
+      "row_id": "JL19-03"
+    },
+    {
+      "anticipated_basis_in_fixed_matrix_order": "mechanical_dimension",
+      "current_basis": "first_representation",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "row_id": "JL19-04"
+    },
+    {
+      "anticipated_basis_in_fixed_matrix_order": "source_established_grade",
+      "current_basis": "first_representation",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ],
+      "row_id": "JL19-05"
+    },
+    {
+      "anticipated_basis_in_fixed_matrix_order": "mechanical_dimension",
+      "current_basis": "first_representation",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "row_id": "JL19-06"
+    },
+    {
+      "anticipated_basis_in_fixed_matrix_order": "source_established_grade",
+      "current_basis": "first_representation",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ],
+      "row_id": "JL19-07"
+    },
+    {
+      "anticipated_basis_in_fixed_matrix_order": "mechanical_dimension",
+      "current_basis": "first_representation",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "row_id": "JL19-08"
+    },
+    {
+      "anticipated_basis_in_fixed_matrix_order": "source_established_grade",
+      "current_basis": "first_representation",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ],
+      "row_id": "JL19-09"
+    },
+    {
+      "anticipated_basis_in_fixed_matrix_order": "mechanical_dimension",
+      "current_basis": "first_representation",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "row_id": "JL19-10"
+    },
+    {
+      "anticipated_basis_in_fixed_matrix_order": "source_established_grade",
+      "current_basis": "first_representation",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ],
+      "row_id": "JL19-11"
+    },
+    {
+      "anticipated_basis_in_fixed_matrix_order": "mechanical_dimension",
+      "current_basis": "first_representation",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "row_id": "JL19-12"
+    },
+    {
+      "anticipated_basis_in_fixed_matrix_order": "source_established_grade",
+      "current_basis": "first_representation",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ],
+      "row_id": "JL19-13"
+    },
+    {
+      "anticipated_basis_in_fixed_matrix_order": "mechanical_dimension",
+      "current_basis": "first_representation",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "row_id": "JL19-14"
+    },
+    {
+      "anticipated_basis_in_fixed_matrix_order": "source_established_grade",
+      "current_basis": "first_representation",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ],
+      "row_id": "JL19-15"
+    },
+    {
+      "anticipated_basis_in_fixed_matrix_order": "mechanical_dimension",
+      "current_basis": "first_representation",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "row_id": "JL19-16"
+    },
+    {
+      "anticipated_basis_in_fixed_matrix_order": "source_established_grade",
+      "current_basis": "first_representation",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ],
+      "row_id": "JL19-17"
+    },
+    {
+      "anticipated_basis_in_fixed_matrix_order": "source_established_grade",
+      "current_basis": "first_representation",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ],
+      "row_id": "JL19-18"
+    },
+    {
+      "anticipated_basis_in_fixed_matrix_order": "mechanical_dimension",
+      "current_basis": "first_representation",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "row_id": "JL19-19"
+    }
+  ]
+}

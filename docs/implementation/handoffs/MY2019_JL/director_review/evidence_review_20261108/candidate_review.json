@@ -1,0 +1,659 @@
+{
+  "blocked": 19,
+  "conflicting": 0,
+  "created_at": "2026-11-08T18:20:55.097237+00:00",
+  "eligible": 0,
+  "input_assertion_sets_validated": 32,
+  "input_candidates_validated": 19,
+  "rows": [
+    {
+      "blockers": [
+        "ERC naturally aspirated evidence",
+        "ERC nonhybrid evidence",
+        "Unpublished MY2019 generation correspondence"
+      ],
+      "body": "two-door",
+      "candidate_digest": "sha256:3238e392ac6ca6c5c464375112c19860fa8f4d078305217c1df6406a18e99dd6",
+      "candidate_reference": "MY2019-JL-JL19-01-preparatory-compact-r2-review-r3",
+      "candidate_valid": true,
+      "canonical_powertrain": {
+        "electrification_type": null,
+        "engine_aspiration": null,
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "fuel_type": "gasoline"
+      },
+      "drivetrain": "4WD",
+      "engine_code": "ERC",
+      "engine_proof_error": [
+        "Missing evidenced powertrain attribute: engine_aspiration."
+      ],
+      "engine_tuple_complete": false,
+      "existing_revision": "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-01.candidate.json",
+      "peer_ids": [],
+      "planner_action": "flag_review",
+      "planner_reasons": [
+        "Missing reviewed generation correspondence."
+      ],
+      "retained_bytes_verified": true,
+      "round_trip_verified": true,
+      "row_id": "JL19-01",
+      "source_model_code": "JLJL72",
+      "status": "blocked",
+      "trim_name": "Sport"
+    },
+    {
+      "blockers": [
+        "Unpublished MY2019 generation correspondence"
+      ],
+      "body": "two-door",
+      "candidate_digest": "sha256:2d4c76e2571661a894807f6f85a923089a03da2b034a27134a11367a216832d6",
+      "candidate_reference": "MY2019-JL-JL19-02-preparatory-compact-r2-review-r3",
+      "candidate_valid": true,
+      "canonical_powertrain": {
+        "electrification_type": "mild_hybrid",
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 4,
+        "engine_displacement_liters": "2",
+        "fuel_type": "gasoline"
+      },
+      "drivetrain": "4WD",
+      "engine_code": "EC3",
+      "engine_proof_error": null,
+      "engine_tuple_complete": true,
+      "existing_revision": "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-02.candidate.json",
+      "peer_ids": [],
+      "planner_action": "flag_review",
+      "planner_reasons": [
+        "Missing reviewed generation correspondence."
+      ],
+      "retained_bytes_verified": true,
+      "round_trip_verified": true,
+      "row_id": "JL19-02",
+      "source_model_code": "JLJL72",
+      "status": "blocked",
+      "trim_name": "Sport"
+    },
+    {
+      "blockers": [
+        "ERC naturally aspirated evidence",
+        "ERC nonhybrid evidence",
+        "Unpublished MY2019 generation correspondence"
+      ],
+      "body": "two-door",
+      "candidate_digest": "sha256:8fa2950b650962e7f43f5d6039f9aed31ff1ef9692da1d908f60868b4afc81a1",
+      "candidate_reference": "MY2019-JL-JL19-03-preparatory-compact-r2-review-r3",
+      "candidate_valid": true,
+      "canonical_powertrain": {
+        "electrification_type": null,
+        "engine_aspiration": null,
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "fuel_type": "gasoline"
+      },
+      "drivetrain": "4WD",
+      "engine_code": "ERC",
+      "engine_proof_error": [
+        "Missing evidenced powertrain attribute: engine_aspiration."
+      ],
+      "engine_tuple_complete": false,
+      "existing_revision": "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-03.candidate.json",
+      "peer_ids": [],
+      "planner_action": "flag_review",
+      "planner_reasons": [
+        "Missing reviewed generation correspondence."
+      ],
+      "retained_bytes_verified": true,
+      "round_trip_verified": true,
+      "row_id": "JL19-03",
+      "source_model_code": "JLJL72",
+      "status": "blocked",
+      "trim_name": "Sport S"
+    },
+    {
+      "blockers": [
+        "Unpublished MY2019 generation correspondence"
+      ],
+      "body": "two-door",
+      "candidate_digest": "sha256:e2366bf8ebddbd0557ab74d6f9de0fbd73fe5287e048c94c6411770421180ab5",
+      "candidate_reference": "MY2019-JL-JL19-04-preparatory-compact-r2-review-r3",
+      "candidate_valid": true,
+      "canonical_powertrain": {
+        "electrification_type": "mild_hybrid",
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 4,
+        "engine_displacement_liters": "2",
+        "fuel_type": "gasoline"
+      },
+      "drivetrain": "4WD",
+      "engine_code": "EC3",
+      "engine_proof_error": null,
+      "engine_tuple_complete": true,
+      "existing_revision": "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-04.candidate.json",
+      "peer_ids": [],
+      "planner_action": "flag_review",
+      "planner_reasons": [
+        "Missing reviewed generation correspondence."
+      ],
+      "retained_bytes_verified": true,
+      "round_trip_verified": true,
+      "row_id": "JL19-04",
+      "source_model_code": "JLJL72",
+      "status": "blocked",
+      "trim_name": "Sport S"
+    },
+    {
+      "blockers": [
+        "ERC naturally aspirated evidence",
+        "ERC nonhybrid evidence",
+        "Unpublished MY2019 generation correspondence"
+      ],
+      "body": "two-door",
+      "candidate_digest": "sha256:fed9d83f17fc8a3cee4ce7c89f553cb4c967a464b1d083dcc67523e6de5b555a",
+      "candidate_reference": "MY2019-JL-JL19-05-preparatory-compact-r2-review-r3",
+      "candidate_valid": true,
+      "canonical_powertrain": {
+        "electrification_type": null,
+        "engine_aspiration": null,
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "fuel_type": "gasoline"
+      },
+      "drivetrain": "4WD",
+      "engine_code": "ERC",
+      "engine_proof_error": [
+        "Missing evidenced powertrain attribute: engine_aspiration."
+      ],
+      "engine_tuple_complete": false,
+      "existing_revision": "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-05.candidate.json",
+      "peer_ids": [],
+      "planner_action": "flag_review",
+      "planner_reasons": [
+        "Missing reviewed generation correspondence."
+      ],
+      "retained_bytes_verified": true,
+      "round_trip_verified": true,
+      "row_id": "JL19-05",
+      "source_model_code": "JLJS72",
+      "status": "blocked",
+      "trim_name": "Rubicon"
+    },
+    {
+      "blockers": [
+        "Unpublished MY2019 generation correspondence"
+      ],
+      "body": "two-door",
+      "candidate_digest": "sha256:5d533cd574e35a07c7778e1f2be2120edea44e76a42688c03067084e70635d51",
+      "candidate_reference": "MY2019-JL-JL19-06-preparatory-compact-r2-review-r3",
+      "candidate_valid": true,
+      "canonical_powertrain": {
+        "electrification_type": "mild_hybrid",
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 4,
+        "engine_displacement_liters": "2",
+        "fuel_type": "gasoline"
+      },
+      "drivetrain": "4WD",
+      "engine_code": "EC3",
+      "engine_proof_error": null,
+      "engine_tuple_complete": true,
+      "existing_revision": "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-06.candidate.json",
+      "peer_ids": [],
+      "planner_action": "flag_review",
+      "planner_reasons": [
+        "Missing reviewed generation correspondence."
+      ],
+      "retained_bytes_verified": true,
+      "round_trip_verified": true,
+      "row_id": "JL19-06",
+      "source_model_code": "JLJS72",
+      "status": "blocked",
+      "trim_name": "Rubicon"
+    },
+    {
+      "blockers": [
+        "ERC naturally aspirated evidence",
+        "ERC nonhybrid evidence",
+        "Unpublished MY2019 generation correspondence"
+      ],
+      "body": "four-door",
+      "candidate_digest": "sha256:6fe2fa907dc30044301e6cb6e632a5e7c9fa960534de8f3081846a8ccbfb3173",
+      "candidate_reference": "MY2019-JL-JL19-07-preparatory-compact-r2-review-r3",
+      "candidate_valid": true,
+      "canonical_powertrain": {
+        "electrification_type": null,
+        "engine_aspiration": null,
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "fuel_type": "gasoline"
+      },
+      "drivetrain": "4WD",
+      "engine_code": "ERC",
+      "engine_proof_error": [
+        "Missing evidenced powertrain attribute: engine_aspiration."
+      ],
+      "engine_tuple_complete": false,
+      "existing_revision": "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-07.candidate.json",
+      "peer_ids": [],
+      "planner_action": "flag_review",
+      "planner_reasons": [
+        "Missing reviewed generation correspondence."
+      ],
+      "retained_bytes_verified": true,
+      "round_trip_verified": true,
+      "row_id": "JL19-07",
+      "source_model_code": "JLJL74",
+      "status": "blocked",
+      "trim_name": "Unlimited Sport"
+    },
+    {
+      "blockers": [
+        "Unpublished MY2019 generation correspondence"
+      ],
+      "body": "four-door",
+      "candidate_digest": "sha256:d2cef6f3c3de7487e94aed4295a097be4471622dcbcb3ad2a15aafb9b3384224",
+      "candidate_reference": "MY2019-JL-JL19-08-preparatory-compact-r2-review-r3",
+      "candidate_valid": true,
+      "canonical_powertrain": {
+        "electrification_type": "mild_hybrid",
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 4,
+        "engine_displacement_liters": "2",
+        "fuel_type": "gasoline"
+      },
+      "drivetrain": "4WD",
+      "engine_code": "EC3",
+      "engine_proof_error": null,
+      "engine_tuple_complete": true,
+      "existing_revision": "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-08.candidate.json",
+      "peer_ids": [],
+      "planner_action": "flag_review",
+      "planner_reasons": [
+        "Missing reviewed generation correspondence."
+      ],
+      "retained_bytes_verified": true,
+      "round_trip_verified": true,
+      "row_id": "JL19-08",
+      "source_model_code": "JLJL74",
+      "status": "blocked",
+      "trim_name": "Unlimited Sport"
+    },
+    {
+      "blockers": [
+        "ERC naturally aspirated evidence",
+        "ERC nonhybrid evidence",
+        "Unpublished MY2019 generation correspondence"
+      ],
+      "body": "four-door",
+      "candidate_digest": "sha256:860d26f4b834637b2477549861a362d95ee7fac7cfa6b178f99224960c7d303d",
+      "candidate_reference": "MY2019-JL-JL19-09-preparatory-compact-r2-review-r3",
+      "candidate_valid": true,
+      "canonical_powertrain": {
+        "electrification_type": null,
+        "engine_aspiration": null,
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "fuel_type": "gasoline"
+      },
+      "drivetrain": "4WD",
+      "engine_code": "ERC",
+      "engine_proof_error": [
+        "Missing evidenced powertrain attribute: engine_aspiration."
+      ],
+      "engine_tuple_complete": false,
+      "existing_revision": "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-09.candidate.json",
+      "peer_ids": [],
+      "planner_action": "flag_review",
+      "planner_reasons": [
+        "Missing reviewed generation correspondence."
+      ],
+      "retained_bytes_verified": true,
+      "round_trip_verified": true,
+      "row_id": "JL19-09",
+      "source_model_code": "JLJL74",
+      "status": "blocked",
+      "trim_name": "Unlimited Sport S"
+    },
+    {
+      "blockers": [
+        "Unpublished MY2019 generation correspondence"
+      ],
+      "body": "four-door",
+      "candidate_digest": "sha256:ccb451844b1d240bfa71a683783749d192bbcfee62086607f32766b64b2b473c",
+      "candidate_reference": "MY2019-JL-JL19-10-preparatory-compact-r2-review-r3",
+      "candidate_valid": true,
+      "canonical_powertrain": {
+        "electrification_type": "mild_hybrid",
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 4,
+        "engine_displacement_liters": "2",
+        "fuel_type": "gasoline"
+      },
+      "drivetrain": "4WD",
+      "engine_code": "EC3",
+      "engine_proof_error": null,
+      "engine_tuple_complete": true,
+      "existing_revision": "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-10.candidate.json",
+      "peer_ids": [],
+      "planner_action": "flag_review",
+      "planner_reasons": [
+        "Missing reviewed generation correspondence."
+      ],
+      "retained_bytes_verified": true,
+      "round_trip_verified": true,
+      "row_id": "JL19-10",
+      "source_model_code": "JLJL74",
+      "status": "blocked",
+      "trim_name": "Unlimited Sport S"
+    },
+    {
+      "blockers": [
+        "ERC naturally aspirated evidence",
+        "ERC nonhybrid evidence",
+        "Unpublished MY2019 generation correspondence"
+      ],
+      "body": "four-door",
+      "candidate_digest": "sha256:7de133eb5646f2832af03106bcd6396cd5e189a89fa1f00556d3713806ebddcf",
+      "candidate_reference": "MY2019-JL-JL19-11-preparatory-compact-r2-review-r3",
+      "candidate_valid": true,
+      "canonical_powertrain": {
+        "electrification_type": null,
+        "engine_aspiration": null,
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "fuel_type": "gasoline"
+      },
+      "drivetrain": "4WD",
+      "engine_code": "ERC",
+      "engine_proof_error": [
+        "Missing evidenced powertrain attribute: engine_aspiration."
+      ],
+      "engine_tuple_complete": false,
+      "existing_revision": "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-11.candidate.json",
+      "peer_ids": [],
+      "planner_action": "flag_review",
+      "planner_reasons": [
+        "Missing reviewed generation correspondence."
+      ],
+      "retained_bytes_verified": true,
+      "round_trip_verified": true,
+      "row_id": "JL19-11",
+      "source_model_code": "JLJL74",
+      "status": "blocked",
+      "trim_name": "Unlimited Sport Altitude"
+    },
+    {
+      "blockers": [
+        "Unpublished MY2019 generation correspondence"
+      ],
+      "body": "four-door",
+      "candidate_digest": "sha256:ccb8eee562dc6bf0ec48259b6bd3367b7b0ac7ece31b722664238e5b6c1cc360",
+      "candidate_reference": "MY2019-JL-JL19-12-preparatory-compact-r2-review-r3",
+      "candidate_valid": true,
+      "canonical_powertrain": {
+        "electrification_type": "mild_hybrid",
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 4,
+        "engine_displacement_liters": "2",
+        "fuel_type": "gasoline"
+      },
+      "drivetrain": "4WD",
+      "engine_code": "EC3",
+      "engine_proof_error": null,
+      "engine_tuple_complete": true,
+      "existing_revision": "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-12.candidate.json",
+      "peer_ids": [],
+      "planner_action": "flag_review",
+      "planner_reasons": [
+        "Missing reviewed generation correspondence."
+      ],
+      "retained_bytes_verified": true,
+      "round_trip_verified": true,
+      "row_id": "JL19-12",
+      "source_model_code": "JLJL74",
+      "status": "blocked",
+      "trim_name": "Unlimited Sport Altitude"
+    },
+    {
+      "blockers": [
+        "ERC naturally aspirated evidence",
+        "ERC nonhybrid evidence",
+        "Unpublished MY2019 generation correspondence"
+      ],
+      "body": "four-door",
+      "candidate_digest": "sha256:a50f891053b5615c7aba52cc6b053a63b90bba3ae530208fab384827c2494a65",
+      "candidate_reference": "MY2019-JL-JL19-13-preparatory-compact-r2-review-r3",
+      "candidate_valid": true,
+      "canonical_powertrain": {
+        "electrification_type": null,
+        "engine_aspiration": null,
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "fuel_type": "gasoline"
+      },
+      "drivetrain": "4WD",
+      "engine_code": "ERC",
+      "engine_proof_error": [
+        "Missing evidenced powertrain attribute: engine_aspiration."
+      ],
+      "engine_tuple_complete": false,
+      "existing_revision": "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-13.candidate.json",
+      "peer_ids": [],
+      "planner_action": "flag_review",
+      "planner_reasons": [
+        "Missing reviewed generation correspondence."
+      ],
+      "retained_bytes_verified": true,
+      "round_trip_verified": true,
+      "row_id": "JL19-13",
+      "source_model_code": "JLJP74",
+      "status": "blocked",
+      "trim_name": "Unlimited Sahara"
+    },
+    {
+      "blockers": [
+        "Unpublished MY2019 generation correspondence"
+      ],
+      "body": "four-door",
+      "candidate_digest": "sha256:fe95dbc320f88fdd77a8dfcfbec295a2450bcbcda2b6ebbf250023b2cb262f7d",
+      "candidate_reference": "MY2019-JL-JL19-14-preparatory-compact-r2-review-r3",
+      "candidate_valid": true,
+      "canonical_powertrain": {
+        "electrification_type": "mild_hybrid",
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 4,
+        "engine_displacement_liters": "2",
+        "fuel_type": "gasoline"
+      },
+      "drivetrain": "4WD",
+      "engine_code": "EC3",
+      "engine_proof_error": null,
+      "engine_tuple_complete": true,
+      "existing_revision": "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-14.candidate.json",
+      "peer_ids": [],
+      "planner_action": "flag_review",
+      "planner_reasons": [
+        "Missing reviewed generation correspondence."
+      ],
+      "retained_bytes_verified": true,
+      "round_trip_verified": true,
+      "row_id": "JL19-14",
+      "source_model_code": "JLJP74",
+      "status": "blocked",
+      "trim_name": "Unlimited Sahara"
+    },
+    {
+      "blockers": [
+        "ERC naturally aspirated evidence",
+        "ERC nonhybrid evidence",
+        "Unpublished MY2019 generation correspondence"
+      ],
+      "body": "four-door",
+      "candidate_digest": "sha256:1eae1e7c6c6e874ef56fcca2599f4a79cec77f77f6da9ab363184000f059acb3",
+      "candidate_reference": "MY2019-JL-JL19-15-preparatory-compact-r2-review-r3",
+      "candidate_valid": true,
+      "canonical_powertrain": {
+        "electrification_type": null,
+        "engine_aspiration": null,
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "fuel_type": "gasoline"
+      },
+      "drivetrain": "4WD",
+      "engine_code": "ERC",
+      "engine_proof_error": [
+        "Missing evidenced powertrain attribute: engine_aspiration."
+      ],
+      "engine_tuple_complete": false,
+      "existing_revision": "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-15.candidate.json",
+      "peer_ids": [],
+      "planner_action": "flag_review",
+      "planner_reasons": [
+        "Missing reviewed generation correspondence."
+      ],
+      "retained_bytes_verified": true,
+      "round_trip_verified": true,
+      "row_id": "JL19-15",
+      "source_model_code": "JLJP74",
+      "status": "blocked",
+      "trim_name": "Unlimited Sahara Altitude"
+    },
+    {
+      "blockers": [
+        "Unpublished MY2019 generation correspondence"
+      ],
+      "body": "four-door",
+      "candidate_digest": "sha256:81aea90b0cc366923ce77e95a8327b7a880ce437d4ddf0f5418a674c113dc90d",
+      "candidate_reference": "MY2019-JL-JL19-16-preparatory-compact-r2-review-r3",
+      "candidate_valid": true,
+      "canonical_powertrain": {
+        "electrification_type": "mild_hybrid",
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 4,
+        "engine_displacement_liters": "2",
+        "fuel_type": "gasoline"
+      },
+      "drivetrain": "4WD",
+      "engine_code": "EC3",
+      "engine_proof_error": null,
+      "engine_tuple_complete": true,
+      "existing_revision": "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-16.candidate.json",
+      "peer_ids": [],
+      "planner_action": "flag_review",
+      "planner_reasons": [
+        "Missing reviewed generation correspondence."
+      ],
+      "retained_bytes_verified": true,
+      "round_trip_verified": true,
+      "row_id": "JL19-16",
+      "source_model_code": "JLJP74",
+      "status": "blocked",
+      "trim_name": "Unlimited Sahara Altitude"
+    },
+    {
+      "blockers": [
+        "ERC naturally aspirated evidence",
+        "ERC nonhybrid evidence",
+        "Unpublished MY2019 generation correspondence"
+      ],
+      "body": "four-door",
+      "candidate_digest": "sha256:45bcc5001ba65e9aea21d8deca1b9b5f82e2599b71fdb390247542eba5b3bcc0",
+      "candidate_reference": "MY2019-JL-JL19-17-preparatory-compact-r2-review-r3",
+      "candidate_valid": true,
+      "canonical_powertrain": {
+        "electrification_type": null,
+        "engine_aspiration": null,
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "fuel_type": "gasoline"
+      },
+      "drivetrain": "4WD",
+      "engine_code": "ERC",
+      "engine_proof_error": [
+        "Missing evidenced powertrain attribute: engine_aspiration."
+      ],
+      "engine_tuple_complete": false,
+      "existing_revision": "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-17.candidate.json",
+      "peer_ids": [],
+      "planner_action": "flag_review",
+      "planner_reasons": [
+        "Missing reviewed generation correspondence."
+      ],
+      "retained_bytes_verified": true,
+      "round_trip_verified": true,
+      "row_id": "JL19-17",
+      "source_model_code": "JLJP74",
+      "status": "blocked",
+      "trim_name": "Unlimited Moab"
+    },
+    {
+      "blockers": [
+        "ERC naturally aspirated evidence",
+        "ERC nonhybrid evidence",
+        "Unpublished MY2019 generation correspondence"
+      ],
+      "body": "four-door",
+      "candidate_digest": "sha256:0f8eaf79b569872cb5b56b86a338cd8684125bfbe36fdb9e2c7f17d713b80987",
+      "candidate_reference": "MY2019-JL-JL19-18-preparatory-compact-r2-review-r3",
+      "candidate_valid": true,
+      "canonical_powertrain": {
+        "electrification_type": null,
+        "engine_aspiration": null,
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "fuel_type": "gasoline"
+      },
+      "drivetrain": "4WD",
+      "engine_code": "ERC",
+      "engine_proof_error": [
+        "Missing evidenced powertrain attribute: engine_aspiration."
+      ],
+      "engine_tuple_complete": false,
+      "existing_revision": "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-18.candidate.json",
+      "peer_ids": [],
+      "planner_action": "flag_review",
+      "planner_reasons": [
+        "Missing reviewed generation correspondence."
+      ],
+      "retained_bytes_verified": true,
+      "round_trip_verified": true,
+      "row_id": "JL19-18",
+      "source_model_code": "JLJS74",
+      "status": "blocked",
+      "trim_name": "Unlimited Rubicon"
+    },
+    {
+      "blockers": [
+        "Unpublished MY2019 generation correspondence"
+      ],
+      "body": "four-door",
+      "candidate_digest": "sha256:7ab768e39cc66d32b1e9626a1bd182e9386691ebf5612c5ae81b99eaeb695757",
+      "candidate_reference": "MY2019-JL-JL19-19-preparatory-compact-r2-review-r3",
+      "candidate_valid": true,
+      "canonical_powertrain": {
+        "electrification_type": "mild_hybrid",
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 4,
+        "engine_displacement_liters": "2",
+        "fuel_type": "gasoline"
+      },
+      "drivetrain": "4WD",
+      "engine_code": "EC3",
+      "engine_proof_error": null,
+      "engine_tuple_complete": true,
+      "existing_revision": "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-19.candidate.json",
+      "peer_ids": [],
+      "planner_action": "flag_review",
+      "planner_reasons": [
+        "Missing reviewed generation correspondence."
+      ],
+      "retained_bytes_verified": true,
+      "round_trip_verified": true,
+      "row_id": "JL19-19",
+      "source_model_code": "JLJS74",
+      "status": "blocked",
+      "trim_name": "Unlimited Rubicon"
+    }
+  ],
+  "valid_candidates": 19
+}

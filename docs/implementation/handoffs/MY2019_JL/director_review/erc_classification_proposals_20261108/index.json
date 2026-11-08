@@ -1,0 +1,109 @@
+{
+  "candidate_revisions_created": 0,
+  "classifications_approved": false,
+  "created_at": "2026-11-08T20:06:44.639511+00:00",
+  "imports_executed": 0,
+  "policy_authorized": true,
+  "proposals": [
+    {
+      "adjudication_hash": "sha256:14dec00d3d05f62aed43e8e2f9aad7d315a2da2e08a7a43cee1e698387944b20",
+      "confidence": "moderate",
+      "electrification_type": "none",
+      "engine_aspiration": "naturally_aspirated",
+      "proposal": "docs/implementation/handoffs/MY2019_JL/director_review/erc_classification_proposals_20261108/proposals/JL19-01.adjudication.json",
+      "row_id": "JL19-01",
+      "status": "awaiting_human_signoff",
+      "trim": "Sport"
+    },
+    {
+      "adjudication_hash": "sha256:584b59d1e91422f3fb20557e9bdfc10e52059d959bd9b6fd398d43e2963fba23",
+      "confidence": "moderate",
+      "electrification_type": "none",
+      "engine_aspiration": "naturally_aspirated",
+      "proposal": "docs/implementation/handoffs/MY2019_JL/director_review/erc_classification_proposals_20261108/proposals/JL19-03.adjudication.json",
+      "row_id": "JL19-03",
+      "status": "awaiting_human_signoff",
+      "trim": "Sport S"
+    },
+    {
+      "adjudication_hash": "sha256:bf25274b4d1dd0a8ecc1ffb822dcd9158d30b7558159c8bca083bdee3eb8328f",
+      "confidence": "moderate",
+      "electrification_type": "none",
+      "engine_aspiration": "naturally_aspirated",
+      "proposal": "docs/implementation/handoffs/MY2019_JL/director_review/erc_classification_proposals_20261108/proposals/JL19-05.adjudication.json",
+      "row_id": "JL19-05",
+      "status": "awaiting_human_signoff",
+      "trim": "Rubicon"
+    },
+    {
+      "adjudication_hash": "sha256:2f2f1f8d57b81907d0cad3217d3e41a0ed7ca7a73da1e176f96eee2a90d41dfd",
+      "confidence": "moderate",
+      "electrification_type": "none",
+      "engine_aspiration": "naturally_aspirated",
+      "proposal": "docs/implementation/handoffs/MY2019_JL/director_review/erc_classification_proposals_20261108/proposals/JL19-07.adjudication.json",
+      "row_id": "JL19-07",
+      "status": "awaiting_human_signoff",
+      "trim": "Unlimited Sport"
+    },
+    {
+      "adjudication_hash": "sha256:12492b1e6933e79d168abe255cdcb54c8bf95a0d08a3f17af2f0471ca84d99d3",
+      "confidence": "moderate",
+      "electrification_type": "none",
+      "engine_aspiration": "naturally_aspirated",
+      "proposal": "docs/implementation/handoffs/MY2019_JL/director_review/erc_classification_proposals_20261108/proposals/JL19-09.adjudication.json",
+      "row_id": "JL19-09",
+      "status": "awaiting_human_signoff",
+      "trim": "Unlimited Sport S"
+    },
+    {
+      "adjudication_hash": "sha256:b1aeb010fc8c84a820bf97d9d3c59952c0791615d71528def25c22513df7df93",
+      "confidence": "moderate",
+      "electrification_type": "none",
+      "engine_aspiration": "naturally_aspirated",
+      "proposal": "docs/implementation/handoffs/MY2019_JL/director_review/erc_classification_proposals_20261108/proposals/JL19-11.adjudication.json",
+      "row_id": "JL19-11",
+      "status": "awaiting_human_signoff",
+      "trim": "Unlimited Sport Altitude"
+    },
+    {
+      "adjudication_hash": "sha256:ff0aea76cf0742f66dbbaaa5038cffa85bb0018163c9756b889e6a1fa013ad6a",
+      "confidence": "moderate",
+      "electrification_type": "none",
+      "engine_aspiration": "naturally_aspirated",
+      "proposal": "docs/implementation/handoffs/MY2019_JL/director_review/erc_classification_proposals_20261108/proposals/JL19-13.adjudication.json",
+      "row_id": "JL19-13",
+      "status": "awaiting_human_signoff",
+      "trim": "Unlimited Sahara"
+    },
+    {
+      "adjudication_hash": "sha256:f16ea762f66add8ed7bcee891557c893231b1ff0cdc9b5f2ef3b0551bc42cbf5",
+      "confidence": "moderate",
+      "electrification_type": "none",
+      "engine_aspiration": "naturally_aspirated",
+      "proposal": "docs/implementation/handoffs/MY2019_JL/director_review/erc_classification_proposals_20261108/proposals/JL19-15.adjudication.json",
+      "row_id": "JL19-15",
+      "status": "awaiting_human_signoff",
+      "trim": "Unlimited Sahara Altitude"
+    },
+    {
+      "adjudication_hash": "sha256:d917f4af8c0bc7be100c2d9efb903e65fcb4a1df9a5fe6df6c30725e061fbff1",
+      "confidence": "moderate",
+      "electrification_type": "none",
+      "engine_aspiration": "naturally_aspirated",
+      "proposal": "docs/implementation/handoffs/MY2019_JL/director_review/erc_classification_proposals_20261108/proposals/JL19-17.adjudication.json",
+      "row_id": "JL19-17",
+      "status": "awaiting_human_signoff",
+      "trim": "Unlimited Moab"
+    },
+    {
+      "adjudication_hash": "sha256:01b1f17fc8e8c06083cba9802cac3677e6aa17fc01ee15af38f99a55aec4e181",
+      "confidence": "moderate",
+      "electrification_type": "none",
+      "engine_aspiration": "naturally_aspirated",
+      "proposal": "docs/implementation/handoffs/MY2019_JL/director_review/erc_classification_proposals_20261108/proposals/JL19-18.adjudication.json",
+      "row_id": "JL19-18",
+      "status": "awaiting_human_signoff",
+      "trim": "Unlimited Rubicon"
+    }
+  ]
+}

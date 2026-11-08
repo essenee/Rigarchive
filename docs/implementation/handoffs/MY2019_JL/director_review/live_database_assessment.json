@@ -1,0 +1,142 @@
+{
+  "assessment_date": "2026-11-07",
+  "access": "SQLite URI mode=ro; no ORM writes",
+  "db_sha256": "b045601a33811b44a443b7c0cc78ce916e9af476cb3c5f4c5b94dc2fdf18e26f",
+  "reference_migrations": [
+    "0007_specification_persistence_publication",
+    "0008_transmission_domain",
+    "0009_factory_equipment_compatibility",
+    "0010_vehicledefinition_electrification_type_and_more"
+  ],
+  "vehicle_definition_count": 793,
+  "receipt_count": 2856,
+  "populated_powertrain_rows": 0,
+  "integrity_check": [
+    [
+      "ok"
+    ]
+  ],
+  "foreign_key_check": [],
+  "jl_peers": [
+    {
+      "id": 715,
+      "uuid": "9bad24223c204e72a52b280080026472",
+      "model_year": 2018,
+      "trim_name": "Sport",
+      "engine_name": "3.6L V6",
+      "slug": "2018-sport-36l-v6-4wd-us"
+    },
+    {
+      "id": 795,
+      "uuid": "018d66eb906a4f319fa3ae72386998ec",
+      "model_year": 2018,
+      "trim_name": "Rubicon",
+      "engine_name": "2.0L I4",
+      "slug": "2018-rubicon-20l-i4-4wd-us"
+    },
+    {
+      "id": 796,
+      "uuid": "4444f2bec0284f6a80446dc626aa2268",
+      "model_year": 2018,
+      "trim_name": "Rubicon",
+      "engine_name": "3.6L V6",
+      "slug": "2018-rubicon-36l-v6-4wd-us"
+    },
+    {
+      "id": 797,
+      "uuid": "5334c105830a4515a26dbe02326f418e",
+      "model_year": 2018,
+      "trim_name": "Sport",
+      "engine_name": "2.0L I4",
+      "slug": "2018-sport-20l-i4-4wd-us"
+    },
+    {
+      "id": 798,
+      "uuid": "1430e7c8e7f54cf2a92bf9dd2d23ecb4",
+      "model_year": 2018,
+      "trim_name": "Sport S",
+      "engine_name": "2.0L I4",
+      "slug": "2018-sport-s-20l-i4-4wd-us"
+    },
+    {
+      "id": 799,
+      "uuid": "935485e266e143b4ad36939fb60f4b4b",
+      "model_year": 2018,
+      "trim_name": "Sport S",
+      "engine_name": "3.6L V6",
+      "slug": "2018-sport-s-36l-v6-4wd-us"
+    },
+    {
+      "id": 800,
+      "uuid": "5796a14a5b9f44fb896455d15f1b1905",
+      "model_year": 2018,
+      "trim_name": "Unlimited Moab",
+      "engine_name": "3.6L V6",
+      "slug": "2018-unlimited-moab-36l-v6-4wd-us"
+    },
+    {
+      "id": 801,
+      "uuid": "fbe4602c23404e03a00dab01d9a31f6a",
+      "model_year": 2018,
+      "trim_name": "Unlimited Rubicon",
+      "engine_name": "2.0L I4",
+      "slug": "2018-unlimited-rubicon-20l-i4-4wd-us"
+    },
+    {
+      "id": 802,
+      "uuid": "20f2580d3223494b86e4993d19031561",
+      "model_year": 2018,
+      "trim_name": "Unlimited Rubicon",
+      "engine_name": "3.6L V6",
+      "slug": "2018-unlimited-rubicon-36l-v6-4wd-us"
+    },
+    {
+      "id": 803,
+      "uuid": "029412a7b6044e2594b0155c4b95d48b",
+      "model_year": 2018,
+      "trim_name": "Unlimited Sahara",
+      "engine_name": "2.0L I4",
+      "slug": "2018-unlimited-sahara-20l-i4-4wd-us"
+    },
+    {
+      "id": 804,
+      "uuid": "f759d99cf3f44e41923815839db4ba7b",
+      "model_year": 2018,
+      "trim_name": "Unlimited Sahara",
+      "engine_name": "3.6L V6",
+      "slug": "2018-unlimited-sahara-36l-v6-4wd-us"
+    },
+    {
+      "id": 805,
+      "uuid": "717ca6633e4c447694ce6e519f497be7",
+      "model_year": 2018,
+      "trim_name": "Unlimited Sport",
+      "engine_name": "2.0L I4",
+      "slug": "2018-unlimited-sport-20l-i4-4wd-us"
+    },
+    {
+      "id": 806,
+      "uuid": "980dcb135042449a980533b88f8df22e",
+      "model_year": 2018,
+      "trim_name": "Unlimited Sport",
+      "engine_name": "3.6L V6",
+      "slug": "2018-unlimited-sport-36l-v6-4wd-us"
+    },
+    {
+      "id": 807,
+      "uuid": "b5ad0d09d38b49a8a6e21a43874f6e6a",
+      "model_year": 2018,
+      "trim_name": "Unlimited Sport S",
+      "engine_name": "2.0L I4",
+      "slug": "2018-unlimited-sport-s-20l-i4-4wd-us"
+    },
+    {
+      "id": 808,
+      "uuid": "46c9530536be449ab541d0a6f07288f3",
+      "model_year": 2018,
+      "trim_name": "Unlimited Sport S",
+      "engine_name": "3.6L V6",
+      "slug": "2018-unlimited-sport-s-36l-v6-4wd-us"
+    }
+  ]
+}

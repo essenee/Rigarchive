@@ -1,0 +1,67 @@
+{
+  "access": "SQLite URI mode=ro plus PRAGMA query_only=ON",
+  "created_at": "2026-11-08T18:20:55.097237+00:00",
+  "db_sha256": "b045601a33811b44a443b7c0cc78ce916e9af476cb3c5f4c5b94dc2fdf18e26f",
+  "jl_existing_year_counts": {
+    "2018": 15
+  },
+  "jl_generation": {
+    "end_year": null,
+    "model_uuid": "5ec5f58a-b140-484c-97f0-c90ec9c134d6",
+    "pk": 32,
+    "slug": "jl",
+    "start_year": 2018,
+    "uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4"
+  },
+  "my2019_namespace": [],
+  "my2019_published_research_correspondences": 0,
+  "prior_verified_model_code_correspondences": {
+    "JLJL72": {
+      "generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "hash": "sha256:400316e1a1c5221aeaa10ca7d6e07914bb73f637892c02caeecc5cafb96b9d25",
+      "uuid": "c1d2135f-6df5-4456-b80b-12ecdc370e07",
+      "year_scope": [
+        2018,
+        2018
+      ]
+    },
+    "JLJL74": {
+      "generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "hash": "sha256:31c421dcd6cd9da891fbce3acb8ab6da9a6411f2310b7c5bba289e49a9c82f50",
+      "uuid": "818a4f2e-61c9-4feb-9f50-7f6382bdb8f3",
+      "year_scope": [
+        2018,
+        2018
+      ]
+    },
+    "JLJP74": {
+      "generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "hash": "sha256:56fabf678e3f9c5662353e5f2ffa6ebc8db8c79ecec6e4b1bf80a208f0849d53",
+      "uuid": "58876758-1856-48c0-98da-fd0ca8e0d72c",
+      "year_scope": [
+        2018,
+        2018
+      ]
+    },
+    "JLJS72": {
+      "generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "hash": "sha256:432a1344bb1f2cf1d1db9ce565ee966ab8a949b2d966521e5088dd3c471e0c6d",
+      "uuid": "747ffef8-ccc2-4a14-9fbc-b19c6f9a518f",
+      "year_scope": [
+        2018,
+        2018
+      ]
+    },
+    "JLJS74": {
+      "generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "hash": "sha256:64f6a42d0a0751583cf6082b5cd2813cb44fbdeb7ca2d3607ad0de83f94517ac",
+      "uuid": "c01af849-2765-44e2-97b8-40c46b583d1c",
+      "year_scope": [
+        2018,
+        2018
+      ]
+    }
+  },
+  "receipts": 2856,
+  "vehicle_definitions": 793
+}

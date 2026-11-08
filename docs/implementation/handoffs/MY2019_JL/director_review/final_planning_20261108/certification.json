@@ -1,0 +1,15 @@
+{
+  "candidate_revisions_verified": 19,
+  "canonical_import_execution": "not_performed",
+  "contract_validation": "passed",
+  "created": "2026-11-08T20:49:56.403487+00:00",
+  "deterministic_replanning_verified": 19,
+  "engine_proofs_verified": 19,
+  "human_matrix_approval": "not_granted",
+  "live_review": "19 pending_create; zero blocked/conflict",
+  "manifest_roundtrip_revalidation": 19,
+  "matrix_digest": "sha256:d8f11301e230b8485dfd2d15c0b9342aaa0cc778aa7418052ce8da7b10cf6896",
+  "matrix_version": "2.1",
+  "published_correspondences_verified": 5,
+  "required_decision": "Owner approval of exact matrix digest, scope, and per-row permitted creation bases before execution. Revalidate immediately before future import; database, candidate, evidence, correspondence or parent drift can invalidate plans."
+}

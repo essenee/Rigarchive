@@ -1,0 +1,50 @@
+{
+  "envelope": {
+    "artifact_type": "rigarchive.source_assertion_set.v1",
+    "created_at": "2026-11-07T17:04:24.836847+00:00",
+    "schema_version": "1.1.0"
+  },
+  "provenance": {
+    "acquisition_method": "local_file",
+    "extraction_provenance": {
+      "extraction_mode": "manually_verified_transcription",
+      "extractor_id": "reviewed_2019_jlu_selected_text",
+      "extractor_version": "1.0.0",
+      "raw_artifact_hash": "sha256:3a3e829b87591583ffd6902a5ddd694be7d47fd815fd10813cb1e28a36a8938f",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/evidence/jlu_2019_06_04_selected_excerpts.json"
+    },
+    "native_record_id": "JL19-09-june-guide-excerpt",
+    "publication_revision": "REISSUED 06/04/2019",
+    "retrieved_at": "2026-11-07T17:04:24.836847+00:00",
+    "review_status": "reviewed_selected_text",
+    "source_applicability": {
+      "applicability_basis": "MY2019 four-door JLJL74; offering page 2 and standard equipment page 15",
+      "applicability_scope": "configuration",
+      "market": "US"
+    },
+    "source_id": "jeep_usa_order_guide_excerpts",
+    "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/",
+    "source_type": "manufacturer_specification",
+    "source_use_notes": "Accepted manufacturer publication; hash covers selected JSON text excerpts, never the PDF."
+  },
+  "source_assertions": [
+    {
+      "assertion_id": "guide_drive",
+      "attribute_key": "drive_descriptor",
+      "raw_value": "COMMAND-TRAC PART TIME 4WD SYSTEM (DHN)",
+      "source_context": "https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/; printed page 15; JLJL74 column; standard equipment unless replaced by optional equipment"
+    },
+    {
+      "assertion_id": "guide_engine_descriptor",
+      "attribute_key": "engine_descriptor",
+      "raw_value": "3.6L V6 24V VVT ENGINE UPG I W/ESS (ERC)",
+      "source_context": "https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/; printed page 2; JLJL74 powertrain table"
+    },
+    {
+      "assertion_id": "guide_offering_table",
+      "attribute_key": "offering_table",
+      "raw_value": "STEP #1 SELECT - MODEL CODE\n$FWP $MSRP\nWRANGLER UNLIMITED SPORT 31,007 31,545 JLJL74\nDESTINATION CHARGE 1,495\n1,545 IN HI\nSTEP #2 SELECT - QUICK ORDER PACKAGE CODE\nPOWERTRAIN AVAILABILITY\nENGINE $FWP $MSRP TRANSMISSION $FWP $MSRP\nSPORT S\nALTITUDE\nM/H PRC or PSC\nor PW7 or PX8 or\nPAU or PDN\n3.6L V6 24V VVT ENGINE UPG\nI W/ESS (ERC)\nN/C N/C 8-SPD AUTO 850RE\nTRANS (MAKE) (DFT)\n1,780 2,000 24B 24S 24L\n6-SPEED MANUAL\nTRANSMISSION (DEM)\nN/C N/C 23B 23S 23L\n2.0L I4 DOHC DI TURBO\nETORQUE ENGINE (EC3)\n890 1,000 8-SPD AUTO 850RE\nTRANS (MAKE) (DFT)\n1,780 2,000 28B 28S 28L",
+      "source_context": "https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/; printed page 2; model code and quick-order package columns retained"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "applicability": "Printed cover identifies MY2019 New Wrangler, US and Canada owner resources; body-neutral engine instructions.",
+  "edition": "19JL-926-AA, First Edition",
+  "facts": [
+    {
+      "engine_heading": "2.0L Engine",
+      "fuel_type_lexeme": "gasoline"
+    },
+    {
+      "engine_heading": "3.6L Engine",
+      "fuel_type_lexeme": "gasoline"
+    }
+  ],
+  "join_basis": "Manufacturer MY2019 model-wide instructions for the two named engines, corroborated by MY2019 manufacturer specifications identifying these engines as standard/available across all models and both body styles. Existing accepted order-guide inventory establishes their actual trim offerings; no cross-product construction.",
+  "original_pdf_retained_for_contract": false,
+  "pdf_page_one_based": 248,
+  "printed_page": 246,
+  "publisher": "FCA US LLC / Mopar",
+  "representation": "Reviewed selected facts and short source lexemes; not original PDF bytes",
+  "retrieved_at": "2026-11-08T18:20:55.097237+00:00",
+  "review": "Both engine subsections expressly prescribe regular unleaded gasoline; the 2.0L subsection additionally recommends premium for performance. No fuel inferred from a fuel-door/tank label.",
+  "source_url": "https://vehicleinfo.mopar.com/assets/publications/en-ca/Jeep/2019/Wrangler/10387.pdf",
+  "title": "2019 New Wrangler User Guide"
+}

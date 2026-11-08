@@ -1,0 +1,1317 @@
+{
+  "created_at": "2026-11-08T20:56:33.296602+00:00",
+  "extraction_provenance": {
+    "assertion_set_id": "JL19-15",
+    "assertions": [
+      {
+        "assertion_id": "engine_cylinders",
+        "attribute_key": "engine_cylinders",
+        "raw_value": 6,
+        "source_context": "Director-accepted research inventory row JL19-15; https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/; reported page 5. Page references are inherited research, not a new PDF inspection."
+      },
+      {
+        "assertion_id": "engine_displacement_liters",
+        "attribute_key": "engine_displacement_liters",
+        "raw_value": "3.60",
+        "source_context": "Director-accepted research inventory row JL19-15; https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/; reported page 5. Page references are inherited research, not a new PDF inspection."
+      },
+      {
+        "assertion_id": "engine_offering",
+        "attribute_key": "engine_offering",
+        "raw_value": "ERC 3.6L V6 ESS",
+        "source_context": "Director-accepted research inventory row JL19-15; https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/; reported page 5. Page references are inherited research, not a new PDF inspection."
+      },
+      {
+        "assertion_id": "make",
+        "attribute_key": "make",
+        "raw_value": "Jeep",
+        "source_context": "Director-accepted research inventory row JL19-15; https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/; reported page 5. Page references are inherited research, not a new PDF inspection."
+      },
+      {
+        "assertion_id": "market",
+        "attribute_key": "market",
+        "raw_value": "US",
+        "source_context": "Director-accepted research inventory row JL19-15; https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/; reported page 5. Page references are inherited research, not a new PDF inspection."
+      },
+      {
+        "assertion_id": "model",
+        "attribute_key": "model",
+        "raw_value": "Wrangler",
+        "source_context": "Director-accepted research inventory row JL19-15; https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/; reported page 5. Page references are inherited research, not a new PDF inspection."
+      },
+      {
+        "assertion_id": "model_year",
+        "attribute_key": "model_year",
+        "raw_value": 2019,
+        "source_context": "Director-accepted research inventory row JL19-15; https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/; reported page 5. Page references are inherited research, not a new PDF inspection."
+      },
+      {
+        "assertion_id": "source_model_code",
+        "attribute_key": "source_model_code",
+        "raw_value": "JLJP74",
+        "source_context": "Director-accepted research inventory row JL19-15; https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/; reported page 5. Page references are inherited research, not a new PDF inspection."
+      },
+      {
+        "assertion_id": "trim",
+        "attribute_key": "trim",
+        "raw_value": "Unlimited Sahara Altitude",
+        "source_context": "Director-accepted research inventory row JL19-15; https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/; reported page 5. Page references are inherited research, not a new PDF inspection."
+      }
+    ],
+    "extraction_mode": "manually_verified_transcription",
+    "extractor_id": "director_accepted_jl_inventory_projection",
+    "extractor_version": "1.0.0",
+    "generation_normalizer": {
+      "id": "explicit_generation_identity",
+      "version": "1.0.0"
+    },
+    "publication_revision": "MY2019 dated-revision union accepted by director; individual printed dates not newly verified",
+    "raw_artifact_hash": "sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3",
+    "raw_artifact_reference": "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/evidence/accepted_research_snapshot.json",
+    "retrieved_at": "2026-11-07T16:57:20.747181+00:00",
+    "source_applicability": {
+      "applicability_basis": "director_accepted_MY2019_US_JL_research_inventory",
+      "applicability_scope": "model_year",
+      "market": "US",
+      "publisher_jurisdiction": null,
+      "unknown_fields": {}
+    },
+    "source_id": "reviewed_jeep_order_guide_inventory",
+    "source_locator": "docs/implementation/handoffs/MY2019_JL/MY2019_JL_CODEX_HANDOFF.md"
+  },
+  "manifest_hash": "sha256:6c446d1646dfee1644ad14e4475dd595c076e8e72414179cba9fdd28345b3566",
+  "manifest_version": "2.1",
+  "plans": [
+    {
+      "adjudication_hash": null,
+      "adjudication_reference": null,
+      "candidate_hash": "sha256:8e37a7fb55d608a4b95446811477ee5db2c3d085ef90f7ce05b9e90ff0176ec4",
+      "candidate_reference": "MY2019-JL-JL19-15-preparatory-compact-r2-review-r3",
+      "candidate_snapshot": {
+        "attribute_provenance": {
+          "electrification_type": [
+            "human_classification_adjudication|sha256:12d513952a1b5093a6a47a180215801c8d312da67199e2fda6ce927d6796ed9f|sha256:43118ff96aa9ff80b41922e8f743768260b7ea3edd36c036c68860ac04b8f2af|electrification_type"
+          ],
+          "engine_aspiration": [
+            "human_classification_adjudication|sha256:12d513952a1b5093a6a47a180215801c8d312da67199e2fda6ce927d6796ed9f|sha256:43118ff96aa9ff80b41922e8f743768260b7ea3edd36c036c68860ac04b8f2af|engine_aspiration"
+          ],
+          "engine_cylinders": [
+            "jeep_usa_order_guide_excerpts|sha256:3a3e829b87591583ffd6902a5ddd694be7d47fd815fd10813cb1e28a36a8938f|JL19-15-june-guide-excerpt|i_engine_cylinders"
+          ],
+          "engine_displacement_liters": [
+            "jeep_usa_order_guide_excerpts|sha256:3a3e829b87591583ffd6902a5ddd694be7d47fd815fd10813cb1e28a36a8938f|JL19-15-june-guide-excerpt|i_engine_displacement_liters"
+          ],
+          "generic_drive_classification": [
+            "jeep_usa_order_guide_excerpts|sha256:3a3e829b87591583ffd6902a5ddd694be7d47fd815fd10813cb1e28a36a8938f|JL19-15-june-guide-excerpt|i_generic_drive"
+          ],
+          "make": [
+            "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-15|i_make"
+          ],
+          "model": [
+            "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-15|i_model"
+          ],
+          "model_year": [
+            "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-15|i_model_year"
+          ]
+        },
+        "candidate_identity": {
+          "manufacturer_name": "Jeep",
+          "market": "US",
+          "model_year": 2019,
+          "trim_name": "Unlimited Sahara Altitude",
+          "vehicle_model_name": "Wrangler"
+        },
+        "candidate_reference": "MY2019-JL-JL19-15-preparatory-compact-r2-review-r3",
+        "canonical_powertrain": {
+          "electrification_type": "none",
+          "engine_aspiration": "naturally_aspirated",
+          "engine_cylinders": 6,
+          "engine_displacement_liters": "3.6",
+          "fuel_type": "gasoline"
+        },
+        "envelope": {
+          "artifact_type": "rigarchive.candidate_configuration.v2",
+          "created_at": "2026-11-08T20:17:13.457926+00:00",
+          "generator": "RigArchive-CandidateConstruction/0.1.0",
+          "schema_version": "2.1.0"
+        },
+        "evidence_documents": [
+          {
+            "assertion_set_id": "JL19-15",
+            "assertions": [
+              {
+                "assertion_id": "engine_cylinders",
+                "attribute_key": "engine_cylinders",
+                "raw_value": 6,
+                "source_context": "Director-accepted research inventory row JL19-15; https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/; reported page 5. Page references are inherited research, not a new PDF inspection."
+              },
+              {
+                "assertion_id": "engine_displacement_liters",
+                "attribute_key": "engine_displacement_liters",
+                "raw_value": "3.60",
+                "source_context": "Director-accepted research inventory row JL19-15; https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/; reported page 5. Page references are inherited research, not a new PDF inspection."
+              },
+              {
+                "assertion_id": "engine_offering",
+                "attribute_key": "engine_offering",
+                "raw_value": "ERC 3.6L V6 ESS",
+                "source_context": "Director-accepted research inventory row JL19-15; https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/; reported page 5. Page references are inherited research, not a new PDF inspection."
+              },
+              {
+                "assertion_id": "make",
+                "attribute_key": "make",
+                "raw_value": "Jeep",
+                "source_context": "Director-accepted research inventory row JL19-15; https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/; reported page 5. Page references are inherited research, not a new PDF inspection."
+              },
+              {
+                "assertion_id": "market",
+                "attribute_key": "market",
+                "raw_value": "US",
+                "source_context": "Director-accepted research inventory row JL19-15; https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/; reported page 5. Page references are inherited research, not a new PDF inspection."
+              },
+              {
+                "assertion_id": "model",
+                "attribute_key": "model",
+                "raw_value": "Wrangler",
+                "source_context": "Director-accepted research inventory row JL19-15; https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/; reported page 5. Page references are inherited research, not a new PDF inspection."
+              },
+              {
+                "assertion_id": "model_year",
+                "attribute_key": "model_year",
+                "raw_value": 2019,
+                "source_context": "Director-accepted research inventory row JL19-15; https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/; reported page 5. Page references are inherited research, not a new PDF inspection."
+              },
+              {
+                "assertion_id": "source_model_code",
+                "attribute_key": "source_model_code",
+                "raw_value": "JLJP74",
+                "source_context": "Director-accepted research inventory row JL19-15; https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/; reported page 5. Page references are inherited research, not a new PDF inspection."
+              },
+              {
+                "assertion_id": "trim",
+                "attribute_key": "trim",
+                "raw_value": "Unlimited Sahara Altitude",
+                "source_context": "Director-accepted research inventory row JL19-15; https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/; reported page 5. Page references are inherited research, not a new PDF inspection."
+              }
+            ],
+            "extraction_mode": "manually_verified_transcription",
+            "extractor_id": "director_accepted_jl_inventory_projection",
+            "extractor_version": "1.0.0",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": "MY2019 dated-revision union accepted by director; individual printed dates not newly verified",
+            "raw_artifact_hash": "sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/evidence/accepted_research_snapshot.json",
+            "retrieved_at": "2026-11-07T16:57:20.747181+00:00",
+            "source_applicability": {
+              "applicability_basis": "director_accepted_MY2019_US_JL_research_inventory",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": null,
+              "unknown_fields": {}
+            },
+            "source_id": "reviewed_jeep_order_guide_inventory",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/MY2019_JL_CODEX_HANDOFF.md"
+          },
+          {
+            "assertion_set_id": "JL19-15-june-guide-excerpt",
+            "assertions": [
+              {
+                "assertion_id": "guide_drive",
+                "attribute_key": "drive_descriptor",
+                "raw_value": "COMMAND-TRAC PART TIME 4WD SYSTEM (DHN)",
+                "source_context": "https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/; printed page 15; JLJP74 column; standard equipment unless replaced by optional equipment"
+              },
+              {
+                "assertion_id": "guide_engine_descriptor",
+                "attribute_key": "engine_descriptor",
+                "raw_value": "3.6L V6 24V VVT ENGINE UPG I W/ESS (ERC)",
+                "source_context": "https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/; printed page 5; JLJP74 powertrain table"
+              },
+              {
+                "assertion_id": "guide_offering_table",
+                "attribute_key": "offering_table",
+                "raw_value": "STEP #1 SELECT - MODEL CODE\n$FWP $MSRP\nWRANGLER UNLIMITED SAHARA 36,679 38,395 JLJP74\nDESTINATION CHARGE 1,495\n1,545 IN HI\nSTEP #2 SELECT - QUICK ORDER PACKAGE CODE\nPOWERTRAIN AVAILABILITY\nENGINE $FWP $MSRP TRANSMISSION $FWP $MSRP ALTITUDE MOAB\n3.6L V6 24V VVT ENGINE UPG\nI W/ESS (ERC)\nN/C N/C 8-SPD AUTO 850RE\nTRANS (MAKE) (DFT)\n1,780 2,000 24G 24L 24M\nN/A W/M9E OR\nM9D\nN/A for Fleet or\nw/PGE Mojito\n6-SPEED MANUAL\nTRANSMISSION (DEM)\nN/C N/C 23G 23L\n2.0L I4 DOHC DI TURBO\nETORQUE ENGINE (EC3)\n890 1,000 8-SPD AUTO 850RE\nTRANS (MAKE) (DFT)\n1,780 2,000 28G 28L",
+                "source_context": "https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/; printed page 5; model code and quick-order package columns retained"
+              }
+            ],
+            "extraction_mode": "manually_verified_transcription",
+            "extractor_id": "reviewed_2019_jlu_selected_text",
+            "extractor_version": "1.0.0",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": "REISSUED 06/04/2019",
+            "raw_artifact_hash": "sha256:3a3e829b87591583ffd6902a5ddd694be7d47fd815fd10813cb1e28a36a8938f",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/evidence/jlu_2019_06_04_selected_excerpts.json",
+            "retrieved_at": "2026-11-07T17:04:24.836847+00:00",
+            "source_applicability": {
+              "applicability_basis": "MY2019 four-door JLJP74; offering page 5 and standard equipment page 15",
+              "applicability_scope": "configuration",
+              "market": "US",
+              "publisher_jurisdiction": null,
+              "unknown_fields": {}
+            },
+            "source_id": "jeep_usa_order_guide_excerpts",
+            "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/"
+          },
+          {
+            "assertion_set_id": "MY2019-JL-fuel",
+            "assertions": [
+              {
+                "assertion_id": "fuel_ec3",
+                "attribute_key": "fuel_type",
+                "raw_value": "gasoline",
+                "source_context": "https://vehicleinfo.mopar.com/assets/publications/en-ca/Jeep/2019/Wrangler/10387.pdf; printed p246, 2.0L Engine; US/Canada edition 19JL-926-AA"
+              },
+              {
+                "assertion_id": "fuel_erc",
+                "attribute_key": "fuel_type",
+                "raw_value": "gasoline",
+                "source_context": "https://vehicleinfo.mopar.com/assets/publications/en-ca/Jeep/2019/Wrangler/10387.pdf; printed p246, 3.6L Engine; US/Canada edition 19JL-926-AA"
+              }
+            ],
+            "extraction_mode": "manually_verified_transcription",
+            "extractor_id": "my2019_reviewed_selected_facts",
+            "extractor_version": "1.0.0",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": "19JL-926-AA First Edition",
+            "raw_artifact_hash": "sha256:0435598871bae4ab42e91f52f689331447ecfdb3d56644c3f9aac4274645cd0e",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/evidence/mopar_2019_fuel_selected_facts.json",
+            "retrieved_at": "2026-11-08T18:20:55.097237+00:00",
+            "source_applicability": {
+              "applicability_basis": "Printed MY2019 US/Canada cover; named engine sections apply across body styles; accepted inventory establishes offering linkage.",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": null,
+              "unknown_fields": {}
+            },
+            "source_id": "mopar_2019_wrangler_user_guide",
+            "source_locator": "https://vehicleinfo.mopar.com/assets/publications/en-ca/Jeep/2019/Wrangler/10387.pdf"
+          },
+          {
+            "assertion_set_id": "MY2019-JL-drive",
+            "assertions": [
+              {
+                "assertion_id": "drive_all_models",
+                "attribute_key": "drive_descriptor",
+                "raw_value": "Longitudinal front engine, four-wheel drive",
+                "source_context": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/specs/2019_JP_Wrangler_SPmk1alba10mregeqq9v39oek881.pdf; printed p1 BODY/CHASSIS Layout; same page explicitly covers both body styles"
+              }
+            ],
+            "extraction_mode": "manually_verified_transcription",
+            "extractor_id": "my2019_reviewed_selected_facts",
+            "extractor_version": "1.0.0",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": "MY2019; no printed revision date",
+            "raw_artifact_hash": "sha256:84bb3faf505332a2799830563cb1863621385b96430585e1a03216924596fd40",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/evidence/jeep_2019_specification_selected_facts.json",
+            "retrieved_at": "2026-11-08T18:20:55.097237+00:00",
+            "source_applicability": {
+              "applicability_basis": "MY2019 US manufacturer model specifications, all models and both bodies; commercial market independently established by retained US order guides.",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": null,
+              "unknown_fields": {}
+            },
+            "source_id": "jeep_2019_wrangler_specifications",
+            "source_locator": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/specs/2019_JP_Wrangler_SPmk1alba10mregeqq9v39oek881.pdf"
+          },
+          {
+            "assertion_set_id": "MY2019-common-JLJP74",
+            "assertions": [
+              {
+                "assertion_id": "common_model_code",
+                "attribute_key": "source_model_code",
+                "raw_value": "JLJP74",
+                "source_context": "Accepted MY2019 US JL inventory, manufacturer model-code column; common selector shared across this model-code group."
+              }
+            ],
+            "extraction_mode": "manually_verified_transcription",
+            "extractor_id": "my2019_reviewed_selected_facts",
+            "extractor_version": "1.0.0",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": "Accepted MY2019 union; historical edition details remain in original inventory",
+            "raw_artifact_hash": "sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/evidence/accepted_research_snapshot.json",
+            "retrieved_at": "2026-11-08T18:20:55.097237+00:00",
+            "source_applicability": {
+              "applicability_basis": "Director-accepted MY2019 US JL dated-revision inventory; scope is exactly this retained manufacturer model code.",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": null,
+              "unknown_fields": {}
+            },
+            "source_id": "reviewed_jeep_order_guide_inventory",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/MY2019_JL_CODEX_HANDOFF.md"
+          },
+          {
+            "assertion_set_id": "ERC-review-synthesis",
+            "assertions": [
+              {
+                "assertion_id": "aspiration_reasoning",
+                "attribute_key": "classification_review_support",
+                "raw_value": "Propose naturally_aspirated for the offered ERC 3.6L Pentastar V6 ESS. The MY19 technical guide positively classifies the same marketed family/ESS architecture as naturally aspirated; applicable US guide/specification lineage identifies ERC, its marketed dimensions and trim/body offerings. Induction continuity across these regional implementations is an engineering judgment supported by the combined evidence, not a direct US manufacturer assertion, code-equality proof or inference from absent turbo words alone.",
+                "source_context": "Research synthesis; AU p10 and pinned US offering evidence. Human conclusion, not manufacturer text."
+              },
+              {
+                "assertion_id": "electrification_reasoning",
+                "attribute_key": "classification_review_support",
+                "raw_value": "Propose none for the ten offered ERC configurations. US manual hardware descriptions distinguish conventional ESS starting equipment from an eTorque motor-generator with hybrid battery and launch assistance; the MY2019 catalog positively identifies conventional without-eTorque alternator applications and a separate ERG BSG application. US offering lineage binds the ten rows to ERC ESS; contemporary MY2020 powertrain materials separately introduce/describe V6 eTorque Sahara. The combined architecture/applicability judgment requires human adjudication; neither ESS terminology, missing eTorque words nor introduction chronology alone establishes nonhybrid status.",
+                "source_context": "Research synthesis; US manual hardware, catalog applications and MY2020 press context."
+              },
+              {
+                "assertion_id": "scope_limitations",
+                "attribute_key": "classification_review_support",
+                "raw_value": "No explicit US ERC naturally aspirated/nonhybrid statement was found. Australian-to-US induction continuity and the ERC conventional-hardware association are derived. Catalog provenance and MY2020 introduction chronology are not conclusive alone. Regulatory material and retrospective FCA Y40 also describe MY2019 3.6L hybrid/eTorque applications without establishing that they are ERC; the proposal is restricted to the ten retained ERC offerings, not all MY2019 3.6L Wranglers.",
+                "source_context": "All limitations must remain visible to the human reviewer."
+              }
+            ],
+            "extraction_mode": "manually_verified_transcription",
+            "extractor_id": "reviewed_classification_support",
+            "extractor_version": "1.0",
+            "raw_artifact_hash": "sha256:df1686c6c360f451a8c10b94e4c4b6dafc5cabced607e2ecac6f0be8d4521443",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2019_JL/director_review/erc_classification_proposals_20261108/evidence/erc_research_dossier.json",
+            "retrieved_at": "2026-11-08T20:06:44.639511+00:00",
+            "source_applicability": {
+              "applicability_basis": "Targeted review of ten retained US MY2019 ERC offerings; regional source scope remains explicit in dossier.",
+              "applicability_scope": "model_year",
+              "market": "US"
+            },
+            "source_id": "my2019_erc_research_review",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/director_review/erc_classification_proposals_20261108/evidence/erc_research_dossier.json"
+          },
+          {
+            "assertion_set_id": "US-MY19-hardware",
+            "assertions": [
+              {
+                "assertion_id": "reviewed_context",
+                "attribute_key": "classification_review_support",
+                "raw_value": "ESS versus eTorque hardware distinction; original source lexemes and pages retained.",
+                "source_context": "Context summarized for human review; not an internal-schema manufacturer classification."
+              }
+            ],
+            "extraction_mode": "manually_verified_transcription",
+            "extractor_id": "reviewed_classification_support",
+            "extractor_version": "1.0",
+            "raw_artifact_hash": "sha256:456d7554534a5dae9f0ecf9ca6ae5f74f634d28d841f0c7a62c44fa0e1cfca75",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2019_JL/director_review/erc_supplied_sources_20261108/sources/mopar_hardware_selected_facts.json",
+            "retrieved_at": "2026-11-08T20:06:44.639511+00:00",
+            "source_applicability": {
+              "applicability_basis": "Manufacturer/retailer source scope described in ERC dossier; no unsupported cross-market fact promoted.",
+              "applicability_scope": "model_year",
+              "market": "US"
+            },
+            "source_id": "mopar_2019_hardware_excerpts",
+            "source_locator": "https://vehicleinfo.mopar.com/assets/publications/en-ca/Jeep/2019/Wrangler/10387.pdf"
+          },
+          {
+            "assertion_set_id": "MY19-alternator",
+            "assertions": [
+              {
+                "assertion_id": "reviewed_context",
+                "attribute_key": "classification_review_support",
+                "raw_value": "Without-eTorque 3.6L alternator subset plus separate ERG BSG entry; no explicit ERC token.",
+                "source_context": "Context summarized for human review; not an internal-schema manufacturer classification."
+              }
+            ],
+            "extraction_mode": "manually_verified_transcription",
+            "extractor_id": "reviewed_classification_support",
+            "extractor_version": "1.0",
+            "raw_artifact_hash": "sha256:e558fc4e27edf7f39a04332fadbd65930ee038b76f1377f84be23f0ac4c42843",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2019_JL/director_review/erc_supplied_sources_20261108/sources/alternator-catalog.html",
+            "retrieved_at": "2026-11-08T20:06:44.639511+00:00",
+            "source_applicability": {
+              "applicability_basis": "Manufacturer/retailer source scope described in ERC dossier; no unsupported cross-market fact promoted.",
+              "applicability_scope": "model_year",
+              "market": "US"
+            },
+            "source_id": "jeeppartsdeal_oe_catalog",
+            "source_locator": "https://www.jeeppartsdeal.com/parts-list/2019-jeep-wrangler/charging-starting/alternator"
+          },
+          {
+            "assertion_set_id": "MY19-family",
+            "assertions": [
+              {
+                "assertion_id": "reviewed_context",
+                "attribute_key": "classification_review_support",
+                "raw_value": "MY2019 Wrangler family availability, with distinct hybrid/eTorque family applications.",
+                "source_context": "Context summarized for human review; not an internal-schema manufacturer classification."
+              }
+            ],
+            "extraction_mode": "manually_verified_transcription",
+            "extractor_id": "reviewed_classification_support",
+            "extractor_version": "1.0",
+            "raw_artifact_hash": "sha256:7e16f753401a6711b78b510ad4cf35cecdaa775b7ce719b0050fd6db72dabfef",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2019_JL/director_review/erc_supplied_sources_20261108/sources/pentastar-family-facts.pdf",
+            "retrieved_at": "2026-11-08T20:06:44.639511+00:00",
+            "source_applicability": {
+              "applicability_basis": "Manufacturer/retailer source scope described in ERC dossier; no unsupported cross-market fact promoted.",
+              "applicability_scope": "model_year",
+              "market": "US"
+            },
+            "source_id": "fca_pentastar_family_facts",
+            "source_locator": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/attachments/Pentastar_V-6_facts1suaud45cdq3l94ji0b4a7550n.pdf"
+          },
+          {
+            "assertion_set_id": "carb_2019_3_6_hev",
+            "assertions": [
+              {
+                "assertion_id": "scope_caution",
+                "attribute_key": "classification_review_support",
+                "raw_value": "MY2019 3.6L test group KCRXT03.65P7 is hybrid-electric and lists Wrangler models; no ERC identifier established.",
+                "source_context": "Printed p1; broad model-year scope must not be equated with the targeted ERC offering."
+              }
+            ],
+            "extraction_mode": "manually_verified_transcription",
+            "extractor_id": "reviewed_classification_support",
+            "extractor_version": "1.0",
+            "raw_artifact_hash": "sha256:c82e4ddc543e0142628e1cf66f1ff6e38e233eff474e6b1b93e0c2dd0eae64e6",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2019_JL/director_review/erc_classification_proposals_20261108/evidence/carb-2019-a0091433.pdf",
+            "retrieved_at": "2026-11-08T20:06:44.639511+00:00",
+            "source_applicability": {
+              "applicability_basis": "US certification/service scope; retained as limitation, not as proof of target ERC classification.",
+              "applicability_scope": "model_year",
+              "market": "US"
+            },
+            "source_id": "carb_2019_3_6_hev",
+            "source_locator": "https://ww2.arb.ca.gov/sites/default/files/classic/msprog/nvepb/executive_orders/EO%20Web%20Files/PC-LDT-MDV/2019/0002/pc-ldt-mdv_ldt_a-9-1433__sdt--20180905.pdf"
+          },
+          {
+            "assertion_set_id": "fca_y40_scope",
+            "assertions": [
+              {
+                "assertion_id": "scope_caution",
+                "attribute_key": "classification_review_support",
+                "raw_value": "Retrospective FCA Y40 lists MY2019-2021 Wrangler 3.6L eTorque ERG; does not state ERC is hybrid.",
+                "source_context": "Printed p1; broad model-year scope must not be equated with the targeted ERC offering."
+              }
+            ],
+            "extraction_mode": "manually_verified_transcription",
+            "extractor_id": "reviewed_classification_support",
+            "extractor_version": "1.0",
+            "raw_artifact_hash": "sha256:6af1557c414a22a709a7a0d9d50767ef55f7fc885dab3fe26bbcf8dd35b9c2d7",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2019_JL/director_review/erc_classification_proposals_20261108/evidence/fca-y40-bulletin.pdf",
+            "retrieved_at": "2026-11-08T20:06:44.639511+00:00",
+            "source_applicability": {
+              "applicability_basis": "US certification/service scope; retained as limitation, not as proof of target ERC classification.",
+              "applicability_scope": "model_year",
+              "market": "US"
+            },
+            "source_id": "fca_y40_scope",
+            "source_locator": "https://static.nhtsa.gov/odi/tsbs/2024/MC-10251816-9999.pdf"
+          },
+          {
+            "assertion_set_id": "sha256:43118ff96aa9ff80b41922e8f743768260b7ea3edd36c036c68860ac04b8f2af",
+            "assertions": [
+              {
+                "assertion_id": "electrification_type",
+                "attribute_key": "electrification_type",
+                "raw_value": {
+                  "classification": "electrification_type",
+                  "provenance": "human_adjudicated",
+                  "value": "none"
+                },
+                "source_context": "Human-adjudicated conclusion by project_owner: Propose none for the ten offered ERC configurations. US manual hardware descriptions distinguish conventional ESS starting equipment from an eTorque motor-generator with hybrid battery and launch assistance; the MY2019 catalog positively identifies conventional without-eTorque alternator applications and a separate ERG BSG application. US offering lineage binds the ten rows to ERC ESS; contemporary MY2020 powertrain materials separately introduce/describe V6 eTorque Sahara. The combined architecture/applicability judgment requires human adjudication; neither ESS terminology, missing eTorque words nor introduction chronology alone establishes nonhybrid status."
+              },
+              {
+                "assertion_id": "engine_aspiration",
+                "attribute_key": "engine_aspiration",
+                "raw_value": {
+                  "classification": "engine_aspiration",
+                  "provenance": "human_adjudicated",
+                  "value": "naturally_aspirated"
+                },
+                "source_context": "Human-adjudicated conclusion by project_owner: Propose naturally_aspirated for the offered ERC 3.6L Pentastar V6 ESS. The MY19 technical guide positively classifies the same marketed family/ESS architecture as naturally aspirated; applicable US guide/specification lineage identifies ERC, its marketed dimensions and trim/body offerings. Induction continuity across these regional implementations is an engineering judgment supported by the combined evidence, not a direct US manufacturer assertion, code-equality proof or inference from absent turbo words alone."
+              }
+            ],
+            "extraction_mode": "manually_verified_transcription",
+            "extractor_id": "approved_human_classification",
+            "extractor_version": "1.1",
+            "publication_revision": "Human classification adjudication 1.1; not manufacturer assertions",
+            "raw_artifact_hash": "sha256:12d513952a1b5093a6a47a180215801c8d312da67199e2fda6ce927d6796ed9f",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/adjudications/JL19-15.approved.json",
+            "retrieved_at": "2026-11-08T20:17:13.457926+00:00",
+            "source_applicability": {
+              "applicability_basis": "Exact candidate digest; approved human conclusion",
+              "applicability_scope": "configuration",
+              "market": "US"
+            },
+            "source_id": "human_classification_adjudication",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/adjudications/JL19-15.approved.json"
+          }
+        ],
+        "evidence_raw_hashes": [
+          "sha256:0435598871bae4ab42e91f52f689331447ecfdb3d56644c3f9aac4274645cd0e",
+          "sha256:12d513952a1b5093a6a47a180215801c8d312da67199e2fda6ce927d6796ed9f",
+          "sha256:3a3e829b87591583ffd6902a5ddd694be7d47fd815fd10813cb1e28a36a8938f",
+          "sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3",
+          "sha256:456d7554534a5dae9f0ecf9ca6ae5f74f634d28d841f0c7a62c44fa0e1cfca75",
+          "sha256:6af1557c414a22a709a7a0d9d50767ef55f7fc885dab3fe26bbcf8dd35b9c2d7",
+          "sha256:7e16f753401a6711b78b510ad4cf35cecdaa775b7ce719b0050fd6db72dabfef",
+          "sha256:84bb3faf505332a2799830563cb1863621385b96430585e1a03216924596fd40",
+          "sha256:c82e4ddc543e0142628e1cf66f1ff6e38e233eff474e6b1b93e0c2dd0eae64e6",
+          "sha256:df1686c6c360f451a8c10b94e4c4b6dafc5cabced607e2ecac6f0be8d4521443",
+          "sha256:e558fc4e27edf7f39a04332fadbd65930ee038b76f1377f84be23f0ac4c42843"
+        ],
+        "generation_evidence": [
+          {
+            "assertion_id": "source_model_code",
+            "assertion_set_id": "JL19-15",
+            "document_hash": "sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3",
+            "identity_type": "model_code",
+            "native_identifier": "JLJP74",
+            "normalizer_id": "explicit_generation_identity",
+            "normalizer_version": "1.0.0",
+            "source_id": "reviewed_jeep_order_guide_inventory",
+            "source_namespace": "source_model_code"
+          },
+          {
+            "assertion_id": "common_model_code",
+            "assertion_set_id": "MY2019-common-JLJP74",
+            "document_hash": "sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3",
+            "identity_type": "model_code",
+            "native_identifier": "JLJP74",
+            "normalizer_id": "explicit_generation_identity",
+            "normalizer_version": "1.0.0",
+            "source_id": "reviewed_jeep_order_guide_inventory",
+            "source_namespace": "source_model_code"
+          }
+        ],
+        "normalized_assertions": [
+          {
+            "interpretation_id": "human_classification_adjudication|sha256:12d513952a1b5093a6a47a180215801c8d312da67199e2fda6ce927d6796ed9f|sha256:43118ff96aa9ff80b41922e8f743768260b7ea3edd36c036c68860ac04b8f2af|electrification_type",
+            "mapping_status": "mapped",
+            "normalization_notes": "Approved human-derived classification; not a direct manufacturer assertion. Propose none for the ten offered ERC configurations. US manual hardware descriptions distinguish conventional ESS starting equipment from an eTorque motor-generator with hybrid battery and launch assistance; the MY2019 catalog positively identifies conventional without-eTorque alternator applications and a separate ERG BSG application. US offering lineage binds the ten rows to ERC ESS; contemporary MY2020 powertrain materials separately introduce/describe V6 eTorque Sahara. The combined architecture/applicability judgment requires human adjudication; neither ESS terminology, missing eTorque words nor introduction chronology alone establishes nonhybrid status.",
+            "normalized_concept": "none",
+            "raw_source_value": {
+              "classification": "electrification_type",
+              "provenance": "human_adjudicated",
+              "value": "none"
+            },
+            "source_assertion_ref": "human_classification_adjudication|sha256:12d513952a1b5093a6a47a180215801c8d312da67199e2fda6ce927d6796ed9f|sha256:43118ff96aa9ff80b41922e8f743768260b7ea3edd36c036c68860ac04b8f2af|electrification_type",
+            "target_attribute_key": "electrification_type"
+          },
+          {
+            "interpretation_id": "human_classification_adjudication|sha256:12d513952a1b5093a6a47a180215801c8d312da67199e2fda6ce927d6796ed9f|sha256:43118ff96aa9ff80b41922e8f743768260b7ea3edd36c036c68860ac04b8f2af|engine_aspiration",
+            "mapping_status": "mapped",
+            "normalization_notes": "Approved human-derived classification; not a direct manufacturer assertion. Propose naturally_aspirated for the offered ERC 3.6L Pentastar V6 ESS. The MY19 technical guide positively classifies the same marketed family/ESS architecture as naturally aspirated; applicable US guide/specification lineage identifies ERC, its marketed dimensions and trim/body offerings. Induction continuity across these regional implementations is an engineering judgment supported by the combined evidence, not a direct US manufacturer assertion, code-equality proof or inference from absent turbo words alone.",
+            "normalized_concept": "naturally_aspirated",
+            "raw_source_value": {
+              "classification": "engine_aspiration",
+              "provenance": "human_adjudicated",
+              "value": "naturally_aspirated"
+            },
+            "source_assertion_ref": "human_classification_adjudication|sha256:12d513952a1b5093a6a47a180215801c8d312da67199e2fda6ce927d6796ed9f|sha256:43118ff96aa9ff80b41922e8f743768260b7ea3edd36c036c68860ac04b8f2af|engine_aspiration",
+            "target_attribute_key": "engine_aspiration"
+          },
+          {
+            "document_qualifier": "jeep_usa_order_guide_excerpts|sha256:3a3e829b87591583ffd6902a5ddd694be7d47fd815fd10813cb1e28a36a8938f|JL19-15-june-guide-excerpt|",
+            "interpretation_id": "jeep_usa_order_guide_excerpts|sha256:3a3e829b87591583ffd6902a5ddd694be7d47fd815fd10813cb1e28a36a8938f|JL19-15-june-guide-excerpt|i_engine_cylinders",
+            "mapping_status": "mapped",
+            "normalization_notes": "Literal applicable June guide engine description; no missing classification inferred.",
+            "normalized_concept": 6,
+            "raw_source_value": "3.6L V6 24V VVT ENGINE UPG I W/ESS (ERC)",
+            "source_assertion_ref": "jeep_usa_order_guide_excerpts|sha256:3a3e829b87591583ffd6902a5ddd694be7d47fd815fd10813cb1e28a36a8938f|JL19-15-june-guide-excerpt|guide_engine_descriptor",
+            "target_attribute_key": "engine_cylinders"
+          },
+          {
+            "document_qualifier": "jeep_usa_order_guide_excerpts|sha256:3a3e829b87591583ffd6902a5ddd694be7d47fd815fd10813cb1e28a36a8938f|JL19-15-june-guide-excerpt|",
+            "interpretation_id": "jeep_usa_order_guide_excerpts|sha256:3a3e829b87591583ffd6902a5ddd694be7d47fd815fd10813cb1e28a36a8938f|JL19-15-june-guide-excerpt|i_engine_displacement_liters",
+            "mapping_status": "mapped",
+            "normalization_notes": "Literal applicable June guide engine description; no missing classification inferred.",
+            "normalized_concept": {
+              "normalized_unit": "L",
+              "normalized_value": "3.6",
+              "raw_source_string": "3.60"
+            },
+            "raw_source_value": "3.6L V6 24V VVT ENGINE UPG I W/ESS (ERC)",
+            "source_assertion_ref": "jeep_usa_order_guide_excerpts|sha256:3a3e829b87591583ffd6902a5ddd694be7d47fd815fd10813cb1e28a36a8938f|JL19-15-june-guide-excerpt|guide_engine_descriptor",
+            "target_attribute_key": "engine_displacement_liters"
+          },
+          {
+            "document_qualifier": "jeep_usa_order_guide_excerpts|sha256:3a3e829b87591583ffd6902a5ddd694be7d47fd815fd10813cb1e28a36a8938f|JL19-15-june-guide-excerpt|",
+            "interpretation_id": "jeep_usa_order_guide_excerpts|sha256:3a3e829b87591583ffd6902a5ddd694be7d47fd815fd10813cb1e28a36a8938f|JL19-15-june-guide-excerpt|i_generic_drive",
+            "mapping_status": "mapped",
+            "normalization_notes": "Explicit 4WD standard equipment for this manufacturer model code; subtype is not a canonical identity split.",
+            "normalized_concept": "4WD",
+            "raw_source_value": "COMMAND-TRAC PART TIME 4WD SYSTEM (DHN)",
+            "source_assertion_ref": "jeep_usa_order_guide_excerpts|sha256:3a3e829b87591583ffd6902a5ddd694be7d47fd815fd10813cb1e28a36a8938f|JL19-15-june-guide-excerpt|guide_drive",
+            "target_attribute_key": "generic_drive_classification"
+          },
+          {
+            "interpretation_id": "mopar_2019_wrangler_user_guide|sha256:0435598871bae4ab42e91f52f689331447ecfdb3d56644c3f9aac4274645cd0e|MY2019-JL-fuel|i_verified_fuel",
+            "mapping_status": "mapped",
+            "normalization_notes": "Explicit named-engine gasoline statement, printed p246; no inference from tank equipment.",
+            "normalized_concept": "gasoline",
+            "raw_source_value": "gasoline",
+            "source_assertion_ref": "mopar_2019_wrangler_user_guide|sha256:0435598871bae4ab42e91f52f689331447ecfdb3d56644c3f9aac4274645cd0e|MY2019-JL-fuel|fuel_erc",
+            "target_attribute_key": "fuel_type"
+          },
+          {
+            "document_qualifier": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-15|",
+            "interpretation_id": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-15|i_make",
+            "mapping_status": "mapped",
+            "normalization_notes": "Accepted inventory projection; no code-derived classifications.",
+            "normalized_concept": "Jeep",
+            "raw_source_value": "Jeep",
+            "source_assertion_ref": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-15|make",
+            "target_attribute_key": "make"
+          },
+          {
+            "document_qualifier": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-15|",
+            "interpretation_id": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-15|i_market",
+            "mapping_status": "mapped",
+            "normalization_notes": "Accepted inventory projection; no code-derived classifications.",
+            "normalized_concept": "US",
+            "raw_source_value": "US",
+            "source_assertion_ref": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-15|market",
+            "target_attribute_key": "market"
+          },
+          {
+            "document_qualifier": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-15|",
+            "interpretation_id": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-15|i_model",
+            "mapping_status": "mapped",
+            "normalization_notes": "Accepted inventory projection; no code-derived classifications.",
+            "normalized_concept": "Wrangler",
+            "raw_source_value": "Wrangler",
+            "source_assertion_ref": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-15|model",
+            "target_attribute_key": "model"
+          },
+          {
+            "document_qualifier": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-15|",
+            "interpretation_id": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-15|i_model_year",
+            "mapping_status": "mapped",
+            "normalization_notes": "Accepted inventory projection; no code-derived classifications.",
+            "normalized_concept": 2019,
+            "raw_source_value": 2019,
+            "source_assertion_ref": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-15|model_year",
+            "target_attribute_key": "model_year"
+          },
+          {
+            "document_qualifier": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-15|",
+            "interpretation_id": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-15|i_trim",
+            "mapping_status": "mapped",
+            "normalization_notes": "Accepted inventory projection; no code-derived classifications.",
+            "normalized_concept": "Unlimited Sahara Altitude",
+            "raw_source_value": "Unlimited Sahara Altitude",
+            "source_assertion_ref": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-15|trim",
+            "target_attribute_key": "trim"
+          }
+        ],
+        "normalized_technical_details": {
+          "drivetrain_details": {
+            "generic_classification": "4WD"
+          },
+          "engine": {
+            "cylinders": 6,
+            "displacement": {
+              "normalized_unit": "L",
+              "normalized_value": "3.6",
+              "raw_source_string": "3.60"
+            }
+          }
+        },
+        "reconciliation_and_review": {
+          "attribute_states": {
+            "engine_cylinders": {
+              "reconciliation_state": "single_source",
+              "review_disposition": "not_required"
+            },
+            "engine_displacement_liters": {
+              "reconciliation_state": "single_source",
+              "review_disposition": "not_required"
+            },
+            "generic_drive_classification": {
+              "reconciliation_state": "single_source",
+              "review_disposition": "not_required"
+            },
+            "make": {
+              "reconciliation_state": "single_source",
+              "review_disposition": "not_required"
+            },
+            "model": {
+              "reconciliation_state": "single_source",
+              "review_disposition": "not_required"
+            },
+            "model_year": {
+              "reconciliation_state": "single_source",
+              "review_disposition": "not_required"
+            }
+          },
+          "requires_human_review": false,
+          "review_workflow_disposition": "not_required"
+        },
+        "source_configuration_identities": [
+          {
+            "identity_type": "record_id",
+            "native_identifier": "MY2019-JL-drive",
+            "source_description": "jeep_2019_wrangler_specifications record_id MY2019-JL-drive",
+            "source_id": "jeep_2019_wrangler_specifications"
+          },
+          {
+            "identity_type": "record_id",
+            "native_identifier": "JL19-15-june-guide-excerpt",
+            "source_description": "jeep_usa_order_guide_excerpts record_id JL19-15-june-guide-excerpt",
+            "source_id": "jeep_usa_order_guide_excerpts"
+          },
+          {
+            "identity_type": "record_id",
+            "native_identifier": "MY2019-JL-fuel",
+            "source_description": "mopar_2019_wrangler_user_guide record_id MY2019-JL-fuel",
+            "source_id": "mopar_2019_wrangler_user_guide"
+          },
+          {
+            "identity_type": "record_id",
+            "native_identifier": "JL19-15",
+            "source_description": "reviewed_jeep_order_guide_inventory record_id JL19-15",
+            "source_id": "reviewed_jeep_order_guide_inventory"
+          },
+          {
+            "identity_type": "record_id",
+            "native_identifier": "MY2019-common-JLJP74",
+            "source_description": "reviewed_jeep_order_guide_inventory record_id MY2019-common-JLJP74",
+            "source_id": "reviewed_jeep_order_guide_inventory"
+          }
+        ]
+      },
+      "create_basis": "source_established_grade",
+      "eligibility_status": "eligible",
+      "existing_vehicle_definition_id": null,
+      "generation_resolution": {
+        "basis": "reviewed_source_correspondence",
+        "correspondences": [
+          {
+            "hash": "sha256:46fe14559da3d434e671d5d14187eabba86acf8d205e17d536fbe1c4b75619d6",
+            "uuid": "f2abb41d-7f25-46f6-9205-b04bec7886e0"
+          }
+        ],
+        "documents": [
+          {
+            "assertion_set_id": "JL19-15",
+            "assertions": [
+              {
+                "assertion_id": "engine_cylinders",
+                "attribute_key": "engine_cylinders",
+                "raw_value": 6,
+                "source_context": "Director-accepted research inventory row JL19-15; https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/; reported page 5. Page references are inherited research, not a new PDF inspection."
+              },
+              {
+                "assertion_id": "engine_displacement_liters",
+                "attribute_key": "engine_displacement_liters",
+                "raw_value": "3.60",
+                "source_context": "Director-accepted research inventory row JL19-15; https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/; reported page 5. Page references are inherited research, not a new PDF inspection."
+              },
+              {
+                "assertion_id": "engine_offering",
+                "attribute_key": "engine_offering",
+                "raw_value": "ERC 3.6L V6 ESS",
+                "source_context": "Director-accepted research inventory row JL19-15; https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/; reported page 5. Page references are inherited research, not a new PDF inspection."
+              },
+              {
+                "assertion_id": "make",
+                "attribute_key": "make",
+                "raw_value": "Jeep",
+                "source_context": "Director-accepted research inventory row JL19-15; https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/; reported page 5. Page references are inherited research, not a new PDF inspection."
+              },
+              {
+                "assertion_id": "market",
+                "attribute_key": "market",
+                "raw_value": "US",
+                "source_context": "Director-accepted research inventory row JL19-15; https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/; reported page 5. Page references are inherited research, not a new PDF inspection."
+              },
+              {
+                "assertion_id": "model",
+                "attribute_key": "model",
+                "raw_value": "Wrangler",
+                "source_context": "Director-accepted research inventory row JL19-15; https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/; reported page 5. Page references are inherited research, not a new PDF inspection."
+              },
+              {
+                "assertion_id": "model_year",
+                "attribute_key": "model_year",
+                "raw_value": 2019,
+                "source_context": "Director-accepted research inventory row JL19-15; https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/; reported page 5. Page references are inherited research, not a new PDF inspection."
+              },
+              {
+                "assertion_id": "source_model_code",
+                "attribute_key": "source_model_code",
+                "raw_value": "JLJP74",
+                "source_context": "Director-accepted research inventory row JL19-15; https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/; reported page 5. Page references are inherited research, not a new PDF inspection."
+              },
+              {
+                "assertion_id": "trim",
+                "attribute_key": "trim",
+                "raw_value": "Unlimited Sahara Altitude",
+                "source_context": "Director-accepted research inventory row JL19-15; https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/; reported page 5. Page references are inherited research, not a new PDF inspection."
+              }
+            ],
+            "extraction_mode": "manually_verified_transcription",
+            "extractor_id": "director_accepted_jl_inventory_projection",
+            "extractor_version": "1.0.0",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": "MY2019 dated-revision union accepted by director; individual printed dates not newly verified",
+            "raw_artifact_hash": "sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/evidence/accepted_research_snapshot.json",
+            "retrieved_at": "2026-11-07T16:57:20.747181+00:00",
+            "source_applicability": {
+              "applicability_basis": "director_accepted_MY2019_US_JL_research_inventory",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": null,
+              "unknown_fields": {}
+            },
+            "source_id": "reviewed_jeep_order_guide_inventory",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/MY2019_JL_CODEX_HANDOFF.md"
+          },
+          {
+            "assertion_set_id": "JL19-15-june-guide-excerpt",
+            "assertions": [
+              {
+                "assertion_id": "guide_drive",
+                "attribute_key": "drive_descriptor",
+                "raw_value": "COMMAND-TRAC PART TIME 4WD SYSTEM (DHN)",
+                "source_context": "https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/; printed page 15; JLJP74 column; standard equipment unless replaced by optional equipment"
+              },
+              {
+                "assertion_id": "guide_engine_descriptor",
+                "attribute_key": "engine_descriptor",
+                "raw_value": "3.6L V6 24V VVT ENGINE UPG I W/ESS (ERC)",
+                "source_context": "https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/; printed page 5; JLJP74 powertrain table"
+              },
+              {
+                "assertion_id": "guide_offering_table",
+                "attribute_key": "offering_table",
+                "raw_value": "STEP #1 SELECT - MODEL CODE\n$FWP $MSRP\nWRANGLER UNLIMITED SAHARA 36,679 38,395 JLJP74\nDESTINATION CHARGE 1,495\n1,545 IN HI\nSTEP #2 SELECT - QUICK ORDER PACKAGE CODE\nPOWERTRAIN AVAILABILITY\nENGINE $FWP $MSRP TRANSMISSION $FWP $MSRP ALTITUDE MOAB\n3.6L V6 24V VVT ENGINE UPG\nI W/ESS (ERC)\nN/C N/C 8-SPD AUTO 850RE\nTRANS (MAKE) (DFT)\n1,780 2,000 24G 24L 24M\nN/A W/M9E OR\nM9D\nN/A for Fleet or\nw/PGE Mojito\n6-SPEED MANUAL\nTRANSMISSION (DEM)\nN/C N/C 23G 23L\n2.0L I4 DOHC DI TURBO\nETORQUE ENGINE (EC3)\n890 1,000 8-SPD AUTO 850RE\nTRANS (MAKE) (DFT)\n1,780 2,000 28G 28L",
+                "source_context": "https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/; printed page 5; model code and quick-order package columns retained"
+              }
+            ],
+            "extraction_mode": "manually_verified_transcription",
+            "extractor_id": "reviewed_2019_jlu_selected_text",
+            "extractor_version": "1.0.0",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": "REISSUED 06/04/2019",
+            "raw_artifact_hash": "sha256:3a3e829b87591583ffd6902a5ddd694be7d47fd815fd10813cb1e28a36a8938f",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/evidence/jlu_2019_06_04_selected_excerpts.json",
+            "retrieved_at": "2026-11-07T17:04:24.836847+00:00",
+            "source_applicability": {
+              "applicability_basis": "MY2019 four-door JLJP74; offering page 5 and standard equipment page 15",
+              "applicability_scope": "configuration",
+              "market": "US",
+              "publisher_jurisdiction": null,
+              "unknown_fields": {}
+            },
+            "source_id": "jeep_usa_order_guide_excerpts",
+            "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/"
+          },
+          {
+            "assertion_set_id": "MY2019-JL-fuel",
+            "assertions": [
+              {
+                "assertion_id": "fuel_ec3",
+                "attribute_key": "fuel_type",
+                "raw_value": "gasoline",
+                "source_context": "https://vehicleinfo.mopar.com/assets/publications/en-ca/Jeep/2019/Wrangler/10387.pdf; printed p246, 2.0L Engine; US/Canada edition 19JL-926-AA"
+              },
+              {
+                "assertion_id": "fuel_erc",
+                "attribute_key": "fuel_type",
+                "raw_value": "gasoline",
+                "source_context": "https://vehicleinfo.mopar.com/assets/publications/en-ca/Jeep/2019/Wrangler/10387.pdf; printed p246, 3.6L Engine; US/Canada edition 19JL-926-AA"
+              }
+            ],
+            "extraction_mode": "manually_verified_transcription",
+            "extractor_id": "my2019_reviewed_selected_facts",
+            "extractor_version": "1.0.0",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": "19JL-926-AA First Edition",
+            "raw_artifact_hash": "sha256:0435598871bae4ab42e91f52f689331447ecfdb3d56644c3f9aac4274645cd0e",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/evidence/mopar_2019_fuel_selected_facts.json",
+            "retrieved_at": "2026-11-08T18:20:55.097237+00:00",
+            "source_applicability": {
+              "applicability_basis": "Printed MY2019 US/Canada cover; named engine sections apply across body styles; accepted inventory establishes offering linkage.",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": null,
+              "unknown_fields": {}
+            },
+            "source_id": "mopar_2019_wrangler_user_guide",
+            "source_locator": "https://vehicleinfo.mopar.com/assets/publications/en-ca/Jeep/2019/Wrangler/10387.pdf"
+          },
+          {
+            "assertion_set_id": "MY2019-JL-drive",
+            "assertions": [
+              {
+                "assertion_id": "drive_all_models",
+                "attribute_key": "drive_descriptor",
+                "raw_value": "Longitudinal front engine, four-wheel drive",
+                "source_context": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/specs/2019_JP_Wrangler_SPmk1alba10mregeqq9v39oek881.pdf; printed p1 BODY/CHASSIS Layout; same page explicitly covers both body styles"
+              }
+            ],
+            "extraction_mode": "manually_verified_transcription",
+            "extractor_id": "my2019_reviewed_selected_facts",
+            "extractor_version": "1.0.0",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": "MY2019; no printed revision date",
+            "raw_artifact_hash": "sha256:84bb3faf505332a2799830563cb1863621385b96430585e1a03216924596fd40",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/evidence/jeep_2019_specification_selected_facts.json",
+            "retrieved_at": "2026-11-08T18:20:55.097237+00:00",
+            "source_applicability": {
+              "applicability_basis": "MY2019 US manufacturer model specifications, all models and both bodies; commercial market independently established by retained US order guides.",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": null,
+              "unknown_fields": {}
+            },
+            "source_id": "jeep_2019_wrangler_specifications",
+            "source_locator": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/specs/2019_JP_Wrangler_SPmk1alba10mregeqq9v39oek881.pdf"
+          },
+          {
+            "assertion_set_id": "MY2019-common-JLJP74",
+            "assertions": [
+              {
+                "assertion_id": "common_model_code",
+                "attribute_key": "source_model_code",
+                "raw_value": "JLJP74",
+                "source_context": "Accepted MY2019 US JL inventory, manufacturer model-code column; common selector shared across this model-code group."
+              }
+            ],
+            "extraction_mode": "manually_verified_transcription",
+            "extractor_id": "my2019_reviewed_selected_facts",
+            "extractor_version": "1.0.0",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": "Accepted MY2019 union; historical edition details remain in original inventory",
+            "raw_artifact_hash": "sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/evidence/accepted_research_snapshot.json",
+            "retrieved_at": "2026-11-08T18:20:55.097237+00:00",
+            "source_applicability": {
+              "applicability_basis": "Director-accepted MY2019 US JL dated-revision inventory; scope is exactly this retained manufacturer model code.",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": null,
+              "unknown_fields": {}
+            },
+            "source_id": "reviewed_jeep_order_guide_inventory",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/MY2019_JL_CODEX_HANDOFF.md"
+          },
+          {
+            "assertion_set_id": "ERC-review-synthesis",
+            "assertions": [
+              {
+                "assertion_id": "aspiration_reasoning",
+                "attribute_key": "classification_review_support",
+                "raw_value": "Propose naturally_aspirated for the offered ERC 3.6L Pentastar V6 ESS. The MY19 technical guide positively classifies the same marketed family/ESS architecture as naturally aspirated; applicable US guide/specification lineage identifies ERC, its marketed dimensions and trim/body offerings. Induction continuity across these regional implementations is an engineering judgment supported by the combined evidence, not a direct US manufacturer assertion, code-equality proof or inference from absent turbo words alone.",
+                "source_context": "Research synthesis; AU p10 and pinned US offering evidence. Human conclusion, not manufacturer text."
+              },
+              {
+                "assertion_id": "electrification_reasoning",
+                "attribute_key": "classification_review_support",
+                "raw_value": "Propose none for the ten offered ERC configurations. US manual hardware descriptions distinguish conventional ESS starting equipment from an eTorque motor-generator with hybrid battery and launch assistance; the MY2019 catalog positively identifies conventional without-eTorque alternator applications and a separate ERG BSG application. US offering lineage binds the ten rows to ERC ESS; contemporary MY2020 powertrain materials separately introduce/describe V6 eTorque Sahara. The combined architecture/applicability judgment requires human adjudication; neither ESS terminology, missing eTorque words nor introduction chronology alone establishes nonhybrid status.",
+                "source_context": "Research synthesis; US manual hardware, catalog applications and MY2020 press context."
+              },
+              {
+                "assertion_id": "scope_limitations",
+                "attribute_key": "classification_review_support",
+                "raw_value": "No explicit US ERC naturally aspirated/nonhybrid statement was found. Australian-to-US induction continuity and the ERC conventional-hardware association are derived. Catalog provenance and MY2020 introduction chronology are not conclusive alone. Regulatory material and retrospective FCA Y40 also describe MY2019 3.6L hybrid/eTorque applications without establishing that they are ERC; the proposal is restricted to the ten retained ERC offerings, not all MY2019 3.6L Wranglers.",
+                "source_context": "All limitations must remain visible to the human reviewer."
+              }
+            ],
+            "extraction_mode": "manually_verified_transcription",
+            "extractor_id": "reviewed_classification_support",
+            "extractor_version": "1.0",
+            "raw_artifact_hash": "sha256:df1686c6c360f451a8c10b94e4c4b6dafc5cabced607e2ecac6f0be8d4521443",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2019_JL/director_review/erc_classification_proposals_20261108/evidence/erc_research_dossier.json",
+            "retrieved_at": "2026-11-08T20:06:44.639511+00:00",
+            "source_applicability": {
+              "applicability_basis": "Targeted review of ten retained US MY2019 ERC offerings; regional source scope remains explicit in dossier.",
+              "applicability_scope": "model_year",
+              "market": "US"
+            },
+            "source_id": "my2019_erc_research_review",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/director_review/erc_classification_proposals_20261108/evidence/erc_research_dossier.json"
+          },
+          {
+            "assertion_set_id": "US-MY19-hardware",
+            "assertions": [
+              {
+                "assertion_id": "reviewed_context",
+                "attribute_key": "classification_review_support",
+                "raw_value": "ESS versus eTorque hardware distinction; original source lexemes and pages retained.",
+                "source_context": "Context summarized for human review; not an internal-schema manufacturer classification."
+              }
+            ],
+            "extraction_mode": "manually_verified_transcription",
+            "extractor_id": "reviewed_classification_support",
+            "extractor_version": "1.0",
+            "raw_artifact_hash": "sha256:456d7554534a5dae9f0ecf9ca6ae5f74f634d28d841f0c7a62c44fa0e1cfca75",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2019_JL/director_review/erc_supplied_sources_20261108/sources/mopar_hardware_selected_facts.json",
+            "retrieved_at": "2026-11-08T20:06:44.639511+00:00",
+            "source_applicability": {
+              "applicability_basis": "Manufacturer/retailer source scope described in ERC dossier; no unsupported cross-market fact promoted.",
+              "applicability_scope": "model_year",
+              "market": "US"
+            },
+            "source_id": "mopar_2019_hardware_excerpts",
+            "source_locator": "https://vehicleinfo.mopar.com/assets/publications/en-ca/Jeep/2019/Wrangler/10387.pdf"
+          },
+          {
+            "assertion_set_id": "MY19-alternator",
+            "assertions": [
+              {
+                "assertion_id": "reviewed_context",
+                "attribute_key": "classification_review_support",
+                "raw_value": "Without-eTorque 3.6L alternator subset plus separate ERG BSG entry; no explicit ERC token.",
+                "source_context": "Context summarized for human review; not an internal-schema manufacturer classification."
+              }
+            ],
+            "extraction_mode": "manually_verified_transcription",
+            "extractor_id": "reviewed_classification_support",
+            "extractor_version": "1.0",
+            "raw_artifact_hash": "sha256:e558fc4e27edf7f39a04332fadbd65930ee038b76f1377f84be23f0ac4c42843",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2019_JL/director_review/erc_supplied_sources_20261108/sources/alternator-catalog.html",
+            "retrieved_at": "2026-11-08T20:06:44.639511+00:00",
+            "source_applicability": {
+              "applicability_basis": "Manufacturer/retailer source scope described in ERC dossier; no unsupported cross-market fact promoted.",
+              "applicability_scope": "model_year",
+              "market": "US"
+            },
+            "source_id": "jeeppartsdeal_oe_catalog",
+            "source_locator": "https://www.jeeppartsdeal.com/parts-list/2019-jeep-wrangler/charging-starting/alternator"
+          },
+          {
+            "assertion_set_id": "MY19-family",
+            "assertions": [
+              {
+                "assertion_id": "reviewed_context",
+                "attribute_key": "classification_review_support",
+                "raw_value": "MY2019 Wrangler family availability, with distinct hybrid/eTorque family applications.",
+                "source_context": "Context summarized for human review; not an internal-schema manufacturer classification."
+              }
+            ],
+            "extraction_mode": "manually_verified_transcription",
+            "extractor_id": "reviewed_classification_support",
+            "extractor_version": "1.0",
+            "raw_artifact_hash": "sha256:7e16f753401a6711b78b510ad4cf35cecdaa775b7ce719b0050fd6db72dabfef",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2019_JL/director_review/erc_supplied_sources_20261108/sources/pentastar-family-facts.pdf",
+            "retrieved_at": "2026-11-08T20:06:44.639511+00:00",
+            "source_applicability": {
+              "applicability_basis": "Manufacturer/retailer source scope described in ERC dossier; no unsupported cross-market fact promoted.",
+              "applicability_scope": "model_year",
+              "market": "US"
+            },
+            "source_id": "fca_pentastar_family_facts",
+            "source_locator": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/attachments/Pentastar_V-6_facts1suaud45cdq3l94ji0b4a7550n.pdf"
+          },
+          {
+            "assertion_set_id": "carb_2019_3_6_hev",
+            "assertions": [
+              {
+                "assertion_id": "scope_caution",
+                "attribute_key": "classification_review_support",
+                "raw_value": "MY2019 3.6L test group KCRXT03.65P7 is hybrid-electric and lists Wrangler models; no ERC identifier established.",
+                "source_context": "Printed p1; broad model-year scope must not be equated with the targeted ERC offering."
+              }
+            ],
+            "extraction_mode": "manually_verified_transcription",
+            "extractor_id": "reviewed_classification_support",
+            "extractor_version": "1.0",
+            "raw_artifact_hash": "sha256:c82e4ddc543e0142628e1cf66f1ff6e38e233eff474e6b1b93e0c2dd0eae64e6",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2019_JL/director_review/erc_classification_proposals_20261108/evidence/carb-2019-a0091433.pdf",
+            "retrieved_at": "2026-11-08T20:06:44.639511+00:00",
+            "source_applicability": {
+              "applicability_basis": "US certification/service scope; retained as limitation, not as proof of target ERC classification.",
+              "applicability_scope": "model_year",
+              "market": "US"
+            },
+            "source_id": "carb_2019_3_6_hev",
+            "source_locator": "https://ww2.arb.ca.gov/sites/default/files/classic/msprog/nvepb/executive_orders/EO%20Web%20Files/PC-LDT-MDV/2019/0002/pc-ldt-mdv_ldt_a-9-1433__sdt--20180905.pdf"
+          },
+          {
+            "assertion_set_id": "fca_y40_scope",
+            "assertions": [
+              {
+                "assertion_id": "scope_caution",
+                "attribute_key": "classification_review_support",
+                "raw_value": "Retrospective FCA Y40 lists MY2019-2021 Wrangler 3.6L eTorque ERG; does not state ERC is hybrid.",
+                "source_context": "Printed p1; broad model-year scope must not be equated with the targeted ERC offering."
+              }
+            ],
+            "extraction_mode": "manually_verified_transcription",
+            "extractor_id": "reviewed_classification_support",
+            "extractor_version": "1.0",
+            "raw_artifact_hash": "sha256:6af1557c414a22a709a7a0d9d50767ef55f7fc885dab3fe26bbcf8dd35b9c2d7",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2019_JL/director_review/erc_classification_proposals_20261108/evidence/fca-y40-bulletin.pdf",
+            "retrieved_at": "2026-11-08T20:06:44.639511+00:00",
+            "source_applicability": {
+              "applicability_basis": "US certification/service scope; retained as limitation, not as proof of target ERC classification.",
+              "applicability_scope": "model_year",
+              "market": "US"
+            },
+            "source_id": "fca_y40_scope",
+            "source_locator": "https://static.nhtsa.gov/odi/tsbs/2024/MC-10251816-9999.pdf"
+          },
+          {
+            "assertion_set_id": "sha256:43118ff96aa9ff80b41922e8f743768260b7ea3edd36c036c68860ac04b8f2af",
+            "assertions": [
+              {
+                "assertion_id": "electrification_type",
+                "attribute_key": "electrification_type",
+                "raw_value": {
+                  "classification": "electrification_type",
+                  "provenance": "human_adjudicated",
+                  "value": "none"
+                },
+                "source_context": "Human-adjudicated conclusion by project_owner: Propose none for the ten offered ERC configurations. US manual hardware descriptions distinguish conventional ESS starting equipment from an eTorque motor-generator with hybrid battery and launch assistance; the MY2019 catalog positively identifies conventional without-eTorque alternator applications and a separate ERG BSG application. US offering lineage binds the ten rows to ERC ESS; contemporary MY2020 powertrain materials separately introduce/describe V6 eTorque Sahara. The combined architecture/applicability judgment requires human adjudication; neither ESS terminology, missing eTorque words nor introduction chronology alone establishes nonhybrid status."
+              },
+              {
+                "assertion_id": "engine_aspiration",
+                "attribute_key": "engine_aspiration",
+                "raw_value": {
+                  "classification": "engine_aspiration",
+                  "provenance": "human_adjudicated",
+                  "value": "naturally_aspirated"
+                },
+                "source_context": "Human-adjudicated conclusion by project_owner: Propose naturally_aspirated for the offered ERC 3.6L Pentastar V6 ESS. The MY19 technical guide positively classifies the same marketed family/ESS architecture as naturally aspirated; applicable US guide/specification lineage identifies ERC, its marketed dimensions and trim/body offerings. Induction continuity across these regional implementations is an engineering judgment supported by the combined evidence, not a direct US manufacturer assertion, code-equality proof or inference from absent turbo words alone."
+              }
+            ],
+            "extraction_mode": "manually_verified_transcription",
+            "extractor_id": "approved_human_classification",
+            "extractor_version": "1.1",
+            "publication_revision": "Human classification adjudication 1.1; not manufacturer assertions",
+            "raw_artifact_hash": "sha256:12d513952a1b5093a6a47a180215801c8d312da67199e2fda6ce927d6796ed9f",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/adjudications/JL19-15.approved.json",
+            "retrieved_at": "2026-11-08T20:17:13.457926+00:00",
+            "source_applicability": {
+              "applicability_basis": "Exact candidate digest; approved human conclusion",
+              "applicability_scope": "configuration",
+              "market": "US"
+            },
+            "source_id": "human_classification_adjudication",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/adjudications/JL19-15.approved.json"
+          }
+        ],
+        "engine_distinction": {
+          "canonical_powertrain": {
+            "electrification_type": "none",
+            "engine_aspiration": "naturally_aspirated",
+            "engine_cylinders": 6,
+            "engine_displacement_liters": "3.6",
+            "fuel_type": "gasoline"
+          },
+          "peers": [],
+          "version": "2.0"
+        },
+        "fields": {
+          "drivetrain": "4WD",
+          "electrification_type": "none",
+          "engine_aspiration": "naturally_aspirated",
+          "engine_cylinders": 6,
+          "engine_displacement_liters": "3.6",
+          "engine_name": "3.6L V6",
+          "fuel_type": "gasoline",
+          "market": "US",
+          "model_year": 2019,
+          "trim_name": "Unlimited Sahara Altitude"
+        },
+        "generation_evidence": [
+          {
+            "assertion_id": "source_model_code",
+            "assertion_set_id": "JL19-15",
+            "document_hash": "sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3",
+            "identity_type": "model_code",
+            "native_identifier": "JLJP74",
+            "normalizer_id": "explicit_generation_identity",
+            "normalizer_version": "1.0.0",
+            "source_id": "reviewed_jeep_order_guide_inventory",
+            "source_namespace": "source_model_code"
+          },
+          {
+            "assertion_id": "common_model_code",
+            "assertion_set_id": "MY2019-common-JLJP74",
+            "document_hash": "sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3",
+            "identity_type": "model_code",
+            "native_identifier": "JLJP74",
+            "normalizer_id": "explicit_generation_identity",
+            "normalizer_version": "1.0.0",
+            "source_id": "reviewed_jeep_order_guide_inventory",
+            "source_namespace": "source_model_code"
+          }
+        ],
+        "market": "US",
+        "model_year": 2019,
+        "parents": {
+          "end_year": null,
+          "generation_active": true,
+          "generation_id": 32,
+          "generation_model_id": 21,
+          "generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+          "manufacturer_active": true,
+          "manufacturer_id": 20,
+          "manufacturer_name": "Jeep",
+          "manufacturer_uuid": "42eefe42-0f2f-4e31-b4b2-f3e520ea0e50",
+          "start_year": 2018,
+          "vehicle_model_active": true,
+          "vehicle_model_id": 21,
+          "vehicle_model_name": "Wrangler",
+          "vehicle_model_uuid": "5ec5f58a-b140-484c-97f0-c90ec9c134d6"
+        },
+        "resolution_version": "1.1",
+        "target_identity": {}
+      },
+      "mechanical_basis_existing_id": null,
+      "namespace_snapshot_count": 14,
+      "native_identifier": "MY2019-JL-drive",
+      "planned_action": "create",
+      "reasons": [
+        "Qualified five-attribute factory engine identity established."
+      ],
+      "resolved_generation_id": 32,
+      "resolved_manufacturer_id": 20,
+      "resolved_vehicle_model_id": 21,
+      "review_category": null,
+      "source_identity_type": "record_id",
+      "target_slug": "2019-unlimited-sahara-altitude-36l-v6-4wd-us",
+      "target_vehicle_definition_fields": {
+        "drivetrain": "4WD",
+        "electrification_type": "none",
+        "engine_aspiration": "naturally_aspirated",
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "engine_name": "3.6L V6",
+        "fuel_type": "gasoline",
+        "market": "US",
+        "model_year": 2019,
+        "trim_name": "Unlimited Sahara Altitude"
+      }
+    }
+  ],
+  "raw_artifact_hash": "sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3",
+  "raw_artifact_reference": "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/evidence/accepted_research_snapshot.json",
+  "source_id": "reviewed_jeep_order_guide_inventory"
+}

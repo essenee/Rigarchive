@@ -1,0 +1,129 @@
+{
+  "created_at": "2026-11-08T18:36:34.855688+00:00",
+  "status": "blocked",
+  "sources": [
+    {
+      "source_id": "supplied-1",
+      "url": "https://www.jlwranglerforums.com/forum/attachments/my19-wrangler-jl-buyers-guide-pdf.131372/",
+      "title": "JL Wrangler MY19 Buyer\u2019s Guide, January 2019",
+      "sections": [
+        "p10 Powertrain aspiration",
+        "p11 model codes",
+        "p12 FCA Australia disclaimer"
+      ],
+      "publisher": "FCA Australia; hosted manufacturer publication",
+      "retrieval": "Cached PDF text inspected. Direct original download HTTP 403; no original PDF hash claimed.",
+      "explicit_finding": "Naturally aspirated 3.6L Pentastar ESS for the specified Australian applications.",
+      "applicability": "US ERC not established: Australian JLUL/JLUP/JLUS codes differ from US JLJL/JLJP/JLJS. No ERC identifier found. Equal engine labels, displacement and cylinders cannot establish the cross-market join.",
+      "candidate_use": "Not admitted for US ERC aspiration."
+    },
+    {
+      "source_id": "supplied-2",
+      "url": "https://cdn.dealereprocess.org/cdn/servicemanuals/jeep/2019-wrangler.pdf",
+      "title": "Supplied US MY2019 Wrangler owner\u2019s manual URL",
+      "sections": [
+        "Stop/Start hardware description (supplied reference)"
+      ],
+      "publisher": "Manufacturer manual hosted by Dealer eProcess; exact edition not retrieved",
+      "retrieval": "Web and direct original download HTTP 403; supplied PDF bytes not verified.",
+      "alternative_source": "https://vehicleinfo.mopar.com/assets/publications/en-ca/Jeep/2019/Wrangler/10387.pdf",
+      "alternative_title": "2019 New Wrangler User Guide",
+      "alternative_sections": [
+        "US/Canada cover",
+        "printed p163 automatic-transmission Stop/Start",
+        "printed p166 manual-transmission Stop/Start"
+      ],
+      "explicit_finding": "Manufacturer distinguishes conventional ESS starting hardware from eTorque regeneration and launch-assist hardware. Sections are conditional on equipment; they do not enumerate every ERC application or explicitly classify all ERC as nonhybrid.",
+      "candidate_use": "Hardware distinction corroborated by inspected official alternative; ESS alone is not normalized to none."
+    },
+    {
+      "source_id": "supplied-3",
+      "url": "https://www.jlwranglerforums.com/forum/attachments/2019_wrangler_2_door_10_04_2018-pdf-96817-pdf.108690/",
+      "title": "2019 Jeep Wrangler 2 Door Customer Preferred Code Guide",
+      "sections": [
+        "p1 US and MY2019 scope",
+        "p2 Sport/Sport S table",
+        "p5 Rubicon table"
+      ],
+      "publisher": "FCA US LLC; hosted manufacturer publication",
+      "revision": "Issued 2018-09-11; reissued 2018-10-04",
+      "retrieval": "Cached PDF text inspected via force-system-browser=1. Direct original download HTTP 403; no PDF hash claimed.",
+      "explicit_finding": "ERC identifies the US two-door 3.6L V6 ESS offering; EC3 identifies the turbo/eTorque alternative.",
+      "coverage": "Three two-door ERC candidates; seven four-door offerings already linked by retained June guide evidence.",
+      "candidate_use": "Offering-code linkage corroborated; neither aspiration nor complete nonhybrid status established."
+    },
+    {
+      "source_id": "supplied-4",
+      "url": "https://www.jeeppartsdeal.com/parts-list/2019-jeep-wrangler/charging-starting/alternator",
+      "title": "2019 Jeep Wrangler Alternator catalog",
+      "sections": [
+        "Alternators 56029765AA, 56029597AA/AB, 56029803AA",
+        "5192387AC starter-generator fitting options"
+      ],
+      "publisher": "JeepPartsDeal retailer; OE parts data, not established as an FCA-issued technical publication",
+      "retrieval": "Original HTTPS HTML retained with embedded catalog data.",
+      "explicit_finding": "Conventional 3.6L alternators explicitly specify Without E-Torque. A separate belt-driven starter-generator lists ERG 3.6L with BSG. Exact ERC token absent in retained HTML.",
+      "applicability": "Supports a without-eTorque subset; does not bind all ten ERC configurations or certify the absence of every hybrid architecture.",
+      "candidate_use": "Corroborating hardware lead only; no invented nonhybrid raw claim.",
+      "retained": {
+        "path": "docs/implementation/handoffs/MY2019_JL/director_review/erc_supplied_sources_20261108/sources/alternator-catalog.html",
+        "sha256": "sha256:e558fc4e27edf7f39a04332fadbd65930ee038b76f1377f84be23f0ac4c42843",
+        "bytes": 229393,
+        "representation": "original downloaded bytes"
+      }
+    },
+    {
+      "source_id": "supplied-5",
+      "url": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/attachments/Pentastar_V-6_facts1suaud45cdq3l94ji0b4a7550n.pdf",
+      "title": "Pentastar V-6 facts \u2014 Availability and Production Sites",
+      "sections": [
+        "p1 MY2019 availability",
+        "p1 Saltillo and Trenton applications"
+      ],
+      "publisher": "FCA manufacturer media distribution",
+      "retrieval": "Original downloaded PDF retained; page/text inspected.",
+      "explicit_finding": "MY2019 Pentastar-family availability includes Wrangler. Family production list distinguishes eTorque and hybrid applications.",
+      "candidate_use": "Family context; no universal naturally aspirated statement, ERC none classification, or cross-market variant-equivalence assertion.",
+      "retained": {
+        "path": "docs/implementation/handoffs/MY2019_JL/director_review/erc_supplied_sources_20261108/sources/pentastar-family-facts.pdf",
+        "sha256": "sha256:7e16f753401a6711b78b510ad4cf35cecdaa775b7ce719b0050fd6db72dabfef",
+        "bytes": 255199,
+        "representation": "original downloaded bytes"
+      }
+    }
+  ],
+  "retained_artifacts": {
+    "alternator-catalog.html": {
+      "path": "docs/implementation/handoffs/MY2019_JL/director_review/erc_supplied_sources_20261108/sources/alternator-catalog.html",
+      "sha256": "sha256:e558fc4e27edf7f39a04332fadbd65930ee038b76f1377f84be23f0ac4c42843",
+      "bytes": 229393,
+      "representation": "original downloaded bytes"
+    },
+    "pentastar-family-facts.pdf": {
+      "path": "docs/implementation/handoffs/MY2019_JL/director_review/erc_supplied_sources_20261108/sources/pentastar-family-facts.pdf",
+      "sha256": "sha256:7e16f753401a6711b78b510ad4cf35cecdaa775b7ce719b0050fd6db72dabfef",
+      "bytes": 255199,
+      "representation": "original downloaded bytes"
+    },
+    "mopar_hardware_selected_facts.json": {
+      "path": "docs/implementation/handoffs/MY2019_JL/director_review/erc_supplied_sources_20261108/sources/mopar_hardware_selected_facts.json",
+      "sha256": "sha256:456d7554534a5dae9f0ecf9ca6ae5f74f634d28d841f0c7a62c44fa0e1cfca75",
+      "bytes": 1229,
+      "representation": "selected facts/lexemes; not PDF bytes"
+    }
+  },
+  "contract_assessment": {
+    "architecture": "RA-044 section 3 permits none from a verified source rule using applicable manufacturer evidence. Cross-market engine equivalence, ESS alone and missing hybrid words are not sufficient.",
+    "implementation": "_supports accepts explicit none/nonhybrid/non hybrid raw claims. ESS and Without E-Torque both fail as raw support for none. It cannot evaluate the proposed multi-document hardware inference.",
+    "consequence": "A future fully scoped hardware rule needs separate implementation compatibility review. No synthetic nonhybrid source claim was inserted, and no code or contract was changed."
+  },
+  "result": {
+    "erc_candidates_reviewed": 10,
+    "erc_candidates_completed": 0,
+    "candidate_revisions_created": 0,
+    "engine_aspiration": "null on all ten",
+    "electrification_type": "null on all ten",
+    "plans_created": 0,
+    "publications": 0
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "authorization_source": "Explicit owner approval in current chat: RigArchive \u2014 Approve MY2019 ERC classifications",
+  "excluded_authority": [
+    "Other configurations/engines/markets/model years",
+    "Generation correspondence publication",
+    "Canonical import planning/execution",
+    "Canonical database writes",
+    "Historical backfill"
+  ],
+  "human_director": "project_owner",
+  "nature": "Evidence-backed human-derived conclusions; preserve documented limitations and moderate confidence. Not direct manufacturer assertions.",
+  "recorded_at": "2026-11-08T20:17:10.873736+00:00",
+  "scope": {
+    "classifications": {
+      "electrification_type": "none",
+      "engine_aspiration": "naturally_aspirated"
+    },
+    "engine": "ERC",
+    "market": "US",
+    "model": "Jeep Wrangler JL",
+    "model_year": 2019,
+    "row_ids": [
+      "JL19-01",
+      "JL19-03",
+      "JL19-05",
+      "JL19-07",
+      "JL19-09",
+      "JL19-11",
+      "JL19-13",
+      "JL19-15",
+      "JL19-17",
+      "JL19-18"
+    ]
+  }
+}

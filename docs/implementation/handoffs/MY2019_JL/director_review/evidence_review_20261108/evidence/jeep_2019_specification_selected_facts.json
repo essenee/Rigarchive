@@ -1,0 +1,15 @@
+{
+  "body_scope": "The same page explicitly lists both two-door and four-door tank capacities and towing weights.",
+  "engine_scope": "Manufacturer specifications identify the 3.6L as standard on all models and the 2.0L as available on all models (pages 1 and 2).",
+  "interpretation": "4WD, independent of transfer-case subtype and transmission.",
+  "layout_lexeme": "Longitudinal front engine, four-wheel drive",
+  "limitations": "No naturally aspirated or nonhybrid assertion is present. Do not infer either from silence. Printed title is MY2019; the web search viewer incorrectly rewrote this URL to a MY2018 document, so downloaded bytes and printed heading were checked directly.",
+  "original_pdf_retained_for_contract": false,
+  "printed_page": 1,
+  "printed_revision_date": null,
+  "publisher": "FCA US LLC / Jeep",
+  "representation": "Reviewed selected facts and short source lexemes; not original PDF bytes",
+  "retrieved_at": "2026-11-08T18:20:55.097237+00:00",
+  "source_url": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/specs/2019_JP_Wrangler_SPmk1alba10mregeqq9v39oek881.pdf",
+  "title": "2019 Jeep Wrangler Specifications"
+}

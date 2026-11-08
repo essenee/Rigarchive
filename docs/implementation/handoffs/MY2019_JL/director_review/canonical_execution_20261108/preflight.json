@@ -1,0 +1,1752 @@
+{
+  "all_table_snapshot": {
+    "accounts_user": {
+      "count": 1,
+      "row_hash": "sha256:b3758defb1ea6d975ce50f522adca740e47cdaaceb86e218271130f84b205240"
+    },
+    "accounts_user_groups": {
+      "count": 0,
+      "row_hash": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "accounts_user_user_permissions": {
+      "count": 0,
+      "row_hash": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "auth_group": {
+      "count": 0,
+      "row_hash": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "auth_group_permissions": {
+      "count": 0,
+      "row_hash": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "auth_permission": {
+      "count": 172,
+      "row_hash": "sha256:b4a101743764a4efb282a70a4f9a229af8fa44d844feeff6c329695628abd743"
+    },
+    "django_admin_log": {
+      "count": 23,
+      "row_hash": "sha256:0bbca4f37e1251b10d8b841e32156999e0ce736ded4fcf82064f0afb8fd974d4"
+    },
+    "django_content_type": {
+      "count": 43,
+      "row_hash": "sha256:c951c13d043fa96ce7dc394b6e5499169bc754b262eec4660d0da3745a4d1c4c"
+    },
+    "django_migrations": {
+      "count": 31,
+      "row_hash": "sha256:75897c876de5deff8ed39cfbc97f4cc4796ac89c2b9ccb69ccd4255675750878"
+    },
+    "django_session": {
+      "count": 5,
+      "row_hash": "sha256:2189083ec7fa05fce5fdada6c6d7bf805202450369204d2625de32140c22f059"
+    },
+    "measurements_applicabilityfeature": {
+      "count": 0,
+      "row_hash": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "measurements_applicabilitystate": {
+      "count": 0,
+      "row_hash": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "measurements_measurementdefinition": {
+      "count": 4,
+      "row_hash": "sha256:77b69b4fb733bc914a13e199e83cc1adf5b711c77f9159aaed94547b6c37ea14"
+    },
+    "measurements_measurementresult": {
+      "count": 2,
+      "row_hash": "sha256:ee5c8ecadb4c3c80f1181348c5763bf72fc42f9cc4c327479a05906c24e1853c"
+    },
+    "measurements_measurementresultcondition": {
+      "count": 0,
+      "row_hash": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "observation_observation": {
+      "count": 0,
+      "row_hash": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "reference_canonicalrecordcorrection": {
+      "count": 31,
+      "row_hash": "sha256:6fdcc6215aa15560db64fb5b8d55dd7aefa7eea0f96d2daf5d85297d240aad4a"
+    },
+    "reference_compatibilityrule": {
+      "count": 0,
+      "row_hash": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "reference_compatibilityrulerevision": {
+      "count": 0,
+      "row_hash": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "reference_equipmentitem": {
+      "count": 0,
+      "row_hash": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "reference_equipmentitemrevision": {
+      "count": 0,
+      "row_hash": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "reference_equipmentoffering": {
+      "count": 0,
+      "row_hash": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "reference_equipmentofferingrevision": {
+      "count": 0,
+      "row_hash": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "reference_evidenceassertionreference": {
+      "count": 0,
+      "row_hash": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "reference_evidencedocument": {
+      "count": 0,
+      "row_hash": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "reference_generation": {
+      "count": 16,
+      "row_hash": "sha256:3be2001152451766980388d366859cf027c00c10b8381ec0fa9f646633695ead"
+    },
+    "reference_generationcorrespondencerevision": {
+      "count": 13,
+      "row_hash": "sha256:6d0a88f9a86971810e7db1b5db01044f95e0d311334f615c1e5045bcd7134d40"
+    },
+    "reference_importexecutionreceipt": {
+      "count": 2861,
+      "row_hash": "sha256:d79d87d89efa14735f2253abb2434d56e248e1698363522f4eca97bc808d33a7"
+    },
+    "reference_manufacturer": {
+      "count": 5,
+      "row_hash": "sha256:08060eda37a7b223ff55dec25654bbe8f6a0e614388f6639ae0252ffccde91ab"
+    },
+    "reference_specificationassertion": {
+      "count": 0,
+      "row_hash": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "reference_specificationcatalogue": {
+      "count": 0,
+      "row_hash": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "reference_specificationcataloguecoverage": {
+      "count": 0,
+      "row_hash": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "reference_specificationcataloguemembership": {
+      "count": 0,
+      "row_hash": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "reference_specificationcataloguerevision": {
+      "count": 0,
+      "row_hash": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "reference_specificationdefinition": {
+      "count": 0,
+      "row_hash": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "reference_specificationdefinitiondependency": {
+      "count": 0,
+      "row_hash": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "reference_specificationdefinitionrevision": {
+      "count": 0,
+      "row_hash": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "reference_specificationevidencelink": {
+      "count": 0,
+      "row_hash": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "reference_specificationpublicationreceipt": {
+      "count": 0,
+      "row_hash": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "reference_specificationunitregistry": {
+      "count": 0,
+      "row_hash": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "reference_transmissiondescription": {
+      "count": 0,
+      "row_hash": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "reference_transmissiondescriptionrevision": {
+      "count": 0,
+      "row_hash": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "reference_transmissionengineeringassertion": {
+      "count": 0,
+      "row_hash": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "reference_transmissionoffering": {
+      "count": 0,
+      "row_hash": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "reference_transmissionofferingrevision": {
+      "count": 0,
+      "row_hash": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "reference_vehicledefinition": {
+      "count": 793,
+      "row_hash": "sha256:b4a4256e59d91038c1c4ad475094ca6e921b8d2c2c8a3c15221873ce24583cad"
+    },
+    "reference_vehiclemodel": {
+      "count": 6,
+      "row_hash": "sha256:0104aa79043fbf19d4d3a86502c49f2c557b0ce64a0069d6b4c08a7395339bd0"
+    },
+    "sqlite_sequence": {
+      "count": 40,
+      "row_hash": "sha256:c57fcc54f5e2fdc43adafd8b466fe4ff81da370b9140297fa8bb51519b3e7204"
+    }
+  },
+  "authorization": "Current owner message authorizes exact verified 19-row Matrix certification and create-only execution; project_owner director, codex agent. No broader data changes authorized.",
+  "backup": "backups/review/my2019_jl_import_20261108T205605112634Z/pre-import.sqlite3",
+  "backup_foreign_keys": "ok",
+  "backup_integrity": "ok",
+  "backup_matches_all_tables": true,
+  "backup_sha256": "sha256:346dfed9672b836d84b605a9618d79804f3cfe1ed167809e19780ba229ddf11d",
+  "counts_before": {
+    "correspondences": 13,
+    "receipts": 2861,
+    "vehicle_definitions": 793
+  },
+  "database_before_sha256": "sha256:c0ee965ce9d741c68850b440065876e2f223cc4648006a4bff1c431712a48686",
+  "interpreter": "/Users/cosmo/dev/Rigarchive/.venv/bin/python",
+  "live_matrix_review": {
+    "approval_digest": null,
+    "authorized_count": 19,
+    "complete": false,
+    "counts": {
+      "pending_create": 19
+    },
+    "matrix_digest": "sha256:d8f11301e230b8485dfd2d15c0b9342aaa0cc778aa7418052ce8da7b10cf6896",
+    "matrix_version": "2.1",
+    "model_year": 2019,
+    "rows": [
+      {
+        "candidate_digest": "sha256:4b051830ca189e2784199f29749acb3d7337eb6891fb3a4f3e1d57fde30ff406",
+        "generation_binding": {
+          "generation": {
+            "pk": 32,
+            "slug": "jl",
+            "uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4"
+          },
+          "mode": "explicit_correspondence",
+          "resolution_version": "1.1",
+          "strategy": "reviewed_source_correspondence"
+        },
+        "row_id": "JL19-01",
+        "slug": "2019-sport-36l-v6-4wd-us",
+        "source_identity": [
+          {
+            "assertion_set_id": "JL19-01",
+            "source_id": "reviewed_jeep_order_guide_inventory",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/MY2019_JL_CODEX_HANDOFF.md"
+          },
+          {
+            "assertion_set_id": "MY2019-JL-fuel",
+            "source_id": "mopar_2019_wrangler_user_guide",
+            "source_locator": "https://vehicleinfo.mopar.com/assets/publications/en-ca/Jeep/2019/Wrangler/10387.pdf"
+          },
+          {
+            "assertion_set_id": "MY2019-JL-drive",
+            "source_id": "jeep_2019_wrangler_specifications",
+            "source_locator": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/specs/2019_JP_Wrangler_SPmk1alba10mregeqq9v39oek881.pdf"
+          },
+          {
+            "assertion_set_id": "MY2019-common-JLJL72",
+            "source_id": "reviewed_jeep_order_guide_inventory",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/MY2019_JL_CODEX_HANDOFF.md"
+          },
+          {
+            "assertion_set_id": "ERC-review-synthesis",
+            "source_id": "my2019_erc_research_review",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/director_review/erc_classification_proposals_20261108/evidence/erc_research_dossier.json"
+          },
+          {
+            "assertion_set_id": "US-MY19-hardware",
+            "source_id": "mopar_2019_hardware_excerpts",
+            "source_locator": "https://vehicleinfo.mopar.com/assets/publications/en-ca/Jeep/2019/Wrangler/10387.pdf"
+          },
+          {
+            "assertion_set_id": "MY19-alternator",
+            "source_id": "jeeppartsdeal_oe_catalog",
+            "source_locator": "https://www.jeeppartsdeal.com/parts-list/2019-jeep-wrangler/charging-starting/alternator"
+          },
+          {
+            "assertion_set_id": "MY19-family",
+            "source_id": "fca_pentastar_family_facts",
+            "source_locator": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/attachments/Pentastar_V-6_facts1suaud45cdq3l94ji0b4a7550n.pdf"
+          },
+          {
+            "assertion_set_id": "carb_2019_3_6_hev",
+            "source_id": "carb_2019_3_6_hev",
+            "source_locator": "https://ww2.arb.ca.gov/sites/default/files/classic/msprog/nvepb/executive_orders/EO%20Web%20Files/PC-LDT-MDV/2019/0002/pc-ldt-mdv_ldt_a-9-1433__sdt--20180905.pdf"
+          },
+          {
+            "assertion_set_id": "fca_y40_scope",
+            "source_id": "fca_y40_scope",
+            "source_locator": "https://static.nhtsa.gov/odi/tsbs/2024/MC-10251816-9999.pdf"
+          },
+          {
+            "assertion_set_id": "sha256:fdaabde206436bdae5a83013eac54f86f12aae17459af6c894f2b1cb73f51127",
+            "source_id": "human_classification_adjudication",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/adjudications/JL19-01.approved.json"
+          }
+        ],
+        "status": "pending_create"
+      },
+      {
+        "candidate_digest": "sha256:2d4c76e2571661a894807f6f85a923089a03da2b034a27134a11367a216832d6",
+        "generation_binding": {
+          "generation": {
+            "pk": 32,
+            "slug": "jl",
+            "uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4"
+          },
+          "mode": "explicit_correspondence",
+          "resolution_version": "1.1",
+          "strategy": "reviewed_source_correspondence"
+        },
+        "row_id": "JL19-02",
+        "slug": "2019-sport-20l-i4-4wd-us-turbo-mhev",
+        "source_identity": [
+          {
+            "assertion_set_id": "JL19-02",
+            "source_id": "reviewed_jeep_order_guide_inventory",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/MY2019_JL_CODEX_HANDOFF.md"
+          },
+          {
+            "assertion_set_id": "MY2019-JL-fuel",
+            "source_id": "mopar_2019_wrangler_user_guide",
+            "source_locator": "https://vehicleinfo.mopar.com/assets/publications/en-ca/Jeep/2019/Wrangler/10387.pdf"
+          },
+          {
+            "assertion_set_id": "MY2019-JL-drive",
+            "source_id": "jeep_2019_wrangler_specifications",
+            "source_locator": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/specs/2019_JP_Wrangler_SPmk1alba10mregeqq9v39oek881.pdf"
+          },
+          {
+            "assertion_set_id": "MY2019-common-JLJL72",
+            "source_id": "reviewed_jeep_order_guide_inventory",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/MY2019_JL_CODEX_HANDOFF.md"
+          }
+        ],
+        "status": "pending_create"
+      },
+      {
+        "candidate_digest": "sha256:6fc3f01e272e9f209b55a2900cef3cecf2268aa18ffbeff32240d57410aa2aa6",
+        "generation_binding": {
+          "generation": {
+            "pk": 32,
+            "slug": "jl",
+            "uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4"
+          },
+          "mode": "explicit_correspondence",
+          "resolution_version": "1.1",
+          "strategy": "reviewed_source_correspondence"
+        },
+        "row_id": "JL19-03",
+        "slug": "2019-sport-s-36l-v6-4wd-us",
+        "source_identity": [
+          {
+            "assertion_set_id": "JL19-03",
+            "source_id": "reviewed_jeep_order_guide_inventory",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/MY2019_JL_CODEX_HANDOFF.md"
+          },
+          {
+            "assertion_set_id": "MY2019-JL-fuel",
+            "source_id": "mopar_2019_wrangler_user_guide",
+            "source_locator": "https://vehicleinfo.mopar.com/assets/publications/en-ca/Jeep/2019/Wrangler/10387.pdf"
+          },
+          {
+            "assertion_set_id": "MY2019-JL-drive",
+            "source_id": "jeep_2019_wrangler_specifications",
+            "source_locator": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/specs/2019_JP_Wrangler_SPmk1alba10mregeqq9v39oek881.pdf"
+          },
+          {
+            "assertion_set_id": "MY2019-common-JLJL72",
+            "source_id": "reviewed_jeep_order_guide_inventory",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/MY2019_JL_CODEX_HANDOFF.md"
+          },
+          {
+            "assertion_set_id": "ERC-review-synthesis",
+            "source_id": "my2019_erc_research_review",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/director_review/erc_classification_proposals_20261108/evidence/erc_research_dossier.json"
+          },
+          {
+            "assertion_set_id": "US-MY19-hardware",
+            "source_id": "mopar_2019_hardware_excerpts",
+            "source_locator": "https://vehicleinfo.mopar.com/assets/publications/en-ca/Jeep/2019/Wrangler/10387.pdf"
+          },
+          {
+            "assertion_set_id": "MY19-alternator",
+            "source_id": "jeeppartsdeal_oe_catalog",
+            "source_locator": "https://www.jeeppartsdeal.com/parts-list/2019-jeep-wrangler/charging-starting/alternator"
+          },
+          {
+            "assertion_set_id": "MY19-family",
+            "source_id": "fca_pentastar_family_facts",
+            "source_locator": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/attachments/Pentastar_V-6_facts1suaud45cdq3l94ji0b4a7550n.pdf"
+          },
+          {
+            "assertion_set_id": "carb_2019_3_6_hev",
+            "source_id": "carb_2019_3_6_hev",
+            "source_locator": "https://ww2.arb.ca.gov/sites/default/files/classic/msprog/nvepb/executive_orders/EO%20Web%20Files/PC-LDT-MDV/2019/0002/pc-ldt-mdv_ldt_a-9-1433__sdt--20180905.pdf"
+          },
+          {
+            "assertion_set_id": "fca_y40_scope",
+            "source_id": "fca_y40_scope",
+            "source_locator": "https://static.nhtsa.gov/odi/tsbs/2024/MC-10251816-9999.pdf"
+          },
+          {
+            "assertion_set_id": "sha256:1c836ae669279447a86bbc395b159f6dbd74a14ef1a5c300ae547d885a68a9a7",
+            "source_id": "human_classification_adjudication",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/adjudications/JL19-03.approved.json"
+          }
+        ],
+        "status": "pending_create"
+      },
+      {
+        "candidate_digest": "sha256:e2366bf8ebddbd0557ab74d6f9de0fbd73fe5287e048c94c6411770421180ab5",
+        "generation_binding": {
+          "generation": {
+            "pk": 32,
+            "slug": "jl",
+            "uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4"
+          },
+          "mode": "explicit_correspondence",
+          "resolution_version": "1.1",
+          "strategy": "reviewed_source_correspondence"
+        },
+        "row_id": "JL19-04",
+        "slug": "2019-sport-s-20l-i4-4wd-us-turbo-mhev",
+        "source_identity": [
+          {
+            "assertion_set_id": "JL19-04",
+            "source_id": "reviewed_jeep_order_guide_inventory",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/MY2019_JL_CODEX_HANDOFF.md"
+          },
+          {
+            "assertion_set_id": "MY2019-JL-fuel",
+            "source_id": "mopar_2019_wrangler_user_guide",
+            "source_locator": "https://vehicleinfo.mopar.com/assets/publications/en-ca/Jeep/2019/Wrangler/10387.pdf"
+          },
+          {
+            "assertion_set_id": "MY2019-JL-drive",
+            "source_id": "jeep_2019_wrangler_specifications",
+            "source_locator": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/specs/2019_JP_Wrangler_SPmk1alba10mregeqq9v39oek881.pdf"
+          },
+          {
+            "assertion_set_id": "MY2019-common-JLJL72",
+            "source_id": "reviewed_jeep_order_guide_inventory",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/MY2019_JL_CODEX_HANDOFF.md"
+          }
+        ],
+        "status": "pending_create"
+      },
+      {
+        "candidate_digest": "sha256:fedc8013ef72f51d589b057c3b44ebd9d892557369a95245b5a330d79bf2843c",
+        "generation_binding": {
+          "generation": {
+            "pk": 32,
+            "slug": "jl",
+            "uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4"
+          },
+          "mode": "explicit_correspondence",
+          "resolution_version": "1.1",
+          "strategy": "reviewed_source_correspondence"
+        },
+        "row_id": "JL19-05",
+        "slug": "2019-rubicon-36l-v6-4wd-us",
+        "source_identity": [
+          {
+            "assertion_set_id": "JL19-05",
+            "source_id": "reviewed_jeep_order_guide_inventory",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/MY2019_JL_CODEX_HANDOFF.md"
+          },
+          {
+            "assertion_set_id": "MY2019-JL-fuel",
+            "source_id": "mopar_2019_wrangler_user_guide",
+            "source_locator": "https://vehicleinfo.mopar.com/assets/publications/en-ca/Jeep/2019/Wrangler/10387.pdf"
+          },
+          {
+            "assertion_set_id": "MY2019-JL-drive",
+            "source_id": "jeep_2019_wrangler_specifications",
+            "source_locator": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/specs/2019_JP_Wrangler_SPmk1alba10mregeqq9v39oek881.pdf"
+          },
+          {
+            "assertion_set_id": "MY2019-common-JLJS72",
+            "source_id": "reviewed_jeep_order_guide_inventory",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/MY2019_JL_CODEX_HANDOFF.md"
+          },
+          {
+            "assertion_set_id": "ERC-review-synthesis",
+            "source_id": "my2019_erc_research_review",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/director_review/erc_classification_proposals_20261108/evidence/erc_research_dossier.json"
+          },
+          {
+            "assertion_set_id": "US-MY19-hardware",
+            "source_id": "mopar_2019_hardware_excerpts",
+            "source_locator": "https://vehicleinfo.mopar.com/assets/publications/en-ca/Jeep/2019/Wrangler/10387.pdf"
+          },
+          {
+            "assertion_set_id": "MY19-alternator",
+            "source_id": "jeeppartsdeal_oe_catalog",
+            "source_locator": "https://www.jeeppartsdeal.com/parts-list/2019-jeep-wrangler/charging-starting/alternator"
+          },
+          {
+            "assertion_set_id": "MY19-family",
+            "source_id": "fca_pentastar_family_facts",
+            "source_locator": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/attachments/Pentastar_V-6_facts1suaud45cdq3l94ji0b4a7550n.pdf"
+          },
+          {
+            "assertion_set_id": "carb_2019_3_6_hev",
+            "source_id": "carb_2019_3_6_hev",
+            "source_locator": "https://ww2.arb.ca.gov/sites/default/files/classic/msprog/nvepb/executive_orders/EO%20Web%20Files/PC-LDT-MDV/2019/0002/pc-ldt-mdv_ldt_a-9-1433__sdt--20180905.pdf"
+          },
+          {
+            "assertion_set_id": "fca_y40_scope",
+            "source_id": "fca_y40_scope",
+            "source_locator": "https://static.nhtsa.gov/odi/tsbs/2024/MC-10251816-9999.pdf"
+          },
+          {
+            "assertion_set_id": "sha256:266ce1c5ac5672a208914c28d47446b92b9b543a03fabe0c2d69cf9d06a6f291",
+            "source_id": "human_classification_adjudication",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/adjudications/JL19-05.approved.json"
+          }
+        ],
+        "status": "pending_create"
+      },
+      {
+        "candidate_digest": "sha256:5d533cd574e35a07c7778e1f2be2120edea44e76a42688c03067084e70635d51",
+        "generation_binding": {
+          "generation": {
+            "pk": 32,
+            "slug": "jl",
+            "uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4"
+          },
+          "mode": "explicit_correspondence",
+          "resolution_version": "1.1",
+          "strategy": "reviewed_source_correspondence"
+        },
+        "row_id": "JL19-06",
+        "slug": "2019-rubicon-20l-i4-4wd-us-turbo-mhev",
+        "source_identity": [
+          {
+            "assertion_set_id": "JL19-06",
+            "source_id": "reviewed_jeep_order_guide_inventory",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/MY2019_JL_CODEX_HANDOFF.md"
+          },
+          {
+            "assertion_set_id": "MY2019-JL-fuel",
+            "source_id": "mopar_2019_wrangler_user_guide",
+            "source_locator": "https://vehicleinfo.mopar.com/assets/publications/en-ca/Jeep/2019/Wrangler/10387.pdf"
+          },
+          {
+            "assertion_set_id": "MY2019-JL-drive",
+            "source_id": "jeep_2019_wrangler_specifications",
+            "source_locator": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/specs/2019_JP_Wrangler_SPmk1alba10mregeqq9v39oek881.pdf"
+          },
+          {
+            "assertion_set_id": "MY2019-common-JLJS72",
+            "source_id": "reviewed_jeep_order_guide_inventory",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/MY2019_JL_CODEX_HANDOFF.md"
+          }
+        ],
+        "status": "pending_create"
+      },
+      {
+        "candidate_digest": "sha256:48c999af9b2ee2a8fbcde64129d3f98dd5e6aa3bfbe189fc3a03fb235522a101",
+        "generation_binding": {
+          "generation": {
+            "pk": 32,
+            "slug": "jl",
+            "uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4"
+          },
+          "mode": "explicit_correspondence",
+          "resolution_version": "1.1",
+          "strategy": "reviewed_source_correspondence"
+        },
+        "row_id": "JL19-07",
+        "slug": "2019-unlimited-sport-36l-v6-4wd-us",
+        "source_identity": [
+          {
+            "assertion_set_id": "JL19-07",
+            "source_id": "reviewed_jeep_order_guide_inventory",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/MY2019_JL_CODEX_HANDOFF.md"
+          },
+          {
+            "assertion_set_id": "JL19-07-june-guide-excerpt",
+            "source_id": "jeep_usa_order_guide_excerpts",
+            "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/"
+          },
+          {
+            "assertion_set_id": "MY2019-JL-fuel",
+            "source_id": "mopar_2019_wrangler_user_guide",
+            "source_locator": "https://vehicleinfo.mopar.com/assets/publications/en-ca/Jeep/2019/Wrangler/10387.pdf"
+          },
+          {
+            "assertion_set_id": "MY2019-JL-drive",
+            "source_id": "jeep_2019_wrangler_specifications",
+            "source_locator": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/specs/2019_JP_Wrangler_SPmk1alba10mregeqq9v39oek881.pdf"
+          },
+          {
+            "assertion_set_id": "MY2019-common-JLJL74",
+            "source_id": "reviewed_jeep_order_guide_inventory",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/MY2019_JL_CODEX_HANDOFF.md"
+          },
+          {
+            "assertion_set_id": "ERC-review-synthesis",
+            "source_id": "my2019_erc_research_review",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/director_review/erc_classification_proposals_20261108/evidence/erc_research_dossier.json"
+          },
+          {
+            "assertion_set_id": "US-MY19-hardware",
+            "source_id": "mopar_2019_hardware_excerpts",
+            "source_locator": "https://vehicleinfo.mopar.com/assets/publications/en-ca/Jeep/2019/Wrangler/10387.pdf"
+          },
+          {
+            "assertion_set_id": "MY19-alternator",
+            "source_id": "jeeppartsdeal_oe_catalog",
+            "source_locator": "https://www.jeeppartsdeal.com/parts-list/2019-jeep-wrangler/charging-starting/alternator"
+          },
+          {
+            "assertion_set_id": "MY19-family",
+            "source_id": "fca_pentastar_family_facts",
+            "source_locator": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/attachments/Pentastar_V-6_facts1suaud45cdq3l94ji0b4a7550n.pdf"
+          },
+          {
+            "assertion_set_id": "carb_2019_3_6_hev",
+            "source_id": "carb_2019_3_6_hev",
+            "source_locator": "https://ww2.arb.ca.gov/sites/default/files/classic/msprog/nvepb/executive_orders/EO%20Web%20Files/PC-LDT-MDV/2019/0002/pc-ldt-mdv_ldt_a-9-1433__sdt--20180905.pdf"
+          },
+          {
+            "assertion_set_id": "fca_y40_scope",
+            "source_id": "fca_y40_scope",
+            "source_locator": "https://static.nhtsa.gov/odi/tsbs/2024/MC-10251816-9999.pdf"
+          },
+          {
+            "assertion_set_id": "sha256:a585d36de7e341ecbb2877f81334debcdcecbb3aa4433613856640063651b6a4",
+            "source_id": "human_classification_adjudication",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/adjudications/JL19-07.approved.json"
+          }
+        ],
+        "status": "pending_create"
+      },
+      {
+        "candidate_digest": "sha256:d2cef6f3c3de7487e94aed4295a097be4471622dcbcb3ad2a15aafb9b3384224",
+        "generation_binding": {
+          "generation": {
+            "pk": 32,
+            "slug": "jl",
+            "uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4"
+          },
+          "mode": "explicit_correspondence",
+          "resolution_version": "1.1",
+          "strategy": "reviewed_source_correspondence"
+        },
+        "row_id": "JL19-08",
+        "slug": "2019-unlimited-sport-20l-i4-4wd-us-turbo-mhev",
+        "source_identity": [
+          {
+            "assertion_set_id": "JL19-08",
+            "source_id": "reviewed_jeep_order_guide_inventory",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/MY2019_JL_CODEX_HANDOFF.md"
+          },
+          {
+            "assertion_set_id": "JL19-08-june-guide-excerpt",
+            "source_id": "jeep_usa_order_guide_excerpts",
+            "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/"
+          },
+          {
+            "assertion_set_id": "MY2019-JL-fuel",
+            "source_id": "mopar_2019_wrangler_user_guide",
+            "source_locator": "https://vehicleinfo.mopar.com/assets/publications/en-ca/Jeep/2019/Wrangler/10387.pdf"
+          },
+          {
+            "assertion_set_id": "MY2019-JL-drive",
+            "source_id": "jeep_2019_wrangler_specifications",
+            "source_locator": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/specs/2019_JP_Wrangler_SPmk1alba10mregeqq9v39oek881.pdf"
+          },
+          {
+            "assertion_set_id": "MY2019-common-JLJL74",
+            "source_id": "reviewed_jeep_order_guide_inventory",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/MY2019_JL_CODEX_HANDOFF.md"
+          }
+        ],
+        "status": "pending_create"
+      },
+      {
+        "candidate_digest": "sha256:bf4117a243b4771b3600c88e887d082cc16d60a8a6e2562b2f1665ef4a41f10d",
+        "generation_binding": {
+          "generation": {
+            "pk": 32,
+            "slug": "jl",
+            "uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4"
+          },
+          "mode": "explicit_correspondence",
+          "resolution_version": "1.1",
+          "strategy": "reviewed_source_correspondence"
+        },
+        "row_id": "JL19-09",
+        "slug": "2019-unlimited-sport-s-36l-v6-4wd-us",
+        "source_identity": [
+          {
+            "assertion_set_id": "JL19-09",
+            "source_id": "reviewed_jeep_order_guide_inventory",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/MY2019_JL_CODEX_HANDOFF.md"
+          },
+          {
+            "assertion_set_id": "JL19-09-june-guide-excerpt",
+            "source_id": "jeep_usa_order_guide_excerpts",
+            "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/"
+          },
+          {
+            "assertion_set_id": "MY2019-JL-fuel",
+            "source_id": "mopar_2019_wrangler_user_guide",
+            "source_locator": "https://vehicleinfo.mopar.com/assets/publications/en-ca/Jeep/2019/Wrangler/10387.pdf"
+          },
+          {
+            "assertion_set_id": "MY2019-JL-drive",
+            "source_id": "jeep_2019_wrangler_specifications",
+            "source_locator": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/specs/2019_JP_Wrangler_SPmk1alba10mregeqq9v39oek881.pdf"
+          },
+          {
+            "assertion_set_id": "MY2019-common-JLJL74",
+            "source_id": "reviewed_jeep_order_guide_inventory",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/MY2019_JL_CODEX_HANDOFF.md"
+          },
+          {
+            "assertion_set_id": "ERC-review-synthesis",
+            "source_id": "my2019_erc_research_review",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/director_review/erc_classification_proposals_20261108/evidence/erc_research_dossier.json"
+          },
+          {
+            "assertion_set_id": "US-MY19-hardware",
+            "source_id": "mopar_2019_hardware_excerpts",
+            "source_locator": "https://vehicleinfo.mopar.com/assets/publications/en-ca/Jeep/2019/Wrangler/10387.pdf"
+          },
+          {
+            "assertion_set_id": "MY19-alternator",
+            "source_id": "jeeppartsdeal_oe_catalog",
+            "source_locator": "https://www.jeeppartsdeal.com/parts-list/2019-jeep-wrangler/charging-starting/alternator"
+          },
+          {
+            "assertion_set_id": "MY19-family",
+            "source_id": "fca_pentastar_family_facts",
+            "source_locator": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/attachments/Pentastar_V-6_facts1suaud45cdq3l94ji0b4a7550n.pdf"
+          },
+          {
+            "assertion_set_id": "carb_2019_3_6_hev",
+            "source_id": "carb_2019_3_6_hev",
+            "source_locator": "https://ww2.arb.ca.gov/sites/default/files/classic/msprog/nvepb/executive_orders/EO%20Web%20Files/PC-LDT-MDV/2019/0002/pc-ldt-mdv_ldt_a-9-1433__sdt--20180905.pdf"
+          },
+          {
+            "assertion_set_id": "fca_y40_scope",
+            "source_id": "fca_y40_scope",
+            "source_locator": "https://static.nhtsa.gov/odi/tsbs/2024/MC-10251816-9999.pdf"
+          },
+          {
+            "assertion_set_id": "sha256:02cba460eade09f0b99ac1a0f92b5747529da236beae020be7385557c09f31f3",
+            "source_id": "human_classification_adjudication",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/adjudications/JL19-09.approved.json"
+          }
+        ],
+        "status": "pending_create"
+      },
+      {
+        "candidate_digest": "sha256:ccb451844b1d240bfa71a683783749d192bbcfee62086607f32766b64b2b473c",
+        "generation_binding": {
+          "generation": {
+            "pk": 32,
+            "slug": "jl",
+            "uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4"
+          },
+          "mode": "explicit_correspondence",
+          "resolution_version": "1.1",
+          "strategy": "reviewed_source_correspondence"
+        },
+        "row_id": "JL19-10",
+        "slug": "2019-unlimited-sport-s-20l-i4-4wd-us-turbo-mhev",
+        "source_identity": [
+          {
+            "assertion_set_id": "JL19-10",
+            "source_id": "reviewed_jeep_order_guide_inventory",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/MY2019_JL_CODEX_HANDOFF.md"
+          },
+          {
+            "assertion_set_id": "JL19-10-june-guide-excerpt",
+            "source_id": "jeep_usa_order_guide_excerpts",
+            "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/"
+          },
+          {
+            "assertion_set_id": "MY2019-JL-fuel",
+            "source_id": "mopar_2019_wrangler_user_guide",
+            "source_locator": "https://vehicleinfo.mopar.com/assets/publications/en-ca/Jeep/2019/Wrangler/10387.pdf"
+          },
+          {
+            "assertion_set_id": "MY2019-JL-drive",
+            "source_id": "jeep_2019_wrangler_specifications",
+            "source_locator": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/specs/2019_JP_Wrangler_SPmk1alba10mregeqq9v39oek881.pdf"
+          },
+          {
+            "assertion_set_id": "MY2019-common-JLJL74",
+            "source_id": "reviewed_jeep_order_guide_inventory",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/MY2019_JL_CODEX_HANDOFF.md"
+          }
+        ],
+        "status": "pending_create"
+      },
+      {
+        "candidate_digest": "sha256:4ac2842b6f712817a33018ff1a70138582f8daa981570112701edf6b66f483e4",
+        "generation_binding": {
+          "generation": {
+            "pk": 32,
+            "slug": "jl",
+            "uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4"
+          },
+          "mode": "explicit_correspondence",
+          "resolution_version": "1.1",
+          "strategy": "reviewed_source_correspondence"
+        },
+        "row_id": "JL19-11",
+        "slug": "2019-unlimited-sport-altitude-36l-v6-4wd-us",
+        "source_identity": [
+          {
+            "assertion_set_id": "JL19-11",
+            "source_id": "reviewed_jeep_order_guide_inventory",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/MY2019_JL_CODEX_HANDOFF.md"
+          },
+          {
+            "assertion_set_id": "JL19-11-june-guide-excerpt",
+            "source_id": "jeep_usa_order_guide_excerpts",
+            "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/"
+          },
+          {
+            "assertion_set_id": "MY2019-JL-fuel",
+            "source_id": "mopar_2019_wrangler_user_guide",
+            "source_locator": "https://vehicleinfo.mopar.com/assets/publications/en-ca/Jeep/2019/Wrangler/10387.pdf"
+          },
+          {
+            "assertion_set_id": "MY2019-JL-drive",
+            "source_id": "jeep_2019_wrangler_specifications",
+            "source_locator": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/specs/2019_JP_Wrangler_SPmk1alba10mregeqq9v39oek881.pdf"
+          },
+          {
+            "assertion_set_id": "MY2019-common-JLJL74",
+            "source_id": "reviewed_jeep_order_guide_inventory",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/MY2019_JL_CODEX_HANDOFF.md"
+          },
+          {
+            "assertion_set_id": "ERC-review-synthesis",
+            "source_id": "my2019_erc_research_review",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/director_review/erc_classification_proposals_20261108/evidence/erc_research_dossier.json"
+          },
+          {
+            "assertion_set_id": "US-MY19-hardware",
+            "source_id": "mopar_2019_hardware_excerpts",
+            "source_locator": "https://vehicleinfo.mopar.com/assets/publications/en-ca/Jeep/2019/Wrangler/10387.pdf"
+          },
+          {
+            "assertion_set_id": "MY19-alternator",
+            "source_id": "jeeppartsdeal_oe_catalog",
+            "source_locator": "https://www.jeeppartsdeal.com/parts-list/2019-jeep-wrangler/charging-starting/alternator"
+          },
+          {
+            "assertion_set_id": "MY19-family",
+            "source_id": "fca_pentastar_family_facts",
+            "source_locator": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/attachments/Pentastar_V-6_facts1suaud45cdq3l94ji0b4a7550n.pdf"
+          },
+          {
+            "assertion_set_id": "carb_2019_3_6_hev",
+            "source_id": "carb_2019_3_6_hev",
+            "source_locator": "https://ww2.arb.ca.gov/sites/default/files/classic/msprog/nvepb/executive_orders/EO%20Web%20Files/PC-LDT-MDV/2019/0002/pc-ldt-mdv_ldt_a-9-1433__sdt--20180905.pdf"
+          },
+          {
+            "assertion_set_id": "fca_y40_scope",
+            "source_id": "fca_y40_scope",
+            "source_locator": "https://static.nhtsa.gov/odi/tsbs/2024/MC-10251816-9999.pdf"
+          },
+          {
+            "assertion_set_id": "sha256:ea3847fe0f233e906cfc9c2da9a8c3a89c1dbaa2e8ac8d25721503944f0c65af",
+            "source_id": "human_classification_adjudication",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/adjudications/JL19-11.approved.json"
+          }
+        ],
+        "status": "pending_create"
+      },
+      {
+        "candidate_digest": "sha256:ccb8eee562dc6bf0ec48259b6bd3367b7b0ac7ece31b722664238e5b6c1cc360",
+        "generation_binding": {
+          "generation": {
+            "pk": 32,
+            "slug": "jl",
+            "uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4"
+          },
+          "mode": "explicit_correspondence",
+          "resolution_version": "1.1",
+          "strategy": "reviewed_source_correspondence"
+        },
+        "row_id": "JL19-12",
+        "slug": "2019-unlimited-sport-altitude-20l-i4-4wd-us-turbo-mhev",
+        "source_identity": [
+          {
+            "assertion_set_id": "JL19-12",
+            "source_id": "reviewed_jeep_order_guide_inventory",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/MY2019_JL_CODEX_HANDOFF.md"
+          },
+          {
+            "assertion_set_id": "JL19-12-june-guide-excerpt",
+            "source_id": "jeep_usa_order_guide_excerpts",
+            "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/"
+          },
+          {
+            "assertion_set_id": "MY2019-JL-fuel",
+            "source_id": "mopar_2019_wrangler_user_guide",
+            "source_locator": "https://vehicleinfo.mopar.com/assets/publications/en-ca/Jeep/2019/Wrangler/10387.pdf"
+          },
+          {
+            "assertion_set_id": "MY2019-JL-drive",
+            "source_id": "jeep_2019_wrangler_specifications",
+            "source_locator": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/specs/2019_JP_Wrangler_SPmk1alba10mregeqq9v39oek881.pdf"
+          },
+          {
+            "assertion_set_id": "MY2019-common-JLJL74",
+            "source_id": "reviewed_jeep_order_guide_inventory",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/MY2019_JL_CODEX_HANDOFF.md"
+          }
+        ],
+        "status": "pending_create"
+      },
+      {
+        "candidate_digest": "sha256:caaf4b18512dc7d0ceff2261e153ab351fab89eedf3cf164f3f16f2634371f42",
+        "generation_binding": {
+          "generation": {
+            "pk": 32,
+            "slug": "jl",
+            "uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4"
+          },
+          "mode": "explicit_correspondence",
+          "resolution_version": "1.1",
+          "strategy": "reviewed_source_correspondence"
+        },
+        "row_id": "JL19-13",
+        "slug": "2019-unlimited-sahara-36l-v6-4wd-us",
+        "source_identity": [
+          {
+            "assertion_set_id": "JL19-13",
+            "source_id": "reviewed_jeep_order_guide_inventory",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/MY2019_JL_CODEX_HANDOFF.md"
+          },
+          {
+            "assertion_set_id": "JL19-13-june-guide-excerpt",
+            "source_id": "jeep_usa_order_guide_excerpts",
+            "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/"
+          },
+          {
+            "assertion_set_id": "MY2019-JL-fuel",
+            "source_id": "mopar_2019_wrangler_user_guide",
+            "source_locator": "https://vehicleinfo.mopar.com/assets/publications/en-ca/Jeep/2019/Wrangler/10387.pdf"
+          },
+          {
+            "assertion_set_id": "MY2019-JL-drive",
+            "source_id": "jeep_2019_wrangler_specifications",
+            "source_locator": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/specs/2019_JP_Wrangler_SPmk1alba10mregeqq9v39oek881.pdf"
+          },
+          {
+            "assertion_set_id": "MY2019-common-JLJP74",
+            "source_id": "reviewed_jeep_order_guide_inventory",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/MY2019_JL_CODEX_HANDOFF.md"
+          },
+          {
+            "assertion_set_id": "ERC-review-synthesis",
+            "source_id": "my2019_erc_research_review",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/director_review/erc_classification_proposals_20261108/evidence/erc_research_dossier.json"
+          },
+          {
+            "assertion_set_id": "US-MY19-hardware",
+            "source_id": "mopar_2019_hardware_excerpts",
+            "source_locator": "https://vehicleinfo.mopar.com/assets/publications/en-ca/Jeep/2019/Wrangler/10387.pdf"
+          },
+          {
+            "assertion_set_id": "MY19-alternator",
+            "source_id": "jeeppartsdeal_oe_catalog",
+            "source_locator": "https://www.jeeppartsdeal.com/parts-list/2019-jeep-wrangler/charging-starting/alternator"
+          },
+          {
+            "assertion_set_id": "MY19-family",
+            "source_id": "fca_pentastar_family_facts",
+            "source_locator": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/attachments/Pentastar_V-6_facts1suaud45cdq3l94ji0b4a7550n.pdf"
+          },
+          {
+            "assertion_set_id": "carb_2019_3_6_hev",
+            "source_id": "carb_2019_3_6_hev",
+            "source_locator": "https://ww2.arb.ca.gov/sites/default/files/classic/msprog/nvepb/executive_orders/EO%20Web%20Files/PC-LDT-MDV/2019/0002/pc-ldt-mdv_ldt_a-9-1433__sdt--20180905.pdf"
+          },
+          {
+            "assertion_set_id": "fca_y40_scope",
+            "source_id": "fca_y40_scope",
+            "source_locator": "https://static.nhtsa.gov/odi/tsbs/2024/MC-10251816-9999.pdf"
+          },
+          {
+            "assertion_set_id": "sha256:c5da82dcf5e98c23d68831b6cd380d71f84f75a9f97a495a14ffe63668d896e7",
+            "source_id": "human_classification_adjudication",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/adjudications/JL19-13.approved.json"
+          }
+        ],
+        "status": "pending_create"
+      },
+      {
+        "candidate_digest": "sha256:fe95dbc320f88fdd77a8dfcfbec295a2450bcbcda2b6ebbf250023b2cb262f7d",
+        "generation_binding": {
+          "generation": {
+            "pk": 32,
+            "slug": "jl",
+            "uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4"
+          },
+          "mode": "explicit_correspondence",
+          "resolution_version": "1.1",
+          "strategy": "reviewed_source_correspondence"
+        },
+        "row_id": "JL19-14",
+        "slug": "2019-unlimited-sahara-20l-i4-4wd-us-turbo-mhev",
+        "source_identity": [
+          {
+            "assertion_set_id": "JL19-14",
+            "source_id": "reviewed_jeep_order_guide_inventory",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/MY2019_JL_CODEX_HANDOFF.md"
+          },
+          {
+            "assertion_set_id": "JL19-14-june-guide-excerpt",
+            "source_id": "jeep_usa_order_guide_excerpts",
+            "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/"
+          },
+          {
+            "assertion_set_id": "MY2019-JL-fuel",
+            "source_id": "mopar_2019_wrangler_user_guide",
+            "source_locator": "https://vehicleinfo.mopar.com/assets/publications/en-ca/Jeep/2019/Wrangler/10387.pdf"
+          },
+          {
+            "assertion_set_id": "MY2019-JL-drive",
+            "source_id": "jeep_2019_wrangler_specifications",
+            "source_locator": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/specs/2019_JP_Wrangler_SPmk1alba10mregeqq9v39oek881.pdf"
+          },
+          {
+            "assertion_set_id": "MY2019-common-JLJP74",
+            "source_id": "reviewed_jeep_order_guide_inventory",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/MY2019_JL_CODEX_HANDOFF.md"
+          }
+        ],
+        "status": "pending_create"
+      },
+      {
+        "candidate_digest": "sha256:8e37a7fb55d608a4b95446811477ee5db2c3d085ef90f7ce05b9e90ff0176ec4",
+        "generation_binding": {
+          "generation": {
+            "pk": 32,
+            "slug": "jl",
+            "uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4"
+          },
+          "mode": "explicit_correspondence",
+          "resolution_version": "1.1",
+          "strategy": "reviewed_source_correspondence"
+        },
+        "row_id": "JL19-15",
+        "slug": "2019-unlimited-sahara-altitude-36l-v6-4wd-us",
+        "source_identity": [
+          {
+            "assertion_set_id": "JL19-15",
+            "source_id": "reviewed_jeep_order_guide_inventory",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/MY2019_JL_CODEX_HANDOFF.md"
+          },
+          {
+            "assertion_set_id": "JL19-15-june-guide-excerpt",
+            "source_id": "jeep_usa_order_guide_excerpts",
+            "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/"
+          },
+          {
+            "assertion_set_id": "MY2019-JL-fuel",
+            "source_id": "mopar_2019_wrangler_user_guide",
+            "source_locator": "https://vehicleinfo.mopar.com/assets/publications/en-ca/Jeep/2019/Wrangler/10387.pdf"
+          },
+          {
+            "assertion_set_id": "MY2019-JL-drive",
+            "source_id": "jeep_2019_wrangler_specifications",
+            "source_locator": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/specs/2019_JP_Wrangler_SPmk1alba10mregeqq9v39oek881.pdf"
+          },
+          {
+            "assertion_set_id": "MY2019-common-JLJP74",
+            "source_id": "reviewed_jeep_order_guide_inventory",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/MY2019_JL_CODEX_HANDOFF.md"
+          },
+          {
+            "assertion_set_id": "ERC-review-synthesis",
+            "source_id": "my2019_erc_research_review",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/director_review/erc_classification_proposals_20261108/evidence/erc_research_dossier.json"
+          },
+          {
+            "assertion_set_id": "US-MY19-hardware",
+            "source_id": "mopar_2019_hardware_excerpts",
+            "source_locator": "https://vehicleinfo.mopar.com/assets/publications/en-ca/Jeep/2019/Wrangler/10387.pdf"
+          },
+          {
+            "assertion_set_id": "MY19-alternator",
+            "source_id": "jeeppartsdeal_oe_catalog",
+            "source_locator": "https://www.jeeppartsdeal.com/parts-list/2019-jeep-wrangler/charging-starting/alternator"
+          },
+          {
+            "assertion_set_id": "MY19-family",
+            "source_id": "fca_pentastar_family_facts",
+            "source_locator": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/attachments/Pentastar_V-6_facts1suaud45cdq3l94ji0b4a7550n.pdf"
+          },
+          {
+            "assertion_set_id": "carb_2019_3_6_hev",
+            "source_id": "carb_2019_3_6_hev",
+            "source_locator": "https://ww2.arb.ca.gov/sites/default/files/classic/msprog/nvepb/executive_orders/EO%20Web%20Files/PC-LDT-MDV/2019/0002/pc-ldt-mdv_ldt_a-9-1433__sdt--20180905.pdf"
+          },
+          {
+            "assertion_set_id": "fca_y40_scope",
+            "source_id": "fca_y40_scope",
+            "source_locator": "https://static.nhtsa.gov/odi/tsbs/2024/MC-10251816-9999.pdf"
+          },
+          {
+            "assertion_set_id": "sha256:43118ff96aa9ff80b41922e8f743768260b7ea3edd36c036c68860ac04b8f2af",
+            "source_id": "human_classification_adjudication",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/adjudications/JL19-15.approved.json"
+          }
+        ],
+        "status": "pending_create"
+      },
+      {
+        "candidate_digest": "sha256:81aea90b0cc366923ce77e95a8327b7a880ce437d4ddf0f5418a674c113dc90d",
+        "generation_binding": {
+          "generation": {
+            "pk": 32,
+            "slug": "jl",
+            "uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4"
+          },
+          "mode": "explicit_correspondence",
+          "resolution_version": "1.1",
+          "strategy": "reviewed_source_correspondence"
+        },
+        "row_id": "JL19-16",
+        "slug": "2019-unlimited-sahara-altitude-20l-i4-4wd-us-turbo-mhev",
+        "source_identity": [
+          {
+            "assertion_set_id": "JL19-16",
+            "source_id": "reviewed_jeep_order_guide_inventory",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/MY2019_JL_CODEX_HANDOFF.md"
+          },
+          {
+            "assertion_set_id": "JL19-16-june-guide-excerpt",
+            "source_id": "jeep_usa_order_guide_excerpts",
+            "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/"
+          },
+          {
+            "assertion_set_id": "MY2019-JL-fuel",
+            "source_id": "mopar_2019_wrangler_user_guide",
+            "source_locator": "https://vehicleinfo.mopar.com/assets/publications/en-ca/Jeep/2019/Wrangler/10387.pdf"
+          },
+          {
+            "assertion_set_id": "MY2019-JL-drive",
+            "source_id": "jeep_2019_wrangler_specifications",
+            "source_locator": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/specs/2019_JP_Wrangler_SPmk1alba10mregeqq9v39oek881.pdf"
+          },
+          {
+            "assertion_set_id": "MY2019-common-JLJP74",
+            "source_id": "reviewed_jeep_order_guide_inventory",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/MY2019_JL_CODEX_HANDOFF.md"
+          }
+        ],
+        "status": "pending_create"
+      },
+      {
+        "candidate_digest": "sha256:b1f691977f696210f96ce073e275fffe29613ac9f4eed27abf190298a33b7de7",
+        "generation_binding": {
+          "generation": {
+            "pk": 32,
+            "slug": "jl",
+            "uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4"
+          },
+          "mode": "explicit_correspondence",
+          "resolution_version": "1.1",
+          "strategy": "reviewed_source_correspondence"
+        },
+        "row_id": "JL19-17",
+        "slug": "2019-unlimited-moab-36l-v6-4wd-us",
+        "source_identity": [
+          {
+            "assertion_set_id": "JL19-17",
+            "source_id": "reviewed_jeep_order_guide_inventory",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/MY2019_JL_CODEX_HANDOFF.md"
+          },
+          {
+            "assertion_set_id": "JL19-17-june-guide-excerpt",
+            "source_id": "jeep_usa_order_guide_excerpts",
+            "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/"
+          },
+          {
+            "assertion_set_id": "MY2019-JL-fuel",
+            "source_id": "mopar_2019_wrangler_user_guide",
+            "source_locator": "https://vehicleinfo.mopar.com/assets/publications/en-ca/Jeep/2019/Wrangler/10387.pdf"
+          },
+          {
+            "assertion_set_id": "MY2019-JL-drive",
+            "source_id": "jeep_2019_wrangler_specifications",
+            "source_locator": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/specs/2019_JP_Wrangler_SPmk1alba10mregeqq9v39oek881.pdf"
+          },
+          {
+            "assertion_set_id": "MY2019-common-JLJP74",
+            "source_id": "reviewed_jeep_order_guide_inventory",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/MY2019_JL_CODEX_HANDOFF.md"
+          },
+          {
+            "assertion_set_id": "ERC-review-synthesis",
+            "source_id": "my2019_erc_research_review",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/director_review/erc_classification_proposals_20261108/evidence/erc_research_dossier.json"
+          },
+          {
+            "assertion_set_id": "US-MY19-hardware",
+            "source_id": "mopar_2019_hardware_excerpts",
+            "source_locator": "https://vehicleinfo.mopar.com/assets/publications/en-ca/Jeep/2019/Wrangler/10387.pdf"
+          },
+          {
+            "assertion_set_id": "MY19-alternator",
+            "source_id": "jeeppartsdeal_oe_catalog",
+            "source_locator": "https://www.jeeppartsdeal.com/parts-list/2019-jeep-wrangler/charging-starting/alternator"
+          },
+          {
+            "assertion_set_id": "MY19-family",
+            "source_id": "fca_pentastar_family_facts",
+            "source_locator": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/attachments/Pentastar_V-6_facts1suaud45cdq3l94ji0b4a7550n.pdf"
+          },
+          {
+            "assertion_set_id": "carb_2019_3_6_hev",
+            "source_id": "carb_2019_3_6_hev",
+            "source_locator": "https://ww2.arb.ca.gov/sites/default/files/classic/msprog/nvepb/executive_orders/EO%20Web%20Files/PC-LDT-MDV/2019/0002/pc-ldt-mdv_ldt_a-9-1433__sdt--20180905.pdf"
+          },
+          {
+            "assertion_set_id": "fca_y40_scope",
+            "source_id": "fca_y40_scope",
+            "source_locator": "https://static.nhtsa.gov/odi/tsbs/2024/MC-10251816-9999.pdf"
+          },
+          {
+            "assertion_set_id": "sha256:cbc2a3d119d254bccaecd161240b47cd569ed14c0ceac318f1588f45df047e0b",
+            "source_id": "human_classification_adjudication",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/adjudications/JL19-17.approved.json"
+          }
+        ],
+        "status": "pending_create"
+      },
+      {
+        "candidate_digest": "sha256:ab8023ccc084a0e8a31438e04eae8cd13aff09f69291313e2e6fe10b29d2a3f7",
+        "generation_binding": {
+          "generation": {
+            "pk": 32,
+            "slug": "jl",
+            "uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4"
+          },
+          "mode": "explicit_correspondence",
+          "resolution_version": "1.1",
+          "strategy": "reviewed_source_correspondence"
+        },
+        "row_id": "JL19-18",
+        "slug": "2019-unlimited-rubicon-36l-v6-4wd-us",
+        "source_identity": [
+          {
+            "assertion_set_id": "JL19-18",
+            "source_id": "reviewed_jeep_order_guide_inventory",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/MY2019_JL_CODEX_HANDOFF.md"
+          },
+          {
+            "assertion_set_id": "JL19-18-june-guide-excerpt",
+            "source_id": "jeep_usa_order_guide_excerpts",
+            "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/"
+          },
+          {
+            "assertion_set_id": "MY2019-JL-fuel",
+            "source_id": "mopar_2019_wrangler_user_guide",
+            "source_locator": "https://vehicleinfo.mopar.com/assets/publications/en-ca/Jeep/2019/Wrangler/10387.pdf"
+          },
+          {
+            "assertion_set_id": "MY2019-JL-drive",
+            "source_id": "jeep_2019_wrangler_specifications",
+            "source_locator": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/specs/2019_JP_Wrangler_SPmk1alba10mregeqq9v39oek881.pdf"
+          },
+          {
+            "assertion_set_id": "MY2019-common-JLJS74",
+            "source_id": "reviewed_jeep_order_guide_inventory",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/MY2019_JL_CODEX_HANDOFF.md"
+          },
+          {
+            "assertion_set_id": "ERC-review-synthesis",
+            "source_id": "my2019_erc_research_review",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/director_review/erc_classification_proposals_20261108/evidence/erc_research_dossier.json"
+          },
+          {
+            "assertion_set_id": "US-MY19-hardware",
+            "source_id": "mopar_2019_hardware_excerpts",
+            "source_locator": "https://vehicleinfo.mopar.com/assets/publications/en-ca/Jeep/2019/Wrangler/10387.pdf"
+          },
+          {
+            "assertion_set_id": "MY19-alternator",
+            "source_id": "jeeppartsdeal_oe_catalog",
+            "source_locator": "https://www.jeeppartsdeal.com/parts-list/2019-jeep-wrangler/charging-starting/alternator"
+          },
+          {
+            "assertion_set_id": "MY19-family",
+            "source_id": "fca_pentastar_family_facts",
+            "source_locator": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/attachments/Pentastar_V-6_facts1suaud45cdq3l94ji0b4a7550n.pdf"
+          },
+          {
+            "assertion_set_id": "carb_2019_3_6_hev",
+            "source_id": "carb_2019_3_6_hev",
+            "source_locator": "https://ww2.arb.ca.gov/sites/default/files/classic/msprog/nvepb/executive_orders/EO%20Web%20Files/PC-LDT-MDV/2019/0002/pc-ldt-mdv_ldt_a-9-1433__sdt--20180905.pdf"
+          },
+          {
+            "assertion_set_id": "fca_y40_scope",
+            "source_id": "fca_y40_scope",
+            "source_locator": "https://static.nhtsa.gov/odi/tsbs/2024/MC-10251816-9999.pdf"
+          },
+          {
+            "assertion_set_id": "sha256:980a2a8698d97bda869d9b5ad676ecc1b4fc949764bb207904f30399f062127a",
+            "source_id": "human_classification_adjudication",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/adjudications/JL19-18.approved.json"
+          }
+        ],
+        "status": "pending_create"
+      },
+      {
+        "candidate_digest": "sha256:7ab768e39cc66d32b1e9626a1bd182e9386691ebf5612c5ae81b99eaeb695757",
+        "generation_binding": {
+          "generation": {
+            "pk": 32,
+            "slug": "jl",
+            "uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4"
+          },
+          "mode": "explicit_correspondence",
+          "resolution_version": "1.1",
+          "strategy": "reviewed_source_correspondence"
+        },
+        "row_id": "JL19-19",
+        "slug": "2019-unlimited-rubicon-20l-i4-4wd-us-turbo-mhev",
+        "source_identity": [
+          {
+            "assertion_set_id": "JL19-19",
+            "source_id": "reviewed_jeep_order_guide_inventory",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/MY2019_JL_CODEX_HANDOFF.md"
+          },
+          {
+            "assertion_set_id": "JL19-19-june-guide-excerpt",
+            "source_id": "jeep_usa_order_guide_excerpts",
+            "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/"
+          },
+          {
+            "assertion_set_id": "MY2019-JL-fuel",
+            "source_id": "mopar_2019_wrangler_user_guide",
+            "source_locator": "https://vehicleinfo.mopar.com/assets/publications/en-ca/Jeep/2019/Wrangler/10387.pdf"
+          },
+          {
+            "assertion_set_id": "MY2019-JL-drive",
+            "source_id": "jeep_2019_wrangler_specifications",
+            "source_locator": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/specs/2019_JP_Wrangler_SPmk1alba10mregeqq9v39oek881.pdf"
+          },
+          {
+            "assertion_set_id": "MY2019-common-JLJS74",
+            "source_id": "reviewed_jeep_order_guide_inventory",
+            "source_locator": "docs/implementation/handoffs/MY2019_JL/MY2019_JL_CODEX_HANDOFF.md"
+          }
+        ],
+        "status": "pending_create"
+      }
+    ]
+  },
+  "matrix_digest": "sha256:d8f11301e230b8485dfd2d15c0b9342aaa0cc778aa7418052ce8da7b10cf6896",
+  "prior_review_file_hashes": {
+    "docs/implementation/handoffs/MY2019_JL/director_review/COMPACT_EVIDENCE_RETENTION.md": "sha256:0594589720768af8f4f0fd8153fdd248c42252f9f0a971eca2492a645ea44304",
+    "docs/implementation/handoffs/MY2019_JL/director_review/MINIMUM_EVIDENCE_REPORT.md": "sha256:4cc5f92cc019de9811c52d6ac7f71b2aa4feb1f5eaedb0c11ff91ff2b0869705",
+    "docs/implementation/handoffs/MY2019_JL/director_review/README.md": "sha256:8bc293ec9e1650fe268ba1111bc26668db7d90818a6f270a767be5fa47aa0b0c",
+    "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-01.candidate.json": "sha256:41b45171d76e9509bf7b8da50ce9abbfac146f63a4808790e63db149991d867f",
+    "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-01.source_assertion_set_1.json": "sha256:594b2e8f816cb9592491dc66e24e708f01e2772bd4c8dfd7c5bc66b75ab70aa5",
+    "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-02.candidate.json": "sha256:31bd05fc66b2969ea1cb9a1f08c14acefd6e59984887830faf74033ca59cdafd",
+    "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-02.source_assertion_set_1.json": "sha256:f2ba53d07798dba91b4a28d4db896317214beb11a0e0a36b8e4bdc9520332846",
+    "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-03.candidate.json": "sha256:f3e88aee65074c0aeb7469ae62202173a0f5eafc3536654688946c06f72a4327",
+    "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-03.source_assertion_set_1.json": "sha256:c94ffc28aec90d402339f745bd88758d497f248f548b5f695d8e4a391b18fbc7",
+    "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-04.candidate.json": "sha256:006b1a84057b72d92fe36da17363a62f9fb4ce211b261a992b3dc052a8c44772",
+    "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-04.source_assertion_set_1.json": "sha256:99e1514955c707aa8f5677781c5e5af6d2d9407b840696b28dc88d0aa770c258",
+    "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-05.candidate.json": "sha256:626eb069b9af62409bb595bd66d84c1fc715a7c1eb7581b4600dec3b66a69f6a",
+    "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-05.source_assertion_set_1.json": "sha256:d74813bc976bc5d2a016c6ddc6ea07c17eaf6cfdf8aeab89799aeea938e643da",
+    "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-06.candidate.json": "sha256:7894047cdbdec8eeb179fa15a53cbd60eea40a9792e1c6ed4fb7420bf1766481",
+    "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-06.source_assertion_set_1.json": "sha256:19dc88c4ef34c9f1f725056f1858e2efdb82276cbb5c0a6a93905ffa491ea828",
+    "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-07.candidate.json": "sha256:fd7f325516da56d5f43cfdc8e765686b110077dff983e87986ca1541d296e3c2",
+    "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-07.source_assertion_set_1.json": "sha256:644da2a3aa7941a92d98e03bd9a17e7a921093e3cc0734a611cd6e5eb1434c57",
+    "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-07.source_assertion_set_2.json": "sha256:3f48805726f8a286b6b66d26ee1c111b8daa16e7d7283eab53fc1a6d076bd60f",
+    "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-08.candidate.json": "sha256:a4edf9e597d55bfb8cb22308052c3c5e67e54ac2a46a450e48af9dfef397272c",
+    "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-08.source_assertion_set_1.json": "sha256:5f84a511b40a6f726549541f9ad50e08eadf3548cf89e5ffcb39c9e5f018defd",
+    "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-08.source_assertion_set_2.json": "sha256:169850a119cae9be34d4b5e48f7e01687f2702ef4c704bfd82571b6aea0b2d2e",
+    "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-09.candidate.json": "sha256:abf7cf6e3cbfb76b3cbb1acc605d4ad1d02573cfc689abdd28ddb6ec71a49e77",
+    "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-09.source_assertion_set_1.json": "sha256:ec5667ce88023060541d64bcb8ed23db262578eeea64dcca8118d4158b9d60c4",
+    "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-09.source_assertion_set_2.json": "sha256:6925dacee0acf3bb687224114277e7d3fba73494b51e863eb613fd643a93800c",
+    "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-10.candidate.json": "sha256:fdd7d2643ed1997716fedb98c75a6741fcee74ea6551c0c1a7f09facff6354e5",
+    "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-10.source_assertion_set_1.json": "sha256:57ce9b14cc08745a6fc2dc2779e73e5bc0620e90fd59a7db893d3b2e4493273b",
+    "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-10.source_assertion_set_2.json": "sha256:950e3bd5858489f915466b4cc7a75a69b9215417da245e18a36861fbe5fcbe50",
+    "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-11.candidate.json": "sha256:907fbe861e9c65f568cba9c80e9cad9123af399b1d8a4153139383c9c7b95a1d",
+    "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-11.source_assertion_set_1.json": "sha256:25664c176924945edfc70b5a11bf93242906fee51d176c00e3966a3f3c71698c",
+    "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-11.source_assertion_set_2.json": "sha256:c28dd08167842d93ae97612045c8e7de1ba4f7d759a1b04ee3b6b9264c9ed290",
+    "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-12.candidate.json": "sha256:f9345c2e8f2206555579f862c0c6c9784a2b65b12d55b99574ee461390d8ae95",
+    "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-12.source_assertion_set_1.json": "sha256:52402c396c1a7ae9ea47c54ada29d104d06be07ec55a3ef7053f11566709dc26",
+    "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-12.source_assertion_set_2.json": "sha256:1d1b8a82d02048f7d2a407ce30887de795fde7c37998184aebeae694bfd50e63",
+    "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-13.candidate.json": "sha256:ef281bf38abfff6bfdcc19895c53b0270e6d58637402236a66c7bec9f2cf7d6c",
+    "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-13.source_assertion_set_1.json": "sha256:6318de155aa6d9e28ad691e028066e48e749920fc4fd9b5ff6d49a1c9006ed56",
+    "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-13.source_assertion_set_2.json": "sha256:50dc29370fb4f0a2f42cf0402b01fce946944dc4284ca1e83df9886060a25b96",
+    "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-14.candidate.json": "sha256:6eda58e87b89f6bd1823b37a946e22d2548301e8d261119b449060cce8510f4e",
+    "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-14.source_assertion_set_1.json": "sha256:5fd8f290c591e400813a438f26425e6d104700b97bbbdeebeb953240711fb1b9",
+    "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-14.source_assertion_set_2.json": "sha256:4885b2fa5799db8778ae4f25b841f0da5f1cc2d4f65ede428367eba60a1f0de7",
+    "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-15.candidate.json": "sha256:f3536a8a031069904d5692a0487b7af0fddf90b0493efe509ea4c874e0c122a9",
+    "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-15.source_assertion_set_1.json": "sha256:74661632626c3dc5a9cae18e603361315dce62328fe5fb0dec8b8d81a3102a78",
+    "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-15.source_assertion_set_2.json": "sha256:60a683713b78f2136198196bd745af27a6e018e402acb4b5f00bdb25db48f636",
+    "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-16.candidate.json": "sha256:ca578e5168a7c3a34a05a473b45a839ed5bda33ea42bcc20d4479dfcddbe3c74",
+    "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-16.source_assertion_set_1.json": "sha256:c1081a46e30ba4f6034018dcd4bd88709d62fd9bd0c2f2233029c551895d4c62",
+    "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-16.source_assertion_set_2.json": "sha256:aaea6ca277ec676ad38064a060f7e39bd48e737cc70f2bb68b1dcd170a540fa6",
+    "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-17.candidate.json": "sha256:e78a610d5a7630672515c850dc0c68302b449a14ac947add17446fa665506c15",
+    "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-17.source_assertion_set_1.json": "sha256:a06c5569cad0662e98c82ce9bd363856ee476c1c44085be193617a1d154ea589",
+    "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-17.source_assertion_set_2.json": "sha256:e47228722170593e7298f65f64a1921f34429d0cf363f8df4f0b25528b7cb016",
+    "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-18.candidate.json": "sha256:ea32e9b7979fff2f12d7cd7e8ed29356aef98f5c2b1a4e4ba59aec9abc7df6eb",
+    "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-18.source_assertion_set_1.json": "sha256:0344328764bf422247dca6b1fc5344302ceff5deb480b3af77dd855bb0976d8f",
+    "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-18.source_assertion_set_2.json": "sha256:f9aa3e7d92ab59e01e34052edce0e4a0f52ff888311a61277580a12fe7a51127",
+    "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-19.candidate.json": "sha256:a1be7459cd53c848d1fc685cdddb39a9781ec47559f80729d4033c31a1ff1247",
+    "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-19.source_assertion_set_1.json": "sha256:c4ace5341e50e843b5e2ef428c7581e86c6abae388bcd2e2544c20136c40ee1b",
+    "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/JL19-19.source_assertion_set_2.json": "sha256:c470b3350e0437cd3082c63d4a7ba52d562a406b4c6bd8a44bc44fd295d17dd7",
+    "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/evidence/accepted_research_snapshot.json": "sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3",
+    "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/evidence/jlu_2019_06_04_selected_excerpts.json": "sha256:3a3e829b87591583ffd6902a5ddd694be7d47fd815fd10813cb1e28a36a8938f",
+    "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/validation_results.json": "sha256:d87e4f92d0221e9b138cca8c59ab23a29a6e0447a0c0895d1aad59778bce221a",
+    "docs/implementation/handoffs/MY2019_JL/director_review/construct_preparatory_candidates.py": "sha256:491e0220ab367a18473082f04c3af1ad551ee8cd033ba2d37de0c2885172310a",
+    "docs/implementation/handoffs/MY2019_JL/director_review/director_review_19_rows_BLOCKED.csv": "sha256:8deb895071993a4b867688e28b4cda71c8b07fbc0f0758f0bd5e518395dda4de",
+    "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/README.md": "sha256:abe4f2b291ad79d714bb599ae780d283f393fe42126ebbf7089e60e041401eab",
+    "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/adjudications/JL19-01.approved.json": "sha256:709d8fa99dd479a1aa558442f10b44e8280800198d2f9c7c772f30ff586af5be",
+    "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/adjudications/JL19-03.approved.json": "sha256:ca7fc746a94c09e77f72c35e667292a4b88d55c4a298b0cbb95042959b11da10",
+    "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/adjudications/JL19-05.approved.json": "sha256:60905a45e8eb6d8ba2877090f2bba9aa6e6d5c81189f5ca69eda27e8464aa39a",
+    "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/adjudications/JL19-07.approved.json": "sha256:1930f97074852114f64fc946882807064e289673ce15e408678420592ac90686",
+    "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/adjudications/JL19-09.approved.json": "sha256:ebfbb2742d3fafff480a1a8af32ac6e3dd1ab48b5c0e402294ab83760323ee59",
+    "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/adjudications/JL19-11.approved.json": "sha256:96ead3202da5203f00a0d2e12831719720068dce4a2daf1660ef0f01e7d89bde",
+    "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/adjudications/JL19-13.approved.json": "sha256:f73e24575dd4ae5104671c955f23d2cceb6af1eefff4a530299dd40d0b7b8698",
+    "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/adjudications/JL19-15.approved.json": "sha256:12d513952a1b5093a6a47a180215801c8d312da67199e2fda6ce927d6796ed9f",
+    "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/adjudications/JL19-17.approved.json": "sha256:fd282eac931fc8ecf3d09c30b7787d86b3c70a225ef5dbdcdca0ab752454e5e0",
+    "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/adjudications/JL19-18.approved.json": "sha256:837a1da50c86e2f505979efb1aaf1a25073ec77e6de43140f509dff4c2b9a9ab",
+    "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/approval_index.json": "sha256:ed4a0d5aa08e5ff95d6ea7cb0342e8f6c9095ef5f0400d3f91b1b1c714096d8c",
+    "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/authorization.json": "sha256:2fd374e646d067e40a6394fd0edb97bded1f9581e9e361ff549392eefc435fd0",
+    "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/candidates/JL19-01.candidate.json": "sha256:dde3f40064d9fb08db8e47d055d47b206d631cf6caabea9b7fa1b4f707101e61",
+    "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/candidates/JL19-03.candidate.json": "sha256:80d64d67aeff14be7bb21a2eab6237870cccea3fcf2cf950d9f80094335af586",
+    "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/candidates/JL19-05.candidate.json": "sha256:d495279841c166f567917df526d11d509ed2566c8c1c5f0bb2cbb50969890bc9",
+    "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/candidates/JL19-07.candidate.json": "sha256:af6ec15b28b5d0d1b3b04452c7f620b69c12cde318c126bfa4230a289d0662d5",
+    "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/candidates/JL19-09.candidate.json": "sha256:c4b8e631f9f05e3060cf5b94d12198a48f6dfc02a407a3451ef311e6ae346a39",
+    "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/candidates/JL19-11.candidate.json": "sha256:861b1cef5fac77529ac482958c23a8800f548f29647de7e19d98e4bc0770343b",
+    "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/candidates/JL19-13.candidate.json": "sha256:7a45d7b6b66752edbf9a0d5dac9b2217ba1aa41c25526d0d3e6df995b4fcc12a",
+    "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/candidates/JL19-15.candidate.json": "sha256:67b44690ddf32e41b4f3c49b45e61dd0282f7ce9116cf741808bf276f9be4fbc",
+    "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/candidates/JL19-17.candidate.json": "sha256:0e11016f916fa1ad91b9a7d6012b404e1ab7f1a89b217de6e32a6d6c1e278a08",
+    "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/candidates/JL19-18.candidate.json": "sha256:6a6ae7fff79f85b8e4a57d9db834814c5d3f8ca11e4806df5e9bc0c837c17fd6",
+    "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/complete_19_candidate_index.json": "sha256:c069a3866af5c09e9f5109b723401d050f5f4a2420f7f2d7b9e0836d22acf14e",
+    "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/preservation.json": "sha256:c1e6858a68ee9d870974c65a8de37f7f82baeb2606e7d81429d80b607dc08188",
+    "docs/implementation/handoffs/MY2019_JL/director_review/erc_classification_proposals_20261108/README.md": "sha256:4e7092f8d85035d9abfa58c56ecb647fc2881f570af9f7687214fc286e7274b6",
+    "docs/implementation/handoffs/MY2019_JL/director_review/erc_classification_proposals_20261108/evidence/carb-2019-a0091433.pdf": "sha256:c82e4ddc543e0142628e1cf66f1ff6e38e233eff474e6b1b93e0c2dd0eae64e6",
+    "docs/implementation/handoffs/MY2019_JL/director_review/erc_classification_proposals_20261108/evidence/erc_research_dossier.json": "sha256:df1686c6c360f451a8c10b94e4c4b6dafc5cabced607e2ecac6f0be8d4521443",
+    "docs/implementation/handoffs/MY2019_JL/director_review/erc_classification_proposals_20261108/evidence/fca-y40-bulletin.pdf": "sha256:6af1557c414a22a709a7a0d9d50767ef55f7fc885dab3fe26bbcf8dd35b9c2d7",
+    "docs/implementation/handoffs/MY2019_JL/director_review/erc_classification_proposals_20261108/evidence/supporting_documents.json": "sha256:2f042ad29297a8c1d9f1aa2f1a682824fd359c33664d6082fd0fce7d2f566465",
+    "docs/implementation/handoffs/MY2019_JL/director_review/erc_classification_proposals_20261108/index.json": "sha256:34f6e23f1e4ea531a7d09d5de85de6c88166c2953a5a09716b5f6b17f8387cd7",
+    "docs/implementation/handoffs/MY2019_JL/director_review/erc_classification_proposals_20261108/preservation.json": "sha256:ec42bc8bbb2bc03535cd21d6eb464cba3b753bb7dd791129833165b7f54ea4a4",
+    "docs/implementation/handoffs/MY2019_JL/director_review/erc_classification_proposals_20261108/proposals/JL19-01.adjudication.json": "sha256:88a944b072a8b73cbd0f086bd24105788a4cdc9366bd6f6a709fced4b71ea190",
+    "docs/implementation/handoffs/MY2019_JL/director_review/erc_classification_proposals_20261108/proposals/JL19-03.adjudication.json": "sha256:823ff1a26b3d37d5c5568b9be0aa5d6fc493d71ffdc1d4df914bde5f16519de5",
+    "docs/implementation/handoffs/MY2019_JL/director_review/erc_classification_proposals_20261108/proposals/JL19-05.adjudication.json": "sha256:52e7ffad84cd1ebfbeb0af5f8e13f137d5a50f1fea096d30ea1a9e50c4c37d15",
+    "docs/implementation/handoffs/MY2019_JL/director_review/erc_classification_proposals_20261108/proposals/JL19-07.adjudication.json": "sha256:2a326589024abd1db7c6442195989a385cee3b8a88339b217b4b6e72060b3e62",
+    "docs/implementation/handoffs/MY2019_JL/director_review/erc_classification_proposals_20261108/proposals/JL19-09.adjudication.json": "sha256:a5043e3f814cd4d658a33b82206874bb167bb75624c31ae079bda22575015be0",
+    "docs/implementation/handoffs/MY2019_JL/director_review/erc_classification_proposals_20261108/proposals/JL19-11.adjudication.json": "sha256:66691da5690c397472544a19c053941bfd40ba73f378f63b5b2c44949c829380",
+    "docs/implementation/handoffs/MY2019_JL/director_review/erc_classification_proposals_20261108/proposals/JL19-13.adjudication.json": "sha256:e371654594f1902bd885b5a38817f7b2e91cada9ee12bba78033a41c31073ee6",
+    "docs/implementation/handoffs/MY2019_JL/director_review/erc_classification_proposals_20261108/proposals/JL19-15.adjudication.json": "sha256:8f4d8275d0834a5f2fa8dcae5c20ee3d05ef1d46e4540773bd8d262cae56a7e5",
+    "docs/implementation/handoffs/MY2019_JL/director_review/erc_classification_proposals_20261108/proposals/JL19-17.adjudication.json": "sha256:7d353d8381884f87e1ac65cda5baff28d082fc8de3185b934f947365cbe19704",
+    "docs/implementation/handoffs/MY2019_JL/director_review/erc_classification_proposals_20261108/proposals/JL19-18.adjudication.json": "sha256:c455f4391eebe6197337d0a0107e0ca3a4b2b3fbd57263bd8c30598e0e3f4bf3",
+    "docs/implementation/handoffs/MY2019_JL/director_review/erc_classification_proposals_20261108/review.csv": "sha256:fec5d687e0e60c86d0e4747baf93b437c5d1f31f50f65107b636a393eec5c8e1",
+    "docs/implementation/handoffs/MY2019_JL/director_review/erc_supplied_sources_20261108/README.md": "sha256:ad8b728701ef96a54e47f86193aa3635e7f5380006ea57087d37a8a0ffa1bc14",
+    "docs/implementation/handoffs/MY2019_JL/director_review/erc_supplied_sources_20261108/coverage.csv": "sha256:e6ec345bf3b7b415409b0818b11e3fcc173609cd917006f4a9012cf9cf08f9bd",
+    "docs/implementation/handoffs/MY2019_JL/director_review/erc_supplied_sources_20261108/preservation.json": "sha256:a5336f0c042cd923657fd41a754e984d96bb43bc6a612ffd5279584f2995f262",
+    "docs/implementation/handoffs/MY2019_JL/director_review/erc_supplied_sources_20261108/source_review.json": "sha256:f34c1595f1eb3902d5c98a9ffbbe0f10b13df48e3cc1441eb55bab8c4062d319",
+    "docs/implementation/handoffs/MY2019_JL/director_review/erc_supplied_sources_20261108/sources/alternator-catalog.html": "sha256:e558fc4e27edf7f39a04332fadbd65930ee038b76f1377f84be23f0ac4c42843",
+    "docs/implementation/handoffs/MY2019_JL/director_review/erc_supplied_sources_20261108/sources/mopar_hardware_selected_facts.json": "sha256:456d7554534a5dae9f0ecf9ca6ae5f74f634d28d841f0c7a62c44fa0e1cfca75",
+    "docs/implementation/handoffs/MY2019_JL/director_review/erc_supplied_sources_20261108/sources/pentastar-family-facts.pdf": "sha256:7e16f753401a6711b78b510ad4cf35cecdaa775b7ce719b0050fd6db72dabfef",
+    "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/JLJL72.source_assertion_set.json": "sha256:460cb28c522994a79ea020b4cd3663306e5ec61e65af2dfff0291e8decfd1206",
+    "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/JLJL74.source_assertion_set.json": "sha256:2792dee90b776dd2f751b1f206f75c88551513d94f8092638102e5fa1ec727ab",
+    "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/JLJP74.source_assertion_set.json": "sha256:78b951e61b63e98d8349730139319dde19f4448adf69d61384fbdbfbba80a8ef",
+    "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/JLJS72.source_assertion_set.json": "sha256:7901d1c99238a07a440f85d26a3298b5ee2b1a7de475775eeba5d6940d34c161",
+    "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/JLJS74.source_assertion_set.json": "sha256:4fd4f2ca332f474f83433c65cd4f73c3babf881faf588923e051e66e27583a86",
+    "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/README.md": "sha256:1ddd64f0e8c0d7213308abe60260b9867eaeb3afb563286f44e427d30f0f9f97",
+    "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/candidate_review.json": "sha256:2353cc66e406d858c537e22d6694efa30f5df9e68506efab5cd6682770d1132d",
+    "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/candidates/JL19-01.candidate.json": "sha256:fa0f29cc78d63732b276e358d0f7eb8a4e987b2f9ac4251c7414cc2c13c5ce6e",
+    "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/candidates/JL19-02.candidate.json": "sha256:8ae7a2b9b75416e9b183afcef3e12f38f33b8eae89462d537ac5091ac92ecf6a",
+    "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/candidates/JL19-03.candidate.json": "sha256:51f0e7ac8e61b1d872482b07c1a8a97b59f3509303e7b227de3851de0276482c",
+    "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/candidates/JL19-04.candidate.json": "sha256:707f5a4fc911f415cd7cf52d39a83a15cf252947103568f80447e10c879ef994",
+    "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/candidates/JL19-05.candidate.json": "sha256:d9d006029f4340940d4900a831f219b1d5b7eef1205d3e1024754107b922439b",
+    "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/candidates/JL19-06.candidate.json": "sha256:736f3c082bc54aff2d1ddf628b0ee718471a0cda9e213cba7b3787977e318d82",
+    "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/candidates/JL19-07.candidate.json": "sha256:b1c4385187162bf8e8139ac6015c95e91993eb2bce6ae9f2286713b926b5d53f",
+    "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/candidates/JL19-08.candidate.json": "sha256:9fd985f5b200e5d19d1ac98f52ec470eeaef330c0d99a9fc3de0acd8abf50020",
+    "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/candidates/JL19-09.candidate.json": "sha256:572739df30dc5ba481924522b70915a38d55a51269461dc13bd72d8aa8f40150",
+    "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/candidates/JL19-10.candidate.json": "sha256:c73cec46c37215235250fe44d8a29010a6b80a36da6587da7862f57b47aeef34",
+    "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/candidates/JL19-11.candidate.json": "sha256:dd6f56a7ec465a679c62486e5d16aa1551976fd68cd91dd2cc65662e746d7c97",
+    "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/candidates/JL19-12.candidate.json": "sha256:e61ef5b6e852ea1f59f6dac24d262306600ef1a1b59e53778a6dbd511900bf72",
+    "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/candidates/JL19-13.candidate.json": "sha256:3b97134574ab4d8d51f0f87e4ec64cc5d64db63968614a6d98ab549dc2c84b66",
+    "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/candidates/JL19-14.candidate.json": "sha256:6968cbd2932c2431d5f979ee3b4c734e927101d9335ec2cb571dc2f63053b979",
+    "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/candidates/JL19-15.candidate.json": "sha256:3bf0aabff45a0a69dd4351145fe669b0716fdd08f1b87e0f804348129362e3b8",
+    "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/candidates/JL19-16.candidate.json": "sha256:3280cccd4197c4fb8f309f98b3f1a4fd4b6700bf704039e8f75c5f5f9212730a",
+    "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/candidates/JL19-17.candidate.json": "sha256:60c123aed5583f204663ff13293315b63e2312801ea89f8cc060012d675c9ff4",
+    "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/candidates/JL19-18.candidate.json": "sha256:5049ed0f17445ed79d461334953ab385bae410beb8a066977d72defe5c23350c",
+    "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/candidates/JL19-19.candidate.json": "sha256:e71b15e160a45557dc2547b68fe9ddee8fbf9f9a69dd3b8f8f2c1addf735cc32",
+    "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/correspondence_proposals/JLJL72.review.json": "sha256:2064e5e2c8d41dfb8a6faa78046348160a7eb69eb4e67ad46fda8353ddaa3ae3",
+    "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/correspondence_proposals/JLJL74.review.json": "sha256:8296cdfec551e855e52f2d2db7cd81a0c11622a5c92a0796ac95e3b15e4dad47",
+    "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/correspondence_proposals/JLJP74.review.json": "sha256:98910e1310c72542ea167c9d4447649ba473998d5fdbc62cc8287b23b1ecf481",
+    "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/correspondence_proposals/JLJS72.review.json": "sha256:616ef1a307fa8b03ad96192f57fc49dcc445f9735b6babd83b50f44467b19127",
+    "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/correspondence_proposals/JLJS74.review.json": "sha256:407f5c0128518c08472e5adc1741fe9dc22c7340c60cf7f15fef31421a198486",
+    "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/director_review_19_rows_BLOCKED.csv": "sha256:fe442cff002f82d19c047f743ddc15abdf73f6605c6be12067e93706b78c5cdb",
+    "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/drive.source_assertion_set.json": "sha256:108d9c8eec21c09c5f97ea4e37df98debd37e332043ea942704dc9b9ec469c4c",
+    "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/engine_proof_assessment.json": "sha256:6860a993c12637765b69e545f2dc12904d8b7692d9bcd23a26bf9233765731b9",
+    "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/evidence/jeep_2019_specification_selected_facts.json": "sha256:84bb3faf505332a2799830563cb1863621385b96430585e1a03216924596fd40",
+    "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/evidence/mopar_2019_fuel_selected_facts.json": "sha256:0435598871bae4ab42e91f52f689331447ecfdb3d56644c3f9aac4274645cd0e",
+    "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/fuel.source_assertion_set.json": "sha256:7fff4b8d836ff098653959adb807fe8b91a31bf25e65e86df2e91b76f5090600",
+    "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/live_peer_assessment.json": "sha256:7ddc736dedc1869004156307b2e9395e4265a9cd5389fc7a17f60c147c97efea",
+    "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/matrix_readiness.json": "sha256:f723dbee2401c93316852bb859b672dd6f9049ec42dbff6ff457b41237656586",
+    "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/preservation.json": "sha256:237e18fc278b5a710e725d4c2f4fe343d069c2a688fafb77a8d4a39710e2d238",
+    "docs/implementation/handoffs/MY2019_JL/director_review/final_planning_20261108/README.md": "sha256:a3fb97249b1f5627a7eb1133e6444825440f2efc510292208424d1389120f5fd",
+    "docs/implementation/handoffs/MY2019_JL/director_review/final_planning_20261108/artifact_hashes.json": "sha256:5e90ae84c71075d50165fd402ca610363c8f3baeb3d436f1952a1102029273ae",
+    "docs/implementation/handoffs/MY2019_JL/director_review/final_planning_20261108/canonical_peer_assessment.json": "sha256:b4aeab637e0a046e1ef88fc2b8d7612c1db0923bb85835a7eeec84ebc371a93a",
+    "docs/implementation/handoffs/MY2019_JL/director_review/final_planning_20261108/certification.json": "sha256:44f578946385ca8ee691b76bcf1270fa0566decd1d5979954f946a2894481028",
+    "docs/implementation/handoffs/MY2019_JL/director_review/final_planning_20261108/engine_proofs_2_0.json": "sha256:d383dd10c6f375e5b50785b1d5517883f9901461092d91409648a2912903170e",
+    "docs/implementation/handoffs/MY2019_JL/director_review/final_planning_20261108/manifests/JL19-01.manifest.json": "sha256:669d5e4dc2da493263fef7dad9f2cb45e2cd6137477ee00159fccb45fdaff393",
+    "docs/implementation/handoffs/MY2019_JL/director_review/final_planning_20261108/manifests/JL19-02.manifest.json": "sha256:b4264ffb8763b23436a1a641faa9e45b565e7c03d6800e980fdbe938416ca2c0",
+    "docs/implementation/handoffs/MY2019_JL/director_review/final_planning_20261108/manifests/JL19-03.manifest.json": "sha256:baabb27a9b53a550d17a535cf3ee4dc2443ec75643ed6eb36f2b0ceb91c7c0ea",
+    "docs/implementation/handoffs/MY2019_JL/director_review/final_planning_20261108/manifests/JL19-04.manifest.json": "sha256:d35cd1edfcf35b60622fa8b6b7b5e0e62d843db49fb4d899071b0f49d8ef4b58",
+    "docs/implementation/handoffs/MY2019_JL/director_review/final_planning_20261108/manifests/JL19-05.manifest.json": "sha256:6a71039cf0257930c82da5fbb674af8e6e4ee321ac851c1b2ac9d0a1a86a3435",
+    "docs/implementation/handoffs/MY2019_JL/director_review/final_planning_20261108/manifests/JL19-06.manifest.json": "sha256:a738685bf9d1244cc271daec51e081e197a6eecf3a8c8efa85f44434f5551459",
+    "docs/implementation/handoffs/MY2019_JL/director_review/final_planning_20261108/manifests/JL19-07.manifest.json": "sha256:6f860c886648875a16f937927b0323fe7e68b69aa4ef0ce64e4275cffe79c4b0",
+    "docs/implementation/handoffs/MY2019_JL/director_review/final_planning_20261108/manifests/JL19-08.manifest.json": "sha256:8b5267571c7b73f9e0f5a049b73562ebe59d9ac7e73fc0c31c9c646f402e8da0",
+    "docs/implementation/handoffs/MY2019_JL/director_review/final_planning_20261108/manifests/JL19-09.manifest.json": "sha256:cab765353246dedf3b377d4a903e93545fa610faf6f7c65d91485c61879874dd",
+    "docs/implementation/handoffs/MY2019_JL/director_review/final_planning_20261108/manifests/JL19-10.manifest.json": "sha256:ba2041296854e26e6c8d6d4025e8caf0bf0885bc2e047f47be82f694dbca4103",
+    "docs/implementation/handoffs/MY2019_JL/director_review/final_planning_20261108/manifests/JL19-11.manifest.json": "sha256:39a0a1e15bfc43151f6be6f9b0eb76bef392c0b1cf4095b99d4c7bd8a1d850a3",
+    "docs/implementation/handoffs/MY2019_JL/director_review/final_planning_20261108/manifests/JL19-12.manifest.json": "sha256:8689c2894a32907232238b5baf363c1310ba2d8208d15816ff87a475a5975640",
+    "docs/implementation/handoffs/MY2019_JL/director_review/final_planning_20261108/manifests/JL19-13.manifest.json": "sha256:b780536480facb9b38d138e37e4d14c1dfc9abcef4a558c0d0e7ae730108db11",
+    "docs/implementation/handoffs/MY2019_JL/director_review/final_planning_20261108/manifests/JL19-14.manifest.json": "sha256:f5639a69f0e81d96364596e5ffb7a5885b37874695ba0577365db23ed008a768",
+    "docs/implementation/handoffs/MY2019_JL/director_review/final_planning_20261108/manifests/JL19-15.manifest.json": "sha256:ffd623699c1023a75725a55cbd5f37474c55fded16e3d4c831f88dbc83e8fec0",
+    "docs/implementation/handoffs/MY2019_JL/director_review/final_planning_20261108/manifests/JL19-16.manifest.json": "sha256:ee489944bfe6fa25d8e7a5e7c5580924f42533636b2b396928ddc462e95f155d",
+    "docs/implementation/handoffs/MY2019_JL/director_review/final_planning_20261108/manifests/JL19-17.manifest.json": "sha256:9bf1fcc4905eb9d3453473171adbded04890973674caa91991f837b1cd7b6e74",
+    "docs/implementation/handoffs/MY2019_JL/director_review/final_planning_20261108/manifests/JL19-18.manifest.json": "sha256:03a9e7fc3877e37b82ae10397f79daeb399c13bfbfa7e09307b66e6cb0df5101",
+    "docs/implementation/handoffs/MY2019_JL/director_review/final_planning_20261108/manifests/JL19-19.manifest.json": "sha256:931c08c6f97cbb430b399bf8c7eab450c208227d7dfad045da6e8565ae0c724c",
+    "docs/implementation/handoffs/MY2019_JL/director_review/final_planning_20261108/matrix_2_1.json": "sha256:8efc1d910702df945809e3f121bc558be8fe834668d5383cd648edd8104da556",
+    "docs/implementation/handoffs/MY2019_JL/director_review/final_planning_20261108/matrix_review.json": "sha256:e0e2f9591bc7a98597b5c316048c2683f2f70804a5330a39d8dce0766f541962",
+    "docs/implementation/handoffs/MY2019_JL/director_review/final_planning_20261108/plan_index.json": "sha256:bacdd6293171adc2287bbba69d322d69c50aeb49a04f11c2aca9572dacc48bc2",
+    "docs/implementation/handoffs/MY2019_JL/director_review/final_planning_20261108/preservation.json": "sha256:9cb5a212b5ef83144ef78810727d1bc5d3400f86dcda8f7fb34fa543a7bcd2b6",
+    "docs/implementation/handoffs/MY2019_JL/director_review/final_planning_20261108/transaction_basis_review.json": "sha256:ec4c3ac9d54dec16ceb56be98b6f1f9f595417ef8f9536e8fc6d4f44600a53ce",
+    "docs/implementation/handoffs/MY2019_JL/director_review/final_planning_20261108/verification.json": "sha256:ba156adb49b23df5acd8be3901149d1daaa335909f34a14ba5966af19b3182c5",
+    "docs/implementation/handoffs/MY2019_JL/director_review/generation_publication_20261108/README.md": "sha256:5736dfc5a7387e85054636530333e76d0213f438b8c900efbe33ce14867c6f26",
+    "docs/implementation/handoffs/MY2019_JL/director_review/generation_publication_20261108/preflight.json": "sha256:db313d121b293eb1807bf87b00efc0732dff571699482d6398cc43e2174b9c65",
+    "docs/implementation/handoffs/MY2019_JL/director_review/generation_publication_20261108/publication_phase_complete.json": "sha256:b500309ea2a3bf57b0dbd4b12f7c248cf2a63f65f0e66aca97afb089f7363c40",
+    "docs/implementation/handoffs/MY2019_JL/director_review/generation_publication_20261108/results.json": "sha256:f93d40b2f6c2d1844dd823dbdb94b703c98436f268eac34fae9b6c9a158e1972",
+    "docs/implementation/handoffs/MY2019_JL/director_review/generation_publication_20261108/verification.json": "sha256:04f4a544c5e8bbfa7f27a2cbdded102eaefeade1e2a8ec2bf4fcf6a7094f49f5",
+    "docs/implementation/handoffs/MY2019_JL/director_review/generation_publication_20261108/workflow_logs/JLJL72.txt": "sha256:6858bcdf6b8c8ecde28115fe561ef79ce5cf953c0cda53b7c23fc8f3eff2372b",
+    "docs/implementation/handoffs/MY2019_JL/director_review/generation_publication_20261108/workflow_logs/JLJL74.txt": "sha256:f42d59e1de9d234af6a2ef3db5c791c233fba66573049af596b1d31828af4e3f",
+    "docs/implementation/handoffs/MY2019_JL/director_review/generation_publication_20261108/workflow_logs/JLJP74.txt": "sha256:5025ea91dbe096a249fe275d23f6b9f5681123c1ee652851ed24550d0d36875f",
+    "docs/implementation/handoffs/MY2019_JL/director_review/generation_publication_20261108/workflow_logs/JLJS72.txt": "sha256:bcb88f7f199bb50c202923273e77e73b38b59a498f0e64ff6bc15f59ad8160c4",
+    "docs/implementation/handoffs/MY2019_JL/director_review/generation_publication_20261108/workflow_logs/JLJS74.txt": "sha256:e51b4c7f74b4700bbf8e062d6bb6c67b4a0ba81197eaa4c19c2c44ed760663d4",
+    "docs/implementation/handoffs/MY2019_JL/director_review/live_database_assessment.json": "sha256:5946e0d4442f5f3b4b6a09aefdf064162c727d865b72bab533c49728f1aa25ad",
+    "docs/implementation/handoffs/MY2019_JL/director_review/preparatory_candidates/JL19-01.candidate.json": "sha256:23400a1d0fd5bba4314352a8725be64ac00754b88b6ebd1b17c72447c847f002",
+    "docs/implementation/handoffs/MY2019_JL/director_review/preparatory_candidates/JL19-01.source_assertion_set.json": "sha256:d4de4c67466de49fff5c79202f536508b83faeb4bd9a97cb6c3fc8c279ce2e35",
+    "docs/implementation/handoffs/MY2019_JL/director_review/preparatory_candidates/JL19-02.candidate.json": "sha256:f56f02d3afdc62b1ba22d016128e214e28cae59c4a5b369e79555593ac7adc4e",
+    "docs/implementation/handoffs/MY2019_JL/director_review/preparatory_candidates/JL19-02.source_assertion_set.json": "sha256:738df0aac22f9c11ca163a697847f3413b1b7a5568051ceadd37e463b6e7268b",
+    "docs/implementation/handoffs/MY2019_JL/director_review/preparatory_candidates/JL19-03.candidate.json": "sha256:7efd17fd039655ec1ad5d8930714135fea59142439b9f32a84a32b481baa1256",
+    "docs/implementation/handoffs/MY2019_JL/director_review/preparatory_candidates/JL19-03.source_assertion_set.json": "sha256:eb90859fd9e19591a69648ccf4267e14f741fcb2ad9fb89bed16b1d3bb66e12a",
+    "docs/implementation/handoffs/MY2019_JL/director_review/preparatory_candidates/JL19-04.candidate.json": "sha256:466bba8b350105d501ff6021661c310e7a82b5e723495702ebc667e71814f5ba",
+    "docs/implementation/handoffs/MY2019_JL/director_review/preparatory_candidates/JL19-04.source_assertion_set.json": "sha256:d2d807c2197d572c563f9e2081adf35ef732e2fcd70e92e88b12c0197efa3cc2",
+    "docs/implementation/handoffs/MY2019_JL/director_review/preparatory_candidates/JL19-05.candidate.json": "sha256:4a8698f452f238899d9abf52b6e6251af3849fb484fd19448274a38f7a61f211",
+    "docs/implementation/handoffs/MY2019_JL/director_review/preparatory_candidates/JL19-05.source_assertion_set.json": "sha256:a0162648d2efe80837b4fcc7be57e7d66070412f8469ea83babe89d6a68451ec",
+    "docs/implementation/handoffs/MY2019_JL/director_review/preparatory_candidates/JL19-06.candidate.json": "sha256:8fe3f0a3a2dc7cbd5677e3a467cc5d4adba5ab2da1f6f7041b61ce0dd6c24267",
+    "docs/implementation/handoffs/MY2019_JL/director_review/preparatory_candidates/JL19-06.source_assertion_set.json": "sha256:d456457f2e4b611b77358a938ae080cbb3ef4eb4851205ee1a78ab5a26c3a03e",
+    "docs/implementation/handoffs/MY2019_JL/director_review/preparatory_candidates/JL19-07.candidate.json": "sha256:e2ce2299a69877eda81f4eb38e618044175ccbb2b692928fa48c1d535097628e",
+    "docs/implementation/handoffs/MY2019_JL/director_review/preparatory_candidates/JL19-07.source_assertion_set.json": "sha256:980e2591689deb0cf765704460c84b51d2da6ca648b4b6a2dcc3126bff63cf7a",
+    "docs/implementation/handoffs/MY2019_JL/director_review/preparatory_candidates/JL19-08.candidate.json": "sha256:7b8ac0639bf8163660ca17f5367a39939150714b549d5cab5305bc17f4fdcb08",
+    "docs/implementation/handoffs/MY2019_JL/director_review/preparatory_candidates/JL19-08.source_assertion_set.json": "sha256:b0f2fb409beb91e5414b1d7fd45ead34867c67c260a93bbfec35e0bf7e8b8c83",
+    "docs/implementation/handoffs/MY2019_JL/director_review/preparatory_candidates/JL19-09.candidate.json": "sha256:9f48aa2e63b904879bd115bfd0b9d61dbcf2745f749e46a89509df2f3a429f7a",
+    "docs/implementation/handoffs/MY2019_JL/director_review/preparatory_candidates/JL19-09.source_assertion_set.json": "sha256:e8ea7479439e3fe663b09229377f205c80c2ecef72883426b2a79020c2a2aa9b",
+    "docs/implementation/handoffs/MY2019_JL/director_review/preparatory_candidates/JL19-10.candidate.json": "sha256:157340168901252371729bed7e01db40d7d23772a1d0cb89ffb458c3b208f3f1",
+    "docs/implementation/handoffs/MY2019_JL/director_review/preparatory_candidates/JL19-10.source_assertion_set.json": "sha256:9e788f3992d40632dd16b04287bcd1b775b5ded05a0eed84f5871d42f8179def",
+    "docs/implementation/handoffs/MY2019_JL/director_review/preparatory_candidates/JL19-11.candidate.json": "sha256:8df6a56d0e578b71f95e929cef0abdf93682f63d138ab472dfa1be528874187d",
+    "docs/implementation/handoffs/MY2019_JL/director_review/preparatory_candidates/JL19-11.source_assertion_set.json": "sha256:890de3a739b87bfabb37a33b9880294397d52d17b361cad4f1d52f8ab952ff3c",
+    "docs/implementation/handoffs/MY2019_JL/director_review/preparatory_candidates/JL19-12.candidate.json": "sha256:b0fbb00e24261b9a3a89845e5c8200c0de617efc882ea2d132af662d86a32276",
+    "docs/implementation/handoffs/MY2019_JL/director_review/preparatory_candidates/JL19-12.source_assertion_set.json": "sha256:1503895956688a3e4ede4d3fb9e7ab1f16833997af9e04a4f57d679fbe7c8669",
+    "docs/implementation/handoffs/MY2019_JL/director_review/preparatory_candidates/JL19-13.candidate.json": "sha256:5375a376ce9c4f434598677d96f6184733551a9f26e82b137d8569cbbcbb484c",
+    "docs/implementation/handoffs/MY2019_JL/director_review/preparatory_candidates/JL19-13.source_assertion_set.json": "sha256:12f4ef0eb00731885201e0edb7cd988a1e72504c358b0e307abd3d5888c8b668",
+    "docs/implementation/handoffs/MY2019_JL/director_review/preparatory_candidates/JL19-14.candidate.json": "sha256:aafe6191c3f09c1185b5aa8d60b6006d954a753c58b1014a537466187159e430",
+    "docs/implementation/handoffs/MY2019_JL/director_review/preparatory_candidates/JL19-14.source_assertion_set.json": "sha256:eda5a5174f680a25eca2ccc83f0bc17b66b6db87ff2030de3486476c961e2a03",
+    "docs/implementation/handoffs/MY2019_JL/director_review/preparatory_candidates/JL19-15.candidate.json": "sha256:1c51a9df6ea4260d21eb9aab50c8fcf0537fa8cf95c49a91c3dc0c7bda3db7de",
+    "docs/implementation/handoffs/MY2019_JL/director_review/preparatory_candidates/JL19-15.source_assertion_set.json": "sha256:ceead26a5e2551be4a6ff8918d23f115c35a04f478564cc8a5aa880258c554ed",
+    "docs/implementation/handoffs/MY2019_JL/director_review/preparatory_candidates/JL19-16.candidate.json": "sha256:c64bb4bf51032f6b50cbd6404b914962f4da4568bea29b487681768ae1f25b8c",
+    "docs/implementation/handoffs/MY2019_JL/director_review/preparatory_candidates/JL19-16.source_assertion_set.json": "sha256:6c1527f57d41528f77e3cb694bcd569ac455232c31651f2c2826c29ea973248a",
+    "docs/implementation/handoffs/MY2019_JL/director_review/preparatory_candidates/JL19-17.candidate.json": "sha256:183b5befcd19b04a82132f3e0254a53a347e92c7e794f6d2f25f1ea341506976",
+    "docs/implementation/handoffs/MY2019_JL/director_review/preparatory_candidates/JL19-17.source_assertion_set.json": "sha256:18975ee22014ff677cf4260b15b35916169d1aafcf076f0678a772e43e77069f",
+    "docs/implementation/handoffs/MY2019_JL/director_review/preparatory_candidates/JL19-18.candidate.json": "sha256:8d9020a6c1636d246fe2ff48b8673d1779251a510b0be5d7db913a013e2babc0",
+    "docs/implementation/handoffs/MY2019_JL/director_review/preparatory_candidates/JL19-18.source_assertion_set.json": "sha256:b52d102137cb52430a8bccc8c5f063f98233515cc075492cd48f62013a6e57df",
+    "docs/implementation/handoffs/MY2019_JL/director_review/preparatory_candidates/JL19-19.candidate.json": "sha256:56e88fbae89dd01bbb5ba851e3d5d7767f5ba8ce6a9f85755667ce66297174de",
+    "docs/implementation/handoffs/MY2019_JL/director_review/preparatory_candidates/JL19-19.source_assertion_set.json": "sha256:109bc2a73b76a2a828ca2fbf36e47a2ee2648d571e6a2c8b46920336322dd749",
+    "docs/implementation/handoffs/MY2019_JL/director_review/preparatory_candidates/snapshot_reference.json": "sha256:c9c1b95849666a1ebf2c3054c41e743c54a6a89dc65288bc8779b0302f9ab14d",
+    "docs/implementation/handoffs/MY2019_JL/director_review/preparatory_candidates/validation_results.json": "sha256:9946348a1f42a025ada244ce61a4ad63881cf59d3b7c3ebee94ca45ed89db4c8",
+    "docs/implementation/handoffs/MY2019_JL/director_review/retain_compact_guide_evidence.py": "sha256:4a9b597472a9de1891549b749670f539b976dae9765c3f54edf760170d80c3f4",
+    "docs/implementation/handoffs/MY2019_JL/director_review/review_20261108.py": "sha256:9d80d920f46d64c5aff2c31b3c8feb9bd158c8d5595b6063e890b3ad653af51b",
+    "docs/implementation/handoffs/MY2019_JL/director_review/source_evidence_ledger_BLOCKED.csv": "sha256:ab36a20c832b86db474188d0f8be7e97836e639352d3d544b8334762b07f3505"
+  },
+  "python": "3.13.1",
+  "recorded_at": "2026-11-08T20:56:05.272709+00:00",
+  "system_check": "System check identified no issues (0 silenced).",
+  "verified_candidates": [
+    {
+      "anticipated_creation_basis": "first_representation",
+      "candidate": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/candidates/JL19-01.candidate.json",
+      "candidate_digest": "sha256:4b051830ca189e2784199f29749acb3d7337eb6891fb3a4f3e1d57fde30ff406",
+      "reviewed_manifest_hash": "sha256:9fcdd4b804559809c96d634d61a210e08dfd1513fca0be0f55a1367ffc5b66a2",
+      "row_id": "JL19-01",
+      "target_slug": "2019-sport-36l-v6-4wd-us"
+    },
+    {
+      "anticipated_creation_basis": "mechanical_dimension",
+      "candidate": "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/candidates/JL19-02.candidate.json",
+      "candidate_digest": "sha256:2d4c76e2571661a894807f6f85a923089a03da2b034a27134a11367a216832d6",
+      "reviewed_manifest_hash": "sha256:d34cb1d8658a7406e73602fbff769a2d3951a81115459c61fc4d67bb3487bffb",
+      "row_id": "JL19-02",
+      "target_slug": "2019-sport-20l-i4-4wd-us-turbo-mhev"
+    },
+    {
+      "anticipated_creation_basis": "source_established_grade",
+      "candidate": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/candidates/JL19-03.candidate.json",
+      "candidate_digest": "sha256:6fc3f01e272e9f209b55a2900cef3cecf2268aa18ffbeff32240d57410aa2aa6",
+      "reviewed_manifest_hash": "sha256:7371157d86e985f97378c75b865ea870bb40bec3ef76c01c5b5271e34ff0ebb4",
+      "row_id": "JL19-03",
+      "target_slug": "2019-sport-s-36l-v6-4wd-us"
+    },
+    {
+      "anticipated_creation_basis": "mechanical_dimension",
+      "candidate": "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/candidates/JL19-04.candidate.json",
+      "candidate_digest": "sha256:e2366bf8ebddbd0557ab74d6f9de0fbd73fe5287e048c94c6411770421180ab5",
+      "reviewed_manifest_hash": "sha256:45005cd2a20d07a9a9472bdc7174d5f7e137952ed23fcf9be4f13f93730dae6c",
+      "row_id": "JL19-04",
+      "target_slug": "2019-sport-s-20l-i4-4wd-us-turbo-mhev"
+    },
+    {
+      "anticipated_creation_basis": "source_established_grade",
+      "candidate": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/candidates/JL19-05.candidate.json",
+      "candidate_digest": "sha256:fedc8013ef72f51d589b057c3b44ebd9d892557369a95245b5a330d79bf2843c",
+      "reviewed_manifest_hash": "sha256:3a062bdfb539a60ea416c0799c7d9f42a1a631050b536794a3e2e694967189a8",
+      "row_id": "JL19-05",
+      "target_slug": "2019-rubicon-36l-v6-4wd-us"
+    },
+    {
+      "anticipated_creation_basis": "mechanical_dimension",
+      "candidate": "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/candidates/JL19-06.candidate.json",
+      "candidate_digest": "sha256:5d533cd574e35a07c7778e1f2be2120edea44e76a42688c03067084e70635d51",
+      "reviewed_manifest_hash": "sha256:09b1d1e536fcbf39c0b3b02e8eaf397901f31ba4835794f4766d3ff976b93781",
+      "row_id": "JL19-06",
+      "target_slug": "2019-rubicon-20l-i4-4wd-us-turbo-mhev"
+    },
+    {
+      "anticipated_creation_basis": "source_established_grade",
+      "candidate": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/candidates/JL19-07.candidate.json",
+      "candidate_digest": "sha256:48c999af9b2ee2a8fbcde64129d3f98dd5e6aa3bfbe189fc3a03fb235522a101",
+      "reviewed_manifest_hash": "sha256:1aac723c2874a51ab324e121fcd135e0e08fef271cb902f087013f2da16d25da",
+      "row_id": "JL19-07",
+      "target_slug": "2019-unlimited-sport-36l-v6-4wd-us"
+    },
+    {
+      "anticipated_creation_basis": "mechanical_dimension",
+      "candidate": "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/candidates/JL19-08.candidate.json",
+      "candidate_digest": "sha256:d2cef6f3c3de7487e94aed4295a097be4471622dcbcb3ad2a15aafb9b3384224",
+      "reviewed_manifest_hash": "sha256:fa3d3aba4bcd9d5fc92cc12021c79cbb73af67fb607bd26bc436a51f8a9a9da7",
+      "row_id": "JL19-08",
+      "target_slug": "2019-unlimited-sport-20l-i4-4wd-us-turbo-mhev"
+    },
+    {
+      "anticipated_creation_basis": "source_established_grade",
+      "candidate": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/candidates/JL19-09.candidate.json",
+      "candidate_digest": "sha256:bf4117a243b4771b3600c88e887d082cc16d60a8a6e2562b2f1665ef4a41f10d",
+      "reviewed_manifest_hash": "sha256:a0d2d199f1f10390f15ca8b462320bd1f79837db7c3c886cb5b5cd681a0d379d",
+      "row_id": "JL19-09",
+      "target_slug": "2019-unlimited-sport-s-36l-v6-4wd-us"
+    },
+    {
+      "anticipated_creation_basis": "mechanical_dimension",
+      "candidate": "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/candidates/JL19-10.candidate.json",
+      "candidate_digest": "sha256:ccb451844b1d240bfa71a683783749d192bbcfee62086607f32766b64b2b473c",
+      "reviewed_manifest_hash": "sha256:29a82d9f5cc5094475f3ecdf33a80e32365decf567bf25875dfc06cf5b5c33f6",
+      "row_id": "JL19-10",
+      "target_slug": "2019-unlimited-sport-s-20l-i4-4wd-us-turbo-mhev"
+    },
+    {
+      "anticipated_creation_basis": "source_established_grade",
+      "candidate": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/candidates/JL19-11.candidate.json",
+      "candidate_digest": "sha256:4ac2842b6f712817a33018ff1a70138582f8daa981570112701edf6b66f483e4",
+      "reviewed_manifest_hash": "sha256:95a55d1b88e822a572fa41d89e75f23b22d78bc76b37fc293a3ec1a3c398c9d0",
+      "row_id": "JL19-11",
+      "target_slug": "2019-unlimited-sport-altitude-36l-v6-4wd-us"
+    },
+    {
+      "anticipated_creation_basis": "mechanical_dimension",
+      "candidate": "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/candidates/JL19-12.candidate.json",
+      "candidate_digest": "sha256:ccb8eee562dc6bf0ec48259b6bd3367b7b0ac7ece31b722664238e5b6c1cc360",
+      "reviewed_manifest_hash": "sha256:5ed4d7dd40d410a0a4014428af0dfff01e244c2a0bb546e4c8a548633634238a",
+      "row_id": "JL19-12",
+      "target_slug": "2019-unlimited-sport-altitude-20l-i4-4wd-us-turbo-mhev"
+    },
+    {
+      "anticipated_creation_basis": "source_established_grade",
+      "candidate": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/candidates/JL19-13.candidate.json",
+      "candidate_digest": "sha256:caaf4b18512dc7d0ceff2261e153ab351fab89eedf3cf164f3f16f2634371f42",
+      "reviewed_manifest_hash": "sha256:9c2a1de422148ffeb34865b2881cd13c525cf8552d142ff4d9e2a5228f42094a",
+      "row_id": "JL19-13",
+      "target_slug": "2019-unlimited-sahara-36l-v6-4wd-us"
+    },
+    {
+      "anticipated_creation_basis": "mechanical_dimension",
+      "candidate": "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/candidates/JL19-14.candidate.json",
+      "candidate_digest": "sha256:fe95dbc320f88fdd77a8dfcfbec295a2450bcbcda2b6ebbf250023b2cb262f7d",
+      "reviewed_manifest_hash": "sha256:bcaa023c80e813c68fa53bde2b6a7bee1ed669b354c138839ace71b7e56e67be",
+      "row_id": "JL19-14",
+      "target_slug": "2019-unlimited-sahara-20l-i4-4wd-us-turbo-mhev"
+    },
+    {
+      "anticipated_creation_basis": "source_established_grade",
+      "candidate": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/candidates/JL19-15.candidate.json",
+      "candidate_digest": "sha256:8e37a7fb55d608a4b95446811477ee5db2c3d085ef90f7ce05b9e90ff0176ec4",
+      "reviewed_manifest_hash": "sha256:ba783590a918664b5edb06fe076a9d7005d76a8a61af49b11b209812148cebff",
+      "row_id": "JL19-15",
+      "target_slug": "2019-unlimited-sahara-altitude-36l-v6-4wd-us"
+    },
+    {
+      "anticipated_creation_basis": "mechanical_dimension",
+      "candidate": "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/candidates/JL19-16.candidate.json",
+      "candidate_digest": "sha256:81aea90b0cc366923ce77e95a8327b7a880ce437d4ddf0f5418a674c113dc90d",
+      "reviewed_manifest_hash": "sha256:ba5a71f6cae9d2d58c955e3523b2b0c8904465c1ddf3dc22112199a6a77cb5cc",
+      "row_id": "JL19-16",
+      "target_slug": "2019-unlimited-sahara-altitude-20l-i4-4wd-us-turbo-mhev"
+    },
+    {
+      "anticipated_creation_basis": "source_established_grade",
+      "candidate": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/candidates/JL19-17.candidate.json",
+      "candidate_digest": "sha256:b1f691977f696210f96ce073e275fffe29613ac9f4eed27abf190298a33b7de7",
+      "reviewed_manifest_hash": "sha256:034922918edf71104201dfdbb19d017af634211e73a1ad667fcc788365bd82c9",
+      "row_id": "JL19-17",
+      "target_slug": "2019-unlimited-moab-36l-v6-4wd-us"
+    },
+    {
+      "anticipated_creation_basis": "source_established_grade",
+      "candidate": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/candidates/JL19-18.candidate.json",
+      "candidate_digest": "sha256:ab8023ccc084a0e8a31438e04eae8cd13aff09f69291313e2e6fe10b29d2a3f7",
+      "reviewed_manifest_hash": "sha256:f18e62ffffbf13409dd696124e57c0168904665c400e02235acca8b65de09ec2",
+      "row_id": "JL19-18",
+      "target_slug": "2019-unlimited-rubicon-36l-v6-4wd-us"
+    },
+    {
+      "anticipated_creation_basis": "mechanical_dimension",
+      "candidate": "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/candidates/JL19-19.candidate.json",
+      "candidate_digest": "sha256:7ab768e39cc66d32b1e9626a1bd182e9386691ebf5612c5ae81b99eaeb695757",
+      "reviewed_manifest_hash": "sha256:7fd5c4eae1043400edc08f87750e142894d7bc364f2d6ea5919e843b450a7661",
+      "row_id": "JL19-19",
+      "target_slug": "2019-unlimited-rubicon-20l-i4-4wd-us-turbo-mhev"
+    }
+  ]
+}

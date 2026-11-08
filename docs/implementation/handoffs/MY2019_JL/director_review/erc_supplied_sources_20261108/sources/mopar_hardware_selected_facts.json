@@ -1,0 +1,26 @@
+{
+  "representation": "Selected source lexemes and reviewed hardware facts; not original PDF bytes",
+  "source_url": "https://vehicleinfo.mopar.com/assets/publications/en-ca/Jeep/2019/Wrangler/10387.pdf",
+  "title": "2019 New Wrangler User Guide",
+  "edition": "19JL-926-AA First Edition",
+  "printed_scope": "US and Canada (cover)",
+  "printed_pages": [
+    163,
+    166
+  ],
+  "pdf_pages_one_based": [
+    165,
+    168
+  ],
+  "source_lexemes": [
+    "heavy duty starter",
+    "enhanced battery",
+    "heavy duty motor generator",
+    "additional hybrid electric battery",
+    "launch torque assist"
+  ],
+  "finding": "Manufacturer distinguishes conventional ESS starting hardware from eTorque regeneration and launch-assist hardware. Sections are conditional on equipment; they do not enumerate every ERC application or explicitly classify all ERC as nonhybrid.",
+  "original_pdf_sha256_computed_from_download": "sha256:6f063d162f29a45cc92d31747e4554aef91a14445666ffa94a233c4689baa19c",
+  "original_pdf_retained_in_this_revision": false,
+  "lineage_note": "Original PDF hash is observational metadata, not an import reference to an unavailable repository file. The selected representation is retained and separately hashed."
+}

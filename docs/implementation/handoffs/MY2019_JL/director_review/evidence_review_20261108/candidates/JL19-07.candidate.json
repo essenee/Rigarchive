@@ -1,0 +1,466 @@
+{
+  "attribute_provenance": {
+    "engine_cylinders": [
+      "jeep_usa_order_guide_excerpts|sha256:3a3e829b87591583ffd6902a5ddd694be7d47fd815fd10813cb1e28a36a8938f|JL19-07-june-guide-excerpt|i_engine_cylinders"
+    ],
+    "engine_displacement_liters": [
+      "jeep_usa_order_guide_excerpts|sha256:3a3e829b87591583ffd6902a5ddd694be7d47fd815fd10813cb1e28a36a8938f|JL19-07-june-guide-excerpt|i_engine_displacement_liters"
+    ],
+    "generic_drive_classification": [
+      "jeep_usa_order_guide_excerpts|sha256:3a3e829b87591583ffd6902a5ddd694be7d47fd815fd10813cb1e28a36a8938f|JL19-07-june-guide-excerpt|i_generic_drive"
+    ],
+    "make": [
+      "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-07|i_make"
+    ],
+    "model": [
+      "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-07|i_model"
+    ],
+    "model_year": [
+      "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-07|i_model_year"
+    ]
+  },
+  "candidate_identity": {
+    "manufacturer_name": "Jeep",
+    "market": "US",
+    "model_year": 2019,
+    "trim_name": "Unlimited Sport",
+    "vehicle_model_name": "Wrangler"
+  },
+  "candidate_reference": "MY2019-JL-JL19-07-preparatory-compact-r2-review-r3",
+  "canonical_powertrain": {
+    "electrification_type": null,
+    "engine_aspiration": null,
+    "engine_cylinders": 6,
+    "engine_displacement_liters": "3.6",
+    "fuel_type": "gasoline"
+  },
+  "envelope": {
+    "artifact_type": "rigarchive.candidate_configuration.v2",
+    "created_at": "2026-11-08T18:20:55.097237+00:00",
+    "generator": "RigArchive-CandidateConstruction/0.1.0",
+    "schema_version": "2.1.0"
+  },
+  "evidence_documents": [
+    {
+      "assertion_set_id": "JL19-07",
+      "assertions": [
+        {
+          "assertion_id": "engine_cylinders",
+          "attribute_key": "engine_cylinders",
+          "raw_value": 6,
+          "source_context": "Director-accepted research inventory row JL19-07; https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/; reported page 2. Page references are inherited research, not a new PDF inspection."
+        },
+        {
+          "assertion_id": "engine_displacement_liters",
+          "attribute_key": "engine_displacement_liters",
+          "raw_value": "3.60",
+          "source_context": "Director-accepted research inventory row JL19-07; https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/; reported page 2. Page references are inherited research, not a new PDF inspection."
+        },
+        {
+          "assertion_id": "engine_offering",
+          "attribute_key": "engine_offering",
+          "raw_value": "ERC 3.6L V6 ESS",
+          "source_context": "Director-accepted research inventory row JL19-07; https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/; reported page 2. Page references are inherited research, not a new PDF inspection."
+        },
+        {
+          "assertion_id": "make",
+          "attribute_key": "make",
+          "raw_value": "Jeep",
+          "source_context": "Director-accepted research inventory row JL19-07; https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/; reported page 2. Page references are inherited research, not a new PDF inspection."
+        },
+        {
+          "assertion_id": "market",
+          "attribute_key": "market",
+          "raw_value": "US",
+          "source_context": "Director-accepted research inventory row JL19-07; https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/; reported page 2. Page references are inherited research, not a new PDF inspection."
+        },
+        {
+          "assertion_id": "model",
+          "attribute_key": "model",
+          "raw_value": "Wrangler",
+          "source_context": "Director-accepted research inventory row JL19-07; https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/; reported page 2. Page references are inherited research, not a new PDF inspection."
+        },
+        {
+          "assertion_id": "model_year",
+          "attribute_key": "model_year",
+          "raw_value": 2019,
+          "source_context": "Director-accepted research inventory row JL19-07; https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/; reported page 2. Page references are inherited research, not a new PDF inspection."
+        },
+        {
+          "assertion_id": "source_model_code",
+          "attribute_key": "source_model_code",
+          "raw_value": "JLJL74",
+          "source_context": "Director-accepted research inventory row JL19-07; https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/; reported page 2. Page references are inherited research, not a new PDF inspection."
+        },
+        {
+          "assertion_id": "trim",
+          "attribute_key": "trim",
+          "raw_value": "Unlimited Sport",
+          "source_context": "Director-accepted research inventory row JL19-07; https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/; reported page 2. Page references are inherited research, not a new PDF inspection."
+        }
+      ],
+      "extraction_mode": "manually_verified_transcription",
+      "extractor_id": "director_accepted_jl_inventory_projection",
+      "extractor_version": "1.0.0",
+      "generation_normalizer": {
+        "id": "explicit_generation_identity",
+        "version": "1.0.0"
+      },
+      "publication_revision": "MY2019 dated-revision union accepted by director; individual printed dates not newly verified",
+      "raw_artifact_hash": "sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/evidence/accepted_research_snapshot.json",
+      "retrieved_at": "2026-11-07T16:57:20.747181+00:00",
+      "source_applicability": {
+        "applicability_basis": "director_accepted_MY2019_US_JL_research_inventory",
+        "applicability_scope": "model_year",
+        "market": "US",
+        "publisher_jurisdiction": null,
+        "unknown_fields": {}
+      },
+      "source_id": "reviewed_jeep_order_guide_inventory",
+      "source_locator": "docs/implementation/handoffs/MY2019_JL/MY2019_JL_CODEX_HANDOFF.md"
+    },
+    {
+      "assertion_set_id": "JL19-07-june-guide-excerpt",
+      "assertions": [
+        {
+          "assertion_id": "guide_drive",
+          "attribute_key": "drive_descriptor",
+          "raw_value": "COMMAND-TRAC PART TIME 4WD SYSTEM (DHN)",
+          "source_context": "https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/; printed page 15; JLJL74 column; standard equipment unless replaced by optional equipment"
+        },
+        {
+          "assertion_id": "guide_engine_descriptor",
+          "attribute_key": "engine_descriptor",
+          "raw_value": "3.6L V6 24V VVT ENGINE UPG I W/ESS (ERC)",
+          "source_context": "https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/; printed page 2; JLJL74 powertrain table"
+        },
+        {
+          "assertion_id": "guide_offering_table",
+          "attribute_key": "offering_table",
+          "raw_value": "STEP #1 SELECT - MODEL CODE\n$FWP $MSRP\nWRANGLER UNLIMITED SPORT 31,007 31,545 JLJL74\nDESTINATION CHARGE 1,495\n1,545 IN HI\nSTEP #2 SELECT - QUICK ORDER PACKAGE CODE\nPOWERTRAIN AVAILABILITY\nENGINE $FWP $MSRP TRANSMISSION $FWP $MSRP\nSPORT S\nALTITUDE\nM/H PRC or PSC\nor PW7 or PX8 or\nPAU or PDN\n3.6L V6 24V VVT ENGINE UPG\nI W/ESS (ERC)\nN/C N/C 8-SPD AUTO 850RE\nTRANS (MAKE) (DFT)\n1,780 2,000 24B 24S 24L\n6-SPEED MANUAL\nTRANSMISSION (DEM)\nN/C N/C 23B 23S 23L\n2.0L I4 DOHC DI TURBO\nETORQUE ENGINE (EC3)\n890 1,000 8-SPD AUTO 850RE\nTRANS (MAKE) (DFT)\n1,780 2,000 28B 28S 28L",
+          "source_context": "https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/; printed page 2; model code and quick-order package columns retained"
+        }
+      ],
+      "extraction_mode": "manually_verified_transcription",
+      "extractor_id": "reviewed_2019_jlu_selected_text",
+      "extractor_version": "1.0.0",
+      "generation_normalizer": {
+        "id": "explicit_generation_identity",
+        "version": "1.0.0"
+      },
+      "publication_revision": "REISSUED 06/04/2019",
+      "raw_artifact_hash": "sha256:3a3e829b87591583ffd6902a5ddd694be7d47fd815fd10813cb1e28a36a8938f",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/evidence/jlu_2019_06_04_selected_excerpts.json",
+      "retrieved_at": "2026-11-07T17:04:24.836847+00:00",
+      "source_applicability": {
+        "applicability_basis": "MY2019 four-door JLJL74; offering page 2 and standard equipment page 15",
+        "applicability_scope": "configuration",
+        "market": "US",
+        "publisher_jurisdiction": null,
+        "unknown_fields": {}
+      },
+      "source_id": "jeep_usa_order_guide_excerpts",
+      "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-19-pdf.190918/"
+    },
+    {
+      "assertion_set_id": "MY2019-JL-fuel",
+      "assertions": [
+        {
+          "assertion_id": "fuel_ec3",
+          "attribute_key": "fuel_type",
+          "raw_value": "gasoline",
+          "source_context": "https://vehicleinfo.mopar.com/assets/publications/en-ca/Jeep/2019/Wrangler/10387.pdf; printed p246, 2.0L Engine; US/Canada edition 19JL-926-AA"
+        },
+        {
+          "assertion_id": "fuel_erc",
+          "attribute_key": "fuel_type",
+          "raw_value": "gasoline",
+          "source_context": "https://vehicleinfo.mopar.com/assets/publications/en-ca/Jeep/2019/Wrangler/10387.pdf; printed p246, 3.6L Engine; US/Canada edition 19JL-926-AA"
+        }
+      ],
+      "extraction_mode": "manually_verified_transcription",
+      "extractor_id": "my2019_reviewed_selected_facts",
+      "extractor_version": "1.0.0",
+      "generation_normalizer": {
+        "id": "explicit_generation_identity",
+        "version": "1.0.0"
+      },
+      "publication_revision": "19JL-926-AA First Edition",
+      "raw_artifact_hash": "sha256:0435598871bae4ab42e91f52f689331447ecfdb3d56644c3f9aac4274645cd0e",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/evidence/mopar_2019_fuel_selected_facts.json",
+      "retrieved_at": "2026-11-08T18:20:55.097237+00:00",
+      "source_applicability": {
+        "applicability_basis": "Printed MY2019 US/Canada cover; named engine sections apply across body styles; accepted inventory establishes offering linkage.",
+        "applicability_scope": "model_year",
+        "market": "US",
+        "publisher_jurisdiction": null,
+        "unknown_fields": {}
+      },
+      "source_id": "mopar_2019_wrangler_user_guide",
+      "source_locator": "https://vehicleinfo.mopar.com/assets/publications/en-ca/Jeep/2019/Wrangler/10387.pdf"
+    },
+    {
+      "assertion_set_id": "MY2019-JL-drive",
+      "assertions": [
+        {
+          "assertion_id": "drive_all_models",
+          "attribute_key": "drive_descriptor",
+          "raw_value": "Longitudinal front engine, four-wheel drive",
+          "source_context": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/specs/2019_JP_Wrangler_SPmk1alba10mregeqq9v39oek881.pdf; printed p1 BODY/CHASSIS Layout; same page explicitly covers both body styles"
+        }
+      ],
+      "extraction_mode": "manually_verified_transcription",
+      "extractor_id": "my2019_reviewed_selected_facts",
+      "extractor_version": "1.0.0",
+      "generation_normalizer": {
+        "id": "explicit_generation_identity",
+        "version": "1.0.0"
+      },
+      "publication_revision": "MY2019; no printed revision date",
+      "raw_artifact_hash": "sha256:84bb3faf505332a2799830563cb1863621385b96430585e1a03216924596fd40",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/evidence/jeep_2019_specification_selected_facts.json",
+      "retrieved_at": "2026-11-08T18:20:55.097237+00:00",
+      "source_applicability": {
+        "applicability_basis": "MY2019 US manufacturer model specifications, all models and both bodies; commercial market independently established by retained US order guides.",
+        "applicability_scope": "model_year",
+        "market": "US",
+        "publisher_jurisdiction": null,
+        "unknown_fields": {}
+      },
+      "source_id": "jeep_2019_wrangler_specifications",
+      "source_locator": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/specs/2019_JP_Wrangler_SPmk1alba10mregeqq9v39oek881.pdf"
+    },
+    {
+      "assertion_set_id": "MY2019-common-JLJL74",
+      "assertions": [
+        {
+          "assertion_id": "common_model_code",
+          "attribute_key": "source_model_code",
+          "raw_value": "JLJL74",
+          "source_context": "Accepted MY2019 US JL inventory, manufacturer model-code column; common selector shared across this model-code group."
+        }
+      ],
+      "extraction_mode": "manually_verified_transcription",
+      "extractor_id": "my2019_reviewed_selected_facts",
+      "extractor_version": "1.0.0",
+      "generation_normalizer": {
+        "id": "explicit_generation_identity",
+        "version": "1.0.0"
+      },
+      "publication_revision": "Accepted MY2019 union; historical edition details remain in original inventory",
+      "raw_artifact_hash": "sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2019_JL/director_review/compact_evidence_revision_2/evidence/accepted_research_snapshot.json",
+      "retrieved_at": "2026-11-08T18:20:55.097237+00:00",
+      "source_applicability": {
+        "applicability_basis": "Director-accepted MY2019 US JL dated-revision inventory; scope is exactly this retained manufacturer model code.",
+        "applicability_scope": "model_year",
+        "market": "US",
+        "publisher_jurisdiction": null,
+        "unknown_fields": {}
+      },
+      "source_id": "reviewed_jeep_order_guide_inventory",
+      "source_locator": "docs/implementation/handoffs/MY2019_JL/MY2019_JL_CODEX_HANDOFF.md"
+    }
+  ],
+  "evidence_raw_hashes": [
+    "sha256:0435598871bae4ab42e91f52f689331447ecfdb3d56644c3f9aac4274645cd0e",
+    "sha256:3a3e829b87591583ffd6902a5ddd694be7d47fd815fd10813cb1e28a36a8938f",
+    "sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3",
+    "sha256:84bb3faf505332a2799830563cb1863621385b96430585e1a03216924596fd40"
+  ],
+  "generation_evidence": [
+    {
+      "assertion_id": "source_model_code",
+      "assertion_set_id": "JL19-07",
+      "document_hash": "sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3",
+      "identity_type": "model_code",
+      "native_identifier": "JLJL74",
+      "normalizer_id": "explicit_generation_identity",
+      "normalizer_version": "1.0.0",
+      "source_id": "reviewed_jeep_order_guide_inventory",
+      "source_namespace": "source_model_code"
+    },
+    {
+      "assertion_id": "common_model_code",
+      "assertion_set_id": "MY2019-common-JLJL74",
+      "document_hash": "sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3",
+      "identity_type": "model_code",
+      "native_identifier": "JLJL74",
+      "normalizer_id": "explicit_generation_identity",
+      "normalizer_version": "1.0.0",
+      "source_id": "reviewed_jeep_order_guide_inventory",
+      "source_namespace": "source_model_code"
+    }
+  ],
+  "normalized_assertions": [
+    {
+      "document_qualifier": "jeep_usa_order_guide_excerpts|sha256:3a3e829b87591583ffd6902a5ddd694be7d47fd815fd10813cb1e28a36a8938f|JL19-07-june-guide-excerpt|",
+      "interpretation_id": "jeep_usa_order_guide_excerpts|sha256:3a3e829b87591583ffd6902a5ddd694be7d47fd815fd10813cb1e28a36a8938f|JL19-07-june-guide-excerpt|i_engine_cylinders",
+      "mapping_status": "mapped",
+      "normalization_notes": "Literal applicable June guide engine description; no missing classification inferred.",
+      "normalized_concept": 6,
+      "raw_source_value": "3.6L V6 24V VVT ENGINE UPG I W/ESS (ERC)",
+      "source_assertion_ref": "jeep_usa_order_guide_excerpts|sha256:3a3e829b87591583ffd6902a5ddd694be7d47fd815fd10813cb1e28a36a8938f|JL19-07-june-guide-excerpt|guide_engine_descriptor",
+      "target_attribute_key": "engine_cylinders"
+    },
+    {
+      "document_qualifier": "jeep_usa_order_guide_excerpts|sha256:3a3e829b87591583ffd6902a5ddd694be7d47fd815fd10813cb1e28a36a8938f|JL19-07-june-guide-excerpt|",
+      "interpretation_id": "jeep_usa_order_guide_excerpts|sha256:3a3e829b87591583ffd6902a5ddd694be7d47fd815fd10813cb1e28a36a8938f|JL19-07-june-guide-excerpt|i_engine_displacement_liters",
+      "mapping_status": "mapped",
+      "normalization_notes": "Literal applicable June guide engine description; no missing classification inferred.",
+      "normalized_concept": {
+        "normalized_unit": "L",
+        "normalized_value": "3.6",
+        "raw_source_string": "3.60"
+      },
+      "raw_source_value": "3.6L V6 24V VVT ENGINE UPG I W/ESS (ERC)",
+      "source_assertion_ref": "jeep_usa_order_guide_excerpts|sha256:3a3e829b87591583ffd6902a5ddd694be7d47fd815fd10813cb1e28a36a8938f|JL19-07-june-guide-excerpt|guide_engine_descriptor",
+      "target_attribute_key": "engine_displacement_liters"
+    },
+    {
+      "document_qualifier": "jeep_usa_order_guide_excerpts|sha256:3a3e829b87591583ffd6902a5ddd694be7d47fd815fd10813cb1e28a36a8938f|JL19-07-june-guide-excerpt|",
+      "interpretation_id": "jeep_usa_order_guide_excerpts|sha256:3a3e829b87591583ffd6902a5ddd694be7d47fd815fd10813cb1e28a36a8938f|JL19-07-june-guide-excerpt|i_generic_drive",
+      "mapping_status": "mapped",
+      "normalization_notes": "Explicit 4WD standard equipment for this manufacturer model code; subtype is not a canonical identity split.",
+      "normalized_concept": "4WD",
+      "raw_source_value": "COMMAND-TRAC PART TIME 4WD SYSTEM (DHN)",
+      "source_assertion_ref": "jeep_usa_order_guide_excerpts|sha256:3a3e829b87591583ffd6902a5ddd694be7d47fd815fd10813cb1e28a36a8938f|JL19-07-june-guide-excerpt|guide_drive",
+      "target_attribute_key": "generic_drive_classification"
+    },
+    {
+      "interpretation_id": "mopar_2019_wrangler_user_guide|sha256:0435598871bae4ab42e91f52f689331447ecfdb3d56644c3f9aac4274645cd0e|MY2019-JL-fuel|i_verified_fuel",
+      "mapping_status": "mapped",
+      "normalization_notes": "Explicit named-engine gasoline statement, printed p246; no inference from tank equipment.",
+      "normalized_concept": "gasoline",
+      "raw_source_value": "gasoline",
+      "source_assertion_ref": "mopar_2019_wrangler_user_guide|sha256:0435598871bae4ab42e91f52f689331447ecfdb3d56644c3f9aac4274645cd0e|MY2019-JL-fuel|fuel_erc",
+      "target_attribute_key": "fuel_type"
+    },
+    {
+      "document_qualifier": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-07|",
+      "interpretation_id": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-07|i_make",
+      "mapping_status": "mapped",
+      "normalization_notes": "Accepted inventory projection; no code-derived classifications.",
+      "normalized_concept": "Jeep",
+      "raw_source_value": "Jeep",
+      "source_assertion_ref": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-07|make",
+      "target_attribute_key": "make"
+    },
+    {
+      "document_qualifier": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-07|",
+      "interpretation_id": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-07|i_market",
+      "mapping_status": "mapped",
+      "normalization_notes": "Accepted inventory projection; no code-derived classifications.",
+      "normalized_concept": "US",
+      "raw_source_value": "US",
+      "source_assertion_ref": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-07|market",
+      "target_attribute_key": "market"
+    },
+    {
+      "document_qualifier": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-07|",
+      "interpretation_id": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-07|i_model",
+      "mapping_status": "mapped",
+      "normalization_notes": "Accepted inventory projection; no code-derived classifications.",
+      "normalized_concept": "Wrangler",
+      "raw_source_value": "Wrangler",
+      "source_assertion_ref": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-07|model",
+      "target_attribute_key": "model"
+    },
+    {
+      "document_qualifier": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-07|",
+      "interpretation_id": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-07|i_model_year",
+      "mapping_status": "mapped",
+      "normalization_notes": "Accepted inventory projection; no code-derived classifications.",
+      "normalized_concept": 2019,
+      "raw_source_value": 2019,
+      "source_assertion_ref": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-07|model_year",
+      "target_attribute_key": "model_year"
+    },
+    {
+      "document_qualifier": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-07|",
+      "interpretation_id": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-07|i_trim",
+      "mapping_status": "mapped",
+      "normalization_notes": "Accepted inventory projection; no code-derived classifications.",
+      "normalized_concept": "Unlimited Sport",
+      "raw_source_value": "Unlimited Sport",
+      "source_assertion_ref": "reviewed_jeep_order_guide_inventory|sha256:44d5baf3d0be3946f2390453b8d567bf9b5529234f94cf6f264f49dd854ff6a3|JL19-07|trim",
+      "target_attribute_key": "trim"
+    }
+  ],
+  "normalized_technical_details": {
+    "drivetrain_details": {
+      "generic_classification": "4WD"
+    },
+    "engine": {
+      "cylinders": 6,
+      "displacement": {
+        "normalized_unit": "L",
+        "normalized_value": "3.6",
+        "raw_source_string": "3.60"
+      }
+    }
+  },
+  "reconciliation_and_review": {
+    "attribute_states": {
+      "engine_cylinders": {
+        "reconciliation_state": "single_source",
+        "review_disposition": "not_required"
+      },
+      "engine_displacement_liters": {
+        "reconciliation_state": "single_source",
+        "review_disposition": "not_required"
+      },
+      "generic_drive_classification": {
+        "reconciliation_state": "single_source",
+        "review_disposition": "not_required"
+      },
+      "make": {
+        "reconciliation_state": "single_source",
+        "review_disposition": "not_required"
+      },
+      "model": {
+        "reconciliation_state": "single_source",
+        "review_disposition": "not_required"
+      },
+      "model_year": {
+        "reconciliation_state": "single_source",
+        "review_disposition": "not_required"
+      }
+    },
+    "requires_human_review": false,
+    "review_workflow_disposition": "not_required"
+  },
+  "source_configuration_identities": [
+    {
+      "identity_type": "record_id",
+      "native_identifier": "MY2019-JL-drive",
+      "source_description": "jeep_2019_wrangler_specifications record_id MY2019-JL-drive",
+      "source_id": "jeep_2019_wrangler_specifications"
+    },
+    {
+      "identity_type": "record_id",
+      "native_identifier": "JL19-07-june-guide-excerpt",
+      "source_description": "jeep_usa_order_guide_excerpts record_id JL19-07-june-guide-excerpt",
+      "source_id": "jeep_usa_order_guide_excerpts"
+    },
+    {
+      "identity_type": "record_id",
+      "native_identifier": "MY2019-JL-fuel",
+      "source_description": "mopar_2019_wrangler_user_guide record_id MY2019-JL-fuel",
+      "source_id": "mopar_2019_wrangler_user_guide"
+    },
+    {
+      "identity_type": "record_id",
+      "native_identifier": "JL19-07",
+      "source_description": "reviewed_jeep_order_guide_inventory record_id JL19-07",
+      "source_id": "reviewed_jeep_order_guide_inventory"
+    },
+    {
+      "identity_type": "record_id",
+      "native_identifier": "MY2019-common-JLJL74",
+      "source_description": "reviewed_jeep_order_guide_inventory record_id MY2019-common-JLJL74",
+      "source_id": "reviewed_jeep_order_guide_inventory"
+    }
+  ]
+}

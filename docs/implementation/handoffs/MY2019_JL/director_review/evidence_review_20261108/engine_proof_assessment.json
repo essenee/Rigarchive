@@ -1,0 +1,232 @@
+{
+  "complete_standalone_assessments": 9,
+  "contract": "engine proof 2.0",
+  "created_at": "2026-11-08T18:20:55.097237+00:00",
+  "resolved_plan_proofs": 0,
+  "rows": [
+    {
+      "engine_proof_2_0": null,
+      "error": [
+        "Missing evidenced powertrain attribute: engine_aspiration."
+      ],
+      "row_id": "JL19-01",
+      "scope": "Read-only standalone candidate/peer sub-assessment, not a resolved plan or import authorization."
+    },
+    {
+      "engine_proof_2_0": {
+        "canonical_powertrain": {
+          "electrification_type": "mild_hybrid",
+          "engine_aspiration": "turbocharged",
+          "engine_cylinders": 4,
+          "engine_displacement_liters": "2",
+          "fuel_type": "gasoline"
+        },
+        "peers": [],
+        "version": "2.0"
+      },
+      "error": null,
+      "row_id": "JL19-02",
+      "scope": "Read-only standalone candidate/peer sub-assessment, not a resolved plan or import authorization."
+    },
+    {
+      "engine_proof_2_0": null,
+      "error": [
+        "Missing evidenced powertrain attribute: engine_aspiration."
+      ],
+      "row_id": "JL19-03",
+      "scope": "Read-only standalone candidate/peer sub-assessment, not a resolved plan or import authorization."
+    },
+    {
+      "engine_proof_2_0": {
+        "canonical_powertrain": {
+          "electrification_type": "mild_hybrid",
+          "engine_aspiration": "turbocharged",
+          "engine_cylinders": 4,
+          "engine_displacement_liters": "2",
+          "fuel_type": "gasoline"
+        },
+        "peers": [],
+        "version": "2.0"
+      },
+      "error": null,
+      "row_id": "JL19-04",
+      "scope": "Read-only standalone candidate/peer sub-assessment, not a resolved plan or import authorization."
+    },
+    {
+      "engine_proof_2_0": null,
+      "error": [
+        "Missing evidenced powertrain attribute: engine_aspiration."
+      ],
+      "row_id": "JL19-05",
+      "scope": "Read-only standalone candidate/peer sub-assessment, not a resolved plan or import authorization."
+    },
+    {
+      "engine_proof_2_0": {
+        "canonical_powertrain": {
+          "electrification_type": "mild_hybrid",
+          "engine_aspiration": "turbocharged",
+          "engine_cylinders": 4,
+          "engine_displacement_liters": "2",
+          "fuel_type": "gasoline"
+        },
+        "peers": [],
+        "version": "2.0"
+      },
+      "error": null,
+      "row_id": "JL19-06",
+      "scope": "Read-only standalone candidate/peer sub-assessment, not a resolved plan or import authorization."
+    },
+    {
+      "engine_proof_2_0": null,
+      "error": [
+        "Missing evidenced powertrain attribute: engine_aspiration."
+      ],
+      "row_id": "JL19-07",
+      "scope": "Read-only standalone candidate/peer sub-assessment, not a resolved plan or import authorization."
+    },
+    {
+      "engine_proof_2_0": {
+        "canonical_powertrain": {
+          "electrification_type": "mild_hybrid",
+          "engine_aspiration": "turbocharged",
+          "engine_cylinders": 4,
+          "engine_displacement_liters": "2",
+          "fuel_type": "gasoline"
+        },
+        "peers": [],
+        "version": "2.0"
+      },
+      "error": null,
+      "row_id": "JL19-08",
+      "scope": "Read-only standalone candidate/peer sub-assessment, not a resolved plan or import authorization."
+    },
+    {
+      "engine_proof_2_0": null,
+      "error": [
+        "Missing evidenced powertrain attribute: engine_aspiration."
+      ],
+      "row_id": "JL19-09",
+      "scope": "Read-only standalone candidate/peer sub-assessment, not a resolved plan or import authorization."
+    },
+    {
+      "engine_proof_2_0": {
+        "canonical_powertrain": {
+          "electrification_type": "mild_hybrid",
+          "engine_aspiration": "turbocharged",
+          "engine_cylinders": 4,
+          "engine_displacement_liters": "2",
+          "fuel_type": "gasoline"
+        },
+        "peers": [],
+        "version": "2.0"
+      },
+      "error": null,
+      "row_id": "JL19-10",
+      "scope": "Read-only standalone candidate/peer sub-assessment, not a resolved plan or import authorization."
+    },
+    {
+      "engine_proof_2_0": null,
+      "error": [
+        "Missing evidenced powertrain attribute: engine_aspiration."
+      ],
+      "row_id": "JL19-11",
+      "scope": "Read-only standalone candidate/peer sub-assessment, not a resolved plan or import authorization."
+    },
+    {
+      "engine_proof_2_0": {
+        "canonical_powertrain": {
+          "electrification_type": "mild_hybrid",
+          "engine_aspiration": "turbocharged",
+          "engine_cylinders": 4,
+          "engine_displacement_liters": "2",
+          "fuel_type": "gasoline"
+        },
+        "peers": [],
+        "version": "2.0"
+      },
+      "error": null,
+      "row_id": "JL19-12",
+      "scope": "Read-only standalone candidate/peer sub-assessment, not a resolved plan or import authorization."
+    },
+    {
+      "engine_proof_2_0": null,
+      "error": [
+        "Missing evidenced powertrain attribute: engine_aspiration."
+      ],
+      "row_id": "JL19-13",
+      "scope": "Read-only standalone candidate/peer sub-assessment, not a resolved plan or import authorization."
+    },
+    {
+      "engine_proof_2_0": {
+        "canonical_powertrain": {
+          "electrification_type": "mild_hybrid",
+          "engine_aspiration": "turbocharged",
+          "engine_cylinders": 4,
+          "engine_displacement_liters": "2",
+          "fuel_type": "gasoline"
+        },
+        "peers": [],
+        "version": "2.0"
+      },
+      "error": null,
+      "row_id": "JL19-14",
+      "scope": "Read-only standalone candidate/peer sub-assessment, not a resolved plan or import authorization."
+    },
+    {
+      "engine_proof_2_0": null,
+      "error": [
+        "Missing evidenced powertrain attribute: engine_aspiration."
+      ],
+      "row_id": "JL19-15",
+      "scope": "Read-only standalone candidate/peer sub-assessment, not a resolved plan or import authorization."
+    },
+    {
+      "engine_proof_2_0": {
+        "canonical_powertrain": {
+          "electrification_type": "mild_hybrid",
+          "engine_aspiration": "turbocharged",
+          "engine_cylinders": 4,
+          "engine_displacement_liters": "2",
+          "fuel_type": "gasoline"
+        },
+        "peers": [],
+        "version": "2.0"
+      },
+      "error": null,
+      "row_id": "JL19-16",
+      "scope": "Read-only standalone candidate/peer sub-assessment, not a resolved plan or import authorization."
+    },
+    {
+      "engine_proof_2_0": null,
+      "error": [
+        "Missing evidenced powertrain attribute: engine_aspiration."
+      ],
+      "row_id": "JL19-17",
+      "scope": "Read-only standalone candidate/peer sub-assessment, not a resolved plan or import authorization."
+    },
+    {
+      "engine_proof_2_0": null,
+      "error": [
+        "Missing evidenced powertrain attribute: engine_aspiration."
+      ],
+      "row_id": "JL19-18",
+      "scope": "Read-only standalone candidate/peer sub-assessment, not a resolved plan or import authorization."
+    },
+    {
+      "engine_proof_2_0": {
+        "canonical_powertrain": {
+          "electrification_type": "mild_hybrid",
+          "engine_aspiration": "turbocharged",
+          "engine_cylinders": 4,
+          "engine_displacement_liters": "2",
+          "fuel_type": "gasoline"
+        },
+        "peers": [],
+        "version": "2.0"
+      },
+      "error": null,
+      "row_id": "JL19-19",
+      "scope": "Read-only standalone candidate/peer sub-assessment, not a resolved plan or import authorization."
+    }
+  ]
+}

@@ -1,0 +1,386 @@
+{
+  "matrix_digest": "sha256:d8f11301e230b8485dfd2d15c0b9342aaa0cc778aa7418052ce8da7b10cf6896",
+  "plans": [
+    {
+      "action": "create",
+      "candidate": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/candidates/JL19-01.candidate.json",
+      "candidate_digest": "sha256:4b051830ca189e2784199f29749acb3d7337eb6891fb3a4f3e1d57fde30ff406",
+      "correspondence": [
+        {
+          "digest": "sha256:a4ae81e161d90a182880790d585ce9083304ee91a35818bba6791bf636ce1130",
+          "reference": "98fc7eb1-f684-413d-be4f-77193bf12fe6"
+        }
+      ],
+      "create_basis": "first_representation",
+      "eligibility": "eligible",
+      "engine_proof_digest": "sha256:51a7cc42a588f494e666ee2889a1413a46d8652248926a019f5dba55afdc64b1",
+      "file_sha256": "sha256:669d5e4dc2da493263fef7dad9f2cb45e2cd6137477ee00159fccb45fdaff393",
+      "manifest": "docs/implementation/handoffs/MY2019_JL/director_review/final_planning_20261108/manifests/JL19-01.manifest.json",
+      "manifest_hash": "sha256:9fcdd4b804559809c96d634d61a210e08dfd1513fca0be0f55a1367ffc5b66a2",
+      "resolution_version": "1.1",
+      "row_id": "JL19-01",
+      "target_slug": "2019-sport-36l-v6-4wd-us"
+    },
+    {
+      "action": "create",
+      "candidate": "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/candidates/JL19-02.candidate.json",
+      "candidate_digest": "sha256:2d4c76e2571661a894807f6f85a923089a03da2b034a27134a11367a216832d6",
+      "correspondence": [
+        {
+          "digest": "sha256:a4ae81e161d90a182880790d585ce9083304ee91a35818bba6791bf636ce1130",
+          "reference": "98fc7eb1-f684-413d-be4f-77193bf12fe6"
+        }
+      ],
+      "create_basis": "first_representation",
+      "eligibility": "eligible",
+      "engine_proof_digest": "sha256:2105dfe162a58de7eae260e9ae5a9dc43538083659064d713d7bbf3739b56a00",
+      "file_sha256": "sha256:b4264ffb8763b23436a1a641faa9e45b565e7c03d6800e980fdbe938416ca2c0",
+      "manifest": "docs/implementation/handoffs/MY2019_JL/director_review/final_planning_20261108/manifests/JL19-02.manifest.json",
+      "manifest_hash": "sha256:d34cb1d8658a7406e73602fbff769a2d3951a81115459c61fc4d67bb3487bffb",
+      "resolution_version": "1.1",
+      "row_id": "JL19-02",
+      "target_slug": "2019-sport-20l-i4-4wd-us-turbo-mhev"
+    },
+    {
+      "action": "create",
+      "candidate": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/candidates/JL19-03.candidate.json",
+      "candidate_digest": "sha256:6fc3f01e272e9f209b55a2900cef3cecf2268aa18ffbeff32240d57410aa2aa6",
+      "correspondence": [
+        {
+          "digest": "sha256:a4ae81e161d90a182880790d585ce9083304ee91a35818bba6791bf636ce1130",
+          "reference": "98fc7eb1-f684-413d-be4f-77193bf12fe6"
+        }
+      ],
+      "create_basis": "first_representation",
+      "eligibility": "eligible",
+      "engine_proof_digest": "sha256:51a7cc42a588f494e666ee2889a1413a46d8652248926a019f5dba55afdc64b1",
+      "file_sha256": "sha256:baabb27a9b53a550d17a535cf3ee4dc2443ec75643ed6eb36f2b0ceb91c7c0ea",
+      "manifest": "docs/implementation/handoffs/MY2019_JL/director_review/final_planning_20261108/manifests/JL19-03.manifest.json",
+      "manifest_hash": "sha256:7371157d86e985f97378c75b865ea870bb40bec3ef76c01c5b5271e34ff0ebb4",
+      "resolution_version": "1.1",
+      "row_id": "JL19-03",
+      "target_slug": "2019-sport-s-36l-v6-4wd-us"
+    },
+    {
+      "action": "create",
+      "candidate": "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/candidates/JL19-04.candidate.json",
+      "candidate_digest": "sha256:e2366bf8ebddbd0557ab74d6f9de0fbd73fe5287e048c94c6411770421180ab5",
+      "correspondence": [
+        {
+          "digest": "sha256:a4ae81e161d90a182880790d585ce9083304ee91a35818bba6791bf636ce1130",
+          "reference": "98fc7eb1-f684-413d-be4f-77193bf12fe6"
+        }
+      ],
+      "create_basis": "first_representation",
+      "eligibility": "eligible",
+      "engine_proof_digest": "sha256:2105dfe162a58de7eae260e9ae5a9dc43538083659064d713d7bbf3739b56a00",
+      "file_sha256": "sha256:d35cd1edfcf35b60622fa8b6b7b5e0e62d843db49fb4d899071b0f49d8ef4b58",
+      "manifest": "docs/implementation/handoffs/MY2019_JL/director_review/final_planning_20261108/manifests/JL19-04.manifest.json",
+      "manifest_hash": "sha256:45005cd2a20d07a9a9472bdc7174d5f7e137952ed23fcf9be4f13f93730dae6c",
+      "resolution_version": "1.1",
+      "row_id": "JL19-04",
+      "target_slug": "2019-sport-s-20l-i4-4wd-us-turbo-mhev"
+    },
+    {
+      "action": "create",
+      "candidate": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/candidates/JL19-05.candidate.json",
+      "candidate_digest": "sha256:fedc8013ef72f51d589b057c3b44ebd9d892557369a95245b5a330d79bf2843c",
+      "correspondence": [
+        {
+          "digest": "sha256:def5ebea00410ce4cb662a53d9fd4c481927d6a628e27d5ce434f69cf8ded6ef",
+          "reference": "c636ab1b-bed8-4943-a1b0-385a9d3d1ca3"
+        }
+      ],
+      "create_basis": "first_representation",
+      "eligibility": "eligible",
+      "engine_proof_digest": "sha256:51a7cc42a588f494e666ee2889a1413a46d8652248926a019f5dba55afdc64b1",
+      "file_sha256": "sha256:6a71039cf0257930c82da5fbb674af8e6e4ee321ac851c1b2ac9d0a1a86a3435",
+      "manifest": "docs/implementation/handoffs/MY2019_JL/director_review/final_planning_20261108/manifests/JL19-05.manifest.json",
+      "manifest_hash": "sha256:3a062bdfb539a60ea416c0799c7d9f42a1a631050b536794a3e2e694967189a8",
+      "resolution_version": "1.1",
+      "row_id": "JL19-05",
+      "target_slug": "2019-rubicon-36l-v6-4wd-us"
+    },
+    {
+      "action": "create",
+      "candidate": "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/candidates/JL19-06.candidate.json",
+      "candidate_digest": "sha256:5d533cd574e35a07c7778e1f2be2120edea44e76a42688c03067084e70635d51",
+      "correspondence": [
+        {
+          "digest": "sha256:def5ebea00410ce4cb662a53d9fd4c481927d6a628e27d5ce434f69cf8ded6ef",
+          "reference": "c636ab1b-bed8-4943-a1b0-385a9d3d1ca3"
+        }
+      ],
+      "create_basis": "first_representation",
+      "eligibility": "eligible",
+      "engine_proof_digest": "sha256:2105dfe162a58de7eae260e9ae5a9dc43538083659064d713d7bbf3739b56a00",
+      "file_sha256": "sha256:a738685bf9d1244cc271daec51e081e197a6eecf3a8c8efa85f44434f5551459",
+      "manifest": "docs/implementation/handoffs/MY2019_JL/director_review/final_planning_20261108/manifests/JL19-06.manifest.json",
+      "manifest_hash": "sha256:09b1d1e536fcbf39c0b3b02e8eaf397901f31ba4835794f4766d3ff976b93781",
+      "resolution_version": "1.1",
+      "row_id": "JL19-06",
+      "target_slug": "2019-rubicon-20l-i4-4wd-us-turbo-mhev"
+    },
+    {
+      "action": "create",
+      "candidate": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/candidates/JL19-07.candidate.json",
+      "candidate_digest": "sha256:48c999af9b2ee2a8fbcde64129d3f98dd5e6aa3bfbe189fc3a03fb235522a101",
+      "correspondence": [
+        {
+          "digest": "sha256:16638781801556503d6723591f7d82292d6d020f197ca4f35b9ccb99987fdd23",
+          "reference": "c1b9b744-b447-4f6c-9c0c-0960f6482bb1"
+        }
+      ],
+      "create_basis": "first_representation",
+      "eligibility": "eligible",
+      "engine_proof_digest": "sha256:51a7cc42a588f494e666ee2889a1413a46d8652248926a019f5dba55afdc64b1",
+      "file_sha256": "sha256:6f860c886648875a16f937927b0323fe7e68b69aa4ef0ce64e4275cffe79c4b0",
+      "manifest": "docs/implementation/handoffs/MY2019_JL/director_review/final_planning_20261108/manifests/JL19-07.manifest.json",
+      "manifest_hash": "sha256:1aac723c2874a51ab324e121fcd135e0e08fef271cb902f087013f2da16d25da",
+      "resolution_version": "1.1",
+      "row_id": "JL19-07",
+      "target_slug": "2019-unlimited-sport-36l-v6-4wd-us"
+    },
+    {
+      "action": "create",
+      "candidate": "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/candidates/JL19-08.candidate.json",
+      "candidate_digest": "sha256:d2cef6f3c3de7487e94aed4295a097be4471622dcbcb3ad2a15aafb9b3384224",
+      "correspondence": [
+        {
+          "digest": "sha256:16638781801556503d6723591f7d82292d6d020f197ca4f35b9ccb99987fdd23",
+          "reference": "c1b9b744-b447-4f6c-9c0c-0960f6482bb1"
+        }
+      ],
+      "create_basis": "first_representation",
+      "eligibility": "eligible",
+      "engine_proof_digest": "sha256:2105dfe162a58de7eae260e9ae5a9dc43538083659064d713d7bbf3739b56a00",
+      "file_sha256": "sha256:8b5267571c7b73f9e0f5a049b73562ebe59d9ac7e73fc0c31c9c646f402e8da0",
+      "manifest": "docs/implementation/handoffs/MY2019_JL/director_review/final_planning_20261108/manifests/JL19-08.manifest.json",
+      "manifest_hash": "sha256:fa3d3aba4bcd9d5fc92cc12021c79cbb73af67fb607bd26bc436a51f8a9a9da7",
+      "resolution_version": "1.1",
+      "row_id": "JL19-08",
+      "target_slug": "2019-unlimited-sport-20l-i4-4wd-us-turbo-mhev"
+    },
+    {
+      "action": "create",
+      "candidate": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/candidates/JL19-09.candidate.json",
+      "candidate_digest": "sha256:bf4117a243b4771b3600c88e887d082cc16d60a8a6e2562b2f1665ef4a41f10d",
+      "correspondence": [
+        {
+          "digest": "sha256:16638781801556503d6723591f7d82292d6d020f197ca4f35b9ccb99987fdd23",
+          "reference": "c1b9b744-b447-4f6c-9c0c-0960f6482bb1"
+        }
+      ],
+      "create_basis": "first_representation",
+      "eligibility": "eligible",
+      "engine_proof_digest": "sha256:51a7cc42a588f494e666ee2889a1413a46d8652248926a019f5dba55afdc64b1",
+      "file_sha256": "sha256:cab765353246dedf3b377d4a903e93545fa610faf6f7c65d91485c61879874dd",
+      "manifest": "docs/implementation/handoffs/MY2019_JL/director_review/final_planning_20261108/manifests/JL19-09.manifest.json",
+      "manifest_hash": "sha256:a0d2d199f1f10390f15ca8b462320bd1f79837db7c3c886cb5b5cd681a0d379d",
+      "resolution_version": "1.1",
+      "row_id": "JL19-09",
+      "target_slug": "2019-unlimited-sport-s-36l-v6-4wd-us"
+    },
+    {
+      "action": "create",
+      "candidate": "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/candidates/JL19-10.candidate.json",
+      "candidate_digest": "sha256:ccb451844b1d240bfa71a683783749d192bbcfee62086607f32766b64b2b473c",
+      "correspondence": [
+        {
+          "digest": "sha256:16638781801556503d6723591f7d82292d6d020f197ca4f35b9ccb99987fdd23",
+          "reference": "c1b9b744-b447-4f6c-9c0c-0960f6482bb1"
+        }
+      ],
+      "create_basis": "first_representation",
+      "eligibility": "eligible",
+      "engine_proof_digest": "sha256:2105dfe162a58de7eae260e9ae5a9dc43538083659064d713d7bbf3739b56a00",
+      "file_sha256": "sha256:ba2041296854e26e6c8d6d4025e8caf0bf0885bc2e047f47be82f694dbca4103",
+      "manifest": "docs/implementation/handoffs/MY2019_JL/director_review/final_planning_20261108/manifests/JL19-10.manifest.json",
+      "manifest_hash": "sha256:29a82d9f5cc5094475f3ecdf33a80e32365decf567bf25875dfc06cf5b5c33f6",
+      "resolution_version": "1.1",
+      "row_id": "JL19-10",
+      "target_slug": "2019-unlimited-sport-s-20l-i4-4wd-us-turbo-mhev"
+    },
+    {
+      "action": "create",
+      "candidate": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/candidates/JL19-11.candidate.json",
+      "candidate_digest": "sha256:4ac2842b6f712817a33018ff1a70138582f8daa981570112701edf6b66f483e4",
+      "correspondence": [
+        {
+          "digest": "sha256:16638781801556503d6723591f7d82292d6d020f197ca4f35b9ccb99987fdd23",
+          "reference": "c1b9b744-b447-4f6c-9c0c-0960f6482bb1"
+        }
+      ],
+      "create_basis": "first_representation",
+      "eligibility": "eligible",
+      "engine_proof_digest": "sha256:51a7cc42a588f494e666ee2889a1413a46d8652248926a019f5dba55afdc64b1",
+      "file_sha256": "sha256:39a0a1e15bfc43151f6be6f9b0eb76bef392c0b1cf4095b99d4c7bd8a1d850a3",
+      "manifest": "docs/implementation/handoffs/MY2019_JL/director_review/final_planning_20261108/manifests/JL19-11.manifest.json",
+      "manifest_hash": "sha256:95a55d1b88e822a572fa41d89e75f23b22d78bc76b37fc293a3ec1a3c398c9d0",
+      "resolution_version": "1.1",
+      "row_id": "JL19-11",
+      "target_slug": "2019-unlimited-sport-altitude-36l-v6-4wd-us"
+    },
+    {
+      "action": "create",
+      "candidate": "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/candidates/JL19-12.candidate.json",
+      "candidate_digest": "sha256:ccb8eee562dc6bf0ec48259b6bd3367b7b0ac7ece31b722664238e5b6c1cc360",
+      "correspondence": [
+        {
+          "digest": "sha256:16638781801556503d6723591f7d82292d6d020f197ca4f35b9ccb99987fdd23",
+          "reference": "c1b9b744-b447-4f6c-9c0c-0960f6482bb1"
+        }
+      ],
+      "create_basis": "first_representation",
+      "eligibility": "eligible",
+      "engine_proof_digest": "sha256:2105dfe162a58de7eae260e9ae5a9dc43538083659064d713d7bbf3739b56a00",
+      "file_sha256": "sha256:8689c2894a32907232238b5baf363c1310ba2d8208d15816ff87a475a5975640",
+      "manifest": "docs/implementation/handoffs/MY2019_JL/director_review/final_planning_20261108/manifests/JL19-12.manifest.json",
+      "manifest_hash": "sha256:5ed4d7dd40d410a0a4014428af0dfff01e244c2a0bb546e4c8a548633634238a",
+      "resolution_version": "1.1",
+      "row_id": "JL19-12",
+      "target_slug": "2019-unlimited-sport-altitude-20l-i4-4wd-us-turbo-mhev"
+    },
+    {
+      "action": "create",
+      "candidate": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/candidates/JL19-13.candidate.json",
+      "candidate_digest": "sha256:caaf4b18512dc7d0ceff2261e153ab351fab89eedf3cf164f3f16f2634371f42",
+      "correspondence": [
+        {
+          "digest": "sha256:46fe14559da3d434e671d5d14187eabba86acf8d205e17d536fbe1c4b75619d6",
+          "reference": "f2abb41d-7f25-46f6-9205-b04bec7886e0"
+        }
+      ],
+      "create_basis": "first_representation",
+      "eligibility": "eligible",
+      "engine_proof_digest": "sha256:51a7cc42a588f494e666ee2889a1413a46d8652248926a019f5dba55afdc64b1",
+      "file_sha256": "sha256:b780536480facb9b38d138e37e4d14c1dfc9abcef4a558c0d0e7ae730108db11",
+      "manifest": "docs/implementation/handoffs/MY2019_JL/director_review/final_planning_20261108/manifests/JL19-13.manifest.json",
+      "manifest_hash": "sha256:9c2a1de422148ffeb34865b2881cd13c525cf8552d142ff4d9e2a5228f42094a",
+      "resolution_version": "1.1",
+      "row_id": "JL19-13",
+      "target_slug": "2019-unlimited-sahara-36l-v6-4wd-us"
+    },
+    {
+      "action": "create",
+      "candidate": "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/candidates/JL19-14.candidate.json",
+      "candidate_digest": "sha256:fe95dbc320f88fdd77a8dfcfbec295a2450bcbcda2b6ebbf250023b2cb262f7d",
+      "correspondence": [
+        {
+          "digest": "sha256:46fe14559da3d434e671d5d14187eabba86acf8d205e17d536fbe1c4b75619d6",
+          "reference": "f2abb41d-7f25-46f6-9205-b04bec7886e0"
+        }
+      ],
+      "create_basis": "first_representation",
+      "eligibility": "eligible",
+      "engine_proof_digest": "sha256:2105dfe162a58de7eae260e9ae5a9dc43538083659064d713d7bbf3739b56a00",
+      "file_sha256": "sha256:f5639a69f0e81d96364596e5ffb7a5885b37874695ba0577365db23ed008a768",
+      "manifest": "docs/implementation/handoffs/MY2019_JL/director_review/final_planning_20261108/manifests/JL19-14.manifest.json",
+      "manifest_hash": "sha256:bcaa023c80e813c68fa53bde2b6a7bee1ed669b354c138839ace71b7e56e67be",
+      "resolution_version": "1.1",
+      "row_id": "JL19-14",
+      "target_slug": "2019-unlimited-sahara-20l-i4-4wd-us-turbo-mhev"
+    },
+    {
+      "action": "create",
+      "candidate": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/candidates/JL19-15.candidate.json",
+      "candidate_digest": "sha256:8e37a7fb55d608a4b95446811477ee5db2c3d085ef90f7ce05b9e90ff0176ec4",
+      "correspondence": [
+        {
+          "digest": "sha256:46fe14559da3d434e671d5d14187eabba86acf8d205e17d536fbe1c4b75619d6",
+          "reference": "f2abb41d-7f25-46f6-9205-b04bec7886e0"
+        }
+      ],
+      "create_basis": "first_representation",
+      "eligibility": "eligible",
+      "engine_proof_digest": "sha256:51a7cc42a588f494e666ee2889a1413a46d8652248926a019f5dba55afdc64b1",
+      "file_sha256": "sha256:ffd623699c1023a75725a55cbd5f37474c55fded16e3d4c831f88dbc83e8fec0",
+      "manifest": "docs/implementation/handoffs/MY2019_JL/director_review/final_planning_20261108/manifests/JL19-15.manifest.json",
+      "manifest_hash": "sha256:ba783590a918664b5edb06fe076a9d7005d76a8a61af49b11b209812148cebff",
+      "resolution_version": "1.1",
+      "row_id": "JL19-15",
+      "target_slug": "2019-unlimited-sahara-altitude-36l-v6-4wd-us"
+    },
+    {
+      "action": "create",
+      "candidate": "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/candidates/JL19-16.candidate.json",
+      "candidate_digest": "sha256:81aea90b0cc366923ce77e95a8327b7a880ce437d4ddf0f5418a674c113dc90d",
+      "correspondence": [
+        {
+          "digest": "sha256:46fe14559da3d434e671d5d14187eabba86acf8d205e17d536fbe1c4b75619d6",
+          "reference": "f2abb41d-7f25-46f6-9205-b04bec7886e0"
+        }
+      ],
+      "create_basis": "first_representation",
+      "eligibility": "eligible",
+      "engine_proof_digest": "sha256:2105dfe162a58de7eae260e9ae5a9dc43538083659064d713d7bbf3739b56a00",
+      "file_sha256": "sha256:ee489944bfe6fa25d8e7a5e7c5580924f42533636b2b396928ddc462e95f155d",
+      "manifest": "docs/implementation/handoffs/MY2019_JL/director_review/final_planning_20261108/manifests/JL19-16.manifest.json",
+      "manifest_hash": "sha256:ba5a71f6cae9d2d58c955e3523b2b0c8904465c1ddf3dc22112199a6a77cb5cc",
+      "resolution_version": "1.1",
+      "row_id": "JL19-16",
+      "target_slug": "2019-unlimited-sahara-altitude-20l-i4-4wd-us-turbo-mhev"
+    },
+    {
+      "action": "create",
+      "candidate": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/candidates/JL19-17.candidate.json",
+      "candidate_digest": "sha256:b1f691977f696210f96ce073e275fffe29613ac9f4eed27abf190298a33b7de7",
+      "correspondence": [
+        {
+          "digest": "sha256:46fe14559da3d434e671d5d14187eabba86acf8d205e17d536fbe1c4b75619d6",
+          "reference": "f2abb41d-7f25-46f6-9205-b04bec7886e0"
+        }
+      ],
+      "create_basis": "first_representation",
+      "eligibility": "eligible",
+      "engine_proof_digest": "sha256:51a7cc42a588f494e666ee2889a1413a46d8652248926a019f5dba55afdc64b1",
+      "file_sha256": "sha256:9bf1fcc4905eb9d3453473171adbded04890973674caa91991f837b1cd7b6e74",
+      "manifest": "docs/implementation/handoffs/MY2019_JL/director_review/final_planning_20261108/manifests/JL19-17.manifest.json",
+      "manifest_hash": "sha256:034922918edf71104201dfdbb19d017af634211e73a1ad667fcc788365bd82c9",
+      "resolution_version": "1.1",
+      "row_id": "JL19-17",
+      "target_slug": "2019-unlimited-moab-36l-v6-4wd-us"
+    },
+    {
+      "action": "create",
+      "candidate": "docs/implementation/handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/candidates/JL19-18.candidate.json",
+      "candidate_digest": "sha256:ab8023ccc084a0e8a31438e04eae8cd13aff09f69291313e2e6fe10b29d2a3f7",
+      "correspondence": [
+        {
+          "digest": "sha256:70544663f878db979874e4b2ea817a098ce7a95f2835e7774f55b66663a7686d",
+          "reference": "a2b7fdee-4c7b-4b4c-b537-e08f08e7413b"
+        }
+      ],
+      "create_basis": "first_representation",
+      "eligibility": "eligible",
+      "engine_proof_digest": "sha256:51a7cc42a588f494e666ee2889a1413a46d8652248926a019f5dba55afdc64b1",
+      "file_sha256": "sha256:03a9e7fc3877e37b82ae10397f79daeb399c13bfbfa7e09307b66e6cb0df5101",
+      "manifest": "docs/implementation/handoffs/MY2019_JL/director_review/final_planning_20261108/manifests/JL19-18.manifest.json",
+      "manifest_hash": "sha256:f18e62ffffbf13409dd696124e57c0168904665c400e02235acca8b65de09ec2",
+      "resolution_version": "1.1",
+      "row_id": "JL19-18",
+      "target_slug": "2019-unlimited-rubicon-36l-v6-4wd-us"
+    },
+    {
+      "action": "create",
+      "candidate": "docs/implementation/handoffs/MY2019_JL/director_review/evidence_review_20261108/candidates/JL19-19.candidate.json",
+      "candidate_digest": "sha256:7ab768e39cc66d32b1e9626a1bd182e9386691ebf5612c5ae81b99eaeb695757",
+      "correspondence": [
+        {
+          "digest": "sha256:70544663f878db979874e4b2ea817a098ce7a95f2835e7774f55b66663a7686d",
+          "reference": "a2b7fdee-4c7b-4b4c-b537-e08f08e7413b"
+        }
+      ],
+      "create_basis": "first_representation",
+      "eligibility": "eligible",
+      "engine_proof_digest": "sha256:2105dfe162a58de7eae260e9ae5a9dc43538083659064d713d7bbf3739b56a00",
+      "file_sha256": "sha256:931c08c6f97cbb430b399bf8c7eab450c208227d7dfad045da6e8565ae0c724c",
+      "manifest": "docs/implementation/handoffs/MY2019_JL/director_review/final_planning_20261108/manifests/JL19-19.manifest.json",
+      "manifest_hash": "sha256:7fd5c4eae1043400edc08f87750e142894d7bc364f2d6ea5919e843b450a7661",
+      "resolution_version": "1.1",
+      "row_id": "JL19-19",
+      "target_slug": "2019-unlimited-rubicon-20l-i4-4wd-us-turbo-mhev"
+    }
+  ],
+  "schema": "MY2019 planning review index"
+}

@@ -1,0 +1,42 @@
+{
+  "all_five_verified": true,
+  "already_published": 0,
+  "before_counts": {
+    "correspondences": 8,
+    "receipts": 2856,
+    "vehicle_definitions": 793
+  },
+  "canonical_vehicle_imports": 0,
+  "coverage": {
+    "JLJL72": [
+      "JL19-01",
+      "JL19-02",
+      "JL19-03",
+      "JL19-04"
+    ],
+    "JLJL74": [
+      "JL19-07",
+      "JL19-08",
+      "JL19-09",
+      "JL19-10",
+      "JL19-11",
+      "JL19-12"
+    ],
+    "JLJP74": [
+      "JL19-13",
+      "JL19-14",
+      "JL19-15",
+      "JL19-16",
+      "JL19-17"
+    ],
+    "JLJS72": [
+      "JL19-05",
+      "JL19-06"
+    ],
+    "JLJS74": [
+      "JL19-18",
+      "JL19-19"
+    ]
+  },
+  "created": 5
+}
