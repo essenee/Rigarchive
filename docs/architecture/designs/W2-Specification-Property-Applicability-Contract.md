@@ -1,5 +1,7 @@
 # W2: Specification property and applicability contract
 
+**Last Updated:** 2026-11-07
+
 **Status**: Approved architecture contracts, incorporating director-approved Phase A corrections on 2026-11-04. B1 pure serializers/validators are implemented; persistence/publication execution is not implemented. No migration or canonical-write authorization.
 
 ## 1. Structural contract
@@ -155,3 +157,9 @@ Validate all UUIDs before evaluation. Foreign/wrong-kind/nonmember/stale revisio
 
 
 Categorical qualifier clarification (director-approved 2026-11-04): each categorical QualifierRule pins `categorical_definition:Ref` as defined in Publication §9; noncategorical rules carry explicit null. Resolve its exact definition revision/hash and controlled terms before accepting qualifier values. Parent property categorical_terms never supplies a qualifier's vocabulary. This introduces no generic expression vocabulary or legacy artifact change.
+
+## JL-D19 / JL-D20 reconciliation — architecture only
+
+[ADR-0012](../ADR/ADR-0012-Structured-Powertrain-Identity-And-Hybrid-Terminology.md) adds future baseline structured engine attributes without changing this document's existing closed wire schema. Map canonical aspiration deliberately to the existing engine.induction property meaning during implementation review. Never create a second conflicting identity authority from descriptive specification assertions. Fuel and electrification classification need separately reviewed definition and applicability bindings before adding properties to execution contracts.
+
+Future power/torque alternatives preserve each source pairing, applicable baseline/selection, RPM, units and rating conditions. Separate numerical values remain sourced assertions. A slash-separated display is computed presentation only. Verified tuning-only differences require review and do not split the baseline. A concrete pairing/linkage representation must be approved before persistence changes.

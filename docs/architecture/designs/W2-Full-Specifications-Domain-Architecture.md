@@ -1,5 +1,7 @@
 # W2: Full Specifications domain architecture
 
+**Last Updated:** 2026-11-07
+
 **Status**: Approved architecture contracts, incorporating director-approved Phase A corrections on 2026-11-04. Not implemented; no migration or canonical-write authorization.
 
 Authority: current task, accepted ADRs, CURRENT_STATE, approved RA designs, Handbook, Blueprint. [ADR-0011](../ADR/ADR-0011-Factory-Body-Configuration-Identity.md) is required for body identity. Read with the [property contract](W2-Specification-Property-Applicability-Contract.md), [publication contract](W2-Enrichment-Publication-Contract.md), [plan](W2-Phase-A-Implementation-Plan.md), [operational protocol](../../development/INGESTION_PROTOCOL.md), and [W1 closeout](../../development/JEEP_W1_CLOSEOUT.md).
@@ -144,3 +146,40 @@ Series preimage is exactly `{identity_contract:"factory-series-semantic/1", scop
 Assessed baseline preimage is exactly `{identity_contract:"vehicle-definition-body/1", scope:Scope, model_year:Integer, trim_name:String, engine_name:String, drivetrain:Enum, market:Enum, body_digest:Hash, series:SeriesIdentity}`. `SeriesIdentity` is `{state:"established", digest:Hash}` or `{state:"not_separate"}`. Legacy-unassessed series/body is not executable through this identity contract. Trim/engine are exact approved canonical strings under existing normalization, not newly lowercased/reformatted by this contract. Drivetrain/market use existing supported canonical enums. Generation scope is independently resolved through existing correspondence. Identity-bearing body/series digests use the semantic rules above, never their UUIDs. Enforce one assessed baseline per digest plus semantic tuple verification; hash equality is not a substitute for validating preimages. Actual FK/UUID bindings remain frozen in the reviewed import manifest and receipt.
 
 Existing baselines have no retroactively assigned digest and stay outside assessed-row uniqueness. Before new assessed creation, check potentially matching unassessed old tuples and block for review; no assumed wildcards. New slug suffixes use already curated full body/series UUIDs, not the semantic digest; the digest prevents duplicate semantic bodies with different UUIDs. Existing slugs/UUIDs/URLs are never regenerated. Body/series publication/curation operation schemas remain B5 work, not part of enrichment publication v1.
+
+## Approved engine-identity reconciliation — architecture only
+
+[ADR-0012](../ADR/ADR-0012-Structured-Powertrain-Identity-And-Hybrid-Terminology.md) extends future baseline engine identity with first-class displacement, cylinders, aspiration, fuel/energy and electrification. Its JL-D20 keeps verified tuning output pairings under one otherwise identical VehicleDefinition with explicit review. Existing W2 sourced quantities, units, RPM/rating qualifiers, catalogue membership and immutable publication remain the reuse points.
+
+The vehicle-definition-body/1 preimage in the semantic-identity section includes engine_name. That preimage retains its original meaning for old artifacts. Before engine-aware body creation, approve a successor preimage and compatible candidate/import versions that bind the assessed engine facts. Do not mutate vehicle-definition-body/1 hashes or infer new fields from engine_name. ADR-0011 body/series semantics and existing legacy UUIDs/slugs remain preserved. No models, migrations, backfill or new publication were delivered by this reconciliation.
+
+
+## Future resolved configurations and production variation — compatibility requirements
+
+**Director-approved forward compatibility, 2026-11-07.** These requirements supplement ADR-0010 and ADR-0012. RA-044 remains limited to baseline structured powertrain implementation. No subordinate configuration model, route, new wire contract, numerical output store, evidence import or Admin revision workflow is implemented or authorized here.
+
+### Subordinate resolved configurations
+
+The future application must permit configuration-specific Full Specifications pages beneath an existing VehicleDefinition. A selection of supported transmission, factory packages and individual factory options may resolve to a stable subordinate identity and URL. The parent baseline UUID, mechanical identity and immutable slug remain unchanged. A selection requiring a different baseline links to that baseline; it cannot mutate the parent identity.
+
+Reuse the existing pinned catalogue, offering revisions, independent transmission/equipment selection knownness, applicability predicates and whole-selection compatibility evaluation. Persist or address a resolved configuration only through a separately reviewed future identity/URL contract. The current Selection is a validation context, not an already approved persistent identity preimage. A stable selection identity must distinguish the parent and exact reviewed choices without equating unknown selections or silently changing meaning when catalogues evolve. Its durable identity and its versioned evidence/result representation need explicit future design; no digest preimage is defined by this addendum.
+
+Retain specification and equipment applicability structurally with exact source-qualified facts, parent/configuration association, known effective dates and applicable offerings. Shared assertions stay at their supported scope and are referenced by resolved results, not duplicated for every possible combination. Preserve existing evidence identifiers and raw sources so later resolution can reuse adequate retained facts. If earlier material lacks essential applicability, record that gap and acquire or review only the affected facts. A future resolver must not assume that raw retained material is already a complete structured specification.
+
+An unknown, unsupported or incompatible choice context cannot produce a definitively supported selected-build sheet. Existing W2 rules permitting baseline-unconditional facts while conditional facts remain unestablished still apply. Brochure-governed accessory exclusions and equipment classification rules remain unchanged.
+
+### Nonselectable factory variations
+
+One VehicleDefinition may retain multiple verified horsepower/torque pairings and other specification alternatives caused by production-period changes, calibration revisions or other nonselectable factory variations. Preserve numerical values separately, paired output relationships, rating method/units/RPM, source provenance and production applicability where known. Nonselectable variation is not a user-selected option. The resolver must not invite a user to choose an arbitrary calibration merely to suppress uncertainty.
+
+A known production date or other evidenced applicability context may select the applicable assertions through existing predicates. When applicability is unknown or overlapping, show the alternatives and their limitations. Do not pick one output as universal, infer a date range from document order, or combine a power value from one pairing with torque from another. Incompatible rating standards cannot be silently merged into a single slash-separated presentation.
+
+JL-D20 prohibits automatic baseline proliferation from tuning-only differences. A future director decision may authorize canonical separation for materially distinct factory configurations where necessary. Such a decision needs explicit identity rationale, applicable versioned contracts and separate correction/import authorization. If the standard identity tuple still matches, current duplicate prevention remains in force until that contract question is resolved. A review flag or chosen output figure cannot bypass it. Existing UUIDs, slugs, receipts and parent/subordinate links cannot be silently split or reassigned.
+
+### Existing contract reconciliation
+
+These requirements agree with existing subordinate transmission/equipment offerings and three-valued applicability. The current closed Selection/enrichment/publication schemas do not define a stable subordinate configuration identifier, URL or numerical output-pair linkage. That is a future contract gap, not permission to insert undeclared keys into current artifacts. Define any successor schema explicitly and preserve old bytes and hashes.
+
+The vehicle-definition-body/1, body/series semantic preimages and existing publication contracts remain unchanged by this addendum. Any future canonical separation or combined assessed-body/engine contract requires the existing architecture and authorization process. There is no identified contradiction requiring an immediate W2 contract amendment. The deferred identity/URL and pairing contracts must be resolved after JL completion, before implementing those features.
+
+See [RA-044](RA-044-Structured-Powertrain-Identity-Implementation-Architecture.md) for the accepted baseline implementation architecture (2026-11-07); implementation remains pending separate authorization and [ADR-0012](../ADR/ADR-0012-Structured-Powertrain-Identity-And-Hybrid-Terminology.md) for the accepted powertrain and tuning policies.

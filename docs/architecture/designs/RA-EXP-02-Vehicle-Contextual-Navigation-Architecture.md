@@ -1,5 +1,7 @@
 # RA-EXP-02 — Vehicle-Contextual Navigation Architecture
 
+**Last Updated:** 2026-11-07
+
 **APPROVED ARCHITECTURE — ORIGINAL RA-EXP-02A AUTHORIZATION CHECKPOINT**
 
 ### Dated implementation clarification — 2026-10-27
@@ -312,3 +314,9 @@ Correct branch confirmed. Initial working tree: modified `db.sqlite3`; untracked
 ### Documentation finalization verification
 
 Only this architecture document was edited during finalization. Existing repository file fingerprints, including the development database and Codex probes, were compared before and after the edit and remained unchanged. No application changes, database operations, management commands, migrations, staging, commits or pushes were performed. No runtime tests were required or run. The complete approved decomposition, sequential dependencies, completion checkpoints and deferred capabilities are recorded. Superseded conditional-approval and missing-instruction language has been removed. RA-EXP-02A documentation finalization is complete; RA-EXP-02B-1 has not begun.
+
+## Approved hybrid presentation convention — architecture only
+
+[ADR-0012](../ADR/ADR-0012-Structured-Powertrain-Identity-And-Hybrid-Terminology.md) defines centralized labels for assessed electrification. VehicleDescription uses Mild hybrid (MHEV), Hybrid (HEV), and Plug-in hybrid (PHEV). The Generation Configurator uses MHEV, HEV, and PHEV. Conventional none omits the abbreviation; unknown remains unassessed. Manufacturer names such as eTorque remain separate metadata. ESS alone cannot supply a hybrid classification.
+
+The current VehicleContext, VehicleDefinition description, and engine_name-based configuration choice labels remain the implementation baseline. A future presentation service consumes one controlled-value definition for both contexts and exposes its labels to templates/JavaScript. Do not infer hybrid identity from display strings or change existing public slugs. Structured engine distinctions must remain visible even when display labels would otherwise coincide. This amendment implements no UI changes.

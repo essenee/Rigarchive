@@ -2,7 +2,7 @@
 
 **Status**: Accepted  
 **Date**: 2026-08-15  
-**Last Updated:** 2026-11-06
+**Last Updated:** 2026-11-07
 **Domain**: Reference Domain — Data Ingestion Pipeline  
 
 ---
@@ -367,3 +367,11 @@ RA-018 is accompanied by **ADR-0004: Canonical Reference Matching & Import Promo
 Generation resolution now has separate unique_year_range and reviewed_source_correspondence bases. All applicable reviewed current correspondences must agree and match scope/evidence. Failed explicit evidence never falls back. Revalidate before both creation and no-op; source/mapping/parent changes abort instead of substituting plans. Canonical creation bases and identities are unchanged.
 
 The permanent [Reference ingestion protocol](../../development/INGESTION_PROTOCOL.md) specifies the current contracts, review/publication lifecycle, compatibility rules, transaction boundaries and test obligations under [accepted ADR-0010](../ADR/ADR-0010-Generation-Correspondence-Selectable-Factory-Alternatives.md). This amendment governs the affected earlier text; historical decisions and completed implementation records remain preserved. Transmission and factory-package implementation remain future milestones.
+
+## Approved structured engine identity extension — architecture only
+
+[ADR-0012](../ADR/ADR-0012-Structured-Powertrain-Identity-And-Hybrid-Terminology.md) records JL-D19 and JL-D20. Future canonical attributes include displacement, cylinder count, aspiration, fuel/energy type and electrification. Verified differences may establish mechanical identity with retained evidence on both sides. Engine codes and display labels alone do not establish distinctness. Unknown never implies naturally aspirated gasoline without electrification. The current §9 proof remains the implemented conservative Candidate v2 behavior until the successor contracts and migrations are separately approved. Horsepower/torque-only differences require review and remain paired sourced specifications on one baseline. Preserve existing UUIDs, slugs, evidence hashes and v1/v2 artifact semantics. New-record slug collisions remain blockers. See ADR-0012 for applicability, backfill and versioning prerequisites.
+
+## Structured powertrain implementation proposal
+
+[RA-044](RA-044-Structured-Powertrain-Identity-Implementation-Architecture.md) defines the accepted architecture for the bounded implementation of ADR-0012 for Wrangler JL MY2019–2026. It defines five nullable VehicleDefinition fields using marketed liters, Candidate v2 schema 2.1.0, explicit manifest/matrix version dispatch, retained structured evidence and peer proof, deterministic new-record slug suffixes, and centralized hybrid labels. The current Candidate 2.0.0 displacement/cylinder proof and Candidate v1 drivetrain compatibility remain implemented behavior. RA-044 was accepted on 2026-11-07. Its separately authorized implementation now provides nullable structured fields, an additive schema migration, Candidate 2.1.0 / Manifest 2.1 / Matrix 2.1 dispatch, resolution 1.1 and engine proof 2.0. See the [RA-044 implementation record](../../implementation/tasks/RA-044-structured-powertrain-identity-implementation.md) for verification and acceptance status. Development migration `reference.0010` is verified as applied; historical backfill and canonical imports require separate authorization.
