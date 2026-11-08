@@ -6,6 +6,18 @@ All notable changes to RigArchive will be documented in this file.
 
 ### Added
 
+- Certified and executed the owner-authorized 19-row US MY2019 Wrangler JL Matrix 2.1 through one model-year transaction with fresh per-row planning. Created VehicleDefinitions 809–827 and receipts 2862–2880; totals 812 definitions and 2,880 receipts. All preexisting rows and evidence preserved; backup, reconciliation, SQLite/Django checks and 98 focused tests verified. No application/contract change, backfill or schema migration.
+
+- Prepared final US MY2019 Wrangler JL Matrix 2.1, 19 engine proof 2.0 assessments, resolution 1.1 peer review and 19 create-only Manifest 2.1 plans. All 19 eligible; no preexisting matches/conflicts. 98 focused tests passed; database and prior review artifacts unchanged. Exact human Matrix approval/execution authorization pending; standalone plans require transaction-time replanning. No imports or application/contract changes.
+
+- Published the five owner-authorized US MY2019 Wrangler JL model-code correspondences to existing JL Generation PK 32. All 19 completed candidates resolve through the new mappings. Five immutable revisions and five audit receipts added; all pre-existing database rows, candidate classifications and original evidence preserved. No canonical import plans or VehicleDefinitions created.
+
+- Recorded owner approval of naturally aspirated/nonhybrid classifications for the ten exact US MY2019 Wrangler JL ERC candidates. Ten separate approved adjudications and Candidate 2.1.0 revisions retain human-derived provenance, moderate confidence and limitations. All 19 MY2019 tuples now validate as complete; 44 focused tests passed. No canonical planning, publication, import or database write.
+
+- Owner-approved classification policy and adjudication 1.1: evidence-backed proposed/approved human conclusions, exact candidate/evidence binding, explicit CLI confirmation and separate candidate revisions through existing planning/execution/receipt paths. Legacy grade adjudication and direct-source validation remain intact. Ten MY2019 ERC proposals await human fact approval; no canonical writes or schema changes.
+
+- MY2019 Wrangler JL evidence review: retained engine-specific manufacturer gasoline facts and model-wide two-door 4WD evidence, 19 validated revised candidates, five unpublished correspondence proposals, and a blocked director-review ledger. Ten ERC rows still require aspiration/nonhybrid evidence; all 19 require correspondence publication before final Matrix 2.1 review. No canonical import or database write performed. Verified with 89 focused tests using the task-approved Python 3.13.1 environment.
+
 - Added reviewed extraction and normalization for the four core 2018 US Wrangler JK Sahara and Rubicon body/grade combinations using the retained Jeep brochure.
 
 - Verified offline JK Unlimited Sport candidate and manifest planning with the existing exact W1 correspondence. Added coverage for evidence order, stale resolution, and historical slug collisions.
@@ -25,6 +37,12 @@ All notable changes to RigArchive will be documented in this file.
 - ADR-0010 Milestone 1: immutable reviewed generation-correspondence revisions, evidence-backed overlap resolution, document-qualified candidate v2 and exact import manifest 2.0, offline planning/publication commands, and atomic publication/import receipts. Includes additive migration 0006, synthetic protocol tests, permanent ingestion protocol and coordinated ingestion-design amendments. No transmission/package implementation or development-data backfill.
 
 ### Changed
+
+- MY2019 JL compact review revision: retained selected June four-door guide text and accepted research in Git-eligible review paths, without hashing or duplicating the PDF. Nineteen revised preparatory candidates validate; 13 four-door rows gain explicit 4WD evidence. Missing engine classifications and model-code correspondence remain review gates. No contract or deployment change.
+
+- MY2019 JL: director-accepted research inventory retained as honest hashed JSON using the existing snapshot manager; 19 incomplete Candidate 2.1.0 and SourceAssertionSet 1.1.0 pairs validate. Corrected the earlier all-18-PDF acquisition requirement. Remaining gates are explicit missing powertrain/drive facts and reviewed model-code correspondence. Existing Homebrew Python 3.13 focused validation succeeds; no import or contract change.
+
+- Recorded director acceptance of RA-044 and read-only confirmation that development reference migrations 0007–0010 are applied. Added MY2019 JL blocked review inventory, source acquisition ledger and live peer snapshot; authentic candidates and Matrix 2.1 remain unconstructed because original source acquisition is blocked. No canonical import or historical backfill.
 
 - Implemented W2 B1 pure specification values, predicates/selections, immutable catalogue and enrichment/publication v1 serializers/validators, and exact-current replay/stale-state checks. Director-approved categorical qualifiers pin an exact categorical definition revision; 86 new standalone tests. Existing v2/2.0 contracts unchanged; no persistence, models, migrations, executors or UI. Corrected temporary-storage isolation in two legacy test classes after an initial suite created four fixture-copy artifacts; intervening development database hash change remains qualified. See the B1 task record for final results and preservation evidence.
 

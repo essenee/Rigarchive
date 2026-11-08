@@ -1,7 +1,123 @@
 RigArchive Project Status Document
 Version: 1.3
-Last Updated: 2026-11-06
+Last Updated: 2026-11-08
 Purpose: Current implementation status and development roadmap
+
+## MY2019 JL canonical import — certified and completed (2026-11-08)
+
+The owner authorized the exact reviewed 19-row Matrix 2.1 after conditional gates.
+All gates passed; the accepted approval workflow certified Matrix digest
+`sha256:d8f11301e230b8485dfd2d15c0b9342aaa0cc778aa7418052ce8da7b10cf6896`.
+The [execution record](handoffs/MY2019_JL/director_review/canonical_execution_20261108/README.md)
+retains the approval, verified consistent pre-import backup, CLI logs, fresh
+per-row manifests, receipts and read-only reconciliation.
+
+One accepted model-year transaction created exactly 19 active US MY2019 JL
+VehicleDefinitions, PK 809–827, and 19 receipts, PK 2862–2880. All resolve to
+Generation PK 32 / UUID `38d3c3ac-f825-4406-abb5-c2d12b9129a4` through the five
+existing published mappings. Totals are now **812 VehicleDefinitions, 2,880
+receipts, 13 correspondences**. The six two-door/thirteen Unlimited offerings
+retain ten approved ERC human-adjudicated tuples and nine original EC3 tuples.
+Each row was freshly planned inside the transaction using only its Matrix-permitted
+creation bases; old standalone snapshot plans were not executed sequentially.
+
+Post-import reconciliation verifies all 19 complete, deterministic slugs, unique
+UUIDs, ten target fields and exact resolution 1.1 / engine proof 2.0 / candidate /
+evidence / correspondence / receipt / Matrix bindings. Every preexisting row in
+every application table remains unchanged versus backup; only 19 definitions,
+19 receipts and their normal sequence advances were added. Schema, migrations,
+correspondences and prior review artifacts are unchanged. SQLite integrity and
+foreign keys, Django checks and 98 isolated focused tests passed. Post-import DB
+SHA-256: `bde5218712398f0c7b5251abaefa3182f99ea43fd037c442c04518f01b59f410`.
+
+No technical blockers remain for this set. No backfill, application/contract
+change, schema migration, additional publication, adjudication repeat, commit or
+push occurred. The prior review `.venv/bin/python` environment was used unchanged
+(Python 3.13.1, Django 6.0.7, pypdf 6.16.1); documented `venv/py313/bin/python`
+remains absent. The original [planning records](handoffs/MY2019_JL/director_review/final_planning_20261108/README.md)
+are preserved as their pre-import checkpoint, not current pending authorization.
+
+## MY2019 JL generation correspondence — five mappings published (2026-11-08)
+
+The owner authorized the five existing proposals after validation. The accepted
+workflow created immutable correspondence revisions 9–13 and publication receipts
+2857–2861 for JLJL72, JLJL74, JLJP74, JLJS72 and JLJS74, narrowly scoped to US
+MY2019. All target existing Wrangler JL Generation PK 32 / UUID
+`38d3c3ac-f825-4406-abb5-c2d12b9129a4`. No pre-existing publication was duplicated.
+[Publication records](handoffs/MY2019_JL/director_review/generation_publication_20261108/README.md)
+retain exact proposal/receipt UUIDs, hashes, command output and coverage.
+
+All 19 completed candidate artifacts resolve through exactly one published
+mapping to that target, with per-code coverage 4, 6, 5, 2 and 2. VehicleDefinitions
+remain 793; receipts increased from 2,856 to 2,861; correspondences from 8 to 13.
+A consistent pre-publication backup and all-table row hashes confirm every
+pre-existing record is unchanged. Only five correspondence rows, their five
+receipts and normal sequence advances were added. SQLite integrity/foreign keys
+and read-only Django checks passed. Original proposals/evidence and all 19
+candidate classifications remain unchanged. No application change, migration,
+canonical planning/import or historical backfill occurred. Final planning, certification and the separately authorized canonical import are
+now complete as described above.
+
+## Human classification adjudication — implemented; MY2019 ERC findings approved (2026-11-08)
+
+The owner's current policy prefers manufacturer specifications without requiring
+exact internal terminology. Evidence-backed human adjudication is the normal
+fallback. [Adjudication 1.1](tasks/MY2019-erc-classification-adjudication.md) reuses
+the existing adjudication artifact and command for proposed/approved classifications.
+The initial consumer fills unknown controlled powertrain categories, with exact
+candidate/source binding, explicit human provenance and confirmation, and no
+changes to direct-source rules or Candidate/Manifest/Matrix versions. Existing
+planning/execution and receipt lineage support the approved revised candidate;
+generation review and import authorization remain independent. No schema change,
+development migration, canonical write or historical backfill was performed.
+
+Verification: 100 focused adjudication/powertrain/lineage/serialization tests
+passed, including 13 new classification regressions. Django system checks,
+migration consistency dry-run and Git whitespace checks passed. All database
+tests used isolated resources; development database bytes remain unchanged.
+
+The owner approved the ten reviewed US MY2019 ERC offerings' naturally aspirated
+and nonhybrid classifications as derived conclusions. The existing adjudication
+workflow created [ten separate approved findings and candidate revisions](handoffs/MY2019_JL/director_review/erc_approved_classifications_20261108/README.md),
+retaining moderate confidence, all reasoning, exact candidate/source bindings and
+limitations. Original proposals and candidates remain unchanged. Combined with
+the nine unchanged EC3 artifacts, all 19 now pass complete structured powertrain
+and retained-evidence validation. Forty-four focused approval/lineage/serialization
+tests passed using isolated resources. No actual import plan, canonical write or
+generation publication occurred. Broader MY2019 3.6L hybrid documentation remains
+a scope caveat: approval covers only the ten exact ERC candidates and their
+documented evidence. Earlier source-audit reports remain historical records.
+
+
+
+## RA-044 structured powertrain implementation — accepted; development migrations applied (2026-11-07)
+
+[Accepted RA-044](../architecture/designs/RA-044-Structured-Powertrain-Identity-Implementation-Architecture.md) has been implemented under separate director authorization. The [implementation record](tasks/RA-044-structured-powertrain-identity-implementation.md) lists the delivered scope and verification. Five nullable VehicleDefinition fields now have model validation and database constraints: marketed `engine_displacement_liters` Decimal(5,2), positive `engine_cylinders`, controlled `engine_aspiration`, `fuel_type`, and `electrification_type`. Migration `reference.0010_vehicledefinition_electrification_type_and_more` is additive and contains no data operations. It is applied to the development database. Read-only inspection on 2026-11-07 confirms reference migrations 0007–0010 are recorded, 793 VehicleDefinitions and 2,856 import receipts exist, and all five structured fields remain null on every historical VehicleDefinition. SQLite integrity and foreign-key checks pass. The director reports the pre/post-migration comparison verified unchanged historical PKs, UUIDs, slugs and receipts; that backup comparison was not independently repeated in this task.
+
+Candidate schema 2.1.0, Manifest 2.1 and Matrix 2.1 explicitly bind the five structured attributes and qualified evidence. Resolution 1.1 and engine proof 2.0 bind current canonical peer state and retained successful-receipt evidence. One source can establish several attributes; multiple applicable sources can jointly establish the tuple. Incomplete/unknown attributes do not default to conventional values. Semantic equality precedes locator matching; established engine distinctions support mechanical creation. Fixed new-record slug qualifiers are independent of occupancy and ingestion order, and occupied conflicting slugs block. Existing UUIDs, immutable slugs and legacy contract serialization remain preserved. Central long and short hybrid labels feed descriptions and configurator choices.
+
+Verification: 39 new RA-044 tests pass in the full suite, including isolated additive-migration preservation, both engine orders, stale evidence/peer rejection, nullable legacy assessment, Matrix rollback and receipt-idempotent retry. The final focused ingestion regression selection passed 129 tests. The complete isolated Django suite passed **691 tests, 0 failures, 0 errors, 0 skips**. Django system checks, migration consistency (`makemigrations --check --dry-run`) and `git diff --check` passed. The documented `venv/py313/bin/python` is absent in this checkout; verification used the existing Homebrew Python 3.13.2 executable (Django 6.1.3) with the existing `venv/lib/python3.13/site-packages` dependency path and `RIGARCHIVE_TEST_DB_PATH=:memory:`. No environment was rebuilt. The development database SHA-256 matches its pre-work baseline.
+
+Implementation is accepted by the director, who confirms development migration completion. MY2019 candidate construction and read-only director-review preparation are authorized; historical backfill, correspondence publication and canonical imports remain separately controlled. This task performed no database writes or historical artifact/receipt rewrites. Earlier W2 entries below describe their original verification checkpoints; their statements that reference 0007–0009 were unapplied are superseded by the live migration inspection above. The completed RA-043 Measurements milestone remains preserved. The [W2 domain addendum](../architecture/designs/W2-Full-Specifications-Domain-Architecture.md#future-resolved-configurations-and-production-variation--compatibility-requirements) remains forward compatibility only; no W2 models, URLs, specification ingestion or revision administration were implemented.
+
+## MY2019 US Wrangler JL preparation — historical evidence checkpoint
+
+The director-accepted inventory remains 19 offerings (six two-door, thirteen
+Unlimited). The [initial review](handoffs/MY2019_JL/director_review/evidence_review_20261108/README.md)
+retains its 19 preparatory candidates, 32 assertion sets and original unresolved
+ERC findings. Ten later separate approved ERC revisions completed the tuples;
+the nine EC3 revisions remained unchanged. Five correspondence proposals were
+subsequently published. Final Matrix certification and canonical execution are
+now complete as recorded above. Earlier blocked reports, null-field candidates,
+planning snapshots and database hashes describe their historical checkpoints and
+have not been overwritten or treated as current blockers. No historical backfill
+was performed.
+
+## Structured powertrain identity and hybrid terminology — documentation approved (2026-11-07)
+
+[ADR-0012](../architecture/ADR/ADR-0012-Structured-Powertrain-Identity-And-Hybrid-Terminology.md) records director-approved JL-D19 (manufacturer-neutral structured displacement/cylinders/aspiration/fuel/electrification), JL-D20 (review tuning-only differences with paired sourced output alternatives), and centralized hybrid labels for VehicleDescription and the Generation Configurator. RA-018, the W2 domain/property contracts and navigation architecture are cross-referenced with explicit supersession boundaries.
+
+This earlier documentation milestone introduced no code or data changes. Its approved direction is now implemented in the separately authorized RA-044 milestone recorded above. Candidate v1 compatibility, historical artifact hashes, existing UUIDs/slugs and prior import outcomes remain intact. Noncombustion/multi-fuel applicability and historical backfill remain deferred.
 
 ## MY2018 US Wrangler JL canonical import completed (2026-11-06 local)
 
