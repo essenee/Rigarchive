@@ -1,0 +1,62 @@
+[
+  {
+    "source_id": "FCA_MY2021_Wrangler_specifications",
+    "url": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/specs/2021_JP_Wrangler_SPpr9cq0ipusqbj1krgeoq0pu45s.pdf",
+    "title": "2021 Jeep® Wrangler",
+    "retained_path": "docs/implementation/handoffs/MY2021_JL/source_pdfs/FCA_MY2021_Wrangler_specifications.pdf",
+    "document_sha256": "sha256:c290b9bb68539a4d3716653f1e0e87ac10bc86046b28f594c262f5de325a741e",
+    "pages": 11,
+    "extraction_path": "docs/implementation/handoffs/MY2021_JL/evidence/FCA_MY2021_Wrangler_specifications.text.json",
+    "extraction_sha256": "sha256:01576d208dfc28266a6a55af6c067a5eb0d939e15f3c0823db15f839581d779b",
+    "model_year": 2021,
+    "market": "US",
+    "issue_date_printed": null,
+    "applicability_basis": "US units, EPA and US fuel-octane requirements; 2021 content headings/footers. PDF/search metadata title 2022 Product Information is not used as model-year authority. Availability snapshots are subordinate to dated order-guide union.",
+    "acquisition": "curl with verified TLS; original publisher-hosted bytes"
+  },
+  {
+    "source_id": "FCA_MY2021_Wrangler_fact_sheet",
+    "url": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/specs/2021_JP_Wrangler_FAtru069su0r0bq8k4vgn80iua6o.pdf",
+    "title": "2021 Jeep Wrangler feature availability",
+    "retained_path": "docs/implementation/handoffs/MY2021_JL/source_pdfs/FCA_MY2021_Wrangler_fact_sheet.pdf",
+    "document_sha256": "sha256:c890c96748dd7c4b46dcdb2623f9f90d0f38d29b2f0d165ca53c6745e705c121",
+    "pages": 10,
+    "extraction_path": "docs/implementation/handoffs/MY2021_JL/evidence/FCA_MY2021_Wrangler_fact_sheet.text.json",
+    "extraction_sha256": "sha256:523958289b518bb300ff3de126a27a74be73b7d73bb11d3c056c8c8ed309cf83",
+    "model_year": 2021,
+    "market": "US",
+    "issue_date_printed": null,
+    "applicability_basis": "US units, EPA and US fuel-octane requirements; 2021 content headings/footers. PDF/search metadata title 2022 Product Information is not used as model-year authority. Availability snapshots are subordinate to dated order-guide union.",
+    "acquisition": "curl with verified TLS; original publisher-hosted bytes"
+  },
+  {
+    "source_id": "FCA_MY2021_Wrangler_4xe_specifications",
+    "url": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/specs/2021_JP_Wrangler_4xe_SP3oj78skon97eivshempg1eg8in.pdf",
+    "title": "2021 Jeep® Wrangler 4xe",
+    "retained_path": "docs/implementation/handoffs/MY2021_JL/source_pdfs/FCA_MY2021_Wrangler_4xe_specifications.pdf",
+    "document_sha256": "sha256:20658983b1624cca3dc1685cf7e020b260bc9118b2783f69d97ef055636d0aec",
+    "pages": 7,
+    "extraction_path": "docs/implementation/handoffs/MY2021_JL/evidence/FCA_MY2021_Wrangler_4xe_specifications.text.json",
+    "extraction_sha256": "sha256:ce6b396c07afca0835a22baf3f4a56acb98abc77a6cad6742b95b132abfee926",
+    "model_year": 2021,
+    "market": "US",
+    "issue_date_printed": null,
+    "applicability_basis": "US units, EPA and US fuel-octane requirements; 2021 content headings/footers. PDF/search metadata title 2022 Product Information is not used as model-year authority. Availability snapshots are subordinate to dated order-guide union.",
+    "acquisition": "curl with verified TLS; original publisher-hosted bytes"
+  },
+  {
+    "source_id": "FCA_MY2021_Wrangler_392_specifications",
+    "url": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/specs/2021_JP_Wrangler_Rubicon_392_SP.pdf",
+    "title": "2021 Jeep® Wrangler Rubicon 392",
+    "retained_path": "docs/implementation/handoffs/MY2021_JL/source_pdfs/FCA_MY2021_Wrangler_392_specifications.pdf",
+    "document_sha256": "sha256:47e6996360a2b44e3a7cae8e36975b63bcd06fab53d8b60f40abec63787faf26",
+    "pages": 5,
+    "extraction_path": "docs/implementation/handoffs/MY2021_JL/evidence/FCA_MY2021_Wrangler_392_specifications.text.json",
+    "extraction_sha256": "sha256:e6c969a8492f0e2d46252c0ba925858a198bee748fb825d3c568e1cc93dbfa0c",
+    "model_year": 2021,
+    "market": "US",
+    "issue_date_printed": null,
+    "applicability_basis": "US units, EPA and US fuel-octane requirements; 2021 content headings/footers. PDF/search metadata title 2022 Product Information is not used as model-year authority. Availability snapshots are subordinate to dated order-guide union.",
+    "acquisition": "curl with verified TLS; original publisher-hosted bytes"
+  }
+]

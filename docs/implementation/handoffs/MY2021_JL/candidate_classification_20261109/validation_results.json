@@ -1,0 +1,39 @@
+{
+  "status": "partial: final five-field validation blocked for one candidate",
+  "base_candidates": 73,
+  "current_candidates": 73,
+  "candidate_revisions": 70,
+  "approved_decisions": 88,
+  "approved_adjudication_envelopes": 70,
+  "individual_decision_records": 88,
+  "body_style_distribution": {
+    "2-door": 23,
+    "4-door": 50
+  },
+  "approved_body_trim_labels": 24,
+  "complete_five_field_identities": 72,
+  "incomplete_candidates": [
+    {
+      "research_row_id": "JL21-70",
+      "fields": [
+        "fuel_type"
+      ],
+      "error": [
+        "Missing evidenced powertrain attribute: fuel_type."
+      ]
+    }
+  ],
+  "earlier_only_combinations_preserved": 24,
+  "unchanged_ECX_candidates": 3,
+  "RHD_candidates": 0,
+  "deferred_RHD_decisions": 1,
+  "candidate_uniqueness": 73,
+  "contracts_serialization_bytes_and_lineage": "passed for all 73 current candidates and 73 bases",
+  "all_preexisting_files_preserved": true,
+  "database_unchanged": true,
+  "database_sha256": "sha256:ec1eb2adb8becf62a6d8ef18e5ae2dee37d5049620faaaeec51ab8c69b0ee4f9",
+  "generation_correspondences_published": 0,
+  "canonical_records_created": 0,
+  "executable_import_plans_created": 0,
+  "remaining_blocker": "JL21-70 gasoline fuel normalization rejected by unchanged direct-source predicate; null retained. Separate evidence acquisition or bounded validator correction authorization needed before full completion/correspondence preparation."
+}

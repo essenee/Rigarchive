@@ -1,0 +1,20 @@
+{
+  "result": "passed",
+  "preexisting_handoff_files_preserved": 950,
+  "current_candidate_artifacts_unchanged": 73,
+  "prior_approved_field_decisions_unchanged": 88,
+  "additional_392_fuel_decision_unchanged": true,
+  "retained_candidate_evidence_files_verified": 105,
+  "focused_tests_passed": 125,
+  "negative_simulation_controls_passed": 190,
+  "Django_check": "passed",
+  "migration_consistency": "passed",
+  "dependency_check": "passed",
+  "database_sha256_before": "sha256:ec1eb2adb8becf62a6d8ef18e5ae2dee37d5049620faaaeec51ab8c69b0ee4f9",
+  "database_sha256_after": "sha256:ec1eb2adb8becf62a6d8ef18e5ae2dee37d5049620faaaeec51ab8c69b0ee4f9",
+  "new_publications": 0,
+  "new_publication_receipts": 0,
+  "candidate_revisions": 0,
+  "committed": false,
+  "pushed": false
+}

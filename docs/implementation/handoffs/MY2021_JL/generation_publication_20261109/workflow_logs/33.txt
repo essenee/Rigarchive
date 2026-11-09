@@ -1,0 +1,98 @@
+Invocation inside outer atomic transaction; this log alone does not establish commit.
+{
+  "review": {
+    "review_version": "1.0",
+    "revision_uuid": "4b7f4b29-c7d8-4ce0-b09d-b1a4ca9c1b71",
+    "correspondence_uuid": "077e09b4-099a-4a5a-87b5-7541f2af0132",
+    "revision_number": 1,
+    "supersedes_uuid": null,
+    "vehicle_model_uuid": "5ec5f58a-b140-484c-97f0-c90ec9c134d6",
+    "generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+    "source_id": "MY2021-JL-4D-2020-09-29",
+    "source_namespace": "source_model_code",
+    "identity_type": "model_code",
+    "native_identifier": "JLJL74",
+    "market": "US",
+    "start_year": 2021,
+    "end_year": 2021,
+    "restrictions": {},
+    "evidence": [
+      {
+        "assertion_set_id": "MY2021-JL-4D-2020-09-29-JLJL74",
+        "assertions": [
+          {
+            "assertion_id": "MY2021-JL-4D-2020-09-29-JLJL74-table",
+            "attribute_key": "factory_powertrain_table",
+            "raw_value": "ENGINE              $FWP    $MSRP   TRANSMISSION         $FWP    $MSRP     SPORT      WILLYS\n                                                                                      SPORT        SPORT S       WILLYS           80TH         FREEDOM    ALTITUDE    ISLANDER\n3.6L V6 24V VVT      N/C     N/C    6-SPEED               N/C     N/C       23B        23K        23S        23W                    23F         23L        23J\nENGINE UPG I                        MANUAL\nW/ESS (ERC)                         TRANSMISSION\n                                    (DEM)\n2.0L I4 DOHC DI      N/C     N/C    8-SPD AUTO           1,350   1,500      22B        22K        22S        22W         22Q        22F         22L        22J\nTURBO ENGINE                        850RE TRANS\nW/ ESS (EC1)                        (MAKE) (DFT)\n3.6L V6 24V VVT     1,350   1,500   8-SPD AUTO           1,350   1,500      25B        25K        25S        25W         25Q        25F         25L        25J\nETORQUE                             850RE TRANS\nENGINE UPG I                        (MAKE) (DFT)\n(ERG)\n3.0L V6 TURBO       4,050   4,500   8-SPD AUTO           1,350   1,500      26B        26K        26S        26W         26Q        26F         26L        26J\nDIESEL ENGINE                       8HP75 TRANS\nW/ESS G3 (EXJ)                      (BUY-GERMANY)\n                                    (DFV)",
+            "source_context": "PDF page 2; manufacturer model heading and named QOP columns"
+          },
+          {
+            "assertion_id": "MY2021-JL-4D-2020-09-29-JLJL74-model",
+            "attribute_key": "source_model_code",
+            "raw_value": "JLJL74",
+            "source_context": "PDF page 2; manufacturer model code"
+          },
+          {
+            "assertion_id": "MY2021-JL-4D-2020-09-29-JLJL74-heading",
+            "attribute_key": "source_document_heading",
+            "raw_value": "REISSUED: 09/29/2020                                                                                                                                       PAGE: 1           JEEP\nISSUED:      06/04/2020\n\n                                                                      United States\n                                                                              2021                                                                                          WRANGLER\n\n                                                         JEEP       WRANGLER                  4  DOOR\n\n                                                      CUSTOMER PREFERRED CODE GUIDE\n\n\n         MODEL                                                                                                CODE                  PAGES\n         WRANGLER UNLIMITED SPORT                                                               JLJL74                  2                                                    4\n\n         WRANGLER UNLIMITED SAHARA                                                            JLJP74                  8                                                      DOOR\n\n         WRANGLER UNLIMITED RUBICON                                                           JLJS74                 14\n         GROUP DETAIL                                                                                                                          17\n         STANDARD EQUIPMENT                                                                                                          21\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n         STEP #1: SELECT                                                                                        MODEL CODE\n\n         STEP #2: SELECT                                                                                        QUICK ORDER PACKAGE CODE\n\n         STEP #3: SELECT                                                                                        $ OPTIONS (IF DESIRED)\n\n         STEP #4: SELECT                                                                                        COLOR & TRIM CODES\n\n\n\n\n\n      © 2020 FCA US LLC, All Rights Reserved. IT IS FOR THE USE OF FCA AND ITS AUTHORIZED DEALERS ONLY AND MAY\n                       NOT BE OTHERWISE USED, RELEASED, OR REPRINTED WITHOUT FCA PRIOR PERMISSION.\n\n                             ORDERS ARE ACCEPTED ONLY WHEN VEHICLES ARE SHIPPED BY THE FACTORY.\n                                                         © 2020 FCA US LLC, All Rights Reserved.",
+            "source_context": "PDF page 1; United States / MY2021 / Jeep Wrangler / body heading"
+          },
+          {
+            "assertion_id": "MY2021-JL-4D-2020-09-29-JLJL74-engine-0",
+            "attribute_key": "engine_descriptor",
+            "raw_value": "2.0L I4 DOHC DI      N/C     N/C    8-SPD AUTO           1,350   1,500      22B        22K        22S        22W         22Q        22F         22L        22J\nTURBO ENGINE                        850RE TRANS\nW/ ESS (EC1)                        (MAKE) (DFT)",
+            "source_context": "PDF page 2; exact EC1 segment, with transmission/QOP cells retained; no code-only inference"
+          },
+          {
+            "assertion_id": "MY2021-JL-4D-2020-09-29-JLJL74-engine-1",
+            "attribute_key": "engine_descriptor",
+            "raw_value": "3.6L V6 24V VVT      N/C     N/C    6-SPEED               N/C     N/C       23B        23K        23S        23W                    23F         23L        23J\nENGINE UPG I                        MANUAL\nW/ESS (ERC)                         TRANSMISSION\n                                    (DEM)",
+            "source_context": "PDF page 2; exact ERC segment, with transmission/QOP cells retained; no code-only inference"
+          },
+          {
+            "assertion_id": "MY2021-JL-4D-2020-09-29-JLJL74-engine-2",
+            "attribute_key": "engine_descriptor",
+            "raw_value": "3.6L V6 24V VVT     1,350   1,500   8-SPD AUTO           1,350   1,500      25B        25K        25S        25W         25Q        25F         25L        25J\nETORQUE                             850RE TRANS\nENGINE UPG I                        (MAKE) (DFT)\n(ERG)",
+            "source_context": "PDF page 2; exact ERG segment, with transmission/QOP cells retained; no code-only inference"
+          },
+          {
+            "assertion_id": "MY2021-JL-4D-2020-09-29-JLJL74-engine-3",
+            "attribute_key": "engine_descriptor",
+            "raw_value": "3.0L V6 TURBO       4,050   4,500   8-SPD AUTO           1,350   1,500      26B        26K        26S        26W         26Q        26F         26L        26J\nDIESEL ENGINE                       8HP75 TRANS\nW/ESS G3 (EXJ)                      (BUY-GERMANY)\n                                    (DFV)",
+            "source_context": "PDF page 2; exact EXJ segment, with transmission/QOP cells retained; no code-only inference"
+          }
+        ],
+        "extraction_mode": "manually_verified_transcription",
+        "extractor_id": "retained_MY2021_evidence_transcription",
+        "extractor_version": "1.0.0",
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "publication_revision": "Original retained MY2021 source; no cross-year approval propagation",
+        "raw_artifact_hash": "sha256:a5f56eb7e8099f78b5de8727acdae7176fa468fec556be174d241ae7ec26105a",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-9-29-20-pdf.377305.pdf",
+        "retrieved_at": "2026-11-09T13:43:25.638901+00:00",
+        "source_applicability": {
+          "applicability_basis": "MY2021 US guide applicability; technical/manual joins scoped to exact engine family and source locators",
+          "applicability_scope": "model_year",
+          "market": "US",
+          "publisher_jurisdiction": "US",
+          "unknown_fields": {}
+        },
+        "source_id": "MY2021-JL-4D-2020-09-29",
+        "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-9-29-20-pdf.377305/"
+      }
+    ],
+    "finding": "established",
+    "reviewer": "Codex MY2021 evidence review; unpublished proposal; owner publication authorization pending",
+    "reviewed_at": "2026-11-09T15:15:13.153673+00:00",
+    "review_notes": "Unpublished MY2021 US-only finding for the exact retained manufacturer guide/model key. Original United States / 2021 / Wrangler body heading and model-code table establish applicability. The owner-reviewed US MY2021 Wrangler JL offering context, manufacturer model/body lineage and active canonical JL target (PK32, starts2018) establish the reviewed relation; not a code-prefix or name-only automatic match. Earlier-year publications were inspected but do not authorize reuse: their year scopes and source identities differ. For 4xe and 392, retain their manufacturer Wrangler Unlimited family headings; no separate model/Generation is invented. The exact existing shared selector document is present in every matching current candidate. No candidate, classification, source key or raw evidence is revised. Publication requires separate explicit owner authorization."
+  },
+  "content_hash": "sha256:f8f94890bf2d5d8e58f93e0415482f277cd4aff1bf58f1d5310d03dcf99a082b"
+}
+Human director: project_owner
+Execution agent: codex
+Interface: cli
+created; receipt 58c3d338-c209-48a4-b2e9-229cb62f77c3

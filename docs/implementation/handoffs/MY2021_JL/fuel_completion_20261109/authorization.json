@@ -1,0 +1,23 @@
+{
+  "created_at": "2026-11-09T14:22:07.037314+00:00",
+  "authority": "Explicit project-owner task: MY2021 Rubicon 392 Fuel-Type Adjudication and Final Validation",
+  "new_approved_decision": {
+    "candidate_reference": "JL21-70",
+    "field": "fuel_type",
+    "value": "gasoline"
+  },
+  "prior_approvals_carried_forward_unchanged": [
+    "CLASS-088",
+    "CLASS-089"
+  ],
+  "prior_approved_adjudication": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-70.approved-r1.adjudication.1.1.json",
+  "prior_approved_adjudication_hash": "sha256:8c819f676106e0471c7938125f2f044ad2f853db6f8ce701e1aaaeec27436f6f",
+  "original_base": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-70.base-r1.candidate.2.1.0.json",
+  "original_base_hash": "sha256:624f892484d1c8408ab4a4142859fa669c19196fb325ee2818d83a7403cdd622",
+  "superseded_candidate": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-70.approved-r1.candidate.2.1.0.json",
+  "superseded_candidate_hash": "sha256:37e84a45f8d4a92bfbeada248af7bd03238defce30af1e0f41716996acbfb30c",
+  "workflow": "Existing adjudication CLI; one cumulative finding bound to original base; no chained human projections",
+  "new_distinct_field_decisions": 1,
+  "cumulative_fields_in_new_envelope": 3,
+  "boundaries": "No code/contract/schema/DB/canonical/planning/publication changes; no commit or push"
+}

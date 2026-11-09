@@ -1,0 +1,13 @@
+{
+  "README.md": "sha256:87f7b7d9287553f1ef2e01b843a05418d8f34f08eb23686f902a4f052081dad6",
+  "artifact_inventory.json": "sha256:efd5732d99a14b59d58cbfe6be2d0fd51d15c785f02783e6695b44b237dfa3be",
+  "checkpoint_report.json": "sha256:cd3dfa95bd6ee414886c450088ff744440ad5017a447e2b951420399209dde62",
+  "checkpoint_session_assessment_baseline_check.json": "sha256:071a401525748908638d2127880d56ac1743da3e50401b663ec0f340c75fea7a",
+  "development_restore_check.json": "sha256:b38e197d2b2dfdc572a91a054035ae72922b79a2a8be3bc5cfb91605bdcd322c",
+  "matrix_receipt_revalidation.json": "sha256:a6cadeb16b5c7da3262fe784ca62334adbb378e6907fb158e3223e0cdf39f554",
+  "prepare_checkpoint.py": "sha256:73b1742bcf1592f144fc4f28de3947c2ba3ef1db3fad021f1200ba7d66972f10",
+  "retained_source_whitespace_assessment.json": "sha256:ef16deaa9877db53e8ad789b916048d96ca6c9405c9528d8542039dadad2ecdb",
+  "tests_and_checks.txt": "sha256:6486a39417e73d68797bc3d41d6c29d6f1c93374a751b54fac3c070442f6f98b",
+  "validation.txt": "sha256:2d4a774f7d1dbe6bb7a3a4ab1e101d553791c0ed62f6658853293ecefe65c5bf",
+  "validation_rerun.txt": "sha256:1d56c9e669dc74ff87b92fcc67bee41647133811c603c6728d85e474f6323b4a"
+}

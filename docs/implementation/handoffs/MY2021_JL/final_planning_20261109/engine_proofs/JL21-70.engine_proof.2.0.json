@@ -1,0 +1,11 @@
+{
+  "version": "2.0",
+  "canonical_powertrain": {
+    "electrification_type": "none",
+    "engine_aspiration": "naturally_aspirated",
+    "engine_cylinders": 8,
+    "engine_displacement_liters": "6.4",
+    "fuel_type": "gasoline"
+  },
+  "peers": []
+}

@@ -1,0 +1,517 @@
+{
+  "matrix_digest": "sha256:6926df6c06e4bd471bbda02c67257cf7a7e2999cf5cdfebfc8b06ead31a9996e",
+  "manifest_count": 73,
+  "plans": [
+    {
+      "row_id": "JL21-01",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-01.manifest.2.1.json",
+      "manifest_hash": "sha256:bbbfd417aa300d9a2174b8b1b0a91401d8a393a30e7ea6f18b8642d18c5afd6d",
+      "manifest_file_sha256": "sha256:ba29870ea9a24ddb357b121be1516df7ae63357f62b3777412b554e24e621c05",
+      "candidate_digest": "sha256:c50be5bd3249bbfb726ed11da574352218060f6ddcfaeaa41c9469c22b8f4056"
+    },
+    {
+      "row_id": "JL21-02",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-02.manifest.2.1.json",
+      "manifest_hash": "sha256:1ac15f017b1da4580c58d94a7c92b5101145dd5de8488baa48a2683b980b2b64",
+      "manifest_file_sha256": "sha256:3600c722e0cdfdc8fb2a1decf8bc0b4a012c0b90269d171338292e8fea96377e",
+      "candidate_digest": "sha256:485e07d695efce0c94f66bb28d595269bc88f7ef28904c49097b4062574d7a4b"
+    },
+    {
+      "row_id": "JL21-03",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-03.manifest.2.1.json",
+      "manifest_hash": "sha256:a04f514e5df857a9ab48c1542236e27fb0d2c0d70afa468195b186a0d11e1d1d",
+      "manifest_file_sha256": "sha256:c8ecd651df80c3e0970a4206a88b660781e9744dd61a6e93eb1de4eed16177a4",
+      "candidate_digest": "sha256:aecd9a4b961d81bba55e01755e1d46f305c662ced6fe70bff1c26b6a5c788ce8"
+    },
+    {
+      "row_id": "JL21-04",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-04.manifest.2.1.json",
+      "manifest_hash": "sha256:3e98e9b806afb9a38b6942418be84b3d867a630e1d7758e5ab8685af74a7fe03",
+      "manifest_file_sha256": "sha256:d17f1061cd4de69c5b1fd16af69b8773c98457d50cc4ec7f4e89d40cb8cdec33",
+      "candidate_digest": "sha256:53f7411f28c3846056539f0adea9500aa53863a5ca54a4e30248575c1a779e5b"
+    },
+    {
+      "row_id": "JL21-05",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-05.manifest.2.1.json",
+      "manifest_hash": "sha256:64721e8edb1dd8efc0e9026409228271c398586711ae11559b12e7d8fcc834bb",
+      "manifest_file_sha256": "sha256:88ed096a9261d4d1493282b051558f4778341fce1819da77babeaffd36dc3ecb",
+      "candidate_digest": "sha256:9125acb6c4ed84cff10fc8d4d4b772d6929205b48be52e8efc3dc3b9df9154af"
+    },
+    {
+      "row_id": "JL21-06",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-06.manifest.2.1.json",
+      "manifest_hash": "sha256:3f54f25a07239e633f120bd4db1c95c7631a501d84564ab8032a82cff6e9b654",
+      "manifest_file_sha256": "sha256:d581563570a66fcdaa35246fd2bee094035df9f5169cc9a79cfc103e82e13342",
+      "candidate_digest": "sha256:dd3048764fb54fdaa715169786456cd521d9efa716f37f84cea860476ca412db"
+    },
+    {
+      "row_id": "JL21-07",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-07.manifest.2.1.json",
+      "manifest_hash": "sha256:7cc7afef71ddc8f3192c7f181425df6f833f29b5b5b91255406e831a89cb058b",
+      "manifest_file_sha256": "sha256:96d52e62c10a7e042f058dd673bf48eccd6b4c7e565ab8de9128338cd7030b9f",
+      "candidate_digest": "sha256:56109e4f06c038049f3d84ae9829d037822e7d9bb72f5480157d66008d207b7a"
+    },
+    {
+      "row_id": "JL21-08",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-08.manifest.2.1.json",
+      "manifest_hash": "sha256:a7a5399b2921152476fc8a34303d9bdbb47b875df7b7fce3146ed00f5b9f99ff",
+      "manifest_file_sha256": "sha256:f7c428b63cb1bcef950e31307b02dbfdf1888ea626632a8d8f2fe86f35caa1ef",
+      "candidate_digest": "sha256:42b3cdd8ca2ec202d911fafd72a287b76948fc404da0079d99edbd68e04dbc1a"
+    },
+    {
+      "row_id": "JL21-09",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-09.manifest.2.1.json",
+      "manifest_hash": "sha256:3b7e2c9de417d49a9e9e5d380b44e7fcf1282761320929b2f07758038007b487",
+      "manifest_file_sha256": "sha256:4c98dfe5831c482f75d3f315374fb2af0de719335c22eac098dd9f1b3e463ae3",
+      "candidate_digest": "sha256:864794e592224d79accceadf456d73f33b098827a0c88485f9bed3adae0de628"
+    },
+    {
+      "row_id": "JL21-10",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-10.manifest.2.1.json",
+      "manifest_hash": "sha256:8b67b33b45db0da636e92444f5faede3ab48b9cb079d930c7f8e04c0c11aa8fa",
+      "manifest_file_sha256": "sha256:0fc98d6543dd52c98dfda1a643dc7466d2edcc64a868079cdbc387e829d7e67e",
+      "candidate_digest": "sha256:1c2566f618cd6b2a3386d81f95c725e8c480913b51bb0d737fc9d31d1cb1f5b2"
+    },
+    {
+      "row_id": "JL21-11",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-11.manifest.2.1.json",
+      "manifest_hash": "sha256:1883ff9ea478fa661777242cfbf05e638162179ec02750eedea2a272ecf37ce3",
+      "manifest_file_sha256": "sha256:d819e23703914484e15ba6ae9ab1b9af585743088430ac3e8272353ba8d1cf75",
+      "candidate_digest": "sha256:f0730b55aa353235b8e974644e13ef367f72cbcafa265413f3050158b7cbc7e5"
+    },
+    {
+      "row_id": "JL21-12",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-12.manifest.2.1.json",
+      "manifest_hash": "sha256:9c169838d0b196639a1c05b655176ce57390fde86c37c2a9b55c65291cfc8979",
+      "manifest_file_sha256": "sha256:a27b3f907253cc7d722718e49a18bf0ee719e0a528ad98965e988a2affdbd123",
+      "candidate_digest": "sha256:c956b5caa27271bef2ee2df263bd5e266489948bac53c0002f2abf1a4caad6d1"
+    },
+    {
+      "row_id": "JL21-13",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-13.manifest.2.1.json",
+      "manifest_hash": "sha256:194f27b6b79c4816ef329320a5877c164fd91062a01c30958f66ad6484db0132",
+      "manifest_file_sha256": "sha256:245120a9bc1ce170ebf95cb1278a50c51260413ca42cc48928af874f7ac3e53e",
+      "candidate_digest": "sha256:3d49ecf02dd8ee0c0c5aaf29b472380217654cbab927b945113cb4ecf032df19"
+    },
+    {
+      "row_id": "JL21-14",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-14.manifest.2.1.json",
+      "manifest_hash": "sha256:ae91bca5769cdbf91630025ce71fc7e953a2e7a927c53881d8981e3eff20272d",
+      "manifest_file_sha256": "sha256:5e70f55d6d28373d046334055dc2c8ee4914652ce6a58bade8c988bccffae6ab",
+      "candidate_digest": "sha256:781837e46ce5016009f8ac90f3f63cd870cf003ecae1ca434c87202da32ed41d"
+    },
+    {
+      "row_id": "JL21-15",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-15.manifest.2.1.json",
+      "manifest_hash": "sha256:4df88d7145e97713412e3e74eb4c9a42baf82cd5d9836ba7fe9e7a813d8a2bc0",
+      "manifest_file_sha256": "sha256:2b161ea28c35e9c46e06494e7f1ec2b7723dba27e456c3bdb03fb282d5a6d8fe",
+      "candidate_digest": "sha256:d3cd286d8d01724e0e5c8a41b50636bc9a8cae76f5b9f787bfe783b974a752b3"
+    },
+    {
+      "row_id": "JL21-16",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-16.manifest.2.1.json",
+      "manifest_hash": "sha256:1f97ca5fa044b3d9f801136b78f26e2567eb2e3264c7e4f38e3d9d18c1aef3a9",
+      "manifest_file_sha256": "sha256:2fc903efe1f6caf3572373605f34334e471449ea0e3fdedad7a8d6d42b599246",
+      "candidate_digest": "sha256:7e3cc27588d858f2b0b8159bde31cb0c8fad0ef1dc886f86fd7030d9c9c7daa6"
+    },
+    {
+      "row_id": "JL21-17",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-17.manifest.2.1.json",
+      "manifest_hash": "sha256:87216604613e6caf0069d2d7f3c5c94d24b029ffcdd3fe8c227592ddd70fb14d",
+      "manifest_file_sha256": "sha256:20c206a1ee152977650841409777c4aacfa32b1e2df496108d1af0063d9fda5b",
+      "candidate_digest": "sha256:79782910fe2edf1cfc63097074a133bf67eaa7c1d6f3c960bface5de841233b5"
+    },
+    {
+      "row_id": "JL21-18",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-18.manifest.2.1.json",
+      "manifest_hash": "sha256:58b8ddc6871b16f7de4af5d6068bdce3cfc94a5960eaefd9e5fc75a5b2f1cd1f",
+      "manifest_file_sha256": "sha256:7c0ad443528e9a5e7488630ad98bff13bdd8eb456ca18134319102fa8f533208",
+      "candidate_digest": "sha256:5021174df255ddc18702bfc0cb0a737f82e02d27801e341f8ec0b5cd2d4d1a9f"
+    },
+    {
+      "row_id": "JL21-19",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-19.manifest.2.1.json",
+      "manifest_hash": "sha256:7d6e2338868040e9f1bf82d8c6823e5a3c5182ab07c95813036a70be22b187b0",
+      "manifest_file_sha256": "sha256:6e1095d9704bca3b60f61a0c71c1d86d49d5e75542c34e6c9ab6d465cec97f62",
+      "candidate_digest": "sha256:9dc34ecbded89010b950d98972b199753f8e7425dab76ac28f16aa7c77dfea0f"
+    },
+    {
+      "row_id": "JL21-20",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-20.manifest.2.1.json",
+      "manifest_hash": "sha256:ea80517c837eb4b024f6d113f55ea2929afcb8f7116075e7dc73b06ed1f178b7",
+      "manifest_file_sha256": "sha256:409d628fc26bd7a3516cd62b6fdc67add653b97e323236db99f06c50d5c975c1",
+      "candidate_digest": "sha256:2aa363193f60967c8272d467b44bbdad5a4bd5ee9c0576a1174a22f870a7bb3e"
+    },
+    {
+      "row_id": "JL21-21",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-21.manifest.2.1.json",
+      "manifest_hash": "sha256:7b1a7eb1ce308f54a19c03208f9b43fc0cea705ef21c9d98d19a1021f9626f80",
+      "manifest_file_sha256": "sha256:3f70e4772e0f5983441220050c00342fc6251f63d430ba0cc100e473bbdade10",
+      "candidate_digest": "sha256:7367fbf66da0f92b1393bed0864474a330ccb5a30a5663865dd4205611c8e9a2"
+    },
+    {
+      "row_id": "JL21-22",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-22.manifest.2.1.json",
+      "manifest_hash": "sha256:150b52739c046f5fb3fdd4bbe6cffc050ad0b83a7727031a707c3c50409a0f4f",
+      "manifest_file_sha256": "sha256:0e33564231eff62770ea5166ec12329b197d4f5177e6292f0cfece2d9ee04c4e",
+      "candidate_digest": "sha256:00a22b2b55a8f126a145d46ba7a4fc9e22953eb54e2c6742e96ba4f2c6e79dc4"
+    },
+    {
+      "row_id": "JL21-23",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-23.manifest.2.1.json",
+      "manifest_hash": "sha256:c9a0bd1b33deff6d7c9f25d080896712fd531eb7cff025a2e3fcc162a3e25d20",
+      "manifest_file_sha256": "sha256:f8ba9c2d9faf33eb98260008017b3d564c1edd34f9140fabce38ea12c3470297",
+      "candidate_digest": "sha256:4b980cdc932e7a33ecd0d9ee803e8ff73a21be65ad57c93f80c367a705fd3cde"
+    },
+    {
+      "row_id": "JL21-24",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-24.manifest.2.1.json",
+      "manifest_hash": "sha256:8e343007cc13a789f2be253956b732bef48e76943456498e7da1c0daad1d5b6a",
+      "manifest_file_sha256": "sha256:f93c894d20a88d361c752fa799c05d9b67d2704f0369d9b6b491ae2378d2d0b8",
+      "candidate_digest": "sha256:fc74bea0d075f6cbe3fc543cebbd8bce98ce8758ca632166cba418dee1a6d8ad"
+    },
+    {
+      "row_id": "JL21-25",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-25.manifest.2.1.json",
+      "manifest_hash": "sha256:1e39a0a579f5816aa1f3ea721d4a2de77fb3b6b7d05eed1d5cef6a9567a6b234",
+      "manifest_file_sha256": "sha256:dc8f83e4a75cc5d3705bd3993936944b2a210e916f57c1cccd153a2c6757c4d9",
+      "candidate_digest": "sha256:0f57892e1e96b36a538bed36e264bb9b1640027612b7cc2805c967602c0da84a"
+    },
+    {
+      "row_id": "JL21-26",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-26.manifest.2.1.json",
+      "manifest_hash": "sha256:a019b15405eaaf0a0e937211a6c3fbcc7983359b93f43db339b728d4c33b5d43",
+      "manifest_file_sha256": "sha256:341c193fc9401abf9cd8b631b4b1ad4429fe07595ab90442c37b716989699891",
+      "candidate_digest": "sha256:e0ce8d7b9fe91cdfd6ddc07ce8ef7be8827ad843d5f7fc29b3c3d96881758310"
+    },
+    {
+      "row_id": "JL21-27",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-27.manifest.2.1.json",
+      "manifest_hash": "sha256:bb7035be09d2c2e8e364195fa935051334732352997dd1bec98b3c123cac8d28",
+      "manifest_file_sha256": "sha256:42ce9cc1a3242e139c87f6124e62147c76ec2a6b82fea8a3c50d3a2ba61fb1f9",
+      "candidate_digest": "sha256:1c2eda672dcf9e86c8b72f36f2b2831ae37ca0f4373c293392e5841a01162198"
+    },
+    {
+      "row_id": "JL21-28",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-28.manifest.2.1.json",
+      "manifest_hash": "sha256:4a511c9a913f77f53288405e8c4dfa231078aa46e202f21dd207e04f77c473dc",
+      "manifest_file_sha256": "sha256:0e3b50a285c00828eed7717a9bf593bcfe45756ab1438c8955314352d3111304",
+      "candidate_digest": "sha256:4252be97f1983a4547f136af944bd30c64e419d476ec69a78f4299873661c8e6"
+    },
+    {
+      "row_id": "JL21-29",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-29.manifest.2.1.json",
+      "manifest_hash": "sha256:b1081dcf6e14b2dd007c23df0e6d8f8f2ed26368019833452c3a8073b9e41ee5",
+      "manifest_file_sha256": "sha256:abcda3644b6c5606434cefcc2b32afef1fca60b15c3f29dd8c9590f18a2b4a1f",
+      "candidate_digest": "sha256:a99ef53d70af546716aeec854f9a2d64b1869f6226fc8d7a89c5c5662ad947d7"
+    },
+    {
+      "row_id": "JL21-30",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-30.manifest.2.1.json",
+      "manifest_hash": "sha256:8fe561e6ff2db953a79369fcc3883b4407aad2f0502e5e5918230a88959d1b5c",
+      "manifest_file_sha256": "sha256:605715724f632b3432afc90284e057e22feb7d9d9ac7bc298a8d7750130bd4a8",
+      "candidate_digest": "sha256:a74f6bb47203e4d1c571c376bac36fb3f8a9351ae115d339ac4c7f601ed8f334"
+    },
+    {
+      "row_id": "JL21-31",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-31.manifest.2.1.json",
+      "manifest_hash": "sha256:fa811dc7689ed201f69bf1bdc51e208fd36342a9fbfd5883a933eff780799298",
+      "manifest_file_sha256": "sha256:c4fe2d0f62cbb9efb5e995a83d78d4f30b4b19943b6261ec4e5b50bf3609c574",
+      "candidate_digest": "sha256:65f8166e0a51cfad715aac56c962ce0ab47f49b443737ae3ec8834c5688d7de5"
+    },
+    {
+      "row_id": "JL21-32",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-32.manifest.2.1.json",
+      "manifest_hash": "sha256:4a915008acfc6e26fda35ff80ee8803c197bc681047a7816f79b2d1c7c6f3b87",
+      "manifest_file_sha256": "sha256:26f5405821d6472b3130456bf2056ebef88be6957a25563b19c78e8e2b97ae7f",
+      "candidate_digest": "sha256:1ce888f56dd47ea47dbd19af8e520929a236efdd3b790d0f996c3b6ef7332c68"
+    },
+    {
+      "row_id": "JL21-33",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-33.manifest.2.1.json",
+      "manifest_hash": "sha256:ba3c90923c74ee57b5a98d686cd568a141a36beb90571358f95c03584542c740",
+      "manifest_file_sha256": "sha256:587600a676f8990f818ab50027726477f02745511a5c77350b2b4ecb8295db9a",
+      "candidate_digest": "sha256:23ef864b15f7c538e7c2a1a73d029af35dde8d31665e3d1cfd7e1fb4a04610b4"
+    },
+    {
+      "row_id": "JL21-34",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-34.manifest.2.1.json",
+      "manifest_hash": "sha256:91f87418b7a9e9389345f2042cc09f39ff7cb87e892641a86bf68b362a7ac17c",
+      "manifest_file_sha256": "sha256:687281f7b9662ae853f77e13bb26e4abf8afc9bcaeafe93c0e6c935fc6eadbe5",
+      "candidate_digest": "sha256:52048ed9fdce2bad618f8fcec38eac590bcea72e505c512f3631b1b93154170e"
+    },
+    {
+      "row_id": "JL21-35",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-35.manifest.2.1.json",
+      "manifest_hash": "sha256:bf31264f3b800c6cebe291caecd25af0169e36008a7940160c7c29b5075602cd",
+      "manifest_file_sha256": "sha256:849c3d2c73bc2686135331074c20c78cc141e1b56df64947ddd6dcf32bbba080",
+      "candidate_digest": "sha256:523d6e00a0991d6679a9adbab3b3635f44c5f7fd4a5eec732d5851fc52e86e1a"
+    },
+    {
+      "row_id": "JL21-36",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-36.manifest.2.1.json",
+      "manifest_hash": "sha256:a497fdebd8d5b06247de9c6938f5bdf8d5c9063df450095d388d33369bd818ea",
+      "manifest_file_sha256": "sha256:5613babe00ae4bf3c301c63fd9473bdeae715d47f135b464a1f5afbd6761780a",
+      "candidate_digest": "sha256:521f6408383092c793c1cf4f6929926dbbe8dbead0e3b7fd7293857094aa9765"
+    },
+    {
+      "row_id": "JL21-37",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-37.manifest.2.1.json",
+      "manifest_hash": "sha256:02468719307bacd03020a6a12ca3806449cf356c7b4c4534768da118ed5f5d80",
+      "manifest_file_sha256": "sha256:fc23b70c1b64e317ee570fbbcf076f58eea3ba084e8a32f201251082785898af",
+      "candidate_digest": "sha256:b8fb04e8a15fc43e748287f7af7ecef0b820abf762864c5cd280c6afdea13493"
+    },
+    {
+      "row_id": "JL21-38",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-38.manifest.2.1.json",
+      "manifest_hash": "sha256:78cfbddb279c4c906f840b878160d485df76146e31dbdba9017a4d38b8405f00",
+      "manifest_file_sha256": "sha256:4f2fa12be44f1842a65541a1e4c959d2c331b2ca99ae39fc6270dd6470be4396",
+      "candidate_digest": "sha256:29a529d8c23da14a7971834f3b7879d8a483e029244862d50609028f71c52132"
+    },
+    {
+      "row_id": "JL21-39",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-39.manifest.2.1.json",
+      "manifest_hash": "sha256:e3de0a423de306e57f3de5b3e064cdeddaf80aa0f3dd561df0300698f50c2503",
+      "manifest_file_sha256": "sha256:4465d4fdc1305acb95b1052760ab4e2db0ca52c3a4fc3d75c0edb8888bc4bd11",
+      "candidate_digest": "sha256:3629c06d9b7016770bebe8db2edf714674ba67cfefb49a26305a64cf3d96c859"
+    },
+    {
+      "row_id": "JL21-40",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-40.manifest.2.1.json",
+      "manifest_hash": "sha256:13fc128ee72de08d287384018f57950c2e5327538b671b13834fe368f39842fa",
+      "manifest_file_sha256": "sha256:7729faee87a25381bb7b38125eefe884e55a2f2053a0dcbbcfeb1c298a4683ba",
+      "candidate_digest": "sha256:7494eef34f78960ffa021407fb2d9b24d8b1c08480c8e44413d1ef6f71580289"
+    },
+    {
+      "row_id": "JL21-41",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-41.manifest.2.1.json",
+      "manifest_hash": "sha256:0ef7f40dcd7392061ecbccda3cf7cc69ca0560064649d26c720d7719661513d8",
+      "manifest_file_sha256": "sha256:58004e418e25670e7fc765e3a9416f848cd6b334def9df3a9defe161c23f99fa",
+      "candidate_digest": "sha256:64e9b5dbe259abb021df99e6c2ba72c135fedc79a0f8ddfe55f915eae80b64ce"
+    },
+    {
+      "row_id": "JL21-42",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-42.manifest.2.1.json",
+      "manifest_hash": "sha256:494467754b51bb5fdadf1d9e634a4aab139c08ad67c0eab6f8d719c95e8968f8",
+      "manifest_file_sha256": "sha256:35271dda3d95d84f4c07aa81dfcb6fe3e8c87a46a480cb6b604838d2538d9ba4",
+      "candidate_digest": "sha256:83fe84ef425138151b00761fcd00842e7a8b1f7b130b8855df5eaaeaa1abad81"
+    },
+    {
+      "row_id": "JL21-43",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-43.manifest.2.1.json",
+      "manifest_hash": "sha256:1a67088fbf221d426ce1ac975f5e881a2a977de90228fd081ea721b19e8dcbcd",
+      "manifest_file_sha256": "sha256:eb02e40d07e8c252456e4aa64710a8076b99bcd6ad67e470ddfb2acf032e4cb4",
+      "candidate_digest": "sha256:3f6d6a2a3151078a54e4573c2f137655f62d4eb41798833163674fa690997e98"
+    },
+    {
+      "row_id": "JL21-44",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-44.manifest.2.1.json",
+      "manifest_hash": "sha256:a5e2703b5bf35f52e912dc3ec3a1b5be978952862807fc7d1018e7dfc9367f3a",
+      "manifest_file_sha256": "sha256:cfce07dde5bd36bbf716f29d06d53d299f21148d85450cfceb60cb265fee904f",
+      "candidate_digest": "sha256:be7690992c3574232184fed5e5010f5dd9b0172cd09e3cd82e055211bb2ea3aa"
+    },
+    {
+      "row_id": "JL21-45",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-45.manifest.2.1.json",
+      "manifest_hash": "sha256:2cf64817deb8a3d79b530cfb3dcb55c28fbb99faa574e13eae5345031d966a02",
+      "manifest_file_sha256": "sha256:318adde14b8e05816f0837dbb9dffdf3c4b692a4e99d51f00b46e29e269b478b",
+      "candidate_digest": "sha256:0e494516825249230e689f8f47035b8405c26e977f484a0f3da1a02712a70ed5"
+    },
+    {
+      "row_id": "JL21-46",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-46.manifest.2.1.json",
+      "manifest_hash": "sha256:f30e6b97cafb4bfacd73cb02963e151bad5db599c5221d758c92a301b776282a",
+      "manifest_file_sha256": "sha256:85cbeb60296c06e4876faf7dcd02263d42ae1c9c4a3817f9c8536bccc0fc7ad7",
+      "candidate_digest": "sha256:e2be7f8b0214a02b663962998256330377af4e7d0ad8ace4c7cc2dc6df134685"
+    },
+    {
+      "row_id": "JL21-47",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-47.manifest.2.1.json",
+      "manifest_hash": "sha256:d01c004ab0ff3ddb82c4d37e58c64b17e62467c8d2ad0745b2c8eba9957cff8d",
+      "manifest_file_sha256": "sha256:fca043ca5cac05da37bbdb5da89cf2441bd80a6ea683f7c086e96386b8ece8df",
+      "candidate_digest": "sha256:07f067e6f3aa609ab1962d1c414ec240cb883ae8652c6c94fb7e52dd764fe093"
+    },
+    {
+      "row_id": "JL21-48",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-48.manifest.2.1.json",
+      "manifest_hash": "sha256:3297e02d50661a2b6efe1edfe6e80811c193c7c15c4f5a0af91ddbdd7dd95bcd",
+      "manifest_file_sha256": "sha256:5ee6bb5abb6d6da62fee06cb5c5748f40a3939a6f57f39b477173623efba69c1",
+      "candidate_digest": "sha256:4f65fb98af41cbb2eeeaf4ec257b7ddf0d12c6006ec7fec9d03e63d439c001bb"
+    },
+    {
+      "row_id": "JL21-49",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-49.manifest.2.1.json",
+      "manifest_hash": "sha256:9dd869c851e03418a111c5f106518815e986df5f0908924e80e33c1e7984144c",
+      "manifest_file_sha256": "sha256:9273f8eca248e58b552f2cc406dac224c5ee9e04b8eaf14eb0de4a9f6b25c42c",
+      "candidate_digest": "sha256:3ea4c36c93242be9e8c8b67a7ea4dee21674e2b2b05c7386744758b342c003f6"
+    },
+    {
+      "row_id": "JL21-50",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-50.manifest.2.1.json",
+      "manifest_hash": "sha256:9c2b6bbd97e81ab5f369a206878446f1617ca82d015be76f1406b1570816c751",
+      "manifest_file_sha256": "sha256:7d7802c1998bb56c7bb369d4e2bff79bd71e254b122cb80214c3a561f9b9f06d",
+      "candidate_digest": "sha256:06538813b5fe30aa54dff063a33794285ddb4400d568f411cdfcf704426fe8eb"
+    },
+    {
+      "row_id": "JL21-51",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-51.manifest.2.1.json",
+      "manifest_hash": "sha256:5a3506b9ed1b9e9453840d3e343be2cde79fa186f86df9939e173a94a4bd210e",
+      "manifest_file_sha256": "sha256:3e0ddf4aac85be04fc10f2dd22519cdc5522eaa3d132090fdc2f1fff1122df3c",
+      "candidate_digest": "sha256:3a1216ed4b81641b482e9d0a08cde0863dfe4e075d2ed749b68e07a38138ff60"
+    },
+    {
+      "row_id": "JL21-52",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-52.manifest.2.1.json",
+      "manifest_hash": "sha256:904ef2b2b8b63d914df000f9d1d41abdf8357b01c086caaf449558461caaeaec",
+      "manifest_file_sha256": "sha256:c99e4139a1df696f88d0937a14305e5c077a1e43c3f2d3fc30b671950ffc6f11",
+      "candidate_digest": "sha256:0f0399f31e2b3eb1ba0dec12629497fbc3694f5974600d933a4908ac9e0c34bb"
+    },
+    {
+      "row_id": "JL21-53",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-53.manifest.2.1.json",
+      "manifest_hash": "sha256:cb615fedc20444ad6e0c66a0e8d7d6fadb385bc2da67880976f1f6eff953a1f3",
+      "manifest_file_sha256": "sha256:1130855bb2e517f28a6d32bc9e39dcc2e8a515aaaf81ee91b4c1abad72131293",
+      "candidate_digest": "sha256:774fd2b2d05c061ba9685520ad9eb235b334e5d8004a59e5b7ef0f7287cd961a"
+    },
+    {
+      "row_id": "JL21-54",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-54.manifest.2.1.json",
+      "manifest_hash": "sha256:19c0d97e800ad606c44bee6da0c3788f6f1b6d97153d4b9cba7b42b9a0fe5ff9",
+      "manifest_file_sha256": "sha256:4987d2b180e66fbacf4134da176bebe6425827d457ca1e0b6f4402d07941be41",
+      "candidate_digest": "sha256:6fb12254cc28f3355ddf7b896c82ced760eacbd0beaed666c1ebd5727c554543"
+    },
+    {
+      "row_id": "JL21-55",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-55.manifest.2.1.json",
+      "manifest_hash": "sha256:33267ef40af02861b66e12f8dc162f19aa22d7997cd36a87d181bb463c889141",
+      "manifest_file_sha256": "sha256:c19c9bee6269040bb9045125d5f03fa5ad874c627a73e58103300897f269de20",
+      "candidate_digest": "sha256:e8135dad85bf904f41d1cb81cd5025372dc17992114caecbbe9612eaa10d84c3"
+    },
+    {
+      "row_id": "JL21-56",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-56.manifest.2.1.json",
+      "manifest_hash": "sha256:1c4930ec4864dce17e733f72bec0f4e8ab813f79bc40967510c6ce64646e1319",
+      "manifest_file_sha256": "sha256:e93c58beaceeb1bb30b661dbc017de0cfc09734760bd5af47a078d6331251f5f",
+      "candidate_digest": "sha256:b7914ba6508ad6334b25259cdbc0a7242cc5dbf61feca51d911d7f3b8e80fbbd"
+    },
+    {
+      "row_id": "JL21-57",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-57.manifest.2.1.json",
+      "manifest_hash": "sha256:003f2b96cd47c1e4564959700b971fc8417ae4f6b8cc6be2c5afbc431eeeeed8",
+      "manifest_file_sha256": "sha256:23ca3f1ca26a9bd97eabba87209f4f28ccd0074827e773d7eff5eb3bf8c8b071",
+      "candidate_digest": "sha256:ff951e0436d627a4ddaa6bc1bf36cfa96eff93a93de3bbfcf1af55780e3ce87c"
+    },
+    {
+      "row_id": "JL21-58",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-58.manifest.2.1.json",
+      "manifest_hash": "sha256:eca2e0c9a5e5cb64435c26393c61337109786f38ef0db3f555f452cc2c16cf98",
+      "manifest_file_sha256": "sha256:d89a9db9d597103368a85db5cb585b879870a957391c4ee284f0ec5ee7398a2a",
+      "candidate_digest": "sha256:e9546ebc1224d96f535dad624168ee7750203d60758fbc5727bab02ce7cacfca"
+    },
+    {
+      "row_id": "JL21-59",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-59.manifest.2.1.json",
+      "manifest_hash": "sha256:2a656555da836decc31f1b28136f9380980838baabac104ffcd31f11f3cb9d52",
+      "manifest_file_sha256": "sha256:d6226f535b6d7de0a3f145f439d028af9f7ec2227da2100e9e9c2e71edea55c8",
+      "candidate_digest": "sha256:98b74c7bdccd21eaf2a10ce99fa8fb7faf920b72298fdf76761975331f04854c"
+    },
+    {
+      "row_id": "JL21-60",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-60.manifest.2.1.json",
+      "manifest_hash": "sha256:1d0ff7fd01ae6f0e9c530f574deb69976ae651c9e95546c3acb017cccff74200",
+      "manifest_file_sha256": "sha256:e96b950e990c73805d94bdbdb4177ff6a2dd1c05701ae5703b2db23fdd652d5e",
+      "candidate_digest": "sha256:66a8a89331560071215c41ab6a88004b0091fad65f24ed6f2cd2ca0c1d6367c3"
+    },
+    {
+      "row_id": "JL21-61",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-61.manifest.2.1.json",
+      "manifest_hash": "sha256:064f8277fe7d11157814afe9313ac93e0db1e66d387c89c7852c3a2b7a43daf1",
+      "manifest_file_sha256": "sha256:7eb5a916c727556596b77add7c0631b4c1da64c784c2b42e1bef36e7d0585f51",
+      "candidate_digest": "sha256:6f1c2d26ee70c64a27962021df1a4d6488c8b7434fb5e06b31192d90c19c8040"
+    },
+    {
+      "row_id": "JL21-62",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-62.manifest.2.1.json",
+      "manifest_hash": "sha256:68270ce39aff8b1b50f0f52a7a64353e682aae2f7496984a58c203c035bec9ba",
+      "manifest_file_sha256": "sha256:6406bdeff876a39d62bae0ee909f0e8a9ab692bfa555f878e7aed31ab21c7ca5",
+      "candidate_digest": "sha256:c308cebd7e5181a5710b955cf5350d965e1a45a850c4158e17895bb297ec486e"
+    },
+    {
+      "row_id": "JL21-63",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-63.manifest.2.1.json",
+      "manifest_hash": "sha256:4c4eb49a8edacefd40d9d31483b694a6813b9f116962df8134d056620a63ee86",
+      "manifest_file_sha256": "sha256:fe68c5ec084e9eef4359f0815b4371db1a3a68f8f2118db2cc583b41d8980ab8",
+      "candidate_digest": "sha256:40ec47de9d86d3b31623515815ba0601fe7b3f78a8dd6fa2625f92cf3a6f4f3f"
+    },
+    {
+      "row_id": "JL21-64",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-64.manifest.2.1.json",
+      "manifest_hash": "sha256:1f85a61fc6ea494fe56623372e147ae6120a2166d012cea460325e44013a6570",
+      "manifest_file_sha256": "sha256:3ccdbd25e33473b12cfd4fe0ae5a80fb667969ef8e6b2fe4f0d21e6cdfc1a639",
+      "candidate_digest": "sha256:3462f4544d659e4d275a6288a20742fdee774ab33e24a0fe1712a919f480f0ed"
+    },
+    {
+      "row_id": "JL21-65",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-65.manifest.2.1.json",
+      "manifest_hash": "sha256:44d60586541d797cbbba37eee9a7a210dc8585b1c2fa092e40b5e833b44f0eaf",
+      "manifest_file_sha256": "sha256:0a5375934379b9ce4b923eafe788c0d28433aaddaf0d21342c173b37a661fcbc",
+      "candidate_digest": "sha256:57981492b98c601cd9db440af2ed24f4a2a2673086b328a04c2f0670e726e837"
+    },
+    {
+      "row_id": "JL21-66",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-66.manifest.2.1.json",
+      "manifest_hash": "sha256:062f8734ca6b84fe9947681f359f3eae5929323dc16711f8447cbee1b649f468",
+      "manifest_file_sha256": "sha256:e0cd3c444f9f55ec9ddfa4d50e9191b09ba1aa2e0a390fd82f885bfb50a3591e",
+      "candidate_digest": "sha256:ff1de3455df8dea6bedcb84f4d51831505639c312370fdd22caecb0f1826fcdf"
+    },
+    {
+      "row_id": "JL21-67",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-67.manifest.2.1.json",
+      "manifest_hash": "sha256:e3b41868d89aefcb15ca20885164867fbcd3bdc79d441c379b6d1f7bb3680968",
+      "manifest_file_sha256": "sha256:ae8fa37b49aaa0b045b86ae383170dc4ff8b7b921565de16ca7796f07a635097",
+      "candidate_digest": "sha256:4019342960eb3b9b57047aee95e62b68987fdfab77026dd9a3d7592a5cbb71ec"
+    },
+    {
+      "row_id": "JL21-68",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-68.manifest.2.1.json",
+      "manifest_hash": "sha256:83d547a4f8b2621babfc4af0ad45000ca4565183384fd8367de2ebc67619c782",
+      "manifest_file_sha256": "sha256:5baae2563670d0bbfe95b90d0d2b2d20a05fb52467ba67094146189e02f37a28",
+      "candidate_digest": "sha256:42a856ea6d3361d97cb7d497a25e4bcb65acf92da216c4bdcae093b91f8a6942"
+    },
+    {
+      "row_id": "JL21-69",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-69.manifest.2.1.json",
+      "manifest_hash": "sha256:4115821848eabef9517674242416f20d6debbf74bfdbf521a92233591f116a8d",
+      "manifest_file_sha256": "sha256:a76d9e84f8e5d1634557dce5c80156a8f394fa4040b89ea72787050132064d3b",
+      "candidate_digest": "sha256:a17c5cea1d9664616532ddf0a01e5525e9ae5d11b71ed9ba1765cd872c78c11b"
+    },
+    {
+      "row_id": "JL21-70",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-70.manifest.2.1.json",
+      "manifest_hash": "sha256:dfc07866d3c45d17235923d9886b53db2f17aff9b08a6139f695e7fea7f02128",
+      "manifest_file_sha256": "sha256:8b1ac242af35fac6376820e3c5e3cd7a94c468ecad8e29590c90fe5f10b567e3",
+      "candidate_digest": "sha256:d080dbd70cd54daa4d827114d72afb7127b34fbda95e89c0cf7582ac3f8086bd"
+    },
+    {
+      "row_id": "JL21-72",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-72.manifest.2.1.json",
+      "manifest_hash": "sha256:a4dede38e67fa98aa83c5d63618ee31a1b3a10ebc13295ad51d62b198c294604",
+      "manifest_file_sha256": "sha256:bfdfefa495d75b9fff3a413d6200272f6c5b3e92030a52ec24223b2610abc837",
+      "candidate_digest": "sha256:a6668cc7c09534f23e987b5c4cd5668d4696d5f1773f9ea4c2902295f3a59283"
+    },
+    {
+      "row_id": "JL21-73",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-73.manifest.2.1.json",
+      "manifest_hash": "sha256:dbf21b49c5f8306f389552846b1d996a428298368f6f37b4db9898ab77ab9efd",
+      "manifest_file_sha256": "sha256:cc3d62c6a0875c749003b9f8879efa412bd3b530a8c3e58483ed902c22bffd30",
+      "candidate_digest": "sha256:189e56aa5069f920d0ee95db76a3dc268e6287eba346ce3f9f1a98357a2cea1c"
+    },
+    {
+      "row_id": "JL21-74",
+      "manifest": "docs/implementation/handoffs/MY2021_JL/final_planning_20261109/manifests/JL21-74.manifest.2.1.json",
+      "manifest_hash": "sha256:bfcf2b0aa92e3de5dcb3c603aae932abb7dd9a84e142aa6aa2f2ac8fd9e2674d",
+      "manifest_file_sha256": "sha256:8225dd825b331463d63f7374c97b116cb6b60f2abb32dcb773ac2433372ad7bf",
+      "candidate_digest": "sha256:3a2f7d7a67422ee05b86b6a99cd3245b46c675ca1090c3077d63fd18ca43b400"
+    }
+  ]
+}

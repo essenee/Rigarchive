@@ -1,0 +1,2 @@
+STARTING ACCEPTED ATOMIC EXECUTION;fresh per-row transaction plans;73expected creations;no no-ops
+COMMITTED:73new VehicleDefinitions/73receipts;one accepted atomic model-year transaction

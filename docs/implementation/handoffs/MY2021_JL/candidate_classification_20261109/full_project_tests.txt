@@ -1,0 +1,393 @@
+Creating test database for alias 'default'...
+............................................................................................Found 713 test(s).
+System check identified no issues (0 silenced).
+================================================================================
+CANONICAL PROMOTION EXECUTION AUTHORIZATION
+================================================================================
+Manifest Source ID:  toyota_usa
+Raw Artifact Hash:   sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Manifest Content Hash: sha256:05473d6fe7abe77c643b3e15aa129ebe6f424cb11060dd7a79ab3d0701904ebc
+Candidate Reference: cand_ref_3a361836c9a9
+Native Identifier:   8664
+Eligibility Status:  eligible
+Planned Action:      create
+Create Basis:        first_representation
+Target Slug:         2020-sr5-40l-v6-2wd-us
+Target Fields:       {"model_year": 2020, "trim_name": "SR5", "engine_name": "4.0L V6", "drivetrain": "2WD", "market": "US"}
+Planner Reasons:     First representation in generation/year/market namespace.
+--------------------------------------------------------------------------------
+Human director: project_owner
+Execution agent: codex
+Interface: cli
+Execution authorization declined. Zero canonical writes performed.
+================================================================================
+CANONICAL PROMOTION EXECUTION AUTHORIZATION
+================================================================================
+Manifest Source ID:  toyota_usa
+Raw Artifact Hash:   sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Manifest Content Hash: sha256:05473d6fe7abe77c643b3e15aa129ebe6f424cb11060dd7a79ab3d0701904ebc
+Candidate Reference: cand_ref_3a361836c9a9
+Native Identifier:   8664
+Eligibility Status:  eligible
+Planned Action:      create
+Create Basis:        first_representation
+Target Slug:         2020-sr5-40l-v6-2wd-us
+Target Fields:       {"model_year": 2020, "trim_name": "SR5", "engine_name": "4.0L V6", "drivetrain": "2WD", "market": "US"}
+Planner Reasons:     First representation in generation/year/market namespace.
+--------------------------------------------------------------------------------
+Human director: project_owner
+Execution agent: codex
+Interface: cli
+Execution authorization declined. Zero canonical writes performed.
+================================================================================
+CANONICAL PROMOTION EXECUTION AUTHORIZATION
+================================================================================
+Manifest Source ID:  toyota_usa
+Raw Artifact Hash:   sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Manifest Content Hash: sha256:05473d6fe7abe77c643b3e15aa129ebe6f424cb11060dd7a79ab3d0701904ebc
+Candidate Reference: cand_ref_3a361836c9a9
+Native Identifier:   8664
+Eligibility Status:  eligible
+Planned Action:      create
+Create Basis:        first_representation
+Target Slug:         2020-sr5-40l-v6-2wd-us
+Target Fields:       {"model_year": 2020, "trim_name": "SR5", "engine_name": "4.0L V6", "drivetrain": "2WD", "market": "US"}
+Planner Reasons:     First representation in generation/year/market namespace.
+--------------------------------------------------------------------------------
+Human director: project_owner
+Execution agent: codex
+Interface: cli
+--------------------------------------------------------------------------------
+CANONICAL PROMOTION SUCCESSFUL: CREATED
+VehicleDefinition ID:   1
+VehicleDefinition UUID: 67296ea4-e488-4e0c-a108-a5251f8d305c
+VehicleDefinition Slug: 2020-sr5-40l-v6-2wd-us
+Execution Receipt UUID: e1b2948a-6fba-493f-922f-c50b80475e5b
+Execution Messages:     Successfully created new canonical VehicleDefinition.
+================================================================================
+Successfully created CanonicalImportAdjudication artifact:
+  Candidate Ref:   cand_ref_b1acea02daa3
+  Category:        distinct_factory_grade
+  Adjudicated Trim:SR5 Premium
+  Adjudication Hash:sha256:0f047dd60baaf06d5c1307acf3e9b539753869d003854b853c4b065af7afbacc
+  Saved File:      /private/var/folders/5d/046pfqxs2y3g2wqwnvx4n9dw0000gn/T/tmpd3sgxs8o/adjudication_cand_ref_b1acea02daa3.json
+================================================================================
+RIGARCHIVE PRODUCTION ACQUISITION DRY-RUN REPORT
+================================================================================
+Source Profile:     toyota_usa
+Publisher Locator:  https://pressroom.toyota.com/album/2020-toyota-4runner-specs/
+Acquisition Status: CREATED
+Content Hash:       sha256:066d2acc7f307fa2c720ad14741ac7887fb7f3e9da1f7951401eb9896f70019b
+Storage Path:       storage/raw_source_artifacts/toyota_usa/066d2acc7f307fa2c720ad14741ac7887fb7f3e9da1f7951401eb9896f70019b.json
+Extracted Sets:     12
+--------------------------------------------------------------------------------
+ 1. Model Code 8642 | Toyota 4Runner 2020 SR5 [US]
+    Status: eligible | Action: create | Basis: first_representation
+    Reasons: First representation in generation/year/market namespace.
+ 2. Model Code 8664 | Toyota 4Runner 2020 SR5 [US]
+    Status: eligible | Action: create | Basis: first_representation
+    Reasons: First representation in generation/year/market namespace.
+ 3. Model Code 8646 | Toyota 4Runner 2020 SR5 Premium [US]
+    Status: eligible | Action: create | Basis: first_representation
+    Reasons: First representation in generation/year/market namespace.
+ 4. Model Code 8666 | Toyota 4Runner 2020 SR5 Premium [US]
+    Status: eligible | Action: create | Basis: first_representation
+    Reasons: First representation in generation/year/market namespace.
+ 5. Model Code 8667 | Toyota 4Runner 2020 Venture Edition [US]
+    Status: requires_review | Action: flag_review | Basis: None
+    Reasons: Candidate lacks complete evidence-backed normalized attributes: missing ['generic_drive_classification'].
+ 6. Model Code 8670 | Toyota 4Runner 2020 TRD Off-Road [US]
+    Status: eligible | Action: create | Basis: first_representation
+    Reasons: First representation in generation/year/market namespace.
+ 7. Model Code 8672 | Toyota 4Runner 2020 TRD Off-Road Premium [US]
+    Status: eligible | Action: create | Basis: first_representation
+    Reasons: First representation in generation/year/market namespace.
+ 8. Model Code 8648 | Toyota 4Runner 2020 Limited [US]
+    Status: eligible | Action: create | Basis: first_representation
+    Reasons: First representation in generation/year/market namespace.
+ 9. Model Code 8668 | Toyota 4Runner 2020 Limited [US]
+    Status: eligible | Action: create | Basis: first_representation
+    Reasons: First representation in generation/year/market namespace.
+10. Model Code 8649 | Toyota 4Runner 2020 Nightshade [US]
+    Status: eligible | Action: create | Basis: first_representation
+    Reasons: First representation in generation/year/market namespace.
+11. Model Code 8669 | Toyota 4Runner 2020 Nightshade [US]
+    Status: eligible | Action: create | Basis: first_representation
+    Reasons: First representation in generation/year/market namespace.
+12. Model Code 8674 | Toyota 4Runner 2020 TRD Pro [US]
+    Status: eligible | Action: create | Basis: first_representation
+    Reasons: First representation in generation/year/market namespace.
+--------------------------------------------------------------------------------
+Dry-Run Summary: Eligible (CREATE): 11 | Requires Review: 1 | Ineligible: 0
+================================================================================
+Saved executable review manifest to '/private/var/folders/5d/046pfqxs2y3g2wqwnvx4n9dw0000gn/T/tmpja_wdhm4/manifest.json'.
+================================================================================
+RIGARCHIVE PRODUCTION ACQUISITION DRY-RUN REPORT
+================================================================================
+Source Profile:     toyota_usa
+Publisher Locator:  https://pressroom.toyota.com/album/2020-toyota-4runner-specs/
+Acquisition Status: CREATED
+Content Hash:       sha256:066d2acc7f307fa2c720ad14741ac7887fb7f3e9da1f7951401eb9896f70019b
+Storage Path:       storage/raw_source_artifacts/toyota_usa/066d2acc7f307fa2c720ad14741ac7887fb7f3e9da1f7951401eb9896f70019b.json
+Extracted Sets:     12
+--------------------------------------------------------------------------------
+ 1. Model Code 8642 | Toyota 4Runner 2020 SR5 [US]
+...    Status: eligible | Action: create | Basis: first_representation
+    Reasons: First representation in generation/year/market namespace.
+ 2. Model Code 8664 | Toyota 4Runner 2020 SR5 [US]
+    Status: eligible | Action: create | Basis: first_representation
+    Reasons: First representation in generation/year/market namespace.
+ 3. Model Code 8646 | Toyota 4Runner 2020 SR5 Premium [US]
+    Status: eligible | Action: create | Basis: first_representation
+    Reasons: First representation in generation/year/market namespace.
+ 4. Model Code 8666 | Toyota 4Runner 2020 SR5 Premium [US]
+    Status: eligible | Action: create | Basis: first_representation
+    Reasons: First representation in generation/year/market namespace.
+ 5. Model Code 8667 | Toyota 4Runner 2020 Venture Edition [US]
+    Status: requires_review | Action: flag_review | Basis: None
+    Reasons: Candidate lacks complete evidence-backed normalized attributes: missing ['generic_drive_classification'].
+ 6. Model Code 8670 | Toyota 4Runner 2020 TRD Off-Road [US]
+    Status: eligible | Action: create | Basis: first_representation
+    Reasons: First representation in generation/year/market namespace.
+ 7. Model Code 8672 | Toyota 4Runner 2020 TRD Off-Road Premium [US]
+    Status: eligible | Action: create | Basis: first_representation
+    Reasons: First representation in generation/year/market namespace.
+ 8. Model Code 8648 | Toyota 4Runner 2020 Limited [US]
+    Status: eligible | Action: create | Basis: first_representation
+    Reasons: First representation in generation/year/market namespace.
+ 9. Model Code 8668 | Toyota 4Runner 2020 Limited [US]
+    Status: eligible | Action: create | Basis: first_representation
+    Reasons: First representation in generation/year/market namespace.
+10. Model Code 8649 | Toyota 4Runner 2020 Nightshade [US]
+    Status: eligible | Action: create | Basis: first_representation
+    Reasons: First representation in generation/year/market namespace.
+11. Model Code 8669 | Toyota 4Runner 2020 Nightshade [US]
+    Status: eligible | Action: create | Basis: first_representation
+    Reasons: First representation in generation/year/market namespace.
+12. Model Code 8674 | Toyota 4Runner 2020 TRD Pro [US]
+    Status: eligible | Action: create | Basis: first_representation
+    Reasons: First representation in generation/year/market namespace.
+--------------------------------------------------------------------------------
+Dry-Run Summary: Eligible (CREATE): 11 | Requires Review: 1 | Ineligible: 0
+================================================================================
+Saved executable review manifest to '/private/var/folders/5d/046pfqxs2y3g2wqwnvx4n9dw0000gn/T/tmp_a67ofzp/manifest.json'.
+================================================================================
+RIGARCHIVE PRODUCTION ACQUISITION DRY-RUN REPORT
+================================================================================
+Source Profile:     toyota_usa
+Publisher Locator:  https://pressroom.toyota.com/album/2020-toyota-4runner-specs/
+Acquisition Status: CREATED
+Content Hash:       sha256:066d2acc7f307fa2c720ad14741ac7887fb7f3e9da1f7951401eb9896f70019b
+Storage Path:       storage/raw_source_artifacts/toyota_usa/066d2acc7f307fa2c720ad14741ac7887fb7f3e9da1f7951401eb9896f70019b.json
+Extracted Sets:     12
+--------------------------------------------------------------------------------
+ 1. Model Code 8642 | Toyota 4Runner 2020 SR5 [US]
+    Status: eligible | Action: create | Basis: first_representation
+    Reasons: First representation in generation/year/market namespace.
+ 2. Model Code 8664 | Toyota 4Runner 2020 SR5 [US]
+    Status: eligible | Action: create | Basis: first_representation
+    Reasons: First representation in generation/year/market namespace.
+ 3. Model Code 8646 | Toyota 4Runner 2020 SR5 Premium [US]
+    Status: eligible | Action: create | Basis: first_representation
+    Reasons: First representation in generation/year/market namespace.
+ 4. Model Code 8666 | Toyota 4Runner 2020 SR5 Premium [US]
+    Status: eligible | Action: create | Basis: first_representation
+    Reasons: First representation in generation/year/market namespace.
+ 5. Model Code 8667 | Toyota 4Runner 2020 Venture Edition [US]
+    Status: requires_review | Action: flag_review | Basis: None
+    Reasons: Candidate lacks complete evidence-backed normalized attributes: missing ['generic_drive_classification'].
+ 6. Model Code 8670 | Toyota 4Runner 2020 TRD Off-Road [US]
+    Status: eligible | Action: create | Basis: first_representation
+    Reasons: First representation in generation/year/market namespace.
+ 7. Model Code 8672 | Toyota 4Runner 2020 TRD Off-Road Premium [US]
+    Status: eligible | Action: create | Basis: first_representation
+    Reasons: First representation in generation/year/market namespace.
+ 8. Model Code 8648 | Toyota 4Runner 2020 Limited [US]
+    Status: eligible | Action: create | Basis: first_representation
+    Reasons: First representation in generation/year/market namespace.
+ 9. Model Code 8668 | Toyota 4Runner 2020 Limited [US]
+    Status: eligible | Action: create | Basis: first_representation
+    Reasons: First representation in generation/year/market namespace.
+10. Model Code 8649 | Toyota 4Runner 2020 Nightshade [US]
+    Status: eligible | Action: create | Basis: first_representation
+    Reasons: First representation in generation/year/market namespace.
+11. Model Code 8669 | Toyota 4Runner 2020 Nightshade [US]
+    Status: eligible | Action: create | Basis: first_representation
+    Reasons: First representation in generation/year/market namespace.
+12. Model Code 8674 | Toyota 4Runner 2020 TRD Pro [US]
+    Status: eligible | Action: create | Basis: first_representation
+    Reasons: First representation in generation/year/market namespace.
+--------------------------------------------------------------------------------
+Dry-Run Summary: Eligible (CREATE): 11 | Requires Review: 1 | Ineligible: 0
+================================================================================
+Saved executable review manifest to '/private/var/folders/5d/046pfqxs2y3g2wqwnvx4n9dw0000gn/T/tmpd3hrlwid/manifest.json'.
+================================================================================
+RIGARCHIVE PRODUCTION ACQUISITION DRY-RUN REPORT
+================================================================================
+Source Profile:     toyota_usa
+Publisher Locator:  https://pressroom.toyota.com/album/2020-toyota-4runner-specs/
+Acquisition Status: CREATED
+Content Hash:       sha256:066d2acc7f307fa2c720ad14741ac7887fb7f3e9da1f7951401eb9896f70019b
+Storage Path:       storage/raw_source_artifacts/toyota_usa/066d2acc7f307fa2c720ad14741ac7887fb7f3e9da1f7951401eb9896f70019b.json
+Extracted Sets:     12
+--------------------------------------------------------------------------------
+ 1. Model Code 8642 | Toyota 4Runner 2020 SR5 [US]
+    Status: eligible | Action: create | Basis: first_representation
+    Reasons: First representation in generation/year/market namespace.
+ 2. Model Code 8664 | Toyota 4Runner 2020 SR5 [US]
+    Status: eligible | Action: create | Basis: first_representation
+    Reasons: First representation in generation/year/market namespace.
+ 3. Model Code 8646 | Toyota 4Runner 2020 SR5 Premium [US]
+    Status: eligible | Action: create | Basis: first_representation
+    Reasons: First representation in generation/year/market namespace.
+ 4. Model Code 8666 | Toyota 4Runner 2020 SR5 Premium [US]
+    Status: eligible | Action: create | Basis: first_representation
+    Reasons: First representation in generation/year/market namespace.
+ 5. Model Code 8667 | Toyota 4Runner 2020 Venture Edition [US]
+    Status: requires_review | Action: flag_review | Basis: None
+    Reasons: Candidate lacks complete evidence-backed normalized attributes: missing ['generic_drive_classification'].
+ 6. Model Code 8670 | Toyota 4Runner 2020 TRD Off-Road [US]
+    Status: eligible | Action: create | Basis: first_representation
+    Reasons: First representation in generation/year/market namespace.
+ 7. Model Code 8672 | Toyota 4Runner 2020 TRD Off-Road Premium [US]
+    Status: eligible | Action: create | Basis: first_representation
+    Reasons: First representation in generation/year/market namespace.
+.................................................................................................................................................................................................................................................................................................................................................................................................................................................................................Rotated text discovered. Output will be incomplete.
+Rotated text discovered. Output will be incomplete.
+Rotated text discovered. Output will be incomplete.
+Rotated text discovered. Output will be incomplete.
+Rotated text discovered. Output will be incomplete.
+Rotated text discovered. Output will be incomplete.
+Rotated text discovered. Output will be incomplete.
+Rotated text discovered. Output will be incomplete.
+Rotated text discovered. Output will be incomplete.
+Rotated text discovered. Output will be incomplete.
+Rotated text discovered. Output will be incomplete.
+Rotated text discovered. Output will be incomplete.
+Rotated text discovered. Output will be incomplete.
+Rotated text discovered. Output will be incomplete.
+Rotated text discovered. Output will be incomplete.
+Rotated text discovered. Output will be incomplete.
+.........................................................................................................................................................
+----------------------------------------------------------------------
+Ran 713 tests in 39.191s
+
+OK
+Destroying test database for alias 'default'...
+ 8. Model Code 8648 | Toyota 4Runner 2020 Limited [US]
+    Status: eligible | Action: create | Basis: first_representation
+    Reasons: First representation in generation/year/market namespace.
+ 9. Model Code 8668 | Toyota 4Runner 2020 Limited [US]
+    Status: eligible | Action: create | Basis: first_representation
+    Reasons: First representation in generation/year/market namespace.
+10. Model Code 8649 | Toyota 4Runner 2020 Nightshade [US]
+    Status: eligible | Action: create | Basis: first_representation
+    Reasons: First representation in generation/year/market namespace.
+11. Model Code 8669 | Toyota 4Runner 2020 Nightshade [US]
+    Status: eligible | Action: create | Basis: first_representation
+    Reasons: First representation in generation/year/market namespace.
+12. Model Code 8674 | Toyota 4Runner 2020 TRD Pro [US]
+    Status: eligible | Action: create | Basis: first_representation
+    Reasons: First representation in generation/year/market namespace.
+--------------------------------------------------------------------------------
+Dry-Run Summary: Eligible (CREATE): 11 | Requires Review: 1 | Ineligible: 0
+================================================================================
+Saved executable review manifest to '/private/var/folders/5d/046pfqxs2y3g2wqwnvx4n9dw0000gn/T/tmp3wevsa2b/manifest_1.json'.
+================================================================================
+CANONICAL PROMOTION EXECUTION AUTHORIZATION
+================================================================================
+Manifest Source ID:  toyota_usa
+Raw Artifact Hash:   sha256:066d2acc7f307fa2c720ad14741ac7887fb7f3e9da1f7951401eb9896f70019b
+Manifest Content Hash: sha256:a46e0d7d79101ac5ce4fafbaea7ad20c4b19b0505c36bfcfe97b6a1e2ea884a0
+Candidate Reference: cand_ref_a7d6bc087e8f
+Native Identifier:   8642
+Eligibility Status:  eligible
+Planned Action:      create
+Create Basis:        first_representation
+Target Slug:         2020-sr5-40l-v6-2wd-us
+Target Fields:       {"model_year": 2020, "trim_name": "SR5", "engine_name": "4.0L V6", "drivetrain": "2WD", "market": "US"}
+Planner Reasons:     First representation in generation/year/market namespace.
+--------------------------------------------------------------------------------
+Human director: project_owner
+Execution agent: codex
+Interface: cli
+--------------------------------------------------------------------------------
+CANONICAL PROMOTION SUCCESSFUL: CREATED
+VehicleDefinition ID:   1
+VehicleDefinition UUID: 26244453-e1d8-442a-8772-d6ca5e520684
+VehicleDefinition Slug: 2020-sr5-40l-v6-2wd-us
+Execution Receipt UUID: 33565cf1-cee9-477e-bba8-7dff41e91b52
+Execution Messages:     Successfully created new canonical VehicleDefinition.
+================================================================================
+================================================================================
+RIGARCHIVE PRODUCTION ACQUISITION DRY-RUN REPORT
+================================================================================
+Source Profile:     toyota_usa
+Publisher Locator:  https://pressroom.toyota.com/album/2020-toyota-4runner-specs/
+Acquisition Status: ALREADY_PRESENT
+Content Hash:       sha256:066d2acc7f307fa2c720ad14741ac7887fb7f3e9da1f7951401eb9896f70019b
+Storage Path:       storage/raw_source_artifacts/toyota_usa/066d2acc7f307fa2c720ad14741ac7887fb7f3e9da1f7951401eb9896f70019b.json
+Extracted Sets:     12
+--------------------------------------------------------------------------------
+ 1. Model Code 8642 | Toyota 4Runner 2020 SR5 [US]
+    Status: eligible | Action: no_op_exact_match | Basis: None
+    Reasons: Exact match found in canonical Reference database. Zero writes required.
+ 2. Model Code 8664 | Toyota 4Runner 2020 SR5 [US]
+    Status: eligible | Action: create | Basis: mechanical_dimension
+    Reasons: Proven mechanical dimensional difference (drivetrain) with matching trim.
+ 3. Model Code 8646 | Toyota 4Runner 2020 SR5 Premium [US]
+    Status: eligible | Action: create | Basis: source_established_grade
+    Reasons: Qualified source evidence explicitly establishes distinct factory grade configuration.
+ 4. Model Code 8666 | Toyota 4Runner 2020 SR5 Premium [US]
+    Status: eligible | Action: create | Basis: source_established_grade
+    Reasons: Qualified source evidence explicitly establishes distinct factory grade configuration.
+ 5. Model Code 8667 | Toyota 4Runner 2020 Venture Edition [US]
+    Status: requires_review | Action: flag_review | Basis: None
+    Reasons: Candidate lacks complete evidence-backed normalized attributes: missing ['generic_drive_classification'].
+ 6. Model Code 8670 | Toyota 4Runner 2020 TRD Off-Road [US]
+    Status: eligible | Action: create | Basis: source_established_grade
+    Reasons: Qualified source evidence explicitly establishes distinct factory grade configuration.
+ 7. Model Code 8672 | Toyota 4Runner 2020 TRD Off-Road Premium [US]
+    Status: eligible | Action: create | Basis: source_established_grade
+    Reasons: Qualified source evidence explicitly establishes distinct factory grade configuration.
+ 8. Model Code 8648 | Toyota 4Runner 2020 Limited [US]
+    Status: eligible | Action: create | Basis: source_established_grade
+    Reasons: Qualified source evidence explicitly establishes distinct factory grade configuration.
+ 9. Model Code 8668 | Toyota 4Runner 2020 Limited [US]
+    Status: eligible | Action: create | Basis: source_established_grade
+    Reasons: Qualified source evidence explicitly establishes distinct factory grade configuration.
+10. Model Code 8649 | Toyota 4Runner 2020 Nightshade [US]
+    Status: eligible | Action: create | Basis: source_established_grade
+    Reasons: Qualified source evidence explicitly establishes distinct factory grade configuration.
+11. Model Code 8669 | Toyota 4Runner 2020 Nightshade [US]
+    Status: eligible | Action: create | Basis: source_established_grade
+    Reasons: Qualified source evidence explicitly establishes distinct factory grade configuration.
+12. Model Code 8674 | Toyota 4Runner 2020 TRD Pro [US]
+    Status: eligible | Action: create | Basis: source_established_grade
+    Reasons: Qualified source evidence explicitly establishes distinct factory grade configuration.
+--------------------------------------------------------------------------------
+Dry-Run Summary: Eligible (CREATE): 11 | Requires Review: 1 | Ineligible: 0
+================================================================================
+Saved executable review manifest to '/private/var/folders/5d/046pfqxs2y3g2wqwnvx4n9dw0000gn/T/tmp3wevsa2b/manifest_2.json'.
+Saved PopulationBatchManifest (sha256:638644811989d1920524ba3072e47bc5d139f044e070f1e453fc5e755d1e4be3) to '/var/folders/5d/046pfqxs2y3g2wqwnvx4n9dw0000gn/T/tmpm2dg_cww/manifest.json'.
+================================================================================
+RIGARCHIVE POPULATION BATCH REVIEW MANIFEST
+================================================================================
+Batch ID:              batch_toyota_4runner_2020_2020
+Batch Manifest Hash:   sha256:638644811989d1920524ba3072e47bc5d139f044e070f1e453fc5e755d1e4be3
+Manufacturer / Model:  Toyota 4Runner [US]
+Model Year Range:      2020–2020
+Total Candidates:      0
+Proposed CREATE:       0
+Proposed NO_OP:        0
+Requires Review:       0
+--------------------------------------------------------------------------------
+================================================================================
+Generating logical export to '/private/var/folders/5d/046pfqxs2y3g2wqwnvx4n9dw0000gn/T/tmpurn3o8w8.json'...
+Successfully created logical export (3116 bytes): /private/var/folders/5d/046pfqxs2y3g2wqwnvx4n9dw0000gn/T/tmpurn3o8w8.json
+/private/var/folders/5d/046pfqxs2y3g2wqwnvx4n9dw0000gn/T/tmpurn3o8w8.json
+Installed 7 object(s) from 1 fixture(s)
+Executing VACUUM INTO '/private/var/folders/5d/046pfqxs2y3g2wqwnvx4n9dw0000gn/T/tmp_1zynlhw.sqlite3'...
+Verifying physical snapshot integrity...
+Successfully created and verified physical snapshot: /private/var/folders/5d/046pfqxs2y3g2wqwnvx4n9dw0000gn/T/tmp_1zynlhw.sqlite3
+/private/var/folders/5d/046pfqxs2y3g2wqwnvx4n9dw0000gn/T/tmp_1zynlhw.sqlite3

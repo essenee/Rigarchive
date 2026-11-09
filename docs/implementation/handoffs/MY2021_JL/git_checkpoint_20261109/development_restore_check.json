@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "Django_check": "no issues",
+  "ORM_counts": [
+    934,
+    3148,
+    159
+  ],
+  "MY2021_generation32_rows": 73,
+  "all_accounts_unusable_password_no_email": true,
+  "checkpoint_opened_read_only": true,
+  "live_database_unchanged": true
+}

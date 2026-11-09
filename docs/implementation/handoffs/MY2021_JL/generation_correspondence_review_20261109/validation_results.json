@@ -1,0 +1,901 @@
+{
+  "result": "passed",
+  "candidate_count": 73,
+  "complete_five_field_identities": 73,
+  "body_distribution": {
+    "2-door": 23,
+    "4-door": 50
+  },
+  "body_trim_labels": 24,
+  "manufacturer_model_code_candidate_counts": {
+    "JLJL72": 20,
+    "JLJS72": 3,
+    "JLJL74": 31,
+    "JLJP74": 11,
+    "JLJS74": 4,
+    "JLJX74": 1,
+    "JLXP74": 2,
+    "JLXS74": 1
+  },
+  "source_model_key_count": 95,
+  "existing_reusable_correspondences": 0,
+  "new_proposals": 95,
+  "candidate_counts_per_key": [
+    {
+      "key": [
+        "MY2021-JL-2D-2020-06-04",
+        "source_model_code",
+        "model_code",
+        "JLJL72"
+      ],
+      "candidates": 12
+    },
+    {
+      "key": [
+        "MY2021-JL-2D-2020-06-04",
+        "source_model_code",
+        "model_code",
+        "JLJS72"
+      ],
+      "candidates": 3
+    },
+    {
+      "key": [
+        "MY2021-JL-2D-2020-08-06",
+        "source_model_code",
+        "model_code",
+        "JLJL72"
+      ],
+      "candidates": 17
+    },
+    {
+      "key": [
+        "MY2021-JL-2D-2020-08-06",
+        "source_model_code",
+        "model_code",
+        "JLJS72"
+      ],
+      "candidates": 3
+    },
+    {
+      "key": [
+        "MY2021-JL-2D-2020-09-29",
+        "source_model_code",
+        "model_code",
+        "JLJL72"
+      ],
+      "candidates": 20
+    },
+    {
+      "key": [
+        "MY2021-JL-2D-2020-09-29",
+        "source_model_code",
+        "model_code",
+        "JLJS72"
+      ],
+      "candidates": 3
+    },
+    {
+      "key": [
+        "MY2021-JL-2D-2020-10-14",
+        "source_model_code",
+        "model_code",
+        "JLJL72"
+      ],
+      "candidates": 20
+    },
+    {
+      "key": [
+        "MY2021-JL-2D-2020-10-14",
+        "source_model_code",
+        "model_code",
+        "JLJS72"
+      ],
+      "candidates": 3
+    },
+    {
+      "key": [
+        "MY2021-JL-2D-2020-12-04",
+        "source_model_code",
+        "model_code",
+        "JLJL72"
+      ],
+      "candidates": 20
+    },
+    {
+      "key": [
+        "MY2021-JL-2D-2020-12-04",
+        "source_model_code",
+        "model_code",
+        "JLJS72"
+      ],
+      "candidates": 3
+    },
+    {
+      "key": [
+        "MY2021-JL-2D-2021-01-01",
+        "source_model_code",
+        "model_code",
+        "JLJL72"
+      ],
+      "candidates": 20
+    },
+    {
+      "key": [
+        "MY2021-JL-2D-2021-01-01",
+        "source_model_code",
+        "model_code",
+        "JLJS72"
+      ],
+      "candidates": 3
+    },
+    {
+      "key": [
+        "MY2021-JL-2D-2021-02-08",
+        "source_model_code",
+        "model_code",
+        "JLJL72"
+      ],
+      "candidates": 20
+    },
+    {
+      "key": [
+        "MY2021-JL-2D-2021-02-08",
+        "source_model_code",
+        "model_code",
+        "JLJS72"
+      ],
+      "candidates": 3
+    },
+    {
+      "key": [
+        "MY2021-JL-2D-2021-03-05",
+        "source_model_code",
+        "model_code",
+        "JLJL72"
+      ],
+      "candidates": 20
+    },
+    {
+      "key": [
+        "MY2021-JL-2D-2021-03-05",
+        "source_model_code",
+        "model_code",
+        "JLJS72"
+      ],
+      "candidates": 3
+    },
+    {
+      "key": [
+        "MY2021-JL-2D-2021-04-14",
+        "source_model_code",
+        "model_code",
+        "JLJL72"
+      ],
+      "candidates": 20
+    },
+    {
+      "key": [
+        "MY2021-JL-2D-2021-04-14",
+        "source_model_code",
+        "model_code",
+        "JLJS72"
+      ],
+      "candidates": 3
+    },
+    {
+      "key": [
+        "MY2021-JL-2D-2021-05-14",
+        "source_model_code",
+        "model_code",
+        "JLJL72"
+      ],
+      "candidates": 17
+    },
+    {
+      "key": [
+        "MY2021-JL-2D-2021-05-14",
+        "source_model_code",
+        "model_code",
+        "JLJS72"
+      ],
+      "candidates": 3
+    },
+    {
+      "key": [
+        "MY2021-JL-2D-2021-06-09",
+        "source_model_code",
+        "model_code",
+        "JLJL72"
+      ],
+      "candidates": 12
+    },
+    {
+      "key": [
+        "MY2021-JL-2D-2021-06-09",
+        "source_model_code",
+        "model_code",
+        "JLJS72"
+      ],
+      "candidates": 3
+    },
+    {
+      "key": [
+        "MY2021-JL-2D-2021-07-06",
+        "source_model_code",
+        "model_code",
+        "JLJL72"
+      ],
+      "candidates": 12
+    },
+    {
+      "key": [
+        "MY2021-JL-2D-2021-07-06",
+        "source_model_code",
+        "model_code",
+        "JLJS72"
+      ],
+      "candidates": 3
+    },
+    {
+      "key": [
+        "MY2021-JL-2D-2021-08-06",
+        "source_model_code",
+        "model_code",
+        "JLJL72"
+      ],
+      "candidates": 12
+    },
+    {
+      "key": [
+        "MY2021-JL-2D-2021-08-06",
+        "source_model_code",
+        "model_code",
+        "JLJS72"
+      ],
+      "candidates": 3
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2020-06-04",
+        "source_model_code",
+        "model_code",
+        "JLJL74"
+      ],
+      "candidates": 20
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2020-06-04",
+        "source_model_code",
+        "model_code",
+        "JLJP74"
+      ],
+      "candidates": 11
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2020-06-04",
+        "source_model_code",
+        "model_code",
+        "JLJS74"
+      ],
+      "candidates": 4
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2020-08-06",
+        "source_model_code",
+        "model_code",
+        "JLJL74"
+      ],
+      "candidates": 27
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2020-08-06",
+        "source_model_code",
+        "model_code",
+        "JLJP74"
+      ],
+      "candidates": 11
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2020-08-06",
+        "source_model_code",
+        "model_code",
+        "JLJS74"
+      ],
+      "candidates": 4
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2020-09-29",
+        "source_model_code",
+        "model_code",
+        "JLJL74"
+      ],
+      "candidates": 31
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2020-09-29",
+        "source_model_code",
+        "model_code",
+        "JLJP74"
+      ],
+      "candidates": 11
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2020-09-29",
+        "source_model_code",
+        "model_code",
+        "JLJS74"
+      ],
+      "candidates": 4
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2020-10-14",
+        "source_model_code",
+        "model_code",
+        "JLJL74"
+      ],
+      "candidates": 31
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2020-10-14",
+        "source_model_code",
+        "model_code",
+        "JLJP74"
+      ],
+      "candidates": 11
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2020-10-14",
+        "source_model_code",
+        "model_code",
+        "JLJS74"
+      ],
+      "candidates": 4
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2020-10-30",
+        "source_model_code",
+        "model_code",
+        "JLJL74"
+      ],
+      "candidates": 31
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2020-10-30",
+        "source_model_code",
+        "model_code",
+        "JLJP74"
+      ],
+      "candidates": 11
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2020-10-30",
+        "source_model_code",
+        "model_code",
+        "JLJS74"
+      ],
+      "candidates": 4
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2020-12-04",
+        "source_model_code",
+        "model_code",
+        "JLJL74"
+      ],
+      "candidates": 31
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2020-12-04",
+        "source_model_code",
+        "model_code",
+        "JLJP74"
+      ],
+      "candidates": 11
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2020-12-04",
+        "source_model_code",
+        "model_code",
+        "JLJS74"
+      ],
+      "candidates": 4
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2020-12-04",
+        "source_model_code",
+        "model_code",
+        "JLJX74"
+      ],
+      "candidates": 1
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2020-12-04",
+        "source_model_code",
+        "model_code",
+        "JLXP74"
+      ],
+      "candidates": 2
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2020-12-04",
+        "source_model_code",
+        "model_code",
+        "JLXS74"
+      ],
+      "candidates": 1
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2021-01-01",
+        "source_model_code",
+        "model_code",
+        "JLJL74"
+      ],
+      "candidates": 31
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2021-01-01",
+        "source_model_code",
+        "model_code",
+        "JLJP74"
+      ],
+      "candidates": 11
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2021-01-01",
+        "source_model_code",
+        "model_code",
+        "JLJS74"
+      ],
+      "candidates": 4
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2021-01-01",
+        "source_model_code",
+        "model_code",
+        "JLJX74"
+      ],
+      "candidates": 1
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2021-01-01",
+        "source_model_code",
+        "model_code",
+        "JLXP74"
+      ],
+      "candidates": 2
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2021-01-01",
+        "source_model_code",
+        "model_code",
+        "JLXS74"
+      ],
+      "candidates": 1
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2021-02-09",
+        "source_model_code",
+        "model_code",
+        "JLJL74"
+      ],
+      "candidates": 31
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2021-02-09",
+        "source_model_code",
+        "model_code",
+        "JLJP74"
+      ],
+      "candidates": 11
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2021-02-09",
+        "source_model_code",
+        "model_code",
+        "JLJS74"
+      ],
+      "candidates": 4
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2021-02-09",
+        "source_model_code",
+        "model_code",
+        "JLJX74"
+      ],
+      "candidates": 1
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2021-02-09",
+        "source_model_code",
+        "model_code",
+        "JLXP74"
+      ],
+      "candidates": 2
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2021-02-09",
+        "source_model_code",
+        "model_code",
+        "JLXS74"
+      ],
+      "candidates": 1
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2021-03-05",
+        "source_model_code",
+        "model_code",
+        "JLJL74"
+      ],
+      "candidates": 31
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2021-03-05",
+        "source_model_code",
+        "model_code",
+        "JLJP74"
+      ],
+      "candidates": 11
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2021-03-05",
+        "source_model_code",
+        "model_code",
+        "JLJS74"
+      ],
+      "candidates": 4
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2021-03-05",
+        "source_model_code",
+        "model_code",
+        "JLJX74"
+      ],
+      "candidates": 1
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2021-03-05",
+        "source_model_code",
+        "model_code",
+        "JLXP74"
+      ],
+      "candidates": 2
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2021-03-05",
+        "source_model_code",
+        "model_code",
+        "JLXS74"
+      ],
+      "candidates": 1
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2021-04-14",
+        "source_model_code",
+        "model_code",
+        "JLJL74"
+      ],
+      "candidates": 31
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2021-04-14",
+        "source_model_code",
+        "model_code",
+        "JLJP74"
+      ],
+      "candidates": 11
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2021-04-14",
+        "source_model_code",
+        "model_code",
+        "JLJS74"
+      ],
+      "candidates": 4
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2021-04-14",
+        "source_model_code",
+        "model_code",
+        "JLJX74"
+      ],
+      "candidates": 1
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2021-04-14",
+        "source_model_code",
+        "model_code",
+        "JLXP74"
+      ],
+      "candidates": 2
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2021-04-14",
+        "source_model_code",
+        "model_code",
+        "JLXS74"
+      ],
+      "candidates": 1
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2021-05-14",
+        "source_model_code",
+        "model_code",
+        "JLJL74"
+      ],
+      "candidates": 20
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2021-05-14",
+        "source_model_code",
+        "model_code",
+        "JLJP74"
+      ],
+      "candidates": 10
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2021-05-14",
+        "source_model_code",
+        "model_code",
+        "JLJS74"
+      ],
+      "candidates": 4
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2021-05-14",
+        "source_model_code",
+        "model_code",
+        "JLJX74"
+      ],
+      "candidates": 1
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2021-05-14",
+        "source_model_code",
+        "model_code",
+        "JLXP74"
+      ],
+      "candidates": 2
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2021-05-14",
+        "source_model_code",
+        "model_code",
+        "JLXS74"
+      ],
+      "candidates": 1
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2021-06-09",
+        "source_model_code",
+        "model_code",
+        "JLJL74"
+      ],
+      "candidates": 16
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2021-06-09",
+        "source_model_code",
+        "model_code",
+        "JLJP74"
+      ],
+      "candidates": 10
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2021-06-09",
+        "source_model_code",
+        "model_code",
+        "JLJS74"
+      ],
+      "candidates": 4
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2021-06-09",
+        "source_model_code",
+        "model_code",
+        "JLJX74"
+      ],
+      "candidates": 1
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2021-06-09",
+        "source_model_code",
+        "model_code",
+        "JLXP74"
+      ],
+      "candidates": 2
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2021-06-09",
+        "source_model_code",
+        "model_code",
+        "JLXS74"
+      ],
+      "candidates": 1
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2021-07-06",
+        "source_model_code",
+        "model_code",
+        "JLJL74"
+      ],
+      "candidates": 16
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2021-07-06",
+        "source_model_code",
+        "model_code",
+        "JLJP74"
+      ],
+      "candidates": 10
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2021-07-06",
+        "source_model_code",
+        "model_code",
+        "JLJS74"
+      ],
+      "candidates": 4
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2021-07-06",
+        "source_model_code",
+        "model_code",
+        "JLJX74"
+      ],
+      "candidates": 1
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2021-07-06",
+        "source_model_code",
+        "model_code",
+        "JLXP74"
+      ],
+      "candidates": 2
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2021-07-06",
+        "source_model_code",
+        "model_code",
+        "JLXS74"
+      ],
+      "candidates": 1
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2021-08-06",
+        "source_model_code",
+        "model_code",
+        "JLJL74"
+      ],
+      "candidates": 16
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2021-08-06",
+        "source_model_code",
+        "model_code",
+        "JLJP74"
+      ],
+      "candidates": 10
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2021-08-06",
+        "source_model_code",
+        "model_code",
+        "JLJS74"
+      ],
+      "candidates": 4
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2021-08-06",
+        "source_model_code",
+        "model_code",
+        "JLJX74"
+      ],
+      "candidates": 1
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2021-08-06",
+        "source_model_code",
+        "model_code",
+        "JLXP74"
+      ],
+      "candidates": 2
+    },
+    {
+      "key": [
+        "MY2021-JL-4D-2021-08-06",
+        "source_model_code",
+        "model_code",
+        "JLXS74"
+      ],
+      "candidates": 1
+    }
+  ],
+  "exact_shared_selector_documents": 95,
+  "all_73_simulate_to_PK32": true,
+  "negative_simulation_controls_passed": 190,
+  "prior_88_decisions_preserved": true,
+  "additional_392_fuel_approval_preserved": true,
+  "serialization_round_trips": "passed",
+  "source_bytes_and_lineage": "passed",
+  "candidate_hashes_unchanged": 73,
+  "database_counts_before_and_after": {
+    "VehicleDefinitions": 861,
+    "audit_receipts": 2980,
+    "published_correspondences": 64
+  },
+  "database_sha256_before_and_after": "sha256:ec1eb2adb8becf62a6d8ef18e5ae2dee37d5049620faaaeec51ab8c69b0ee4f9",
+  "SQLite_integrity_and_foreign_keys": "passed",
+  "preexisting_files_preserved": 950,
+  "new_publications": 0,
+  "new_publication_receipts": 0,
+  "new_candidates": 0,
+  "remaining_contract_incompatibilities": [],
+  "publication_requires_separate_owner_authorization": true
+}

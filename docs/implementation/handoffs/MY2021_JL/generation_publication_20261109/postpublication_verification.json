@@ -1,0 +1,317 @@
+{
+  "result": "passed",
+  "counts": {
+    "VehicleDefinitions": 861,
+    "audit_receipts": 3075,
+    "correspondences": 159
+  },
+  "new_correspondences": 95,
+  "new_publication_receipts": 95,
+  "actual_candidate_resolutions_to_JL32": 73,
+  "all_861_preexisting_VehicleDefinitions_unchanged": true,
+  "all_64_preexisting_correspondences_unchanged": true,
+  "all_preexisting_database_rows_and_schema_unchanged": true,
+  "table_reconciliation": {
+    "accounts_user": {
+      "before": 1,
+      "after": 1,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "accounts_user_groups": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "accounts_user_user_permissions": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "auth_group": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "auth_group_permissions": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "auth_permission": {
+      "before": 172,
+      "after": 172,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "django_admin_log": {
+      "before": 23,
+      "after": 23,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "django_content_type": {
+      "before": 43,
+      "after": 43,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "django_migrations": {
+      "before": 31,
+      "after": 31,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "django_session": {
+      "before": 5,
+      "after": 5,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "measurements_applicabilityfeature": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "measurements_applicabilitystate": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "measurements_measurementdefinition": {
+      "before": 4,
+      "after": 4,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "measurements_measurementresult": {
+      "before": 2,
+      "after": 2,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "measurements_measurementresultcondition": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "observation_observation": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "reference_canonicalrecordcorrection": {
+      "before": 31,
+      "after": 31,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "reference_compatibilityrule": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "reference_compatibilityrulerevision": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "reference_equipmentitem": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "reference_equipmentitemrevision": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "reference_equipmentoffering": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "reference_equipmentofferingrevision": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "reference_evidenceassertionreference": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "reference_evidencedocument": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "reference_generation": {
+      "before": 16,
+      "after": 16,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "reference_generationcorrespondencerevision": {
+      "before": 64,
+      "after": 159,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 95
+    },
+    "reference_importexecutionreceipt": {
+      "before": 2980,
+      "after": 3075,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 95
+    },
+    "reference_manufacturer": {
+      "before": 5,
+      "after": 5,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "reference_specificationassertion": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "reference_specificationcatalogue": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "reference_specificationcataloguecoverage": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "reference_specificationcataloguemembership": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "reference_specificationcataloguerevision": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "reference_specificationdefinition": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "reference_specificationdefinitiondependency": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "reference_specificationdefinitionrevision": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "reference_specificationevidencelink": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "reference_specificationpublicationreceipt": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "reference_specificationunitregistry": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "reference_transmissiondescription": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "reference_transmissiondescriptionrevision": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "reference_transmissionengineeringassertion": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "reference_transmissionoffering": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "reference_transmissionofferingrevision": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "reference_vehicledefinition": {
+      "before": 861,
+      "after": 861,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "reference_vehiclemodel": {
+      "before": 6,
+      "after": 6,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    }
+  },
+  "only_additions": "95 correspondences +95 publication receipts +normal sequence advances",
+  "candidate_and_classification_files_unchanged": true,
+  "RHD_CLASS075": "unchanged/deferred",
+  "SQLite_integrity": "ok",
+  "foreign_key_violations": 0,
+  "Django_check": "System check identified no issues (0 silenced).",
+  "database_before_sha256": "sha256:ec1eb2adb8becf62a6d8ef18e5ae2dee37d5049620faaaeec51ab8c69b0ee4f9",
+  "database_after_sha256": "sha256:51cfe5595492b454484f106df9aade9b02e6ded681ce39eaeae3c4590443b975",
+  "backup": {
+    "path": "backups/review/MY2021_JL_correspondence_prepublication_20261109T154455104372Z.sqlite3",
+    "sha256": "sha256:06502534d35395b97d74447b98c760f237a1e2aba04860f32d349fab62bd1d92",
+    "integrity": "ok",
+    "foreign_keys": "passed",
+    "logical_all_table_match": true
+  },
+  "backup_unchanged": true,
+  "preexisting_handoff_files_preserved": 1165,
+  "application_contract_schema_changes": false,
+  "canonical_plans_or_imports": 0
+}

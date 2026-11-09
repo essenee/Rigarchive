@@ -1,0 +1,28 @@
+{
+  "fuel_taxonomy": {
+    "gasoline": "Gasoline",
+    "diesel": "Diesel"
+  },
+  "five_fields": [
+    "engine_displacement_liters",
+    "engine_cylinders",
+    "engine_aspiration",
+    "fuel_type",
+    "electrification_type"
+  ],
+  "octane_is_identity_field": false,
+  "original_completeness_error": [
+    "Missing evidenced powertrain attribute: fuel_type."
+  ],
+  "raw_fuel_line_direct_parser_accepts_gasoline": false,
+  "source_document": "docs/implementation/handoffs/MY2021_JL/source_pdfs/FCA_MY2021_Wrangler_392_specifications.pdf",
+  "source_sha256": "sha256:47e6996360a2b44e3a7cae8e36975b63bcd06fab53d8b60f40abec63787faf26",
+  "source_pdf_page": 1,
+  "source_assertion_ref": "FCA_MY2021_Wrangler_392_specifications|sha256:47e6996360a2b44e3a7cae8e36975b63bcd06fab53d8b60f40abec63787faf26|FCA_MY2021_Wrangler_392_specifications|FCA_MY2021_Wrangler_392_specifications-p1",
+  "manufacturer_wording": "Fuel Requirement                                                 Premium 91 octane (R+M)/2 — required",
+  "fuel_requirement_status": "Premium 91 (R+M)/2 required; not merely recommended",
+  "manufacturer_unleaded_wording_in_this_line": false,
+  "classification_basis": "Human-approved broad gasoline category, retaining manufacturer fuel-grade wording unchanged",
+  "contract_implications": "None; gasoline already exists, octane is outside the five-field identity; original-base cumulative adjudication uses unchanged existing validation",
+  "historical_base_limitation_notice": "Original research_revision_lineage remains byte-for-byte base history, including its then-unresolved fuel note; the new approved projection and current index resolve that historical gap"
+}

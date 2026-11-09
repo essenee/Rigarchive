@@ -1,0 +1,9 @@
+{
+  "original_guard_stopped_before_any_publication_call": true,
+  "cause": "Django SQLite declared-type conversion differs from plain SQLite reader, notably bool/date; task-local snapshot now uses no-op SQL expressions to obtain identical native stored values",
+  "live_Django_and_plain_reader_and_backup_all_match_original_baseline": true,
+  "database_sha256_unchanged": "sha256:ec1eb2adb8becf62a6d8ef18e5ae2dee37d5049620faaaeec51ab8c69b0ee4f9",
+  "application_and_contract_changes": false,
+  "original_failure_record_preserved": "publication_failure.json",
+  "same_exact95_authorization_and_verified_backup_remain_valid": true
+}

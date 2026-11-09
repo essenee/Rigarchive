@@ -1,0 +1,44 @@
+{
+  "scope_verification": "passed",
+  "review_manifest_counts": {
+    "MY2021_JL": 90,
+    "owner_review_20261108": 33
+  },
+  "owner_approval_authority": "Explicit owner approval in current chat and corrected prerequisite-order task; historical pending artifacts preserved unchanged",
+  "consumer_rows": 73,
+  "body_style_distribution": {
+    "2-door": 23,
+    "4-door": 50
+  },
+  "approved_body_trim_labels": 24,
+  "earlier_only_rows_preserved_in_scope": 24,
+  "approved_field_decisions_verified": 88,
+  "affected_candidates": 70,
+  "deferred_decision": "CLASS-075 / JL21-71 / EC1 electrification_type",
+  "RHD": "JLUL74 preserved; no candidate constructed; identity semantics deferred",
+  "stage_1": "blocked before candidate construction",
+  "blocking_candidate": "JL21-70 / Unlimited Rubicon 392 / ESG",
+  "blocking_field": "fuel_type",
+  "source": "docs/implementation/handoffs/MY2021_JL/source_pdfs/FCA_MY2021_Wrangler_392_specifications.pdf",
+  "source_sha256": "sha256:47e6996360a2b44e3a7cae8e36975b63bcd06fab53d8b60f40abec63787faf26",
+  "source_pdf_page": 1,
+  "source_fuel_requirement_verbatim": "Fuel Requirement Premium 91 octane (R+M)/2 — required ",
+  "existing_direct_support_predicate_accepts_gasoline": false,
+  "existing_full_page_predicate_accepts_gasoline": false,
+  "explanation": "The reviewed normalized fuel value is gasoline, but the unchanged direct-source predicate recognizes gasoline/petrol/diesel terms, not premium 91-octane wording. The retained 392 specification has no gasoline/petrol token. The generic manual gasoline section names 2.0L and 3.6L engines, not 6.4L. The retained production release gasoline/diesel phrase describes models outside North America; it is not an applicable US ESG fuel assertion. Secondary research transcription cannot be relabeled as manufacturer evidence.",
+  "decisions_applied": 0,
+  "base_candidates_constructed": 0,
+  "candidate_revisions_created": 0,
+  "final_candidates_delivered": 0,
+  "database_unchanged_from_owner_review": true,
+  "database_sha256": "sha256:ec1eb2adb8becf62a6d8ef18e5ae2dee37d5049620faaaeec51ab8c69b0ee4f9",
+  "python": "3.13.1 (v3.13.1:06714517797, Dec  3 2024, 14:00:22) [Clang 15.0.0 (clang-1500.3.9.4)]",
+  "interpreter": "/Users/cosmo/dev/Rigarchive/.venv/bin/python",
+  "django": "6.0.7",
+  "pypdf": "6.16.1",
+  "requirements": [
+    "Django==6.0.7",
+    "pypdf==6.16.1"
+  ],
+  "required_direction": "Authorize applicable manufacturer fuel-evidence acquisition or separately authorize a bounded direct-source validator change. No raw-evidence rewriting or extra adjudication is authorized."
+}

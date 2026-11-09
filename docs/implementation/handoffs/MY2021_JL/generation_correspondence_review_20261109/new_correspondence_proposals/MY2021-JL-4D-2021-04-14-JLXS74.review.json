@@ -1,0 +1,75 @@
+{
+  "review": {
+    "review_version": "1.0",
+    "revision_uuid": "79a5d515-35d1-4a63-8531-c2d032035277",
+    "correspondence_uuid": "e81ff67d-4d11-4b35-82c8-ac944811aa47",
+    "revision_number": 1,
+    "supersedes_uuid": null,
+    "vehicle_model_uuid": "5ec5f58a-b140-484c-97f0-c90ec9c134d6",
+    "generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+    "source_id": "MY2021-JL-4D-2021-04-14",
+    "source_namespace": "source_model_code",
+    "identity_type": "model_code",
+    "native_identifier": "JLXS74",
+    "market": "US",
+    "start_year": 2021,
+    "end_year": 2021,
+    "restrictions": {},
+    "evidence": [
+      {
+        "assertion_set_id": "MY2021-JL-4D-2021-04-14-JLXS74",
+        "assertions": [
+          {
+            "assertion_id": "MY2021-JL-4D-2021-04-14-JLXS74-table",
+            "attribute_key": "factory_powertrain_table",
+            "raw_value": "ENGINE              $FWP   $MSRP   TRANSMISSION        $FWP    $MSRP\n2.0L I4 DOHC DI     N/C     N/C    8-SPD AUTO           N/C     N/C                                             29V\nTURBO PHEV                         8P75PH PHEV\nENGINE (ECX)                       TRANSMISSION\n                                   (DFY)",
+            "source_context": "PDF page 24; manufacturer model heading and named QOP columns"
+          },
+          {
+            "assertion_id": "MY2021-JL-4D-2021-04-14-JLXS74-model",
+            "attribute_key": "source_model_code",
+            "raw_value": "JLXS74",
+            "source_context": "PDF page 24; manufacturer model code"
+          },
+          {
+            "assertion_id": "MY2021-JL-4D-2021-04-14-JLXS74-heading",
+            "attribute_key": "source_document_heading",
+            "raw_value": "REISSUED: 04/14/2021                                                                                                                                        PAGE: 1           JEEP\nISSUED:      06/04/2020\n\n                                                                      United States\n                                                                               2021                                                                                          WRANGLER\n\n                                                         JEEP        WRANGLER                 4   DOOR\n\n                                                       CUSTOMER PREFERRED CODE GUIDE\n\n\n         MODEL                                                                                                 CODE                  PAGES\n         WRANGLER UNLIMITED SPORT                                                               JLJL74                  2                                                     4\n\n         WRANGLER UNLIMITED SAHARA                                                            JLJP74                  9                                                       DOOR\n\n         WRANGLER UNLIMITED RUBICON                                                           JLJS74                 15\n         WRANGLER UNLIMITED RUBICON 392                                                    JLJX74                 18\n         WRANGLER UNLIMITED SPORT RHD                                                       JLUL74                 20\n         WRANGLER UNLIMITED SAHARA 4XE                                                     JLXP74                 21\n         WRANGLER UNLIMITED RUBICON 4XE                                                   JLXS74                 24\n         GROUP DETAIL                                                                                                                          27\n         STANDARD EQUIPMENT                                                                                                          32\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n         STEP #1: SELECT                                                                                        MODEL CODE\n\n         STEP #2: SELECT                                                                                        QUICK ORDER PACKAGE CODE\n\n         STEP #3: SELECT                                                                                        $ OPTIONS (IF DESIRED)\n\n         STEP #4: SELECT                                                                                        COLOR & TRIM CODES\n\n\n\n\n\n       © 2020 FCA US LLC, All Rights Reserved. IT IS FOR THE USE OF FCA AND ITS AUTHORIZED DEALERS ONLY AND MAY\n                       NOT BE OTHERWISE USED, RELEASED, OR REPRINTED WITHOUT FCA PRIOR PERMISSION.\n\n                             ORDERS ARE ACCEPTED ONLY WHEN VEHICLES ARE SHIPPED BY THE FACTORY.\n                                                          © 2020 FCA US LLC, All Rights Reserved.",
+            "source_context": "PDF page 1; United States / MY2021 / Jeep Wrangler / body heading"
+          },
+          {
+            "assertion_id": "MY2021-JL-4D-2021-04-14-JLXS74-engine-0",
+            "attribute_key": "engine_descriptor",
+            "raw_value": "2.0L I4 DOHC DI     N/C     N/C    8-SPD AUTO           N/C     N/C                                             29V\nTURBO PHEV                         8P75PH PHEV\nENGINE (ECX)                       TRANSMISSION\n                                   (DFY)",
+            "source_context": "PDF page 24; exact ECX segment, with transmission/QOP cells retained; no code-only inference"
+          }
+        ],
+        "extraction_mode": "manually_verified_transcription",
+        "extractor_id": "retained_MY2021_evidence_transcription",
+        "extractor_version": "1.0.0",
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "publication_revision": "Original retained MY2021 source; no cross-year approval propagation",
+        "raw_artifact_hash": "sha256:d748a277a6cd23a6a7fbb744fa0b24d9c980b21bef9ce4a3fb993c44c9093179",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-4-14-21-pdf.447429.pdf",
+        "retrieved_at": "2026-11-09T13:43:25.638901+00:00",
+        "source_applicability": {
+          "applicability_basis": "MY2021 US guide applicability; technical/manual joins scoped to exact engine family and source locators",
+          "applicability_scope": "model_year",
+          "market": "US",
+          "publisher_jurisdiction": "US",
+          "unknown_fields": {}
+        },
+        "source_id": "MY2021-JL-4D-2021-04-14",
+        "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-4-14-21-pdf.447429/"
+      }
+    ],
+    "finding": "established",
+    "reviewer": "Codex MY2021 evidence review; unpublished proposal; owner publication authorization pending",
+    "reviewed_at": "2026-11-09T15:15:13.153673+00:00",
+    "review_notes": "Unpublished MY2021 US-only finding for the exact retained manufacturer guide/model key. Original United States / 2021 / Wrangler body heading and model-code table establish applicability. The owner-reviewed US MY2021 Wrangler JL offering context, manufacturer model/body lineage and active canonical JL target (PK32, starts2018) establish the reviewed relation; not a code-prefix or name-only automatic match. Earlier-year publications were inspected but do not authorize reuse: their year scopes and source identities differ. For 4xe and 392, retain their manufacturer Wrangler Unlimited family headings; no separate model/Generation is invented. The exact existing shared selector document is present in every matching current candidate. No candidate, classification, source key or raw evidence is revised. Publication requires separate explicit owner authorization."
+  },
+  "content_hash": "sha256:418850c88f366c5dfcda853ab61bc5d003ed46d95f76b0b0af3e320f8e851021"
+}

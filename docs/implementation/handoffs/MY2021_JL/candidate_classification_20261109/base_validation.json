@@ -1,0 +1,14 @@
+{
+  "result": "passed; unresolved values remain null",
+  "base_candidates": 73,
+  "distribution": {
+    "2-door": 23,
+    "4-door": 50
+  },
+  "labels": 24,
+  "serialization_and_evidence_hashes": "passed",
+  "approved_fields_left_null": 88,
+  "additional_null": "JL21-70 fuel_type; explicit unresolved-field rule",
+  "complete_ECX_bases": 3,
+  "RHD_candidates": 0
+}

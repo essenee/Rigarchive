@@ -1,0 +1,1 @@
+VALIDATED: 73 bases, 88 decisions, 70 revisions, 73 current candidates; 72 complete, one fuel_type null

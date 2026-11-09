@@ -1,0 +1,1145 @@
+[
+  {
+    "review_id": "TRIM-01",
+    "normalized_display_name_proposal": "80th Anniversary Edition",
+    "manufacturer_model_heading_exact": "WRANGLER SPORT",
+    "manufacturer_column_labels_or_locators": [
+      "80TH EDITION"
+    ],
+    "manufacturer_name_notice": "Full marketed designation is model-heading plus column-label context; normalized display name is not presented as a verbatim full source name. 80TH expansion is a normalization proposal.",
+    "model_code": "JLJL72",
+    "body_style": "2-door",
+    "classification": "marketed_special_edition",
+    "separate_canonical_trim_recommended": true,
+    "owner_approval_status": "pending",
+    "rationale": "Manufacturer names the grade/edition in a model heading or QOP column, supported by content/badging and Edmunds listing; this is not inferred merely from different QOP numbers. Sport S is also a named column in manufacturer technical feature availability.",
+    "engine_codes": [
+      "EC1",
+      "ERG"
+    ],
+    "research_row_ids": [
+      "JL21-01",
+      "JL21-02"
+    ],
+    "QOP_codes": [
+      "22Q",
+      "25Q"
+    ],
+    "powertrain_excerpt_ids": [
+      "MY2021-JL-2D-2020-08-06-p2",
+      "MY2021-JL-2D-2020-09-29-p2",
+      "MY2021-JL-2D-2020-10-14-p2",
+      "MY2021-JL-2D-2020-12-04-p2",
+      "MY2021-JL-2D-2021-01-01-p2",
+      "MY2021-JL-2D-2021-02-08-p2",
+      "MY2021-JL-2D-2021-03-05-p2",
+      "MY2021-JL-2D-2021-04-14-p2",
+      "MY2021-JL-2D-2021-05-14-p2"
+    ],
+    "supporting_package_excerpt_inventory": "../factory_package_availability_excerpts.json",
+    "secondary_reference": "https://www.edmunds.com/jeep/wrangler/2021/st-401878299/features-specs/"
+  },
+  {
+    "review_id": "TRIM-02",
+    "normalized_display_name_proposal": "Freedom",
+    "manufacturer_model_heading_exact": "WRANGLER SPORT",
+    "manufacturer_column_labels_or_locators": [
+      "FREEDOM"
+    ],
+    "manufacturer_name_notice": "Full marketed designation is model-heading plus column-label context; normalized display name is not presented as a verbatim full source name. 80TH expansion is a normalization proposal.",
+    "model_code": "JLJL72",
+    "body_style": "2-door",
+    "classification": "marketed_special_edition",
+    "separate_canonical_trim_recommended": true,
+    "owner_approval_status": "pending",
+    "rationale": "Manufacturer names the grade/edition in a model heading or QOP column, supported by content/badging and Edmunds listing; this is not inferred merely from different QOP numbers. Sport S is also a named column in manufacturer technical feature availability.",
+    "engine_codes": [
+      "EC1",
+      "ERC",
+      "ERG"
+    ],
+    "research_row_ids": [
+      "JL21-03",
+      "JL21-04",
+      "JL21-05"
+    ],
+    "QOP_codes": [
+      "22F",
+      "23F",
+      "25F"
+    ],
+    "powertrain_excerpt_ids": [
+      "MY2021-JL-2D-2020-09-29-p2",
+      "MY2021-JL-2D-2020-10-14-p2",
+      "MY2021-JL-2D-2020-12-04-p2",
+      "MY2021-JL-2D-2021-01-01-p2",
+      "MY2021-JL-2D-2021-02-08-p2",
+      "MY2021-JL-2D-2021-03-05-p2",
+      "MY2021-JL-2D-2021-04-14-p2",
+      "MY2021-JL-2D-2021-05-14-p2"
+    ],
+    "supporting_package_excerpt_inventory": "../factory_package_availability_excerpts.json",
+    "secondary_reference": "https://www.edmunds.com/jeep/wrangler/2021/st-401878300/features-specs/"
+  },
+  {
+    "review_id": "TRIM-03",
+    "normalized_display_name_proposal": "Islander",
+    "manufacturer_model_heading_exact": "WRANGLER SPORT",
+    "manufacturer_column_labels_or_locators": [
+      "ISLANDER"
+    ],
+    "manufacturer_name_notice": "Full marketed designation is model-heading plus column-label context; normalized display name is not presented as a verbatim full source name. 80TH expansion is a normalization proposal.",
+    "model_code": "JLJL72",
+    "body_style": "2-door",
+    "classification": "marketed_special_edition",
+    "separate_canonical_trim_recommended": true,
+    "owner_approval_status": "pending",
+    "rationale": "Manufacturer names the grade/edition in a model heading or QOP column, supported by content/badging and Edmunds listing; this is not inferred merely from different QOP numbers. Sport S is also a named column in manufacturer technical feature availability.",
+    "engine_codes": [
+      "EC1",
+      "ERC",
+      "ERG"
+    ],
+    "research_row_ids": [
+      "JL21-06",
+      "JL21-07",
+      "JL21-08"
+    ],
+    "QOP_codes": [
+      "22J",
+      "23J",
+      "25J"
+    ],
+    "powertrain_excerpt_ids": [
+      "MY2021-JL-2D-2020-08-06-p2",
+      "MY2021-JL-2D-2020-09-29-p2",
+      "MY2021-JL-2D-2020-10-14-p2",
+      "MY2021-JL-2D-2020-12-04-p2",
+      "MY2021-JL-2D-2021-01-01-p2",
+      "MY2021-JL-2D-2021-02-08-p2",
+      "MY2021-JL-2D-2021-03-05-p2",
+      "MY2021-JL-2D-2021-04-14-p2"
+    ],
+    "supporting_package_excerpt_inventory": "../factory_package_availability_excerpts.json",
+    "secondary_reference": "https://www.edmunds.com/jeep/wrangler/2021/st-401878301/features-specs/"
+  },
+  {
+    "review_id": "TRIM-04",
+    "normalized_display_name_proposal": "Rubicon",
+    "manufacturer_model_heading_exact": "WRANGLER RUBICON",
+    "manufacturer_column_labels_or_locators": [
+      "single offering, QOP suffix R"
+    ],
+    "manufacturer_name_notice": "Full marketed designation is model-heading plus column-label context; normalized display name is not presented as a verbatim full source name. 80TH expansion is a normalization proposal.",
+    "model_code": "JLJS72",
+    "body_style": "2-door",
+    "classification": "manufacturer_grade",
+    "separate_canonical_trim_recommended": true,
+    "owner_approval_status": "pending",
+    "rationale": "Manufacturer names the grade/edition in a model heading or QOP column, supported by content/badging and Edmunds listing; this is not inferred merely from different QOP numbers. Sport S is also a named column in manufacturer technical feature availability.",
+    "engine_codes": [
+      "EC1",
+      "ERC",
+      "ERG"
+    ],
+    "research_row_ids": [
+      "JL21-21",
+      "JL21-22",
+      "JL21-23"
+    ],
+    "QOP_codes": [
+      "22R",
+      "23R",
+      "25R"
+    ],
+    "powertrain_excerpt_ids": [
+      "MY2021-JL-2D-2020-06-04-p6",
+      "MY2021-JL-2D-2020-08-06-p8",
+      "MY2021-JL-2D-2020-09-29-p8",
+      "MY2021-JL-2D-2020-10-14-p8",
+      "MY2021-JL-2D-2020-12-04-p8",
+      "MY2021-JL-2D-2021-01-01-p8",
+      "MY2021-JL-2D-2021-02-08-p8",
+      "MY2021-JL-2D-2021-03-05-p8",
+      "MY2021-JL-2D-2021-04-14-p8",
+      "MY2021-JL-2D-2021-05-14-p8",
+      "MY2021-JL-2D-2021-06-09-p7",
+      "MY2021-JL-2D-2021-07-06-p7",
+      "MY2021-JL-2D-2021-08-06-p7"
+    ],
+    "supporting_package_excerpt_inventory": "../factory_package_availability_excerpts.json",
+    "secondary_reference": "https://www.edmunds.com/jeep/wrangler/2021/st-401857821/features-specs/"
+  },
+  {
+    "review_id": "TRIM-05",
+    "normalized_display_name_proposal": "Sport",
+    "manufacturer_model_heading_exact": "WRANGLER SPORT",
+    "manufacturer_column_labels_or_locators": [
+      "SPORT"
+    ],
+    "manufacturer_name_notice": "Full marketed designation is model-heading plus column-label context; normalized display name is not presented as a verbatim full source name. 80TH expansion is a normalization proposal.",
+    "model_code": "JLJL72",
+    "body_style": "2-door",
+    "classification": "manufacturer_grade",
+    "separate_canonical_trim_recommended": true,
+    "owner_approval_status": "pending",
+    "rationale": "Manufacturer names the grade/edition in a model heading or QOP column, supported by content/badging and Edmunds listing; this is not inferred merely from different QOP numbers. Sport S is also a named column in manufacturer technical feature availability.",
+    "engine_codes": [
+      "EC1",
+      "ERC",
+      "ERG"
+    ],
+    "research_row_ids": [
+      "JL21-09",
+      "JL21-10",
+      "JL21-11"
+    ],
+    "QOP_codes": [
+      "22B",
+      "23B",
+      "25B"
+    ],
+    "powertrain_excerpt_ids": [
+      "MY2021-JL-2D-2020-06-04-p2",
+      "MY2021-JL-2D-2020-08-06-p2",
+      "MY2021-JL-2D-2020-09-29-p2",
+      "MY2021-JL-2D-2020-10-14-p2",
+      "MY2021-JL-2D-2020-12-04-p2",
+      "MY2021-JL-2D-2021-01-01-p2",
+      "MY2021-JL-2D-2021-02-08-p2",
+      "MY2021-JL-2D-2021-03-05-p2",
+      "MY2021-JL-2D-2021-04-14-p2",
+      "MY2021-JL-2D-2021-05-14-p2",
+      "MY2021-JL-2D-2021-06-09-p2",
+      "MY2021-JL-2D-2021-07-06-p2",
+      "MY2021-JL-2D-2021-08-06-p2"
+    ],
+    "supporting_package_excerpt_inventory": "../factory_package_availability_excerpts.json",
+    "secondary_reference": "https://www.edmunds.com/jeep/wrangler/2021/st-401844797/features-specs/"
+  },
+  {
+    "review_id": "TRIM-06",
+    "normalized_display_name_proposal": "Sport S",
+    "manufacturer_model_heading_exact": "WRANGLER SPORT",
+    "manufacturer_column_labels_or_locators": [
+      "SPORT S"
+    ],
+    "manufacturer_name_notice": "Full marketed designation is model-heading plus column-label context; normalized display name is not presented as a verbatim full source name. 80TH expansion is a normalization proposal.",
+    "model_code": "JLJL72",
+    "body_style": "2-door",
+    "classification": "manufacturer_grade",
+    "separate_canonical_trim_recommended": true,
+    "owner_approval_status": "pending",
+    "rationale": "Manufacturer names the grade/edition in a model heading or QOP column, supported by content/badging and Edmunds listing; this is not inferred merely from different QOP numbers. Sport S is also a named column in manufacturer technical feature availability.",
+    "engine_codes": [
+      "EC1",
+      "ERC",
+      "ERG"
+    ],
+    "research_row_ids": [
+      "JL21-12",
+      "JL21-13",
+      "JL21-14"
+    ],
+    "QOP_codes": [
+      "22S",
+      "23S",
+      "25S"
+    ],
+    "powertrain_excerpt_ids": [
+      "MY2021-JL-2D-2020-06-04-p2",
+      "MY2021-JL-2D-2020-08-06-p2",
+      "MY2021-JL-2D-2020-09-29-p2",
+      "MY2021-JL-2D-2020-10-14-p2",
+      "MY2021-JL-2D-2020-12-04-p2",
+      "MY2021-JL-2D-2021-01-01-p2",
+      "MY2021-JL-2D-2021-02-08-p2",
+      "MY2021-JL-2D-2021-03-05-p2",
+      "MY2021-JL-2D-2021-04-14-p2",
+      "MY2021-JL-2D-2021-05-14-p2",
+      "MY2021-JL-2D-2021-06-09-p2",
+      "MY2021-JL-2D-2021-07-06-p2",
+      "MY2021-JL-2D-2021-08-06-p2"
+    ],
+    "supporting_package_excerpt_inventory": "../factory_package_availability_excerpts.json",
+    "secondary_reference": "https://www.edmunds.com/jeep/wrangler/2021/st-401857819/features-specs/"
+  },
+  {
+    "review_id": "TRIM-07",
+    "normalized_display_name_proposal": "Unlimited 80th Anniversary Edition",
+    "manufacturer_model_heading_exact": "WRANGLER UNLIMITED SPORT",
+    "manufacturer_column_labels_or_locators": [
+      "80TH"
+    ],
+    "manufacturer_name_notice": "Full marketed designation is model-heading plus column-label context; normalized display name is not presented as a verbatim full source name. 80TH expansion is a normalization proposal.",
+    "model_code": "JLJL74",
+    "body_style": "4-door",
+    "classification": "marketed_special_edition",
+    "separate_canonical_trim_recommended": true,
+    "owner_approval_status": "pending",
+    "rationale": "Manufacturer names the grade/edition in a model heading or QOP column, supported by content/badging and Edmunds listing; this is not inferred merely from different QOP numbers. Sport S is also a named column in manufacturer technical feature availability.",
+    "engine_codes": [
+      "EC1",
+      "ERG",
+      "EXJ"
+    ],
+    "research_row_ids": [
+      "JL21-24",
+      "JL21-25",
+      "JL21-26"
+    ],
+    "QOP_codes": [
+      "22Q",
+      "25Q",
+      "26Q"
+    ],
+    "powertrain_excerpt_ids": [
+      "MY2021-JL-4D-2020-08-06-p2",
+      "MY2021-JL-4D-2020-09-29-p2",
+      "MY2021-JL-4D-2020-10-14-p2",
+      "MY2021-JL-4D-2020-10-30-p2",
+      "MY2021-JL-4D-2020-12-04-p2",
+      "MY2021-JL-4D-2021-01-01-p2",
+      "MY2021-JL-4D-2021-02-09-p2",
+      "MY2021-JL-4D-2021-03-05-p2",
+      "MY2021-JL-4D-2021-04-14-p2"
+    ],
+    "supporting_package_excerpt_inventory": "../factory_package_availability_excerpts.json",
+    "secondary_reference": "https://www.edmunds.com/jeep/wrangler/2021/st-401878943/features-specs/"
+  },
+  {
+    "review_id": "TRIM-08",
+    "normalized_display_name_proposal": "Unlimited Freedom",
+    "manufacturer_model_heading_exact": "WRANGLER UNLIMITED SPORT",
+    "manufacturer_column_labels_or_locators": [
+      "FREEDOM"
+    ],
+    "manufacturer_name_notice": "Full marketed designation is model-heading plus column-label context; normalized display name is not presented as a verbatim full source name. 80TH expansion is a normalization proposal.",
+    "model_code": "JLJL74",
+    "body_style": "4-door",
+    "classification": "marketed_special_edition",
+    "separate_canonical_trim_recommended": true,
+    "owner_approval_status": "pending",
+    "rationale": "Manufacturer names the grade/edition in a model heading or QOP column, supported by content/badging and Edmunds listing; this is not inferred merely from different QOP numbers. Sport S is also a named column in manufacturer technical feature availability.",
+    "engine_codes": [
+      "EC1",
+      "ERC",
+      "ERG",
+      "EXJ"
+    ],
+    "research_row_ids": [
+      "JL21-27",
+      "JL21-28",
+      "JL21-29",
+      "JL21-30"
+    ],
+    "QOP_codes": [
+      "22F",
+      "23F",
+      "25F",
+      "26F"
+    ],
+    "powertrain_excerpt_ids": [
+      "MY2021-JL-4D-2020-09-29-p2",
+      "MY2021-JL-4D-2020-10-14-p2",
+      "MY2021-JL-4D-2020-10-30-p2",
+      "MY2021-JL-4D-2020-12-04-p2",
+      "MY2021-JL-4D-2021-01-01-p2",
+      "MY2021-JL-4D-2021-02-09-p2",
+      "MY2021-JL-4D-2021-03-05-p2",
+      "MY2021-JL-4D-2021-04-14-p2",
+      "MY2021-JL-4D-2021-05-14-p2"
+    ],
+    "supporting_package_excerpt_inventory": "../factory_package_availability_excerpts.json",
+    "secondary_reference": "https://www.edmunds.com/jeep/wrangler/2021/st-401878944/features-specs/"
+  },
+  {
+    "review_id": "TRIM-09",
+    "normalized_display_name_proposal": "Unlimited High Altitude",
+    "manufacturer_model_heading_exact": "WRANGLER UNLIMITED SAHARA",
+    "manufacturer_column_labels_or_locators": [
+      "HIGH ALTITUDE"
+    ],
+    "manufacturer_name_notice": "Full marketed designation is model-heading plus column-label context; normalized display name is not presented as a verbatim full source name. 80TH expansion is a normalization proposal.",
+    "model_code": "JLJP74",
+    "body_style": "4-door",
+    "classification": "marketed_special_edition",
+    "separate_canonical_trim_recommended": true,
+    "owner_approval_status": "pending",
+    "rationale": "Manufacturer names the grade/edition in a model heading or QOP column, supported by content/badging and Edmunds listing; this is not inferred merely from different QOP numbers. Sport S is also a named column in manufacturer technical feature availability.",
+    "engine_codes": [
+      "EC1",
+      "ERG",
+      "EXJ"
+    ],
+    "research_row_ids": [
+      "JL21-55",
+      "JL21-56",
+      "JL21-57"
+    ],
+    "QOP_codes": [
+      "22N",
+      "25N",
+      "26N"
+    ],
+    "powertrain_excerpt_ids": [
+      "MY2021-JL-4D-2020-06-04-p7",
+      "MY2021-JL-4D-2020-08-06-p8",
+      "MY2021-JL-4D-2020-09-29-p8",
+      "MY2021-JL-4D-2020-10-14-p8",
+      "MY2021-JL-4D-2020-10-30-p8",
+      "MY2021-JL-4D-2020-12-04-p8",
+      "MY2021-JL-4D-2021-01-01-p8",
+      "MY2021-JL-4D-2021-02-09-p8",
+      "MY2021-JL-4D-2021-03-05-p8",
+      "MY2021-JL-4D-2021-04-14-p9",
+      "MY2021-JL-4D-2021-05-14-p8",
+      "MY2021-JL-4D-2021-06-09-p9",
+      "MY2021-JL-4D-2021-07-06-p8",
+      "MY2021-JL-4D-2021-08-06-p8"
+    ],
+    "supporting_package_excerpt_inventory": "../factory_package_availability_excerpts.json",
+    "secondary_reference": "https://www.edmunds.com/jeep/wrangler/2021/st-401858050/features-specs/"
+  },
+  {
+    "review_id": "TRIM-10",
+    "normalized_display_name_proposal": "Unlimited High Altitude 4xe",
+    "manufacturer_model_heading_exact": "WRANGLER UNLIMITED SAHARA 4XE",
+    "manufacturer_column_labels_or_locators": [
+      "HIGH ALTITUDE"
+    ],
+    "manufacturer_name_notice": "Full marketed designation is model-heading plus column-label context; normalized display name is not presented as a verbatim full source name. 80TH expansion is a normalization proposal.",
+    "model_code": "JLXP74",
+    "body_style": "4-door",
+    "classification": "marketed_special_edition",
+    "separate_canonical_trim_recommended": true,
+    "owner_approval_status": "pending",
+    "rationale": "Manufacturer 4XE model heading plus explicitly named High Altitude column where applicable; retain marketed propulsion qualifier without creating a separate Generation/model or a second bare-name ECX row.",
+    "engine_codes": [
+      "ECX"
+    ],
+    "research_row_ids": [
+      "JL21-72"
+    ],
+    "QOP_codes": [
+      "29N"
+    ],
+    "powertrain_excerpt_ids": [
+      "MY2021-JL-4D-2020-12-04-p20",
+      "MY2021-JL-4D-2021-01-01-p20",
+      "MY2021-JL-4D-2021-02-09-p21",
+      "MY2021-JL-4D-2021-03-05-p21",
+      "MY2021-JL-4D-2021-04-14-p21",
+      "MY2021-JL-4D-2021-05-14-p22",
+      "MY2021-JL-4D-2021-06-09-p23",
+      "MY2021-JL-4D-2021-07-06-p22",
+      "MY2021-JL-4D-2021-08-06-p22"
+    ],
+    "supporting_package_excerpt_inventory": "../factory_package_availability_excerpts.json",
+    "secondary_reference": "https://www.edmunds.com/jeep/wrangler-4xe/2021/trims/"
+  },
+  {
+    "review_id": "TRIM-11",
+    "normalized_display_name_proposal": "Unlimited Islander",
+    "manufacturer_model_heading_exact": "WRANGLER UNLIMITED SPORT",
+    "manufacturer_column_labels_or_locators": [
+      "ISLANDER"
+    ],
+    "manufacturer_name_notice": "Full marketed designation is model-heading plus column-label context; normalized display name is not presented as a verbatim full source name. 80TH expansion is a normalization proposal.",
+    "model_code": "JLJL74",
+    "body_style": "4-door",
+    "classification": "marketed_special_edition",
+    "separate_canonical_trim_recommended": true,
+    "owner_approval_status": "pending",
+    "rationale": "Manufacturer names the grade/edition in a model heading or QOP column, supported by content/badging and Edmunds listing; this is not inferred merely from different QOP numbers. Sport S is also a named column in manufacturer technical feature availability.",
+    "engine_codes": [
+      "EC1",
+      "ERC",
+      "ERG",
+      "EXJ"
+    ],
+    "research_row_ids": [
+      "JL21-31",
+      "JL21-32",
+      "JL21-33",
+      "JL21-34"
+    ],
+    "QOP_codes": [
+      "22J",
+      "23J",
+      "25J",
+      "26J"
+    ],
+    "powertrain_excerpt_ids": [
+      "MY2021-JL-4D-2020-08-06-p2",
+      "MY2021-JL-4D-2020-09-29-p2",
+      "MY2021-JL-4D-2020-10-14-p2",
+      "MY2021-JL-4D-2020-10-30-p2",
+      "MY2021-JL-4D-2020-12-04-p2",
+      "MY2021-JL-4D-2021-01-01-p2",
+      "MY2021-JL-4D-2021-02-09-p2",
+      "MY2021-JL-4D-2021-03-05-p2",
+      "MY2021-JL-4D-2021-04-14-p2"
+    ],
+    "supporting_package_excerpt_inventory": "../factory_package_availability_excerpts.json",
+    "secondary_reference": "https://www.edmunds.com/jeep/wrangler/2021/st-401878945/features-specs/"
+  },
+  {
+    "review_id": "TRIM-12",
+    "normalized_display_name_proposal": "Unlimited Rubicon",
+    "manufacturer_model_heading_exact": "WRANGLER UNLIMITED RUBICON",
+    "manufacturer_column_labels_or_locators": [
+      "single offering, QOP suffix R"
+    ],
+    "manufacturer_name_notice": "Full marketed designation is model-heading plus column-label context; normalized display name is not presented as a verbatim full source name. 80TH expansion is a normalization proposal.",
+    "model_code": "JLJS74",
+    "body_style": "4-door",
+    "classification": "manufacturer_grade",
+    "separate_canonical_trim_recommended": true,
+    "owner_approval_status": "pending",
+    "rationale": "Manufacturer names the grade/edition in a model heading or QOP column, supported by content/badging and Edmunds listing; this is not inferred merely from different QOP numbers. Sport S is also a named column in manufacturer technical feature availability.",
+    "engine_codes": [
+      "EC1",
+      "ERC",
+      "ERG",
+      "EXJ"
+    ],
+    "research_row_ids": [
+      "JL21-66",
+      "JL21-67",
+      "JL21-68",
+      "JL21-69"
+    ],
+    "QOP_codes": [
+      "22R",
+      "23R",
+      "25R",
+      "26R"
+    ],
+    "powertrain_excerpt_ids": [
+      "MY2021-JL-4D-2020-06-04-p12",
+      "MY2021-JL-4D-2020-08-06-p14",
+      "MY2021-JL-4D-2020-09-29-p14",
+      "MY2021-JL-4D-2020-10-14-p14",
+      "MY2021-JL-4D-2020-10-30-p14",
+      "MY2021-JL-4D-2020-12-04-p14",
+      "MY2021-JL-4D-2021-01-01-p14",
+      "MY2021-JL-4D-2021-02-09-p14",
+      "MY2021-JL-4D-2021-03-05-p14",
+      "MY2021-JL-4D-2021-04-14-p15",
+      "MY2021-JL-4D-2021-05-14-p14",
+      "MY2021-JL-4D-2021-06-09-p15",
+      "MY2021-JL-4D-2021-07-06-p14",
+      "MY2021-JL-4D-2021-08-06-p14"
+    ],
+    "supporting_package_excerpt_inventory": "../factory_package_availability_excerpts.json",
+    "secondary_reference": "https://www.edmunds.com/jeep/wrangler/2021/st-401858046/features-specs/"
+  },
+  {
+    "review_id": "TRIM-13",
+    "normalized_display_name_proposal": "Unlimited Rubicon 392",
+    "manufacturer_model_heading_exact": "WRANGLER UNLIMITED RUBICON 392",
+    "manufacturer_column_labels_or_locators": [
+      "single offering, QOP 27X"
+    ],
+    "manufacturer_name_notice": "Full marketed designation is model-heading plus column-label context; normalized display name is not presented as a verbatim full source name. 80TH expansion is a normalization proposal.",
+    "model_code": "JLJX74",
+    "body_style": "4-door",
+    "classification": "marketed_performance_variant",
+    "separate_canonical_trim_recommended": true,
+    "owner_approval_status": "pending",
+    "rationale": "Manufacturer names the grade/edition in a model heading or QOP column, supported by content/badging and Edmunds listing; this is not inferred merely from different QOP numbers. Sport S is also a named column in manufacturer technical feature availability.",
+    "engine_codes": [
+      "ESG"
+    ],
+    "research_row_ids": [
+      "JL21-70"
+    ],
+    "QOP_codes": [
+      "27X"
+    ],
+    "powertrain_excerpt_ids": [
+      "MY2021-JL-4D-2020-12-04-p17",
+      "MY2021-JL-4D-2021-01-01-p17",
+      "MY2021-JL-4D-2021-02-09-p18",
+      "MY2021-JL-4D-2021-03-05-p17",
+      "MY2021-JL-4D-2021-04-14-p18",
+      "MY2021-JL-4D-2021-05-14-p18",
+      "MY2021-JL-4D-2021-06-09-p19",
+      "MY2021-JL-4D-2021-07-06-p18",
+      "MY2021-JL-4D-2021-08-06-p18"
+    ],
+    "supporting_package_excerpt_inventory": "../factory_package_availability_excerpts.json",
+    "secondary_reference": "https://www.edmunds.com/jeep/wrangler/2021/st-401882532/features-specs/"
+  },
+  {
+    "review_id": "TRIM-14",
+    "normalized_display_name_proposal": "Unlimited Rubicon 4xe",
+    "manufacturer_model_heading_exact": "WRANGLER UNLIMITED RUBICON 4XE",
+    "manufacturer_column_labels_or_locators": [
+      "single offering, QOP 29V"
+    ],
+    "manufacturer_name_notice": "Full marketed designation is model-heading plus column-label context; normalized display name is not presented as a verbatim full source name. 80TH expansion is a normalization proposal.",
+    "model_code": "JLXS74",
+    "body_style": "4-door",
+    "classification": "propulsion_qualified_marketed_trim",
+    "separate_canonical_trim_recommended": true,
+    "owner_approval_status": "pending",
+    "rationale": "Manufacturer 4XE model heading plus explicitly named High Altitude column where applicable; retain marketed propulsion qualifier without creating a separate Generation/model or a second bare-name ECX row.",
+    "engine_codes": [
+      "ECX"
+    ],
+    "research_row_ids": [
+      "JL21-74"
+    ],
+    "QOP_codes": [
+      "29V"
+    ],
+    "powertrain_excerpt_ids": [
+      "MY2021-JL-4D-2020-12-04-p23",
+      "MY2021-JL-4D-2021-01-01-p23",
+      "MY2021-JL-4D-2021-02-09-p24",
+      "MY2021-JL-4D-2021-03-05-p24",
+      "MY2021-JL-4D-2021-04-14-p24",
+      "MY2021-JL-4D-2021-05-14-p25",
+      "MY2021-JL-4D-2021-06-09-p26",
+      "MY2021-JL-4D-2021-07-06-p25",
+      "MY2021-JL-4D-2021-08-06-p25"
+    ],
+    "supporting_package_excerpt_inventory": "../factory_package_availability_excerpts.json",
+    "secondary_reference": "https://www.edmunds.com/jeep/wrangler-4xe/2021/trims/"
+  },
+  {
+    "review_id": "TRIM-15",
+    "normalized_display_name_proposal": "Unlimited Sahara",
+    "manufacturer_model_heading_exact": "WRANGLER UNLIMITED SAHARA",
+    "manufacturer_column_labels_or_locators": [
+      "unlabelled base column, QOP suffix G"
+    ],
+    "manufacturer_name_notice": "Full marketed designation is model-heading plus column-label context; normalized display name is not presented as a verbatim full source name. 80TH expansion is a normalization proposal.",
+    "model_code": "JLJP74",
+    "body_style": "4-door",
+    "classification": "manufacturer_grade",
+    "separate_canonical_trim_recommended": true,
+    "owner_approval_status": "pending",
+    "rationale": "Manufacturer names the grade/edition in a model heading or QOP column, supported by content/badging and Edmunds listing; this is not inferred merely from different QOP numbers. Sport S is also a named column in manufacturer technical feature availability.",
+    "engine_codes": [
+      "EC1",
+      "ERC",
+      "ERG",
+      "EXJ"
+    ],
+    "research_row_ids": [
+      "JL21-58",
+      "JL21-59",
+      "JL21-60",
+      "JL21-61"
+    ],
+    "QOP_codes": [
+      "22G",
+      "23G",
+      "24G",
+      "25G",
+      "26G"
+    ],
+    "powertrain_excerpt_ids": [
+      "MY2021-JL-4D-2020-06-04-p7",
+      "MY2021-JL-4D-2020-08-06-p8",
+      "MY2021-JL-4D-2020-09-29-p8",
+      "MY2021-JL-4D-2020-10-14-p8",
+      "MY2021-JL-4D-2020-10-30-p8",
+      "MY2021-JL-4D-2020-12-04-p8",
+      "MY2021-JL-4D-2021-01-01-p8",
+      "MY2021-JL-4D-2021-02-09-p8",
+      "MY2021-JL-4D-2021-03-05-p8",
+      "MY2021-JL-4D-2021-04-14-p9",
+      "MY2021-JL-4D-2021-05-14-p8",
+      "MY2021-JL-4D-2021-06-09-p9",
+      "MY2021-JL-4D-2021-07-06-p8",
+      "MY2021-JL-4D-2021-08-06-p8"
+    ],
+    "supporting_package_excerpt_inventory": "../factory_package_availability_excerpts.json",
+    "secondary_reference": "https://www.edmunds.com/jeep/wrangler/2021/st-401858048/features-specs/"
+  },
+  {
+    "review_id": "TRIM-16",
+    "normalized_display_name_proposal": "Unlimited Sahara 4xe",
+    "manufacturer_model_heading_exact": "WRANGLER UNLIMITED SAHARA 4XE",
+    "manufacturer_column_labels_or_locators": [
+      "unlabelled base column, QOP 29P"
+    ],
+    "manufacturer_name_notice": "Full marketed designation is model-heading plus column-label context; normalized display name is not presented as a verbatim full source name. 80TH expansion is a normalization proposal.",
+    "model_code": "JLXP74",
+    "body_style": "4-door",
+    "classification": "propulsion_qualified_marketed_trim",
+    "separate_canonical_trim_recommended": true,
+    "owner_approval_status": "pending",
+    "rationale": "Manufacturer 4XE model heading plus explicitly named High Altitude column where applicable; retain marketed propulsion qualifier without creating a separate Generation/model or a second bare-name ECX row.",
+    "engine_codes": [
+      "ECX"
+    ],
+    "research_row_ids": [
+      "JL21-73"
+    ],
+    "QOP_codes": [
+      "29P"
+    ],
+    "powertrain_excerpt_ids": [
+      "MY2021-JL-4D-2020-12-04-p20",
+      "MY2021-JL-4D-2021-01-01-p20",
+      "MY2021-JL-4D-2021-02-09-p21",
+      "MY2021-JL-4D-2021-03-05-p21",
+      "MY2021-JL-4D-2021-04-14-p21",
+      "MY2021-JL-4D-2021-05-14-p22",
+      "MY2021-JL-4D-2021-06-09-p23",
+      "MY2021-JL-4D-2021-07-06-p22",
+      "MY2021-JL-4D-2021-08-06-p22"
+    ],
+    "supporting_package_excerpt_inventory": "../factory_package_availability_excerpts.json",
+    "secondary_reference": "https://www.edmunds.com/jeep/wrangler-4xe/2021/trims/"
+  },
+  {
+    "review_id": "TRIM-17",
+    "normalized_display_name_proposal": "Unlimited Sahara Altitude",
+    "manufacturer_model_heading_exact": "WRANGLER UNLIMITED SAHARA",
+    "manufacturer_column_labels_or_locators": [
+      "ALTITUDE"
+    ],
+    "manufacturer_name_notice": "Full marketed designation is model-heading plus column-label context; normalized display name is not presented as a verbatim full source name. 80TH expansion is a normalization proposal.",
+    "model_code": "JLJP74",
+    "body_style": "4-door",
+    "classification": "marketed_special_edition",
+    "separate_canonical_trim_recommended": true,
+    "owner_approval_status": "pending",
+    "rationale": "Manufacturer names the grade/edition in a model heading or QOP column, supported by content/badging and Edmunds listing; this is not inferred merely from different QOP numbers. Sport S is also a named column in manufacturer technical feature availability.",
+    "engine_codes": [
+      "EC1",
+      "ERC",
+      "ERG",
+      "EXJ"
+    ],
+    "research_row_ids": [
+      "JL21-62",
+      "JL21-63",
+      "JL21-64",
+      "JL21-65"
+    ],
+    "QOP_codes": [
+      "22L",
+      "23L",
+      "25L",
+      "26L"
+    ],
+    "powertrain_excerpt_ids": [
+      "MY2021-JL-4D-2020-06-04-p7",
+      "MY2021-JL-4D-2020-08-06-p8",
+      "MY2021-JL-4D-2020-09-29-p8",
+      "MY2021-JL-4D-2020-10-14-p8",
+      "MY2021-JL-4D-2020-10-30-p8",
+      "MY2021-JL-4D-2020-12-04-p8",
+      "MY2021-JL-4D-2021-01-01-p8",
+      "MY2021-JL-4D-2021-02-09-p8",
+      "MY2021-JL-4D-2021-03-05-p8",
+      "MY2021-JL-4D-2021-04-14-p9",
+      "MY2021-JL-4D-2021-05-14-p8",
+      "MY2021-JL-4D-2021-06-09-p9",
+      "MY2021-JL-4D-2021-07-06-p8",
+      "MY2021-JL-4D-2021-08-06-p8"
+    ],
+    "supporting_package_excerpt_inventory": "../factory_package_availability_excerpts.json",
+    "secondary_reference": "https://www.edmunds.com/jeep/wrangler/2021/st-401858049/features-specs/"
+  },
+  {
+    "review_id": "TRIM-18",
+    "normalized_display_name_proposal": "Unlimited Sport",
+    "manufacturer_model_heading_exact": "WRANGLER UNLIMITED SPORT",
+    "manufacturer_column_labels_or_locators": [
+      "SPORT"
+    ],
+    "manufacturer_name_notice": "Full marketed designation is model-heading plus column-label context; normalized display name is not presented as a verbatim full source name. 80TH expansion is a normalization proposal.",
+    "model_code": "JLJL74",
+    "body_style": "4-door",
+    "classification": "manufacturer_grade",
+    "separate_canonical_trim_recommended": true,
+    "owner_approval_status": "pending",
+    "rationale": "Manufacturer names the grade/edition in a model heading or QOP column, supported by content/badging and Edmunds listing; this is not inferred merely from different QOP numbers. Sport S is also a named column in manufacturer technical feature availability.",
+    "engine_codes": [
+      "EC1",
+      "ERC",
+      "ERG",
+      "EXJ"
+    ],
+    "research_row_ids": [
+      "JL21-35",
+      "JL21-36",
+      "JL21-37",
+      "JL21-38"
+    ],
+    "QOP_codes": [
+      "22B",
+      "23B",
+      "24B",
+      "25B",
+      "26B"
+    ],
+    "powertrain_excerpt_ids": [
+      "MY2021-JL-4D-2020-06-04-p2",
+      "MY2021-JL-4D-2020-08-06-p2",
+      "MY2021-JL-4D-2020-09-29-p2",
+      "MY2021-JL-4D-2020-10-14-p2",
+      "MY2021-JL-4D-2020-10-30-p2",
+      "MY2021-JL-4D-2020-12-04-p2",
+      "MY2021-JL-4D-2021-01-01-p2",
+      "MY2021-JL-4D-2021-02-09-p2",
+      "MY2021-JL-4D-2021-03-05-p2",
+      "MY2021-JL-4D-2021-04-14-p2",
+      "MY2021-JL-4D-2021-05-14-p2",
+      "MY2021-JL-4D-2021-06-09-p2",
+      "MY2021-JL-4D-2021-07-06-p2",
+      "MY2021-JL-4D-2021-08-06-p2"
+    ],
+    "supporting_package_excerpt_inventory": "../factory_package_availability_excerpts.json",
+    "secondary_reference": "https://www.edmunds.com/jeep/wrangler/2021/st-401858036/features-specs/"
+  },
+  {
+    "review_id": "TRIM-19",
+    "normalized_display_name_proposal": "Unlimited Sport Altitude",
+    "manufacturer_model_heading_exact": "WRANGLER UNLIMITED SPORT",
+    "manufacturer_column_labels_or_locators": [
+      "ALTITUDE"
+    ],
+    "manufacturer_name_notice": "Full marketed designation is model-heading plus column-label context; normalized display name is not presented as a verbatim full source name. 80TH expansion is a normalization proposal.",
+    "model_code": "JLJL74",
+    "body_style": "4-door",
+    "classification": "marketed_special_edition",
+    "separate_canonical_trim_recommended": true,
+    "owner_approval_status": "pending",
+    "rationale": "Manufacturer names the grade/edition in a model heading or QOP column, supported by content/badging and Edmunds listing; this is not inferred merely from different QOP numbers. Sport S is also a named column in manufacturer technical feature availability.",
+    "engine_codes": [
+      "EC1",
+      "ERC",
+      "ERG",
+      "EXJ"
+    ],
+    "research_row_ids": [
+      "JL21-39",
+      "JL21-40",
+      "JL21-41",
+      "JL21-42"
+    ],
+    "QOP_codes": [
+      "22L",
+      "23L",
+      "24L",
+      "25L",
+      "26L"
+    ],
+    "powertrain_excerpt_ids": [
+      "MY2021-JL-4D-2020-06-04-p2",
+      "MY2021-JL-4D-2020-08-06-p2",
+      "MY2021-JL-4D-2020-09-29-p2",
+      "MY2021-JL-4D-2020-10-14-p2",
+      "MY2021-JL-4D-2020-10-30-p2",
+      "MY2021-JL-4D-2020-12-04-p2",
+      "MY2021-JL-4D-2021-01-01-p2",
+      "MY2021-JL-4D-2021-02-09-p2",
+      "MY2021-JL-4D-2021-03-05-p2",
+      "MY2021-JL-4D-2021-04-14-p2",
+      "MY2021-JL-4D-2021-05-14-p2",
+      "MY2021-JL-4D-2021-06-09-p2",
+      "MY2021-JL-4D-2021-07-06-p2",
+      "MY2021-JL-4D-2021-08-06-p2"
+    ],
+    "supporting_package_excerpt_inventory": "../factory_package_availability_excerpts.json",
+    "secondary_reference": "https://www.edmunds.com/jeep/wrangler/2021/st-401858040/features-specs/"
+  },
+  {
+    "review_id": "TRIM-20",
+    "normalized_display_name_proposal": "Unlimited Sport RHD",
+    "manufacturer_model_heading_exact": "WRANGLER UNLIMITED SPORT RHD",
+    "manufacturer_column_labels_or_locators": [
+      "single offering, QOP 22A"
+    ],
+    "manufacturer_name_notice": "Full marketed designation is model-heading plus column-label context; normalized display name is not presented as a verbatim full source name. 80TH expansion is a normalization proposal.",
+    "model_code": "JLUL74",
+    "body_style": "4-door",
+    "classification": "factory_steering_configuration_variant",
+    "separate_canonical_trim_recommended": false,
+    "owner_approval_status": "pending",
+    "rationale": "RHD steering is demonstrated, but accepting it as a new trim discriminator or storing an independently classified non-consumer variant needs a bounded decision beyond this review.",
+    "engine_codes": [
+      "EC1"
+    ],
+    "research_row_ids": [
+      "JL21-71"
+    ],
+    "QOP_codes": [
+      "22A"
+    ],
+    "powertrain_excerpt_ids": [
+      "MY2021-JL-4D-2020-10-14-p17",
+      "MY2021-JL-4D-2020-10-30-p17",
+      "MY2021-JL-4D-2020-12-04-p19",
+      "MY2021-JL-4D-2021-01-01-p19",
+      "MY2021-JL-4D-2021-02-09-p20",
+      "MY2021-JL-4D-2021-03-05-p20",
+      "MY2021-JL-4D-2021-04-14-p20",
+      "MY2021-JL-4D-2021-05-14-p21",
+      "MY2021-JL-4D-2021-06-09-p22",
+      "MY2021-JL-4D-2021-07-06-p21",
+      "MY2021-JL-4D-2021-08-06-p21"
+    ],
+    "supporting_package_excerpt_inventory": "../factory_package_availability_excerpts.json",
+    "secondary_reference": "https://www.edmunds.com/jeep/wrangler/2021/st-401891174/features-specs/"
+  },
+  {
+    "review_id": "TRIM-21",
+    "normalized_display_name_proposal": "Unlimited Sport S",
+    "manufacturer_model_heading_exact": "WRANGLER UNLIMITED SPORT",
+    "manufacturer_column_labels_or_locators": [
+      "SPORT S"
+    ],
+    "manufacturer_name_notice": "Full marketed designation is model-heading plus column-label context; normalized display name is not presented as a verbatim full source name. 80TH expansion is a normalization proposal.",
+    "model_code": "JLJL74",
+    "body_style": "4-door",
+    "classification": "manufacturer_grade",
+    "separate_canonical_trim_recommended": true,
+    "owner_approval_status": "pending",
+    "rationale": "Manufacturer names the grade/edition in a model heading or QOP column, supported by content/badging and Edmunds listing; this is not inferred merely from different QOP numbers. Sport S is also a named column in manufacturer technical feature availability.",
+    "engine_codes": [
+      "EC1",
+      "ERC",
+      "ERG",
+      "EXJ"
+    ],
+    "research_row_ids": [
+      "JL21-43",
+      "JL21-44",
+      "JL21-45",
+      "JL21-46"
+    ],
+    "QOP_codes": [
+      "22S",
+      "23S",
+      "24S",
+      "25S",
+      "26S"
+    ],
+    "powertrain_excerpt_ids": [
+      "MY2021-JL-4D-2020-06-04-p2",
+      "MY2021-JL-4D-2020-08-06-p2",
+      "MY2021-JL-4D-2020-09-29-p2",
+      "MY2021-JL-4D-2020-10-14-p2",
+      "MY2021-JL-4D-2020-10-30-p2",
+      "MY2021-JL-4D-2020-12-04-p2",
+      "MY2021-JL-4D-2021-01-01-p2",
+      "MY2021-JL-4D-2021-02-09-p2",
+      "MY2021-JL-4D-2021-03-05-p2",
+      "MY2021-JL-4D-2021-04-14-p2",
+      "MY2021-JL-4D-2021-05-14-p2",
+      "MY2021-JL-4D-2021-06-09-p2",
+      "MY2021-JL-4D-2021-07-06-p2",
+      "MY2021-JL-4D-2021-08-06-p2"
+    ],
+    "supporting_package_excerpt_inventory": "../factory_package_availability_excerpts.json",
+    "secondary_reference": "https://www.edmunds.com/jeep/wrangler/2021/st-401858038/features-specs/"
+  },
+  {
+    "review_id": "TRIM-22",
+    "normalized_display_name_proposal": "Unlimited Willys",
+    "manufacturer_model_heading_exact": "WRANGLER UNLIMITED SPORT",
+    "manufacturer_column_labels_or_locators": [
+      "WILLYS"
+    ],
+    "manufacturer_name_notice": "Full marketed designation is model-heading plus column-label context; normalized display name is not presented as a verbatim full source name. 80TH expansion is a normalization proposal.",
+    "model_code": "JLJL74",
+    "body_style": "4-door",
+    "classification": "marketed_special_edition",
+    "separate_canonical_trim_recommended": true,
+    "owner_approval_status": "pending",
+    "rationale": "Manufacturer names the grade/edition in a model heading or QOP column, supported by content/badging and Edmunds listing; this is not inferred merely from different QOP numbers. Sport S is also a named column in manufacturer technical feature availability.",
+    "engine_codes": [
+      "EC1",
+      "ERC",
+      "ERG",
+      "EXJ"
+    ],
+    "research_row_ids": [
+      "JL21-47",
+      "JL21-48",
+      "JL21-49",
+      "JL21-50"
+    ],
+    "QOP_codes": [
+      "22W",
+      "23W",
+      "24W",
+      "25W",
+      "26W"
+    ],
+    "powertrain_excerpt_ids": [
+      "MY2021-JL-4D-2020-06-04-p2",
+      "MY2021-JL-4D-2020-08-06-p2",
+      "MY2021-JL-4D-2020-09-29-p2",
+      "MY2021-JL-4D-2020-10-14-p2",
+      "MY2021-JL-4D-2020-10-30-p2",
+      "MY2021-JL-4D-2020-12-04-p2",
+      "MY2021-JL-4D-2021-01-01-p2",
+      "MY2021-JL-4D-2021-02-09-p2",
+      "MY2021-JL-4D-2021-03-05-p2",
+      "MY2021-JL-4D-2021-04-14-p2",
+      "MY2021-JL-4D-2021-05-14-p2",
+      "MY2021-JL-4D-2021-06-09-p2",
+      "MY2021-JL-4D-2021-07-06-p2",
+      "MY2021-JL-4D-2021-08-06-p2"
+    ],
+    "supporting_package_excerpt_inventory": "../factory_package_availability_excerpts.json",
+    "secondary_reference": "https://www.edmunds.com/jeep/wrangler/2021/st-401858039/features-specs/"
+  },
+  {
+    "review_id": "TRIM-23",
+    "normalized_display_name_proposal": "Unlimited Willys Sport",
+    "manufacturer_model_heading_exact": "WRANGLER UNLIMITED SPORT",
+    "manufacturer_column_labels_or_locators": [
+      "WILLYS SPORT"
+    ],
+    "manufacturer_name_notice": "Full marketed designation is model-heading plus column-label context; normalized display name is not presented as a verbatim full source name. 80TH expansion is a normalization proposal.",
+    "model_code": "JLJL74",
+    "body_style": "4-door",
+    "classification": "marketed_special_edition",
+    "separate_canonical_trim_recommended": true,
+    "owner_approval_status": "pending",
+    "rationale": "Manufacturer names the grade/edition in a model heading or QOP column, supported by content/badging and Edmunds listing; this is not inferred merely from different QOP numbers. Sport S is also a named column in manufacturer technical feature availability.",
+    "engine_codes": [
+      "EC1",
+      "ERC",
+      "ERG",
+      "EXJ"
+    ],
+    "research_row_ids": [
+      "JL21-51",
+      "JL21-52",
+      "JL21-53",
+      "JL21-54"
+    ],
+    "QOP_codes": [
+      "22K",
+      "23K",
+      "24K",
+      "25K",
+      "26K"
+    ],
+    "powertrain_excerpt_ids": [
+      "MY2021-JL-4D-2020-06-04-p2",
+      "MY2021-JL-4D-2020-08-06-p2",
+      "MY2021-JL-4D-2020-09-29-p2",
+      "MY2021-JL-4D-2020-10-14-p2",
+      "MY2021-JL-4D-2020-10-30-p2",
+      "MY2021-JL-4D-2020-12-04-p2",
+      "MY2021-JL-4D-2021-01-01-p2",
+      "MY2021-JL-4D-2021-02-09-p2",
+      "MY2021-JL-4D-2021-03-05-p2",
+      "MY2021-JL-4D-2021-04-14-p2",
+      "MY2021-JL-4D-2021-05-14-p2",
+      "MY2021-JL-4D-2021-06-09-p2",
+      "MY2021-JL-4D-2021-07-06-p2",
+      "MY2021-JL-4D-2021-08-06-p2"
+    ],
+    "supporting_package_excerpt_inventory": "../factory_package_availability_excerpts.json",
+    "secondary_reference": "https://www.edmunds.com/jeep/wrangler/2021/st-401858037/features-specs/"
+  },
+  {
+    "review_id": "TRIM-24",
+    "normalized_display_name_proposal": "Willys",
+    "manufacturer_model_heading_exact": "WRANGLER SPORT",
+    "manufacturer_column_labels_or_locators": [
+      "WILLYS"
+    ],
+    "manufacturer_name_notice": "Full marketed designation is model-heading plus column-label context; normalized display name is not presented as a verbatim full source name. 80TH expansion is a normalization proposal.",
+    "model_code": "JLJL72",
+    "body_style": "2-door",
+    "classification": "marketed_special_edition",
+    "separate_canonical_trim_recommended": true,
+    "owner_approval_status": "pending",
+    "rationale": "Manufacturer names the grade/edition in a model heading or QOP column, supported by content/badging and Edmunds listing; this is not inferred merely from different QOP numbers. Sport S is also a named column in manufacturer technical feature availability.",
+    "engine_codes": [
+      "EC1",
+      "ERC",
+      "ERG"
+    ],
+    "research_row_ids": [
+      "JL21-15",
+      "JL21-16",
+      "JL21-17"
+    ],
+    "QOP_codes": [
+      "22W",
+      "23W",
+      "25W"
+    ],
+    "powertrain_excerpt_ids": [
+      "MY2021-JL-2D-2020-06-04-p2",
+      "MY2021-JL-2D-2020-08-06-p2",
+      "MY2021-JL-2D-2020-09-29-p2",
+      "MY2021-JL-2D-2020-10-14-p2",
+      "MY2021-JL-2D-2020-12-04-p2",
+      "MY2021-JL-2D-2021-01-01-p2",
+      "MY2021-JL-2D-2021-02-08-p2",
+      "MY2021-JL-2D-2021-03-05-p2",
+      "MY2021-JL-2D-2021-04-14-p2",
+      "MY2021-JL-2D-2021-05-14-p2",
+      "MY2021-JL-2D-2021-06-09-p2",
+      "MY2021-JL-2D-2021-07-06-p2",
+      "MY2021-JL-2D-2021-08-06-p2"
+    ],
+    "supporting_package_excerpt_inventory": "../factory_package_availability_excerpts.json",
+    "secondary_reference": "https://www.edmunds.com/jeep/wrangler/2021/st-401857820/features-specs/"
+  },
+  {
+    "review_id": "TRIM-25",
+    "normalized_display_name_proposal": "Willys Sport",
+    "manufacturer_model_heading_exact": "WRANGLER SPORT",
+    "manufacturer_column_labels_or_locators": [
+      "WILLYS SPORT"
+    ],
+    "manufacturer_name_notice": "Full marketed designation is model-heading plus column-label context; normalized display name is not presented as a verbatim full source name. 80TH expansion is a normalization proposal.",
+    "model_code": "JLJL72",
+    "body_style": "2-door",
+    "classification": "marketed_special_edition",
+    "separate_canonical_trim_recommended": true,
+    "owner_approval_status": "pending",
+    "rationale": "Manufacturer names the grade/edition in a model heading or QOP column, supported by content/badging and Edmunds listing; this is not inferred merely from different QOP numbers. Sport S is also a named column in manufacturer technical feature availability.",
+    "engine_codes": [
+      "EC1",
+      "ERC",
+      "ERG"
+    ],
+    "research_row_ids": [
+      "JL21-18",
+      "JL21-19",
+      "JL21-20"
+    ],
+    "QOP_codes": [
+      "22K",
+      "23K",
+      "25K"
+    ],
+    "powertrain_excerpt_ids": [
+      "MY2021-JL-2D-2020-06-04-p2",
+      "MY2021-JL-2D-2020-08-06-p2",
+      "MY2021-JL-2D-2020-09-29-p2",
+      "MY2021-JL-2D-2020-10-14-p2",
+      "MY2021-JL-2D-2020-12-04-p2",
+      "MY2021-JL-2D-2021-01-01-p2",
+      "MY2021-JL-2D-2021-02-08-p2",
+      "MY2021-JL-2D-2021-03-05-p2",
+      "MY2021-JL-2D-2021-04-14-p2",
+      "MY2021-JL-2D-2021-05-14-p2",
+      "MY2021-JL-2D-2021-06-09-p2",
+      "MY2021-JL-2D-2021-07-06-p2",
+      "MY2021-JL-2D-2021-08-06-p2"
+    ],
+    "supporting_package_excerpt_inventory": "../factory_package_availability_excerpts.json",
+    "secondary_reference": "https://www.edmunds.com/jeep/wrangler/2021/st-401857818/features-specs/"
+  }
+]

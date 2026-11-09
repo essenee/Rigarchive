@@ -1,0 +1,50 @@
+{
+  "session_count_before": 5,
+  "session_count_after": 5,
+  "added_sessions": 0,
+  "deleted_sessions": 0,
+  "changed_sessions": 1,
+  "changes": [
+    {
+      "primary_key": {
+        "redacted": true,
+        "PK_fingerprint": "sha256:d2fc15bdc8d2ebbd4dccaf90d3cf2855f8b7f7f26534104c805c44dbda5355b5"
+      },
+      "changed_columns": [
+        "session_data",
+        "expire_date"
+      ],
+      "valid_signatures_before_and_after": true,
+      "decoded_keys_added": [],
+      "decoded_keys_removed": [],
+      "decoded_keys_changed": [
+        "recently_viewed_generations"
+      ],
+      "authentication_and_all_other_decoded_fields_unchanged": true,
+      "history_entry_count_before": 1,
+      "history_entry_count_after": 5,
+      "history_schema_limit_uniqueness_and_canonical_metadata_valid": true,
+      "old_signed_time": {
+        "UTC": "2026-11-09T04:13:54+00:00",
+        "America_Los_Angeles": "2026-11-08T20:13:54-08:00"
+      },
+      "new_signed_time": {
+        "UTC": "2026-11-09T16:33:33+00:00",
+        "America_Los_Angeles": "2026-11-09T08:33:33-08:00"
+      },
+      "old_expiry": "2026-11-23T04:13:54.787926+00:00",
+      "new_expiry": "2026-11-23T16:33:33.534226+00:00",
+      "expiry_matches_normal_cookie_age_seconds": 1209600,
+      "classification": "normal recently-viewed generation browsing write, session re-signing and expiry renewal; no auth-field change"
+    }
+  ],
+  "application_write_path": [
+    "reference/views.py:GenerationHubView.get_context_data",
+    "reference/services.py:record_recently_viewed_generation"
+  ],
+  "mechanism": "Generation-page visits replace/bubble the recently-viewed entry, cap history at5 and set session.modified=True. Django re-signs modified session_data and renews normal expiry.",
+  "normal_browsing_consistency": true,
+  "actor_or_individual_HTTP_request_attribution": "not established; not required to validate the nature of changes",
+  "precise_ECC_to_DE_hash_pair_reconstruction": false,
+  "limitation": "Neither intermediate file-hash state has a retained physical snapshot. The exact historical byte delta cannot be reconstructed; all-table preservation plus explicit publication reconciliation and signed-session nature establish the current verified state."
+}

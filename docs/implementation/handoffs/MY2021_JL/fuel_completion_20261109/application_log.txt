@@ -1,0 +1,2 @@
+APPLIED: one new fuel decision; cumulative 3-claim adjudication; other four 392 fields unchanged
+Candidate content digest: sha256:d080dbd70cd54daa4d827114d72afb7127b34fbda95e89c0cf7582ac3f8086bd

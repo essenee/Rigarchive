@@ -1,0 +1,483 @@
+{
+  "result": "passed",
+  "certified_matrix_digest": "sha256:6926df6c06e4bd471bbda02c67257cf7a7e2999cf5cdfebfc8b06ead31a9996e",
+  "new_VehicleDefinitions": 73,
+  "new_execution_receipts": 73,
+  "VehicleDefinition_PKs": [
+    877,
+    878,
+    879,
+    880,
+    881,
+    882,
+    883,
+    884,
+    885,
+    886,
+    887,
+    888,
+    889,
+    890,
+    891,
+    892,
+    893,
+    894,
+    895,
+    896,
+    897,
+    898,
+    899,
+    900,
+    901,
+    902,
+    903,
+    904,
+    905,
+    906,
+    907,
+    908,
+    909,
+    910,
+    911,
+    912,
+    913,
+    914,
+    915,
+    916,
+    917,
+    918,
+    919,
+    920,
+    921,
+    922,
+    923,
+    924,
+    925,
+    926,
+    927,
+    928,
+    929,
+    930,
+    931,
+    932,
+    933,
+    934,
+    935,
+    936,
+    937,
+    938,
+    939,
+    940,
+    941,
+    942,
+    943,
+    944,
+    945,
+    946,
+    947,
+    948,
+    949
+  ],
+  "receipt_PKs": [
+    3076,
+    3077,
+    3078,
+    3079,
+    3080,
+    3081,
+    3082,
+    3083,
+    3084,
+    3085,
+    3086,
+    3087,
+    3088,
+    3089,
+    3090,
+    3091,
+    3092,
+    3093,
+    3094,
+    3095,
+    3096,
+    3097,
+    3098,
+    3099,
+    3100,
+    3101,
+    3102,
+    3103,
+    3104,
+    3105,
+    3106,
+    3107,
+    3108,
+    3109,
+    3110,
+    3111,
+    3112,
+    3113,
+    3114,
+    3115,
+    3116,
+    3117,
+    3118,
+    3119,
+    3120,
+    3121,
+    3122,
+    3123,
+    3124,
+    3125,
+    3126,
+    3127,
+    3128,
+    3129,
+    3130,
+    3131,
+    3132,
+    3133,
+    3134,
+    3135,
+    3136,
+    3137,
+    3138,
+    3139,
+    3140,
+    3141,
+    3142,
+    3143,
+    3144,
+    3145,
+    3146,
+    3147,
+    3148
+  ],
+  "body_distribution": {
+    "2-door": 23,
+    "4-door": 50
+  },
+  "approved_labels": 24,
+  "all_five_fields_evidence_and_adjudication_lineage": "passed",
+  "actual_creation_basis_counts": {
+    "first_representation": 1,
+    "mechanical_dimension": 49,
+    "source_established_grade": 23
+  },
+  "all_861_preexisting_VehicleDefinitions_unchanged": true,
+  "all_159_correspondences_unchanged": true,
+  "all_preexisting_non_session_database_rows_unchanged": true,
+  "all_preexisting_database_rows_unchanged": true,
+  "local_authentication_state_preserved": true,
+  "schema_unchanged": true,
+  "table_reconciliation": {
+    "accounts_user": {
+      "before": 1,
+      "after": 1,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "accounts_user_groups": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "accounts_user_user_permissions": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "auth_group": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "auth_group_permissions": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "auth_permission": {
+      "before": 172,
+      "after": 172,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "django_admin_log": {
+      "before": 23,
+      "after": 23,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "django_content_type": {
+      "before": 43,
+      "after": 43,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "django_migrations": {
+      "before": 31,
+      "after": 31,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "django_session": {
+      "before": 5,
+      "after": 5,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0,
+      "ordinary_browsing_changes_verified": true,
+      "local_authentication_state_preserved": true
+    },
+    "measurements_applicabilityfeature": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "measurements_applicabilitystate": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "measurements_measurementdefinition": {
+      "before": 4,
+      "after": 4,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "measurements_measurementresult": {
+      "before": 2,
+      "after": 2,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "measurements_measurementresultcondition": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "observation_observation": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "reference_canonicalrecordcorrection": {
+      "before": 31,
+      "after": 31,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "reference_compatibilityrule": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "reference_compatibilityrulerevision": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "reference_equipmentitem": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "reference_equipmentitemrevision": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "reference_equipmentoffering": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "reference_equipmentofferingrevision": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "reference_evidenceassertionreference": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "reference_evidencedocument": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "reference_generation": {
+      "before": 16,
+      "after": 16,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "reference_generationcorrespondencerevision": {
+      "before": 159,
+      "after": 159,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "reference_importexecutionreceipt": {
+      "before": 3075,
+      "after": 3148,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 73
+    },
+    "reference_manufacturer": {
+      "before": 5,
+      "after": 5,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "reference_specificationassertion": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "reference_specificationcatalogue": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "reference_specificationcataloguecoverage": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "reference_specificationcataloguemembership": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "reference_specificationcataloguerevision": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "reference_specificationdefinition": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "reference_specificationdefinitiondependency": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "reference_specificationdefinitionrevision": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "reference_specificationevidencelink": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "reference_specificationpublicationreceipt": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "reference_specificationunitregistry": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "reference_transmissiondescription": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "reference_transmissiondescriptionrevision": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "reference_transmissionengineeringassertion": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "reference_transmissionoffering": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "reference_transmissionofferingrevision": {
+      "before": 0,
+      "after": 0,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    },
+    "reference_vehicledefinition": {
+      "before": 861,
+      "after": 934,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 73
+    },
+    "reference_vehiclemodel": {
+      "before": 6,
+      "after": 6,
+      "all_preexisting_rows_unchanged": true,
+      "new_rows": 0
+    }
+  },
+  "post_counts": {
+    "VehicleDefinitions": 934,
+    "audit_receipts": 3148,
+    "correspondences": 159
+  },
+  "unique_new_UUIDs_slugs_and_identities": 73,
+  "Matrix_receipt_reconciliation": "73previously_completed;complete;no import replay",
+  "SQLite_integrity": "ok",
+  "foreign_key_violations": 0,
+  "Django_check": "System check identified no issues (0 silenced).",
+  "backup": {
+    "path": "backups/review/MY2021_JL_canonical_preimport_20261109T171124979026Z.sqlite3",
+    "sha256": "sha256:21bd8db4505b96eff57696d02b5cdf51bdeadd0dae9bddb8aff11b54cc135a97",
+    "integrity": "ok",
+    "foreign_keys": "passed",
+    "all_non_session_table_match": true,
+    "session_state_independently_verified": true
+  },
+  "backup_unchanged": true,
+  "database_before_sha256": "sha256:058bbd44e0811c83bf67c916ae92e27b6a0b062c26be031876e9582190e01473",
+  "database_after_sha256": "sha256:1ba9df02cf7f3c74551c9304b3dd21e6234eea2b55e5abae3ee6ee6fd122b408",
+  "preexisting_handoff_files_preserved": 1723,
+  "RHD_CLASS075": "unchanged/excluded/deferred",
+  "no_other_imports_backfills_migrations_or_code_contract_changes": true
+}

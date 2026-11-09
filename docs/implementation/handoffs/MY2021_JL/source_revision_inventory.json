@@ -1,0 +1,808 @@
+[
+  {
+    "source_id": "MY2021-JL-2D-2020-06-04",
+    "body_style": "2-door",
+    "url": "https://www.jlwranglerforums.com/forum/attachments/2-door-6-4-20-pdf.328860/",
+    "archive_label": "2 Door 6-4-20.pdf",
+    "archive_url": "https://www.jlwranglerforums.com/forum/threads/2021-jeep-wrangler-jl-2-door-order-guide.52368/",
+    "status": "retained",
+    "retained_path": "docs/implementation/handoffs/MY2021_JL/source_pdfs/2-door-6-4-20-pdf.328860.pdf",
+    "sha256": "sha256:28c4ec6f22bbf3967b4c39cc51d845db61e532594b85c0b74532777cc6feb6dc",
+    "pages": 14,
+    "extraction_path": "docs/implementation/handoffs/MY2021_JL/evidence/2-door-6-4-20-pdf.328860.text.json",
+    "printed_dates": [
+      "06/04/2020"
+    ],
+    "model_codes": [
+      "JLJL72",
+      "JLJS72"
+    ],
+    "revision_date_printed": "2020-06-04",
+    "issue_date_printed": "2020-06-04",
+    "model_year": 2021,
+    "market": "US",
+    "authenticity": "Manufacturer-issued archived copy: US/MY2021 heading, dealer-use FCA footer, printed issue/reissue dates and model/QOP table consistency; no digital-signature claim.",
+    "acquisition": "Browser download control; copied unchanged from returned local download path.",
+    "positive_package_cells": 15,
+    "unique_configurations": 15
+  },
+  {
+    "source_id": "MY2021-JL-2D-2020-08-06",
+    "body_style": "2-door",
+    "url": "https://www.jlwranglerforums.com/forum/attachments/2-door-8-6-20-pdf.357054/",
+    "archive_label": "2 Door 8-6-20.pdf",
+    "archive_url": "https://www.jlwranglerforums.com/forum/threads/2021-jeep-wrangler-jl-2-door-order-guide.52368/",
+    "status": "retained",
+    "retained_path": "docs/implementation/handoffs/MY2021_JL/source_pdfs/2-door-8-6-20-pdf.357054.pdf",
+    "sha256": "sha256:6df8c719d000c190a960abdf02e93e99f2a19bf876ef738590097bd20a6f986b",
+    "pages": 16,
+    "extraction_path": "docs/implementation/handoffs/MY2021_JL/evidence/2-door-8-6-20-pdf.357054.text.json",
+    "printed_dates": [
+      "08/06/2020",
+      "06/04/2020"
+    ],
+    "model_codes": [
+      "JLJL72",
+      "JLJS72"
+    ],
+    "revision_date_printed": "2020-08-06",
+    "issue_date_printed": "2020-06-04",
+    "model_year": 2021,
+    "market": "US",
+    "authenticity": "Manufacturer-issued archived copy: US/MY2021 heading, dealer-use FCA footer, printed issue/reissue dates and model/QOP table consistency; no digital-signature claim.",
+    "acquisition": "Browser download control; copied unchanged from returned local download path.",
+    "positive_package_cells": 20,
+    "unique_configurations": 20
+  },
+  {
+    "source_id": "MY2021-JL-2D-2020-09-29",
+    "body_style": "2-door",
+    "url": "https://www.jlwranglerforums.com/forum/attachments/2-door-9-29-20-pdf.377304/",
+    "archive_label": "2 Door 9-29-20.pdf",
+    "archive_url": "https://www.jlwranglerforums.com/forum/threads/2021-jeep-wrangler-jl-2-door-order-guide.52368/",
+    "status": "retained",
+    "retained_path": "docs/implementation/handoffs/MY2021_JL/source_pdfs/2-door-9-29-20-pdf.377304.pdf",
+    "sha256": "sha256:d68c348b77739e16f8786aabfb560ebb23296045f40747718804374df8dd0b09",
+    "pages": 17,
+    "extraction_path": "docs/implementation/handoffs/MY2021_JL/evidence/2-door-9-29-20-pdf.377304.text.json",
+    "printed_dates": [
+      "09/29/2020",
+      "06/04/2020"
+    ],
+    "model_codes": [
+      "JLJL72",
+      "JLJS72"
+    ],
+    "revision_date_printed": "2020-09-29",
+    "issue_date_printed": "2020-06-04",
+    "model_year": 2021,
+    "market": "US",
+    "authenticity": "Manufacturer-issued archived copy: US/MY2021 heading, dealer-use FCA footer, printed issue/reissue dates and model/QOP table consistency; no digital-signature claim.",
+    "acquisition": "Browser download control; copied unchanged from returned local download path.",
+    "positive_package_cells": 23,
+    "unique_configurations": 23
+  },
+  {
+    "source_id": "MY2021-JL-2D-2020-10-14",
+    "body_style": "2-door",
+    "url": "https://www.jlwranglerforums.com/forum/attachments/2-door-10-14-20-pdf.382089/",
+    "archive_label": "2 Door 10-14-20.pdf",
+    "archive_url": "https://www.jlwranglerforums.com/forum/threads/2021-jeep-wrangler-jl-2-door-order-guide.52368/",
+    "status": "retained",
+    "retained_path": "docs/implementation/handoffs/MY2021_JL/source_pdfs/2-door-10-14-20-pdf.382089.pdf",
+    "sha256": "sha256:20e40c434de57f6372281f52ae2a7450c22ff03358e83037355be69b9836d167",
+    "pages": 17,
+    "extraction_path": "docs/implementation/handoffs/MY2021_JL/evidence/2-door-10-14-20-pdf.382089.text.json",
+    "printed_dates": [
+      "10/14/2020",
+      "06/04/2020"
+    ],
+    "model_codes": [
+      "JLJL72",
+      "JLJS72"
+    ],
+    "revision_date_printed": "2020-10-14",
+    "issue_date_printed": "2020-06-04",
+    "model_year": 2021,
+    "market": "US",
+    "authenticity": "Manufacturer-issued archived copy: US/MY2021 heading, dealer-use FCA footer, printed issue/reissue dates and model/QOP table consistency; no digital-signature claim.",
+    "acquisition": "Browser download control; copied unchanged from returned local download path.",
+    "positive_package_cells": 23,
+    "unique_configurations": 23
+  },
+  {
+    "source_id": "MY2021-JL-2D-2020-12-04",
+    "body_style": "2-door",
+    "url": "https://www.jlwranglerforums.com/forum/attachments/2-door-12-4-20-pdf.401773/",
+    "archive_label": "2 Door 12-4-20.pdf",
+    "archive_url": "https://www.jlwranglerforums.com/forum/threads/2021-jeep-wrangler-jl-2-door-order-guide.52368/",
+    "status": "retained",
+    "retained_path": "docs/implementation/handoffs/MY2021_JL/source_pdfs/2-door-12-4-20-pdf.401773.pdf",
+    "sha256": "sha256:c152ad76ec8fcf65a962f443e83afdbc846b9ffd237ac82b10536810f87aca50",
+    "pages": 17,
+    "extraction_path": "docs/implementation/handoffs/MY2021_JL/evidence/2-door-12-4-20-pdf.401773.text.json",
+    "printed_dates": [
+      "12/04/2020",
+      "06/04/2020"
+    ],
+    "model_codes": [
+      "JLJL72",
+      "JLJS72"
+    ],
+    "revision_date_printed": "2020-12-04",
+    "issue_date_printed": "2020-06-04",
+    "model_year": 2021,
+    "market": "US",
+    "authenticity": "Manufacturer-issued archived copy: US/MY2021 heading, dealer-use FCA footer, printed issue/reissue dates and model/QOP table consistency; no digital-signature claim.",
+    "acquisition": "Browser download control; copied unchanged from returned local download path.",
+    "positive_package_cells": 23,
+    "unique_configurations": 23
+  },
+  {
+    "source_id": "MY2021-JL-2D-2021-01-01",
+    "body_style": "2-door",
+    "url": "https://www.jlwranglerforums.com/forum/attachments/2-door-1-1-21-pdf.412193/",
+    "archive_label": "2 Door 1-1-21.pdf",
+    "archive_url": "https://www.jlwranglerforums.com/forum/threads/2021-jeep-wrangler-jl-2-door-order-guide.52368/",
+    "status": "retained",
+    "retained_path": "docs/implementation/handoffs/MY2021_JL/source_pdfs/2-door-1-1-21-pdf.412193.pdf",
+    "sha256": "sha256:8541303bca3dd5bdd0df5158c36ee9a25c4a41a464e530c2f964dc930d9a7e1e",
+    "pages": 17,
+    "extraction_path": "docs/implementation/handoffs/MY2021_JL/evidence/2-door-1-1-21-pdf.412193.text.json",
+    "printed_dates": [
+      "01/01/2021",
+      "06/04/2020"
+    ],
+    "model_codes": [
+      "JLJL72",
+      "JLJS72"
+    ],
+    "revision_date_printed": "2021-01-01",
+    "issue_date_printed": "2020-06-04",
+    "model_year": 2021,
+    "market": "US",
+    "authenticity": "Manufacturer-issued archived copy: US/MY2021 heading, dealer-use FCA footer, printed issue/reissue dates and model/QOP table consistency; no digital-signature claim.",
+    "acquisition": "Browser download control; copied unchanged from returned local download path.",
+    "positive_package_cells": 23,
+    "unique_configurations": 23
+  },
+  {
+    "source_id": "MY2021-JL-2D-2021-02-08",
+    "body_style": "2-door",
+    "url": "https://www.jlwranglerforums.com/forum/attachments/2-door-2-8-21-pdf.423851/",
+    "archive_label": "2 Door 2-8-21.pdf",
+    "archive_url": "https://www.jlwranglerforums.com/forum/threads/2021-jeep-wrangler-jl-2-door-order-guide.52368/",
+    "status": "retained",
+    "retained_path": "docs/implementation/handoffs/MY2021_JL/source_pdfs/2-door-2-8-21-pdf.423851.pdf",
+    "sha256": "sha256:f02eadc8e31d8ed8f8d8bf48b04d39aee033f89bde9b207f6961cf3b918aa1ec",
+    "pages": 17,
+    "extraction_path": "docs/implementation/handoffs/MY2021_JL/evidence/2-door-2-8-21-pdf.423851.text.json",
+    "printed_dates": [
+      "02/08/2021",
+      "06/04/2020"
+    ],
+    "model_codes": [
+      "JLJL72",
+      "JLJS72"
+    ],
+    "revision_date_printed": "2021-02-08",
+    "issue_date_printed": "2020-06-04",
+    "model_year": 2021,
+    "market": "US",
+    "authenticity": "Manufacturer-issued archived copy: US/MY2021 heading, dealer-use FCA footer, printed issue/reissue dates and model/QOP table consistency; no digital-signature claim.",
+    "acquisition": "Browser download control; copied unchanged from returned local download path.",
+    "positive_package_cells": 23,
+    "unique_configurations": 23
+  },
+  {
+    "source_id": "MY2021-JL-2D-2021-03-05",
+    "body_style": "2-door",
+    "url": "https://www.jlwranglerforums.com/forum/attachments/2-door-3-5-21-pdf.434803/",
+    "archive_label": "2 Door 3-5-21.pdf",
+    "archive_url": "https://www.jlwranglerforums.com/forum/threads/2021-jeep-wrangler-jl-2-door-order-guide.52368/",
+    "status": "retained",
+    "retained_path": "docs/implementation/handoffs/MY2021_JL/source_pdfs/2-door-3-5-21-pdf.434803.pdf",
+    "sha256": "sha256:c9e29d461fe1c13fa0e2c7fb6b6920b8104a049e0ab57080931bf3111ef81744",
+    "pages": 17,
+    "extraction_path": "docs/implementation/handoffs/MY2021_JL/evidence/2-door-3-5-21-pdf.434803.text.json",
+    "printed_dates": [
+      "03/05/2021",
+      "06/04/2020"
+    ],
+    "model_codes": [
+      "JLJL72",
+      "JLJS72"
+    ],
+    "revision_date_printed": "2021-03-05",
+    "issue_date_printed": "2020-06-04",
+    "model_year": 2021,
+    "market": "US",
+    "authenticity": "Manufacturer-issued archived copy: US/MY2021 heading, dealer-use FCA footer, printed issue/reissue dates and model/QOP table consistency; no digital-signature claim.",
+    "acquisition": "Browser download control; copied unchanged from returned local download path.",
+    "positive_package_cells": 23,
+    "unique_configurations": 23
+  },
+  {
+    "source_id": "MY2021-JL-2D-2021-04-14",
+    "body_style": "2-door",
+    "url": "https://www.jlwranglerforums.com/forum/attachments/2-door-4-14-21-pdf.447427/",
+    "archive_label": "2 Door 4-14-21.pdf",
+    "archive_url": "https://www.jlwranglerforums.com/forum/threads/2021-jeep-wrangler-jl-2-door-order-guide.52368/",
+    "status": "retained",
+    "retained_path": "docs/implementation/handoffs/MY2021_JL/source_pdfs/2-door-4-14-21-pdf.447427.pdf",
+    "sha256": "sha256:f6a362d7b4633f81036159fbed36c26f7cc9645f791ed2dd954027c8c9aa520b",
+    "pages": 17,
+    "extraction_path": "docs/implementation/handoffs/MY2021_JL/evidence/2-door-4-14-21-pdf.447427.text.json",
+    "printed_dates": [
+      "04/14/2021",
+      "06/04/2020"
+    ],
+    "model_codes": [
+      "JLJL72",
+      "JLJS72"
+    ],
+    "revision_date_printed": "2021-04-14",
+    "issue_date_printed": "2020-06-04",
+    "model_year": 2021,
+    "market": "US",
+    "authenticity": "Manufacturer-issued archived copy: US/MY2021 heading, dealer-use FCA footer, printed issue/reissue dates and model/QOP table consistency; no digital-signature claim.",
+    "acquisition": "Browser download control; copied unchanged from returned local download path.",
+    "positive_package_cells": 23,
+    "unique_configurations": 23
+  },
+  {
+    "source_id": "MY2021-JL-2D-2021-05-14",
+    "body_style": "2-door",
+    "url": "https://www.jlwranglerforums.com/forum/attachments/2-door-5-14-21-pdf.461291/",
+    "archive_label": "2 Door 5-14-21.pdf",
+    "archive_url": "https://www.jlwranglerforums.com/forum/threads/2021-jeep-wrangler-jl-2-door-order-guide.52368/",
+    "status": "retained",
+    "retained_path": "docs/implementation/handoffs/MY2021_JL/source_pdfs/2-door-5-14-21-pdf.461291.pdf",
+    "sha256": "sha256:727afb687abb9a9f9a6982a5fcc68ad63214512b9ba38b6d0c38f98a9d4b47cc",
+    "pages": 17,
+    "extraction_path": "docs/implementation/handoffs/MY2021_JL/evidence/2-door-5-14-21-pdf.461291.text.json",
+    "printed_dates": [
+      "05/14/2021",
+      "06/04/2020"
+    ],
+    "model_codes": [
+      "JLJL72",
+      "JLJS72"
+    ],
+    "revision_date_printed": "2021-05-14",
+    "issue_date_printed": "2020-06-04",
+    "model_year": 2021,
+    "market": "US",
+    "authenticity": "Manufacturer-issued archived copy: US/MY2021 heading, dealer-use FCA footer, printed issue/reissue dates and model/QOP table consistency; no digital-signature claim.",
+    "acquisition": "Browser download control; copied unchanged from returned local download path.",
+    "positive_package_cells": 20,
+    "unique_configurations": 20
+  },
+  {
+    "source_id": "MY2021-JL-2D-2021-06-09",
+    "body_style": "2-door",
+    "url": "https://www.jlwranglerforums.com/forum/attachments/2-door-6-9-21-pdf.472445/",
+    "archive_label": "2 Door 6-9-21.pdf",
+    "archive_url": "https://www.jlwranglerforums.com/forum/threads/2021-jeep-wrangler-jl-2-door-order-guide.52368/",
+    "status": "retained",
+    "retained_path": "docs/implementation/handoffs/MY2021_JL/source_pdfs/2-door-6-9-21-pdf.472445.pdf",
+    "sha256": "sha256:cb54c383c74a2a4558184e19c97a578390f36f7e950b9ad250714348a833ff9d",
+    "pages": 16,
+    "extraction_path": "docs/implementation/handoffs/MY2021_JL/evidence/2-door-6-9-21-pdf.472445.text.json",
+    "printed_dates": [
+      "06/09/2021",
+      "06/04/2020"
+    ],
+    "model_codes": [
+      "JLJL72",
+      "JLJS72"
+    ],
+    "revision_date_printed": "2021-06-09",
+    "issue_date_printed": "2020-06-04",
+    "model_year": 2021,
+    "market": "US",
+    "authenticity": "Manufacturer-issued archived copy: US/MY2021 heading, dealer-use FCA footer, printed issue/reissue dates and model/QOP table consistency; no digital-signature claim.",
+    "acquisition": "Browser download control; copied unchanged from returned local download path.",
+    "positive_package_cells": 15,
+    "unique_configurations": 15
+  },
+  {
+    "source_id": "MY2021-JL-2D-2021-07-06",
+    "body_style": "2-door",
+    "url": "https://www.jlwranglerforums.com/forum/attachments/2-door-7-6-21-pdf.484797/",
+    "archive_label": "2 Door 7-6-21.pdf",
+    "archive_url": "https://www.jlwranglerforums.com/forum/threads/2021-jeep-wrangler-jl-2-door-order-guide.52368/",
+    "status": "retained",
+    "retained_path": "docs/implementation/handoffs/MY2021_JL/source_pdfs/2-door-7-6-21-pdf.484797.pdf",
+    "sha256": "sha256:2940c4afec74e1e45adbb73cb5ee9042adfddd56ac1d18c7e51dc26bf9dd8f5c",
+    "pages": 16,
+    "extraction_path": "docs/implementation/handoffs/MY2021_JL/evidence/2-door-7-6-21-pdf.484797.text.json",
+    "printed_dates": [
+      "07/06/2021",
+      "06/04/2020"
+    ],
+    "model_codes": [
+      "JLJL72",
+      "JLJS72"
+    ],
+    "revision_date_printed": "2021-07-06",
+    "issue_date_printed": "2020-06-04",
+    "model_year": 2021,
+    "market": "US",
+    "authenticity": "Manufacturer-issued archived copy: US/MY2021 heading, dealer-use FCA footer, printed issue/reissue dates and model/QOP table consistency; no digital-signature claim.",
+    "acquisition": "Browser download control; copied unchanged from returned local download path.",
+    "positive_package_cells": 15,
+    "unique_configurations": 15
+  },
+  {
+    "source_id": "MY2021-JL-2D-2021-08-06",
+    "body_style": "2-door",
+    "url": "https://www.jlwranglerforums.com/forum/attachments/2-door-8-6-21-pdf.497505/",
+    "archive_label": "2 Door 8-6-21.pdf",
+    "archive_url": "https://www.jlwranglerforums.com/forum/threads/2021-jeep-wrangler-jl-2-door-order-guide.52368/",
+    "status": "retained",
+    "retained_path": "docs/implementation/handoffs/MY2021_JL/source_pdfs/2-door-8-6-21-pdf.497505.pdf",
+    "sha256": "sha256:55b46dee107699fd07ded68025edf48598fe336320537bdf90ca45f8ca82514f",
+    "pages": 16,
+    "extraction_path": "docs/implementation/handoffs/MY2021_JL/evidence/2-door-8-6-21-pdf.497505.text.json",
+    "printed_dates": [
+      "08/06/2021",
+      "06/04/2020"
+    ],
+    "model_codes": [
+      "JLJL72",
+      "JLJS72"
+    ],
+    "revision_date_printed": "2021-08-06",
+    "issue_date_printed": "2020-06-04",
+    "model_year": 2021,
+    "market": "US",
+    "authenticity": "Manufacturer-issued archived copy: US/MY2021 heading, dealer-use FCA footer, printed issue/reissue dates and model/QOP table consistency; no digital-signature claim.",
+    "acquisition": "Browser download control; copied unchanged from returned local download path.",
+    "positive_package_cells": 15,
+    "unique_configurations": 15
+  },
+  {
+    "source_id": "MY2021-JL-4D-2020-06-04",
+    "body_style": "4-door",
+    "url": "https://www.jlwranglerforums.com/forum/attachments/4-door-6-4-20-pdf.328859/",
+    "archive_label": "4 Door 6-4-20.pdf",
+    "archive_url": "https://www.jlwranglerforums.com/forum/threads/latest-2021-jeep-wrangler-jl-and-jlu-order-guides.52367/",
+    "status": "retained",
+    "retained_path": "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-6-4-20-pdf.328859.pdf",
+    "sha256": "sha256:6bab917f60f3b646013ce6327e6e759d5b9db75bd7e70927b472dfcdcd70481c",
+    "pages": 22,
+    "extraction_path": "docs/implementation/handoffs/MY2021_JL/evidence/4-door-6-4-20-pdf.328859.text.json",
+    "printed_dates": [
+      "06/04/2020"
+    ],
+    "model_codes": [
+      "JLJL74",
+      "JLJP74",
+      "JLJS74"
+    ],
+    "revision_date_printed": "2020-06-04",
+    "issue_date_printed": "2020-06-04",
+    "model_year": 2021,
+    "market": "US",
+    "authenticity": "Manufacturer-issued archived copy: US/MY2021 heading, dealer-use FCA footer, printed issue/reissue dates and model/QOP table consistency; no digital-signature claim.",
+    "acquisition": "Browser download control; copied unchanged from returned local download path.",
+    "positive_package_cells": 35,
+    "unique_configurations": 35
+  },
+  {
+    "source_id": "MY2021-JL-4D-2020-08-06",
+    "body_style": "4-door",
+    "url": "https://www.jlwranglerforums.com/forum/attachments/4-door-8-6-20-pdf.357053/",
+    "archive_label": "4 Door 8-6-20.pdf",
+    "archive_url": "https://www.jlwranglerforums.com/forum/threads/latest-2021-jeep-wrangler-jl-and-jlu-order-guides.52367/",
+    "status": "retained",
+    "retained_path": "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-8-6-20-pdf.357053.pdf",
+    "sha256": "sha256:3e051bcbccaec39d19e12640bba3438b1b3fc5e244f5f90535ba870c39bdf8ab",
+    "pages": 23,
+    "extraction_path": "docs/implementation/handoffs/MY2021_JL/evidence/4-door-8-6-20-pdf.357053.text.json",
+    "printed_dates": [
+      "08/06/2020",
+      "06/04/2020"
+    ],
+    "model_codes": [
+      "JLJL74",
+      "JLJP74",
+      "JLJS74"
+    ],
+    "revision_date_printed": "2020-08-06",
+    "issue_date_printed": "2020-06-04",
+    "model_year": 2021,
+    "market": "US",
+    "authenticity": "Manufacturer-issued archived copy: US/MY2021 heading, dealer-use FCA footer, printed issue/reissue dates and model/QOP table consistency; no digital-signature claim.",
+    "acquisition": "Browser download control; copied unchanged from returned local download path.",
+    "positive_package_cells": 42,
+    "unique_configurations": 42
+  },
+  {
+    "source_id": "MY2021-JL-4D-2020-09-29",
+    "body_style": "4-door",
+    "url": "https://www.jlwranglerforums.com/forum/attachments/4-door-9-29-20-pdf.377305/",
+    "archive_label": "4 Door 9-29-20.pdf",
+    "archive_url": "https://www.jlwranglerforums.com/forum/threads/latest-2021-jeep-wrangler-jl-and-jlu-order-guides.52367/",
+    "status": "retained",
+    "retained_path": "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-9-29-20-pdf.377305.pdf",
+    "sha256": "sha256:a5f56eb7e8099f78b5de8727acdae7176fa468fec556be174d241ae7ec26105a",
+    "pages": 24,
+    "extraction_path": "docs/implementation/handoffs/MY2021_JL/evidence/4-door-9-29-20-pdf.377305.text.json",
+    "printed_dates": [
+      "09/29/2020",
+      "06/04/2020"
+    ],
+    "model_codes": [
+      "JLJL74",
+      "JLJP74",
+      "JLJS74"
+    ],
+    "revision_date_printed": "2020-09-29",
+    "issue_date_printed": "2020-06-04",
+    "model_year": 2021,
+    "market": "US",
+    "authenticity": "Manufacturer-issued archived copy: US/MY2021 heading, dealer-use FCA footer, printed issue/reissue dates and model/QOP table consistency; no digital-signature claim.",
+    "acquisition": "Browser download control; copied unchanged from returned local download path.",
+    "positive_package_cells": 46,
+    "unique_configurations": 46
+  },
+  {
+    "source_id": "MY2021-JL-4D-2020-10-14",
+    "body_style": "4-door",
+    "url": "https://www.jlwranglerforums.com/forum/attachments/4-door-10-14-20-pdf.382079/",
+    "archive_label": "4 Door 10-14-20.pdf",
+    "archive_url": "https://www.jlwranglerforums.com/forum/threads/latest-2021-jeep-wrangler-jl-and-jlu-order-guides.52367/",
+    "status": "retained",
+    "retained_path": "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-10-14-20-pdf.382079.pdf",
+    "sha256": "sha256:23b0edc5f7b5c7a59ca538a84a1b46c9aebd93c113e54e57ada8763dc723f2ed",
+    "pages": 26,
+    "extraction_path": "docs/implementation/handoffs/MY2021_JL/evidence/4-door-10-14-20-pdf.382079.text.json",
+    "printed_dates": [
+      "10/14/2020",
+      "06/04/2020"
+    ],
+    "model_codes": [
+      "JLJL74",
+      "JLJP74",
+      "JLJS74",
+      "JLUL74"
+    ],
+    "revision_date_printed": "2020-10-14",
+    "issue_date_printed": "2020-06-04",
+    "model_year": 2021,
+    "market": "US",
+    "authenticity": "Manufacturer-issued archived copy: US/MY2021 heading, dealer-use FCA footer, printed issue/reissue dates and model/QOP table consistency; no digital-signature claim.",
+    "acquisition": "Browser download control; copied unchanged from returned local download path.",
+    "positive_package_cells": 47,
+    "unique_configurations": 47
+  },
+  {
+    "source_id": "MY2021-JL-4D-2020-10-30",
+    "body_style": "4-door",
+    "url": "https://www.jlwranglerforums.com/forum/attachments/4-door-10-30-20-pdf.388525/",
+    "archive_label": "4 Door 10-30-20.pdf",
+    "archive_url": "https://www.jlwranglerforums.com/forum/threads/latest-2021-jeep-wrangler-jl-and-jlu-order-guides.52367/",
+    "status": "retained",
+    "retained_path": "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-10-30-20-pdf.388525.pdf",
+    "sha256": "sha256:c9c3b3931316a6a39e94a5c2f8893ae81e55a877542bfed5f15dbc259bc73489",
+    "pages": 26,
+    "extraction_path": "docs/implementation/handoffs/MY2021_JL/evidence/4-door-10-30-20-pdf.388525.text.json",
+    "printed_dates": [
+      "10/30/2020",
+      "06/04/2020"
+    ],
+    "model_codes": [
+      "JLJL74",
+      "JLJP74",
+      "JLJS74",
+      "JLUL74"
+    ],
+    "revision_date_printed": "2020-10-30",
+    "issue_date_printed": "2020-06-04",
+    "model_year": 2021,
+    "market": "US",
+    "authenticity": "Manufacturer-issued archived copy: US/MY2021 heading, dealer-use FCA footer, printed issue/reissue dates and model/QOP table consistency; no digital-signature claim.",
+    "acquisition": "Browser download control; copied unchanged from returned local download path.",
+    "positive_package_cells": 47,
+    "unique_configurations": 47
+  },
+  {
+    "source_id": "MY2021-JL-4D-2020-12-04",
+    "body_style": "4-door",
+    "url": "https://www.jlwranglerforums.com/forum/attachments/4-door-12-4-20-pdf.401774/",
+    "archive_label": "4 Door 12-4-20.pdf",
+    "archive_url": "https://www.jlwranglerforums.com/forum/threads/latest-2021-jeep-wrangler-jl-and-jlu-order-guides.52367/",
+    "status": "retained",
+    "retained_path": "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-12-4-20-pdf.401774.pdf",
+    "sha256": "sha256:4dad5bddad4fbd0c0e2bab5095734c9f740e9c0e53d67de64df30b41576ada5a",
+    "pages": 34,
+    "extraction_path": "docs/implementation/handoffs/MY2021_JL/evidence/4-door-12-4-20-pdf.401774.text.json",
+    "printed_dates": [
+      "12/04/2020",
+      "06/04/2020"
+    ],
+    "model_codes": [
+      "JLJL74",
+      "JLJP74",
+      "JLJS74",
+      "JLJX74",
+      "JLUL74",
+      "JLXP74",
+      "JLXS74"
+    ],
+    "revision_date_printed": "2020-12-04",
+    "issue_date_printed": "2020-06-04",
+    "model_year": 2021,
+    "market": "US",
+    "authenticity": "Manufacturer-issued archived copy: US/MY2021 heading, dealer-use FCA footer, printed issue/reissue dates and model/QOP table consistency; no digital-signature claim.",
+    "acquisition": "Browser download control; copied unchanged from returned local download path.",
+    "positive_package_cells": 51,
+    "unique_configurations": 51
+  },
+  {
+    "source_id": "MY2021-JL-4D-2021-01-01",
+    "body_style": "4-door",
+    "url": "https://www.jlwranglerforums.com/forum/attachments/4-door-1-1-21-pdf.412194/",
+    "archive_label": "4 Door 1-1-21.pdf",
+    "archive_url": "https://www.jlwranglerforums.com/forum/threads/latest-2021-jeep-wrangler-jl-and-jlu-order-guides.52367/",
+    "status": "retained",
+    "retained_path": "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-1-1-21-pdf.412194.pdf",
+    "sha256": "sha256:d0d2e4d1cf0e18f4ca5be3092d0625a2810fae009afefd97a603149ce53ab568",
+    "pages": 35,
+    "extraction_path": "docs/implementation/handoffs/MY2021_JL/evidence/4-door-1-1-21-pdf.412194.text.json",
+    "printed_dates": [
+      "01/01/2021",
+      "06/04/2020"
+    ],
+    "model_codes": [
+      "JLJL74",
+      "JLJP74",
+      "JLJS74",
+      "JLJX74",
+      "JLUL74",
+      "JLXP74",
+      "JLXS74"
+    ],
+    "revision_date_printed": "2021-01-01",
+    "issue_date_printed": "2020-06-04",
+    "model_year": 2021,
+    "market": "US",
+    "authenticity": "Manufacturer-issued archived copy: US/MY2021 heading, dealer-use FCA footer, printed issue/reissue dates and model/QOP table consistency; no digital-signature claim.",
+    "acquisition": "Browser download control; copied unchanged from returned local download path.",
+    "positive_package_cells": 51,
+    "unique_configurations": 51
+  },
+  {
+    "source_id": "MY2021-JL-4D-2021-02-09",
+    "body_style": "4-door",
+    "url": "https://www.jlwranglerforums.com/forum/attachments/4-door-2-9-21-pdf.423850/",
+    "archive_label": "4 Door 2-9-21.pdf",
+    "archive_url": "https://www.jlwranglerforums.com/forum/threads/latest-2021-jeep-wrangler-jl-and-jlu-order-guides.52367/",
+    "status": "retained",
+    "retained_path": "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-2-9-21-pdf.423850.pdf",
+    "sha256": "sha256:2fa3c481460efa71f1036638c3f0929c2eca3eb91bd97a0eb87c0bbd3cfdcc9d",
+    "pages": 36,
+    "extraction_path": "docs/implementation/handoffs/MY2021_JL/evidence/4-door-2-9-21-pdf.423850.text.json",
+    "printed_dates": [
+      "02/09/2021",
+      "06/04/2020"
+    ],
+    "model_codes": [
+      "JLJL74",
+      "JLJP74",
+      "JLJS74",
+      "JLJX74",
+      "JLUL74",
+      "JLXP74",
+      "JLXS74"
+    ],
+    "revision_date_printed": "2021-02-09",
+    "issue_date_printed": "2020-06-04",
+    "model_year": 2021,
+    "market": "US",
+    "authenticity": "Manufacturer-issued archived copy: US/MY2021 heading, dealer-use FCA footer, printed issue/reissue dates and model/QOP table consistency; no digital-signature claim.",
+    "acquisition": "Browser download control; copied unchanged from returned local download path.",
+    "positive_package_cells": 51,
+    "unique_configurations": 51
+  },
+  {
+    "source_id": "MY2021-JL-4D-2021-03-05",
+    "body_style": "4-door",
+    "url": "https://www.jlwranglerforums.com/forum/attachments/4-door-3-5-21-pdf.434799/",
+    "archive_label": "4 Door 3-5-21.pdf",
+    "archive_url": "https://www.jlwranglerforums.com/forum/threads/latest-2021-jeep-wrangler-jl-and-jlu-order-guides.52367/",
+    "status": "retained",
+    "retained_path": "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-3-5-21-pdf.434799.pdf",
+    "sha256": "sha256:37cd4e33d30f54bb7d46940533a691312c5b8b4da22faee583a10fe5c9feaebb",
+    "pages": 36,
+    "extraction_path": "docs/implementation/handoffs/MY2021_JL/evidence/4-door-3-5-21-pdf.434799.text.json",
+    "printed_dates": [
+      "03/05/2021",
+      "06/04/2020"
+    ],
+    "model_codes": [
+      "JLJL74",
+      "JLJP74",
+      "JLJS74",
+      "JLJX74",
+      "JLUL74",
+      "JLXP74",
+      "JLXS74"
+    ],
+    "revision_date_printed": "2021-03-05",
+    "issue_date_printed": "2020-06-04",
+    "model_year": 2021,
+    "market": "US",
+    "authenticity": "Manufacturer-issued archived copy: US/MY2021 heading, dealer-use FCA footer, printed issue/reissue dates and model/QOP table consistency; no digital-signature claim.",
+    "acquisition": "Browser download control; copied unchanged from returned local download path.",
+    "positive_package_cells": 51,
+    "unique_configurations": 51
+  },
+  {
+    "source_id": "MY2021-JL-4D-2021-04-14",
+    "body_style": "4-door",
+    "url": "https://www.jlwranglerforums.com/forum/attachments/4-door-4-14-21-pdf.447429/",
+    "archive_label": "4 Door 4-14-21.pdf",
+    "archive_url": "https://www.jlwranglerforums.com/forum/threads/latest-2021-jeep-wrangler-jl-and-jlu-order-guides.52367/",
+    "status": "retained",
+    "retained_path": "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-4-14-21-pdf.447429.pdf",
+    "sha256": "sha256:d748a277a6cd23a6a7fbb744fa0b24d9c980b21bef9ce4a3fb993c44c9093179",
+    "pages": 37,
+    "extraction_path": "docs/implementation/handoffs/MY2021_JL/evidence/4-door-4-14-21-pdf.447429.text.json",
+    "printed_dates": [
+      "04/14/2021",
+      "06/04/2020"
+    ],
+    "model_codes": [
+      "JLJL74",
+      "JLJP74",
+      "JLJS74",
+      "JLJX74",
+      "JLUL74",
+      "JLXP74",
+      "JLXS74"
+    ],
+    "revision_date_printed": "2021-04-14",
+    "issue_date_printed": "2020-06-04",
+    "model_year": 2021,
+    "market": "US",
+    "authenticity": "Manufacturer-issued archived copy: US/MY2021 heading, dealer-use FCA footer, printed issue/reissue dates and model/QOP table consistency; no digital-signature claim.",
+    "acquisition": "Browser download control; copied unchanged from returned local download path.",
+    "positive_package_cells": 51,
+    "unique_configurations": 51
+  },
+  {
+    "source_id": "MY2021-JL-4D-2021-05-14",
+    "body_style": "4-door",
+    "url": "https://www.jlwranglerforums.com/forum/attachments/4-door-5-14-21-pdf.461295/",
+    "archive_label": "4 Door 5-14-21.pdf",
+    "archive_url": "https://www.jlwranglerforums.com/forum/threads/latest-2021-jeep-wrangler-jl-and-jlu-order-guides.52367/",
+    "status": "retained",
+    "retained_path": "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-5-14-21-pdf.461295.pdf",
+    "sha256": "sha256:086c2e9728515750fbb0f31a425c831b448bd99e02831cf3365452694594e2d1",
+    "pages": 38,
+    "extraction_path": "docs/implementation/handoffs/MY2021_JL/evidence/4-door-5-14-21-pdf.461295.text.json",
+    "printed_dates": [
+      "05/14/2021",
+      "06/04/2020"
+    ],
+    "model_codes": [
+      "JLJL74",
+      "JLJP74",
+      "JLJS74",
+      "JLJX74",
+      "JLUL74",
+      "JLXP74",
+      "JLXS74"
+    ],
+    "revision_date_printed": "2021-05-14",
+    "issue_date_printed": "2020-06-04",
+    "model_year": 2021,
+    "market": "US",
+    "authenticity": "Manufacturer-issued archived copy: US/MY2021 heading, dealer-use FCA footer, printed issue/reissue dates and model/QOP table consistency; no digital-signature claim.",
+    "acquisition": "Browser download control; copied unchanged from returned local download path.",
+    "positive_package_cells": 44,
+    "unique_configurations": 39
+  },
+  {
+    "source_id": "MY2021-JL-4D-2021-06-09",
+    "body_style": "4-door",
+    "url": "https://www.jlwranglerforums.com/forum/attachments/4-door-6-9-21-pdf.472444/",
+    "archive_label": "4 Door 6-9-21.pdf",
+    "archive_url": "https://www.jlwranglerforums.com/forum/threads/latest-2021-jeep-wrangler-jl-and-jlu-order-guides.52367/",
+    "status": "retained",
+    "retained_path": "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-6-9-21-pdf.472444.pdf",
+    "sha256": "sha256:c531aa9316c46520de25eebd81c9a27d0a547651f10eea467f74a95c71e246ae",
+    "pages": 39,
+    "extraction_path": "docs/implementation/handoffs/MY2021_JL/evidence/4-door-6-9-21-pdf.472444.text.json",
+    "printed_dates": [
+      "06/09/2021",
+      "06/04/2020"
+    ],
+    "model_codes": [
+      "JLJL74",
+      "JLJP74",
+      "JLJS74",
+      "JLJX74",
+      "JLUL74",
+      "JLXP74",
+      "JLXS74"
+    ],
+    "revision_date_printed": "2021-06-09",
+    "issue_date_printed": "2020-06-04",
+    "model_year": 2021,
+    "market": "US",
+    "authenticity": "Manufacturer-issued archived copy: US/MY2021 heading, dealer-use FCA footer, printed issue/reissue dates and model/QOP table consistency; no digital-signature claim.",
+    "acquisition": "Browser download control; copied unchanged from returned local download path.",
+    "positive_package_cells": 41,
+    "unique_configurations": 35
+  },
+  {
+    "source_id": "MY2021-JL-4D-2021-07-06",
+    "body_style": "4-door",
+    "url": "https://www.jlwranglerforums.com/forum/attachments/4-door-7-6-21-pdf.484796/",
+    "archive_label": "4 Door 7-6-21.pdf",
+    "archive_url": "https://www.jlwranglerforums.com/forum/threads/latest-2021-jeep-wrangler-jl-and-jlu-order-guides.52367/",
+    "status": "retained",
+    "retained_path": "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-7-6-21-pdf.484796.pdf",
+    "sha256": "sha256:341f1b6f4a5ac774a082bf07a6df0f7c9ebc018272b7da3ff880b67844c93271",
+    "pages": 38,
+    "extraction_path": "docs/implementation/handoffs/MY2021_JL/evidence/4-door-7-6-21-pdf.484796.text.json",
+    "printed_dates": [
+      "07/06/2021",
+      "06/04/2020"
+    ],
+    "model_codes": [
+      "JLJL74",
+      "JLJP74",
+      "JLJS74",
+      "JLJX74",
+      "JLUL74",
+      "JLXP74",
+      "JLXS74"
+    ],
+    "revision_date_printed": "2021-07-06",
+    "issue_date_printed": "2020-06-04",
+    "model_year": 2021,
+    "market": "US",
+    "authenticity": "Manufacturer-issued archived copy: US/MY2021 heading, dealer-use FCA footer, printed issue/reissue dates and model/QOP table consistency; no digital-signature claim.",
+    "acquisition": "Browser download control; copied unchanged from returned local download path.",
+    "positive_package_cells": 41,
+    "unique_configurations": 35
+  },
+  {
+    "source_id": "MY2021-JL-4D-2021-08-06",
+    "body_style": "4-door",
+    "url": "https://www.jlwranglerforums.com/forum/attachments/4-door-8-6-21-pdf.497498/",
+    "archive_label": "4 Door 8-6-21.pdf",
+    "archive_url": "https://www.jlwranglerforums.com/forum/threads/latest-2021-jeep-wrangler-jl-and-jlu-order-guides.52367/",
+    "status": "retained",
+    "retained_path": "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-8-6-21-pdf.497498.pdf",
+    "sha256": "sha256:e6c2aa78fb6c34608dbb28dc4084cf909c444802434fcf32af61eb916a1168c4",
+    "pages": 38,
+    "extraction_path": "docs/implementation/handoffs/MY2021_JL/evidence/4-door-8-6-21-pdf.497498.text.json",
+    "printed_dates": [
+      "08/06/2021",
+      "06/04/2020"
+    ],
+    "model_codes": [
+      "JLJL74",
+      "JLJP74",
+      "JLJS74",
+      "JLJX74",
+      "JLUL74",
+      "JLXP74",
+      "JLXS74"
+    ],
+    "revision_date_printed": "2021-08-06",
+    "issue_date_printed": "2020-06-04",
+    "model_year": 2021,
+    "market": "US",
+    "authenticity": "Manufacturer-issued archived copy: US/MY2021 heading, dealer-use FCA footer, printed issue/reissue dates and model/QOP table consistency; no digital-signature claim.",
+    "acquisition": "Browser download control; copied unchanged from returned local download path.",
+    "positive_package_cells": 41,
+    "unique_configurations": 35
+  }
+]

@@ -1,0 +1,40 @@
+{
+  "envelope": {
+    "artifact_type": "rigarchive.source_assertion_set.v1",
+    "created_at": "2026-11-09T13:43:25.638901+00:00",
+    "generator": "MY2021_bounded_construction",
+    "schema_version": "1.1.0"
+  },
+  "provenance": {
+    "acquisition_method": "retained_local_evidence",
+    "extraction_provenance": {
+      "extraction_mode": "manually_verified_transcription",
+      "extractor_id": "retained_MY2021_evidence_transcription",
+      "extractor_version": "1.0.0",
+      "raw_artifact_hash": "sha256:cb54c383c74a2a4558184e19c97a578390f36f7e950b9ad250714348a833ff9d",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2021_JL/source_pdfs/2-door-6-9-21-pdf.472445.pdf"
+    },
+    "native_record_id": "MY2021-JL-2D-2021-06-09-package-p4",
+    "publication_revision": "Original retained MY2021 source; no cross-year approval propagation",
+    "retrieved_at": "2026-11-09T13:43:25.638901+00:00",
+    "review_status": "reviewed",
+    "source_applicability": {
+      "applicability_basis": "MY2021 US guide applicability; technical/manual joins scoped to exact engine family and source locators",
+      "applicability_scope": "model_year",
+      "market": "US",
+      "publisher_jurisdiction": "US"
+    },
+    "source_id": "MY2021-JL-2D-2021-06-09",
+    "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2-door-6-9-21-pdf.472445/",
+    "source_type": "manufacturer_document",
+    "source_use_notes": "Raw optional-package evidence only. No option/transmission-only baseline is constructed."
+  },
+  "source_assertions": [
+    {
+      "assertion_id": "MY2021-JL-2D-2021-06-09-package-p4",
+      "attribute_key": "factory_package_option_page",
+      "raw_value": "JEEP United States                                   REISSUED: 06/09/2021                                                                                           PAGE: 4\nREVISED                                                         ISSUED:      06/04/2020                                                 2021 WRANGLER 2 DOOR\n                                                                                                                               WRANGLER SPORT\nSTEP #3              SELECT - $ OPTIONS (IF DESIRED)\n\n                                                                             SPORT                         WILLYS SPORT                       SPORT S                              WILLYS\nDESCRIPTION                                           $FWP    $MSRP           2_B                  2_K                   2_S                  2_W\n17X7.5 MACHINED GRANITE                                896     995                                                      WGG\nCRYSTAL WHLS\nM/H TTC OR TQL\n2.72:1 SELEC-TRAC FULL TIME 4WD                        626     695                                                      DHP                   DHP\nSYS\nM/H DSA; N/A W/DEM\n245/75R17 ALL TERRAIN TIRES                            176     195           TTC                                        TTC\nN/A W/8DA; N/A W/WF9\n8.4\" RADIO AND PREMIUM AUDIO                          1,886   2,095                                                     AEK                   AEK\nGROUP\nM/H AAN\nADVANCED SAFETY GROUP                                  716     795                                                      ALP                   ALP\nAIR CONDITIONING                                      1,166   1,295          HAA                   HAA                    P                    P\nAIR CONDITIONING BYPASS                                N/C     N/C           4XA                   4XA                  4XA                   4XA\nALPINE PREMIUM AUDIO SYSTEM                           1,166   1,295                                                     RC4                   RC4\nINCLUDED W/AEK                                 W/AEK   N/C     N/C                                                      RC4                   RC4\nANTI-SPIN DIFFERENTIAL REAR                            536     595           DSA                    P                   DSA                    P\nAXLE\nBLACK 3-PIECE HARD TOP                                1,346   1,495          HT1                   HT1                  HT1                   HT1\nONLY 1: HT1 OR HT2\nCOLD WEATHER GROUP                                     896     995                                                      ADE                   ADE\nW/2TS M/H ADC; W/2TW M/H ADC                  W/DEM    626     695                                                      ADE                   ADE\nCONVENIENCE GROUP                                      536     595                                                      ADC                   ADC\n                                              W/ADE    356     395                                                      ADC                   ADC\n                                              W/DEM    356     395                                                      ADC                   ADC\nDEEP TINT SUNSCREEN WINDOWS                            446     495           GCD                    P                     P                    P\nDUAL DOOR GROUP W/ BASE                               2,116   2,350           AJB                  AJB\nUPPERS                                                2,116   2,350                                                     AJB                   AJB\nN/A W/AJS\nincludes package AJS content\nDUAL DOOR GROUP W/ PREMIUM                            2,296   2,550           AJS                  AJS\nUPPERS                                                2,296   2,550                                                     AJS                   AJS\nM/H HT1 OR STB OR HT2; N/A W/STC\nincludes package AJB content\nENGINE BLOCK HEATER                                     86      95           NHK                   NHK                  NHK                   NHK\nGORILLA GLASS                                           86      95                                                      GMA                  GMA\nJEEP TRAIL RATED KIT                                   176     195           XWX                  XWX                   XWX                  XWX\nLED HEADLAMP AND FOG LAMP                              940    1,045                                                     ADA                    P\nGROUP\nMANUF STATEMENT OF ORIGIN                              N/C     N/C           YEP                   YEP                  YEP                   YEP\nPREMIUM BLACK SUNRIDER SOFT                            536     595                                                      STB                   STB\nTOP\nN/A W/HT2\nPREMIUM TAN SUNRIDER SOFT                              716     795                                                      STC                   STC\nTOP\nREMOTE PROXIMITY KEYLESS                               580     645           GXD                   GXD                  GXD                   GXD\nENTRY\nM/H AJB OR AJS\nSAFETY GROUP                                           896     995                                                       AJ1                  AJ1\nSIDE STEPS                                             626     695                                                      MRK\nN/A W/2TJ; N/A W/MMU; ONLY 1: MRT OR\nMRU OR MRK\nSIRIUSXM SATELLITE RADIO                               266     295           RSD                   RSD                  RSD                   RSD\nINCLUDED W/AAN OR AEK\nSMOKER'S GROUP                                          27      30           AWS                  AWS                   AWS                  AWS\nSOFT TOP WINDOW STORAGE BAG                             68      75           CWJ                   CWJ                  CWJ                   CWJ\nN/A W/HT2\nTECHNOLOGY GROUP                                       896     995                                                      AAN                   AAN\nRequired on Sport S, Willys, Freedom and\nIslander\n\n\nE - EXTRA COST N/C - NO CHARGE N/A - NOT AVAILABLE P - PACKAGED",
+      "source_context": "PDF page 4; model JLJL72; raw conditions retained, not evaluated"
+    }
+  ]
+}

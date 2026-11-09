@@ -1,0 +1,62 @@
+{
+  "rows": [
+    {
+      "manufacturer_model_code": "JLJL72",
+      "source_model_keys": 13,
+      "existing_reused": 0,
+      "new_proposals": 13,
+      "unique_candidates": 20
+    },
+    {
+      "manufacturer_model_code": "JLJL74",
+      "source_model_keys": 14,
+      "existing_reused": 0,
+      "new_proposals": 14,
+      "unique_candidates": 31
+    },
+    {
+      "manufacturer_model_code": "JLJP74",
+      "source_model_keys": 14,
+      "existing_reused": 0,
+      "new_proposals": 14,
+      "unique_candidates": 11
+    },
+    {
+      "manufacturer_model_code": "JLJS72",
+      "source_model_keys": 13,
+      "existing_reused": 0,
+      "new_proposals": 13,
+      "unique_candidates": 3
+    },
+    {
+      "manufacturer_model_code": "JLJS74",
+      "source_model_keys": 14,
+      "existing_reused": 0,
+      "new_proposals": 14,
+      "unique_candidates": 4
+    },
+    {
+      "manufacturer_model_code": "JLJX74",
+      "source_model_keys": 9,
+      "existing_reused": 0,
+      "new_proposals": 9,
+      "unique_candidates": 1
+    },
+    {
+      "manufacturer_model_code": "JLXP74",
+      "source_model_keys": 9,
+      "existing_reused": 0,
+      "new_proposals": 9,
+      "unique_candidates": 2
+    },
+    {
+      "manufacturer_model_code": "JLXS74",
+      "source_model_keys": 9,
+      "existing_reused": 0,
+      "new_proposals": 9,
+      "unique_candidates": 1
+    }
+  ],
+  "total_source_model_keys": 95,
+  "total_unique_candidates": 73
+}

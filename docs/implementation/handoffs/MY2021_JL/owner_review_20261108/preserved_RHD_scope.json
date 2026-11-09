@@ -1,0 +1,59 @@
+{
+  "artifact_kind": "preserved_factory_evidence_scope_not_Candidate",
+  "source_matrix_sha256": "sha256:691b242e773b214a1bdf0f752e5173f6fa04438bf0b5cdfb76681357fa82389d",
+  "row": {
+    "research_row_id": "JL21-71",
+    "model_year": 2021,
+    "market": "US",
+    "body_style": "4-door",
+    "model_code": "JLUL74",
+    "marketed_trim_proposal": "Unlimited Sport RHD",
+    "engine_code": "EC1",
+    "scope_status": "requires_RHD_identity_decision",
+    "quick_order_packages": [
+      "22A"
+    ],
+    "engine_transmission_pairings": [
+      "EC1/DFT"
+    ],
+    "first_observed_revision": "2020-10-14",
+    "last_observed_revision": "2021-08-06",
+    "guide_source_ids": [
+      "MY2021-JL-4D-2020-10-14",
+      "MY2021-JL-4D-2020-10-30",
+      "MY2021-JL-4D-2020-12-04",
+      "MY2021-JL-4D-2021-01-01",
+      "MY2021-JL-4D-2021-02-09",
+      "MY2021-JL-4D-2021-03-05",
+      "MY2021-JL-4D-2021-04-14",
+      "MY2021-JL-4D-2021-05-14",
+      "MY2021-JL-4D-2021-06-09",
+      "MY2021-JL-4D-2021-07-06",
+      "MY2021-JL-4D-2021-08-06"
+    ],
+    "excerpt_ids": [
+      "MY2021-JL-4D-2020-10-14-p17",
+      "MY2021-JL-4D-2020-10-30-p17",
+      "MY2021-JL-4D-2020-12-04-p19",
+      "MY2021-JL-4D-2021-01-01-p19",
+      "MY2021-JL-4D-2021-02-09-p20",
+      "MY2021-JL-4D-2021-03-05-p20",
+      "MY2021-JL-4D-2021-04-14-p20",
+      "MY2021-JL-4D-2021-05-14-p21",
+      "MY2021-JL-4D-2021-06-09-p22",
+      "MY2021-JL-4D-2021-07-06-p21",
+      "MY2021-JL-4D-2021-08-06-p21"
+    ],
+    "positive_observations": 11,
+    "availability_notice": "First/last observed guide dates, not production start/end dates."
+  },
+  "research_row_sha256": "sha256:d895b16c1499eb828051a19728d7bedaf30d89e2eec25996c68565e719c19fdd",
+  "commercial_market": "US",
+  "factory_offering_supported": true,
+  "fleet_only_status": "not_established",
+  "retail_eligibility_status": "contemporaneous secondary reports retail availability; primary manufacturer ordering restrictions not exhaustively verified",
+  "recommended_treatment": "Preserve as manufacturer evidence but defer canonical representation",
+  "reason": "Current architecture has no steering/configuration-variant classification or public visibility flag. Arbitrary trim string can technically store RHD but does not establish semantic authority. Active records are all exposed by the configurator; is_active is not a fleet/public visibility classification.",
+  "owner_approval_status": "pending",
+  "construction_authorized": false
+}

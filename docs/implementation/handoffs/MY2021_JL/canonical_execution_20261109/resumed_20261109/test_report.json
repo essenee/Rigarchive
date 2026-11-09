@@ -1,0 +1,14 @@
+{
+  "focused_tests": 165,
+  "result": "passed",
+  "log": "focused_tests_rerun.txt",
+  "isolated_database": ":memory:",
+  "temporary_media": true,
+  "Django_check": "passed",
+  "migration_consistency": "no changes detected;dry-run only",
+  "dependency_pins": "Django6.0.7/pypdf6.16.1 match requirements.txt;pip check passed",
+  "python": "3.13.1",
+  "interpreter": "/Users/cosmo/dev/Rigarchive/.venv/bin/python",
+  "full_suite": "not run;focused candidate/adjudication/correspondence/Matrix execution coverage run",
+  "initial_test_launcher_failure": "Incorrect settings module rigarchive.settings failed before test setup; corrected to config.settings. Original log retained in focused_tests.txt. No application change."
+}

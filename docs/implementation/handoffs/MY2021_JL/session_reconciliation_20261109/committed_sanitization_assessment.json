@@ -1,0 +1,481 @@
+{
+  "committed_sha256": "sha256:4c374c89dc2eaec66e308a4679cdad7592d138f2903b5d377126e2ff1e08e573",
+  "matches_documented_checkpoint": true,
+  "documented_sanitized_account_columns": [
+    "display_name",
+    "email",
+    "last_login",
+    "password",
+    "username"
+  ],
+  "tables": [
+    {
+      "table": "accounts_user",
+      "baseline_count": 1,
+      "live_count": 1,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [
+        {
+          "primary_key": {
+            "id": 17
+          },
+          "changed_columns": [
+            "password",
+            "last_login",
+            "username",
+            "email",
+            "display_name"
+          ]
+        }
+      ],
+      "classification": "previously documented committed-copy account sanitization; operational values unchanged from closest live backup"
+    },
+    {
+      "table": "accounts_user_groups",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "accounts_user_user_permissions",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "auth_group",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "auth_group_permissions",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "auth_permission",
+      "baseline_count": 172,
+      "live_count": 172,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "django_admin_log",
+      "baseline_count": 23,
+      "live_count": 23,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "django_content_type",
+      "baseline_count": 43,
+      "live_count": 43,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "django_migrations",
+      "baseline_count": 31,
+      "live_count": 31,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "django_session",
+      "baseline_count": 0,
+      "live_count": 5,
+      "added_rows": [
+        {
+          "redacted": true,
+          "PK_fingerprint": "sha256:6f569aafca37ef4cec7320ae7dd8006cbff9689b67f80ff828ee90aa230d31e0"
+        },
+        {
+          "redacted": true,
+          "PK_fingerprint": "sha256:83fc6a0420d248c657b87c134fa297c4aed4df8f2a6036aacc47d27ac6e408ef"
+        },
+        {
+          "redacted": true,
+          "PK_fingerprint": "sha256:8cf092d67dfa70864e8508e61b2cdf5ba2c8d9ccc4e4435a4462a48ce3dc5fa2"
+        },
+        {
+          "redacted": true,
+          "PK_fingerprint": "sha256:d2fc15bdc8d2ebbd4dccaf90d3cf2855f8b7f7f26534104c805c44dbda5355b5"
+        },
+        {
+          "redacted": true,
+          "PK_fingerprint": "sha256:77b3919e00d350f08ca65eda09e69abc461cb5f072c574e323642c5a13c7d117"
+        }
+      ],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "sessions deliberately removed only in documented committed sanitized copy"
+    },
+    {
+      "table": "measurements_applicabilityfeature",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "measurements_applicabilitystate",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "measurements_measurementdefinition",
+      "baseline_count": 4,
+      "live_count": 4,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "measurements_measurementresult",
+      "baseline_count": 2,
+      "live_count": 2,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "measurements_measurementresultcondition",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "observation_observation",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "reference_canonicalrecordcorrection",
+      "baseline_count": 31,
+      "live_count": 31,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "reference_compatibilityrule",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "reference_compatibilityrulerevision",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "reference_equipmentitem",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "reference_equipmentitemrevision",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "reference_equipmentoffering",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "reference_equipmentofferingrevision",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "reference_evidenceassertionreference",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "reference_evidencedocument",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "reference_generation",
+      "baseline_count": 16,
+      "live_count": 16,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "reference_generationcorrespondencerevision",
+      "baseline_count": 64,
+      "live_count": 64,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "reference_importexecutionreceipt",
+      "baseline_count": 2980,
+      "live_count": 2980,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "reference_manufacturer",
+      "baseline_count": 5,
+      "live_count": 5,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "reference_specificationassertion",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "reference_specificationcatalogue",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "reference_specificationcataloguecoverage",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "reference_specificationcataloguemembership",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "reference_specificationcataloguerevision",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "reference_specificationdefinition",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "reference_specificationdefinitiondependency",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "reference_specificationdefinitionrevision",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "reference_specificationevidencelink",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "reference_specificationpublicationreceipt",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "reference_specificationunitregistry",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "reference_transmissiondescription",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "reference_transmissiondescriptionrevision",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "reference_transmissionengineeringassertion",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "reference_transmissionoffering",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "reference_transmissionofferingrevision",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "reference_vehicledefinition",
+      "baseline_count": 861,
+      "live_count": 861,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "reference_vehiclemodel",
+      "baseline_count": 6,
+      "live_count": 6,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "sqlite_sequence",
+      "baseline_count": 40,
+      "live_count": 40,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    }
+  ],
+  "unexplained_differences": [],
+  "committed_snapshot_not_selected_as_operational_baseline": true
+}

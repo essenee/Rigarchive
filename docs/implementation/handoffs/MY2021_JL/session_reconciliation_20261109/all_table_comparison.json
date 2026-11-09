@@ -1,0 +1,1044 @@
+{
+  "baseline": "/Users/cosmo/dev/Rigarchive/backups/review/MY2021_JL_correspondence_prepublication_20261109T154455104372Z.sqlite3",
+  "table_count": 48,
+  "tables": [
+    {
+      "table": "accounts_user",
+      "baseline_count": 1,
+      "live_count": 1,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "accounts_user_groups",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "accounts_user_user_permissions",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "auth_group",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "auth_group_permissions",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "auth_permission",
+      "baseline_count": 172,
+      "live_count": 172,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "django_admin_log",
+      "baseline_count": 23,
+      "live_count": 23,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "django_content_type",
+      "baseline_count": 43,
+      "live_count": 43,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "django_migrations",
+      "baseline_count": 31,
+      "live_count": 31,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "django_session",
+      "baseline_count": 5,
+      "live_count": 5,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [
+        {
+          "primary_key": {
+            "redacted": true,
+            "PK_fingerprint": "sha256:d2fc15bdc8d2ebbd4dccaf90d3cf2855f8b7f7f26534104c805c44dbda5355b5"
+          },
+          "changed_columns": [
+            "session_data",
+            "expire_date"
+          ]
+        }
+      ],
+      "classification": "session nature assessed separately; never assumed benign by table name"
+    },
+    {
+      "table": "measurements_applicabilityfeature",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "measurements_applicabilitystate",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "measurements_measurementdefinition",
+      "baseline_count": 4,
+      "live_count": 4,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "measurements_measurementresult",
+      "baseline_count": 2,
+      "live_count": 2,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "measurements_measurementresultcondition",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "observation_observation",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "reference_canonicalrecordcorrection",
+      "baseline_count": 31,
+      "live_count": 31,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "reference_compatibilityrule",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "reference_compatibilityrulerevision",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "reference_equipmentitem",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "reference_equipmentitemrevision",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "reference_equipmentoffering",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "reference_equipmentofferingrevision",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "reference_evidenceassertionreference",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "reference_evidencedocument",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "reference_generation",
+      "baseline_count": 16,
+      "live_count": 16,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "reference_generationcorrespondencerevision",
+      "baseline_count": 64,
+      "live_count": 159,
+      "added_rows": [
+        {
+          "id": 65
+        },
+        {
+          "id": 66
+        },
+        {
+          "id": 67
+        },
+        {
+          "id": 68
+        },
+        {
+          "id": 69
+        },
+        {
+          "id": 70
+        },
+        {
+          "id": 71
+        },
+        {
+          "id": 72
+        },
+        {
+          "id": 73
+        },
+        {
+          "id": 74
+        },
+        {
+          "id": 75
+        },
+        {
+          "id": 76
+        },
+        {
+          "id": 77
+        },
+        {
+          "id": 78
+        },
+        {
+          "id": 79
+        },
+        {
+          "id": 80
+        },
+        {
+          "id": 81
+        },
+        {
+          "id": 82
+        },
+        {
+          "id": 83
+        },
+        {
+          "id": 84
+        },
+        {
+          "id": 85
+        },
+        {
+          "id": 86
+        },
+        {
+          "id": 87
+        },
+        {
+          "id": 88
+        },
+        {
+          "id": 89
+        },
+        {
+          "id": 90
+        },
+        {
+          "id": 91
+        },
+        {
+          "id": 92
+        },
+        {
+          "id": 93
+        },
+        {
+          "id": 94
+        },
+        {
+          "id": 95
+        },
+        {
+          "id": 96
+        },
+        {
+          "id": 97
+        },
+        {
+          "id": 98
+        },
+        {
+          "id": 99
+        },
+        {
+          "id": 100
+        },
+        {
+          "id": 101
+        },
+        {
+          "id": 102
+        },
+        {
+          "id": 103
+        },
+        {
+          "id": 104
+        },
+        {
+          "id": 105
+        },
+        {
+          "id": 106
+        },
+        {
+          "id": 107
+        },
+        {
+          "id": 108
+        },
+        {
+          "id": 109
+        },
+        {
+          "id": 110
+        },
+        {
+          "id": 111
+        },
+        {
+          "id": 112
+        },
+        {
+          "id": 113
+        },
+        {
+          "id": 114
+        },
+        {
+          "id": 115
+        },
+        {
+          "id": 116
+        },
+        {
+          "id": 117
+        },
+        {
+          "id": 118
+        },
+        {
+          "id": 119
+        },
+        {
+          "id": 120
+        },
+        {
+          "id": 121
+        },
+        {
+          "id": 122
+        },
+        {
+          "id": 123
+        },
+        {
+          "id": 124
+        },
+        {
+          "id": 125
+        },
+        {
+          "id": 126
+        },
+        {
+          "id": 127
+        },
+        {
+          "id": 128
+        },
+        {
+          "id": 129
+        },
+        {
+          "id": 130
+        },
+        {
+          "id": 131
+        },
+        {
+          "id": 132
+        },
+        {
+          "id": 133
+        },
+        {
+          "id": 134
+        },
+        {
+          "id": 135
+        },
+        {
+          "id": 136
+        },
+        {
+          "id": 137
+        },
+        {
+          "id": 138
+        },
+        {
+          "id": 139
+        },
+        {
+          "id": 140
+        },
+        {
+          "id": 141
+        },
+        {
+          "id": 142
+        },
+        {
+          "id": 143
+        },
+        {
+          "id": 144
+        },
+        {
+          "id": 145
+        },
+        {
+          "id": 146
+        },
+        {
+          "id": 147
+        },
+        {
+          "id": 148
+        },
+        {
+          "id": 149
+        },
+        {
+          "id": 150
+        },
+        {
+          "id": 151
+        },
+        {
+          "id": 152
+        },
+        {
+          "id": 153
+        },
+        {
+          "id": 154
+        },
+        {
+          "id": 155
+        },
+        {
+          "id": 156
+        },
+        {
+          "id": 157
+        },
+        {
+          "id": 158
+        },
+        {
+          "id": 159
+        }
+      ],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "exact previously owner-authorized95 correspondence publication additions; not new unexplained drift"
+    },
+    {
+      "table": "reference_importexecutionreceipt",
+      "baseline_count": 2980,
+      "live_count": 3075,
+      "added_rows": [
+        {
+          "id": 2981
+        },
+        {
+          "id": 2982
+        },
+        {
+          "id": 2983
+        },
+        {
+          "id": 2984
+        },
+        {
+          "id": 2985
+        },
+        {
+          "id": 2986
+        },
+        {
+          "id": 2987
+        },
+        {
+          "id": 2988
+        },
+        {
+          "id": 2989
+        },
+        {
+          "id": 2990
+        },
+        {
+          "id": 2991
+        },
+        {
+          "id": 2992
+        },
+        {
+          "id": 2993
+        },
+        {
+          "id": 2994
+        },
+        {
+          "id": 2995
+        },
+        {
+          "id": 2996
+        },
+        {
+          "id": 2997
+        },
+        {
+          "id": 2998
+        },
+        {
+          "id": 2999
+        },
+        {
+          "id": 3000
+        },
+        {
+          "id": 3001
+        },
+        {
+          "id": 3002
+        },
+        {
+          "id": 3003
+        },
+        {
+          "id": 3004
+        },
+        {
+          "id": 3005
+        },
+        {
+          "id": 3006
+        },
+        {
+          "id": 3007
+        },
+        {
+          "id": 3008
+        },
+        {
+          "id": 3009
+        },
+        {
+          "id": 3010
+        },
+        {
+          "id": 3011
+        },
+        {
+          "id": 3012
+        },
+        {
+          "id": 3013
+        },
+        {
+          "id": 3014
+        },
+        {
+          "id": 3015
+        },
+        {
+          "id": 3016
+        },
+        {
+          "id": 3017
+        },
+        {
+          "id": 3018
+        },
+        {
+          "id": 3019
+        },
+        {
+          "id": 3020
+        },
+        {
+          "id": 3021
+        },
+        {
+          "id": 3022
+        },
+        {
+          "id": 3023
+        },
+        {
+          "id": 3024
+        },
+        {
+          "id": 3025
+        },
+        {
+          "id": 3026
+        },
+        {
+          "id": 3027
+        },
+        {
+          "id": 3028
+        },
+        {
+          "id": 3029
+        },
+        {
+          "id": 3030
+        },
+        {
+          "id": 3031
+        },
+        {
+          "id": 3032
+        },
+        {
+          "id": 3033
+        },
+        {
+          "id": 3034
+        },
+        {
+          "id": 3035
+        },
+        {
+          "id": 3036
+        },
+        {
+          "id": 3037
+        },
+        {
+          "id": 3038
+        },
+        {
+          "id": 3039
+        },
+        {
+          "id": 3040
+        },
+        {
+          "id": 3041
+        },
+        {
+          "id": 3042
+        },
+        {
+          "id": 3043
+        },
+        {
+          "id": 3044
+        },
+        {
+          "id": 3045
+        },
+        {
+          "id": 3046
+        },
+        {
+          "id": 3047
+        },
+        {
+          "id": 3048
+        },
+        {
+          "id": 3049
+        },
+        {
+          "id": 3050
+        },
+        {
+          "id": 3051
+        },
+        {
+          "id": 3052
+        },
+        {
+          "id": 3053
+        },
+        {
+          "id": 3054
+        },
+        {
+          "id": 3055
+        },
+        {
+          "id": 3056
+        },
+        {
+          "id": 3057
+        },
+        {
+          "id": 3058
+        },
+        {
+          "id": 3059
+        },
+        {
+          "id": 3060
+        },
+        {
+          "id": 3061
+        },
+        {
+          "id": 3062
+        },
+        {
+          "id": 3063
+        },
+        {
+          "id": 3064
+        },
+        {
+          "id": 3065
+        },
+        {
+          "id": 3066
+        },
+        {
+          "id": 3067
+        },
+        {
+          "id": 3068
+        },
+        {
+          "id": 3069
+        },
+        {
+          "id": 3070
+        },
+        {
+          "id": 3071
+        },
+        {
+          "id": 3072
+        },
+        {
+          "id": 3073
+        },
+        {
+          "id": 3074
+        },
+        {
+          "id": 3075
+        }
+      ],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "exact previously owner-authorized95 correspondence publication additions; not new unexplained drift"
+    },
+    {
+      "table": "reference_manufacturer",
+      "baseline_count": 5,
+      "live_count": 5,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "reference_specificationassertion",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "reference_specificationcatalogue",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "reference_specificationcataloguecoverage",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "reference_specificationcataloguemembership",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "reference_specificationcataloguerevision",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "reference_specificationdefinition",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "reference_specificationdefinitiondependency",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "reference_specificationdefinitionrevision",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "reference_specificationevidencelink",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "reference_specificationpublicationreceipt",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "reference_specificationunitregistry",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "reference_transmissiondescription",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "reference_transmissiondescriptionrevision",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "reference_transmissionengineeringassertion",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "reference_transmissionoffering",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "reference_transmissionofferingrevision",
+      "baseline_count": 0,
+      "live_count": 0,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "reference_vehicledefinition",
+      "baseline_count": 861,
+      "live_count": 861,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "reference_vehiclemodel",
+      "baseline_count": 6,
+      "live_count": 6,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [],
+      "classification": "unchanged"
+    },
+    {
+      "table": "sqlite_sequence",
+      "baseline_count": 40,
+      "live_count": 40,
+      "added_rows": [],
+      "deleted_rows": [],
+      "changed_rows": [
+        {
+          "primary_key": {
+            "name": "reference_generationcorrespondencerevision"
+          },
+          "changed_columns": [
+            "seq"
+          ]
+        },
+        {
+          "primary_key": {
+            "name": "reference_importexecutionreceipt"
+          },
+          "changed_columns": [
+            "seq"
+          ]
+        }
+      ],
+      "classification": "two documented publication sequences advanced95; no other sequence changed"
+    }
+  ],
+  "unexplained_non_session_changes": [],
+  "documented_publication_additions": {
+    "correspondences": 95,
+    "receipts": 95
+  },
+  "private_primary_keys": "Session keys are authentication tokens; SHA256 fingerprints replace actual values"
+}

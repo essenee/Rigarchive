@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/cosmo/dev/Rigarchive/docs/implementation/handoffs/MY2021_JL/generation_publication_20261109/publish_atomic.py", line 468, in <module>
+    {'preflight': preflight, 'publish': publish, 'verify': verify}[sys.argv[1]]()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/cosmo/dev/Rigarchive/docs/implementation/handoffs/MY2021_JL/generation_publication_20261109/publish_atomic.py", line 381, in publish
+    assert snapshot(connection.connection) == baseline['database_snapshot'], 'Concurrent database change'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Concurrent database change

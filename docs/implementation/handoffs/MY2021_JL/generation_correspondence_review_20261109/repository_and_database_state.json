@@ -1,0 +1,62 @@
+{
+  "counts": {
+    "VehicleDefinitions": 861,
+    "audit_receipts": 2980,
+    "published_correspondences": 64
+  },
+  "target": {
+    "manufacturer_id": 20,
+    "manufacturer_uuid": "42eefe42-0f2f-4e31-b4b2-f3e520ea0e50",
+    "manufacturer_name": "Jeep",
+    "manufacturer_active": true,
+    "vehicle_model_id": 21,
+    "vehicle_model_uuid": "5ec5f58a-b140-484c-97f0-c90ec9c134d6",
+    "vehicle_model_name": "Wrangler",
+    "vehicle_model_active": true,
+    "generation_id": 32,
+    "generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+    "generation_active": true,
+    "generation_model_id": 21,
+    "start_year": 2018,
+    "end_year": null
+  },
+  "database_sha256": "sha256:ec1eb2adb8becf62a6d8ef18e5ae2dee37d5049620faaaeec51ab8c69b0ee4f9",
+  "material_discrepancies": [],
+  "published_scope_counts": [
+    {
+      "start_year": 2018,
+      "end_year": 2018,
+      "revisions": 8
+    },
+    {
+      "start_year": 2019,
+      "end_year": 2019,
+      "revisions": 5
+    },
+    {
+      "start_year": 2020,
+      "end_year": 2020,
+      "revisions": 51
+    }
+  ],
+  "all_64_published_payloads_and_evidence_valid": true,
+  "MY2019_MY2020_successful_publication_receipts": 56,
+  "historical_workflows_reviewed": [
+    {
+      "path": "docs/implementation/handoffs/MY2019_JL/director_review/generation_publication_20261108/README.md",
+      "sha256": "sha256:5736dfc5a7387e85054636530333e76d0213f438b8c900efbe33ce14867c6f26"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2020_JL/generation_publication_20261108/README.md",
+      "sha256": "sha256:cbcff1b6060e0e8a9e238595c2e0972db384714ee424cab7e0ec1f350244e767"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2020_JL/generation_correspondence_review_20261108/verify_coverage.py",
+      "sha256": "sha256:b507b86df3878cd10da0bc0e386904c7fd4ad3abfbe8700711ea794c99dc606e"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/repair_selectors.py",
+      "sha256": "sha256:5018fd820a731a5c9af5875c41d5cc07a4a0a43ef357242a09be74f35bd282a6"
+    }
+  ]
+}

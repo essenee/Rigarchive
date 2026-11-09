@@ -1,0 +1,40 @@
+{
+  "envelope": {
+    "artifact_type": "rigarchive.source_assertion_set.v1",
+    "created_at": "2026-11-09T13:43:25.638901+00:00",
+    "generator": "MY2021_bounded_construction",
+    "schema_version": "1.1.0"
+  },
+  "provenance": {
+    "acquisition_method": "retained_local_evidence",
+    "extraction_provenance": {
+      "extraction_mode": "manually_verified_transcription",
+      "extractor_id": "retained_MY2021_evidence_transcription",
+      "extractor_version": "1.0.0",
+      "raw_artifact_hash": "sha256:2fa3c481460efa71f1036638c3f0929c2eca3eb91bd97a0eb87c0bbd3cfdcc9d",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-2-9-21-pdf.423850.pdf"
+    },
+    "native_record_id": "MY2021-JL-4D-2021-02-09-package-p18",
+    "publication_revision": "Original retained MY2021 source; no cross-year approval propagation",
+    "retrieved_at": "2026-11-09T13:43:25.638901+00:00",
+    "review_status": "reviewed",
+    "source_applicability": {
+      "applicability_basis": "MY2021 US guide applicability; technical/manual joins scoped to exact engine family and source locators",
+      "applicability_scope": "model_year",
+      "market": "US",
+      "publisher_jurisdiction": "US"
+    },
+    "source_id": "MY2021-JL-4D-2021-02-09",
+    "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-2-9-21-pdf.423850/",
+    "source_type": "manufacturer_document",
+    "source_use_notes": "Raw optional-package evidence only. No option/transmission-only baseline is constructed."
+  },
+  "source_assertions": [
+    {
+      "assertion_id": "MY2021-JL-4D-2021-02-09-package-p18",
+      "attribute_key": "factory_package_option_page",
+      "raw_value": "JEEP United States                                   REISSUED: 02/09/2021                                                                                         PAGE: 18\nREVISED                                                         ISSUED:      06/04/2020                                                 2021 WRANGLER 4 DOOR\n                                                                                                    WRANGLER UNLIMITED RUBICON 392\nSTEP #1              SELECT - MODEL CODE\nWRANGLER UNLIMITED RUBICON 392                                                                                             JLJX74\n\nSTEP #2              SELECT - QUICK ORDER PACKAGE CODE\nPOWERTRAIN AVAILABILITY\nENGINE                               TRANSMISSION\n6.4L V8 SRT HEMI MDS ENGINE          8-SPD AUTO 8HP75 TRANS                                                 27X\n(ESG)                                (BUY-GERMANY) (DFV)\n\n\nSTEP #3              SELECT - $ OPTIONS (IF DESIRED)\n\nDESCRIPTION                                                                                                  2_X\nCARGO GROUP W/ TRAIL RAIL SYSTEM                                                                            CMD\nDUAL DOOR GROUP W/ PREMIUM                                                                                  AJS\nUPPERS\nM/H HT3 OR STJ; M/H PAU OR PBJ OR PDN OR\nPGG OR PRV OR PW7 OR PX8; M/H PAU OR\nPDN OR PGG OR PRC OR PRV OR PSC OR PW7\nOR PX8; N/A W/AEN; N/A W/ST3; N/A W/ST8\nDUAL TOP GROUP                                                                                              AEN\nENGINE BLOCK HEATER                                                                                         NHK\nFRONT LICENSE PLATE BRACKET                                                                                 MDA\nINTEGRATED OFF-ROAD CAMERA                                                                                  XNY\nM/H AD6 AND AEK\nLT285/70R17C BSW M/T TIRES                                                                                  TWG\nONLY 1: TT4 OR TWG\nLT285/70R17C OWL OFF-ROAD TIRES                                                                             TT4\nONLY 1: TT4 OR TWG\nMANUF STATEMENT OF ORIGIN                                                                                   YEP\nPREMIUM TAN SUNRIDER SOFT TOP                                                                               ST3\nM/H AEN; ONLY 1: STJ OR ST3\nSKY ONE-TOUCH POWER TOP                                                                                     STJ\nN/A W/AEN; N/A W/PYV; ONLY 1: STJ OR ST3\nSMOKER'S GROUP                                                                                              AWS\nSOFT TOP WINDOW STORAGE BAG                                                                                 CWJ\nM/H AEN OR ST3; N/A W/ST8; N/A W/STJ\nTRAILER TOW PACKAGE                                                                                         ABR\n\nMOPAR OPTIONS\nMOPAR ALL-WEATHER FLOOR MATS                                                                                CWA\nMOPAR HARDTOP HEADLINER                                                                                     CHD\nM/H HT3; N/A W/STJ\nMOPAR HINGE-GATE REINFORCEMENT                                                                              XDB\nMOPAR LOWER BODY SIDE GRAPHIC                                                                               M9G\nMOPAR MESH SUNBONNET TOP                                                                                    CS7\nM/H HT3; N/A W/STJ\nMOPAR SATIN BLACK GRILLE                                                                                    MHJ\nMOPAR SOLID SUNBONNET TOP                                                                                   CS3\nM/H HT3; N/A W/STJ\nMOPAR UPPER BODY SIDE GRAPHIC                                                                               M9F\nN/A W/M9G\nMOPAR WINDSHIELD TIE DOWN                                                                                   CT9\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nE - EXTRA COST N/C - NO CHARGE N/A - NOT AVAILABLE P - PACKAGED",
+      "source_context": "PDF page 18; model JLJX74; raw conditions retained, not evaluated"
+    }
+  ]
+}

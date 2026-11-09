@@ -1,0 +1,671 @@
+{
+  "records_verified": 95,
+  "checks": [
+    {
+      "revision_PK": 65,
+      "receipt_PK": 2981,
+      "review_hash": "sha256:9ff8fe1d04acaa91a1723b9d46c7980ac300ea73aa86d6833537958b0f740840",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 66,
+      "receipt_PK": 2982,
+      "review_hash": "sha256:67217441ce832f8987dfbe90bfddf8e553fe239be598704dbb43f93f3d5120f6",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 67,
+      "receipt_PK": 2983,
+      "review_hash": "sha256:e7421b30a52bc864de600f3e4efbd43c420e90d4e63ce466ae3ae4c8ad6b75ec",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 68,
+      "receipt_PK": 2984,
+      "review_hash": "sha256:7e3e45c8cc8779c873dd2032eb35963773c37753ae5ec712e63950b2b3ea9920",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 69,
+      "receipt_PK": 2985,
+      "review_hash": "sha256:999e30e4f02a0a60c1411eef5ea368260a13ec77cdc5c236349108fa3a8f4f2a",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 70,
+      "receipt_PK": 2986,
+      "review_hash": "sha256:78867a2788c8121c0c654f31952a2f6d026efc1905f21c561aa6a321e263b21b",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 71,
+      "receipt_PK": 2987,
+      "review_hash": "sha256:c3453d01034666b857a170317790cb33fabf306e79887662a21c033be9d068eb",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 72,
+      "receipt_PK": 2988,
+      "review_hash": "sha256:b6214169f397d003ef6fc684f197ac18527c17e7e84c928171b17c9c4a1d1832",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 73,
+      "receipt_PK": 2989,
+      "review_hash": "sha256:52cec54e6627548cdd0b60d0ba95907979f7359ba4434d7bb05b569d458fc6d3",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 74,
+      "receipt_PK": 2990,
+      "review_hash": "sha256:d07a6bf063751a50d54e21d58177d740cec2f36ef32b83ef5ac3a975cc8834c1",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 75,
+      "receipt_PK": 2991,
+      "review_hash": "sha256:33e2523d74d4ab8084c61d6223e51b29f5614e50f60e839c67435b5b5c05c2d0",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 76,
+      "receipt_PK": 2992,
+      "review_hash": "sha256:14de0780cd9da3f5cabc5eeef119d2abe64230d31002c3e63033f6ef0470d597",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 77,
+      "receipt_PK": 2993,
+      "review_hash": "sha256:eef89db574830f9ccd66efe2ca2a9ab96e84fecb4137a245048713ebb08920a3",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 78,
+      "receipt_PK": 2994,
+      "review_hash": "sha256:1523c6eb9869e59b071b24193ea9617e597328957fa937a4cc6d066361ddf660",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 79,
+      "receipt_PK": 2995,
+      "review_hash": "sha256:c59a59d5b20e60869e241dd523056202b065b6f70672be86e7aeab2aa381d5a7",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 80,
+      "receipt_PK": 2996,
+      "review_hash": "sha256:a92ca5ad7fbf349946ee6a62963eff4b24c2b84eca5091297784f3a266086a43",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 81,
+      "receipt_PK": 2997,
+      "review_hash": "sha256:a5e668d721b320035a1a8a0c19dbfdbf1bede211e717056a83adc1b6fd8a306a",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 82,
+      "receipt_PK": 2998,
+      "review_hash": "sha256:9a31ca3916a263245ae29a67996968f752fc3987600944976fa6045bb1d5ba6c",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 83,
+      "receipt_PK": 2999,
+      "review_hash": "sha256:ba6165725f907f89359bfc43bf4cd48c5d03a0a503feaa3dc236956efa2c9d49",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 84,
+      "receipt_PK": 3000,
+      "review_hash": "sha256:a26eba5de2a94b0f902073c15e31872c9f1532e92067882ce7406841587425aa",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 85,
+      "receipt_PK": 3001,
+      "review_hash": "sha256:0d115b360b1806dd0c73e27cff473f64008ea0cc3c865151feeb1f8aaa7b3630",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 86,
+      "receipt_PK": 3002,
+      "review_hash": "sha256:90a99a4d3c3332a621fa2bcd6a7ab184ad59dd017294fae039dbd9a520afb0f9",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 87,
+      "receipt_PK": 3003,
+      "review_hash": "sha256:7d2766ab7600e1d2f01f08b978133bffe362077abfff463283aa20b7c4cf7dfb",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 88,
+      "receipt_PK": 3004,
+      "review_hash": "sha256:d452e90a7622ce8e17cea384b35da76265041ba02e6fb290f7b0c03d3fb02573",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 89,
+      "receipt_PK": 3005,
+      "review_hash": "sha256:bb218f400720dfdfcbadcf721e2896cda34594cab663c81fc8cdf5fe80af2db2",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 90,
+      "receipt_PK": 3006,
+      "review_hash": "sha256:abb158ed090cab4f18e66418358fbaa473e5b6e74a1f19eeaebcc16050f3a398",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 91,
+      "receipt_PK": 3007,
+      "review_hash": "sha256:392b515483464efe597242219ac3f7810b8923e616d118ad5e456dc7f606d67f",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 92,
+      "receipt_PK": 3008,
+      "review_hash": "sha256:4e33b47d71f6c0eaadb5f63fab505f1340abc2afb127ab79ea4c798dba99922e",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 93,
+      "receipt_PK": 3009,
+      "review_hash": "sha256:be754baf3684e20e168a6b8e092bdac1787b102cdd318f18238714d1e427d787",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 94,
+      "receipt_PK": 3010,
+      "review_hash": "sha256:5788d7a170d7dc32fbe2ada42bf50e2675b28ef1613e19a3c45fc3702115e8c1",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 95,
+      "receipt_PK": 3011,
+      "review_hash": "sha256:3bba3c2a97a38604cd879824eaa59a3a53e10a3a9e6fe1436dacd738922ec573",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 96,
+      "receipt_PK": 3012,
+      "review_hash": "sha256:c2677dc34cf8ccc7df4bef0b19bb74ba23a5b93ac05c100b84ca7421d34d3a91",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 97,
+      "receipt_PK": 3013,
+      "review_hash": "sha256:f8f94890bf2d5d8e58f93e0415482f277cd4aff1bf58f1d5310d03dcf99a082b",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 98,
+      "receipt_PK": 3014,
+      "review_hash": "sha256:88bd4b47693ab2eb187cefdc71b4c69aba9c79147b45d299c56769afeed75d9d",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 99,
+      "receipt_PK": 3015,
+      "review_hash": "sha256:af2fcf4fe0b5c1866c29b474210e02e2f43c09a35266b3a9bf234c0ee74b0cbc",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 100,
+      "receipt_PK": 3016,
+      "review_hash": "sha256:89b202f799b269482d6f7dda3edd507c33b78911694dc9f586edd62e59343c59",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 101,
+      "receipt_PK": 3017,
+      "review_hash": "sha256:2be46ef2995876d835b4f9bde694388f2346c2fdf0a1e677138111c11dc9b211",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 102,
+      "receipt_PK": 3018,
+      "review_hash": "sha256:6651c44bfb687f89f09e4d997919d669b6985a088e1b4c0be3e5b690cf441b58",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 103,
+      "receipt_PK": 3019,
+      "review_hash": "sha256:70004be2c874d608e57b58e3d582b5da53d6037a955d395ee51d7c3b3a382e25",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 104,
+      "receipt_PK": 3020,
+      "review_hash": "sha256:2eb16463abac4ce746816b9299957b7d06925ad913bd34e70c76e6a723310138",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 105,
+      "receipt_PK": 3021,
+      "review_hash": "sha256:1069eb0f94d4ba8f99699563205e43d428590796028e2029c6d856a14068436c",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 106,
+      "receipt_PK": 3022,
+      "review_hash": "sha256:d25a3172ccb31d484cc5bf64d0af19e9e7f95fbdaf645f4c566f03132813a7b2",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 107,
+      "receipt_PK": 3023,
+      "review_hash": "sha256:d22998f30371f6e13ff602f68088d4caa190445980e3766feca2c46614ed9fca",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 108,
+      "receipt_PK": 3024,
+      "review_hash": "sha256:1043cbac57024ed3a95b4ce591f286d2692491b2a86863cdf2ed9ffb5510c042",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 109,
+      "receipt_PK": 3025,
+      "review_hash": "sha256:228c399bf76438d1802d4ce9fad7db0b0f1d493f7354411558c12aa1a0637080",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 110,
+      "receipt_PK": 3026,
+      "review_hash": "sha256:abf9cfd0db747d0a9fe59b746a2a841c1a355d9809104fab974d8387726e4c4d",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 111,
+      "receipt_PK": 3027,
+      "review_hash": "sha256:d5bb206a5cb429ab3df261b3621801e8f3a51d7ee67e793e80b6284ee42315ac",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 112,
+      "receipt_PK": 3028,
+      "review_hash": "sha256:98cf250e22384be90b98abb1097472d375e01fa308b3748fea69f15451108761",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 113,
+      "receipt_PK": 3029,
+      "review_hash": "sha256:5cb4b499d4cb3e6d8c0966e333c622cc54eca316d3ec0811e3da01639b1aed5c",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 114,
+      "receipt_PK": 3030,
+      "review_hash": "sha256:dccf88c6a8a5f42f6e58272fb3b68b91ccaa6140d8f88e77a5144dc503b70aab",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 115,
+      "receipt_PK": 3031,
+      "review_hash": "sha256:ccbd58fbea3f5d00c2e5b84e9c2dd493df3a2c959e312183c1d2ceafe3726aa0",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 116,
+      "receipt_PK": 3032,
+      "review_hash": "sha256:d750ac88957345eeca58ad6549184c064115c8a79a04a47f07ba97ae2e94d824",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 117,
+      "receipt_PK": 3033,
+      "review_hash": "sha256:b8d05598c74124292578e252869cf5ebed0efd227fda6673a68806337c05f184",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 118,
+      "receipt_PK": 3034,
+      "review_hash": "sha256:a30c846a4219bfdc376a3e6c80eb65c56cf1d1356baa2da2f1c5d3050482482b",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 119,
+      "receipt_PK": 3035,
+      "review_hash": "sha256:9bc280c52c852c2e751d2c0f173f56b116dbf0998574936cca90fe35a93afb98",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 120,
+      "receipt_PK": 3036,
+      "review_hash": "sha256:10fb11f5104bc875ca6f96f2dba79b0687bb58207b26e8715a6a10e7d4a3fef3",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 121,
+      "receipt_PK": 3037,
+      "review_hash": "sha256:b403b97c567fc5ed4cbf91510ba44b934804a2cbb0ea826de66724d66fbfb785",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 122,
+      "receipt_PK": 3038,
+      "review_hash": "sha256:daac52e9a05b11a60a46ff4ff49c988baf8a9acf84c02dd424a6cd42709fbdc7",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 123,
+      "receipt_PK": 3039,
+      "review_hash": "sha256:4f8de03258046b810ac425a3718a9a95baa6b5865e3208b8ebaa609b41dc49a4",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 124,
+      "receipt_PK": 3040,
+      "review_hash": "sha256:fe4f53702366bdd2c379a2139d114eed089c1009748e26ed2823efb8d124659c",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 125,
+      "receipt_PK": 3041,
+      "review_hash": "sha256:d22211aa87e3ca4d5cb70d79dcf5b29f15568da9d1c5ce8a62e4d18f4db02506",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 126,
+      "receipt_PK": 3042,
+      "review_hash": "sha256:7046b71b4f67692df19f0f1d98edf11a94012231820bc26833f8469cd6fb7869",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 127,
+      "receipt_PK": 3043,
+      "review_hash": "sha256:10a3c7213e23bd5f5d6da86f9231e0f08deb169617d473f0f2f531cedf2e5df8",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 128,
+      "receipt_PK": 3044,
+      "review_hash": "sha256:51168cc73a3d47eab6246f301e63273a7f0d981eabcee4a6fec926935f7b41f3",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 129,
+      "receipt_PK": 3045,
+      "review_hash": "sha256:8a40ee9334e0f79930a6c82c02e9ebcab4464439a764f9336bf4e42fd9af6e99",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 130,
+      "receipt_PK": 3046,
+      "review_hash": "sha256:ca1de25462484d1b8cc480818bc3bc985ca5386b30a4ed1587d5e5d1b5a45a7f",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 131,
+      "receipt_PK": 3047,
+      "review_hash": "sha256:bf33247e5ebb81f6a31f77c00605e7efaa5c64653f4018d38c4018cbffce22bf",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 132,
+      "receipt_PK": 3048,
+      "review_hash": "sha256:6888f491691121d4bbf67486615b2ae62b2436b2f862c3e31fc2dec33b916e5d",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 133,
+      "receipt_PK": 3049,
+      "review_hash": "sha256:bb427b6b67754e80b842d41b016620cfe78dac6b606f537f5417bef7493c70a0",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 134,
+      "receipt_PK": 3050,
+      "review_hash": "sha256:e6714d95c26a5081e3d2ea21298a3b3a800bd9e5a980b8904d024218a1f97f63",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 135,
+      "receipt_PK": 3051,
+      "review_hash": "sha256:418850c88f366c5dfcda853ab61bc5d003ed46d95f76b0b0af3e320f8e851021",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 136,
+      "receipt_PK": 3052,
+      "review_hash": "sha256:d9314c2f86963afa7e3b86eff0222a63815ea73ade3cb47399f70ae66fa40c11",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 137,
+      "receipt_PK": 3053,
+      "review_hash": "sha256:38a1b4af8806887586c93d6c32e0fcce9ab34391d7380e49026f58d32da7b3d3",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 138,
+      "receipt_PK": 3054,
+      "review_hash": "sha256:fdc49763e65d8ed82bc5cfe80b779f0516d4cd5a4b0d36c61dd3e27f50f7c6e1",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 139,
+      "receipt_PK": 3055,
+      "review_hash": "sha256:9b529624074ca838e450f4e654feff950786cd41a85031ab4b07dcab09e2cf1f",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 140,
+      "receipt_PK": 3056,
+      "review_hash": "sha256:e641ed41ac4f667f89c8d4d8dd75ce5792165a6abd1a2adfd370aa1850056e95",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 141,
+      "receipt_PK": 3057,
+      "review_hash": "sha256:e25aa142948efb1ed6782354136ea4ec80ee7ee2f28fa86be343134e3383e3ef",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 142,
+      "receipt_PK": 3058,
+      "review_hash": "sha256:4200f5d6200a3684af078dec72236329fea36ddd2fb937647a8107e1b1ede7f8",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 143,
+      "receipt_PK": 3059,
+      "review_hash": "sha256:dab12eda47bb77047ee8fcf0e833df0d46f30d7a630387d720547eec0f4279c3",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 144,
+      "receipt_PK": 3060,
+      "review_hash": "sha256:16add66b3ce550476667b3fd94d984880f61e003b9f2ad86e2858bf36ed12c60",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 145,
+      "receipt_PK": 3061,
+      "review_hash": "sha256:7ee94dea7bf8966fd527ef4bc384c53edea790b1c804864b8a870170abfda4dc",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 146,
+      "receipt_PK": 3062,
+      "review_hash": "sha256:c2fa6b14fe296fe74132ee6cd2c6bf235390d73cc082fdf7ccbf5796739f62e5",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 147,
+      "receipt_PK": 3063,
+      "review_hash": "sha256:9210b7b93c1a08fa36cff0ff8a45f3d394b4eabb7621ba592fc2363e2ae5bab5",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 148,
+      "receipt_PK": 3064,
+      "review_hash": "sha256:475b573da421b4a698cd9971e04b68bb29d6192f0d666af9d80683eb66bc9812",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 149,
+      "receipt_PK": 3065,
+      "review_hash": "sha256:6917d9c67c04b2c37663aa578a8ee939e2f09051ed8b17f0d31b0b7da4d9926a",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 150,
+      "receipt_PK": 3066,
+      "review_hash": "sha256:88948026a71a06f8e01d2b9ec4c8bfb7f4c143186753391255da2e387d4cfeaa",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 151,
+      "receipt_PK": 3067,
+      "review_hash": "sha256:644bf05fb7aa65c35aa2cec087853d6b05f95bb490ad3799d3681b3bc83cb51d",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 152,
+      "receipt_PK": 3068,
+      "review_hash": "sha256:55122df0c3effd2e8e8049afcad34e7c04295c6053cbf7feaf14d75e51fa44ad",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 153,
+      "receipt_PK": 3069,
+      "review_hash": "sha256:58a0ad0780e56f1b060740dfe43247cf41e6579187f9b10d334fce732ec57312",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 154,
+      "receipt_PK": 3070,
+      "review_hash": "sha256:40274cd643fad79c073524e2f53a155f489eb7fabc9cf5b7c3b6bcb3ee38ee0c",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 155,
+      "receipt_PK": 3071,
+      "review_hash": "sha256:e6e0c320d38e854a8d370d63d98135ed183416d9ece62e2472e49000c8327d2b",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 156,
+      "receipt_PK": 3072,
+      "review_hash": "sha256:46d325ca6de88671a8cfbbf8b2281ed6e87ab4075508df2d8393bdfcf09ab673",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 157,
+      "receipt_PK": 3073,
+      "review_hash": "sha256:aa8510de68e57ed06f2fc2196027f48d67b5dfb070bfd79a2d9babf2a78533be",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 158,
+      "receipt_PK": 3074,
+      "review_hash": "sha256:3dadb5f02ef10eec1e1f0fef91598283ac1a1987f3c27c2db1d90bf3c80f425e",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    },
+    {
+      "revision_PK": 159,
+      "receipt_PK": 3075,
+      "review_hash": "sha256:6b6d444de2462eb99e9a875fc66690ebd43956f0ed833cfeb2ce51ad0e29167e",
+      "approved_payload_and_receipt_lineage_match": true,
+      "nonpayload_fields_defaults_and_creation_window_verified": true
+    }
+  ],
+  "automatic_metadata_limit": "The physical baseline predates these rows. Approved payloads/receipt lineage, recorded IDs/UUIDs, constructor defaults and original creation windows are verified; no historical full-row byte snapshot exists for the95new rows."
+}

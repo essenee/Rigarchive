@@ -1,0 +1,13 @@
+test_independent_plain_text_positive_cells (__main__.DiscoveryChecks.test_independent_plain_text_positive_cells) ... ok
+test_lineage_and_pairings (__main__.DiscoveryChecks.test_lineage_and_pairings) ... ok
+test_original_sources_and_extractions (__main__.DiscoveryChecks.test_original_sources_and_extractions) ... ok
+test_package_excerpt_lineage (__main__.DiscoveryChecks.test_package_excerpt_lineage) ... ok
+test_read_only_database_preservation (__main__.DiscoveryChecks.test_read_only_database_preservation) ... ok
+test_scope_and_classification_boundaries (__main__.DiscoveryChecks.test_scope_and_classification_boundaries) ... ok
+test_secondary_coverage_has_no_manufactured_codes (__main__.DiscoveryChecks.test_secondary_coverage_has_no_manufactured_codes) ... ok
+test_union_uniqueness_and_serialization (__main__.DiscoveryChecks.test_union_uniqueness_and_serialization) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 25.371s
+
+OK

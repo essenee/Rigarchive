@@ -1,0 +1,58 @@
+{
+  "status": "passed",
+  "offline_tests": 8,
+  "test_log": "verification_results.txt",
+  "python": "3.13.1",
+  "django": "6.0.7",
+  "pypdf": "6.16.1",
+  "guide_PDFs": 27,
+  "technical_PDFs": 4,
+  "powertrain_excerpts": 106,
+  "factory_option_excerpt_pages": 312,
+  "positive_QOP_observations": 900,
+  "unique_provisional_rows": 74,
+  "consumer_scope_proposals": 73,
+  "flagged_RHD_rows": 1,
+  "body_trim_labels": 25,
+  "edmunds_engine_family_corroborations": 74,
+  "pending_field_conclusions": 89,
+  "pending_row_count": 71,
+  "indexed_missing_PDFs": 0,
+  "generation_read_only": [
+    32,
+    "38d3c3acf8254406abb5c2d12b9129a4",
+    "JL",
+    2018,
+    null,
+    1
+  ],
+  "database_counts_before_and_after": {
+    "reference_vehicledefinition": 861,
+    "reference_importexecutionreceipt": 2980,
+    "reference_generationcorrespondencerevision": 64
+  },
+  "database_SHA256_before": "sha256:ec1eb2adb8becf62a6d8ef18e5ae2dee37d5049620faaaeec51ab8c69b0ee4f9",
+  "database_SHA256_after": "sha256:ec1eb2adb8becf62a6d8ef18e5ae2dee37d5049620faaaeec51ab8c69b0ee4f9",
+  "database_byte_unchanged": true,
+  "SQLite_integrity": "ok",
+  "foreign_key_violations": 0,
+  "exact_PDF_and_layout_text_checks": "passed",
+  "independent_plain_text_QOP_check": "passed",
+  "source_hash_and_lineage_checks": "passed",
+  "matrix_JSON_CSV_uniqueness_and_roundtrip_checks": "passed",
+  "visual_review": [
+    {
+      "source": "2-door-9-29-20-pdf.377304.pdf",
+      "PDF_page": 2
+    },
+    {
+      "source": "4-door-9-29-20-pdf.377305.pdf",
+      "PDF_page": 2
+    },
+    {
+      "source": "4-door-6-9-21-pdf.472444.pdf",
+      "PDF_page": 23
+    }
+  ],
+  "scope_notice": "Discovery only; no Candidates, approval, correspondence publication, import planning/execution or canonical writes. No application/contract changes. No commit/push."
+}

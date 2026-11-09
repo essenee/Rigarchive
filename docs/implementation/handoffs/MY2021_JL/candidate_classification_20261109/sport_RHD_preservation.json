@@ -1,0 +1,86 @@
+{
+  "status": "preserved and deferred; no Candidate constructed",
+  "original_record": "docs/implementation/handoffs/MY2021_JL/owner_review_20261108/preserved_RHD_scope.json",
+  "original_record_sha256": "sha256:fcd778174bb56474f9ceeea4d202349902275f6c48e01c94f137976e22933337",
+  "discovery_row": {
+    "research_row_id": "JL21-71",
+    "model_year": 2021,
+    "market": "US",
+    "body_style": "4-door",
+    "model_code": "JLUL74",
+    "marketed_trim_proposal": "Unlimited Sport RHD",
+    "engine_code": "EC1",
+    "scope_status": "requires_RHD_identity_decision",
+    "quick_order_packages": [
+      "22A"
+    ],
+    "engine_transmission_pairings": [
+      "EC1/DFT"
+    ],
+    "first_observed_revision": "2020-10-14",
+    "last_observed_revision": "2021-08-06",
+    "guide_source_ids": [
+      "MY2021-JL-4D-2020-10-14",
+      "MY2021-JL-4D-2020-10-30",
+      "MY2021-JL-4D-2020-12-04",
+      "MY2021-JL-4D-2021-01-01",
+      "MY2021-JL-4D-2021-02-09",
+      "MY2021-JL-4D-2021-03-05",
+      "MY2021-JL-4D-2021-04-14",
+      "MY2021-JL-4D-2021-05-14",
+      "MY2021-JL-4D-2021-06-09",
+      "MY2021-JL-4D-2021-07-06",
+      "MY2021-JL-4D-2021-08-06"
+    ],
+    "excerpt_ids": [
+      "MY2021-JL-4D-2020-10-14-p17",
+      "MY2021-JL-4D-2020-10-30-p17",
+      "MY2021-JL-4D-2020-12-04-p19",
+      "MY2021-JL-4D-2021-01-01-p19",
+      "MY2021-JL-4D-2021-02-09-p20",
+      "MY2021-JL-4D-2021-03-05-p20",
+      "MY2021-JL-4D-2021-04-14-p20",
+      "MY2021-JL-4D-2021-05-14-p21",
+      "MY2021-JL-4D-2021-06-09-p22",
+      "MY2021-JL-4D-2021-07-06-p21",
+      "MY2021-JL-4D-2021-08-06-p21"
+    ],
+    "positive_observations": 11,
+    "availability_notice": "First/last observed guide dates, not production start/end dates."
+  },
+  "deferred_decision": {
+    "decision_id": "CLASS-075",
+    "group_id": "EC1-electrification_type",
+    "research_row_id": "JL21-71",
+    "research_row_sha256": "sha256:d895b16c1499eb828051a19728d7bedaf30d89e2eec25996c68565e719c19fdd",
+    "model_year": 2021,
+    "market": "US",
+    "body_style": "4-door",
+    "model_code": "JLUL74",
+    "trim_name_proposal": "Unlimited Sport RHD",
+    "engine_code": "EC1",
+    "field": "electrification_type",
+    "directly_supported_value": null,
+    "proposed_value": "none",
+    "confidence": "moderate",
+    "evidence_group_reference": "classification_groups.json#EC1-electrification_type",
+    "guide_excerpt_ids": [
+      "MY2021-JL-4D-2020-10-14-p17",
+      "MY2021-JL-4D-2020-10-30-p17",
+      "MY2021-JL-4D-2020-12-04-p19",
+      "MY2021-JL-4D-2021-01-01-p19",
+      "MY2021-JL-4D-2021-02-09-p20",
+      "MY2021-JL-4D-2021-03-05-p20",
+      "MY2021-JL-4D-2021-04-14-p20",
+      "MY2021-JL-4D-2021-05-14-p21",
+      "MY2021-JL-4D-2021-06-09-p22",
+      "MY2021-JL-4D-2021-07-06-p21",
+      "MY2021-JL-4D-2021-08-06-p21"
+    ],
+    "approval_status": "pending",
+    "recommended_disposition": "defer_with_RHD_representation",
+    "candidate_artifact": null
+  },
+  "restrictions": "No fleet-only/postal-only assertion. Steering/public visibility and canonical representation unresolved.",
+  "original_discovery_preservation": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/preservation_baseline.json"
+}

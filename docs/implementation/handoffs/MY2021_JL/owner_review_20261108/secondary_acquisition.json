@@ -1,0 +1,23 @@
+[
+  {
+    "source_id": "Jalopnik_MY2021_RHD_retail_report",
+    "url": "https://www.jalopnik.com/you-can-still-buy-right-hand-drive-wranglers-from-jeep-1847176346/",
+    "status": "retained",
+    "path": "docs/implementation/handoffs/MY2021_JL/owner_review_20261108/sources/Jalopnik_MY2021_RHD_retail_report.html",
+    "sha256": "sha256:f5c85944d46c543d4f2839d88ab6e4b176241ab7b403c264f584619f2188287a"
+  },
+  {
+    "source_id": "CarAndDriver_MY2021_392_launch",
+    "url": "https://www.caranddriver.com/news/a34671109/2021-jeep-wrangler-rubicon-392-specs-revealed/",
+    "status": "retained",
+    "path": "docs/implementation/handoffs/MY2021_JL/owner_review_20261108/sources/CarAndDriver_MY2021_392_launch.html",
+    "sha256": "sha256:1593b8695f749efd117bdc9a2d37c8f46edd370a4137d6f9580d7e1a126e98fa"
+  },
+  {
+    "source_id": "CarAndDriver_MY2021_Wrangler_engine_context",
+    "url": "https://www.caranddriver.com/reviews/a36561292/2021-jeep-wrangler-rubicon-392-drive/",
+    "status": "retained",
+    "path": "docs/implementation/handoffs/MY2021_JL/owner_review_20261108/sources/CarAndDriver_MY2021_Wrangler_engine_context.html",
+    "sha256": "sha256:c581537c40a73dcfdedf9eaa322ba62d53d196e74456e234fa2bff5ad825947a"
+  }
+]

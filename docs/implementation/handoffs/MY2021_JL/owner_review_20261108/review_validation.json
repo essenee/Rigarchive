@@ -1,0 +1,30 @@
+{
+  "status": "passed",
+  "focused_review_tests": 8,
+  "test_log": "verification_results.txt",
+  "original_discovery_files_preserved": 91,
+  "original_hash_inventory_entries": 90,
+  "database_byte_unchanged": true,
+  "database_sha256": "sha256:ec1eb2adb8becf62a6d8ef18e5ae2dee37d5049620faaaeec51ab8c69b0ee4f9",
+  "database_counts_unchanged": {
+    "reference_vehicledefinition": 861,
+    "reference_importexecutionreceipt": 2980,
+    "reference_generationcorrespondencerevision": 64
+  },
+  "SQLite_integrity": "ok",
+  "foreign_key_violations": 0,
+  "trim_variants_reviewed": 25,
+  "proposed_construction_rows": 73,
+  "deferred_RHD_rows": 1,
+  "classification_groups": 7,
+  "field_decisions_reviewed": 89,
+  "consumer_field_decisions_requested": 88,
+  "RHD_field_decisions_deferred": 1,
+  "earlier_only_rows_preserved": 24,
+  "candidate_artifacts_constructed": 0,
+  "adjudications_applied": 0,
+  "application_or_contract_changes": false,
+  "canonical_database_writes": false,
+  "commit_or_push": false,
+  "manual_visual_review": "Official MY2021 manual PDF page 143, printed 141, checked visually against extracted ESS/eTorque hardware text."
+}

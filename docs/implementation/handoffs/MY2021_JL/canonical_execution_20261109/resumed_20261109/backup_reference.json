@@ -1,0 +1,9 @@
+{
+  "path": "backups/review/MY2021_JL_canonical_preimport_20261109T171124979026Z.sqlite3",
+  "sha256": "sha256:21bd8db4505b96eff57696d02b5cdf51bdeadd0dae9bddb8aff11b54cc135a97",
+  "integrity": "ok",
+  "foreign_keys": "passed",
+  "all_non_session_table_match": true,
+  "session_state_independently_verified": true,
+  "absolute_path": "/Users/cosmo/dev/Rigarchive/backups/review/MY2021_JL_canonical_preimport_20261109T171124979026Z.sqlite3"
+}

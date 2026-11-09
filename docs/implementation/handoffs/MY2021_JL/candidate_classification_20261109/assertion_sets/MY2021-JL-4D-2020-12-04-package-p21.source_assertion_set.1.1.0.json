@@ -1,0 +1,40 @@
+{
+  "envelope": {
+    "artifact_type": "rigarchive.source_assertion_set.v1",
+    "created_at": "2026-11-09T13:43:25.638901+00:00",
+    "generator": "MY2021_bounded_construction",
+    "schema_version": "1.1.0"
+  },
+  "provenance": {
+    "acquisition_method": "retained_local_evidence",
+    "extraction_provenance": {
+      "extraction_mode": "manually_verified_transcription",
+      "extractor_id": "retained_MY2021_evidence_transcription",
+      "extractor_version": "1.0.0",
+      "raw_artifact_hash": "sha256:4dad5bddad4fbd0c0e2bab5095734c9f740e9c0e53d67de64df30b41576ada5a",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-12-4-20-pdf.401774.pdf"
+    },
+    "native_record_id": "MY2021-JL-4D-2020-12-04-package-p21",
+    "publication_revision": "Original retained MY2021 source; no cross-year approval propagation",
+    "retrieved_at": "2026-11-09T13:43:25.638901+00:00",
+    "review_status": "reviewed",
+    "source_applicability": {
+      "applicability_basis": "MY2021 US guide applicability; technical/manual joins scoped to exact engine family and source locators",
+      "applicability_scope": "model_year",
+      "market": "US",
+      "publisher_jurisdiction": "US"
+    },
+    "source_id": "MY2021-JL-4D-2020-12-04",
+    "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-12-4-20-pdf.401774/",
+    "source_type": "manufacturer_document",
+    "source_use_notes": "Raw optional-package evidence only. No option/transmission-only baseline is constructed."
+  },
+  "source_assertions": [
+    {
+      "assertion_id": "MY2021-JL-4D-2020-12-04-package-p21",
+      "attribute_key": "factory_package_option_page",
+      "raw_value": "JEEP United States                                   REISSUED: 12/04/2020                                                                                         PAGE: 21\nREVISED                                                         ISSUED:      06/04/2020                                                 2021 WRANGLER 4 DOOR\n                                                                                                   WRANGLER UNLIMITED SAHARA 4XE\nSTEP #3              SELECT - $ OPTIONS (IF DESIRED)\n\n                                                                                                                           HIGH ALTITUDE\nDESCRIPTION                                                                           2_P                                      2_N\nADVANCED SAFETY GROUP                                                                ALP                                       ALP\nANTI-SPIN DIFFERENTIAL REAR AXLE                                                     DSA                                       DSA\nBODY COLOR 3-PIECE HARD TOP                                                          HT3                                        P\nINCLUDED W/AEN; N/A W/PYV; N/A W/STJ                        W/AEN                    HT3                                        P\nCARGO GROUP W/ TRAIL RAIL SYSTEM                                                     CMD                                       CMD\nCOLD WEATHER GROUP                                                                   ADE                                       ADE\nDUAL TOP GROUP                                                                       AEN\nIncludes HT3                                                                                                                   AEN\nFRONT LICENSE PLATE BRACKET                                                          MDA                                       MDA\nINTEGRATED OFF-ROAD CAMERA                                                           XNY                                       XNY\nM/H AD6 AND AEK\nJEEP TRAIL RATED KIT                                                                 XWX                                       XWX\nMANUF STATEMENT OF ORIGIN                                                            YEP                                       YEP\nPREMIUM BLACK SUNRIDER SOFT TOP                                                      STB\nONLY 1: STB OR STC OR STJ OR ST3\nPREMIUM TAN SUNRIDER SOFT TOP                                                        ST3\nONLY 1: STB OR STC OR STJ OR ST3                                                                                               ST3\nPREMIUM TAN SUNRIDER SOFT TOP                                                        STC\nONLY 1: STB OR STC OR STJ OR ST3\nREMOTE PROXIMITY KEYLESS ENTRY                                                       GXD                                        P\nM/H GX4\nREMOTE START SYSTEM                                                                  XBM                                       XBM\nINCLUDED W/ADE                                              W/ADE                    XBM                                       XBM\nSAFETY GROUP                                                                          AJ1                                       P\nSKY ONE-TOUCH POWER TOP                                                              STJ\nN/A W/AEN; N/A W/PYV; ONLY 1: STB OR STC                                                                                       STJ\nOR STJ OR ST3\nSMOKER'S GROUP                                                                       AWS                                       AWS\nSOFT TOP WINDOW STORAGE BAG                                                          CWJ                                       CWJ\nN/A W/AEN\nTRAILER TOW AND HD ELECTRICAL                                                        ADH                                       ADH\nGROUP\n\nMOPAR OPTIONS\nMOPAR ALL-WEATHER FLOOR MATS                                                         CWA                                      CWA\nMOPAR BLACK TUBULAR SIDE STEPS                                                       MRU\nONLY 1: MRT OR MRU\nMOPAR GRAB HANDLE KIT                                                                XC3                                       XC3\nN/A W/STJ\nMOPAR HARDTOP HEADLINER                                                              CHD                                       CHD\nM/H HT3 OR AEN; N/A W/STJ\nMOPAR MESH SUNBONNET TOP                                                             CS7                                       CS7\nMOPAR SOLID SUNBONNET TOP                                                            CS3                                       CS3\nMOPAR STAINLESS DOOR SILL GUARDS                                                     CLN\nMOPAR WINDSHIELD TIE DOWN                                                            CT9                                       CT9\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nE - EXTRA COST N/C - NO CHARGE N/A - NOT AVAILABLE P - PACKAGED",
+      "source_context": "PDF page 21; model JLXP74; raw conditions retained, not evaluated"
+    }
+  ]
+}

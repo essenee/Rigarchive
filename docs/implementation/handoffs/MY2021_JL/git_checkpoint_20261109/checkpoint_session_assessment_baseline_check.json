@@ -1,0 +1,29 @@
+{
+  "phase": "checkpoint_session_assessment",
+  "reconciled_baseline": "docs/implementation/handoffs/MY2021_JL/session_reconciliation_20261109/execution_baseline.json",
+  "baseline_file_sha256": "sha256:af922094a6e333567c6954da016d0f96387579b90fdbe6dd86297f587d494cda",
+  "accepted_baseline_database_sha256": "sha256:058bbd44e0811c83bf67c916ae92e27b6a0b062c26be031876e9582190e01473",
+  "current_file_sha256": "sha256:c37823955537d922c708d091a1494188c80f3cdc458b480c0fa955106d752ef6",
+  "byte_hash_differs": true,
+  "verified_normal_session_changes": [
+    {
+      "PK_fingerprint": "sha256:d2fc15bdc8d2ebbd4dccaf90d3cf2855f8b7f7f26534104c805c44dbda5355b5",
+      "changed_columns": [
+        "session_data",
+        "expire_date"
+      ],
+      "valid_signature": true,
+      "only_recently_viewed_decoded_data_may_differ": true,
+      "authentication_values_unchanged": true,
+      "history_schema_and_canonical_metadata_valid": true,
+      "normal_expiry_verified": true,
+      "history_count": 5
+    }
+  ],
+  "non_session_application_data_matches_baseline": false,
+  "post_execution_additions_require_separate_backup_reconciliation": true,
+  "schema_identity_and_receipt_digest_checks": "non-mutated tables passed;73+73 additions separately reconciled",
+  "SQLite_integrity": "ok",
+  "foreign_key_violations": 0,
+  "live_database_writes": 0
+}

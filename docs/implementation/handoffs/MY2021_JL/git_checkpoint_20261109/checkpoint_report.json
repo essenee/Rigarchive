@@ -1,0 +1,49 @@
+{
+  "status": "passed",
+  "checkpoint_path": "/Users/cosmo/dev/Rigarchive/backups/review/MY2021_commit_checkpoint_20261109T182304627056Z.sqlite3",
+  "checkpoint_sha256": "sha256:431fa5e47d7c80021ed8bc7c63dc8feee0cdb0447664f07b7c406cf57e94ae97",
+  "live_database_before_sha256": "sha256:c37823955537d922c708d091a1494188c80f3cdc458b480c0fa955106d752ef6",
+  "live_database_after_sha256": "sha256:c37823955537d922c708d091a1494188c80f3cdc458b480c0fa955106d752ef6",
+  "live_database_unchanged": true,
+  "totals": {
+    "VehicleDefinitions": 934,
+    "audit_receipts": 3148,
+    "correspondences": 159
+  },
+  "MY2021_definitions": 73,
+  "MY2021_execution_receipts": 73,
+  "MY2021_published_correspondences": 95,
+  "body_distribution": {
+    "2-door": 23,
+    "4-door": 50
+  },
+  "labels": 24,
+  "complete_five_field_identities": 73,
+  "Matrix_digest": "sha256:6926df6c06e4bd471bbda02c67257cf7a7e2999cf5cdfebfc8b06ead31a9996e",
+  "SQLite_integrity": "ok",
+  "foreign_key_violations": 0,
+  "canonical_and_all_other_non_authentication_tables_identical": true,
+  "session_rows_removed_from_copy_only": 5,
+  "sanitized_account_PKs": [
+    17
+  ],
+  "sanitized_columns": [
+    "display_name",
+    "email",
+    "last_login",
+    "password",
+    "username"
+  ],
+  "password": "unusable marker; no credentials retained",
+  "private_session_and_password_bytes_absent": true,
+  "publication_artifact_authentication_secret_scan": "passed",
+  "restoration_to_separate_development_copy": "passed;all tables matched;934/3148/159",
+  "python": "3.13.1 (v3.13.1:06714517797, Dec  3 2024, 14:00:22) [Clang 15.0.0 (clang-1500.3.9.4)]",
+  "interpreter": "/Users/cosmo/dev/Rigarchive/.venv/bin/python",
+  "dependencies": {
+    "Django": "6.0.7",
+    "pypdf": "6.16.1"
+  },
+  "prior_sanitization_policy_commit": "5a451d2",
+  "no_application_contract_or_migration_changes": true
+}

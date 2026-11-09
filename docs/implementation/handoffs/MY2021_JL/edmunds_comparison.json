@@ -1,0 +1,981 @@
+{
+  "compared_rows": 74,
+  "corroborated_body_trim_and_engine_family": 74,
+  "manufacturer_supported_absent_from_edmunds": [],
+  "edmunds_listed_absent_from_guide_union": [],
+  "comparison": [
+    {
+      "research_row_id": "JL21-01",
+      "trim": "80th Anniversary Edition",
+      "manufacturer_engine_code": "EC1",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401878299/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-02",
+      "trim": "80th Anniversary Edition",
+      "manufacturer_engine_code": "ERG",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401878299/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-03",
+      "trim": "Freedom",
+      "manufacturer_engine_code": "EC1",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401878300/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-04",
+      "trim": "Freedom",
+      "manufacturer_engine_code": "ERC",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401878300/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-05",
+      "trim": "Freedom",
+      "manufacturer_engine_code": "ERG",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401878300/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-06",
+      "trim": "Islander",
+      "manufacturer_engine_code": "EC1",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401878301/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-07",
+      "trim": "Islander",
+      "manufacturer_engine_code": "ERC",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401878301/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-08",
+      "trim": "Islander",
+      "manufacturer_engine_code": "ERG",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401878301/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-09",
+      "trim": "Sport",
+      "manufacturer_engine_code": "EC1",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401844797/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-10",
+      "trim": "Sport",
+      "manufacturer_engine_code": "ERC",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401844797/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-11",
+      "trim": "Sport",
+      "manufacturer_engine_code": "ERG",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401844797/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-12",
+      "trim": "Sport S",
+      "manufacturer_engine_code": "EC1",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401857819/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-13",
+      "trim": "Sport S",
+      "manufacturer_engine_code": "ERC",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401857819/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-14",
+      "trim": "Sport S",
+      "manufacturer_engine_code": "ERG",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401857819/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-15",
+      "trim": "Willys",
+      "manufacturer_engine_code": "EC1",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401857820/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-16",
+      "trim": "Willys",
+      "manufacturer_engine_code": "ERC",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401857820/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-17",
+      "trim": "Willys",
+      "manufacturer_engine_code": "ERG",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401857820/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-18",
+      "trim": "Willys Sport",
+      "manufacturer_engine_code": "EC1",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401857818/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-19",
+      "trim": "Willys Sport",
+      "manufacturer_engine_code": "ERC",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401857818/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-20",
+      "trim": "Willys Sport",
+      "manufacturer_engine_code": "ERG",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401857818/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-21",
+      "trim": "Rubicon",
+      "manufacturer_engine_code": "EC1",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401857821/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-22",
+      "trim": "Rubicon",
+      "manufacturer_engine_code": "ERC",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401857821/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-23",
+      "trim": "Rubicon",
+      "manufacturer_engine_code": "ERG",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401857821/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-24",
+      "trim": "Unlimited 80th Anniversary Edition",
+      "manufacturer_engine_code": "EC1",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401878943/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-25",
+      "trim": "Unlimited 80th Anniversary Edition",
+      "manufacturer_engine_code": "ERG",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401878943/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-26",
+      "trim": "Unlimited 80th Anniversary Edition",
+      "manufacturer_engine_code": "EXJ",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401878943/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-27",
+      "trim": "Unlimited Freedom",
+      "manufacturer_engine_code": "EC1",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401878944/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-28",
+      "trim": "Unlimited Freedom",
+      "manufacturer_engine_code": "ERC",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401878944/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-29",
+      "trim": "Unlimited Freedom",
+      "manufacturer_engine_code": "ERG",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401878944/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-30",
+      "trim": "Unlimited Freedom",
+      "manufacturer_engine_code": "EXJ",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401878944/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-31",
+      "trim": "Unlimited Islander",
+      "manufacturer_engine_code": "EC1",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401878945/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-32",
+      "trim": "Unlimited Islander",
+      "manufacturer_engine_code": "ERC",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401878945/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-33",
+      "trim": "Unlimited Islander",
+      "manufacturer_engine_code": "ERG",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401878945/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-34",
+      "trim": "Unlimited Islander",
+      "manufacturer_engine_code": "EXJ",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401878945/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-35",
+      "trim": "Unlimited Sport",
+      "manufacturer_engine_code": "EC1",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401858036/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-36",
+      "trim": "Unlimited Sport",
+      "manufacturer_engine_code": "ERC",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401858036/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-37",
+      "trim": "Unlimited Sport",
+      "manufacturer_engine_code": "ERG",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401858036/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-38",
+      "trim": "Unlimited Sport",
+      "manufacturer_engine_code": "EXJ",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401858036/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-39",
+      "trim": "Unlimited Sport Altitude",
+      "manufacturer_engine_code": "EC1",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401858040/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-40",
+      "trim": "Unlimited Sport Altitude",
+      "manufacturer_engine_code": "ERC",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401858040/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-41",
+      "trim": "Unlimited Sport Altitude",
+      "manufacturer_engine_code": "ERG",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401858040/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-42",
+      "trim": "Unlimited Sport Altitude",
+      "manufacturer_engine_code": "EXJ",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401858040/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-43",
+      "trim": "Unlimited Sport S",
+      "manufacturer_engine_code": "EC1",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401858038/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-44",
+      "trim": "Unlimited Sport S",
+      "manufacturer_engine_code": "ERC",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401858038/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-45",
+      "trim": "Unlimited Sport S",
+      "manufacturer_engine_code": "ERG",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401858038/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-46",
+      "trim": "Unlimited Sport S",
+      "manufacturer_engine_code": "EXJ",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401858038/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-47",
+      "trim": "Unlimited Willys",
+      "manufacturer_engine_code": "EC1",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401858039/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-48",
+      "trim": "Unlimited Willys",
+      "manufacturer_engine_code": "ERC",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401858039/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-49",
+      "trim": "Unlimited Willys",
+      "manufacturer_engine_code": "ERG",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401858039/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-50",
+      "trim": "Unlimited Willys",
+      "manufacturer_engine_code": "EXJ",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401858039/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-51",
+      "trim": "Unlimited Willys Sport",
+      "manufacturer_engine_code": "EC1",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401858037/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-52",
+      "trim": "Unlimited Willys Sport",
+      "manufacturer_engine_code": "ERC",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401858037/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-53",
+      "trim": "Unlimited Willys Sport",
+      "manufacturer_engine_code": "ERG",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401858037/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-54",
+      "trim": "Unlimited Willys Sport",
+      "manufacturer_engine_code": "EXJ",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401858037/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-55",
+      "trim": "Unlimited High Altitude",
+      "manufacturer_engine_code": "EC1",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401858050/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-56",
+      "trim": "Unlimited High Altitude",
+      "manufacturer_engine_code": "ERG",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401858050/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-57",
+      "trim": "Unlimited High Altitude",
+      "manufacturer_engine_code": "EXJ",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401858050/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-58",
+      "trim": "Unlimited Sahara",
+      "manufacturer_engine_code": "EC1",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401858048/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-59",
+      "trim": "Unlimited Sahara",
+      "manufacturer_engine_code": "ERC",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401858048/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-60",
+      "trim": "Unlimited Sahara",
+      "manufacturer_engine_code": "ERG",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401858048/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-61",
+      "trim": "Unlimited Sahara",
+      "manufacturer_engine_code": "EXJ",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401858048/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-62",
+      "trim": "Unlimited Sahara Altitude",
+      "manufacturer_engine_code": "EC1",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401858049/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-63",
+      "trim": "Unlimited Sahara Altitude",
+      "manufacturer_engine_code": "ERC",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401858049/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-64",
+      "trim": "Unlimited Sahara Altitude",
+      "manufacturer_engine_code": "ERG",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401858049/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-65",
+      "trim": "Unlimited Sahara Altitude",
+      "manufacturer_engine_code": "EXJ",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401858049/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-66",
+      "trim": "Unlimited Rubicon",
+      "manufacturer_engine_code": "EC1",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401858046/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-67",
+      "trim": "Unlimited Rubicon",
+      "manufacturer_engine_code": "ERC",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401858046/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-68",
+      "trim": "Unlimited Rubicon",
+      "manufacturer_engine_code": "ERG",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401858046/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-69",
+      "trim": "Unlimited Rubicon",
+      "manufacturer_engine_code": "EXJ",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401858046/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-70",
+      "trim": "Unlimited Rubicon 392",
+      "manufacturer_engine_code": "ESG",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401882532/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-71",
+      "trim": "Unlimited Sport RHD",
+      "manufacturer_engine_code": "EC1",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler/2021/st-401891174/features-specs/",
+      "secondary_sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-72",
+      "trim": "Unlimited High Altitude 4xe",
+      "manufacturer_engine_code": "ECX",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler-4xe/2021/trims/",
+      "secondary_sections": [
+        "Compare 2021 Wrangler 4xe trims side-by-side",
+        "Specifications",
+        "Fuel economy"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-73",
+      "trim": "Unlimited Sahara 4xe",
+      "manufacturer_engine_code": "ECX",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler-4xe/2021/trims/",
+      "secondary_sections": [
+        "Compare 2021 Wrangler 4xe trims side-by-side",
+        "Specifications",
+        "Fuel economy"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    },
+    {
+      "research_row_id": "JL21-74",
+      "trim": "Unlimited Rubicon 4xe",
+      "manufacturer_engine_code": "ECX",
+      "secondary_url": "https://www.edmunds.com/jeep/wrangler-4xe/2021/trims/",
+      "secondary_sections": [
+        "Compare 2021 Wrangler 4xe trims side-by-side",
+        "Specifications",
+        "Fuel economy"
+      ],
+      "result": "corroborated_body_trim_and_engine_family",
+      "exact_structured_identity_confirmation": false,
+      "interpretation": "Engine-code association comes from manufacturer guides; Edmunds corroborates described engine family/technology, not manufacturer codes or all canonical classifications."
+    }
+  ],
+  "limitations": [
+    "No Cartesian engine expansion from a general review; each body/trim page optional engine table was inspected or web-read.",
+    "ERC automatic versus manual alternatives collapse under manufacturer identity; Edmunds does not independently certify every ERC automatic revision.",
+    "80th Edition/80th Anniversary Edition and Sahara-family High Altitude normalized labels differ; provenance retained.",
+    "Edmunds treats editions as subtrim packages while listing them separately. RigArchive manufacturer-grade rules govern.",
+    "Edmunds catalogue separation of 4xe and 392 does not establish a separate canonical model or Generation.",
+    "Edmunds displayed end-date qualifiers differ from first/last guide observations. They are not adopted as factory production boundaries."
+  ]
+}

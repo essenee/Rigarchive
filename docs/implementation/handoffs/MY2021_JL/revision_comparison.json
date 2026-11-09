@@ -1,0 +1,720 @@
+[
+  {
+    "source_id": "MY2021-JL-2D-2020-06-04",
+    "revision_date_printed": "2020-06-04",
+    "unique_configurations": 15,
+    "added_since_previous_retained_revision": [
+      [
+        "JLJL72",
+        "Sport",
+        "EC1"
+      ],
+      [
+        "JLJL72",
+        "Sport",
+        "ERC"
+      ],
+      [
+        "JLJL72",
+        "Sport",
+        "ERG"
+      ],
+      [
+        "JLJL72",
+        "Sport S",
+        "EC1"
+      ],
+      [
+        "JLJL72",
+        "Sport S",
+        "ERC"
+      ],
+      [
+        "JLJL72",
+        "Sport S",
+        "ERG"
+      ],
+      [
+        "JLJL72",
+        "Willys",
+        "EC1"
+      ],
+      [
+        "JLJL72",
+        "Willys",
+        "ERC"
+      ],
+      [
+        "JLJL72",
+        "Willys",
+        "ERG"
+      ],
+      [
+        "JLJL72",
+        "Willys Sport",
+        "EC1"
+      ],
+      [
+        "JLJL72",
+        "Willys Sport",
+        "ERC"
+      ],
+      [
+        "JLJL72",
+        "Willys Sport",
+        "ERG"
+      ],
+      [
+        "JLJS72",
+        "Rubicon",
+        "EC1"
+      ],
+      [
+        "JLJS72",
+        "Rubicon",
+        "ERC"
+      ],
+      [
+        "JLJS72",
+        "Rubicon",
+        "ERG"
+      ]
+    ],
+    "absent_since_previous_retained_revision": [],
+    "package_cells": 15
+  },
+  {
+    "source_id": "MY2021-JL-2D-2020-08-06",
+    "revision_date_printed": "2020-08-06",
+    "unique_configurations": 20,
+    "added_since_previous_retained_revision": [
+      [
+        "JLJL72",
+        "80th Anniversary Edition",
+        "EC1"
+      ],
+      [
+        "JLJL72",
+        "80th Anniversary Edition",
+        "ERG"
+      ],
+      [
+        "JLJL72",
+        "Islander",
+        "EC1"
+      ],
+      [
+        "JLJL72",
+        "Islander",
+        "ERC"
+      ],
+      [
+        "JLJL72",
+        "Islander",
+        "ERG"
+      ]
+    ],
+    "absent_since_previous_retained_revision": [],
+    "package_cells": 20
+  },
+  {
+    "source_id": "MY2021-JL-2D-2020-09-29",
+    "revision_date_printed": "2020-09-29",
+    "unique_configurations": 23,
+    "added_since_previous_retained_revision": [
+      [
+        "JLJL72",
+        "Freedom",
+        "EC1"
+      ],
+      [
+        "JLJL72",
+        "Freedom",
+        "ERC"
+      ],
+      [
+        "JLJL72",
+        "Freedom",
+        "ERG"
+      ]
+    ],
+    "absent_since_previous_retained_revision": [],
+    "package_cells": 23
+  },
+  {
+    "source_id": "MY2021-JL-2D-2020-10-14",
+    "revision_date_printed": "2020-10-14",
+    "unique_configurations": 23,
+    "added_since_previous_retained_revision": [],
+    "absent_since_previous_retained_revision": [],
+    "package_cells": 23
+  },
+  {
+    "source_id": "MY2021-JL-2D-2020-12-04",
+    "revision_date_printed": "2020-12-04",
+    "unique_configurations": 23,
+    "added_since_previous_retained_revision": [],
+    "absent_since_previous_retained_revision": [],
+    "package_cells": 23
+  },
+  {
+    "source_id": "MY2021-JL-2D-2021-01-01",
+    "revision_date_printed": "2021-01-01",
+    "unique_configurations": 23,
+    "added_since_previous_retained_revision": [],
+    "absent_since_previous_retained_revision": [],
+    "package_cells": 23
+  },
+  {
+    "source_id": "MY2021-JL-2D-2021-02-08",
+    "revision_date_printed": "2021-02-08",
+    "unique_configurations": 23,
+    "added_since_previous_retained_revision": [],
+    "absent_since_previous_retained_revision": [],
+    "package_cells": 23
+  },
+  {
+    "source_id": "MY2021-JL-2D-2021-03-05",
+    "revision_date_printed": "2021-03-05",
+    "unique_configurations": 23,
+    "added_since_previous_retained_revision": [],
+    "absent_since_previous_retained_revision": [],
+    "package_cells": 23
+  },
+  {
+    "source_id": "MY2021-JL-2D-2021-04-14",
+    "revision_date_printed": "2021-04-14",
+    "unique_configurations": 23,
+    "added_since_previous_retained_revision": [],
+    "absent_since_previous_retained_revision": [],
+    "package_cells": 23
+  },
+  {
+    "source_id": "MY2021-JL-2D-2021-05-14",
+    "revision_date_printed": "2021-05-14",
+    "unique_configurations": 20,
+    "added_since_previous_retained_revision": [],
+    "absent_since_previous_retained_revision": [
+      [
+        "JLJL72",
+        "Islander",
+        "EC1"
+      ],
+      [
+        "JLJL72",
+        "Islander",
+        "ERC"
+      ],
+      [
+        "JLJL72",
+        "Islander",
+        "ERG"
+      ]
+    ],
+    "package_cells": 20
+  },
+  {
+    "source_id": "MY2021-JL-2D-2021-06-09",
+    "revision_date_printed": "2021-06-09",
+    "unique_configurations": 15,
+    "added_since_previous_retained_revision": [],
+    "absent_since_previous_retained_revision": [
+      [
+        "JLJL72",
+        "80th Anniversary Edition",
+        "EC1"
+      ],
+      [
+        "JLJL72",
+        "80th Anniversary Edition",
+        "ERG"
+      ],
+      [
+        "JLJL72",
+        "Freedom",
+        "EC1"
+      ],
+      [
+        "JLJL72",
+        "Freedom",
+        "ERC"
+      ],
+      [
+        "JLJL72",
+        "Freedom",
+        "ERG"
+      ]
+    ],
+    "package_cells": 15
+  },
+  {
+    "source_id": "MY2021-JL-2D-2021-07-06",
+    "revision_date_printed": "2021-07-06",
+    "unique_configurations": 15,
+    "added_since_previous_retained_revision": [],
+    "absent_since_previous_retained_revision": [],
+    "package_cells": 15
+  },
+  {
+    "source_id": "MY2021-JL-2D-2021-08-06",
+    "revision_date_printed": "2021-08-06",
+    "unique_configurations": 15,
+    "added_since_previous_retained_revision": [],
+    "absent_since_previous_retained_revision": [],
+    "package_cells": 15
+  },
+  {
+    "source_id": "MY2021-JL-4D-2020-06-04",
+    "revision_date_printed": "2020-06-04",
+    "unique_configurations": 35,
+    "added_since_previous_retained_revision": [
+      [
+        "JLJL74",
+        "Unlimited Sport",
+        "EC1"
+      ],
+      [
+        "JLJL74",
+        "Unlimited Sport",
+        "ERC"
+      ],
+      [
+        "JLJL74",
+        "Unlimited Sport",
+        "ERG"
+      ],
+      [
+        "JLJL74",
+        "Unlimited Sport",
+        "EXJ"
+      ],
+      [
+        "JLJL74",
+        "Unlimited Sport Altitude",
+        "EC1"
+      ],
+      [
+        "JLJL74",
+        "Unlimited Sport Altitude",
+        "ERC"
+      ],
+      [
+        "JLJL74",
+        "Unlimited Sport Altitude",
+        "ERG"
+      ],
+      [
+        "JLJL74",
+        "Unlimited Sport Altitude",
+        "EXJ"
+      ],
+      [
+        "JLJL74",
+        "Unlimited Sport S",
+        "EC1"
+      ],
+      [
+        "JLJL74",
+        "Unlimited Sport S",
+        "ERC"
+      ],
+      [
+        "JLJL74",
+        "Unlimited Sport S",
+        "ERG"
+      ],
+      [
+        "JLJL74",
+        "Unlimited Sport S",
+        "EXJ"
+      ],
+      [
+        "JLJL74",
+        "Unlimited Willys",
+        "EC1"
+      ],
+      [
+        "JLJL74",
+        "Unlimited Willys",
+        "ERC"
+      ],
+      [
+        "JLJL74",
+        "Unlimited Willys",
+        "ERG"
+      ],
+      [
+        "JLJL74",
+        "Unlimited Willys",
+        "EXJ"
+      ],
+      [
+        "JLJL74",
+        "Unlimited Willys Sport",
+        "EC1"
+      ],
+      [
+        "JLJL74",
+        "Unlimited Willys Sport",
+        "ERC"
+      ],
+      [
+        "JLJL74",
+        "Unlimited Willys Sport",
+        "ERG"
+      ],
+      [
+        "JLJL74",
+        "Unlimited Willys Sport",
+        "EXJ"
+      ],
+      [
+        "JLJP74",
+        "Unlimited High Altitude",
+        "EC1"
+      ],
+      [
+        "JLJP74",
+        "Unlimited High Altitude",
+        "ERG"
+      ],
+      [
+        "JLJP74",
+        "Unlimited High Altitude",
+        "EXJ"
+      ],
+      [
+        "JLJP74",
+        "Unlimited Sahara",
+        "EC1"
+      ],
+      [
+        "JLJP74",
+        "Unlimited Sahara",
+        "ERC"
+      ],
+      [
+        "JLJP74",
+        "Unlimited Sahara",
+        "ERG"
+      ],
+      [
+        "JLJP74",
+        "Unlimited Sahara",
+        "EXJ"
+      ],
+      [
+        "JLJP74",
+        "Unlimited Sahara Altitude",
+        "EC1"
+      ],
+      [
+        "JLJP74",
+        "Unlimited Sahara Altitude",
+        "ERC"
+      ],
+      [
+        "JLJP74",
+        "Unlimited Sahara Altitude",
+        "ERG"
+      ],
+      [
+        "JLJP74",
+        "Unlimited Sahara Altitude",
+        "EXJ"
+      ],
+      [
+        "JLJS74",
+        "Unlimited Rubicon",
+        "EC1"
+      ],
+      [
+        "JLJS74",
+        "Unlimited Rubicon",
+        "ERC"
+      ],
+      [
+        "JLJS74",
+        "Unlimited Rubicon",
+        "ERG"
+      ],
+      [
+        "JLJS74",
+        "Unlimited Rubicon",
+        "EXJ"
+      ]
+    ],
+    "absent_since_previous_retained_revision": [],
+    "package_cells": 35
+  },
+  {
+    "source_id": "MY2021-JL-4D-2020-08-06",
+    "revision_date_printed": "2020-08-06",
+    "unique_configurations": 42,
+    "added_since_previous_retained_revision": [
+      [
+        "JLJL74",
+        "Unlimited 80th Anniversary Edition",
+        "EC1"
+      ],
+      [
+        "JLJL74",
+        "Unlimited 80th Anniversary Edition",
+        "ERG"
+      ],
+      [
+        "JLJL74",
+        "Unlimited 80th Anniversary Edition",
+        "EXJ"
+      ],
+      [
+        "JLJL74",
+        "Unlimited Islander",
+        "EC1"
+      ],
+      [
+        "JLJL74",
+        "Unlimited Islander",
+        "ERC"
+      ],
+      [
+        "JLJL74",
+        "Unlimited Islander",
+        "ERG"
+      ],
+      [
+        "JLJL74",
+        "Unlimited Islander",
+        "EXJ"
+      ]
+    ],
+    "absent_since_previous_retained_revision": [],
+    "package_cells": 42
+  },
+  {
+    "source_id": "MY2021-JL-4D-2020-09-29",
+    "revision_date_printed": "2020-09-29",
+    "unique_configurations": 46,
+    "added_since_previous_retained_revision": [
+      [
+        "JLJL74",
+        "Unlimited Freedom",
+        "EC1"
+      ],
+      [
+        "JLJL74",
+        "Unlimited Freedom",
+        "ERC"
+      ],
+      [
+        "JLJL74",
+        "Unlimited Freedom",
+        "ERG"
+      ],
+      [
+        "JLJL74",
+        "Unlimited Freedom",
+        "EXJ"
+      ]
+    ],
+    "absent_since_previous_retained_revision": [],
+    "package_cells": 46
+  },
+  {
+    "source_id": "MY2021-JL-4D-2020-10-14",
+    "revision_date_printed": "2020-10-14",
+    "unique_configurations": 47,
+    "added_since_previous_retained_revision": [
+      [
+        "JLUL74",
+        "Unlimited Sport RHD",
+        "EC1"
+      ]
+    ],
+    "absent_since_previous_retained_revision": [],
+    "package_cells": 47
+  },
+  {
+    "source_id": "MY2021-JL-4D-2020-10-30",
+    "revision_date_printed": "2020-10-30",
+    "unique_configurations": 47,
+    "added_since_previous_retained_revision": [],
+    "absent_since_previous_retained_revision": [],
+    "package_cells": 47
+  },
+  {
+    "source_id": "MY2021-JL-4D-2020-12-04",
+    "revision_date_printed": "2020-12-04",
+    "unique_configurations": 51,
+    "added_since_previous_retained_revision": [
+      [
+        "JLJX74",
+        "Unlimited Rubicon 392",
+        "ESG"
+      ],
+      [
+        "JLXP74",
+        "Unlimited High Altitude 4xe",
+        "ECX"
+      ],
+      [
+        "JLXP74",
+        "Unlimited Sahara 4xe",
+        "ECX"
+      ],
+      [
+        "JLXS74",
+        "Unlimited Rubicon 4xe",
+        "ECX"
+      ]
+    ],
+    "absent_since_previous_retained_revision": [],
+    "package_cells": 51
+  },
+  {
+    "source_id": "MY2021-JL-4D-2021-01-01",
+    "revision_date_printed": "2021-01-01",
+    "unique_configurations": 51,
+    "added_since_previous_retained_revision": [],
+    "absent_since_previous_retained_revision": [],
+    "package_cells": 51
+  },
+  {
+    "source_id": "MY2021-JL-4D-2021-02-09",
+    "revision_date_printed": "2021-02-09",
+    "unique_configurations": 51,
+    "added_since_previous_retained_revision": [],
+    "absent_since_previous_retained_revision": [],
+    "package_cells": 51
+  },
+  {
+    "source_id": "MY2021-JL-4D-2021-03-05",
+    "revision_date_printed": "2021-03-05",
+    "unique_configurations": 51,
+    "added_since_previous_retained_revision": [],
+    "absent_since_previous_retained_revision": [],
+    "package_cells": 51
+  },
+  {
+    "source_id": "MY2021-JL-4D-2021-04-14",
+    "revision_date_printed": "2021-04-14",
+    "unique_configurations": 51,
+    "added_since_previous_retained_revision": [],
+    "absent_since_previous_retained_revision": [],
+    "package_cells": 51
+  },
+  {
+    "source_id": "MY2021-JL-4D-2021-05-14",
+    "revision_date_printed": "2021-05-14",
+    "unique_configurations": 39,
+    "added_since_previous_retained_revision": [],
+    "absent_since_previous_retained_revision": [
+      [
+        "JLJL74",
+        "Unlimited 80th Anniversary Edition",
+        "EC1"
+      ],
+      [
+        "JLJL74",
+        "Unlimited 80th Anniversary Edition",
+        "ERG"
+      ],
+      [
+        "JLJL74",
+        "Unlimited 80th Anniversary Edition",
+        "EXJ"
+      ],
+      [
+        "JLJL74",
+        "Unlimited Islander",
+        "EC1"
+      ],
+      [
+        "JLJL74",
+        "Unlimited Islander",
+        "ERC"
+      ],
+      [
+        "JLJL74",
+        "Unlimited Islander",
+        "ERG"
+      ],
+      [
+        "JLJL74",
+        "Unlimited Islander",
+        "EXJ"
+      ],
+      [
+        "JLJL74",
+        "Unlimited Sport Altitude",
+        "ERG"
+      ],
+      [
+        "JLJL74",
+        "Unlimited Willys",
+        "ERG"
+      ],
+      [
+        "JLJL74",
+        "Unlimited Willys",
+        "EXJ"
+      ],
+      [
+        "JLJL74",
+        "Unlimited Willys Sport",
+        "ERG"
+      ],
+      [
+        "JLJP74",
+        "Unlimited Sahara Altitude",
+        "ERG"
+      ]
+    ],
+    "package_cells": 44
+  },
+  {
+    "source_id": "MY2021-JL-4D-2021-06-09",
+    "revision_date_printed": "2021-06-09",
+    "unique_configurations": 35,
+    "added_since_previous_retained_revision": [],
+    "absent_since_previous_retained_revision": [
+      [
+        "JLJL74",
+        "Unlimited Freedom",
+        "EC1"
+      ],
+      [
+        "JLJL74",
+        "Unlimited Freedom",
+        "ERC"
+      ],
+      [
+        "JLJL74",
+        "Unlimited Freedom",
+        "ERG"
+      ],
+      [
+        "JLJL74",
+        "Unlimited Freedom",
+        "EXJ"
+      ]
+    ],
+    "package_cells": 41
+  },
+  {
+    "source_id": "MY2021-JL-4D-2021-07-06",
+    "revision_date_printed": "2021-07-06",
+    "unique_configurations": 35,
+    "added_since_previous_retained_revision": [],
+    "absent_since_previous_retained_revision": [],
+    "package_cells": 41
+  },
+  {
+    "source_id": "MY2021-JL-4D-2021-08-06",
+    "revision_date_printed": "2021-08-06",
+    "unique_configurations": 35,
+    "added_since_previous_retained_revision": [],
+    "absent_since_previous_retained_revision": [],
+    "package_cells": 41
+  }
+]

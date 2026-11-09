@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/cosmo/dev/Rigarchive/docs/implementation/handoffs/MY2021_JL/canonical_execution_20261109/execute_certified.py", line 344, in <module>
+    {'preflight': preflight, 'execute': execute, 'verify': verify}[sys.argv[1]]()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/cosmo/dev/Rigarchive/docs/implementation/handoffs/MY2021_JL/canonical_execution_20261109/execute_certified.py", line 99, in preflight
+    assert current_hash == load(PLANNING / 'preservation.json')['database_sha256_before'], 'Database changed since certified planning; stop'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Database changed since certified planning; stop

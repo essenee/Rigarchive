@@ -1,0 +1,3649 @@
+{
+  "artifact_kind": "nonexecutable_research_scope_not_Candidate",
+  "source_matrix_sha256": "sha256:691b242e773b214a1bdf0f752e5173f6fa04438bf0b5cdfb76681357fa82389d",
+  "owner_approval_status": "pending",
+  "rows": [
+    {
+      "research_row_id": "JL21-01",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "2-door",
+      "model_code": "JLJL72",
+      "marketed_trim_proposal": "80th Anniversary Edition",
+      "engine_code": "EC1",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "22Q"
+      ],
+      "engine_transmission_pairings": [
+        "EC1/DFT"
+      ],
+      "first_observed_revision": "2020-08-06",
+      "last_observed_revision": "2021-05-14",
+      "guide_source_ids": [
+        "MY2021-JL-2D-2020-08-06",
+        "MY2021-JL-2D-2020-09-29",
+        "MY2021-JL-2D-2020-10-14",
+        "MY2021-JL-2D-2020-12-04",
+        "MY2021-JL-2D-2021-01-01",
+        "MY2021-JL-2D-2021-02-08",
+        "MY2021-JL-2D-2021-03-05",
+        "MY2021-JL-2D-2021-04-14",
+        "MY2021-JL-2D-2021-05-14"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-2D-2020-08-06-p2",
+        "MY2021-JL-2D-2020-09-29-p2",
+        "MY2021-JL-2D-2020-10-14-p2",
+        "MY2021-JL-2D-2020-12-04-p2",
+        "MY2021-JL-2D-2021-01-01-p2",
+        "MY2021-JL-2D-2021-02-08-p2",
+        "MY2021-JL-2D-2021-03-05-p2",
+        "MY2021-JL-2D-2021-04-14-p2",
+        "MY2021-JL-2D-2021-05-14-p2"
+      ],
+      "positive_observations": 9,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:3817a3ddbe996ed2c5fe3d7b1e21933961c0d54d05ad36dae0e95b3ff0b01155"
+    },
+    {
+      "research_row_id": "JL21-02",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "2-door",
+      "model_code": "JLJL72",
+      "marketed_trim_proposal": "80th Anniversary Edition",
+      "engine_code": "ERG",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "25Q"
+      ],
+      "engine_transmission_pairings": [
+        "ERG/DFT"
+      ],
+      "first_observed_revision": "2020-08-06",
+      "last_observed_revision": "2021-05-14",
+      "guide_source_ids": [
+        "MY2021-JL-2D-2020-08-06",
+        "MY2021-JL-2D-2020-09-29",
+        "MY2021-JL-2D-2020-10-14",
+        "MY2021-JL-2D-2020-12-04",
+        "MY2021-JL-2D-2021-01-01",
+        "MY2021-JL-2D-2021-02-08",
+        "MY2021-JL-2D-2021-03-05",
+        "MY2021-JL-2D-2021-04-14",
+        "MY2021-JL-2D-2021-05-14"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-2D-2020-08-06-p2",
+        "MY2021-JL-2D-2020-09-29-p2",
+        "MY2021-JL-2D-2020-10-14-p2",
+        "MY2021-JL-2D-2020-12-04-p2",
+        "MY2021-JL-2D-2021-01-01-p2",
+        "MY2021-JL-2D-2021-02-08-p2",
+        "MY2021-JL-2D-2021-03-05-p2",
+        "MY2021-JL-2D-2021-04-14-p2",
+        "MY2021-JL-2D-2021-05-14-p2"
+      ],
+      "positive_observations": 9,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:1c973b307378f3ddd45b6e194e7f378fbff8358de0c7ec2bc3f3eef37ca265d4"
+    },
+    {
+      "research_row_id": "JL21-03",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "2-door",
+      "model_code": "JLJL72",
+      "marketed_trim_proposal": "Freedom",
+      "engine_code": "EC1",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "22F"
+      ],
+      "engine_transmission_pairings": [
+        "EC1/DFT"
+      ],
+      "first_observed_revision": "2020-09-29",
+      "last_observed_revision": "2021-05-14",
+      "guide_source_ids": [
+        "MY2021-JL-2D-2020-09-29",
+        "MY2021-JL-2D-2020-10-14",
+        "MY2021-JL-2D-2020-12-04",
+        "MY2021-JL-2D-2021-01-01",
+        "MY2021-JL-2D-2021-02-08",
+        "MY2021-JL-2D-2021-03-05",
+        "MY2021-JL-2D-2021-04-14",
+        "MY2021-JL-2D-2021-05-14"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-2D-2020-09-29-p2",
+        "MY2021-JL-2D-2020-10-14-p2",
+        "MY2021-JL-2D-2020-12-04-p2",
+        "MY2021-JL-2D-2021-01-01-p2",
+        "MY2021-JL-2D-2021-02-08-p2",
+        "MY2021-JL-2D-2021-03-05-p2",
+        "MY2021-JL-2D-2021-04-14-p2",
+        "MY2021-JL-2D-2021-05-14-p2"
+      ],
+      "positive_observations": 8,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:80066fb7302a28542a71c38b0ae66bdbc69c36a56222894ad6130bc0fa956a08"
+    },
+    {
+      "research_row_id": "JL21-04",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "2-door",
+      "model_code": "JLJL72",
+      "marketed_trim_proposal": "Freedom",
+      "engine_code": "ERC",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "23F"
+      ],
+      "engine_transmission_pairings": [
+        "ERC/DEM"
+      ],
+      "first_observed_revision": "2020-09-29",
+      "last_observed_revision": "2021-05-14",
+      "guide_source_ids": [
+        "MY2021-JL-2D-2020-09-29",
+        "MY2021-JL-2D-2020-10-14",
+        "MY2021-JL-2D-2020-12-04",
+        "MY2021-JL-2D-2021-01-01",
+        "MY2021-JL-2D-2021-02-08",
+        "MY2021-JL-2D-2021-03-05",
+        "MY2021-JL-2D-2021-04-14",
+        "MY2021-JL-2D-2021-05-14"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-2D-2020-09-29-p2",
+        "MY2021-JL-2D-2020-10-14-p2",
+        "MY2021-JL-2D-2020-12-04-p2",
+        "MY2021-JL-2D-2021-01-01-p2",
+        "MY2021-JL-2D-2021-02-08-p2",
+        "MY2021-JL-2D-2021-03-05-p2",
+        "MY2021-JL-2D-2021-04-14-p2",
+        "MY2021-JL-2D-2021-05-14-p2"
+      ],
+      "positive_observations": 8,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:4fd9020762c081f95c17334f44e080029411f32deb1e632d0ccaab96db032230"
+    },
+    {
+      "research_row_id": "JL21-05",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "2-door",
+      "model_code": "JLJL72",
+      "marketed_trim_proposal": "Freedom",
+      "engine_code": "ERG",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "25F"
+      ],
+      "engine_transmission_pairings": [
+        "ERG/DFT"
+      ],
+      "first_observed_revision": "2020-09-29",
+      "last_observed_revision": "2021-05-14",
+      "guide_source_ids": [
+        "MY2021-JL-2D-2020-09-29",
+        "MY2021-JL-2D-2020-10-14",
+        "MY2021-JL-2D-2020-12-04",
+        "MY2021-JL-2D-2021-01-01",
+        "MY2021-JL-2D-2021-02-08",
+        "MY2021-JL-2D-2021-03-05",
+        "MY2021-JL-2D-2021-04-14",
+        "MY2021-JL-2D-2021-05-14"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-2D-2020-09-29-p2",
+        "MY2021-JL-2D-2020-10-14-p2",
+        "MY2021-JL-2D-2020-12-04-p2",
+        "MY2021-JL-2D-2021-01-01-p2",
+        "MY2021-JL-2D-2021-02-08-p2",
+        "MY2021-JL-2D-2021-03-05-p2",
+        "MY2021-JL-2D-2021-04-14-p2",
+        "MY2021-JL-2D-2021-05-14-p2"
+      ],
+      "positive_observations": 8,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:1d59dce648ffe16970ac9b2c8a2e8b5d1687536a35a9a4e950921989334a2524"
+    },
+    {
+      "research_row_id": "JL21-06",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "2-door",
+      "model_code": "JLJL72",
+      "marketed_trim_proposal": "Islander",
+      "engine_code": "EC1",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "22J"
+      ],
+      "engine_transmission_pairings": [
+        "EC1/DFT"
+      ],
+      "first_observed_revision": "2020-08-06",
+      "last_observed_revision": "2021-04-14",
+      "guide_source_ids": [
+        "MY2021-JL-2D-2020-08-06",
+        "MY2021-JL-2D-2020-09-29",
+        "MY2021-JL-2D-2020-10-14",
+        "MY2021-JL-2D-2020-12-04",
+        "MY2021-JL-2D-2021-01-01",
+        "MY2021-JL-2D-2021-02-08",
+        "MY2021-JL-2D-2021-03-05",
+        "MY2021-JL-2D-2021-04-14"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-2D-2020-08-06-p2",
+        "MY2021-JL-2D-2020-09-29-p2",
+        "MY2021-JL-2D-2020-10-14-p2",
+        "MY2021-JL-2D-2020-12-04-p2",
+        "MY2021-JL-2D-2021-01-01-p2",
+        "MY2021-JL-2D-2021-02-08-p2",
+        "MY2021-JL-2D-2021-03-05-p2",
+        "MY2021-JL-2D-2021-04-14-p2"
+      ],
+      "positive_observations": 8,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:cafdb9fd5fdde5bfff540875b41feb9ee9f259100043741f0703340334693d90"
+    },
+    {
+      "research_row_id": "JL21-07",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "2-door",
+      "model_code": "JLJL72",
+      "marketed_trim_proposal": "Islander",
+      "engine_code": "ERC",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "23J"
+      ],
+      "engine_transmission_pairings": [
+        "ERC/DEM"
+      ],
+      "first_observed_revision": "2020-08-06",
+      "last_observed_revision": "2021-04-14",
+      "guide_source_ids": [
+        "MY2021-JL-2D-2020-08-06",
+        "MY2021-JL-2D-2020-09-29",
+        "MY2021-JL-2D-2020-10-14",
+        "MY2021-JL-2D-2020-12-04",
+        "MY2021-JL-2D-2021-01-01",
+        "MY2021-JL-2D-2021-02-08",
+        "MY2021-JL-2D-2021-03-05",
+        "MY2021-JL-2D-2021-04-14"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-2D-2020-08-06-p2",
+        "MY2021-JL-2D-2020-09-29-p2",
+        "MY2021-JL-2D-2020-10-14-p2",
+        "MY2021-JL-2D-2020-12-04-p2",
+        "MY2021-JL-2D-2021-01-01-p2",
+        "MY2021-JL-2D-2021-02-08-p2",
+        "MY2021-JL-2D-2021-03-05-p2",
+        "MY2021-JL-2D-2021-04-14-p2"
+      ],
+      "positive_observations": 8,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:12f3e23e91dfdab1524fa421376c14fde49004edb90d6eb7211f9ad14f192e45"
+    },
+    {
+      "research_row_id": "JL21-08",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "2-door",
+      "model_code": "JLJL72",
+      "marketed_trim_proposal": "Islander",
+      "engine_code": "ERG",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "25J"
+      ],
+      "engine_transmission_pairings": [
+        "ERG/DFT"
+      ],
+      "first_observed_revision": "2020-08-06",
+      "last_observed_revision": "2021-04-14",
+      "guide_source_ids": [
+        "MY2021-JL-2D-2020-08-06",
+        "MY2021-JL-2D-2020-09-29",
+        "MY2021-JL-2D-2020-10-14",
+        "MY2021-JL-2D-2020-12-04",
+        "MY2021-JL-2D-2021-01-01",
+        "MY2021-JL-2D-2021-02-08",
+        "MY2021-JL-2D-2021-03-05",
+        "MY2021-JL-2D-2021-04-14"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-2D-2020-08-06-p2",
+        "MY2021-JL-2D-2020-09-29-p2",
+        "MY2021-JL-2D-2020-10-14-p2",
+        "MY2021-JL-2D-2020-12-04-p2",
+        "MY2021-JL-2D-2021-01-01-p2",
+        "MY2021-JL-2D-2021-02-08-p2",
+        "MY2021-JL-2D-2021-03-05-p2",
+        "MY2021-JL-2D-2021-04-14-p2"
+      ],
+      "positive_observations": 8,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:e62f9168cff6271611b1101a61890399f4ca705fe18351b8a855fc494ac63623"
+    },
+    {
+      "research_row_id": "JL21-09",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "2-door",
+      "model_code": "JLJL72",
+      "marketed_trim_proposal": "Sport",
+      "engine_code": "EC1",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "22B"
+      ],
+      "engine_transmission_pairings": [
+        "EC1/DFT"
+      ],
+      "first_observed_revision": "2020-06-04",
+      "last_observed_revision": "2021-08-06",
+      "guide_source_ids": [
+        "MY2021-JL-2D-2020-06-04",
+        "MY2021-JL-2D-2020-08-06",
+        "MY2021-JL-2D-2020-09-29",
+        "MY2021-JL-2D-2020-10-14",
+        "MY2021-JL-2D-2020-12-04",
+        "MY2021-JL-2D-2021-01-01",
+        "MY2021-JL-2D-2021-02-08",
+        "MY2021-JL-2D-2021-03-05",
+        "MY2021-JL-2D-2021-04-14",
+        "MY2021-JL-2D-2021-05-14",
+        "MY2021-JL-2D-2021-06-09",
+        "MY2021-JL-2D-2021-07-06",
+        "MY2021-JL-2D-2021-08-06"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-2D-2020-06-04-p2",
+        "MY2021-JL-2D-2020-08-06-p2",
+        "MY2021-JL-2D-2020-09-29-p2",
+        "MY2021-JL-2D-2020-10-14-p2",
+        "MY2021-JL-2D-2020-12-04-p2",
+        "MY2021-JL-2D-2021-01-01-p2",
+        "MY2021-JL-2D-2021-02-08-p2",
+        "MY2021-JL-2D-2021-03-05-p2",
+        "MY2021-JL-2D-2021-04-14-p2",
+        "MY2021-JL-2D-2021-05-14-p2",
+        "MY2021-JL-2D-2021-06-09-p2",
+        "MY2021-JL-2D-2021-07-06-p2",
+        "MY2021-JL-2D-2021-08-06-p2"
+      ],
+      "positive_observations": 13,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:b4c7e13bc3d9ae07463498881f240c428588a9f9db36f02adf33e9825b980e3b"
+    },
+    {
+      "research_row_id": "JL21-10",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "2-door",
+      "model_code": "JLJL72",
+      "marketed_trim_proposal": "Sport",
+      "engine_code": "ERC",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "23B"
+      ],
+      "engine_transmission_pairings": [
+        "ERC/DEM"
+      ],
+      "first_observed_revision": "2020-06-04",
+      "last_observed_revision": "2021-08-06",
+      "guide_source_ids": [
+        "MY2021-JL-2D-2020-06-04",
+        "MY2021-JL-2D-2020-08-06",
+        "MY2021-JL-2D-2020-09-29",
+        "MY2021-JL-2D-2020-10-14",
+        "MY2021-JL-2D-2020-12-04",
+        "MY2021-JL-2D-2021-01-01",
+        "MY2021-JL-2D-2021-02-08",
+        "MY2021-JL-2D-2021-03-05",
+        "MY2021-JL-2D-2021-04-14",
+        "MY2021-JL-2D-2021-05-14",
+        "MY2021-JL-2D-2021-06-09",
+        "MY2021-JL-2D-2021-07-06",
+        "MY2021-JL-2D-2021-08-06"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-2D-2020-06-04-p2",
+        "MY2021-JL-2D-2020-08-06-p2",
+        "MY2021-JL-2D-2020-09-29-p2",
+        "MY2021-JL-2D-2020-10-14-p2",
+        "MY2021-JL-2D-2020-12-04-p2",
+        "MY2021-JL-2D-2021-01-01-p2",
+        "MY2021-JL-2D-2021-02-08-p2",
+        "MY2021-JL-2D-2021-03-05-p2",
+        "MY2021-JL-2D-2021-04-14-p2",
+        "MY2021-JL-2D-2021-05-14-p2",
+        "MY2021-JL-2D-2021-06-09-p2",
+        "MY2021-JL-2D-2021-07-06-p2",
+        "MY2021-JL-2D-2021-08-06-p2"
+      ],
+      "positive_observations": 13,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:06eb4c14c782ec322da3f2cdbabc1b5e73ddc20c5f9d2a32f0da3405f89fdbcd"
+    },
+    {
+      "research_row_id": "JL21-11",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "2-door",
+      "model_code": "JLJL72",
+      "marketed_trim_proposal": "Sport",
+      "engine_code": "ERG",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "25B"
+      ],
+      "engine_transmission_pairings": [
+        "ERG/DFT"
+      ],
+      "first_observed_revision": "2020-06-04",
+      "last_observed_revision": "2021-08-06",
+      "guide_source_ids": [
+        "MY2021-JL-2D-2020-06-04",
+        "MY2021-JL-2D-2020-08-06",
+        "MY2021-JL-2D-2020-09-29",
+        "MY2021-JL-2D-2020-10-14",
+        "MY2021-JL-2D-2020-12-04",
+        "MY2021-JL-2D-2021-01-01",
+        "MY2021-JL-2D-2021-02-08",
+        "MY2021-JL-2D-2021-03-05",
+        "MY2021-JL-2D-2021-04-14",
+        "MY2021-JL-2D-2021-05-14",
+        "MY2021-JL-2D-2021-06-09",
+        "MY2021-JL-2D-2021-07-06",
+        "MY2021-JL-2D-2021-08-06"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-2D-2020-06-04-p2",
+        "MY2021-JL-2D-2020-08-06-p2",
+        "MY2021-JL-2D-2020-09-29-p2",
+        "MY2021-JL-2D-2020-10-14-p2",
+        "MY2021-JL-2D-2020-12-04-p2",
+        "MY2021-JL-2D-2021-01-01-p2",
+        "MY2021-JL-2D-2021-02-08-p2",
+        "MY2021-JL-2D-2021-03-05-p2",
+        "MY2021-JL-2D-2021-04-14-p2",
+        "MY2021-JL-2D-2021-05-14-p2",
+        "MY2021-JL-2D-2021-06-09-p2",
+        "MY2021-JL-2D-2021-07-06-p2",
+        "MY2021-JL-2D-2021-08-06-p2"
+      ],
+      "positive_observations": 13,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:a61d0b381ee4fc7185433fcfe0cc21324bc2ab138c25cb14f17ffea1b3847748"
+    },
+    {
+      "research_row_id": "JL21-12",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "2-door",
+      "model_code": "JLJL72",
+      "marketed_trim_proposal": "Sport S",
+      "engine_code": "EC1",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "22S"
+      ],
+      "engine_transmission_pairings": [
+        "EC1/DFT"
+      ],
+      "first_observed_revision": "2020-06-04",
+      "last_observed_revision": "2021-08-06",
+      "guide_source_ids": [
+        "MY2021-JL-2D-2020-06-04",
+        "MY2021-JL-2D-2020-08-06",
+        "MY2021-JL-2D-2020-09-29",
+        "MY2021-JL-2D-2020-10-14",
+        "MY2021-JL-2D-2020-12-04",
+        "MY2021-JL-2D-2021-01-01",
+        "MY2021-JL-2D-2021-02-08",
+        "MY2021-JL-2D-2021-03-05",
+        "MY2021-JL-2D-2021-04-14",
+        "MY2021-JL-2D-2021-05-14",
+        "MY2021-JL-2D-2021-06-09",
+        "MY2021-JL-2D-2021-07-06",
+        "MY2021-JL-2D-2021-08-06"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-2D-2020-06-04-p2",
+        "MY2021-JL-2D-2020-08-06-p2",
+        "MY2021-JL-2D-2020-09-29-p2",
+        "MY2021-JL-2D-2020-10-14-p2",
+        "MY2021-JL-2D-2020-12-04-p2",
+        "MY2021-JL-2D-2021-01-01-p2",
+        "MY2021-JL-2D-2021-02-08-p2",
+        "MY2021-JL-2D-2021-03-05-p2",
+        "MY2021-JL-2D-2021-04-14-p2",
+        "MY2021-JL-2D-2021-05-14-p2",
+        "MY2021-JL-2D-2021-06-09-p2",
+        "MY2021-JL-2D-2021-07-06-p2",
+        "MY2021-JL-2D-2021-08-06-p2"
+      ],
+      "positive_observations": 13,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:f142caf049b58edb27adf968b76dcd3dee9aeaa001fad3bcf4e08905ed8fed52"
+    },
+    {
+      "research_row_id": "JL21-13",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "2-door",
+      "model_code": "JLJL72",
+      "marketed_trim_proposal": "Sport S",
+      "engine_code": "ERC",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "23S"
+      ],
+      "engine_transmission_pairings": [
+        "ERC/DEM"
+      ],
+      "first_observed_revision": "2020-06-04",
+      "last_observed_revision": "2021-08-06",
+      "guide_source_ids": [
+        "MY2021-JL-2D-2020-06-04",
+        "MY2021-JL-2D-2020-08-06",
+        "MY2021-JL-2D-2020-09-29",
+        "MY2021-JL-2D-2020-10-14",
+        "MY2021-JL-2D-2020-12-04",
+        "MY2021-JL-2D-2021-01-01",
+        "MY2021-JL-2D-2021-02-08",
+        "MY2021-JL-2D-2021-03-05",
+        "MY2021-JL-2D-2021-04-14",
+        "MY2021-JL-2D-2021-05-14",
+        "MY2021-JL-2D-2021-06-09",
+        "MY2021-JL-2D-2021-07-06",
+        "MY2021-JL-2D-2021-08-06"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-2D-2020-06-04-p2",
+        "MY2021-JL-2D-2020-08-06-p2",
+        "MY2021-JL-2D-2020-09-29-p2",
+        "MY2021-JL-2D-2020-10-14-p2",
+        "MY2021-JL-2D-2020-12-04-p2",
+        "MY2021-JL-2D-2021-01-01-p2",
+        "MY2021-JL-2D-2021-02-08-p2",
+        "MY2021-JL-2D-2021-03-05-p2",
+        "MY2021-JL-2D-2021-04-14-p2",
+        "MY2021-JL-2D-2021-05-14-p2",
+        "MY2021-JL-2D-2021-06-09-p2",
+        "MY2021-JL-2D-2021-07-06-p2",
+        "MY2021-JL-2D-2021-08-06-p2"
+      ],
+      "positive_observations": 13,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:35097f7577bd5d6a1318ace6fe7c25cb21949dbd74d7ba53c83e59bc0bcbfeae"
+    },
+    {
+      "research_row_id": "JL21-14",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "2-door",
+      "model_code": "JLJL72",
+      "marketed_trim_proposal": "Sport S",
+      "engine_code": "ERG",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "25S"
+      ],
+      "engine_transmission_pairings": [
+        "ERG/DFT"
+      ],
+      "first_observed_revision": "2020-06-04",
+      "last_observed_revision": "2021-08-06",
+      "guide_source_ids": [
+        "MY2021-JL-2D-2020-06-04",
+        "MY2021-JL-2D-2020-08-06",
+        "MY2021-JL-2D-2020-09-29",
+        "MY2021-JL-2D-2020-10-14",
+        "MY2021-JL-2D-2020-12-04",
+        "MY2021-JL-2D-2021-01-01",
+        "MY2021-JL-2D-2021-02-08",
+        "MY2021-JL-2D-2021-03-05",
+        "MY2021-JL-2D-2021-04-14",
+        "MY2021-JL-2D-2021-05-14",
+        "MY2021-JL-2D-2021-06-09",
+        "MY2021-JL-2D-2021-07-06",
+        "MY2021-JL-2D-2021-08-06"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-2D-2020-06-04-p2",
+        "MY2021-JL-2D-2020-08-06-p2",
+        "MY2021-JL-2D-2020-09-29-p2",
+        "MY2021-JL-2D-2020-10-14-p2",
+        "MY2021-JL-2D-2020-12-04-p2",
+        "MY2021-JL-2D-2021-01-01-p2",
+        "MY2021-JL-2D-2021-02-08-p2",
+        "MY2021-JL-2D-2021-03-05-p2",
+        "MY2021-JL-2D-2021-04-14-p2",
+        "MY2021-JL-2D-2021-05-14-p2",
+        "MY2021-JL-2D-2021-06-09-p2",
+        "MY2021-JL-2D-2021-07-06-p2",
+        "MY2021-JL-2D-2021-08-06-p2"
+      ],
+      "positive_observations": 13,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:f90d9773bc1e0556919eb54dcd33955087916cba7cdae23b225f9cce6d91e663"
+    },
+    {
+      "research_row_id": "JL21-15",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "2-door",
+      "model_code": "JLJL72",
+      "marketed_trim_proposal": "Willys",
+      "engine_code": "EC1",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "22W"
+      ],
+      "engine_transmission_pairings": [
+        "EC1/DFT"
+      ],
+      "first_observed_revision": "2020-06-04",
+      "last_observed_revision": "2021-08-06",
+      "guide_source_ids": [
+        "MY2021-JL-2D-2020-06-04",
+        "MY2021-JL-2D-2020-08-06",
+        "MY2021-JL-2D-2020-09-29",
+        "MY2021-JL-2D-2020-10-14",
+        "MY2021-JL-2D-2020-12-04",
+        "MY2021-JL-2D-2021-01-01",
+        "MY2021-JL-2D-2021-02-08",
+        "MY2021-JL-2D-2021-03-05",
+        "MY2021-JL-2D-2021-04-14",
+        "MY2021-JL-2D-2021-05-14",
+        "MY2021-JL-2D-2021-06-09",
+        "MY2021-JL-2D-2021-07-06",
+        "MY2021-JL-2D-2021-08-06"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-2D-2020-06-04-p2",
+        "MY2021-JL-2D-2020-08-06-p2",
+        "MY2021-JL-2D-2020-09-29-p2",
+        "MY2021-JL-2D-2020-10-14-p2",
+        "MY2021-JL-2D-2020-12-04-p2",
+        "MY2021-JL-2D-2021-01-01-p2",
+        "MY2021-JL-2D-2021-02-08-p2",
+        "MY2021-JL-2D-2021-03-05-p2",
+        "MY2021-JL-2D-2021-04-14-p2",
+        "MY2021-JL-2D-2021-05-14-p2",
+        "MY2021-JL-2D-2021-06-09-p2",
+        "MY2021-JL-2D-2021-07-06-p2",
+        "MY2021-JL-2D-2021-08-06-p2"
+      ],
+      "positive_observations": 13,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:130fd01f19ee68c073f24017abef82409c69d7bd53dae689557418379636fb2b"
+    },
+    {
+      "research_row_id": "JL21-16",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "2-door",
+      "model_code": "JLJL72",
+      "marketed_trim_proposal": "Willys",
+      "engine_code": "ERC",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "23W"
+      ],
+      "engine_transmission_pairings": [
+        "ERC/DEM"
+      ],
+      "first_observed_revision": "2020-06-04",
+      "last_observed_revision": "2021-08-06",
+      "guide_source_ids": [
+        "MY2021-JL-2D-2020-06-04",
+        "MY2021-JL-2D-2020-08-06",
+        "MY2021-JL-2D-2020-09-29",
+        "MY2021-JL-2D-2020-10-14",
+        "MY2021-JL-2D-2020-12-04",
+        "MY2021-JL-2D-2021-01-01",
+        "MY2021-JL-2D-2021-02-08",
+        "MY2021-JL-2D-2021-03-05",
+        "MY2021-JL-2D-2021-04-14",
+        "MY2021-JL-2D-2021-05-14",
+        "MY2021-JL-2D-2021-06-09",
+        "MY2021-JL-2D-2021-07-06",
+        "MY2021-JL-2D-2021-08-06"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-2D-2020-06-04-p2",
+        "MY2021-JL-2D-2020-08-06-p2",
+        "MY2021-JL-2D-2020-09-29-p2",
+        "MY2021-JL-2D-2020-10-14-p2",
+        "MY2021-JL-2D-2020-12-04-p2",
+        "MY2021-JL-2D-2021-01-01-p2",
+        "MY2021-JL-2D-2021-02-08-p2",
+        "MY2021-JL-2D-2021-03-05-p2",
+        "MY2021-JL-2D-2021-04-14-p2",
+        "MY2021-JL-2D-2021-05-14-p2",
+        "MY2021-JL-2D-2021-06-09-p2",
+        "MY2021-JL-2D-2021-07-06-p2",
+        "MY2021-JL-2D-2021-08-06-p2"
+      ],
+      "positive_observations": 13,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:d49c61fd186129145f1fe721e6e5dc776a15e7130e714135e85863f186cc5ba7"
+    },
+    {
+      "research_row_id": "JL21-17",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "2-door",
+      "model_code": "JLJL72",
+      "marketed_trim_proposal": "Willys",
+      "engine_code": "ERG",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "25W"
+      ],
+      "engine_transmission_pairings": [
+        "ERG/DFT"
+      ],
+      "first_observed_revision": "2020-06-04",
+      "last_observed_revision": "2021-08-06",
+      "guide_source_ids": [
+        "MY2021-JL-2D-2020-06-04",
+        "MY2021-JL-2D-2020-08-06",
+        "MY2021-JL-2D-2020-09-29",
+        "MY2021-JL-2D-2020-10-14",
+        "MY2021-JL-2D-2020-12-04",
+        "MY2021-JL-2D-2021-01-01",
+        "MY2021-JL-2D-2021-02-08",
+        "MY2021-JL-2D-2021-03-05",
+        "MY2021-JL-2D-2021-04-14",
+        "MY2021-JL-2D-2021-05-14",
+        "MY2021-JL-2D-2021-06-09",
+        "MY2021-JL-2D-2021-07-06",
+        "MY2021-JL-2D-2021-08-06"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-2D-2020-06-04-p2",
+        "MY2021-JL-2D-2020-08-06-p2",
+        "MY2021-JL-2D-2020-09-29-p2",
+        "MY2021-JL-2D-2020-10-14-p2",
+        "MY2021-JL-2D-2020-12-04-p2",
+        "MY2021-JL-2D-2021-01-01-p2",
+        "MY2021-JL-2D-2021-02-08-p2",
+        "MY2021-JL-2D-2021-03-05-p2",
+        "MY2021-JL-2D-2021-04-14-p2",
+        "MY2021-JL-2D-2021-05-14-p2",
+        "MY2021-JL-2D-2021-06-09-p2",
+        "MY2021-JL-2D-2021-07-06-p2",
+        "MY2021-JL-2D-2021-08-06-p2"
+      ],
+      "positive_observations": 13,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:9d7e2100a832482fbb100f07e01f262430fcb4352726da24bdc09866ecbd5556"
+    },
+    {
+      "research_row_id": "JL21-18",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "2-door",
+      "model_code": "JLJL72",
+      "marketed_trim_proposal": "Willys Sport",
+      "engine_code": "EC1",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "22K"
+      ],
+      "engine_transmission_pairings": [
+        "EC1/DFT"
+      ],
+      "first_observed_revision": "2020-06-04",
+      "last_observed_revision": "2021-08-06",
+      "guide_source_ids": [
+        "MY2021-JL-2D-2020-06-04",
+        "MY2021-JL-2D-2020-08-06",
+        "MY2021-JL-2D-2020-09-29",
+        "MY2021-JL-2D-2020-10-14",
+        "MY2021-JL-2D-2020-12-04",
+        "MY2021-JL-2D-2021-01-01",
+        "MY2021-JL-2D-2021-02-08",
+        "MY2021-JL-2D-2021-03-05",
+        "MY2021-JL-2D-2021-04-14",
+        "MY2021-JL-2D-2021-05-14",
+        "MY2021-JL-2D-2021-06-09",
+        "MY2021-JL-2D-2021-07-06",
+        "MY2021-JL-2D-2021-08-06"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-2D-2020-06-04-p2",
+        "MY2021-JL-2D-2020-08-06-p2",
+        "MY2021-JL-2D-2020-09-29-p2",
+        "MY2021-JL-2D-2020-10-14-p2",
+        "MY2021-JL-2D-2020-12-04-p2",
+        "MY2021-JL-2D-2021-01-01-p2",
+        "MY2021-JL-2D-2021-02-08-p2",
+        "MY2021-JL-2D-2021-03-05-p2",
+        "MY2021-JL-2D-2021-04-14-p2",
+        "MY2021-JL-2D-2021-05-14-p2",
+        "MY2021-JL-2D-2021-06-09-p2",
+        "MY2021-JL-2D-2021-07-06-p2",
+        "MY2021-JL-2D-2021-08-06-p2"
+      ],
+      "positive_observations": 13,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:73b3041699501aca0618c20a3123eb0555474eeb699eb869a7bafa3f7e0e7e7d"
+    },
+    {
+      "research_row_id": "JL21-19",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "2-door",
+      "model_code": "JLJL72",
+      "marketed_trim_proposal": "Willys Sport",
+      "engine_code": "ERC",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "23K"
+      ],
+      "engine_transmission_pairings": [
+        "ERC/DEM"
+      ],
+      "first_observed_revision": "2020-06-04",
+      "last_observed_revision": "2021-08-06",
+      "guide_source_ids": [
+        "MY2021-JL-2D-2020-06-04",
+        "MY2021-JL-2D-2020-08-06",
+        "MY2021-JL-2D-2020-09-29",
+        "MY2021-JL-2D-2020-10-14",
+        "MY2021-JL-2D-2020-12-04",
+        "MY2021-JL-2D-2021-01-01",
+        "MY2021-JL-2D-2021-02-08",
+        "MY2021-JL-2D-2021-03-05",
+        "MY2021-JL-2D-2021-04-14",
+        "MY2021-JL-2D-2021-05-14",
+        "MY2021-JL-2D-2021-06-09",
+        "MY2021-JL-2D-2021-07-06",
+        "MY2021-JL-2D-2021-08-06"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-2D-2020-06-04-p2",
+        "MY2021-JL-2D-2020-08-06-p2",
+        "MY2021-JL-2D-2020-09-29-p2",
+        "MY2021-JL-2D-2020-10-14-p2",
+        "MY2021-JL-2D-2020-12-04-p2",
+        "MY2021-JL-2D-2021-01-01-p2",
+        "MY2021-JL-2D-2021-02-08-p2",
+        "MY2021-JL-2D-2021-03-05-p2",
+        "MY2021-JL-2D-2021-04-14-p2",
+        "MY2021-JL-2D-2021-05-14-p2",
+        "MY2021-JL-2D-2021-06-09-p2",
+        "MY2021-JL-2D-2021-07-06-p2",
+        "MY2021-JL-2D-2021-08-06-p2"
+      ],
+      "positive_observations": 13,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:104c6384718cb63e12325ee8c4562894d30674ed357c50f201bf735e4d76032f"
+    },
+    {
+      "research_row_id": "JL21-20",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "2-door",
+      "model_code": "JLJL72",
+      "marketed_trim_proposal": "Willys Sport",
+      "engine_code": "ERG",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "25K"
+      ],
+      "engine_transmission_pairings": [
+        "ERG/DFT"
+      ],
+      "first_observed_revision": "2020-06-04",
+      "last_observed_revision": "2021-08-06",
+      "guide_source_ids": [
+        "MY2021-JL-2D-2020-06-04",
+        "MY2021-JL-2D-2020-08-06",
+        "MY2021-JL-2D-2020-09-29",
+        "MY2021-JL-2D-2020-10-14",
+        "MY2021-JL-2D-2020-12-04",
+        "MY2021-JL-2D-2021-01-01",
+        "MY2021-JL-2D-2021-02-08",
+        "MY2021-JL-2D-2021-03-05",
+        "MY2021-JL-2D-2021-04-14",
+        "MY2021-JL-2D-2021-05-14",
+        "MY2021-JL-2D-2021-06-09",
+        "MY2021-JL-2D-2021-07-06",
+        "MY2021-JL-2D-2021-08-06"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-2D-2020-06-04-p2",
+        "MY2021-JL-2D-2020-08-06-p2",
+        "MY2021-JL-2D-2020-09-29-p2",
+        "MY2021-JL-2D-2020-10-14-p2",
+        "MY2021-JL-2D-2020-12-04-p2",
+        "MY2021-JL-2D-2021-01-01-p2",
+        "MY2021-JL-2D-2021-02-08-p2",
+        "MY2021-JL-2D-2021-03-05-p2",
+        "MY2021-JL-2D-2021-04-14-p2",
+        "MY2021-JL-2D-2021-05-14-p2",
+        "MY2021-JL-2D-2021-06-09-p2",
+        "MY2021-JL-2D-2021-07-06-p2",
+        "MY2021-JL-2D-2021-08-06-p2"
+      ],
+      "positive_observations": 13,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:1e66073292bdb5a5e7641a9184c6c6f9c73c04192a7d11535f31975dad648f57"
+    },
+    {
+      "research_row_id": "JL21-21",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "2-door",
+      "model_code": "JLJS72",
+      "marketed_trim_proposal": "Rubicon",
+      "engine_code": "EC1",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "22R"
+      ],
+      "engine_transmission_pairings": [
+        "EC1/DFT"
+      ],
+      "first_observed_revision": "2020-06-04",
+      "last_observed_revision": "2021-08-06",
+      "guide_source_ids": [
+        "MY2021-JL-2D-2020-06-04",
+        "MY2021-JL-2D-2020-08-06",
+        "MY2021-JL-2D-2020-09-29",
+        "MY2021-JL-2D-2020-10-14",
+        "MY2021-JL-2D-2020-12-04",
+        "MY2021-JL-2D-2021-01-01",
+        "MY2021-JL-2D-2021-02-08",
+        "MY2021-JL-2D-2021-03-05",
+        "MY2021-JL-2D-2021-04-14",
+        "MY2021-JL-2D-2021-05-14",
+        "MY2021-JL-2D-2021-06-09",
+        "MY2021-JL-2D-2021-07-06",
+        "MY2021-JL-2D-2021-08-06"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-2D-2020-06-04-p6",
+        "MY2021-JL-2D-2020-08-06-p8",
+        "MY2021-JL-2D-2020-09-29-p8",
+        "MY2021-JL-2D-2020-10-14-p8",
+        "MY2021-JL-2D-2020-12-04-p8",
+        "MY2021-JL-2D-2021-01-01-p8",
+        "MY2021-JL-2D-2021-02-08-p8",
+        "MY2021-JL-2D-2021-03-05-p8",
+        "MY2021-JL-2D-2021-04-14-p8",
+        "MY2021-JL-2D-2021-05-14-p8",
+        "MY2021-JL-2D-2021-06-09-p7",
+        "MY2021-JL-2D-2021-07-06-p7",
+        "MY2021-JL-2D-2021-08-06-p7"
+      ],
+      "positive_observations": 13,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:52d226e6695b9c8b707a30727fb2beed7d5fe1b0e043734b67d229ff3f9f00e1"
+    },
+    {
+      "research_row_id": "JL21-22",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "2-door",
+      "model_code": "JLJS72",
+      "marketed_trim_proposal": "Rubicon",
+      "engine_code": "ERC",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "23R"
+      ],
+      "engine_transmission_pairings": [
+        "ERC/DEM"
+      ],
+      "first_observed_revision": "2020-06-04",
+      "last_observed_revision": "2021-08-06",
+      "guide_source_ids": [
+        "MY2021-JL-2D-2020-06-04",
+        "MY2021-JL-2D-2020-08-06",
+        "MY2021-JL-2D-2020-09-29",
+        "MY2021-JL-2D-2020-10-14",
+        "MY2021-JL-2D-2020-12-04",
+        "MY2021-JL-2D-2021-01-01",
+        "MY2021-JL-2D-2021-02-08",
+        "MY2021-JL-2D-2021-03-05",
+        "MY2021-JL-2D-2021-04-14",
+        "MY2021-JL-2D-2021-05-14",
+        "MY2021-JL-2D-2021-06-09",
+        "MY2021-JL-2D-2021-07-06",
+        "MY2021-JL-2D-2021-08-06"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-2D-2020-06-04-p6",
+        "MY2021-JL-2D-2020-08-06-p8",
+        "MY2021-JL-2D-2020-09-29-p8",
+        "MY2021-JL-2D-2020-10-14-p8",
+        "MY2021-JL-2D-2020-12-04-p8",
+        "MY2021-JL-2D-2021-01-01-p8",
+        "MY2021-JL-2D-2021-02-08-p8",
+        "MY2021-JL-2D-2021-03-05-p8",
+        "MY2021-JL-2D-2021-04-14-p8",
+        "MY2021-JL-2D-2021-05-14-p8",
+        "MY2021-JL-2D-2021-06-09-p7",
+        "MY2021-JL-2D-2021-07-06-p7",
+        "MY2021-JL-2D-2021-08-06-p7"
+      ],
+      "positive_observations": 13,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:039c2a3dde6fcfc24588118c15ab00b8e41605bb5c083af54cf7a95a47dcd96e"
+    },
+    {
+      "research_row_id": "JL21-23",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "2-door",
+      "model_code": "JLJS72",
+      "marketed_trim_proposal": "Rubicon",
+      "engine_code": "ERG",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "25R"
+      ],
+      "engine_transmission_pairings": [
+        "ERG/DFT"
+      ],
+      "first_observed_revision": "2020-06-04",
+      "last_observed_revision": "2021-08-06",
+      "guide_source_ids": [
+        "MY2021-JL-2D-2020-06-04",
+        "MY2021-JL-2D-2020-08-06",
+        "MY2021-JL-2D-2020-09-29",
+        "MY2021-JL-2D-2020-10-14",
+        "MY2021-JL-2D-2020-12-04",
+        "MY2021-JL-2D-2021-01-01",
+        "MY2021-JL-2D-2021-02-08",
+        "MY2021-JL-2D-2021-03-05",
+        "MY2021-JL-2D-2021-04-14",
+        "MY2021-JL-2D-2021-05-14",
+        "MY2021-JL-2D-2021-06-09",
+        "MY2021-JL-2D-2021-07-06",
+        "MY2021-JL-2D-2021-08-06"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-2D-2020-06-04-p6",
+        "MY2021-JL-2D-2020-08-06-p8",
+        "MY2021-JL-2D-2020-09-29-p8",
+        "MY2021-JL-2D-2020-10-14-p8",
+        "MY2021-JL-2D-2020-12-04-p8",
+        "MY2021-JL-2D-2021-01-01-p8",
+        "MY2021-JL-2D-2021-02-08-p8",
+        "MY2021-JL-2D-2021-03-05-p8",
+        "MY2021-JL-2D-2021-04-14-p8",
+        "MY2021-JL-2D-2021-05-14-p8",
+        "MY2021-JL-2D-2021-06-09-p7",
+        "MY2021-JL-2D-2021-07-06-p7",
+        "MY2021-JL-2D-2021-08-06-p7"
+      ],
+      "positive_observations": 13,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:90409455c1dbad425f6beeddb14f990c0ba1a57dfbd3e859384bed23fc8afb65"
+    },
+    {
+      "research_row_id": "JL21-24",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "4-door",
+      "model_code": "JLJL74",
+      "marketed_trim_proposal": "Unlimited 80th Anniversary Edition",
+      "engine_code": "EC1",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "22Q"
+      ],
+      "engine_transmission_pairings": [
+        "EC1/DFT"
+      ],
+      "first_observed_revision": "2020-08-06",
+      "last_observed_revision": "2021-04-14",
+      "guide_source_ids": [
+        "MY2021-JL-4D-2020-08-06",
+        "MY2021-JL-4D-2020-09-29",
+        "MY2021-JL-4D-2020-10-14",
+        "MY2021-JL-4D-2020-10-30",
+        "MY2021-JL-4D-2020-12-04",
+        "MY2021-JL-4D-2021-01-01",
+        "MY2021-JL-4D-2021-02-09",
+        "MY2021-JL-4D-2021-03-05",
+        "MY2021-JL-4D-2021-04-14"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-4D-2020-08-06-p2",
+        "MY2021-JL-4D-2020-09-29-p2",
+        "MY2021-JL-4D-2020-10-14-p2",
+        "MY2021-JL-4D-2020-10-30-p2",
+        "MY2021-JL-4D-2020-12-04-p2",
+        "MY2021-JL-4D-2021-01-01-p2",
+        "MY2021-JL-4D-2021-02-09-p2",
+        "MY2021-JL-4D-2021-03-05-p2",
+        "MY2021-JL-4D-2021-04-14-p2"
+      ],
+      "positive_observations": 9,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:6b17d6f79bf00c0f6df568f16e9c9263aa33687ede93821f2d6a1f9affcf29e8"
+    },
+    {
+      "research_row_id": "JL21-25",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "4-door",
+      "model_code": "JLJL74",
+      "marketed_trim_proposal": "Unlimited 80th Anniversary Edition",
+      "engine_code": "ERG",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "25Q"
+      ],
+      "engine_transmission_pairings": [
+        "ERG/DFT"
+      ],
+      "first_observed_revision": "2020-08-06",
+      "last_observed_revision": "2021-04-14",
+      "guide_source_ids": [
+        "MY2021-JL-4D-2020-08-06",
+        "MY2021-JL-4D-2020-09-29",
+        "MY2021-JL-4D-2020-10-14",
+        "MY2021-JL-4D-2020-10-30",
+        "MY2021-JL-4D-2020-12-04",
+        "MY2021-JL-4D-2021-01-01",
+        "MY2021-JL-4D-2021-02-09",
+        "MY2021-JL-4D-2021-03-05",
+        "MY2021-JL-4D-2021-04-14"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-4D-2020-08-06-p2",
+        "MY2021-JL-4D-2020-09-29-p2",
+        "MY2021-JL-4D-2020-10-14-p2",
+        "MY2021-JL-4D-2020-10-30-p2",
+        "MY2021-JL-4D-2020-12-04-p2",
+        "MY2021-JL-4D-2021-01-01-p2",
+        "MY2021-JL-4D-2021-02-09-p2",
+        "MY2021-JL-4D-2021-03-05-p2",
+        "MY2021-JL-4D-2021-04-14-p2"
+      ],
+      "positive_observations": 9,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:6e0ac146243bd5b3d8c7ccc353184fd8b26d01150cd9c40aabb5b86f320b5548"
+    },
+    {
+      "research_row_id": "JL21-26",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "4-door",
+      "model_code": "JLJL74",
+      "marketed_trim_proposal": "Unlimited 80th Anniversary Edition",
+      "engine_code": "EXJ",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "26Q"
+      ],
+      "engine_transmission_pairings": [
+        "EXJ/DFV"
+      ],
+      "first_observed_revision": "2020-08-06",
+      "last_observed_revision": "2021-04-14",
+      "guide_source_ids": [
+        "MY2021-JL-4D-2020-08-06",
+        "MY2021-JL-4D-2020-09-29",
+        "MY2021-JL-4D-2020-10-14",
+        "MY2021-JL-4D-2020-10-30",
+        "MY2021-JL-4D-2020-12-04",
+        "MY2021-JL-4D-2021-01-01",
+        "MY2021-JL-4D-2021-02-09",
+        "MY2021-JL-4D-2021-03-05",
+        "MY2021-JL-4D-2021-04-14"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-4D-2020-08-06-p2",
+        "MY2021-JL-4D-2020-09-29-p2",
+        "MY2021-JL-4D-2020-10-14-p2",
+        "MY2021-JL-4D-2020-10-30-p2",
+        "MY2021-JL-4D-2020-12-04-p2",
+        "MY2021-JL-4D-2021-01-01-p2",
+        "MY2021-JL-4D-2021-02-09-p2",
+        "MY2021-JL-4D-2021-03-05-p2",
+        "MY2021-JL-4D-2021-04-14-p2"
+      ],
+      "positive_observations": 9,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:90a822c7fd955500fc118aed4c5ca3106e489ee260f4947a372d9383bfd6e42e"
+    },
+    {
+      "research_row_id": "JL21-27",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "4-door",
+      "model_code": "JLJL74",
+      "marketed_trim_proposal": "Unlimited Freedom",
+      "engine_code": "EC1",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "22F"
+      ],
+      "engine_transmission_pairings": [
+        "EC1/DFT"
+      ],
+      "first_observed_revision": "2020-09-29",
+      "last_observed_revision": "2021-05-14",
+      "guide_source_ids": [
+        "MY2021-JL-4D-2020-09-29",
+        "MY2021-JL-4D-2020-10-14",
+        "MY2021-JL-4D-2020-10-30",
+        "MY2021-JL-4D-2020-12-04",
+        "MY2021-JL-4D-2021-01-01",
+        "MY2021-JL-4D-2021-02-09",
+        "MY2021-JL-4D-2021-03-05",
+        "MY2021-JL-4D-2021-04-14",
+        "MY2021-JL-4D-2021-05-14"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-4D-2020-09-29-p2",
+        "MY2021-JL-4D-2020-10-14-p2",
+        "MY2021-JL-4D-2020-10-30-p2",
+        "MY2021-JL-4D-2020-12-04-p2",
+        "MY2021-JL-4D-2021-01-01-p2",
+        "MY2021-JL-4D-2021-02-09-p2",
+        "MY2021-JL-4D-2021-03-05-p2",
+        "MY2021-JL-4D-2021-04-14-p2",
+        "MY2021-JL-4D-2021-05-14-p2"
+      ],
+      "positive_observations": 9,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:92dbd4ae22c7e5764871ef6a9df488f446f1f3628a781199e08841009699a617"
+    },
+    {
+      "research_row_id": "JL21-28",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "4-door",
+      "model_code": "JLJL74",
+      "marketed_trim_proposal": "Unlimited Freedom",
+      "engine_code": "ERC",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "23F"
+      ],
+      "engine_transmission_pairings": [
+        "ERC/DEM"
+      ],
+      "first_observed_revision": "2020-09-29",
+      "last_observed_revision": "2021-05-14",
+      "guide_source_ids": [
+        "MY2021-JL-4D-2020-09-29",
+        "MY2021-JL-4D-2020-10-14",
+        "MY2021-JL-4D-2020-10-30",
+        "MY2021-JL-4D-2020-12-04",
+        "MY2021-JL-4D-2021-01-01",
+        "MY2021-JL-4D-2021-02-09",
+        "MY2021-JL-4D-2021-03-05",
+        "MY2021-JL-4D-2021-04-14",
+        "MY2021-JL-4D-2021-05-14"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-4D-2020-09-29-p2",
+        "MY2021-JL-4D-2020-10-14-p2",
+        "MY2021-JL-4D-2020-10-30-p2",
+        "MY2021-JL-4D-2020-12-04-p2",
+        "MY2021-JL-4D-2021-01-01-p2",
+        "MY2021-JL-4D-2021-02-09-p2",
+        "MY2021-JL-4D-2021-03-05-p2",
+        "MY2021-JL-4D-2021-04-14-p2",
+        "MY2021-JL-4D-2021-05-14-p2"
+      ],
+      "positive_observations": 9,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:5770da2967557914e924037112d41eef99624af9ad23941ef77afb4982bf2488"
+    },
+    {
+      "research_row_id": "JL21-29",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "4-door",
+      "model_code": "JLJL74",
+      "marketed_trim_proposal": "Unlimited Freedom",
+      "engine_code": "ERG",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "25F"
+      ],
+      "engine_transmission_pairings": [
+        "ERG/DFT"
+      ],
+      "first_observed_revision": "2020-09-29",
+      "last_observed_revision": "2021-05-14",
+      "guide_source_ids": [
+        "MY2021-JL-4D-2020-09-29",
+        "MY2021-JL-4D-2020-10-14",
+        "MY2021-JL-4D-2020-10-30",
+        "MY2021-JL-4D-2020-12-04",
+        "MY2021-JL-4D-2021-01-01",
+        "MY2021-JL-4D-2021-02-09",
+        "MY2021-JL-4D-2021-03-05",
+        "MY2021-JL-4D-2021-04-14",
+        "MY2021-JL-4D-2021-05-14"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-4D-2020-09-29-p2",
+        "MY2021-JL-4D-2020-10-14-p2",
+        "MY2021-JL-4D-2020-10-30-p2",
+        "MY2021-JL-4D-2020-12-04-p2",
+        "MY2021-JL-4D-2021-01-01-p2",
+        "MY2021-JL-4D-2021-02-09-p2",
+        "MY2021-JL-4D-2021-03-05-p2",
+        "MY2021-JL-4D-2021-04-14-p2",
+        "MY2021-JL-4D-2021-05-14-p2"
+      ],
+      "positive_observations": 9,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:45bf4864f1e8bf09c2b78f80f86560dca65d6493fed63c747bc74a752b570317"
+    },
+    {
+      "research_row_id": "JL21-30",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "4-door",
+      "model_code": "JLJL74",
+      "marketed_trim_proposal": "Unlimited Freedom",
+      "engine_code": "EXJ",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "26F"
+      ],
+      "engine_transmission_pairings": [
+        "EXJ/DFV"
+      ],
+      "first_observed_revision": "2020-09-29",
+      "last_observed_revision": "2021-05-14",
+      "guide_source_ids": [
+        "MY2021-JL-4D-2020-09-29",
+        "MY2021-JL-4D-2020-10-14",
+        "MY2021-JL-4D-2020-10-30",
+        "MY2021-JL-4D-2020-12-04",
+        "MY2021-JL-4D-2021-01-01",
+        "MY2021-JL-4D-2021-02-09",
+        "MY2021-JL-4D-2021-03-05",
+        "MY2021-JL-4D-2021-04-14",
+        "MY2021-JL-4D-2021-05-14"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-4D-2020-09-29-p2",
+        "MY2021-JL-4D-2020-10-14-p2",
+        "MY2021-JL-4D-2020-10-30-p2",
+        "MY2021-JL-4D-2020-12-04-p2",
+        "MY2021-JL-4D-2021-01-01-p2",
+        "MY2021-JL-4D-2021-02-09-p2",
+        "MY2021-JL-4D-2021-03-05-p2",
+        "MY2021-JL-4D-2021-04-14-p2",
+        "MY2021-JL-4D-2021-05-14-p2"
+      ],
+      "positive_observations": 9,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:58bfbcb67c95488145a865084a8804d8a8f4aef03e51c1eca737e0bbdf86313e"
+    },
+    {
+      "research_row_id": "JL21-31",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "4-door",
+      "model_code": "JLJL74",
+      "marketed_trim_proposal": "Unlimited Islander",
+      "engine_code": "EC1",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "22J"
+      ],
+      "engine_transmission_pairings": [
+        "EC1/DFT"
+      ],
+      "first_observed_revision": "2020-08-06",
+      "last_observed_revision": "2021-04-14",
+      "guide_source_ids": [
+        "MY2021-JL-4D-2020-08-06",
+        "MY2021-JL-4D-2020-09-29",
+        "MY2021-JL-4D-2020-10-14",
+        "MY2021-JL-4D-2020-10-30",
+        "MY2021-JL-4D-2020-12-04",
+        "MY2021-JL-4D-2021-01-01",
+        "MY2021-JL-4D-2021-02-09",
+        "MY2021-JL-4D-2021-03-05",
+        "MY2021-JL-4D-2021-04-14"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-4D-2020-08-06-p2",
+        "MY2021-JL-4D-2020-09-29-p2",
+        "MY2021-JL-4D-2020-10-14-p2",
+        "MY2021-JL-4D-2020-10-30-p2",
+        "MY2021-JL-4D-2020-12-04-p2",
+        "MY2021-JL-4D-2021-01-01-p2",
+        "MY2021-JL-4D-2021-02-09-p2",
+        "MY2021-JL-4D-2021-03-05-p2",
+        "MY2021-JL-4D-2021-04-14-p2"
+      ],
+      "positive_observations": 9,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:551cee6a38a40dbc6a5f5bac07eda94ed1d30759f85e5e3583decaf22f8106d2"
+    },
+    {
+      "research_row_id": "JL21-32",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "4-door",
+      "model_code": "JLJL74",
+      "marketed_trim_proposal": "Unlimited Islander",
+      "engine_code": "ERC",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "23J"
+      ],
+      "engine_transmission_pairings": [
+        "ERC/DEM"
+      ],
+      "first_observed_revision": "2020-08-06",
+      "last_observed_revision": "2021-04-14",
+      "guide_source_ids": [
+        "MY2021-JL-4D-2020-08-06",
+        "MY2021-JL-4D-2020-09-29",
+        "MY2021-JL-4D-2020-10-14",
+        "MY2021-JL-4D-2020-10-30",
+        "MY2021-JL-4D-2020-12-04",
+        "MY2021-JL-4D-2021-01-01",
+        "MY2021-JL-4D-2021-02-09",
+        "MY2021-JL-4D-2021-03-05",
+        "MY2021-JL-4D-2021-04-14"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-4D-2020-08-06-p2",
+        "MY2021-JL-4D-2020-09-29-p2",
+        "MY2021-JL-4D-2020-10-14-p2",
+        "MY2021-JL-4D-2020-10-30-p2",
+        "MY2021-JL-4D-2020-12-04-p2",
+        "MY2021-JL-4D-2021-01-01-p2",
+        "MY2021-JL-4D-2021-02-09-p2",
+        "MY2021-JL-4D-2021-03-05-p2",
+        "MY2021-JL-4D-2021-04-14-p2"
+      ],
+      "positive_observations": 9,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:1d78b77cbcc54cdd6eb93395678cf8c83b0f04b69b90379d531cf4886762ec68"
+    },
+    {
+      "research_row_id": "JL21-33",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "4-door",
+      "model_code": "JLJL74",
+      "marketed_trim_proposal": "Unlimited Islander",
+      "engine_code": "ERG",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "25J"
+      ],
+      "engine_transmission_pairings": [
+        "ERG/DFT"
+      ],
+      "first_observed_revision": "2020-08-06",
+      "last_observed_revision": "2021-04-14",
+      "guide_source_ids": [
+        "MY2021-JL-4D-2020-08-06",
+        "MY2021-JL-4D-2020-09-29",
+        "MY2021-JL-4D-2020-10-14",
+        "MY2021-JL-4D-2020-10-30",
+        "MY2021-JL-4D-2020-12-04",
+        "MY2021-JL-4D-2021-01-01",
+        "MY2021-JL-4D-2021-02-09",
+        "MY2021-JL-4D-2021-03-05",
+        "MY2021-JL-4D-2021-04-14"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-4D-2020-08-06-p2",
+        "MY2021-JL-4D-2020-09-29-p2",
+        "MY2021-JL-4D-2020-10-14-p2",
+        "MY2021-JL-4D-2020-10-30-p2",
+        "MY2021-JL-4D-2020-12-04-p2",
+        "MY2021-JL-4D-2021-01-01-p2",
+        "MY2021-JL-4D-2021-02-09-p2",
+        "MY2021-JL-4D-2021-03-05-p2",
+        "MY2021-JL-4D-2021-04-14-p2"
+      ],
+      "positive_observations": 9,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:f2d73cf72252d422a1579da5825da1f5b10d63c0d2bf1dd3b798002d93a0bda5"
+    },
+    {
+      "research_row_id": "JL21-34",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "4-door",
+      "model_code": "JLJL74",
+      "marketed_trim_proposal": "Unlimited Islander",
+      "engine_code": "EXJ",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "26J"
+      ],
+      "engine_transmission_pairings": [
+        "EXJ/DFV"
+      ],
+      "first_observed_revision": "2020-08-06",
+      "last_observed_revision": "2021-04-14",
+      "guide_source_ids": [
+        "MY2021-JL-4D-2020-08-06",
+        "MY2021-JL-4D-2020-09-29",
+        "MY2021-JL-4D-2020-10-14",
+        "MY2021-JL-4D-2020-10-30",
+        "MY2021-JL-4D-2020-12-04",
+        "MY2021-JL-4D-2021-01-01",
+        "MY2021-JL-4D-2021-02-09",
+        "MY2021-JL-4D-2021-03-05",
+        "MY2021-JL-4D-2021-04-14"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-4D-2020-08-06-p2",
+        "MY2021-JL-4D-2020-09-29-p2",
+        "MY2021-JL-4D-2020-10-14-p2",
+        "MY2021-JL-4D-2020-10-30-p2",
+        "MY2021-JL-4D-2020-12-04-p2",
+        "MY2021-JL-4D-2021-01-01-p2",
+        "MY2021-JL-4D-2021-02-09-p2",
+        "MY2021-JL-4D-2021-03-05-p2",
+        "MY2021-JL-4D-2021-04-14-p2"
+      ],
+      "positive_observations": 9,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:be2a7d0136db0491de1ab589ebabb01be29f9cc3f4a4b4b857ae0fec702e2a58"
+    },
+    {
+      "research_row_id": "JL21-35",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "4-door",
+      "model_code": "JLJL74",
+      "marketed_trim_proposal": "Unlimited Sport",
+      "engine_code": "EC1",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "22B"
+      ],
+      "engine_transmission_pairings": [
+        "EC1/DFT"
+      ],
+      "first_observed_revision": "2020-06-04",
+      "last_observed_revision": "2021-08-06",
+      "guide_source_ids": [
+        "MY2021-JL-4D-2020-06-04",
+        "MY2021-JL-4D-2020-08-06",
+        "MY2021-JL-4D-2020-09-29",
+        "MY2021-JL-4D-2020-10-14",
+        "MY2021-JL-4D-2020-10-30",
+        "MY2021-JL-4D-2020-12-04",
+        "MY2021-JL-4D-2021-01-01",
+        "MY2021-JL-4D-2021-02-09",
+        "MY2021-JL-4D-2021-03-05",
+        "MY2021-JL-4D-2021-04-14",
+        "MY2021-JL-4D-2021-05-14",
+        "MY2021-JL-4D-2021-06-09",
+        "MY2021-JL-4D-2021-07-06",
+        "MY2021-JL-4D-2021-08-06"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-4D-2020-06-04-p2",
+        "MY2021-JL-4D-2020-08-06-p2",
+        "MY2021-JL-4D-2020-09-29-p2",
+        "MY2021-JL-4D-2020-10-14-p2",
+        "MY2021-JL-4D-2020-10-30-p2",
+        "MY2021-JL-4D-2020-12-04-p2",
+        "MY2021-JL-4D-2021-01-01-p2",
+        "MY2021-JL-4D-2021-02-09-p2",
+        "MY2021-JL-4D-2021-03-05-p2",
+        "MY2021-JL-4D-2021-04-14-p2",
+        "MY2021-JL-4D-2021-05-14-p2",
+        "MY2021-JL-4D-2021-06-09-p2",
+        "MY2021-JL-4D-2021-07-06-p2",
+        "MY2021-JL-4D-2021-08-06-p2"
+      ],
+      "positive_observations": 14,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:347a04928c56aecf8190175f08f19ef2f88ec4e5b4c08f9068051b5c3c8d32a7"
+    },
+    {
+      "research_row_id": "JL21-36",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "4-door",
+      "model_code": "JLJL74",
+      "marketed_trim_proposal": "Unlimited Sport",
+      "engine_code": "ERC",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "23B",
+        "24B"
+      ],
+      "engine_transmission_pairings": [
+        "ERC/DEM",
+        "ERC/DFT"
+      ],
+      "first_observed_revision": "2020-06-04",
+      "last_observed_revision": "2021-08-06",
+      "guide_source_ids": [
+        "MY2021-JL-4D-2020-06-04",
+        "MY2021-JL-4D-2020-08-06",
+        "MY2021-JL-4D-2020-09-29",
+        "MY2021-JL-4D-2020-10-14",
+        "MY2021-JL-4D-2020-10-30",
+        "MY2021-JL-4D-2020-12-04",
+        "MY2021-JL-4D-2021-01-01",
+        "MY2021-JL-4D-2021-02-09",
+        "MY2021-JL-4D-2021-03-05",
+        "MY2021-JL-4D-2021-04-14",
+        "MY2021-JL-4D-2021-05-14",
+        "MY2021-JL-4D-2021-06-09",
+        "MY2021-JL-4D-2021-07-06",
+        "MY2021-JL-4D-2021-08-06"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-4D-2020-06-04-p2",
+        "MY2021-JL-4D-2020-08-06-p2",
+        "MY2021-JL-4D-2020-09-29-p2",
+        "MY2021-JL-4D-2020-10-14-p2",
+        "MY2021-JL-4D-2020-10-30-p2",
+        "MY2021-JL-4D-2020-12-04-p2",
+        "MY2021-JL-4D-2021-01-01-p2",
+        "MY2021-JL-4D-2021-02-09-p2",
+        "MY2021-JL-4D-2021-03-05-p2",
+        "MY2021-JL-4D-2021-04-14-p2",
+        "MY2021-JL-4D-2021-05-14-p2",
+        "MY2021-JL-4D-2021-06-09-p2",
+        "MY2021-JL-4D-2021-07-06-p2",
+        "MY2021-JL-4D-2021-08-06-p2"
+      ],
+      "positive_observations": 18,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:87313940cc7e276c521336df441401c87b9d0e42a189731612ea7f7e9d270e11"
+    },
+    {
+      "research_row_id": "JL21-37",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "4-door",
+      "model_code": "JLJL74",
+      "marketed_trim_proposal": "Unlimited Sport",
+      "engine_code": "ERG",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "25B"
+      ],
+      "engine_transmission_pairings": [
+        "ERG/DFT"
+      ],
+      "first_observed_revision": "2020-06-04",
+      "last_observed_revision": "2021-08-06",
+      "guide_source_ids": [
+        "MY2021-JL-4D-2020-06-04",
+        "MY2021-JL-4D-2020-08-06",
+        "MY2021-JL-4D-2020-09-29",
+        "MY2021-JL-4D-2020-10-14",
+        "MY2021-JL-4D-2020-10-30",
+        "MY2021-JL-4D-2020-12-04",
+        "MY2021-JL-4D-2021-01-01",
+        "MY2021-JL-4D-2021-02-09",
+        "MY2021-JL-4D-2021-03-05",
+        "MY2021-JL-4D-2021-04-14",
+        "MY2021-JL-4D-2021-05-14",
+        "MY2021-JL-4D-2021-06-09",
+        "MY2021-JL-4D-2021-07-06",
+        "MY2021-JL-4D-2021-08-06"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-4D-2020-06-04-p2",
+        "MY2021-JL-4D-2020-08-06-p2",
+        "MY2021-JL-4D-2020-09-29-p2",
+        "MY2021-JL-4D-2020-10-14-p2",
+        "MY2021-JL-4D-2020-10-30-p2",
+        "MY2021-JL-4D-2020-12-04-p2",
+        "MY2021-JL-4D-2021-01-01-p2",
+        "MY2021-JL-4D-2021-02-09-p2",
+        "MY2021-JL-4D-2021-03-05-p2",
+        "MY2021-JL-4D-2021-04-14-p2",
+        "MY2021-JL-4D-2021-05-14-p2",
+        "MY2021-JL-4D-2021-06-09-p2",
+        "MY2021-JL-4D-2021-07-06-p2",
+        "MY2021-JL-4D-2021-08-06-p2"
+      ],
+      "positive_observations": 14,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:21fc8489938f91793d6189b47545036128526bdc2864e79e20e58a32ebe1a93a"
+    },
+    {
+      "research_row_id": "JL21-38",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "4-door",
+      "model_code": "JLJL74",
+      "marketed_trim_proposal": "Unlimited Sport",
+      "engine_code": "EXJ",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "26B"
+      ],
+      "engine_transmission_pairings": [
+        "EXJ/DFV"
+      ],
+      "first_observed_revision": "2020-06-04",
+      "last_observed_revision": "2021-08-06",
+      "guide_source_ids": [
+        "MY2021-JL-4D-2020-06-04",
+        "MY2021-JL-4D-2020-08-06",
+        "MY2021-JL-4D-2020-09-29",
+        "MY2021-JL-4D-2020-10-14",
+        "MY2021-JL-4D-2020-10-30",
+        "MY2021-JL-4D-2020-12-04",
+        "MY2021-JL-4D-2021-01-01",
+        "MY2021-JL-4D-2021-02-09",
+        "MY2021-JL-4D-2021-03-05",
+        "MY2021-JL-4D-2021-04-14",
+        "MY2021-JL-4D-2021-05-14",
+        "MY2021-JL-4D-2021-06-09",
+        "MY2021-JL-4D-2021-07-06",
+        "MY2021-JL-4D-2021-08-06"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-4D-2020-06-04-p2",
+        "MY2021-JL-4D-2020-08-06-p2",
+        "MY2021-JL-4D-2020-09-29-p2",
+        "MY2021-JL-4D-2020-10-14-p2",
+        "MY2021-JL-4D-2020-10-30-p2",
+        "MY2021-JL-4D-2020-12-04-p2",
+        "MY2021-JL-4D-2021-01-01-p2",
+        "MY2021-JL-4D-2021-02-09-p2",
+        "MY2021-JL-4D-2021-03-05-p2",
+        "MY2021-JL-4D-2021-04-14-p2",
+        "MY2021-JL-4D-2021-05-14-p2",
+        "MY2021-JL-4D-2021-06-09-p2",
+        "MY2021-JL-4D-2021-07-06-p2",
+        "MY2021-JL-4D-2021-08-06-p2"
+      ],
+      "positive_observations": 14,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:e105f0012bb93281f6ce70dcd8275f251f97aa5f15ec656ad97085862db9fa9d"
+    },
+    {
+      "research_row_id": "JL21-39",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "4-door",
+      "model_code": "JLJL74",
+      "marketed_trim_proposal": "Unlimited Sport Altitude",
+      "engine_code": "EC1",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "22L"
+      ],
+      "engine_transmission_pairings": [
+        "EC1/DFT"
+      ],
+      "first_observed_revision": "2020-06-04",
+      "last_observed_revision": "2021-08-06",
+      "guide_source_ids": [
+        "MY2021-JL-4D-2020-06-04",
+        "MY2021-JL-4D-2020-08-06",
+        "MY2021-JL-4D-2020-09-29",
+        "MY2021-JL-4D-2020-10-14",
+        "MY2021-JL-4D-2020-10-30",
+        "MY2021-JL-4D-2020-12-04",
+        "MY2021-JL-4D-2021-01-01",
+        "MY2021-JL-4D-2021-02-09",
+        "MY2021-JL-4D-2021-03-05",
+        "MY2021-JL-4D-2021-04-14",
+        "MY2021-JL-4D-2021-05-14",
+        "MY2021-JL-4D-2021-06-09",
+        "MY2021-JL-4D-2021-07-06",
+        "MY2021-JL-4D-2021-08-06"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-4D-2020-06-04-p2",
+        "MY2021-JL-4D-2020-08-06-p2",
+        "MY2021-JL-4D-2020-09-29-p2",
+        "MY2021-JL-4D-2020-10-14-p2",
+        "MY2021-JL-4D-2020-10-30-p2",
+        "MY2021-JL-4D-2020-12-04-p2",
+        "MY2021-JL-4D-2021-01-01-p2",
+        "MY2021-JL-4D-2021-02-09-p2",
+        "MY2021-JL-4D-2021-03-05-p2",
+        "MY2021-JL-4D-2021-04-14-p2",
+        "MY2021-JL-4D-2021-05-14-p2",
+        "MY2021-JL-4D-2021-06-09-p2",
+        "MY2021-JL-4D-2021-07-06-p2",
+        "MY2021-JL-4D-2021-08-06-p2"
+      ],
+      "positive_observations": 14,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:d51caf6c1b12caa9082c89a38078ae28aa6dcacf1cb1c81f685388885245acd7"
+    },
+    {
+      "research_row_id": "JL21-40",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "4-door",
+      "model_code": "JLJL74",
+      "marketed_trim_proposal": "Unlimited Sport Altitude",
+      "engine_code": "ERC",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "23L",
+        "24L"
+      ],
+      "engine_transmission_pairings": [
+        "ERC/DEM",
+        "ERC/DFT"
+      ],
+      "first_observed_revision": "2020-06-04",
+      "last_observed_revision": "2021-08-06",
+      "guide_source_ids": [
+        "MY2021-JL-4D-2020-06-04",
+        "MY2021-JL-4D-2020-08-06",
+        "MY2021-JL-4D-2020-09-29",
+        "MY2021-JL-4D-2020-10-14",
+        "MY2021-JL-4D-2020-10-30",
+        "MY2021-JL-4D-2020-12-04",
+        "MY2021-JL-4D-2021-01-01",
+        "MY2021-JL-4D-2021-02-09",
+        "MY2021-JL-4D-2021-03-05",
+        "MY2021-JL-4D-2021-04-14",
+        "MY2021-JL-4D-2021-05-14",
+        "MY2021-JL-4D-2021-06-09",
+        "MY2021-JL-4D-2021-07-06",
+        "MY2021-JL-4D-2021-08-06"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-4D-2020-06-04-p2",
+        "MY2021-JL-4D-2020-08-06-p2",
+        "MY2021-JL-4D-2020-09-29-p2",
+        "MY2021-JL-4D-2020-10-14-p2",
+        "MY2021-JL-4D-2020-10-30-p2",
+        "MY2021-JL-4D-2020-12-04-p2",
+        "MY2021-JL-4D-2021-01-01-p2",
+        "MY2021-JL-4D-2021-02-09-p2",
+        "MY2021-JL-4D-2021-03-05-p2",
+        "MY2021-JL-4D-2021-04-14-p2",
+        "MY2021-JL-4D-2021-05-14-p2",
+        "MY2021-JL-4D-2021-06-09-p2",
+        "MY2021-JL-4D-2021-07-06-p2",
+        "MY2021-JL-4D-2021-08-06-p2"
+      ],
+      "positive_observations": 17,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:af508d3d24b58992bbeab0e6da5078f7ef31adfc0c6f82672689fabb452dd96e"
+    },
+    {
+      "research_row_id": "JL21-41",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "4-door",
+      "model_code": "JLJL74",
+      "marketed_trim_proposal": "Unlimited Sport Altitude",
+      "engine_code": "ERG",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "25L"
+      ],
+      "engine_transmission_pairings": [
+        "ERG/DFT"
+      ],
+      "first_observed_revision": "2020-06-04",
+      "last_observed_revision": "2021-04-14",
+      "guide_source_ids": [
+        "MY2021-JL-4D-2020-06-04",
+        "MY2021-JL-4D-2020-08-06",
+        "MY2021-JL-4D-2020-09-29",
+        "MY2021-JL-4D-2020-10-14",
+        "MY2021-JL-4D-2020-10-30",
+        "MY2021-JL-4D-2020-12-04",
+        "MY2021-JL-4D-2021-01-01",
+        "MY2021-JL-4D-2021-02-09",
+        "MY2021-JL-4D-2021-03-05",
+        "MY2021-JL-4D-2021-04-14"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-4D-2020-06-04-p2",
+        "MY2021-JL-4D-2020-08-06-p2",
+        "MY2021-JL-4D-2020-09-29-p2",
+        "MY2021-JL-4D-2020-10-14-p2",
+        "MY2021-JL-4D-2020-10-30-p2",
+        "MY2021-JL-4D-2020-12-04-p2",
+        "MY2021-JL-4D-2021-01-01-p2",
+        "MY2021-JL-4D-2021-02-09-p2",
+        "MY2021-JL-4D-2021-03-05-p2",
+        "MY2021-JL-4D-2021-04-14-p2"
+      ],
+      "positive_observations": 10,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:7b2062fe9f4f74036713e37c562fd46bca63bddf3e56854030eb8d2d22054195"
+    },
+    {
+      "research_row_id": "JL21-42",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "4-door",
+      "model_code": "JLJL74",
+      "marketed_trim_proposal": "Unlimited Sport Altitude",
+      "engine_code": "EXJ",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "26L"
+      ],
+      "engine_transmission_pairings": [
+        "EXJ/DFV"
+      ],
+      "first_observed_revision": "2020-06-04",
+      "last_observed_revision": "2021-08-06",
+      "guide_source_ids": [
+        "MY2021-JL-4D-2020-06-04",
+        "MY2021-JL-4D-2020-08-06",
+        "MY2021-JL-4D-2020-09-29",
+        "MY2021-JL-4D-2020-10-14",
+        "MY2021-JL-4D-2020-10-30",
+        "MY2021-JL-4D-2020-12-04",
+        "MY2021-JL-4D-2021-01-01",
+        "MY2021-JL-4D-2021-02-09",
+        "MY2021-JL-4D-2021-03-05",
+        "MY2021-JL-4D-2021-04-14",
+        "MY2021-JL-4D-2021-05-14",
+        "MY2021-JL-4D-2021-06-09",
+        "MY2021-JL-4D-2021-07-06",
+        "MY2021-JL-4D-2021-08-06"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-4D-2020-06-04-p2",
+        "MY2021-JL-4D-2020-08-06-p2",
+        "MY2021-JL-4D-2020-09-29-p2",
+        "MY2021-JL-4D-2020-10-14-p2",
+        "MY2021-JL-4D-2020-10-30-p2",
+        "MY2021-JL-4D-2020-12-04-p2",
+        "MY2021-JL-4D-2021-01-01-p2",
+        "MY2021-JL-4D-2021-02-09-p2",
+        "MY2021-JL-4D-2021-03-05-p2",
+        "MY2021-JL-4D-2021-04-14-p2",
+        "MY2021-JL-4D-2021-05-14-p2",
+        "MY2021-JL-4D-2021-06-09-p2",
+        "MY2021-JL-4D-2021-07-06-p2",
+        "MY2021-JL-4D-2021-08-06-p2"
+      ],
+      "positive_observations": 14,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:ed2169b13fc653a57e71d55f36c0d071875a17f38d27d9973445a8fe26148762"
+    },
+    {
+      "research_row_id": "JL21-43",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "4-door",
+      "model_code": "JLJL74",
+      "marketed_trim_proposal": "Unlimited Sport S",
+      "engine_code": "EC1",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "22S"
+      ],
+      "engine_transmission_pairings": [
+        "EC1/DFT"
+      ],
+      "first_observed_revision": "2020-06-04",
+      "last_observed_revision": "2021-08-06",
+      "guide_source_ids": [
+        "MY2021-JL-4D-2020-06-04",
+        "MY2021-JL-4D-2020-08-06",
+        "MY2021-JL-4D-2020-09-29",
+        "MY2021-JL-4D-2020-10-14",
+        "MY2021-JL-4D-2020-10-30",
+        "MY2021-JL-4D-2020-12-04",
+        "MY2021-JL-4D-2021-01-01",
+        "MY2021-JL-4D-2021-02-09",
+        "MY2021-JL-4D-2021-03-05",
+        "MY2021-JL-4D-2021-04-14",
+        "MY2021-JL-4D-2021-05-14",
+        "MY2021-JL-4D-2021-06-09",
+        "MY2021-JL-4D-2021-07-06",
+        "MY2021-JL-4D-2021-08-06"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-4D-2020-06-04-p2",
+        "MY2021-JL-4D-2020-08-06-p2",
+        "MY2021-JL-4D-2020-09-29-p2",
+        "MY2021-JL-4D-2020-10-14-p2",
+        "MY2021-JL-4D-2020-10-30-p2",
+        "MY2021-JL-4D-2020-12-04-p2",
+        "MY2021-JL-4D-2021-01-01-p2",
+        "MY2021-JL-4D-2021-02-09-p2",
+        "MY2021-JL-4D-2021-03-05-p2",
+        "MY2021-JL-4D-2021-04-14-p2",
+        "MY2021-JL-4D-2021-05-14-p2",
+        "MY2021-JL-4D-2021-06-09-p2",
+        "MY2021-JL-4D-2021-07-06-p2",
+        "MY2021-JL-4D-2021-08-06-p2"
+      ],
+      "positive_observations": 14,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:f5c6582cdcb048b3135a1ca8d20eb9b9970c6983b874270f31eaf42a05357475"
+    },
+    {
+      "research_row_id": "JL21-44",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "4-door",
+      "model_code": "JLJL74",
+      "marketed_trim_proposal": "Unlimited Sport S",
+      "engine_code": "ERC",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "23S",
+        "24S"
+      ],
+      "engine_transmission_pairings": [
+        "ERC/DEM",
+        "ERC/DFT"
+      ],
+      "first_observed_revision": "2020-06-04",
+      "last_observed_revision": "2021-08-06",
+      "guide_source_ids": [
+        "MY2021-JL-4D-2020-06-04",
+        "MY2021-JL-4D-2020-08-06",
+        "MY2021-JL-4D-2020-09-29",
+        "MY2021-JL-4D-2020-10-14",
+        "MY2021-JL-4D-2020-10-30",
+        "MY2021-JL-4D-2020-12-04",
+        "MY2021-JL-4D-2021-01-01",
+        "MY2021-JL-4D-2021-02-09",
+        "MY2021-JL-4D-2021-03-05",
+        "MY2021-JL-4D-2021-04-14",
+        "MY2021-JL-4D-2021-05-14",
+        "MY2021-JL-4D-2021-06-09",
+        "MY2021-JL-4D-2021-07-06",
+        "MY2021-JL-4D-2021-08-06"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-4D-2020-06-04-p2",
+        "MY2021-JL-4D-2020-08-06-p2",
+        "MY2021-JL-4D-2020-09-29-p2",
+        "MY2021-JL-4D-2020-10-14-p2",
+        "MY2021-JL-4D-2020-10-30-p2",
+        "MY2021-JL-4D-2020-12-04-p2",
+        "MY2021-JL-4D-2021-01-01-p2",
+        "MY2021-JL-4D-2021-02-09-p2",
+        "MY2021-JL-4D-2021-03-05-p2",
+        "MY2021-JL-4D-2021-04-14-p2",
+        "MY2021-JL-4D-2021-05-14-p2",
+        "MY2021-JL-4D-2021-06-09-p2",
+        "MY2021-JL-4D-2021-07-06-p2",
+        "MY2021-JL-4D-2021-08-06-p2"
+      ],
+      "positive_observations": 18,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:2fd847922adf67a4eb84bfd8d91abbbfdd96c2fd8a89544d5488a7b7412e23d1"
+    },
+    {
+      "research_row_id": "JL21-45",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "4-door",
+      "model_code": "JLJL74",
+      "marketed_trim_proposal": "Unlimited Sport S",
+      "engine_code": "ERG",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "25S"
+      ],
+      "engine_transmission_pairings": [
+        "ERG/DFT"
+      ],
+      "first_observed_revision": "2020-06-04",
+      "last_observed_revision": "2021-08-06",
+      "guide_source_ids": [
+        "MY2021-JL-4D-2020-06-04",
+        "MY2021-JL-4D-2020-08-06",
+        "MY2021-JL-4D-2020-09-29",
+        "MY2021-JL-4D-2020-10-14",
+        "MY2021-JL-4D-2020-10-30",
+        "MY2021-JL-4D-2020-12-04",
+        "MY2021-JL-4D-2021-01-01",
+        "MY2021-JL-4D-2021-02-09",
+        "MY2021-JL-4D-2021-03-05",
+        "MY2021-JL-4D-2021-04-14",
+        "MY2021-JL-4D-2021-05-14",
+        "MY2021-JL-4D-2021-06-09",
+        "MY2021-JL-4D-2021-07-06",
+        "MY2021-JL-4D-2021-08-06"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-4D-2020-06-04-p2",
+        "MY2021-JL-4D-2020-08-06-p2",
+        "MY2021-JL-4D-2020-09-29-p2",
+        "MY2021-JL-4D-2020-10-14-p2",
+        "MY2021-JL-4D-2020-10-30-p2",
+        "MY2021-JL-4D-2020-12-04-p2",
+        "MY2021-JL-4D-2021-01-01-p2",
+        "MY2021-JL-4D-2021-02-09-p2",
+        "MY2021-JL-4D-2021-03-05-p2",
+        "MY2021-JL-4D-2021-04-14-p2",
+        "MY2021-JL-4D-2021-05-14-p2",
+        "MY2021-JL-4D-2021-06-09-p2",
+        "MY2021-JL-4D-2021-07-06-p2",
+        "MY2021-JL-4D-2021-08-06-p2"
+      ],
+      "positive_observations": 14,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:13026d5b0247550e516ab38368c8c44362f46886b31505bba4842afd37fc6b33"
+    },
+    {
+      "research_row_id": "JL21-46",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "4-door",
+      "model_code": "JLJL74",
+      "marketed_trim_proposal": "Unlimited Sport S",
+      "engine_code": "EXJ",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "26S"
+      ],
+      "engine_transmission_pairings": [
+        "EXJ/DFV"
+      ],
+      "first_observed_revision": "2020-06-04",
+      "last_observed_revision": "2021-08-06",
+      "guide_source_ids": [
+        "MY2021-JL-4D-2020-06-04",
+        "MY2021-JL-4D-2020-08-06",
+        "MY2021-JL-4D-2020-09-29",
+        "MY2021-JL-4D-2020-10-14",
+        "MY2021-JL-4D-2020-10-30",
+        "MY2021-JL-4D-2020-12-04",
+        "MY2021-JL-4D-2021-01-01",
+        "MY2021-JL-4D-2021-02-09",
+        "MY2021-JL-4D-2021-03-05",
+        "MY2021-JL-4D-2021-04-14",
+        "MY2021-JL-4D-2021-05-14",
+        "MY2021-JL-4D-2021-06-09",
+        "MY2021-JL-4D-2021-07-06",
+        "MY2021-JL-4D-2021-08-06"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-4D-2020-06-04-p2",
+        "MY2021-JL-4D-2020-08-06-p2",
+        "MY2021-JL-4D-2020-09-29-p2",
+        "MY2021-JL-4D-2020-10-14-p2",
+        "MY2021-JL-4D-2020-10-30-p2",
+        "MY2021-JL-4D-2020-12-04-p2",
+        "MY2021-JL-4D-2021-01-01-p2",
+        "MY2021-JL-4D-2021-02-09-p2",
+        "MY2021-JL-4D-2021-03-05-p2",
+        "MY2021-JL-4D-2021-04-14-p2",
+        "MY2021-JL-4D-2021-05-14-p2",
+        "MY2021-JL-4D-2021-06-09-p2",
+        "MY2021-JL-4D-2021-07-06-p2",
+        "MY2021-JL-4D-2021-08-06-p2"
+      ],
+      "positive_observations": 14,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:12c49abc368b90da12d126c8cd60ba2c96cb5d23907adbeedcac4b15540e8723"
+    },
+    {
+      "research_row_id": "JL21-47",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "4-door",
+      "model_code": "JLJL74",
+      "marketed_trim_proposal": "Unlimited Willys",
+      "engine_code": "EC1",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "22W"
+      ],
+      "engine_transmission_pairings": [
+        "EC1/DFT"
+      ],
+      "first_observed_revision": "2020-06-04",
+      "last_observed_revision": "2021-08-06",
+      "guide_source_ids": [
+        "MY2021-JL-4D-2020-06-04",
+        "MY2021-JL-4D-2020-08-06",
+        "MY2021-JL-4D-2020-09-29",
+        "MY2021-JL-4D-2020-10-14",
+        "MY2021-JL-4D-2020-10-30",
+        "MY2021-JL-4D-2020-12-04",
+        "MY2021-JL-4D-2021-01-01",
+        "MY2021-JL-4D-2021-02-09",
+        "MY2021-JL-4D-2021-03-05",
+        "MY2021-JL-4D-2021-04-14",
+        "MY2021-JL-4D-2021-05-14",
+        "MY2021-JL-4D-2021-06-09",
+        "MY2021-JL-4D-2021-07-06",
+        "MY2021-JL-4D-2021-08-06"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-4D-2020-06-04-p2",
+        "MY2021-JL-4D-2020-08-06-p2",
+        "MY2021-JL-4D-2020-09-29-p2",
+        "MY2021-JL-4D-2020-10-14-p2",
+        "MY2021-JL-4D-2020-10-30-p2",
+        "MY2021-JL-4D-2020-12-04-p2",
+        "MY2021-JL-4D-2021-01-01-p2",
+        "MY2021-JL-4D-2021-02-09-p2",
+        "MY2021-JL-4D-2021-03-05-p2",
+        "MY2021-JL-4D-2021-04-14-p2",
+        "MY2021-JL-4D-2021-05-14-p2",
+        "MY2021-JL-4D-2021-06-09-p2",
+        "MY2021-JL-4D-2021-07-06-p2",
+        "MY2021-JL-4D-2021-08-06-p2"
+      ],
+      "positive_observations": 14,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:ab44242a1cccb8815c500aa4e5504f9d79f51a2ca1fc9feb67c39f9b878b4926"
+    },
+    {
+      "research_row_id": "JL21-48",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "4-door",
+      "model_code": "JLJL74",
+      "marketed_trim_proposal": "Unlimited Willys",
+      "engine_code": "ERC",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "23W",
+        "24W"
+      ],
+      "engine_transmission_pairings": [
+        "ERC/DEM",
+        "ERC/DFT"
+      ],
+      "first_observed_revision": "2020-06-04",
+      "last_observed_revision": "2021-08-06",
+      "guide_source_ids": [
+        "MY2021-JL-4D-2020-06-04",
+        "MY2021-JL-4D-2020-08-06",
+        "MY2021-JL-4D-2020-09-29",
+        "MY2021-JL-4D-2020-10-14",
+        "MY2021-JL-4D-2020-10-30",
+        "MY2021-JL-4D-2020-12-04",
+        "MY2021-JL-4D-2021-01-01",
+        "MY2021-JL-4D-2021-02-09",
+        "MY2021-JL-4D-2021-03-05",
+        "MY2021-JL-4D-2021-04-14",
+        "MY2021-JL-4D-2021-05-14",
+        "MY2021-JL-4D-2021-06-09",
+        "MY2021-JL-4D-2021-07-06",
+        "MY2021-JL-4D-2021-08-06"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-4D-2020-06-04-p2",
+        "MY2021-JL-4D-2020-08-06-p2",
+        "MY2021-JL-4D-2020-09-29-p2",
+        "MY2021-JL-4D-2020-10-14-p2",
+        "MY2021-JL-4D-2020-10-30-p2",
+        "MY2021-JL-4D-2020-12-04-p2",
+        "MY2021-JL-4D-2021-01-01-p2",
+        "MY2021-JL-4D-2021-02-09-p2",
+        "MY2021-JL-4D-2021-03-05-p2",
+        "MY2021-JL-4D-2021-04-14-p2",
+        "MY2021-JL-4D-2021-05-14-p2",
+        "MY2021-JL-4D-2021-06-09-p2",
+        "MY2021-JL-4D-2021-07-06-p2",
+        "MY2021-JL-4D-2021-08-06-p2"
+      ],
+      "positive_observations": 18,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:78ea37e7fbe4f31f44a91fa69419b755aeee29564cc9665ba78bdd9de0391841"
+    },
+    {
+      "research_row_id": "JL21-49",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "4-door",
+      "model_code": "JLJL74",
+      "marketed_trim_proposal": "Unlimited Willys",
+      "engine_code": "ERG",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "25W"
+      ],
+      "engine_transmission_pairings": [
+        "ERG/DFT"
+      ],
+      "first_observed_revision": "2020-06-04",
+      "last_observed_revision": "2021-04-14",
+      "guide_source_ids": [
+        "MY2021-JL-4D-2020-06-04",
+        "MY2021-JL-4D-2020-08-06",
+        "MY2021-JL-4D-2020-09-29",
+        "MY2021-JL-4D-2020-10-14",
+        "MY2021-JL-4D-2020-10-30",
+        "MY2021-JL-4D-2020-12-04",
+        "MY2021-JL-4D-2021-01-01",
+        "MY2021-JL-4D-2021-02-09",
+        "MY2021-JL-4D-2021-03-05",
+        "MY2021-JL-4D-2021-04-14"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-4D-2020-06-04-p2",
+        "MY2021-JL-4D-2020-08-06-p2",
+        "MY2021-JL-4D-2020-09-29-p2",
+        "MY2021-JL-4D-2020-10-14-p2",
+        "MY2021-JL-4D-2020-10-30-p2",
+        "MY2021-JL-4D-2020-12-04-p2",
+        "MY2021-JL-4D-2021-01-01-p2",
+        "MY2021-JL-4D-2021-02-09-p2",
+        "MY2021-JL-4D-2021-03-05-p2",
+        "MY2021-JL-4D-2021-04-14-p2"
+      ],
+      "positive_observations": 10,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:5bbd041faec47058835681eca2efe3dd04f4e45f05e566c084155621684eccd8"
+    },
+    {
+      "research_row_id": "JL21-50",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "4-door",
+      "model_code": "JLJL74",
+      "marketed_trim_proposal": "Unlimited Willys",
+      "engine_code": "EXJ",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "26W"
+      ],
+      "engine_transmission_pairings": [
+        "EXJ/DFV"
+      ],
+      "first_observed_revision": "2020-06-04",
+      "last_observed_revision": "2021-04-14",
+      "guide_source_ids": [
+        "MY2021-JL-4D-2020-06-04",
+        "MY2021-JL-4D-2020-08-06",
+        "MY2021-JL-4D-2020-09-29",
+        "MY2021-JL-4D-2020-10-14",
+        "MY2021-JL-4D-2020-10-30",
+        "MY2021-JL-4D-2020-12-04",
+        "MY2021-JL-4D-2021-01-01",
+        "MY2021-JL-4D-2021-02-09",
+        "MY2021-JL-4D-2021-03-05",
+        "MY2021-JL-4D-2021-04-14"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-4D-2020-06-04-p2",
+        "MY2021-JL-4D-2020-08-06-p2",
+        "MY2021-JL-4D-2020-09-29-p2",
+        "MY2021-JL-4D-2020-10-14-p2",
+        "MY2021-JL-4D-2020-10-30-p2",
+        "MY2021-JL-4D-2020-12-04-p2",
+        "MY2021-JL-4D-2021-01-01-p2",
+        "MY2021-JL-4D-2021-02-09-p2",
+        "MY2021-JL-4D-2021-03-05-p2",
+        "MY2021-JL-4D-2021-04-14-p2"
+      ],
+      "positive_observations": 10,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:3c1edfecb2465c071c05c8402f045eb4992c4d48994ccd120444bb1088384a4c"
+    },
+    {
+      "research_row_id": "JL21-51",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "4-door",
+      "model_code": "JLJL74",
+      "marketed_trim_proposal": "Unlimited Willys Sport",
+      "engine_code": "EC1",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "22K"
+      ],
+      "engine_transmission_pairings": [
+        "EC1/DFT"
+      ],
+      "first_observed_revision": "2020-06-04",
+      "last_observed_revision": "2021-08-06",
+      "guide_source_ids": [
+        "MY2021-JL-4D-2020-06-04",
+        "MY2021-JL-4D-2020-08-06",
+        "MY2021-JL-4D-2020-09-29",
+        "MY2021-JL-4D-2020-10-14",
+        "MY2021-JL-4D-2020-10-30",
+        "MY2021-JL-4D-2020-12-04",
+        "MY2021-JL-4D-2021-01-01",
+        "MY2021-JL-4D-2021-02-09",
+        "MY2021-JL-4D-2021-03-05",
+        "MY2021-JL-4D-2021-04-14",
+        "MY2021-JL-4D-2021-05-14",
+        "MY2021-JL-4D-2021-06-09",
+        "MY2021-JL-4D-2021-07-06",
+        "MY2021-JL-4D-2021-08-06"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-4D-2020-06-04-p2",
+        "MY2021-JL-4D-2020-08-06-p2",
+        "MY2021-JL-4D-2020-09-29-p2",
+        "MY2021-JL-4D-2020-10-14-p2",
+        "MY2021-JL-4D-2020-10-30-p2",
+        "MY2021-JL-4D-2020-12-04-p2",
+        "MY2021-JL-4D-2021-01-01-p2",
+        "MY2021-JL-4D-2021-02-09-p2",
+        "MY2021-JL-4D-2021-03-05-p2",
+        "MY2021-JL-4D-2021-04-14-p2",
+        "MY2021-JL-4D-2021-05-14-p2",
+        "MY2021-JL-4D-2021-06-09-p2",
+        "MY2021-JL-4D-2021-07-06-p2",
+        "MY2021-JL-4D-2021-08-06-p2"
+      ],
+      "positive_observations": 14,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:8b00b5d8f4bbc128492ce6ad6f495dbf067ff6e22e03dc9953494e8ad909f07c"
+    },
+    {
+      "research_row_id": "JL21-52",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "4-door",
+      "model_code": "JLJL74",
+      "marketed_trim_proposal": "Unlimited Willys Sport",
+      "engine_code": "ERC",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "23K",
+        "24K"
+      ],
+      "engine_transmission_pairings": [
+        "ERC/DEM",
+        "ERC/DFT"
+      ],
+      "first_observed_revision": "2020-06-04",
+      "last_observed_revision": "2021-08-06",
+      "guide_source_ids": [
+        "MY2021-JL-4D-2020-06-04",
+        "MY2021-JL-4D-2020-08-06",
+        "MY2021-JL-4D-2020-09-29",
+        "MY2021-JL-4D-2020-10-14",
+        "MY2021-JL-4D-2020-10-30",
+        "MY2021-JL-4D-2020-12-04",
+        "MY2021-JL-4D-2021-01-01",
+        "MY2021-JL-4D-2021-02-09",
+        "MY2021-JL-4D-2021-03-05",
+        "MY2021-JL-4D-2021-04-14",
+        "MY2021-JL-4D-2021-05-14",
+        "MY2021-JL-4D-2021-06-09",
+        "MY2021-JL-4D-2021-07-06",
+        "MY2021-JL-4D-2021-08-06"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-4D-2020-06-04-p2",
+        "MY2021-JL-4D-2020-08-06-p2",
+        "MY2021-JL-4D-2020-09-29-p2",
+        "MY2021-JL-4D-2020-10-14-p2",
+        "MY2021-JL-4D-2020-10-30-p2",
+        "MY2021-JL-4D-2020-12-04-p2",
+        "MY2021-JL-4D-2021-01-01-p2",
+        "MY2021-JL-4D-2021-02-09-p2",
+        "MY2021-JL-4D-2021-03-05-p2",
+        "MY2021-JL-4D-2021-04-14-p2",
+        "MY2021-JL-4D-2021-05-14-p2",
+        "MY2021-JL-4D-2021-06-09-p2",
+        "MY2021-JL-4D-2021-07-06-p2",
+        "MY2021-JL-4D-2021-08-06-p2"
+      ],
+      "positive_observations": 18,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:783066d23990a8b54cead627c901c29bbfe915b0692d8571789b219beb3a0b2b"
+    },
+    {
+      "research_row_id": "JL21-53",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "4-door",
+      "model_code": "JLJL74",
+      "marketed_trim_proposal": "Unlimited Willys Sport",
+      "engine_code": "ERG",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "25K"
+      ],
+      "engine_transmission_pairings": [
+        "ERG/DFT"
+      ],
+      "first_observed_revision": "2020-06-04",
+      "last_observed_revision": "2021-04-14",
+      "guide_source_ids": [
+        "MY2021-JL-4D-2020-06-04",
+        "MY2021-JL-4D-2020-08-06",
+        "MY2021-JL-4D-2020-09-29",
+        "MY2021-JL-4D-2020-10-14",
+        "MY2021-JL-4D-2020-10-30",
+        "MY2021-JL-4D-2020-12-04",
+        "MY2021-JL-4D-2021-01-01",
+        "MY2021-JL-4D-2021-02-09",
+        "MY2021-JL-4D-2021-03-05",
+        "MY2021-JL-4D-2021-04-14"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-4D-2020-06-04-p2",
+        "MY2021-JL-4D-2020-08-06-p2",
+        "MY2021-JL-4D-2020-09-29-p2",
+        "MY2021-JL-4D-2020-10-14-p2",
+        "MY2021-JL-4D-2020-10-30-p2",
+        "MY2021-JL-4D-2020-12-04-p2",
+        "MY2021-JL-4D-2021-01-01-p2",
+        "MY2021-JL-4D-2021-02-09-p2",
+        "MY2021-JL-4D-2021-03-05-p2",
+        "MY2021-JL-4D-2021-04-14-p2"
+      ],
+      "positive_observations": 10,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:1fa396b1e43a85738f5d270e0a4e79143962159d6b58bdda4fd18cb260ec048d"
+    },
+    {
+      "research_row_id": "JL21-54",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "4-door",
+      "model_code": "JLJL74",
+      "marketed_trim_proposal": "Unlimited Willys Sport",
+      "engine_code": "EXJ",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "26K"
+      ],
+      "engine_transmission_pairings": [
+        "EXJ/DFV"
+      ],
+      "first_observed_revision": "2020-06-04",
+      "last_observed_revision": "2021-08-06",
+      "guide_source_ids": [
+        "MY2021-JL-4D-2020-06-04",
+        "MY2021-JL-4D-2020-08-06",
+        "MY2021-JL-4D-2020-09-29",
+        "MY2021-JL-4D-2020-10-14",
+        "MY2021-JL-4D-2020-10-30",
+        "MY2021-JL-4D-2020-12-04",
+        "MY2021-JL-4D-2021-01-01",
+        "MY2021-JL-4D-2021-02-09",
+        "MY2021-JL-4D-2021-03-05",
+        "MY2021-JL-4D-2021-04-14",
+        "MY2021-JL-4D-2021-05-14",
+        "MY2021-JL-4D-2021-06-09",
+        "MY2021-JL-4D-2021-07-06",
+        "MY2021-JL-4D-2021-08-06"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-4D-2020-06-04-p2",
+        "MY2021-JL-4D-2020-08-06-p2",
+        "MY2021-JL-4D-2020-09-29-p2",
+        "MY2021-JL-4D-2020-10-14-p2",
+        "MY2021-JL-4D-2020-10-30-p2",
+        "MY2021-JL-4D-2020-12-04-p2",
+        "MY2021-JL-4D-2021-01-01-p2",
+        "MY2021-JL-4D-2021-02-09-p2",
+        "MY2021-JL-4D-2021-03-05-p2",
+        "MY2021-JL-4D-2021-04-14-p2",
+        "MY2021-JL-4D-2021-05-14-p2",
+        "MY2021-JL-4D-2021-06-09-p2",
+        "MY2021-JL-4D-2021-07-06-p2",
+        "MY2021-JL-4D-2021-08-06-p2"
+      ],
+      "positive_observations": 14,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:70e37b2f4326e3496fddf76718e1aa71d531a8970675405c921b0f15c20c7283"
+    },
+    {
+      "research_row_id": "JL21-55",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "4-door",
+      "model_code": "JLJP74",
+      "marketed_trim_proposal": "Unlimited High Altitude",
+      "engine_code": "EC1",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "22N"
+      ],
+      "engine_transmission_pairings": [
+        "EC1/DFT"
+      ],
+      "first_observed_revision": "2020-06-04",
+      "last_observed_revision": "2021-08-06",
+      "guide_source_ids": [
+        "MY2021-JL-4D-2020-06-04",
+        "MY2021-JL-4D-2020-08-06",
+        "MY2021-JL-4D-2020-09-29",
+        "MY2021-JL-4D-2020-10-14",
+        "MY2021-JL-4D-2020-10-30",
+        "MY2021-JL-4D-2020-12-04",
+        "MY2021-JL-4D-2021-01-01",
+        "MY2021-JL-4D-2021-02-09",
+        "MY2021-JL-4D-2021-03-05",
+        "MY2021-JL-4D-2021-04-14",
+        "MY2021-JL-4D-2021-05-14",
+        "MY2021-JL-4D-2021-06-09",
+        "MY2021-JL-4D-2021-07-06",
+        "MY2021-JL-4D-2021-08-06"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-4D-2020-06-04-p7",
+        "MY2021-JL-4D-2020-08-06-p8",
+        "MY2021-JL-4D-2020-09-29-p8",
+        "MY2021-JL-4D-2020-10-14-p8",
+        "MY2021-JL-4D-2020-10-30-p8",
+        "MY2021-JL-4D-2020-12-04-p8",
+        "MY2021-JL-4D-2021-01-01-p8",
+        "MY2021-JL-4D-2021-02-09-p8",
+        "MY2021-JL-4D-2021-03-05-p8",
+        "MY2021-JL-4D-2021-04-14-p9",
+        "MY2021-JL-4D-2021-05-14-p8",
+        "MY2021-JL-4D-2021-06-09-p9",
+        "MY2021-JL-4D-2021-07-06-p8",
+        "MY2021-JL-4D-2021-08-06-p8"
+      ],
+      "positive_observations": 14,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:77d5cb1d18dc24802670d6f48a731e2406f1865f58b3caf9b3afd21858d26448"
+    },
+    {
+      "research_row_id": "JL21-56",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "4-door",
+      "model_code": "JLJP74",
+      "marketed_trim_proposal": "Unlimited High Altitude",
+      "engine_code": "ERG",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "25N"
+      ],
+      "engine_transmission_pairings": [
+        "ERG/DFT"
+      ],
+      "first_observed_revision": "2020-06-04",
+      "last_observed_revision": "2021-08-06",
+      "guide_source_ids": [
+        "MY2021-JL-4D-2020-06-04",
+        "MY2021-JL-4D-2020-08-06",
+        "MY2021-JL-4D-2020-09-29",
+        "MY2021-JL-4D-2020-10-14",
+        "MY2021-JL-4D-2020-10-30",
+        "MY2021-JL-4D-2020-12-04",
+        "MY2021-JL-4D-2021-01-01",
+        "MY2021-JL-4D-2021-02-09",
+        "MY2021-JL-4D-2021-03-05",
+        "MY2021-JL-4D-2021-04-14",
+        "MY2021-JL-4D-2021-05-14",
+        "MY2021-JL-4D-2021-06-09",
+        "MY2021-JL-4D-2021-07-06",
+        "MY2021-JL-4D-2021-08-06"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-4D-2020-06-04-p7",
+        "MY2021-JL-4D-2020-08-06-p8",
+        "MY2021-JL-4D-2020-09-29-p8",
+        "MY2021-JL-4D-2020-10-14-p8",
+        "MY2021-JL-4D-2020-10-30-p8",
+        "MY2021-JL-4D-2020-12-04-p8",
+        "MY2021-JL-4D-2021-01-01-p8",
+        "MY2021-JL-4D-2021-02-09-p8",
+        "MY2021-JL-4D-2021-03-05-p8",
+        "MY2021-JL-4D-2021-04-14-p9",
+        "MY2021-JL-4D-2021-05-14-p8",
+        "MY2021-JL-4D-2021-06-09-p9",
+        "MY2021-JL-4D-2021-07-06-p8",
+        "MY2021-JL-4D-2021-08-06-p8"
+      ],
+      "positive_observations": 14,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:df11565d84efcf71e32b099364a9f1ed71a0aee547cdcdfabe3e414043c90512"
+    },
+    {
+      "research_row_id": "JL21-57",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "4-door",
+      "model_code": "JLJP74",
+      "marketed_trim_proposal": "Unlimited High Altitude",
+      "engine_code": "EXJ",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "26N"
+      ],
+      "engine_transmission_pairings": [
+        "EXJ/DFV"
+      ],
+      "first_observed_revision": "2020-06-04",
+      "last_observed_revision": "2021-08-06",
+      "guide_source_ids": [
+        "MY2021-JL-4D-2020-06-04",
+        "MY2021-JL-4D-2020-08-06",
+        "MY2021-JL-4D-2020-09-29",
+        "MY2021-JL-4D-2020-10-14",
+        "MY2021-JL-4D-2020-10-30",
+        "MY2021-JL-4D-2020-12-04",
+        "MY2021-JL-4D-2021-01-01",
+        "MY2021-JL-4D-2021-02-09",
+        "MY2021-JL-4D-2021-03-05",
+        "MY2021-JL-4D-2021-04-14",
+        "MY2021-JL-4D-2021-05-14",
+        "MY2021-JL-4D-2021-06-09",
+        "MY2021-JL-4D-2021-07-06",
+        "MY2021-JL-4D-2021-08-06"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-4D-2020-06-04-p7",
+        "MY2021-JL-4D-2020-08-06-p8",
+        "MY2021-JL-4D-2020-09-29-p8",
+        "MY2021-JL-4D-2020-10-14-p8",
+        "MY2021-JL-4D-2020-10-30-p8",
+        "MY2021-JL-4D-2020-12-04-p8",
+        "MY2021-JL-4D-2021-01-01-p8",
+        "MY2021-JL-4D-2021-02-09-p8",
+        "MY2021-JL-4D-2021-03-05-p8",
+        "MY2021-JL-4D-2021-04-14-p9",
+        "MY2021-JL-4D-2021-05-14-p8",
+        "MY2021-JL-4D-2021-06-09-p9",
+        "MY2021-JL-4D-2021-07-06-p8",
+        "MY2021-JL-4D-2021-08-06-p8"
+      ],
+      "positive_observations": 14,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:0be3a68220e9961916fe9f2d5dc2b9211b4e3ac75b5e620db527382a7be49fba"
+    },
+    {
+      "research_row_id": "JL21-58",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "4-door",
+      "model_code": "JLJP74",
+      "marketed_trim_proposal": "Unlimited Sahara",
+      "engine_code": "EC1",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "22G"
+      ],
+      "engine_transmission_pairings": [
+        "EC1/DFT"
+      ],
+      "first_observed_revision": "2020-06-04",
+      "last_observed_revision": "2021-08-06",
+      "guide_source_ids": [
+        "MY2021-JL-4D-2020-06-04",
+        "MY2021-JL-4D-2020-08-06",
+        "MY2021-JL-4D-2020-09-29",
+        "MY2021-JL-4D-2020-10-14",
+        "MY2021-JL-4D-2020-10-30",
+        "MY2021-JL-4D-2020-12-04",
+        "MY2021-JL-4D-2021-01-01",
+        "MY2021-JL-4D-2021-02-09",
+        "MY2021-JL-4D-2021-03-05",
+        "MY2021-JL-4D-2021-04-14",
+        "MY2021-JL-4D-2021-05-14",
+        "MY2021-JL-4D-2021-06-09",
+        "MY2021-JL-4D-2021-07-06",
+        "MY2021-JL-4D-2021-08-06"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-4D-2020-06-04-p7",
+        "MY2021-JL-4D-2020-08-06-p8",
+        "MY2021-JL-4D-2020-09-29-p8",
+        "MY2021-JL-4D-2020-10-14-p8",
+        "MY2021-JL-4D-2020-10-30-p8",
+        "MY2021-JL-4D-2020-12-04-p8",
+        "MY2021-JL-4D-2021-01-01-p8",
+        "MY2021-JL-4D-2021-02-09-p8",
+        "MY2021-JL-4D-2021-03-05-p8",
+        "MY2021-JL-4D-2021-04-14-p9",
+        "MY2021-JL-4D-2021-05-14-p8",
+        "MY2021-JL-4D-2021-06-09-p9",
+        "MY2021-JL-4D-2021-07-06-p8",
+        "MY2021-JL-4D-2021-08-06-p8"
+      ],
+      "positive_observations": 14,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:ac20e045bc23f693c3e79b11d1f081a46fe2f56925f7c85b768a8a62891a4bce"
+    },
+    {
+      "research_row_id": "JL21-59",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "4-door",
+      "model_code": "JLJP74",
+      "marketed_trim_proposal": "Unlimited Sahara",
+      "engine_code": "ERC",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "23G",
+        "24G"
+      ],
+      "engine_transmission_pairings": [
+        "ERC/DEM",
+        "ERC/DFT"
+      ],
+      "first_observed_revision": "2020-06-04",
+      "last_observed_revision": "2021-08-06",
+      "guide_source_ids": [
+        "MY2021-JL-4D-2020-06-04",
+        "MY2021-JL-4D-2020-08-06",
+        "MY2021-JL-4D-2020-09-29",
+        "MY2021-JL-4D-2020-10-14",
+        "MY2021-JL-4D-2020-10-30",
+        "MY2021-JL-4D-2020-12-04",
+        "MY2021-JL-4D-2021-01-01",
+        "MY2021-JL-4D-2021-02-09",
+        "MY2021-JL-4D-2021-03-05",
+        "MY2021-JL-4D-2021-04-14",
+        "MY2021-JL-4D-2021-05-14",
+        "MY2021-JL-4D-2021-06-09",
+        "MY2021-JL-4D-2021-07-06",
+        "MY2021-JL-4D-2021-08-06"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-4D-2020-06-04-p7",
+        "MY2021-JL-4D-2020-08-06-p8",
+        "MY2021-JL-4D-2020-09-29-p8",
+        "MY2021-JL-4D-2020-10-14-p8",
+        "MY2021-JL-4D-2020-10-30-p8",
+        "MY2021-JL-4D-2020-12-04-p8",
+        "MY2021-JL-4D-2021-01-01-p8",
+        "MY2021-JL-4D-2021-02-09-p8",
+        "MY2021-JL-4D-2021-03-05-p8",
+        "MY2021-JL-4D-2021-04-14-p9",
+        "MY2021-JL-4D-2021-05-14-p8",
+        "MY2021-JL-4D-2021-06-09-p9",
+        "MY2021-JL-4D-2021-07-06-p8",
+        "MY2021-JL-4D-2021-08-06-p8"
+      ],
+      "positive_observations": 18,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:d2fa580b9b20ff5f81b8816eec8cfb71c9de30265988ae9172aac9f59db0d979"
+    },
+    {
+      "research_row_id": "JL21-60",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "4-door",
+      "model_code": "JLJP74",
+      "marketed_trim_proposal": "Unlimited Sahara",
+      "engine_code": "ERG",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "25G"
+      ],
+      "engine_transmission_pairings": [
+        "ERG/DFT"
+      ],
+      "first_observed_revision": "2020-06-04",
+      "last_observed_revision": "2021-08-06",
+      "guide_source_ids": [
+        "MY2021-JL-4D-2020-06-04",
+        "MY2021-JL-4D-2020-08-06",
+        "MY2021-JL-4D-2020-09-29",
+        "MY2021-JL-4D-2020-10-14",
+        "MY2021-JL-4D-2020-10-30",
+        "MY2021-JL-4D-2020-12-04",
+        "MY2021-JL-4D-2021-01-01",
+        "MY2021-JL-4D-2021-02-09",
+        "MY2021-JL-4D-2021-03-05",
+        "MY2021-JL-4D-2021-04-14",
+        "MY2021-JL-4D-2021-05-14",
+        "MY2021-JL-4D-2021-06-09",
+        "MY2021-JL-4D-2021-07-06",
+        "MY2021-JL-4D-2021-08-06"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-4D-2020-06-04-p7",
+        "MY2021-JL-4D-2020-08-06-p8",
+        "MY2021-JL-4D-2020-09-29-p8",
+        "MY2021-JL-4D-2020-10-14-p8",
+        "MY2021-JL-4D-2020-10-30-p8",
+        "MY2021-JL-4D-2020-12-04-p8",
+        "MY2021-JL-4D-2021-01-01-p8",
+        "MY2021-JL-4D-2021-02-09-p8",
+        "MY2021-JL-4D-2021-03-05-p8",
+        "MY2021-JL-4D-2021-04-14-p9",
+        "MY2021-JL-4D-2021-05-14-p8",
+        "MY2021-JL-4D-2021-06-09-p9",
+        "MY2021-JL-4D-2021-07-06-p8",
+        "MY2021-JL-4D-2021-08-06-p8"
+      ],
+      "positive_observations": 14,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:348dc3dbf8f0a702cca5969c81efbf59940c5671db49c35cf98a33df433c731d"
+    },
+    {
+      "research_row_id": "JL21-61",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "4-door",
+      "model_code": "JLJP74",
+      "marketed_trim_proposal": "Unlimited Sahara",
+      "engine_code": "EXJ",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "26G"
+      ],
+      "engine_transmission_pairings": [
+        "EXJ/DFV"
+      ],
+      "first_observed_revision": "2020-06-04",
+      "last_observed_revision": "2021-08-06",
+      "guide_source_ids": [
+        "MY2021-JL-4D-2020-06-04",
+        "MY2021-JL-4D-2020-08-06",
+        "MY2021-JL-4D-2020-09-29",
+        "MY2021-JL-4D-2020-10-14",
+        "MY2021-JL-4D-2020-10-30",
+        "MY2021-JL-4D-2020-12-04",
+        "MY2021-JL-4D-2021-01-01",
+        "MY2021-JL-4D-2021-02-09",
+        "MY2021-JL-4D-2021-03-05",
+        "MY2021-JL-4D-2021-04-14",
+        "MY2021-JL-4D-2021-05-14",
+        "MY2021-JL-4D-2021-06-09",
+        "MY2021-JL-4D-2021-07-06",
+        "MY2021-JL-4D-2021-08-06"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-4D-2020-06-04-p7",
+        "MY2021-JL-4D-2020-08-06-p8",
+        "MY2021-JL-4D-2020-09-29-p8",
+        "MY2021-JL-4D-2020-10-14-p8",
+        "MY2021-JL-4D-2020-10-30-p8",
+        "MY2021-JL-4D-2020-12-04-p8",
+        "MY2021-JL-4D-2021-01-01-p8",
+        "MY2021-JL-4D-2021-02-09-p8",
+        "MY2021-JL-4D-2021-03-05-p8",
+        "MY2021-JL-4D-2021-04-14-p9",
+        "MY2021-JL-4D-2021-05-14-p8",
+        "MY2021-JL-4D-2021-06-09-p9",
+        "MY2021-JL-4D-2021-07-06-p8",
+        "MY2021-JL-4D-2021-08-06-p8"
+      ],
+      "positive_observations": 14,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:aa88ed75136b26db0366c3e02f4ca8f9c6d7c5ca3cb49951954e849a79a99b5d"
+    },
+    {
+      "research_row_id": "JL21-62",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "4-door",
+      "model_code": "JLJP74",
+      "marketed_trim_proposal": "Unlimited Sahara Altitude",
+      "engine_code": "EC1",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "22L"
+      ],
+      "engine_transmission_pairings": [
+        "EC1/DFT"
+      ],
+      "first_observed_revision": "2020-06-04",
+      "last_observed_revision": "2021-08-06",
+      "guide_source_ids": [
+        "MY2021-JL-4D-2020-06-04",
+        "MY2021-JL-4D-2020-08-06",
+        "MY2021-JL-4D-2020-09-29",
+        "MY2021-JL-4D-2020-10-14",
+        "MY2021-JL-4D-2020-10-30",
+        "MY2021-JL-4D-2020-12-04",
+        "MY2021-JL-4D-2021-01-01",
+        "MY2021-JL-4D-2021-02-09",
+        "MY2021-JL-4D-2021-03-05",
+        "MY2021-JL-4D-2021-04-14",
+        "MY2021-JL-4D-2021-05-14",
+        "MY2021-JL-4D-2021-06-09",
+        "MY2021-JL-4D-2021-07-06",
+        "MY2021-JL-4D-2021-08-06"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-4D-2020-06-04-p7",
+        "MY2021-JL-4D-2020-08-06-p8",
+        "MY2021-JL-4D-2020-09-29-p8",
+        "MY2021-JL-4D-2020-10-14-p8",
+        "MY2021-JL-4D-2020-10-30-p8",
+        "MY2021-JL-4D-2020-12-04-p8",
+        "MY2021-JL-4D-2021-01-01-p8",
+        "MY2021-JL-4D-2021-02-09-p8",
+        "MY2021-JL-4D-2021-03-05-p8",
+        "MY2021-JL-4D-2021-04-14-p9",
+        "MY2021-JL-4D-2021-05-14-p8",
+        "MY2021-JL-4D-2021-06-09-p9",
+        "MY2021-JL-4D-2021-07-06-p8",
+        "MY2021-JL-4D-2021-08-06-p8"
+      ],
+      "positive_observations": 14,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:0e4d45bfce8630fc0d91b315d8d6ff14ef8e29ee8d89579f65b9fb3ae46d53c2"
+    },
+    {
+      "research_row_id": "JL21-63",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "4-door",
+      "model_code": "JLJP74",
+      "marketed_trim_proposal": "Unlimited Sahara Altitude",
+      "engine_code": "ERC",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "23L"
+      ],
+      "engine_transmission_pairings": [
+        "ERC/DEM"
+      ],
+      "first_observed_revision": "2020-06-04",
+      "last_observed_revision": "2021-08-06",
+      "guide_source_ids": [
+        "MY2021-JL-4D-2020-06-04",
+        "MY2021-JL-4D-2020-08-06",
+        "MY2021-JL-4D-2020-09-29",
+        "MY2021-JL-4D-2020-10-14",
+        "MY2021-JL-4D-2020-10-30",
+        "MY2021-JL-4D-2020-12-04",
+        "MY2021-JL-4D-2021-01-01",
+        "MY2021-JL-4D-2021-02-09",
+        "MY2021-JL-4D-2021-03-05",
+        "MY2021-JL-4D-2021-04-14",
+        "MY2021-JL-4D-2021-05-14",
+        "MY2021-JL-4D-2021-06-09",
+        "MY2021-JL-4D-2021-07-06",
+        "MY2021-JL-4D-2021-08-06"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-4D-2020-06-04-p7",
+        "MY2021-JL-4D-2020-08-06-p8",
+        "MY2021-JL-4D-2020-09-29-p8",
+        "MY2021-JL-4D-2020-10-14-p8",
+        "MY2021-JL-4D-2020-10-30-p8",
+        "MY2021-JL-4D-2020-12-04-p8",
+        "MY2021-JL-4D-2021-01-01-p8",
+        "MY2021-JL-4D-2021-02-09-p8",
+        "MY2021-JL-4D-2021-03-05-p8",
+        "MY2021-JL-4D-2021-04-14-p9",
+        "MY2021-JL-4D-2021-05-14-p8",
+        "MY2021-JL-4D-2021-06-09-p9",
+        "MY2021-JL-4D-2021-07-06-p8",
+        "MY2021-JL-4D-2021-08-06-p8"
+      ],
+      "positive_observations": 14,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:6d5d5136b449807e48fc60836602f1c46d84fb26e4e6151972b274500f4b0483"
+    },
+    {
+      "research_row_id": "JL21-64",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "4-door",
+      "model_code": "JLJP74",
+      "marketed_trim_proposal": "Unlimited Sahara Altitude",
+      "engine_code": "ERG",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "25L"
+      ],
+      "engine_transmission_pairings": [
+        "ERG/DFT"
+      ],
+      "first_observed_revision": "2020-06-04",
+      "last_observed_revision": "2021-04-14",
+      "guide_source_ids": [
+        "MY2021-JL-4D-2020-06-04",
+        "MY2021-JL-4D-2020-08-06",
+        "MY2021-JL-4D-2020-09-29",
+        "MY2021-JL-4D-2020-10-14",
+        "MY2021-JL-4D-2020-10-30",
+        "MY2021-JL-4D-2020-12-04",
+        "MY2021-JL-4D-2021-01-01",
+        "MY2021-JL-4D-2021-02-09",
+        "MY2021-JL-4D-2021-03-05",
+        "MY2021-JL-4D-2021-04-14"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-4D-2020-06-04-p7",
+        "MY2021-JL-4D-2020-08-06-p8",
+        "MY2021-JL-4D-2020-09-29-p8",
+        "MY2021-JL-4D-2020-10-14-p8",
+        "MY2021-JL-4D-2020-10-30-p8",
+        "MY2021-JL-4D-2020-12-04-p8",
+        "MY2021-JL-4D-2021-01-01-p8",
+        "MY2021-JL-4D-2021-02-09-p8",
+        "MY2021-JL-4D-2021-03-05-p8",
+        "MY2021-JL-4D-2021-04-14-p9"
+      ],
+      "positive_observations": 10,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:d096ef88eaf805b26cf59500e9cfdbe14276bf459178f09d31bc3dc32f15d644"
+    },
+    {
+      "research_row_id": "JL21-65",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "4-door",
+      "model_code": "JLJP74",
+      "marketed_trim_proposal": "Unlimited Sahara Altitude",
+      "engine_code": "EXJ",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "26L"
+      ],
+      "engine_transmission_pairings": [
+        "EXJ/DFV"
+      ],
+      "first_observed_revision": "2020-06-04",
+      "last_observed_revision": "2021-08-06",
+      "guide_source_ids": [
+        "MY2021-JL-4D-2020-06-04",
+        "MY2021-JL-4D-2020-08-06",
+        "MY2021-JL-4D-2020-09-29",
+        "MY2021-JL-4D-2020-10-14",
+        "MY2021-JL-4D-2020-10-30",
+        "MY2021-JL-4D-2020-12-04",
+        "MY2021-JL-4D-2021-01-01",
+        "MY2021-JL-4D-2021-02-09",
+        "MY2021-JL-4D-2021-03-05",
+        "MY2021-JL-4D-2021-04-14",
+        "MY2021-JL-4D-2021-05-14",
+        "MY2021-JL-4D-2021-06-09",
+        "MY2021-JL-4D-2021-07-06",
+        "MY2021-JL-4D-2021-08-06"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-4D-2020-06-04-p7",
+        "MY2021-JL-4D-2020-08-06-p8",
+        "MY2021-JL-4D-2020-09-29-p8",
+        "MY2021-JL-4D-2020-10-14-p8",
+        "MY2021-JL-4D-2020-10-30-p8",
+        "MY2021-JL-4D-2020-12-04-p8",
+        "MY2021-JL-4D-2021-01-01-p8",
+        "MY2021-JL-4D-2021-02-09-p8",
+        "MY2021-JL-4D-2021-03-05-p8",
+        "MY2021-JL-4D-2021-04-14-p9",
+        "MY2021-JL-4D-2021-05-14-p8",
+        "MY2021-JL-4D-2021-06-09-p9",
+        "MY2021-JL-4D-2021-07-06-p8",
+        "MY2021-JL-4D-2021-08-06-p8"
+      ],
+      "positive_observations": 14,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:24a3c1609e163fa6f9b51a001ef6537b926f717a6253c4accee9c9b8b1a0586f"
+    },
+    {
+      "research_row_id": "JL21-66",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "4-door",
+      "model_code": "JLJS74",
+      "marketed_trim_proposal": "Unlimited Rubicon",
+      "engine_code": "EC1",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "22R"
+      ],
+      "engine_transmission_pairings": [
+        "EC1/DFT"
+      ],
+      "first_observed_revision": "2020-06-04",
+      "last_observed_revision": "2021-08-06",
+      "guide_source_ids": [
+        "MY2021-JL-4D-2020-06-04",
+        "MY2021-JL-4D-2020-08-06",
+        "MY2021-JL-4D-2020-09-29",
+        "MY2021-JL-4D-2020-10-14",
+        "MY2021-JL-4D-2020-10-30",
+        "MY2021-JL-4D-2020-12-04",
+        "MY2021-JL-4D-2021-01-01",
+        "MY2021-JL-4D-2021-02-09",
+        "MY2021-JL-4D-2021-03-05",
+        "MY2021-JL-4D-2021-04-14",
+        "MY2021-JL-4D-2021-05-14",
+        "MY2021-JL-4D-2021-06-09",
+        "MY2021-JL-4D-2021-07-06",
+        "MY2021-JL-4D-2021-08-06"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-4D-2020-06-04-p12",
+        "MY2021-JL-4D-2020-08-06-p14",
+        "MY2021-JL-4D-2020-09-29-p14",
+        "MY2021-JL-4D-2020-10-14-p14",
+        "MY2021-JL-4D-2020-10-30-p14",
+        "MY2021-JL-4D-2020-12-04-p14",
+        "MY2021-JL-4D-2021-01-01-p14",
+        "MY2021-JL-4D-2021-02-09-p14",
+        "MY2021-JL-4D-2021-03-05-p14",
+        "MY2021-JL-4D-2021-04-14-p15",
+        "MY2021-JL-4D-2021-05-14-p14",
+        "MY2021-JL-4D-2021-06-09-p15",
+        "MY2021-JL-4D-2021-07-06-p14",
+        "MY2021-JL-4D-2021-08-06-p14"
+      ],
+      "positive_observations": 14,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:c73bcbeecda3d5a4400a3e5db3ab8e7228aff139f0651aa1f7f694ca8dc2f70f"
+    },
+    {
+      "research_row_id": "JL21-67",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "4-door",
+      "model_code": "JLJS74",
+      "marketed_trim_proposal": "Unlimited Rubicon",
+      "engine_code": "ERC",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "23R"
+      ],
+      "engine_transmission_pairings": [
+        "ERC/DEM"
+      ],
+      "first_observed_revision": "2020-06-04",
+      "last_observed_revision": "2021-08-06",
+      "guide_source_ids": [
+        "MY2021-JL-4D-2020-06-04",
+        "MY2021-JL-4D-2020-08-06",
+        "MY2021-JL-4D-2020-09-29",
+        "MY2021-JL-4D-2020-10-14",
+        "MY2021-JL-4D-2020-10-30",
+        "MY2021-JL-4D-2020-12-04",
+        "MY2021-JL-4D-2021-01-01",
+        "MY2021-JL-4D-2021-02-09",
+        "MY2021-JL-4D-2021-03-05",
+        "MY2021-JL-4D-2021-04-14",
+        "MY2021-JL-4D-2021-05-14",
+        "MY2021-JL-4D-2021-06-09",
+        "MY2021-JL-4D-2021-07-06",
+        "MY2021-JL-4D-2021-08-06"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-4D-2020-06-04-p12",
+        "MY2021-JL-4D-2020-08-06-p14",
+        "MY2021-JL-4D-2020-09-29-p14",
+        "MY2021-JL-4D-2020-10-14-p14",
+        "MY2021-JL-4D-2020-10-30-p14",
+        "MY2021-JL-4D-2020-12-04-p14",
+        "MY2021-JL-4D-2021-01-01-p14",
+        "MY2021-JL-4D-2021-02-09-p14",
+        "MY2021-JL-4D-2021-03-05-p14",
+        "MY2021-JL-4D-2021-04-14-p15",
+        "MY2021-JL-4D-2021-05-14-p14",
+        "MY2021-JL-4D-2021-06-09-p15",
+        "MY2021-JL-4D-2021-07-06-p14",
+        "MY2021-JL-4D-2021-08-06-p14"
+      ],
+      "positive_observations": 14,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:1af0661b90049b36e3340a205f154fe1cd7ac7404e911e58dd41350075bf4e3a"
+    },
+    {
+      "research_row_id": "JL21-68",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "4-door",
+      "model_code": "JLJS74",
+      "marketed_trim_proposal": "Unlimited Rubicon",
+      "engine_code": "ERG",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "25R"
+      ],
+      "engine_transmission_pairings": [
+        "ERG/DFT"
+      ],
+      "first_observed_revision": "2020-06-04",
+      "last_observed_revision": "2021-08-06",
+      "guide_source_ids": [
+        "MY2021-JL-4D-2020-06-04",
+        "MY2021-JL-4D-2020-08-06",
+        "MY2021-JL-4D-2020-09-29",
+        "MY2021-JL-4D-2020-10-14",
+        "MY2021-JL-4D-2020-10-30",
+        "MY2021-JL-4D-2020-12-04",
+        "MY2021-JL-4D-2021-01-01",
+        "MY2021-JL-4D-2021-02-09",
+        "MY2021-JL-4D-2021-03-05",
+        "MY2021-JL-4D-2021-04-14",
+        "MY2021-JL-4D-2021-05-14",
+        "MY2021-JL-4D-2021-06-09",
+        "MY2021-JL-4D-2021-07-06",
+        "MY2021-JL-4D-2021-08-06"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-4D-2020-06-04-p12",
+        "MY2021-JL-4D-2020-08-06-p14",
+        "MY2021-JL-4D-2020-09-29-p14",
+        "MY2021-JL-4D-2020-10-14-p14",
+        "MY2021-JL-4D-2020-10-30-p14",
+        "MY2021-JL-4D-2020-12-04-p14",
+        "MY2021-JL-4D-2021-01-01-p14",
+        "MY2021-JL-4D-2021-02-09-p14",
+        "MY2021-JL-4D-2021-03-05-p14",
+        "MY2021-JL-4D-2021-04-14-p15",
+        "MY2021-JL-4D-2021-05-14-p14",
+        "MY2021-JL-4D-2021-06-09-p15",
+        "MY2021-JL-4D-2021-07-06-p14",
+        "MY2021-JL-4D-2021-08-06-p14"
+      ],
+      "positive_observations": 14,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:e36c62b84204969d1f735aa7feffdf1387e5c2d07b591e9353470397823aefcf"
+    },
+    {
+      "research_row_id": "JL21-69",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "4-door",
+      "model_code": "JLJS74",
+      "marketed_trim_proposal": "Unlimited Rubicon",
+      "engine_code": "EXJ",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "26R"
+      ],
+      "engine_transmission_pairings": [
+        "EXJ/DFV"
+      ],
+      "first_observed_revision": "2020-06-04",
+      "last_observed_revision": "2021-08-06",
+      "guide_source_ids": [
+        "MY2021-JL-4D-2020-06-04",
+        "MY2021-JL-4D-2020-08-06",
+        "MY2021-JL-4D-2020-09-29",
+        "MY2021-JL-4D-2020-10-14",
+        "MY2021-JL-4D-2020-10-30",
+        "MY2021-JL-4D-2020-12-04",
+        "MY2021-JL-4D-2021-01-01",
+        "MY2021-JL-4D-2021-02-09",
+        "MY2021-JL-4D-2021-03-05",
+        "MY2021-JL-4D-2021-04-14",
+        "MY2021-JL-4D-2021-05-14",
+        "MY2021-JL-4D-2021-06-09",
+        "MY2021-JL-4D-2021-07-06",
+        "MY2021-JL-4D-2021-08-06"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-4D-2020-06-04-p12",
+        "MY2021-JL-4D-2020-08-06-p14",
+        "MY2021-JL-4D-2020-09-29-p14",
+        "MY2021-JL-4D-2020-10-14-p14",
+        "MY2021-JL-4D-2020-10-30-p14",
+        "MY2021-JL-4D-2020-12-04-p14",
+        "MY2021-JL-4D-2021-01-01-p14",
+        "MY2021-JL-4D-2021-02-09-p14",
+        "MY2021-JL-4D-2021-03-05-p14",
+        "MY2021-JL-4D-2021-04-14-p15",
+        "MY2021-JL-4D-2021-05-14-p14",
+        "MY2021-JL-4D-2021-06-09-p15",
+        "MY2021-JL-4D-2021-07-06-p14",
+        "MY2021-JL-4D-2021-08-06-p14"
+      ],
+      "positive_observations": 14,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:13d2c945cbedb21a0ac4a9e969d59c16e8b90abb1246061abd8b433798ade691"
+    },
+    {
+      "research_row_id": "JL21-70",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "4-door",
+      "model_code": "JLJX74",
+      "marketed_trim_proposal": "Unlimited Rubicon 392",
+      "engine_code": "ESG",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "27X"
+      ],
+      "engine_transmission_pairings": [
+        "ESG/DFV"
+      ],
+      "first_observed_revision": "2020-12-04",
+      "last_observed_revision": "2021-08-06",
+      "guide_source_ids": [
+        "MY2021-JL-4D-2020-12-04",
+        "MY2021-JL-4D-2021-01-01",
+        "MY2021-JL-4D-2021-02-09",
+        "MY2021-JL-4D-2021-03-05",
+        "MY2021-JL-4D-2021-04-14",
+        "MY2021-JL-4D-2021-05-14",
+        "MY2021-JL-4D-2021-06-09",
+        "MY2021-JL-4D-2021-07-06",
+        "MY2021-JL-4D-2021-08-06"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-4D-2020-12-04-p17",
+        "MY2021-JL-4D-2021-01-01-p17",
+        "MY2021-JL-4D-2021-02-09-p18",
+        "MY2021-JL-4D-2021-03-05-p17",
+        "MY2021-JL-4D-2021-04-14-p18",
+        "MY2021-JL-4D-2021-05-14-p18",
+        "MY2021-JL-4D-2021-06-09-p19",
+        "MY2021-JL-4D-2021-07-06-p18",
+        "MY2021-JL-4D-2021-08-06-p18"
+      ],
+      "positive_observations": 9,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:66a2c87edc7658643ddb7a7ab77f524065b81d15b20763e473dbcafbb0e13f4a"
+    },
+    {
+      "research_row_id": "JL21-72",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "4-door",
+      "model_code": "JLXP74",
+      "marketed_trim_proposal": "Unlimited High Altitude 4xe",
+      "engine_code": "ECX",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "29N"
+      ],
+      "engine_transmission_pairings": [
+        "ECX/DFY"
+      ],
+      "first_observed_revision": "2020-12-04",
+      "last_observed_revision": "2021-08-06",
+      "guide_source_ids": [
+        "MY2021-JL-4D-2020-12-04",
+        "MY2021-JL-4D-2021-01-01",
+        "MY2021-JL-4D-2021-02-09",
+        "MY2021-JL-4D-2021-03-05",
+        "MY2021-JL-4D-2021-04-14",
+        "MY2021-JL-4D-2021-05-14",
+        "MY2021-JL-4D-2021-06-09",
+        "MY2021-JL-4D-2021-07-06",
+        "MY2021-JL-4D-2021-08-06"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-4D-2020-12-04-p20",
+        "MY2021-JL-4D-2021-01-01-p20",
+        "MY2021-JL-4D-2021-02-09-p21",
+        "MY2021-JL-4D-2021-03-05-p21",
+        "MY2021-JL-4D-2021-04-14-p21",
+        "MY2021-JL-4D-2021-05-14-p22",
+        "MY2021-JL-4D-2021-06-09-p23",
+        "MY2021-JL-4D-2021-07-06-p22",
+        "MY2021-JL-4D-2021-08-06-p22"
+      ],
+      "positive_observations": 9,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:33dd95c30510a5a6b244744f74b522886732cecd586924c0aedfcaf7faec4dbc"
+    },
+    {
+      "research_row_id": "JL21-73",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "4-door",
+      "model_code": "JLXP74",
+      "marketed_trim_proposal": "Unlimited Sahara 4xe",
+      "engine_code": "ECX",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "29P"
+      ],
+      "engine_transmission_pairings": [
+        "ECX/DFY"
+      ],
+      "first_observed_revision": "2020-12-04",
+      "last_observed_revision": "2021-08-06",
+      "guide_source_ids": [
+        "MY2021-JL-4D-2020-12-04",
+        "MY2021-JL-4D-2021-01-01",
+        "MY2021-JL-4D-2021-02-09",
+        "MY2021-JL-4D-2021-03-05",
+        "MY2021-JL-4D-2021-04-14",
+        "MY2021-JL-4D-2021-05-14",
+        "MY2021-JL-4D-2021-06-09",
+        "MY2021-JL-4D-2021-07-06",
+        "MY2021-JL-4D-2021-08-06"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-4D-2020-12-04-p20",
+        "MY2021-JL-4D-2021-01-01-p20",
+        "MY2021-JL-4D-2021-02-09-p21",
+        "MY2021-JL-4D-2021-03-05-p21",
+        "MY2021-JL-4D-2021-04-14-p21",
+        "MY2021-JL-4D-2021-05-14-p22",
+        "MY2021-JL-4D-2021-06-09-p23",
+        "MY2021-JL-4D-2021-07-06-p22",
+        "MY2021-JL-4D-2021-08-06-p22"
+      ],
+      "positive_observations": 9,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:35e69c11a7502b408c20185cdb8c04c6910f3cc5f4a7d0888a0bfaddeecbfd7c"
+    },
+    {
+      "research_row_id": "JL21-74",
+      "model_year": 2021,
+      "market": "US",
+      "body_style": "4-door",
+      "model_code": "JLXS74",
+      "marketed_trim_proposal": "Unlimited Rubicon 4xe",
+      "engine_code": "ECX",
+      "scope_status": "proposed_consumer_scope",
+      "quick_order_packages": [
+        "29V"
+      ],
+      "engine_transmission_pairings": [
+        "ECX/DFY"
+      ],
+      "first_observed_revision": "2020-12-04",
+      "last_observed_revision": "2021-08-06",
+      "guide_source_ids": [
+        "MY2021-JL-4D-2020-12-04",
+        "MY2021-JL-4D-2021-01-01",
+        "MY2021-JL-4D-2021-02-09",
+        "MY2021-JL-4D-2021-03-05",
+        "MY2021-JL-4D-2021-04-14",
+        "MY2021-JL-4D-2021-05-14",
+        "MY2021-JL-4D-2021-06-09",
+        "MY2021-JL-4D-2021-07-06",
+        "MY2021-JL-4D-2021-08-06"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-4D-2020-12-04-p23",
+        "MY2021-JL-4D-2021-01-01-p23",
+        "MY2021-JL-4D-2021-02-09-p24",
+        "MY2021-JL-4D-2021-03-05-p24",
+        "MY2021-JL-4D-2021-04-14-p24",
+        "MY2021-JL-4D-2021-05-14-p25",
+        "MY2021-JL-4D-2021-06-09-p26",
+        "MY2021-JL-4D-2021-07-06-p25",
+        "MY2021-JL-4D-2021-08-06-p25"
+      ],
+      "positive_observations": 9,
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "research_row_sha256": "sha256:15719f837b90e614feea88c746c45ef36bf63ef28154733813a002aba633ff90"
+    }
+  ]
+}

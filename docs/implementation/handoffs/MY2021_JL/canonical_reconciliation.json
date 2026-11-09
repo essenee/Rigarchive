@@ -1,0 +1,268 @@
+{
+  "generation": [
+    32,
+    "38d3c3acf8254406abb5c2d12b9129a4",
+    "JL"
+  ],
+  "current_counts": {
+    "reference_vehicledefinition": 861,
+    "reference_importexecutionreceipt": 2980,
+    "reference_generationcorrespondencerevision": 64
+  },
+  "existing_MY2021_JL": [],
+  "historical_JL_counts_by_year": [
+    [
+      2018,
+      15
+    ],
+    [
+      2019,
+      19
+    ],
+    [
+      2020,
+      49
+    ]
+  ],
+  "MY2020_artifact_type": "dict",
+  "MY2020_current_approved_index": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/candidate_index.json",
+  "MY2020_current_index_sha256": "sha256:c0e28ee9ce1bc834c8227cb859a7f3fcce13bf67e106a2b4ee96218c6e8dca41",
+  "MY2020_to_MY2021_offering_descriptors": {
+    "common_descriptors": 39,
+    "MY2020_only": [
+      [
+        "2-door",
+        "Black and Tan",
+        "EC1"
+      ],
+      [
+        "2-door",
+        "Black and Tan",
+        "ERC"
+      ],
+      [
+        "2-door",
+        "Rubicon Recon",
+        "EC3"
+      ],
+      [
+        "4-door",
+        "Unlimited Black and Tan",
+        "EC1"
+      ],
+      [
+        "4-door",
+        "Unlimited Black and Tan",
+        "ERC"
+      ],
+      [
+        "4-door",
+        "Unlimited High Altitude",
+        "EC3"
+      ],
+      [
+        "4-door",
+        "Unlimited North Edition",
+        "EC3"
+      ],
+      [
+        "4-door",
+        "Unlimited Rubicon Recon",
+        "EC3"
+      ],
+      [
+        "4-door",
+        "Unlimited Sahara",
+        "EC3"
+      ],
+      [
+        "4-door",
+        "Unlimited Sahara Altitude",
+        "EC3"
+      ]
+    ],
+    "MY2021_only": [
+      [
+        "2-door",
+        "80th Anniversary Edition",
+        "EC1"
+      ],
+      [
+        "2-door",
+        "80th Anniversary Edition",
+        "ERG"
+      ],
+      [
+        "2-door",
+        "Freedom",
+        "ERG"
+      ],
+      [
+        "2-door",
+        "Islander",
+        "EC1"
+      ],
+      [
+        "2-door",
+        "Islander",
+        "ERC"
+      ],
+      [
+        "2-door",
+        "Islander",
+        "ERG"
+      ],
+      [
+        "2-door",
+        "Rubicon",
+        "ERG"
+      ],
+      [
+        "2-door",
+        "Sport",
+        "ERG"
+      ],
+      [
+        "2-door",
+        "Sport S",
+        "ERG"
+      ],
+      [
+        "2-door",
+        "Willys",
+        "ERG"
+      ],
+      [
+        "2-door",
+        "Willys Sport",
+        "ERG"
+      ],
+      [
+        "4-door",
+        "Unlimited 80th Anniversary Edition",
+        "EC1"
+      ],
+      [
+        "4-door",
+        "Unlimited 80th Anniversary Edition",
+        "ERG"
+      ],
+      [
+        "4-door",
+        "Unlimited 80th Anniversary Edition",
+        "EXJ"
+      ],
+      [
+        "4-door",
+        "Unlimited Freedom",
+        "ERG"
+      ],
+      [
+        "4-door",
+        "Unlimited Freedom",
+        "EXJ"
+      ],
+      [
+        "4-door",
+        "Unlimited High Altitude",
+        "EC1"
+      ],
+      [
+        "4-door",
+        "Unlimited High Altitude 4xe",
+        "ECX"
+      ],
+      [
+        "4-door",
+        "Unlimited Islander",
+        "EC1"
+      ],
+      [
+        "4-door",
+        "Unlimited Islander",
+        "ERC"
+      ],
+      [
+        "4-door",
+        "Unlimited Islander",
+        "ERG"
+      ],
+      [
+        "4-door",
+        "Unlimited Islander",
+        "EXJ"
+      ],
+      [
+        "4-door",
+        "Unlimited Rubicon",
+        "ERG"
+      ],
+      [
+        "4-door",
+        "Unlimited Rubicon 392",
+        "ESG"
+      ],
+      [
+        "4-door",
+        "Unlimited Rubicon 4xe",
+        "ECX"
+      ],
+      [
+        "4-door",
+        "Unlimited Sahara",
+        "EC1"
+      ],
+      [
+        "4-door",
+        "Unlimited Sahara 4xe",
+        "ECX"
+      ],
+      [
+        "4-door",
+        "Unlimited Sahara Altitude",
+        "EC1"
+      ],
+      [
+        "4-door",
+        "Unlimited Sport",
+        "ERG"
+      ],
+      [
+        "4-door",
+        "Unlimited Sport Altitude",
+        "ERG"
+      ],
+      [
+        "4-door",
+        "Unlimited Sport RHD",
+        "EC1"
+      ],
+      [
+        "4-door",
+        "Unlimited Sport S",
+        "ERG"
+      ],
+      [
+        "4-door",
+        "Unlimited Willys",
+        "ERG"
+      ],
+      [
+        "4-door",
+        "Unlimited Willys Sport",
+        "ERG"
+      ],
+      [
+        "4-door",
+        "Unlimited Willys Sport",
+        "EXJ"
+      ]
+    ],
+    "notice": "Different model-year identities never become no-ops merely by descriptor equality. No historical approval/lineage is propagated. High Altitude normalization uses approved MY2020 current labels."
+  },
+  "historical_canonical_identity_counts": {
+    "2019": 19,
+    "2020": 49,
+    "2021": 0
+  }
+}

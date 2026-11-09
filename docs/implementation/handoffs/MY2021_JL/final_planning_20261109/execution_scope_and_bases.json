@@ -1,0 +1,1028 @@
+{
+  "matrix_digest": "sha256:6926df6c06e4bd471bbda02c67257cf7a7e2999cf5cdfebfc8b06ead31a9996e",
+  "scope": "73 US MY2021 consumer rows only;23two-door/50four-door;24body/trim labels",
+  "standalone_snapshot_basis_counts": {
+    "first_representation": 73
+  },
+  "anticipated_transaction_basis_counts": {
+    "first_representation": 1,
+    "mechanical_dimension": 49,
+    "source_established_grade": 23
+  },
+  "notice": "All snapshots bind the present empty namespace. They must not be executed sequentially unchanged. Any separately authorized Matrix execution must freshly replan each row in fixed row-ID order inside one model-year transaction, recomputing namespace counts and sibling receipt/evidence proofs. Anticipated bases are code/tuple analysis, not executed sibling proofs.",
+  "execution_authorized": false,
+  "rows": [
+    {
+      "row_id": "JL21-01",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "first_representation",
+      "permitted_create_bases": [
+        "first_representation"
+      ],
+      "earlier_same_trim_rows": [],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-02",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_rows": [
+        "JL21-01"
+      ],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-03",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "source_established_grade",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ],
+      "earlier_same_trim_rows": [],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-04",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_rows": [
+        "JL21-03"
+      ],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-05",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_rows": [
+        "JL21-03",
+        "JL21-04"
+      ],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-06",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "source_established_grade",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ],
+      "earlier_same_trim_rows": [],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-07",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_rows": [
+        "JL21-06"
+      ],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-08",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_rows": [
+        "JL21-06",
+        "JL21-07"
+      ],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-09",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "source_established_grade",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ],
+      "earlier_same_trim_rows": [],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-10",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_rows": [
+        "JL21-09"
+      ],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-11",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_rows": [
+        "JL21-09",
+        "JL21-10"
+      ],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-12",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "source_established_grade",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ],
+      "earlier_same_trim_rows": [],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-13",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_rows": [
+        "JL21-12"
+      ],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-14",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_rows": [
+        "JL21-12",
+        "JL21-13"
+      ],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-15",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "source_established_grade",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ],
+      "earlier_same_trim_rows": [],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-16",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_rows": [
+        "JL21-15"
+      ],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-17",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_rows": [
+        "JL21-15",
+        "JL21-16"
+      ],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-18",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "source_established_grade",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ],
+      "earlier_same_trim_rows": [],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-19",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_rows": [
+        "JL21-18"
+      ],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-20",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_rows": [
+        "JL21-18",
+        "JL21-19"
+      ],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-21",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "source_established_grade",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ],
+      "earlier_same_trim_rows": [],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-22",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_rows": [
+        "JL21-21"
+      ],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-23",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_rows": [
+        "JL21-21",
+        "JL21-22"
+      ],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-24",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "source_established_grade",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ],
+      "earlier_same_trim_rows": [],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-25",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_rows": [
+        "JL21-24"
+      ],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-26",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_rows": [
+        "JL21-24",
+        "JL21-25"
+      ],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-27",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "source_established_grade",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ],
+      "earlier_same_trim_rows": [],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-28",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_rows": [
+        "JL21-27"
+      ],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-29",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_rows": [
+        "JL21-27",
+        "JL21-28"
+      ],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-30",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_rows": [
+        "JL21-27",
+        "JL21-28",
+        "JL21-29"
+      ],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-31",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "source_established_grade",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ],
+      "earlier_same_trim_rows": [],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-32",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_rows": [
+        "JL21-31"
+      ],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-33",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_rows": [
+        "JL21-31",
+        "JL21-32"
+      ],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-34",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_rows": [
+        "JL21-31",
+        "JL21-32",
+        "JL21-33"
+      ],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-35",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "source_established_grade",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ],
+      "earlier_same_trim_rows": [],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-36",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_rows": [
+        "JL21-35"
+      ],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-37",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_rows": [
+        "JL21-35",
+        "JL21-36"
+      ],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-38",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_rows": [
+        "JL21-35",
+        "JL21-36",
+        "JL21-37"
+      ],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-39",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "source_established_grade",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ],
+      "earlier_same_trim_rows": [],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-40",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_rows": [
+        "JL21-39"
+      ],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-41",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_rows": [
+        "JL21-39",
+        "JL21-40"
+      ],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-42",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_rows": [
+        "JL21-39",
+        "JL21-40",
+        "JL21-41"
+      ],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-43",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "source_established_grade",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ],
+      "earlier_same_trim_rows": [],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-44",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_rows": [
+        "JL21-43"
+      ],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-45",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_rows": [
+        "JL21-43",
+        "JL21-44"
+      ],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-46",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_rows": [
+        "JL21-43",
+        "JL21-44",
+        "JL21-45"
+      ],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-47",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "source_established_grade",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ],
+      "earlier_same_trim_rows": [],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-48",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_rows": [
+        "JL21-47"
+      ],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-49",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_rows": [
+        "JL21-47",
+        "JL21-48"
+      ],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-50",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_rows": [
+        "JL21-47",
+        "JL21-48",
+        "JL21-49"
+      ],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-51",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "source_established_grade",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ],
+      "earlier_same_trim_rows": [],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-52",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_rows": [
+        "JL21-51"
+      ],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-53",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_rows": [
+        "JL21-51",
+        "JL21-52"
+      ],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-54",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_rows": [
+        "JL21-51",
+        "JL21-52",
+        "JL21-53"
+      ],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-55",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "source_established_grade",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ],
+      "earlier_same_trim_rows": [],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-56",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_rows": [
+        "JL21-55"
+      ],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-57",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_rows": [
+        "JL21-55",
+        "JL21-56"
+      ],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-58",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "source_established_grade",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ],
+      "earlier_same_trim_rows": [],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-59",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_rows": [
+        "JL21-58"
+      ],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-60",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_rows": [
+        "JL21-58",
+        "JL21-59"
+      ],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-61",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_rows": [
+        "JL21-58",
+        "JL21-59",
+        "JL21-60"
+      ],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-62",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "source_established_grade",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ],
+      "earlier_same_trim_rows": [],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-63",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_rows": [
+        "JL21-62"
+      ],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-64",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_rows": [
+        "JL21-62",
+        "JL21-63"
+      ],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-65",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_rows": [
+        "JL21-62",
+        "JL21-63",
+        "JL21-64"
+      ],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-66",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "source_established_grade",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ],
+      "earlier_same_trim_rows": [],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-67",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_rows": [
+        "JL21-66"
+      ],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-68",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_rows": [
+        "JL21-66",
+        "JL21-67"
+      ],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-69",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_rows": [
+        "JL21-66",
+        "JL21-67",
+        "JL21-68"
+      ],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-70",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "source_established_grade",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ],
+      "earlier_same_trim_rows": [],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-72",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "source_established_grade",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ],
+      "earlier_same_trim_rows": [],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-73",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "source_established_grade",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ],
+      "earlier_same_trim_rows": [],
+      "approved_five_field_tuples_are_distinct": true
+    },
+    {
+      "row_id": "JL21-74",
+      "snapshot_basis": "first_representation",
+      "namespace_snapshot_count": 0,
+      "anticipated_basis_in_fixed_row_order": "source_established_grade",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ],
+      "earlier_same_trim_rows": [],
+      "approved_five_field_tuples_are_distinct": true
+    }
+  ]
+}

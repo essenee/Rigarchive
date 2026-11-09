@@ -1,0 +1,14 @@
+{
+  "db_sha256": "sha256:ec1eb2adb8becf62a6d8ef18e5ae2dee37d5049620faaaeec51ab8c69b0ee4f9",
+  "counts": {
+    "reference_vehicledefinition": 861,
+    "reference_importexecutionreceipt": 2980,
+    "reference_generationcorrespondencerevision": 64
+  },
+  "generation": [
+    32,
+    "38d3c3acf8254406abb5c2d12b9129a4",
+    "JL"
+  ],
+  "my2021_existing": []
+}

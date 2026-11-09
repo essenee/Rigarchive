@@ -1,0 +1,173 @@
+{
+  "artifact_kind": "nonexecutable_owner_review_table",
+  "approval_status": "pending",
+  "model_year": 2021,
+  "market": "US",
+  "generation_context": {
+    "pk": 32,
+    "uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4"
+  },
+  "scope_file": "proposed_consumer_scope.json",
+  "scope_sha256": "sha256:535430a5912badaf08fe51515cc801e948d7843ced9dc7fd8bd59142c92c6f1f",
+  "proposed_construction_rows": 73,
+  "proposed_body_trim_names": 24,
+  "trim_review_sha256": "sha256:7d77bc04bf995686e9254feba82a9b909ea293dc6614b723c05c9ea55bb3e16e",
+  "classification_review_file": "classification_review_89_decisions.json",
+  "classification_review_sha256": "sha256:308eb6ee38e99a5ebe781ca2c8b5a3dbc78f258d6c6d02addd691fc6b52d480e",
+  "classification_group_file_sha256": "sha256:1d2c565b407298f6713e34a6ba7cfb585643abfdbaa38a261bebfa753f158b36",
+  "reviewed_field_decisions": 89,
+  "consumer_field_decisions_requested": 88,
+  "consumer_affected_rows": 70,
+  "deferred_field_decisions": 1,
+  "groups": [
+    {
+      "group_id": "ERC-engine_aspiration",
+      "proposed_value": "naturally_aspirated",
+      "confidence": "moderate",
+      "consumer_decision_ids": [
+        "CLASS-001",
+        "CLASS-002",
+        "CLASS-003",
+        "CLASS-004",
+        "CLASS-005",
+        "CLASS-006",
+        "CLASS-007",
+        "CLASS-008",
+        "CLASS-009",
+        "CLASS-010",
+        "CLASS-011",
+        "CLASS-012",
+        "CLASS-013",
+        "CLASS-014",
+        "CLASS-015",
+        "CLASS-016",
+        "CLASS-017"
+      ],
+      "deferred_decision_ids": []
+    },
+    {
+      "group_id": "ERC-electrification_type",
+      "proposed_value": "none",
+      "confidence": "moderate",
+      "consumer_decision_ids": [
+        "CLASS-018",
+        "CLASS-019",
+        "CLASS-020",
+        "CLASS-021",
+        "CLASS-022",
+        "CLASS-023",
+        "CLASS-024",
+        "CLASS-025",
+        "CLASS-026",
+        "CLASS-027",
+        "CLASS-028",
+        "CLASS-029",
+        "CLASS-030",
+        "CLASS-031",
+        "CLASS-032",
+        "CLASS-033",
+        "CLASS-034"
+      ],
+      "deferred_decision_ids": []
+    },
+    {
+      "group_id": "ERG-engine_aspiration",
+      "proposed_value": "naturally_aspirated",
+      "confidence": "moderate",
+      "consumer_decision_ids": [
+        "CLASS-035",
+        "CLASS-036",
+        "CLASS-037",
+        "CLASS-038",
+        "CLASS-039",
+        "CLASS-040",
+        "CLASS-041",
+        "CLASS-042",
+        "CLASS-043",
+        "CLASS-044",
+        "CLASS-045",
+        "CLASS-046",
+        "CLASS-047",
+        "CLASS-048",
+        "CLASS-049",
+        "CLASS-050",
+        "CLASS-051",
+        "CLASS-052",
+        "CLASS-053",
+        "CLASS-054"
+      ],
+      "deferred_decision_ids": []
+    },
+    {
+      "group_id": "EC1-electrification_type",
+      "proposed_value": "none",
+      "confidence": "moderate",
+      "consumer_decision_ids": [
+        "CLASS-055",
+        "CLASS-056",
+        "CLASS-057",
+        "CLASS-058",
+        "CLASS-059",
+        "CLASS-060",
+        "CLASS-061",
+        "CLASS-062",
+        "CLASS-063",
+        "CLASS-064",
+        "CLASS-065",
+        "CLASS-066",
+        "CLASS-067",
+        "CLASS-068",
+        "CLASS-069",
+        "CLASS-070",
+        "CLASS-071",
+        "CLASS-072",
+        "CLASS-073",
+        "CLASS-074"
+      ],
+      "deferred_decision_ids": [
+        "CLASS-075"
+      ]
+    },
+    {
+      "group_id": "EXJ-electrification_type",
+      "proposed_value": "none",
+      "confidence": "moderate",
+      "consumer_decision_ids": [
+        "CLASS-076",
+        "CLASS-077",
+        "CLASS-078",
+        "CLASS-079",
+        "CLASS-080",
+        "CLASS-081",
+        "CLASS-082",
+        "CLASS-083",
+        "CLASS-084",
+        "CLASS-085",
+        "CLASS-086",
+        "CLASS-087"
+      ],
+      "deferred_decision_ids": []
+    },
+    {
+      "group_id": "ESG-engine_aspiration",
+      "proposed_value": "naturally_aspirated",
+      "confidence": "moderate",
+      "consumer_decision_ids": [
+        "CLASS-088"
+      ],
+      "deferred_decision_ids": []
+    },
+    {
+      "group_id": "ESG-electrification_type",
+      "proposed_value": "none",
+      "confidence": "moderate",
+      "consumer_decision_ids": [
+        "CLASS-089"
+      ],
+      "deferred_decision_ids": []
+    }
+  ],
+  "RHD_recommendation": "Preserve manufacturer evidence; defer canonical representation, without claiming fleet-only restriction.",
+  "RHD_scope_file_sha256": "sha256:fcd778174bb56474f9ceeea4d202349902275f6c48e01c94f137976e22933337",
+  "authorization_notice": "This is a proposal only. No owner approval, candidate-bound adjudication, construction or execution authorization has been applied."
+}

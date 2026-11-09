@@ -1,0 +1,25 @@
+{
+  "overall_status": "incomplete",
+  "blocking_consumer_candidate": {
+    "candidate_reference": "JL21-70",
+    "engine_code": "ESG",
+    "field": "fuel_type",
+    "current_value": null,
+    "reviewed_normalization": "gasoline",
+    "reason": "Existing direct-source predicate rejects premium 91-octane terminology; raw manufacturer evidence and validator preserved unchanged",
+    "resolution_requires": "Separately authorized applicable manufacturer evidence or bounded validator correction"
+  },
+  "deferred_outside_consumer_scope": {
+    "candidate_reference": "JL21-71",
+    "model_code": "JLUL74",
+    "decision_id": "CLASS-075",
+    "issues": [
+      "canonical steering semantics",
+      "public visibility",
+      "EC1 electrification classification deferred"
+    ],
+    "evidence_preserved": true,
+    "consumer_candidate_constructed": false
+  },
+  "generation_correspondence_preparation": "not started; requires separate authorization after consumer completeness blocker resolved"
+}

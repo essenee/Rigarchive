@@ -1,0 +1,40 @@
+{
+  "envelope": {
+    "artifact_type": "rigarchive.source_assertion_set.v1",
+    "created_at": "2026-11-09T13:43:25.638901+00:00",
+    "generator": "MY2021_bounded_construction",
+    "schema_version": "1.1.0"
+  },
+  "provenance": {
+    "acquisition_method": "retained_local_evidence",
+    "extraction_provenance": {
+      "extraction_mode": "manually_verified_transcription",
+      "extractor_id": "retained_MY2021_evidence_transcription",
+      "extractor_version": "1.0.0",
+      "raw_artifact_hash": "sha256:8541303bca3dd5bdd0df5158c36ee9a25c4a41a464e530c2f964dc930d9a7e1e",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2021_JL/source_pdfs/2-door-1-1-21-pdf.412193.pdf"
+    },
+    "native_record_id": "MY2021-JL-2D-2021-01-01-package-p4",
+    "publication_revision": "Original retained MY2021 source; no cross-year approval propagation",
+    "retrieved_at": "2026-11-09T13:43:25.638901+00:00",
+    "review_status": "reviewed",
+    "source_applicability": {
+      "applicability_basis": "MY2021 US guide applicability; technical/manual joins scoped to exact engine family and source locators",
+      "applicability_scope": "model_year",
+      "market": "US",
+      "publisher_jurisdiction": "US"
+    },
+    "source_id": "MY2021-JL-2D-2021-01-01",
+    "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2-door-1-1-21-pdf.412193/",
+    "source_type": "manufacturer_document",
+    "source_use_notes": "Raw optional-package evidence only. No option/transmission-only baseline is constructed."
+  },
+  "source_assertions": [
+    {
+      "assertion_id": "MY2021-JL-2D-2021-01-01-package-p4",
+      "attribute_key": "factory_package_option_page",
+      "raw_value": "JEEP United States                                   REISSUED: 01/01/2021                                                                                           PAGE: 4\nREVISED                                                         ISSUED:      06/04/2020                                                 2021 WRANGLER 2 DOOR\n                                                                                                                                   WRANGLER SPORT\n                                                                                       WILLYS\nPACKAGE CONTENT                                                                                                      SPORTSPORT           SPORT S          WILLYS      80TH EDITION    FREEDOM       ISLANDER\nMOLD IN COLOR BUMPER W/GLOSS BLACK (MBU)                                                 X                        X\nMOLD IN COLOR BUMPER W/NEUTRAL GRAY (MB3)                                                                                      X\nMOPAR ALL-WEATHER FLOOR MATS (CWA)                                                       X                        X\nOSCAR MIKE BADGE (MG9)                                                                                                                      X\nPOWER HEATED MIRRORS (GTB)                                                                            X           X            X            X           X\nPREMIUM BLACK SUNRIDER SOFT TOP (STB)                                                                                                       X\nPWR WINDOWS, FRONT 1-TOUCH DOWN (JPY)                                                                 X           X            X            X           X\nR1234YF A/C REFRIGERANT (XFC)                                                                         X           X                         X           X\nREAR VIEW AUTO DIM MIRROR (GNK)                                                                                                X\nREMOTE KEYLESS ENTRY (GXM)                                                                            X           X            X            X           X\nROCK PROTECTION SILL RAILS (MEF)                                                         X                        X                         X           X\nSECURITY ALARM (LSA)                                                                                  X           X            X            X           X\nSELECTABLE TIRE FILL ALERT (LA5)                                                                                               X                        X\nSILVER JEEP BADGES (MJC)                                                                                                                                X\nSPEED SENSITIVE POWER LOCKS (JPH)                                                                     X           X            X            X           X\nSTEEL FRONT BUMPER (MC6)                                                                                                                    X\nSUN VISORS W/ILLUM VANITY MIRRORS (GNC)                                                               X           X            X            X           X\nTECHNOLOGY GROUP (AAN)                                                                                                         X\nUCONNECT 4 WITH 7\" DISPLAY (UAG)                                                                                               X                        X\nUSB HOST FLIP (RF7)                                                                                                            X                        X\nWILLYS (ACB)                                                                             X                        X\nWILLYS HOOD DECAL (MT6)                                                                  X                        X\nWRANGLER DECAL (MG1)                                                                     X                        X            X            X           X\n\n                  PACKAGE VALUE PRICE                           $FWP         0         1,530        2,880       5,126        5,576        5,756       4,406\n                  PACKAGE DISCOUNT                              $FWP         0           0            0            0           0            0           0\n                  NET PACKAGE VALUE PRICE                       $FWP         0         1,530        2,880       5,126        5,576        5,756       4,406\n                  PACKAGE VALUE PRICE                         $MSRP          0         1,700        3,200       5,695        6,195        6,395       4,895\n                  PACKAGE DISCOUNT                            $MSRP          0           0            0            0           0            0           0\n                  NET PACKAGE VALUE PRICE                     $MSRP          0         1,700        3,200       5,695        6,195        6,395       4,895\n\nPRICE INCLUDES - BASE PRICE, ENGINE/TRANSMISSION AND QUICK ORDER PACKAGE\n(ALSO INCLUDES PACKAGE DISCOUNT WHERE APPLICABLE - ADD DESTINATION CHARGE)\nFACTORY WHOLESALE PRICE $                                          23-    27,967      29,497       30,847       33,093                   33,723       32,373\n                                                                   22-    29,317      30,847       32,197       34,443      34,893       35,073       33,723\n                                                                   25-    30,667      32,197       33,547       35,793      36,243       36,423       35,073\n\nMANUFACTURER SUGGESTED RETAIL PRICE $                              23-    28,475      30,175       31,675       34,170                   34,870       33,370\n                                                                   22-    29,975      31,675       33,175       35,670      36,170       36,370       34,870\n                                                                   25-    31,475      33,175       34,675       37,170      37,670       37,870       36,370\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nE - EXTRA COST N/C - NO CHARGE N/A - NOT AVAILABLE P - PACKAGED",
+      "source_context": "PDF page 4; model JLJL72; raw conditions retained, not evaluated"
+    }
+  ]
+}

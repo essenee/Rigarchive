@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/Users/cosmo/dev/Rigarchive/docs/implementation/handoffs/MY2021_JL/git_checkpoint_20261109/prepare_checkpoint.py", line 28, in <module>
+    assert live_hash==load(BASE/'canonical_execution_20261109/resumed_20261109/verification.json')['database_after_sha256'],'Unexpected live database change; stop for reconciliation'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Unexpected live database change; stop for reconciliation

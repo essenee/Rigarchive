@@ -1,0 +1,47 @@
+{
+  "total": 74,
+  "consumer_proposals": 73,
+  "RHD_review_rows": 1,
+  "by_body": {
+    "2-door": 23,
+    "4-door": 51
+  },
+  "by_engine": {
+    "EC1": 21,
+    "ERG": 20,
+    "ERC": 17,
+    "EXJ": 12,
+    "ESG": 1,
+    "ECX": 3
+  },
+  "by_body_and_engine": {
+    "2-door": {
+      "EC1": 8,
+      "ERG": 8,
+      "ERC": 7
+    },
+    "4-door": {
+      "EC1": 13,
+      "ERG": 12,
+      "EXJ": 12,
+      "ERC": 10,
+      "ESG": 1,
+      "ECX": 3
+    }
+  },
+  "body_trim_variants": 25,
+  "model_codes": {
+    "JLJL72": 20,
+    "JLJS72": 3,
+    "JLJL74": 31,
+    "JLJP74": 11,
+    "JLJS74": 4,
+    "JLJX74": 1,
+    "JLUL74": 1,
+    "JLXP74": 2,
+    "JLXS74": 1
+  },
+  "guides": 27,
+  "table_excerpts": 106,
+  "positive_cells": 900
+}

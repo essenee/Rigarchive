@@ -1,0 +1,409 @@
+{
+  "kind": "research_transcription_not_original_source_bytes",
+  "observed_utc_date": "2026-11-09",
+  "sources": [
+    {
+      "trim_label": "Sport",
+      "style_id": "401844797",
+      "url": "https://www.edmunds.com/jeep/wrangler/2021/st-401844797/features-specs/",
+      "observed_powertrain_descriptions": [
+        "3.6L V6 manual gasoline",
+        "2.0L turbo I4 gasoline",
+        "3.6L V6 eTorque"
+      ],
+      "observation_method": "browser: Engine table and expanded Mechanical Options",
+      "sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "limitation": "Secondary descriptions do not assert manufacturer engine codes, every transmission constraint, or the complete five-field canonical tuple."
+    },
+    {
+      "trim_label": "Willys Sport",
+      "style_id": "401857818",
+      "url": "https://www.edmunds.com/jeep/wrangler/2021/st-401857818/features-specs/",
+      "observed_powertrain_descriptions": [
+        "3.6L V6 manual gasoline",
+        "2.0L turbo I4 gasoline",
+        "3.6L V6 eTorque"
+      ],
+      "observation_method": "browser: Engine table and expanded Mechanical Options",
+      "sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "limitation": "Secondary descriptions do not assert manufacturer engine codes, every transmission constraint, or the complete five-field canonical tuple."
+    },
+    {
+      "trim_label": "Unlimited Islander",
+      "style_id": "401878945",
+      "url": "https://www.edmunds.com/jeep/wrangler/2021/st-401878945/features-specs/",
+      "observed_powertrain_descriptions": [
+        "3.6L V6 manual gasoline",
+        "2.0L turbo I4 gasoline",
+        "3.6L V6 eTorque",
+        "3.0L turbo diesel V6"
+      ],
+      "observation_method": "browser: Engine table and expanded Mechanical Options",
+      "sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "limitation": "Secondary descriptions do not assert manufacturer engine codes, every transmission constraint, or the complete five-field canonical tuple."
+    },
+    {
+      "trim_label": "Unlimited Freedom",
+      "style_id": "401878944",
+      "url": "https://www.edmunds.com/jeep/wrangler/2021/st-401878944/features-specs/",
+      "observed_powertrain_descriptions": [
+        "3.6L V6 manual gasoline",
+        "2.0L turbo I4 gasoline",
+        "3.6L V6 eTorque",
+        "3.0L turbo diesel V6"
+      ],
+      "observation_method": "browser: Engine table and expanded Mechanical Options",
+      "sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "limitation": "Secondary descriptions do not assert manufacturer engine codes, every transmission constraint, or the complete five-field canonical tuple."
+    },
+    {
+      "trim_label": "Sport S",
+      "style_id": "401857819",
+      "url": "https://www.edmunds.com/jeep/wrangler/2021/st-401857819/features-specs/",
+      "observed_powertrain_descriptions": [
+        "3.6L V6 manual gasoline",
+        "2.0L turbo I4 gasoline",
+        "3.6L V6 eTorque"
+      ],
+      "observation_method": "browser: Engine table and expanded Mechanical Options",
+      "sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "limitation": "Secondary descriptions do not assert manufacturer engine codes, every transmission constraint, or the complete five-field canonical tuple."
+    },
+    {
+      "trim_label": "Unlimited Sport",
+      "style_id": "401858036",
+      "url": "https://www.edmunds.com/jeep/wrangler/2021/st-401858036/features-specs/",
+      "observed_powertrain_descriptions": [
+        "3.6L V6 manual gasoline",
+        "2.0L turbo I4 gasoline",
+        "3.6L V6 eTorque",
+        "3.0L turbo diesel V6"
+      ],
+      "observation_method": "browser: Engine table and expanded Mechanical Options",
+      "sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "limitation": "Secondary descriptions do not assert manufacturer engine codes, every transmission constraint, or the complete five-field canonical tuple."
+    },
+    {
+      "trim_label": "Islander",
+      "style_id": "401878301",
+      "url": "https://www.edmunds.com/jeep/wrangler/2021/st-401878301/features-specs/",
+      "observed_powertrain_descriptions": [
+        "3.6L V6 manual gasoline",
+        "2.0L turbo I4 gasoline",
+        "3.6L V6 eTorque"
+      ],
+      "observation_method": "browser: Engine table and expanded Mechanical Options",
+      "sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "limitation": "Secondary descriptions do not assert manufacturer engine codes, every transmission constraint, or the complete five-field canonical tuple."
+    },
+    {
+      "trim_label": "Unlimited Willys Sport",
+      "style_id": "401858037",
+      "url": "https://www.edmunds.com/jeep/wrangler/2021/st-401858037/features-specs/",
+      "observed_powertrain_descriptions": [
+        "3.6L V6 manual gasoline",
+        "2.0L turbo I4 gasoline",
+        "3.6L V6 eTorque",
+        "3.0L turbo diesel V6"
+      ],
+      "observation_method": "browser: Engine table and expanded Mechanical Options",
+      "sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "limitation": "Secondary descriptions do not assert manufacturer engine codes, every transmission constraint, or the complete five-field canonical tuple."
+    },
+    {
+      "trim_label": "Freedom",
+      "style_id": "401878300",
+      "url": "https://www.edmunds.com/jeep/wrangler/2021/st-401878300/features-specs/",
+      "observed_powertrain_descriptions": [
+        "3.6L V6 manual gasoline",
+        "2.0L turbo I4 gasoline",
+        "3.6L V6 eTorque"
+      ],
+      "observation_method": "browser: Engine table and expanded Mechanical Options",
+      "sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "limitation": "Secondary descriptions do not assert manufacturer engine codes, every transmission constraint, or the complete five-field canonical tuple."
+    },
+    {
+      "trim_label": "Willys",
+      "style_id": "401857820",
+      "url": "https://www.edmunds.com/jeep/wrangler/2021/st-401857820/features-specs/",
+      "observed_powertrain_descriptions": [
+        "3.6L V6 manual gasoline",
+        "2.0L turbo I4 gasoline",
+        "3.6L V6 eTorque"
+      ],
+      "observation_method": "browser: Engine table and expanded Mechanical Options",
+      "sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "limitation": "Secondary descriptions do not assert manufacturer engine codes, every transmission constraint, or the complete five-field canonical tuple."
+    },
+    {
+      "trim_label": "Unlimited Sport S",
+      "style_id": "401858038",
+      "url": "https://www.edmunds.com/jeep/wrangler/2021/st-401858038/features-specs/",
+      "observed_powertrain_descriptions": [
+        "3.6L V6 manual gasoline",
+        "2.0L turbo I4 gasoline",
+        "3.6L V6 eTorque",
+        "3.0L turbo diesel V6"
+      ],
+      "observation_method": "browser: Engine table and expanded Mechanical Options",
+      "sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "limitation": "Secondary descriptions do not assert manufacturer engine codes, every transmission constraint, or the complete five-field canonical tuple."
+    },
+    {
+      "trim_label": "80th Anniversary Edition",
+      "style_id": "401878299",
+      "url": "https://www.edmunds.com/jeep/wrangler/2021/st-401878299/features-specs/",
+      "observed_powertrain_descriptions": [
+        "2.0L turbo I4 gasoline",
+        "3.6L V6 eTorque"
+      ],
+      "observation_method": "browser: Engine table and expanded Mechanical Options",
+      "sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "limitation": "Secondary descriptions do not assert manufacturer engine codes, every transmission constraint, or the complete five-field canonical tuple."
+    },
+    {
+      "trim_label": "Unlimited Sport Altitude",
+      "style_id": "401858040",
+      "url": "https://www.edmunds.com/jeep/wrangler/2021/st-401858040/features-specs/",
+      "observed_powertrain_descriptions": [
+        "3.6L V6 manual gasoline",
+        "2.0L turbo I4 gasoline",
+        "3.6L V6 eTorque",
+        "3.0L turbo diesel V6"
+      ],
+      "observation_method": "browser: Engine table and expanded Mechanical Options",
+      "sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "limitation": "Secondary descriptions do not assert manufacturer engine codes, every transmission constraint, or the complete five-field canonical tuple."
+    },
+    {
+      "trim_label": "Unlimited Willys",
+      "style_id": "401858039",
+      "url": "https://www.edmunds.com/jeep/wrangler/2021/st-401858039/features-specs/",
+      "observed_powertrain_descriptions": [
+        "3.6L V6 manual gasoline",
+        "2.0L turbo I4 gasoline",
+        "3.6L V6 eTorque",
+        "3.0L turbo diesel V6"
+      ],
+      "observation_method": "browser: Engine table and expanded Mechanical Options",
+      "sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "limitation": "Secondary descriptions do not assert manufacturer engine codes, every transmission constraint, or the complete five-field canonical tuple."
+    },
+    {
+      "trim_label": "Unlimited Sport RHD",
+      "style_id": "401891174",
+      "url": "https://www.edmunds.com/jeep/wrangler/2021/st-401891174/features-specs/",
+      "observed_powertrain_descriptions": [
+        "2.0L turbo I4 gasoline"
+      ],
+      "observation_method": "browser: Engine table and expanded Mechanical Options",
+      "sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "limitation": "Secondary descriptions do not assert manufacturer engine codes, every transmission constraint, or the complete five-field canonical tuple."
+    },
+    {
+      "trim_label": "Unlimited Sahara",
+      "style_id": "401858048",
+      "url": "https://www.edmunds.com/jeep/wrangler/2021/st-401858048/features-specs/",
+      "observed_powertrain_descriptions": [
+        "3.6L V6 manual gasoline",
+        "2.0L turbo I4 gasoline",
+        "3.6L V6 eTorque",
+        "3.0L turbo diesel V6"
+      ],
+      "observation_method": "browser: Engine table and expanded Mechanical Options",
+      "sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "limitation": "Secondary descriptions do not assert manufacturer engine codes, every transmission constraint, or the complete five-field canonical tuple."
+    },
+    {
+      "trim_label": "Rubicon",
+      "style_id": "401857821",
+      "url": "https://www.edmunds.com/jeep/wrangler/2021/st-401857821/features-specs/",
+      "observed_powertrain_descriptions": [
+        "3.6L V6 manual gasoline",
+        "2.0L turbo I4 gasoline",
+        "3.6L V6 eTorque"
+      ],
+      "observation_method": "browser: Engine table and expanded Mechanical Options",
+      "sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "limitation": "Secondary descriptions do not assert manufacturer engine codes, every transmission constraint, or the complete five-field canonical tuple."
+    },
+    {
+      "trim_label": "Unlimited 80th Anniversary Edition",
+      "style_id": "401878943",
+      "url": "https://www.edmunds.com/jeep/wrangler/2021/st-401878943/features-specs/",
+      "observed_powertrain_descriptions": [
+        "2.0L turbo I4 gasoline",
+        "3.6L V6 eTorque",
+        "3.0L turbo diesel V6"
+      ],
+      "observation_method": "browser: Engine table and expanded Mechanical Options",
+      "sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "limitation": "Secondary descriptions do not assert manufacturer engine codes, every transmission constraint, or the complete five-field canonical tuple."
+    },
+    {
+      "trim_label": "Unlimited Rubicon",
+      "style_id": "401858046",
+      "url": "https://www.edmunds.com/jeep/wrangler/2021/st-401858046/features-specs/",
+      "observed_powertrain_descriptions": [
+        "3.6L V6 manual gasoline",
+        "2.0L turbo I4 gasoline",
+        "3.6L V6 eTorque",
+        "3.0L turbo diesel V6"
+      ],
+      "observation_method": "browser: Engine table and expanded Mechanical Options",
+      "sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "limitation": "Secondary descriptions do not assert manufacturer engine codes, every transmission constraint, or the complete five-field canonical tuple."
+    },
+    {
+      "trim_label": "Unlimited Sahara Altitude",
+      "style_id": "401858049",
+      "url": "https://www.edmunds.com/jeep/wrangler/2021/st-401858049/features-specs/",
+      "observed_powertrain_descriptions": [
+        "3.6L V6 manual gasoline",
+        "2.0L turbo I4 gasoline",
+        "3.6L V6 eTorque",
+        "3.0L turbo diesel V6"
+      ],
+      "observation_method": "browser: Engine table and expanded Mechanical Options",
+      "sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "limitation": "Secondary descriptions do not assert manufacturer engine codes, every transmission constraint, or the complete five-field canonical tuple."
+    },
+    {
+      "trim_label": "Unlimited High Altitude",
+      "style_id": "401858050",
+      "url": "https://www.edmunds.com/jeep/wrangler/2021/st-401858050/features-specs/",
+      "observed_powertrain_descriptions": [
+        "2.0L turbo I4 gasoline",
+        "3.6L V6 eTorque",
+        "3.0L turbo diesel V6"
+      ],
+      "observation_method": "web reader: Engine, Mechanical Options and Packages tables (22N/25N/26N)",
+      "sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "limitation": "Secondary descriptions do not assert manufacturer engine codes, every transmission constraint, or the complete five-field canonical tuple."
+    },
+    {
+      "trim_label": "Unlimited Rubicon 392",
+      "style_id": "401882532",
+      "url": "https://www.edmunds.com/jeep/wrangler/2021/st-401882532/features-specs/",
+      "observed_powertrain_descriptions": [
+        "6.4L V8 gasoline"
+      ],
+      "observation_method": "web reader: Engine and Drivetrain tables",
+      "sections": [
+        "Engine",
+        "Mechanical Options"
+      ],
+      "limitation": "Secondary descriptions do not assert manufacturer engine codes, every transmission constraint, or the complete five-field canonical tuple."
+    },
+    {
+      "trim_label": "Unlimited Sahara 4xe",
+      "style_id": null,
+      "url": "https://www.edmunds.com/jeep/wrangler-4xe/2021/trims/",
+      "observed_powertrain_descriptions": [
+        "2.0L turbo I4 gasoline plug-in hybrid, eight-speed automatic"
+      ],
+      "observation_method": "web reader: three-column trim/specification comparison",
+      "sections": [
+        "Compare 2021 Wrangler 4xe trims side-by-side",
+        "Specifications",
+        "Fuel economy"
+      ],
+      "limitation": "Separate Edmunds model catalogue; source label omits redundant 4xe suffix within that catalogue. No manufacturer engine code asserted."
+    },
+    {
+      "trim_label": "Unlimited Rubicon 4xe",
+      "style_id": null,
+      "url": "https://www.edmunds.com/jeep/wrangler-4xe/2021/trims/",
+      "observed_powertrain_descriptions": [
+        "2.0L turbo I4 gasoline plug-in hybrid, eight-speed automatic"
+      ],
+      "observation_method": "web reader: three-column trim/specification comparison",
+      "sections": [
+        "Compare 2021 Wrangler 4xe trims side-by-side",
+        "Specifications",
+        "Fuel economy"
+      ],
+      "limitation": "Separate Edmunds model catalogue; source label omits redundant 4xe suffix within that catalogue. No manufacturer engine code asserted."
+    },
+    {
+      "trim_label": "Unlimited High Altitude 4xe",
+      "style_id": null,
+      "url": "https://www.edmunds.com/jeep/wrangler-4xe/2021/trims/",
+      "observed_powertrain_descriptions": [
+        "2.0L turbo I4 gasoline plug-in hybrid, eight-speed automatic"
+      ],
+      "observation_method": "web reader: three-column trim/specification comparison",
+      "sections": [
+        "Compare 2021 Wrangler 4xe trims side-by-side",
+        "Specifications",
+        "Fuel economy"
+      ],
+      "limitation": "Separate Edmunds model catalogue; source label omits redundant 4xe suffix within that catalogue. No manufacturer engine code asserted."
+    }
+  ],
+  "access_limitations": "Browser eventually returned Access Denied for High Altitude, 392 and 4xe; public web-reader views supplied their cited tables. No access restriction was bypassed. No original webpage-byte hash is claimed."
+}

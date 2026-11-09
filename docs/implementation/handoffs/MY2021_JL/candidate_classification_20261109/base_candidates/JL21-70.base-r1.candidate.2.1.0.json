@@ -1,0 +1,1712 @@
+{
+  "attribute_provenance": {
+    "engine_cylinders": [
+      "MY2021-JL-4D-2021-08-06|sha256:e6c2aa78fb6c34608dbb28dc4084cf909c444802434fcf32af61eb916a1168c4|MY2021-JL-4D-2021-08-06-JLJX74|JL21-70-engine_cylinders"
+    ],
+    "engine_displacement_liters": [
+      "MY2021-JL-4D-2021-08-06|sha256:e6c2aa78fb6c34608dbb28dc4084cf909c444802434fcf32af61eb916a1168c4|MY2021-JL-4D-2021-08-06-JLJX74|JL21-70-engine_displacement_liters"
+    ],
+    "generic_drive_classification": [
+      "FCA_MY2021_Wrangler_392_specifications|sha256:47e6996360a2b44e3a7cae8e36975b63bcd06fab53d8b60f40abec63787faf26|FCA_MY2021_Wrangler_392_specifications|JL21-70-drive"
+    ],
+    "make": [
+      "MY2021-JL-4D-2021-08-06|sha256:e6c2aa78fb6c34608dbb28dc4084cf909c444802434fcf32af61eb916a1168c4|MY2021-JL-4D-2021-08-06-JLJX74|JL21-70-make"
+    ],
+    "model": [
+      "MY2021-JL-4D-2021-08-06|sha256:e6c2aa78fb6c34608dbb28dc4084cf909c444802434fcf32af61eb916a1168c4|MY2021-JL-4D-2021-08-06-JLJX74|JL21-70-model"
+    ],
+    "model_year": [
+      "MY2021-JL-4D-2021-08-06|sha256:e6c2aa78fb6c34608dbb28dc4084cf909c444802434fcf32af61eb916a1168c4|MY2021-JL-4D-2021-08-06-JLJX74|JL21-70-model_year"
+    ]
+  },
+  "candidate_identity": {
+    "manufacturer_name": "Jeep",
+    "market": "US",
+    "model_year": 2021,
+    "trim_name": "Unlimited Rubicon 392",
+    "vehicle_model_name": "Wrangler"
+  },
+  "candidate_reference": "JL21-70",
+  "canonical_powertrain": {
+    "electrification_type": null,
+    "engine_aspiration": null,
+    "engine_cylinders": 8,
+    "engine_displacement_liters": "6.4",
+    "fuel_type": null
+  },
+  "envelope": {
+    "artifact_type": "rigarchive.candidate_configuration.v2",
+    "created_at": "2026-11-09T13:43:25.638901+00:00",
+    "generator": "RigArchive-CandidateConstruction/0.1.0",
+    "schema_version": "2.1.0"
+  },
+  "evidence_documents": [
+    {
+      "assertion_set_id": "MY2021-JL-4D-2020-12-04-JLJX74",
+      "assertions": [
+        {
+          "assertion_id": "MY2021-JL-4D-2020-12-04-JLJX74-table",
+          "attribute_key": "factory_powertrain_table",
+          "raw_value": "ENGINE                               TRANSMISSION\n6.4L V8 SRT HEMI MDS ENGINE          8-SPD AUTO 8HP75 TRANS                                                 27X\n(ESG)                                (BUY-GERMANY) (DFV)",
+          "source_context": "PDF page 17; manufacturer model heading and named QOP columns"
+        },
+        {
+          "assertion_id": "MY2021-JL-4D-2020-12-04-JLJX74-model",
+          "attribute_key": "source_model_code",
+          "raw_value": "JLJX74",
+          "source_context": "PDF page 17; manufacturer model code"
+        },
+        {
+          "assertion_id": "MY2021-JL-4D-2020-12-04-JLJX74-heading",
+          "attribute_key": "source_document_heading",
+          "raw_value": "REISSUED: 12/04/2020                                                                                                                                        PAGE: 1           JEEP\nISSUED:      06/04/2020\n\n                                                                      United States\n                                                                               2021                                                                                          WRANGLER\n\n                                                         JEEP        WRANGLER                 4   DOOR\n\n                                                       CUSTOMER PREFERRED CODE GUIDE\n\n\n         MODEL                                                                                                 CODE                  PAGES\n         WRANGLER UNLIMITED SPORT                                                               JLJL74                  2                                                     4\n\n         WRANGLER UNLIMITED SAHARA                                                            JLJP74                  8                                                       DOOR\n\n         WRANGLER UNLIMITED RUBICON                                                           JLJS74                 14\n         WRANGLER UNLIMITED RUBICON 392                                                    JLJX74                 17\n         WRANGLER UNLIMITED SPORT RHD                                                       JLUL74                 19\n         WRANGLER UNLIMITED SAHARA 4XE                                                     JLXP74                 20\n         WRANGLER UNLIMITED RUBICON 4XE                                                   JLXS74                 23\n         GROUP DETAIL                                                                                                                          25\n         STANDARD EQUIPMENT                                                                                                          29\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n         STEP #1: SELECT                                                                                        MODEL CODE\n\n         STEP #2: SELECT                                                                                        QUICK ORDER PACKAGE CODE\n\n         STEP #3: SELECT                                                                                        $ OPTIONS (IF DESIRED)\n\n         STEP #4: SELECT                                                                                        COLOR & TRIM CODES\n\n\n\n\n\n       © 2020 FCA US LLC, All Rights Reserved. IT IS FOR THE USE OF FCA AND ITS AUTHORIZED DEALERS ONLY AND MAY\n                       NOT BE OTHERWISE USED, RELEASED, OR REPRINTED WITHOUT FCA PRIOR PERMISSION.\n\n                             ORDERS ARE ACCEPTED ONLY WHEN VEHICLES ARE SHIPPED BY THE FACTORY.\n                                                          © 2020 FCA US LLC, All Rights Reserved.",
+          "source_context": "PDF page 1; United States / MY2021 / Jeep Wrangler / body heading"
+        },
+        {
+          "assertion_id": "MY2021-JL-4D-2020-12-04-JLJX74-engine-0",
+          "attribute_key": "engine_descriptor",
+          "raw_value": "6.4L V8 SRT HEMI MDS ENGINE          8-SPD AUTO 8HP75 TRANS                                                 27X\n(ESG)                                (BUY-GERMANY) (DFV)",
+          "source_context": "PDF page 17; exact ESG segment, with transmission/QOP cells retained; no code-only inference"
+        }
+      ],
+      "extraction_mode": "manually_verified_transcription",
+      "extractor_id": "retained_MY2021_evidence_transcription",
+      "extractor_version": "1.0.0",
+      "generation_normalizer": {
+        "id": "explicit_generation_identity",
+        "version": "1.0.0"
+      },
+      "publication_revision": "Original retained MY2021 source; no cross-year approval propagation",
+      "raw_artifact_hash": "sha256:4dad5bddad4fbd0c0e2bab5095734c9f740e9c0e53d67de64df30b41576ada5a",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-12-4-20-pdf.401774.pdf",
+      "retrieved_at": "2026-11-09T13:43:25.638901+00:00",
+      "source_applicability": {
+        "applicability_basis": "MY2021 US guide applicability; technical/manual joins scoped to exact engine family and source locators",
+        "applicability_scope": "model_year",
+        "market": "US",
+        "publisher_jurisdiction": "US",
+        "unknown_fields": {}
+      },
+      "source_id": "MY2021-JL-4D-2020-12-04",
+      "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-12-4-20-pdf.401774/"
+    },
+    {
+      "assertion_set_id": "MY2021-JL-4D-2021-01-01-JLJX74",
+      "assertions": [
+        {
+          "assertion_id": "MY2021-JL-4D-2021-01-01-JLJX74-table",
+          "attribute_key": "factory_powertrain_table",
+          "raw_value": "ENGINE                               TRANSMISSION\n6.4L V8 SRT HEMI MDS ENGINE          8-SPD AUTO 8HP75 TRANS                                                 27X\n(ESG)                                (BUY-GERMANY) (DFV)",
+          "source_context": "PDF page 17; manufacturer model heading and named QOP columns"
+        },
+        {
+          "assertion_id": "MY2021-JL-4D-2021-01-01-JLJX74-model",
+          "attribute_key": "source_model_code",
+          "raw_value": "JLJX74",
+          "source_context": "PDF page 17; manufacturer model code"
+        },
+        {
+          "assertion_id": "MY2021-JL-4D-2021-01-01-JLJX74-heading",
+          "attribute_key": "source_document_heading",
+          "raw_value": "REISSUED: 01/01/2021                                                                                                                                        PAGE: 1           JEEP\nISSUED:      06/04/2020\n\n                                                                      United States\n                                                                               2021                                                                                          WRANGLER\n\n                                                         JEEP        WRANGLER                 4   DOOR\n\n                                                       CUSTOMER PREFERRED CODE GUIDE\n\n\n         MODEL                                                                                                 CODE                  PAGES\n         WRANGLER UNLIMITED SPORT                                                               JLJL74                  2                                                     4\n\n         WRANGLER UNLIMITED SAHARA                                                            JLJP74                  8                                                       DOOR\n\n         WRANGLER UNLIMITED RUBICON                                                           JLJS74                 14\n         WRANGLER UNLIMITED RUBICON 392                                                    JLJX74                 17\n         WRANGLER UNLIMITED SPORT RHD                                                       JLUL74                 19\n         WRANGLER UNLIMITED SAHARA 4XE                                                     JLXP74                 20\n         WRANGLER UNLIMITED RUBICON 4XE                                                   JLXS74                 23\n         GROUP DETAIL                                                                                                                          26\n         STANDARD EQUIPMENT                                                                                                          30\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n         STEP #1: SELECT                                                                                        MODEL CODE\n\n         STEP #2: SELECT                                                                                        QUICK ORDER PACKAGE CODE\n\n         STEP #3: SELECT                                                                                        $ OPTIONS (IF DESIRED)\n\n         STEP #4: SELECT                                                                                        COLOR & TRIM CODES\n\n\n\n\n\n       © 2020 FCA US LLC, All Rights Reserved. IT IS FOR THE USE OF FCA AND ITS AUTHORIZED DEALERS ONLY AND MAY\n                       NOT BE OTHERWISE USED, RELEASED, OR REPRINTED WITHOUT FCA PRIOR PERMISSION.\n\n                             ORDERS ARE ACCEPTED ONLY WHEN VEHICLES ARE SHIPPED BY THE FACTORY.\n                                                          © 2020 FCA US LLC, All Rights Reserved.",
+          "source_context": "PDF page 1; United States / MY2021 / Jeep Wrangler / body heading"
+        },
+        {
+          "assertion_id": "MY2021-JL-4D-2021-01-01-JLJX74-engine-0",
+          "attribute_key": "engine_descriptor",
+          "raw_value": "6.4L V8 SRT HEMI MDS ENGINE          8-SPD AUTO 8HP75 TRANS                                                 27X\n(ESG)                                (BUY-GERMANY) (DFV)",
+          "source_context": "PDF page 17; exact ESG segment, with transmission/QOP cells retained; no code-only inference"
+        }
+      ],
+      "extraction_mode": "manually_verified_transcription",
+      "extractor_id": "retained_MY2021_evidence_transcription",
+      "extractor_version": "1.0.0",
+      "generation_normalizer": {
+        "id": "explicit_generation_identity",
+        "version": "1.0.0"
+      },
+      "publication_revision": "Original retained MY2021 source; no cross-year approval propagation",
+      "raw_artifact_hash": "sha256:d0d2e4d1cf0e18f4ca5be3092d0625a2810fae009afefd97a603149ce53ab568",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-1-1-21-pdf.412194.pdf",
+      "retrieved_at": "2026-11-09T13:43:25.638901+00:00",
+      "source_applicability": {
+        "applicability_basis": "MY2021 US guide applicability; technical/manual joins scoped to exact engine family and source locators",
+        "applicability_scope": "model_year",
+        "market": "US",
+        "publisher_jurisdiction": "US",
+        "unknown_fields": {}
+      },
+      "source_id": "MY2021-JL-4D-2021-01-01",
+      "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-1-1-21-pdf.412194/"
+    },
+    {
+      "assertion_set_id": "MY2021-JL-4D-2021-02-09-JLJX74",
+      "assertions": [
+        {
+          "assertion_id": "MY2021-JL-4D-2021-02-09-JLJX74-table",
+          "attribute_key": "factory_powertrain_table",
+          "raw_value": "ENGINE                               TRANSMISSION\n6.4L V8 SRT HEMI MDS ENGINE          8-SPD AUTO 8HP75 TRANS                                                 27X\n(ESG)                                (BUY-GERMANY) (DFV)",
+          "source_context": "PDF page 18; manufacturer model heading and named QOP columns"
+        },
+        {
+          "assertion_id": "MY2021-JL-4D-2021-02-09-JLJX74-model",
+          "attribute_key": "source_model_code",
+          "raw_value": "JLJX74",
+          "source_context": "PDF page 18; manufacturer model code"
+        },
+        {
+          "assertion_id": "MY2021-JL-4D-2021-02-09-JLJX74-heading",
+          "attribute_key": "source_document_heading",
+          "raw_value": "REISSUED: 02/09/2021                                                                                                                                        PAGE: 1           JEEP\nISSUED:      06/04/2020\n\n                                                                      United States\n                                                                               2021                                                                                          WRANGLER\n\n                                                         JEEP        WRANGLER                 4   DOOR\n\n                                                       CUSTOMER PREFERRED CODE GUIDE\n\n\n         MODEL                                                                                                 CODE                  PAGES\n         WRANGLER UNLIMITED SPORT                                                               JLJL74                  2                                                     4\n\n         WRANGLER UNLIMITED SAHARA                                                            JLJP74                  8                                                       DOOR\n\n         WRANGLER UNLIMITED RUBICON                                                           JLJS74                 14\n         WRANGLER UNLIMITED RUBICON 392                                                    JLJX74                 18\n         WRANGLER UNLIMITED SPORT RHD                                                       JLUL74                 20\n         WRANGLER UNLIMITED SAHARA 4XE                                                     JLXP74                 21\n         WRANGLER UNLIMITED RUBICON 4XE                                                   JLXS74                 24\n         GROUP DETAIL                                                                                                                          27\n         STANDARD EQUIPMENT                                                                                                          31\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n         STEP #1: SELECT                                                                                        MODEL CODE\n\n         STEP #2: SELECT                                                                                        QUICK ORDER PACKAGE CODE\n\n         STEP #3: SELECT                                                                                        $ OPTIONS (IF DESIRED)\n\n         STEP #4: SELECT                                                                                        COLOR & TRIM CODES\n\n\n\n\n\n       © 2020 FCA US LLC, All Rights Reserved. IT IS FOR THE USE OF FCA AND ITS AUTHORIZED DEALERS ONLY AND MAY\n                       NOT BE OTHERWISE USED, RELEASED, OR REPRINTED WITHOUT FCA PRIOR PERMISSION.\n\n                             ORDERS ARE ACCEPTED ONLY WHEN VEHICLES ARE SHIPPED BY THE FACTORY.\n                                                          © 2020 FCA US LLC, All Rights Reserved.",
+          "source_context": "PDF page 1; United States / MY2021 / Jeep Wrangler / body heading"
+        },
+        {
+          "assertion_id": "MY2021-JL-4D-2021-02-09-JLJX74-engine-0",
+          "attribute_key": "engine_descriptor",
+          "raw_value": "6.4L V8 SRT HEMI MDS ENGINE          8-SPD AUTO 8HP75 TRANS                                                 27X\n(ESG)                                (BUY-GERMANY) (DFV)",
+          "source_context": "PDF page 18; exact ESG segment, with transmission/QOP cells retained; no code-only inference"
+        }
+      ],
+      "extraction_mode": "manually_verified_transcription",
+      "extractor_id": "retained_MY2021_evidence_transcription",
+      "extractor_version": "1.0.0",
+      "generation_normalizer": {
+        "id": "explicit_generation_identity",
+        "version": "1.0.0"
+      },
+      "publication_revision": "Original retained MY2021 source; no cross-year approval propagation",
+      "raw_artifact_hash": "sha256:2fa3c481460efa71f1036638c3f0929c2eca3eb91bd97a0eb87c0bbd3cfdcc9d",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-2-9-21-pdf.423850.pdf",
+      "retrieved_at": "2026-11-09T13:43:25.638901+00:00",
+      "source_applicability": {
+        "applicability_basis": "MY2021 US guide applicability; technical/manual joins scoped to exact engine family and source locators",
+        "applicability_scope": "model_year",
+        "market": "US",
+        "publisher_jurisdiction": "US",
+        "unknown_fields": {}
+      },
+      "source_id": "MY2021-JL-4D-2021-02-09",
+      "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-2-9-21-pdf.423850/"
+    },
+    {
+      "assertion_set_id": "MY2021-JL-4D-2021-03-05-JLJX74",
+      "assertions": [
+        {
+          "assertion_id": "MY2021-JL-4D-2021-03-05-JLJX74-table",
+          "attribute_key": "factory_powertrain_table",
+          "raw_value": "ENGINE              $FWP   $MSRP   TRANSMISSION        $FWP    $MSRP\n6.4L V8 SRT         N/C     N/C    8-SPD AUTO           N/C     N/C                                             27X\nHEMI MDS                           8HP75 TRANS\nENGINE (ESG)                       (BUY-GERMANY)\n                                   (DFV)",
+          "source_context": "PDF page 17; manufacturer model heading and named QOP columns"
+        },
+        {
+          "assertion_id": "MY2021-JL-4D-2021-03-05-JLJX74-model",
+          "attribute_key": "source_model_code",
+          "raw_value": "JLJX74",
+          "source_context": "PDF page 17; manufacturer model code"
+        },
+        {
+          "assertion_id": "MY2021-JL-4D-2021-03-05-JLJX74-heading",
+          "attribute_key": "source_document_heading",
+          "raw_value": "REISSUED: 03/05/2021                                                                                                                                        PAGE: 1           JEEP\nISSUED:      06/04/2020\n\n                                                                      United States\n                                                                               2021                                                                                          WRANGLER\n\n                                                         JEEP        WRANGLER                 4   DOOR\n\n                                                       CUSTOMER PREFERRED CODE GUIDE\n\n\n         MODEL                                                                                                 CODE                  PAGES\n         WRANGLER UNLIMITED SPORT                                                               JLJL74                  2                                                     4\n\n         WRANGLER UNLIMITED SAHARA                                                            JLJP74                  8                                                       DOOR\n\n         WRANGLER UNLIMITED RUBICON                                                           JLJS74                 14\n         WRANGLER UNLIMITED RUBICON 392                                                    JLJX74                 17\n         WRANGLER UNLIMITED SPORT RHD                                                       JLUL74                 20\n         WRANGLER UNLIMITED SAHARA 4XE                                                     JLXP74                 21\n         WRANGLER UNLIMITED RUBICON 4XE                                                   JLXS74                 24\n         GROUP DETAIL                                                                                                                          27\n         STANDARD EQUIPMENT                                                                                                          31\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n         STEP #1: SELECT                                                                                        MODEL CODE\n\n         STEP #2: SELECT                                                                                        QUICK ORDER PACKAGE CODE\n\n         STEP #3: SELECT                                                                                        $ OPTIONS (IF DESIRED)\n\n         STEP #4: SELECT                                                                                        COLOR & TRIM CODES\n\n\n\n\n\n       © 2020 FCA US LLC, All Rights Reserved. IT IS FOR THE USE OF FCA AND ITS AUTHORIZED DEALERS ONLY AND MAY\n                       NOT BE OTHERWISE USED, RELEASED, OR REPRINTED WITHOUT FCA PRIOR PERMISSION.\n\n                             ORDERS ARE ACCEPTED ONLY WHEN VEHICLES ARE SHIPPED BY THE FACTORY.\n                                                          © 2020 FCA US LLC, All Rights Reserved.",
+          "source_context": "PDF page 1; United States / MY2021 / Jeep Wrangler / body heading"
+        },
+        {
+          "assertion_id": "MY2021-JL-4D-2021-03-05-JLJX74-engine-0",
+          "attribute_key": "engine_descriptor",
+          "raw_value": "6.4L V8 SRT         N/C     N/C    8-SPD AUTO           N/C     N/C                                             27X\nHEMI MDS                           8HP75 TRANS\nENGINE (ESG)                       (BUY-GERMANY)\n                                   (DFV)",
+          "source_context": "PDF page 17; exact ESG segment, with transmission/QOP cells retained; no code-only inference"
+        }
+      ],
+      "extraction_mode": "manually_verified_transcription",
+      "extractor_id": "retained_MY2021_evidence_transcription",
+      "extractor_version": "1.0.0",
+      "generation_normalizer": {
+        "id": "explicit_generation_identity",
+        "version": "1.0.0"
+      },
+      "publication_revision": "Original retained MY2021 source; no cross-year approval propagation",
+      "raw_artifact_hash": "sha256:37cd4e33d30f54bb7d46940533a691312c5b8b4da22faee583a10fe5c9feaebb",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-3-5-21-pdf.434799.pdf",
+      "retrieved_at": "2026-11-09T13:43:25.638901+00:00",
+      "source_applicability": {
+        "applicability_basis": "MY2021 US guide applicability; technical/manual joins scoped to exact engine family and source locators",
+        "applicability_scope": "model_year",
+        "market": "US",
+        "publisher_jurisdiction": "US",
+        "unknown_fields": {}
+      },
+      "source_id": "MY2021-JL-4D-2021-03-05",
+      "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-3-5-21-pdf.434799/"
+    },
+    {
+      "assertion_set_id": "MY2021-JL-4D-2021-04-14-JLJX74",
+      "assertions": [
+        {
+          "assertion_id": "MY2021-JL-4D-2021-04-14-JLJX74-table",
+          "attribute_key": "factory_powertrain_table",
+          "raw_value": "ENGINE              $FWP   $MSRP   TRANSMISSION        $FWP    $MSRP\n6.4L V8 SRT         N/C     N/C    8-SPD AUTO           N/C     N/C                                             27X\nHEMI MDS                           8HP75 TRANS\nENGINE (ESG)                       (BUY-GERMANY)\n                                   (DFV)",
+          "source_context": "PDF page 18; manufacturer model heading and named QOP columns"
+        },
+        {
+          "assertion_id": "MY2021-JL-4D-2021-04-14-JLJX74-model",
+          "attribute_key": "source_model_code",
+          "raw_value": "JLJX74",
+          "source_context": "PDF page 18; manufacturer model code"
+        },
+        {
+          "assertion_id": "MY2021-JL-4D-2021-04-14-JLJX74-heading",
+          "attribute_key": "source_document_heading",
+          "raw_value": "REISSUED: 04/14/2021                                                                                                                                        PAGE: 1           JEEP\nISSUED:      06/04/2020\n\n                                                                      United States\n                                                                               2021                                                                                          WRANGLER\n\n                                                         JEEP        WRANGLER                 4   DOOR\n\n                                                       CUSTOMER PREFERRED CODE GUIDE\n\n\n         MODEL                                                                                                 CODE                  PAGES\n         WRANGLER UNLIMITED SPORT                                                               JLJL74                  2                                                     4\n\n         WRANGLER UNLIMITED SAHARA                                                            JLJP74                  9                                                       DOOR\n\n         WRANGLER UNLIMITED RUBICON                                                           JLJS74                 15\n         WRANGLER UNLIMITED RUBICON 392                                                    JLJX74                 18\n         WRANGLER UNLIMITED SPORT RHD                                                       JLUL74                 20\n         WRANGLER UNLIMITED SAHARA 4XE                                                     JLXP74                 21\n         WRANGLER UNLIMITED RUBICON 4XE                                                   JLXS74                 24\n         GROUP DETAIL                                                                                                                          27\n         STANDARD EQUIPMENT                                                                                                          32\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n         STEP #1: SELECT                                                                                        MODEL CODE\n\n         STEP #2: SELECT                                                                                        QUICK ORDER PACKAGE CODE\n\n         STEP #3: SELECT                                                                                        $ OPTIONS (IF DESIRED)\n\n         STEP #4: SELECT                                                                                        COLOR & TRIM CODES\n\n\n\n\n\n       © 2020 FCA US LLC, All Rights Reserved. IT IS FOR THE USE OF FCA AND ITS AUTHORIZED DEALERS ONLY AND MAY\n                       NOT BE OTHERWISE USED, RELEASED, OR REPRINTED WITHOUT FCA PRIOR PERMISSION.\n\n                             ORDERS ARE ACCEPTED ONLY WHEN VEHICLES ARE SHIPPED BY THE FACTORY.\n                                                          © 2020 FCA US LLC, All Rights Reserved.",
+          "source_context": "PDF page 1; United States / MY2021 / Jeep Wrangler / body heading"
+        },
+        {
+          "assertion_id": "MY2021-JL-4D-2021-04-14-JLJX74-engine-0",
+          "attribute_key": "engine_descriptor",
+          "raw_value": "6.4L V8 SRT         N/C     N/C    8-SPD AUTO           N/C     N/C                                             27X\nHEMI MDS                           8HP75 TRANS\nENGINE (ESG)                       (BUY-GERMANY)\n                                   (DFV)",
+          "source_context": "PDF page 18; exact ESG segment, with transmission/QOP cells retained; no code-only inference"
+        }
+      ],
+      "extraction_mode": "manually_verified_transcription",
+      "extractor_id": "retained_MY2021_evidence_transcription",
+      "extractor_version": "1.0.0",
+      "generation_normalizer": {
+        "id": "explicit_generation_identity",
+        "version": "1.0.0"
+      },
+      "publication_revision": "Original retained MY2021 source; no cross-year approval propagation",
+      "raw_artifact_hash": "sha256:d748a277a6cd23a6a7fbb744fa0b24d9c980b21bef9ce4a3fb993c44c9093179",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-4-14-21-pdf.447429.pdf",
+      "retrieved_at": "2026-11-09T13:43:25.638901+00:00",
+      "source_applicability": {
+        "applicability_basis": "MY2021 US guide applicability; technical/manual joins scoped to exact engine family and source locators",
+        "applicability_scope": "model_year",
+        "market": "US",
+        "publisher_jurisdiction": "US",
+        "unknown_fields": {}
+      },
+      "source_id": "MY2021-JL-4D-2021-04-14",
+      "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-4-14-21-pdf.447429/"
+    },
+    {
+      "assertion_set_id": "MY2021-JL-4D-2021-05-14-JLJX74",
+      "assertions": [
+        {
+          "assertion_id": "MY2021-JL-4D-2021-05-14-JLJX74-table",
+          "attribute_key": "factory_powertrain_table",
+          "raw_value": "ENGINE              $FWP   $MSRP   TRANSMISSION        $FWP    $MSRP\n6.4L V8 SRT         N/C     N/C    8-SPD AUTO           N/C     N/C                                             27X\nHEMI MDS                           8HP75 TRANS\nENGINE (ESG)                       (BUY-GERMANY)\n                                   (DFV)",
+          "source_context": "PDF page 18; manufacturer model heading and named QOP columns"
+        },
+        {
+          "assertion_id": "MY2021-JL-4D-2021-05-14-JLJX74-model",
+          "attribute_key": "source_model_code",
+          "raw_value": "JLJX74",
+          "source_context": "PDF page 18; manufacturer model code"
+        },
+        {
+          "assertion_id": "MY2021-JL-4D-2021-05-14-JLJX74-heading",
+          "attribute_key": "source_document_heading",
+          "raw_value": "REISSUED: 05/14/2021                                                                                                                                        PAGE: 1           JEEP\nISSUED:      06/04/2020\n\n                                                                      United States\n                                                                               2021                                                                                          WRANGLER\n\n                                                         JEEP        WRANGLER                 4   DOOR\n\n                                                       CUSTOMER PREFERRED CODE GUIDE\n\n\n         MODEL                                                                                                 CODE                  PAGES\n         WRANGLER UNLIMITED SPORT                                                               JLJL74                  2                                                     4\n\n         WRANGLER UNLIMITED SAHARA                                                            JLJP74                  8                                                       DOOR\n\n         WRANGLER UNLIMITED RUBICON                                                           JLJS74                 14\n         WRANGLER UNLIMITED RUBICON 392                                                    JLJX74                 18\n         WRANGLER UNLIMITED SPORT RHD                                                       JLUL74                 21\n         WRANGLER UNLIMITED SAHARA 4XE                                                     JLXP74                 22\n         WRANGLER UNLIMITED RUBICON 4XE                                                   JLXS74                 25\n         GROUP DETAIL                                                                                                                          28\n         STANDARD EQUIPMENT                                                                                                          33\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n         STEP #1: SELECT                                                                                        MODEL CODE\n\n         STEP #2: SELECT                                                                                        QUICK ORDER PACKAGE CODE\n\n         STEP #3: SELECT                                                                                        $ OPTIONS (IF DESIRED)\n\n         STEP #4: SELECT                                                                                        COLOR & TRIM CODES\n\n\n\n\n\n       © 2020 FCA US LLC, All Rights Reserved. IT IS FOR THE USE OF FCA AND ITS AUTHORIZED DEALERS ONLY AND MAY\n                       NOT BE OTHERWISE USED, RELEASED, OR REPRINTED WITHOUT FCA PRIOR PERMISSION.\n\n                             ORDERS ARE ACCEPTED ONLY WHEN VEHICLES ARE SHIPPED BY THE FACTORY.\n                                                          © 2020 FCA US LLC, All Rights Reserved.",
+          "source_context": "PDF page 1; United States / MY2021 / Jeep Wrangler / body heading"
+        },
+        {
+          "assertion_id": "MY2021-JL-4D-2021-05-14-JLJX74-engine-0",
+          "attribute_key": "engine_descriptor",
+          "raw_value": "6.4L V8 SRT         N/C     N/C    8-SPD AUTO           N/C     N/C                                             27X\nHEMI MDS                           8HP75 TRANS\nENGINE (ESG)                       (BUY-GERMANY)\n                                   (DFV)",
+          "source_context": "PDF page 18; exact ESG segment, with transmission/QOP cells retained; no code-only inference"
+        }
+      ],
+      "extraction_mode": "manually_verified_transcription",
+      "extractor_id": "retained_MY2021_evidence_transcription",
+      "extractor_version": "1.0.0",
+      "generation_normalizer": {
+        "id": "explicit_generation_identity",
+        "version": "1.0.0"
+      },
+      "publication_revision": "Original retained MY2021 source; no cross-year approval propagation",
+      "raw_artifact_hash": "sha256:086c2e9728515750fbb0f31a425c831b448bd99e02831cf3365452694594e2d1",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-5-14-21-pdf.461295.pdf",
+      "retrieved_at": "2026-11-09T13:43:25.638901+00:00",
+      "source_applicability": {
+        "applicability_basis": "MY2021 US guide applicability; technical/manual joins scoped to exact engine family and source locators",
+        "applicability_scope": "model_year",
+        "market": "US",
+        "publisher_jurisdiction": "US",
+        "unknown_fields": {}
+      },
+      "source_id": "MY2021-JL-4D-2021-05-14",
+      "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-5-14-21-pdf.461295/"
+    },
+    {
+      "assertion_set_id": "MY2021-JL-4D-2021-06-09-JLJX74",
+      "assertions": [
+        {
+          "assertion_id": "MY2021-JL-4D-2021-06-09-JLJX74-table",
+          "attribute_key": "factory_powertrain_table",
+          "raw_value": "ENGINE              $FWP   $MSRP   TRANSMISSION        $FWP    $MSRP\n6.4L V8 SRT         N/C     N/C    8-SPD AUTO           N/C     N/C                                             27X\nHEMI MDS                           8HP75 TRANS\nENGINE (ESG)                       (BUY-GERMANY)\n                                   (DFV)",
+          "source_context": "PDF page 19; manufacturer model heading and named QOP columns"
+        },
+        {
+          "assertion_id": "MY2021-JL-4D-2021-06-09-JLJX74-model",
+          "attribute_key": "source_model_code",
+          "raw_value": "JLJX74",
+          "source_context": "PDF page 19; manufacturer model code"
+        },
+        {
+          "assertion_id": "MY2021-JL-4D-2021-06-09-JLJX74-heading",
+          "attribute_key": "source_document_heading",
+          "raw_value": "REISSUED: 06/09/2021                                                                                                                                        PAGE: 1           JEEP\nISSUED:      06/04/2020\n\n                                                                      United States\n                                                                               2021                                                                                          WRANGLER\n\n                                                         JEEP        WRANGLER                 4   DOOR\n\n                                                       CUSTOMER PREFERRED CODE GUIDE\n\n\n         MODEL                                                                                                 CODE                  PAGES\n         WRANGLER UNLIMITED SPORT                                                               JLJL74                  2                                                     4\n\n         WRANGLER UNLIMITED SAHARA                                                            JLJP74                  9                                                       DOOR\n\n         WRANGLER UNLIMITED RUBICON                                                           JLJS74                 15\n         WRANGLER UNLIMITED RUBICON 392                                                    JLJX74                 19\n         WRANGLER UNLIMITED SPORT RHD                                                       JLUL74                 22\n         WRANGLER UNLIMITED SAHARA 4XE                                                     JLXP74                 23\n         WRANGLER UNLIMITED RUBICON 4XE                                                   JLXS74                 26\n         GROUP DETAIL                                                                                                                          29\n         STANDARD EQUIPMENT                                                                                                          34\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n         STEP #1: SELECT                                                                                        MODEL CODE\n\n         STEP #2: SELECT                                                                                        QUICK ORDER PACKAGE CODE\n\n         STEP #3: SELECT                                                                                        $ OPTIONS (IF DESIRED)\n\n         STEP #4: SELECT                                                                                        COLOR & TRIM CODES\n\n\n\n\n\n       © 2020 FCA US LLC, All Rights Reserved. IT IS FOR THE USE OF FCA AND ITS AUTHORIZED DEALERS ONLY AND MAY\n                       NOT BE OTHERWISE USED, RELEASED, OR REPRINTED WITHOUT FCA PRIOR PERMISSION.\n\n                             ORDERS ARE ACCEPTED ONLY WHEN VEHICLES ARE SHIPPED BY THE FACTORY.\n                                                          © 2020 FCA US LLC, All Rights Reserved.",
+          "source_context": "PDF page 1; United States / MY2021 / Jeep Wrangler / body heading"
+        },
+        {
+          "assertion_id": "MY2021-JL-4D-2021-06-09-JLJX74-engine-0",
+          "attribute_key": "engine_descriptor",
+          "raw_value": "6.4L V8 SRT         N/C     N/C    8-SPD AUTO           N/C     N/C                                             27X\nHEMI MDS                           8HP75 TRANS\nENGINE (ESG)                       (BUY-GERMANY)\n                                   (DFV)",
+          "source_context": "PDF page 19; exact ESG segment, with transmission/QOP cells retained; no code-only inference"
+        }
+      ],
+      "extraction_mode": "manually_verified_transcription",
+      "extractor_id": "retained_MY2021_evidence_transcription",
+      "extractor_version": "1.0.0",
+      "generation_normalizer": {
+        "id": "explicit_generation_identity",
+        "version": "1.0.0"
+      },
+      "publication_revision": "Original retained MY2021 source; no cross-year approval propagation",
+      "raw_artifact_hash": "sha256:c531aa9316c46520de25eebd81c9a27d0a547651f10eea467f74a95c71e246ae",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-6-9-21-pdf.472444.pdf",
+      "retrieved_at": "2026-11-09T13:43:25.638901+00:00",
+      "source_applicability": {
+        "applicability_basis": "MY2021 US guide applicability; technical/manual joins scoped to exact engine family and source locators",
+        "applicability_scope": "model_year",
+        "market": "US",
+        "publisher_jurisdiction": "US",
+        "unknown_fields": {}
+      },
+      "source_id": "MY2021-JL-4D-2021-06-09",
+      "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-6-9-21-pdf.472444/"
+    },
+    {
+      "assertion_set_id": "MY2021-JL-4D-2021-07-06-JLJX74",
+      "assertions": [
+        {
+          "assertion_id": "MY2021-JL-4D-2021-07-06-JLJX74-table",
+          "attribute_key": "factory_powertrain_table",
+          "raw_value": "ENGINE              $FWP   $MSRP   TRANSMISSION        $FWP    $MSRP\n6.4L V8 SRT         N/C     N/C    8-SPD AUTO           N/C     N/C                                             27X\nHEMI MDS                           8HP75 TRANS\nENGINE (ESG)                       (BUY-GERMANY)\n                                   (DFV)",
+          "source_context": "PDF page 18; manufacturer model heading and named QOP columns"
+        },
+        {
+          "assertion_id": "MY2021-JL-4D-2021-07-06-JLJX74-model",
+          "attribute_key": "source_model_code",
+          "raw_value": "JLJX74",
+          "source_context": "PDF page 18; manufacturer model code"
+        },
+        {
+          "assertion_id": "MY2021-JL-4D-2021-07-06-JLJX74-heading",
+          "attribute_key": "source_document_heading",
+          "raw_value": "REISSUED: 07/06/2021                                                                                                                                        PAGE: 1           JEEP\nISSUED:      06/04/2020\n\n                                                                      United States\n                                                                               2021                                                                                          WRANGLER\n\n                                                         JEEP        WRANGLER                 4   DOOR\n\n                                                       CUSTOMER PREFERRED CODE GUIDE\n\n\n         MODEL                                                                                                 CODE                  PAGES\n         WRANGLER UNLIMITED SPORT                                                               JLJL74                  2                                                     4\n\n         WRANGLER UNLIMITED SAHARA                                                            JLJP74                  8                                                       DOOR\n\n         WRANGLER UNLIMITED RUBICON                                                           JLJS74                 14\n         WRANGLER UNLIMITED RUBICON 392                                                    JLJX74                 18\n         WRANGLER UNLIMITED SPORT RHD                                                       JLUL74                 21\n         WRANGLER UNLIMITED SAHARA 4XE                                                     JLXP74                 22\n         WRANGLER UNLIMITED RUBICON 4XE                                                   JLXS74                 25\n         GROUP DETAIL                                                                                                                          28\n         STANDARD EQUIPMENT                                                                                                          33\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n         STEP #1: SELECT                                                                                        MODEL CODE\n\n         STEP #2: SELECT                                                                                        QUICK ORDER PACKAGE CODE\n\n         STEP #3: SELECT                                                                                        $ OPTIONS (IF DESIRED)\n\n         STEP #4: SELECT                                                                                        COLOR & TRIM CODES\n\n\n\n\n\n       © 2020 FCA US LLC, All Rights Reserved. IT IS FOR THE USE OF FCA AND ITS AUTHORIZED DEALERS ONLY AND MAY\n                       NOT BE OTHERWISE USED, RELEASED, OR REPRINTED WITHOUT FCA PRIOR PERMISSION.\n\n                             ORDERS ARE ACCEPTED ONLY WHEN VEHICLES ARE SHIPPED BY THE FACTORY.\n                                                          © 2020 FCA US LLC, All Rights Reserved.",
+          "source_context": "PDF page 1; United States / MY2021 / Jeep Wrangler / body heading"
+        },
+        {
+          "assertion_id": "MY2021-JL-4D-2021-07-06-JLJX74-engine-0",
+          "attribute_key": "engine_descriptor",
+          "raw_value": "6.4L V8 SRT         N/C     N/C    8-SPD AUTO           N/C     N/C                                             27X\nHEMI MDS                           8HP75 TRANS\nENGINE (ESG)                       (BUY-GERMANY)\n                                   (DFV)",
+          "source_context": "PDF page 18; exact ESG segment, with transmission/QOP cells retained; no code-only inference"
+        }
+      ],
+      "extraction_mode": "manually_verified_transcription",
+      "extractor_id": "retained_MY2021_evidence_transcription",
+      "extractor_version": "1.0.0",
+      "generation_normalizer": {
+        "id": "explicit_generation_identity",
+        "version": "1.0.0"
+      },
+      "publication_revision": "Original retained MY2021 source; no cross-year approval propagation",
+      "raw_artifact_hash": "sha256:341f1b6f4a5ac774a082bf07a6df0f7c9ebc018272b7da3ff880b67844c93271",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-7-6-21-pdf.484796.pdf",
+      "retrieved_at": "2026-11-09T13:43:25.638901+00:00",
+      "source_applicability": {
+        "applicability_basis": "MY2021 US guide applicability; technical/manual joins scoped to exact engine family and source locators",
+        "applicability_scope": "model_year",
+        "market": "US",
+        "publisher_jurisdiction": "US",
+        "unknown_fields": {}
+      },
+      "source_id": "MY2021-JL-4D-2021-07-06",
+      "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-7-6-21-pdf.484796/"
+    },
+    {
+      "assertion_set_id": "MY2021-JL-4D-2021-08-06-JLJX74",
+      "assertions": [
+        {
+          "assertion_id": "MY2021-JL-4D-2021-08-06-JLJX74-table",
+          "attribute_key": "factory_powertrain_table",
+          "raw_value": "ENGINE              $FWP   $MSRP   TRANSMISSION        $FWP    $MSRP\n6.4L V8 SRT         N/C     N/C    8-SPD AUTO           N/C     N/C                                             27X\nHEMI MDS                           8HP75 TRANS\nENGINE (ESG)                       (BUY-GERMANY)\n                                   (DFV)",
+          "source_context": "PDF page 18; manufacturer model heading and named QOP columns"
+        },
+        {
+          "assertion_id": "MY2021-JL-4D-2021-08-06-JLJX74-model",
+          "attribute_key": "source_model_code",
+          "raw_value": "JLJX74",
+          "source_context": "PDF page 18; manufacturer model code"
+        },
+        {
+          "assertion_id": "MY2021-JL-4D-2021-08-06-JLJX74-heading",
+          "attribute_key": "source_document_heading",
+          "raw_value": "REISSUED: 08/06/2021                                                                                                                                        PAGE: 1           JEEP\nISSUED:      06/04/2020\n\n                                                                      United States\n                                                                               2021                                                                                          WRANGLER\n\n                                                         JEEP        WRANGLER                 4   DOOR\n\n                                                       CUSTOMER PREFERRED CODE GUIDE\n\n\n         MODEL                                                                                                 CODE                  PAGES\n         WRANGLER UNLIMITED SPORT                                                               JLJL74                  2                                                     4\n\n         WRANGLER UNLIMITED SAHARA                                                            JLJP74                  8                                                       DOOR\n\n         WRANGLER UNLIMITED RUBICON                                                           JLJS74                 14\n         WRANGLER UNLIMITED RUBICON 392                                                    JLJX74                 18\n         WRANGLER UNLIMITED SPORT RHD                                                       JLUL74                 21\n         WRANGLER UNLIMITED SAHARA 4XE                                                     JLXP74                 22\n         WRANGLER UNLIMITED RUBICON 4XE                                                   JLXS74                 25\n         GROUP DETAIL                                                                                                                          28\n         STANDARD EQUIPMENT                                                                                                          33\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n         STEP #1: SELECT                                                                                        MODEL CODE\n\n         STEP #2: SELECT                                                                                        QUICK ORDER PACKAGE CODE\n\n         STEP #3: SELECT                                                                                        $ OPTIONS (IF DESIRED)\n\n         STEP #4: SELECT                                                                                        COLOR & TRIM CODES\n\n\n\n\n\n       © 2020 FCA US LLC, All Rights Reserved. IT IS FOR THE USE OF FCA AND ITS AUTHORIZED DEALERS ONLY AND MAY\n                       NOT BE OTHERWISE USED, RELEASED, OR REPRINTED WITHOUT FCA PRIOR PERMISSION.\n\n                             ORDERS ARE ACCEPTED ONLY WHEN VEHICLES ARE SHIPPED BY THE FACTORY.\n                                                          © 2020 FCA US LLC, All Rights Reserved.",
+          "source_context": "PDF page 1; United States / MY2021 / Jeep Wrangler / body heading"
+        },
+        {
+          "assertion_id": "MY2021-JL-4D-2021-08-06-JLJX74-engine-0",
+          "attribute_key": "engine_descriptor",
+          "raw_value": "6.4L V8 SRT         N/C     N/C    8-SPD AUTO           N/C     N/C                                             27X\nHEMI MDS                           8HP75 TRANS\nENGINE (ESG)                       (BUY-GERMANY)\n                                   (DFV)",
+          "source_context": "PDF page 18; exact ESG segment, with transmission/QOP cells retained; no code-only inference"
+        }
+      ],
+      "extraction_mode": "manually_verified_transcription",
+      "extractor_id": "retained_MY2021_evidence_transcription",
+      "extractor_version": "1.0.0",
+      "generation_normalizer": {
+        "id": "explicit_generation_identity",
+        "version": "1.0.0"
+      },
+      "publication_revision": "Original retained MY2021 source; no cross-year approval propagation",
+      "raw_artifact_hash": "sha256:e6c2aa78fb6c34608dbb28dc4084cf909c444802434fcf32af61eb916a1168c4",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-8-6-21-pdf.497498.pdf",
+      "retrieved_at": "2026-11-09T13:43:25.638901+00:00",
+      "source_applicability": {
+        "applicability_basis": "MY2021 US guide applicability; technical/manual joins scoped to exact engine family and source locators",
+        "applicability_scope": "model_year",
+        "market": "US",
+        "publisher_jurisdiction": "US",
+        "unknown_fields": {}
+      },
+      "source_id": "MY2021-JL-4D-2021-08-06",
+      "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-8-6-21-pdf.497498/"
+    },
+    {
+      "assertion_set_id": "MY2021-JL-4D-2020-12-04-package-p17",
+      "assertions": [
+        {
+          "assertion_id": "MY2021-JL-4D-2020-12-04-package-p17",
+          "attribute_key": "factory_package_option_page",
+          "raw_value": "JEEP United States                                   REISSUED: 12/04/2020                                                                                         PAGE: 17\nREVISED                                                         ISSUED:      06/04/2020                                                 2021 WRANGLER 4 DOOR\n                                                                                                    WRANGLER UNLIMITED RUBICON 392\nSTEP #1              SELECT - MODEL CODE\nWRANGLER UNLIMITED RUBICON 392                                                                                             JLJX74\n\nSTEP #2              SELECT - QUICK ORDER PACKAGE CODE\nPOWERTRAIN AVAILABILITY\nENGINE                               TRANSMISSION\n6.4L V8 SRT HEMI MDS ENGINE          8-SPD AUTO 8HP75 TRANS                                                 27X\n(ESG)                                (BUY-GERMANY) (DFV)\n\n\nSTEP #3              SELECT - $ OPTIONS (IF DESIRED)\n\nDESCRIPTION                                                                                                 2_X\nCARGO GROUP W/ TRAIL RAIL SYSTEM                                                                            CMD\nDUAL DOOR GROUP W/ PREMIUM                                                                                  AJS\nUPPERS\nM/H HT3 OR STJ; M/H PAU OR PBJ OR PDN OR\nPGG OR PRV OR PW7 OR PX8; N/A W/AEN; N/A\nW/ST3; N/A W/ST8\nDUAL TOP GROUP                                                                                              AEN\nENGINE BLOCK HEATER                                                                                         NHK\nFRONT LICENSE PLATE BRACKET                                                                                 MDA\nINTEGRATED OFF-ROAD CAMERA                                                                                  XNY\nM/H AD6 AND AEK\nLT285/70R17C BSW M/T TIRES                                                                                 TWG\nONLY 1: TT4 OR TWG\nLT285/70R17C OWL OFF-ROAD TIRES                                                                             TT4\nONLY 1: TT4 OR TWG\nMANUF STATEMENT OF ORIGIN                                                                                   YEP\nPREMIUM TAN SUNRIDER SOFT TOP                                                                               ST3\nM/H AEN; ONLY 1: STJ OR ST3\nSKY ONE-TOUCH POWER TOP                                                                                     STJ\nN/A W/AEN; N/A W/PYV; ONLY 1: STJ OR ST3\nSMOKER'S GROUP                                                                                              AWS\nSOFT TOP WINDOW STORAGE BAG                                                                                 CWJ\nM/H AEN OR ST3; N/A W/ST8; N/A W/STJ\nTRAILER TOW PACKAGE                                                                                         ABR\n\nMOPAR OPTIONS\nMOPAR ALL-WEATHER FLOOR MATS                                                                               CWA\nMOPAR HARDTOP HEADLINER                                                                                     CHD\nM/H HT3; N/A W/STJ\nMOPAR HINGE-GATE REINFORCEMENT                                                                              XDB\nMOPAR LOWER BODY SIDE GRAPHIC                                                                               M9G\nMOPAR MESH SUNBONNET TOP                                                                                    CS7\nM/H HT3; N/A W/STJ\nMOPAR SATIN BLACK GRILLE                                                                                    MHJ\nMOPAR SOLID SUNBONNET TOP                                                                                   CS3\nM/H HT3; N/A W/STJ\nMOPAR UPPER BODY SIDE GRAPHIC                                                                               M9F\nN/A W/M9G\nMOPAR WINDSHIELD TIE DOWN                                                                                   CT9\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nE - EXTRA COST N/C - NO CHARGE N/A - NOT AVAILABLE P - PACKAGED",
+          "source_context": "PDF page 17; model JLJX74; raw conditions retained, not evaluated"
+        }
+      ],
+      "extraction_mode": "manually_verified_transcription",
+      "extractor_id": "retained_MY2021_evidence_transcription",
+      "extractor_version": "1.0.0",
+      "generation_normalizer": {
+        "id": "explicit_generation_identity",
+        "version": "1.0.0"
+      },
+      "publication_revision": "Original retained MY2021 source; no cross-year approval propagation",
+      "raw_artifact_hash": "sha256:4dad5bddad4fbd0c0e2bab5095734c9f740e9c0e53d67de64df30b41576ada5a",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-12-4-20-pdf.401774.pdf",
+      "retrieved_at": "2026-11-09T13:43:25.638901+00:00",
+      "source_applicability": {
+        "applicability_basis": "MY2021 US guide applicability; technical/manual joins scoped to exact engine family and source locators",
+        "applicability_scope": "model_year",
+        "market": "US",
+        "publisher_jurisdiction": "US",
+        "unknown_fields": {}
+      },
+      "source_id": "MY2021-JL-4D-2020-12-04",
+      "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-12-4-20-pdf.401774/"
+    },
+    {
+      "assertion_set_id": "MY2021-JL-4D-2021-01-01-package-p17",
+      "assertions": [
+        {
+          "assertion_id": "MY2021-JL-4D-2021-01-01-package-p17",
+          "attribute_key": "factory_package_option_page",
+          "raw_value": "JEEP United States                                   REISSUED: 01/01/2021                                                                                         PAGE: 17\nREVISED                                                         ISSUED:      06/04/2020                                                 2021 WRANGLER 4 DOOR\n                                                                                                    WRANGLER UNLIMITED RUBICON 392\nSTEP #1              SELECT - MODEL CODE\nWRANGLER UNLIMITED RUBICON 392                                                                                             JLJX74\n\nSTEP #2              SELECT - QUICK ORDER PACKAGE CODE\nPOWERTRAIN AVAILABILITY\nENGINE                               TRANSMISSION\n6.4L V8 SRT HEMI MDS ENGINE          8-SPD AUTO 8HP75 TRANS                                                 27X\n(ESG)                                (BUY-GERMANY) (DFV)\n\n\nSTEP #3              SELECT - $ OPTIONS (IF DESIRED)\n\nDESCRIPTION                                                                                                 2_X\nCARGO GROUP W/ TRAIL RAIL SYSTEM                                                                            CMD\nDUAL DOOR GROUP W/ PREMIUM                                                                                  AJS\nUPPERS\nM/H HT3 OR STJ; M/H PAU OR PBJ OR PDN OR\nPGG OR PRV OR PW7 OR PX8; N/A W/AEN; N/A\nW/ST3; N/A W/ST8\nDUAL TOP GROUP                                                                                              AEN\nENGINE BLOCK HEATER                                                                                         NHK\nFRONT LICENSE PLATE BRACKET                                                                                 MDA\nINTEGRATED OFF-ROAD CAMERA                                                                                  XNY\nM/H AD6 AND AEK\nLT285/70R17C BSW M/T TIRES                                                                                 TWG\nONLY 1: TT4 OR TWG\nLT285/70R17C OWL OFF-ROAD TIRES                                                                             TT4\nONLY 1: TT4 OR TWG\nMANUF STATEMENT OF ORIGIN                                                                                   YEP\nPREMIUM TAN SUNRIDER SOFT TOP                                                                               ST3\nM/H AEN; ONLY 1: STJ OR ST3\nSKY ONE-TOUCH POWER TOP                                                                                     STJ\nN/A W/AEN; N/A W/PYV; ONLY 1: STJ OR ST3\nSMOKER'S GROUP                                                                                              AWS\nSOFT TOP WINDOW STORAGE BAG                                                                                 CWJ\nM/H AEN OR ST3; N/A W/ST8; N/A W/STJ\nTRAILER TOW PACKAGE                                                                                         ABR\n\nMOPAR OPTIONS\nMOPAR ALL-WEATHER FLOOR MATS                                                                               CWA\nMOPAR HARDTOP HEADLINER                                                                                     CHD\nM/H HT3; N/A W/STJ\nMOPAR HINGE-GATE REINFORCEMENT                                                                              XDB\nMOPAR LOWER BODY SIDE GRAPHIC                                                                               M9G\nMOPAR MESH SUNBONNET TOP                                                                                    CS7\nM/H HT3; N/A W/STJ\nMOPAR SATIN BLACK GRILLE                                                                                    MHJ\nMOPAR SOLID SUNBONNET TOP                                                                                   CS3\nM/H HT3; N/A W/STJ\nMOPAR UPPER BODY SIDE GRAPHIC                                                                               M9F\nN/A W/M9G\nMOPAR WINDSHIELD TIE DOWN                                                                                   CT9\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nE - EXTRA COST N/C - NO CHARGE N/A - NOT AVAILABLE P - PACKAGED",
+          "source_context": "PDF page 17; model JLJX74; raw conditions retained, not evaluated"
+        }
+      ],
+      "extraction_mode": "manually_verified_transcription",
+      "extractor_id": "retained_MY2021_evidence_transcription",
+      "extractor_version": "1.0.0",
+      "generation_normalizer": {
+        "id": "explicit_generation_identity",
+        "version": "1.0.0"
+      },
+      "publication_revision": "Original retained MY2021 source; no cross-year approval propagation",
+      "raw_artifact_hash": "sha256:d0d2e4d1cf0e18f4ca5be3092d0625a2810fae009afefd97a603149ce53ab568",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-1-1-21-pdf.412194.pdf",
+      "retrieved_at": "2026-11-09T13:43:25.638901+00:00",
+      "source_applicability": {
+        "applicability_basis": "MY2021 US guide applicability; technical/manual joins scoped to exact engine family and source locators",
+        "applicability_scope": "model_year",
+        "market": "US",
+        "publisher_jurisdiction": "US",
+        "unknown_fields": {}
+      },
+      "source_id": "MY2021-JL-4D-2021-01-01",
+      "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-1-1-21-pdf.412194/"
+    },
+    {
+      "assertion_set_id": "MY2021-JL-4D-2021-02-09-package-p18",
+      "assertions": [
+        {
+          "assertion_id": "MY2021-JL-4D-2021-02-09-package-p18",
+          "attribute_key": "factory_package_option_page",
+          "raw_value": "JEEP United States                                   REISSUED: 02/09/2021                                                                                         PAGE: 18\nREVISED                                                         ISSUED:      06/04/2020                                                 2021 WRANGLER 4 DOOR\n                                                                                                    WRANGLER UNLIMITED RUBICON 392\nSTEP #1              SELECT - MODEL CODE\nWRANGLER UNLIMITED RUBICON 392                                                                                             JLJX74\n\nSTEP #2              SELECT - QUICK ORDER PACKAGE CODE\nPOWERTRAIN AVAILABILITY\nENGINE                               TRANSMISSION\n6.4L V8 SRT HEMI MDS ENGINE          8-SPD AUTO 8HP75 TRANS                                                 27X\n(ESG)                                (BUY-GERMANY) (DFV)\n\n\nSTEP #3              SELECT - $ OPTIONS (IF DESIRED)\n\nDESCRIPTION                                                                                                  2_X\nCARGO GROUP W/ TRAIL RAIL SYSTEM                                                                            CMD\nDUAL DOOR GROUP W/ PREMIUM                                                                                  AJS\nUPPERS\nM/H HT3 OR STJ; M/H PAU OR PBJ OR PDN OR\nPGG OR PRV OR PW7 OR PX8; M/H PAU OR\nPDN OR PGG OR PRC OR PRV OR PSC OR PW7\nOR PX8; N/A W/AEN; N/A W/ST3; N/A W/ST8\nDUAL TOP GROUP                                                                                              AEN\nENGINE BLOCK HEATER                                                                                         NHK\nFRONT LICENSE PLATE BRACKET                                                                                 MDA\nINTEGRATED OFF-ROAD CAMERA                                                                                  XNY\nM/H AD6 AND AEK\nLT285/70R17C BSW M/T TIRES                                                                                  TWG\nONLY 1: TT4 OR TWG\nLT285/70R17C OWL OFF-ROAD TIRES                                                                             TT4\nONLY 1: TT4 OR TWG\nMANUF STATEMENT OF ORIGIN                                                                                   YEP\nPREMIUM TAN SUNRIDER SOFT TOP                                                                               ST3\nM/H AEN; ONLY 1: STJ OR ST3\nSKY ONE-TOUCH POWER TOP                                                                                     STJ\nN/A W/AEN; N/A W/PYV; ONLY 1: STJ OR ST3\nSMOKER'S GROUP                                                                                              AWS\nSOFT TOP WINDOW STORAGE BAG                                                                                 CWJ\nM/H AEN OR ST3; N/A W/ST8; N/A W/STJ\nTRAILER TOW PACKAGE                                                                                         ABR\n\nMOPAR OPTIONS\nMOPAR ALL-WEATHER FLOOR MATS                                                                                CWA\nMOPAR HARDTOP HEADLINER                                                                                     CHD\nM/H HT3; N/A W/STJ\nMOPAR HINGE-GATE REINFORCEMENT                                                                              XDB\nMOPAR LOWER BODY SIDE GRAPHIC                                                                               M9G\nMOPAR MESH SUNBONNET TOP                                                                                    CS7\nM/H HT3; N/A W/STJ\nMOPAR SATIN BLACK GRILLE                                                                                    MHJ\nMOPAR SOLID SUNBONNET TOP                                                                                   CS3\nM/H HT3; N/A W/STJ\nMOPAR UPPER BODY SIDE GRAPHIC                                                                               M9F\nN/A W/M9G\nMOPAR WINDSHIELD TIE DOWN                                                                                   CT9\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nE - EXTRA COST N/C - NO CHARGE N/A - NOT AVAILABLE P - PACKAGED",
+          "source_context": "PDF page 18; model JLJX74; raw conditions retained, not evaluated"
+        }
+      ],
+      "extraction_mode": "manually_verified_transcription",
+      "extractor_id": "retained_MY2021_evidence_transcription",
+      "extractor_version": "1.0.0",
+      "generation_normalizer": {
+        "id": "explicit_generation_identity",
+        "version": "1.0.0"
+      },
+      "publication_revision": "Original retained MY2021 source; no cross-year approval propagation",
+      "raw_artifact_hash": "sha256:2fa3c481460efa71f1036638c3f0929c2eca3eb91bd97a0eb87c0bbd3cfdcc9d",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-2-9-21-pdf.423850.pdf",
+      "retrieved_at": "2026-11-09T13:43:25.638901+00:00",
+      "source_applicability": {
+        "applicability_basis": "MY2021 US guide applicability; technical/manual joins scoped to exact engine family and source locators",
+        "applicability_scope": "model_year",
+        "market": "US",
+        "publisher_jurisdiction": "US",
+        "unknown_fields": {}
+      },
+      "source_id": "MY2021-JL-4D-2021-02-09",
+      "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-2-9-21-pdf.423850/"
+    },
+    {
+      "assertion_set_id": "MY2021-JL-4D-2021-03-05-package-p18",
+      "assertions": [
+        {
+          "assertion_id": "MY2021-JL-4D-2021-03-05-package-p18",
+          "attribute_key": "factory_package_option_page",
+          "raw_value": "JEEP United States                                   REISSUED: 03/05/2021                                                                                         PAGE: 18\nREVISED                                                         ISSUED:      06/04/2020                                                 2021 WRANGLER 4 DOOR\n                                                                                                     WRANGLER UNLIMITED RUBICON 392\nSTEP #3              SELECT - $ OPTIONS (IF DESIRED)\n\nDESCRIPTION                                           $FWP   $MSRP                                           2_X\nCARGO GROUP W/ TRAIL RAIL                              176    195                                           CMD\nSYSTEM\nDUAL DOOR GROUP (LOWERS                                N/C    N/C                                            AJG\nONLY)\nM/H PAU OR PBJ OR PDN OR PGG OR\nPRC OR PRV OR PW7 OR PX8 OR PYV;\nN/A W/AEN; N/A W/AJS\nDUAL DOOR GROUP W/ PREMIUM                            3,956   4,395                                          AJS\nUPPERS\nM/H HT3 OR STJ; M/H PAU OR PBJ OR\nPDN OR PGG OR PRV OR PW7 OR PX8;\nN/A W/AEN; N/A W/ST3; N/A W/ST8\nDUAL TOP GROUP                                        1,170   1,300                                         AEN\nENGINE BLOCK HEATER                                    86      95                                           NHK\nFRONT LICENSE PLATE BRACKET                            N/C    N/C                                           MDA\nINTEGRATED OFF-ROAD CAMERA                             536    595                                           XNY\nM/H AD6 AND AEK\nLT285/70R17C BSW M/T TIRES                             176    195                                           TWG\nONLY 1: TT4 OR TWG\nLT285/70R17C OWL OFF-ROAD                              N/C    N/C                                            TT4\nTIRES\nONLY 1: TT4 OR TWG\nMANUF STATEMENT OF ORIGIN                              N/C    N/C                                            YEP\nPREMIUM TAN SUNRIDER SOFT                              N/C    N/C                                            ST3\nTOP\nM/H AEN; ONLY 1: STJ OR ST3\nSKY ONE-TOUCH POWER TOP                               1,800   2,000                                          STJ\nN/A W/AEN; N/A W/PYV; ONLY 1: STJ OR\nST3\nSMOKER'S GROUP                                         27      30                                           AWS\nSOFT TOP WINDOW STORAGE BAG                            68      75                                           CWJ\nM/H AEN OR ST3; N/A W/ST8; N/A W/STJ\nTRAILER TOW PACKAGE                                    316    350                                           ABR\n\nMOPAR OPTIONS\nMOPAR ALL-WEATHER FLOOR                                149    165                                           CWA\nMATS\nMOPAR HARDTOP HEADLINER                                473    525                                           CHD\nM/H HT3; N/A W/STJ\nMOPAR HINGE-GATE                                       608    675                                           XDB\nREINFORCEMENT\nMOPAR LOWER BODY SIDE                                  220    245                                           M9G\nGRAPHIC\nMOPAR MESH SUNBONNET TOP                               158    175                                            CS7\nM/H HT3; N/A W/STJ\nMOPAR SATIN BLACK GRILLE                               293    325                                           MHJ\nMOPAR SOLID SUNBONNET TOP                              266    295                                            CS3\nM/H HT3; N/A W/STJ\nMOPAR UPPER BODY SIDE                                  220    245                                            M9F\nGRAPHIC\nN/A W/M9G\nMOPAR WINDSHIELD TIE DOWN                              35      40                                            CT9\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nE - EXTRA COST N/C - NO CHARGE N/A - NOT AVAILABLE P - PACKAGED",
+          "source_context": "PDF page 18; model JLJX74; raw conditions retained, not evaluated"
+        }
+      ],
+      "extraction_mode": "manually_verified_transcription",
+      "extractor_id": "retained_MY2021_evidence_transcription",
+      "extractor_version": "1.0.0",
+      "generation_normalizer": {
+        "id": "explicit_generation_identity",
+        "version": "1.0.0"
+      },
+      "publication_revision": "Original retained MY2021 source; no cross-year approval propagation",
+      "raw_artifact_hash": "sha256:37cd4e33d30f54bb7d46940533a691312c5b8b4da22faee583a10fe5c9feaebb",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-3-5-21-pdf.434799.pdf",
+      "retrieved_at": "2026-11-09T13:43:25.638901+00:00",
+      "source_applicability": {
+        "applicability_basis": "MY2021 US guide applicability; technical/manual joins scoped to exact engine family and source locators",
+        "applicability_scope": "model_year",
+        "market": "US",
+        "publisher_jurisdiction": "US",
+        "unknown_fields": {}
+      },
+      "source_id": "MY2021-JL-4D-2021-03-05",
+      "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-3-5-21-pdf.434799/"
+    },
+    {
+      "assertion_set_id": "MY2021-JL-4D-2021-04-14-package-p19",
+      "assertions": [
+        {
+          "assertion_id": "MY2021-JL-4D-2021-04-14-package-p19",
+          "attribute_key": "factory_package_option_page",
+          "raw_value": "JEEP United States                                   REISSUED: 04/14/2021                                                                                         PAGE: 19\nREVISED                                                         ISSUED:      06/04/2020                                                 2021 WRANGLER 4 DOOR\n                                                                                                  WRANGLER UNLIMITED RUBICON 392\nSTEP #3              SELECT - $ OPTIONS (IF DESIRED)\n\nDESCRIPTION                                          $FWP   $MSRP                                          2_X\nCARGO GROUP W/ TRAIL RAIL                             176    195                                          CMD\nSYSTEM\nDUAL DOOR GROUP W/ PREMIUM                           3,956  4,395                                         AJS\nUPPERS\nM/H HT3 OR STJ; M/H PAU OR PBJ OR\nPDN OR PGG OR PRV OR PW7 OR PX8;\nN/A W/AEN; N/A W/ST3; N/A W/ST8\nDUAL TOP GROUP                                       1,170  1,300                                         AEN\nENGINE BLOCK HEATER                                   86      95                                          NHK\nFRONT LICENSE PLATE BRACKET                           N/C    N/C                                          MDA\nINTEGRATED OFF-ROAD CAMERA                            536    595                                          XNY\nM/H AD6 AND AEK\nLT285/70R17C BSW M/T TIRES                            176    195                                          TWG\nONLY 1: TT4 OR TWG\nLT285/70R17C OWL OFF-ROAD                             N/C    N/C                                          TT4\nTIRES\nONLY 1: TT4 OR TWG\nMANUF STATEMENT OF ORIGIN                             N/C    N/C                                          YEP\nPREMIUM TAN SUNRIDER SOFT                             N/C    N/C                                          ST3\nTOP\nM/H AEN; ONLY 1: STJ OR ST3\nSKY ONE-TOUCH POWER TOP                              1,800  2,000                                         STJ\nN/A W/AEN; N/A W/PYV; ONLY 1: STJ OR\nST3\nSMOKER'S GROUP                                        27      30                                          AWS\nSOFT TOP WINDOW STORAGE BAG                           68      75                                          CWJ\nM/H AEN OR ST3; N/A W/ST8; N/A W/STJ\nTRAILER TOW PACKAGE                                   316    350                                          ABR\n\nMOPAR OPTIONS\nMOPAR ALL-WEATHER FLOOR                               149    165                                          CWA\nMATS\nMOPAR HARDTOP HEADLINER                               473    525                                          CHD\nM/H HT3; N/A W/STJ\nMOPAR HINGE-GATE                                      608    675                                          XDB\nREINFORCEMENT\nMOPAR LOWER BODY SIDE                                 220    245                                          M9G\nGRAPHIC\nMOPAR MESH SUNBONNET TOP                              158    175                                          CS7\nMOPAR SATIN BLACK GRILLE                              293    325                                          MHJ\nMOPAR SOLID SUNBONNET TOP                             266    295                                          CS3\nM/H HT3; N/A W/STJ\nMOPAR UPPER BODY SIDE                                 220    245                                          M9F\nGRAPHIC\nN/A W/M9G\nMOPAR WINDSHIELD TIE DOWN                             35      40                                          CT9\n\nSTEP #4              SELECT - COLOR & TRIM CODES\n\nCOLOR/TRIM                                                                            $FWP   $MSRP                        BLACK\nLEATHER TRIMMED BUCKET SEATS                                                      (S)  N/C    N/C                         HDX9\n\nMONOTONE PAINT - APA\n\nPRIMARY COLOR\nBILLET SILVER METALLIC CLEAR COAT                                                      220    245                          PSC\nBLACK CLEAR COAT                                                                       220    245                          PX8\nBRIGHT WHITE CLEAR COAT                                                                N/C    N/C                          PW7\nFIRECRACKER RED C/C                                                                    220    245                          PRC\nGRANITE CRYSTAL MET. CLEAR COAT                                                        220    245                          PAU\nHYDRO BLUE PEARL COAT                                                                  220    245                          PBJ\nSARGE GREEN CLEAR COAT                                                                 220    245                          PGG\nSNAZZBERRY PEARL COAT                                                                  220    245                          PRV\nSTING-GRAY CLEAR COAT                                                                  220    245                          PDN\n\nE - EXTRA COST N/C - NO CHARGE N/A - NOT AVAILABLE P - PACKAGED",
+          "source_context": "PDF page 19; model JLJX74; raw conditions retained, not evaluated"
+        }
+      ],
+      "extraction_mode": "manually_verified_transcription",
+      "extractor_id": "retained_MY2021_evidence_transcription",
+      "extractor_version": "1.0.0",
+      "generation_normalizer": {
+        "id": "explicit_generation_identity",
+        "version": "1.0.0"
+      },
+      "publication_revision": "Original retained MY2021 source; no cross-year approval propagation",
+      "raw_artifact_hash": "sha256:d748a277a6cd23a6a7fbb744fa0b24d9c980b21bef9ce4a3fb993c44c9093179",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-4-14-21-pdf.447429.pdf",
+      "retrieved_at": "2026-11-09T13:43:25.638901+00:00",
+      "source_applicability": {
+        "applicability_basis": "MY2021 US guide applicability; technical/manual joins scoped to exact engine family and source locators",
+        "applicability_scope": "model_year",
+        "market": "US",
+        "publisher_jurisdiction": "US",
+        "unknown_fields": {}
+      },
+      "source_id": "MY2021-JL-4D-2021-04-14",
+      "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-4-14-21-pdf.447429/"
+    },
+    {
+      "assertion_set_id": "MY2021-JL-4D-2021-05-14-package-p19",
+      "assertions": [
+        {
+          "assertion_id": "MY2021-JL-4D-2021-05-14-package-p19",
+          "attribute_key": "factory_package_option_page",
+          "raw_value": "JEEP United States                                   REISSUED: 05/14/2021                                                                                         PAGE: 19\nREVISED                                                         ISSUED:      06/04/2020                                                 2021 WRANGLER 4 DOOR\n                                                                                                    WRANGLER UNLIMITED RUBICON 392\nSTEP #3              SELECT - $ OPTIONS (IF DESIRED)\n\nDESCRIPTION                                          $FWP   $MSRP                                           2_X\nDUAL DOOR GROUP W/ PREMIUM                           3,956   4,395                                          AJS\nUPPERS\nM/H HT3 OR STJ; N/A W/AEN; N/A W/ST3;\nN/A W/ST8\nDUAL TOP GROUP                                       1,170   1,300                                         AEN\nENGINE BLOCK HEATER                                    86      95                                          NHK\nFRONT LICENSE PLATE BRACKET                           N/C     N/C                                          MDA\nGORILLA GLASS                                          86      95                                          GMA\nINTEGRATED OFF-ROAD CAMERA                            536     595                                          XNY\nM/H AD6 AND AEK\nLT285/70R17C BSW M/T TIRES                            176     195                                          TWG\nONLY 1: TT4 OR TWG\nLT285/70R17C OWL OFF-ROAD                             N/C     N/C                                           TT4\nTIRES\nONLY 1: TT4 OR TWG\nMANUF STATEMENT OF ORIGIN                             N/C     N/C                                           YEP\nPREMIUM TAN SUNRIDER SOFT                             N/C     N/C                                           ST3\nTOP\nM/H AEN; ONLY 1: STJ OR ST3\nSKY ONE-TOUCH POWER TOP                              1,800   2,000                                          STJ\nN/A W/AEN; N/A W/PYV; ONLY 1: STJ OR\nST3\nSMOKER'S GROUP                                         27      30                                          AWS\nSOFT TOP WINDOW STORAGE BAG                            68      75                                          CWJ\nM/H AEN OR ST3; N/A W/ST8; N/A W/STJ\nTRAILER TOW PACKAGE                                   316     350                                          ABR\nTRAIL RAIL MANAGEMENT SYSTEM                          176     195                                          CMD\n\nMOPAR OPTIONS\nMOPAR ALL-WEATHER FLOOR                               149     165                                          CWA\nMATS\nMOPAR DOORS OFF MIRROR KIT                            176     195                                           LFR\nMOPAR HARDTOP HEADLINER                               473     525                                          CHD\nM/H HT3; N/A W/STJ\nMOPAR HINGE-GATE                                      608     675                                          XDB\nREINFORCEMENT\nMOPAR LOWER BODY SIDE                                 220     245                                          M9G\nGRAPHIC\nMOPAR MESH SUNBONNET TOP                              158     175                                           CS7\nMOPAR SATIN BLACK GRILLE                              293     325                                          MHJ\nMOPAR SOLID SUNBONNET TOP                             266     295                                           CS3\nM/H HT3; N/A W/STJ\nMOPAR SUNRIDER FLIPTOP FOR                            806     895                                          MHW\nHARDTOP\nM/H HT3; N/A W/AEN; N/A W/AJS\nMOPAR UPPER BODY SIDE                                 220     245                                           M9F\nGRAPHIC\nN/A W/M9G\nMOPAR WINDSHIELD TIE DOWN                              35      40                                           CT9\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nE - EXTRA COST N/C - NO CHARGE N/A - NOT AVAILABLE P - PACKAGED",
+          "source_context": "PDF page 19; model JLJX74; raw conditions retained, not evaluated"
+        }
+      ],
+      "extraction_mode": "manually_verified_transcription",
+      "extractor_id": "retained_MY2021_evidence_transcription",
+      "extractor_version": "1.0.0",
+      "generation_normalizer": {
+        "id": "explicit_generation_identity",
+        "version": "1.0.0"
+      },
+      "publication_revision": "Original retained MY2021 source; no cross-year approval propagation",
+      "raw_artifact_hash": "sha256:086c2e9728515750fbb0f31a425c831b448bd99e02831cf3365452694594e2d1",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-5-14-21-pdf.461295.pdf",
+      "retrieved_at": "2026-11-09T13:43:25.638901+00:00",
+      "source_applicability": {
+        "applicability_basis": "MY2021 US guide applicability; technical/manual joins scoped to exact engine family and source locators",
+        "applicability_scope": "model_year",
+        "market": "US",
+        "publisher_jurisdiction": "US",
+        "unknown_fields": {}
+      },
+      "source_id": "MY2021-JL-4D-2021-05-14",
+      "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-5-14-21-pdf.461295/"
+    },
+    {
+      "assertion_set_id": "MY2021-JL-4D-2021-06-09-package-p20",
+      "assertions": [
+        {
+          "assertion_id": "MY2021-JL-4D-2021-06-09-package-p20",
+          "attribute_key": "factory_package_option_page",
+          "raw_value": "JEEP United States                                   REISSUED: 06/09/2021                                                                                         PAGE: 20\nREVISED                                                         ISSUED:      06/04/2020                                                 2021 WRANGLER 4 DOOR\n                                                                                                    WRANGLER UNLIMITED RUBICON 392\nSTEP #3              SELECT - $ OPTIONS (IF DESIRED)\n\nDESCRIPTION                                          $FWP   $MSRP                                           2_X\nDUAL DOOR GROUP W/ PREMIUM                           3,956   4,395                                          AJS\nUPPERS\nM/H HT3 OR STJ; N/A W/AEN; N/A W/ST3;\nN/A W/ST8\nDUAL TOP GROUP                                       1,170   1,300                                         AEN\nENGINE BLOCK HEATER                                    86      95                                          NHK\nFRONT LICENSE PLATE BRACKET                           N/C     N/C                                          MDA\nGORILLA GLASS                                          86      95                                          GMA\nINTEGRATED OFF-ROAD CAMERA                            536     595                                          XNY\nM/H AD6 AND AEK\nLT285/70R17C BSW M/T TIRES                            176     195                                          TWG\nONLY 1: TT4 OR TWG\nLT285/70R17C OWL OFF-ROAD                             N/C     N/C                                           TT4\nTIRES\nONLY 1: TT4 OR TWG\nMANUF STATEMENT OF ORIGIN                             N/C     N/C                                           YEP\nPREMIUM TAN SUNRIDER SOFT                             N/C     N/C                                           ST3\nTOP\nM/H AEN; ONLY 1: STJ OR ST3\nSKY ONE-TOUCH POWER TOP                              1,800   2,000                                          STJ\nN/A W/AEN; N/A W/PYV; ONLY 1: STJ OR\nST3\nSMOKER'S GROUP                                         27      30                                          AWS\nSOFT TOP WINDOW STORAGE BAG                            68      75                                          CWJ\nM/H AEN OR ST3; N/A W/ST8; N/A W/STJ\nTRAILER TOW PACKAGE                                   316     350                                          ABR\nTRAIL RAIL MANAGEMENT SYSTEM                          176     195                                          CMD\n\nMOPAR OPTIONS\nMOPAR ALL-WEATHER FLOOR                               149     165                                          CWA\nMATS\nMOPAR DOORS OFF MIRROR KIT                            176     195                                           LFR\nMOPAR HARDTOP HEADLINER                               473     525                                          CHD\nM/H HT3; N/A W/STJ\nMOPAR HINGE-GATE                                      608     675                                          XDB\nREINFORCEMENT\nMOPAR LOWER BODY SIDE                                 220     245                                          M9G\nGRAPHIC\nMOPAR MESH SUNBONNET TOP                              158     175                                           CS7\nMOPAR SATIN BLACK GRILLE                              293     325                                          MHJ\nMOPAR SOLID SUNBONNET TOP                             266     295                                           CS3\nM/H HT3; N/A W/STJ\nMOPAR SUNRIDER FLIPTOP FOR                            806     895                                          MHW\nHARDTOP\nM/H HT3; N/A W/AEN; N/A W/AJS\nMOPAR UPPER BODY SIDE                                 220     245                                           M9F\nGRAPHIC\nN/A W/M9G\nMOPAR WINDSHIELD TIE DOWN                              35      40                                           CT9\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nE - EXTRA COST N/C - NO CHARGE N/A - NOT AVAILABLE P - PACKAGED",
+          "source_context": "PDF page 20; model JLJX74; raw conditions retained, not evaluated"
+        }
+      ],
+      "extraction_mode": "manually_verified_transcription",
+      "extractor_id": "retained_MY2021_evidence_transcription",
+      "extractor_version": "1.0.0",
+      "generation_normalizer": {
+        "id": "explicit_generation_identity",
+        "version": "1.0.0"
+      },
+      "publication_revision": "Original retained MY2021 source; no cross-year approval propagation",
+      "raw_artifact_hash": "sha256:c531aa9316c46520de25eebd81c9a27d0a547651f10eea467f74a95c71e246ae",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-6-9-21-pdf.472444.pdf",
+      "retrieved_at": "2026-11-09T13:43:25.638901+00:00",
+      "source_applicability": {
+        "applicability_basis": "MY2021 US guide applicability; technical/manual joins scoped to exact engine family and source locators",
+        "applicability_scope": "model_year",
+        "market": "US",
+        "publisher_jurisdiction": "US",
+        "unknown_fields": {}
+      },
+      "source_id": "MY2021-JL-4D-2021-06-09",
+      "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-6-9-21-pdf.472444/"
+    },
+    {
+      "assertion_set_id": "MY2021-JL-4D-2021-07-06-package-p19",
+      "assertions": [
+        {
+          "assertion_id": "MY2021-JL-4D-2021-07-06-package-p19",
+          "attribute_key": "factory_package_option_page",
+          "raw_value": "JEEP United States                                   REISSUED: 07/06/2021                                                                                         PAGE: 19\nREVISED                                                         ISSUED:      06/04/2020                                                 2021 WRANGLER 4 DOOR\n                                                                                                    WRANGLER UNLIMITED RUBICON 392\nSTEP #3              SELECT - $ OPTIONS (IF DESIRED)\n\nDESCRIPTION                                          $FWP   $MSRP                                           2_X\nDUAL DOOR GROUP W/ PREMIUM                           3,956   4,395                                          AJS\nUPPERS\nM/H HT3 OR STJ; N/A W/AEN; N/A W/ST3;\nN/A W/ST8\nDUAL TOP GROUP                                       1,170   1,300                                         AEN\nENGINE BLOCK HEATER                                    86      95                                          NHK\nFRONT LICENSE PLATE BRACKET                           N/C     N/C                                          MDA\nINTEGRATED OFF-ROAD CAMERA                            536     595                                          XNY\nM/H AD6 AND AEK\nLT285/70R17C BSW M/T TIRES                            176     195                                          TWG\nONLY 1: TT4 OR TWG\nLT285/70R17C OWL OFF-ROAD                             N/C     N/C                                           TT4\nTIRES\nONLY 1: TT4 OR TWG\nMANUF STATEMENT OF ORIGIN                             N/C     N/C                                           YEP\nPREMIUM TAN SUNRIDER SOFT                             N/C     N/C                                           ST3\nTOP\nM/H AEN; ONLY 1: STJ OR ST3\nSKY ONE-TOUCH POWER TOP                              1,800   2,000                                          STJ\nN/A W/AEN; N/A W/PYV; ONLY 1: STJ OR\nST3\nSMOKER'S GROUP                                         27      30                                          AWS\nSOFT TOP WINDOW STORAGE BAG                            68      75                                          CWJ\nM/H AEN OR ST3; N/A W/ST8; N/A W/STJ\nTRAILER TOW PACKAGE                                   316     350                                          ABR\nTRAIL RAIL MANAGEMENT SYSTEM                          176     195                                          CMD\nWINDSHIELD W/ CORNING GORILLA                          86      95                                          GMA\nGLASS\nXTREME RECON 35\" TIRE PACKAGE                        3,596   3,995                                         AGB\nN/A W/TT4; N/A W/TWG; N/A W/TXA; N/A\nW/WGU\n\nMOPAR OPTIONS\nMOPAR ALL-WEATHER FLOOR                               149     165                                          CWA\nMATS\nMOPAR DOORS OFF MIRROR KIT                            176     195                                           LFR\nMOPAR HARDTOP HEADLINER                               473     525                                          CHD\nM/H HT3; N/A W/STJ\nMOPAR HINGE-GATE                                      608     675                                          XDB\nREINFORCEMENT\nINCLUDED W/AGB\nMOPAR LOWER BODY SIDE                                 220     245                                          M9G\nGRAPHIC\nMOPAR MESH SUNBONNET TOP                              158     175                                           CS7\nMOPAR SATIN BLACK GRILLE                              293     325                                          MHJ\nMOPAR SOLID SUNBONNET TOP                             266     295                                           CS3\nM/H HT3; N/A W/STJ\nMOPAR SUNRIDER FLIPTOP FOR                            806     895                                          MHW\nHARDTOP\nM/H HT3; N/A W/AEN; N/A W/AJS\nMOPAR UPPER BODY SIDE                                 220     245                                           M9F\nGRAPHIC\nN/A W/M9G\nMOPAR WINDSHIELD TIE DOWN                              35      40                                           CT9\n\n\n\n\n\n\n\n\n\n\n\n\n\nE - EXTRA COST N/C - NO CHARGE N/A - NOT AVAILABLE P - PACKAGED",
+          "source_context": "PDF page 19; model JLJX74; raw conditions retained, not evaluated"
+        }
+      ],
+      "extraction_mode": "manually_verified_transcription",
+      "extractor_id": "retained_MY2021_evidence_transcription",
+      "extractor_version": "1.0.0",
+      "generation_normalizer": {
+        "id": "explicit_generation_identity",
+        "version": "1.0.0"
+      },
+      "publication_revision": "Original retained MY2021 source; no cross-year approval propagation",
+      "raw_artifact_hash": "sha256:341f1b6f4a5ac774a082bf07a6df0f7c9ebc018272b7da3ff880b67844c93271",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-7-6-21-pdf.484796.pdf",
+      "retrieved_at": "2026-11-09T13:43:25.638901+00:00",
+      "source_applicability": {
+        "applicability_basis": "MY2021 US guide applicability; technical/manual joins scoped to exact engine family and source locators",
+        "applicability_scope": "model_year",
+        "market": "US",
+        "publisher_jurisdiction": "US",
+        "unknown_fields": {}
+      },
+      "source_id": "MY2021-JL-4D-2021-07-06",
+      "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-7-6-21-pdf.484796/"
+    },
+    {
+      "assertion_set_id": "MY2021-JL-4D-2021-08-06-package-p19",
+      "assertions": [
+        {
+          "assertion_id": "MY2021-JL-4D-2021-08-06-package-p19",
+          "attribute_key": "factory_package_option_page",
+          "raw_value": "JEEP United States                                   REISSUED: 08/06/2021                                                                                         PAGE: 19\nREVISED                                                         ISSUED:      06/04/2020                                                 2021 WRANGLER 4 DOOR\n                                                                                                    WRANGLER UNLIMITED RUBICON 392\nSTEP #3              SELECT - $ OPTIONS (IF DESIRED)\n\nDESCRIPTION                                          $FWP   $MSRP                                           2_X\nCORNING GORILLA GLASS                                  86      95                                          GMA\nDUAL DOOR GROUP W/ PREMIUM                           3,956   4,395                                          AJS\nUPPERS\nM/H HT3 OR STJ; N/A W/AEN; N/A W/ST3;\nN/A W/ST8\nDUAL TOP GROUP                                       1,170   1,300                                          AEN\nENGINE BLOCK HEATER                                    86      95                                          NHK\nFRONT LICENSE PLATE BRACKET                           N/C     N/C                                          MDA\nINTEGRATED OFF-ROAD CAMERA                            536     595                                           XNY\nM/H AD6 AND AEK\nLT285/70R17C BSW M/T TIRES                            176     195                                          TWG\nONLY 1: TT4 OR TWG\nLT285/70R17C OWL OFF-ROAD                             N/C     N/C                                           TT4\nTIRES\nONLY 1: TT4 OR TWG\nMANUF STATEMENT OF ORIGIN                             N/C     N/C                                           YEP\nPREMIUM TAN SUNRIDER SOFT                             N/C     N/C                                           ST3\nTOP\nM/H AEN; ONLY 1: STJ OR ST3\nSKY ONE-TOUCH POWER TOP                              1,800   2,000                                          STJ\nN/A W/AEN; N/A W/PYV; ONLY 1: STJ OR\nST3\nSMOKER'S GROUP                                         27      30                                          AWS\nSOFT TOP WINDOW STORAGE BAG                            68      75                                          CWJ\nM/H AEN OR ST3; N/A W/ST8; N/A W/STJ\nTRAILER TOW PACKAGE                                   316     350                                           ABR\nTRAIL RAIL MANAGEMENT SYSTEM                          176     195                                          CMD\nXTREME RECON 35\" TIRE PACKAGE                        3,596   3,995                                         AGB\nN/A W/TT4; N/A W/TWG; N/A W/TXA; N/A\nW/WGU\n\nMOPAR OPTIONS\nMOPAR ALL-WEATHER FLOOR                               149     165                                          CWA\nMATS\nMOPAR DOORS OFF MIRROR KIT                            176     195                                           LFR\nMOPAR HARDTOP HEADLINER                               473     525                                          CHD\nM/H HT3; N/A W/STJ\nMOPAR HINGE-GATE                                      608     675                                           XDB\nREINFORCEMENT\nINCLUDED W/AGB\nMOPAR LOWER BODY SIDE                                 220     245                                          M9G\nGRAPHIC\nMOPAR MESH SUNBONNET TOP                              158     175                                           CS7\nMOPAR SATIN BLACK GRILLE                              293     325                                           MHJ\nMOPAR SOLID SUNBONNET TOP                             266     295                                           CS3\nM/H HT3; N/A W/STJ\nMOPAR SUNRIDER FLIPTOP FOR                            806     895                                          MHW\nHARDTOP\nM/H HT3; N/A W/AEN; N/A W/AJS\nMOPAR UPPER BODY SIDE                                 220     245                                           M9F\nGRAPHIC\nN/A W/M9G\nMOPAR WINDSHIELD TIE DOWN                              35      40                                           CT9\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nE - EXTRA COST N/C - NO CHARGE N/A - NOT AVAILABLE P - PACKAGED",
+          "source_context": "PDF page 19; model JLJX74; raw conditions retained, not evaluated"
+        }
+      ],
+      "extraction_mode": "manually_verified_transcription",
+      "extractor_id": "retained_MY2021_evidence_transcription",
+      "extractor_version": "1.0.0",
+      "generation_normalizer": {
+        "id": "explicit_generation_identity",
+        "version": "1.0.0"
+      },
+      "publication_revision": "Original retained MY2021 source; no cross-year approval propagation",
+      "raw_artifact_hash": "sha256:e6c2aa78fb6c34608dbb28dc4084cf909c444802434fcf32af61eb916a1168c4",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-8-6-21-pdf.497498.pdf",
+      "retrieved_at": "2026-11-09T13:43:25.638901+00:00",
+      "source_applicability": {
+        "applicability_basis": "MY2021 US guide applicability; technical/manual joins scoped to exact engine family and source locators",
+        "applicability_scope": "model_year",
+        "market": "US",
+        "publisher_jurisdiction": "US",
+        "unknown_fields": {}
+      },
+      "source_id": "MY2021-JL-4D-2021-08-06",
+      "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-8-6-21-pdf.497498/"
+    },
+    {
+      "assertion_set_id": "FCA_MY2021_Wrangler_392_specifications",
+      "assertions": [
+        {
+          "assertion_id": "FCA_MY2021_Wrangler_392_specifications-p1",
+          "attribute_key": "manufacturer_technical_page",
+          "raw_value": "2021 Jeep® Wrangler Rubicon 392\nSPECIFICATIONS\n\nSpecifications are based on the latest product information available at the time of publication.\nAll dimensions are in inches (millimeters) unless otherwise noted.\nAll dimensions measured at curb weight with standard tires and wheels.\n\n\nGENERAL INFORMATION\nVehicle Type                                                     Sport-utility vehicle\nAssembly Plant                                                   Toledo Assembly Complex, Toledo, Ohio\nEPA Vehicle Class                                                Multipurpose vehicle\n\n\nBODY/CHASSIS\nLayout                                                           Longitudinal, front engine, transfer case, four-wheel drive\nConstruction                                                     Ladder-type frame, open steel and aluminum body\n\n\nENGINE: 6.4-LITER V-8\nType and Description                                             90-degree V-type, liquid cooled\nDisplacement (cu. in. / cc)                                      392 cu. in. (6,417 cu. cm)\nBore x Stroke                                                    4.09 x 3.72 (103.9 x 94.6)\nValve System                                                     Pushrod-operated overhead valves, 16 valves with sodium-filled\n                                                                 exhaust valves and hollow stem intake valves, 16 conventional\n                                                                 hydraulic lifters, all with roller tips\nFuel Injection                                                   Sequential, multi-port, electronic, returnless; Fuel Saver mode\nConstruction                                                     Deep-skirt cast-iron block with cross-bolted main bearing caps,\n                                                                 aluminum alloy heads with hemispherical combustion chambers\nCompression Ratio                                                10.9:1\nPower (SAE net) (hp / kW@rpm)                                    470 hp (354 kW) @ 6,000 rpm\nTorque (SAE net) (lb.-ft. / N•m)                                 470 lb.-ft. (637 N•m) @ 4,300 rpm\nMax. Engine Speed (rpm)                                          6,400 rpm (electronically limited)\nFuel Requirement                                                 Premium 91 octane (R+M)/2 — required\nFuel Tank Capacity (gallons)                                     21.5\nOil Capacity                                                     7 quarts (6.6 liters)\nCoolant Capacity                                                 14 quarts (13.25 liters)\nEmission Controls                                                Dual close-coupled three-way catalytic converters, quad-heated oxygen\n                                                                 sensors and internal engine features\nMax. Gross Trailer Weight                                        3,500 lbs.\nAssembly Plant                                                   Saltillo Engine Plant, Saltillo, Mexico\n\n\n\n\n\n\n2021 JEEP® |  WRANGLER RUBICON 392  |  SPECIFICATIONS                                                                                               |  1",
+          "source_context": "PDF page 1; retained extraction docs/implementation/handoffs/MY2021_JL/evidence/FCA_MY2021_Wrangler_392_specifications.text.json"
+        },
+        {
+          "assertion_id": "FCA_MY2021_Wrangler_392_specifications-p2",
+          "attribute_key": "manufacturer_technical_page",
+          "raw_value": "TRANSMISSION: 8HP75 AUTOMATIC, EIGHT-SPEED OVERDRIVE\nDescription                                                   Adaptive electronic control or Electronic Range Select (ERS) driver-\n                                                              interactive manual control and electronically modulated torque converter\n                                                              clutch\nGear Ratios\n  1st                                                         4.71\n  2nd                                                         3.13\n  3rd                                                         2.10\n  4th                                                         1.67\n  5th                                                         1.28\n  6th                                                         1.00\n  7th                                                         0.84\n  8th                                                         0.67\n  Reverse                                                     3.30\n\n\nTRANSFER CASE: MP3022 SELEC-TRAC\nType                                                          Full-time\nOperating Modes                                               4WD Auto; 4WD High; Neutral; 4WD Low\nLow Range Ratio                                               2.72:1\n\n\nAXLES\nFront                                                         3rd Generation Dana 44\nDifferential type                                             Tru-Lock electronic locking\nRear                                                          3rd Generation Dana 44\nDifferential type                                             Tru-Lok electronic locking\nAxle ratios                                                    3.73, 4.56\n\n\nELECTRICAL SYSTEM\nArchitecture                                                  Powernet\nAlternator                                                    180 amp\nBattery                                                       700 CCA, maintenance free\n\n\nSUSPENSION\nFront                                                         Solid axle, link coil, leading arms, track bar, coil springs, stabilizer bar\n  Stabilizer bar                                              Electronic sway-bar disconnect system\n\n\n\n\n\n\n\n\n2021 JEEP® |  WRANGLER RUBICON 392  |  SPECIFICATIONS                                                                                        |  2",
+          "source_context": "PDF page 2; retained extraction docs/implementation/handoffs/MY2021_JL/evidence/FCA_MY2021_Wrangler_392_specifications.text.json"
+        },
+        {
+          "assertion_id": "FCA_MY2021_Wrangler_392_specifications-p3",
+          "attribute_key": "manufacturer_technical_page",
+          "raw_value": "SUSPENSION (CONTINUED)\nShock type                                                      High-pressure gas-charged FOX aluminum monotube shock absorbers\n                                                                with hydraulic rebound stop\nRear                                                            Solid axle, link coil, trailing arms, track bar, coil springs, stabilizer bar\n  Shock type                                                    High-pressure gas-charged FOX aluminum monotube shock absorbers\n                                                                with hydraulic rebound stop\n\n\nSTEERING\nType                                                            Electro-hydraulic power\n  Overall ratio                                                 13.7:1\n  Turning diameter (curb-to-curb) (ft)                          39.4\nSteering Turns (lock-to-lock)                                   3.13\nP/S pump                                                        Electro-hydraulic\n\n\nBRAKES\nType                                                            Power-assisted, anti-lock brake system\nFront\n  Rotor size and type                                           12.9 x 1.1 (330 x 28) vented rotor\n  Caliper size and type                                         2 (51) twin-piston floating calipers\nRear\n  Rotor size and type                                           14 x .86 (350 x 22) vented rotor\n  Caliper size and type                                         2 (51) single-piston floating calipers\n\n\nDIMENSIONS AND CAPACITIES\nWheelbase                                                       118.4 (3,008)\nOverhang — Front                                                29.5 (749.8)\nOverhang — Rear                                                 40.3 (1,023)\nTrack — Front                                                   64.4 (1,636)\nTrack — Rear                                                    64.4 (1,636)\nOverall Length (includes spare tire)                            188.4 (4,786)\nOverall Width                                                   73.8 (1,875)\nOverall Height                                                  74.5 (1,893)\n\n\nCLEARANCES\nApproach angle, degrees                                         44.5, 46.7*\nBreakover angle, degrees                                        22.6, 24.5*\n\n\n\n\n\n\n\n2021 JEEP® |  WRANGLER RUBICON 392  |  SPECIFICATIONS                                                                                            |  3",
+          "source_context": "PDF page 3; retained extraction docs/implementation/handoffs/MY2021_JL/evidence/FCA_MY2021_Wrangler_392_specifications.text.json"
+        },
+        {
+          "assertion_id": "FCA_MY2021_Wrangler_392_specifications-p4",
+          "attribute_key": "manufacturer_technical_page",
+          "raw_value": "CLEARANCES (CONTINUED)\nDeparture angle, degrees                                         37.5, 39.8*\nGround clearance, inches                                         10.3, 11.1*\nWater fording, inches                                            32.5, 33.6*\n\n*with Xtreme Recon Package\n\n\nCURB WEIGHT (LBS.)                                               5,103\n\n\nACCOMMODATIONS\nSeating Capacity, F/R                                            2/3\n\nSAE Total Interior Passenger Volume,\n(cu. ft. / cu. m)                                                103.3 (2.93)\n\nFront\n  Headroom                                                       40.8 (1,036) hardtop / 42.8 (1,087) soft top\n  Legroom                                                        40.8 (1,038)\n  Shoulder room                                                  55.8 (1,417)\n  Hip room                                                       53.9 (1,370)\n  Seat travel                                                    8.1 (206)\n  EPA front volume index                                         54.6 (1.55)\nRear\n  Headroom                                                       40.3 (1,023) hardtop, 42.6 (1,082) soft top\n  Legroom                                                        38.2 (970)\n  Knee clearance                                                 61.6 (1,565.9)\n  Shoulder Room                                                  55.8 (1,417)\n  Hip Room                                                       55.9 (1,421)\n  EPA rear seat volume index (cu. ft. / cu. m)                   48.7 (1.38)\n  Liftover height                                                30.8 (782)\n  Maximum cargo width at liftgate opening                        47.9 (1,217)\n  Minimum cargo width at liftgate opening                        41.5 (1,054)\n  Maximum cargo height at liftgate opening                       36.0 (942.3)\n  Minimum cargo height at liftgate opening                       35.7 (907.8)\n  Distance between wheelhouse interior trim                      45.0 (1143)\nSAE Cargo Volume\n  Rear seat folded                                               67.4 cu. ft. (1.91)\n  Rear seat upright                                              27.7 cu. ft. (0.89)\n\n  Total passenger plus cargo volume,\n  (cu. ft. / cu. m)                                              131 / 3.71\n\n\n\n2021 JEEP® |  WRANGLER RUBICON 392  |  SPECIFICATIONS                                                                                              |  4",
+          "source_context": "PDF page 4; retained extraction docs/implementation/handoffs/MY2021_JL/evidence/FCA_MY2021_Wrangler_392_specifications.text.json"
+        },
+        {
+          "assertion_id": "FCA_MY2021_Wrangler_392_specifications-p5",
+          "attribute_key": "manufacturer_technical_page",
+          "raw_value": "WHEELS\nAvailability                                                    Standard\n  Type and Material                                             Bead lock capable, high-gloss painted cast aluminum\n  Size                                                          17 x 7.5 in.\nAvailability                                                    Optional\n  Type and Material                                             Bead lock capable, low-gloss smoked bronze paint and low-gloss black\n                                                                trim ring with low-gloss black bolts cast aluminum\n  Size                                                          17 x 8.0 in.\n\n\nTIRES\nAvailability                                                    Standard\n  Size and Type                                                 LT285/70R17C, on/off-road, black sidewall\n  Mfr. And Model                                                BF Goodrich KO2 All-Terrain\n  Revs per Mile (km)                                            645 (401)\nAvailability                                                    Optional\n  Size and Type                                                 LT285/70R17C\n  Mfr. And Model                                                Falken Wildpeak M/T\n  Revs per Mile (km)                                            617 (383)\nAvailability                                                    Optional\n  Size and Type                                                 LT315/70R17C, on/off-road, black sidewall\n  Mfr. And Model                                                BF Goodrich KO2 All-Terrain\n  Revs per Mile (km)                                            604 (376)\n\n\n                                                                      # # #\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2021 JEEP® |  WRANGLER RUBICON 392  |  SPECIFICATIONS                                                                                            |  5",
+          "source_context": "PDF page 5; retained extraction docs/implementation/handoffs/MY2021_JL/evidence/FCA_MY2021_Wrangler_392_specifications.text.json"
+        }
+      ],
+      "extraction_mode": "manually_verified_transcription",
+      "extractor_id": "retained_MY2021_evidence_transcription",
+      "extractor_version": "1.0.0",
+      "generation_normalizer": {
+        "id": "explicit_generation_identity",
+        "version": "1.0.0"
+      },
+      "publication_revision": "Original retained MY2021 source; no cross-year approval propagation",
+      "raw_artifact_hash": "sha256:47e6996360a2b44e3a7cae8e36975b63bcd06fab53d8b60f40abec63787faf26",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2021_JL/source_pdfs/FCA_MY2021_Wrangler_392_specifications.pdf",
+      "retrieved_at": "2026-11-09T13:43:25.638901+00:00",
+      "source_applicability": {
+        "applicability_basis": "MY2021 US guide applicability; technical/manual joins scoped to exact engine family and source locators",
+        "applicability_scope": "model_year",
+        "market": "US",
+        "publisher_jurisdiction": "US",
+        "unknown_fields": {}
+      },
+      "source_id": "FCA_MY2021_Wrangler_392_specifications",
+      "source_locator": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/specs/2021_JP_Wrangler_Rubicon_392_SP.pdf"
+    },
+    {
+      "assertion_set_id": "MY2021-manual-fuel-hardware",
+      "assertions": [
+        {
+          "assertion_id": "manual-p143",
+          "attribute_key": "engine_hardware",
+          "raw_value": "CAUTION!\nExtremesteeringmaneuversmaycausetheelectri-\ncallydrivenpumptoreduceorstoppowersteering\nassistanceinordertopreventdamagetothesystem.\nNormaloperationwillresumeoncethesystemis\nallowedtocool.\nIfthe“SERVICEPOWERSTEERING”messageanda\nflashingiconaredisplayedontheinstrumentcluster\nscreen,itindicatesthatthevehicleneedstobetaken\ntothedealerforservice.Itislikelythevehiclehaslost\npowersteeringassistance\npage103.\nIfthe“POWERSTEERINGHOT”messageandanicon\naredisplayedontheinstrumentclusterscreen,itindi-\ncatesthatextremesteeringmaneuversmayhave\noccurred,whichcausedanovertemperaturecondition\ninthepowersteeringsystem.Youwilllosepowersteer-\ningassistancemomentarilyuntiltheovertemperature\nconditionnolongerexists.Oncedrivingconditionsare\nsafe,thenpulloverandletvehicleidleforafew\nmomentsuntilthelightturnsoff\npage103.\nNOTE:\n•Evenifpowersteeringassistanceisnolonger\noperational,itisstillpossibletosteerthevehicle.\nUndertheseconditionstherewillbeasubstantial\nincreaseinsteeringeffort,especiallyatverylow\nvehiclespeedsandduringparkingmaneuvers.\n•Iftheconditionpersists,seeanauthorizeddealer\nforservice.\nSTOP/START SYSTEM — AUTOMATIC\nTRANSMISSION (IF EQUIPPED)\nTheEngineStop/Start(ESS)functionisdevelopedto\nreducefuelconsumption.Thesystemwillstopthe\nengineautomaticallyduringavehiclestopifthe\nrequiredconditionsaremet.Releasingthebrakepedal\norpressingtheacceleratorpedalwillautomatically\nre-starttheengine.\nESSvehicleshavebeenupgradedwithaheavyduty\nstarter,enhancedbattery,andotherupgradedengine\nparts,tohandletheadditionalenginestarts.Vehicles\nequippedwitheTorquecontainaheavydutymotorgen-\neratorandanadditionalhybridelectricbatterytostore\nenergyfromvehicledecelerationforuseonengine\nstartupafterastopaswellasprovidinglaunchtorque\nassist.\nNOTE:\nItisrecommendedthatStop/Startsystembedisabled\nduringoff-roaduse.\nSecondary Battery\nYourvehiclemaybeequippedwithasecondarybattery\nusedtopowertheStop/Startsystemandthe12Volt\nvehicleelectricalsystem.Thesecondarybatteryis\nlocatedbehindthewheelwellforthefrontpassenger\nwheel.\nAUTOSTOPMODE\nWARNING!\n•VehicleswiththeStop/Startsystemwillbe\nequippedwithtwobatteries.Boththemainand\nthesupplementalbatteriesmustbedisconnected\ntocompletelyde-energizethe12Voltelectrical\nsystem.\n•Seriousinjuryordeathcouldresultifyoudonot\ndisconnectbothbatteries.Tolearnhowtoproperly\ndisconnect,seeanauthorizeddealer.\nTheStop/Startfeatureisenabledaftereverydriverigni-\ntionstart.Atthattime,thesystemwillgointoSTOP/\nSTARTREADYandifallotherconditionsaremet,cango\nintoaSTOP/STARTAUTOSTOPACTIVE“Autostop”mode.\nBattery Locations\n1—PrimaryBattery\n2—SecondaryBattery\nSTARTINGANDOPERATING 141\n4",
+          "source_context": "PDF page 143; Fourth Edition V1, copyright 2022, MY2021 manual; optional equipment does not independently bind engine codes"
+        },
+        {
+          "assertion_id": "manual-p145",
+          "attribute_key": "engine_hardware",
+          "raw_value": "TOMANUALLYTURNONTHE\nSTOP/STARTSYSTEM\nPushtheStop/StartOFFswitch(locatedontheswitch\nbank).Thelightontheswitchwillturnoff.\nSYSTEMMALFUNCTION\nIfthereisamalfunctionintheStop/Startsystem,the\nsystemwillnotshutdowntheengine.A“SERVICE\nSTOP/STARTSYSTEM”messagewillappearinthe\ninstrumentclusterdisplay\npage103.\nIfthe“SERVICESTOP/STARTSYSTEM”message\nappearsintheinstrumentclusterdisplay,havethesys-\ntemcheckedbyanauthorizeddealer.\nIfamalfunctionoccursduringanautostop,thevehicle\nmaynotautostartandwillneedakeystart.\nSTOP/START SYSTEM — MANUAL\nTRANSMISSION (IF EQUIPPED)\nTheEngineStop/Start(ESS)functionisdevelopedto\nreducefuelconsumption.Thesystemwillstopthe\nengineautomaticallyduringavehiclestopifthe\nrequiredconditionsaremet.Pressingtheclutchpedal\nwillautomaticallyrestartthevehicle.\nESSvehicleshavebeenupgradedwithaheavyduty\nstarter,enhancedbattery,andotherupgradedengine\nparts,tohandletheadditionalenginestarts.Vehicles\nequippedwitheTorquecontainaheavydutymotorgen-\neratorandanadditionalhybridelectricbatterytostore\nenergyfromvehicledecelerationforuseonengine\nstartupafterastopaswellasprovidinglaunchtorque\nassist.\nNOTE:\nItisrecommendedthatStop/Startbedisabledduring\noff-roaduse.\nSecondary Battery\nYourvehiclemaybeequippedwithasecondarybattery\nusedtopowertheStop/Startsystemandthe12Volt\nvehicleelectricalsystem.Thesecondarybatteryis\nlocatedbehindthewheelwellforthefrontpassenger\nwheel.\nAUTOSTOPMODE\nWARNING!\n•VehicleswiththeStop/Startsystemwillbe\nequippedwithtwobatteries.Boththemainand\nthesupplementalbatteriesmustbedisconnected\ntocompletelyde-energizethe12Voltelectrical\nsystem.\n(Continued)\nWARNING!\n•Seriousinjuryordeathcouldresultifyoudonot\ndisconnectbothbatteries.Tolearnhowtoproperly\ndisconnect,seeanauthorizeddealer.\nTheStop/Startfeatureisenabledaftereverydriverigni-\ntionstart.ItwillremaininSTOP/STARTNOTREADYuntil\nyoudriveforwardwithavehiclespeedgreaterthan\n5mph(8km/h).Atthattime,thesystemwillgointo\nSTOP/STARTREADYandifallotherconditionsaremet,\ncangointoanSTOP/STARTAUTOSTOPACTIVEmode.\nTo Activate The STOP/START AUTO STOP ACTIVE Mode,\nThe Following Must Occur:\n•ThesystemmustbeinSTOP/STARTREADYstate.A\nSTOP/STARTREADYmessagewillbedisplayedin\ntheinstrumentcluster\npage103.\n•Vehiclespeedmustbelessthan2mph(3km/h).\n•ThegearselectormustbeintheNEUTRALposition\nandtheclutchpedalmustbefullyreleased\nPOSSIBLEREASONSTHEENGINE\nDOESNOTAUTOSTOP\nPriortoengineshutdown,thesystemwillcheckmany\nsafetyandcomfortconditionstoseeiftheyarefulfilled.\nSituationswhentheenginewillnotstopinclude(but\nnotlimitedto):\n•Driver’sseatbeltisnotbuckled.\n•Outsidetemperatureislessthan10°F(–12°C)or\ngreaterthan109°F(43°C).\n•Actualcabintemperatureissignificantlydifferent\nthantemperaturesetonAutoHVAC.\n•HVACissettofulldefrostmode.\nBattery Locations\n1—PrimaryBattery\n2—SecondaryBattery\nSTARTINGANDOPERATING 143\n4",
+          "source_context": "PDF page 145; Fourth Edition V1, copyright 2022, MY2021 manual; optional equipment does not independently bind engine codes"
+        },
+        {
+          "assertion_id": "manual-p354",
+          "attribute_key": "fuel_requirements",
+          "raw_value": "After25miles(40km),checkthelugnut/bolttorqueto\nbesurethatallthelugnuts/boltsareproperlyseated\nagainstthewheel.\nWARNING!\nToavoidtheriskofforcingthevehicleoffthejack,do\nnottightenthelugnuts/boltsfullyuntilthevehicle\nhasbeenlowered.Failuretofollowthiswarningmay\nresultinpersonalinjury.\nFUEL REQUIREMENTS — GASOLINE\nENGINE\nWhileoperatingongasolinewiththerequiredoctane\nnumber,hearingalightknockingsoundfromthe\nengineisnotacauseforconcern.However,ifthe\nengineisheardmakingaheavyknockingsound,seea\ndealerimmediately.Useofgasolinewithanoctane\nnumberlowerthanrecommendedoctanecancause\nenginefailureandmayvoidtheNewVehicleLimited\nWarranty.\nPoorqualitygasolinecancauseproblemssuchashard\nstarting,stalling,andhesitations.Ifyouexperience\nthesesymptoms,tryanotherbrandofgasolinebefore\nconsideringserviceforthevehicle.\n2.0LENGINE\nThisengineisdesignedtomeetallemission\nrequirements,andprovidesatisfactoryfuel\neconomyandperformance,whenusinghigh-\nqualityunleadedregulargasolinehavingan\noctaneratingof87,asspecifiedbythe(R+M)/\n2method.Theuseof91orhigheroctanepremium\ngasolinewillallowtheseenginestooperatetooptimal\nperformance.Thisincreaseinperformanceismost\nnoticeableinhotweatherorotherheavierloadcondi-\ntions,suchaswhiletowing.\n3.6LENGINE\nThisengineisdesignedtomeetallemission\nregulationsandprovidesatisfactoryfuel\neconomyandperformancewhenusinghigh-\nqualityunleadedregulargasolinehavingan\noctaneratingof87asspecifiedbythe(R+M)/\n2method.Theuseofhigheroctanepremiumgasoline\nwillnotprovideanybenefitoverregulargasolinein\ntheseengines.\nREFORMULATEDGASOLINE\nManyareasofthecountryrequiretheuseofcleaner\nburninggasolinereferredtoas“reformulatedgasoline”.\nReformulatedgasolinecontainsoxygenatesandare\nspecificallyblendedtoreducevehicleemissionsand\nimproveairquality.\nTheuseofreformulatedgasolineisrecommended.\nProperlyblendedreformulatedgasolinewillprovide\nimprovedperformanceanddurabilityofengineandfuel\nsystemcomponents.\nMATERIALSADDEDTOFUEL\nBesidesusingunleadedgasolinewiththeproper\noctanerating,gasolinesthatcontaindetergents,corro-\nsionandstabilityadditivesarerecommended.Using\ngasolinesthathavetheseadditiveswillhelpimprove\nfueleconomy,reduceemissions,andmaintainvehicle\nperformance.\nDesignatedTOPTIERDetergentGasoline\ncontainsahigherlevelofdetergentstofur-\ntheraideinminimizingengineandfuelsys-\ntemdeposits.Whenavailable,theusageof\nTOPTIERDetergentgasolineisrecommended.Visit\nwww.toptiergas.comforalistofTOPTIERDetergent\nGasolineRetailers.\nIndiscriminateuseoffuelsystemcleaningagents\nshouldbeavoided.Manyofthesematerialsintended\nforgumandvarnishremovalmaycontainactivesol-\nventsorsimilaringredients.Thesecanharmfuelsys-\ntemgasketanddiaphragmmaterials.\nGASOLINE/OXYGENATEBLENDS\nSomefuelsuppliersblendunleadedgasolinewithoxy-\ngenatessuchasethanol.\nTorque Patterns\n352 TECHNICALSPECIFICATIONS",
+          "source_context": "PDF page 354; Fourth Edition V1, copyright 2022, MY2021 manual; optional equipment does not independently bind engine codes"
+        }
+      ],
+      "extraction_mode": "manually_verified_transcription",
+      "extractor_id": "retained_MY2021_evidence_transcription",
+      "extractor_version": "1.0.0",
+      "generation_normalizer": {
+        "id": "explicit_generation_identity",
+        "version": "1.0.0"
+      },
+      "publication_revision": "Original retained MY2021 source; no cross-year approval propagation",
+      "raw_artifact_hash": "sha256:327691234c6a544a97fcd3f168aab3039bf0e382b13e2f6e037ad15018fc6d20",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2021_JL/owner_review_20261108/sources/Jeep_MY2021_Wrangler_US_owners_manual_E5.pdf",
+      "retrieved_at": "2026-11-09T13:43:25.638901+00:00",
+      "source_applicability": {
+        "applicability_basis": "MY2021 US guide applicability; technical/manual joins scoped to exact engine family and source locators",
+        "applicability_scope": "model_year",
+        "market": "US",
+        "publisher_jurisdiction": "US",
+        "unknown_fields": {}
+      },
+      "source_id": "Jeep_MY2021_US_owners_manual",
+      "source_locator": "https://vehicleinfo.mopar.com/assets/publications/en-us/Jeep/2021/Wrangler/5690670_21_JL_OM_EN_USC_DIGITAL_E5.pdf"
+    }
+  ],
+  "evidence_raw_hashes": [
+    "sha256:086c2e9728515750fbb0f31a425c831b448bd99e02831cf3365452694594e2d1",
+    "sha256:2fa3c481460efa71f1036638c3f0929c2eca3eb91bd97a0eb87c0bbd3cfdcc9d",
+    "sha256:327691234c6a544a97fcd3f168aab3039bf0e382b13e2f6e037ad15018fc6d20",
+    "sha256:341f1b6f4a5ac774a082bf07a6df0f7c9ebc018272b7da3ff880b67844c93271",
+    "sha256:37cd4e33d30f54bb7d46940533a691312c5b8b4da22faee583a10fe5c9feaebb",
+    "sha256:47e6996360a2b44e3a7cae8e36975b63bcd06fab53d8b60f40abec63787faf26",
+    "sha256:4dad5bddad4fbd0c0e2bab5095734c9f740e9c0e53d67de64df30b41576ada5a",
+    "sha256:c531aa9316c46520de25eebd81c9a27d0a547651f10eea467f74a95c71e246ae",
+    "sha256:d0d2e4d1cf0e18f4ca5be3092d0625a2810fae009afefd97a603149ce53ab568",
+    "sha256:d748a277a6cd23a6a7fbb744fa0b24d9c980b21bef9ce4a3fb993c44c9093179",
+    "sha256:e6c2aa78fb6c34608dbb28dc4084cf909c444802434fcf32af61eb916a1168c4"
+  ],
+  "generation_evidence": [
+    {
+      "assertion_id": "MY2021-JL-4D-2020-12-04-JLJX74-model",
+      "assertion_set_id": "MY2021-JL-4D-2020-12-04-JLJX74",
+      "document_hash": "sha256:4dad5bddad4fbd0c0e2bab5095734c9f740e9c0e53d67de64df30b41576ada5a",
+      "identity_type": "model_code",
+      "native_identifier": "JLJX74",
+      "normalizer_id": "explicit_generation_identity",
+      "normalizer_version": "1.0.0",
+      "source_id": "MY2021-JL-4D-2020-12-04",
+      "source_namespace": "source_model_code"
+    },
+    {
+      "assertion_id": "MY2021-JL-4D-2021-01-01-JLJX74-model",
+      "assertion_set_id": "MY2021-JL-4D-2021-01-01-JLJX74",
+      "document_hash": "sha256:d0d2e4d1cf0e18f4ca5be3092d0625a2810fae009afefd97a603149ce53ab568",
+      "identity_type": "model_code",
+      "native_identifier": "JLJX74",
+      "normalizer_id": "explicit_generation_identity",
+      "normalizer_version": "1.0.0",
+      "source_id": "MY2021-JL-4D-2021-01-01",
+      "source_namespace": "source_model_code"
+    },
+    {
+      "assertion_id": "MY2021-JL-4D-2021-02-09-JLJX74-model",
+      "assertion_set_id": "MY2021-JL-4D-2021-02-09-JLJX74",
+      "document_hash": "sha256:2fa3c481460efa71f1036638c3f0929c2eca3eb91bd97a0eb87c0bbd3cfdcc9d",
+      "identity_type": "model_code",
+      "native_identifier": "JLJX74",
+      "normalizer_id": "explicit_generation_identity",
+      "normalizer_version": "1.0.0",
+      "source_id": "MY2021-JL-4D-2021-02-09",
+      "source_namespace": "source_model_code"
+    },
+    {
+      "assertion_id": "MY2021-JL-4D-2021-03-05-JLJX74-model",
+      "assertion_set_id": "MY2021-JL-4D-2021-03-05-JLJX74",
+      "document_hash": "sha256:37cd4e33d30f54bb7d46940533a691312c5b8b4da22faee583a10fe5c9feaebb",
+      "identity_type": "model_code",
+      "native_identifier": "JLJX74",
+      "normalizer_id": "explicit_generation_identity",
+      "normalizer_version": "1.0.0",
+      "source_id": "MY2021-JL-4D-2021-03-05",
+      "source_namespace": "source_model_code"
+    },
+    {
+      "assertion_id": "MY2021-JL-4D-2021-04-14-JLJX74-model",
+      "assertion_set_id": "MY2021-JL-4D-2021-04-14-JLJX74",
+      "document_hash": "sha256:d748a277a6cd23a6a7fbb744fa0b24d9c980b21bef9ce4a3fb993c44c9093179",
+      "identity_type": "model_code",
+      "native_identifier": "JLJX74",
+      "normalizer_id": "explicit_generation_identity",
+      "normalizer_version": "1.0.0",
+      "source_id": "MY2021-JL-4D-2021-04-14",
+      "source_namespace": "source_model_code"
+    },
+    {
+      "assertion_id": "MY2021-JL-4D-2021-05-14-JLJX74-model",
+      "assertion_set_id": "MY2021-JL-4D-2021-05-14-JLJX74",
+      "document_hash": "sha256:086c2e9728515750fbb0f31a425c831b448bd99e02831cf3365452694594e2d1",
+      "identity_type": "model_code",
+      "native_identifier": "JLJX74",
+      "normalizer_id": "explicit_generation_identity",
+      "normalizer_version": "1.0.0",
+      "source_id": "MY2021-JL-4D-2021-05-14",
+      "source_namespace": "source_model_code"
+    },
+    {
+      "assertion_id": "MY2021-JL-4D-2021-06-09-JLJX74-model",
+      "assertion_set_id": "MY2021-JL-4D-2021-06-09-JLJX74",
+      "document_hash": "sha256:c531aa9316c46520de25eebd81c9a27d0a547651f10eea467f74a95c71e246ae",
+      "identity_type": "model_code",
+      "native_identifier": "JLJX74",
+      "normalizer_id": "explicit_generation_identity",
+      "normalizer_version": "1.0.0",
+      "source_id": "MY2021-JL-4D-2021-06-09",
+      "source_namespace": "source_model_code"
+    },
+    {
+      "assertion_id": "MY2021-JL-4D-2021-07-06-JLJX74-model",
+      "assertion_set_id": "MY2021-JL-4D-2021-07-06-JLJX74",
+      "document_hash": "sha256:341f1b6f4a5ac774a082bf07a6df0f7c9ebc018272b7da3ff880b67844c93271",
+      "identity_type": "model_code",
+      "native_identifier": "JLJX74",
+      "normalizer_id": "explicit_generation_identity",
+      "normalizer_version": "1.0.0",
+      "source_id": "MY2021-JL-4D-2021-07-06",
+      "source_namespace": "source_model_code"
+    },
+    {
+      "assertion_id": "MY2021-JL-4D-2021-08-06-JLJX74-model",
+      "assertion_set_id": "MY2021-JL-4D-2021-08-06-JLJX74",
+      "document_hash": "sha256:e6c2aa78fb6c34608dbb28dc4084cf909c444802434fcf32af61eb916a1168c4",
+      "identity_type": "model_code",
+      "native_identifier": "JLJX74",
+      "normalizer_id": "explicit_generation_identity",
+      "normalizer_version": "1.0.0",
+      "source_id": "MY2021-JL-4D-2021-08-06",
+      "source_namespace": "source_model_code"
+    }
+  ],
+  "normalized_assertions": [
+    {
+      "interpretation_id": "FCA_MY2021_Wrangler_392_specifications|sha256:47e6996360a2b44e3a7cae8e36975b63bcd06fab53d8b60f40abec63787faf26|FCA_MY2021_Wrangler_392_specifications|JL21-70-drive",
+      "mapping_status": "mapped",
+      "normalization_notes": "Manufacturer model/body layout; optional transfer-case equipment does not create a new baseline.",
+      "normalized_concept": "4WD",
+      "raw_source_value": "2021 Jeep® Wrangler Rubicon 392\nSPECIFICATIONS\n\nSpecifications are based on the latest product information available at the time of publication.\nAll dimensions are in inches (millimeters) unless otherwise noted.\nAll dimensions measured at curb weight with standard tires and wheels.\n\n\nGENERAL INFORMATION\nVehicle Type                                                     Sport-utility vehicle\nAssembly Plant                                                   Toledo Assembly Complex, Toledo, Ohio\nEPA Vehicle Class                                                Multipurpose vehicle\n\n\nBODY/CHASSIS\nLayout                                                           Longitudinal, front engine, transfer case, four-wheel drive\nConstruction                                                     Ladder-type frame, open steel and aluminum body\n\n\nENGINE: 6.4-LITER V-8\nType and Description                                             90-degree V-type, liquid cooled\nDisplacement (cu. in. / cc)                                      392 cu. in. (6,417 cu. cm)\nBore x Stroke                                                    4.09 x 3.72 (103.9 x 94.6)\nValve System                                                     Pushrod-operated overhead valves, 16 valves with sodium-filled\n                                                                 exhaust valves and hollow stem intake valves, 16 conventional\n                                                                 hydraulic lifters, all with roller tips\nFuel Injection                                                   Sequential, multi-port, electronic, returnless; Fuel Saver mode\nConstruction                                                     Deep-skirt cast-iron block with cross-bolted main bearing caps,\n                                                                 aluminum alloy heads with hemispherical combustion chambers\nCompression Ratio                                                10.9:1\nPower (SAE net) (hp / kW@rpm)                                    470 hp (354 kW) @ 6,000 rpm\nTorque (SAE net) (lb.-ft. / N•m)                                 470 lb.-ft. (637 N•m) @ 4,300 rpm\nMax. Engine Speed (rpm)                                          6,400 rpm (electronically limited)\nFuel Requirement                                                 Premium 91 octane (R+M)/2 — required\nFuel Tank Capacity (gallons)                                     21.5\nOil Capacity                                                     7 quarts (6.6 liters)\nCoolant Capacity                                                 14 quarts (13.25 liters)\nEmission Controls                                                Dual close-coupled three-way catalytic converters, quad-heated oxygen\n                                                                 sensors and internal engine features\nMax. Gross Trailer Weight                                        3,500 lbs.\nAssembly Plant                                                   Saltillo Engine Plant, Saltillo, Mexico\n\n\n\n\n\n\n2021 JEEP® |  WRANGLER RUBICON 392  |  SPECIFICATIONS                                                                                               |  1",
+      "source_assertion_ref": "FCA_MY2021_Wrangler_392_specifications|sha256:47e6996360a2b44e3a7cae8e36975b63bcd06fab53d8b60f40abec63787faf26|FCA_MY2021_Wrangler_392_specifications|FCA_MY2021_Wrangler_392_specifications-p1",
+      "target_attribute_key": "generic_drive_classification"
+    },
+    {
+      "interpretation_id": "MY2021-JL-4D-2021-08-06|sha256:e6c2aa78fb6c34608dbb28dc4084cf909c444802434fcf32af61eb916a1168c4|MY2021-JL-4D-2021-08-06-JLJX74|JL21-70-engine_cylinders",
+      "mapping_status": "mapped",
+      "normalization_notes": "Explicit guide engine terminology normalized; exact positive QOP binds engine/transmission/grade. No derived aspiration/nonhybrid conclusion is inserted.",
+      "normalized_concept": 8,
+      "raw_source_value": "6.4L V8 SRT         N/C     N/C    8-SPD AUTO           N/C     N/C                                             27X\nHEMI MDS                           8HP75 TRANS\nENGINE (ESG)                       (BUY-GERMANY)\n                                   (DFV)",
+      "source_assertion_ref": "MY2021-JL-4D-2021-08-06|sha256:e6c2aa78fb6c34608dbb28dc4084cf909c444802434fcf32af61eb916a1168c4|MY2021-JL-4D-2021-08-06-JLJX74|MY2021-JL-4D-2021-08-06-JLJX74-engine-0",
+      "target_attribute_key": "engine_cylinders"
+    },
+    {
+      "interpretation_id": "MY2021-JL-4D-2021-08-06|sha256:e6c2aa78fb6c34608dbb28dc4084cf909c444802434fcf32af61eb916a1168c4|MY2021-JL-4D-2021-08-06-JLJX74|JL21-70-engine_displacement_liters",
+      "mapping_status": "mapped",
+      "normalization_notes": "Explicit guide engine terminology normalized; exact positive QOP binds engine/transmission/grade. No derived aspiration/nonhybrid conclusion is inserted.",
+      "normalized_concept": {
+        "normalized_unit": "L",
+        "normalized_value": "6.4",
+        "raw_source_string": "6.4L V8 SRT         N/C     N/C    8-SPD AUTO           N/C     N/C                                             27X\nHEMI MDS                           8HP75 TRANS\nENGINE (ESG)                       (BUY-GERMANY)\n                                   (DFV)"
+      },
+      "raw_source_value": "6.4L V8 SRT         N/C     N/C    8-SPD AUTO           N/C     N/C                                             27X\nHEMI MDS                           8HP75 TRANS\nENGINE (ESG)                       (BUY-GERMANY)\n                                   (DFV)",
+      "source_assertion_ref": "MY2021-JL-4D-2021-08-06|sha256:e6c2aa78fb6c34608dbb28dc4084cf909c444802434fcf32af61eb916a1168c4|MY2021-JL-4D-2021-08-06-JLJX74|MY2021-JL-4D-2021-08-06-JLJX74-engine-0",
+      "target_attribute_key": "engine_displacement_liters"
+    },
+    {
+      "interpretation_id": "MY2021-JL-4D-2021-08-06|sha256:e6c2aa78fb6c34608dbb28dc4084cf909c444802434fcf32af61eb916a1168c4|MY2021-JL-4D-2021-08-06-JLJX74|JL21-70-make",
+      "mapping_status": "mapped",
+      "normalization_notes": "Independent US MY2021 manufacturer document heading; not caller-context evidence.",
+      "normalized_concept": "Jeep",
+      "raw_source_value": "REISSUED: 08/06/2021                                                                                                                                        PAGE: 1           JEEP\nISSUED:      06/04/2020\n\n                                                                      United States\n                                                                               2021                                                                                          WRANGLER\n\n                                                         JEEP        WRANGLER                 4   DOOR\n\n                                                       CUSTOMER PREFERRED CODE GUIDE\n\n\n         MODEL                                                                                                 CODE                  PAGES\n         WRANGLER UNLIMITED SPORT                                                               JLJL74                  2                                                     4\n\n         WRANGLER UNLIMITED SAHARA                                                            JLJP74                  8                                                       DOOR\n\n         WRANGLER UNLIMITED RUBICON                                                           JLJS74                 14\n         WRANGLER UNLIMITED RUBICON 392                                                    JLJX74                 18\n         WRANGLER UNLIMITED SPORT RHD                                                       JLUL74                 21\n         WRANGLER UNLIMITED SAHARA 4XE                                                     JLXP74                 22\n         WRANGLER UNLIMITED RUBICON 4XE                                                   JLXS74                 25\n         GROUP DETAIL                                                                                                                          28\n         STANDARD EQUIPMENT                                                                                                          33\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n         STEP #1: SELECT                                                                                        MODEL CODE\n\n         STEP #2: SELECT                                                                                        QUICK ORDER PACKAGE CODE\n\n         STEP #3: SELECT                                                                                        $ OPTIONS (IF DESIRED)\n\n         STEP #4: SELECT                                                                                        COLOR & TRIM CODES\n\n\n\n\n\n       © 2020 FCA US LLC, All Rights Reserved. IT IS FOR THE USE OF FCA AND ITS AUTHORIZED DEALERS ONLY AND MAY\n                       NOT BE OTHERWISE USED, RELEASED, OR REPRINTED WITHOUT FCA PRIOR PERMISSION.\n\n                             ORDERS ARE ACCEPTED ONLY WHEN VEHICLES ARE SHIPPED BY THE FACTORY.\n                                                          © 2020 FCA US LLC, All Rights Reserved.",
+      "source_assertion_ref": "MY2021-JL-4D-2021-08-06|sha256:e6c2aa78fb6c34608dbb28dc4084cf909c444802434fcf32af61eb916a1168c4|MY2021-JL-4D-2021-08-06-JLJX74|MY2021-JL-4D-2021-08-06-JLJX74-heading",
+      "target_attribute_key": "make"
+    },
+    {
+      "interpretation_id": "MY2021-JL-4D-2021-08-06|sha256:e6c2aa78fb6c34608dbb28dc4084cf909c444802434fcf32af61eb916a1168c4|MY2021-JL-4D-2021-08-06-JLJX74|JL21-70-market",
+      "mapping_status": "mapped",
+      "normalization_notes": "Independent US MY2021 manufacturer document heading; not caller-context evidence.",
+      "normalized_concept": "US",
+      "raw_source_value": "REISSUED: 08/06/2021                                                                                                                                        PAGE: 1           JEEP\nISSUED:      06/04/2020\n\n                                                                      United States\n                                                                               2021                                                                                          WRANGLER\n\n                                                         JEEP        WRANGLER                 4   DOOR\n\n                                                       CUSTOMER PREFERRED CODE GUIDE\n\n\n         MODEL                                                                                                 CODE                  PAGES\n         WRANGLER UNLIMITED SPORT                                                               JLJL74                  2                                                     4\n\n         WRANGLER UNLIMITED SAHARA                                                            JLJP74                  8                                                       DOOR\n\n         WRANGLER UNLIMITED RUBICON                                                           JLJS74                 14\n         WRANGLER UNLIMITED RUBICON 392                                                    JLJX74                 18\n         WRANGLER UNLIMITED SPORT RHD                                                       JLUL74                 21\n         WRANGLER UNLIMITED SAHARA 4XE                                                     JLXP74                 22\n         WRANGLER UNLIMITED RUBICON 4XE                                                   JLXS74                 25\n         GROUP DETAIL                                                                                                                          28\n         STANDARD EQUIPMENT                                                                                                          33\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n         STEP #1: SELECT                                                                                        MODEL CODE\n\n         STEP #2: SELECT                                                                                        QUICK ORDER PACKAGE CODE\n\n         STEP #3: SELECT                                                                                        $ OPTIONS (IF DESIRED)\n\n         STEP #4: SELECT                                                                                        COLOR & TRIM CODES\n\n\n\n\n\n       © 2020 FCA US LLC, All Rights Reserved. IT IS FOR THE USE OF FCA AND ITS AUTHORIZED DEALERS ONLY AND MAY\n                       NOT BE OTHERWISE USED, RELEASED, OR REPRINTED WITHOUT FCA PRIOR PERMISSION.\n\n                             ORDERS ARE ACCEPTED ONLY WHEN VEHICLES ARE SHIPPED BY THE FACTORY.\n                                                          © 2020 FCA US LLC, All Rights Reserved.",
+      "source_assertion_ref": "MY2021-JL-4D-2021-08-06|sha256:e6c2aa78fb6c34608dbb28dc4084cf909c444802434fcf32af61eb916a1168c4|MY2021-JL-4D-2021-08-06-JLJX74|MY2021-JL-4D-2021-08-06-JLJX74-heading",
+      "target_attribute_key": "market"
+    },
+    {
+      "interpretation_id": "MY2021-JL-4D-2021-08-06|sha256:e6c2aa78fb6c34608dbb28dc4084cf909c444802434fcf32af61eb916a1168c4|MY2021-JL-4D-2021-08-06-JLJX74|JL21-70-model",
+      "mapping_status": "mapped",
+      "normalization_notes": "Independent US MY2021 manufacturer document heading; not caller-context evidence.",
+      "normalized_concept": "Wrangler",
+      "raw_source_value": "REISSUED: 08/06/2021                                                                                                                                        PAGE: 1           JEEP\nISSUED:      06/04/2020\n\n                                                                      United States\n                                                                               2021                                                                                          WRANGLER\n\n                                                         JEEP        WRANGLER                 4   DOOR\n\n                                                       CUSTOMER PREFERRED CODE GUIDE\n\n\n         MODEL                                                                                                 CODE                  PAGES\n         WRANGLER UNLIMITED SPORT                                                               JLJL74                  2                                                     4\n\n         WRANGLER UNLIMITED SAHARA                                                            JLJP74                  8                                                       DOOR\n\n         WRANGLER UNLIMITED RUBICON                                                           JLJS74                 14\n         WRANGLER UNLIMITED RUBICON 392                                                    JLJX74                 18\n         WRANGLER UNLIMITED SPORT RHD                                                       JLUL74                 21\n         WRANGLER UNLIMITED SAHARA 4XE                                                     JLXP74                 22\n         WRANGLER UNLIMITED RUBICON 4XE                                                   JLXS74                 25\n         GROUP DETAIL                                                                                                                          28\n         STANDARD EQUIPMENT                                                                                                          33\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n         STEP #1: SELECT                                                                                        MODEL CODE\n\n         STEP #2: SELECT                                                                                        QUICK ORDER PACKAGE CODE\n\n         STEP #3: SELECT                                                                                        $ OPTIONS (IF DESIRED)\n\n         STEP #4: SELECT                                                                                        COLOR & TRIM CODES\n\n\n\n\n\n       © 2020 FCA US LLC, All Rights Reserved. IT IS FOR THE USE OF FCA AND ITS AUTHORIZED DEALERS ONLY AND MAY\n                       NOT BE OTHERWISE USED, RELEASED, OR REPRINTED WITHOUT FCA PRIOR PERMISSION.\n\n                             ORDERS ARE ACCEPTED ONLY WHEN VEHICLES ARE SHIPPED BY THE FACTORY.\n                                                          © 2020 FCA US LLC, All Rights Reserved.",
+      "source_assertion_ref": "MY2021-JL-4D-2021-08-06|sha256:e6c2aa78fb6c34608dbb28dc4084cf909c444802434fcf32af61eb916a1168c4|MY2021-JL-4D-2021-08-06-JLJX74|MY2021-JL-4D-2021-08-06-JLJX74-heading",
+      "target_attribute_key": "model"
+    },
+    {
+      "interpretation_id": "MY2021-JL-4D-2021-08-06|sha256:e6c2aa78fb6c34608dbb28dc4084cf909c444802434fcf32af61eb916a1168c4|MY2021-JL-4D-2021-08-06-JLJX74|JL21-70-model_year",
+      "mapping_status": "mapped",
+      "normalization_notes": "Independent US MY2021 manufacturer document heading; not caller-context evidence.",
+      "normalized_concept": 2021,
+      "raw_source_value": "REISSUED: 08/06/2021                                                                                                                                        PAGE: 1           JEEP\nISSUED:      06/04/2020\n\n                                                                      United States\n                                                                               2021                                                                                          WRANGLER\n\n                                                         JEEP        WRANGLER                 4   DOOR\n\n                                                       CUSTOMER PREFERRED CODE GUIDE\n\n\n         MODEL                                                                                                 CODE                  PAGES\n         WRANGLER UNLIMITED SPORT                                                               JLJL74                  2                                                     4\n\n         WRANGLER UNLIMITED SAHARA                                                            JLJP74                  8                                                       DOOR\n\n         WRANGLER UNLIMITED RUBICON                                                           JLJS74                 14\n         WRANGLER UNLIMITED RUBICON 392                                                    JLJX74                 18\n         WRANGLER UNLIMITED SPORT RHD                                                       JLUL74                 21\n         WRANGLER UNLIMITED SAHARA 4XE                                                     JLXP74                 22\n         WRANGLER UNLIMITED RUBICON 4XE                                                   JLXS74                 25\n         GROUP DETAIL                                                                                                                          28\n         STANDARD EQUIPMENT                                                                                                          33\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n         STEP #1: SELECT                                                                                        MODEL CODE\n\n         STEP #2: SELECT                                                                                        QUICK ORDER PACKAGE CODE\n\n         STEP #3: SELECT                                                                                        $ OPTIONS (IF DESIRED)\n\n         STEP #4: SELECT                                                                                        COLOR & TRIM CODES\n\n\n\n\n\n       © 2020 FCA US LLC, All Rights Reserved. IT IS FOR THE USE OF FCA AND ITS AUTHORIZED DEALERS ONLY AND MAY\n                       NOT BE OTHERWISE USED, RELEASED, OR REPRINTED WITHOUT FCA PRIOR PERMISSION.\n\n                             ORDERS ARE ACCEPTED ONLY WHEN VEHICLES ARE SHIPPED BY THE FACTORY.\n                                                          © 2020 FCA US LLC, All Rights Reserved.",
+      "source_assertion_ref": "MY2021-JL-4D-2021-08-06|sha256:e6c2aa78fb6c34608dbb28dc4084cf909c444802434fcf32af61eb916a1168c4|MY2021-JL-4D-2021-08-06-JLJX74|MY2021-JL-4D-2021-08-06-JLJX74-heading",
+      "target_attribute_key": "model_year"
+    },
+    {
+      "interpretation_id": "MY2021-JL-4D-2021-08-06|sha256:e6c2aa78fb6c34608dbb28dc4084cf909c444802434fcf32af61eb916a1168c4|MY2021-JL-4D-2021-08-06-JLJX74|JL21-70-trim",
+      "mapping_status": "mapped",
+      "normalization_notes": "Owner-approved body-aware marketed-grade normalization from exact manufacturer family heading and column/QOP locator; not a verbatim concatenated source quote.",
+      "normalized_concept": "Unlimited Rubicon 392",
+      "raw_source_value": "ENGINE              $FWP   $MSRP   TRANSMISSION        $FWP    $MSRP\n6.4L V8 SRT         N/C     N/C    8-SPD AUTO           N/C     N/C                                             27X\nHEMI MDS                           8HP75 TRANS\nENGINE (ESG)                       (BUY-GERMANY)\n                                   (DFV)",
+      "source_assertion_ref": "MY2021-JL-4D-2021-08-06|sha256:e6c2aa78fb6c34608dbb28dc4084cf909c444802434fcf32af61eb916a1168c4|MY2021-JL-4D-2021-08-06-JLJX74|MY2021-JL-4D-2021-08-06-JLJX74-table",
+      "target_attribute_key": "trim"
+    }
+  ],
+  "normalized_technical_details": {
+    "drivetrain_details": {
+      "generic_classification": "4WD"
+    },
+    "engine": {
+      "cylinders": 8,
+      "displacement": {
+        "normalized_unit": "L",
+        "normalized_value": "6.4",
+        "raw_source_string": "6.4L V8 SRT         N/C     N/C    8-SPD AUTO           N/C     N/C                                             27X\nHEMI MDS                           8HP75 TRANS\nENGINE (ESG)                       (BUY-GERMANY)\n                                   (DFV)"
+      }
+    }
+  },
+  "reconciliation_and_review": {
+    "attribute_states": {
+      "engine_cylinders": {
+        "reconciliation_state": "single_source",
+        "review_disposition": "not_required"
+      },
+      "engine_displacement_liters": {
+        "reconciliation_state": "single_source",
+        "review_disposition": "not_required"
+      },
+      "generic_drive_classification": {
+        "reconciliation_state": "single_source",
+        "review_disposition": "not_required"
+      },
+      "make": {
+        "reconciliation_state": "single_source",
+        "review_disposition": "not_required"
+      },
+      "model": {
+        "reconciliation_state": "single_source",
+        "review_disposition": "not_required"
+      },
+      "model_year": {
+        "reconciliation_state": "single_source",
+        "review_disposition": "not_required"
+      }
+    },
+    "requires_human_review": false,
+    "review_workflow_disposition": "not_required"
+  },
+  "research_revision_lineage": {
+    "applicable_package_page_locators": [
+      {
+        "pdf_page_1_based": 1,
+        "source_id": "MY2021-JL-4D-2020-12-04",
+        "source_sha256": "sha256:4dad5bddad4fbd0c0e2bab5095734c9f740e9c0e53d67de64df30b41576ada5a"
+      },
+      {
+        "pdf_page_1_based": 17,
+        "source_id": "MY2021-JL-4D-2020-12-04",
+        "source_sha256": "sha256:4dad5bddad4fbd0c0e2bab5095734c9f740e9c0e53d67de64df30b41576ada5a"
+      },
+      {
+        "pdf_page_1_based": 25,
+        "source_id": "MY2021-JL-4D-2020-12-04",
+        "source_sha256": "sha256:4dad5bddad4fbd0c0e2bab5095734c9f740e9c0e53d67de64df30b41576ada5a"
+      },
+      {
+        "pdf_page_1_based": 26,
+        "source_id": "MY2021-JL-4D-2020-12-04",
+        "source_sha256": "sha256:4dad5bddad4fbd0c0e2bab5095734c9f740e9c0e53d67de64df30b41576ada5a"
+      },
+      {
+        "pdf_page_1_based": 27,
+        "source_id": "MY2021-JL-4D-2020-12-04",
+        "source_sha256": "sha256:4dad5bddad4fbd0c0e2bab5095734c9f740e9c0e53d67de64df30b41576ada5a"
+      },
+      {
+        "pdf_page_1_based": 28,
+        "source_id": "MY2021-JL-4D-2020-12-04",
+        "source_sha256": "sha256:4dad5bddad4fbd0c0e2bab5095734c9f740e9c0e53d67de64df30b41576ada5a"
+      },
+      {
+        "pdf_page_1_based": 1,
+        "source_id": "MY2021-JL-4D-2021-01-01",
+        "source_sha256": "sha256:d0d2e4d1cf0e18f4ca5be3092d0625a2810fae009afefd97a603149ce53ab568"
+      },
+      {
+        "pdf_page_1_based": 17,
+        "source_id": "MY2021-JL-4D-2021-01-01",
+        "source_sha256": "sha256:d0d2e4d1cf0e18f4ca5be3092d0625a2810fae009afefd97a603149ce53ab568"
+      },
+      {
+        "pdf_page_1_based": 26,
+        "source_id": "MY2021-JL-4D-2021-01-01",
+        "source_sha256": "sha256:d0d2e4d1cf0e18f4ca5be3092d0625a2810fae009afefd97a603149ce53ab568"
+      },
+      {
+        "pdf_page_1_based": 27,
+        "source_id": "MY2021-JL-4D-2021-01-01",
+        "source_sha256": "sha256:d0d2e4d1cf0e18f4ca5be3092d0625a2810fae009afefd97a603149ce53ab568"
+      },
+      {
+        "pdf_page_1_based": 28,
+        "source_id": "MY2021-JL-4D-2021-01-01",
+        "source_sha256": "sha256:d0d2e4d1cf0e18f4ca5be3092d0625a2810fae009afefd97a603149ce53ab568"
+      },
+      {
+        "pdf_page_1_based": 29,
+        "source_id": "MY2021-JL-4D-2021-01-01",
+        "source_sha256": "sha256:d0d2e4d1cf0e18f4ca5be3092d0625a2810fae009afefd97a603149ce53ab568"
+      },
+      {
+        "pdf_page_1_based": 1,
+        "source_id": "MY2021-JL-4D-2021-02-09",
+        "source_sha256": "sha256:2fa3c481460efa71f1036638c3f0929c2eca3eb91bd97a0eb87c0bbd3cfdcc9d"
+      },
+      {
+        "pdf_page_1_based": 18,
+        "source_id": "MY2021-JL-4D-2021-02-09",
+        "source_sha256": "sha256:2fa3c481460efa71f1036638c3f0929c2eca3eb91bd97a0eb87c0bbd3cfdcc9d"
+      },
+      {
+        "pdf_page_1_based": 27,
+        "source_id": "MY2021-JL-4D-2021-02-09",
+        "source_sha256": "sha256:2fa3c481460efa71f1036638c3f0929c2eca3eb91bd97a0eb87c0bbd3cfdcc9d"
+      },
+      {
+        "pdf_page_1_based": 28,
+        "source_id": "MY2021-JL-4D-2021-02-09",
+        "source_sha256": "sha256:2fa3c481460efa71f1036638c3f0929c2eca3eb91bd97a0eb87c0bbd3cfdcc9d"
+      },
+      {
+        "pdf_page_1_based": 29,
+        "source_id": "MY2021-JL-4D-2021-02-09",
+        "source_sha256": "sha256:2fa3c481460efa71f1036638c3f0929c2eca3eb91bd97a0eb87c0bbd3cfdcc9d"
+      },
+      {
+        "pdf_page_1_based": 30,
+        "source_id": "MY2021-JL-4D-2021-02-09",
+        "source_sha256": "sha256:2fa3c481460efa71f1036638c3f0929c2eca3eb91bd97a0eb87c0bbd3cfdcc9d"
+      },
+      {
+        "pdf_page_1_based": 1,
+        "source_id": "MY2021-JL-4D-2021-03-05",
+        "source_sha256": "sha256:37cd4e33d30f54bb7d46940533a691312c5b8b4da22faee583a10fe5c9feaebb"
+      },
+      {
+        "pdf_page_1_based": 18,
+        "source_id": "MY2021-JL-4D-2021-03-05",
+        "source_sha256": "sha256:37cd4e33d30f54bb7d46940533a691312c5b8b4da22faee583a10fe5c9feaebb"
+      },
+      {
+        "pdf_page_1_based": 27,
+        "source_id": "MY2021-JL-4D-2021-03-05",
+        "source_sha256": "sha256:37cd4e33d30f54bb7d46940533a691312c5b8b4da22faee583a10fe5c9feaebb"
+      },
+      {
+        "pdf_page_1_based": 28,
+        "source_id": "MY2021-JL-4D-2021-03-05",
+        "source_sha256": "sha256:37cd4e33d30f54bb7d46940533a691312c5b8b4da22faee583a10fe5c9feaebb"
+      },
+      {
+        "pdf_page_1_based": 29,
+        "source_id": "MY2021-JL-4D-2021-03-05",
+        "source_sha256": "sha256:37cd4e33d30f54bb7d46940533a691312c5b8b4da22faee583a10fe5c9feaebb"
+      },
+      {
+        "pdf_page_1_based": 30,
+        "source_id": "MY2021-JL-4D-2021-03-05",
+        "source_sha256": "sha256:37cd4e33d30f54bb7d46940533a691312c5b8b4da22faee583a10fe5c9feaebb"
+      },
+      {
+        "pdf_page_1_based": 1,
+        "source_id": "MY2021-JL-4D-2021-04-14",
+        "source_sha256": "sha256:d748a277a6cd23a6a7fbb744fa0b24d9c980b21bef9ce4a3fb993c44c9093179"
+      },
+      {
+        "pdf_page_1_based": 19,
+        "source_id": "MY2021-JL-4D-2021-04-14",
+        "source_sha256": "sha256:d748a277a6cd23a6a7fbb744fa0b24d9c980b21bef9ce4a3fb993c44c9093179"
+      },
+      {
+        "pdf_page_1_based": 27,
+        "source_id": "MY2021-JL-4D-2021-04-14",
+        "source_sha256": "sha256:d748a277a6cd23a6a7fbb744fa0b24d9c980b21bef9ce4a3fb993c44c9093179"
+      },
+      {
+        "pdf_page_1_based": 28,
+        "source_id": "MY2021-JL-4D-2021-04-14",
+        "source_sha256": "sha256:d748a277a6cd23a6a7fbb744fa0b24d9c980b21bef9ce4a3fb993c44c9093179"
+      },
+      {
+        "pdf_page_1_based": 29,
+        "source_id": "MY2021-JL-4D-2021-04-14",
+        "source_sha256": "sha256:d748a277a6cd23a6a7fbb744fa0b24d9c980b21bef9ce4a3fb993c44c9093179"
+      },
+      {
+        "pdf_page_1_based": 30,
+        "source_id": "MY2021-JL-4D-2021-04-14",
+        "source_sha256": "sha256:d748a277a6cd23a6a7fbb744fa0b24d9c980b21bef9ce4a3fb993c44c9093179"
+      },
+      {
+        "pdf_page_1_based": 31,
+        "source_id": "MY2021-JL-4D-2021-04-14",
+        "source_sha256": "sha256:d748a277a6cd23a6a7fbb744fa0b24d9c980b21bef9ce4a3fb993c44c9093179"
+      },
+      {
+        "pdf_page_1_based": 1,
+        "source_id": "MY2021-JL-4D-2021-05-14",
+        "source_sha256": "sha256:086c2e9728515750fbb0f31a425c831b448bd99e02831cf3365452694594e2d1"
+      },
+      {
+        "pdf_page_1_based": 19,
+        "source_id": "MY2021-JL-4D-2021-05-14",
+        "source_sha256": "sha256:086c2e9728515750fbb0f31a425c831b448bd99e02831cf3365452694594e2d1"
+      },
+      {
+        "pdf_page_1_based": 28,
+        "source_id": "MY2021-JL-4D-2021-05-14",
+        "source_sha256": "sha256:086c2e9728515750fbb0f31a425c831b448bd99e02831cf3365452694594e2d1"
+      },
+      {
+        "pdf_page_1_based": 29,
+        "source_id": "MY2021-JL-4D-2021-05-14",
+        "source_sha256": "sha256:086c2e9728515750fbb0f31a425c831b448bd99e02831cf3365452694594e2d1"
+      },
+      {
+        "pdf_page_1_based": 30,
+        "source_id": "MY2021-JL-4D-2021-05-14",
+        "source_sha256": "sha256:086c2e9728515750fbb0f31a425c831b448bd99e02831cf3365452694594e2d1"
+      },
+      {
+        "pdf_page_1_based": 31,
+        "source_id": "MY2021-JL-4D-2021-05-14",
+        "source_sha256": "sha256:086c2e9728515750fbb0f31a425c831b448bd99e02831cf3365452694594e2d1"
+      },
+      {
+        "pdf_page_1_based": 32,
+        "source_id": "MY2021-JL-4D-2021-05-14",
+        "source_sha256": "sha256:086c2e9728515750fbb0f31a425c831b448bd99e02831cf3365452694594e2d1"
+      },
+      {
+        "pdf_page_1_based": 1,
+        "source_id": "MY2021-JL-4D-2021-06-09",
+        "source_sha256": "sha256:c531aa9316c46520de25eebd81c9a27d0a547651f10eea467f74a95c71e246ae"
+      },
+      {
+        "pdf_page_1_based": 20,
+        "source_id": "MY2021-JL-4D-2021-06-09",
+        "source_sha256": "sha256:c531aa9316c46520de25eebd81c9a27d0a547651f10eea467f74a95c71e246ae"
+      },
+      {
+        "pdf_page_1_based": 29,
+        "source_id": "MY2021-JL-4D-2021-06-09",
+        "source_sha256": "sha256:c531aa9316c46520de25eebd81c9a27d0a547651f10eea467f74a95c71e246ae"
+      },
+      {
+        "pdf_page_1_based": 30,
+        "source_id": "MY2021-JL-4D-2021-06-09",
+        "source_sha256": "sha256:c531aa9316c46520de25eebd81c9a27d0a547651f10eea467f74a95c71e246ae"
+      },
+      {
+        "pdf_page_1_based": 31,
+        "source_id": "MY2021-JL-4D-2021-06-09",
+        "source_sha256": "sha256:c531aa9316c46520de25eebd81c9a27d0a547651f10eea467f74a95c71e246ae"
+      },
+      {
+        "pdf_page_1_based": 32,
+        "source_id": "MY2021-JL-4D-2021-06-09",
+        "source_sha256": "sha256:c531aa9316c46520de25eebd81c9a27d0a547651f10eea467f74a95c71e246ae"
+      },
+      {
+        "pdf_page_1_based": 33,
+        "source_id": "MY2021-JL-4D-2021-06-09",
+        "source_sha256": "sha256:c531aa9316c46520de25eebd81c9a27d0a547651f10eea467f74a95c71e246ae"
+      },
+      {
+        "pdf_page_1_based": 1,
+        "source_id": "MY2021-JL-4D-2021-07-06",
+        "source_sha256": "sha256:341f1b6f4a5ac774a082bf07a6df0f7c9ebc018272b7da3ff880b67844c93271"
+      },
+      {
+        "pdf_page_1_based": 19,
+        "source_id": "MY2021-JL-4D-2021-07-06",
+        "source_sha256": "sha256:341f1b6f4a5ac774a082bf07a6df0f7c9ebc018272b7da3ff880b67844c93271"
+      },
+      {
+        "pdf_page_1_based": 28,
+        "source_id": "MY2021-JL-4D-2021-07-06",
+        "source_sha256": "sha256:341f1b6f4a5ac774a082bf07a6df0f7c9ebc018272b7da3ff880b67844c93271"
+      },
+      {
+        "pdf_page_1_based": 29,
+        "source_id": "MY2021-JL-4D-2021-07-06",
+        "source_sha256": "sha256:341f1b6f4a5ac774a082bf07a6df0f7c9ebc018272b7da3ff880b67844c93271"
+      },
+      {
+        "pdf_page_1_based": 30,
+        "source_id": "MY2021-JL-4D-2021-07-06",
+        "source_sha256": "sha256:341f1b6f4a5ac774a082bf07a6df0f7c9ebc018272b7da3ff880b67844c93271"
+      },
+      {
+        "pdf_page_1_based": 31,
+        "source_id": "MY2021-JL-4D-2021-07-06",
+        "source_sha256": "sha256:341f1b6f4a5ac774a082bf07a6df0f7c9ebc018272b7da3ff880b67844c93271"
+      },
+      {
+        "pdf_page_1_based": 32,
+        "source_id": "MY2021-JL-4D-2021-07-06",
+        "source_sha256": "sha256:341f1b6f4a5ac774a082bf07a6df0f7c9ebc018272b7da3ff880b67844c93271"
+      },
+      {
+        "pdf_page_1_based": 1,
+        "source_id": "MY2021-JL-4D-2021-08-06",
+        "source_sha256": "sha256:e6c2aa78fb6c34608dbb28dc4084cf909c444802434fcf32af61eb916a1168c4"
+      },
+      {
+        "pdf_page_1_based": 19,
+        "source_id": "MY2021-JL-4D-2021-08-06",
+        "source_sha256": "sha256:e6c2aa78fb6c34608dbb28dc4084cf909c444802434fcf32af61eb916a1168c4"
+      },
+      {
+        "pdf_page_1_based": 28,
+        "source_id": "MY2021-JL-4D-2021-08-06",
+        "source_sha256": "sha256:e6c2aa78fb6c34608dbb28dc4084cf909c444802434fcf32af61eb916a1168c4"
+      },
+      {
+        "pdf_page_1_based": 29,
+        "source_id": "MY2021-JL-4D-2021-08-06",
+        "source_sha256": "sha256:e6c2aa78fb6c34608dbb28dc4084cf909c444802434fcf32af61eb916a1168c4"
+      },
+      {
+        "pdf_page_1_based": 30,
+        "source_id": "MY2021-JL-4D-2021-08-06",
+        "source_sha256": "sha256:e6c2aa78fb6c34608dbb28dc4084cf909c444802434fcf32af61eb916a1168c4"
+      },
+      {
+        "pdf_page_1_based": 31,
+        "source_id": "MY2021-JL-4D-2021-08-06",
+        "source_sha256": "sha256:e6c2aa78fb6c34608dbb28dc4084cf909c444802434fcf32af61eb916a1168c4"
+      },
+      {
+        "pdf_page_1_based": 32,
+        "source_id": "MY2021-JL-4D-2021-08-06",
+        "source_sha256": "sha256:e6c2aa78fb6c34608dbb28dc4084cf909c444802434fcf32af61eb916a1168c4"
+      }
+    ],
+    "approval_authority": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/authorization.json",
+    "fuel_validation_limitation": "Reviewed gasoline normalization cannot pass unchanged premium-octane direct-source predicate; fuel_type deliberately null",
+    "manufacturer_column_labels_or_locators": [
+      "single offering, QOP 27X"
+    ],
+    "manufacturer_model_heading_exact": "WRANGLER UNLIMITED RUBICON 392",
+    "normalization_notice": "Full marketed designation is model-heading plus column-label context; normalized display name is not presented as a verbatim full source name. 80TH expansion is a normalization proposal.",
+    "normalized_display_name": "Unlimited Rubicon 392",
+    "package_inventory": "docs/implementation/handoffs/MY2021_JL/factory_package_availability_excerpts.json",
+    "package_inventory_sha256": "sha256:06d1d0bf025ce8c9fcccd787eae86b34ed03af52599d1dfce46952782f55c115",
+    "positive_QOP_observations": [
+      {
+        "body_style": "4-door",
+        "engine_code": "ESG",
+        "excerpt_id": "MY2021-JL-4D-2020-12-04-p17",
+        "manufacturer_engine_segment": "6.4L V8 SRT HEMI MDS ENGINE          8-SPD AUTO 8HP75 TRANS                                                 27X\n(ESG)                                (BUY-GERMANY) (DFV)",
+        "marketed_trim_proposal": "Unlimited Rubicon 392",
+        "model_code": "JLJX74",
+        "pdf_page_1_based": 17,
+        "quick_order_package": "27X",
+        "revision_date_printed": "2020-12-04",
+        "scope_status": "proposed_consumer_scope",
+        "source_id": "MY2021-JL-4D-2020-12-04",
+        "source_sha256": "sha256:4dad5bddad4fbd0c0e2bab5095734c9f740e9c0e53d67de64df30b41576ada5a",
+        "transmission_code": "DFV"
+      },
+      {
+        "body_style": "4-door",
+        "engine_code": "ESG",
+        "excerpt_id": "MY2021-JL-4D-2021-01-01-p17",
+        "manufacturer_engine_segment": "6.4L V8 SRT HEMI MDS ENGINE          8-SPD AUTO 8HP75 TRANS                                                 27X\n(ESG)                                (BUY-GERMANY) (DFV)",
+        "marketed_trim_proposal": "Unlimited Rubicon 392",
+        "model_code": "JLJX74",
+        "pdf_page_1_based": 17,
+        "quick_order_package": "27X",
+        "revision_date_printed": "2021-01-01",
+        "scope_status": "proposed_consumer_scope",
+        "source_id": "MY2021-JL-4D-2021-01-01",
+        "source_sha256": "sha256:d0d2e4d1cf0e18f4ca5be3092d0625a2810fae009afefd97a603149ce53ab568",
+        "transmission_code": "DFV"
+      },
+      {
+        "body_style": "4-door",
+        "engine_code": "ESG",
+        "excerpt_id": "MY2021-JL-4D-2021-02-09-p18",
+        "manufacturer_engine_segment": "6.4L V8 SRT HEMI MDS ENGINE          8-SPD AUTO 8HP75 TRANS                                                 27X\n(ESG)                                (BUY-GERMANY) (DFV)",
+        "marketed_trim_proposal": "Unlimited Rubicon 392",
+        "model_code": "JLJX74",
+        "pdf_page_1_based": 18,
+        "quick_order_package": "27X",
+        "revision_date_printed": "2021-02-09",
+        "scope_status": "proposed_consumer_scope",
+        "source_id": "MY2021-JL-4D-2021-02-09",
+        "source_sha256": "sha256:2fa3c481460efa71f1036638c3f0929c2eca3eb91bd97a0eb87c0bbd3cfdcc9d",
+        "transmission_code": "DFV"
+      },
+      {
+        "body_style": "4-door",
+        "engine_code": "ESG",
+        "excerpt_id": "MY2021-JL-4D-2021-03-05-p17",
+        "manufacturer_engine_segment": "6.4L V8 SRT         N/C     N/C    8-SPD AUTO           N/C     N/C                                             27X\nHEMI MDS                           8HP75 TRANS\nENGINE (ESG)                       (BUY-GERMANY)\n                                   (DFV)",
+        "marketed_trim_proposal": "Unlimited Rubicon 392",
+        "model_code": "JLJX74",
+        "pdf_page_1_based": 17,
+        "quick_order_package": "27X",
+        "revision_date_printed": "2021-03-05",
+        "scope_status": "proposed_consumer_scope",
+        "source_id": "MY2021-JL-4D-2021-03-05",
+        "source_sha256": "sha256:37cd4e33d30f54bb7d46940533a691312c5b8b4da22faee583a10fe5c9feaebb",
+        "transmission_code": "DFV"
+      },
+      {
+        "body_style": "4-door",
+        "engine_code": "ESG",
+        "excerpt_id": "MY2021-JL-4D-2021-04-14-p18",
+        "manufacturer_engine_segment": "6.4L V8 SRT         N/C     N/C    8-SPD AUTO           N/C     N/C                                             27X\nHEMI MDS                           8HP75 TRANS\nENGINE (ESG)                       (BUY-GERMANY)\n                                   (DFV)",
+        "marketed_trim_proposal": "Unlimited Rubicon 392",
+        "model_code": "JLJX74",
+        "pdf_page_1_based": 18,
+        "quick_order_package": "27X",
+        "revision_date_printed": "2021-04-14",
+        "scope_status": "proposed_consumer_scope",
+        "source_id": "MY2021-JL-4D-2021-04-14",
+        "source_sha256": "sha256:d748a277a6cd23a6a7fbb744fa0b24d9c980b21bef9ce4a3fb993c44c9093179",
+        "transmission_code": "DFV"
+      },
+      {
+        "body_style": "4-door",
+        "engine_code": "ESG",
+        "excerpt_id": "MY2021-JL-4D-2021-05-14-p18",
+        "manufacturer_engine_segment": "6.4L V8 SRT         N/C     N/C    8-SPD AUTO           N/C     N/C                                             27X\nHEMI MDS                           8HP75 TRANS\nENGINE (ESG)                       (BUY-GERMANY)\n                                   (DFV)",
+        "marketed_trim_proposal": "Unlimited Rubicon 392",
+        "model_code": "JLJX74",
+        "pdf_page_1_based": 18,
+        "quick_order_package": "27X",
+        "revision_date_printed": "2021-05-14",
+        "scope_status": "proposed_consumer_scope",
+        "source_id": "MY2021-JL-4D-2021-05-14",
+        "source_sha256": "sha256:086c2e9728515750fbb0f31a425c831b448bd99e02831cf3365452694594e2d1",
+        "transmission_code": "DFV"
+      },
+      {
+        "body_style": "4-door",
+        "engine_code": "ESG",
+        "excerpt_id": "MY2021-JL-4D-2021-06-09-p19",
+        "manufacturer_engine_segment": "6.4L V8 SRT         N/C     N/C    8-SPD AUTO           N/C     N/C                                             27X\nHEMI MDS                           8HP75 TRANS\nENGINE (ESG)                       (BUY-GERMANY)\n                                   (DFV)",
+        "marketed_trim_proposal": "Unlimited Rubicon 392",
+        "model_code": "JLJX74",
+        "pdf_page_1_based": 19,
+        "quick_order_package": "27X",
+        "revision_date_printed": "2021-06-09",
+        "scope_status": "proposed_consumer_scope",
+        "source_id": "MY2021-JL-4D-2021-06-09",
+        "source_sha256": "sha256:c531aa9316c46520de25eebd81c9a27d0a547651f10eea467f74a95c71e246ae",
+        "transmission_code": "DFV"
+      },
+      {
+        "body_style": "4-door",
+        "engine_code": "ESG",
+        "excerpt_id": "MY2021-JL-4D-2021-07-06-p18",
+        "manufacturer_engine_segment": "6.4L V8 SRT         N/C     N/C    8-SPD AUTO           N/C     N/C                                             27X\nHEMI MDS                           8HP75 TRANS\nENGINE (ESG)                       (BUY-GERMANY)\n                                   (DFV)",
+        "marketed_trim_proposal": "Unlimited Rubicon 392",
+        "model_code": "JLJX74",
+        "pdf_page_1_based": 18,
+        "quick_order_package": "27X",
+        "revision_date_printed": "2021-07-06",
+        "scope_status": "proposed_consumer_scope",
+        "source_id": "MY2021-JL-4D-2021-07-06",
+        "source_sha256": "sha256:341f1b6f4a5ac774a082bf07a6df0f7c9ebc018272b7da3ff880b67844c93271",
+        "transmission_code": "DFV"
+      },
+      {
+        "body_style": "4-door",
+        "engine_code": "ESG",
+        "excerpt_id": "MY2021-JL-4D-2021-08-06-p18",
+        "manufacturer_engine_segment": "6.4L V8 SRT         N/C     N/C    8-SPD AUTO           N/C     N/C                                             27X\nHEMI MDS                           8HP75 TRANS\nENGINE (ESG)                       (BUY-GERMANY)\n                                   (DFV)",
+        "marketed_trim_proposal": "Unlimited Rubicon 392",
+        "model_code": "JLJX74",
+        "pdf_page_1_based": 18,
+        "quick_order_package": "27X",
+        "revision_date_printed": "2021-08-06",
+        "scope_status": "proposed_consumer_scope",
+        "source_id": "MY2021-JL-4D-2021-08-06",
+        "source_sha256": "sha256:e6c2aa78fb6c34608dbb28dc4084cf909c444802434fcf32af61eb916a1168c4",
+        "transmission_code": "DFV"
+      }
+    ],
+    "research_matrix": "docs/implementation/handoffs/MY2021_JL/preliminary_factory_offerings.json",
+    "research_matrix_sha256": "sha256:691b242e773b214a1bdf0f752e5173f6fa04438bf0b5cdfb76681357fa82389d",
+    "research_row": {
+      "availability_notice": "First/last observed guide dates, not production start/end dates.",
+      "body_style": "4-door",
+      "engine_code": "ESG",
+      "engine_transmission_pairings": [
+        "ESG/DFV"
+      ],
+      "excerpt_ids": [
+        "MY2021-JL-4D-2020-12-04-p17",
+        "MY2021-JL-4D-2021-01-01-p17",
+        "MY2021-JL-4D-2021-02-09-p18",
+        "MY2021-JL-4D-2021-03-05-p17",
+        "MY2021-JL-4D-2021-04-14-p18",
+        "MY2021-JL-4D-2021-05-14-p18",
+        "MY2021-JL-4D-2021-06-09-p19",
+        "MY2021-JL-4D-2021-07-06-p18",
+        "MY2021-JL-4D-2021-08-06-p18"
+      ],
+      "first_observed_revision": "2020-12-04",
+      "guide_source_ids": [
+        "MY2021-JL-4D-2020-12-04",
+        "MY2021-JL-4D-2021-01-01",
+        "MY2021-JL-4D-2021-02-09",
+        "MY2021-JL-4D-2021-03-05",
+        "MY2021-JL-4D-2021-04-14",
+        "MY2021-JL-4D-2021-05-14",
+        "MY2021-JL-4D-2021-06-09",
+        "MY2021-JL-4D-2021-07-06",
+        "MY2021-JL-4D-2021-08-06"
+      ],
+      "last_observed_revision": "2021-08-06",
+      "market": "US",
+      "marketed_trim_proposal": "Unlimited Rubicon 392",
+      "model_code": "JLJX74",
+      "model_year": 2021,
+      "positive_observations": 9,
+      "quick_order_packages": [
+        "27X"
+      ],
+      "research_row_id": "JL21-70",
+      "research_row_sha256": "sha256:66a2c87edc7658643ddb7a7ab77f524065b81d15b20763e473dbcafbb0e13f4a",
+      "review_scope": "proposed_for_later_construction_after_owner_approval",
+      "scope_status": "proposed_consumer_scope"
+    }
+  },
+  "source_configuration_identities": [
+    {
+      "identity_type": "record_id",
+      "native_identifier": "FCA_MY2021_Wrangler_392_specifications",
+      "source_description": "FCA_MY2021_Wrangler_392_specifications record_id FCA_MY2021_Wrangler_392_specifications",
+      "source_id": "FCA_MY2021_Wrangler_392_specifications"
+    },
+    {
+      "identity_type": "record_id",
+      "native_identifier": "MY2021-manual-fuel-hardware",
+      "source_description": "Jeep_MY2021_US_owners_manual record_id MY2021-manual-fuel-hardware",
+      "source_id": "Jeep_MY2021_US_owners_manual"
+    },
+    {
+      "identity_type": "record_id",
+      "native_identifier": "MY2021-JL-4D-2020-12-04-JLJX74",
+      "source_description": "MY2021-JL-4D-2020-12-04 record_id MY2021-JL-4D-2020-12-04-JLJX74",
+      "source_id": "MY2021-JL-4D-2020-12-04"
+    },
+    {
+      "identity_type": "record_id",
+      "native_identifier": "MY2021-JL-4D-2020-12-04-package-p17",
+      "source_description": "MY2021-JL-4D-2020-12-04 record_id MY2021-JL-4D-2020-12-04-package-p17",
+      "source_id": "MY2021-JL-4D-2020-12-04"
+    },
+    {
+      "identity_type": "record_id",
+      "native_identifier": "MY2021-JL-4D-2021-01-01-JLJX74",
+      "source_description": "MY2021-JL-4D-2021-01-01 record_id MY2021-JL-4D-2021-01-01-JLJX74",
+      "source_id": "MY2021-JL-4D-2021-01-01"
+    },
+    {
+      "identity_type": "record_id",
+      "native_identifier": "MY2021-JL-4D-2021-01-01-package-p17",
+      "source_description": "MY2021-JL-4D-2021-01-01 record_id MY2021-JL-4D-2021-01-01-package-p17",
+      "source_id": "MY2021-JL-4D-2021-01-01"
+    },
+    {
+      "identity_type": "record_id",
+      "native_identifier": "MY2021-JL-4D-2021-02-09-JLJX74",
+      "source_description": "MY2021-JL-4D-2021-02-09 record_id MY2021-JL-4D-2021-02-09-JLJX74",
+      "source_id": "MY2021-JL-4D-2021-02-09"
+    },
+    {
+      "identity_type": "record_id",
+      "native_identifier": "MY2021-JL-4D-2021-02-09-package-p18",
+      "source_description": "MY2021-JL-4D-2021-02-09 record_id MY2021-JL-4D-2021-02-09-package-p18",
+      "source_id": "MY2021-JL-4D-2021-02-09"
+    },
+    {
+      "identity_type": "record_id",
+      "native_identifier": "MY2021-JL-4D-2021-03-05-JLJX74",
+      "source_description": "MY2021-JL-4D-2021-03-05 record_id MY2021-JL-4D-2021-03-05-JLJX74",
+      "source_id": "MY2021-JL-4D-2021-03-05"
+    },
+    {
+      "identity_type": "record_id",
+      "native_identifier": "MY2021-JL-4D-2021-03-05-package-p18",
+      "source_description": "MY2021-JL-4D-2021-03-05 record_id MY2021-JL-4D-2021-03-05-package-p18",
+      "source_id": "MY2021-JL-4D-2021-03-05"
+    },
+    {
+      "identity_type": "record_id",
+      "native_identifier": "MY2021-JL-4D-2021-04-14-JLJX74",
+      "source_description": "MY2021-JL-4D-2021-04-14 record_id MY2021-JL-4D-2021-04-14-JLJX74",
+      "source_id": "MY2021-JL-4D-2021-04-14"
+    },
+    {
+      "identity_type": "record_id",
+      "native_identifier": "MY2021-JL-4D-2021-04-14-package-p19",
+      "source_description": "MY2021-JL-4D-2021-04-14 record_id MY2021-JL-4D-2021-04-14-package-p19",
+      "source_id": "MY2021-JL-4D-2021-04-14"
+    },
+    {
+      "identity_type": "record_id",
+      "native_identifier": "MY2021-JL-4D-2021-05-14-JLJX74",
+      "source_description": "MY2021-JL-4D-2021-05-14 record_id MY2021-JL-4D-2021-05-14-JLJX74",
+      "source_id": "MY2021-JL-4D-2021-05-14"
+    },
+    {
+      "identity_type": "record_id",
+      "native_identifier": "MY2021-JL-4D-2021-05-14-package-p19",
+      "source_description": "MY2021-JL-4D-2021-05-14 record_id MY2021-JL-4D-2021-05-14-package-p19",
+      "source_id": "MY2021-JL-4D-2021-05-14"
+    },
+    {
+      "identity_type": "record_id",
+      "native_identifier": "MY2021-JL-4D-2021-06-09-JLJX74",
+      "source_description": "MY2021-JL-4D-2021-06-09 record_id MY2021-JL-4D-2021-06-09-JLJX74",
+      "source_id": "MY2021-JL-4D-2021-06-09"
+    },
+    {
+      "identity_type": "record_id",
+      "native_identifier": "MY2021-JL-4D-2021-06-09-package-p20",
+      "source_description": "MY2021-JL-4D-2021-06-09 record_id MY2021-JL-4D-2021-06-09-package-p20",
+      "source_id": "MY2021-JL-4D-2021-06-09"
+    },
+    {
+      "identity_type": "record_id",
+      "native_identifier": "MY2021-JL-4D-2021-07-06-JLJX74",
+      "source_description": "MY2021-JL-4D-2021-07-06 record_id MY2021-JL-4D-2021-07-06-JLJX74",
+      "source_id": "MY2021-JL-4D-2021-07-06"
+    },
+    {
+      "identity_type": "record_id",
+      "native_identifier": "MY2021-JL-4D-2021-07-06-package-p19",
+      "source_description": "MY2021-JL-4D-2021-07-06 record_id MY2021-JL-4D-2021-07-06-package-p19",
+      "source_id": "MY2021-JL-4D-2021-07-06"
+    },
+    {
+      "identity_type": "record_id",
+      "native_identifier": "MY2021-JL-4D-2021-08-06-JLJX74",
+      "source_description": "MY2021-JL-4D-2021-08-06 record_id MY2021-JL-4D-2021-08-06-JLJX74",
+      "source_id": "MY2021-JL-4D-2021-08-06"
+    },
+    {
+      "identity_type": "record_id",
+      "native_identifier": "MY2021-JL-4D-2021-08-06-package-p19",
+      "source_description": "MY2021-JL-4D-2021-08-06 record_id MY2021-JL-4D-2021-08-06-package-p19",
+      "source_id": "MY2021-JL-4D-2021-08-06"
+    }
+  ]
+}

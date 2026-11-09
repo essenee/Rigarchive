@@ -1,0 +1,27 @@
+{
+  "Rubicon_392": {
+    "candidate_reference": "JL21-70",
+    "canonical_powertrain": {
+      "electrification_type": "none",
+      "engine_aspiration": "naturally_aspirated",
+      "engine_cylinders": 8,
+      "engine_displacement_liters": "6.4",
+      "fuel_type": "gasoline"
+    },
+    "raw_fuel_grade_requirement": "Fuel Requirement                                                 Premium 91 octane (R+M)/2 — required",
+    "fuel_grade_is_outside_five_field_identity": true,
+    "source_document": "docs/implementation/handoffs/MY2021_JL/source_pdfs/FCA_MY2021_Wrangler_392_specifications.pdf",
+    "source_sha256": "sha256:47e6996360a2b44e3a7cae8e36975b63bcd06fab53d8b60f40abec63787faf26",
+    "source_assertion_id": "FCA_MY2021_Wrangler_392_specifications-p1",
+    "classification": "Approved human gasoline conclusion; source wording preserved; no new approval or normalization"
+  },
+  "ECX": {
+    "candidate_references": [
+      "JL21-72",
+      "JL21-73",
+      "JL21-74"
+    ],
+    "five_fields": "complete; gasoline PHEV",
+    "direct_technical_evidence_preserved": true
+  }
+}

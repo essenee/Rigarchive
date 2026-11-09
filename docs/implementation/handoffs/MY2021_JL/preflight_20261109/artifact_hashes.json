@@ -1,0 +1,9 @@
+{
+  "README.md": "sha256:141a9a06f8ce9ddbdfef09ab8d54d25fd33b0240b4c66eafe2e899c13a0bb614",
+  "django_check.txt": "sha256:1e3e63f221bde88816c4a4ef7367691607b20cc1d194028a02ec9ae0586cf9b1",
+  "focused_tests.txt": "sha256:e0cda8ede72c27bf1cff60959eda25e578bc54c49b112d3f4c47d8bc3aa22368",
+  "migration_check.txt": "sha256:a2bfa7b376c38062f77ce2b1e703876aaa04662f96355cdf5dc9d0d075302b05",
+  "owner_review_tests.txt": "sha256:59b2a4f6c084fa275c7dfa653a603b019fcf7395942b2addd615769269f26a46",
+  "preflight_results.json": "sha256:716445a80615ff71d8a4b393af3b379f4ab8febd204098d3bb1b4df3499318f3",
+  "verify_preflight.py": "sha256:394741468e8452bdc894364705fa1debd5068e5b7a18ee7493968bd166f2b003"
+}

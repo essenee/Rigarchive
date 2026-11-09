@@ -1,0 +1,644 @@
+{
+  "manufacturer_documents_and_extractions": {
+    "docs/implementation/handoffs/MY2021_JL/source_pdfs/2-door-6-4-20-pdf.328860.pdf": "sha256:28c4ec6f22bbf3967b4c39cc51d845db61e532594b85c0b74532777cc6feb6dc",
+    "docs/implementation/handoffs/MY2021_JL/evidence/2-door-6-4-20-pdf.328860.text.json": "sha256:5b8771f6db3fae0249edfb2438d4b163bbb2d8f50d6ce7e832d79dccf036e0e3",
+    "docs/implementation/handoffs/MY2021_JL/source_pdfs/2-door-8-6-20-pdf.357054.pdf": "sha256:6df8c719d000c190a960abdf02e93e99f2a19bf876ef738590097bd20a6f986b",
+    "docs/implementation/handoffs/MY2021_JL/evidence/2-door-8-6-20-pdf.357054.text.json": "sha256:22098dca00f398ad73750fe90ec208f9cfe85bf3794e7c0059a331adf027cedf",
+    "docs/implementation/handoffs/MY2021_JL/source_pdfs/2-door-9-29-20-pdf.377304.pdf": "sha256:d68c348b77739e16f8786aabfb560ebb23296045f40747718804374df8dd0b09",
+    "docs/implementation/handoffs/MY2021_JL/evidence/2-door-9-29-20-pdf.377304.text.json": "sha256:e200bf6c21f8d2cd8b9e058bd11098927a2bc2c1dd3265fb418f08af8825208a",
+    "docs/implementation/handoffs/MY2021_JL/source_pdfs/2-door-10-14-20-pdf.382089.pdf": "sha256:20e40c434de57f6372281f52ae2a7450c22ff03358e83037355be69b9836d167",
+    "docs/implementation/handoffs/MY2021_JL/evidence/2-door-10-14-20-pdf.382089.text.json": "sha256:dd4211dcce8e25b2351eb0b6e209d18d9803a3fee64ab758726a9e292f319133",
+    "docs/implementation/handoffs/MY2021_JL/source_pdfs/2-door-12-4-20-pdf.401773.pdf": "sha256:c152ad76ec8fcf65a962f443e83afdbc846b9ffd237ac82b10536810f87aca50",
+    "docs/implementation/handoffs/MY2021_JL/evidence/2-door-12-4-20-pdf.401773.text.json": "sha256:9472eaf55603bb4e33b80f1e00633b6097e40a0f775c5bf3c927aee803c46757",
+    "docs/implementation/handoffs/MY2021_JL/source_pdfs/2-door-1-1-21-pdf.412193.pdf": "sha256:8541303bca3dd5bdd0df5158c36ee9a25c4a41a464e530c2f964dc930d9a7e1e",
+    "docs/implementation/handoffs/MY2021_JL/evidence/2-door-1-1-21-pdf.412193.text.json": "sha256:0fc39738b4ace2632cba0ea73fbe77261fedbfbcf6c27faf9a58e48863b1f277",
+    "docs/implementation/handoffs/MY2021_JL/source_pdfs/2-door-2-8-21-pdf.423851.pdf": "sha256:f02eadc8e31d8ed8f8d8bf48b04d39aee033f89bde9b207f6961cf3b918aa1ec",
+    "docs/implementation/handoffs/MY2021_JL/evidence/2-door-2-8-21-pdf.423851.text.json": "sha256:349049ca6e63e235e4f2e1ab2d04a69bf3805689de6180f1ed486f454aeaa1ed",
+    "docs/implementation/handoffs/MY2021_JL/source_pdfs/2-door-3-5-21-pdf.434803.pdf": "sha256:c9e29d461fe1c13fa0e2c7fb6b6920b8104a049e0ab57080931bf3111ef81744",
+    "docs/implementation/handoffs/MY2021_JL/evidence/2-door-3-5-21-pdf.434803.text.json": "sha256:5796bcf7f8d334094a654799e5f2503f3b99908a9cafcdc4e34ed2c8ef005fe2",
+    "docs/implementation/handoffs/MY2021_JL/source_pdfs/2-door-4-14-21-pdf.447427.pdf": "sha256:f6a362d7b4633f81036159fbed36c26f7cc9645f791ed2dd954027c8c9aa520b",
+    "docs/implementation/handoffs/MY2021_JL/evidence/2-door-4-14-21-pdf.447427.text.json": "sha256:01a7ccf7fb9dab09117c11e905b611cb7a2c4ddcfd1af73d22bf3476f3c5e8cf",
+    "docs/implementation/handoffs/MY2021_JL/source_pdfs/2-door-5-14-21-pdf.461291.pdf": "sha256:727afb687abb9a9f9a6982a5fcc68ad63214512b9ba38b6d0c38f98a9d4b47cc",
+    "docs/implementation/handoffs/MY2021_JL/evidence/2-door-5-14-21-pdf.461291.text.json": "sha256:489ef37edcb1eb39e9ea3ab6d892de010b5f119318c7be67a6856bbbd90eff5d",
+    "docs/implementation/handoffs/MY2021_JL/source_pdfs/2-door-6-9-21-pdf.472445.pdf": "sha256:cb54c383c74a2a4558184e19c97a578390f36f7e950b9ad250714348a833ff9d",
+    "docs/implementation/handoffs/MY2021_JL/evidence/2-door-6-9-21-pdf.472445.text.json": "sha256:a22e516a44dfc15ec34f6dcdd7ba53a347ffe6e905ee0bd356acfd9cae759fda",
+    "docs/implementation/handoffs/MY2021_JL/source_pdfs/2-door-7-6-21-pdf.484797.pdf": "sha256:2940c4afec74e1e45adbb73cb5ee9042adfddd56ac1d18c7e51dc26bf9dd8f5c",
+    "docs/implementation/handoffs/MY2021_JL/evidence/2-door-7-6-21-pdf.484797.text.json": "sha256:d8e36dd7e920ace64794ffaa742c0e4e3a3fbd64f03f3f8c808963fc55506867",
+    "docs/implementation/handoffs/MY2021_JL/source_pdfs/2-door-8-6-21-pdf.497505.pdf": "sha256:55b46dee107699fd07ded68025edf48598fe336320537bdf90ca45f8ca82514f",
+    "docs/implementation/handoffs/MY2021_JL/evidence/2-door-8-6-21-pdf.497505.text.json": "sha256:59b6bb78f245ddab8c8438cd2b8c2a0d8591aa27f1501b5c2468e6131c3c8f9f",
+    "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-6-4-20-pdf.328859.pdf": "sha256:6bab917f60f3b646013ce6327e6e759d5b9db75bd7e70927b472dfcdcd70481c",
+    "docs/implementation/handoffs/MY2021_JL/evidence/4-door-6-4-20-pdf.328859.text.json": "sha256:6e3217184a907f9efd7af43d18c7f49ffa4f13fd649af615320e2645ab9df379",
+    "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-8-6-20-pdf.357053.pdf": "sha256:3e051bcbccaec39d19e12640bba3438b1b3fc5e244f5f90535ba870c39bdf8ab",
+    "docs/implementation/handoffs/MY2021_JL/evidence/4-door-8-6-20-pdf.357053.text.json": "sha256:fe3935999ef9ca799dfaab859f0b2f9e012c323eb875b4bf2b6bfbb95c1efd08",
+    "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-9-29-20-pdf.377305.pdf": "sha256:a5f56eb7e8099f78b5de8727acdae7176fa468fec556be174d241ae7ec26105a",
+    "docs/implementation/handoffs/MY2021_JL/evidence/4-door-9-29-20-pdf.377305.text.json": "sha256:9174777c73f93a597bb27e52acba6595eb93727d8f0afe748e6adb4036fbcee6",
+    "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-10-14-20-pdf.382079.pdf": "sha256:23b0edc5f7b5c7a59ca538a84a1b46c9aebd93c113e54e57ada8763dc723f2ed",
+    "docs/implementation/handoffs/MY2021_JL/evidence/4-door-10-14-20-pdf.382079.text.json": "sha256:b0ee9a110a8b79aabc70ae48dd5a770e536061e78c04c01afc1a325c28c944d6",
+    "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-10-30-20-pdf.388525.pdf": "sha256:c9c3b3931316a6a39e94a5c2f8893ae81e55a877542bfed5f15dbc259bc73489",
+    "docs/implementation/handoffs/MY2021_JL/evidence/4-door-10-30-20-pdf.388525.text.json": "sha256:5789f3fc88cfd6d58c4e303614cdb7f475286ddcb1f558cca5215a6115d35fef",
+    "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-12-4-20-pdf.401774.pdf": "sha256:4dad5bddad4fbd0c0e2bab5095734c9f740e9c0e53d67de64df30b41576ada5a",
+    "docs/implementation/handoffs/MY2021_JL/evidence/4-door-12-4-20-pdf.401774.text.json": "sha256:1ae3face948a6158477f9af17706b2cde0f9ac08465eb54b78f4a0bc848986e5",
+    "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-1-1-21-pdf.412194.pdf": "sha256:d0d2e4d1cf0e18f4ca5be3092d0625a2810fae009afefd97a603149ce53ab568",
+    "docs/implementation/handoffs/MY2021_JL/evidence/4-door-1-1-21-pdf.412194.text.json": "sha256:f1a71870d1dab0b637296f7e75535e655647b92f0d31bd5fbd487f9f75a4ad99",
+    "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-2-9-21-pdf.423850.pdf": "sha256:2fa3c481460efa71f1036638c3f0929c2eca3eb91bd97a0eb87c0bbd3cfdcc9d",
+    "docs/implementation/handoffs/MY2021_JL/evidence/4-door-2-9-21-pdf.423850.text.json": "sha256:15ea11afd70d2d83caf7dc43ae851dc0693b3e5e44816537dd254aaac57d5b24",
+    "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-3-5-21-pdf.434799.pdf": "sha256:37cd4e33d30f54bb7d46940533a691312c5b8b4da22faee583a10fe5c9feaebb",
+    "docs/implementation/handoffs/MY2021_JL/evidence/4-door-3-5-21-pdf.434799.text.json": "sha256:b4f77ece9e12d336aa1b85c205eb01ed0f0a0a2f3e5bd0ea8e3f41946befe2f8",
+    "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-4-14-21-pdf.447429.pdf": "sha256:d748a277a6cd23a6a7fbb744fa0b24d9c980b21bef9ce4a3fb993c44c9093179",
+    "docs/implementation/handoffs/MY2021_JL/evidence/4-door-4-14-21-pdf.447429.text.json": "sha256:3a339b7cd1c439e4191259ee25b46a05ef4aa80b37e37bb944435f95719fff32",
+    "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-5-14-21-pdf.461295.pdf": "sha256:086c2e9728515750fbb0f31a425c831b448bd99e02831cf3365452694594e2d1",
+    "docs/implementation/handoffs/MY2021_JL/evidence/4-door-5-14-21-pdf.461295.text.json": "sha256:a6d41c8fc9b5e0387c7ad21ef6d8d40a9943eb54bd25fba71a708ffdf8b509e8",
+    "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-6-9-21-pdf.472444.pdf": "sha256:c531aa9316c46520de25eebd81c9a27d0a547651f10eea467f74a95c71e246ae",
+    "docs/implementation/handoffs/MY2021_JL/evidence/4-door-6-9-21-pdf.472444.text.json": "sha256:25d51793a75c10fbae66cdde81cb2602309e2f07b6faefc1d054152b46432bfa",
+    "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-7-6-21-pdf.484796.pdf": "sha256:341f1b6f4a5ac774a082bf07a6df0f7c9ebc018272b7da3ff880b67844c93271",
+    "docs/implementation/handoffs/MY2021_JL/evidence/4-door-7-6-21-pdf.484796.text.json": "sha256:1c0c227999d4257d01fe5bedde5c59f7199e6e84dac1279a7ca94a1c974385b9",
+    "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-8-6-21-pdf.497498.pdf": "sha256:e6c2aa78fb6c34608dbb28dc4084cf909c444802434fcf32af61eb916a1168c4",
+    "docs/implementation/handoffs/MY2021_JL/evidence/4-door-8-6-21-pdf.497498.text.json": "sha256:5109a45bc80742766c52ce87a1403534fcbc697a5142d0ab1a209fdbd3ba971b"
+  },
+  "candidate_source_index": "docs/implementation/handoffs/MY2021_JL/fuel_completion_20261109/current_candidate_index.json",
+  "candidate_source_index_sha256": "sha256:1d163f3d5f62c3c640eb814c957aae5437bedd09adcd1e048b7244c4207d8b4f",
+  "selectors": [
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-2D-2020-06-04-JLJL72.document.json",
+      "file_sha256": "sha256:ad9262d5f455caae2eb012e85eabc6276d609c6aa118a8044f8ce69c45cbc9da",
+      "selector_content_hash": "sha256:ab7e91dc91280010d95d9c1a4a64bfca59bff58fe93910ceebf5daed57e482ab"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-2D-2020-06-04-JLJS72.document.json",
+      "file_sha256": "sha256:6bf9afb3bad7e48f1803840e1186f319b9d0ca84631068605b29fc8fb28fe9df",
+      "selector_content_hash": "sha256:3679cce02afed061a2525167dc2a3c518d6095df4688559e92f1ae7e29217316"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-2D-2020-08-06-JLJL72.document.json",
+      "file_sha256": "sha256:af9722a8b2ac5e7d16f86b84f11e9c5143815f23d08de17aeb79ecd71bfd56d9",
+      "selector_content_hash": "sha256:ce880ffd6cefec1b3fbc44240d414062e363ea8d1a106e40c1f18d3abb736127"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-2D-2020-08-06-JLJS72.document.json",
+      "file_sha256": "sha256:38bbc10ad068384adca7b9177820ae3e0377d9e25de20e3f398583df8b4f77d5",
+      "selector_content_hash": "sha256:1cfb977c0025890d10ba3ae0320bcb5331d8bb3d0ac0cc073f3b5a712adcd750"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-2D-2020-09-29-JLJL72.document.json",
+      "file_sha256": "sha256:3c022675ccd731a9f05f89a074f5597e42a545f7e5a008e94a51afd621a68031",
+      "selector_content_hash": "sha256:d213bd954cd16d11d31fef472556d637f76bfc59ed6a356d6b2014dc0581c9e3"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-2D-2020-09-29-JLJS72.document.json",
+      "file_sha256": "sha256:3f7173c4bdbe24a1704d75d3e074b183b9f4e69c6af94f14ac5ee7af9ac80382",
+      "selector_content_hash": "sha256:64499c4e536842fb4afd71c0ee20054febd4e051ee3519974080e57d3c25fca4"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-2D-2020-10-14-JLJL72.document.json",
+      "file_sha256": "sha256:1fdbe5d6f9c74436bb48c3b6226643e65f602ed4d39e42b619b4520b38fc6e0a",
+      "selector_content_hash": "sha256:222eb8d2020d3080c38cf334f18dc2e10be3479a9c184bf38881c0df2a219193"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-2D-2020-10-14-JLJS72.document.json",
+      "file_sha256": "sha256:aa6509109292e3154c6b254388dfdeab609eb2250e27e527ad2b144880b2d4c6",
+      "selector_content_hash": "sha256:2d7571f713f70ad4c682db4920572ceac277da18134445328eafe141b23adbd3"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-2D-2020-12-04-JLJL72.document.json",
+      "file_sha256": "sha256:5ed07c0c6d7f63c6bddba817f969848528d6e78033e72f9092d18f65ef5087d6",
+      "selector_content_hash": "sha256:449b8dc93788d095102de668b6e71a7817c2849615ce18fcdaa4718cbccb31c8"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-2D-2020-12-04-JLJS72.document.json",
+      "file_sha256": "sha256:dd486a233dcdbadae03ee5548f6678160f2318ced8bd868e035fc00f06950a9d",
+      "selector_content_hash": "sha256:c2d6a82806cd0cc8854105c854387cc469dac69158ced193901a59588bf5e565"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-2D-2021-01-01-JLJL72.document.json",
+      "file_sha256": "sha256:f8db1e087b4999a0b759d8cafab32460def97f3826b48e1c01df10883b008874",
+      "selector_content_hash": "sha256:c61ab65a38614075a1b03208198323de8791d88dfc85befbcfc555613aef22ba"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-2D-2021-01-01-JLJS72.document.json",
+      "file_sha256": "sha256:5979569ae26255c2eca03f9a79b574455b5979e70f20655fe516aefedb635192",
+      "selector_content_hash": "sha256:042ee221c8b2a91092fb271d277d601b56f36cd94e6c6bea3cfd0f9f310ecd48"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-2D-2021-02-08-JLJL72.document.json",
+      "file_sha256": "sha256:bcc65d899c4188b3ca14c3ad96aafb3803687aff96d6468b30a21ec8a2217393",
+      "selector_content_hash": "sha256:5b29a646cfb2cd671dfb88e1ff1b0c9d44d760a44622348880f70c917aef6d14"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-2D-2021-02-08-JLJS72.document.json",
+      "file_sha256": "sha256:e839660890f58c876d56222714b02f5cbdf9365013d11f34feccf60b3786d2d1",
+      "selector_content_hash": "sha256:4f89eead72102e8bbd94859131a0307788e3f2ca8d11288bf9a484f4b947786b"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-2D-2021-03-05-JLJL72.document.json",
+      "file_sha256": "sha256:79d09af4912c08570cf9f5871642c6637fde5bc863acf55ea265f5fe756e8f13",
+      "selector_content_hash": "sha256:035949216ebad0897c776b332880217968b1fcc87badfea2683e7503f2446fed"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-2D-2021-03-05-JLJS72.document.json",
+      "file_sha256": "sha256:c55062fc2a3bd638cd81d3632c12c8618ae7e6f49e6c8b602c3718fdc29e5ee2",
+      "selector_content_hash": "sha256:0d356d16d9cda28f4c6a84aa6cb48e1569b116a8d1ba5bc45916aed5fc679c7d"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-2D-2021-04-14-JLJL72.document.json",
+      "file_sha256": "sha256:a4d63643486fc46006e38712730229f3adeed632c8e917b8f11b0cdc16e204c4",
+      "selector_content_hash": "sha256:5d667744b94e44afbbc9f2965530b09ebd5471c1fb8b3505b801a81d447ebf42"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-2D-2021-04-14-JLJS72.document.json",
+      "file_sha256": "sha256:95728bc2b18086b7545d94a38e4ba809db79c7e206c2342a7d40b769f93c69c7",
+      "selector_content_hash": "sha256:2c1f5189e0d4c11184a45b50ec68f44f045046663aa13f745a341bd69ec55769"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-2D-2021-05-14-JLJL72.document.json",
+      "file_sha256": "sha256:5f696fcfbfcfdf87362e32c3a8e26bc269097d465df24263d51262521a1053bf",
+      "selector_content_hash": "sha256:fcacf432b1c9467ff63e72b35271a3c6990d57ed64979e81671a5a8c5d14eef8"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-2D-2021-05-14-JLJS72.document.json",
+      "file_sha256": "sha256:c2cfe9cb4b4b3c954d3544b4df1844ab2e72aef1f6a38cb0b8e0fc491494cc91",
+      "selector_content_hash": "sha256:65fd1034865cb6120db348bce23be72b4c65cec4aa84f2752bb9633cdbc42429"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-2D-2021-06-09-JLJL72.document.json",
+      "file_sha256": "sha256:d15e4fa6f8b505aa59a40efd5080660e0b1604e4a56352caaf9052fd89f118d9",
+      "selector_content_hash": "sha256:d5bf3d34c672ccd48f489e5016e2df532b62778840a3af210d6072b9f7863098"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-2D-2021-06-09-JLJS72.document.json",
+      "file_sha256": "sha256:237b10949c3170c58bf38cc2dddee3f3ccb4749befe960e48c3fcd88959aa334",
+      "selector_content_hash": "sha256:4c3422226de9df3363fec00c0e1142f6082298f9a987bd0ec83f2e3e3faa5f65"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-2D-2021-07-06-JLJL72.document.json",
+      "file_sha256": "sha256:a9cd7b142977d0d8aa49c004b70dbed74d7c49cb0e7cbd1e78cd43ef6298fb11",
+      "selector_content_hash": "sha256:d8521173f4ecc8895acaf4bfab462a0cf12225ec7fb969c6fc9e60b126b7d038"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-2D-2021-07-06-JLJS72.document.json",
+      "file_sha256": "sha256:80d32871bb71711bc83f1f2bf194fc428aaf74034fe8ee6017076d0dbdeaf58a",
+      "selector_content_hash": "sha256:b90a4d35fb7e99b10c301c6a15fd5fe6c23f9fd081b31f4b6f5a680710481127"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-2D-2021-08-06-JLJL72.document.json",
+      "file_sha256": "sha256:3227a77e8a7582435f36341e72d947566a99fa1a1d6f4e1abebe64828641ee25",
+      "selector_content_hash": "sha256:ff97a9ba8f56b71b94357254dae5d089e2ce95a1b6587b03dcc223c1dc1b3c78"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-2D-2021-08-06-JLJS72.document.json",
+      "file_sha256": "sha256:22a9617686e083b30bc3681bad5659c6f599bf230f2d5742ff1400680e7679e0",
+      "selector_content_hash": "sha256:edaf068d318357842b50cb309803fdba6aba6ace1dcc785489090894683a9f8c"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2020-06-04-JLJL74.document.json",
+      "file_sha256": "sha256:cfd255b90cb648825f4eb64ad462f2af287a1d3530038564d67279b63540ec30",
+      "selector_content_hash": "sha256:bafddec5bc0fee2b3e40eb7d04d7cdcfe57722c2d5728baf16f9e35155af9edb"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2020-06-04-JLJP74.document.json",
+      "file_sha256": "sha256:663ac437b3142e15bfb3c1b03d3562a00744467fd4854205000bb6f14f536749",
+      "selector_content_hash": "sha256:ad94ac6f6a432a1e39ee70cd433c2c4bad5799ce9ba7ed2188f032fc3b72e5d0"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2020-06-04-JLJS74.document.json",
+      "file_sha256": "sha256:6594319e35db839a87ae2b5505c35494926be62c356139b2c742a32101482c6e",
+      "selector_content_hash": "sha256:6e428de2d644ba8b8d385e94295ec6764de71636539d6630c84a67f0695ff103"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2020-08-06-JLJL74.document.json",
+      "file_sha256": "sha256:421854c7830487fe78b65851ac8552c53a48edf3ba5a7d9f302db6376e5e05da",
+      "selector_content_hash": "sha256:87fb194ebffba11c2859d0d15c88b4b8eaccdbb2335394dd9c8fe8e6d86270b4"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2020-08-06-JLJP74.document.json",
+      "file_sha256": "sha256:2f44d53af8e80f87c0557e69d059f1978ca996e4a29b0252275a5e369daeb257",
+      "selector_content_hash": "sha256:8a813d00f04cf37f896d86e750d7e28d8666dda5a6ccb0f26714195e5e4bb548"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2020-08-06-JLJS74.document.json",
+      "file_sha256": "sha256:ee9c1279914ebd62eee897e2254c43284376ea3681ff3829f0e9b892942f1447",
+      "selector_content_hash": "sha256:73a4f46f5f2d6c580e90d9251e737537107001d588c4d30e6febc8a760a3812e"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2020-09-29-JLJL74.document.json",
+      "file_sha256": "sha256:0058e437b48e2a8a984a0744b4b9d53ed1fb7a9e2a0d536ad0e8d7f87c9b0717",
+      "selector_content_hash": "sha256:e97a6bbb39e9880f5f8b16d736463d8e93c3cf58467f619774ad2a7d62367e76"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2020-09-29-JLJP74.document.json",
+      "file_sha256": "sha256:adbf8fb60ae6f5ca7f2849ef754fbc972567fd030ab86fe2bc69282e30425697",
+      "selector_content_hash": "sha256:7da37160999619f9905f54a4d03ff7b2c4e50338d6271e1396ea07fdb03059b9"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2020-09-29-JLJS74.document.json",
+      "file_sha256": "sha256:e608047b148dcba571104d5784d27ad4d320486b8b9d3d22e110ba37a673c507",
+      "selector_content_hash": "sha256:917fecee8a7f52d5daf7deca876978103976ccc6bfe4b8c644a1d3ae4c46acea"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2020-10-14-JLJL74.document.json",
+      "file_sha256": "sha256:3d9eec7f8843c3202db28f376e4ff9307d2ed2791578309975d738cd2ecf467e",
+      "selector_content_hash": "sha256:fb1cca0aeabc83c0191ef1e599caed4ebbcf269ddd5553a656bb63300a431d24"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2020-10-14-JLJP74.document.json",
+      "file_sha256": "sha256:a1eb383509f11c0eab001ff7b4142a71c67f8a29a6eea319ce46e25af4a7a2a5",
+      "selector_content_hash": "sha256:e3c60ac43c1b767304c8dd9271926eeb164b93fa0f5283ed8b092ee1d35c1bfa"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2020-10-14-JLJS74.document.json",
+      "file_sha256": "sha256:6814460f7bc787e7327fdcd4cc6fef8724f2ed51c9434e801e53df1c720da2f8",
+      "selector_content_hash": "sha256:b72e842d5b3bcb596c619c8ec22ded351160fa45ebd65abb7a6e530f8a96f4ed"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2020-10-30-JLJL74.document.json",
+      "file_sha256": "sha256:ce9f07969cb0a781a999c4c81154fae6811f889d701574aebe0d79b68298ba03",
+      "selector_content_hash": "sha256:f3909d21e81343d1aa3c87b07c6d8469db93b384f278124ddb8e339d5c2ddad9"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2020-10-30-JLJP74.document.json",
+      "file_sha256": "sha256:d9dd9e9a181c91bd6bcc5db180e22c8ae5e99e2a5d516ca65b1bd37c3a80ccb4",
+      "selector_content_hash": "sha256:dfd9d618366e932373f1e7571bd0e1dbfb51f7ee0a9b3686a980b9d33cd11f31"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2020-10-30-JLJS74.document.json",
+      "file_sha256": "sha256:1ac78fe07d98e72665485b83305e9277e8d50db205ab3dda488f13a274269717",
+      "selector_content_hash": "sha256:53ece17af4b804a043f0885683366f0a143bb9ef1d17e602efcdbac5860a8843"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2020-12-04-JLJL74.document.json",
+      "file_sha256": "sha256:c6d74ce9c1a98dfefab6741998b90425e150912e981039b1fe2e01a274378f05",
+      "selector_content_hash": "sha256:5b4a0d7c6603d20ed8925908e4bfba781df9097972a1b4b040a144fdcb73e360"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2020-12-04-JLJP74.document.json",
+      "file_sha256": "sha256:2d4a1d99375458fea146c80ea0a3f40f7d5988ff491ac23e9feebdc936240bc0",
+      "selector_content_hash": "sha256:0ffdbdbb5577a3ace9f3372a5b8a53c959136d838310a4cdecdff9aaf6d1a72b"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2020-12-04-JLJS74.document.json",
+      "file_sha256": "sha256:795b20ab1b5ffd13333a8ed98e68e46ee7bed9f09e636635544a03d02611063e",
+      "selector_content_hash": "sha256:fcbfc9448410efe3e43b2b7004f821b5aef257269b118dfba1cc62fb70651c6c"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2020-12-04-JLJX74.document.json",
+      "file_sha256": "sha256:5e8e005bc5f2fa1accd3e88bcac3be2b7f418f4669c5e96d0f18507a3bbc412f",
+      "selector_content_hash": "sha256:1384c09b14019bdb90983e2c2ea3e220b9ba563ead8715fa30a90697e0691b82"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2020-12-04-JLXP74.document.json",
+      "file_sha256": "sha256:27ee5ad380ecfe13ce1d31d3a3d7479001e178b9bc461857729261e2ec7348dc",
+      "selector_content_hash": "sha256:c28ac698868913915d146acbfd54fe8b75d39dd8260f96b24ba7f40da3289dd8"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2020-12-04-JLXS74.document.json",
+      "file_sha256": "sha256:c61b72b5a74704d78e8aee206fd1acc79ea0d7001724d912b01a5d35944d0f08",
+      "selector_content_hash": "sha256:161b910806154f32a14dd4b4fd7dbeae60fe7efef7955dfa67b6cb8a01dfc104"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2021-01-01-JLJL74.document.json",
+      "file_sha256": "sha256:3ceeca64b99cf713f0959c710f68a6a9e357ffa585ab7fa8d624ff72437c3f8e",
+      "selector_content_hash": "sha256:47400bcfe08fe5eb2a19b1122978c04153b499b532458f4f878a91bdc52bcae8"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2021-01-01-JLJP74.document.json",
+      "file_sha256": "sha256:913ffc1dab60205ba53622f9606b277670f28a234acf35117edd20af4827673e",
+      "selector_content_hash": "sha256:e54d4b194ca860d7f92ea691292f424bc76f4b7cf708097c62ef1744a3192fbe"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2021-01-01-JLJS74.document.json",
+      "file_sha256": "sha256:c0782c916143c750abffd4e52bf1b1ff84367eee93bb27573cbd16a75c7accb7",
+      "selector_content_hash": "sha256:25c2e787ac80a34b643ce61b25167e5b5c865faaf2494c8e60ad739ed389da62"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2021-01-01-JLJX74.document.json",
+      "file_sha256": "sha256:2b762da9c47eeebcf130ad64835b93fa881b217457765cec12d3e481f4e5713d",
+      "selector_content_hash": "sha256:4592790391e3476c05d0b947c900d671ac68745e35028028149e2c938ef9c022"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2021-01-01-JLXP74.document.json",
+      "file_sha256": "sha256:19632b2e6b23a471257f474f70812f35388ecd2bb8373a20a5a668a3d17cf62e",
+      "selector_content_hash": "sha256:b9077eb098f88567dbf0095ef46d7d2ee8f6b78532cc957ffc1fb025397ff1fd"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2021-01-01-JLXS74.document.json",
+      "file_sha256": "sha256:23543dc06e11571c66a158b565b41220034e9751750e1bf26ade11e957ae002f",
+      "selector_content_hash": "sha256:56a287eea5ecedb6678bbed00d513c839901c98e3327695bca67679dde7eff6b"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2021-02-09-JLJL74.document.json",
+      "file_sha256": "sha256:df8214a5595cbb2735aee1061337abbb509e02400ba746d7884f4ece21af169b",
+      "selector_content_hash": "sha256:6d9ece4c27947bddaee49176ea22ed14465b104e3ee57a5bc45adb79cb8ac2c0"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2021-02-09-JLJP74.document.json",
+      "file_sha256": "sha256:1afa037ca77aa5e95009056b7f04ed3a80d7da61113864c3b36dd7d158e49ae5",
+      "selector_content_hash": "sha256:185fc607835230b32cd18e35b090f851c7a15d5dcb927542eab70fcdb8156c12"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2021-02-09-JLJS74.document.json",
+      "file_sha256": "sha256:98a76a59ecdc0e86be38baf89aa009c06abc9f61c29e5f4c9e418d3d405d2720",
+      "selector_content_hash": "sha256:fca4d466007912b8bc24ee30f78b6a1bad54072f2972c1bcfa7d496af4e0050b"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2021-02-09-JLJX74.document.json",
+      "file_sha256": "sha256:fe78482c0dc3f1d99afdd287f280b2605e515ab8fcb35673c8a2bcf26cbe073a",
+      "selector_content_hash": "sha256:8414867f3d29c77cfcfc09f9ba5e63c4f3e4668a2372a0fa7daadd72e88d8283"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2021-02-09-JLXP74.document.json",
+      "file_sha256": "sha256:5dc6add20e7bb80f225ebc7ff4d5d7a1bf9f7ee6ab24d7ec5ca326e7db8f779e",
+      "selector_content_hash": "sha256:d539afa4e2201ee96cd015efda9e7da637d7a80b8627ae00156291dfea43b472"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2021-02-09-JLXS74.document.json",
+      "file_sha256": "sha256:dcb9888f7b47baccf2c7d14b0f7952104d36a4d9d2f99daa4f4b37cbd6814867",
+      "selector_content_hash": "sha256:0d3f578931e9a8165130579fdd46e0014ccb2bac78bf0ab97dd93b5d85dfdcd7"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2021-03-05-JLJL74.document.json",
+      "file_sha256": "sha256:1c782fb6bbebdbfe5df900d1defc7fff67e79c8c761d2709cd00f4dcfec7a824",
+      "selector_content_hash": "sha256:c0d10a1ec742754b870653e80fe95e018d46b95bddf3ff3e534f22d76ee40ac3"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2021-03-05-JLJP74.document.json",
+      "file_sha256": "sha256:b8a967dcdd0482d8f3528ad4f10edd2524ed1fadd5dd15bb46ae8f5f53a0b418",
+      "selector_content_hash": "sha256:f1d2b0242d1ebfe735c0e88731c0a85d203546a9a39785809c5d8bd8391b3344"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2021-03-05-JLJS74.document.json",
+      "file_sha256": "sha256:474dbbac56f19abd95acec558d2d23f1d0706e03d29c9cd917b0c27143cdbab3",
+      "selector_content_hash": "sha256:f6b5597b2e7f90e1af82c560e0bb240a70d2d4083d7caf37b696bbea63d23ebb"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2021-03-05-JLJX74.document.json",
+      "file_sha256": "sha256:80a0cd20ece4b18547438c51b27dfe96d26ef6d129ee3a9be97b3c47e94d2851",
+      "selector_content_hash": "sha256:6e26c21a47e67fc5cfe09d68b817691bfaf8c5e3e1051fbe1d87e94fbc49e033"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2021-03-05-JLXP74.document.json",
+      "file_sha256": "sha256:93dcb97b4b38a7c759000224ffe9daa14f68e807504f627cb66ef869cac306a4",
+      "selector_content_hash": "sha256:009e2e972a1baba9388ab91b80387c726f05b42fc047b968fd4baea137d7da0c"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2021-03-05-JLXS74.document.json",
+      "file_sha256": "sha256:58d85036b04db4157cee93a50ca67218d8ba6c67c7c081e94fe58808a9faf8ea",
+      "selector_content_hash": "sha256:9f897631e94afd37cd6fd3bb64fbb347d542a32d7adbaf294a1a772820f160b2"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2021-04-14-JLJL74.document.json",
+      "file_sha256": "sha256:fe158755476e2954e71095ec86f2ce9223f30c0d2ec770f35073de7c16b9ce5a",
+      "selector_content_hash": "sha256:cf92acb26ef356df0acd66d52254563b31576b8bdd5d68d59538d1d75e9c6de0"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2021-04-14-JLJP74.document.json",
+      "file_sha256": "sha256:7bc4d0bdf2ea3828f6ae2181f99349db3e4c42b438b1e4af4669437c9ed62157",
+      "selector_content_hash": "sha256:159b8efbfbdad3790758b276b2fa9986d510f0a47ac6e41f2675650a40b8b677"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2021-04-14-JLJS74.document.json",
+      "file_sha256": "sha256:fa43630be0ec5cae5dc058459ad20d6076b942a49241a80da13c68202ab674a3",
+      "selector_content_hash": "sha256:351641ca06bf0ac5c5a80b6bc1db345792f99e176e7cb6ea2b76f69d92b46e6e"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2021-04-14-JLJX74.document.json",
+      "file_sha256": "sha256:9f313e8bc64bda48f9efaec96b3afdcdf474c97f3fdffbcbd63f79ed27a198b7",
+      "selector_content_hash": "sha256:049cd166956bf4e436345270c42d569410293379e5bdee1425a77ca00006cd2f"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2021-04-14-JLXP74.document.json",
+      "file_sha256": "sha256:430b160e4f5fb1cad384b70e6060bad6f06bb76dbb4586e5d4bbd03386585111",
+      "selector_content_hash": "sha256:2eca9b34125c432926a0c92fd8c91caf9efde11ee25bbab501ac48aceffaa204"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2021-04-14-JLXS74.document.json",
+      "file_sha256": "sha256:49da97dab8b2c1e4a46702ad965fcc41c80c08d9d61a9f4dff8c15503323387f",
+      "selector_content_hash": "sha256:e43bedb68d2a0f63301df5aabf57b14d06f85457480a87c3fd363506325025c7"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2021-05-14-JLJL74.document.json",
+      "file_sha256": "sha256:78110f02f9f29fac8f32b28418edaf891b25f35534b64741157dafabacdd8258",
+      "selector_content_hash": "sha256:b4b7f0867f8b37d7597998a6792f439d01b4ed5043e0d4b9582b0a1c41f9b16d"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2021-05-14-JLJP74.document.json",
+      "file_sha256": "sha256:39a8acec8dd996ddd225be555425ffbd5fd1eb0cac5e465e3907a561fcdafb05",
+      "selector_content_hash": "sha256:2fb34c5363a218a7a1b817eb362f9976b2c9a6002bc7f337e802615a19bda556"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2021-05-14-JLJS74.document.json",
+      "file_sha256": "sha256:14a6a4a5f1029b62ec7da2907b45c1ae0385994a2c48c3d013493d5f681da0e1",
+      "selector_content_hash": "sha256:ce2d38ae7c499491504ac2ec631b9a5d63f99e0b24f122db07aff76cd59666f8"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2021-05-14-JLJX74.document.json",
+      "file_sha256": "sha256:8ed1f883bf0687681e14e346bc06970f27d43c214437e3f00b7838f260d6ec8b",
+      "selector_content_hash": "sha256:9bee740579abf389a1b3d13218bdc2797a906a9bcc0d46474b621ff6bd4db3f6"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2021-05-14-JLXP74.document.json",
+      "file_sha256": "sha256:4d072e23c91c8b7ff9f7de0e06dc4dada64684c4baf975d0105197ddad673535",
+      "selector_content_hash": "sha256:efa5b89bdac719e0d1817db4209abbf81eedcb51297b79200f45b6962b81d30c"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2021-05-14-JLXS74.document.json",
+      "file_sha256": "sha256:d5afa6ff03475eb631dac4c00a6680600387253a36914115be714b7bc6ef0327",
+      "selector_content_hash": "sha256:c79a13dbd73458b16f289bb70d35d68cf87e79f07413ac77fec5a65676abc061"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2021-06-09-JLJL74.document.json",
+      "file_sha256": "sha256:f3873819501a25f9436e8d3f38980676c310b3c7407b4aa10cbc6c4f0e8ec785",
+      "selector_content_hash": "sha256:3c9c29214ee223218468c81dc324df4fd5f7f868bbdbd7ef5d51326d4e4bd3a5"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2021-06-09-JLJP74.document.json",
+      "file_sha256": "sha256:31afca9955611165314e1ff65bab2d28c5dde200dc7e55eafb6c6c9701997fec",
+      "selector_content_hash": "sha256:187b4c47c6fca6c8cde867b54224da14b47f25a54d542ad22f4bfaeffd30d2db"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2021-06-09-JLJS74.document.json",
+      "file_sha256": "sha256:36a48982c77b61ef5102add1a4161af8f95f192bc50143ed861606152bcf0b16",
+      "selector_content_hash": "sha256:a64212bfb785eecd296b3bddc860401a5c19835099992218e54ad5e73e667425"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2021-06-09-JLJX74.document.json",
+      "file_sha256": "sha256:f16d679b2523270908fc951524b1340972cdc8f34264994285631749b8e317b1",
+      "selector_content_hash": "sha256:ba1dd0f0a528e4411a22a2f2127203d6ba79036d348aee39d8e715c3d9355f45"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2021-06-09-JLXP74.document.json",
+      "file_sha256": "sha256:0b5f2bf15c35fc3d36d420b73d8f877922d20ce84b4b64e7ed5e4026eda62cf9",
+      "selector_content_hash": "sha256:70352b4734f9e7c8c49dbb11e92aa61f3aca7e59d44739ca3fd03fe99854fccf"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2021-06-09-JLXS74.document.json",
+      "file_sha256": "sha256:376a6d43eb03955ef33e71b31ed3beed3f67b3de074bd68d4d580cac6e6af9c8",
+      "selector_content_hash": "sha256:24ae1b229ae2dcf48d11d137b05d943a00ad7babddca82333416d65f5a9ea734"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2021-07-06-JLJL74.document.json",
+      "file_sha256": "sha256:8bfd7a6ee72db1170ec69c69327cade60f49932cfc3188347d77a8b7f00e60fb",
+      "selector_content_hash": "sha256:5b7a6dea055f9b967c783e1c32fa64ba286c48e1365d5b7b9d0b05b5f2c08d89"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2021-07-06-JLJP74.document.json",
+      "file_sha256": "sha256:2d2266bd8a3883973fea2f99d1b599a4284ab40ce0cab2e0c8e3ca0519192331",
+      "selector_content_hash": "sha256:e3842577e547947b6a99a41c32633449eec670398215b12491491da5670954f8"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2021-07-06-JLJS74.document.json",
+      "file_sha256": "sha256:7b544a7d9143cce5f0b69c8572ec0f528dd5f7594534d5cb27c5380de6073767",
+      "selector_content_hash": "sha256:cc5d3c1d3cc3b4595eee7f0f339c7ee91532a897dbb82fee62991b3cfb61bdb9"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2021-07-06-JLJX74.document.json",
+      "file_sha256": "sha256:22c6f3dcc71012a4900740010a58b452e79e69d5435eeebd28dbe8540d955d19",
+      "selector_content_hash": "sha256:268496f567cfb284f64ca704d8a191e090458701a330a9cb47bedd1b829aa857"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2021-07-06-JLXP74.document.json",
+      "file_sha256": "sha256:2e2b3a26e345fd0eb80be7140404a6f7cc3e12765bfcead281791880b574c31b",
+      "selector_content_hash": "sha256:c781cd503a910a146e91d51d67a9fdb313f0aed076f00f9d299b3b9711e5dad5"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2021-07-06-JLXS74.document.json",
+      "file_sha256": "sha256:70dced8cb46a9bdbb3aa3bf4ed4154d807475ff0c3138092932e7c7c35e4ca1c",
+      "selector_content_hash": "sha256:40157c4aab487340fca1122e0afcd6885ea315d905ea16ca6216d9c82def310a"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2021-08-06-JLJL74.document.json",
+      "file_sha256": "sha256:f48584e4a591fe1cc31b1bcf9e60ed17cfd2712620e54bb2fcd3e2e01e41ed98",
+      "selector_content_hash": "sha256:9fd3d02560e2ae83d10d78a4c8e4f152d2a2d74d05f1736deebdfd2beca34b20"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2021-08-06-JLJP74.document.json",
+      "file_sha256": "sha256:2771f7079296d1c4690087fb240a8e1ead3f5c6519799bab8ed28713fd16e57c",
+      "selector_content_hash": "sha256:31b33acf3ccac9bd57adb30125c20a0ff480b2f68a454107538abd9c7c8efd10"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2021-08-06-JLJS74.document.json",
+      "file_sha256": "sha256:fbb957a3e092140016233060fccdf1aa5df2f89b00d6cea73bc3a194112a58ad",
+      "selector_content_hash": "sha256:e807de366b90e85d2e360d7357e3f9d3cadd031f0bce3e2b3310213d9e6001cf"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2021-08-06-JLJX74.document.json",
+      "file_sha256": "sha256:13bfc982f519b21a8a6e20bd713a654dc75c0a975ea3df5b2f2053ef5afac37f",
+      "selector_content_hash": "sha256:a112498c11f3b48a166c2b59eef74b374c0700895d1a7528a6388e1cd28883b0"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2021-08-06-JLXP74.document.json",
+      "file_sha256": "sha256:392a990d154e563c2d1c39a2298ce07d350c12b283da851e48775376a110bb98",
+      "selector_content_hash": "sha256:13b0423dbcfac3ab4f84afee1aa41f0fec40b7305dfe2b2b5ca4786853948f66"
+    },
+    {
+      "path": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/shared_selectors/MY2021-JL-4D-2021-08-06-JLXS74.document.json",
+      "file_sha256": "sha256:38aaea30d5c9647be9c0cdb2b6df35400fb9d737dd4a2e4846f471ef32a5e4d5",
+      "selector_content_hash": "sha256:340a0ff19a29e766a27b1c72fba04428fe631080f9053e94baebda4bca83f320"
+    }
+  ],
+  "all_current_candidate_retained_evidence": {
+    "docs/implementation/handoffs/MY2021_JL/source_pdfs/2-door-8-6-20-pdf.357054.pdf": "sha256:6df8c719d000c190a960abdf02e93e99f2a19bf876ef738590097bd20a6f986b",
+    "docs/implementation/handoffs/MY2021_JL/source_pdfs/2-door-9-29-20-pdf.377304.pdf": "sha256:d68c348b77739e16f8786aabfb560ebb23296045f40747718804374df8dd0b09",
+    "docs/implementation/handoffs/MY2021_JL/source_pdfs/2-door-10-14-20-pdf.382089.pdf": "sha256:20e40c434de57f6372281f52ae2a7450c22ff03358e83037355be69b9836d167",
+    "docs/implementation/handoffs/MY2021_JL/source_pdfs/2-door-12-4-20-pdf.401773.pdf": "sha256:c152ad76ec8fcf65a962f443e83afdbc846b9ffd237ac82b10536810f87aca50",
+    "docs/implementation/handoffs/MY2021_JL/source_pdfs/2-door-1-1-21-pdf.412193.pdf": "sha256:8541303bca3dd5bdd0df5158c36ee9a25c4a41a464e530c2f964dc930d9a7e1e",
+    "docs/implementation/handoffs/MY2021_JL/source_pdfs/2-door-2-8-21-pdf.423851.pdf": "sha256:f02eadc8e31d8ed8f8d8bf48b04d39aee033f89bde9b207f6961cf3b918aa1ec",
+    "docs/implementation/handoffs/MY2021_JL/source_pdfs/2-door-3-5-21-pdf.434803.pdf": "sha256:c9e29d461fe1c13fa0e2c7fb6b6920b8104a049e0ab57080931bf3111ef81744",
+    "docs/implementation/handoffs/MY2021_JL/source_pdfs/2-door-4-14-21-pdf.447427.pdf": "sha256:f6a362d7b4633f81036159fbed36c26f7cc9645f791ed2dd954027c8c9aa520b",
+    "docs/implementation/handoffs/MY2021_JL/source_pdfs/2-door-5-14-21-pdf.461291.pdf": "sha256:727afb687abb9a9f9a6982a5fcc68ad63214512b9ba38b6d0c38f98a9d4b47cc",
+    "docs/implementation/handoffs/MY2021_JL/source_pdfs/FCA_MY2021_Wrangler_specifications.pdf": "sha256:c290b9bb68539a4d3716653f1e0e87ac10bc86046b28f594c262f5de325a741e",
+    "docs/implementation/handoffs/MY2021_JL/owner_review_20261108/sources/Jeep_MY2021_Wrangler_US_owners_manual_E5.pdf": "sha256:327691234c6a544a97fcd3f168aab3039bf0e382b13e2f6e037ad15018fc6d20",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-01.approved-r1.adjudication.1.1.json": "sha256:c1e9e70ca6424ba2c11c0f101da8da5b6643a6045f4b3a1bea58fa00fa1615b4",
+    "docs/implementation/handoffs/MY2021_JL/source_pdfs/FCA_MY2021_Wrangler_fact_sheet.pdf": "sha256:c890c96748dd7c4b46dcdb2623f9f90d0f38d29b2f0d165ca53c6745e705c121",
+    "docs/implementation/handoffs/MY2021_JL/owner_review_20261108/sources/CarAndDriver_MY2021_Wrangler_engine_context.html": "sha256:c581537c40a73dcfdedf9eaa322ba62d53d196e74456e234fa2bff5ad825947a",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-02.approved-r1.adjudication.1.1.json": "sha256:d42ae6eb36836a8be54d9f11fe6b90e1c1707d8a4f5b5f41875a4ba9d3b33e60",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-03.approved-r1.adjudication.1.1.json": "sha256:9f98cdf739cabe2e0633cafd65fb8aa58a79eb7bc7a1caaf2461f1e2081432f4",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-04.approved-r1.adjudication.1.1.json": "sha256:02da8e4d1ae94dc5d4f61c7f230fbef7772e7c944a0e2db1bf32c2f943c94d1c",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-05.approved-r1.adjudication.1.1.json": "sha256:30bbfe5340318f564654251da391308749cd4527419936f36796544cfbe40e6f",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-06.approved-r1.adjudication.1.1.json": "sha256:7c30e3c03cf858d67d31077789d15255879844b46aa09f67534ae8aa95872971",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-07.approved-r1.adjudication.1.1.json": "sha256:130d342e1ff9f025e15873e0057a3f263e2821417f299a1d7fe76af180f3a6a7",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-08.approved-r1.adjudication.1.1.json": "sha256:4716d34dbdb15beaae7429e2bde221ec09151b55526a32ec918293aa04efe9cf",
+    "docs/implementation/handoffs/MY2021_JL/source_pdfs/2-door-6-4-20-pdf.328860.pdf": "sha256:28c4ec6f22bbf3967b4c39cc51d845db61e532594b85c0b74532777cc6feb6dc",
+    "docs/implementation/handoffs/MY2021_JL/source_pdfs/2-door-6-9-21-pdf.472445.pdf": "sha256:cb54c383c74a2a4558184e19c97a578390f36f7e950b9ad250714348a833ff9d",
+    "docs/implementation/handoffs/MY2021_JL/source_pdfs/2-door-7-6-21-pdf.484797.pdf": "sha256:2940c4afec74e1e45adbb73cb5ee9042adfddd56ac1d18c7e51dc26bf9dd8f5c",
+    "docs/implementation/handoffs/MY2021_JL/source_pdfs/2-door-8-6-21-pdf.497505.pdf": "sha256:55b46dee107699fd07ded68025edf48598fe336320537bdf90ca45f8ca82514f",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-09.approved-r1.adjudication.1.1.json": "sha256:fa3861e20a6bbc9d1083cfe446cfd9c38f908ac84163a1d729aee47666c49bc0",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-10.approved-r1.adjudication.1.1.json": "sha256:7844f7356951079050a16c9abd3c7c98b34c458e50d189453d7bf58984e4d137",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-11.approved-r1.adjudication.1.1.json": "sha256:9952de8098167934390c3dc97814bf36e5b4198b0ea84c06b7d64238cd0e1fb3",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-12.approved-r1.adjudication.1.1.json": "sha256:7ffa200471a9d03223694f6c2d7e4621b5fc3cac3c63e3a6e1d9197a750d2ad7",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-13.approved-r1.adjudication.1.1.json": "sha256:f13620baa84fadc7f363f8b57d1db7017b466d119b95196b0e5fe19e59afb0ef",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-14.approved-r1.adjudication.1.1.json": "sha256:c20b039c9e9550edb5c001505ff43a3d18e2910cf581daf8d673084f5a07060d",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-15.approved-r1.adjudication.1.1.json": "sha256:e5129acff1df1e53c382d4c4dc90743adeca0591681f16b57d70b00e37d58720",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-16.approved-r1.adjudication.1.1.json": "sha256:f1df1aa0454babdf7069879735a04199ae481f182dae85e30f9df7d3f8225ef0",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-17.approved-r1.adjudication.1.1.json": "sha256:153c0b011eb98bd6829d0a7bc5ef1e91cbdec3363851d66be52e046288755d73",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-18.approved-r1.adjudication.1.1.json": "sha256:2500e4c5407304c45209b4840b40dd0ff2bf59cb99a79c839e6a931bba2f16b8",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-19.approved-r1.adjudication.1.1.json": "sha256:d964fb67b72469640652acaa4fae9e0f0cdf7a3f7891b4789d4b9699430a2858",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-20.approved-r1.adjudication.1.1.json": "sha256:4d7afaf92026f034a159a8810a3c6ea090afd470e4516f611a56e1c5cef52240",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-21.approved-r1.adjudication.1.1.json": "sha256:1a0857eb4f52fcbc5698992a8541502fff1d7bb4fb99f4091c46d85423d24a26",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-22.approved-r1.adjudication.1.1.json": "sha256:f203987f43193d9b4fdf554a0a9e3466b61e96ad823f95b4db21fe2fa2cdb823",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-23.approved-r1.adjudication.1.1.json": "sha256:843487b124a7dbab9553f072ac7dd2914c2ad50b6e3aa028957d285f651228b3",
+    "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-8-6-20-pdf.357053.pdf": "sha256:3e051bcbccaec39d19e12640bba3438b1b3fc5e244f5f90535ba870c39bdf8ab",
+    "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-9-29-20-pdf.377305.pdf": "sha256:a5f56eb7e8099f78b5de8727acdae7176fa468fec556be174d241ae7ec26105a",
+    "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-10-14-20-pdf.382079.pdf": "sha256:23b0edc5f7b5c7a59ca538a84a1b46c9aebd93c113e54e57ada8763dc723f2ed",
+    "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-10-30-20-pdf.388525.pdf": "sha256:c9c3b3931316a6a39e94a5c2f8893ae81e55a877542bfed5f15dbc259bc73489",
+    "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-12-4-20-pdf.401774.pdf": "sha256:4dad5bddad4fbd0c0e2bab5095734c9f740e9c0e53d67de64df30b41576ada5a",
+    "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-1-1-21-pdf.412194.pdf": "sha256:d0d2e4d1cf0e18f4ca5be3092d0625a2810fae009afefd97a603149ce53ab568",
+    "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-2-9-21-pdf.423850.pdf": "sha256:2fa3c481460efa71f1036638c3f0929c2eca3eb91bd97a0eb87c0bbd3cfdcc9d",
+    "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-3-5-21-pdf.434799.pdf": "sha256:37cd4e33d30f54bb7d46940533a691312c5b8b4da22faee583a10fe5c9feaebb",
+    "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-4-14-21-pdf.447429.pdf": "sha256:d748a277a6cd23a6a7fbb744fa0b24d9c980b21bef9ce4a3fb993c44c9093179",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-24.approved-r1.adjudication.1.1.json": "sha256:6d276da25bc2a6f9a518832846e43b5015dd13778b84ef9b3774ae7d02df6503",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-25.approved-r1.adjudication.1.1.json": "sha256:b8cb5aba57a3d93b71db030421458ea34bb028e0f980dfa39182f7b3725384d4",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-26.approved-r1.adjudication.1.1.json": "sha256:6c5a915412e5422e26125971cff1d2e27321d3e5ec6bc8d3e359570e956be3ae",
+    "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-5-14-21-pdf.461295.pdf": "sha256:086c2e9728515750fbb0f31a425c831b448bd99e02831cf3365452694594e2d1",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-27.approved-r1.adjudication.1.1.json": "sha256:a69f86b0e08732242f13f3ca3f6211ccb78cf41db6b5c66ebe8bbee61955fbde",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-28.approved-r1.adjudication.1.1.json": "sha256:7ffbfdf6e770a6f20df9b4d5494ecec6381d0f48eeda94b34ef1976887d49b18",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-29.approved-r1.adjudication.1.1.json": "sha256:c55542602b0921ee27042e8ad80e0648f0a267b70cb4eab941ee35cac459ce1c",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-30.approved-r1.adjudication.1.1.json": "sha256:9a0305e9271ee6b4a2c1ddc53435af495b87b80b8e7ed3948808492ef4ff65a7",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-31.approved-r1.adjudication.1.1.json": "sha256:9611a0c1fe9cf7236e7373877c6664b0e8fe7d8f433cda7114e8663836f0bf9b",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-32.approved-r1.adjudication.1.1.json": "sha256:167bc82bf1dfc5973e6260ac15c90ac65edf2485b46157a0058a0fe1e6dcb544",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-33.approved-r1.adjudication.1.1.json": "sha256:91a95da311a32ccf1f67f44f85e9ee3ea83e5bc8a8834f8dedc7305d1f146543",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-34.approved-r1.adjudication.1.1.json": "sha256:7344353cfca665b0270c47ef2cc7a601e2d74515ff6380023bdc5ae3952f38de",
+    "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-6-4-20-pdf.328859.pdf": "sha256:6bab917f60f3b646013ce6327e6e759d5b9db75bd7e70927b472dfcdcd70481c",
+    "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-6-9-21-pdf.472444.pdf": "sha256:c531aa9316c46520de25eebd81c9a27d0a547651f10eea467f74a95c71e246ae",
+    "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-7-6-21-pdf.484796.pdf": "sha256:341f1b6f4a5ac774a082bf07a6df0f7c9ebc018272b7da3ff880b67844c93271",
+    "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-8-6-21-pdf.497498.pdf": "sha256:e6c2aa78fb6c34608dbb28dc4084cf909c444802434fcf32af61eb916a1168c4",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-35.approved-r1.adjudication.1.1.json": "sha256:4e3a83e2a01621e02262a84b1bf5fb07cb3607a663dcd64c3a16065ff8802537",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-36.approved-r1.adjudication.1.1.json": "sha256:3844a297e6d0fb336b5f90f9e24e5d33625ea9d3e3ab1dbb7eafd43680c448f2",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-37.approved-r1.adjudication.1.1.json": "sha256:b467037c770e2adefe88472996813bec03fbdaa60f0ca6417f62a33831ae37db",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-38.approved-r1.adjudication.1.1.json": "sha256:94718ffc1f8f5c0c78fabce0984393f0c31869d59816c17fd4679ddad7119985",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-39.approved-r1.adjudication.1.1.json": "sha256:b9abfa40b2d391d250d9af59fd235235279c242aa6ad97d7d6063f01358fbf9f",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-40.approved-r1.adjudication.1.1.json": "sha256:320496cef69461d3b8cd6df99ffba6368074d40ee36d9d2e503ab08d55804322",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-41.approved-r1.adjudication.1.1.json": "sha256:67e1415626094f0992b97958b72e8c4022ea801d57331c9aa2d9c7a0c032f8b5",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-42.approved-r1.adjudication.1.1.json": "sha256:f0c5d156f8f482c4c7a13f6831855e228c42cc5a16c147eefc63874351d06d36",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-43.approved-r1.adjudication.1.1.json": "sha256:6d1a366de43d0262260911bd5ca005e277f08742d6eb2b167576b61b41b45bad",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-44.approved-r1.adjudication.1.1.json": "sha256:a55e423c419fe9a8cf82295b35d9a8490f342c2647eb8262860645b2e1f51f14",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-45.approved-r1.adjudication.1.1.json": "sha256:873aa74a4847abe47a6f850a3eb600e86244af80c62733e81501b27e29b44eb8",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-46.approved-r1.adjudication.1.1.json": "sha256:e83d597fb982ff7f5bbb447a2985a2d41fd46fecc3739651d4f1a3d89584c960",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-47.approved-r1.adjudication.1.1.json": "sha256:5194e263e9db92dd2e1036c9ebe4a2055e98b585bbae592e368fd2731430284e",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-48.approved-r1.adjudication.1.1.json": "sha256:d6cdd8afc16bd5cd123137c57213c0714b5ab3c67cd38ff70aca0a359bb2c503",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-49.approved-r1.adjudication.1.1.json": "sha256:ccd8de2ea40bcf67ba4b865fd2211c1208ec3a69f44ed4175cd349afee3a3086",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-50.approved-r1.adjudication.1.1.json": "sha256:1b1e88b6b99844150b350ed89cd4f72bff28d3f23101d5089276b3f4c2fdaeec",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-51.approved-r1.adjudication.1.1.json": "sha256:ee603ec2f62c8e8a4446d6f794eb18db5800761b3fc43fab9615d62026632654",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-52.approved-r1.adjudication.1.1.json": "sha256:9153b2d19490b6658ab7a898c809efc079d99133fef8779eb731ec4ec226e2d4",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-53.approved-r1.adjudication.1.1.json": "sha256:7e346b64f9acca1145c8624674ca169c144230ca44ebc1a059211fa0f827f1b9",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-54.approved-r1.adjudication.1.1.json": "sha256:dbed80102e63e6f0fe66b120bdd3df023fd387b8bd590b0cda5cacd7aad98176",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-55.approved-r1.adjudication.1.1.json": "sha256:396255e125139828acec5c6d0a3288652cb680451aeb89704824a10a09088aab",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-56.approved-r1.adjudication.1.1.json": "sha256:56161aa04072ae991aabb39518c8fa9c9152292c5e1488067ddd75e76fae0164",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-57.approved-r1.adjudication.1.1.json": "sha256:a96254cd5afd9dfd8efdf66b1d52d4c3275bfbafe24c6a886798286b56fae8f5",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-58.approved-r1.adjudication.1.1.json": "sha256:cfd181c3801a4f4453f1708ba28d4b6789cf5113bb8e9c1347994a2b1c83f243",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-59.approved-r1.adjudication.1.1.json": "sha256:1cd00b1360d94b7e8551aa9ae8a10bf9e234e015b7d9e5b48d2a182604e492c4",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-60.approved-r1.adjudication.1.1.json": "sha256:8139387f86f9b115096674547b0c186796c7e54f80a56221602672f095c6cf7a",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-61.approved-r1.adjudication.1.1.json": "sha256:3802f56ed993d71bb263ebdea8a4bd13d190ac9f730aae989faefe4eb6791fa2",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-62.approved-r1.adjudication.1.1.json": "sha256:5775d2f284657da2648d27ba97a8d22c2da5c5581035335daa51f292e594f1f7",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-63.approved-r1.adjudication.1.1.json": "sha256:d05670ac2ac99abba83c98e317596fb5aa4ccabab2f26414acf2bb57e93ec2fb",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-64.approved-r1.adjudication.1.1.json": "sha256:b58010f7e1ef9e5e0563a57b010a62d42dedbeef492fe5856dbed7ab5f75af49",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-65.approved-r1.adjudication.1.1.json": "sha256:28e79b0b11352da1a6743c4f5ce28b28f8b9410f2094ea93689cb2044118c5a4",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-66.approved-r1.adjudication.1.1.json": "sha256:5ca4db2521020a1a4f9d144377afdcba81f37e46177a695ea12891e0a689d8dc",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-67.approved-r1.adjudication.1.1.json": "sha256:ae851aaad149ec5927cbf6798e53ac7b7eb50413d24ef0e50107e61c0ad40102",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-68.approved-r1.adjudication.1.1.json": "sha256:69f7e25447860f4b91cfc08304f25adc802d4d429d4702ff0dae076f2efb4aae",
+    "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-69.approved-r1.adjudication.1.1.json": "sha256:da3052a5cd472aae3589c75a4aebd096926cf06843123103da2031b98f169798",
+    "docs/implementation/handoffs/MY2021_JL/source_pdfs/FCA_MY2021_Wrangler_392_specifications.pdf": "sha256:47e6996360a2b44e3a7cae8e36975b63bcd06fab53d8b60f40abec63787faf26",
+    "docs/implementation/handoffs/MY2021_JL/owner_review_20261108/sources/Stellantis_MY2021_392_production_release.html": "sha256:f45de845748d42b55fc4db41003c618e6a64430854707f8f45a66d9dae236610",
+    "docs/implementation/handoffs/MY2021_JL/owner_review_20261108/sources/CarAndDriver_MY2021_392_launch.html": "sha256:1593b8695f749efd117bdc9a2d37c8f46edd370a4137d6f9580d7e1a126e98fa",
+    "docs/implementation/handoffs/MY2021_JL/fuel_completion_20261109/JL21-70.fuel-r2.approved.adjudication.1.1.json": "sha256:599f071cb4a18e001613834637c5e1310e19865abe04a7faccdc78db431da872",
+    "docs/implementation/handoffs/MY2021_JL/source_pdfs/FCA_MY2021_Wrangler_4xe_specifications.pdf": "sha256:20658983b1624cca3dc1685cf7e020b260bc9118b2783f69d97ef055636d0aec"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "result": "passed; fresh baseline established",
+  "all_tables_inspected": 48,
+  "counts": {
+    "VehicleDefinitions": 861,
+    "receipts": 3075,
+    "correspondences": 159
+  },
+  "all_861_canonical_rows_PK_UUID_slug_and_other_fields_unchanged": true,
+  "old_receipts_and_lineage_unchanged": true,
+  "all159_correspondence_targets_verified": true,
+  "approved95_publication_additions_reconciled": true,
+  "unexplained_non_session_changes": 0,
+  "normal_session_rows_changed": 1,
+  "committed_private_auth_differences_documented": true,
+  "database_sha256_before": "sha256:058bbd44e0811c83bf67c916ae92e27b6a0b062c26be031876e9582190e01473",
+  "database_sha256_after": "sha256:058bbd44e0811c83bf67c916ae92e27b6a0b062c26be031876e9582190e01473",
+  "live_database_unchanged_by_audit": true,
+  "new_database_backup_created": false,
+  "execution_performed": false,
+  "new_VehicleDefinitions": 0,
+  "new_receipts": 0,
+  "precise_intermediate_hash_pair_causes_proven": false,
+  "limitation": "See session_nature_assessment; no matching intermediate physical snapshots exist."
+}

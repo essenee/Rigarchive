@@ -1,0 +1,175 @@
+{
+  "live": {
+    "absolute_path": "/Users/cosmo/dev/Rigarchive/db.sqlite3",
+    "sha256": "sha256:058bbd44e0811c83bf67c916ae92e27b6a0b062c26be031876e9582190e01473",
+    "size_bytes": 13438976,
+    "modification_time": {
+      "UTC": "2026-11-09T16:33:33.535948+00:00",
+      "America_Los_Angeles": "2026-11-09T08:33:33.535948-08:00"
+    },
+    "filesystem_birth_time": {
+      "UTC": "2026-11-06T17:28:59+00:00",
+      "America_Los_Angeles": "2026-11-06T09:28:59-08:00"
+    }
+  },
+  "closest_verified_physical_baseline": {
+    "absolute_path": "/Users/cosmo/dev/Rigarchive/backups/review/MY2021_JL_correspondence_prepublication_20261109T154455104372Z.sqlite3",
+    "sha256": "sha256:06502534d35395b97d74447b98c760f237a1e2aba04860f32d349fab62bd1d92",
+    "size_bytes": 11624448,
+    "modification_time": {
+      "UTC": "2026-11-09T15:44:55.140437+00:00",
+      "America_Los_Angeles": "2026-11-09T07:44:55.140437-08:00"
+    },
+    "filesystem_birth_time": {
+      "UTC": "2026-11-09T15:44:55.118345+00:00",
+      "America_Los_Angeles": "2026-11-09T07:44:55.118345-08:00"
+    }
+  },
+  "closest_baseline_limit": "Prepublication snapshot; the95correspondence and95receipt additions are separately reconciled to immutable approved publication records, never ignored as session drift",
+  "historical_backup_inventory": [
+    {
+      "absolute_path": "/Users/cosmo/dev/Rigarchive/backups/review/MY2021_JL_correspondence_prepublication_20261109T154455104372Z.sqlite3",
+      "sha256": "sha256:06502534d35395b97d74447b98c760f237a1e2aba04860f32d349fab62bd1d92",
+      "size_bytes": 11624448,
+      "modification_time": {
+        "UTC": "2026-11-09T15:44:55.140437+00:00",
+        "America_Los_Angeles": "2026-11-09T07:44:55.140437-08:00"
+      },
+      "filesystem_birth_time": {
+        "UTC": "2026-11-09T15:44:55.118345+00:00",
+        "America_Los_Angeles": "2026-11-09T07:44:55.118345-08:00"
+      }
+    },
+    {
+      "absolute_path": "/Users/cosmo/dev/Rigarchive/backups/review/MY2020_commit_checkpoint_20261109T025312470275Z/sanitized.sqlite3",
+      "sha256": "sha256:4c374c89dc2eaec66e308a4679cdad7592d138f2903b5d377126e2ff1e08e573",
+      "size_bytes": 11624448,
+      "modification_time": {
+        "UTC": "2026-11-09T02:53:12.766159+00:00",
+        "America_Los_Angeles": "2026-11-08T18:53:12.766159-08:00"
+      },
+      "filesystem_birth_time": {
+        "UTC": "2026-11-09T02:53:12.685767+00:00",
+        "America_Los_Angeles": "2026-11-08T18:53:12.685767-08:00"
+      }
+    },
+    {
+      "absolute_path": "/Users/cosmo/dev/Rigarchive/backups/review/MY2020_commit_checkpoint_20261109T025312470275Z/live-consistent-backup.sqlite3",
+      "sha256": "sha256:bbc1c96b8f775ea99d10c09f82fbc2f7307e9ab4de4018572c87585f7dd67457",
+      "size_bytes": 11747328,
+      "modification_time": {
+        "UTC": "2026-11-09T02:53:12.514245+00:00",
+        "America_Los_Angeles": "2026-11-08T18:53:12.514245-08:00"
+      },
+      "filesystem_birth_time": {
+        "UTC": "2026-11-09T02:53:12.482160+00:00",
+        "America_Los_Angeles": "2026-11-08T18:53:12.482160-08:00"
+      }
+    },
+    {
+      "absolute_path": "/Users/cosmo/dev/Rigarchive/backups/review/MY2020_JL_canonical_preimport_20261109T021043662755Z.sqlite3",
+      "sha256": "sha256:613881ef7e9ec2f3e7029294b5784cf480943ae73887cffb6aa62dd01c3ee5dd",
+      "size_bytes": 8122368,
+      "modification_time": {
+        "UTC": "2026-11-09T02:10:43.691769+00:00",
+        "America_Los_Angeles": "2026-11-08T18:10:43.691769-08:00"
+      },
+      "filesystem_birth_time": {
+        "UTC": "2026-11-09T02:10:43.679238+00:00",
+        "America_Los_Angeles": "2026-11-08T18:10:43.679238-08:00"
+      }
+    },
+    {
+      "absolute_path": "/Users/cosmo/dev/Rigarchive/backups/review/MY2020_JL_correspondence_prepublication_20261108T231420638715Z.sqlite3",
+      "sha256": "sha256:1ed8d207e4300de4a8eb164c1c958e8545fd709704e137cbd3394226caffa014",
+      "size_bytes": 7716864,
+      "modification_time": {
+        "UTC": "2026-11-08T23:14:20.664984+00:00",
+        "America_Los_Angeles": "2026-11-08T15:14:20.664984-08:00"
+      },
+      "filesystem_birth_time": {
+        "UTC": "2026-11-08T23:14:20.654044+00:00",
+        "America_Los_Angeles": "2026-11-08T15:14:20.654044-08:00"
+      }
+    },
+    {
+      "absolute_path": "/Users/cosmo/dev/Rigarchive/backups/review/five_commit_checkpoint_20261108T211936107086Z/sanitized-commit.sqlite3",
+      "sha256": "sha256:0a106aee1d95f61b9e908093a9eb1f74721f59f592ea01ff418a48ac5bea8d9e",
+      "size_bytes": 7651328,
+      "modification_time": {
+        "UTC": "2026-11-08T21:19:36.172698+00:00",
+        "America_Los_Angeles": "2026-11-08T13:19:36.172698-08:00"
+      },
+      "filesystem_birth_time": {
+        "UTC": "2026-11-08T21:19:36.120661+00:00",
+        "America_Los_Angeles": "2026-11-08T13:19:36.120661-08:00"
+      }
+    },
+    {
+      "absolute_path": "/Users/cosmo/dev/Rigarchive/backups/review/five_commit_checkpoint_20261108T211936107086Z/live-pre-sanitization.sqlite3",
+      "sha256": "sha256:1ed8d207e4300de4a8eb164c1c958e8545fd709704e137cbd3394226caffa014",
+      "size_bytes": 7716864,
+      "modification_time": {
+        "UTC": "2026-11-08T21:19:36.119260+00:00",
+        "America_Los_Angeles": "2026-11-08T13:19:36.119260-08:00"
+      },
+      "filesystem_birth_time": {
+        "UTC": "2026-11-08T21:19:36.107865+00:00",
+        "America_Los_Angeles": "2026-11-08T13:19:36.107865-08:00"
+      }
+    },
+    {
+      "absolute_path": "/Users/cosmo/dev/Rigarchive/backups/review/my2019_jl_import_20261108T205605112634Z/pre-import.sqlite3",
+      "sha256": "sha256:346dfed9672b836d84b605a9618d79804f3cfe1ed167809e19780ba229ddf11d",
+      "size_bytes": 7434240,
+      "modification_time": {
+        "UTC": "2026-11-08T20:56:05.123921+00:00",
+        "America_Los_Angeles": "2026-11-08T12:56:05.123921-08:00"
+      },
+      "filesystem_birth_time": {
+        "UTC": "2026-11-08T20:56:05.113093+00:00",
+        "America_Los_Angeles": "2026-11-08T12:56:05.113093-08:00"
+      }
+    },
+    {
+      "absolute_path": "/Users/cosmo/dev/Rigarchive/backups/review/my2019_jl_correspondence_20261108T203329215652Z/pre-publication.sqlite3",
+      "sha256": "sha256:fdb018c70dc2594394313817879752ac0c221d78f013d8acb229b5ec896aec62",
+      "size_bytes": 7434240,
+      "modification_time": {
+        "UTC": "2026-11-08T20:33:29.229092+00:00",
+        "America_Los_Angeles": "2026-11-08T12:33:29.229092-08:00"
+      },
+      "filesystem_birth_time": {
+        "UTC": "2026-11-08T20:33:29.216455+00:00",
+        "America_Los_Angeles": "2026-11-08T12:33:29.216455-08:00"
+      }
+    },
+    {
+      "absolute_path": "/Users/cosmo/dev/Rigarchive/backups/review/jeep_jl_my2018_jdpower_pilot/live-import-20261107T013404Z/pre-import.sqlite3",
+      "sha256": "sha256:6bd46a480a6538b63ee3c1673f9713c13ad93dee83aebed067ade4a3fc004752",
+      "size_bytes": 6402048,
+      "modification_time": {
+        "UTC": "2026-11-07T01:34:05+00:00",
+        "America_Los_Angeles": "2026-11-06T17:34:05-08:00"
+      },
+      "filesystem_birth_time": {
+        "UTC": "2026-11-07T01:34:05+00:00",
+        "America_Los_Angeles": "2026-11-06T17:34:05-08:00"
+      }
+    }
+  ],
+  "committed_checkpoint": {
+    "HEAD": "8d4a6e8f06dd2c15761ee3810ad009771cc03e70",
+    "database_last_commit_date": "2026-11-08T18:55:51-08:00",
+    "database_sha256": "sha256:4c374c89dc2eaec66e308a4679cdad7592d138f2903b5d377126e2ff1e08e573",
+    "size_bytes": 11624448,
+    "matches_documented_sanitized_copy": true,
+    "sanitization_record": "/Users/cosmo/dev/Rigarchive/backups/review/MY2020_commit_checkpoint_20261109T025312470275Z/state.json",
+    "committed_session_count": 0,
+    "operational_database_is_not_committed_snapshot": true
+  },
+  "earlier_file_hashes_without_matching_retained_physical_snapshot": {
+    "planning": "sha256:ecc521242b0d29b659a7195bbfbc498ed80c8f129c472ab9bf445461984520e2",
+    "stopped_preflight": "sha256:de2308f1c965899a40ee8dec9a66a47484241fb45515e9efd76b2f06b156036c"
+  }
+}

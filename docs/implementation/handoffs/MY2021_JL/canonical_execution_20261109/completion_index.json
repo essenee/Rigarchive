@@ -1,0 +1,18 @@
+{
+  "status": "completed",
+  "report": "docs/implementation/handoffs/MY2021_JL/canonical_execution_20261109/COMPLETION_REPORT.md",
+  "resumed_report": "docs/implementation/handoffs/MY2021_JL/canonical_execution_20261109/resumed_20261109/README.md",
+  "inventory": "docs/implementation/handoffs/MY2021_JL/canonical_execution_20261109/resumed_20261109/artifact_hashes.json",
+  "inventory_sha256": "sha256:c504faeac5f7a3f5bbfbfcd01887aa88698d1ca0cc2a3a6d54f02fd5d21d2afd",
+  "created_VehicleDefinitions": 73,
+  "VehicleDefinition_PK_range": [
+    877,
+    949
+  ],
+  "created_receipts": 73,
+  "receipt_PK_range": [
+    3076,
+    3148
+  ],
+  "matrix_digest": "sha256:6926df6c06e4bd471bbda02c67257cf7a7e2999cf5cdfebfc8b06ead31a9996e"
+}

@@ -1,0 +1,57 @@
+{
+  "authority_order": [
+    "current explicitly approved task",
+    "accepted ADRs",
+    "CURRENT_STATE.md",
+    "approved design/ingestion contracts",
+    "Engineering Handbook",
+    "Project Blueprint"
+  ],
+  "reviewed_documents": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "sha256:d0514068276bbf1db43377443d6ed7bb75a766af60e6081727a16ff26bee68cc"
+    },
+    {
+      "path": "GEMINI.md",
+      "sha256": "sha256:b9eaed6a3a6be823319819ec35620cad13ee4e0888dbdbfe02fb5ff87fdec9e4"
+    },
+    {
+      "path": "docs/implementation/CURRENT_STATE.md",
+      "sha256": "sha256:5d430c5968d7719370faea0bef19204b8d96e2608d16945eb51714007cd36da7"
+    },
+    {
+      "path": "docs/architecture/ADR/ADR-0005-Manufacturer-Grade-Taxonomy-Market-Applicability-Normalization.md",
+      "sha256": "sha256:d8f6b5fe64ce76cd4ba69e575ac4ddb821cd649b19587d230305070bf15de907"
+    },
+    {
+      "path": "docs/architecture/ADR/ADR-0010-Generation-Correspondence-Selectable-Factory-Alternatives.md",
+      "sha256": "sha256:a0ac148af0a8ba03adfa0a2ae28b7513b5efbfb0df48cb94f30ef8774c1f8212"
+    },
+    {
+      "path": "docs/architecture/ADR/ADR-0011-Factory-Body-Configuration-Identity.md",
+      "sha256": "sha256:cbd4e08b1eaabc4fa94b343cf1b13e37dcc82671e19204ae74cb6c69306ff174"
+    },
+    {
+      "path": "docs/architecture/ADR/ADR-0012-Structured-Powertrain-Identity-And-Hybrid-Terminology.md",
+      "sha256": "sha256:60fcb8109b97d80860978c319af26ec368b17ffb05f09d607f6cd896e6874568"
+    },
+    {
+      "path": "docs/architecture/designs/RA-044-Structured-Powertrain-Identity-Implementation-Architecture.md",
+      "sha256": "sha256:2a9c7c634eea51599c8bb2a88d72490cd97b6f7bbc9216ac2e0ac776557d9250"
+    },
+    {
+      "path": "docs/implementation/tasks/RA-044-structured-powertrain-identity-implementation.md",
+      "sha256": "sha256:119c2b92c579d7e9fe43186f82d618d906b2c8294ead898c739d9894838523aa"
+    },
+    {
+      "path": "reference/ingestion/contracts.py",
+      "sha256": "sha256:9bed10c5861e19554387860f9a2500f0a9de52ff6401b463b4195ab514c88959"
+    },
+    {
+      "path": "reference/ingestion/classification_adjudication.py",
+      "sha256": "sha256:001bb9b1c33f1612faf1b746557ca5154d92b507544d46af94e0d724c3bedf85"
+    }
+  ],
+  "interpretation": "Reuse existing Candidate 2.1.0, canonical adjudication 1.1 and Matrix 2.1; no execution or architecture changes. Discovery is not approval."
+}

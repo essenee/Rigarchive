@@ -1,0 +1,31 @@
+BASE JL21-01 ['electrification_type']
+BASE JL21-02 ['engine_aspiration']
+BASE JL21-03 ['electrification_type']
+BASE JL21-04 ['engine_aspiration', 'electrification_type']
+BASE JL21-05 ['engine_aspiration']
+BASE JL21-06 ['electrification_type']
+BASE JL21-07 ['engine_aspiration', 'electrification_type']
+BASE JL21-08 ['engine_aspiration']
+BASE JL21-09 ['electrification_type']
+BASE JL21-10 ['engine_aspiration', 'electrification_type']
+BASE JL21-11 ['engine_aspiration']
+BASE JL21-12 ['electrification_type']
+BASE JL21-13 ['engine_aspiration', 'electrification_type']
+BASE JL21-14 ['engine_aspiration']
+BASE JL21-15 ['electrification_type']
+BASE JL21-16 ['engine_aspiration', 'electrification_type']
+BASE JL21-17 ['engine_aspiration']
+BASE JL21-18 ['electrification_type']
+BASE JL21-19 ['engine_aspiration', 'electrification_type']
+BASE JL21-20 ['engine_aspiration']
+BASE JL21-21 ['electrification_type']
+BASE JL21-22 ['engine_aspiration', 'electrification_type']
+BASE JL21-23 ['engine_aspiration']
+Traceback (most recent call last):
+  File "/Users/cosmo/dev/Rigarchive/docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/build_artifacts.py", line 508, in <module>
+    {'base': base_stage, 'approve': approve_stage, 'validate': validate_stage}[sys.argv[1]]()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/cosmo/dev/Rigarchive/docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/build_artifacts.py", line 249, in base_stage
+    assert _supports(assertion.raw_value, key, value, jeep=True), (rid, key)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('JL21-24', 'engine_displacement_liters')

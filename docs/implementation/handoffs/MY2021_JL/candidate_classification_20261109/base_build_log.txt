@@ -1,0 +1,12 @@
+BASE JL21-01 ['electrification_type']
+Traceback (most recent call last):
+  File "/Users/cosmo/dev/Rigarchive/docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/build_artifacts.py", line 499, in <module>
+    {'base': base_stage, 'approve': approve_stage, 'validate': validate_stage}[sys.argv[1]]()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/cosmo/dev/Rigarchive/docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/build_artifacts.py", line 208, in base_stage
+    source = source_set(e['source_id'], ROOT / e['document'], g['url'], native, assertions,
+        notes='Manufacturer guide archived copy. Shared model-code selector across marketed grades; grade normalization uses table context, not a code-only identity.')
+  File "/Users/cosmo/dev/Rigarchive/docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/build_artifacts.py", line 106, in source_set
+    assert result.source_assertions == assertions
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

@@ -1,0 +1,40 @@
+{
+  "envelope": {
+    "artifact_type": "rigarchive.source_assertion_set.v1",
+    "created_at": "2026-11-09T13:43:25.638901+00:00",
+    "generator": "MY2021_bounded_construction",
+    "schema_version": "1.1.0"
+  },
+  "provenance": {
+    "acquisition_method": "retained_local_evidence",
+    "extraction_provenance": {
+      "extraction_mode": "manually_verified_transcription",
+      "extractor_id": "retained_MY2021_evidence_transcription",
+      "extractor_version": "1.0.0",
+      "raw_artifact_hash": "sha256:d748a277a6cd23a6a7fbb744fa0b24d9c980b21bef9ce4a3fb993c44c9093179",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-4-14-21-pdf.447429.pdf"
+    },
+    "native_record_id": "MY2021-JL-4D-2021-04-14-package-p19",
+    "publication_revision": "Original retained MY2021 source; no cross-year approval propagation",
+    "retrieved_at": "2026-11-09T13:43:25.638901+00:00",
+    "review_status": "reviewed",
+    "source_applicability": {
+      "applicability_basis": "MY2021 US guide applicability; technical/manual joins scoped to exact engine family and source locators",
+      "applicability_scope": "model_year",
+      "market": "US",
+      "publisher_jurisdiction": "US"
+    },
+    "source_id": "MY2021-JL-4D-2021-04-14",
+    "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-4-14-21-pdf.447429/",
+    "source_type": "manufacturer_document",
+    "source_use_notes": "Raw optional-package evidence only. No option/transmission-only baseline is constructed."
+  },
+  "source_assertions": [
+    {
+      "assertion_id": "MY2021-JL-4D-2021-04-14-package-p19",
+      "attribute_key": "factory_package_option_page",
+      "raw_value": "JEEP United States                                   REISSUED: 04/14/2021                                                                                         PAGE: 19\nREVISED                                                         ISSUED:      06/04/2020                                                 2021 WRANGLER 4 DOOR\n                                                                                                  WRANGLER UNLIMITED RUBICON 392\nSTEP #3              SELECT - $ OPTIONS (IF DESIRED)\n\nDESCRIPTION                                          $FWP   $MSRP                                          2_X\nCARGO GROUP W/ TRAIL RAIL                             176    195                                          CMD\nSYSTEM\nDUAL DOOR GROUP W/ PREMIUM                           3,956  4,395                                         AJS\nUPPERS\nM/H HT3 OR STJ; M/H PAU OR PBJ OR\nPDN OR PGG OR PRV OR PW7 OR PX8;\nN/A W/AEN; N/A W/ST3; N/A W/ST8\nDUAL TOP GROUP                                       1,170  1,300                                         AEN\nENGINE BLOCK HEATER                                   86      95                                          NHK\nFRONT LICENSE PLATE BRACKET                           N/C    N/C                                          MDA\nINTEGRATED OFF-ROAD CAMERA                            536    595                                          XNY\nM/H AD6 AND AEK\nLT285/70R17C BSW M/T TIRES                            176    195                                          TWG\nONLY 1: TT4 OR TWG\nLT285/70R17C OWL OFF-ROAD                             N/C    N/C                                          TT4\nTIRES\nONLY 1: TT4 OR TWG\nMANUF STATEMENT OF ORIGIN                             N/C    N/C                                          YEP\nPREMIUM TAN SUNRIDER SOFT                             N/C    N/C                                          ST3\nTOP\nM/H AEN; ONLY 1: STJ OR ST3\nSKY ONE-TOUCH POWER TOP                              1,800  2,000                                         STJ\nN/A W/AEN; N/A W/PYV; ONLY 1: STJ OR\nST3\nSMOKER'S GROUP                                        27      30                                          AWS\nSOFT TOP WINDOW STORAGE BAG                           68      75                                          CWJ\nM/H AEN OR ST3; N/A W/ST8; N/A W/STJ\nTRAILER TOW PACKAGE                                   316    350                                          ABR\n\nMOPAR OPTIONS\nMOPAR ALL-WEATHER FLOOR                               149    165                                          CWA\nMATS\nMOPAR HARDTOP HEADLINER                               473    525                                          CHD\nM/H HT3; N/A W/STJ\nMOPAR HINGE-GATE                                      608    675                                          XDB\nREINFORCEMENT\nMOPAR LOWER BODY SIDE                                 220    245                                          M9G\nGRAPHIC\nMOPAR MESH SUNBONNET TOP                              158    175                                          CS7\nMOPAR SATIN BLACK GRILLE                              293    325                                          MHJ\nMOPAR SOLID SUNBONNET TOP                             266    295                                          CS3\nM/H HT3; N/A W/STJ\nMOPAR UPPER BODY SIDE                                 220    245                                          M9F\nGRAPHIC\nN/A W/M9G\nMOPAR WINDSHIELD TIE DOWN                             35      40                                          CT9\n\nSTEP #4              SELECT - COLOR & TRIM CODES\n\nCOLOR/TRIM                                                                            $FWP   $MSRP                        BLACK\nLEATHER TRIMMED BUCKET SEATS                                                      (S)  N/C    N/C                         HDX9\n\nMONOTONE PAINT - APA\n\nPRIMARY COLOR\nBILLET SILVER METALLIC CLEAR COAT                                                      220    245                          PSC\nBLACK CLEAR COAT                                                                       220    245                          PX8\nBRIGHT WHITE CLEAR COAT                                                                N/C    N/C                          PW7\nFIRECRACKER RED C/C                                                                    220    245                          PRC\nGRANITE CRYSTAL MET. CLEAR COAT                                                        220    245                          PAU\nHYDRO BLUE PEARL COAT                                                                  220    245                          PBJ\nSARGE GREEN CLEAR COAT                                                                 220    245                          PGG\nSNAZZBERRY PEARL COAT                                                                  220    245                          PRV\nSTING-GRAY CLEAR COAT                                                                  220    245                          PDN\n\nE - EXTRA COST N/C - NO CHARGE N/A - NOT AVAILABLE P - PACKAGED",
+      "source_context": "PDF page 19; model JLJX74; raw conditions retained, not evaluated"
+    }
+  ]
+}

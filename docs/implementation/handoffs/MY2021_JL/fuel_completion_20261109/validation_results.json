@@ -1,0 +1,30 @@
+{
+  "result": "passed",
+  "current_candidates": 73,
+  "complete_five_field_identities": 73,
+  "body_distribution": {
+    "2-door": 23,
+    "4-door": 50
+  },
+  "approved_body_trim_labels": 24,
+  "other_candidates_unchanged": 72,
+  "changed_candidates": [
+    "JL21-70"
+  ],
+  "other_392_powertrain_fields_unchanged": 4,
+  "prior_approved_decisions_preserved": 88,
+  "new_distinct_approved_decisions": 1,
+  "total_distinct_approved_field_decisions": 89,
+  "new_cumulative_adjudication_claims": 3,
+  "prior_ESG_claims_carried_forward_exactly": 2,
+  "unchanged_direct_ECX_candidates": 3,
+  "RHD_candidates": 0,
+  "RHD_deferred_decisions": 1,
+  "unique_candidate_identities": 73,
+  "hashes_lineage_and_serialization": "passed",
+  "database_unchanged": true,
+  "database_sha256": "sha256:ec1eb2adb8becf62a6d8ef18e5ae2dee37d5049620faaaeec51ab8c69b0ee4f9",
+  "original_files_and_accepted_code_contracts_unchanged": true,
+  "remaining_consumer_classification_blockers": [],
+  "generation_correspondence_work": "Not performed; awaits separate owner authorization"
+}

@@ -1,0 +1,93 @@
+{
+  "review": {
+    "review_version": "1.0",
+    "revision_uuid": "bd0380a0-2191-48a4-a973-b05f486b1e49",
+    "correspondence_uuid": "59bfe007-b839-4e21-8e4b-d0ccebca9e25",
+    "revision_number": 1,
+    "supersedes_uuid": null,
+    "vehicle_model_uuid": "5ec5f58a-b140-484c-97f0-c90ec9c134d6",
+    "generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+    "source_id": "MY2021-JL-4D-2021-05-14",
+    "source_namespace": "source_model_code",
+    "identity_type": "model_code",
+    "native_identifier": "JLJS74",
+    "market": "US",
+    "start_year": 2021,
+    "end_year": 2021,
+    "restrictions": {},
+    "evidence": [
+      {
+        "assertion_set_id": "MY2021-JL-4D-2021-05-14-JLJS74",
+        "assertions": [
+          {
+            "assertion_id": "MY2021-JL-4D-2021-05-14-JLJS74-table",
+            "attribute_key": "factory_powertrain_table",
+            "raw_value": "ENGINE             $FWP    $MSRP  TRANSMISSION         $FWP   $MSRP\n3.6L V6 24V VVT     N/C     N/C   6-SPEED               N/C     N/C                                            23R\nENGINE UPG I                      MANUAL\nW/ESS (ERC)                       TRANSMISSION\n                                  (DEM)\n2.0L I4 DOHC DI     (900) (1,000) 8-SPD AUTO           2,250   2,500                                           22R\nTURBO ENGINE                      850RE TRANS\nW/ ESS (EC1)                      (MAKE) (DFT)\n3.6L V6 24V VVT     676     750   8-SPD AUTO           2,250   2,500                                           25R\nETORQUE                           850RE TRANS\nENGINE UPG I                      (MAKE) (DFT)\n(ERG)\n3.0L V6 TURBO      3,150   3,500  8-SPD AUTO           2,250   2,500                                           26R\nDIESEL ENGINE                     8HP75 TRANS\nW/ESS G3 (EXJ)                    (BUY-GERMANY)\n                                  (DFV)",
+            "source_context": "PDF page 14; manufacturer model heading and named QOP columns"
+          },
+          {
+            "assertion_id": "MY2021-JL-4D-2021-05-14-JLJS74-model",
+            "attribute_key": "source_model_code",
+            "raw_value": "JLJS74",
+            "source_context": "PDF page 14; manufacturer model code"
+          },
+          {
+            "assertion_id": "MY2021-JL-4D-2021-05-14-JLJS74-heading",
+            "attribute_key": "source_document_heading",
+            "raw_value": "REISSUED: 05/14/2021                                                                                                                                        PAGE: 1           JEEP\nISSUED:      06/04/2020\n\n                                                                      United States\n                                                                               2021                                                                                          WRANGLER\n\n                                                         JEEP        WRANGLER                 4   DOOR\n\n                                                       CUSTOMER PREFERRED CODE GUIDE\n\n\n         MODEL                                                                                                 CODE                  PAGES\n         WRANGLER UNLIMITED SPORT                                                               JLJL74                  2                                                     4\n\n         WRANGLER UNLIMITED SAHARA                                                            JLJP74                  8                                                       DOOR\n\n         WRANGLER UNLIMITED RUBICON                                                           JLJS74                 14\n         WRANGLER UNLIMITED RUBICON 392                                                    JLJX74                 18\n         WRANGLER UNLIMITED SPORT RHD                                                       JLUL74                 21\n         WRANGLER UNLIMITED SAHARA 4XE                                                     JLXP74                 22\n         WRANGLER UNLIMITED RUBICON 4XE                                                   JLXS74                 25\n         GROUP DETAIL                                                                                                                          28\n         STANDARD EQUIPMENT                                                                                                          33\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n         STEP #1: SELECT                                                                                        MODEL CODE\n\n         STEP #2: SELECT                                                                                        QUICK ORDER PACKAGE CODE\n\n         STEP #3: SELECT                                                                                        $ OPTIONS (IF DESIRED)\n\n         STEP #4: SELECT                                                                                        COLOR & TRIM CODES\n\n\n\n\n\n       © 2020 FCA US LLC, All Rights Reserved. IT IS FOR THE USE OF FCA AND ITS AUTHORIZED DEALERS ONLY AND MAY\n                       NOT BE OTHERWISE USED, RELEASED, OR REPRINTED WITHOUT FCA PRIOR PERMISSION.\n\n                             ORDERS ARE ACCEPTED ONLY WHEN VEHICLES ARE SHIPPED BY THE FACTORY.\n                                                          © 2020 FCA US LLC, All Rights Reserved.",
+            "source_context": "PDF page 1; United States / MY2021 / Jeep Wrangler / body heading"
+          },
+          {
+            "assertion_id": "MY2021-JL-4D-2021-05-14-JLJS74-engine-0",
+            "attribute_key": "engine_descriptor",
+            "raw_value": "2.0L I4 DOHC DI     (900) (1,000) 8-SPD AUTO           2,250   2,500                                           22R\nTURBO ENGINE                      850RE TRANS\nW/ ESS (EC1)                      (MAKE) (DFT)",
+            "source_context": "PDF page 14; exact EC1 segment, with transmission/QOP cells retained; no code-only inference"
+          },
+          {
+            "assertion_id": "MY2021-JL-4D-2021-05-14-JLJS74-engine-1",
+            "attribute_key": "engine_descriptor",
+            "raw_value": "3.6L V6 24V VVT     N/C     N/C   6-SPEED               N/C     N/C                                            23R\nENGINE UPG I                      MANUAL\nW/ESS (ERC)                       TRANSMISSION\n                                  (DEM)",
+            "source_context": "PDF page 14; exact ERC segment, with transmission/QOP cells retained; no code-only inference"
+          },
+          {
+            "assertion_id": "MY2021-JL-4D-2021-05-14-JLJS74-engine-2",
+            "attribute_key": "engine_descriptor",
+            "raw_value": "3.6L V6 24V VVT     676     750   8-SPD AUTO           2,250   2,500                                           25R\nETORQUE                           850RE TRANS\nENGINE UPG I                      (MAKE) (DFT)\n(ERG)",
+            "source_context": "PDF page 14; exact ERG segment, with transmission/QOP cells retained; no code-only inference"
+          },
+          {
+            "assertion_id": "MY2021-JL-4D-2021-05-14-JLJS74-engine-3",
+            "attribute_key": "engine_descriptor",
+            "raw_value": "3.0L V6 TURBO      3,150   3,500  8-SPD AUTO           2,250   2,500                                           26R\nDIESEL ENGINE                     8HP75 TRANS\nW/ESS G3 (EXJ)                    (BUY-GERMANY)\n                                  (DFV)",
+            "source_context": "PDF page 14; exact EXJ segment, with transmission/QOP cells retained; no code-only inference"
+          }
+        ],
+        "extraction_mode": "manually_verified_transcription",
+        "extractor_id": "retained_MY2021_evidence_transcription",
+        "extractor_version": "1.0.0",
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "publication_revision": "Original retained MY2021 source; no cross-year approval propagation",
+        "raw_artifact_hash": "sha256:086c2e9728515750fbb0f31a425c831b448bd99e02831cf3365452694594e2d1",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-5-14-21-pdf.461295.pdf",
+        "retrieved_at": "2026-11-09T13:43:25.638901+00:00",
+        "source_applicability": {
+          "applicability_basis": "MY2021 US guide applicability; technical/manual joins scoped to exact engine family and source locators",
+          "applicability_scope": "model_year",
+          "market": "US",
+          "publisher_jurisdiction": "US",
+          "unknown_fields": {}
+        },
+        "source_id": "MY2021-JL-4D-2021-05-14",
+        "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-5-14-21-pdf.461295/"
+      }
+    ],
+    "finding": "established",
+    "reviewer": "Codex MY2021 evidence review; unpublished proposal; owner publication authorization pending",
+    "reviewed_at": "2026-11-09T15:15:13.153673+00:00",
+    "review_notes": "Unpublished MY2021 US-only finding for the exact retained manufacturer guide/model key. Original United States / 2021 / Wrangler body heading and model-code table establish applicability. The owner-reviewed US MY2021 Wrangler JL offering context, manufacturer model/body lineage and active canonical JL target (PK32, starts2018) establish the reviewed relation; not a code-prefix or name-only automatic match. Earlier-year publications were inspected but do not authorize reuse: their year scopes and source identities differ. For 4xe and 392, retain their manufacturer Wrangler Unlimited family headings; no separate model/Generation is invented. The exact existing shared selector document is present in every matching current candidate. No candidate, classification, source key or raw evidence is revised. Publication requires separate explicit owner authorization."
+  },
+  "content_hash": "sha256:fdc49763e65d8ed82bc5cfe80b779f0516d4cd5a4b0d36c61dd3e27f50f7c6e1"
+}

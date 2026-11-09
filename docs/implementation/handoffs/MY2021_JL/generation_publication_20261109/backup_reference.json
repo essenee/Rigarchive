@@ -1,0 +1,16 @@
+{
+  "path": "backups/review/MY2021_JL_correspondence_prepublication_20261109T154455104372Z.sqlite3",
+  "sha256": "sha256:06502534d35395b97d74447b98c760f237a1e2aba04860f32d349fab62bd1d92",
+  "integrity": "ok",
+  "foreign_keys": "passed",
+  "logical_all_table_match": true,
+  "absolute_path": "/Users/cosmo/dev/Rigarchive/backups/review/MY2021_JL_correspondence_prepublication_20261109T154455104372Z.sqlite3",
+  "method": "Existing snapshot_db Layer1 VACUUM INTO using read-only live SQLite URI",
+  "database_counts_at_backup": {
+    "VehicleDefinitions": 861,
+    "audit_receipts": 2980,
+    "correspondences": 64
+  },
+  "backup_still_unchanged": true,
+  "ignored_local_backup": true
+}

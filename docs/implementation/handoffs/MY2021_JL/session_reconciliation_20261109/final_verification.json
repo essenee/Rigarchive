@@ -1,0 +1,19 @@
+{
+  "result": "passed",
+  "tables_inspected": 48,
+  "counts": {
+    "VehicleDefinitions": 861,
+    "receipts": 3075,
+    "correspondences": 159
+  },
+  "successful_MY2021_JL_import_receipts": 0,
+  "live_SHA256_matches_new_baseline": true,
+  "live_database_SHA256": "sha256:058bbd44e0811c83bf67c916ae92e27b6a0b062c26be031876e9582190e01473",
+  "SQLite_integrity": "ok",
+  "foreign_key_violations": 0,
+  "audit_live_writes": 0,
+  "canonical_import_executed": false,
+  "committed": false,
+  "pushed": false,
+  "precise_intermediate_hash_pair_reconstructed": false
+}

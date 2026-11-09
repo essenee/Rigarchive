@@ -1,0 +1,40 @@
+{
+  "envelope": {
+    "artifact_type": "rigarchive.source_assertion_set.v1",
+    "created_at": "2026-11-09T13:43:25.638901+00:00",
+    "generator": "MY2021_bounded_construction",
+    "schema_version": "1.1.0"
+  },
+  "provenance": {
+    "acquisition_method": "retained_local_evidence",
+    "extraction_provenance": {
+      "extraction_mode": "manually_verified_transcription",
+      "extractor_id": "retained_MY2021_evidence_transcription",
+      "extractor_version": "1.0.0",
+      "raw_artifact_hash": "sha256:d748a277a6cd23a6a7fbb744fa0b24d9c980b21bef9ce4a3fb993c44c9093179",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2021_JL/source_pdfs/4-door-4-14-21-pdf.447429.pdf"
+    },
+    "native_record_id": "JL21-25-qualified-engine-column",
+    "publication_revision": "Original retained MY2021 source; no cross-year approval propagation",
+    "retrieved_at": "2026-11-09T13:43:25.638901+00:00",
+    "review_status": "reviewed",
+    "source_applicability": {
+      "applicability_basis": "MY2021 US guide applicability; technical/manual joins scoped to exact engine family and source locators",
+      "applicability_scope": "model_year",
+      "market": "US",
+      "publisher_jurisdiction": "US"
+    },
+    "source_id": "MY2021-JL-4D-2021-04-14",
+    "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-4-14-21-pdf.447429/",
+    "source_type": "manufacturer_document",
+    "source_use_notes": "Faithful engine-column transcription excludes price/transmission/QOP columns; no normalization is inserted into raw manufacturer text."
+  },
+  "source_assertions": [
+    {
+      "assertion_id": "JL21-25-qualified-engine-column",
+      "attribute_key": "engine_descriptor",
+      "raw_value": "3.6L V6 24V VVT\nETORQUE\nENGINE UPG I\n(ERG)",
+      "source_context": "PDF page 2; exact ERG segment, with transmission/QOP cells retained; no code-only inference; engine column only, at original layout boundary; full table/segment separately retained"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "status": "owner review required; not authorization",
+  "recommendation": "Review exactly95 US MY2021-only proposals, then separately authorize publication through the existing workflow if accepted. Fresh applicability/UUID/hash/selector/database checks are required before publication.",
+  "existing_correspondences_to_reuse": 0,
+  "new_correspondences_recommended": 95,
+  "candidate_revisions_required": 0,
+  "unresolved_questions": [],
+  "RHD": "Outside consumer scope; preserve JLUL74/CLASS-075 and do not extend proposal coverage to it",
+  "future_boundary": "No publication, Matrix certification, executable canonical plan, import or backfill is authorized by this package"
+}

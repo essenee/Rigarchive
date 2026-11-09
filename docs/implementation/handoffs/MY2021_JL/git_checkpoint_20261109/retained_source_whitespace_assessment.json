@@ -1,0 +1,43 @@
+{
+  "status": "reviewed;retained byte-for-byte to preserve accepted hashes",
+  "git_diff_cached_check_exit_code": 2,
+  "all_findings_in_original_hash_verified_milestone_artifacts": true,
+  "findings": [
+    {
+      "file": "docs/implementation/handoffs/MY2021_JL/canonical_execution_20261109/resumed_20261109/candidate_to_canonical_mapping.csv",
+      "kind": "trailing whitespace.",
+      "count": 74
+    },
+    {
+      "file": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/correspondence_coverage_matrix.csv",
+      "kind": "trailing whitespace.",
+      "count": 96
+    },
+    {
+      "file": "docs/implementation/handoffs/MY2021_JL/generation_publication_20261109/complete_95_key_coverage.csv",
+      "kind": "trailing whitespace.",
+      "count": 96
+    },
+    {
+      "file": "docs/implementation/handoffs/MY2021_JL/owner_review_20261108/sources/CarAndDriver_MY2021_Wrangler_engine_context.html",
+      "kind": "trailing whitespace.",
+      "count": 28
+    },
+    {
+      "file": "docs/implementation/handoffs/MY2021_JL/owner_review_20261108/sources/Jalopnik_MY2021_RHD_retail_report.html",
+      "kind": "trailing whitespace.",
+      "count": 324
+    },
+    {
+      "file": "docs/implementation/handoffs/MY2021_JL/owner_review_20261108/sources/Jalopnik_MY2021_RHD_retail_report.html",
+      "kind": "trailing whitespace, space before tab in indent.",
+      "count": 1
+    },
+    {
+      "file": "docs/implementation/handoffs/MY2021_JL/owner_review_20261108/sources/Stellantis_MY2021_392_production_release.html",
+      "kind": "trailing whitespace.",
+      "count": 397
+    }
+  ],
+  "new_checkpoint_documents_and_code_whitespace_check": "passed"
+}

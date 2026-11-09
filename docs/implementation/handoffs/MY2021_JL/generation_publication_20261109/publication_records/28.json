@@ -1,0 +1,30 @@
+{
+  "proposal": "docs/implementation/handoffs/MY2021_JL/generation_correspondence_review_20261109/new_correspondence_proposals/MY2021-JL-4D-2020-06-04-JLJP74.review.json",
+  "source_model_key": [
+    "MY2021-JL-4D-2020-06-04",
+    "source_model_code",
+    "model_code",
+    "JLJP74"
+  ],
+  "content_hash": "sha256:4e33b47d71f6c0eaadb5f63fab505f1340abc2afb127ab79ea4c798dba99922e",
+  "revision_PK": 92,
+  "revision_uuid": "6e36649c-ed84-4b61-8083-e70a70270801",
+  "correspondence_uuid": "a5c6734b-86b4-455f-8d7f-f971c24d104a",
+  "receipt_PK": 3008,
+  "receipt_uuid": "e7c080aa-e5fa-40f9-b08a-9da2aa1f0cdc",
+  "execution_outcome": "created",
+  "target_generation_PK": 32,
+  "candidate_references": [
+    "JL21-55",
+    "JL21-56",
+    "JL21-57",
+    "JL21-58",
+    "JL21-59",
+    "JL21-60",
+    "JL21-61",
+    "JL21-62",
+    "JL21-63",
+    "JL21-64",
+    "JL21-65"
+  ]
+}

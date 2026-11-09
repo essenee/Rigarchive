@@ -1,0 +1,14 @@
+{
+  "error_type": "AssertionError",
+  "error": "Concurrent database change",
+  "committed": false,
+  "entire_database_logically_matches_prepublication_snapshot": true,
+  "backup_preserved": {
+    "path": "backups/review/MY2021_JL_correspondence_prepublication_20261109T154455104372Z.sqlite3",
+    "sha256": "sha256:06502534d35395b97d74447b98c760f237a1e2aba04860f32d349fab62bd1d92",
+    "integrity": "ok",
+    "foreign_keys": "passed",
+    "logical_all_table_match": true
+  },
+  "no_retry_or_restore_performed": true
+}

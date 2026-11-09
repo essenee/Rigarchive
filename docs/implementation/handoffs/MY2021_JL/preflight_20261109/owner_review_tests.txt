@@ -1,0 +1,13 @@
+test_all_89_classification_decisions_exactly_reviewed (__main__.ReviewChecks.test_all_89_classification_decisions_exactly_reviewed) ... ok
+test_all_five_field_assessments_and_PHEV_distinction (__main__.ReviewChecks.test_all_five_field_assessments_and_PHEV_distinction) ... ok
+test_all_original_artifacts_preserved (__main__.ReviewChecks.test_all_original_artifacts_preserved) ... ok
+test_database_and_counts_preserved (__main__.ReviewChecks.test_database_and_counts_preserved) ... ok
+test_earlier_only_and_transmission_reconciliation (__main__.ReviewChecks.test_earlier_only_and_transmission_reconciliation) ... ok
+test_new_source_bytes_and_manual_locators (__main__.ReviewChecks.test_new_source_bytes_and_manual_locators) ... ok
+test_partition_and_no_discovery_row_changes (__main__.ReviewChecks.test_partition_and_no_discovery_row_changes) ... ok
+test_trim_review_covers_exact_scope (__main__.ReviewChecks.test_trim_review_covers_exact_scope) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 2.647s
+
+OK

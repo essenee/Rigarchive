@@ -1,0 +1,13 @@
+{
+  "README.md": "sha256:329c9cc0231073265c99d616cd7baf8eb55beaf39139210efde3087b782970ad",
+  "all_table_comparison.json": "sha256:8bd08a611458710c2ad4471214898929a9df3505bef5df0efc56755fc920ae32",
+  "audit_log.txt": "sha256:e5abb046d8c398d17b4623f831128d0551178f7df4d0b8f3e0e262529a9ad9a6",
+  "audit_sessions.py": "sha256:8d60a35cd90cd8272937334c0fd2ab1e0076453f06fe83ec2a14dc78939cfa84",
+  "committed_sanitization_assessment.json": "sha256:039f8acedeeff86cb0a78b69efe79479681b537f8d008d9dcf4c648aaa7fbcc1",
+  "database_metadata_and_baselines.json": "sha256:ebb309c524c1b0d80e87a6418aa1e204395e6a569c8ecb971ce74daa2e37c358",
+  "documented_publication_reconciliation.json": "sha256:c1e4276bc5bda8fe26820c45e4463b5cb6bbfd1c0b9eeeb655c91a5076184157",
+  "execution_baseline.json": "sha256:af922094a6e333567c6954da016d0f96387579b90fdbe6dd86297f587d494cda",
+  "final_verification.json": "sha256:97d980b6fadebd7aa4de49376b740332318a0343f63a4b2dcc10f6af50311ef6",
+  "session_nature_assessment.json": "sha256:99a588314432105b0f4a5fc0a88b13bb61fe68562fc2d615ec21637cfb8ccc79",
+  "verification_summary.json": "sha256:70ad8a797c5d609bd5e4c0a412e29ee60f448cba9d60b7dd2a6ea8e7d3b50a20"
+}

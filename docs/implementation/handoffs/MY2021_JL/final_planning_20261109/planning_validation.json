@@ -1,0 +1,24 @@
+{
+  "result": "passed",
+  "matrix_digest": "sha256:6926df6c06e4bd471bbda02c67257cf7a7e2999cf5cdfebfc8b06ead31a9996e",
+  "candidate_count": 73,
+  "distribution": {
+    "2-door": 23,
+    "4-door": 50
+  },
+  "approved_labels": 24,
+  "complete_engine_proofs_2_0": 73,
+  "actual_published_resolutions_1_1": 73,
+  "published_correspondences_used": 95,
+  "eligible": 73,
+  "blocked": 0,
+  "conflicting": 0,
+  "preexisting": 0,
+  "expected_creations": 73,
+  "expected_no_ops": 0,
+  "manifest_round_trips_fresh_plan_matches_and_revalidations": 73,
+  "certification": "next explicit stage",
+  "database_unchanged": true,
+  "database_sha256": "sha256:ecc521242b0d29b659a7195bbfbc498ed80c8f129c472ab9bf445461984520e2",
+  "execution_performed": false
+}

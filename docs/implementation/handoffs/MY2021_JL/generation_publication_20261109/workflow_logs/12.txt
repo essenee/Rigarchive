@@ -1,0 +1,92 @@
+Invocation inside outer atomic transaction; this log alone does not establish commit.
+{
+  "review": {
+    "review_version": "1.0",
+    "revision_uuid": "d68fd9f4-a9b6-4752-9ad2-c00b456fcf04",
+    "correspondence_uuid": "20e0037c-2afb-49e0-8c6a-c83b7d4076ba",
+    "revision_number": 1,
+    "supersedes_uuid": null,
+    "vehicle_model_uuid": "5ec5f58a-b140-484c-97f0-c90ec9c134d6",
+    "generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+    "source_id": "MY2021-JL-2D-2021-01-01",
+    "source_namespace": "source_model_code",
+    "identity_type": "model_code",
+    "native_identifier": "JLJS72",
+    "market": "US",
+    "start_year": 2021,
+    "end_year": 2021,
+    "restrictions": {},
+    "evidence": [
+      {
+        "assertion_set_id": "MY2021-JL-2D-2021-01-01-JLJS72",
+        "assertions": [
+          {
+            "assertion_id": "MY2021-JL-2D-2021-01-01-JLJS72-table",
+            "attribute_key": "factory_powertrain_table",
+            "raw_value": "ENGINE              $FWP   $MSRP   TRANSMISSION        $FWP    $MSRP\n3.6L V6 24V VVT     N/C     N/C    6-SPEED              N/C     N/C                                             23R\nENGINE UPG I                       MANUAL\nW/ESS (ERC)                        TRANSMISSION\n                                   (DEM)\n2.0L I4 DOHC DI     N/C     N/C    8-SPD AUTO          1,350   1,500                                            22R\nTURBO ENGINE                       850RE TRANS\nW/ ESS (EC1)                       (MAKE) (DFT)\n3.6L V6 24V VVT    1,350   1,500   8-SPD AUTO          1,350   1,500                                            25R\nETORQUE                            850RE TRANS\nENGINE UPG I                       (MAKE) (DFT)\n(ERG)",
+            "source_context": "PDF page 8; manufacturer model heading and named QOP columns"
+          },
+          {
+            "assertion_id": "MY2021-JL-2D-2021-01-01-JLJS72-model",
+            "attribute_key": "source_model_code",
+            "raw_value": "JLJS72",
+            "source_context": "PDF page 8; manufacturer model code"
+          },
+          {
+            "assertion_id": "MY2021-JL-2D-2021-01-01-JLJS72-heading",
+            "attribute_key": "source_document_heading",
+            "raw_value": "REISSUED: 01/01/2021                                                                                                                                        PAGE: 1            JEEP\nISSUED:      06/04/2020\n\n                                                                       United States\n                                                                               2021                                                                                           WRANGLER\n\n                                                          JEEP       WRANGLER                  2  DOOR\n\n                                                       CUSTOMER PREFERRED CODE GUIDE\n\n\n         MODEL                                                                                                 CODE                   PAGES\n         WRANGLER SPORT                                                                                    JLJL72                  2                                           2\n\n         WRANGLER RUBICON                                                                                JLJS72                  8                                             DOOR\n\n         GROUP DETAIL                                                                                                                          11\n         STANDARD EQUIPMENT                                                                                                          14\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n         STEP #1: SELECT                                                                                        MODEL CODE\n\n         STEP #2: SELECT                                                                                        QUICK ORDER PACKAGE CODE\n\n         STEP #3: SELECT                                                                                        $ OPTIONS (IF DESIRED)\n\n         STEP #4: SELECT                                                                                        COLOR & TRIM CODES\n\n\n\n\n\n       © 2020 FCA US LLC, All Rights Reserved. IT IS FOR THE USE OF FCA AND ITS AUTHORIZED DEALERS ONLY AND MAY\n                       NOT BE OTHERWISE USED, RELEASED, OR REPRINTED WITHOUT FCA PRIOR PERMISSION.\n\n                             ORDERS ARE ACCEPTED ONLY WHEN VEHICLES ARE SHIPPED BY THE FACTORY.\n                                                          © 2020 FCA US LLC, All Rights Reserved.",
+            "source_context": "PDF page 1; United States / MY2021 / Jeep Wrangler / body heading"
+          },
+          {
+            "assertion_id": "MY2021-JL-2D-2021-01-01-JLJS72-engine-0",
+            "attribute_key": "engine_descriptor",
+            "raw_value": "2.0L I4 DOHC DI     N/C     N/C    8-SPD AUTO          1,350   1,500                                            22R\nTURBO ENGINE                       850RE TRANS\nW/ ESS (EC1)                       (MAKE) (DFT)",
+            "source_context": "PDF page 8; exact EC1 segment, with transmission/QOP cells retained; no code-only inference"
+          },
+          {
+            "assertion_id": "MY2021-JL-2D-2021-01-01-JLJS72-engine-1",
+            "attribute_key": "engine_descriptor",
+            "raw_value": "3.6L V6 24V VVT     N/C     N/C    6-SPEED              N/C     N/C                                             23R\nENGINE UPG I                       MANUAL\nW/ESS (ERC)                        TRANSMISSION\n                                   (DEM)",
+            "source_context": "PDF page 8; exact ERC segment, with transmission/QOP cells retained; no code-only inference"
+          },
+          {
+            "assertion_id": "MY2021-JL-2D-2021-01-01-JLJS72-engine-2",
+            "attribute_key": "engine_descriptor",
+            "raw_value": "3.6L V6 24V VVT    1,350   1,500   8-SPD AUTO          1,350   1,500                                            25R\nETORQUE                            850RE TRANS\nENGINE UPG I                       (MAKE) (DFT)\n(ERG)",
+            "source_context": "PDF page 8; exact ERG segment, with transmission/QOP cells retained; no code-only inference"
+          }
+        ],
+        "extraction_mode": "manually_verified_transcription",
+        "extractor_id": "retained_MY2021_evidence_transcription",
+        "extractor_version": "1.0.0",
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "publication_revision": "Original retained MY2021 source; no cross-year approval propagation",
+        "raw_artifact_hash": "sha256:8541303bca3dd5bdd0df5158c36ee9a25c4a41a464e530c2f964dc930d9a7e1e",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2021_JL/source_pdfs/2-door-1-1-21-pdf.412193.pdf",
+        "retrieved_at": "2026-11-09T13:43:25.638901+00:00",
+        "source_applicability": {
+          "applicability_basis": "MY2021 US guide applicability; technical/manual joins scoped to exact engine family and source locators",
+          "applicability_scope": "model_year",
+          "market": "US",
+          "publisher_jurisdiction": "US",
+          "unknown_fields": {}
+        },
+        "source_id": "MY2021-JL-2D-2021-01-01",
+        "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2-door-1-1-21-pdf.412193/"
+      }
+    ],
+    "finding": "established",
+    "reviewer": "Codex MY2021 evidence review; unpublished proposal; owner publication authorization pending",
+    "reviewed_at": "2026-11-09T15:15:13.153673+00:00",
+    "review_notes": "Unpublished MY2021 US-only finding for the exact retained manufacturer guide/model key. Original United States / 2021 / Wrangler body heading and model-code table establish applicability. The owner-reviewed US MY2021 Wrangler JL offering context, manufacturer model/body lineage and active canonical JL target (PK32, starts2018) establish the reviewed relation; not a code-prefix or name-only automatic match. Earlier-year publications were inspected but do not authorize reuse: their year scopes and source identities differ. For 4xe and 392, retain their manufacturer Wrangler Unlimited family headings; no separate model/Generation is invented. The exact existing shared selector document is present in every matching current candidate. No candidate, classification, source key or raw evidence is revised. Publication requires separate explicit owner authorization."
+  },
+  "content_hash": "sha256:14de0780cd9da3f5cabc5eeef119d2abe64230d31002c3e63033f6ef0470d597"
+}
+Human director: project_owner
+Execution agent: codex
+Interface: cli
+created; receipt bf546451-9914-4f21-a8f5-49cb59cadfb5

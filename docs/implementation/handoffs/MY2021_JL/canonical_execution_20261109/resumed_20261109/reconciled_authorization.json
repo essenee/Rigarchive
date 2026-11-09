@@ -1,0 +1,16 @@
+{
+  "authority": "Current explicit owner resumption authorizes exactly73 certified MY2021 creations; verified ordinary session-only differences may be accepted",
+  "matrix_digest": "sha256:6926df6c06e4bd471bbda02c67257cf7a7e2999cf5cdfebfc8b06ead31a9996e",
+  "accepted_reconciliation_baseline": "docs/implementation/handoffs/MY2021_JL/session_reconciliation_20261109/execution_baseline.json",
+  "baseline_file_sha256": "sha256:af922094a6e333567c6954da016d0f96387579b90fdbe6dd86297f587d494cda",
+  "canonical_data_changes_tolerated_before_execution": false,
+  "application_contract_changes": false,
+  "scope": {
+    "creates": 73,
+    "two_door": 23,
+    "four_door": 50,
+    "expected_no_ops": 0,
+    "generation_PK": 32
+  },
+  "stopped_preflight_record_preserved": "docs/implementation/handoffs/MY2021_JL/canonical_execution_20261109/README.md"
+}

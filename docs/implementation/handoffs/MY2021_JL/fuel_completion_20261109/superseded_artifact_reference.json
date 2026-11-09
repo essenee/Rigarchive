@@ -1,0 +1,21 @@
+{
+  "candidate_reference": "JL21-70",
+  "previous_candidate": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-70.approved-r1.candidate.2.1.0.json",
+  "previous_candidate_hash": "sha256:37e84a45f8d4a92bfbeada248af7bd03238defce30af1e0f41716996acbfb30c",
+  "previous_artifact_sha256": "sha256:43232989bceb11b9c7b1441553aaedcbb1b32a79759cfd9c8ea730bde2615e29",
+  "previous_adjudication": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/adjudications/JL21-70.approved-r1.adjudication.1.1.json",
+  "previous_adjudication_hash": "sha256:8c819f676106e0471c7938125f2f044ad2f853db6f8ce701e1aaaeec27436f6f",
+  "previous_adjudication_sha256": "sha256:37de25ede9da83e6862bc199466678d12dac606344fe928c96755331cb689023",
+  "original_base": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-70.base-r1.candidate.2.1.0.json",
+  "original_base_hash": "sha256:624f892484d1c8408ab4a4142859fa669c19196fb325ee2818d83a7403cdd622",
+  "current_candidate": "docs/implementation/handoffs/MY2021_JL/fuel_completion_20261109/JL21-70.fuel-r2.candidate.2.1.0.json",
+  "current_candidate_hash": "sha256:d080dbd70cd54daa4d827114d72afb7127b34fbda95e89c0cf7582ac3f8086bd",
+  "current_file_sha256": "sha256:fbfd9d19ffc9a3fa19d66f02c501a7a31cfa7fca0452d06d51a66a7584ac6057",
+  "current_adjudication": "docs/implementation/handoffs/MY2021_JL/fuel_completion_20261109/JL21-70.fuel-r2.approved.adjudication.1.1.json",
+  "current_adjudication_hash": "sha256:17906cae6b8a090bee1dee95ea7df49c77bcc8612ed7e5902287d5831d14c2f8",
+  "one_new_distinct_decision": "fuel_type=gasoline",
+  "carried_forward_decisions": [
+    "CLASS-088",
+    "CLASS-089"
+  ]
+}

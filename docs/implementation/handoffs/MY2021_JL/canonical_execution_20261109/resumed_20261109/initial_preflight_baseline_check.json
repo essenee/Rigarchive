@@ -1,0 +1,15 @@
+{
+  "phase": "initial_preflight",
+  "reconciled_baseline": "docs/implementation/handoffs/MY2021_JL/session_reconciliation_20261109/execution_baseline.json",
+  "baseline_file_sha256": "sha256:af922094a6e333567c6954da016d0f96387579b90fdbe6dd86297f587d494cda",
+  "accepted_baseline_database_sha256": "sha256:058bbd44e0811c83bf67c916ae92e27b6a0b062c26be031876e9582190e01473",
+  "current_file_sha256": "sha256:058bbd44e0811c83bf67c916ae92e27b6a0b062c26be031876e9582190e01473",
+  "byte_hash_differs": false,
+  "verified_normal_session_changes": [],
+  "non_session_application_data_matches_baseline": true,
+  "post_execution_additions_require_separate_backup_reconciliation": false,
+  "schema_identity_and_receipt_digest_checks": "passed",
+  "SQLite_integrity": "ok",
+  "foreign_key_violations": 0,
+  "live_database_writes": 0
+}

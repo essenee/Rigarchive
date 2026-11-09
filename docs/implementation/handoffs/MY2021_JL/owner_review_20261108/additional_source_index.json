@@ -1,0 +1,59 @@
+[
+  {
+    "source_id": "Jeep_MY2021_US_owners_manual",
+    "url": "https://vehicleinfo.mopar.com/assets/publications/en-us/Jeep/2021/Wrangler/5690670_21_JL_OM_EN_USC_DIGITAL_E5.pdf",
+    "path": "docs/implementation/handoffs/MY2021_JL/owner_review_20261108/sources/Jeep_MY2021_Wrangler_US_owners_manual_E5.pdf",
+    "kind": "manufacturer_manual",
+    "title": "2021 Wrangler Owner’s Manual, Fourth Edition V1",
+    "scope": "US/Canada combined 2021 manual; US content and original US guide corroboration used. Cover copyright 2022. Not a date-of-sale or engine-code-specific configuration census.",
+    "locator": "PDF 143 / printed 141: automatic ESS hardware; PDF 145 / printed 143: manual ESS hardware",
+    "extraction_path": "docs/implementation/handoffs/MY2021_JL/owner_review_20261108/evidence/owners_manual_selected_pages.json",
+    "sha256": "sha256:327691234c6a544a97fcd3f168aab3039bf0e382b13e2f6e037ad15018fc6d20",
+    "extraction_sha256": "sha256:8b7081c17c898dd5b10f55d0982b643984ce77831675ab928ce06aabb05d5654"
+  },
+  {
+    "source_id": "Stellantis_MY2021_392_production_release",
+    "url": "https://www.media.stellantis.com/em-en/jeep/press/4x4x470-new-2021-jeep-wrangler-rubicon-392-combines-legendary-4x4-capability-with-470-horsepower-v-8-engine-for-the-most-capable-wrangler-yet",
+    "path": "docs/implementation/handoffs/MY2021_JL/owner_review_20261108/sources/Stellantis_MY2021_392_production_release.html",
+    "kind": "manufacturer_production_release",
+    "title": "4x4x470! New 2021 Jeep Wrangler Rubicon 392",
+    "scope": "November 17, 2020 manufacturer release explicitly says product information/introduction refer exclusively to North American market. Matches US order-guide ESG/27X. Not the 450-hp concept.",
+    "locator": "North American applicability disclaimer; production 6.4L V8 and standard eight-speed automatic sections",
+    "extraction_path": "docs/implementation/handoffs/MY2021_JL/owner_review_20261108/evidence/Stellantis_MY2021_392_production_release.text.txt",
+    "sha256": "sha256:f45de845748d42b55fc4db41003c618e6a64430854707f8f45a66d9dae236610",
+    "extraction_sha256": "sha256:9086369bb4abb7e16dc0d24b6e7dcd7b3887573dd9ce71b1e729d6702834428e"
+  },
+  {
+    "source_id": "Jalopnik_MY2021_RHD_retail_report",
+    "url": "https://www.jalopnik.com/you-can-still-buy-right-hand-drive-wranglers-from-jeep-1847176346/",
+    "status": "retained",
+    "path": "docs/implementation/handoffs/MY2021_JL/owner_review_20261108/sources/Jalopnik_MY2021_RHD_retail_report.html",
+    "sha256": "sha256:f5c85944d46c543d4f2839d88ab6e4b176241ab7b403c264f584619f2188287a",
+    "kind": "secondary_corroboration",
+    "locator": "June 28, 2021 article body: RHD retail offering, fleet/delivery appeal, Unlimited 2.0 turbo automatic only",
+    "extraction_path": "docs/implementation/handoffs/MY2021_JL/owner_review_20261108/evidence/Jalopnik_MY2021_RHD_retail_report.text.txt",
+    "extraction_sha256": "sha256:74c69f0b84c93c1cf83673aec819c4fcf16bd77c61c2fe38a41263389ac139ef"
+  },
+  {
+    "source_id": "CarAndDriver_MY2021_392_launch",
+    "url": "https://www.caranddriver.com/news/a34671109/2021-jeep-wrangler-rubicon-392-specs-revealed/",
+    "status": "retained",
+    "path": "docs/implementation/handoffs/MY2021_JL/owner_review_20261108/sources/CarAndDriver_MY2021_392_launch.html",
+    "sha256": "sha256:1593b8695f749efd117bdc9a2d37c8f46edd370a4137d6f9580d7e1a126e98fa",
+    "kind": "secondary_corroboration",
+    "locator": "November 17, 2020 production introduction: 6.4L naturally aspirated V8 paragraph",
+    "extraction_path": "docs/implementation/handoffs/MY2021_JL/owner_review_20261108/evidence/CarAndDriver_MY2021_392_launch.text.txt",
+    "extraction_sha256": "sha256:67efe0b658ebbaba1a26a2690a0d83f9b2dce1586019b5f84ae7b67d364c5e50"
+  },
+  {
+    "source_id": "CarAndDriver_MY2021_Wrangler_engine_context",
+    "url": "https://www.caranddriver.com/reviews/a36561292/2021-jeep-wrangler-rubicon-392-drive/",
+    "status": "retained",
+    "path": "docs/implementation/handoffs/MY2021_JL/owner_review_20261108/sources/CarAndDriver_MY2021_Wrangler_engine_context.html",
+    "sha256": "sha256:c581537c40a73dcfdedf9eaa322ba62d53d196e74456e234fa2bff5ad825947a",
+    "kind": "secondary_corroboration",
+    "locator": "November 23, 2021 updated test: opening engine-family comparison, naturally aspirated V6 with/without 48V assistance",
+    "extraction_path": "docs/implementation/handoffs/MY2021_JL/owner_review_20261108/evidence/CarAndDriver_MY2021_Wrangler_engine_context.text.txt",
+    "extraction_sha256": "sha256:ac0508fdb65c530ef2d01503f8f69764caf20733efd7dfc037e604a489bd3d71"
+  }
+]

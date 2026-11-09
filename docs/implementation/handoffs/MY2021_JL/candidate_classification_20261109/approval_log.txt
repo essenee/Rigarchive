@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "/Users/cosmo/dev/Rigarchive/docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/build_artifacts.py", line 526, in <module>
+    {'base': base_stage, 'approve': approve_stage, 'validate': validate_stage}[sys.argv[1]]()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/cosmo/dev/Rigarchive/docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/build_artifacts.py", line 371, in approve_stage
+    validate_classification_adjudication(proposal)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/cosmo/dev/Rigarchive/reference/ingestion/classification_adjudication.py", line 82, in validate_classification_adjudication
+    validate_documents(a["supporting_documents"], verify_bytes=True)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/cosmo/dev/Rigarchive/reference/ingestion/generation_correspondence.py", line 43, in validate_documents
+    require(isinstance(documents, list) and bool(documents), "Retained document evidence is required.")
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/cosmo/dev/Rigarchive/reference/ingestion/generation_correspondence.py", line 39, in require
+    raise ValidationError(message)
+django.core.exceptions.ValidationError: ['Retained document evidence is required.']

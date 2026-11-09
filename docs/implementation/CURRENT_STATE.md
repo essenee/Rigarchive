@@ -1,7 +1,181 @@
 RigArchive Project Status Document
 Version: 1.3
-Last Updated: 2026-11-08
+Last Updated: 2026-11-09
 Purpose: Current implementation status and development roadmap
+
+## MY2021 JL — sanitized Git checkpoint validated (2026-11-09)
+
+The [milestone checkpoint](handoffs/MY2021_JL/git_checkpoint_20261109/README.md)
+verifies all 1,910 retained evidence/artifact files, 1,897 existing hash entries,
+73 canonical mappings/receipts, 95 MY2021 publications and the certified Matrix.
+Totals remain **934 definitions / 3,148 receipts / 159 correspondences**. One
+intervening ordinary session update was independently verified; no unexplained
+application drift remains. A consistent copied database follows the MY2020
+sanitization policy: zero sessions, generic development account, unusable password,
+no email/last-login data; all canonical/provenance and other tables remain exact.
+The operational database is preserved byte-for-byte and intentionally remains
+different from the sanitized tracked `db.sqlite3` checkpoint. Restoration and
+Django ORM checks passed. **713 full-suite plus 8 guard tests**, Django/migration
+dry-run checks, integrity/foreign keys and credential scans passed. No UI,
+drive-wheel, application/contract/schema or canonical-data changes were made.
+Owner authorization includes pushing the existing approved configurator commit
+`8d4a6e8` with the MY2021 milestone commits; see Git history for publication IDs.
+
+## MY2021 US Wrangler JL — 73 canonical configurations imported atomically (2026-11-09)
+
+The owner-authorized certified Matrix
+`sha256:6926df6c06e4bd471bbda02c67257cf7a7e2999cf5cdfebfc8b06ead31a9996e`
+completed through the accepted Matrix execution workflow after all-table
+reconciliation of the session-audited baseline and a verified consistent backup.
+**73 VehicleDefinitions (PK 877–949)** and **73 execution receipts (PK 3076–3148)**
+were created in one durable model-year transaction with fresh per-row planning.
+There were zero no-ops, blocked or conflicting rows. Actual creation bases:
+1 first representation / 23 source-established grades / 49 mechanical distinctions.
+
+All 73 resolve to Generation 32, retain complete five-field identities, 23 two-door /
+50 four-door and 24 approved labels. All original 861 definitions, 3,075 receipts and
+159 correspondences remain unchanged, as do candidate/classification/evidence
+artifacts, application/contracts and local authentication state. Sport RHD and
+CLASS-075 remain preserved/deferred. Current totals: **934 VehicleDefinitions /
+3,148 receipts / 159 published correspondences**.
+
+[Completion report](handoffs/MY2021_JL/canonical_execution_20261109/COMPLETION_REPORT.md)
+links every created PK/UUID/slug/receipt, backup path/hash and independent
+reconciliation. 165 isolated focused tests, Django system/migration dry-run checks,
+SQLite integrity/foreign keys, lineage and uniqueness checks passed using
+`.venv/bin/python` Python 3.13.1 with pinned dependencies. No unrelated import,
+backfill, migration, application/contract change, commit or push. Earlier planning
+and stopped-attempt records below describe their historical checkpoints.
+
+## MY2021 US Wrangler JL — Matrix 2.1 certified; read-only canonical plans prepared (2026-11-09)
+
+The owner authorized Matrix certification and planning for the 73 completed US
+MY2021 consumer candidates. The [final planning package](handoffs/MY2021_JL/final_planning_20261109/README.md)
+retains the certified Matrix 2.1 and existing-format approval artifact, 73 fresh
+Manifest 2.1 snapshots/hashes, 73 Engine proof 2.0 artifacts, 73 actual-published
+Resolution 1.1 artifacts, source/approval provenance and peer/conflict assessment.
+Exact certified Matrix digest:
+`sha256:6926df6c06e4bd471bbda02c67257cf7a7e2999cf5cdfebfc8b06ead31a9996e`.
+
+Verified outcomes are **73 eligible, zero blocked/conflicting/preexisting; 73
+expected creations and zero no-ops**. The actual MY2021 US JL canonical namespace
+is empty across active/inactive records, and every planned identity/slug is unique
+and unoccupied. All candidates resolve through the 95 published correspondences
+to existing JL Generation PK 32 / UUID `38d3c3ac-f825-4406-abb5-c2d12b9129a4`.
+Scope remains 23 two-door / 50 four-door, 24 approved labels; all 88 earlier claims,
+the additional 392 gasoline classification/premium-grade evidence and direct ECX
+PHEV evidence are unchanged. RHD/CLASS-075 remain preserved and deferred.
+
+The existing `approve_generation_trim_matrix` CLI captured certification under
+the owner's current instruction. Certified status is **73 pending_create**, not
+executed/completed imports. All standalone snapshots currently use
+`first_representation` and namespace count zero. Future authorized Matrix
+execution must freshly replan each row inside one model-year transaction; fixed
+row-order analysis anticipates **1 first representation, 23 source-established
+grades and 49 mechanical distinctions**. The Matrix pins the current basis plus
+each row's anticipated applicable basis; no future sibling receipt proof is
+fabricated at planning time. Standalone snapshots must not be executed sequentially
+unchanged. **At that planning checkpoint canonical execution was not authorized; the later owner-authorized completion is recorded above.**
+
+The existing publication counts remain **861 VehicleDefinitions / 3,075 receipts /
+159 correspondences**. One preexisting session-row update explains an intervening
+logical difference from the prior publication checkpoint; canonical rows, schema
+and published payloads/receipts were verified unchanged. The current task's fresh
+database baseline is byte-for-byte unchanged through planning/certification.
+**157 isolated focused tests**, Django checks, migration consistency, evidence
+hashes/lineage, manifest reconstruction/fresh-plan equality and Matrix/approval
+serialization passed using `.venv/bin/python` Python 3.13.1 with matching Django
+6.0.7/pypdf 6.16.1 pins. No import/rehearsal, VehicleDefinition mutation, backfill,
+migration, correspondence change, application/contract change, commit or push.
+
+## MY2021 US Wrangler JL — 95 generation correspondences published atomically (2026-11-09)
+
+The owner authorized the exact 95 reviewed source/model-key proposals. Fresh
+candidate/selector/proposal/state checks and a verified consistent Layer 1 backup
+passed. The existing human-confirmed publication CLI/service published **95
+immutable revisions, PK 65–159**, and **95 publication receipts, PK 2981–3075**,
+inside one outer durable Django transaction. Any CLI/service or pre-commit
+verification failure would roll back the entire batch. The original proposal
+payloads, selector documents and all earlier publications remain unchanged.
+
+All **73 current MY2021 consumer candidates** now resolve through the **actual
+published database state** to existing active Wrangler JL Generation PK 32 /
+UUID `38d3c3ac-f825-4406-abb5-c2d12b9129a4`, with exact expected revision UUID/hash
+sets. Scope remains **23 two-door / 50 four-door**, **24 labels**, eight model codes
+and 27 retained guide revisions. All five-field identities, 88 original approved
+decisions, the additional 392 gasoline approval and direct ECX evidence remain
+unchanged. JLUL74 Sport RHD and CLASS-075 remain separately preserved/deferred.
+
+Current totals: **861 VehicleDefinitions, 3,075 audit receipts and 159 published
+correspondences**. All preexisting rows in every table, including all 861
+VehicleDefinitions, all 64 earlier correspondences and all 2,980 earlier receipts,
+match the verified pre-publication backup. Only 95 correspondence rows, 95
+publication receipts and their normal sequence advances were added. Schema,
+application/contracts and all 1,165 earlier MY2021 handoff files are unchanged.
+
+The [publication checkpoint](handoffs/MY2021_JL/generation_publication_20261109/README.md)
+retains exact published PKs/UUIDs, receipts, 95-key reconciliation, 73 actual
+resolutions, backup location/hash, all-table preservation and verification. The
+[original review](handoffs/MY2021_JL/generation_correspondence_review_20261109/README.md)
+remains unchanged as its then-unpublished checkpoint. Its 95 proposals reused
+already-shared exact selectors; no candidate revision or prior-year mapping
+extension was needed. An initial task-local snapshot comparison stopped before
+any publication call because of Python SQLite type-conversion differences; the
+comparison was corrected and regression-tested against the unchanged backup.
+
+**130 focused tests** passed after publication, including five task-local
+atomicity/snapshot regressions. SQLite integrity/foreign keys, real read-only
+Django checks, migration consistency, evidence hashes, lineage and serialization
+passed using `.venv/bin/python` Python 3.13.1 with Django 6.0.7/pypdf 6.16.1.
+No correspondence blocker remains. Matrix certification and read-only canonical
+planning are now separately completed above; import execution remains unauthorized.
+At this publication milestone none of those later operations was performed. No
+VehicleDefinition, migration/backfill, application/contract change, commit or push.
+
+## MY2021 US Wrangler JL — consumer candidates fully classified and validated (2026-11-09)
+
+The owner-approved 73-row consumer scope now has 73 retained Candidate 2.1.0
+bases: **23 two-door and 50 four-door**, covering all 24 approved body/trim labels
+and all 24 earlier-only supported combinations. The exact **88 approved field
+decisions** were applied through the existing human-adjudication CLI in **70
+candidate-bound adjudication 1.1 artifacts**, with 88 individually indexed decision
+records and 70 separate candidate revisions. Moderate confidence, reviewed
+reasoning/limitations, exact base digests and supporting evidence remain retained.
+The three ECX bases retain direct five-field support and need no adjudication.
+
+The owner separately approved `fuel_type = gasoline` for JL21-70 / Unlimited
+Rubicon 392 / ESG. A new cumulative adjudication against the original base carries
+its two prior claims forward exactly and adds the moderate-confidence fuel claim.
+The existing CLI produced one separate versioned candidate revision. Manufacturer
+wording **Premium 91 octane (R+M)/2 — required** remains unchanged; gasoline is the
+existing broad fuel category, while the required octane grade is outside the
+five-field identity. No taxonomy, parser or contract changes were needed.
+
+The [current completion checkpoint](handoffs/MY2021_JL/fuel_completion_20261109/README.md)
+indexes **73 complete five-field identities**. The other 72 candidate artifacts
+and all 88 original approved decisions remain unchanged. There are **89 distinct
+approved field decisions** including the new fuel claim; its cumulative envelope
+reuses the existing two ESG claims rather than adding duplicate decisions.
+The old incomplete 392 artifact, its exact digest, original adjudication and all
+bases remain preserved. All 73 identity, evidence-byte, lineage, uniqueness and
+serialization checks passed. No consumer classification blocker remains before
+generation-correspondence preparation and subsequent publication, now separately
+authorized and completed above. This classification milestone itself authorized
+no correspondence publication.
+
+JL21-71 / JLUL74 Sport RHD remains separately preserved, without a consumer
+candidate or a fleet/postal-only assertion. Its EC1 decision CLASS-075 and
+steering/public-visibility/canonical semantics remain deferred. Original discovery,
+owner-review and superseded base artifacts are preserved byte for byte. The
+[original construction checkpoint](handoffs/MY2021_JL/candidate_classification_20261109/README.md)
+retains its historical incomplete-fuel results; the fuel completion checkpoint
+supplies the superseding current index and validation. No canonical records,
+publication, Matrix certification or executable
+import plans were created; application code, contracts and migrations are unchanged.
+Verification used `.venv/bin/python` Python 3.13.1 with both requirements pins
+matching (Django 6.0.7, pypdf 6.16.1): 713 full project tests, 65 focused tests,
+Django system checks and migration consistency passed again for fuel completion.
+Tests used isolated databases/media; live database bytes remained unchanged.
 
 ## Configurator default trim selection (2026-11-08)
 

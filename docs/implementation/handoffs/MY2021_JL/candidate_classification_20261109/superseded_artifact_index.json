@@ -1,0 +1,859 @@
+{
+  "rows": [
+    {
+      "candidate_reference": "JL21-01",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-01.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-01.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:a14c5bbb30a41956274cf07976135f696738c9315203120f7c9d09883eda6be7",
+          "artifact_sha256": "sha256:66493b1bc086ff04da6d011b7635f4fc93ead9c006d7669bd0a88868a6f6096c",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-02",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-02.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-02.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:27e911913e5ab2b9782dfdff01dae33342fe0f7783794f88ebfd281109cecbbc",
+          "artifact_sha256": "sha256:a1a29556caa69e729f75ffee04f8c0ce044e68205b3324df9d966432dc664ff8",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-03",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-03.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-03.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:63817c9e2a01efa4672e1c9faaeaece5589664fd1258f90d34c66ccf7f47c0ed",
+          "artifact_sha256": "sha256:427e540182ff0401b0ce04c9048f807714c73e92c8a376307ba5fe1edc3a6ee4",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-04",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-04.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-04.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:b1d996ff3a94c917b599cbc85c43d274efef631b422178c82cec478bcf864041",
+          "artifact_sha256": "sha256:7f73466ea6103c9f302cf0c29e66b36d8fbbe33b2b90a603d653af97154c040c",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-05",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-05.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-05.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:47053115ea81feff7672e1f310ecbb595d1a77295e3340704917b4d27c2d3051",
+          "artifact_sha256": "sha256:395e02658361af199b7920f533276ccabd42fe9f52d14fffebac1bbcc4f65816",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-06",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-06.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-06.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:665a8de0f32e7419a7dacd8cdccdf32f1679b98ab172d1e90137f72db95d7ed4",
+          "artifact_sha256": "sha256:b9df507265af52b332fdc8fbab7f9a58437758563930627bb3b211741811ee0f",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-07",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-07.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-07.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:9b8c82f67c238f3f1a223409d57a0193bb2f899e38055fa406d42ea8dfb989b8",
+          "artifact_sha256": "sha256:86623a4657f6dad7edc3db0d9274544a5f521bebef5c855fea9310dfa7949d29",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-08",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-08.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-08.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:b796bb2b1ae5997b34f009345b7994f26976c5b81262a57206260487a96d5c9d",
+          "artifact_sha256": "sha256:a7d18e25c3e8a3a9968251ebf89b3cb4dbd50afa9d2bab2311045821eea95364",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-09",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-09.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-09.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:532964a98dabfba2465930117f03737b6397e61e3de20a8ac550063a765be9b1",
+          "artifact_sha256": "sha256:d19ff78ddc8d220012b20102cea7deaf743519a5db978d1bfcbf448513be1751",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-10",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-10.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-10.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:7ee3958a24c1dd1f94df73c1c4ad10e9ee459988f8f13c59fd31ccfec19e6ada",
+          "artifact_sha256": "sha256:0d791ef4a38359ac35701783b6233baef5ed8b4c94ad68706522ef88d201778b",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-11",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-11.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-11.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:4aa3b2d2b4f27c75f9afee376b1867e38b1630ebb34e058bb1343fc63da107ef",
+          "artifact_sha256": "sha256:7ae7f54e7703a6353a8d37072b4f7787f1878d95b133f3d0bb5c5f6f17e174b6",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-12",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-12.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-12.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:0c16771f7d3adbeff5d960a80157411aef004ebd5e510906865043caf5009d69",
+          "artifact_sha256": "sha256:83210d2fbc98c3c87128e23abecffc4421418840e060ebfab112b187385f9668",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-13",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-13.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-13.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:cbec7f6ab20b8193245e9809beb5efc58594ee47b764317aaa7ccc759328379b",
+          "artifact_sha256": "sha256:19ef1eee9b050f33899d9857ccd26e5ede05a61cddab7fc37e37bb093a9fa4d9",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-14",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-14.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-14.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:248c3cccd15950c7d6d47dfaeb481707d3cb3e48b680652727a8fcbe2f46351e",
+          "artifact_sha256": "sha256:c004b7544621c37acb31055afd96110cc0901f6ae5993400461bdfd2760e4871",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-15",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-15.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-15.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:69617715fe35ebd02c70d644e0bcc65b9ac18e652573c46ce49dae2a06abfdbf",
+          "artifact_sha256": "sha256:88df54bbc173e270534d0cfcc9b9fef0a815d59d4aa4d9654ccf8c200a95a2b3",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-16",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-16.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-16.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:349c516c5bf95ac6e8063c89494d8cb218c1c2811a7e89271d2db1c4edb76e2d",
+          "artifact_sha256": "sha256:5f00bf16dcaf63ab3568ea743daf21702f9488ad6f4c48f8b119bcd93cfcf583",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-17",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-17.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-17.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:7b8ccd06f97d355907b70333cca13b0650a5d2124d6343537638412ed892548b",
+          "artifact_sha256": "sha256:e2fadce3dc61867b15dd95d9fb50eef4ad1df24ff8f1e4485d2d5f5e8d0f7364",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-18",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-18.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-18.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:1c8f16ee145bd8a971e0005c73eb7eaf8d06e494dc4e89f486a1ab8c425f9b38",
+          "artifact_sha256": "sha256:4e5bbe1c33d6c31d2e9bc7a72ba2621e69ae1b513a2853cda53d8acf32d84b36",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-19",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-19.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-19.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:7add03b8d18890bfe25a7faaa3a5cfdbaaa8b683f872b78e6a2c4bd59b67054b",
+          "artifact_sha256": "sha256:9c7ef89afc6b4744004824a98f0d652cfd9dd69b5a292c952982780ac763bf2f",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-20",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-20.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-20.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:f67dd6c7b9daa15f80772dd0ec94a6365dbf19c18e1c1795b9330e996d6c7f5d",
+          "artifact_sha256": "sha256:67c1896463cb6438e0b38877ea0c8856c3c202d1ee4c83a4b6492ca439257f9c",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-21",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-21.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-21.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:9f51721e5ae0b0905101bf980b15743b2cf681148e0ffee9abd1311b284b38ca",
+          "artifact_sha256": "sha256:e1cec65a2f617140af4dd3ea91eccaa84171f7fb5933e193f92d803276a0f426",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-22",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-22.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-22.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:fb7a991aedcdeaa5866e5defdd0884395a718177981f042d569a82af7a4ed4ff",
+          "artifact_sha256": "sha256:7e4473015534458079b98c8b5d17194d0389281528bad45fdc040d30a6e911ae",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-23",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-23.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-23.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:afd49663b1f9f6e538f2cd5d6a458ac9429467a3c3327da2368aebe9c82b8f82",
+          "artifact_sha256": "sha256:9f98cd7b0590030e7e225dab47c80e89e088d3e328de1964c4ae7ec988b0ca96",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-24",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-24.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-24.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:b01a88193fee54847f10406059cfe366023625e14fa94eb830edc5ad7d9949f0",
+          "artifact_sha256": "sha256:bd453c8b022173a1b1d5e4906372cc37f4368aa84e5f7f75ed0e88dd5db14085",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-25",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-25.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-25.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:13e6fa4e0cbd3dcfe3fbc681379a0aaf8d191644949e6914fd88ffe5f92536e9",
+          "artifact_sha256": "sha256:465e98aee29c517b0c86edc05a7bb1a00d589dc9bc395af68df92a23d727c550",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-26",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-26.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-26.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:2675073dd3adcd840731b407433ef35ec12a05500da396dd9e8306846df0e139",
+          "artifact_sha256": "sha256:6f19952e9776a0a220ab363c986b9a556ea70a0a51621565de8dbf02a5458535",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-27",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-27.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-27.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:4a016076c66add7ba4cf8ff671c01e445d0128daf1c614a0ccbd92237cd67845",
+          "artifact_sha256": "sha256:ee2bbd5ee89891bd29c3218698cf0903c8f3e7acf8add778e201752459b95a62",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-28",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-28.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-28.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:77fba61009ffb93ff47d0c0a20965f9499fefda72bda51d4dae66a65f5955755",
+          "artifact_sha256": "sha256:1e9a2bc52bd0441c544c5534c5c6b596c3764f06456c9c8eb684ebe856937b31",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-29",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-29.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-29.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:1110aabaa74e7ab63417dbda79089f6e4b05a7608fed03009d5aee74ee2c5659",
+          "artifact_sha256": "sha256:3ab3228b47920a76fd1b4f0bc2c97af6fba9230c9b83b875549db3519e3017b6",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-30",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-30.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-30.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:bccc271cbc498731d1626e6c5fa90747d2f632095f05b5de93219057a774534f",
+          "artifact_sha256": "sha256:d4bfc52c5f60b9b683cba41b468f1a6f165422acc366e93cc5f9b1de839ee1fb",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-31",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-31.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-31.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:b303114d8137974d8e74e4d732d73f2f928aeb067f0c7407a07fc18372a5766a",
+          "artifact_sha256": "sha256:84792de42bb35b6da36e20d5f36bf535061ca754bbd7b2abd54bee9fa30b0b6a",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-32",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-32.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-32.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:142c97ec62107dc69480bbbb1ab7e47cfdee6fae92cb74edbd7b7979b74a2c4d",
+          "artifact_sha256": "sha256:dfeabf3b7208632264895f99312c3e059a79f0a0cc6dbf5abb40d75ece331a07",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-33",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-33.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-33.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:402b7cafe5456fee96bb238b42ea024f13fb25b55e18f1dbef8b8ddf1ce82bd6",
+          "artifact_sha256": "sha256:64c19d4f6723a56805b4c93c5cc6f4cc9231f396ae85954e1a9c7b2ca974fb8c",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-34",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-34.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-34.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:19eb4a0b63ef3a25d880d69cc8ef0cde2541bfe5a220fdacf56066516602d7e8",
+          "artifact_sha256": "sha256:de8cc6fef860744a46b77ff3d0a4e55e281a35e18cdbbef90e1e0c170c711c38",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-35",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-35.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-35.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:b45bfc288499e5a14f61518b124901adc231c1dc77dd13184781766a091ce19d",
+          "artifact_sha256": "sha256:21467278d10394c4920da75d26baa53705ebff19298d484ebb533795331b70f0",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-36",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-36.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-36.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:e867197dfe707d1dd00b59fe6837abeacd10302984c9f534e49b22cfd4a24593",
+          "artifact_sha256": "sha256:294a0f35a0c5ba0c28d2ebf450b2395727e51810a814663f3999b247706250a3",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-37",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-37.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-37.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:a2c57713afbacc9b9548e3911c69426ca0eea4f61dfea4a634496c78b7135df4",
+          "artifact_sha256": "sha256:1534d68cbf6685d7ba9b3f9d1e51e90491a106099f6da4fd0dbe64f4cee178b5",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-38",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-38.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-38.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:15c4b3c049aa73372a2e2e68ff9afda53454f42515a30e923595e5c9f50a7dcc",
+          "artifact_sha256": "sha256:463c1ca9a06b3ae5ec630385aaa215e8f30cc6015c7a569519972c16fbb88346",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-39",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-39.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-39.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:72300b2f999afb8ba808a25ee4bf275f38f181af83ed9b71a87ab51201934226",
+          "artifact_sha256": "sha256:5b3074395637df2b994392b9f279bccf88d09db8da160f141f3193c721e7e3c1",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-40",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-40.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-40.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:7324c6f97ea077a2aba596257bbbffa7285f08f2ecb385d771f9a1be7c5cbc4d",
+          "artifact_sha256": "sha256:52e64972ab4860648146d0f8e98cce3131dd2a62bddbac1b4c6473cff98fbc0b",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-41",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-41.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-41.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:1fe24e2221ca0bdf917e9505cce78c25fd4f846e0a9a198859d9c41a53b4515a",
+          "artifact_sha256": "sha256:2ab16a0ff086139e778bd37a54a0caa9e34dfeb41729cacc16a5b957bc33d9dc",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-42",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-42.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-42.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:20bd917663c5e3905b73ce8ce1d42424a6583938269590e318b5a90cf02a8f5d",
+          "artifact_sha256": "sha256:cfe8bda837161322c034faf8926a3a634961f413ff45d73d45ba5fd1872d5f7c",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-43",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-43.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-43.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:1df2f5788c609492b06f9f042f139763449e24e65db88eff243f57af4915cc2d",
+          "artifact_sha256": "sha256:3cc5149ec00a7be8da4a323f1628617186ab0cf2968f5c358ce90699e6fca3f3",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-44",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-44.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-44.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:a364da21e4d71437ccb68fb0be8d10cb3b43604f9752e6045d2c04aa916b415b",
+          "artifact_sha256": "sha256:dceb7e479d83a823f3169e2360bd41099ffc23f752a6142a12701e15916493a3",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-45",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-45.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-45.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:415e9d766fdd026bbb6a175580da482e8c9cb2a1ad2c2ce2c134d874b48b70c6",
+          "artifact_sha256": "sha256:dfb90bb1f5ba5bc28249ddd6dc3714522134090a8200825b9bdfc351d77f85de",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-46",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-46.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-46.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:6ab02146e16d1b8d190497910b1b403907ce4993e143e0b25d16df660ae13daa",
+          "artifact_sha256": "sha256:df2926b18130a1c5f5579789f2bf76cab83316a3fdb8db178a46324121ff914d",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-47",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-47.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-47.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:6eac1f36ef1c41d50b8837443a7f530e526f7d1106d429facc8fdbb490d02015",
+          "artifact_sha256": "sha256:938dfaf0561af541befcf0b6d689da639cc2092c6ddfa5537a1daf2d6f88217f",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-48",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-48.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-48.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:c6010a06817e0853e6c47096a428926220478bdf7973771ef963482863af815c",
+          "artifact_sha256": "sha256:9c3c08ac13036293d170137574e10c7382d19c33f419d2cbb99fbd4d30e1d244",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-49",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-49.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-49.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:e338cb0c5aa1c16f93bfb772d132f333169e2c78f91369a5974a2b9437795b15",
+          "artifact_sha256": "sha256:c7e43511cdef6e345fbd83330b32662ea565c27641db76f989246b9ad6799cb6",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-50",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-50.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-50.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:4966e1c98efe88a6d399875ef364d1ab770721bd4f9919d834861f485f9b7e71",
+          "artifact_sha256": "sha256:37351e8e58fce329b9e7096150c025084f2e68519e35fc143917d0e33096abdc",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-51",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-51.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-51.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:7ab4dde03e41e691abf2e6cd9bf42605a17819277f5be5eba8f232e5c0d89c04",
+          "artifact_sha256": "sha256:83da3037f94ac17fcfb483c6afb401d9f30d82942d04f258a73b6d5209d13a01",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-52",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-52.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-52.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:4f50da9de0a5acd489488e378a0199b0b75e38f8abe4e9ef3aacc45ae0f2d937",
+          "artifact_sha256": "sha256:a8858c25033f15d0c5c7f77eef0ce1d8e7c16a5dd0ac8b5dffa8d39aaaa682c9",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-53",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-53.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-53.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:8f3633b93f92fdfd725a301a62ab998a57722077113dcb8f59801fbc49785fde",
+          "artifact_sha256": "sha256:b761ffaad7228466a6eb0e8f8e5f464bda96e076c8505e2bc87b3f0b577058e2",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-54",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-54.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-54.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:0b868d9d0edeb283ecbc06cf376f7060a1e951092dea8e2c00ad2df65f6b6395",
+          "artifact_sha256": "sha256:89ffe29984a8736e4ad875be17750cc7d40f36c92bdcdfca72ae1bc935a538d0",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-55",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-55.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-55.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:d0ed85222f4b023e9923b5f2f84c3cb8a3ee0823cea3e9538cdf4b83534d3ec0",
+          "artifact_sha256": "sha256:76b745b52719be44f9fa1f293e1b4797deaaab6ccf26b20a90b7de64806583e5",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-56",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-56.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-56.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:055f34b1507b8fdfe35e209a1da3977fa02bba3f815115f6547e4352e4593154",
+          "artifact_sha256": "sha256:c66830ee2fedcc11f825cbabc7dfe2b23c26e07950805889de5a82ab0aae2da1",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-57",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-57.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-57.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:bcfbf2b3d3e3ea36d0e201d2cfc387c5fc11ca8c9abb1e137f47f8d956bb30f5",
+          "artifact_sha256": "sha256:6b510a97e2963ff07d9d26025d72a1639ccffe6caa0e31762091d93ce60567df",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-58",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-58.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-58.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:a6470dcba2a560c0a37cf21115b5bec668fa14ae446cb3352ef1c28195d112ae",
+          "artifact_sha256": "sha256:1f45158e176862b8ab1a460ac4e56a9ab1b9d879870d0bcb22e8de15f07ce243",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-59",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-59.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-59.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:f0c975b958fbdcfc318e6de319d91013c2130481aef187ef6443b7bdc506ea84",
+          "artifact_sha256": "sha256:007f79646eaa6421ff6a3364c0e4b92c220bf0b01f5b07aeb49ce1e5152cdbb1",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-60",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-60.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-60.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:0eb57b217f1e042ffbe182e465d7ed10a15795ddfdf146336e962001097a6fd7",
+          "artifact_sha256": "sha256:df173d9aec548783b996f99ccf170f7dd9af093d27dcce98b16863d4ef7925bb",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-61",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-61.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-61.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:431eae7f65cac85c8edea26b7dca13ad6e533dda59026cd375881f1647d22af3",
+          "artifact_sha256": "sha256:88008727b43a8b0bbaf8f413478ab14055080cf3e0e8a2478ff9ed965af1379e",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-62",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-62.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-62.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:5286a6183d6044c43474f968a89ca75e62f92ef570810eaac1db2df6773bc4df",
+          "artifact_sha256": "sha256:b6c9410739197f04f526de7e0a0d828492bc7be9076d9992b90b9f2796509ed6",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-63",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-63.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-63.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:01e803e69efb3734cdfaac7f6247a48d72e51419e54a07b49aa2b79efecc902c",
+          "artifact_sha256": "sha256:d79d81890919137325dccf53ca37efac7fa2f9f062c5881ebef4aeb1fe6a7ced",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-64",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-64.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-64.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:3d8160668f6b8ae2b1d12b2db668b099a95476544a9ad0806788f988b122d95e",
+          "artifact_sha256": "sha256:a4293c24d1386cdde16aa2e850e049490689f444454b03fef74cd253e26f426e",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-65",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-65.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-65.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:46dd2e2fc56ba5c02587e8a67d3293b4882346498710e25b78d83cf334f518b7",
+          "artifact_sha256": "sha256:ac33406de341ca6e8339e2c2c600ae6d100f637af1e5f98b12bccf40a5e35fa8",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-66",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-66.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-66.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:be345f34c1b2975f3750346f47454c4fd6dc2742e509aa28a5b37046cc0574c2",
+          "artifact_sha256": "sha256:9a0990d04cff44982a8304891054a9937d2141953b6646da7458d62037386366",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-67",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-67.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-67.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:cfed8317f531ec3505ee3c500ed1ae119bf1946156874ce1f5beaa99191d22b8",
+          "artifact_sha256": "sha256:de5aa4b6994a5e1a66e838560fcfa059ab2274a406cc31475f45e66e570d6644",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-68",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-68.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-68.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:60ebf81f079a093bd7290ec6093a17f3fa6a86890f11a7b82beef5db37ad83b1",
+          "artifact_sha256": "sha256:46de8cda2da89af12275754057db8f3e9cc67236689acff280077d6403131f63",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-69",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-69.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-69.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:715d56783939feca0dd48f1876e5311720857b85da492162e954e93cfdd6cc56",
+          "artifact_sha256": "sha256:0c9345fdeca48440194876fb59ecb538a0689d94ae0e2f3a81e1168823d362c9",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-70",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/classified_candidates/JL21-70.approved-r1.candidate.2.1.0.json",
+      "superseded": [
+        {
+          "artifact": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-70.base-r1.candidate.2.1.0.json",
+          "candidate_hash": "sha256:624f892484d1c8408ab4a4142859fa669c19196fb325ee2818d83a7403cdd622",
+          "artifact_sha256": "sha256:93f1d3e515738f34e86d47ecf0e050c56a283e06613548c2024b47df4141e118",
+          "reason": "Exact owner-approved human classifications; original base preserved"
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL21-72",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-72.base-r1.candidate.2.1.0.json",
+      "superseded": []
+    },
+    {
+      "candidate_reference": "JL21-73",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-73.base-r1.candidate.2.1.0.json",
+      "superseded": []
+    },
+    {
+      "candidate_reference": "JL21-74",
+      "current": "docs/implementation/handoffs/MY2021_JL/candidate_classification_20261109/base_candidates/JL21-74.base-r1.candidate.2.1.0.json",
+      "superseded": []
+    }
+  ]
+}

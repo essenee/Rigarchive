@@ -1,0 +1,34 @@
+{
+  "status": "stopped before execution due to database-byte drift during preflight",
+  "authorized_matrix_digest": "sha256:6926df6c06e4bd471bbda02c67257cf7a7e2999cf5cdfebfc8b06ead31a9996e",
+  "planning_baseline_and_initial_current_task_hash": "sha256:ecc521242b0d29b659a7195bbfbc498ed80c8f129c472ab9bf445461984520e2",
+  "diagnostic_current_hash": "sha256:de2308f1c965899a40ee8dec9a66a47484241fb45515e9efd76b2f06b156036c",
+  "counts": {
+    "VehicleDefinitions": 861,
+    "audit_receipts": 3075,
+    "correspondences": 159
+  },
+  "schema_matches_prior_verified_snapshot": true,
+  "logical_differences_from_prepublication_baseline_beyond_authorized_publications": [
+    {
+      "table": "django_session",
+      "changed_or_missing_preexisting_rows": 1,
+      "actual_count_change": 0,
+      "expected_authorized_publication_additions": 0
+    }
+  ],
+  "all_861_preexisting_VehicleDefinitions_match_verified_backup": true,
+  "all_159_correspondence_payloads_existing_or_approved": true,
+  "all95_MY2021_published_records_and_receipts_verified": 95,
+  "MY2021_US_JL_canonical_records": 0,
+  "SQLite_integrity": "ok",
+  "foreign_key_violations": 0,
+  "new_VehicleDefinitions": 0,
+  "new_execution_receipts": 0,
+  "backup_created": false,
+  "execution_CLI_invoked": false,
+  "live_access": "SQLite mode=ro/query_only=ON only",
+  "session_contents_or_row_identifiers_reported": false,
+  "limitation": "The planning checkpoint retains a file hash but no per-row session snapshot. Its earlier finding already recorded one changed session row relative to the older publication backup, so this diagnostic cannot prove that only session data accounts for the new byte difference. Canonical preservation and exact published payload checks pass; the byte drift still violates the preflight gate.",
+  "required_direction": "Review/accept a fresh consistent database baseline and ensure no external writes occur during the next verification/execution window; no automatic retry, restore or import was attempted."
+}
