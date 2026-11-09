@@ -215,18 +215,33 @@ def get_vehicle_selector_context(*, query="", manufacturer_slug="", model_slug="
     }
 
 
+def _drive_wheel_label(configuration):
+    """Show only the established canonical category, never infer from trim/modes."""
+    if configuration.drivetrain in {
+        VehicleDefinition.Drivetrain.TWO_WHEEL_DRIVE,
+        VehicleDefinition.Drivetrain.FOUR_WHEEL_DRIVE,
+        VehicleDefinition.Drivetrain.ALL_WHEEL_DRIVE,
+    }:
+        return configuration.get_drivetrain_display()
+    if configuration.drivetrain in (None, "", VehicleDefinition.Drivetrain.UNKNOWN):
+        return "Drive wheels not specified"
+    return "Drive wheels require review"
+
+
 def _label_configuration_choices(configurations):
     """Attach presentation-only labels without collapsing canonical records."""
     choices = list(configurations)
     attributes = [
         lambda vd: vd.trim_name or "Unnamed trim",
         lambda vd: engine_label(vd, short=True),
-        lambda vd: vd.get_drivetrain_display(),
     ]
     varying = [attribute for attribute in attributes if len({attribute(vd) for vd in choices}) > 1]
-    # A single choice still needs a useful description, even with no variation.
-    fields = varying or attributes[1:]
-    labels = [" · ".join(attribute(vd) for attribute in fields) for vd in choices]
+    drive_labels = [_drive_wheel_label(vd) for vd in choices]
+    # Keep compact differing descriptors, but always show the canonical drive
+    # category once. Drive-only alternatives need no repeated engine descriptor.
+    fields = varying or ([] if len(set(drive_labels)) > 1 else attributes[1:])
+    labels = [" · ".join([attribute(vd) for attribute in fields] + [drive])
+              for vd, drive in zip(choices, drive_labels)]
     counts = Counter(labels)
     labels = [f"{label} · {vd.get_market_display()} ({vd.market})" if counts[label] > 1 else label
               for vd, label in zip(choices, labels)]

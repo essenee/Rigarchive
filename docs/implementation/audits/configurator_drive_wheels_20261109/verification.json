@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "full_Django_tests": 724,
+  "initial_focused_Django_tests": 54,
+  "additional_page_integration_test_in_full_suite": 1,
+  "frontend_test_callbacks": 31,
+  "Django_system_check": "passed",
+  "migration_dry_run": "no changes detected",
+  "SQLite_integrity": "ok",
+  "foreign_key_violations": 0,
+  "database_byte_sha256_unchanged": "sha256:7a4661e3ddfadfd7970af235d2d761fc9471189b14a9bf41595373ed569f8868",
+  "counts": {
+    "VehicleDefinitions": 934,
+    "receipts": 3148,
+    "correspondences": 159
+  },
+  "frontend_files_changed": false,
+  "Python": "3.13.1",
+  "interpreter": "/Users/cosmo/dev/Rigarchive/.venv/bin/python",
+  "Node_CLI_available": false,
+  "frontend_method": "Existing CommonJS node:test callbacks and node:assert assertions executed using bundled Node VM callback collector",
+  "real_canonical_rendered_requests": 15,
+  "session_writes": "in-memory only",
+  "no_commit_push_migration_import_deployment": true
+}

@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "owner_visual_verification": [
+    "Toyota Tacoma",
+    "Volkswagen Touareg",
+    "Jeep Wrangler JL"
+  ],
+  "branch": "feature/configurator-drive-wheel-display",
+  "starting_commit": "764389b986ec37a58a6b3b7d579409fea382f314",
+  "main_unchanged": "764389b986ec37a58a6b3b7d579409fea382f314",
+  "audit_records_reconciled": 934,
+  "public_labels_covered": 903,
+  "relevant_Django_tests_passed": 55,
+  "frontend_callbacks_passed": 31,
+  "Django_check": "passed",
+  "migration_dry_run": "no changes detected",
+  "SQLite_integrity": "ok",
+  "foreign_key_violations": 0,
+  "database_before_sha256": "sha256:8e716a4c3f2ed2d0494098a6ec6c2aad12a59ed9d3e48b46cc68d1eb8188882b",
+  "database_after_sha256": "sha256:8e716a4c3f2ed2d0494098a6ec6c2aad12a59ed9d3e48b46cc68d1eb8188882b",
+  "counts": {
+    "VehicleDefinitions": 934,
+    "receipts": 3148,
+    "correspondences": 159
+  },
+  "canonical_drive_values_only": true,
+  "no_unsupported_inference_or_duplicate_category": true,
+  "database_excluded_from_staging": true,
+  "commit_message": "fix: consistently display canonical drive-wheel categories",
+  "no_merge_push_deployment_main_mutation": true
+}

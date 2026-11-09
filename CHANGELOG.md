@@ -6,6 +6,8 @@ All notable changes to RigArchive will be documented in this file.
 
 ### Changed
 
+- Owner-verified drive-wheel feature correction: configurator labels consistently include canonical 2WD/4WD/AWD once, with explicit missing/review states and no mode or front/rear inference. Audited all 934 definitions and 105 groups; public omissions fall from 283 year-view / 183 trim-view labels to zero. Existing selector behavior and canonical data are preserved. 724 Django tests, 31 frontend callbacks and 15 read-only canonical page renders passed; operational database unchanged. The owner visually verified Tacoma, Touareg and Wrangler JL and authorized the feature-only commit; fresh 55 relevant Django tests and 31 frontend callbacks/checks passed. Operational database excluded; no push, merge or deployment.
+
 - The configurator preserves trim-list scrolling across nearby selections, reveals obscured deep-linked selections without centering, and fits up to eight natural-height one-line trim buttons with CSS-based spacing and focus room. Short lists stay compact; long labels wrap and scroll. Existing automatic first-trim selection and keyboard focus are preserved. Full 715-test suite, 46 focused tests, 31 frontend callbacks and isolated browser checks passed; operational database unchanged.
 
 - The public generation configurator automatically selects the first displayed trim when the selected model year has more than 10 active configurations and no explicit selection. Existing URL selections, small lists and invalid-selection fallbacks are preserved.

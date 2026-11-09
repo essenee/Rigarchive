@@ -3,6 +3,28 @@ Version: 1.3
 Last Updated: 2026-11-09
 Purpose: Current implementation status and development roadmap
 
+## Configurator drive-wheel labels — owner-approved feature checkpoint (2026-11-09)
+
+On `feature/configurator-drive-wheel-display` from local `764389b`, the existing
+label service now always includes the canonical 2WD/4WD/AWD category once. Unknowns
+are explicit; unsupported/combined values require review. No trim/engine/mode
+inference or front/rear taxonomy expansion. Main remains unchanged.
+[All-record audit and A/B instructions](audits/configurator_drive_wheels_20261109/README.md)
+cover 934 definitions across 105 groups: 283 2WD / 581 4WD / 70 AWD; 903 public
+records and 31 inactive. Before, 283 year-view and 183 trim-view labels omitted
+present data; after, zero public omissions. No canonical category gaps or applicable
+receipt-target conflicts found. Legacy provenance limitations remain: 93 records
+lack creation receipts and 605 receipt-backed records lack resolution snapshots.
+724 full-suite tests, 31 frontend callbacks, 15 read-only rendered canonical requests,
+Django/migration dry-run and SQLite checks passed. Database bytes and 934/3148/159
+counts are unchanged. Selector scroll/height/default selection/deep links are
+preserved. Source evidence, canonicals and contracts remain unchanged. The owner
+visually verified Tacoma, Touareg and Wrangler JL and authorized the feature-only
+commit. Fresh 55 relevant Django tests and 31 frontend callbacks, Django/migration
+checks and all 934 audit-identity checks passed. Operational database remains
+byte-for-byte unchanged during the commit task and is not staged. No push, merge,
+deployment, migration, import or main modification.
+
 ## Configurator trim list — scroll preserved and eight-row cap (2026-11-09)
 
 Trim selections now preserve the nested list offset across panel replacements when

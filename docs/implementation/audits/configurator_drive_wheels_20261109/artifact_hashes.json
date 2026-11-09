@@ -1,0 +1,12 @@
+{
+  "README.md": "sha256:ba935fd731c47e0e4d913c0434ffddac1af95d2e7128871153b60276d64e6939",
+  "all_configurations.csv": "sha256:2fd3ff14ec3fbc3200a0e2f9df728bdde44125e1c2104f23431135fedfa49e86",
+  "all_configurations.json": "sha256:691343d7874e25867e2a45fff1e5aa54c1f009e84ed9771f9bc8cafcb8726b35",
+  "audit.py": "sha256:c8ac15e295451b0857f0a697b98238fcaf579cd048620491166dd4b697f9ef73",
+  "commit_validation.json": "sha256:d93f623c5426291c8b3675421339a58da43dcd027b5428ab8aaf5fe31237a36d",
+  "grouped_audit.json": "sha256:6b0b61083434fd41a1aab29dce807f4f00237f194b1b4493e5befbfc4a307167",
+  "rendered_page_verification.json": "sha256:65d64fef92edbb5b99a7b39431401f834f73ff71f3458025b1f7f28a771d0c3b",
+  "summary.json": "sha256:d8892c9c5a76c0039a7aa544f3dcf8961e3422417f86af431818ad95882a0c51",
+  "verification.json": "sha256:0be30dd07fa771ec7f536689c25228ccdbbc33b50d64646554928f05d8821f04",
+  "verify_pages.py": "sha256:83c67d0447d68149282c6195b35855c493954f3c5bb25498a02c981af99b84b6"
+}
