@@ -1528,20 +1528,32 @@ select:focus-visible {
 
 /* 2. Trim Button List */
 .trims-button-list {
+    --trim-gap: 0.45rem;
+    --trim-padding-block: 0.45rem;
+    --trim-border: 1px;
+    --trim-focus-inset: 0.25rem;
     display: flex;
     flex-direction: column;
-    gap: 0.45rem;
-    max-height: 260px;
+    gap: var(--trim-gap);
+    font-size: 0.88rem;
+    line-height: 1.6;
+    /* Eight one-line buttons, seven gaps and room for the focus outlines.
+       Natural content height keeps shorter lists compact; wrapped labels scroll. */
+    max-height: calc(8 * (1lh + 2 * var(--trim-padding-block) + 2 * var(--trim-border)) + 7 * var(--trim-gap) + 2 * var(--trim-focus-inset));
+    padding: var(--trim-focus-inset);
     overflow-y: auto;
+    min-width: 0;
 }
 
 .trim-button {
     display: block;
-    padding: 0.45rem 0.75rem;
+    flex: none;
+    padding: var(--trim-padding-block) 0.75rem;
     background-color: var(--bg-surface);
-    border: 1px solid var(--border-color);
+    border: var(--trim-border) solid var(--border-color);
     border-radius: var(--radius-sm);
-    font-size: 0.88rem;
+    font-size: inherit;
+    overflow-wrap: anywhere;
     font-weight: 500;
     color: var(--text-primary);
     text-decoration: none;

@@ -816,3 +816,42 @@ class LargeConfiguratorDefaultTrimTests(TestCase):
         self.assertEqual(response.context["year_filtered_defs"].count(), 49)
         self.assertEqual(response.context["selected_trim"], "Alpha")
         self.assert_choices(response, self.configurations[10:-1])
+
+
+class TrimSelectorRenderingTests(TestCase):
+    @classmethod
+    def setUpTestData(cls):
+        maker = Manufacturer.objects.create(name="Trim selector test")
+        model = VehicleModel.objects.create(manufacturer=maker, name="Selector")
+        cls.generation = Generation.objects.create(
+            vehicle_model=model, name="Selector generation", start_year=2020,
+        )
+        for year, count in enumerate((4, 6, 7, 8, 12), start=2020):
+            for index in range(count):
+                VehicleDefinition.objects.create(
+                    generation=cls.generation, model_year=year,
+                    trim_name=f"Trim {index:02d}", engine_name="Test engine",
+                    drivetrain="4WD", market="US",
+                )
+
+    def test_short_and_long_lists_render_all_choices_in_one_stable_container(self):
+        for year, count in enumerate((4, 6, 7, 8, 12), start=2020):
+            with self.subTest(count=count):
+                response = self.client.get(self.generation.get_absolute_url(), {"year": year})
+                self.assertContains(response, 'id="configuration-trims"', count=1)
+                page = ConfiguratorParser(response.content.decode())
+                links = [link for link in page.links
+                         if "trim-button" in link["attrs"].get("class", "").split()]
+                self.assertEqual(len(links), count)
+                self.assertEqual(response.context["selected_trim"], "Trim 00" if count > 10 else None)
+                self.assertTrue(all(parse_qs(urlsplit(link["attrs"]["href"]).query)["year"] == [str(year)]
+                                    for link in links))
+
+    def test_last_trim_deep_links_and_year_changes_keep_correct_choices(self):
+        for year, count in enumerate((4, 6, 7, 8, 12), start=2020):
+            with self.subTest(count=count):
+                response = self.client.get(self.generation.get_absolute_url(),
+                                           {"year": year, "trim": f"Trim {count - 1:02d}"})
+                self.assertEqual(response.context["selected_trim"], f"Trim {count - 1:02d}")
+                self.assertEqual(len(response.context["available_trims"]), count)
+                self.assertContains(response, 'class="trim-button is-selected"', count=1)

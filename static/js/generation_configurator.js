@@ -10,6 +10,25 @@
     let sequence = 0;
     let renderedSearch = window.location.search;
 
+    function trimChoices(list) {
+        return [...list.querySelectorAll("a[data-generation-filter]")]
+            .map(link => link.getAttribute("href"));
+    }
+
+    function revealSelectedTrim(list) {
+        const selected = list?.querySelector(".is-selected");
+        if (!selected) return;
+        const bounds = list.getBoundingClientRect();
+        const item = selected.getBoundingClientRect();
+        const style = window.getComputedStyle(list);
+        const top = bounds.top + list.clientTop + parseFloat(style.paddingTop);
+        const bottom = bounds.bottom - list.clientTop - parseFloat(style.paddingBottom);
+        // Reveal only the obscured edge; never move the page or center a button.
+        // Round outward to avoid clipping fractional pixels at zoomed font sizes.
+        if (item.top < top) list.scrollTop += Math.floor(item.top - top);
+        else if (item.bottom > bottom) list.scrollTop += Math.ceil(item.bottom - bottom);
+    }
+
     function filterURL(value) {
         const url = new URL(value, window.location.href);
         return url.origin === window.location.origin && url.pathname === path ? url : null;
@@ -41,12 +60,21 @@
             const replacements = panelIds.map(id => page.getElementById(id));
             if (replacements.some(panel => !panel)) throw new Error("Missing filter panels");
             const top = document.getElementById(panelId).getBoundingClientRect().top;
+            const oldTrims = document.getElementById("configuration-trims");
+            const choices = oldTrims && trimChoices(oldTrims);
+            // Read at replacement time: the user may scroll while fetching.
+            const trimScrollTop = oldTrims?.scrollTop;
             panelIds.forEach((id, index) => document.getElementById(id).replaceWith(replacements[index]));
+            const newTrims = document.getElementById("configuration-trims");
+            if (newTrims && choices && JSON.stringify(choices) === JSON.stringify(trimChoices(newTrims))) {
+                newTrims.scrollTop = trimScrollTop;
+            }
             const newAnchor = document.getElementById(panelId);
             const focusTarget = (focusId && document.getElementById(focusId)) ||
                 [...newAnchor.querySelectorAll("a[data-generation-filter]")]
                     .find(link => link.getAttribute("href") === focusHref) || newAnchor;
             focusTarget.focus({ preventScroll: true });
+            revealSelectedTrim(newTrims);
             // Compensate any layout shift without scrolling to the section top.
             const delta = newAnchor.getBoundingClientRect().top - top;
             if (Math.abs(delta) > 1) {
@@ -83,4 +111,7 @@
         const url = filterURL(window.location.href);
         if (url && url.search !== renderedSearch) update(url, document.activeElement, false);
     });
+
+    // Initial explicit trim/configuration deep links can select below the fold.
+    revealSelectedTrim(document.getElementById("configuration-trims"));
 })();

@@ -1,0 +1,91 @@
+{
+  "heights": [
+    {
+      "clientHeight": 185,
+      "count": 4,
+      "gap": "7.2px",
+      "height": 185.2421875,
+      "horizontalOverflow": false,
+      "paddingBottom": "4px",
+      "paddingTop": "4px",
+      "rowHeight": 38.9140625,
+      "scrollHeight": 185,
+      "scrollTop": 0
+    },
+    {
+      "clientHeight": 277,
+      "count": 6,
+      "gap": "7.2px",
+      "height": 277.4609375,
+      "horizontalOverflow": false,
+      "paddingBottom": "4px",
+      "paddingTop": "4px",
+      "rowHeight": 38.9140625,
+      "scrollHeight": 277,
+      "scrollTop": 0
+    },
+    {
+      "clientHeight": 324,
+      "count": 7,
+      "gap": "7.2px",
+      "height": 323.5703125,
+      "horizontalOverflow": false,
+      "paddingBottom": "4px",
+      "paddingTop": "4px",
+      "rowHeight": 38.9140625,
+      "scrollHeight": 324,
+      "scrollTop": 0
+    },
+    {
+      "clientHeight": 370,
+      "count": 8,
+      "gap": "7.2px",
+      "height": 369.6796875,
+      "horizontalOverflow": false,
+      "paddingBottom": "4px",
+      "paddingTop": "4px",
+      "rowHeight": 38.9140625,
+      "scrollHeight": 370,
+      "scrollTop": 0
+    },
+    {
+      "clientHeight": 370,
+      "count": 12,
+      "gap": "7.2px",
+      "height": 369.78125,
+      "horizontalOverflow": false,
+      "paddingBottom": "4px",
+      "paddingTop": "4px",
+      "rowHeight": 38.9140625,
+      "scrollHeight": 554,
+      "scrollTop": 0
+    }
+  ],
+  "deepLink": {
+    "bottomClearance": 3.8515625,
+    "scrollTop": 737.5,
+    "selected": "Willys Sport",
+    "visible": true
+  },
+  "mobile": {
+    "count": 24,
+    "horizontalListOverflow": false,
+    "horizontalPageOverflow": false,
+    "maxHeight": "369.788px",
+    "overflowWrap": "anywhere",
+    "whiteSpace": "normal"
+  },
+  "nativeMouse": {
+    "before": 438,
+    "afterFirst": 438,
+    "afterSecond": 438,
+    "pageY": 649
+  },
+  "keyboard": {
+    "scrollTop": 438,
+    "focusVisible": true,
+    "outline": "solid"
+  },
+  "isolation": "Local preview with temporary SQLite copy; synthetic fixture years only in copy",
+  "live_database_sha256_unchanged": "c37823955537d922c708d091a1494188c80f3cdc458b480c0fa955106d752ef6"
+}

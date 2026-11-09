@@ -123,7 +123,7 @@
                     <h3 class="column-title">2. Trim</h3>
                     {% if selected_year %}
                         {% if available_trims %}
-                            <div class="trims-button-list">
+                            <div class="trims-button-list" id="configuration-trims">
                                 {% for trim_item in available_trims %}
                                     <a href="?year={{ selected_year }}&amp;trim={{ trim_item|urlencode }}#configurations" data-generation-filter class="trim-button {% if selected_trim == trim_item %}is-selected{% endif %}">
                                         {{ trim_item|default:"Unnamed trim" }}

@@ -6,6 +6,8 @@ All notable changes to RigArchive will be documented in this file.
 
 ### Changed
 
+- The configurator preserves trim-list scrolling across nearby selections, reveals obscured deep-linked selections without centering, and fits up to eight natural-height one-line trim buttons with CSS-based spacing and focus room. Short lists stay compact; long labels wrap and scroll. Existing automatic first-trim selection and keyboard focus are preserved. Full 715-test suite, 46 focused tests, 31 frontend callbacks and isolated browser checks passed; operational database unchanged.
+
 - The public generation configurator automatically selects the first displayed trim when the selected model year has more than 10 active configurations and no explicit selection. Existing URL selections, small lists and invalid-selection fallbacks are preserved.
 
 ### Added

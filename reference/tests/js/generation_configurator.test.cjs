@@ -10,7 +10,7 @@ const tick = () => new Promise(resolve => setImmediate(resolve));
 
 // Execute the production script with an instrumented DOM/Fetch boundary.
 // These tests cover asynchronous interaction behavior, not browser rendering.
-function harness(enhanced = true) {
+function harness(enhanced = true, initialTrims = null) {
     const h = { requests: [], navigations: [], history: [], scrolls: [], pages: new Map() };
     let current = new URL(base);
     const handlers = {};
@@ -19,7 +19,8 @@ function harness(enhanced = true) {
         panels: {}, activeElement: null,
         addEventListener: (name, callback) => { handlers[name] = callback; },
         getElementById(id) {
-            return this.panels[id] || Object.values(this.panels).flatMap(p => p.children || []).find(n => n.id === id);
+            const descend = node => [node, ...(node.children || []).flatMap(descend)];
+            return this.panels[id] || Object.values(this.panels).flatMap(descend).find(n => n.id === id);
         },
     };
     function node(id, panel, attrs = {}) {
@@ -48,7 +49,10 @@ function harness(enhanced = true) {
                     document.panels.configurations.children = replacement.children;
                 }
             },
-            querySelectorAll() { return this.children.filter(n => Object.hasOwn(n.attrs, 'data-generation-filter')); },
+            querySelectorAll() {
+                return this.children.flatMap(n => n.children || [n])
+                    .filter(n => Object.hasOwn(n.attrs, 'data-generation-filter'));
+            },
             focus(options) { document.activeElement = this; h.focusOptions = options; },
         };
     }
@@ -56,6 +60,24 @@ function harness(enhanced = true) {
         const link = node('', owner, { href, ...(enhanced ? { 'data-generation-filter': '' } : {}) });
         owner.children.push(link);
         return link;
+    };
+    h.trims = (owner, { year = 2021, count = 12, selected = -1, height = 200 } = {}) => {
+        const list = {
+            id: 'configuration-trims', children: [], offset: 0, clientTop: 0, clientHeight: height,
+            get scrollTop() { return this.offset; },
+            set scrollTop(value) { this.offset = Math.max(0, value); },
+            getBoundingClientRect: () => ({ top: 100, bottom: 100 + height }),
+            querySelectorAll() { return this.children; },
+            querySelector() { return this.children[selected]; },
+        };
+        owner.children.push(list);
+        for (let i = 0; i < count; i++) {
+            const link = h.link(`?year=${year}&trim=Trim${i}#configurations`, list);
+            // Instrumented viewport geometry, not a browser layout engine.
+            link.getBoundingClientRect = () => ({ top: 100 + i * 40 - list.scrollTop,
+                bottom: 140 + i * 40 - list.scrollTop });
+        }
+        return list;
     };
     const location = {
         get href() { return current.href; }, get origin() { return current.origin; },
@@ -68,18 +90,21 @@ function harness(enhanced = true) {
         addEventListener: (name, callback) => { windowHandlers[name] = callback; },
         history: { pushState: (_state, _title, url) => { h.history.push(url); current = new URL(url); } },
         scrollTo(options) { h.scrolls.push(options); this.scrollY = options.top; },
+        getComputedStyle: () => ({ paddingTop: '4px', paddingBottom: '4px' }),
     };
     document.panels.configurations = panel('configurations', 1000);
     document.panels['configuration-content'] = panel('configuration-content', 1000);
     document.panels['generation-filter-status'] = { textContent: '' };
     // Exclude the status node from generic child lookups.
     document.panels['generation-filter-status'].children = [];
+    if (initialTrims) h.trims(document.panels.configurations, initialTrims);
     class DOMParser { parseFromString(key) { return { getElementById: id => h.pages.get(key)?.[id] }; } }
-    h.respond = (index, { shift = 0, missing = false, ok = true } = {}) => {
+    h.respond = (index, { shift = 0, missing = false, ok = true, trims = null } = {}) => {
         const request = h.requests[index];
         const key = String(index);
         const configurations = panel('configuration-content', 1000 + shift);
-        h.link(new URL(request.url).search + '#configurations', configurations);
+        if (trims) h.trims(configurations, trims);
+        else h.link(new URL(request.url).search + '#configurations', configurations);
         h.pages.set(key, !missing ? { 'configuration-content': configurations } : {});
         request.resolve({ ok, url: request.url, headers: { get: () => 'text/html; charset=utf-8' }, text: async () => key });
     };
@@ -228,4 +253,86 @@ test('live announcer remains mounted during repeated updates and focus stays acc
         assert.equal(h.focusOptions.preventScroll, true);
     }
     assert.equal(h.navigations.length, 0);
+});
+
+test('nearby trim selections preserve the latest list offset, focus and page position', async () => {
+    const h = harness(true, { count: 24 }); // MY2021 JL's displayed trim count.
+    let list = h.document.getElementById('configuration-trims');
+    list.scrollTop = 360;
+    h.dispatch('click', list.children[12]);
+    list.scrollTop = 400; // Continued scrolling during the request must survive.
+    h.respond(0, { trims: { count: 24, selected: 12 } });
+    await tick();
+    list = h.document.getElementById('configuration-trims');
+    assert.equal(list.scrollTop, 400);
+    assert.equal(h.document.activeElement, list.children[12]);
+    h.dispatch('click', list.children[13]);
+    h.respond(1, { trims: { count: 24, selected: 13 } });
+    await tick();
+    list = h.document.getElementById('configuration-trims');
+    assert.equal(list.scrollTop, 400);
+    assert.equal(h.document.activeElement, list.children[13]);
+    assert.equal(h.focusOptions.preventScroll, true);
+    assert.equal(h.window.scrollY, 600);
+    assert.equal(h.scrolls.length, 0);
+    list.scrollTop += 40;
+    assert.equal(list.scrollTop, 440);
+});
+
+test('changed year or changed trim choices start with a fresh scroll container', async () => {
+    for (const choices of [{ year: 2020, count: 4 }, { year: 2021, count: 7 }]) {
+        const h = harness(true, { count: 24 });
+        h.document.getElementById('configuration-trims').scrollTop = 400;
+        h.dispatch('click', h.link(`?year=${choices.year}`));
+        h.respond(0, { trims: choices });
+        await tick();
+        assert.equal(h.document.getElementById('configuration-trims').scrollTop, 0);
+        assert.equal(h.document.getElementById('configuration-trims').children.length, choices.count);
+    }
+});
+
+test('initial deep links reveal selected trims with only the minimum internal scroll', () => {
+    const h = harness(true, { count: 24, selected: 23 });
+    const list = h.document.getElementById('configuration-trims');
+    assert.equal(list.scrollTop, 764);
+    assert.equal(list.children[23].getBoundingClientRect().bottom, 296);
+    assert.equal(h.scrolls.length, 0);
+    assert.equal(h.document.activeElement, null); // Do not steal initial focus.
+});
+
+test('history selection reveals only an obscured edge without centering or page scrolling', async () => {
+    for (const [offset, selected, expected] of [[360, 2, 76], [0, 11, 284], [200, 6, 200]]) {
+        const h = harness(true, { count: 24 });
+        h.document.getElementById('configuration-trims').scrollTop = offset;
+        h.pop(`?year=2021&trim=Trim${selected}`);
+        h.respond(0, { trims: { count: 24, selected } });
+        await tick();
+        assert.equal(h.document.getElementById('configuration-trims').scrollTop, expected);
+        assert.equal(h.history.length, 0);
+        assert.equal(h.scrolls.length, 0);
+    }
+});
+
+test('short lists and keyboard-activated trim links keep native focus with preventScroll', async () => {
+    const h = harness(true, { count: 4 });
+    const list = h.document.getElementById('configuration-trims');
+    // Enter on a native anchor produces the same click event as pointer activation.
+    h.dispatch('click', list.children[2], { detail: 0 });
+    h.respond(0, { trims: { count: 4, selected: 2 } });
+    await tick();
+    const replacement = h.document.getElementById('configuration-trims');
+    assert.equal(replacement.scrollTop, 0);
+    assert.equal(h.document.activeElement, replacement.children[2]);
+    assert.equal(h.focusOptions.preventScroll, true);
+});
+
+test('fractional viewport edges reveal the entire selected button and its focus inset', async () => {
+    const h = harness();
+    h.dispatch('click', h.link('?year=2021&trim=Trim0'));
+    h.respond(0, { trims: { selected: 0 } });
+    const list = h.pages.get('0')['configuration-content'].children[0];
+    list.getBoundingClientRect = () => ({ top: 100, bottom: 299.7 });
+    list.children[0].getBoundingClientRect = () => ({ top: 260, bottom: 300.1 });
+    await tick();
+    assert.equal(list.scrollTop, 5); // ceil(300.1 - (299.7 - 4)), not a clipped fraction.
 });

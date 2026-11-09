@@ -3,6 +3,21 @@ Version: 1.3
 Last Updated: 2026-11-09
 Purpose: Current implementation status and development roadmap
 
+## Configurator trim list — scroll preserved and eight-row cap (2026-11-09)
+
+Trim selections now preserve the nested list offset across panel replacements when
+ordered year/trim choices match; initial deep links/history reveal only an obscured
+selected edge. Native focus and >10-configuration automatic first-trim selection
+remain intact. CSS naturally fits short lists and caps at eight one-line buttons,
+including gaps, borders, padding and focus room; buttons no longer shrink.
+[Task and verification](tasks/configurator-trim-selector-scroll-height.md): 46 focused
+Django tests, full 715-test suite and 31 frontend callbacks passed, plus Django and
+migration-consistency checks. Isolated real-browser checks cover MY2021 JL repeated
+scroll/selection, keyboard focus, deep links, 4/6/7/8/12-row fixture heights and 375px
+layout. The operational database remains byte-for-byte unchanged at 934 definitions /
+3,148 receipts / 159 correspondences. No ingestion, drivetrain, canonical or schema
+changes; no push or drive-wheel work.
+
 ## MY2021 JL — sanitized Git checkpoint validated (2026-11-09)
 
 The [milestone checkpoint](handoffs/MY2021_JL/git_checkpoint_20261109/README.md)
