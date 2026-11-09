@@ -42,13 +42,19 @@ All preservation artifacts are stored locally under `backups/` (`backups/snapsho
 
 ## Developer Preservation Commands
 
-Interpreter examples reconciled 2026-10-27 to the approved Python 3.13 environment. These are operator instructions, not commands executed or authorized by this documentation task. Operations capable of modifying the development database still require explicit authorization; reset/rebuild requires separate explicit authorization.
+Environment verified 2026-11-09: `.venv/bin/python`, Python 3.13.1, Django 6.0.7 (pypdf 6.16.1). The older `venv/py313` directory is absent in this checkout. Protected governance files still describe that older environment; this guide records the actual local environment under the current maintenance task's explicit verification requirement. Historical task logs and deployment-specific environments are not rewritten.
+
+Run every example from `/Users/cosmo/dev/Rigarchive` (or the root of your own checkout). No activation is required when using the explicit interpreter path. Optional activation is `source .venv/bin/activate`; then use `python manage.py ...`. Do not install or rebuild an environment as part of preservation.
+
+For normal operational backup/export, `RIGARCHIVE_TEST_DB_PATH` must be unset: settings otherwise select that database instead of `db.sqlite3`. Check the intended target before running commands. `verify_dev_data` sets this variable itself for its isolated subprocesses. No other environment variable is required by these commands. `PYTHONDONTWRITEBYTECODE=1` (or Python's `-B`) optionally suppresses bytecode caches.
+
+These are operator instructions, not authorization to execute database-changing operations. Obtain explicit authorization identifying affected records and risks before any operation capable of modifying the development database; reset/rebuild requires separate explicit authorization. Quiesce application writers and retain SQLite sidecars with the database until a consistent verified backup exists.
 
 ### 1. Take a Physical Database Snapshot (Layer 1)
 Use before running risky migrations, experimental database work, or destructive database commands:
 
 ```bash
-venv/py313/bin/python manage.py snapshot_db
+.venv/bin/python manage.py snapshot_db
 ```
 
 * **Output**: `backups/snapshots/db_snapshot_<YYYYMMDD_HHMMSS>.sqlite3`
@@ -58,43 +64,71 @@ venv/py313/bin/python manage.py snapshot_db
 Use before database resets, clean migration rebuilds, or structural branch transitions:
 
 ```bash
-venv/py313/bin/python manage.py export_dev_data
+.venv/bin/python manage.py export_dev_data
 ```
 
 * **Output**: `backups/logical/dev_data_<YYYYMMDD_HHMMSS>.json`
-* **Content**: Exports `accounts.User`, `auth.Group`, `reference` models, and `observation.Observation`. Excludes `contenttypes` and `auth.Permission` (re-generated via `post_migrate`).
+* **Content**: The command explicitly exports only `accounts.User`, `auth.Group`, `reference.Manufacturer`, `reference.VehicleModel`, `reference.Generation`, `reference.VehicleDefinition`, and `observation.Observation`. It excludes `contenttypes`, `auth.Permission` and sessions. It does **not** export all current reference models, receipts, correspondences, specification models or measurements, so it cannot alone reconstruct the current project. Retain a verified physical recovery snapshot and evidence artifacts.
+* **Privacy**: Physical backups contain operational authentication/session data; logical exports include user/password fields and private observations even though sessions are excluded. Keep both private and ignored. Neither is a sanitized Git checkpoint or suitable for public packaging without separate review and authorized sanitization of a copy.
 
 ### 3. Verify a Logical Export
-Verify a logical JSON export against an isolated OS temporary database without affecting `db.sqlite3`:
+Verify a logical JSON export against an isolated OS temporary database without affecting `db.sqlite3`. Set `fixture` to an actual retained export filename; do not paste angle-bracket placeholders into the shell:
 
 ```bash
-venv/py313/bin/python manage.py verify_dev_data --fixture backups/logical/dev_data_<timestamp>.json
+fixture="backups/logical/dev_data_YYYYMMDD_HHMMSS.json" # replace with the actual filename
+test -f "$fixture"
 ```
 
-* **Verification**: Migrates a fresh temporary database in `/tmp`, restores the fixture via `loaddata`, and asserts 11-point actual data invariants.
+```bash
+.venv/bin/python manage.py verify_dev_data --fixture "$fixture"
+```
+
+* **Verification**: Migrates a fresh database in the OS temporary directory, restores the fixture via `loaddata`, and runs the implemented model/relationship invariants. This checks the exported subset, not completeness of all current canonical/provenance data. Physical snapshot verification likewise checks integrity and six configured table counts, not every current table.
 
 ---
 
 ## Clean Database Rebuild Workflow
 
-To rebuild `db.sqlite3` from zero and restore your preserved logical data:
+This destructive workflow requires separate explicit authorization to delete/recreate `db.sqlite3`, and authorization for migrations/restoration. It loses records outside the logical export's seven-model subset; use a verified complete physical backup when full current-state recovery is required. Stop if there are active writers or WAL/journal/shared-memory sidecars; do not remove the database independently of its sidecars.
+
+Only after those gates, run from the repository root. First unset any test override. Retain the exact export path emitted by step 1 in `fixture` below and verify it before deletion. The verification command restores into a temporary database; it does not independently verify the rebuilt operational file.
 
 ```bash
+unset RIGARCHIVE_TEST_DB_PATH
+
 # 1. Export current logical data
-venv/py313/bin/python manage.py export_dev_data
+.venv/bin/python manage.py export_dev_data
 
 # 2. Take a physical recovery snapshot as fallback
-venv/py313/bin/python manage.py snapshot_db
+.venv/bin/python manage.py snapshot_db
 
-# 3. Reset/delete physical db.sqlite3
+# 3. Select and verify the exact export BEFORE separately authorized deletion
+fixture="backups/logical/dev_data_YYYYMMDD_HHMMSS.json" # replace with actual output
+# Execute each following step only if the preceding step succeeds.
+test -f "$fixture"
+.venv/bin/python manage.py verify_dev_data --fixture "$fixture"
+# After explicit reset authorization and all preservation gates:
 rm db.sqlite3
 
 # 4. Re-run all Django migrations from scratch
-venv/py313/bin/python manage.py migrate
+.venv/bin/python manage.py migrate
 
 # 5. Restore preserved logical data
-venv/py313/bin/python manage.py loaddata backups/logical/dev_data_<timestamp>.json
+.venv/bin/python manage.py loaddata "$fixture"
 
-# 6. Verify restored database
-venv/py313/bin/python manage.py verify_dev_data --fixture backups/logical/dev_data_<timestamp>.json
+# 6. Recheck export restoration in an isolated database; review live counts separately
+.venv/bin/python manage.py verify_dev_data --fixture "$fixture"
 ```
+
+
+## Local checks and tests
+
+Run from the repository root. These invocations select an isolated in-memory SQLite database; do not export this override into the operational backup shell:
+
+```bash
+RIGARCHIVE_TEST_DB_PATH=:memory: .venv/bin/python -B manage.py check
+RIGARCHIVE_TEST_DB_PATH=:memory: .venv/bin/python -B manage.py makemigrations --check --dry-run
+RIGARCHIVE_TEST_DB_PATH=:memory: .venv/bin/python -B manage.py test --noinput
+```
+
+Django tests must retain isolated test databases and temporary media/acquisition storage. Follow the task-specific isolation harness where filesystem fixtures require it; database isolation alone does not isolate media. No development migration is implied by these checks.
