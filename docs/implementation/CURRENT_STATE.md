@@ -3,6 +3,19 @@ Version: 1.3
 Last Updated: 2026-11-08
 Purpose: Current implementation status and development roadmap
 
+## Configurator default trim selection (2026-11-08)
+
+For a selected model year with more than 10 active configurations, the existing
+hub context selects the first trim in its displayed order unless explicit trim or
+configuration state already resolves a selection. Invalid/stale parameters retain
+their existing error fallback. Lists of 10 or fewer and all-years views retain
+their previous behavior. Existing templates render the selection and filtered
+third column; native links and progressive JavaScript navigation are unchanged.
+`AUTO_SELECT_TRIM_THRESHOLD = 10` is defined in `reference/services.py`.
+All 44 focused hub tests, Django system checks and migration consistency checks
+passed using `.venv/bin/python` with an isolated in-memory database. No schema,
+canonical data or ingestion changes. Task: [configurator default trim](tasks/configurator-default-trim-selection.md).
+
 ## MY2020 US Wrangler JL — certified canonical import completed (2026-11-08)
 
 The owner authorized the exact reviewed 49-row Matrix 2.1 digest

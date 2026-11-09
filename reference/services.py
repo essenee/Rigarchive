@@ -23,6 +23,8 @@ from reference.models import (
     VehicleModel,
 )
 
+AUTO_SELECT_TRIM_THRESHOLD = 10
+
 
 @dataclass(frozen=True)
 class VehicleContext:
@@ -298,6 +300,13 @@ def get_generation_hub_context(
             selected_trim = candidate.trim_name
         else:
             filter_errors.append("The requested configuration is unavailable for this selection.")
+
+    # Resolve explicit URL state first, including configuration-only deep links.
+    # Invalid selections retain their existing unfiltered/error fallback.
+    if (selected_year is not None and selected_trim is None
+            and trim_name is None and not filter_errors and available_trims
+            and year_filtered_defs.count() > AUTO_SELECT_TRIM_THRESHOLD):
+        selected_trim = available_trims[0]
 
     displayed_defs = year_filtered_defs
     if selected_trim is not None:

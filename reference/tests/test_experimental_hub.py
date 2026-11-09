@@ -677,3 +677,142 @@ class ExperimentalVehicleHubAndHomepageTests(TestCase):
         self.assertIn("clip-path: inset(50%)", rule)
         self.assertNotIn("display: none", rule)
         self.assertNotIn("visibility: hidden", rule)
+
+
+class LargeConfiguratorDefaultTrimTests(TestCase):
+    @classmethod
+    def setUpTestData(cls):
+        maker = Manufacturer.objects.create(name="Configurator test")
+        model = VehicleModel.objects.create(manufacturer=maker, name="Large selection")
+        cls.generation = Generation.objects.create(
+            vehicle_model=model, name="Test generation", start_year=2020,
+        )
+        # Reverse insertion order deliberately: the displayed trim order wins.
+        cls.configurations = [
+            VehicleDefinition.objects.create(
+                generation=cls.generation, model_year=2020,
+                trim_name="Zulu" if index < 10 else "Alpha",
+                engine_name=f"Engine {index}", drivetrain="4WD", market="US",
+            )
+            for index in range(21)
+        ]
+
+    def get_page(self, **params):
+        return self.client.get(self.generation.get_absolute_url(), params)
+
+    def assert_choices(self, response, expected):
+        self.assertEqual(
+            {vd.pk for vd in response.context["configuration_browser_choices"]},
+            {vd.pk for vd in expected},
+        )
+        page = ConfiguratorParser(response.content.decode())
+        links = [link for link in page.links
+                 if link["attrs"].get("class") == "configuration-choice"]
+        self.assertEqual(len(links), len(expected))
+        self.assertEqual(
+            {parse_qs(urlsplit(link["attrs"]["href"]).query)["configuration"][0]
+             for link in links}, {vd.slug for vd in expected},
+        )
+        return page
+
+    def test_ten_configurations_do_not_select_trim(self):
+        VehicleDefinition.objects.filter(pk__in=[vd.pk for vd in self.configurations[10:]]).delete()
+        response = self.get_page(year=2020)
+        self.assertIsNone(response.context["selected_trim"])
+        self.assert_choices(response, self.configurations[:10])
+
+    def test_eleven_selects_first_displayed_trim_without_exact_selection(self):
+        VehicleDefinition.objects.filter(pk__in=[vd.pk for vd in self.configurations[11:]]).delete()
+        response = self.get_page(year=2020)
+        self.assertEqual(response.context["available_trims"], ["Alpha", "Zulu"])
+        self.assertEqual(response.context["selected_trim"], "Alpha")
+        self.assertIsNone(response.context["selected_config"])
+        page = self.assert_choices(response, self.configurations[10:11])
+        selected = [link for link in page.links
+                    if "trim-button" in link["attrs"].get("class", "").split()
+                    and "is-selected" in link["attrs"].get("class", "").split()]
+        self.assertEqual([link["text"].strip() for link in selected], ["Alpha"])
+
+    def test_explicit_trim_overrides_default_and_switching_uses_native_links(self):
+        page = ConfiguratorParser(self.get_page(year=2020).content.decode())
+        for trim, expected in [("Zulu", self.configurations[:10]),
+                               ("Alpha", self.configurations[10:])]:
+            link = next(link for link in page.links
+                        if "trim-button" in link["attrs"].get("class", "").split()
+                        and link["text"].strip() == trim)
+            params = parse_qs(urlsplit(link["attrs"]["href"]).query)
+            response = self.client.get(self.generation.get_absolute_url(), params)
+            self.assertEqual(response.context["selected_trim"], trim)
+            page = self.assert_choices(response, expected)
+
+    def test_exact_configuration_deep_links_override_default(self):
+        target = self.configurations[0]
+        for params in [{"configuration": target.slug},
+                       {"year": 2020, "configuration": target.slug}]:
+            with self.subTest(params=params):
+                response = self.get_page(**params)
+                self.assertEqual(response.context["selected_config"], target)
+                self.assertEqual(response.context["selected_trim"], "Zulu")
+                self.assert_choices(response, self.configurations[:10])
+
+    def test_small_selection_and_all_years_keep_existing_behavior(self):
+        response = self.get_page()
+        self.assertIsNone(response.context["selected_year"])
+        self.assertIsNone(response.context["selected_trim"])
+        self.assert_choices(response, [])
+        VehicleDefinition.objects.filter(pk__in=[vd.pk for vd in self.configurations[10:]]).delete()
+        response = self.get_page(year=2020)
+        self.assertIsNone(response.context["selected_trim"])
+        self.assert_choices(response, self.configurations[:10])
+
+    def test_invalid_or_stale_parameters_keep_error_fallback(self):
+        for params in [{"year": 2020, "trim": "stale"},
+                       {"year": 2020, "trim": ""},
+                       {"year": 2020, "configuration": "stale"},
+                       {"year": "invalid"}, {"year": 1999}, {"year": ""}]:
+            with self.subTest(params=params):
+                response = self.get_page(**params)
+                self.assertIsNone(response.context["selected_trim"])
+                self.assertIsNone(response.context["selected_config"])
+                if params != {"year": ""}:
+                    self.assertTrue(response.context["filter_errors"])
+                self.assert_choices(response, self.configurations if params["year"] == 2020 else [])
+
+    def test_unnamed_trim_is_a_valid_explicit_selection_and_default(self):
+        unnamed = self.configurations[0]
+        unnamed.trim_name = ""
+        unnamed.save()
+        for params in [{"year": 2020}, {"year": 2020, "trim": ""}]:
+            with self.subTest(params=params):
+                response = self.get_page(**params)
+                self.assertEqual(response.context["selected_trim"], "")
+                self.assert_choices(response, [unnamed])
+
+    def test_threshold_counts_only_active_configurations_in_selected_year(self):
+        # A large generation does not imply a large selected-year context.
+        for vd in self.configurations[10:]:
+            vd.model_year = 2021
+            vd.save()
+        response = self.get_page(year=2020)
+        self.assertIsNone(response.context["selected_trim"])
+        self.assert_choices(response, self.configurations[:10])
+        self.configurations[-1].is_active = False
+        self.configurations[-1].save()
+        response = self.get_page(year=2021)
+        self.assertIsNone(response.context["selected_trim"])
+        self.assert_choices(response, self.configurations[10:-1])
+
+    def test_twenty_and_forty_nine_configurations_select_first_trim(self):
+        self.configurations[-1].delete()
+        response = self.get_page(year=2020)
+        self.assertEqual(response.context["selected_trim"], "Alpha")
+        self.assert_choices(response, self.configurations[10:-1])
+        for index in range(21, 50):
+            VehicleDefinition.objects.create(
+                generation=self.generation, model_year=2020, trim_name="Zulu",
+                engine_name=f"Engine {index}", drivetrain="4WD", market="US",
+            )
+        response = self.get_page(year=2020)
+        self.assertEqual(response.context["year_filtered_defs"].count(), 49)
+        self.assertEqual(response.context["selected_trim"], "Alpha")
+        self.assert_choices(response, self.configurations[10:-1])

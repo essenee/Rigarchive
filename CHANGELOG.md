@@ -4,6 +4,10 @@ All notable changes to RigArchive will be documented in this file.
 
 ## Unreleased
 
+### Changed
+
+- The public generation configurator automatically selects the first displayed trim when the selected model year has more than 10 active configurations and no explicit selection. Existing URL selections, small lists and invalid-selection fallbacks are preserved.
+
 ### Added
 
 - Certified and executed the exact owner-authorized 49-row US MY2020 Wrangler JL Matrix 2.1 in one atomic model-year transaction with fresh per-row plans. Created VehicleDefinitions 828–876 and receipts 2932–2980; totals 861 definitions, 2,980 receipts and 64 unchanged correspondences. Actual permitted bases: 1 first representation, 20 source-established grades, 28 mechanical distinctions. All preexisting database rows and prior MY2020 artifacts preserved; verified consistent backup, receipt/manifest reconciliation, SQLite/Django checks and 157 isolated tests. No other imports, backfill, schema, application or contract changes.
