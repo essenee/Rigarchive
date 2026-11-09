@@ -3,6 +3,47 @@ Version: 1.3
 Last Updated: 2026-11-08
 Purpose: Current implementation status and development roadmap
 
+## MY2020 US Wrangler JL — certified canonical import completed (2026-11-08)
+
+The owner authorized the exact reviewed 49-row Matrix 2.1 digest
+`sha256:a624e23a03e47491f86f8a417a86768e91aa8269213101a8d0dff08f1b3c9e0c`.
+Fresh pre-execution checks and a consistent verified SQLite backup passed. The
+accepted human-approval workflow certified the exact digest/scope, and one durable
+model-year transaction freshly planned and created all 49 US MY2020 JL records.
+[Execution checkpoint](handoffs/MY2020_JL/canonical_execution_20261108/README.md)
+retains approval, backup pin, CLI output, fresh manifests, receipts and reconciliation.
+
+Exactly **49 VehicleDefinitions, PK 828–876, and 49 creation receipts, PK 2932–2980**,
+were added. Current totals are **861 VehicleDefinitions, 2,980 receipts and 64
+correspondences**. All new records belong to existing active Wrangler JL Generation
+PK 32 / UUID `38d3c3ac-f825-4406-abb5-c2d12b9129a4`, with model-code coverage
+JLJL72 12, JLJS72 3, JLJL74 18, JLJP74 12 and JLJS74 4. All 60 approved human
+classification decisions, 43 approved declaration revisions, six EC3 sourced
+identities and three Unlimited High Altitude names/Sahara-family provenance remain
+preserved in their exact candidate/source lineage.
+
+Execution used only permitted bases: one first representation, 20 source-established
+grades and 28 mechanical distinctions. Actual execution manifests record evolving
+namespace counts 0–48; old standalone snapshot manifests were not executed unchanged.
+All new UUIDs/slugs, ten target fields, parent FKs, resolution 1.1, engine proof 2.0,
+source/candidate/approval/published-mapping bindings and Matrix receipt links verify.
+Read-only reconciliation confirms all 49 rows complete.
+
+Every preexisting row in every application table, including all original 812
+VehicleDefinitions, historical receipts and all 64 correspondence revisions, matches
+the consistent pre-import backup. Only 49 definitions, 49 receipts and normal
+sequence advances were added. Schema/migrations and all 1,348 prior MY2020 artifacts
+are unchanged. SQLite integrity/foreign keys, Django checks and 157 isolated focused
+tests passed. An independent verifier's receipt-accessor error was corrected using
+read-only inspection; no import retry or canonical data/scope deviation occurred.
+
+The [published correspondence checkpoint](handoffs/MY2020_JL/generation_publication_20261108/README.md)
+and [final planning package](handoffs/MY2020_JL/final_planning_20261108/README.md)
+remain preserved historical stages. The planning package's then-pending approval/
+execution status is superseded by this certified execution record. No backfill,
+correspondence revision, application/contract change, migration, other-year import,
+commit or push occurred. No work remains for this exact MY2020 import task.
+
 ## MY2019 JL canonical import — certified and completed (2026-11-08)
 
 The owner authorized the exact reviewed 19-row Matrix 2.1 after conditional gates.
@@ -15,7 +56,7 @@ per-row manifests, receipts and read-only reconciliation.
 One accepted model-year transaction created exactly 19 active US MY2019 JL
 VehicleDefinitions, PK 809–827, and 19 receipts, PK 2862–2880. All resolve to
 Generation PK 32 / UUID `38d3c3ac-f825-4406-abb5-c2d12b9129a4` through the five
-existing published mappings. Totals are now **812 VehicleDefinitions, 2,880
+existing published mappings. MY2019 completion totals were **812 VehicleDefinitions, 2,880
 receipts, 13 correspondences**. The six two-door/thirteen Unlimited offerings
 retain ten approved ERC human-adjudicated tuples and nine original EC3 tuples.
 Each row was freshly planned inside the transaction using only its Matrix-permitted

@@ -1,0 +1,28 @@
+{
+  "matrix_digest": "sha256:a624e23a03e47491f86f8a417a86768e91aa8269213101a8d0dff08f1b3c9e0c",
+  "eligible": 49,
+  "blocked": 0,
+  "conflicting": 0,
+  "preexisting": 0,
+  "expected_creations": 49,
+  "expected_no_ops": 0,
+  "unique_planned_identities_and_slugs": 49,
+  "current_and_approved_candidates_verified": 49,
+  "approved_field_decisions_preserved": 60,
+  "engine_proofs_verified": 49,
+  "manifest_roundtrips_and_fresh_plan_matches": 49,
+  "actual_published_correspondence_bindings": 51,
+  "Matrix_contract_review": "passed;uncertified",
+  "Django_checks": "System check identified no issues (0 silenced).",
+  "SQLite_integrity": "ok",
+  "foreign_key_violations": 0,
+  "database_counts": {
+    "VehicleDefinitions": 812,
+    "receipts": 2931,
+    "correspondences": 64
+  },
+  "database_sha256_before_and_after": "sha256:a39f704c1347baa48b5d3fef2da8f3cac19db7f4f27cefd8ce954636cead410f",
+  "database_byte_unchanged": true,
+  "preexisting_MY2020_files_unchanged": 1235,
+  "no_approval_import_migration_or_publication": true
+}

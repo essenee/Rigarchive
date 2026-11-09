@@ -1,0 +1,56 @@
+{
+  "environment": {
+    "interpreter": "/Users/cosmo/dev/Rigarchive/.venv/bin/python",
+    "Python": "3.13.1",
+    "Django": "6.0.7",
+    "pypdf": "6.16.1"
+  },
+  "matrix_version": "2.1",
+  "matrix_digest": "sha256:a624e23a03e47491f86f8a417a86768e91aa8269213101a8d0dff08f1b3c9e0c",
+  "matrix_validation": "passed",
+  "matrix_certification": "not_granted",
+  "approval_artifact_created": false,
+  "engine_proofs": {
+    "version": "2.0",
+    "passed": 49,
+    "human_claims_preserved": 60
+  },
+  "generation_peer_resolution_version": "1.1",
+  "eligible": 49,
+  "blocked": 0,
+  "conflicting": 0,
+  "preexisting": 0,
+  "expected_creations": 49,
+  "expected_no_ops": 0,
+  "manifest_count": 49,
+  "manifest_hashes_rechecked": 49,
+  "manifest_hash_index": "plan_index.json",
+  "full_hash_table": "plan_hashes.md",
+  "published_correspondences_used": 51,
+  "focused_tests": {
+    "passed": 157,
+    "seconds": 4.179,
+    "isolated": true
+  },
+  "Django_checks": "passed",
+  "database_counts": {
+    "VehicleDefinitions": 812,
+    "receipts": 2931,
+    "correspondences": 64
+  },
+  "database_byte_unchanged": true,
+  "database_sha256": "sha256:a39f704c1347baa48b5d3fef2da8f3cac19db7f4f27cefd8ce954636cead410f",
+  "SQLite_integrity": "ok",
+  "foreign_key_violations": 0,
+  "preexisting_MY2020_files_preserved": 1235,
+  "technical_blockers": [],
+  "owner_decisions_pending": [
+    "Exact Matrix certification/approval of digest,49-row scope and per-row permitted creation bases",
+    "Explicit accepted Matrix execution authorization, subject to fresh pre-execution verification"
+  ],
+  "stale_plan_risk": "All snapshot plans bind empty namespace and must not be executed sequentially unchanged; Matrix execution must freshly plan each row in one model-year transaction",
+  "canonical_import_execution": "not_performed",
+  "correspondence_publication_or_adjudication": "not_performed",
+  "application_contract_or_migration_change": "none",
+  "commit_or_push": "none"
+}

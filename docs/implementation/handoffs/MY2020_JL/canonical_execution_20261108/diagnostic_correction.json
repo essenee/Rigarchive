@@ -1,0 +1,9 @@
+{
+  "phase": "independent post-commit diagnostics",
+  "initial_issue": "Verifier used nonexistent receipt resolved_vehicle_model_id/resolved_manufacturer_id accessors; full candidate snapshots also belong to retained execution manifests rather than the receipt object",
+  "actual_receipt_contract": "Parent IDs in resolution_snapshot_json.generation_resolution.parents; receipt candidate_hash and manifest_hash bind retained candidate snapshot/manifests",
+  "resolution": "Corrected handoff-only verifier and ran independent read-only verification successfully",
+  "accepted_execution_successful": true,
+  "canonical_import_retried": false,
+  "application_contract_or_canonical_data_fix": false
+}

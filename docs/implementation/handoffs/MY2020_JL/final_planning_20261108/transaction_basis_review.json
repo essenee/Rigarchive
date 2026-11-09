@@ -1,0 +1,665 @@
+{
+  "notice": "Standalone snapshot manifests all bind an empty namespace and first_representation. Do not execute49 standalone snapshots sequentially unchanged. Accepted Matrix execution must freshly plan/revalidate each row in row-ID order inside one model-year transaction. Anticipated bases below are code/tuple analysis, not executed results. No real-candidate rehearsal or import occurred.",
+  "anticipated_basis_counts": {
+    "first_representation": 1,
+    "mechanical_dimension": 28,
+    "source_established_grade": 20
+  },
+  "rows": [
+    {
+      "row_id": "JL20-01",
+      "current_basis": "first_representation",
+      "anticipated_basis_in_fixed_matrix_order": "first_representation",
+      "permitted_create_bases": [
+        "first_representation"
+      ],
+      "earlier_same_trim_candidates": [],
+      "tuple_distinct_from_all_earlier_same_trim_candidates": true,
+      "analysis_basis": "Existing structured planner branch plus complete approved pairwise-distinct tuples. Not executed or tested by importing real candidates."
+    },
+    {
+      "row_id": "JL20-02",
+      "current_basis": "first_representation",
+      "anticipated_basis_in_fixed_matrix_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_candidates": [
+        "JL20-01"
+      ],
+      "tuple_distinct_from_all_earlier_same_trim_candidates": true,
+      "analysis_basis": "Existing structured planner branch plus complete approved pairwise-distinct tuples. Not executed or tested by importing real candidates."
+    },
+    {
+      "row_id": "JL20-03",
+      "current_basis": "first_representation",
+      "anticipated_basis_in_fixed_matrix_order": "source_established_grade",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ],
+      "earlier_same_trim_candidates": [],
+      "tuple_distinct_from_all_earlier_same_trim_candidates": true,
+      "analysis_basis": "Existing structured planner branch plus complete approved pairwise-distinct tuples. Not executed or tested by importing real candidates."
+    },
+    {
+      "row_id": "JL20-04",
+      "current_basis": "first_representation",
+      "anticipated_basis_in_fixed_matrix_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_candidates": [
+        "JL20-03"
+      ],
+      "tuple_distinct_from_all_earlier_same_trim_candidates": true,
+      "analysis_basis": "Existing structured planner branch plus complete approved pairwise-distinct tuples. Not executed or tested by importing real candidates."
+    },
+    {
+      "row_id": "JL20-05",
+      "current_basis": "first_representation",
+      "anticipated_basis_in_fixed_matrix_order": "source_established_grade",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ],
+      "earlier_same_trim_candidates": [],
+      "tuple_distinct_from_all_earlier_same_trim_candidates": true,
+      "analysis_basis": "Existing structured planner branch plus complete approved pairwise-distinct tuples. Not executed or tested by importing real candidates."
+    },
+    {
+      "row_id": "JL20-06",
+      "current_basis": "first_representation",
+      "anticipated_basis_in_fixed_matrix_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_candidates": [
+        "JL20-05"
+      ],
+      "tuple_distinct_from_all_earlier_same_trim_candidates": true,
+      "analysis_basis": "Existing structured planner branch plus complete approved pairwise-distinct tuples. Not executed or tested by importing real candidates."
+    },
+    {
+      "row_id": "JL20-07",
+      "current_basis": "first_representation",
+      "anticipated_basis_in_fixed_matrix_order": "source_established_grade",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ],
+      "earlier_same_trim_candidates": [],
+      "tuple_distinct_from_all_earlier_same_trim_candidates": true,
+      "analysis_basis": "Existing structured planner branch plus complete approved pairwise-distinct tuples. Not executed or tested by importing real candidates."
+    },
+    {
+      "row_id": "JL20-08",
+      "current_basis": "first_representation",
+      "anticipated_basis_in_fixed_matrix_order": "source_established_grade",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ],
+      "earlier_same_trim_candidates": [],
+      "tuple_distinct_from_all_earlier_same_trim_candidates": true,
+      "analysis_basis": "Existing structured planner branch plus complete approved pairwise-distinct tuples. Not executed or tested by importing real candidates."
+    },
+    {
+      "row_id": "JL20-09",
+      "current_basis": "first_representation",
+      "anticipated_basis_in_fixed_matrix_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_candidates": [
+        "JL20-08"
+      ],
+      "tuple_distinct_from_all_earlier_same_trim_candidates": true,
+      "analysis_basis": "Existing structured planner branch plus complete approved pairwise-distinct tuples. Not executed or tested by importing real candidates."
+    },
+    {
+      "row_id": "JL20-10",
+      "current_basis": "first_representation",
+      "anticipated_basis_in_fixed_matrix_order": "source_established_grade",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ],
+      "earlier_same_trim_candidates": [],
+      "tuple_distinct_from_all_earlier_same_trim_candidates": true,
+      "analysis_basis": "Existing structured planner branch plus complete approved pairwise-distinct tuples. Not executed or tested by importing real candidates."
+    },
+    {
+      "row_id": "JL20-11",
+      "current_basis": "first_representation",
+      "anticipated_basis_in_fixed_matrix_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_candidates": [
+        "JL20-10"
+      ],
+      "tuple_distinct_from_all_earlier_same_trim_candidates": true,
+      "analysis_basis": "Existing structured planner branch plus complete approved pairwise-distinct tuples. Not executed or tested by importing real candidates."
+    },
+    {
+      "row_id": "JL20-12",
+      "current_basis": "first_representation",
+      "anticipated_basis_in_fixed_matrix_order": "source_established_grade",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ],
+      "earlier_same_trim_candidates": [],
+      "tuple_distinct_from_all_earlier_same_trim_candidates": true,
+      "analysis_basis": "Existing structured planner branch plus complete approved pairwise-distinct tuples. Not executed or tested by importing real candidates."
+    },
+    {
+      "row_id": "JL20-13",
+      "current_basis": "first_representation",
+      "anticipated_basis_in_fixed_matrix_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_candidates": [
+        "JL20-12"
+      ],
+      "tuple_distinct_from_all_earlier_same_trim_candidates": true,
+      "analysis_basis": "Existing structured planner branch plus complete approved pairwise-distinct tuples. Not executed or tested by importing real candidates."
+    },
+    {
+      "row_id": "JL20-14",
+      "current_basis": "first_representation",
+      "anticipated_basis_in_fixed_matrix_order": "source_established_grade",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ],
+      "earlier_same_trim_candidates": [],
+      "tuple_distinct_from_all_earlier_same_trim_candidates": true,
+      "analysis_basis": "Existing structured planner branch plus complete approved pairwise-distinct tuples. Not executed or tested by importing real candidates."
+    },
+    {
+      "row_id": "JL20-15",
+      "current_basis": "first_representation",
+      "anticipated_basis_in_fixed_matrix_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_candidates": [
+        "JL20-14"
+      ],
+      "tuple_distinct_from_all_earlier_same_trim_candidates": true,
+      "analysis_basis": "Existing structured planner branch plus complete approved pairwise-distinct tuples. Not executed or tested by importing real candidates."
+    },
+    {
+      "row_id": "JL20-16",
+      "current_basis": "first_representation",
+      "anticipated_basis_in_fixed_matrix_order": "source_established_grade",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ],
+      "earlier_same_trim_candidates": [],
+      "tuple_distinct_from_all_earlier_same_trim_candidates": true,
+      "analysis_basis": "Existing structured planner branch plus complete approved pairwise-distinct tuples. Not executed or tested by importing real candidates."
+    },
+    {
+      "row_id": "JL20-17",
+      "current_basis": "first_representation",
+      "anticipated_basis_in_fixed_matrix_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_candidates": [
+        "JL20-16"
+      ],
+      "tuple_distinct_from_all_earlier_same_trim_candidates": true,
+      "analysis_basis": "Existing structured planner branch plus complete approved pairwise-distinct tuples. Not executed or tested by importing real candidates."
+    },
+    {
+      "row_id": "JL20-18",
+      "current_basis": "first_representation",
+      "anticipated_basis_in_fixed_matrix_order": "source_established_grade",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ],
+      "earlier_same_trim_candidates": [],
+      "tuple_distinct_from_all_earlier_same_trim_candidates": true,
+      "analysis_basis": "Existing structured planner branch plus complete approved pairwise-distinct tuples. Not executed or tested by importing real candidates."
+    },
+    {
+      "row_id": "JL20-19",
+      "current_basis": "first_representation",
+      "anticipated_basis_in_fixed_matrix_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_candidates": [
+        "JL20-18"
+      ],
+      "tuple_distinct_from_all_earlier_same_trim_candidates": true,
+      "analysis_basis": "Existing structured planner branch plus complete approved pairwise-distinct tuples. Not executed or tested by importing real candidates."
+    },
+    {
+      "row_id": "JL20-20",
+      "current_basis": "first_representation",
+      "anticipated_basis_in_fixed_matrix_order": "source_established_grade",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ],
+      "earlier_same_trim_candidates": [],
+      "tuple_distinct_from_all_earlier_same_trim_candidates": true,
+      "analysis_basis": "Existing structured planner branch plus complete approved pairwise-distinct tuples. Not executed or tested by importing real candidates."
+    },
+    {
+      "row_id": "JL20-21",
+      "current_basis": "first_representation",
+      "anticipated_basis_in_fixed_matrix_order": "source_established_grade",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ],
+      "earlier_same_trim_candidates": [],
+      "tuple_distinct_from_all_earlier_same_trim_candidates": true,
+      "analysis_basis": "Existing structured planner branch plus complete approved pairwise-distinct tuples. Not executed or tested by importing real candidates."
+    },
+    {
+      "row_id": "JL20-22",
+      "current_basis": "first_representation",
+      "anticipated_basis_in_fixed_matrix_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_candidates": [
+        "JL20-21"
+      ],
+      "tuple_distinct_from_all_earlier_same_trim_candidates": true,
+      "analysis_basis": "Existing structured planner branch plus complete approved pairwise-distinct tuples. Not executed or tested by importing real candidates."
+    },
+    {
+      "row_id": "JL20-23",
+      "current_basis": "first_representation",
+      "anticipated_basis_in_fixed_matrix_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_candidates": [
+        "JL20-21",
+        "JL20-22"
+      ],
+      "tuple_distinct_from_all_earlier_same_trim_candidates": true,
+      "analysis_basis": "Existing structured planner branch plus complete approved pairwise-distinct tuples. Not executed or tested by importing real candidates."
+    },
+    {
+      "row_id": "JL20-24",
+      "current_basis": "first_representation",
+      "anticipated_basis_in_fixed_matrix_order": "source_established_grade",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ],
+      "earlier_same_trim_candidates": [],
+      "tuple_distinct_from_all_earlier_same_trim_candidates": true,
+      "analysis_basis": "Existing structured planner branch plus complete approved pairwise-distinct tuples. Not executed or tested by importing real candidates."
+    },
+    {
+      "row_id": "JL20-25",
+      "current_basis": "first_representation",
+      "anticipated_basis_in_fixed_matrix_order": "source_established_grade",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ],
+      "earlier_same_trim_candidates": [],
+      "tuple_distinct_from_all_earlier_same_trim_candidates": true,
+      "analysis_basis": "Existing structured planner branch plus complete approved pairwise-distinct tuples. Not executed or tested by importing real candidates."
+    },
+    {
+      "row_id": "JL20-26",
+      "current_basis": "first_representation",
+      "anticipated_basis_in_fixed_matrix_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_candidates": [
+        "JL20-25"
+      ],
+      "tuple_distinct_from_all_earlier_same_trim_candidates": true,
+      "analysis_basis": "Existing structured planner branch plus complete approved pairwise-distinct tuples. Not executed or tested by importing real candidates."
+    },
+    {
+      "row_id": "JL20-27",
+      "current_basis": "first_representation",
+      "anticipated_basis_in_fixed_matrix_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_candidates": [
+        "JL20-25",
+        "JL20-26"
+      ],
+      "tuple_distinct_from_all_earlier_same_trim_candidates": true,
+      "analysis_basis": "Existing structured planner branch plus complete approved pairwise-distinct tuples. Not executed or tested by importing real candidates."
+    },
+    {
+      "row_id": "JL20-28",
+      "current_basis": "first_representation",
+      "anticipated_basis_in_fixed_matrix_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_candidates": [
+        "JL20-25",
+        "JL20-26",
+        "JL20-27"
+      ],
+      "tuple_distinct_from_all_earlier_same_trim_candidates": true,
+      "analysis_basis": "Existing structured planner branch plus complete approved pairwise-distinct tuples. Not executed or tested by importing real candidates."
+    },
+    {
+      "row_id": "JL20-29",
+      "current_basis": "first_representation",
+      "anticipated_basis_in_fixed_matrix_order": "source_established_grade",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ],
+      "earlier_same_trim_candidates": [],
+      "tuple_distinct_from_all_earlier_same_trim_candidates": true,
+      "analysis_basis": "Existing structured planner branch plus complete approved pairwise-distinct tuples. Not executed or tested by importing real candidates."
+    },
+    {
+      "row_id": "JL20-30",
+      "current_basis": "first_representation",
+      "anticipated_basis_in_fixed_matrix_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_candidates": [
+        "JL20-29"
+      ],
+      "tuple_distinct_from_all_earlier_same_trim_candidates": true,
+      "analysis_basis": "Existing structured planner branch plus complete approved pairwise-distinct tuples. Not executed or tested by importing real candidates."
+    },
+    {
+      "row_id": "JL20-31",
+      "current_basis": "first_representation",
+      "anticipated_basis_in_fixed_matrix_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_candidates": [
+        "JL20-29",
+        "JL20-30"
+      ],
+      "tuple_distinct_from_all_earlier_same_trim_candidates": true,
+      "analysis_basis": "Existing structured planner branch plus complete approved pairwise-distinct tuples. Not executed or tested by importing real candidates."
+    },
+    {
+      "row_id": "JL20-32",
+      "current_basis": "first_representation",
+      "anticipated_basis_in_fixed_matrix_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_candidates": [
+        "JL20-29",
+        "JL20-30",
+        "JL20-31"
+      ],
+      "tuple_distinct_from_all_earlier_same_trim_candidates": true,
+      "analysis_basis": "Existing structured planner branch plus complete approved pairwise-distinct tuples. Not executed or tested by importing real candidates."
+    },
+    {
+      "row_id": "JL20-33",
+      "current_basis": "first_representation",
+      "anticipated_basis_in_fixed_matrix_order": "source_established_grade",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ],
+      "earlier_same_trim_candidates": [],
+      "tuple_distinct_from_all_earlier_same_trim_candidates": true,
+      "analysis_basis": "Existing structured planner branch plus complete approved pairwise-distinct tuples. Not executed or tested by importing real candidates."
+    },
+    {
+      "row_id": "JL20-34",
+      "current_basis": "first_representation",
+      "anticipated_basis_in_fixed_matrix_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_candidates": [
+        "JL20-33"
+      ],
+      "tuple_distinct_from_all_earlier_same_trim_candidates": true,
+      "analysis_basis": "Existing structured planner branch plus complete approved pairwise-distinct tuples. Not executed or tested by importing real candidates."
+    },
+    {
+      "row_id": "JL20-35",
+      "current_basis": "first_representation",
+      "anticipated_basis_in_fixed_matrix_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_candidates": [
+        "JL20-33",
+        "JL20-34"
+      ],
+      "tuple_distinct_from_all_earlier_same_trim_candidates": true,
+      "analysis_basis": "Existing structured planner branch plus complete approved pairwise-distinct tuples. Not executed or tested by importing real candidates."
+    },
+    {
+      "row_id": "JL20-36",
+      "current_basis": "first_representation",
+      "anticipated_basis_in_fixed_matrix_order": "source_established_grade",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ],
+      "earlier_same_trim_candidates": [],
+      "tuple_distinct_from_all_earlier_same_trim_candidates": true,
+      "analysis_basis": "Existing structured planner branch plus complete approved pairwise-distinct tuples. Not executed or tested by importing real candidates."
+    },
+    {
+      "row_id": "JL20-37",
+      "current_basis": "first_representation",
+      "anticipated_basis_in_fixed_matrix_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_candidates": [
+        "JL20-36"
+      ],
+      "tuple_distinct_from_all_earlier_same_trim_candidates": true,
+      "analysis_basis": "Existing structured planner branch plus complete approved pairwise-distinct tuples. Not executed or tested by importing real candidates."
+    },
+    {
+      "row_id": "JL20-38",
+      "current_basis": "first_representation",
+      "anticipated_basis_in_fixed_matrix_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_candidates": [
+        "JL20-36",
+        "JL20-37"
+      ],
+      "tuple_distinct_from_all_earlier_same_trim_candidates": true,
+      "analysis_basis": "Existing structured planner branch plus complete approved pairwise-distinct tuples. Not executed or tested by importing real candidates."
+    },
+    {
+      "row_id": "JL20-39",
+      "current_basis": "first_representation",
+      "anticipated_basis_in_fixed_matrix_order": "source_established_grade",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ],
+      "earlier_same_trim_candidates": [],
+      "tuple_distinct_from_all_earlier_same_trim_candidates": true,
+      "analysis_basis": "Existing structured planner branch plus complete approved pairwise-distinct tuples. Not executed or tested by importing real candidates."
+    },
+    {
+      "row_id": "JL20-40",
+      "current_basis": "first_representation",
+      "anticipated_basis_in_fixed_matrix_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_candidates": [
+        "JL20-39"
+      ],
+      "tuple_distinct_from_all_earlier_same_trim_candidates": true,
+      "analysis_basis": "Existing structured planner branch plus complete approved pairwise-distinct tuples. Not executed or tested by importing real candidates."
+    },
+    {
+      "row_id": "JL20-41",
+      "current_basis": "first_representation",
+      "anticipated_basis_in_fixed_matrix_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_candidates": [
+        "JL20-39",
+        "JL20-40"
+      ],
+      "tuple_distinct_from_all_earlier_same_trim_candidates": true,
+      "analysis_basis": "Existing structured planner branch plus complete approved pairwise-distinct tuples. Not executed or tested by importing real candidates."
+    },
+    {
+      "row_id": "JL20-42",
+      "current_basis": "first_representation",
+      "anticipated_basis_in_fixed_matrix_order": "source_established_grade",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ],
+      "earlier_same_trim_candidates": [],
+      "tuple_distinct_from_all_earlier_same_trim_candidates": true,
+      "analysis_basis": "Existing structured planner branch plus complete approved pairwise-distinct tuples. Not executed or tested by importing real candidates."
+    },
+    {
+      "row_id": "JL20-43",
+      "current_basis": "first_representation",
+      "anticipated_basis_in_fixed_matrix_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_candidates": [
+        "JL20-42"
+      ],
+      "tuple_distinct_from_all_earlier_same_trim_candidates": true,
+      "analysis_basis": "Existing structured planner branch plus complete approved pairwise-distinct tuples. Not executed or tested by importing real candidates."
+    },
+    {
+      "row_id": "JL20-44",
+      "current_basis": "first_representation",
+      "anticipated_basis_in_fixed_matrix_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_candidates": [
+        "JL20-42",
+        "JL20-43"
+      ],
+      "tuple_distinct_from_all_earlier_same_trim_candidates": true,
+      "analysis_basis": "Existing structured planner branch plus complete approved pairwise-distinct tuples. Not executed or tested by importing real candidates."
+    },
+    {
+      "row_id": "JL20-45",
+      "current_basis": "first_representation",
+      "anticipated_basis_in_fixed_matrix_order": "source_established_grade",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ],
+      "earlier_same_trim_candidates": [],
+      "tuple_distinct_from_all_earlier_same_trim_candidates": true,
+      "analysis_basis": "Existing structured planner branch plus complete approved pairwise-distinct tuples. Not executed or tested by importing real candidates."
+    },
+    {
+      "row_id": "JL20-46",
+      "current_basis": "first_representation",
+      "anticipated_basis_in_fixed_matrix_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_candidates": [
+        "JL20-45"
+      ],
+      "tuple_distinct_from_all_earlier_same_trim_candidates": true,
+      "analysis_basis": "Existing structured planner branch plus complete approved pairwise-distinct tuples. Not executed or tested by importing real candidates."
+    },
+    {
+      "row_id": "JL20-47",
+      "current_basis": "first_representation",
+      "anticipated_basis_in_fixed_matrix_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_candidates": [
+        "JL20-45",
+        "JL20-46"
+      ],
+      "tuple_distinct_from_all_earlier_same_trim_candidates": true,
+      "analysis_basis": "Existing structured planner branch plus complete approved pairwise-distinct tuples. Not executed or tested by importing real candidates."
+    },
+    {
+      "row_id": "JL20-48",
+      "current_basis": "first_representation",
+      "anticipated_basis_in_fixed_matrix_order": "source_established_grade",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ],
+      "earlier_same_trim_candidates": [],
+      "tuple_distinct_from_all_earlier_same_trim_candidates": true,
+      "analysis_basis": "Existing structured planner branch plus complete approved pairwise-distinct tuples. Not executed or tested by importing real candidates."
+    },
+    {
+      "row_id": "JL20-49",
+      "current_basis": "first_representation",
+      "anticipated_basis_in_fixed_matrix_order": "mechanical_dimension",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ],
+      "earlier_same_trim_candidates": [
+        "JL20-48"
+      ],
+      "tuple_distinct_from_all_earlier_same_trim_candidates": true,
+      "analysis_basis": "Existing structured planner branch plus complete approved pairwise-distinct tuples. Not executed or tested by importing real candidates."
+    }
+  ]
+}

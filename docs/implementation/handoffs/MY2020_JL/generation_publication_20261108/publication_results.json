@@ -1,0 +1,1491 @@
+{
+  "published": 51,
+  "results": [
+    {
+      "proposal": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/correspondence_proposals/MY2020-JL-2D-2019-08-15-JLJL72.review.json",
+      "content_hash": "sha256:2c90c5bc0880e1b3f41ac316ce761076ac1e5a02c1c402d9e93cff84a891fdd3",
+      "source_model_key": [
+        "MY2020-JL-2D-2019-08-15",
+        "source_model_code",
+        "model_code",
+        "JLJL72"
+      ],
+      "revision_PK": 14,
+      "revision_uuid": "de67bdae-0bef-4286-957d-ec3a87655dfa",
+      "correspondence_uuid": "b74e913e-bd62-4c28-946f-56dcbc75383a",
+      "receipt_PK": 2881,
+      "receipt_uuid": "e3a4b4df-ccee-43b3-b934-37ccfc1e4165",
+      "execution_outcome": "created",
+      "target_generation_PK": 32,
+      "candidate_references": [
+        "JL20-01",
+        "JL20-02",
+        "JL20-08",
+        "JL20-09",
+        "JL20-10",
+        "JL20-11"
+      ],
+      "workflow_log": "docs/implementation/handoffs/MY2020_JL/generation_publication_20261108/workflow_logs/01-MY2020-JL-2D-2019-08-15-JLJL72.txt"
+    },
+    {
+      "proposal": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/correspondence_proposals/MY2020-JL-2D-2019-08-15-JLJS72.review.json",
+      "content_hash": "sha256:df1ed10d431201e990bc7cd8d61c4c84481800bb96747a749b1949b319484319",
+      "source_model_key": [
+        "MY2020-JL-2D-2019-08-15",
+        "source_model_code",
+        "model_code",
+        "JLJS72"
+      ],
+      "revision_PK": 15,
+      "revision_uuid": "febae3c2-c09f-4b83-bf9e-10a91ef859f3",
+      "correspondence_uuid": "093e4a83-a40b-4800-ba2c-b6701e5357fb",
+      "receipt_PK": 2882,
+      "receipt_uuid": "7d4c1496-998e-4f70-a9fe-6cc1f2e4d0e7",
+      "execution_outcome": "created",
+      "target_generation_PK": 32,
+      "candidate_references": [
+        "JL20-05",
+        "JL20-06"
+      ],
+      "workflow_log": "docs/implementation/handoffs/MY2020_JL/generation_publication_20261108/workflow_logs/02-MY2020-JL-2D-2019-08-15-JLJS72.txt"
+    },
+    {
+      "proposal": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/correspondence_proposals/MY2020-JL-2D-2019-09-05-JLJL72.review.json",
+      "content_hash": "sha256:fa0dd3a870471d583d660c6aca5184801cfa405de57727f3a9cf8dc6947821b8",
+      "source_model_key": [
+        "MY2020-JL-2D-2019-09-05",
+        "source_model_code",
+        "model_code",
+        "JLJL72"
+      ],
+      "revision_PK": 16,
+      "revision_uuid": "f0b051b2-3339-4de8-ab90-2b50cecb89d8",
+      "correspondence_uuid": "fd2ce9a4-e81a-4fae-b774-bf538942edec",
+      "receipt_PK": 2883,
+      "receipt_uuid": "3bb2d9cc-1b80-4cb0-ba4e-3142789a9941",
+      "execution_outcome": "created",
+      "target_generation_PK": 32,
+      "candidate_references": [
+        "JL20-01",
+        "JL20-02",
+        "JL20-08",
+        "JL20-09",
+        "JL20-10",
+        "JL20-11",
+        "JL20-12",
+        "JL20-13"
+      ],
+      "workflow_log": "docs/implementation/handoffs/MY2020_JL/generation_publication_20261108/workflow_logs/03-MY2020-JL-2D-2019-09-05-JLJL72.txt"
+    },
+    {
+      "proposal": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/correspondence_proposals/MY2020-JL-2D-2019-09-05-JLJS72.review.json",
+      "content_hash": "sha256:2988555cceb0612cd58214c3db5bd96565b88d7c6b70d328263a6de7a2b49099",
+      "source_model_key": [
+        "MY2020-JL-2D-2019-09-05",
+        "source_model_code",
+        "model_code",
+        "JLJS72"
+      ],
+      "revision_PK": 17,
+      "revision_uuid": "fd2bfae3-8e24-4b52-a52d-a8c1ee31b9a9",
+      "correspondence_uuid": "5858fb34-45f2-4538-9297-002b9561475e",
+      "receipt_PK": 2884,
+      "receipt_uuid": "ac3e7326-7f45-4781-8138-ef46e46befb3",
+      "execution_outcome": "created",
+      "target_generation_PK": 32,
+      "candidate_references": [
+        "JL20-05",
+        "JL20-06"
+      ],
+      "workflow_log": "docs/implementation/handoffs/MY2020_JL/generation_publication_20261108/workflow_logs/04-MY2020-JL-2D-2019-09-05-JLJS72.txt"
+    },
+    {
+      "proposal": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/correspondence_proposals/MY2020-JL-2D-2019-10-08-JLJL72.review.json",
+      "content_hash": "sha256:9ea171b2d60a5194c15d718fb91d3d15f22f72a63949853a5e47007e96dd22b5",
+      "source_model_key": [
+        "MY2020-JL-2D-2019-10-08",
+        "source_model_code",
+        "model_code",
+        "JLJL72"
+      ],
+      "revision_PK": 18,
+      "revision_uuid": "4bc3695f-7789-476c-aca0-b1875e638935",
+      "correspondence_uuid": "8610927c-4184-4546-b85c-fac4c183b043",
+      "receipt_PK": 2885,
+      "receipt_uuid": "287b0d68-b951-494c-a976-d0fbb9cb04ad",
+      "execution_outcome": "created",
+      "target_generation_PK": 32,
+      "candidate_references": [
+        "JL20-01",
+        "JL20-02",
+        "JL20-03",
+        "JL20-04",
+        "JL20-08",
+        "JL20-09",
+        "JL20-10",
+        "JL20-11",
+        "JL20-12",
+        "JL20-13"
+      ],
+      "workflow_log": "docs/implementation/handoffs/MY2020_JL/generation_publication_20261108/workflow_logs/05-MY2020-JL-2D-2019-10-08-JLJL72.txt"
+    },
+    {
+      "proposal": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/correspondence_proposals/MY2020-JL-2D-2019-10-08-JLJS72.review.json",
+      "content_hash": "sha256:1737557e4895c30b6a91832066877b0b97d79277432bfd90b51ddbe6216f3bc7",
+      "source_model_key": [
+        "MY2020-JL-2D-2019-10-08",
+        "source_model_code",
+        "model_code",
+        "JLJS72"
+      ],
+      "revision_PK": 19,
+      "revision_uuid": "6eb27f79-57c0-4ff4-bf45-84b51b2ecab5",
+      "correspondence_uuid": "3e2586d2-e7ac-4a9e-a056-09baa4411af2",
+      "receipt_PK": 2886,
+      "receipt_uuid": "b708e766-769f-46b6-9360-cab4e50e1349",
+      "execution_outcome": "created",
+      "target_generation_PK": 32,
+      "candidate_references": [
+        "JL20-05",
+        "JL20-06"
+      ],
+      "workflow_log": "docs/implementation/handoffs/MY2020_JL/generation_publication_20261108/workflow_logs/06-MY2020-JL-2D-2019-10-08-JLJS72.txt"
+    },
+    {
+      "proposal": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/correspondence_proposals/MY2020-JL-2D-2019-11-04-JLJL72.review.json",
+      "content_hash": "sha256:fddf3051267a119c8fcc2fabca6c8319f097179a2733fa1bf73b13ac7e01c97d",
+      "source_model_key": [
+        "MY2020-JL-2D-2019-11-04",
+        "source_model_code",
+        "model_code",
+        "JLJL72"
+      ],
+      "revision_PK": 20,
+      "revision_uuid": "a3f5cdd8-0983-4a22-883e-4cf66b23e519",
+      "correspondence_uuid": "e1adf0ae-0628-4e44-8c0a-b09409818c37",
+      "receipt_PK": 2887,
+      "receipt_uuid": "3982179d-8b74-4e63-b3c7-b1c9e6ce157c",
+      "execution_outcome": "created",
+      "target_generation_PK": 32,
+      "candidate_references": [
+        "JL20-01",
+        "JL20-02",
+        "JL20-03",
+        "JL20-04",
+        "JL20-08",
+        "JL20-09",
+        "JL20-10",
+        "JL20-11",
+        "JL20-12",
+        "JL20-13",
+        "JL20-14",
+        "JL20-15"
+      ],
+      "workflow_log": "docs/implementation/handoffs/MY2020_JL/generation_publication_20261108/workflow_logs/07-MY2020-JL-2D-2019-11-04-JLJL72.txt"
+    },
+    {
+      "proposal": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/correspondence_proposals/MY2020-JL-2D-2019-11-04-JLJS72.review.json",
+      "content_hash": "sha256:c537fb00ed86741882e0fa60531cf7e64e8492f9ff14e30d82c4dea2c86c417b",
+      "source_model_key": [
+        "MY2020-JL-2D-2019-11-04",
+        "source_model_code",
+        "model_code",
+        "JLJS72"
+      ],
+      "revision_PK": 21,
+      "revision_uuid": "e5ddd878-72bd-4909-b315-7049dff5bfc5",
+      "correspondence_uuid": "b5fff1ce-b247-481d-bcbb-3ab3efd8fed3",
+      "receipt_PK": 2888,
+      "receipt_uuid": "94cc0e92-cb8f-42d1-98bd-970f895a0b90",
+      "execution_outcome": "created",
+      "target_generation_PK": 32,
+      "candidate_references": [
+        "JL20-05",
+        "JL20-06"
+      ],
+      "workflow_log": "docs/implementation/handoffs/MY2020_JL/generation_publication_20261108/workflow_logs/08-MY2020-JL-2D-2019-11-04-JLJS72.txt"
+    },
+    {
+      "proposal": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/correspondence_proposals/MY2020-JL-2D-2020-01-15-JLJL72.review.json",
+      "content_hash": "sha256:c16ca413dbed2b31c64705929feaf780836c984fb2a98d2e4d28f29b163c79ce",
+      "source_model_key": [
+        "MY2020-JL-2D-2020-01-15",
+        "source_model_code",
+        "model_code",
+        "JLJL72"
+      ],
+      "revision_PK": 22,
+      "revision_uuid": "53572bff-d161-48b8-a271-a8fc860b67b7",
+      "correspondence_uuid": "083c13ab-229d-423e-b74a-df62dc8462b9",
+      "receipt_PK": 2889,
+      "receipt_uuid": "a42be39d-f428-4cf0-b7d4-18e7f7e218cd",
+      "execution_outcome": "created",
+      "target_generation_PK": 32,
+      "candidate_references": [
+        "JL20-01",
+        "JL20-02",
+        "JL20-03",
+        "JL20-04",
+        "JL20-08",
+        "JL20-09",
+        "JL20-10",
+        "JL20-11",
+        "JL20-12",
+        "JL20-13",
+        "JL20-14",
+        "JL20-15"
+      ],
+      "workflow_log": "docs/implementation/handoffs/MY2020_JL/generation_publication_20261108/workflow_logs/09-MY2020-JL-2D-2020-01-15-JLJL72.txt"
+    },
+    {
+      "proposal": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/correspondence_proposals/MY2020-JL-2D-2020-01-15-JLJS72.review.json",
+      "content_hash": "sha256:6b52080cacded457050dd0918f315877ee6e91e0f0996302a2a578a341ad5876",
+      "source_model_key": [
+        "MY2020-JL-2D-2020-01-15",
+        "source_model_code",
+        "model_code",
+        "JLJS72"
+      ],
+      "revision_PK": 23,
+      "revision_uuid": "775af14b-48e9-4602-87d2-ca3437d8b8a2",
+      "correspondence_uuid": "6fdeeb5a-6864-44f3-9834-cc2c734f983b",
+      "receipt_PK": 2890,
+      "receipt_uuid": "eb8e3584-7098-42e9-bdf5-ca0233d97603",
+      "execution_outcome": "created",
+      "target_generation_PK": 32,
+      "candidate_references": [
+        "JL20-05",
+        "JL20-06",
+        "JL20-07"
+      ],
+      "workflow_log": "docs/implementation/handoffs/MY2020_JL/generation_publication_20261108/workflow_logs/10-MY2020-JL-2D-2020-01-15-JLJS72.txt"
+    },
+    {
+      "proposal": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/correspondence_proposals/MY2020-JL-2D-2020-01-23-JLJL72.review.json",
+      "content_hash": "sha256:1ff36dcc88f4c9339d2f900152b1f190b3cda264397cbb5ab1e40f414aed078e",
+      "source_model_key": [
+        "MY2020-JL-2D-2020-01-23",
+        "source_model_code",
+        "model_code",
+        "JLJL72"
+      ],
+      "revision_PK": 24,
+      "revision_uuid": "3069255e-faae-4a0c-b1f2-b90aec80383a",
+      "correspondence_uuid": "431d9921-e4f5-446e-8439-174d044b411c",
+      "receipt_PK": 2891,
+      "receipt_uuid": "a72e8ae1-7834-4384-b37d-87808cad9bba",
+      "execution_outcome": "created",
+      "target_generation_PK": 32,
+      "candidate_references": [
+        "JL20-01",
+        "JL20-02",
+        "JL20-03",
+        "JL20-04",
+        "JL20-08",
+        "JL20-09",
+        "JL20-10",
+        "JL20-11",
+        "JL20-12",
+        "JL20-13",
+        "JL20-14",
+        "JL20-15"
+      ],
+      "workflow_log": "docs/implementation/handoffs/MY2020_JL/generation_publication_20261108/workflow_logs/11-MY2020-JL-2D-2020-01-23-JLJL72.txt"
+    },
+    {
+      "proposal": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/correspondence_proposals/MY2020-JL-2D-2020-01-23-JLJS72.review.json",
+      "content_hash": "sha256:f552612fb62761b02a1f6ce48bf7fd203f86d0fe146564ff1bf6bfedb5cc6066",
+      "source_model_key": [
+        "MY2020-JL-2D-2020-01-23",
+        "source_model_code",
+        "model_code",
+        "JLJS72"
+      ],
+      "revision_PK": 25,
+      "revision_uuid": "9c57c936-6431-4966-8bba-e901c26a8bcf",
+      "correspondence_uuid": "a79b803e-e37a-4fcd-ba51-20337f76ce29",
+      "receipt_PK": 2892,
+      "receipt_uuid": "5edd4fc0-bfcc-4bf6-a0ac-c48c75a27730",
+      "execution_outcome": "created",
+      "target_generation_PK": 32,
+      "candidate_references": [
+        "JL20-05",
+        "JL20-06",
+        "JL20-07"
+      ],
+      "workflow_log": "docs/implementation/handoffs/MY2020_JL/generation_publication_20261108/workflow_logs/12-MY2020-JL-2D-2020-01-23-JLJS72.txt"
+    },
+    {
+      "proposal": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/correspondence_proposals/MY2020-JL-2D-2020-02-12-JLJL72.review.json",
+      "content_hash": "sha256:861a90e3d48f6923c66d1594ea05e3d15115bb722843030a7950e679b5258626",
+      "source_model_key": [
+        "MY2020-JL-2D-2020-02-12",
+        "source_model_code",
+        "model_code",
+        "JLJL72"
+      ],
+      "revision_PK": 26,
+      "revision_uuid": "918e29f0-09c6-41b9-985b-510aee10f98f",
+      "correspondence_uuid": "16f8914e-5103-4e5e-b42e-899e7c697676",
+      "receipt_PK": 2893,
+      "receipt_uuid": "5e30b128-04e1-4fb6-8bf5-54060304768e",
+      "execution_outcome": "created",
+      "target_generation_PK": 32,
+      "candidate_references": [
+        "JL20-01",
+        "JL20-02",
+        "JL20-03",
+        "JL20-04",
+        "JL20-08",
+        "JL20-09",
+        "JL20-10",
+        "JL20-11",
+        "JL20-12",
+        "JL20-13",
+        "JL20-14",
+        "JL20-15"
+      ],
+      "workflow_log": "docs/implementation/handoffs/MY2020_JL/generation_publication_20261108/workflow_logs/13-MY2020-JL-2D-2020-02-12-JLJL72.txt"
+    },
+    {
+      "proposal": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/correspondence_proposals/MY2020-JL-2D-2020-02-12-JLJS72.review.json",
+      "content_hash": "sha256:51edfb18346c80590a036713c9cd7cf6a64a1f0ac33268bde33cbee2167c948c",
+      "source_model_key": [
+        "MY2020-JL-2D-2020-02-12",
+        "source_model_code",
+        "model_code",
+        "JLJS72"
+      ],
+      "revision_PK": 27,
+      "revision_uuid": "90b157f3-bd66-4311-bbed-1c5119681696",
+      "correspondence_uuid": "f10be955-03ca-4c71-8dd3-5109bcc82aa7",
+      "receipt_PK": 2894,
+      "receipt_uuid": "934d5e84-8406-4b36-8369-81c1f2977c6c",
+      "execution_outcome": "created",
+      "target_generation_PK": 32,
+      "candidate_references": [
+        "JL20-05",
+        "JL20-06",
+        "JL20-07"
+      ],
+      "workflow_log": "docs/implementation/handoffs/MY2020_JL/generation_publication_20261108/workflow_logs/14-MY2020-JL-2D-2020-02-12-JLJS72.txt"
+    },
+    {
+      "proposal": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/correspondence_proposals/MY2020-JL-2D-2020-03-03-JLJL72.review.json",
+      "content_hash": "sha256:5a195219bd983e1691cb48893154eafcce5819783ba5537a051257b8e7c2b31b",
+      "source_model_key": [
+        "MY2020-JL-2D-2020-03-03",
+        "source_model_code",
+        "model_code",
+        "JLJL72"
+      ],
+      "revision_PK": 28,
+      "revision_uuid": "097b6ab8-2c81-4bd4-8dac-02e8fc9973b6",
+      "correspondence_uuid": "f70c2684-03c4-4fd0-b72d-ebbe47d2b3e4",
+      "receipt_PK": 2895,
+      "receipt_uuid": "6117913c-ebfc-4783-afbc-681a00e95f72",
+      "execution_outcome": "created",
+      "target_generation_PK": 32,
+      "candidate_references": [
+        "JL20-01",
+        "JL20-02",
+        "JL20-03",
+        "JL20-04",
+        "JL20-08",
+        "JL20-09",
+        "JL20-10",
+        "JL20-11",
+        "JL20-12",
+        "JL20-13",
+        "JL20-14",
+        "JL20-15"
+      ],
+      "workflow_log": "docs/implementation/handoffs/MY2020_JL/generation_publication_20261108/workflow_logs/15-MY2020-JL-2D-2020-03-03-JLJL72.txt"
+    },
+    {
+      "proposal": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/correspondence_proposals/MY2020-JL-2D-2020-03-03-JLJS72.review.json",
+      "content_hash": "sha256:cf18d620c6f0050355c9bbcce53f798421f72e9c0e10f275bbcb67fa31dfe5de",
+      "source_model_key": [
+        "MY2020-JL-2D-2020-03-03",
+        "source_model_code",
+        "model_code",
+        "JLJS72"
+      ],
+      "revision_PK": 29,
+      "revision_uuid": "2af90cb5-1cdf-4252-8f81-bcaf2f4dec9c",
+      "correspondence_uuid": "dbe09ef3-b674-4765-a36a-7fcc749a55b8",
+      "receipt_PK": 2896,
+      "receipt_uuid": "d24be830-d4ba-4e2b-bdde-7a7a277bd1be",
+      "execution_outcome": "created",
+      "target_generation_PK": 32,
+      "candidate_references": [
+        "JL20-05",
+        "JL20-06",
+        "JL20-07"
+      ],
+      "workflow_log": "docs/implementation/handoffs/MY2020_JL/generation_publication_20261108/workflow_logs/16-MY2020-JL-2D-2020-03-03-JLJS72.txt"
+    },
+    {
+      "proposal": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/correspondence_proposals/MY2020-JL-2D-2020-04-17-JLJL72.review.json",
+      "content_hash": "sha256:ad65db14de7a2ab2db451f7be605329e7ff10413447e7677256729ab9c2e6045",
+      "source_model_key": [
+        "MY2020-JL-2D-2020-04-17",
+        "source_model_code",
+        "model_code",
+        "JLJL72"
+      ],
+      "revision_PK": 30,
+      "revision_uuid": "f5c95e90-57d0-4109-a619-99a01a90cf54",
+      "correspondence_uuid": "6e8871a3-4ab7-48f3-a93b-89e6baaf7409",
+      "receipt_PK": 2897,
+      "receipt_uuid": "60868a14-98c5-447a-b036-c7da4633bbd9",
+      "execution_outcome": "created",
+      "target_generation_PK": 32,
+      "candidate_references": [
+        "JL20-03",
+        "JL20-04",
+        "JL20-08",
+        "JL20-09",
+        "JL20-10",
+        "JL20-11",
+        "JL20-12",
+        "JL20-13",
+        "JL20-14",
+        "JL20-15"
+      ],
+      "workflow_log": "docs/implementation/handoffs/MY2020_JL/generation_publication_20261108/workflow_logs/17-MY2020-JL-2D-2020-04-17-JLJL72.txt"
+    },
+    {
+      "proposal": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/correspondence_proposals/MY2020-JL-2D-2020-04-17-JLJS72.review.json",
+      "content_hash": "sha256:11506ed3ed32a26abd05072bb180863dc1daadb3a9507b8efed78941c02261ec",
+      "source_model_key": [
+        "MY2020-JL-2D-2020-04-17",
+        "source_model_code",
+        "model_code",
+        "JLJS72"
+      ],
+      "revision_PK": 31,
+      "revision_uuid": "0f4ce36c-608f-4288-b208-c6e614a7da2a",
+      "correspondence_uuid": "86143deb-2c15-43cc-80d5-8f183816ecdc",
+      "receipt_PK": 2898,
+      "receipt_uuid": "80b34aa8-4ca5-4846-8066-3e587c0675f8",
+      "execution_outcome": "created",
+      "target_generation_PK": 32,
+      "candidate_references": [
+        "JL20-05",
+        "JL20-06",
+        "JL20-07"
+      ],
+      "workflow_log": "docs/implementation/handoffs/MY2020_JL/generation_publication_20261108/workflow_logs/18-MY2020-JL-2D-2020-04-17-JLJS72.txt"
+    },
+    {
+      "proposal": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/correspondence_proposals/MY2020-JL-4D-2019-07-02-JLJL74.review.json",
+      "content_hash": "sha256:38f3dcec76e7a48d9f5f8c5ce3db105620ad379de53a146245b89c9a91a34db9",
+      "source_model_key": [
+        "MY2020-JL-4D-2019-07-02",
+        "source_model_code",
+        "model_code",
+        "JLJL74"
+      ],
+      "revision_PK": 32,
+      "revision_uuid": "1225baac-61b4-4f8c-8e69-609e9be4da11",
+      "correspondence_uuid": "f5fbe292-1131-415e-b387-d4c09d832e81",
+      "receipt_PK": 2899,
+      "receipt_uuid": "e0df6250-9ec3-4e03-a114-0ec0bf2e077f",
+      "execution_outcome": "created",
+      "target_generation_PK": 32,
+      "candidate_references": [
+        "JL20-16",
+        "JL20-17",
+        "JL20-36",
+        "JL20-37",
+        "JL20-39",
+        "JL20-40",
+        "JL20-42",
+        "JL20-43"
+      ],
+      "workflow_log": "docs/implementation/handoffs/MY2020_JL/generation_publication_20261108/workflow_logs/19-MY2020-JL-4D-2019-07-02-JLJL74.txt"
+    },
+    {
+      "proposal": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/correspondence_proposals/MY2020-JL-4D-2019-07-02-JLJP74.review.json",
+      "content_hash": "sha256:2571dc54e3b37deb2f51c78a6733c8eb0c1093b64ae294a0c5e93f018d29b689",
+      "source_model_key": [
+        "MY2020-JL-4D-2019-07-02",
+        "source_model_code",
+        "model_code",
+        "JLJP74"
+      ],
+      "revision_PK": 33,
+      "revision_uuid": "9b13364a-1ebf-4d97-80e4-2decc2e2fd2f",
+      "correspondence_uuid": "94d828fd-ab4e-49c9-8939-83799e9eb031",
+      "receipt_PK": 2900,
+      "receipt_uuid": "2db3a447-11a2-4be4-84de-60a89d786c92",
+      "execution_outcome": "created",
+      "target_generation_PK": 32,
+      "candidate_references": [
+        "JL20-25",
+        "JL20-26",
+        "JL20-27",
+        "JL20-29",
+        "JL20-30",
+        "JL20-31"
+      ],
+      "workflow_log": "docs/implementation/handoffs/MY2020_JL/generation_publication_20261108/workflow_logs/20-MY2020-JL-4D-2019-07-02-JLJP74.txt"
+    },
+    {
+      "proposal": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/correspondence_proposals/MY2020-JL-4D-2019-07-02-JLJS74.review.json",
+      "content_hash": "sha256:ddfd53b5955acf408302b34af1ff9b26f69d4a03f60e66000fdf769b4f927e8c",
+      "source_model_key": [
+        "MY2020-JL-4D-2019-07-02",
+        "source_model_code",
+        "model_code",
+        "JLJS74"
+      ],
+      "revision_PK": 34,
+      "revision_uuid": "976d7437-2fcb-4417-8a07-37f0adb19c0d",
+      "correspondence_uuid": "267d6709-b1e6-4b86-a4bf-5218780418d2",
+      "receipt_PK": 2901,
+      "receipt_uuid": "51fb2a88-0ee1-490b-9e02-2b3964c6e68b",
+      "execution_outcome": "created",
+      "target_generation_PK": 32,
+      "candidate_references": [
+        "JL20-21",
+        "JL20-22"
+      ],
+      "workflow_log": "docs/implementation/handoffs/MY2020_JL/generation_publication_20261108/workflow_logs/21-MY2020-JL-4D-2019-07-02-JLJS74.txt"
+    },
+    {
+      "proposal": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/correspondence_proposals/MY2020-JL-4D-2019-08-15-JLJL74.review.json",
+      "content_hash": "sha256:76a7cd7b4a3045677ca39c10c347f7cf0810a654cbda963847144a97f86f4541",
+      "source_model_key": [
+        "MY2020-JL-4D-2019-08-15",
+        "source_model_code",
+        "model_code",
+        "JLJL74"
+      ],
+      "revision_PK": 35,
+      "revision_uuid": "6403584e-14a7-482d-ab76-4dcbf52a482f",
+      "correspondence_uuid": "a42a5af0-1428-4b41-b4b5-6f498d91ed3a",
+      "receipt_PK": 2902,
+      "receipt_uuid": "5df401ab-f65a-4c52-82ce-e9bcfee49fae",
+      "execution_outcome": "created",
+      "target_generation_PK": 32,
+      "candidate_references": [
+        "JL20-16",
+        "JL20-17",
+        "JL20-36",
+        "JL20-37",
+        "JL20-39",
+        "JL20-40",
+        "JL20-42",
+        "JL20-43"
+      ],
+      "workflow_log": "docs/implementation/handoffs/MY2020_JL/generation_publication_20261108/workflow_logs/22-MY2020-JL-4D-2019-08-15-JLJL74.txt"
+    },
+    {
+      "proposal": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/correspondence_proposals/MY2020-JL-4D-2019-08-15-JLJP74.review.json",
+      "content_hash": "sha256:6adf463eb721ef7e8133836057d7a546bbed571c82c5417fc6cb7e93a62e9dc8",
+      "source_model_key": [
+        "MY2020-JL-4D-2019-08-15",
+        "source_model_code",
+        "model_code",
+        "JLJP74"
+      ],
+      "revision_PK": 36,
+      "revision_uuid": "4110751b-1211-4752-9d8e-835b772cdcbc",
+      "correspondence_uuid": "ebc12979-eb2d-400c-9a72-a969dffb66d5",
+      "receipt_PK": 2903,
+      "receipt_uuid": "a8c6e30c-c7a0-454f-9fca-cc7fdb07279f",
+      "execution_outcome": "created",
+      "target_generation_PK": 32,
+      "candidate_references": [
+        "JL20-25",
+        "JL20-26",
+        "JL20-27",
+        "JL20-29",
+        "JL20-30",
+        "JL20-31"
+      ],
+      "workflow_log": "docs/implementation/handoffs/MY2020_JL/generation_publication_20261108/workflow_logs/23-MY2020-JL-4D-2019-08-15-JLJP74.txt"
+    },
+    {
+      "proposal": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/correspondence_proposals/MY2020-JL-4D-2019-08-15-JLJS74.review.json",
+      "content_hash": "sha256:a1cb05437cc77ac6153f26a6e12b509fe2541f1ec4b71dd8a748e2f97354db71",
+      "source_model_key": [
+        "MY2020-JL-4D-2019-08-15",
+        "source_model_code",
+        "model_code",
+        "JLJS74"
+      ],
+      "revision_PK": 37,
+      "revision_uuid": "5a8bcd75-cd75-4644-8c18-920c2ad671a6",
+      "correspondence_uuid": "9af43132-d345-4b80-9340-9eba7b65252c",
+      "receipt_PK": 2904,
+      "receipt_uuid": "5cf99404-09a7-4c98-8dd9-2b1a9a8f733d",
+      "execution_outcome": "created",
+      "target_generation_PK": 32,
+      "candidate_references": [
+        "JL20-21",
+        "JL20-22"
+      ],
+      "workflow_log": "docs/implementation/handoffs/MY2020_JL/generation_publication_20261108/workflow_logs/24-MY2020-JL-4D-2019-08-15-JLJS74.txt"
+    },
+    {
+      "proposal": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/correspondence_proposals/MY2020-JL-4D-2019-09-05-JLJL74.review.json",
+      "content_hash": "sha256:b65db680af4b824ac1e7af6eb94a0c56ace3e1384c7beb591600bc6744bec98b",
+      "source_model_key": [
+        "MY2020-JL-4D-2019-09-05",
+        "source_model_code",
+        "model_code",
+        "JLJL74"
+      ],
+      "revision_PK": 38,
+      "revision_uuid": "55b710df-8206-4961-b357-41a06172372a",
+      "correspondence_uuid": "392a84cb-85bf-4d8c-83eb-54b7e12a2c67",
+      "receipt_PK": 2905,
+      "receipt_uuid": "81bff383-12f9-4751-9877-e112a69dc386",
+      "execution_outcome": "created",
+      "target_generation_PK": 32,
+      "candidate_references": [
+        "JL20-16",
+        "JL20-17",
+        "JL20-36",
+        "JL20-37",
+        "JL20-39",
+        "JL20-40",
+        "JL20-42",
+        "JL20-43",
+        "JL20-45",
+        "JL20-46"
+      ],
+      "workflow_log": "docs/implementation/handoffs/MY2020_JL/generation_publication_20261108/workflow_logs/25-MY2020-JL-4D-2019-09-05-JLJL74.txt"
+    },
+    {
+      "proposal": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/correspondence_proposals/MY2020-JL-4D-2019-09-05-JLJP74.review.json",
+      "content_hash": "sha256:6a9f0bd9ad58f67aada89b08bfbe91a893a5a2c0ddac253976603660b90a4c20",
+      "source_model_key": [
+        "MY2020-JL-4D-2019-09-05",
+        "source_model_code",
+        "model_code",
+        "JLJP74"
+      ],
+      "revision_PK": 39,
+      "revision_uuid": "0fafe528-0b3f-4ba9-a7f8-e22eb1519068",
+      "correspondence_uuid": "62542b1a-265e-47e2-bd44-071ffae3c837",
+      "receipt_PK": 2906,
+      "receipt_uuid": "3d8031cf-2536-4a30-bdd5-0d07eb549484",
+      "execution_outcome": "created",
+      "target_generation_PK": 32,
+      "candidate_references": [
+        "JL20-25",
+        "JL20-26",
+        "JL20-27",
+        "JL20-29",
+        "JL20-30",
+        "JL20-31"
+      ],
+      "workflow_log": "docs/implementation/handoffs/MY2020_JL/generation_publication_20261108/workflow_logs/26-MY2020-JL-4D-2019-09-05-JLJP74.txt"
+    },
+    {
+      "proposal": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/correspondence_proposals/MY2020-JL-4D-2019-09-05-JLJS74.review.json",
+      "content_hash": "sha256:990db73803dbf3b66fc38d085d2026d40a995db095ed2076db96b1707caef5a8",
+      "source_model_key": [
+        "MY2020-JL-4D-2019-09-05",
+        "source_model_code",
+        "model_code",
+        "JLJS74"
+      ],
+      "revision_PK": 40,
+      "revision_uuid": "20b2b422-25dc-446e-9a59-77c6769aac4f",
+      "correspondence_uuid": "6a2243ba-b39a-4cdb-9e01-556da127c67c",
+      "receipt_PK": 2907,
+      "receipt_uuid": "a652d8ba-ccbd-4c34-8209-90e4af58135b",
+      "execution_outcome": "created",
+      "target_generation_PK": 32,
+      "candidate_references": [
+        "JL20-21",
+        "JL20-22"
+      ],
+      "workflow_log": "docs/implementation/handoffs/MY2020_JL/generation_publication_20261108/workflow_logs/27-MY2020-JL-4D-2019-09-05-JLJS74.txt"
+    },
+    {
+      "proposal": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/correspondence_proposals/MY2020-JL-4D-2019-10-15-JLJL74.review.json",
+      "content_hash": "sha256:3f89cb2b4e4ba85f2ce624b9510ff8d94314f0f8913c32df45a28e53c6a912fd",
+      "source_model_key": [
+        "MY2020-JL-4D-2019-10-15",
+        "source_model_code",
+        "model_code",
+        "JLJL74"
+      ],
+      "revision_PK": 41,
+      "revision_uuid": "9db48af4-f371-49b4-ab08-08491be51d01",
+      "correspondence_uuid": "b700c040-d0f0-4136-b9bc-06377713eb69",
+      "receipt_PK": 2908,
+      "receipt_uuid": "78b97b04-052d-4968-8b04-85ab755f7a36",
+      "execution_outcome": "created",
+      "target_generation_PK": 32,
+      "candidate_references": [
+        "JL20-16",
+        "JL20-17",
+        "JL20-18",
+        "JL20-19",
+        "JL20-36",
+        "JL20-37",
+        "JL20-38",
+        "JL20-39",
+        "JL20-40",
+        "JL20-41",
+        "JL20-42",
+        "JL20-43",
+        "JL20-44",
+        "JL20-45",
+        "JL20-46",
+        "JL20-47"
+      ],
+      "workflow_log": "docs/implementation/handoffs/MY2020_JL/generation_publication_20261108/workflow_logs/28-MY2020-JL-4D-2019-10-15-JLJL74.txt"
+    },
+    {
+      "proposal": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/correspondence_proposals/MY2020-JL-4D-2019-10-15-JLJP74.review.json",
+      "content_hash": "sha256:aed5e72f90d4a90ccbfd17bd6c42ee87cfdef431a9b38316add845e2ec897046",
+      "source_model_key": [
+        "MY2020-JL-4D-2019-10-15",
+        "source_model_code",
+        "model_code",
+        "JLJP74"
+      ],
+      "revision_PK": 42,
+      "revision_uuid": "9d532cdf-03c4-4a4b-8bda-afdc3adac83a",
+      "correspondence_uuid": "52dcf0bb-c561-4114-8b86-31b39a61f3b2",
+      "receipt_PK": 2909,
+      "receipt_uuid": "851451cf-4838-45ae-bade-70a8305c40c4",
+      "execution_outcome": "created",
+      "target_generation_PK": 32,
+      "candidate_references": [
+        "JL20-20",
+        "JL20-25",
+        "JL20-26",
+        "JL20-27",
+        "JL20-28",
+        "JL20-29",
+        "JL20-30",
+        "JL20-31",
+        "JL20-32"
+      ],
+      "workflow_log": "docs/implementation/handoffs/MY2020_JL/generation_publication_20261108/workflow_logs/29-MY2020-JL-4D-2019-10-15-JLJP74.txt"
+    },
+    {
+      "proposal": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/correspondence_proposals/MY2020-JL-4D-2019-10-15-JLJS74.review.json",
+      "content_hash": "sha256:7bcf2fc20a0274848a4b9730b9d128767326fdf521f7379863413188e03d22f6",
+      "source_model_key": [
+        "MY2020-JL-4D-2019-10-15",
+        "source_model_code",
+        "model_code",
+        "JLJS74"
+      ],
+      "revision_PK": 43,
+      "revision_uuid": "795a3d46-5681-49b2-a9f1-865c76813f60",
+      "correspondence_uuid": "19654a7a-d1d7-4249-9256-5102a6a0599e",
+      "receipt_PK": 2910,
+      "receipt_uuid": "12126e3a-eed2-4826-8930-85a9297cf88a",
+      "execution_outcome": "created",
+      "target_generation_PK": 32,
+      "candidate_references": [
+        "JL20-21",
+        "JL20-22",
+        "JL20-23"
+      ],
+      "workflow_log": "docs/implementation/handoffs/MY2020_JL/generation_publication_20261108/workflow_logs/30-MY2020-JL-4D-2019-10-15-JLJS74.txt"
+    },
+    {
+      "proposal": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/correspondence_proposals/MY2020-JL-4D-2019-11-13-JLJL74.review.json",
+      "content_hash": "sha256:ffde8151b8c3e5886ea1d0aa2291c7fae0cc7c4327bb69b6e6163db8f187db59",
+      "source_model_key": [
+        "MY2020-JL-4D-2019-11-13",
+        "source_model_code",
+        "model_code",
+        "JLJL74"
+      ],
+      "revision_PK": 44,
+      "revision_uuid": "a8d6eb74-bac2-4bed-b15f-9376fc831c1e",
+      "correspondence_uuid": "3b92a1c5-4870-4511-b3f7-193e48b994c5",
+      "receipt_PK": 2911,
+      "receipt_uuid": "d8ad2167-e42a-47fe-9e55-765bc594e6b0",
+      "execution_outcome": "created",
+      "target_generation_PK": 32,
+      "candidate_references": [
+        "JL20-16",
+        "JL20-17",
+        "JL20-18",
+        "JL20-19",
+        "JL20-36",
+        "JL20-37",
+        "JL20-38",
+        "JL20-39",
+        "JL20-40",
+        "JL20-41",
+        "JL20-42",
+        "JL20-43",
+        "JL20-44",
+        "JL20-45",
+        "JL20-46",
+        "JL20-47",
+        "JL20-48",
+        "JL20-49"
+      ],
+      "workflow_log": "docs/implementation/handoffs/MY2020_JL/generation_publication_20261108/workflow_logs/31-MY2020-JL-4D-2019-11-13-JLJL74.txt"
+    },
+    {
+      "proposal": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/correspondence_proposals/MY2020-JL-4D-2019-11-13-JLJP74.review.json",
+      "content_hash": "sha256:58dd8a6cc63f77877bb9c787da761d9986522ba95b3b9f6518ab755c6a3cc703",
+      "source_model_key": [
+        "MY2020-JL-4D-2019-11-13",
+        "source_model_code",
+        "model_code",
+        "JLJP74"
+      ],
+      "revision_PK": 45,
+      "revision_uuid": "fbd1566a-c429-4e08-80e1-2d8a564a9e8c",
+      "correspondence_uuid": "e97033e3-cea9-4a90-8459-1eb7df1bc1f0",
+      "receipt_PK": 2912,
+      "receipt_uuid": "0b7b77c7-10ce-4d53-b4a6-b4b311cb3374",
+      "execution_outcome": "created",
+      "target_generation_PK": 32,
+      "candidate_references": [
+        "JL20-20",
+        "JL20-25",
+        "JL20-26",
+        "JL20-27",
+        "JL20-28",
+        "JL20-29",
+        "JL20-30",
+        "JL20-31",
+        "JL20-32"
+      ],
+      "workflow_log": "docs/implementation/handoffs/MY2020_JL/generation_publication_20261108/workflow_logs/32-MY2020-JL-4D-2019-11-13-JLJP74.txt"
+    },
+    {
+      "proposal": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/correspondence_proposals/MY2020-JL-4D-2019-11-13-JLJS74.review.json",
+      "content_hash": "sha256:29f60994465bd654f74eea63e096198ffe1d2aaecd6aae66911dd00364697b2a",
+      "source_model_key": [
+        "MY2020-JL-4D-2019-11-13",
+        "source_model_code",
+        "model_code",
+        "JLJS74"
+      ],
+      "revision_PK": 46,
+      "revision_uuid": "c5b19baf-d4e8-431e-87c1-4be981a9ce0f",
+      "correspondence_uuid": "e1ae5fac-21e5-4655-a057-b7565c7bcbc9",
+      "receipt_PK": 2913,
+      "receipt_uuid": "7fdf8c37-5e46-417c-944c-f3b4114cbc3b",
+      "execution_outcome": "created",
+      "target_generation_PK": 32,
+      "candidate_references": [
+        "JL20-21",
+        "JL20-22",
+        "JL20-23"
+      ],
+      "workflow_log": "docs/implementation/handoffs/MY2020_JL/generation_publication_20261108/workflow_logs/33-MY2020-JL-4D-2019-11-13-JLJS74.txt"
+    },
+    {
+      "proposal": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/correspondence_proposals/MY2020-JL-4D-2019-12-03-JLJL74.review.json",
+      "content_hash": "sha256:0f8a8f990b2d8dcc95eed10d12107fc9899287aba4b159df3bd87ff10c7bd872",
+      "source_model_key": [
+        "MY2020-JL-4D-2019-12-03",
+        "source_model_code",
+        "model_code",
+        "JLJL74"
+      ],
+      "revision_PK": 47,
+      "revision_uuid": "9fba45d7-5251-42d7-9777-ef7ea93463b7",
+      "correspondence_uuid": "9a95157f-155c-46db-b454-66e60eb6437b",
+      "receipt_PK": 2914,
+      "receipt_uuid": "595fdef7-69e8-41f3-b4d9-c4b0877e29f3",
+      "execution_outcome": "created",
+      "target_generation_PK": 32,
+      "candidate_references": [
+        "JL20-16",
+        "JL20-17",
+        "JL20-18",
+        "JL20-19",
+        "JL20-36",
+        "JL20-37",
+        "JL20-38",
+        "JL20-39",
+        "JL20-40",
+        "JL20-41",
+        "JL20-42",
+        "JL20-43",
+        "JL20-44",
+        "JL20-45",
+        "JL20-46",
+        "JL20-47",
+        "JL20-48",
+        "JL20-49"
+      ],
+      "workflow_log": "docs/implementation/handoffs/MY2020_JL/generation_publication_20261108/workflow_logs/34-MY2020-JL-4D-2019-12-03-JLJL74.txt"
+    },
+    {
+      "proposal": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/correspondence_proposals/MY2020-JL-4D-2019-12-03-JLJP74.review.json",
+      "content_hash": "sha256:610b6f7f7da5f7d1b01a128fad94de486a42c4c3070a037b08a951025126507d",
+      "source_model_key": [
+        "MY2020-JL-4D-2019-12-03",
+        "source_model_code",
+        "model_code",
+        "JLJP74"
+      ],
+      "revision_PK": 48,
+      "revision_uuid": "13ab1ff8-2b4d-4051-a885-e76df5ac8760",
+      "correspondence_uuid": "fde4844a-361d-4a93-8794-1344fa9e46f7",
+      "receipt_PK": 2915,
+      "receipt_uuid": "17a160c8-6822-479b-acb1-490df957dec1",
+      "execution_outcome": "created",
+      "target_generation_PK": 32,
+      "candidate_references": [
+        "JL20-20",
+        "JL20-25",
+        "JL20-26",
+        "JL20-27",
+        "JL20-28",
+        "JL20-29",
+        "JL20-30",
+        "JL20-31",
+        "JL20-32"
+      ],
+      "workflow_log": "docs/implementation/handoffs/MY2020_JL/generation_publication_20261108/workflow_logs/35-MY2020-JL-4D-2019-12-03-JLJP74.txt"
+    },
+    {
+      "proposal": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/correspondence_proposals/MY2020-JL-4D-2019-12-03-JLJS74.review.json",
+      "content_hash": "sha256:9734fd0af623b905739af845fe8cb140c2d94810f55b01a836c0c3d4780617f6",
+      "source_model_key": [
+        "MY2020-JL-4D-2019-12-03",
+        "source_model_code",
+        "model_code",
+        "JLJS74"
+      ],
+      "revision_PK": 49,
+      "revision_uuid": "34e43662-bf72-4438-a4ba-bbcedc6c1eb3",
+      "correspondence_uuid": "d3e9a0f5-6086-4869-9b46-26db828ece51",
+      "receipt_PK": 2916,
+      "receipt_uuid": "375e21fa-3278-414f-90d5-9dfc84993e81",
+      "execution_outcome": "created",
+      "target_generation_PK": 32,
+      "candidate_references": [
+        "JL20-21",
+        "JL20-22",
+        "JL20-23"
+      ],
+      "workflow_log": "docs/implementation/handoffs/MY2020_JL/generation_publication_20261108/workflow_logs/36-MY2020-JL-4D-2019-12-03-JLJS74.txt"
+    },
+    {
+      "proposal": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/correspondence_proposals/MY2020-JL-4D-2020-01-02-JLJL74.review.json",
+      "content_hash": "sha256:cfa2997ed6c6a212172b935a36ebcc92c8015b9f6cc2572a0e7d8167ac8e89a5",
+      "source_model_key": [
+        "MY2020-JL-4D-2020-01-02",
+        "source_model_code",
+        "model_code",
+        "JLJL74"
+      ],
+      "revision_PK": 50,
+      "revision_uuid": "c81d7643-b4f0-4d5a-8727-9cd2dc643563",
+      "correspondence_uuid": "c2fafed5-2af8-44f3-ace4-1716c1f4cee1",
+      "receipt_PK": 2917,
+      "receipt_uuid": "bdb79ce5-018a-4471-8e65-d959ce6bc55f",
+      "execution_outcome": "created",
+      "target_generation_PK": 32,
+      "candidate_references": [
+        "JL20-16",
+        "JL20-17",
+        "JL20-18",
+        "JL20-19",
+        "JL20-36",
+        "JL20-37",
+        "JL20-38",
+        "JL20-39",
+        "JL20-40",
+        "JL20-41",
+        "JL20-42",
+        "JL20-43",
+        "JL20-44",
+        "JL20-45",
+        "JL20-46",
+        "JL20-47",
+        "JL20-48",
+        "JL20-49"
+      ],
+      "workflow_log": "docs/implementation/handoffs/MY2020_JL/generation_publication_20261108/workflow_logs/37-MY2020-JL-4D-2020-01-02-JLJL74.txt"
+    },
+    {
+      "proposal": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/correspondence_proposals/MY2020-JL-4D-2020-01-02-JLJP74.review.json",
+      "content_hash": "sha256:6f5381a738460c3baba1dc254d86e4778470f1222a7a8a94c2d210d7538af454",
+      "source_model_key": [
+        "MY2020-JL-4D-2020-01-02",
+        "source_model_code",
+        "model_code",
+        "JLJP74"
+      ],
+      "revision_PK": 51,
+      "revision_uuid": "4026e8ff-8e89-412e-b1dd-ba830e65f18d",
+      "correspondence_uuid": "a07d5cf7-ce89-4e0f-af71-3ece0400359f",
+      "receipt_PK": 2918,
+      "receipt_uuid": "12188577-122f-43cb-a2a9-095cebc34d79",
+      "execution_outcome": "created",
+      "target_generation_PK": 32,
+      "candidate_references": [
+        "JL20-20",
+        "JL20-25",
+        "JL20-26",
+        "JL20-27",
+        "JL20-28",
+        "JL20-29",
+        "JL20-30",
+        "JL20-31",
+        "JL20-32"
+      ],
+      "workflow_log": "docs/implementation/handoffs/MY2020_JL/generation_publication_20261108/workflow_logs/38-MY2020-JL-4D-2020-01-02-JLJP74.txt"
+    },
+    {
+      "proposal": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/correspondence_proposals/MY2020-JL-4D-2020-01-02-JLJS74.review.json",
+      "content_hash": "sha256:6268e2a1809cff8cfa903abf0c68fdf2e4c478beb256212a455876428caa0062",
+      "source_model_key": [
+        "MY2020-JL-4D-2020-01-02",
+        "source_model_code",
+        "model_code",
+        "JLJS74"
+      ],
+      "revision_PK": 52,
+      "revision_uuid": "7ff5587a-6b4b-4a7b-b903-bfa6a970c8fa",
+      "correspondence_uuid": "7d46f0fc-218e-4b88-8ee9-28760b540ec9",
+      "receipt_PK": 2919,
+      "receipt_uuid": "b367067f-4304-48a5-8e3f-584ac549ea99",
+      "execution_outcome": "created",
+      "target_generation_PK": 32,
+      "candidate_references": [
+        "JL20-21",
+        "JL20-22",
+        "JL20-23",
+        "JL20-24"
+      ],
+      "workflow_log": "docs/implementation/handoffs/MY2020_JL/generation_publication_20261108/workflow_logs/39-MY2020-JL-4D-2020-01-02-JLJS74.txt"
+    },
+    {
+      "proposal": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/correspondence_proposals/MY2020-JL-4D-2020-01-23-JLJL74.review.json",
+      "content_hash": "sha256:a605c32e513affad6933db4b1ab911569bfc1dda3d98bdb41e99b320f0c02a41",
+      "source_model_key": [
+        "MY2020-JL-4D-2020-01-23",
+        "source_model_code",
+        "model_code",
+        "JLJL74"
+      ],
+      "revision_PK": 53,
+      "revision_uuid": "4d07fd00-2cdf-4358-9287-fdfdeb13843d",
+      "correspondence_uuid": "1fd40eb2-20c9-4052-b00b-9dffa56f8a19",
+      "receipt_PK": 2920,
+      "receipt_uuid": "09881f38-c9f8-412d-9c68-4f74131ed199",
+      "execution_outcome": "created",
+      "target_generation_PK": 32,
+      "candidate_references": [
+        "JL20-16",
+        "JL20-17",
+        "JL20-18",
+        "JL20-19",
+        "JL20-36",
+        "JL20-37",
+        "JL20-38",
+        "JL20-39",
+        "JL20-40",
+        "JL20-41",
+        "JL20-42",
+        "JL20-43",
+        "JL20-44",
+        "JL20-45",
+        "JL20-46",
+        "JL20-47",
+        "JL20-48",
+        "JL20-49"
+      ],
+      "workflow_log": "docs/implementation/handoffs/MY2020_JL/generation_publication_20261108/workflow_logs/40-MY2020-JL-4D-2020-01-23-JLJL74.txt"
+    },
+    {
+      "proposal": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/correspondence_proposals/MY2020-JL-4D-2020-01-23-JLJP74.review.json",
+      "content_hash": "sha256:1f3d1f8202f9ecd6e18bffa92f9dcc2f232dc5d411d974c1d6b36a24382717c8",
+      "source_model_key": [
+        "MY2020-JL-4D-2020-01-23",
+        "source_model_code",
+        "model_code",
+        "JLJP74"
+      ],
+      "revision_PK": 54,
+      "revision_uuid": "4b7f6998-00af-4139-be6c-d1b9a8983040",
+      "correspondence_uuid": "6fcf801c-926c-4426-a584-b34dee61e471",
+      "receipt_PK": 2921,
+      "receipt_uuid": "b50e3d1a-10cb-40e0-a7c4-42cd4543b82b",
+      "execution_outcome": "created",
+      "target_generation_PK": 32,
+      "candidate_references": [
+        "JL20-20",
+        "JL20-25",
+        "JL20-26",
+        "JL20-27",
+        "JL20-28",
+        "JL20-29",
+        "JL20-30",
+        "JL20-31",
+        "JL20-32"
+      ],
+      "workflow_log": "docs/implementation/handoffs/MY2020_JL/generation_publication_20261108/workflow_logs/41-MY2020-JL-4D-2020-01-23-JLJP74.txt"
+    },
+    {
+      "proposal": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/correspondence_proposals/MY2020-JL-4D-2020-01-23-JLJS74.review.json",
+      "content_hash": "sha256:4c19be69a41f2bdc963745c5c2da2029536b980a03467e74309a472fa038dc13",
+      "source_model_key": [
+        "MY2020-JL-4D-2020-01-23",
+        "source_model_code",
+        "model_code",
+        "JLJS74"
+      ],
+      "revision_PK": 55,
+      "revision_uuid": "9a392bac-d5d3-48e4-bd05-9c27ef984130",
+      "correspondence_uuid": "f8967829-b57a-464e-9665-126570bd181a",
+      "receipt_PK": 2922,
+      "receipt_uuid": "bb6eceac-4eea-4bde-bc8d-a78e2de7c344",
+      "execution_outcome": "created",
+      "target_generation_PK": 32,
+      "candidate_references": [
+        "JL20-21",
+        "JL20-22",
+        "JL20-23",
+        "JL20-24"
+      ],
+      "workflow_log": "docs/implementation/handoffs/MY2020_JL/generation_publication_20261108/workflow_logs/42-MY2020-JL-4D-2020-01-23-JLJS74.txt"
+    },
+    {
+      "proposal": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/correspondence_proposals/MY2020-JL-4D-2020-02-11-JLJL74.review.json",
+      "content_hash": "sha256:046d55c6dced940a66141ca35da4c1ceebf3e163070c458009ddebac93f29c9a",
+      "source_model_key": [
+        "MY2020-JL-4D-2020-02-11",
+        "source_model_code",
+        "model_code",
+        "JLJL74"
+      ],
+      "revision_PK": 56,
+      "revision_uuid": "223579bb-5d6d-418c-bafa-48d96981a79a",
+      "correspondence_uuid": "07b247e0-b2ef-4714-9756-fedb1f88e769",
+      "receipt_PK": 2923,
+      "receipt_uuid": "316ae18e-d19c-4a30-ad26-38e8f9f26be5",
+      "execution_outcome": "created",
+      "target_generation_PK": 32,
+      "candidate_references": [
+        "JL20-16",
+        "JL20-17",
+        "JL20-18",
+        "JL20-19",
+        "JL20-36",
+        "JL20-37",
+        "JL20-38",
+        "JL20-39",
+        "JL20-40",
+        "JL20-41",
+        "JL20-42",
+        "JL20-43",
+        "JL20-44",
+        "JL20-45",
+        "JL20-46",
+        "JL20-47",
+        "JL20-48",
+        "JL20-49"
+      ],
+      "workflow_log": "docs/implementation/handoffs/MY2020_JL/generation_publication_20261108/workflow_logs/43-MY2020-JL-4D-2020-02-11-JLJL74.txt"
+    },
+    {
+      "proposal": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/correspondence_proposals/MY2020-JL-4D-2020-02-11-JLJP74.review.json",
+      "content_hash": "sha256:9bc2f29397b089b7a938fc95f91a232642deb386b67d73d7e49293a213477852",
+      "source_model_key": [
+        "MY2020-JL-4D-2020-02-11",
+        "source_model_code",
+        "model_code",
+        "JLJP74"
+      ],
+      "revision_PK": 57,
+      "revision_uuid": "504dbb65-dfea-4375-b515-a1743f2783fe",
+      "correspondence_uuid": "c4c60ae7-2f95-41f8-8d44-42a88cf2a5ac",
+      "receipt_PK": 2924,
+      "receipt_uuid": "c0040801-64dd-4a1b-b41d-93891b4e6b2b",
+      "execution_outcome": "created",
+      "target_generation_PK": 32,
+      "candidate_references": [
+        "JL20-20",
+        "JL20-25",
+        "JL20-26",
+        "JL20-27",
+        "JL20-28",
+        "JL20-29",
+        "JL20-30",
+        "JL20-31",
+        "JL20-32"
+      ],
+      "workflow_log": "docs/implementation/handoffs/MY2020_JL/generation_publication_20261108/workflow_logs/44-MY2020-JL-4D-2020-02-11-JLJP74.txt"
+    },
+    {
+      "proposal": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/correspondence_proposals/MY2020-JL-4D-2020-02-11-JLJS74.review.json",
+      "content_hash": "sha256:6f206471a27177c41272a5f93de96ae9013b628f8033093171e8e2789b12fbc5",
+      "source_model_key": [
+        "MY2020-JL-4D-2020-02-11",
+        "source_model_code",
+        "model_code",
+        "JLJS74"
+      ],
+      "revision_PK": 58,
+      "revision_uuid": "359dfa00-09c7-43d0-abce-ea5f81a54b94",
+      "correspondence_uuid": "82277ddd-9131-43c5-b4da-597fb55af702",
+      "receipt_PK": 2925,
+      "receipt_uuid": "70e80c8b-4ce9-4a19-99d4-b402159edb20",
+      "execution_outcome": "created",
+      "target_generation_PK": 32,
+      "candidate_references": [
+        "JL20-21",
+        "JL20-22",
+        "JL20-23",
+        "JL20-24"
+      ],
+      "workflow_log": "docs/implementation/handoffs/MY2020_JL/generation_publication_20261108/workflow_logs/45-MY2020-JL-4D-2020-02-11-JLJS74.txt"
+    },
+    {
+      "proposal": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/correspondence_proposals/MY2020-JL-4D-2020-03-03-JLJL74.review.json",
+      "content_hash": "sha256:3c9422c2d78606fc54ae58f495d2d771e04035cca8a80be5183802bfaf749659",
+      "source_model_key": [
+        "MY2020-JL-4D-2020-03-03",
+        "source_model_code",
+        "model_code",
+        "JLJL74"
+      ],
+      "revision_PK": 59,
+      "revision_uuid": "020a3635-e4dc-4afe-9e8a-d243692b6cd6",
+      "correspondence_uuid": "f4a09df2-8902-49ae-97ff-6a58ec2c0709",
+      "receipt_PK": 2926,
+      "receipt_uuid": "15bbfe48-9615-487a-b4cf-2a3f57521c14",
+      "execution_outcome": "created",
+      "target_generation_PK": 32,
+      "candidate_references": [
+        "JL20-16",
+        "JL20-17",
+        "JL20-18",
+        "JL20-19",
+        "JL20-36",
+        "JL20-37",
+        "JL20-38",
+        "JL20-39",
+        "JL20-40",
+        "JL20-41",
+        "JL20-42",
+        "JL20-43",
+        "JL20-44",
+        "JL20-45",
+        "JL20-46",
+        "JL20-47",
+        "JL20-48",
+        "JL20-49"
+      ],
+      "workflow_log": "docs/implementation/handoffs/MY2020_JL/generation_publication_20261108/workflow_logs/46-MY2020-JL-4D-2020-03-03-JLJL74.txt"
+    },
+    {
+      "proposal": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/correspondence_proposals/MY2020-JL-4D-2020-03-03-JLJP74.review.json",
+      "content_hash": "sha256:85d4c6a9d5ec1de82018f9fc7aab055672a59f4db6466cd09a9ff5703575a062",
+      "source_model_key": [
+        "MY2020-JL-4D-2020-03-03",
+        "source_model_code",
+        "model_code",
+        "JLJP74"
+      ],
+      "revision_PK": 60,
+      "revision_uuid": "a91ec151-3694-4b47-96c1-c4d9a49e952c",
+      "correspondence_uuid": "5cb6ad58-c912-4b0a-84e7-8c2bf9f9360a",
+      "receipt_PK": 2927,
+      "receipt_uuid": "07f27f06-a8d4-4172-afcd-f0a3f52fd47c",
+      "execution_outcome": "created",
+      "target_generation_PK": 32,
+      "candidate_references": [
+        "JL20-20",
+        "JL20-25",
+        "JL20-26",
+        "JL20-27",
+        "JL20-28",
+        "JL20-29",
+        "JL20-30",
+        "JL20-31",
+        "JL20-32",
+        "JL20-33",
+        "JL20-34",
+        "JL20-35"
+      ],
+      "workflow_log": "docs/implementation/handoffs/MY2020_JL/generation_publication_20261108/workflow_logs/47-MY2020-JL-4D-2020-03-03-JLJP74.txt"
+    },
+    {
+      "proposal": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/correspondence_proposals/MY2020-JL-4D-2020-03-03-JLJS74.review.json",
+      "content_hash": "sha256:ee91e6ff48d8c5e1f23fb0cdf56576275eb39734db8bd8e51c5933d074b39347",
+      "source_model_key": [
+        "MY2020-JL-4D-2020-03-03",
+        "source_model_code",
+        "model_code",
+        "JLJS74"
+      ],
+      "revision_PK": 61,
+      "revision_uuid": "3736453a-7ab4-4fb8-aac3-a496785460eb",
+      "correspondence_uuid": "e68ff2e2-42c9-46cf-8fdb-81c4990725e8",
+      "receipt_PK": 2928,
+      "receipt_uuid": "3e297199-c3e1-4d30-8d30-c32da6426605",
+      "execution_outcome": "created",
+      "target_generation_PK": 32,
+      "candidate_references": [
+        "JL20-21",
+        "JL20-22",
+        "JL20-23",
+        "JL20-24"
+      ],
+      "workflow_log": "docs/implementation/handoffs/MY2020_JL/generation_publication_20261108/workflow_logs/48-MY2020-JL-4D-2020-03-03-JLJS74.txt"
+    },
+    {
+      "proposal": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/correspondence_proposals/MY2020-JL-4D-2020-04-17-JLJL74.review.json",
+      "content_hash": "sha256:d956f8d2bfafe92b1e3d43593225644df26e56d3ad79908dd9e0055b896bfa33",
+      "source_model_key": [
+        "MY2020-JL-4D-2020-04-17",
+        "source_model_code",
+        "model_code",
+        "JLJL74"
+      ],
+      "revision_PK": 62,
+      "revision_uuid": "016d3b68-fe07-45fb-a8f3-bfb515ccdf9c",
+      "correspondence_uuid": "adda81e3-cecd-4348-acd8-2b5e224b2ea4",
+      "receipt_PK": 2929,
+      "receipt_uuid": "d45e1e16-d1c9-4ff6-8b5f-9eedff78b497",
+      "execution_outcome": "created",
+      "target_generation_PK": 32,
+      "candidate_references": [
+        "JL20-18",
+        "JL20-19",
+        "JL20-36",
+        "JL20-37",
+        "JL20-38",
+        "JL20-39",
+        "JL20-40",
+        "JL20-41",
+        "JL20-42",
+        "JL20-43",
+        "JL20-44",
+        "JL20-45",
+        "JL20-46",
+        "JL20-47",
+        "JL20-48",
+        "JL20-49"
+      ],
+      "workflow_log": "docs/implementation/handoffs/MY2020_JL/generation_publication_20261108/workflow_logs/49-MY2020-JL-4D-2020-04-17-JLJL74.txt"
+    },
+    {
+      "proposal": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/correspondence_proposals/MY2020-JL-4D-2020-04-17-JLJP74.review.json",
+      "content_hash": "sha256:03830abf6b7e8dcfa428caf139d50032282b5a4ddfe1ddd79159326f4eeac011",
+      "source_model_key": [
+        "MY2020-JL-4D-2020-04-17",
+        "source_model_code",
+        "model_code",
+        "JLJP74"
+      ],
+      "revision_PK": 63,
+      "revision_uuid": "9ba0ce21-1a93-4550-a254-efb4efcc2d90",
+      "correspondence_uuid": "e68365d7-b7f5-4db3-b66a-4e3eff445b27",
+      "receipt_PK": 2930,
+      "receipt_uuid": "6e3916eb-4078-4dfe-9fb6-cbb37cf48818",
+      "execution_outcome": "created",
+      "target_generation_PK": 32,
+      "candidate_references": [
+        "JL20-20",
+        "JL20-25",
+        "JL20-26",
+        "JL20-27",
+        "JL20-28",
+        "JL20-29",
+        "JL20-30",
+        "JL20-31",
+        "JL20-32",
+        "JL20-33",
+        "JL20-34",
+        "JL20-35"
+      ],
+      "workflow_log": "docs/implementation/handoffs/MY2020_JL/generation_publication_20261108/workflow_logs/50-MY2020-JL-4D-2020-04-17-JLJP74.txt"
+    },
+    {
+      "proposal": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/correspondence_proposals/MY2020-JL-4D-2020-04-17-JLJS74.review.json",
+      "content_hash": "sha256:f2ca0c33203df1adfba24c9b1a1c88ceca2a455ae48224ea920d293781a1387a",
+      "source_model_key": [
+        "MY2020-JL-4D-2020-04-17",
+        "source_model_code",
+        "model_code",
+        "JLJS74"
+      ],
+      "revision_PK": 64,
+      "revision_uuid": "49947324-8d2e-49a1-b930-09f54ff648f5",
+      "correspondence_uuid": "ade0d98d-db80-4fc7-8c57-cf6e6beb3687",
+      "receipt_PK": 2931,
+      "receipt_uuid": "dc265bc7-e5e1-46c4-b32d-cc5f8ca0c79c",
+      "execution_outcome": "created",
+      "target_generation_PK": 32,
+      "candidate_references": [
+        "JL20-21",
+        "JL20-22",
+        "JL20-24"
+      ],
+      "workflow_log": "docs/implementation/handoffs/MY2020_JL/generation_publication_20261108/workflow_logs/51-MY2020-JL-4D-2020-04-17-JLJS74.txt"
+    }
+  ],
+  "receipt_PKs": [
+    2881,
+    2882,
+    2883,
+    2884,
+    2885,
+    2886,
+    2887,
+    2888,
+    2889,
+    2890,
+    2891,
+    2892,
+    2893,
+    2894,
+    2895,
+    2896,
+    2897,
+    2898,
+    2899,
+    2900,
+    2901,
+    2902,
+    2903,
+    2904,
+    2905,
+    2906,
+    2907,
+    2908,
+    2909,
+    2910,
+    2911,
+    2912,
+    2913,
+    2914,
+    2915,
+    2916,
+    2917,
+    2918,
+    2919,
+    2920,
+    2921,
+    2922,
+    2923,
+    2924,
+    2925,
+    2926,
+    2927,
+    2928,
+    2929,
+    2930,
+    2931
+  ]
+}

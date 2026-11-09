@@ -1,0 +1,2491 @@
+{
+  "manifest_version": "2.1",
+  "created_at": "2026-11-08T23:40:09.828865+00:00",
+  "source_id": "MY2020-JL-2D-2019-08-15",
+  "raw_artifact_hash": "sha256:24239a7e5037840a190003d888998522e522fe3406599bb019b00e05ffd67591",
+  "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2020_JL_2_door_08_15_2019.pdf",
+  "extraction_provenance": {
+    "assertion_set_id": "JL20-10-MY2020-JL-2D-2019-08-15",
+    "assertions": [
+      {
+        "assertion_id": "JL20-10-MY2020-JL-2D-2019-08-15-table",
+        "attribute_key": "factory_powertrain_table",
+        "raw_value": "ENGINE                               $FWP      $MSRP    TRANSMISSION                    $FWP      $MSRP               SPORT                     SPORT S             BLACK AND TAN\n3.6L V6 24V VVT ENGINE UPG            N/C        N/C    6-SPEED MANUAL                   N/C        N/C           23B               23S               23D\nI W/ESS (ERC)                                           TRANSMISSION (DEM)\n                                                        8-SPD AUTO 850RE                2,225      2,500          24B               24S               24D\n                                                        TRANS (MAKE) (DFT)\n2.0L I4 DOHC DI TURBO                 N/C        N/C    8-SPD AUTO 850RE                1,335      1,500          22B               22S               22D\nENGINE W/ ESS (EC1)                                     TRANS (MAKE) (DFT)",
+        "source_context": "PDF page 2; model JLJL72; selected grade Sport S; QOP 22S; normalization is not a verbatim manufacturer trim assertion"
+      },
+      {
+        "assertion_id": "JL20-10-MY2020-JL-2D-2019-08-15-model",
+        "attribute_key": "source_model_code",
+        "raw_value": "JLJL72",
+        "source_context": "PDF page 2; printed model heading"
+      }
+    ],
+    "extraction_mode": "source_specific_parser",
+    "extractor_id": "pypdf",
+    "extractor_version": "6.16.1",
+    "generation_normalizer": {
+      "id": "explicit_generation_identity",
+      "version": "1.0.0"
+    },
+    "publication_revision": null,
+    "raw_artifact_hash": "sha256:24239a7e5037840a190003d888998522e522fe3406599bb019b00e05ffd67591",
+    "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2020_JL_2_door_08_15_2019.pdf",
+    "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+    "source_applicability": {
+      "applicability_basis": "US model-year guide/manual applicability; engine-family joins explicitly scoped",
+      "applicability_scope": "model_year",
+      "market": "US",
+      "publisher_jurisdiction": "US",
+      "unknown_fields": {}
+    },
+    "source_id": "MY2020-JL-2D-2019-08-15",
+    "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2020_jl_2_door_08_15_2019-pdf.215559/"
+  },
+  "plans": [
+    {
+      "candidate_reference": "JL20-10",
+      "source_identity_type": "record_id",
+      "native_identifier": "MY2020-US-specs",
+      "eligibility_status": "eligible",
+      "planned_action": "create",
+      "create_basis": "first_representation",
+      "review_category": null,
+      "namespace_snapshot_count": 0,
+      "mechanical_basis_existing_id": null,
+      "resolved_manufacturer_id": 20,
+      "resolved_vehicle_model_id": 21,
+      "resolved_generation_id": 32,
+      "target_vehicle_definition_fields": {
+        "model_year": 2020,
+        "trim_name": "Sport S",
+        "engine_name": "2.0L I4",
+        "drivetrain": "4WD",
+        "market": "US",
+        "electrification_type": "none",
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 4,
+        "engine_displacement_liters": "2",
+        "fuel_type": "gasoline"
+      },
+      "target_slug": "2020-sport-s-20l-i4-4wd-us-turbo",
+      "existing_vehicle_definition_id": null,
+      "reasons": [
+        "Qualified five-attribute factory engine identity established."
+      ],
+      "adjudication_reference": null,
+      "adjudication_hash": null,
+      "generation_resolution": {
+        "resolution_version": "1.1",
+        "basis": "reviewed_source_correspondence",
+        "parents": {
+          "manufacturer_id": 20,
+          "manufacturer_uuid": "42eefe42-0f2f-4e31-b4b2-f3e520ea0e50",
+          "manufacturer_name": "Jeep",
+          "manufacturer_active": true,
+          "vehicle_model_id": 21,
+          "vehicle_model_uuid": "5ec5f58a-b140-484c-97f0-c90ec9c134d6",
+          "vehicle_model_name": "Wrangler",
+          "vehicle_model_active": true,
+          "generation_id": 32,
+          "generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+          "generation_active": true,
+          "generation_model_id": 21,
+          "start_year": 2018,
+          "end_year": null
+        },
+        "model_year": 2020,
+        "market": "US",
+        "fields": {
+          "model_year": 2020,
+          "trim_name": "Sport S",
+          "engine_name": "2.0L I4",
+          "drivetrain": "4WD",
+          "market": "US",
+          "electrification_type": "none",
+          "engine_aspiration": "turbocharged",
+          "engine_cylinders": 4,
+          "engine_displacement_liters": "2",
+          "fuel_type": "gasoline"
+        },
+        "generation_evidence": [
+          {
+            "assertion_id": "JL20-10-MY2020-JL-2D-2019-08-15-model",
+            "assertion_set_id": "JL20-10-MY2020-JL-2D-2019-08-15",
+            "document_hash": "sha256:24239a7e5037840a190003d888998522e522fe3406599bb019b00e05ffd67591",
+            "identity_type": "model_code",
+            "native_identifier": "JLJL72",
+            "normalizer_id": "explicit_generation_identity",
+            "normalizer_version": "1.0.0",
+            "source_id": "MY2020-JL-2D-2019-08-15",
+            "source_namespace": "source_model_code"
+          },
+          {
+            "assertion_id": "JL20-10-MY2020-JL-2D-2019-09-05-model",
+            "assertion_set_id": "JL20-10-MY2020-JL-2D-2019-09-05",
+            "document_hash": "sha256:5e7855d90320a9cdcfe5569b46a74794d552161165a4278b1d68c8ffda8c02fa",
+            "identity_type": "model_code",
+            "native_identifier": "JLJL72",
+            "normalizer_id": "explicit_generation_identity",
+            "normalizer_version": "1.0.0",
+            "source_id": "MY2020-JL-2D-2019-09-05",
+            "source_namespace": "source_model_code"
+          },
+          {
+            "assertion_id": "JL20-10-MY2020-JL-2D-2019-10-08-model",
+            "assertion_set_id": "JL20-10-MY2020-JL-2D-2019-10-08",
+            "document_hash": "sha256:e12a2f7f835f34bab14c1f7eb3d884aebbdbe547bc2dcdf8e606041062fb19ef",
+            "identity_type": "model_code",
+            "native_identifier": "JLJL72",
+            "normalizer_id": "explicit_generation_identity",
+            "normalizer_version": "1.0.0",
+            "source_id": "MY2020-JL-2D-2019-10-08",
+            "source_namespace": "source_model_code"
+          },
+          {
+            "assertion_id": "JL20-10-MY2020-JL-2D-2019-11-04-model",
+            "assertion_set_id": "JL20-10-MY2020-JL-2D-2019-11-04",
+            "document_hash": "sha256:13b43d0e183acafafc50d3ab6edf74b030aaf0d15fd0ffd77b87f8e87949243f",
+            "identity_type": "model_code",
+            "native_identifier": "JLJL72",
+            "normalizer_id": "explicit_generation_identity",
+            "normalizer_version": "1.0.0",
+            "source_id": "MY2020-JL-2D-2019-11-04",
+            "source_namespace": "source_model_code"
+          },
+          {
+            "assertion_id": "JL20-10-MY2020-JL-2D-2020-01-15-model",
+            "assertion_set_id": "JL20-10-MY2020-JL-2D-2020-01-15",
+            "document_hash": "sha256:06c2eaec0efb83c7d8ba5f773fd0be47e1e3ac2cba471b46da17d08fe54dc426",
+            "identity_type": "model_code",
+            "native_identifier": "JLJL72",
+            "normalizer_id": "explicit_generation_identity",
+            "normalizer_version": "1.0.0",
+            "source_id": "MY2020-JL-2D-2020-01-15",
+            "source_namespace": "source_model_code"
+          },
+          {
+            "assertion_id": "JL20-10-MY2020-JL-2D-2020-01-23-model",
+            "assertion_set_id": "JL20-10-MY2020-JL-2D-2020-01-23",
+            "document_hash": "sha256:94155d6e84f45028046435152baf9a5b76281977b24b66accc604112c2edd355",
+            "identity_type": "model_code",
+            "native_identifier": "JLJL72",
+            "normalizer_id": "explicit_generation_identity",
+            "normalizer_version": "1.0.0",
+            "source_id": "MY2020-JL-2D-2020-01-23",
+            "source_namespace": "source_model_code"
+          },
+          {
+            "assertion_id": "JL20-10-MY2020-JL-2D-2020-02-12-model",
+            "assertion_set_id": "JL20-10-MY2020-JL-2D-2020-02-12",
+            "document_hash": "sha256:75b13996335662290ed71506cb76772da71347e1151ecd4720e8e9b8bc44f848",
+            "identity_type": "model_code",
+            "native_identifier": "JLJL72",
+            "normalizer_id": "explicit_generation_identity",
+            "normalizer_version": "1.0.0",
+            "source_id": "MY2020-JL-2D-2020-02-12",
+            "source_namespace": "source_model_code"
+          },
+          {
+            "assertion_id": "JL20-10-MY2020-JL-2D-2020-03-03-model",
+            "assertion_set_id": "JL20-10-MY2020-JL-2D-2020-03-03",
+            "document_hash": "sha256:1270871250ddbdad0fead362ba0df7e1516dd42ce51d37fc599c098f0bf81adc",
+            "identity_type": "model_code",
+            "native_identifier": "JLJL72",
+            "normalizer_id": "explicit_generation_identity",
+            "normalizer_version": "1.0.0",
+            "source_id": "MY2020-JL-2D-2020-03-03",
+            "source_namespace": "source_model_code"
+          },
+          {
+            "assertion_id": "JL20-10-MY2020-JL-2D-2020-04-17-model",
+            "assertion_set_id": "JL20-10-MY2020-JL-2D-2020-04-17",
+            "document_hash": "sha256:aebf9026be5c1b3a04c11ec4a037b7c5f423eacc875c22d909875f242e2d3fc2",
+            "identity_type": "model_code",
+            "native_identifier": "JLJL72",
+            "normalizer_id": "explicit_generation_identity",
+            "normalizer_version": "1.0.0",
+            "source_id": "MY2020-JL-2D-2020-04-17",
+            "source_namespace": "source_model_code"
+          },
+          {
+            "assertion_id": "model_code",
+            "assertion_set_id": "MY2020-JL-2D-2019-08-15-JLJL72-shared-selector-r1",
+            "document_hash": "sha256:24239a7e5037840a190003d888998522e522fe3406599bb019b00e05ffd67591",
+            "identity_type": "model_code",
+            "native_identifier": "JLJL72",
+            "normalizer_id": "explicit_generation_identity",
+            "normalizer_version": "1.0.0",
+            "source_id": "MY2020-JL-2D-2019-08-15",
+            "source_namespace": "source_model_code"
+          },
+          {
+            "assertion_id": "model_code",
+            "assertion_set_id": "MY2020-JL-2D-2019-09-05-JLJL72-shared-selector-r1",
+            "document_hash": "sha256:5e7855d90320a9cdcfe5569b46a74794d552161165a4278b1d68c8ffda8c02fa",
+            "identity_type": "model_code",
+            "native_identifier": "JLJL72",
+            "normalizer_id": "explicit_generation_identity",
+            "normalizer_version": "1.0.0",
+            "source_id": "MY2020-JL-2D-2019-09-05",
+            "source_namespace": "source_model_code"
+          },
+          {
+            "assertion_id": "model_code",
+            "assertion_set_id": "MY2020-JL-2D-2019-10-08-JLJL72-shared-selector-r1",
+            "document_hash": "sha256:e12a2f7f835f34bab14c1f7eb3d884aebbdbe547bc2dcdf8e606041062fb19ef",
+            "identity_type": "model_code",
+            "native_identifier": "JLJL72",
+            "normalizer_id": "explicit_generation_identity",
+            "normalizer_version": "1.0.0",
+            "source_id": "MY2020-JL-2D-2019-10-08",
+            "source_namespace": "source_model_code"
+          },
+          {
+            "assertion_id": "model_code",
+            "assertion_set_id": "MY2020-JL-2D-2019-11-04-JLJL72-shared-selector-r1",
+            "document_hash": "sha256:13b43d0e183acafafc50d3ab6edf74b030aaf0d15fd0ffd77b87f8e87949243f",
+            "identity_type": "model_code",
+            "native_identifier": "JLJL72",
+            "normalizer_id": "explicit_generation_identity",
+            "normalizer_version": "1.0.0",
+            "source_id": "MY2020-JL-2D-2019-11-04",
+            "source_namespace": "source_model_code"
+          },
+          {
+            "assertion_id": "model_code",
+            "assertion_set_id": "MY2020-JL-2D-2020-01-15-JLJL72-shared-selector-r1",
+            "document_hash": "sha256:06c2eaec0efb83c7d8ba5f773fd0be47e1e3ac2cba471b46da17d08fe54dc426",
+            "identity_type": "model_code",
+            "native_identifier": "JLJL72",
+            "normalizer_id": "explicit_generation_identity",
+            "normalizer_version": "1.0.0",
+            "source_id": "MY2020-JL-2D-2020-01-15",
+            "source_namespace": "source_model_code"
+          },
+          {
+            "assertion_id": "model_code",
+            "assertion_set_id": "MY2020-JL-2D-2020-01-23-JLJL72-shared-selector-r1",
+            "document_hash": "sha256:94155d6e84f45028046435152baf9a5b76281977b24b66accc604112c2edd355",
+            "identity_type": "model_code",
+            "native_identifier": "JLJL72",
+            "normalizer_id": "explicit_generation_identity",
+            "normalizer_version": "1.0.0",
+            "source_id": "MY2020-JL-2D-2020-01-23",
+            "source_namespace": "source_model_code"
+          },
+          {
+            "assertion_id": "model_code",
+            "assertion_set_id": "MY2020-JL-2D-2020-02-12-JLJL72-shared-selector-r1",
+            "document_hash": "sha256:75b13996335662290ed71506cb76772da71347e1151ecd4720e8e9b8bc44f848",
+            "identity_type": "model_code",
+            "native_identifier": "JLJL72",
+            "normalizer_id": "explicit_generation_identity",
+            "normalizer_version": "1.0.0",
+            "source_id": "MY2020-JL-2D-2020-02-12",
+            "source_namespace": "source_model_code"
+          },
+          {
+            "assertion_id": "model_code",
+            "assertion_set_id": "MY2020-JL-2D-2020-03-03-JLJL72-shared-selector-r1",
+            "document_hash": "sha256:1270871250ddbdad0fead362ba0df7e1516dd42ce51d37fc599c098f0bf81adc",
+            "identity_type": "model_code",
+            "native_identifier": "JLJL72",
+            "normalizer_id": "explicit_generation_identity",
+            "normalizer_version": "1.0.0",
+            "source_id": "MY2020-JL-2D-2020-03-03",
+            "source_namespace": "source_model_code"
+          },
+          {
+            "assertion_id": "model_code",
+            "assertion_set_id": "MY2020-JL-2D-2020-04-17-JLJL72-shared-selector-r1",
+            "document_hash": "sha256:aebf9026be5c1b3a04c11ec4a037b7c5f423eacc875c22d909875f242e2d3fc2",
+            "identity_type": "model_code",
+            "native_identifier": "JLJL72",
+            "normalizer_id": "explicit_generation_identity",
+            "normalizer_version": "1.0.0",
+            "source_id": "MY2020-JL-2D-2020-04-17",
+            "source_namespace": "source_model_code"
+          }
+        ],
+        "documents": [
+          {
+            "assertion_set_id": "JL20-10-MY2020-JL-2D-2019-08-15",
+            "assertions": [
+              {
+                "assertion_id": "JL20-10-MY2020-JL-2D-2019-08-15-table",
+                "attribute_key": "factory_powertrain_table",
+                "raw_value": "ENGINE                               $FWP      $MSRP    TRANSMISSION                    $FWP      $MSRP               SPORT                     SPORT S             BLACK AND TAN\n3.6L V6 24V VVT ENGINE UPG            N/C        N/C    6-SPEED MANUAL                   N/C        N/C           23B               23S               23D\nI W/ESS (ERC)                                           TRANSMISSION (DEM)\n                                                        8-SPD AUTO 850RE                2,225      2,500          24B               24S               24D\n                                                        TRANS (MAKE) (DFT)\n2.0L I4 DOHC DI TURBO                 N/C        N/C    8-SPD AUTO 850RE                1,335      1,500          22B               22S               22D\nENGINE W/ ESS (EC1)                                     TRANS (MAKE) (DFT)",
+                "source_context": "PDF page 2; model JLJL72; selected grade Sport S; QOP 22S; normalization is not a verbatim manufacturer trim assertion"
+              },
+              {
+                "assertion_id": "JL20-10-MY2020-JL-2D-2019-08-15-model",
+                "attribute_key": "source_model_code",
+                "raw_value": "JLJL72",
+                "source_context": "PDF page 2; printed model heading"
+              }
+            ],
+            "extraction_mode": "source_specific_parser",
+            "extractor_id": "pypdf",
+            "extractor_version": "6.16.1",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": null,
+            "raw_artifact_hash": "sha256:24239a7e5037840a190003d888998522e522fe3406599bb019b00e05ffd67591",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2020_JL_2_door_08_15_2019.pdf",
+            "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+            "source_applicability": {
+              "applicability_basis": "US model-year guide/manual applicability; engine-family joins explicitly scoped",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": "US",
+              "unknown_fields": {}
+            },
+            "source_id": "MY2020-JL-2D-2019-08-15",
+            "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2020_jl_2_door_08_15_2019-pdf.215559/"
+          },
+          {
+            "assertion_set_id": "JL20-10-MY2020-JL-2D-2019-09-05",
+            "assertions": [
+              {
+                "assertion_id": "JL20-10-MY2020-JL-2D-2019-09-05-table",
+                "attribute_key": "factory_powertrain_table",
+                "raw_value": "ENGINE                                $FWP       $MSRP    TRANSMISSION                     $FWP      $MSRP          SPORT            SPORT SBLACK AND\n                                                                                                                                               TAN                WILLYS\n3.6L V6 24V VVT ENGINE UPG             N/C        N/C     6-SPEED MANUAL                    N/C        N/C         23B           23S           23D           23W\nI W/ESS (ERC)                                             TRANSMISSION (DEM)\n                                                          8-SPD AUTO 850RE                 2,225      2,500        24B           24S           24D           24W\n                                                          TRANS (MAKE) (DFT)\n2.0L I4 DOHC DI TURBO                  N/C        N/C     8-SPD AUTO 850RE                 1,335      1,500        22B           22S           22D           22W\nENGINE W/ ESS (EC1)                                       TRANS (MAKE) (DFT)",
+                "source_context": "PDF page 2; model JLJL72; selected grade Sport S; QOP 22S; normalization is not a verbatim manufacturer trim assertion"
+              },
+              {
+                "assertion_id": "JL20-10-MY2020-JL-2D-2019-09-05-model",
+                "attribute_key": "source_model_code",
+                "raw_value": "JLJL72",
+                "source_context": "PDF page 2; printed model heading"
+              }
+            ],
+            "extraction_mode": "source_specific_parser",
+            "extractor_id": "pypdf",
+            "extractor_version": "6.16.1",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": null,
+            "raw_artifact_hash": "sha256:5e7855d90320a9cdcfe5569b46a74794d552161165a4278b1d68c8ffda8c02fa",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2 Door 9-5-19.pdf",
+            "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+            "source_applicability": {
+              "applicability_basis": "US model-year guide/manual applicability; engine-family joins explicitly scoped",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": "US",
+              "unknown_fields": {}
+            },
+            "source_id": "MY2020-JL-2D-2019-09-05",
+            "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2-door-9-5-19-pdf.227937/"
+          },
+          {
+            "assertion_set_id": "JL20-10-MY2020-JL-2D-2019-10-08",
+            "assertions": [
+              {
+                "assertion_id": "JL20-10-MY2020-JL-2D-2019-10-08-table",
+                "attribute_key": "factory_powertrain_table",
+                "raw_value": "ENGINE                                $FWP      $MSRP     TRANSMISSION                    $FWP       $MSRP        SPORT       SPORT SBLACK AND\n                                                                                                                                        TAN           WILLYS     FREEDOM\n3.6L V6 24V VVT ENGINE UPG             N/C        N/C     6-SPEED MANUAL                   N/C        N/C        23B        23S        23D        23W         23F\nI W/ESS (ERC)                                             TRANSMISSION (DEM)\n                                                          8-SPD AUTO 850RE                2,448      2,750       24B        24S        24D        24W         24F\n                                                          TRANS (MAKE) (DFT)\n2.0L I4 DOHC DI TURBO                  N/C        N/C     8-SPD AUTO 850RE                1,335      1,500       22B        22S        22D        22W         22F\nENGINE W/ ESS (EC1)                                       TRANS (MAKE) (DFT)",
+                "source_context": "PDF page 2; model JLJL72; selected grade Sport S; QOP 22S; normalization is not a verbatim manufacturer trim assertion"
+              },
+              {
+                "assertion_id": "JL20-10-MY2020-JL-2D-2019-10-08-model",
+                "attribute_key": "source_model_code",
+                "raw_value": "JLJL72",
+                "source_context": "PDF page 2; printed model heading"
+              }
+            ],
+            "extraction_mode": "source_specific_parser",
+            "extractor_id": "pypdf",
+            "extractor_version": "6.16.1",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": null,
+            "raw_artifact_hash": "sha256:e12a2f7f835f34bab14c1f7eb3d884aebbdbe547bc2dcdf8e606041062fb19ef",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2 Door 10-8-19.pdf",
+            "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+            "source_applicability": {
+              "applicability_basis": "US model-year guide/manual applicability; engine-family joins explicitly scoped",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": "US",
+              "unknown_fields": {}
+            },
+            "source_id": "MY2020-JL-2D-2019-10-08",
+            "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2-door-10-8-19-pdf.239598/"
+          },
+          {
+            "assertion_set_id": "JL20-10-MY2020-JL-2D-2019-11-04",
+            "assertions": [
+              {
+                "assertion_id": "JL20-10-MY2020-JL-2D-2019-11-04-table",
+                "attribute_key": "factory_powertrain_table",
+                "raw_value": "ENGINE                                $FWP      $MSRP    TRANSMISSION                    $FWP       $MSRP      SPORT   WILLYS            BLACK\n                                                                                                                       SPORT   SPORT S  AND TAN   WILLYS  FREEDOM\n3.6L V6 24V VVT ENGINE UPG            N/C        N/C     6-SPEED MANUAL                   N/C        N/C       23B      23K      23S      23D      23W       23F\nI W/ESS (ERC)                                            TRANSMISSION (DEM)\n                                                         8-SPD AUTO 850RE                2,448      2,750      24B      24K      24S      24D      24W       24F\n                                                         TRANS (MAKE) (DFT)\n2.0L I4 DOHC DI TURBO                 N/C        N/C     8-SPD AUTO 850RE                1,335      1,500      22B      22K      22S      22D      22W       22F\nENGINE W/ ESS (EC1)                                      TRANS (MAKE) (DFT)",
+                "source_context": "PDF page 2; model JLJL72; selected grade Sport S; QOP 22S; normalization is not a verbatim manufacturer trim assertion"
+              },
+              {
+                "assertion_id": "JL20-10-MY2020-JL-2D-2019-11-04-model",
+                "attribute_key": "source_model_code",
+                "raw_value": "JLJL72",
+                "source_context": "PDF page 2; printed model heading"
+              }
+            ],
+            "extraction_mode": "source_specific_parser",
+            "extractor_id": "pypdf",
+            "extractor_version": "6.16.1",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": null,
+            "raw_artifact_hash": "sha256:13b43d0e183acafafc50d3ab6edf74b030aaf0d15fd0ffd77b87f8e87949243f",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2 Door 11-4-19.pdf",
+            "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+            "source_applicability": {
+              "applicability_basis": "US model-year guide/manual applicability; engine-family joins explicitly scoped",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": "US",
+              "unknown_fields": {}
+            },
+            "source_id": "MY2020-JL-2D-2019-11-04",
+            "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2-door-11-4-19-pdf.255143/"
+          },
+          {
+            "assertion_set_id": "JL20-10-MY2020-JL-2D-2020-01-15",
+            "assertions": [
+              {
+                "assertion_id": "JL20-10-MY2020-JL-2D-2020-01-15-table",
+                "attribute_key": "factory_powertrain_table",
+                "raw_value": "ENGINE                                $FWP      $MSRP    TRANSMISSION                    $FWP       $MSRP      SPORT   WILLYS            BLACK\n                                                                                                                       SPORT   SPORT S  AND TAN   WILLYS  FREEDOM\n3.6L V6 24V VVT ENGINE UPG            N/C        N/C     6-SPEED MANUAL                   N/C        N/C       23B      23K      23S      23D      23W       23F\nI W/ESS (ERC)                                            TRANSMISSION (DEM)\n                                                         8-SPD AUTO 850RE                2,448      2,750      24B      24K      24S      24D      24W       24F\n                                                         TRANS (MAKE) (DFT)\n2.0L I4 DOHC DI TURBO                 N/C        N/C     8-SPD AUTO 850RE                2,448      2,750      22B      22K      22S      22D      22W       22F\nENGINE W/ ESS (EC1)                                      TRANS (MAKE) (DFT)",
+                "source_context": "PDF page 2; model JLJL72; selected grade Sport S; QOP 22S; normalization is not a verbatim manufacturer trim assertion"
+              },
+              {
+                "assertion_id": "JL20-10-MY2020-JL-2D-2020-01-15-model",
+                "attribute_key": "source_model_code",
+                "raw_value": "JLJL72",
+                "source_context": "PDF page 2; printed model heading"
+              }
+            ],
+            "extraction_mode": "source_specific_parser",
+            "extractor_id": "pypdf",
+            "extractor_version": "6.16.1",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": null,
+            "raw_artifact_hash": "sha256:06c2eaec0efb83c7d8ba5f773fd0be47e1e3ac2cba471b46da17d08fe54dc426",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2 Door 1-15-20.pdf",
+            "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+            "source_applicability": {
+              "applicability_basis": "US model-year guide/manual applicability; engine-family joins explicitly scoped",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": "US",
+              "unknown_fields": {}
+            },
+            "source_id": "MY2020-JL-2D-2020-01-15",
+            "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2-door-1-15-20-pdf.272500/"
+          },
+          {
+            "assertion_set_id": "JL20-10-MY2020-JL-2D-2020-01-23",
+            "assertions": [
+              {
+                "assertion_id": "JL20-10-MY2020-JL-2D-2020-01-23-table",
+                "attribute_key": "factory_powertrain_table",
+                "raw_value": "ENGINE                                $FWP      $MSRP    TRANSMISSION                    $FWP       $MSRP      SPORT   WILLYS            BLACK\n                                                                                                                       SPORT   SPORT S  AND TAN   WILLYS  FREEDOM\n3.6L V6 24V VVT ENGINE UPG            N/C        N/C     6-SPEED MANUAL                   N/C        N/C       23B      23K      23S      23D      23W       23F\nI W/ESS (ERC)                                            TRANSMISSION (DEM)\n                                                         8-SPD AUTO 850RE                2,448      2,750      24B      24K      24S      24D      24W       24F\n                                                         TRANS (MAKE) (DFT)\n2.0L I4 DOHC DI TURBO                 N/C        N/C     8-SPD AUTO 850RE                1,335      1,500      22B      22K      22S      22D      22W       22F\nENGINE W/ ESS (EC1)                                      TRANS (MAKE) (DFT)",
+                "source_context": "PDF page 2; model JLJL72; selected grade Sport S; QOP 22S; normalization is not a verbatim manufacturer trim assertion"
+              },
+              {
+                "assertion_id": "JL20-10-MY2020-JL-2D-2020-01-23-model",
+                "attribute_key": "source_model_code",
+                "raw_value": "JLJL72",
+                "source_context": "PDF page 2; printed model heading"
+              }
+            ],
+            "extraction_mode": "source_specific_parser",
+            "extractor_id": "pypdf",
+            "extractor_version": "6.16.1",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": null,
+            "raw_artifact_hash": "sha256:94155d6e84f45028046435152baf9a5b76281977b24b66accc604112c2edd355",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2 Door 1-23-20.pdf",
+            "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+            "source_applicability": {
+              "applicability_basis": "US model-year guide/manual applicability; engine-family joins explicitly scoped",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": "US",
+              "unknown_fields": {}
+            },
+            "source_id": "MY2020-JL-2D-2020-01-23",
+            "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2-door-1-23-20-pdf.275369/"
+          },
+          {
+            "assertion_set_id": "JL20-10-MY2020-JL-2D-2020-02-12",
+            "assertions": [
+              {
+                "assertion_id": "JL20-10-MY2020-JL-2D-2020-02-12-table",
+                "attribute_key": "factory_powertrain_table",
+                "raw_value": "ENGINE                                $FWP      $MSRP    TRANSMISSION                    $FWP       $MSRP      SPORT   WILLYS            BLACK\n                                                                                                                       SPORT   SPORT S  AND TAN   WILLYS  FREEDOM\n3.6L V6 24V VVT ENGINE UPG            N/C        N/C     6-SPEED MANUAL                   N/C        N/C       23B      23K      23S      23D      23W       23F\nI W/ESS (ERC)                                            TRANSMISSION (DEM)\n                                                         8-SPD AUTO 850RE                2,448      2,750      24B      24K      24S      24D      24W       24F\n                                                         TRANS (MAKE) (DFT)\n2.0L I4 DOHC DI TURBO                 N/C        N/C     8-SPD AUTO 850RE                1,335      1,500      22B      22K      22S      22D      22W       22F\nENGINE W/ ESS (EC1)                                      TRANS (MAKE) (DFT)",
+                "source_context": "PDF page 2; model JLJL72; selected grade Sport S; QOP 22S; normalization is not a verbatim manufacturer trim assertion"
+              },
+              {
+                "assertion_id": "JL20-10-MY2020-JL-2D-2020-02-12-model",
+                "attribute_key": "source_model_code",
+                "raw_value": "JLJL72",
+                "source_context": "PDF page 2; printed model heading"
+              }
+            ],
+            "extraction_mode": "source_specific_parser",
+            "extractor_id": "pypdf",
+            "extractor_version": "6.16.1",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": null,
+            "raw_artifact_hash": "sha256:75b13996335662290ed71506cb76772da71347e1151ecd4720e8e9b8bc44f848",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2 Door 2-12-20.pdf",
+            "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+            "source_applicability": {
+              "applicability_basis": "US model-year guide/manual applicability; engine-family joins explicitly scoped",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": "US",
+              "unknown_fields": {}
+            },
+            "source_id": "MY2020-JL-2D-2020-02-12",
+            "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2-door-2-12-20-pdf.281244/"
+          },
+          {
+            "assertion_set_id": "JL20-10-MY2020-JL-2D-2020-03-03",
+            "assertions": [
+              {
+                "assertion_id": "JL20-10-MY2020-JL-2D-2020-03-03-table",
+                "attribute_key": "factory_powertrain_table",
+                "raw_value": "ENGINE                                $FWP      $MSRP    TRANSMISSION                    $FWP       $MSRP      SPORT   WILLYS            BLACK\n                                                                                                                       SPORT   SPORT S  AND TAN   WILLYS  FREEDOM\n3.6L V6 24V VVT ENGINE UPG            N/C        N/C     6-SPEED MANUAL                   N/C        N/C       23B      23K      23S      23D      23W       23F\nI W/ESS (ERC)                                            TRANSMISSION (DEM)\n                                                         8-SPD AUTO 850RE                2,475      2,750      24B      24K      24S      24D      24W       24F\n                                                         TRANS (MAKE) (DFT)\n2.0L I4 DOHC DI TURBO                 N/C        N/C     8-SPD AUTO 850RE                1,350      1,500      22B      22K      22S      22D      22W       22F\nENGINE W/ ESS (EC1)                                      TRANS (MAKE) (DFT)",
+                "source_context": "PDF page 2; model JLJL72; selected grade Sport S; QOP 22S; normalization is not a verbatim manufacturer trim assertion"
+              },
+              {
+                "assertion_id": "JL20-10-MY2020-JL-2D-2020-03-03-model",
+                "attribute_key": "source_model_code",
+                "raw_value": "JLJL72",
+                "source_context": "PDF page 2; printed model heading"
+              }
+            ],
+            "extraction_mode": "source_specific_parser",
+            "extractor_id": "pypdf",
+            "extractor_version": "6.16.1",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": null,
+            "raw_artifact_hash": "sha256:1270871250ddbdad0fead362ba0df7e1516dd42ce51d37fc599c098f0bf81adc",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2 Door 3-3-20.pdf",
+            "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+            "source_applicability": {
+              "applicability_basis": "US model-year guide/manual applicability; engine-family joins explicitly scoped",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": "US",
+              "unknown_fields": {}
+            },
+            "source_id": "MY2020-JL-2D-2020-03-03",
+            "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2-door-3-3-20-pdf.288455/"
+          },
+          {
+            "assertion_set_id": "JL20-10-MY2020-JL-2D-2020-04-17",
+            "assertions": [
+              {
+                "assertion_id": "JL20-10-MY2020-JL-2D-2020-04-17-table",
+                "attribute_key": "factory_powertrain_table",
+                "raw_value": "ENGINE                              $FWP      $MSRP    TRANSMISSION                   $FWP      $MSRP        SPORT   WILLYS\n                                                                                                                      SPORT       SPORT S      WILLYS     FREEDOM\n3.6L V6 24V VVT ENGINE UPG           N/C        N/C    6-SPEED MANUAL                  N/C        N/C       23B       23K        23S       23W        23F\nI W/ESS (ERC)                                          TRANSMISSION (DEM)\n                                                       8-SPD AUTO 850RE               2,475      2,750      24B       24K        24S       24W        24F\n                                                       TRANS (MAKE) (DFT)\n2.0L I4 DOHC DI TURBO                N/C        N/C    8-SPD AUTO 850RE               1,350      1,500      22B       22K        22S       22W        22F\nENGINE W/ ESS (EC1)                                    TRANS (MAKE) (DFT)\n\n                                                                                                                     WILLYS",
+                "source_context": "PDF page 2; model JLJL72; selected grade Sport S; QOP 22S; normalization is not a verbatim manufacturer trim assertion"
+              },
+              {
+                "assertion_id": "JL20-10-MY2020-JL-2D-2020-04-17-model",
+                "attribute_key": "source_model_code",
+                "raw_value": "JLJL72",
+                "source_context": "PDF page 2; printed model heading"
+              }
+            ],
+            "extraction_mode": "source_specific_parser",
+            "extractor_id": "pypdf",
+            "extractor_version": "6.16.1",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": null,
+            "raw_artifact_hash": "sha256:aebf9026be5c1b3a04c11ec4a037b7c5f423eacc875c22d909875f242e2d3fc2",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2 Door 4-17-20.pdf",
+            "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+            "source_applicability": {
+              "applicability_basis": "US model-year guide/manual applicability; engine-family joins explicitly scoped",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": "US",
+              "unknown_fields": {}
+            },
+            "source_id": "MY2020-JL-2D-2020-04-17",
+            "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2-door-4-17-20-pdf.312615/"
+          },
+          {
+            "assertion_set_id": "JL20-10-engine",
+            "assertions": [
+              {
+                "assertion_id": "JL20-10-engine",
+                "attribute_key": "engine_descriptor",
+                "raw_value": "2.0L I4 DOHC DI TURBO                 N/C        N/C\nENGINE W/ ESS (EC1)",
+                "source_context": "PDF page 2; JLJL72; QOP 22S; exact engine table segment"
+              }
+            ],
+            "extraction_mode": "source_specific_parser",
+            "extractor_id": "pypdf",
+            "extractor_version": "6.16.1",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": null,
+            "raw_artifact_hash": "sha256:1270871250ddbdad0fead362ba0df7e1516dd42ce51d37fc599c098f0bf81adc",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2 Door 3-3-20.pdf",
+            "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+            "source_applicability": {
+              "applicability_basis": "US model-year guide/manual applicability; engine-family joins explicitly scoped",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": "US",
+              "unknown_fields": {}
+            },
+            "source_id": "MY2020-JL-2D-2020-03-03",
+            "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2-door-3-3-20-pdf.288455/"
+          },
+          {
+            "assertion_set_id": "MY2020-manual-fuel-hardware",
+            "assertions": [
+              {
+                "assertion_id": "fuel2",
+                "attribute_key": "fuel_requirements",
+                "raw_value": "\nThis engine is designed to meet all emission \nrequirements, and provide satisfactory fuel \neconomy and performance, when using \nhigh-quality unleaded “regular” gasoline having \nan octane rating of 87, as specified by the (R+M)/\n2 method. The use of 91 or higher octane “premium” \ngasoline will allow these engines to operate to optimal \nperformance. This increase in performance is most \nnoticeable in hot weather or other heavier load conditions, \nsuch as while towing.\nWhile operating on gasoline with the required octane \nnumber, hearing a light knocking sound from the engine is \nnot a cause for concern. However, if the engine is heard \nmaking a heavy knocking sound, see your dealer \nimmediately. Use of gasoline with a lower than \nrecommended octane number can cause engine failure \nand may void or not be covered by the New Vehicle Limited \nWarranty.\nPoor quality gasoline can cause problems such as hard \nstarting, stalling, and hesitations. If you experience these \nsymptoms, try another brand of gasoline before \nconsidering service for the vehicle.\n",
+                "source_context": "PDF page284 / printed282, 2.0L ENGINE"
+              },
+              {
+                "assertion_id": "fuel36",
+                "attribute_key": "fuel_requirements",
+                "raw_value": "\nThis engine is designed to meet all emissions \nregulations and provide satisfactory fuel \neconomy and performance when using \nhigh-quality unleaded “Regular” gasoline \nhaving an octane rating of 87 as specified by the (R+M)/\n2 method. The use of higher octane “Premium” gasoline \nwill not provide any benefit over “Regular” gasoline in \nthese engines.\nWhile operating on gasoline with an octane number of 87, \nhearing a light knocking sound from the engine is not a \ncause for concern. However, if the engine is heard making \na heavy knocking sound, see your dealer immediately. Use \nof gasoline with an octane number lower than 87 can \ncause engine failure and may void or not be covered by the \nNew Vehicle Limited Warranty.\nPoor quality gasoline can cause problems such as hard \nstarting, stalling, and hesitations. If you experience these \nsymptoms, try another brand of gasoline before \nconsidering service for the vehicle.\n",
+                "source_context": "PDF page284 / printed282, 3.6L ENGINE"
+              },
+              {
+                "assertion_id": "hardware",
+                "attribute_key": "engine_hardware",
+                "raw_value": "284 TECHNICAL SPECIFICATIONS  \nFUEL SYSTEM CAUTIONS\nNOTE:\nIntentional tampering with the emissions control system can result in civil penalties being assessed against you.\nFLUID CAPACITIES    \nCAUTION!\nFollow these guidelines to maintain your vehicle’s performance:\n The use of leaded gasoline is prohibited by Federal law. Using leaded gasoline can impair engine performance and damage the emissions control system.\n An out-of-tune engine or certain fuel or ignition malfunctions can cause the catalytic converter to overheat. If you notice a pungent burning odor or some light smoke, your engine \nmay be out of tune or malfunctioning and may require immediate service. Contact an authorized dealer for service assistance.\n The use of fuel additives, which are now being sold as octane enhancers, is not recommended. Most of these products contain high concentrations of methanol. Fuel system \ndamage or vehicle performance problems resulting from the use of such fuels or additives is not the responsibility of the manufacturer and may void or not be covered under the \nNew Vehicle Limited Warranty.\nUS Metric\nFuel (Approximate)\nTwo Door Models 17.5 Gallons 66 Liters\nFour Door Models 21.5 Gallons 81 Liters\nEngine Oil with Filter\n2.0L Engine 5 Quarts 4.73 Liters\n3.6L Engine 5 Quarts 4.73 Liters\nCooling System *\n2.0L Engine (Mopar Antifreeze/Engine Coolant 10 Year/150,000 Mile (240,000 km) Formula or equivalent) 10.3 Quarts 9.7 Liters\n2.0L Engine Intercooler without Motor Generator Unit (MGU) (Mopar Antifreeze/Engine Coolant 10 Year/\n150,000 Mile (240,000 km) Formula or equivalent) 3.2 Quarts 3.0 Liters\n20_JL_OM_EN_USC_t.book  Page 284  \nTECHNICAL SPECIFICATIONS 285\nFLUIDS AND LUBRICANTS\nENGINE     \n2.0L Engine Intercooler with Motor Generator Unit (MGU) (Mopar Antifreeze/Engine Coolant 10 Year/\n150,000 Mile (240,000 km) Formula or equivalent) 3.5 Quarts 3.3 Liters\n2.0L Battery Coolant (Mopar Antifreeze/Engine Coolant 10 Year/150,000 Mile (240,000 km) Formula or \nequivalent) 2.5 Quarts 2.4 Liters\n3.6L Engine (Mopar Antifreeze/Engine Coolant 10 Year/150,000 Mile (240,000 km) Formula or equivalent) 11.2 Quarts 10.6 Liters\n3.6L Motor Generator Unit (MGU) (Mopar Antifreeze/Engine Coolant 10 Year/150,000 Mile (240,000 km) \nFormula or equivalent) 1.9 Quarts 1.8 Liters\n3.6L Battery Coolant (Mopar Antifreeze/Engine Coolant 10 Year/150,000 Mile (240,000 km) Formula or \nequivalent) 2.5 Quarts 2.4 Liters\n* Includes coolant recovery bottle filled to MAX level.\nUS Metric\nComponent Fluid, Lubricant, or Genuine Part\nEngine Coolant\nWe recommend you use Mopar Antifreeze/Coolant 10 Year/150,000 Mile (240,000 km) \nFormula OAT (Organic Additive Technology) or equivalent meeting the requirements of \nFCA Material Standard MS.90032.\nIntercooler/Motor Generator Unit (if equipped)\nWe recommend you use Mopar Antifreeze/Coolant 10 Year/150,000 Mile (240,000 km) \nFormula OAT (Organic Additive Technology) or equivalent meeting the requirements of \nFCA Material Standard MS.90032.\nBattery Coolant (if equipped)\nWe recommend you use Mopar Antifreeze/Coolant 10 Year/150,000 Mile (240,000 km) \nFormula OAT (Organic Additive Technology) or equivalent meeting the requirements of \nFCA Material Standard MS.90032.\n8\n20_JL_OM_EN_USC_t.book  Page 285  \n286 TECHNICAL SPECIFICATIONS  \nEngine Oil — 2.0L Engine\nWe recommend you use Mopar API SN PLUS Certified SAE 5W-30 Full Synthetic Engine \nOil which meets the requirements of FCA Material Standard MS-13340. Equivalent full \nsynthetic SAE 5W-30 engine oil can be used if it meets API SN PLUS Certification. If SN \nPLUS or equivalent oil is unavailable then please contact your local dealership for \nrecommendation.\nCAUTION!\nFailure to use the recommended SN PLUS or equivalent oil can cause engine damage \nnot covered by the vehicle warranty.\nEngine Oil — 3.6L Engine\nWe recommend you use API Certified SAE 0W-20 Engine Oil, meeting the requirements of \nFCA Material Standard MS-6395 such as Mopar, Pennzoil, and Shell Helix. Refer to your \nengine oil filler cap for correct SAE grade.\nEngine Oil Filter We recommend you use Mopar Engine Oil Filter or equivalent.\nSpark Plugs We recommend you use Mopar Spark Plugs.\nFuel Selection — 2.0L Engine 87 Octane (R+M)/2 Method, 0-15% Ethanol.\nFuel Selection — 3.6L Engine 87 Octane (R+M)/2 Method, 0-15% Ethanol.\nComponent Fluid, Lubricant, or Genuine Part\nCAUTION!\n Mixing of engine coolant (antifreeze) other than specified Organic Additive Technology (OAT) engine coolant (antifreeze), may result in engine damage and may decrease corrosion \nprotection. Organic Additive Technology (OAT) engine coolant is different and should not be mixed with Hybrid Organic Additive Technology (HOAT) engine coolant (antifreeze) or \nany “globally compatible” coolant (antifreeze). If a non-OAT engine coolant (antifreeze) is introduced into the cooling system in an emergency, the cooling system will need to be \ndrained, flushed, and refilled with fresh OAT coolant (conforming to MS.90032), by an authorized dealer as soon as possible.\n Do not use water alone or alcohol-based engine coolant (antifreeze) products. Do not use additional rust inhibitors or antirust products, as they may not be compatible with the \nradiator engine coolant and may plug the radiator.\n This vehicle has not been designed for use with propylene glycol-based engine coolant (antifreeze). Use of propylene glycol-based engine coolant (antifreeze) is not recommended.\n20_JL_OM_EN_USC_t.book  Page 286  ",
+                "source_context": "PDF pages286–288; cooling system and underhood drawings; applicability must not be inferred beyond each caption"
+              }
+            ],
+            "extraction_mode": "source_specific_parser",
+            "extractor_id": "pypdf",
+            "extractor_version": "6.16.1",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": null,
+            "raw_artifact_hash": "sha256:eccf53d564172144d82728cacc2b7f87210c2dd7af0a535e1df78f588a92cd92",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/evidence/Mopar_MY2020_Wrangler_US_owners_manual.pdf",
+            "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+            "source_applicability": {
+              "applicability_basis": "US model-year guide/manual applicability; engine-family joins explicitly scoped",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": "US",
+              "unknown_fields": {}
+            },
+            "source_id": "Mopar_MY2020_Wrangler_US_manual",
+            "source_locator": "https://vehicleinfo.mopar.com/assets/publications/en-us/Jeep/2020/Wrangler/P138305_20_JL_OM_EN_USC_DIGITAL.pdf"
+          },
+          {
+            "assertion_set_id": "MY2020-US-specs",
+            "assertions": [
+              {
+                "assertion_id": "layout",
+                "attribute_key": "generic_drive_classification",
+                "raw_value": "Longitudinal front engine, four-wheel drive",
+                "source_context": "PDF page1, BODY/CHASSIS Layout"
+              },
+              {
+                "assertion_id": "pentastar",
+                "attribute_key": "manufacturer_powertrain_description",
+                "raw_value": "NEW 2020  JEEP  WRANGLER ECODIESEL  | SPECIFICATIONS  http://media.fcanorthamerica.com  |  1  \n \n2020 Jeep Wrangler \nSPECIFICATIONS  \n \nSpecifications are based on the latest product information available at the time of publication.  \nAll dimensions are in inches (millimeters) unless otherwise noted.  \nAll dimensions measured at curb weight with standard tires and wheels. \n \n \nGENERAL INFORMATION  \nVehicle Type Sport-utility vehicle \nAssembly Plant Toledo Supplier Park, Toledo, Ohio \nEPA Vehicle Class Multipurpose vehicle \nIntroduction Date Fall 2017 as a 2018 model  \n  \nBODY/CHASSIS  \nLayout Longitudinal front engine, four-wheel drive \nConstruction Ladder-type frame, open steel and aluminum body \n  \nENGINE: 3.6-LITER PENTASTAR V-6  \nAvailability Standard — Sport, Sahara (MTX only), Rubicon (all ESS)  \nAvailable — Sahara (with eTorque mild-hybrid assist) \nType and Description 60-degree, V-type, liquid-cooled \nDisplacement (cu. in. / cc) 220 cu. in. (3,604 cu. cm) \nBore x Stroke  3.78 x 3.27 (96 x 83) \nValve System Chain-driven DOHC, 24 valves and hydraulic end-pivot roller rockers \nFuel Injection Sequential, multiport, electronic, returnless \nConstruction Aluminum deep-skirt block, aluminum alloy heads  \nCompression Ratio 11.3:1 \nPower (SAE net) (hp / kW@rpm) 285 hp (213 kW) at 6,400 rpm \nTorque (SAE net) (lb.-ft. / N•m) 260 lb.-ft. (353 N•m) at 4,800 rpm \nMax. Engine Speed (rpm) 6,600 rpm (electronically limited) \nFuel Requirement Unleaded regular, 87 octane (R + M)/2 \nFuel Tank Capacity (gallons) 17.5 (2-door), 21.5 (4-door) \nOil Capacity  5.0 quarts (4.7 liters) \nCoolant Capacity  10 quarts (10.1 liters) \nEmission Controls  Dual three-way catalytic converters, heated oxygen sensors and internal engine \nfeatures ",
+                "source_context": "PDF page1, ENGINE 3.6-LITER PENTASTAR V-6; source-specific guide governs edition availability"
+              }
+            ],
+            "extraction_mode": "source_specific_parser",
+            "extractor_id": "pypdf",
+            "extractor_version": "6.16.1",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": null,
+            "raw_artifact_hash": "sha256:8ca6c22b9af4a87f33700b3a3455fa3fae9ea5799218f232cbbb1b31eabf8354",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/FCA_2020_Wrangler_US_specifications.pdf",
+            "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+            "source_applicability": {
+              "applicability_basis": "US model-year guide/manual applicability; engine-family joins explicitly scoped",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": "US",
+              "unknown_fields": {}
+            },
+            "source_id": "FCA_MY2020_Wrangler_US_specs",
+            "source_locator": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/specs/2020_JP_Wrangler_SPmrgun0frgq245rkio8imc5var6.pdf"
+          },
+          {
+            "assertion_set_id": "JL20-10-heading",
+            "assertions": [
+              {
+                "assertion_id": "JL20-10-heading",
+                "attribute_key": "source_document_heading",
+                "raw_value": "REISSUED: 03/03/2020\nISSUED: 07/02/2019\nPAGE: 1\nUnited States\n2020\nJEEP WRANGLER 2 DOOR\nCUSTOMER PREFERRED CODE GUIDE\nMODEL CODE PAGES\nWRANGLER SPORT JLJL72 2\nWRANGLER RUBICON JLJS72 7\nGROUP DETAIL 10\nSTANDARD EQUIPMENT 13\nSTEP #1: SELECT MODEL CODE\nSTEP #2: SELECT QUICK ORDER PACKAGE CODE\nSTEP #3: SELECT $ OPTIONS (IF DESIRED)\nSTEP #4: SELECT COLOR & TRIM CODES\n© 2020 FCA US LLC, All Rights Reserved. IT IS FOR THE USE OF FCA AND ITS AUTHORIZED DEALERS ONLY AND MAY\nNOT BE OTHERWISE USED, RELEASED, OR REPRINTED WITHOUT FCA PRIOR PERMISSION.\nORDERS ARE ACCEPTED ONLY WHEN VEHICLES ARE SHIPPED BY THE FACTORY.\n© 2020 FCA US LLC, All Rights Reserved.\nJ\nE\nE\nP\nW\nR\nA\nN\nG\nL\nE\nR\n2\nD\nO\nO\nR",
+                "source_context": "PDF page1; US MY2020 model/body applicability"
+              }
+            ],
+            "extraction_mode": "source_specific_parser",
+            "extractor_id": "pypdf",
+            "extractor_version": "6.16.1",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": null,
+            "raw_artifact_hash": "sha256:1270871250ddbdad0fead362ba0df7e1516dd42ce51d37fc599c098f0bf81adc",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2 Door 3-3-20.pdf",
+            "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+            "source_applicability": {
+              "applicability_basis": "US model-year guide/manual applicability; engine-family joins explicitly scoped",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": "US",
+              "unknown_fields": {}
+            },
+            "source_id": "MY2020-JL-2D-2020-03-03",
+            "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2-door-3-3-20-pdf.288455/"
+          },
+          {
+            "assertion_set_id": "Mopar_MY2020_ESS_eTorque_hardware-review-20261108",
+            "assertions": [
+              {
+                "assertion_id": "ESS-hardware-180",
+                "attribute_key": "starting_charging_architecture",
+                "raw_value": "ESS vehicles have been upgraded with a heavy duty \nstarter, enhanced battery, and other upgraded engine \nparts, to handle the additional engine starts. Vehicles \nequipped with eTorque contain a heavy duty motor \ngenerator and an additional hybrid electric battery to store \nenergy from vehicle deceleration for use on engine startup \nafter a stop as well as providing launch torque assist.\n",
+                "source_context": "PDF page180, printed178; Stop/Start System; automatic/manual section respectively; generic ESS/eTorque distinction, not EXJ identifier"
+              },
+              {
+                "assertion_id": "ESS-hardware-182",
+                "attribute_key": "starting_charging_architecture",
+                "raw_value": "ESS vehicles have been upgraded with a heavy duty \nstarter, enhanced battery, and other upgraded engine \nparts, to handle the additional engine starts. Vehicles \nequipped with eTorque contain a heavy duty motor \ngenerator and an additional hybrid electric battery to store \nenergy from vehicle deceleration for use on engine startup \nafter a stop as well as providing launch torque assist.\n",
+                "source_context": "PDF page182, printed180; Stop/Start System; automatic/manual section respectively; generic ESS/eTorque distinction, not EXJ identifier"
+              }
+            ],
+            "extraction_mode": "source_specific_parser",
+            "extractor_id": "MY2020_evidence_review",
+            "extractor_version": "1.0",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": null,
+            "raw_artifact_hash": "sha256:eccf53d564172144d82728cacc2b7f87210c2dd7af0a535e1df78f588a92cd92",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/evidence/Mopar_MY2020_Wrangler_US_owners_manual.pdf",
+            "retrieved_at": "2026-11-08T22:37:13.602767+00:00",
+            "source_applicability": {
+              "applicability_basis": "Document-specific US MY2020 applicability; scope limitations recorded in notes",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": "US",
+              "unknown_fields": {}
+            },
+            "source_id": "Mopar_MY2020_ESS_eTorque_hardware",
+            "source_locator": "https://vehicleinfo.mopar.com/assets/publications/en-us/Jeep/2020/Wrangler/P138305_20_JL_OM_EN_USC_DIGITAL.pdf"
+          },
+          {
+            "assertion_set_id": "MY2020-JL-2D-2019-08-15-JLJL72-shared-selector-r1",
+            "assertions": [
+              {
+                "assertion_id": "model_code",
+                "attribute_key": "source_model_code",
+                "raw_value": "JLJL72",
+                "source_context": "PDF page 2; manufacturer model-code heading, same original location as predecessor assertion JL20-01-MY2020-JL-2D-2019-08-15/JL20-01-MY2020-JL-2D-2019-08-15-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+              }
+            ],
+            "extraction_mode": "manually_verified_transcription",
+            "extractor_id": "my2020_shared_model_code_selector",
+            "extractor_version": "1.0.0",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": null,
+            "raw_artifact_hash": "sha256:24239a7e5037840a190003d888998522e522fe3406599bb019b00e05ffd67591",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2020_JL_2_door_08_15_2019.pdf",
+            "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+            "source_applicability": {
+              "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": "US",
+              "unknown_fields": {}
+            },
+            "source_id": "MY2020-JL-2D-2019-08-15",
+            "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2020_jl_2_door_08_15_2019-pdf.215559/"
+          },
+          {
+            "assertion_set_id": "MY2020-JL-2D-2019-09-05-JLJL72-shared-selector-r1",
+            "assertions": [
+              {
+                "assertion_id": "model_code",
+                "attribute_key": "source_model_code",
+                "raw_value": "JLJL72",
+                "source_context": "PDF page 2; manufacturer model-code heading, same original location as predecessor assertion JL20-01-MY2020-JL-2D-2019-09-05/JL20-01-MY2020-JL-2D-2019-09-05-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+              }
+            ],
+            "extraction_mode": "manually_verified_transcription",
+            "extractor_id": "my2020_shared_model_code_selector",
+            "extractor_version": "1.0.0",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": null,
+            "raw_artifact_hash": "sha256:5e7855d90320a9cdcfe5569b46a74794d552161165a4278b1d68c8ffda8c02fa",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2 Door 9-5-19.pdf",
+            "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+            "source_applicability": {
+              "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": "US",
+              "unknown_fields": {}
+            },
+            "source_id": "MY2020-JL-2D-2019-09-05",
+            "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2-door-9-5-19-pdf.227937/"
+          },
+          {
+            "assertion_set_id": "MY2020-JL-2D-2019-10-08-JLJL72-shared-selector-r1",
+            "assertions": [
+              {
+                "assertion_id": "model_code",
+                "attribute_key": "source_model_code",
+                "raw_value": "JLJL72",
+                "source_context": "PDF page 2; manufacturer model-code heading, same original location as predecessor assertion JL20-01-MY2020-JL-2D-2019-10-08/JL20-01-MY2020-JL-2D-2019-10-08-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+              }
+            ],
+            "extraction_mode": "manually_verified_transcription",
+            "extractor_id": "my2020_shared_model_code_selector",
+            "extractor_version": "1.0.0",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": null,
+            "raw_artifact_hash": "sha256:e12a2f7f835f34bab14c1f7eb3d884aebbdbe547bc2dcdf8e606041062fb19ef",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2 Door 10-8-19.pdf",
+            "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+            "source_applicability": {
+              "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": "US",
+              "unknown_fields": {}
+            },
+            "source_id": "MY2020-JL-2D-2019-10-08",
+            "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2-door-10-8-19-pdf.239598/"
+          },
+          {
+            "assertion_set_id": "MY2020-JL-2D-2019-11-04-JLJL72-shared-selector-r1",
+            "assertions": [
+              {
+                "assertion_id": "model_code",
+                "attribute_key": "source_model_code",
+                "raw_value": "JLJL72",
+                "source_context": "PDF page 2; manufacturer model-code heading, same original location as predecessor assertion JL20-01-MY2020-JL-2D-2019-11-04/JL20-01-MY2020-JL-2D-2019-11-04-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+              }
+            ],
+            "extraction_mode": "manually_verified_transcription",
+            "extractor_id": "my2020_shared_model_code_selector",
+            "extractor_version": "1.0.0",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": null,
+            "raw_artifact_hash": "sha256:13b43d0e183acafafc50d3ab6edf74b030aaf0d15fd0ffd77b87f8e87949243f",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2 Door 11-4-19.pdf",
+            "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+            "source_applicability": {
+              "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": "US",
+              "unknown_fields": {}
+            },
+            "source_id": "MY2020-JL-2D-2019-11-04",
+            "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2-door-11-4-19-pdf.255143/"
+          },
+          {
+            "assertion_set_id": "MY2020-JL-2D-2020-01-15-JLJL72-shared-selector-r1",
+            "assertions": [
+              {
+                "assertion_id": "model_code",
+                "attribute_key": "source_model_code",
+                "raw_value": "JLJL72",
+                "source_context": "PDF page 2; manufacturer model-code heading, same original location as predecessor assertion JL20-01-MY2020-JL-2D-2020-01-15/JL20-01-MY2020-JL-2D-2020-01-15-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+              }
+            ],
+            "extraction_mode": "manually_verified_transcription",
+            "extractor_id": "my2020_shared_model_code_selector",
+            "extractor_version": "1.0.0",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": null,
+            "raw_artifact_hash": "sha256:06c2eaec0efb83c7d8ba5f773fd0be47e1e3ac2cba471b46da17d08fe54dc426",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2 Door 1-15-20.pdf",
+            "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+            "source_applicability": {
+              "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": "US",
+              "unknown_fields": {}
+            },
+            "source_id": "MY2020-JL-2D-2020-01-15",
+            "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2-door-1-15-20-pdf.272500/"
+          },
+          {
+            "assertion_set_id": "MY2020-JL-2D-2020-01-23-JLJL72-shared-selector-r1",
+            "assertions": [
+              {
+                "assertion_id": "model_code",
+                "attribute_key": "source_model_code",
+                "raw_value": "JLJL72",
+                "source_context": "PDF page 2; manufacturer model-code heading, same original location as predecessor assertion JL20-01-MY2020-JL-2D-2020-01-23/JL20-01-MY2020-JL-2D-2020-01-23-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+              }
+            ],
+            "extraction_mode": "manually_verified_transcription",
+            "extractor_id": "my2020_shared_model_code_selector",
+            "extractor_version": "1.0.0",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": null,
+            "raw_artifact_hash": "sha256:94155d6e84f45028046435152baf9a5b76281977b24b66accc604112c2edd355",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2 Door 1-23-20.pdf",
+            "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+            "source_applicability": {
+              "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": "US",
+              "unknown_fields": {}
+            },
+            "source_id": "MY2020-JL-2D-2020-01-23",
+            "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2-door-1-23-20-pdf.275369/"
+          },
+          {
+            "assertion_set_id": "MY2020-JL-2D-2020-02-12-JLJL72-shared-selector-r1",
+            "assertions": [
+              {
+                "assertion_id": "model_code",
+                "attribute_key": "source_model_code",
+                "raw_value": "JLJL72",
+                "source_context": "PDF page 2; manufacturer model-code heading, same original location as predecessor assertion JL20-01-MY2020-JL-2D-2020-02-12/JL20-01-MY2020-JL-2D-2020-02-12-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+              }
+            ],
+            "extraction_mode": "manually_verified_transcription",
+            "extractor_id": "my2020_shared_model_code_selector",
+            "extractor_version": "1.0.0",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": null,
+            "raw_artifact_hash": "sha256:75b13996335662290ed71506cb76772da71347e1151ecd4720e8e9b8bc44f848",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2 Door 2-12-20.pdf",
+            "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+            "source_applicability": {
+              "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": "US",
+              "unknown_fields": {}
+            },
+            "source_id": "MY2020-JL-2D-2020-02-12",
+            "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2-door-2-12-20-pdf.281244/"
+          },
+          {
+            "assertion_set_id": "MY2020-JL-2D-2020-03-03-JLJL72-shared-selector-r1",
+            "assertions": [
+              {
+                "assertion_id": "model_code",
+                "attribute_key": "source_model_code",
+                "raw_value": "JLJL72",
+                "source_context": "PDF page 2; manufacturer model-code heading, same original location as predecessor assertion JL20-01-MY2020-JL-2D-2020-03-03/JL20-01-MY2020-JL-2D-2020-03-03-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+              }
+            ],
+            "extraction_mode": "manually_verified_transcription",
+            "extractor_id": "my2020_shared_model_code_selector",
+            "extractor_version": "1.0.0",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": null,
+            "raw_artifact_hash": "sha256:1270871250ddbdad0fead362ba0df7e1516dd42ce51d37fc599c098f0bf81adc",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2 Door 3-3-20.pdf",
+            "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+            "source_applicability": {
+              "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": "US",
+              "unknown_fields": {}
+            },
+            "source_id": "MY2020-JL-2D-2020-03-03",
+            "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2-door-3-3-20-pdf.288455/"
+          },
+          {
+            "assertion_set_id": "MY2020-JL-2D-2020-04-17-JLJL72-shared-selector-r1",
+            "assertions": [
+              {
+                "assertion_id": "model_code",
+                "attribute_key": "source_model_code",
+                "raw_value": "JLJL72",
+                "source_context": "PDF page 2; manufacturer model-code heading, same original location as predecessor assertion JL20-03-MY2020-JL-2D-2020-04-17/JL20-03-MY2020-JL-2D-2020-04-17-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+              }
+            ],
+            "extraction_mode": "manually_verified_transcription",
+            "extractor_id": "my2020_shared_model_code_selector",
+            "extractor_version": "1.0.0",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": null,
+            "raw_artifact_hash": "sha256:aebf9026be5c1b3a04c11ec4a037b7c5f423eacc875c22d909875f242e2d3fc2",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2 Door 4-17-20.pdf",
+            "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+            "source_applicability": {
+              "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": "US",
+              "unknown_fields": {}
+            },
+            "source_id": "MY2020-JL-2D-2020-04-17",
+            "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2-door-4-17-20-pdf.312615/"
+          },
+          {
+            "assertion_set_id": "sha256:d815fcef330500357ba9fe4227dbf153c2339a1efb5cb332e35f4bc2f3178688",
+            "assertions": [
+              {
+                "assertion_id": "electrification_type",
+                "attribute_key": "electrification_type",
+                "raw_value": {
+                  "classification": "electrification_type",
+                  "provenance": "human_adjudicated",
+                  "value": "none"
+                },
+                "source_context": "Human-adjudicated conclusion by project_owner: MY2020 US manual printed284–285 positively distinguishes 2.0L intercooler without MGU from with-MGU and battery-coolant architecture. The exact order-guide EC1/ESS offering is paired against distinct EC3/eTorque offerings. Proposed none joins the non-MGU variant to EC1; this code-to-hardware association is a bounded engineering conclusion, not a direct manufacturer assertion and not ESS terminology alone."
+              }
+            ],
+            "extraction_mode": "manually_verified_transcription",
+            "extractor_id": "approved_human_classification",
+            "extractor_version": "1.1",
+            "publication_revision": "Human classification adjudication 1.1; not manufacturer assertions",
+            "raw_artifact_hash": "sha256:c4b2053c680657f08f5b29dab0c3ceda0253bce48e3f2ded237c1fce0895d30d",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/adjudication_evidence_revisions/JL20-10.selector-evidence-r1.approved.json",
+            "retrieved_at": "2026-11-08T22:53:14.119739+00:00",
+            "source_applicability": {
+              "applicability_basis": "Exact candidate digest; approved human conclusion",
+              "applicability_scope": "configuration",
+              "market": "US"
+            },
+            "source_id": "human_classification_adjudication",
+            "source_locator": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/adjudication_evidence_revisions/JL20-10.selector-evidence-r1.approved.json"
+          }
+        ],
+        "target_identity": {},
+        "correspondences": [
+          {
+            "uuid": "097b6ab8-2c81-4bd4-8dac-02e8fc9973b6",
+            "hash": "sha256:5a195219bd983e1691cb48893154eafcce5819783ba5537a051257b8e7c2b31b"
+          },
+          {
+            "uuid": "3069255e-faae-4a0c-b1f2-b90aec80383a",
+            "hash": "sha256:1ff36dcc88f4c9339d2f900152b1f190b3cda264397cbb5ab1e40f414aed078e"
+          },
+          {
+            "uuid": "4bc3695f-7789-476c-aca0-b1875e638935",
+            "hash": "sha256:9ea171b2d60a5194c15d718fb91d3d15f22f72a63949853a5e47007e96dd22b5"
+          },
+          {
+            "uuid": "53572bff-d161-48b8-a271-a8fc860b67b7",
+            "hash": "sha256:c16ca413dbed2b31c64705929feaf780836c984fb2a98d2e4d28f29b163c79ce"
+          },
+          {
+            "uuid": "918e29f0-09c6-41b9-985b-510aee10f98f",
+            "hash": "sha256:861a90e3d48f6923c66d1594ea05e3d15115bb722843030a7950e679b5258626"
+          },
+          {
+            "uuid": "a3f5cdd8-0983-4a22-883e-4cf66b23e519",
+            "hash": "sha256:fddf3051267a119c8fcc2fabca6c8319f097179a2733fa1bf73b13ac7e01c97d"
+          },
+          {
+            "uuid": "de67bdae-0bef-4286-957d-ec3a87655dfa",
+            "hash": "sha256:2c90c5bc0880e1b3f41ac316ce761076ac1e5a02c1c402d9e93cff84a891fdd3"
+          },
+          {
+            "uuid": "f0b051b2-3339-4de8-ab90-2b50cecb89d8",
+            "hash": "sha256:fa0dd3a870471d583d660c6aca5184801cfa405de57727f3a9cf8dc6947821b8"
+          },
+          {
+            "uuid": "f5c95e90-57d0-4109-a619-99a01a90cf54",
+            "hash": "sha256:ad65db14de7a2ab2db451f7be605329e7ff10413447e7677256729ab9c2e6045"
+          }
+        ],
+        "engine_distinction": {
+          "version": "2.0",
+          "canonical_powertrain": {
+            "electrification_type": "none",
+            "engine_aspiration": "turbocharged",
+            "engine_cylinders": 4,
+            "engine_displacement_liters": "2",
+            "fuel_type": "gasoline"
+          },
+          "peers": []
+        }
+      },
+      "candidate_snapshot": {
+        "envelope": {
+          "artifact_type": "rigarchive.candidate_configuration.v2",
+          "schema_version": "2.1.0",
+          "created_at": "2026-11-08T22:53:14.119739+00:00",
+          "generator": "RigArchive-CandidateConstruction/0.1.0"
+        },
+        "candidate_reference": "JL20-10",
+        "candidate_identity": {
+          "manufacturer_name": "Jeep",
+          "vehicle_model_name": "Wrangler",
+          "model_year": 2020,
+          "market": "US",
+          "trim_name": "Sport S"
+        },
+        "source_configuration_identities": [
+          {
+            "source_id": "FCA_MY2020_Wrangler_US_specs",
+            "identity_type": "record_id",
+            "native_identifier": "MY2020-US-specs",
+            "source_description": "FCA_MY2020_Wrangler_US_specs record_id MY2020-US-specs"
+          },
+          {
+            "source_id": "MY2020-JL-2D-2019-08-15",
+            "identity_type": "record_id",
+            "native_identifier": "JL20-10-MY2020-JL-2D-2019-08-15",
+            "source_description": "MY2020-JL-2D-2019-08-15 record_id JL20-10-MY2020-JL-2D-2019-08-15"
+          },
+          {
+            "source_id": "MY2020-JL-2D-2019-09-05",
+            "identity_type": "record_id",
+            "native_identifier": "JL20-10-MY2020-JL-2D-2019-09-05",
+            "source_description": "MY2020-JL-2D-2019-09-05 record_id JL20-10-MY2020-JL-2D-2019-09-05"
+          },
+          {
+            "source_id": "MY2020-JL-2D-2019-10-08",
+            "identity_type": "record_id",
+            "native_identifier": "JL20-10-MY2020-JL-2D-2019-10-08",
+            "source_description": "MY2020-JL-2D-2019-10-08 record_id JL20-10-MY2020-JL-2D-2019-10-08"
+          },
+          {
+            "source_id": "MY2020-JL-2D-2019-11-04",
+            "identity_type": "record_id",
+            "native_identifier": "JL20-10-MY2020-JL-2D-2019-11-04",
+            "source_description": "MY2020-JL-2D-2019-11-04 record_id JL20-10-MY2020-JL-2D-2019-11-04"
+          },
+          {
+            "source_id": "MY2020-JL-2D-2020-01-15",
+            "identity_type": "record_id",
+            "native_identifier": "JL20-10-MY2020-JL-2D-2020-01-15",
+            "source_description": "MY2020-JL-2D-2020-01-15 record_id JL20-10-MY2020-JL-2D-2020-01-15"
+          },
+          {
+            "source_id": "MY2020-JL-2D-2020-01-23",
+            "identity_type": "record_id",
+            "native_identifier": "JL20-10-MY2020-JL-2D-2020-01-23",
+            "source_description": "MY2020-JL-2D-2020-01-23 record_id JL20-10-MY2020-JL-2D-2020-01-23"
+          },
+          {
+            "source_id": "MY2020-JL-2D-2020-02-12",
+            "identity_type": "record_id",
+            "native_identifier": "JL20-10-MY2020-JL-2D-2020-02-12",
+            "source_description": "MY2020-JL-2D-2020-02-12 record_id JL20-10-MY2020-JL-2D-2020-02-12"
+          },
+          {
+            "source_id": "MY2020-JL-2D-2020-03-03",
+            "identity_type": "record_id",
+            "native_identifier": "JL20-10-MY2020-JL-2D-2020-03-03",
+            "source_description": "MY2020-JL-2D-2020-03-03 record_id JL20-10-MY2020-JL-2D-2020-03-03"
+          },
+          {
+            "source_id": "MY2020-JL-2D-2020-03-03",
+            "identity_type": "record_id",
+            "native_identifier": "JL20-10-engine",
+            "source_description": "MY2020-JL-2D-2020-03-03 record_id JL20-10-engine"
+          },
+          {
+            "source_id": "MY2020-JL-2D-2020-03-03",
+            "identity_type": "record_id",
+            "native_identifier": "JL20-10-heading",
+            "source_description": "MY2020-JL-2D-2020-03-03 record_id JL20-10-heading"
+          },
+          {
+            "source_id": "MY2020-JL-2D-2020-04-17",
+            "identity_type": "record_id",
+            "native_identifier": "JL20-10-MY2020-JL-2D-2020-04-17",
+            "source_description": "MY2020-JL-2D-2020-04-17 record_id JL20-10-MY2020-JL-2D-2020-04-17"
+          },
+          {
+            "source_id": "Mopar_MY2020_Wrangler_US_manual",
+            "identity_type": "record_id",
+            "native_identifier": "MY2020-manual-fuel-hardware",
+            "source_description": "Mopar_MY2020_Wrangler_US_manual record_id MY2020-manual-fuel-hardware"
+          }
+        ],
+        "normalized_assertions": [
+          {
+            "interpretation_id": "FCA_MY2020_Wrangler_US_specs|sha256:8ca6c22b9af4a87f33700b3a3455fa3fae9ea5799218f232cbbb1b31eabf8354|MY2020-US-specs|JL20-10-drive",
+            "source_assertion_ref": "FCA_MY2020_Wrangler_US_specs|sha256:8ca6c22b9af4a87f33700b3a3455fa3fae9ea5799218f232cbbb1b31eabf8354|MY2020-US-specs|layout",
+            "target_attribute_key": "generic_drive_classification",
+            "normalized_concept": "4WD",
+            "mapping_status": "mapped",
+            "normalization_notes": "Manufacturer US model layout, applicable to both bodies; no optional transfer-case permutation changes generic drive identity."
+          },
+          {
+            "interpretation_id": "MY2020-JL-2D-2020-03-03|sha256:1270871250ddbdad0fead362ba0df7e1516dd42ce51d37fc599c098f0bf81adc|JL20-10-MY2020-JL-2D-2020-03-03|JL20-10-trim",
+            "source_assertion_ref": "MY2020-JL-2D-2020-03-03|sha256:1270871250ddbdad0fead362ba0df7e1516dd42ce51d37fc599c098f0bf81adc|JL20-10-MY2020-JL-2D-2020-03-03|JL20-10-MY2020-JL-2D-2020-03-03-table",
+            "target_attribute_key": "trim",
+            "normalized_concept": "Sport S",
+            "mapping_status": "mapped",
+            "normalization_notes": "Proposed body-aware grade normalization from model heading plus marketed-grade column; High Altitude label remains explicitly review-required. QOP option is not independently treated as grade proof."
+          },
+          {
+            "interpretation_id": "MY2020-JL-2D-2020-03-03|sha256:1270871250ddbdad0fead362ba0df7e1516dd42ce51d37fc599c098f0bf81adc|JL20-10-engine|JL20-10-engine_aspiration",
+            "source_assertion_ref": "MY2020-JL-2D-2020-03-03|sha256:1270871250ddbdad0fead362ba0df7e1516dd42ce51d37fc599c098f0bf81adc|JL20-10-engine|JL20-10-engine",
+            "target_attribute_key": "engine_aspiration",
+            "normalized_concept": "turbocharged",
+            "mapping_status": "mapped",
+            "normalization_notes": "Direct source terminology normalized; gasoline family joined to exact guide engine displacement/code; no MY2019 human approval propagated."
+          },
+          {
+            "interpretation_id": "MY2020-JL-2D-2020-03-03|sha256:1270871250ddbdad0fead362ba0df7e1516dd42ce51d37fc599c098f0bf81adc|JL20-10-engine|JL20-10-engine_cylinders",
+            "source_assertion_ref": "MY2020-JL-2D-2020-03-03|sha256:1270871250ddbdad0fead362ba0df7e1516dd42ce51d37fc599c098f0bf81adc|JL20-10-engine|JL20-10-engine",
+            "target_attribute_key": "engine_cylinders",
+            "normalized_concept": 4,
+            "mapping_status": "mapped",
+            "normalization_notes": "Direct source terminology normalized; gasoline family joined to exact guide engine displacement/code; no MY2019 human approval propagated."
+          },
+          {
+            "interpretation_id": "MY2020-JL-2D-2020-03-03|sha256:1270871250ddbdad0fead362ba0df7e1516dd42ce51d37fc599c098f0bf81adc|JL20-10-engine|JL20-10-engine_displacement_liters",
+            "source_assertion_ref": "MY2020-JL-2D-2020-03-03|sha256:1270871250ddbdad0fead362ba0df7e1516dd42ce51d37fc599c098f0bf81adc|JL20-10-engine|JL20-10-engine",
+            "target_attribute_key": "engine_displacement_liters",
+            "normalized_concept": {
+              "normalized_value": "2",
+              "normalized_unit": "L",
+              "raw_source_string": "2.0L I4 DOHC DI TURBO                 N/C        N/C\nENGINE W/ ESS (EC1)"
+            },
+            "mapping_status": "mapped",
+            "normalization_notes": "Direct source terminology normalized; gasoline family joined to exact guide engine displacement/code; no MY2019 human approval propagated."
+          },
+          {
+            "interpretation_id": "MY2020-JL-2D-2020-03-03|sha256:1270871250ddbdad0fead362ba0df7e1516dd42ce51d37fc599c098f0bf81adc|JL20-10-heading|JL20-10-make",
+            "source_assertion_ref": "MY2020-JL-2D-2020-03-03|sha256:1270871250ddbdad0fead362ba0df7e1516dd42ce51d37fc599c098f0bf81adc|JL20-10-heading|JL20-10-heading",
+            "target_attribute_key": "make",
+            "normalized_concept": "Jeep",
+            "mapping_status": "mapped",
+            "normalization_notes": "Document first-page manufacturer/model/year/United States heading; market is independently sourced."
+          },
+          {
+            "interpretation_id": "MY2020-JL-2D-2020-03-03|sha256:1270871250ddbdad0fead362ba0df7e1516dd42ce51d37fc599c098f0bf81adc|JL20-10-heading|JL20-10-market",
+            "source_assertion_ref": "MY2020-JL-2D-2020-03-03|sha256:1270871250ddbdad0fead362ba0df7e1516dd42ce51d37fc599c098f0bf81adc|JL20-10-heading|JL20-10-heading",
+            "target_attribute_key": "market",
+            "normalized_concept": "US",
+            "mapping_status": "mapped",
+            "normalization_notes": "Document first-page manufacturer/model/year/United States heading; market is independently sourced."
+          },
+          {
+            "interpretation_id": "MY2020-JL-2D-2020-03-03|sha256:1270871250ddbdad0fead362ba0df7e1516dd42ce51d37fc599c098f0bf81adc|JL20-10-heading|JL20-10-model",
+            "source_assertion_ref": "MY2020-JL-2D-2020-03-03|sha256:1270871250ddbdad0fead362ba0df7e1516dd42ce51d37fc599c098f0bf81adc|JL20-10-heading|JL20-10-heading",
+            "target_attribute_key": "model",
+            "normalized_concept": "Wrangler",
+            "mapping_status": "mapped",
+            "normalization_notes": "Document first-page manufacturer/model/year/United States heading; market is independently sourced."
+          },
+          {
+            "interpretation_id": "MY2020-JL-2D-2020-03-03|sha256:1270871250ddbdad0fead362ba0df7e1516dd42ce51d37fc599c098f0bf81adc|JL20-10-heading|JL20-10-model_year",
+            "source_assertion_ref": "MY2020-JL-2D-2020-03-03|sha256:1270871250ddbdad0fead362ba0df7e1516dd42ce51d37fc599c098f0bf81adc|JL20-10-heading|JL20-10-heading",
+            "target_attribute_key": "model_year",
+            "normalized_concept": 2020,
+            "mapping_status": "mapped",
+            "normalization_notes": "Document first-page manufacturer/model/year/United States heading; market is independently sourced."
+          },
+          {
+            "interpretation_id": "Mopar_MY2020_Wrangler_US_manual|sha256:eccf53d564172144d82728cacc2b7f87210c2dd7af0a535e1df78f588a92cd92|MY2020-manual-fuel-hardware|JL20-10-fuel_type",
+            "source_assertion_ref": "Mopar_MY2020_Wrangler_US_manual|sha256:eccf53d564172144d82728cacc2b7f87210c2dd7af0a535e1df78f588a92cd92|MY2020-manual-fuel-hardware|fuel2",
+            "target_attribute_key": "fuel_type",
+            "normalized_concept": "gasoline",
+            "mapping_status": "mapped",
+            "normalization_notes": "Direct source terminology normalized; gasoline family joined to exact guide engine displacement/code; no MY2019 human approval propagated."
+          },
+          {
+            "interpretation_id": "human_classification_adjudication|sha256:c4b2053c680657f08f5b29dab0c3ceda0253bce48e3f2ded237c1fce0895d30d|sha256:d815fcef330500357ba9fe4227dbf153c2339a1efb5cb332e35f4bc2f3178688|electrification_type",
+            "source_assertion_ref": "human_classification_adjudication|sha256:c4b2053c680657f08f5b29dab0c3ceda0253bce48e3f2ded237c1fce0895d30d|sha256:d815fcef330500357ba9fe4227dbf153c2339a1efb5cb332e35f4bc2f3178688|electrification_type",
+            "target_attribute_key": "electrification_type",
+            "normalized_concept": "none",
+            "raw_source_value": {
+              "classification": "electrification_type",
+              "provenance": "human_adjudicated",
+              "value": "none"
+            },
+            "mapping_status": "mapped",
+            "normalization_notes": "Approved human-derived classification; not a direct manufacturer assertion. MY2020 US manual printed284–285 positively distinguishes 2.0L intercooler without MGU from with-MGU and battery-coolant architecture. The exact order-guide EC1/ESS offering is paired against distinct EC3/eTorque offerings. Proposed none joins the non-MGU variant to EC1; this code-to-hardware association is a bounded engineering conclusion, not a direct manufacturer assertion and not ESS terminology alone."
+          }
+        ],
+        "normalized_technical_details": {
+          "drivetrain_details": {
+            "generic_classification": "4WD"
+          },
+          "engine": {
+            "cylinders": 4,
+            "displacement": {
+              "normalized_value": "2",
+              "normalized_unit": "L",
+              "raw_source_string": "2.0L I4 DOHC DI TURBO                 N/C        N/C\nENGINE W/ ESS (EC1)"
+            }
+          }
+        },
+        "attribute_provenance": {
+          "electrification_type": [
+            "human_classification_adjudication|sha256:c4b2053c680657f08f5b29dab0c3ceda0253bce48e3f2ded237c1fce0895d30d|sha256:d815fcef330500357ba9fe4227dbf153c2339a1efb5cb332e35f4bc2f3178688|electrification_type"
+          ],
+          "engine_cylinders": [
+            "MY2020-JL-2D-2020-03-03|sha256:1270871250ddbdad0fead362ba0df7e1516dd42ce51d37fc599c098f0bf81adc|JL20-10-engine|JL20-10-engine_cylinders"
+          ],
+          "engine_displacement_liters": [
+            "MY2020-JL-2D-2020-03-03|sha256:1270871250ddbdad0fead362ba0df7e1516dd42ce51d37fc599c098f0bf81adc|JL20-10-engine|JL20-10-engine_displacement_liters"
+          ],
+          "generic_drive_classification": [
+            "FCA_MY2020_Wrangler_US_specs|sha256:8ca6c22b9af4a87f33700b3a3455fa3fae9ea5799218f232cbbb1b31eabf8354|MY2020-US-specs|JL20-10-drive"
+          ],
+          "make": [
+            "MY2020-JL-2D-2020-03-03|sha256:1270871250ddbdad0fead362ba0df7e1516dd42ce51d37fc599c098f0bf81adc|JL20-10-heading|JL20-10-make"
+          ],
+          "model": [
+            "MY2020-JL-2D-2020-03-03|sha256:1270871250ddbdad0fead362ba0df7e1516dd42ce51d37fc599c098f0bf81adc|JL20-10-heading|JL20-10-model"
+          ],
+          "model_year": [
+            "MY2020-JL-2D-2020-03-03|sha256:1270871250ddbdad0fead362ba0df7e1516dd42ce51d37fc599c098f0bf81adc|JL20-10-heading|JL20-10-model_year"
+          ]
+        },
+        "reconciliation_and_review": {
+          "requires_human_review": false,
+          "review_workflow_disposition": "not_required",
+          "attribute_states": {
+            "engine_cylinders": {
+              "reconciliation_state": "single_source",
+              "review_disposition": "not_required"
+            },
+            "engine_displacement_liters": {
+              "reconciliation_state": "single_source",
+              "review_disposition": "not_required"
+            },
+            "generic_drive_classification": {
+              "reconciliation_state": "single_source",
+              "review_disposition": "not_required"
+            },
+            "make": {
+              "reconciliation_state": "single_source",
+              "review_disposition": "not_required"
+            },
+            "model": {
+              "reconciliation_state": "single_source",
+              "review_disposition": "not_required"
+            },
+            "model_year": {
+              "reconciliation_state": "single_source",
+              "review_disposition": "not_required"
+            }
+          }
+        },
+        "evidence_raw_hashes": [
+          "sha256:06c2eaec0efb83c7d8ba5f773fd0be47e1e3ac2cba471b46da17d08fe54dc426",
+          "sha256:1270871250ddbdad0fead362ba0df7e1516dd42ce51d37fc599c098f0bf81adc",
+          "sha256:13b43d0e183acafafc50d3ab6edf74b030aaf0d15fd0ffd77b87f8e87949243f",
+          "sha256:24239a7e5037840a190003d888998522e522fe3406599bb019b00e05ffd67591",
+          "sha256:5e7855d90320a9cdcfe5569b46a74794d552161165a4278b1d68c8ffda8c02fa",
+          "sha256:75b13996335662290ed71506cb76772da71347e1151ecd4720e8e9b8bc44f848",
+          "sha256:8ca6c22b9af4a87f33700b3a3455fa3fae9ea5799218f232cbbb1b31eabf8354",
+          "sha256:94155d6e84f45028046435152baf9a5b76281977b24b66accc604112c2edd355",
+          "sha256:aebf9026be5c1b3a04c11ec4a037b7c5f423eacc875c22d909875f242e2d3fc2",
+          "sha256:c4b2053c680657f08f5b29dab0c3ceda0253bce48e3f2ded237c1fce0895d30d",
+          "sha256:e12a2f7f835f34bab14c1f7eb3d884aebbdbe547bc2dcdf8e606041062fb19ef",
+          "sha256:eccf53d564172144d82728cacc2b7f87210c2dd7af0a535e1df78f588a92cd92"
+        ],
+        "generation_evidence": [
+          {
+            "assertion_id": "JL20-10-MY2020-JL-2D-2019-08-15-model",
+            "assertion_set_id": "JL20-10-MY2020-JL-2D-2019-08-15",
+            "document_hash": "sha256:24239a7e5037840a190003d888998522e522fe3406599bb019b00e05ffd67591",
+            "identity_type": "model_code",
+            "native_identifier": "JLJL72",
+            "normalizer_id": "explicit_generation_identity",
+            "normalizer_version": "1.0.0",
+            "source_id": "MY2020-JL-2D-2019-08-15",
+            "source_namespace": "source_model_code"
+          },
+          {
+            "assertion_id": "JL20-10-MY2020-JL-2D-2019-09-05-model",
+            "assertion_set_id": "JL20-10-MY2020-JL-2D-2019-09-05",
+            "document_hash": "sha256:5e7855d90320a9cdcfe5569b46a74794d552161165a4278b1d68c8ffda8c02fa",
+            "identity_type": "model_code",
+            "native_identifier": "JLJL72",
+            "normalizer_id": "explicit_generation_identity",
+            "normalizer_version": "1.0.0",
+            "source_id": "MY2020-JL-2D-2019-09-05",
+            "source_namespace": "source_model_code"
+          },
+          {
+            "assertion_id": "JL20-10-MY2020-JL-2D-2019-10-08-model",
+            "assertion_set_id": "JL20-10-MY2020-JL-2D-2019-10-08",
+            "document_hash": "sha256:e12a2f7f835f34bab14c1f7eb3d884aebbdbe547bc2dcdf8e606041062fb19ef",
+            "identity_type": "model_code",
+            "native_identifier": "JLJL72",
+            "normalizer_id": "explicit_generation_identity",
+            "normalizer_version": "1.0.0",
+            "source_id": "MY2020-JL-2D-2019-10-08",
+            "source_namespace": "source_model_code"
+          },
+          {
+            "assertion_id": "JL20-10-MY2020-JL-2D-2019-11-04-model",
+            "assertion_set_id": "JL20-10-MY2020-JL-2D-2019-11-04",
+            "document_hash": "sha256:13b43d0e183acafafc50d3ab6edf74b030aaf0d15fd0ffd77b87f8e87949243f",
+            "identity_type": "model_code",
+            "native_identifier": "JLJL72",
+            "normalizer_id": "explicit_generation_identity",
+            "normalizer_version": "1.0.0",
+            "source_id": "MY2020-JL-2D-2019-11-04",
+            "source_namespace": "source_model_code"
+          },
+          {
+            "assertion_id": "JL20-10-MY2020-JL-2D-2020-01-15-model",
+            "assertion_set_id": "JL20-10-MY2020-JL-2D-2020-01-15",
+            "document_hash": "sha256:06c2eaec0efb83c7d8ba5f773fd0be47e1e3ac2cba471b46da17d08fe54dc426",
+            "identity_type": "model_code",
+            "native_identifier": "JLJL72",
+            "normalizer_id": "explicit_generation_identity",
+            "normalizer_version": "1.0.0",
+            "source_id": "MY2020-JL-2D-2020-01-15",
+            "source_namespace": "source_model_code"
+          },
+          {
+            "assertion_id": "JL20-10-MY2020-JL-2D-2020-01-23-model",
+            "assertion_set_id": "JL20-10-MY2020-JL-2D-2020-01-23",
+            "document_hash": "sha256:94155d6e84f45028046435152baf9a5b76281977b24b66accc604112c2edd355",
+            "identity_type": "model_code",
+            "native_identifier": "JLJL72",
+            "normalizer_id": "explicit_generation_identity",
+            "normalizer_version": "1.0.0",
+            "source_id": "MY2020-JL-2D-2020-01-23",
+            "source_namespace": "source_model_code"
+          },
+          {
+            "assertion_id": "JL20-10-MY2020-JL-2D-2020-02-12-model",
+            "assertion_set_id": "JL20-10-MY2020-JL-2D-2020-02-12",
+            "document_hash": "sha256:75b13996335662290ed71506cb76772da71347e1151ecd4720e8e9b8bc44f848",
+            "identity_type": "model_code",
+            "native_identifier": "JLJL72",
+            "normalizer_id": "explicit_generation_identity",
+            "normalizer_version": "1.0.0",
+            "source_id": "MY2020-JL-2D-2020-02-12",
+            "source_namespace": "source_model_code"
+          },
+          {
+            "assertion_id": "JL20-10-MY2020-JL-2D-2020-03-03-model",
+            "assertion_set_id": "JL20-10-MY2020-JL-2D-2020-03-03",
+            "document_hash": "sha256:1270871250ddbdad0fead362ba0df7e1516dd42ce51d37fc599c098f0bf81adc",
+            "identity_type": "model_code",
+            "native_identifier": "JLJL72",
+            "normalizer_id": "explicit_generation_identity",
+            "normalizer_version": "1.0.0",
+            "source_id": "MY2020-JL-2D-2020-03-03",
+            "source_namespace": "source_model_code"
+          },
+          {
+            "assertion_id": "JL20-10-MY2020-JL-2D-2020-04-17-model",
+            "assertion_set_id": "JL20-10-MY2020-JL-2D-2020-04-17",
+            "document_hash": "sha256:aebf9026be5c1b3a04c11ec4a037b7c5f423eacc875c22d909875f242e2d3fc2",
+            "identity_type": "model_code",
+            "native_identifier": "JLJL72",
+            "normalizer_id": "explicit_generation_identity",
+            "normalizer_version": "1.0.0",
+            "source_id": "MY2020-JL-2D-2020-04-17",
+            "source_namespace": "source_model_code"
+          },
+          {
+            "assertion_id": "model_code",
+            "assertion_set_id": "MY2020-JL-2D-2019-08-15-JLJL72-shared-selector-r1",
+            "document_hash": "sha256:24239a7e5037840a190003d888998522e522fe3406599bb019b00e05ffd67591",
+            "identity_type": "model_code",
+            "native_identifier": "JLJL72",
+            "normalizer_id": "explicit_generation_identity",
+            "normalizer_version": "1.0.0",
+            "source_id": "MY2020-JL-2D-2019-08-15",
+            "source_namespace": "source_model_code"
+          },
+          {
+            "assertion_id": "model_code",
+            "assertion_set_id": "MY2020-JL-2D-2019-09-05-JLJL72-shared-selector-r1",
+            "document_hash": "sha256:5e7855d90320a9cdcfe5569b46a74794d552161165a4278b1d68c8ffda8c02fa",
+            "identity_type": "model_code",
+            "native_identifier": "JLJL72",
+            "normalizer_id": "explicit_generation_identity",
+            "normalizer_version": "1.0.0",
+            "source_id": "MY2020-JL-2D-2019-09-05",
+            "source_namespace": "source_model_code"
+          },
+          {
+            "assertion_id": "model_code",
+            "assertion_set_id": "MY2020-JL-2D-2019-10-08-JLJL72-shared-selector-r1",
+            "document_hash": "sha256:e12a2f7f835f34bab14c1f7eb3d884aebbdbe547bc2dcdf8e606041062fb19ef",
+            "identity_type": "model_code",
+            "native_identifier": "JLJL72",
+            "normalizer_id": "explicit_generation_identity",
+            "normalizer_version": "1.0.0",
+            "source_id": "MY2020-JL-2D-2019-10-08",
+            "source_namespace": "source_model_code"
+          },
+          {
+            "assertion_id": "model_code",
+            "assertion_set_id": "MY2020-JL-2D-2019-11-04-JLJL72-shared-selector-r1",
+            "document_hash": "sha256:13b43d0e183acafafc50d3ab6edf74b030aaf0d15fd0ffd77b87f8e87949243f",
+            "identity_type": "model_code",
+            "native_identifier": "JLJL72",
+            "normalizer_id": "explicit_generation_identity",
+            "normalizer_version": "1.0.0",
+            "source_id": "MY2020-JL-2D-2019-11-04",
+            "source_namespace": "source_model_code"
+          },
+          {
+            "assertion_id": "model_code",
+            "assertion_set_id": "MY2020-JL-2D-2020-01-15-JLJL72-shared-selector-r1",
+            "document_hash": "sha256:06c2eaec0efb83c7d8ba5f773fd0be47e1e3ac2cba471b46da17d08fe54dc426",
+            "identity_type": "model_code",
+            "native_identifier": "JLJL72",
+            "normalizer_id": "explicit_generation_identity",
+            "normalizer_version": "1.0.0",
+            "source_id": "MY2020-JL-2D-2020-01-15",
+            "source_namespace": "source_model_code"
+          },
+          {
+            "assertion_id": "model_code",
+            "assertion_set_id": "MY2020-JL-2D-2020-01-23-JLJL72-shared-selector-r1",
+            "document_hash": "sha256:94155d6e84f45028046435152baf9a5b76281977b24b66accc604112c2edd355",
+            "identity_type": "model_code",
+            "native_identifier": "JLJL72",
+            "normalizer_id": "explicit_generation_identity",
+            "normalizer_version": "1.0.0",
+            "source_id": "MY2020-JL-2D-2020-01-23",
+            "source_namespace": "source_model_code"
+          },
+          {
+            "assertion_id": "model_code",
+            "assertion_set_id": "MY2020-JL-2D-2020-02-12-JLJL72-shared-selector-r1",
+            "document_hash": "sha256:75b13996335662290ed71506cb76772da71347e1151ecd4720e8e9b8bc44f848",
+            "identity_type": "model_code",
+            "native_identifier": "JLJL72",
+            "normalizer_id": "explicit_generation_identity",
+            "normalizer_version": "1.0.0",
+            "source_id": "MY2020-JL-2D-2020-02-12",
+            "source_namespace": "source_model_code"
+          },
+          {
+            "assertion_id": "model_code",
+            "assertion_set_id": "MY2020-JL-2D-2020-03-03-JLJL72-shared-selector-r1",
+            "document_hash": "sha256:1270871250ddbdad0fead362ba0df7e1516dd42ce51d37fc599c098f0bf81adc",
+            "identity_type": "model_code",
+            "native_identifier": "JLJL72",
+            "normalizer_id": "explicit_generation_identity",
+            "normalizer_version": "1.0.0",
+            "source_id": "MY2020-JL-2D-2020-03-03",
+            "source_namespace": "source_model_code"
+          },
+          {
+            "assertion_id": "model_code",
+            "assertion_set_id": "MY2020-JL-2D-2020-04-17-JLJL72-shared-selector-r1",
+            "document_hash": "sha256:aebf9026be5c1b3a04c11ec4a037b7c5f423eacc875c22d909875f242e2d3fc2",
+            "identity_type": "model_code",
+            "native_identifier": "JLJL72",
+            "normalizer_id": "explicit_generation_identity",
+            "normalizer_version": "1.0.0",
+            "source_id": "MY2020-JL-2D-2020-04-17",
+            "source_namespace": "source_model_code"
+          }
+        ],
+        "evidence_documents": [
+          {
+            "assertion_set_id": "JL20-10-MY2020-JL-2D-2019-08-15",
+            "assertions": [
+              {
+                "assertion_id": "JL20-10-MY2020-JL-2D-2019-08-15-table",
+                "attribute_key": "factory_powertrain_table",
+                "raw_value": "ENGINE                               $FWP      $MSRP    TRANSMISSION                    $FWP      $MSRP               SPORT                     SPORT S             BLACK AND TAN\n3.6L V6 24V VVT ENGINE UPG            N/C        N/C    6-SPEED MANUAL                   N/C        N/C           23B               23S               23D\nI W/ESS (ERC)                                           TRANSMISSION (DEM)\n                                                        8-SPD AUTO 850RE                2,225      2,500          24B               24S               24D\n                                                        TRANS (MAKE) (DFT)\n2.0L I4 DOHC DI TURBO                 N/C        N/C    8-SPD AUTO 850RE                1,335      1,500          22B               22S               22D\nENGINE W/ ESS (EC1)                                     TRANS (MAKE) (DFT)",
+                "source_context": "PDF page 2; model JLJL72; selected grade Sport S; QOP 22S; normalization is not a verbatim manufacturer trim assertion"
+              },
+              {
+                "assertion_id": "JL20-10-MY2020-JL-2D-2019-08-15-model",
+                "attribute_key": "source_model_code",
+                "raw_value": "JLJL72",
+                "source_context": "PDF page 2; printed model heading"
+              }
+            ],
+            "extraction_mode": "source_specific_parser",
+            "extractor_id": "pypdf",
+            "extractor_version": "6.16.1",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": null,
+            "raw_artifact_hash": "sha256:24239a7e5037840a190003d888998522e522fe3406599bb019b00e05ffd67591",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2020_JL_2_door_08_15_2019.pdf",
+            "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+            "source_applicability": {
+              "applicability_basis": "US model-year guide/manual applicability; engine-family joins explicitly scoped",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": "US",
+              "unknown_fields": {}
+            },
+            "source_id": "MY2020-JL-2D-2019-08-15",
+            "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2020_jl_2_door_08_15_2019-pdf.215559/"
+          },
+          {
+            "assertion_set_id": "JL20-10-MY2020-JL-2D-2019-09-05",
+            "assertions": [
+              {
+                "assertion_id": "JL20-10-MY2020-JL-2D-2019-09-05-table",
+                "attribute_key": "factory_powertrain_table",
+                "raw_value": "ENGINE                                $FWP       $MSRP    TRANSMISSION                     $FWP      $MSRP          SPORT            SPORT SBLACK AND\n                                                                                                                                               TAN                WILLYS\n3.6L V6 24V VVT ENGINE UPG             N/C        N/C     6-SPEED MANUAL                    N/C        N/C         23B           23S           23D           23W\nI W/ESS (ERC)                                             TRANSMISSION (DEM)\n                                                          8-SPD AUTO 850RE                 2,225      2,500        24B           24S           24D           24W\n                                                          TRANS (MAKE) (DFT)\n2.0L I4 DOHC DI TURBO                  N/C        N/C     8-SPD AUTO 850RE                 1,335      1,500        22B           22S           22D           22W\nENGINE W/ ESS (EC1)                                       TRANS (MAKE) (DFT)",
+                "source_context": "PDF page 2; model JLJL72; selected grade Sport S; QOP 22S; normalization is not a verbatim manufacturer trim assertion"
+              },
+              {
+                "assertion_id": "JL20-10-MY2020-JL-2D-2019-09-05-model",
+                "attribute_key": "source_model_code",
+                "raw_value": "JLJL72",
+                "source_context": "PDF page 2; printed model heading"
+              }
+            ],
+            "extraction_mode": "source_specific_parser",
+            "extractor_id": "pypdf",
+            "extractor_version": "6.16.1",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": null,
+            "raw_artifact_hash": "sha256:5e7855d90320a9cdcfe5569b46a74794d552161165a4278b1d68c8ffda8c02fa",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2 Door 9-5-19.pdf",
+            "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+            "source_applicability": {
+              "applicability_basis": "US model-year guide/manual applicability; engine-family joins explicitly scoped",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": "US",
+              "unknown_fields": {}
+            },
+            "source_id": "MY2020-JL-2D-2019-09-05",
+            "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2-door-9-5-19-pdf.227937/"
+          },
+          {
+            "assertion_set_id": "JL20-10-MY2020-JL-2D-2019-10-08",
+            "assertions": [
+              {
+                "assertion_id": "JL20-10-MY2020-JL-2D-2019-10-08-table",
+                "attribute_key": "factory_powertrain_table",
+                "raw_value": "ENGINE                                $FWP      $MSRP     TRANSMISSION                    $FWP       $MSRP        SPORT       SPORT SBLACK AND\n                                                                                                                                        TAN           WILLYS     FREEDOM\n3.6L V6 24V VVT ENGINE UPG             N/C        N/C     6-SPEED MANUAL                   N/C        N/C        23B        23S        23D        23W         23F\nI W/ESS (ERC)                                             TRANSMISSION (DEM)\n                                                          8-SPD AUTO 850RE                2,448      2,750       24B        24S        24D        24W         24F\n                                                          TRANS (MAKE) (DFT)\n2.0L I4 DOHC DI TURBO                  N/C        N/C     8-SPD AUTO 850RE                1,335      1,500       22B        22S        22D        22W         22F\nENGINE W/ ESS (EC1)                                       TRANS (MAKE) (DFT)",
+                "source_context": "PDF page 2; model JLJL72; selected grade Sport S; QOP 22S; normalization is not a verbatim manufacturer trim assertion"
+              },
+              {
+                "assertion_id": "JL20-10-MY2020-JL-2D-2019-10-08-model",
+                "attribute_key": "source_model_code",
+                "raw_value": "JLJL72",
+                "source_context": "PDF page 2; printed model heading"
+              }
+            ],
+            "extraction_mode": "source_specific_parser",
+            "extractor_id": "pypdf",
+            "extractor_version": "6.16.1",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": null,
+            "raw_artifact_hash": "sha256:e12a2f7f835f34bab14c1f7eb3d884aebbdbe547bc2dcdf8e606041062fb19ef",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2 Door 10-8-19.pdf",
+            "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+            "source_applicability": {
+              "applicability_basis": "US model-year guide/manual applicability; engine-family joins explicitly scoped",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": "US",
+              "unknown_fields": {}
+            },
+            "source_id": "MY2020-JL-2D-2019-10-08",
+            "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2-door-10-8-19-pdf.239598/"
+          },
+          {
+            "assertion_set_id": "JL20-10-MY2020-JL-2D-2019-11-04",
+            "assertions": [
+              {
+                "assertion_id": "JL20-10-MY2020-JL-2D-2019-11-04-table",
+                "attribute_key": "factory_powertrain_table",
+                "raw_value": "ENGINE                                $FWP      $MSRP    TRANSMISSION                    $FWP       $MSRP      SPORT   WILLYS            BLACK\n                                                                                                                       SPORT   SPORT S  AND TAN   WILLYS  FREEDOM\n3.6L V6 24V VVT ENGINE UPG            N/C        N/C     6-SPEED MANUAL                   N/C        N/C       23B      23K      23S      23D      23W       23F\nI W/ESS (ERC)                                            TRANSMISSION (DEM)\n                                                         8-SPD AUTO 850RE                2,448      2,750      24B      24K      24S      24D      24W       24F\n                                                         TRANS (MAKE) (DFT)\n2.0L I4 DOHC DI TURBO                 N/C        N/C     8-SPD AUTO 850RE                1,335      1,500      22B      22K      22S      22D      22W       22F\nENGINE W/ ESS (EC1)                                      TRANS (MAKE) (DFT)",
+                "source_context": "PDF page 2; model JLJL72; selected grade Sport S; QOP 22S; normalization is not a verbatim manufacturer trim assertion"
+              },
+              {
+                "assertion_id": "JL20-10-MY2020-JL-2D-2019-11-04-model",
+                "attribute_key": "source_model_code",
+                "raw_value": "JLJL72",
+                "source_context": "PDF page 2; printed model heading"
+              }
+            ],
+            "extraction_mode": "source_specific_parser",
+            "extractor_id": "pypdf",
+            "extractor_version": "6.16.1",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": null,
+            "raw_artifact_hash": "sha256:13b43d0e183acafafc50d3ab6edf74b030aaf0d15fd0ffd77b87f8e87949243f",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2 Door 11-4-19.pdf",
+            "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+            "source_applicability": {
+              "applicability_basis": "US model-year guide/manual applicability; engine-family joins explicitly scoped",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": "US",
+              "unknown_fields": {}
+            },
+            "source_id": "MY2020-JL-2D-2019-11-04",
+            "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2-door-11-4-19-pdf.255143/"
+          },
+          {
+            "assertion_set_id": "JL20-10-MY2020-JL-2D-2020-01-15",
+            "assertions": [
+              {
+                "assertion_id": "JL20-10-MY2020-JL-2D-2020-01-15-table",
+                "attribute_key": "factory_powertrain_table",
+                "raw_value": "ENGINE                                $FWP      $MSRP    TRANSMISSION                    $FWP       $MSRP      SPORT   WILLYS            BLACK\n                                                                                                                       SPORT   SPORT S  AND TAN   WILLYS  FREEDOM\n3.6L V6 24V VVT ENGINE UPG            N/C        N/C     6-SPEED MANUAL                   N/C        N/C       23B      23K      23S      23D      23W       23F\nI W/ESS (ERC)                                            TRANSMISSION (DEM)\n                                                         8-SPD AUTO 850RE                2,448      2,750      24B      24K      24S      24D      24W       24F\n                                                         TRANS (MAKE) (DFT)\n2.0L I4 DOHC DI TURBO                 N/C        N/C     8-SPD AUTO 850RE                2,448      2,750      22B      22K      22S      22D      22W       22F\nENGINE W/ ESS (EC1)                                      TRANS (MAKE) (DFT)",
+                "source_context": "PDF page 2; model JLJL72; selected grade Sport S; QOP 22S; normalization is not a verbatim manufacturer trim assertion"
+              },
+              {
+                "assertion_id": "JL20-10-MY2020-JL-2D-2020-01-15-model",
+                "attribute_key": "source_model_code",
+                "raw_value": "JLJL72",
+                "source_context": "PDF page 2; printed model heading"
+              }
+            ],
+            "extraction_mode": "source_specific_parser",
+            "extractor_id": "pypdf",
+            "extractor_version": "6.16.1",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": null,
+            "raw_artifact_hash": "sha256:06c2eaec0efb83c7d8ba5f773fd0be47e1e3ac2cba471b46da17d08fe54dc426",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2 Door 1-15-20.pdf",
+            "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+            "source_applicability": {
+              "applicability_basis": "US model-year guide/manual applicability; engine-family joins explicitly scoped",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": "US",
+              "unknown_fields": {}
+            },
+            "source_id": "MY2020-JL-2D-2020-01-15",
+            "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2-door-1-15-20-pdf.272500/"
+          },
+          {
+            "assertion_set_id": "JL20-10-MY2020-JL-2D-2020-01-23",
+            "assertions": [
+              {
+                "assertion_id": "JL20-10-MY2020-JL-2D-2020-01-23-table",
+                "attribute_key": "factory_powertrain_table",
+                "raw_value": "ENGINE                                $FWP      $MSRP    TRANSMISSION                    $FWP       $MSRP      SPORT   WILLYS            BLACK\n                                                                                                                       SPORT   SPORT S  AND TAN   WILLYS  FREEDOM\n3.6L V6 24V VVT ENGINE UPG            N/C        N/C     6-SPEED MANUAL                   N/C        N/C       23B      23K      23S      23D      23W       23F\nI W/ESS (ERC)                                            TRANSMISSION (DEM)\n                                                         8-SPD AUTO 850RE                2,448      2,750      24B      24K      24S      24D      24W       24F\n                                                         TRANS (MAKE) (DFT)\n2.0L I4 DOHC DI TURBO                 N/C        N/C     8-SPD AUTO 850RE                1,335      1,500      22B      22K      22S      22D      22W       22F\nENGINE W/ ESS (EC1)                                      TRANS (MAKE) (DFT)",
+                "source_context": "PDF page 2; model JLJL72; selected grade Sport S; QOP 22S; normalization is not a verbatim manufacturer trim assertion"
+              },
+              {
+                "assertion_id": "JL20-10-MY2020-JL-2D-2020-01-23-model",
+                "attribute_key": "source_model_code",
+                "raw_value": "JLJL72",
+                "source_context": "PDF page 2; printed model heading"
+              }
+            ],
+            "extraction_mode": "source_specific_parser",
+            "extractor_id": "pypdf",
+            "extractor_version": "6.16.1",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": null,
+            "raw_artifact_hash": "sha256:94155d6e84f45028046435152baf9a5b76281977b24b66accc604112c2edd355",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2 Door 1-23-20.pdf",
+            "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+            "source_applicability": {
+              "applicability_basis": "US model-year guide/manual applicability; engine-family joins explicitly scoped",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": "US",
+              "unknown_fields": {}
+            },
+            "source_id": "MY2020-JL-2D-2020-01-23",
+            "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2-door-1-23-20-pdf.275369/"
+          },
+          {
+            "assertion_set_id": "JL20-10-MY2020-JL-2D-2020-02-12",
+            "assertions": [
+              {
+                "assertion_id": "JL20-10-MY2020-JL-2D-2020-02-12-table",
+                "attribute_key": "factory_powertrain_table",
+                "raw_value": "ENGINE                                $FWP      $MSRP    TRANSMISSION                    $FWP       $MSRP      SPORT   WILLYS            BLACK\n                                                                                                                       SPORT   SPORT S  AND TAN   WILLYS  FREEDOM\n3.6L V6 24V VVT ENGINE UPG            N/C        N/C     6-SPEED MANUAL                   N/C        N/C       23B      23K      23S      23D      23W       23F\nI W/ESS (ERC)                                            TRANSMISSION (DEM)\n                                                         8-SPD AUTO 850RE                2,448      2,750      24B      24K      24S      24D      24W       24F\n                                                         TRANS (MAKE) (DFT)\n2.0L I4 DOHC DI TURBO                 N/C        N/C     8-SPD AUTO 850RE                1,335      1,500      22B      22K      22S      22D      22W       22F\nENGINE W/ ESS (EC1)                                      TRANS (MAKE) (DFT)",
+                "source_context": "PDF page 2; model JLJL72; selected grade Sport S; QOP 22S; normalization is not a verbatim manufacturer trim assertion"
+              },
+              {
+                "assertion_id": "JL20-10-MY2020-JL-2D-2020-02-12-model",
+                "attribute_key": "source_model_code",
+                "raw_value": "JLJL72",
+                "source_context": "PDF page 2; printed model heading"
+              }
+            ],
+            "extraction_mode": "source_specific_parser",
+            "extractor_id": "pypdf",
+            "extractor_version": "6.16.1",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": null,
+            "raw_artifact_hash": "sha256:75b13996335662290ed71506cb76772da71347e1151ecd4720e8e9b8bc44f848",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2 Door 2-12-20.pdf",
+            "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+            "source_applicability": {
+              "applicability_basis": "US model-year guide/manual applicability; engine-family joins explicitly scoped",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": "US",
+              "unknown_fields": {}
+            },
+            "source_id": "MY2020-JL-2D-2020-02-12",
+            "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2-door-2-12-20-pdf.281244/"
+          },
+          {
+            "assertion_set_id": "JL20-10-MY2020-JL-2D-2020-03-03",
+            "assertions": [
+              {
+                "assertion_id": "JL20-10-MY2020-JL-2D-2020-03-03-table",
+                "attribute_key": "factory_powertrain_table",
+                "raw_value": "ENGINE                                $FWP      $MSRP    TRANSMISSION                    $FWP       $MSRP      SPORT   WILLYS            BLACK\n                                                                                                                       SPORT   SPORT S  AND TAN   WILLYS  FREEDOM\n3.6L V6 24V VVT ENGINE UPG            N/C        N/C     6-SPEED MANUAL                   N/C        N/C       23B      23K      23S      23D      23W       23F\nI W/ESS (ERC)                                            TRANSMISSION (DEM)\n                                                         8-SPD AUTO 850RE                2,475      2,750      24B      24K      24S      24D      24W       24F\n                                                         TRANS (MAKE) (DFT)\n2.0L I4 DOHC DI TURBO                 N/C        N/C     8-SPD AUTO 850RE                1,350      1,500      22B      22K      22S      22D      22W       22F\nENGINE W/ ESS (EC1)                                      TRANS (MAKE) (DFT)",
+                "source_context": "PDF page 2; model JLJL72; selected grade Sport S; QOP 22S; normalization is not a verbatim manufacturer trim assertion"
+              },
+              {
+                "assertion_id": "JL20-10-MY2020-JL-2D-2020-03-03-model",
+                "attribute_key": "source_model_code",
+                "raw_value": "JLJL72",
+                "source_context": "PDF page 2; printed model heading"
+              }
+            ],
+            "extraction_mode": "source_specific_parser",
+            "extractor_id": "pypdf",
+            "extractor_version": "6.16.1",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": null,
+            "raw_artifact_hash": "sha256:1270871250ddbdad0fead362ba0df7e1516dd42ce51d37fc599c098f0bf81adc",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2 Door 3-3-20.pdf",
+            "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+            "source_applicability": {
+              "applicability_basis": "US model-year guide/manual applicability; engine-family joins explicitly scoped",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": "US",
+              "unknown_fields": {}
+            },
+            "source_id": "MY2020-JL-2D-2020-03-03",
+            "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2-door-3-3-20-pdf.288455/"
+          },
+          {
+            "assertion_set_id": "JL20-10-MY2020-JL-2D-2020-04-17",
+            "assertions": [
+              {
+                "assertion_id": "JL20-10-MY2020-JL-2D-2020-04-17-table",
+                "attribute_key": "factory_powertrain_table",
+                "raw_value": "ENGINE                              $FWP      $MSRP    TRANSMISSION                   $FWP      $MSRP        SPORT   WILLYS\n                                                                                                                      SPORT       SPORT S      WILLYS     FREEDOM\n3.6L V6 24V VVT ENGINE UPG           N/C        N/C    6-SPEED MANUAL                  N/C        N/C       23B       23K        23S       23W        23F\nI W/ESS (ERC)                                          TRANSMISSION (DEM)\n                                                       8-SPD AUTO 850RE               2,475      2,750      24B       24K        24S       24W        24F\n                                                       TRANS (MAKE) (DFT)\n2.0L I4 DOHC DI TURBO                N/C        N/C    8-SPD AUTO 850RE               1,350      1,500      22B       22K        22S       22W        22F\nENGINE W/ ESS (EC1)                                    TRANS (MAKE) (DFT)\n\n                                                                                                                     WILLYS",
+                "source_context": "PDF page 2; model JLJL72; selected grade Sport S; QOP 22S; normalization is not a verbatim manufacturer trim assertion"
+              },
+              {
+                "assertion_id": "JL20-10-MY2020-JL-2D-2020-04-17-model",
+                "attribute_key": "source_model_code",
+                "raw_value": "JLJL72",
+                "source_context": "PDF page 2; printed model heading"
+              }
+            ],
+            "extraction_mode": "source_specific_parser",
+            "extractor_id": "pypdf",
+            "extractor_version": "6.16.1",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": null,
+            "raw_artifact_hash": "sha256:aebf9026be5c1b3a04c11ec4a037b7c5f423eacc875c22d909875f242e2d3fc2",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2 Door 4-17-20.pdf",
+            "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+            "source_applicability": {
+              "applicability_basis": "US model-year guide/manual applicability; engine-family joins explicitly scoped",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": "US",
+              "unknown_fields": {}
+            },
+            "source_id": "MY2020-JL-2D-2020-04-17",
+            "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2-door-4-17-20-pdf.312615/"
+          },
+          {
+            "assertion_set_id": "JL20-10-engine",
+            "assertions": [
+              {
+                "assertion_id": "JL20-10-engine",
+                "attribute_key": "engine_descriptor",
+                "raw_value": "2.0L I4 DOHC DI TURBO                 N/C        N/C\nENGINE W/ ESS (EC1)",
+                "source_context": "PDF page 2; JLJL72; QOP 22S; exact engine table segment"
+              }
+            ],
+            "extraction_mode": "source_specific_parser",
+            "extractor_id": "pypdf",
+            "extractor_version": "6.16.1",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": null,
+            "raw_artifact_hash": "sha256:1270871250ddbdad0fead362ba0df7e1516dd42ce51d37fc599c098f0bf81adc",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2 Door 3-3-20.pdf",
+            "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+            "source_applicability": {
+              "applicability_basis": "US model-year guide/manual applicability; engine-family joins explicitly scoped",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": "US",
+              "unknown_fields": {}
+            },
+            "source_id": "MY2020-JL-2D-2020-03-03",
+            "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2-door-3-3-20-pdf.288455/"
+          },
+          {
+            "assertion_set_id": "MY2020-manual-fuel-hardware",
+            "assertions": [
+              {
+                "assertion_id": "fuel2",
+                "attribute_key": "fuel_requirements",
+                "raw_value": "\nThis engine is designed to meet all emission \nrequirements, and provide satisfactory fuel \neconomy and performance, when using \nhigh-quality unleaded “regular” gasoline having \nan octane rating of 87, as specified by the (R+M)/\n2 method. The use of 91 or higher octane “premium” \ngasoline will allow these engines to operate to optimal \nperformance. This increase in performance is most \nnoticeable in hot weather or other heavier load conditions, \nsuch as while towing.\nWhile operating on gasoline with the required octane \nnumber, hearing a light knocking sound from the engine is \nnot a cause for concern. However, if the engine is heard \nmaking a heavy knocking sound, see your dealer \nimmediately. Use of gasoline with a lower than \nrecommended octane number can cause engine failure \nand may void or not be covered by the New Vehicle Limited \nWarranty.\nPoor quality gasoline can cause problems such as hard \nstarting, stalling, and hesitations. If you experience these \nsymptoms, try another brand of gasoline before \nconsidering service for the vehicle.\n",
+                "source_context": "PDF page284 / printed282, 2.0L ENGINE"
+              },
+              {
+                "assertion_id": "fuel36",
+                "attribute_key": "fuel_requirements",
+                "raw_value": "\nThis engine is designed to meet all emissions \nregulations and provide satisfactory fuel \neconomy and performance when using \nhigh-quality unleaded “Regular” gasoline \nhaving an octane rating of 87 as specified by the (R+M)/\n2 method. The use of higher octane “Premium” gasoline \nwill not provide any benefit over “Regular” gasoline in \nthese engines.\nWhile operating on gasoline with an octane number of 87, \nhearing a light knocking sound from the engine is not a \ncause for concern. However, if the engine is heard making \na heavy knocking sound, see your dealer immediately. Use \nof gasoline with an octane number lower than 87 can \ncause engine failure and may void or not be covered by the \nNew Vehicle Limited Warranty.\nPoor quality gasoline can cause problems such as hard \nstarting, stalling, and hesitations. If you experience these \nsymptoms, try another brand of gasoline before \nconsidering service for the vehicle.\n",
+                "source_context": "PDF page284 / printed282, 3.6L ENGINE"
+              },
+              {
+                "assertion_id": "hardware",
+                "attribute_key": "engine_hardware",
+                "raw_value": "284 TECHNICAL SPECIFICATIONS  \nFUEL SYSTEM CAUTIONS\nNOTE:\nIntentional tampering with the emissions control system can result in civil penalties being assessed against you.\nFLUID CAPACITIES    \nCAUTION!\nFollow these guidelines to maintain your vehicle’s performance:\n The use of leaded gasoline is prohibited by Federal law. Using leaded gasoline can impair engine performance and damage the emissions control system.\n An out-of-tune engine or certain fuel or ignition malfunctions can cause the catalytic converter to overheat. If you notice a pungent burning odor or some light smoke, your engine \nmay be out of tune or malfunctioning and may require immediate service. Contact an authorized dealer for service assistance.\n The use of fuel additives, which are now being sold as octane enhancers, is not recommended. Most of these products contain high concentrations of methanol. Fuel system \ndamage or vehicle performance problems resulting from the use of such fuels or additives is not the responsibility of the manufacturer and may void or not be covered under the \nNew Vehicle Limited Warranty.\nUS Metric\nFuel (Approximate)\nTwo Door Models 17.5 Gallons 66 Liters\nFour Door Models 21.5 Gallons 81 Liters\nEngine Oil with Filter\n2.0L Engine 5 Quarts 4.73 Liters\n3.6L Engine 5 Quarts 4.73 Liters\nCooling System *\n2.0L Engine (Mopar Antifreeze/Engine Coolant 10 Year/150,000 Mile (240,000 km) Formula or equivalent) 10.3 Quarts 9.7 Liters\n2.0L Engine Intercooler without Motor Generator Unit (MGU) (Mopar Antifreeze/Engine Coolant 10 Year/\n150,000 Mile (240,000 km) Formula or equivalent) 3.2 Quarts 3.0 Liters\n20_JL_OM_EN_USC_t.book  Page 284  \nTECHNICAL SPECIFICATIONS 285\nFLUIDS AND LUBRICANTS\nENGINE     \n2.0L Engine Intercooler with Motor Generator Unit (MGU) (Mopar Antifreeze/Engine Coolant 10 Year/\n150,000 Mile (240,000 km) Formula or equivalent) 3.5 Quarts 3.3 Liters\n2.0L Battery Coolant (Mopar Antifreeze/Engine Coolant 10 Year/150,000 Mile (240,000 km) Formula or \nequivalent) 2.5 Quarts 2.4 Liters\n3.6L Engine (Mopar Antifreeze/Engine Coolant 10 Year/150,000 Mile (240,000 km) Formula or equivalent) 11.2 Quarts 10.6 Liters\n3.6L Motor Generator Unit (MGU) (Mopar Antifreeze/Engine Coolant 10 Year/150,000 Mile (240,000 km) \nFormula or equivalent) 1.9 Quarts 1.8 Liters\n3.6L Battery Coolant (Mopar Antifreeze/Engine Coolant 10 Year/150,000 Mile (240,000 km) Formula or \nequivalent) 2.5 Quarts 2.4 Liters\n* Includes coolant recovery bottle filled to MAX level.\nUS Metric\nComponent Fluid, Lubricant, or Genuine Part\nEngine Coolant\nWe recommend you use Mopar Antifreeze/Coolant 10 Year/150,000 Mile (240,000 km) \nFormula OAT (Organic Additive Technology) or equivalent meeting the requirements of \nFCA Material Standard MS.90032.\nIntercooler/Motor Generator Unit (if equipped)\nWe recommend you use Mopar Antifreeze/Coolant 10 Year/150,000 Mile (240,000 km) \nFormula OAT (Organic Additive Technology) or equivalent meeting the requirements of \nFCA Material Standard MS.90032.\nBattery Coolant (if equipped)\nWe recommend you use Mopar Antifreeze/Coolant 10 Year/150,000 Mile (240,000 km) \nFormula OAT (Organic Additive Technology) or equivalent meeting the requirements of \nFCA Material Standard MS.90032.\n8\n20_JL_OM_EN_USC_t.book  Page 285  \n286 TECHNICAL SPECIFICATIONS  \nEngine Oil — 2.0L Engine\nWe recommend you use Mopar API SN PLUS Certified SAE 5W-30 Full Synthetic Engine \nOil which meets the requirements of FCA Material Standard MS-13340. Equivalent full \nsynthetic SAE 5W-30 engine oil can be used if it meets API SN PLUS Certification. If SN \nPLUS or equivalent oil is unavailable then please contact your local dealership for \nrecommendation.\nCAUTION!\nFailure to use the recommended SN PLUS or equivalent oil can cause engine damage \nnot covered by the vehicle warranty.\nEngine Oil — 3.6L Engine\nWe recommend you use API Certified SAE 0W-20 Engine Oil, meeting the requirements of \nFCA Material Standard MS-6395 such as Mopar, Pennzoil, and Shell Helix. Refer to your \nengine oil filler cap for correct SAE grade.\nEngine Oil Filter We recommend you use Mopar Engine Oil Filter or equivalent.\nSpark Plugs We recommend you use Mopar Spark Plugs.\nFuel Selection — 2.0L Engine 87 Octane (R+M)/2 Method, 0-15% Ethanol.\nFuel Selection — 3.6L Engine 87 Octane (R+M)/2 Method, 0-15% Ethanol.\nComponent Fluid, Lubricant, or Genuine Part\nCAUTION!\n Mixing of engine coolant (antifreeze) other than specified Organic Additive Technology (OAT) engine coolant (antifreeze), may result in engine damage and may decrease corrosion \nprotection. Organic Additive Technology (OAT) engine coolant is different and should not be mixed with Hybrid Organic Additive Technology (HOAT) engine coolant (antifreeze) or \nany “globally compatible” coolant (antifreeze). If a non-OAT engine coolant (antifreeze) is introduced into the cooling system in an emergency, the cooling system will need to be \ndrained, flushed, and refilled with fresh OAT coolant (conforming to MS.90032), by an authorized dealer as soon as possible.\n Do not use water alone or alcohol-based engine coolant (antifreeze) products. Do not use additional rust inhibitors or antirust products, as they may not be compatible with the \nradiator engine coolant and may plug the radiator.\n This vehicle has not been designed for use with propylene glycol-based engine coolant (antifreeze). Use of propylene glycol-based engine coolant (antifreeze) is not recommended.\n20_JL_OM_EN_USC_t.book  Page 286  ",
+                "source_context": "PDF pages286–288; cooling system and underhood drawings; applicability must not be inferred beyond each caption"
+              }
+            ],
+            "extraction_mode": "source_specific_parser",
+            "extractor_id": "pypdf",
+            "extractor_version": "6.16.1",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": null,
+            "raw_artifact_hash": "sha256:eccf53d564172144d82728cacc2b7f87210c2dd7af0a535e1df78f588a92cd92",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/evidence/Mopar_MY2020_Wrangler_US_owners_manual.pdf",
+            "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+            "source_applicability": {
+              "applicability_basis": "US model-year guide/manual applicability; engine-family joins explicitly scoped",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": "US",
+              "unknown_fields": {}
+            },
+            "source_id": "Mopar_MY2020_Wrangler_US_manual",
+            "source_locator": "https://vehicleinfo.mopar.com/assets/publications/en-us/Jeep/2020/Wrangler/P138305_20_JL_OM_EN_USC_DIGITAL.pdf"
+          },
+          {
+            "assertion_set_id": "MY2020-US-specs",
+            "assertions": [
+              {
+                "assertion_id": "layout",
+                "attribute_key": "generic_drive_classification",
+                "raw_value": "Longitudinal front engine, four-wheel drive",
+                "source_context": "PDF page1, BODY/CHASSIS Layout"
+              },
+              {
+                "assertion_id": "pentastar",
+                "attribute_key": "manufacturer_powertrain_description",
+                "raw_value": "NEW 2020  JEEP  WRANGLER ECODIESEL  | SPECIFICATIONS  http://media.fcanorthamerica.com  |  1  \n \n2020 Jeep Wrangler \nSPECIFICATIONS  \n \nSpecifications are based on the latest product information available at the time of publication.  \nAll dimensions are in inches (millimeters) unless otherwise noted.  \nAll dimensions measured at curb weight with standard tires and wheels. \n \n \nGENERAL INFORMATION  \nVehicle Type Sport-utility vehicle \nAssembly Plant Toledo Supplier Park, Toledo, Ohio \nEPA Vehicle Class Multipurpose vehicle \nIntroduction Date Fall 2017 as a 2018 model  \n  \nBODY/CHASSIS  \nLayout Longitudinal front engine, four-wheel drive \nConstruction Ladder-type frame, open steel and aluminum body \n  \nENGINE: 3.6-LITER PENTASTAR V-6  \nAvailability Standard — Sport, Sahara (MTX only), Rubicon (all ESS)  \nAvailable — Sahara (with eTorque mild-hybrid assist) \nType and Description 60-degree, V-type, liquid-cooled \nDisplacement (cu. in. / cc) 220 cu. in. (3,604 cu. cm) \nBore x Stroke  3.78 x 3.27 (96 x 83) \nValve System Chain-driven DOHC, 24 valves and hydraulic end-pivot roller rockers \nFuel Injection Sequential, multiport, electronic, returnless \nConstruction Aluminum deep-skirt block, aluminum alloy heads  \nCompression Ratio 11.3:1 \nPower (SAE net) (hp / kW@rpm) 285 hp (213 kW) at 6,400 rpm \nTorque (SAE net) (lb.-ft. / N•m) 260 lb.-ft. (353 N•m) at 4,800 rpm \nMax. Engine Speed (rpm) 6,600 rpm (electronically limited) \nFuel Requirement Unleaded regular, 87 octane (R + M)/2 \nFuel Tank Capacity (gallons) 17.5 (2-door), 21.5 (4-door) \nOil Capacity  5.0 quarts (4.7 liters) \nCoolant Capacity  10 quarts (10.1 liters) \nEmission Controls  Dual three-way catalytic converters, heated oxygen sensors and internal engine \nfeatures ",
+                "source_context": "PDF page1, ENGINE 3.6-LITER PENTASTAR V-6; source-specific guide governs edition availability"
+              }
+            ],
+            "extraction_mode": "source_specific_parser",
+            "extractor_id": "pypdf",
+            "extractor_version": "6.16.1",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": null,
+            "raw_artifact_hash": "sha256:8ca6c22b9af4a87f33700b3a3455fa3fae9ea5799218f232cbbb1b31eabf8354",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/FCA_2020_Wrangler_US_specifications.pdf",
+            "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+            "source_applicability": {
+              "applicability_basis": "US model-year guide/manual applicability; engine-family joins explicitly scoped",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": "US",
+              "unknown_fields": {}
+            },
+            "source_id": "FCA_MY2020_Wrangler_US_specs",
+            "source_locator": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/specs/2020_JP_Wrangler_SPmrgun0frgq245rkio8imc5var6.pdf"
+          },
+          {
+            "assertion_set_id": "JL20-10-heading",
+            "assertions": [
+              {
+                "assertion_id": "JL20-10-heading",
+                "attribute_key": "source_document_heading",
+                "raw_value": "REISSUED: 03/03/2020\nISSUED: 07/02/2019\nPAGE: 1\nUnited States\n2020\nJEEP WRANGLER 2 DOOR\nCUSTOMER PREFERRED CODE GUIDE\nMODEL CODE PAGES\nWRANGLER SPORT JLJL72 2\nWRANGLER RUBICON JLJS72 7\nGROUP DETAIL 10\nSTANDARD EQUIPMENT 13\nSTEP #1: SELECT MODEL CODE\nSTEP #2: SELECT QUICK ORDER PACKAGE CODE\nSTEP #3: SELECT $ OPTIONS (IF DESIRED)\nSTEP #4: SELECT COLOR & TRIM CODES\n© 2020 FCA US LLC, All Rights Reserved. IT IS FOR THE USE OF FCA AND ITS AUTHORIZED DEALERS ONLY AND MAY\nNOT BE OTHERWISE USED, RELEASED, OR REPRINTED WITHOUT FCA PRIOR PERMISSION.\nORDERS ARE ACCEPTED ONLY WHEN VEHICLES ARE SHIPPED BY THE FACTORY.\n© 2020 FCA US LLC, All Rights Reserved.\nJ\nE\nE\nP\nW\nR\nA\nN\nG\nL\nE\nR\n2\nD\nO\nO\nR",
+                "source_context": "PDF page1; US MY2020 model/body applicability"
+              }
+            ],
+            "extraction_mode": "source_specific_parser",
+            "extractor_id": "pypdf",
+            "extractor_version": "6.16.1",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": null,
+            "raw_artifact_hash": "sha256:1270871250ddbdad0fead362ba0df7e1516dd42ce51d37fc599c098f0bf81adc",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2 Door 3-3-20.pdf",
+            "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+            "source_applicability": {
+              "applicability_basis": "US model-year guide/manual applicability; engine-family joins explicitly scoped",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": "US",
+              "unknown_fields": {}
+            },
+            "source_id": "MY2020-JL-2D-2020-03-03",
+            "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2-door-3-3-20-pdf.288455/"
+          },
+          {
+            "assertion_set_id": "Mopar_MY2020_ESS_eTorque_hardware-review-20261108",
+            "assertions": [
+              {
+                "assertion_id": "ESS-hardware-180",
+                "attribute_key": "starting_charging_architecture",
+                "raw_value": "ESS vehicles have been upgraded with a heavy duty \nstarter, enhanced battery, and other upgraded engine \nparts, to handle the additional engine starts. Vehicles \nequipped with eTorque contain a heavy duty motor \ngenerator and an additional hybrid electric battery to store \nenergy from vehicle deceleration for use on engine startup \nafter a stop as well as providing launch torque assist.\n",
+                "source_context": "PDF page180, printed178; Stop/Start System; automatic/manual section respectively; generic ESS/eTorque distinction, not EXJ identifier"
+              },
+              {
+                "assertion_id": "ESS-hardware-182",
+                "attribute_key": "starting_charging_architecture",
+                "raw_value": "ESS vehicles have been upgraded with a heavy duty \nstarter, enhanced battery, and other upgraded engine \nparts, to handle the additional engine starts. Vehicles \nequipped with eTorque contain a heavy duty motor \ngenerator and an additional hybrid electric battery to store \nenergy from vehicle deceleration for use on engine startup \nafter a stop as well as providing launch torque assist.\n",
+                "source_context": "PDF page182, printed180; Stop/Start System; automatic/manual section respectively; generic ESS/eTorque distinction, not EXJ identifier"
+              }
+            ],
+            "extraction_mode": "source_specific_parser",
+            "extractor_id": "MY2020_evidence_review",
+            "extractor_version": "1.0",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": null,
+            "raw_artifact_hash": "sha256:eccf53d564172144d82728cacc2b7f87210c2dd7af0a535e1df78f588a92cd92",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/evidence/Mopar_MY2020_Wrangler_US_owners_manual.pdf",
+            "retrieved_at": "2026-11-08T22:37:13.602767+00:00",
+            "source_applicability": {
+              "applicability_basis": "Document-specific US MY2020 applicability; scope limitations recorded in notes",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": "US",
+              "unknown_fields": {}
+            },
+            "source_id": "Mopar_MY2020_ESS_eTorque_hardware",
+            "source_locator": "https://vehicleinfo.mopar.com/assets/publications/en-us/Jeep/2020/Wrangler/P138305_20_JL_OM_EN_USC_DIGITAL.pdf"
+          },
+          {
+            "assertion_set_id": "MY2020-JL-2D-2019-08-15-JLJL72-shared-selector-r1",
+            "assertions": [
+              {
+                "assertion_id": "model_code",
+                "attribute_key": "source_model_code",
+                "raw_value": "JLJL72",
+                "source_context": "PDF page 2; manufacturer model-code heading, same original location as predecessor assertion JL20-01-MY2020-JL-2D-2019-08-15/JL20-01-MY2020-JL-2D-2019-08-15-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+              }
+            ],
+            "extraction_mode": "manually_verified_transcription",
+            "extractor_id": "my2020_shared_model_code_selector",
+            "extractor_version": "1.0.0",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": null,
+            "raw_artifact_hash": "sha256:24239a7e5037840a190003d888998522e522fe3406599bb019b00e05ffd67591",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2020_JL_2_door_08_15_2019.pdf",
+            "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+            "source_applicability": {
+              "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": "US",
+              "unknown_fields": {}
+            },
+            "source_id": "MY2020-JL-2D-2019-08-15",
+            "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2020_jl_2_door_08_15_2019-pdf.215559/"
+          },
+          {
+            "assertion_set_id": "MY2020-JL-2D-2019-09-05-JLJL72-shared-selector-r1",
+            "assertions": [
+              {
+                "assertion_id": "model_code",
+                "attribute_key": "source_model_code",
+                "raw_value": "JLJL72",
+                "source_context": "PDF page 2; manufacturer model-code heading, same original location as predecessor assertion JL20-01-MY2020-JL-2D-2019-09-05/JL20-01-MY2020-JL-2D-2019-09-05-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+              }
+            ],
+            "extraction_mode": "manually_verified_transcription",
+            "extractor_id": "my2020_shared_model_code_selector",
+            "extractor_version": "1.0.0",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": null,
+            "raw_artifact_hash": "sha256:5e7855d90320a9cdcfe5569b46a74794d552161165a4278b1d68c8ffda8c02fa",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2 Door 9-5-19.pdf",
+            "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+            "source_applicability": {
+              "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": "US",
+              "unknown_fields": {}
+            },
+            "source_id": "MY2020-JL-2D-2019-09-05",
+            "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2-door-9-5-19-pdf.227937/"
+          },
+          {
+            "assertion_set_id": "MY2020-JL-2D-2019-10-08-JLJL72-shared-selector-r1",
+            "assertions": [
+              {
+                "assertion_id": "model_code",
+                "attribute_key": "source_model_code",
+                "raw_value": "JLJL72",
+                "source_context": "PDF page 2; manufacturer model-code heading, same original location as predecessor assertion JL20-01-MY2020-JL-2D-2019-10-08/JL20-01-MY2020-JL-2D-2019-10-08-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+              }
+            ],
+            "extraction_mode": "manually_verified_transcription",
+            "extractor_id": "my2020_shared_model_code_selector",
+            "extractor_version": "1.0.0",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": null,
+            "raw_artifact_hash": "sha256:e12a2f7f835f34bab14c1f7eb3d884aebbdbe547bc2dcdf8e606041062fb19ef",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2 Door 10-8-19.pdf",
+            "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+            "source_applicability": {
+              "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": "US",
+              "unknown_fields": {}
+            },
+            "source_id": "MY2020-JL-2D-2019-10-08",
+            "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2-door-10-8-19-pdf.239598/"
+          },
+          {
+            "assertion_set_id": "MY2020-JL-2D-2019-11-04-JLJL72-shared-selector-r1",
+            "assertions": [
+              {
+                "assertion_id": "model_code",
+                "attribute_key": "source_model_code",
+                "raw_value": "JLJL72",
+                "source_context": "PDF page 2; manufacturer model-code heading, same original location as predecessor assertion JL20-01-MY2020-JL-2D-2019-11-04/JL20-01-MY2020-JL-2D-2019-11-04-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+              }
+            ],
+            "extraction_mode": "manually_verified_transcription",
+            "extractor_id": "my2020_shared_model_code_selector",
+            "extractor_version": "1.0.0",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": null,
+            "raw_artifact_hash": "sha256:13b43d0e183acafafc50d3ab6edf74b030aaf0d15fd0ffd77b87f8e87949243f",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2 Door 11-4-19.pdf",
+            "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+            "source_applicability": {
+              "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": "US",
+              "unknown_fields": {}
+            },
+            "source_id": "MY2020-JL-2D-2019-11-04",
+            "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2-door-11-4-19-pdf.255143/"
+          },
+          {
+            "assertion_set_id": "MY2020-JL-2D-2020-01-15-JLJL72-shared-selector-r1",
+            "assertions": [
+              {
+                "assertion_id": "model_code",
+                "attribute_key": "source_model_code",
+                "raw_value": "JLJL72",
+                "source_context": "PDF page 2; manufacturer model-code heading, same original location as predecessor assertion JL20-01-MY2020-JL-2D-2020-01-15/JL20-01-MY2020-JL-2D-2020-01-15-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+              }
+            ],
+            "extraction_mode": "manually_verified_transcription",
+            "extractor_id": "my2020_shared_model_code_selector",
+            "extractor_version": "1.0.0",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": null,
+            "raw_artifact_hash": "sha256:06c2eaec0efb83c7d8ba5f773fd0be47e1e3ac2cba471b46da17d08fe54dc426",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2 Door 1-15-20.pdf",
+            "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+            "source_applicability": {
+              "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": "US",
+              "unknown_fields": {}
+            },
+            "source_id": "MY2020-JL-2D-2020-01-15",
+            "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2-door-1-15-20-pdf.272500/"
+          },
+          {
+            "assertion_set_id": "MY2020-JL-2D-2020-01-23-JLJL72-shared-selector-r1",
+            "assertions": [
+              {
+                "assertion_id": "model_code",
+                "attribute_key": "source_model_code",
+                "raw_value": "JLJL72",
+                "source_context": "PDF page 2; manufacturer model-code heading, same original location as predecessor assertion JL20-01-MY2020-JL-2D-2020-01-23/JL20-01-MY2020-JL-2D-2020-01-23-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+              }
+            ],
+            "extraction_mode": "manually_verified_transcription",
+            "extractor_id": "my2020_shared_model_code_selector",
+            "extractor_version": "1.0.0",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": null,
+            "raw_artifact_hash": "sha256:94155d6e84f45028046435152baf9a5b76281977b24b66accc604112c2edd355",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2 Door 1-23-20.pdf",
+            "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+            "source_applicability": {
+              "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": "US",
+              "unknown_fields": {}
+            },
+            "source_id": "MY2020-JL-2D-2020-01-23",
+            "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2-door-1-23-20-pdf.275369/"
+          },
+          {
+            "assertion_set_id": "MY2020-JL-2D-2020-02-12-JLJL72-shared-selector-r1",
+            "assertions": [
+              {
+                "assertion_id": "model_code",
+                "attribute_key": "source_model_code",
+                "raw_value": "JLJL72",
+                "source_context": "PDF page 2; manufacturer model-code heading, same original location as predecessor assertion JL20-01-MY2020-JL-2D-2020-02-12/JL20-01-MY2020-JL-2D-2020-02-12-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+              }
+            ],
+            "extraction_mode": "manually_verified_transcription",
+            "extractor_id": "my2020_shared_model_code_selector",
+            "extractor_version": "1.0.0",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": null,
+            "raw_artifact_hash": "sha256:75b13996335662290ed71506cb76772da71347e1151ecd4720e8e9b8bc44f848",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2 Door 2-12-20.pdf",
+            "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+            "source_applicability": {
+              "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": "US",
+              "unknown_fields": {}
+            },
+            "source_id": "MY2020-JL-2D-2020-02-12",
+            "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2-door-2-12-20-pdf.281244/"
+          },
+          {
+            "assertion_set_id": "MY2020-JL-2D-2020-03-03-JLJL72-shared-selector-r1",
+            "assertions": [
+              {
+                "assertion_id": "model_code",
+                "attribute_key": "source_model_code",
+                "raw_value": "JLJL72",
+                "source_context": "PDF page 2; manufacturer model-code heading, same original location as predecessor assertion JL20-01-MY2020-JL-2D-2020-03-03/JL20-01-MY2020-JL-2D-2020-03-03-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+              }
+            ],
+            "extraction_mode": "manually_verified_transcription",
+            "extractor_id": "my2020_shared_model_code_selector",
+            "extractor_version": "1.0.0",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": null,
+            "raw_artifact_hash": "sha256:1270871250ddbdad0fead362ba0df7e1516dd42ce51d37fc599c098f0bf81adc",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2 Door 3-3-20.pdf",
+            "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+            "source_applicability": {
+              "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": "US",
+              "unknown_fields": {}
+            },
+            "source_id": "MY2020-JL-2D-2020-03-03",
+            "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2-door-3-3-20-pdf.288455/"
+          },
+          {
+            "assertion_set_id": "MY2020-JL-2D-2020-04-17-JLJL72-shared-selector-r1",
+            "assertions": [
+              {
+                "assertion_id": "model_code",
+                "attribute_key": "source_model_code",
+                "raw_value": "JLJL72",
+                "source_context": "PDF page 2; manufacturer model-code heading, same original location as predecessor assertion JL20-03-MY2020-JL-2D-2020-04-17/JL20-03-MY2020-JL-2D-2020-04-17-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+              }
+            ],
+            "extraction_mode": "manually_verified_transcription",
+            "extractor_id": "my2020_shared_model_code_selector",
+            "extractor_version": "1.0.0",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": null,
+            "raw_artifact_hash": "sha256:aebf9026be5c1b3a04c11ec4a037b7c5f423eacc875c22d909875f242e2d3fc2",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2 Door 4-17-20.pdf",
+            "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+            "source_applicability": {
+              "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": "US",
+              "unknown_fields": {}
+            },
+            "source_id": "MY2020-JL-2D-2020-04-17",
+            "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2-door-4-17-20-pdf.312615/"
+          },
+          {
+            "assertion_set_id": "sha256:d815fcef330500357ba9fe4227dbf153c2339a1efb5cb332e35f4bc2f3178688",
+            "assertions": [
+              {
+                "assertion_id": "electrification_type",
+                "attribute_key": "electrification_type",
+                "raw_value": {
+                  "classification": "electrification_type",
+                  "provenance": "human_adjudicated",
+                  "value": "none"
+                },
+                "source_context": "Human-adjudicated conclusion by project_owner: MY2020 US manual printed284–285 positively distinguishes 2.0L intercooler without MGU from with-MGU and battery-coolant architecture. The exact order-guide EC1/ESS offering is paired against distinct EC3/eTorque offerings. Proposed none joins the non-MGU variant to EC1; this code-to-hardware association is a bounded engineering conclusion, not a direct manufacturer assertion and not ESS terminology alone."
+              }
+            ],
+            "extraction_mode": "manually_verified_transcription",
+            "extractor_id": "approved_human_classification",
+            "extractor_version": "1.1",
+            "publication_revision": "Human classification adjudication 1.1; not manufacturer assertions",
+            "raw_artifact_hash": "sha256:c4b2053c680657f08f5b29dab0c3ceda0253bce48e3f2ded237c1fce0895d30d",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/adjudication_evidence_revisions/JL20-10.selector-evidence-r1.approved.json",
+            "retrieved_at": "2026-11-08T22:53:14.119739+00:00",
+            "source_applicability": {
+              "applicability_basis": "Exact candidate digest; approved human conclusion",
+              "applicability_scope": "configuration",
+              "market": "US"
+            },
+            "source_id": "human_classification_adjudication",
+            "source_locator": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/adjudication_evidence_revisions/JL20-10.selector-evidence-r1.approved.json"
+          }
+        ],
+        "canonical_powertrain": {
+          "electrification_type": "none",
+          "engine_aspiration": "turbocharged",
+          "engine_cylinders": 4,
+          "engine_displacement_liters": "2",
+          "fuel_type": "gasoline"
+        }
+      },
+      "candidate_hash": "sha256:f05892759e5e59b5125b4ce94955e99d428e82e9d129ba6d8cf6bbed33f6d69a"
+    }
+  ],
+  "manifest_hash": "sha256:bd3949327dc74a5bcc1b6dc1bd9105c1ea18ea5c0b6540a807f0c958252ddd9a"
+}

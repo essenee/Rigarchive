@@ -1,0 +1,61 @@
+{
+  "review": {
+    "review_version": "1.0",
+    "revision_uuid": "775af14b-48e9-4602-87d2-ca3437d8b8a2",
+    "correspondence_uuid": "6fdeeb5a-6864-44f3-9834-cc2c734f983b",
+    "revision_number": 1,
+    "supersedes_uuid": null,
+    "vehicle_model_uuid": "5ec5f58a-b140-484c-97f0-c90ec9c134d6",
+    "generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+    "source_id": "MY2020-JL-2D-2020-01-15",
+    "source_namespace": "source_model_code",
+    "identity_type": "model_code",
+    "native_identifier": "JLJS72",
+    "market": "US",
+    "start_year": 2020,
+    "end_year": 2020,
+    "restrictions": {},
+    "evidence": [
+      {
+        "source_id": "MY2020-JL-2D-2020-01-15",
+        "raw_artifact_hash": "sha256:06c2eaec0efb83c7d8ba5f773fd0be47e1e3ac2cba471b46da17d08fe54dc426",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2 Door 1-15-20.pdf",
+        "extractor_id": "my2020_shared_model_code_selector",
+        "extractor_version": "1.0.0",
+        "extraction_mode": "manually_verified_transcription",
+        "assertion_set_id": "MY2020-JL-2D-2020-01-15-JLJS72-shared-selector-r1",
+        "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2-door-1-15-20-pdf.272500/",
+        "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+        "source_applicability": {
+          "market": "US",
+          "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+          "publisher_jurisdiction": "US",
+          "applicability_scope": "model_year",
+          "unknown_fields": {}
+        },
+        "publication_revision": null,
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "assertions": [
+          {
+            "assertion_id": "model_code",
+            "attribute_key": "source_model_code",
+            "raw_value": "JLJS72",
+            "source_context": "PDF page 7; manufacturer model-code heading, same original location as predecessor assertion JL20-05-MY2020-JL-2D-2020-01-15/JL20-05-MY2020-JL-2D-2020-01-15-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+          }
+        ]
+      }
+    ],
+    "finding": "established",
+    "reviewer": "Codex evidence-packaging verification; unpublished proposal; publication authorization pending",
+    "reviewed_at": "2026-11-08T23:06:30.530712+00:00",
+    "review_notes": "Exact US MY2020 manufacturer model-code heading retained from authentic guide, unchanged source/hash/page. Same manufacturer/model/code lineage as established prior JL mappings, active existing JL target and in-range model year; no name-only target selection. Shared selector is present byte-for-byte in every matching candidate. Proposed only; no publication authorization asserted."
+  },
+  "content_hash": "sha256:6b52080cacded457050dd0918f315877ee6e91e0f0996302a2a578a341ad5876"
+}
+Human director: project_owner
+Execution agent: codex
+Interface: cli
+Authorize publishing this exact correspondence revision? [y/N]: created; receipt eb8e3584-7098-42e9-bdf5-ca0233d97603

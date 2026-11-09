@@ -1,0 +1,38 @@
+{
+  "proposal": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/correspondence_proposals/MY2020-JL-4D-2020-01-23-JLJL74.review.json",
+  "content_hash": "sha256:a605c32e513affad6933db4b1ab911569bfc1dda3d98bdb41e99b320f0c02a41",
+  "source_model_key": [
+    "MY2020-JL-4D-2020-01-23",
+    "source_model_code",
+    "model_code",
+    "JLJL74"
+  ],
+  "revision_PK": 53,
+  "revision_uuid": "4d07fd00-2cdf-4358-9287-fdfdeb13843d",
+  "correspondence_uuid": "1fd40eb2-20c9-4052-b00b-9dffa56f8a19",
+  "receipt_PK": 2920,
+  "receipt_uuid": "09881f38-c9f8-412d-9c68-4f74131ed199",
+  "execution_outcome": "created",
+  "target_generation_PK": 32,
+  "candidate_references": [
+    "JL20-16",
+    "JL20-17",
+    "JL20-18",
+    "JL20-19",
+    "JL20-36",
+    "JL20-37",
+    "JL20-38",
+    "JL20-39",
+    "JL20-40",
+    "JL20-41",
+    "JL20-42",
+    "JL20-43",
+    "JL20-44",
+    "JL20-45",
+    "JL20-46",
+    "JL20-47",
+    "JL20-48",
+    "JL20-49"
+  ],
+  "workflow_log": "docs/implementation/handoffs/MY2020_JL/generation_publication_20261108/workflow_logs/40-MY2020-JL-4D-2020-01-23-JLJL74.txt"
+}

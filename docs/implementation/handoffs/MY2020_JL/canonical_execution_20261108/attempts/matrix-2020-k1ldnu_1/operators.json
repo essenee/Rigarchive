@@ -1,0 +1,6 @@
+{
+  "approval_operator": "project_owner",
+  "execution_agent": "codex",
+  "execution_interface": "cli",
+  "execution_operator": "project_owner"
+}
