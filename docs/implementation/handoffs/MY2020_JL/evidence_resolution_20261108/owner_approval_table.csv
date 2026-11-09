@@ -1,0 +1,6 @@
+engine_code,field,proposed_value,affected_candidate_count,confidence,status
+EC1,electrification_type,none,15,moderate,evidence-backed derived proposal; owner approval required
+ERC,electrification_type,none,17,moderate,evidence-backed derived proposal; owner approval required
+ERC,engine_aspiration,naturally_aspirated,17,moderate,evidence-backed derived proposal; owner approval required
+ERG,engine_aspiration,naturally_aspirated,3,moderate,evidence-backed derived proposal; owner approval required
+EXJ,electrification_type,none,8,moderate,evidence-backed derived proposal; owner approval required

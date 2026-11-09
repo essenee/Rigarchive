@@ -1,0 +1,24 @@
+{
+  "approved_field_decisions": 60,
+  "approved_records": 43,
+  "candidate_revisions_created": 43,
+  "final_valid_complete_candidates": 49,
+  "unchanged_EC3_candidates": 6,
+  "High_Altitude_names_verified": 3,
+  "candidate_and_adjudication_contracts": "passed",
+  "raw_source_bytes_and_approved_lineage": "passed",
+  "serialization_roundtrips": "passed",
+  "all_reasoning_confidence_applicability_and_limitations_unchanged": true,
+  "semantic_uniqueness": "49 distinct trim/market/five-field tuples",
+  "preexisting_files_preserved": 766,
+  "database_unchanged": true,
+  "database_sha256": "sha256:f0d32327e0d688b56711a572375e4e462a266ebb8fdb250b97965e392dff07ab",
+  "database_counts": {
+    "VehicleDefinitions": 812,
+    "receipts": 2880,
+    "MY2020_JL": 0
+  },
+  "SQLite_integrity_and_FKs": "passed",
+  "generation_correspondences_published": 0,
+  "import_plans_generated": 0
+}

@@ -1,0 +1,138 @@
+{
+  "vehicle_count": 49,
+  "classification_candidate_count": 43,
+  "field_decisions": 60,
+  "classifications": [
+    {
+      "engine_code": "EC1",
+      "field": "electrification_type",
+      "proposed_value": "none",
+      "affected_candidate_count": 15,
+      "candidate_references": [
+        "JL20-01",
+        "JL20-03",
+        "JL20-05",
+        "JL20-08",
+        "JL20-10",
+        "JL20-12",
+        "JL20-14",
+        "JL20-16",
+        "JL20-18",
+        "JL20-21",
+        "JL20-36",
+        "JL20-39",
+        "JL20-42",
+        "JL20-45",
+        "JL20-48"
+      ],
+      "confidence": "moderate",
+      "status": "evidence-backed derived proposal; owner approval required",
+      "limitations": [
+        "No extension of MY2019 approvals. No final human approval. Family joins are engineering conclusions; exact engine-code hardware/induction corroboration required before approval if current evidence is judged insufficient. Missing archive revisions may affect scope history."
+      ]
+    },
+    {
+      "engine_code": "ERC",
+      "field": "electrification_type",
+      "proposed_value": "none",
+      "affected_candidate_count": 17,
+      "candidate_references": [
+        "JL20-02",
+        "JL20-04",
+        "JL20-06",
+        "JL20-09",
+        "JL20-11",
+        "JL20-13",
+        "JL20-15",
+        "JL20-17",
+        "JL20-19",
+        "JL20-22",
+        "JL20-26",
+        "JL20-30",
+        "JL20-37",
+        "JL20-40",
+        "JL20-43",
+        "JL20-46",
+        "JL20-49"
+      ],
+      "confidence": "moderate",
+      "status": "evidence-backed derived proposal; owner approval required",
+      "limitations": [
+        "No extension of MY2019 approvals. No final human approval. Family joins are engineering conclusions; exact engine-code hardware/induction corroboration required before approval if current evidence is judged insufficient. Missing archive revisions may affect scope history."
+      ]
+    },
+    {
+      "engine_code": "ERC",
+      "field": "engine_aspiration",
+      "proposed_value": "naturally_aspirated",
+      "affected_candidate_count": 17,
+      "candidate_references": [
+        "JL20-02",
+        "JL20-04",
+        "JL20-06",
+        "JL20-09",
+        "JL20-11",
+        "JL20-13",
+        "JL20-15",
+        "JL20-17",
+        "JL20-19",
+        "JL20-22",
+        "JL20-26",
+        "JL20-30",
+        "JL20-37",
+        "JL20-40",
+        "JL20-43",
+        "JL20-46",
+        "JL20-49"
+      ],
+      "confidence": "moderate",
+      "status": "evidence-backed derived proposal; owner approval required",
+      "limitations": [
+        "No extension of MY2019 approvals. No final human approval. Family joins are engineering conclusions; exact engine-code hardware/induction corroboration required before approval if current evidence is judged insufficient. Missing archive revisions may affect scope history."
+      ]
+    },
+    {
+      "engine_code": "ERG",
+      "field": "engine_aspiration",
+      "proposed_value": "naturally_aspirated",
+      "affected_candidate_count": 3,
+      "candidate_references": [
+        "JL20-27",
+        "JL20-31",
+        "JL20-34"
+      ],
+      "confidence": "moderate",
+      "status": "evidence-backed derived proposal; owner approval required",
+      "limitations": [
+        "No extension of MY2019 approvals. No final human approval. Family joins are engineering conclusions; exact engine-code hardware/induction corroboration required before approval if current evidence is judged insufficient. Missing archive revisions may affect scope history."
+      ]
+    },
+    {
+      "engine_code": "EXJ",
+      "field": "electrification_type",
+      "proposed_value": "none",
+      "affected_candidate_count": 8,
+      "candidate_references": [
+        "JL20-23",
+        "JL20-28",
+        "JL20-32",
+        "JL20-35",
+        "JL20-38",
+        "JL20-41",
+        "JL20-44",
+        "JL20-47"
+      ],
+      "confidence": "moderate",
+      "status": "evidence-backed derived proposal; owner approval required",
+      "limitations": [
+        "Human sign-off required for exactly these eight candidate digests. Secondary alternator description is not OEM wiring/service proof and does not alone exclude a hybrid. Generic gasoline-family manual hardware comparison does not expressly name EXJ. Manufacturer blog original HTML unavailable; cached text is context only. No extension to other years, markets, engines or editions."
+      ]
+    }
+  ],
+  "naming": {
+    "candidate_count": 3,
+    "value": "Unlimited High Altitude",
+    "manufacturer_family": "Wrangler Unlimited Sahara / JLJP74",
+    "canonical_grade_decision": "retain distinct marketed grade; owner approval pending"
+  }
+}

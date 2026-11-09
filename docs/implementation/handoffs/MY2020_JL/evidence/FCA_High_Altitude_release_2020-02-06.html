@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<!-- begin spin_special_output(head_start) -->
+<script type="text/javascript" src="js/jquery-webdriver.js" wd_script_id="jquery-webdriver.js" nonce="YjhiM2UxMDQ0MjViZjU5NDZkZDdjZDk5OWYyODJkZDg5MmJlMWY5MA=="></script>
+<script type="text/javascript" src="js/webdriver.js" wd_script_id="webdriver.js" nonce="YjhiM2UxMDQ0MjViZjU5NDZkZDdjZDk5OWYyODJkZDg5MmJlMWY5MA=="></script>
+<style type="text/css" wd_script_id="search_form_style" nonce="YjhiM2UxMDQ0MjViZjU5NDZkZDdjZDk5OWYyODJkZDg5MmJlMWY5MA==">
+		.wd_search_form .wd_input_datepicker {
+			margin-right: 2px;
+		}
+		.wd_search_type_checkbox {
+			margin-left: 20px;
+		}
+		</style>
+<script type="text/javascript" wd_script_id="search_form_script" nonce="YjhiM2UxMDQ0MjViZjU5NDZkZDdjZDk5OWYyODJkZDg5MmJlMWY5MA==">
+			function wd_toggle_search_form(link, advanced) {
+				var $ = webDriver.jQuery;
+				var $container = $(link).closest(".wd_search_form_container");
+				var basic_form = $container.find(".wd_search_form_basic");
+				var basic_query = basic_form.find('input[name="query"]');
+				var advanced_form = $container.find(".wd_search_form_advanced");
+				var advanced_query = advanced_form.find('input[name="query"]');
+
+				if (advanced) {
+					advanced_query.val(basic_query.val());
+					advanced_form.show();
+					basic_form.hide();
+				} else {
+					basic_query.val(advanced_query.val());
+					basic_form.show();
+					advanced_form.hide();
+				}
+
+				var target_form = advanced ? advanced_form : basic_form;
+				var focus_target = target_form.find('input[name="query"]').filter(":visible:not(:disabled)").get(0);
+				if (!focus_target)
+					focus_target = target_form.find(":input").filter(":visible:not(:disabled)").get(0);
+				if (focus_target)
+					setTimeout(function() { focus_target.focus(); }, 0);
+			}
+
+			function wd_toggle_search_type_checkboxes(radio) {
+				var $ = webDriver.jQuery;
+				var $radio = $(radio);
+				var all = $radio.val() == "All" ? $radio.is(":checked") : !$radio.is(":checked");
+				var $checkboxes = $radio.closest(".wd_form_field").find(".wd_search_type_checkbox");
+				$checkboxes.find('input[type="checkbox"]').prop("disabled", all);
+				$checkboxes.toggle(!all);
+			}
+
+			webDriver.jQuery(function ($) {
+				$('.wd_search_type_radio input[type="radio"]').each(function() {wd_toggle_search_type_checkboxes(this);});
+			});
+		</script>
+<script type="text/javascript" wd_script_id="view_printable_script" nonce="YjhiM2UxMDQ0MjViZjU5NDZkZDdjZDk5OWYyODJkZDg5MmJlMWY5MA==">
+	function view_printable() {
+		var loc = window.location;
+		var sep = (loc.search == "") ? "?" : "&";
+		var url = loc.protocol+"//"+loc.host+loc.pathname+loc.search+sep+"printable"+loc.hash;
+		window.open(url, "_blank", "");
+	}
+</script>
+<link href="thirdparty/font-awesome/css/font-awesome.min.css" type="text/css" rel="stylesheet" wd_script_id="font-awesome.min.css">
+<style type="text/css" wd_script_id="toolbar_style" nonce="YjhiM2UxMDQ0MjViZjU5NDZkZDdjZDk5OWYyODJkZDg5MmJlMWY5MA==">
+			div.wd_toolbar {
+				border-top: 1px solid #cccccc;
+				border-bottom: 1px solid #cccccc;
+				margin: 15px 0px 15px 0px;
+				padding: 5px;
+				line-height: 1;
+			}
+			div.wd_toolbar-page {
+				clear: both;
+			}
+			div.wd_toolbar ul.wd_tools {
+				display: inline-block;
+				width: 100%;
+				margin: 0;
+				padding: 5px 0;
+			}
+			div.wd_toolbar ul.wd_tools li.wd_tool {
+				display: block;
+				list-style-type: none;
+				margin-right: 5px;
+				padding: 0;
+				float: right;
+			}
+			span.wd_tool_icon > a:link,
+			span.wd_tool_icon > a:visited {
+				border-radius: 2px;
+				display: inline-block;
+				width: 30px;
+				height: 30px;
+				box-sizing: border-box;
+				margin: 0;
+				padding: 7px;
+				font-size: 16px;
+				line-height: 1;
+				text-align: center;
+				color: #ffffff;
+				background-color: #767676;
+			} 
+			span.wd_tool_icon > a:hover {
+				color: #ffffff;
+				background-color: #666666;
+				text-decoration: none;
+			}
+			div.wd_toolbar ul.wd_tools li.wd_tool-addthis {
+				float: left;
+			}
+		</style>
+<script type="text/javascript" nonce="YjhiM2UxMDQ0MjViZjU5NDZkZDdjZDk5OWYyODJkZDg5MmJlMWY5MA==">webDriver.push_jQuery();</script>
+<script type="text/javascript" wd_script_id="gallery_hi_res_download" nonce="YjhiM2UxMDQ0MjViZjU5NDZkZDdjZDk5OWYyODJkZDg5MmJlMWY5MA==">
+(function($){
+	function galleryHiResFilename(url) {
+		var path = "";
+		try {
+			path = new URL(url, window.location.href).pathname || "";
+		} catch (err) {
+			path = (url || "").split("?")[0] || "";
+		}
+		var parts = path.split("/");
+		return parts.length ? parts[parts.length - 1] : "";
+	}
+
+	$(document)
+		.off("click.galleryHiResDownload", "a.wd_hi_res_download[data-hi-res-url], .wd_gallery_asset .wd_icon_container > a:last-child, .wd_hi_res_link_wrapper a, .hi_res-links a")
+		.on("click.galleryHiResDownload", "a.wd_hi_res_download[data-hi-res-url], .wd_gallery_asset .wd_icon_container > a:last-child, .wd_hi_res_link_wrapper a, .hi_res-links a", function(e){
+			var a = this;
+			var href = a.href || "";
+			var onclick = a.getAttribute("onclick") || "";
+			if (href.indexOf("protected_url.php") !== -1 || onclick.indexOf("spin_protected_link") !== -1) {
+				e.preventDefault();
+				e.stopPropagation();
+				if (e.stopImmediatePropagation)
+					e.stopImmediatePropagation();
+				spin_protected_link(href, a.target || "");
+				return false;
+			}
+			e.preventDefault();
+			e.stopPropagation();
+			if (e.stopImmediatePropagation)
+				e.stopImmediatePropagation();
+			var url = $(a).data("hi-res-url") || a.href || "";
+			var filename = $(a).data("hi-res-filename") || galleryHiResFilename(url);
+			if (!filename) {
+				window.location.href = a.href || url;
+				return false;
+			}
+			fetch(url, { mode: "cors" })
+				.then(function(r){
+	 				if (!r.ok)
+	 					throw new Error("HTTP " + r.status);
+	 				return r.blob();
+	 			})
+				.then(function(blob){
+					var objUrl = URL.createObjectURL(blob);
+					var link = document.createElement("a");
+					link.href = objUrl;
+					link.download = filename || "hi-res-image.jpg";
+					document.body.appendChild(link);
+					link.click();
+					document.body.removeChild(link);
+					window.setTimeout(function(){
+						URL.revokeObjectURL(objUrl);
+					}, 60000);
+				})
+				.catch(function(){
+	 				window.location.href = a.href || url;
+	 			});
+			return false;
+		});
+})(webDriver.jQuery);
+</script>
+<style type="text/css" wd_script_id="template detail:gallery:system style" nonce="YjhiM2UxMDQ0MjViZjU5NDZkZDdjZDk5OWYyODJkZDg5MmJlMWY5MA==">
+.wd_gallery-detail .wd_title {
+	font-weight: bold;
+}
+</style>
+<style type="text/css" wd_script_id="asset_display_style" nonce="YjhiM2UxMDQ0MjViZjU5NDZkZDdjZDk5OWYyODJkZDg5MmJlMWY5MA==">
+			.wd_assets_container div.wd_asset_type_tabs {
+				background: #fff url(images/webdriver/assets_tab.gif) 0 bottom/contain repeat-x !important;
+				margin: 0;
+				padding: 0;
+				border-left: 1px solid #e1e1e1;
+				border-right: 1px solid #e1e1e1;
+				border-bottom: 1px solid #e1e1e1;
+				border-top: 1px solid #e1e1e1;
+				border-top-right-radius:4px;
+				border-top-left-radius:4px;
+				-webkit-border-top-right-radius:4px;
+				-webkit-border-top-left-radius:4px;
+				-moz-border-radius-topright: 4px;
+				-moz-border-radius-topleft: 4px;
+			}
+			.wd_assets_container ul.wd_asset_type_tabs {
+				overflow: hidden;
+				margin: 0px;
+				padding: 0px;
+			}
+			.wd_assets_container li.wd_asset_type_tab {
+				float: left;
+				display: block;
+			}
+			.wd_assets_container div.wd_asset_type_tabs li.wd_asset_type_tab a {
+				float: left;
+				border-left: 1px solid #fff;
+				border-right: 1px solid #e1e1e1;
+				display: block;
+				padding: 8px;
+				margin: 1px 0 0;
+			}
+			.wd_assets_container div.wd_asset_type_tabs li span.tab_close_icon {
+				display: none;
+			}
+			.wd_assets_container div.wd_asset_type_tabs li.wd_asset_type_tab span.wd_asset_count {
+				margin-left: 1ex;
+			}
+			.wd_assets_container div.wd_asset_type_tabs a span {
+				font-weight: normal;
+			}
+			.wd_assets_container li.tab-inactive a, .wd_assets_container li.tab-inactive a:hover {
+				background-color: transparent;
+				font-weight: normal;
+			}
+			.wd_assets_container li.tab-active a, .wd_assets_container li.tab-active a:hover {
+				background-color: #fff;
+				color: #333!important;
+				font-weight: bold;
+			}
+			.wd_assets_container div.wd_asset_type_tabs li.wd_asset_type_tab .wd_asset_icon {
+				color: #4f5051;
+				font-size: 1.2em;
+				margin: 0 5px 0 0;
+			}
+			img.wd_asset_icon {
+				vertical-align: middle;
+				margin: 0 5px 0 0;
+				border: 0;
+			}
+			.wd_assets_container .wd_assets {
+				clear: both;
+			}
+			@media(max-width:768px){
+				.wd_assets_container div.wd_asset_type_tabs li.wd_asset_type_tab a {
+					padding: 8px 5px 0;
+				}
+				.wd_assets_container div.wd_asset_type_tabs li.wd_asset_type_tab img.wd_asset_icon {
+					margin-right: 0px;
+				}
+				.wd_assets_container div.wd_asset_type_tabs li.wd_asset_type_tab span.wd_asset_label {
+					display: none;
+				}
+				.wd_assets_container div.wd_asset_type_tabs li.wd_asset_type_tab span.wd_asset_count {
+					margin-left: 1px;
+				}
+			}
+			
+		.wd_assets_container {
+			border: 0px none;
+			margin: 15px 0 0 0;
+			padding: 0 0 14px;
+			background: transparent url(images/webdriver/assets_shadow_full.png) center bottom no-repeat;
+			clear: both;
+		}
+
+		.wd_assets_container .wd_assets {
+			border-left: 1px solid #e1e1e1;
+			border-right: 1px solid #e1e1e1;
+			border-bottom: 1px solid #e1e1e1;
+			border-top: 1px solid #fff;
+			padding: 15px;
+		}
+
+		.wd_assets_container .wd_assets img {
+			max-width: 400px;
+		}
+
+		.wd_assets_container #wd_assets_closer .wd_assets {
+			border: 0px none;
+			overflow: auto;
+		}
+
+		.wd_assets_container #wd_assets_content {
+			border: 0px none;
+			margin: 0px;
+			padding: 0px 0px 25px 0px;
+		}
+
+		.wd_assets_container #wd_assets_content.wd_assets_noclose {
+			padding-bottom: 0px;
+		}
+
+		.wd_assets_container #wd_assets_closer {
+			border-left: 1px solid #e1e1e1;
+			border-right: 1px solid #e1e1e1;
+			border-bottom: 1px solid #e1e1e1;
+			border-top: 1px solid #fff;
+			margin: 0px;
+			padding: 0px;
+			position: relative;
+			height: 0px;
+			overflow: hidden;
+		}
+
+		.wd_assets_container #Documents_items a img, .wd_assets_container #Video_items a img {
+			padding: 15px 15px;
+			display: block;
+			margin-bottom: 1px;
+			border: 1px solid #e1e1e1;
+			background-color: #fcfcfc;
+		}
+
+		.wd_assets_container .summary_list_link {
+			margin: 5px 0px 5px 0px;
+		}
+
+		.wd_assets_container a.summary_detail_back_button, .wd_assets_container a:hover.summary_detail_back_button {
+			background: #fff url(images/webdriver/assets_left_arrow.gif) left center no-repeat;
+			border: 1px solid #dedede;
+			height: 22px;
+			padding: 4px 12px 2px 40px;
+			font-size: 12px;
+			text-decoration: none;
+		}
+
+		.wd_assets_container .assets_close_link {
+			text-align: right;
+			margin: 0px;
+			position: absolute;
+			bottom: 0px;
+			right: 0px;
+		}
+
+		.wd_assets_container a.assets_close_button, .wd_assets_container a:hover.assets_close_button {
+			background: #fff url(images/webdriver/assets_up_arrow.gif) left center no-repeat;
+			border: 1px solid #dedede;
+			height: 22px;
+			padding: 4px 12px 2px 40px;
+			font-size: 12px;
+			text-decoration: none;
+		}
+		</style>
+<script type="text/javascript" src="js/wd_scriptloader.js" wd_script_id="wd_scriptloader.js" nonce="YjhiM2UxMDQ0MjViZjU5NDZkZDdjZDk5OWYyODJkZDg5MmJlMWY5MA=="></script>
+<script type="text/javascript" src="js/wd_hashchange.js" wd_script_id="wd_hashchange.js" nonce="YjhiM2UxMDQ0MjViZjU5NDZkZDdjZDk5OWYyODJkZDg5MmJlMWY5MA=="></script>
+<script type="text/javascript" wd_script_id="asset_display_script" nonce="YjhiM2UxMDQ0MjViZjU5NDZkZDdjZDk5OWYyODJkZDg5MmJlMWY5MA==">
+		(function($) {
+		function show_asset_list(type) {
+			var obj = document.getElementById(type+"_summary_list");
+			if (obj) {
+				var tab_link = document.getElementById(type+"_tab_link");
+				if (tab_link)
+					tab_link.href = tab_link.href.replace(/#.*$/,"")+"#"+type;
+
+				obj.style.display = "";
+
+				obj = document.getElementById(type+"_summary_list_link");
+				if (obj)
+					obj.style.display = "none";
+
+				obj = document.getElementById(type+"_summary_detail");
+				if (obj)
+					obj.style.display = "none";
+					
+				assets_resize(false, type);
+			}
+		}
+
+		function load_asset_detail(type, id) {
+			var item = document.getElementById("item_"+type+":"+id);
+			if (!item || !item.attributes.wd_detail_url)
+				return;
+
+			var url = item.attributes.wd_detail_url.nodeValue;
+
+			var detail = document.getElementById(type+"_summary_detail");
+			if (!detail)
+				return;
+
+			var tab_link = document.getElementById(type+"_tab_link");
+			if (tab_link)
+				tab_link.href = tab_link.href.replace(/#.*$/,"")+"#"+type+((id != "") ? (":"+id) : "");
+
+			detail.innerHTML = "Loading...";
+			detail.style.display = "";
+
+			var request;
+
+			if (window.XMLHttpRequest) {
+				request = new XMLHttpRequest();
+				if (request.overrideMimeType)
+					request.overrideMimeType("text/html");
+			} else if (window.ActiveXObject) {
+				request = new ActiveXObject("Microsoft.XMLHTTP");
+			}
+
+			if (!request)
+				return;
+
+			var obj = document.getElementById(type+"_summary_list");
+			if (obj)
+				obj.style.display = "none";
+
+			obj = document.getElementById(type+"_summary_list_link");
+			if (obj)
+				obj.style.display = "";
+
+			request.onreadystatechange = function (){
+				if (request.readyState == 4 && request.status == 200) {
+					detail.innerHTML = request.responseText;
+					var scripts = detail.getElementsByTagName("SCRIPT");
+					for (var i=0; i < scripts.length; ++i)
+						eval(scripts[i].text);
+					webDriver.queueCallback(function() {assets_resize(false, type);});
+				}
+			};
+
+			request.open("GET", url, true);
+			request.send(null);
+		}
+		
+		var active_tab = "";
+		var default_hash = "#";
+		var prev_hash = false;
+		function hash_update() {
+			var hash = window.location.hash;
+			if (!hash || hash == "#")
+				hash = default_hash;
+			if (hash == prev_hash) return;
+			var need_resize = (prev_hash === false);
+			prev_hash = hash;
+
+			// Lock height, so resize animation works
+			var closer = document.getElementById("wd_assets_closer");
+			if (closer)
+				$(closer).height($(closer).height());
+
+			id = hash.substr(1);
+
+			var hash_tab = id;
+			var hash_item = "";
+			var pos = id.indexOf(":");
+			if (pos >= 0) {
+				hash_tab = id.substr(0,pos);
+				hash_item = id.substr(pos+1);
+			}
+
+			if (hash_tab != active_tab) {
+				need_resize = true;
+				
+				if (active_tab != "") {
+					var old_tab = document.getElementById(active_tab+"_tab");
+					if (old_tab) {
+						old_tab.className = old_tab.className.replace(/\btab-active\b/, "tab-inactive");
+
+						var old_div = document.getElementById(active_tab+"_items");
+						if (old_div)
+							old_div.style.display = "none";
+					}
+					active_tab = "";
+				}
+
+				if (hash_tab != "") {
+					var new_tab = document.getElementById(hash_tab+"_tab");
+					if (new_tab) {
+						new_tab.className = new_tab.className.replace(/\btab-inactive\b/, "tab-active");
+
+						$("#"+hash_tab+"_items").show().trigger("wd_assets_show");
+
+						active_tab = hash_tab;
+					}
+				}
+				
+				asset_tabs_update_visibility();
+			}
+			
+			if (need_resize)
+				assets_resize(active_tab == "", active_tab);
+
+			if (active_tab != "") {
+				var old_item = "__Unknown__";
+				var tab_link = document.getElementById(active_tab+"_tab_link");
+				if (tab_link) {
+					var hpos = tab_link.href.indexOf("#");
+					if (hpos >= 0) {
+						var cpos = tab_link.href.indexOf(":", hpos);
+						if (cpos >= 0)
+							old_item = tab_link.href.substr(cpos+1);
+					}
+				}
+
+				if (hash_item != old_item) {
+					if (hash_item == "")
+						show_asset_list(active_tab);
+					else
+						load_asset_detail(active_tab, hash_item);
+						
+					$("#"+hash_tab+"_items").trigger("wd_asset_item", [hash_item]);
+				}
+			}
+		}
+		
+		function toggle_tab(tab) {
+			if (tab == active_tab) {
+				window.location.hash = "#Closed";
+				return false;
+			} else {
+				return true;
+			}
+		}
+		
+		function assets_resize(close, type) {
+			if (type != active_tab)
+				return;
+				
+			var closer = document.getElementById("wd_assets_closer");
+			if (!closer)
+				return;
+			
+			var new_height = 0;
+			if (!close) {
+				var content = document.getElementById("wd_assets_content");
+				if (content)
+					new_height = $(content).outerHeight();
+			}
+			
+			var my_close = close;
+			$(closer).animate({height:new_height},500,function() {if (!my_close) $(closer).css("height", "auto");});
+		}
+		
+		function asset_tabs_update_visibility() {
+			if (active_tab == "" || $("li.wd_asset_type_tab").css("float") != "none")
+				$(".wd_asset_type_tab.tab-inactive").slideDown(500);
+			else
+				$(".wd_asset_type_tab.tab-inactive").slideUp(500);
+		}
+
+		$(function() {
+			setTimeout(hash_update, 10);
+			$(window).hashchange(hash_update);
+			
+			asset_tabs_update_visibility();
+			$(window).resize(function() {
+				asset_tabs_update_visibility();
+			});
+		});
+		
+		$.extend(
+			webDriver,
+			{
+				toggle_tab: toggle_tab,
+				load_asset_detail: load_asset_detail
+			}
+		);
+		})(webDriver.jQuery);
+		</script>
+<script type="text/javascript" src="js/wd_resize.js" wd_script_id="wd_resize.js" nonce="YjhiM2UxMDQ0MjViZjU5NDZkZDdjZDk5OWYyODJkZDg5MmJlMWY5MA=="></script>
+<script type="text/javascript" wd_script_id="format_news_script" nonce="YjhiM2UxMDQ0MjViZjU5NDZkZDdjZDk5OWYyODJkZDg5MmJlMWY5MA==">
+(function($) {
+	webDriver.formatNews = function() {
+		var $news = $(this);
+		var print_url = $news.attr("wd_print_url");
+		$news.find("table").each(function() {
+			var $table = $(this);
+			var $parent = $table.parent();
+			if ($parent.innerWidth() < $table.outerWidth()) {
+				if ($parent.hasClass("wd_news_table")) {
+					$parent.find(".fullscreen-button").show();
+				} else {
+					var $btn = $("<button>View News Release Full Screen</button>")
+						.addClass("fullscreen-button")
+						.on("click", function() {
+							if (print_url)
+								window.open(print_url, "_blank", "");
+							else
+								view_printable();
+						})
+					;
+
+					var $div = $("<div></div>)")
+						.addClass("wd_news_table")
+						.css("overflow-x", "auto")
+						.append($btn)
+					;
+
+					$table.replaceWith($div);
+					$div.append($table);
+				}
+			} else {
+				if ($parent.hasClass("wd_news_table"))
+					$parent.find(".fullscreen-button").hide();
+			}
+		});
+	}
+})(webDriver.jQuery);
+</script>
+<style type="text/css" wd_script_id="template detail:newsfeed_releases:system style" nonce="YjhiM2UxMDQ0MjViZjU5NDZkZDdjZDk5OWYyODJkZDg5MmJlMWY5MA==">
+.wd_title {
+	font-size: 1.3em;
+	font-weight: bold;
+}
+.wd_subtitle {
+	font-weight: bold;
+}
+table.wd_extimagetable {
+	border-style: none; 
+	border-spacing:0px;
+	clear: right; 
+	float: right; 
+}
+td.wd_extimagecell {
+	text-align: right; 
+	margin: 0px 0px 5px 5px;
+	padding:0px;
+}
+td.wd_extimagecell img {
+	padding-left:10px;
+	padding-bottom:10px;
+	border-style: none; 
+}
+blockquote.wd_pullquote {
+	font-style: italic;
+	width:200px;
+	margin:0 0 20px 20px;
+	line-height: 1.8em;
+	float: right;
+	clear: right;
+}
+blockquote.wd_pullquote:before {
+	content: "“ ";
+	font-size: xx-large;
+}
+blockquote.wd_pullquote:after {
+	content: " ”";
+	font-size: xx-large;
+	float: right;
+}
+.fullscreen-button {
+	border: 1px solid #d1d1d1;
+	background: #e3e3e3 url(images/webdriver/view_full_screen_button_background.png) no-repeat;
+	padding: 3px 3px 3px 30px;
+	margin: 5px 0px 5px 0px;
+	color: #727272;
+	width: 220px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	cursor: pointer;
+}
+.wd_contact {
+	margin: 1em 0;
+}
+.wd_release_data {
+	margin: 1em 0;
+}
+.wd_caption {
+	text-align: center;
+	font-size: 0.72em;
+	font-style: italic;
+	margin: 1em 0 0 0;
+}
+</style>
+<script type="text/javascript" nonce="YjhiM2UxMDQ0MjViZjU5NDZkZDdjZDk5OWYyODJkZDg5MmJlMWY5MA==">webDriver.pop_jQuery();</script>
+
+<!-- end spin_special_output(head_start) -->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    
+    <title>Jeep® Brand Expands Wrangler and Gladiator Lineup With Premium High Altitude Model - Feb 6, 2020</title>
+	
+ <meta name="keywords" content="" />
+ <meta name="description" content="" />
+ <meta name="twitter:card" content="summary" />
+ <meta name="twitter:title" content="Jeep® Brand Expands Wrangler and Gladiator Lineup With Premium High Altitude Model" />
+ <meta name="twitter:description" content="New 2020 Jeep® Wrangler and Jeep Gladiator High Altitude debut at Chicago Auto Show Wrangler and Gladiator models boast an unmatched combination of customized appearance, premium content and 4x4..." />
+ <meta name="twitter:image" content="https://mma.prnewswire.com/media/1086714/FCA_Jeep_Wrangler_High_Altitude.jpg?p=twitter" />
+ <meta property="og:site_name" content="Chicago Auto Show Online Press Office News" />
+ <meta property="og:url" content="https://cas.vporoom.com/2020-02-06-Jeep-R-Brand-Expands-Wrangler-and-Gladiator-Lineup-With-Premium-High-Altitude-Model" />
+ <meta property="og:title" content="Jeep® Brand Expands Wrangler and Gladiator Lineup With Premium High Altitude Model" />
+ <meta property="og:description" content="New 2020 Jeep® Wrangler and Jeep Gladiator High Altitude debut at Chicago Auto Show Wrangler and Gladiator models boast an unmatched combination of customized appearance, premium content and 4x4..." />
+ <meta name="image" property="og:image" content="https://mma.prnewswire.com/media/1086714/FCA_Jeep_Wrangler_High_Altitude.jpg?p=facebook" />
+	
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    
+    <link href="css/tradeshow.css" rel="stylesheet">
+    <link href="css/wdcontent.css" rel="stylesheet">
+    <link href="css/wd_media_query.css" rel="stylesheet">
+    	<style type="text/css">
+		.container a,
+		.wd_nav li a,
+		.wd_newsfeed_releases .wd_title a,
+		.wd_newsfeed_releases-teaser .item_name a {
+			color: #5D5D5D;
+		}
+
+		.wd_footer,
+		.wd_featurebox_title:after,
+		#single_slider_responsive .single_slider_carousel_caption h4:after,
+		.wd_nav li:hover, 
+		.wd_nav li.on,
+		.wd_footer,
+		.wd_featurebox i.fa,
+		.wd_featurebox p.more,
+		.wd_subscribe_btn {
+			background: #5D5D5D;
+		}
+	</style>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<!-- begin spin_special_output(head_end) -->
+<link rel="canonical" href="https://cas.vporoom.com/2020-02-06-Jeep-R-Brand-Expands-Wrangler-and-Gladiator-Lineup-With-Premium-High-Altitude-Model" />
+<!-- end spin_special_output(head_end) -->
+</head>
+<body>
+<header>
+    <div class="container header">
+		<a href="http://www.chicagoautoshow.com" alt="Go to the Chicago Auto Show Home page">
+        <img src="/image/Chicago+Auto+show+2018+unofficial+banner+copy.jpg" alt=""  />		</a>
+    </div>
+</header>
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12 col-md-12">
+					</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12 col-md-3">
+			<ul class="wd_nav">
+				
+
+<li><a href="https://cas.vporoom.com/index.php?s=2450" target="_self">About Us</a></li>
+
+
+
+
+<li class="on"><a class="on" href="https://cas.vporoom.com/index.php?s=2429" target="_self">News Releases</a></li>
+
+
+
+
+<li><a href="https://cas.vporoom.com/index.php?s=34216" target="_self">Get News Alerts by Email</a></li>
+
+
+
+
+				
+            </ul>
+            <div class="wd_site_search">
+            <div class="wd_search_form_container"><form name="basic_search" method="get" action="https://cas.vporoom.com/index.php?s=2456" class="wd_search_form wd_search_form_basic"><input type="hidden" name="s" value="search_results" /><input type="text" name="query" value="" size="32" placeholder="Search" title="Search" /> <a href="#" onclick="webDriver.jQuery(this).closest('form').submit(); return false;"><img src="images/webdriver/search.png"></a></form>
+</div>            </div>
+					</div>
+				<div class="col-xs-12 col-sm-9 col-md-9">
+		<h1 class="page_header">News Releases</h1><div id="wd_printable_content" class="fr-view">
+<div class="wd_newsfeed_releases-detail">
+<div class="wd_title wd_language_left">Jeep® Brand Expands Wrangler and Gladiator Lineup With Premium High Altitude Model</div>
+
+<div class="wd_toolbar wd_toolbar-detail"><ul class="wd_tools"><li class="wd_tool wd_tool-print"><span class="wd_tool_icon"><a onclick="view_printable(); return false;" rel="nofollow" aria-describedby="newwindow-note" href="#print" title="print"><span class="fa fa-print"></span></a></span></li><li class="wd_tool wd_tool-socialshare_facebook"><span class="wd_tool_icon">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcas.vporoom.com%2Findex.php%3Fs%3D2429%26item%3D122560" target="_blank" title="Facebook Share" style="background-color:#4267B2;">
+                    <span class="fa fa-facebook"></span>
+		    <span class="wd_sr-only wd_sr-only-focusable"></span>
+                    </a>
+                </span></li><li class="wd_tool wd_tool-socialshare_linkedin"><span class="wd_tool_icon">
+                    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fcas.vporoom.com%2Findex.php%3Fs%3D2429%26item%3D122560" target="_blank" title="Linkedin Share" style="background-color:#0077B5;">
+                    <span class="fa fa-linkedin"></span>
+		    <span class="wd_sr-only wd_sr-only-focusable"></span>
+                    </a>
+                </span></li><li class="wd_tool wd_tool-socialshare_twitter"><span class="wd_tool_icon">
+                    <a href="https://twitter.com/share?url=https%3A%2F%2Fcas.vporoom.com%2Findex.php%3Fs%3D2429%26item%3D122560" target="_blank" title="Twitter Share" style="background-color:#000;">
+                    <span class="fa fa-twitter"></span>
+		    <span class="wd_sr-only wd_sr-only-focusable"></span>
+                    </a>
+                </span></li><li class="wd_tool wd_tool-email"><span class="wd_tool_icon"><a onclick="window.location.href = 'mailto:?subject=Jeep%C2%AE%20Brand%20Expands%20Wrangler%20and%20Gladiator%20Lineup%20With%20Premium%20High%20Altitude%20Model%20-%20Feb%206%2C%202020&amp;body='+encodeURIComponent(window.location.href);return false;" href="#email" title="email"><span class="fa fa-envelope"></span></a></span></li><li class="wd_tool wd_tool-rss"><span class="wd_tool_icon"><a href="https://cas.vporoom.com/2020-02-06-Jeep-R-Brand-Expands-Wrangler-and-Gladiator-Lineup-With-Premium-High-Altitude-Model?pagetemplate=rss" title="rss"><span class="fa fa-rss"></span></a></span></li></ul></div>
+
+<div class="wd_assets_container"><div class="wd_asset_type_tabs"><ul class="wd_asset_type_tabs"><li class="wd_asset_type_tab tab-inactive" id="assets_2429_122560-111_tab" title="Photos"><a href="https://cas.vporoom.com/2020-02-06-Jeep-R-Brand-Expands-Wrangler-and-Gladiator-Lineup-With-Premium-High-Altitude-Model#assets_2429_122560-111" id="assets_2429_122560-111_tab_link" onclick="return webDriver.toggle_tab('assets_2429_122560-111');"><span class="tab_close_icon"></span><span class="wd_asset_icon fa fa-photo" style="font-size: 1.2em;"></span><span class="wd_asset_label">Photos</span><span class="wd_asset_count">(1)</span></a></li></ul></div><div id="wd_assets_closer"><div id="wd_assets_content"><div class="wd_assets" id="assets_2429_122560-111_items" style="display:none">
+<div class="wd_gallery-detail">
+<div class="wd_image" style=" margin: 0px 0px 0px 0px;"><img src="https://mma.prnewswire.com/media/1086714/FCA_Jeep_Wrangler_High_Altitude.jpg" alt="" border="0"/></div>
+<div class="wd_detail_caption">
+	<div class="wd_title"><a >FCA Jeep-Wrangler-High-Altitude</a></div>
+	<div class="wd_date">Feb 6, 2020</div>
+	<div class="wd_summary"><p>Jeep® Brand Expands Wrangler and Gladiator Lineup with Premium High Altitude Model</p></div>
+	<div class="wd_hi_res_link_wrapper">Download: <a href="https://mma.prnewswire.com/media/1086714/FCA_Jeep_Wrangler_High_Altitude.jpg?p=original" class="wd_hi_res_link wd_hi_res_download" data-hi-res-url="https://mma.prnewswire.com/media/1086714/FCA_Jeep_Wrangler_High_Altitude.jpg?p=original" data-hi-res-filename="FCA_Jeep_Wrangler_High_Altitude.jpg">Hi Res</a></div>
+</div>
+
+</div>
+</div></div><div class="assets_close_link"><a href="https://cas.vporoom.com/2020-02-06-Jeep-R-Brand-Expands-Wrangler-and-Gladiator-Lineup-With-Premium-High-Altitude-Model#Closed" class="assets_close_button">CLOSE</a></div></div></div>
+
+			
+		
+
+			
+		
+
+<style type="text/css">
+
+
+/* Style Definitions */
+span.prnews_span
+{
+font-size:8pt;
+font-family:"Arial";
+color:black;
+}
+a.prnews_a
+{
+color:blue;
+}
+li.prnews_li
+{
+font-size:8pt;
+font-family:"Arial";
+color:black;
+}
+p.prnews_p
+{
+font-size:0.62em;
+font-family:"Arial";
+color:black;
+margin:0in;
+}
+
+					span.prnews_span{
+						font-size:inherit;
+						font-family:inherit;
+					}
+					li.prnews_li{
+						font-size: inherit;
+						font-family: inherit;           
+					}
+					p.prnews_p{
+						font-size: inherit;
+						font-family: inherit;           
+					}
+				
+					div.PRN_ImbeddedAssetReference{
+						display: none;
+					}
+					div[id^="prni_dvprne"]{
+						display: none;
+					}
+				</style>
+
+<div class="wd_body wd_news_body fr-view" wd_resize="formatNews" wd_print_url="https://cas.vporoom.com/2020-02-06-Jeep-R-Brand-Expands-Wrangler-and-Gladiator-Lineup-With-Premium-High-Altitude-Model?printable=1">
+<p><span class="xn-location">CHICAGO</span>, <span class="xn-chron">Feb. 6, 2020</span> /<a href="http://www.prnewswire.com/" target="_blank">PRNewswire</a>/ --</p>
+<ul type="disc"><li><b>New 2020 Jeep® Wrangler and Jeep Gladiator High Altitude debut at Chicago Auto Show</b> </li><li><b>Wrangler and Gladiator models boast an unmatched combination of customized appearance, premium content and 4x4 capability </b> </li><li><b>Wrangler and Gladiator High Altitude deliver customized, sophisticated styling, a well-appointed interior, a long list of premium standard features and legendary Jeep 4x4 capability</b> </li><li><b>Wrangler and Gladiator High Altitude models will arrive in Jeep showrooms in the second quarter of 2020</b></li></ul><p>As the Chicago Auto Show opens this weekend, the Jeep® brand is introducing new editions of the Wrangler and Gladiator in the form of new High Altitude models, which deliver a new level of premium content combined with legendary Jeep 4x4 capability and a new customized appearance.</p>
+<div class="PRN_ImbeddedAssetReference" id="DivAssetPlaceHolder7954"><p><img src="https://mma.prnewswire.com/media/1086714/FCA_Jeep_Wrangler_High_Altitude.jpg" title="Jeep® Brand Expands Wrangler and Gladiator Lineup with Premium High Altitude Model" alt="Jeep® Brand Expands Wrangler and Gladiator Lineup with Premium High Altitude Model"/></p>
+</div><p>&quot;Our new Jeep Wrangler and Gladiator High Altitude are in direct response to customers who continue to ask for even more luxurious materials, premium content and technology in two of the most capable vehicles that we've ever offered,&quot; said <span class="xn-person">Jim Morrison</span>, Head of Jeep Brand – FCA North America. &quot;We've taken the most capable SUV and midsize pickup on the planet and delivered a pair of truly unique vehicles, inside and out, so there's clearly no compromise between luxury and capability.&quot;</p>
+<p>Wrangler and Gladiator High Altitude models will arrive in Jeep showrooms in the second quarter of 2020.</p>
+<p><b>2020 Jeep Wrangler and Gladiator High Altitude</b><br/>Packed with standard premium amenities, the new 2020 Jeep Wrangler and Gladiator High Altitude represent the top of the line in Jeep luxury and capability. <br/></p>
+<p>The exterior of each High Altitude edition model boasts a premium look starting with new 20-inch fully painted gloss black aluminum wheels and a full suite of exterior LED lights — daytime running lamps with LED accents, front LED fog lamps, LED reflector headlamps and LED taillamps.<br/></p>
+<p>Premium exterior enhancements continue with matching body-color treatments – hardtop, fender flares, exterior mirrors, door handles, tailgate handle, as well as the front and rear bumpers – that distinguish the High Altitude models. Running boards with an integrated step and a matte black Trail Rated badge round out the luxurious look of each High Altitude model. <br/></p>
+<p>Inside the cabin, High Altitude models feature a full leather luxury interior boasting a leather-wrapped dashboard, center console and door panels, and Nappa leather seats with quilting. Two interior color options Black and Steel Gray (late availability), as well as a black leather-wrapped steering wheel, are offered as well. <br/></p>
+<p>Wrangler and Gladiator High Altitude models mark the first time either vehicle has featured 20-inch wheels. Bridgestone Dueler H/L Alenza all-season tires (275/55R20) provide the perfect balance of looks and rugged all-terrain capability. <br/></p>
+<p>An array of technology and other premium features are also standard on the High Altitude models: 8.4-inch touchscreen display with Alpine premium audio system, 4G LTE Wi-Fi hotspot, automatic high-beam headlamp control, GPS navigation, remote proximity keyless entry, Blind-spot Monitoring, Rear Cross Path detection and ParkView rear backup camera with dynamic grid lines. <br/></p>
+<p>Jeep Wrangler and Gladiator High Altitude models are available in Billet Silver, Black, Bright White, Gobi (Gladiator exclusive), Granite Crystal, and Ocean Blue (Wrangler exclusive), Snazzberry (late availability) exterior paints.<br/></p>
+<p><b>Jeep Brand</b><br/>Built on more than 75 years of legendary heritage, Jeep is the authentic SUV with class-leading capability, craftsmanship and versatility for people who seek extraordinary journeys. The Jeep brand delivers an open invitation to live life to the fullest by offering a full line of vehicles that continue to provide owners with a sense of security to handle any journey with confidence.<br/></p>
+<p>The Jeep vehicle lineup consists of the Cherokee, Compass, Gladiator, Grand Cherokee, Renegade and Wrangler. To meet consumer demand around the world, all Jeep models sold outside <span class="xn-location">North America</span> are available in both left- and right-hand drive configurations and with gasoline and diesel powertrain options. Jeep is part of the portfolio of brands offered by global automaker Fiat Chrysler Automobiles. For more information regarding FCA (NYSE: FCAU/ MTA: FCA), please visit <a target="_blank" href="https://c212.net/c/link/?t=0&amp;l=en&amp;o=2712439-1&amp;h=3411593498&amp;u=http%3A%2F%2Fwww.fcagroup.com%2F&amp;a=www.fcagroup.com" rel="nofollow">www.fcagroup.com</a>.<br/></p>
+<p><b>Follow Jeep and FCA news and video on:</b><br/>Company blog: <a target="_blank" href="https://c212.net/c/link/?t=0&amp;l=en&amp;o=2712439-1&amp;h=2664632409&amp;u=http%3A%2F%2Fblog.fcanorthamerica.com%2F&amp;a=http%3A%2F%2Fblog.fcanorthamerica.com" rel="nofollow">http://blog.fcanorthamerica.com</a><br/>Media website: <a target="_blank" href="https://c212.net/c/link/?t=0&amp;l=en&amp;o=2712439-1&amp;h=1483306423&amp;u=http%3A%2F%2Fmedia.fcanorthamerica.com%2F&amp;a=http%3A%2F%2Fmedia.fcanorthamerica.com" rel="nofollow">http://media.fcanorthamerica.com</a><br/>Jeep brand: <a target="_blank" href="https://c212.net/c/link/?t=0&amp;l=en&amp;o=2712439-1&amp;h=827596594&amp;u=http%3A%2F%2Fwww.jeep.com%2F&amp;a=www.jeep.com" rel="nofollow">www.jeep.com</a><br/>Facebook: <a target="_blank" href="https://c212.net/c/link/?t=0&amp;l=en&amp;o=2712439-1&amp;h=1220684622&amp;u=http%3A%2F%2Fwww.facebook.com%2Fjeep&amp;a=www.facebook.com%2Fjeep" rel="nofollow">www.facebook.com/jeep</a> or <a target="_blank" href="https://c212.net/c/link/?t=0&amp;l=en&amp;o=2712439-1&amp;h=3426254503&amp;u=https%3A%2F%2Fwww.facebook.com%2FFiatChrysler.NorthAmerica%2F&amp;a=https%3A%2F%2Fwww.facebook.com%2FFiatChrysler.NorthAmerica%2F" rel="nofollow">https://www.facebook.com/FiatChrysler.NorthAmerica/</a><br/>Instagram: <a target="_blank" href="https://c212.net/c/link/?t=0&amp;l=en&amp;o=2712439-1&amp;h=2033304322&amp;u=http%3A%2F%2Fwww.instagram.com%2Fjeep&amp;a=www.instagram.com%2Fjeep" rel="nofollow">www.instagram.com/jeep</a> or  <a target="_blank" href="https://c212.net/c/link/?t=0&amp;l=en&amp;o=2712439-1&amp;h=144010132&amp;u=http%3A%2F%2Fwww.instagram.com%2FFiatChrysler_NA&amp;a=www.instagram.com%2FFiatChrysler_NA" rel="nofollow">www.instagram.com/FiatChrysler_NA</a><br/>Twitter: <a target="_blank" href="https://c212.net/c/link/?t=0&amp;l=en&amp;o=2712439-1&amp;h=1234783140&amp;u=http%3A%2F%2Fwww.twitter.com%2Fjeep&amp;a=www.twitter.com%2Fjeep" rel="nofollow">www.twitter.com/jeep</a> or <a target="_blank" href="https://c212.net/c/link/?t=0&amp;l=en&amp;o=2712439-1&amp;h=3594225813&amp;u=http%3A%2F%2Fwww.twitter.com%2FFiatChrysler_NA&amp;a=www.twitter.com%2FFiatChrysler_NA" rel="nofollow">www.twitter.com/FiatChrysler_NA</a><br/>YouTube: <a target="_blank" href="https://c212.net/c/link/?t=0&amp;l=en&amp;o=2712439-1&amp;h=4157631225&amp;u=http%3A%2F%2Fwww.youtube.com%2Fthejeepchannel&amp;a=www.youtube.com%2Fthejeepchannel" rel="nofollow">www.youtube.com/thejeepchannel</a> or <a target="_blank" href="https://c212.net/c/link/?t=0&amp;l=en&amp;o=2712439-1&amp;h=1105889928&amp;u=http%3A%2F%2Fwww.youtube.com%2Ffcanorthamerica&amp;a=www.youtube.com%2Ffcanorthamerica" rel="nofollow">www.youtube.com/fcanorthamerica</a>  </p>
+
+<div class="PRN_ImbeddedAssetReference" id="DivAssetPlaceHolder0">
+</div>
+
+<p>SOURCE  FCA</p>
+<img alt="" src="https://rt.prnewswire.com/rt.gif?NewsItemId=DE10903&amp;Transmission_Id=202002061500PR_NEWS_USPR_____DE10903&amp;DateId=20200206" style="border:0px; width:1px; height:1px;"/></div>
+
+<div class="wd_contact">For further information: Berj Alexanian, (248) 512-0364 (office), (248) 766-9116 (cell), berj.alexanian@fcagroup.com; Todd Goyer, (248) 512-0041 (office), (248) 761-0805 (cell), todd.goyer@fcagroup.com</div>
+
+
+ 
+				
+			
+
+<!-- ITEMDATE: 2020-02-06 15:00:00 EST -->
+
+</div>
+</div>		</div>
+			</div>
+	<div class="row">
+		<div class="col-sm-12 col-md-12">
+			<div class="wd_footer">
+				<p></p>
+			</div>
+		</div>
+	</div>
+</div>
+		
+
+<!-- begin spin_special_output(body_end) -->
+<script wd_script_id="piwik_tracking_code"></script>
+<!-- Piwik Tracking Code -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+
+  _paq.push(["setCustomVariable", 4, "News Release Feed ID", "202002061500PR_NEWS_USPR_____DE10903", "page"]);
+
+  _paq.push(["setCustomVariable", 1, "Content Type", "News Releases Feed", "page"]);
+
+  _paq.push(["setCustomVariable", 3, "Navigation Page", "News Releases", "page"]);
+
+  _paq.push(["trackPageView"]);
+  _paq.push(["enableLinkTracking"]);
+  (function() {
+    var u="//stats.drivetheweb.com/";
+    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+    _paq.push(["setSiteId", 2935]);
+    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0];
+    g.type="text/javascript"; g.async=true; g.defer=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript>
+	<img src="https://stats.drivetheweb.com/piwik.php?idsite=2935&rec=1" style="border:0" alt="" />
+</noscript>
+<!-- End Piwik Tracking Code -->
+		<span id="newwindow-note" class="sr-only">(opens in a new window)</span>
+<!-- end spin_special_output(body_end) -->
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a577cee2dc85148e',t:'MTc5NDE3NDc4MQ=='};var l=window.parent.location,o;try{o=new URL(l.origin).origin}catch(e){try{o=new URL(new URL(l.href).origin).origin}catch(e){o=''}}var u='/cdn-cgi/challenge-platform/scripts/jsd/main.js?ray=a577cee2dc85148e',a=document.createElement('script');a.src=o?new URL(u,o).href:u;document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

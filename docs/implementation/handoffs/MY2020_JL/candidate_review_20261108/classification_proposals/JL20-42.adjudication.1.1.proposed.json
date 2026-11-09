@@ -1,0 +1,118 @@
+{
+  "adjudication_version": "1.1",
+  "created_at": "2026-11-08T22:19:57.363050+00:00",
+  "operator_label": "pending_human_signoff",
+  "original_manifest_hash": "",
+  "candidate_reference": "JL20-42",
+  "source_identity": {
+    "source_id": "human_classification_adjudication",
+    "source_identity_type": "candidate_digest",
+    "native_identifier": "sha256:b5bafe400cb5aa6b17dbc091bf31ee945dd8c2c61fd2cefc38f9b60d5636f719"
+  },
+  "original_review_category": "missing_classification",
+  "adjudication_category": "evidence_backed_classification",
+  "adjudication_decision": "proposed_classifications",
+  "adjudicated_trim_name": "Unlimited Sport S",
+  "adjudication_notes": "Unapproved bounded engineering proposal; no canonical fact or import authorization.",
+  "evidence_anchors": {
+    "candidate_artifact_reference": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/candidates/JL20-42.candidate.2.1.0.json",
+    "candidate_hash": "sha256:b5bafe400cb5aa6b17dbc091bf31ee945dd8c2c61fd2cefc38f9b60d5636f719",
+    "supporting_documents": [
+      {
+        "source_id": "Mopar_MY2020_Wrangler_US_manual",
+        "raw_artifact_hash": "sha256:eccf53d564172144d82728cacc2b7f87210c2dd7af0a535e1df78f588a92cd92",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/evidence/Mopar_MY2020_Wrangler_US_owners_manual.pdf",
+        "extractor_id": "pypdf",
+        "extractor_version": "6.16.1",
+        "extraction_mode": "source_specific_parser",
+        "assertion_set_id": "MY2020-manual-fuel-hardware",
+        "source_locator": "https://vehicleinfo.mopar.com/assets/publications/en-us/Jeep/2020/Wrangler/P138305_20_JL_OM_EN_USC_DIGITAL.pdf",
+        "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+        "source_applicability": {
+          "market": "US",
+          "applicability_basis": "US model-year guide/manual applicability; engine-family joins explicitly scoped",
+          "publisher_jurisdiction": "US",
+          "applicability_scope": "model_year",
+          "unknown_fields": {}
+        },
+        "publication_revision": null,
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "assertions": [
+          {
+            "assertion_id": "fuel2",
+            "attribute_key": "fuel_requirements",
+            "raw_value": "\nThis engine is designed to meet all emission \nrequirements, and provide satisfactory fuel \neconomy and performance, when using \nhigh-quality unleaded “regular” gasoline having \nan octane rating of 87, as specified by the (R+M)/\n2 method. The use of 91 or higher octane “premium” \ngasoline will allow these engines to operate to optimal \nperformance. This increase in performance is most \nnoticeable in hot weather or other heavier load conditions, \nsuch as while towing.\nWhile operating on gasoline with the required octane \nnumber, hearing a light knocking sound from the engine is \nnot a cause for concern. However, if the engine is heard \nmaking a heavy knocking sound, see your dealer \nimmediately. Use of gasoline with a lower than \nrecommended octane number can cause engine failure \nand may void or not be covered by the New Vehicle Limited \nWarranty.\nPoor quality gasoline can cause problems such as hard \nstarting, stalling, and hesitations. If you experience these \nsymptoms, try another brand of gasoline before \nconsidering service for the vehicle.\n",
+            "source_context": "PDF page284 / printed282, 2.0L ENGINE"
+          },
+          {
+            "assertion_id": "fuel36",
+            "attribute_key": "fuel_requirements",
+            "raw_value": "\nThis engine is designed to meet all emissions \nregulations and provide satisfactory fuel \neconomy and performance when using \nhigh-quality unleaded “Regular” gasoline \nhaving an octane rating of 87 as specified by the (R+M)/\n2 method. The use of higher octane “Premium” gasoline \nwill not provide any benefit over “Regular” gasoline in \nthese engines.\nWhile operating on gasoline with an octane number of 87, \nhearing a light knocking sound from the engine is not a \ncause for concern. However, if the engine is heard making \na heavy knocking sound, see your dealer immediately. Use \nof gasoline with an octane number lower than 87 can \ncause engine failure and may void or not be covered by the \nNew Vehicle Limited Warranty.\nPoor quality gasoline can cause problems such as hard \nstarting, stalling, and hesitations. If you experience these \nsymptoms, try another brand of gasoline before \nconsidering service for the vehicle.\n",
+            "source_context": "PDF page284 / printed282, 3.6L ENGINE"
+          },
+          {
+            "assertion_id": "hardware",
+            "attribute_key": "engine_hardware",
+            "raw_value": "284 TECHNICAL SPECIFICATIONS  \nFUEL SYSTEM CAUTIONS\nNOTE:\nIntentional tampering with the emissions control system can result in civil penalties being assessed against you.\nFLUID CAPACITIES    \nCAUTION!\nFollow these guidelines to maintain your vehicle’s performance:\n The use of leaded gasoline is prohibited by Federal law. Using leaded gasoline can impair engine performance and damage the emissions control system.\n An out-of-tune engine or certain fuel or ignition malfunctions can cause the catalytic converter to overheat. If you notice a pungent burning odor or some light smoke, your engine \nmay be out of tune or malfunctioning and may require immediate service. Contact an authorized dealer for service assistance.\n The use of fuel additives, which are now being sold as octane enhancers, is not recommended. Most of these products contain high concentrations of methanol. Fuel system \ndamage or vehicle performance problems resulting from the use of such fuels or additives is not the responsibility of the manufacturer and may void or not be covered under the \nNew Vehicle Limited Warranty.\nUS Metric\nFuel (Approximate)\nTwo Door Models 17.5 Gallons 66 Liters\nFour Door Models 21.5 Gallons 81 Liters\nEngine Oil with Filter\n2.0L Engine 5 Quarts 4.73 Liters\n3.6L Engine 5 Quarts 4.73 Liters\nCooling System *\n2.0L Engine (Mopar Antifreeze/Engine Coolant 10 Year/150,000 Mile (240,000 km) Formula or equivalent) 10.3 Quarts 9.7 Liters\n2.0L Engine Intercooler without Motor Generator Unit (MGU) (Mopar Antifreeze/Engine Coolant 10 Year/\n150,000 Mile (240,000 km) Formula or equivalent) 3.2 Quarts 3.0 Liters\n20_JL_OM_EN_USC_t.book  Page 284  \nTECHNICAL SPECIFICATIONS 285\nFLUIDS AND LUBRICANTS\nENGINE     \n2.0L Engine Intercooler with Motor Generator Unit (MGU) (Mopar Antifreeze/Engine Coolant 10 Year/\n150,000 Mile (240,000 km) Formula or equivalent) 3.5 Quarts 3.3 Liters\n2.0L Battery Coolant (Mopar Antifreeze/Engine Coolant 10 Year/150,000 Mile (240,000 km) Formula or \nequivalent) 2.5 Quarts 2.4 Liters\n3.6L Engine (Mopar Antifreeze/Engine Coolant 10 Year/150,000 Mile (240,000 km) Formula or equivalent) 11.2 Quarts 10.6 Liters\n3.6L Motor Generator Unit (MGU) (Mopar Antifreeze/Engine Coolant 10 Year/150,000 Mile (240,000 km) \nFormula or equivalent) 1.9 Quarts 1.8 Liters\n3.6L Battery Coolant (Mopar Antifreeze/Engine Coolant 10 Year/150,000 Mile (240,000 km) Formula or \nequivalent) 2.5 Quarts 2.4 Liters\n* Includes coolant recovery bottle filled to MAX level.\nUS Metric\nComponent Fluid, Lubricant, or Genuine Part\nEngine Coolant\nWe recommend you use Mopar Antifreeze/Coolant 10 Year/150,000 Mile (240,000 km) \nFormula OAT (Organic Additive Technology) or equivalent meeting the requirements of \nFCA Material Standard MS.90032.\nIntercooler/Motor Generator Unit (if equipped)\nWe recommend you use Mopar Antifreeze/Coolant 10 Year/150,000 Mile (240,000 km) \nFormula OAT (Organic Additive Technology) or equivalent meeting the requirements of \nFCA Material Standard MS.90032.\nBattery Coolant (if equipped)\nWe recommend you use Mopar Antifreeze/Coolant 10 Year/150,000 Mile (240,000 km) \nFormula OAT (Organic Additive Technology) or equivalent meeting the requirements of \nFCA Material Standard MS.90032.\n8\n20_JL_OM_EN_USC_t.book  Page 285  \n286 TECHNICAL SPECIFICATIONS  \nEngine Oil — 2.0L Engine\nWe recommend you use Mopar API SN PLUS Certified SAE 5W-30 Full Synthetic Engine \nOil which meets the requirements of FCA Material Standard MS-13340. Equivalent full \nsynthetic SAE 5W-30 engine oil can be used if it meets API SN PLUS Certification. If SN \nPLUS or equivalent oil is unavailable then please contact your local dealership for \nrecommendation.\nCAUTION!\nFailure to use the recommended SN PLUS or equivalent oil can cause engine damage \nnot covered by the vehicle warranty.\nEngine Oil — 3.6L Engine\nWe recommend you use API Certified SAE 0W-20 Engine Oil, meeting the requirements of \nFCA Material Standard MS-6395 such as Mopar, Pennzoil, and Shell Helix. Refer to your \nengine oil filler cap for correct SAE grade.\nEngine Oil Filter We recommend you use Mopar Engine Oil Filter or equivalent.\nSpark Plugs We recommend you use Mopar Spark Plugs.\nFuel Selection — 2.0L Engine 87 Octane (R+M)/2 Method, 0-15% Ethanol.\nFuel Selection — 3.6L Engine 87 Octane (R+M)/2 Method, 0-15% Ethanol.\nComponent Fluid, Lubricant, or Genuine Part\nCAUTION!\n Mixing of engine coolant (antifreeze) other than specified Organic Additive Technology (OAT) engine coolant (antifreeze), may result in engine damage and may decrease corrosion \nprotection. Organic Additive Technology (OAT) engine coolant is different and should not be mixed with Hybrid Organic Additive Technology (HOAT) engine coolant (antifreeze) or \nany “globally compatible” coolant (antifreeze). If a non-OAT engine coolant (antifreeze) is introduced into the cooling system in an emergency, the cooling system will need to be \ndrained, flushed, and refilled with fresh OAT coolant (conforming to MS.90032), by an authorized dealer as soon as possible.\n Do not use water alone or alcohol-based engine coolant (antifreeze) products. Do not use additional rust inhibitors or antirust products, as they may not be compatible with the \nradiator engine coolant and may plug the radiator.\n This vehicle has not been designed for use with propylene glycol-based engine coolant (antifreeze). Use of propylene glycol-based engine coolant (antifreeze) is not recommended.\n20_JL_OM_EN_USC_t.book  Page 286  ",
+            "source_context": "PDF pages286–288; cooling system and underhood drawings; applicability must not be inferred beyond each caption"
+          }
+        ]
+      },
+      {
+        "source_id": "FCA_MY2020_Wrangler_US_specs",
+        "raw_artifact_hash": "sha256:8ca6c22b9af4a87f33700b3a3455fa3fae9ea5799218f232cbbb1b31eabf8354",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/FCA_2020_Wrangler_US_specifications.pdf",
+        "extractor_id": "pypdf",
+        "extractor_version": "6.16.1",
+        "extraction_mode": "source_specific_parser",
+        "assertion_set_id": "MY2020-US-specs",
+        "source_locator": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/specs/2020_JP_Wrangler_SPmrgun0frgq245rkio8imc5var6.pdf",
+        "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+        "source_applicability": {
+          "market": "US",
+          "applicability_basis": "US model-year guide/manual applicability; engine-family joins explicitly scoped",
+          "publisher_jurisdiction": "US",
+          "applicability_scope": "model_year",
+          "unknown_fields": {}
+        },
+        "publication_revision": null,
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "assertions": [
+          {
+            "assertion_id": "layout",
+            "attribute_key": "generic_drive_classification",
+            "raw_value": "Longitudinal front engine, four-wheel drive",
+            "source_context": "PDF page1, BODY/CHASSIS Layout"
+          },
+          {
+            "assertion_id": "pentastar",
+            "attribute_key": "manufacturer_powertrain_description",
+            "raw_value": "NEW 2020  JEEP  WRANGLER ECODIESEL  | SPECIFICATIONS  http://media.fcanorthamerica.com  |  1  \n \n2020 Jeep Wrangler \nSPECIFICATIONS  \n \nSpecifications are based on the latest product information available at the time of publication.  \nAll dimensions are in inches (millimeters) unless otherwise noted.  \nAll dimensions measured at curb weight with standard tires and wheels. \n \n \nGENERAL INFORMATION  \nVehicle Type Sport-utility vehicle \nAssembly Plant Toledo Supplier Park, Toledo, Ohio \nEPA Vehicle Class Multipurpose vehicle \nIntroduction Date Fall 2017 as a 2018 model  \n  \nBODY/CHASSIS  \nLayout Longitudinal front engine, four-wheel drive \nConstruction Ladder-type frame, open steel and aluminum body \n  \nENGINE: 3.6-LITER PENTASTAR V-6  \nAvailability Standard — Sport, Sahara (MTX only), Rubicon (all ESS)  \nAvailable — Sahara (with eTorque mild-hybrid assist) \nType and Description 60-degree, V-type, liquid-cooled \nDisplacement (cu. in. / cc) 220 cu. in. (3,604 cu. cm) \nBore x Stroke  3.78 x 3.27 (96 x 83) \nValve System Chain-driven DOHC, 24 valves and hydraulic end-pivot roller rockers \nFuel Injection Sequential, multiport, electronic, returnless \nConstruction Aluminum deep-skirt block, aluminum alloy heads  \nCompression Ratio 11.3:1 \nPower (SAE net) (hp / kW@rpm) 285 hp (213 kW) at 6,400 rpm \nTorque (SAE net) (lb.-ft. / N•m) 260 lb.-ft. (353 N•m) at 4,800 rpm \nMax. Engine Speed (rpm) 6,600 rpm (electronically limited) \nFuel Requirement Unleaded regular, 87 octane (R + M)/2 \nFuel Tank Capacity (gallons) 17.5 (2-door), 21.5 (4-door) \nOil Capacity  5.0 quarts (4.7 liters) \nCoolant Capacity  10 quarts (10.1 liters) \nEmission Controls  Dual three-way catalytic converters, heated oxygen sensors and internal engine \nfeatures ",
+            "source_context": "PDF page1, ENGINE 3.6-LITER PENTASTAR V-6; source-specific guide governs edition availability"
+          }
+        ]
+      }
+    ],
+    "classifications": {
+      "electrification_type": {
+        "value": "none",
+        "reasoning": "MY2020 US manual printed284–285 positively distinguishes 2.0L intercooler without MGU from with-MGU and battery-coolant architecture. The exact order-guide EC1/ESS offering is paired against distinct EC3/eTorque offerings. Proposed none joins the non-MGU variant to EC1; this code-to-hardware association is a bounded engineering conclusion, not a direct manufacturer assertion and not ESS terminology alone.",
+        "applicability": "Only JL20-42: US MY2020 4-door Unlimited Sport S, EC1, JLJL74, QOP 22S; candidate digest sha256:b5bafe400cb5aa6b17dbc091bf31ee945dd8c2c61fd2cefc38f9b60d5636f719",
+        "limitations": "No extension of MY2019 approvals. No final human approval. Family joins are engineering conclusions; exact engine-code hardware/induction corroboration required before approval if current evidence is judged insufficient. Missing archive revisions may affect scope history.",
+        "confidence": "moderate",
+        "source_assertion_refs": [
+          "MY2020-JL-4D-2020-03-03|sha256:b9a2b88de8cf857b845950fec682b460396d802327e12587697da667f69ba731|JL20-42-engine|JL20-42-engine",
+          "Mopar_MY2020_Wrangler_US_manual|sha256:eccf53d564172144d82728cacc2b7f87210c2dd7af0a535e1df78f588a92cd92|MY2020-manual-fuel-hardware|hardware"
+        ],
+        "evidence_status": "supported"
+      }
+    }
+  },
+  "adjudication_hash": "sha256:79a1dd4596e2996ef5efd0ffda64ddec5fd96dc9e31b7e0fdd303701f6c30e05"
+}

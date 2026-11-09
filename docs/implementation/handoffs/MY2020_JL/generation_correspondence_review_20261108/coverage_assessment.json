@@ -1,0 +1,3244 @@
+{
+  "phase1_result": "blocked; phase2 not authorized because full-coverage condition fails",
+  "final_candidates_verified": 49,
+  "model_code_coverage": {
+    "JLJL72": 12,
+    "JLJS72": 3,
+    "JLJL74": 18,
+    "JLJP74": 12,
+    "JLJS74": 4
+  },
+  "target": {
+    "generation_PK": 32,
+    "generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+    "name": "JL",
+    "start_year": 2018,
+    "end_year": null,
+    "vehicle_model_UUID": "5ec5f58a-b140-484c-97f0-c90ec9c134d6",
+    "active_parents": true
+  },
+  "manufacturer_evidence_assessment": "Original US MY2020 order guides positively bind all five native model codes to manufacturer/model/body and year; matching source-code lineage targets existing JL, consistent with previous established mappings. Publication evidence-inclusion gate fails independently of target compatibility; no correspondence finding was published.",
+  "existing_MY2020_conflicts_or_duplicates": 0,
+  "existing_MY2020_covered": 0,
+  "MY2019_reused": 0,
+  "new_publications": 0,
+  "new_receipts": [],
+  "blocking_keys": 51,
+  "rows": [
+    {
+      "candidate_reference": "JL20-01",
+      "current_artifact": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/candidates/JL20-01.approved-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:2d0095a310916a68297ecc22f3b1ca7883dc832f34638df096aac96ea38ec382",
+      "model_code": "JLJL72",
+      "model_year": 2020,
+      "market": "US",
+      "complete_powertrain": true,
+      "intended_generation_PK": 32,
+      "current_published_coverage": false,
+      "resolver_error": "['Missing reviewed generation correspondence.']",
+      "required_identity_keys": [
+        [
+          "MY2020-JL-2D-2019-08-15",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2019-09-05",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2019-10-08",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2019-11-04",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2020-01-15",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2020-01-23",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2020-02-12",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2020-03-03",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ]
+      ],
+      "status": "blocked by unshared document-qualified selector evidence"
+    },
+    {
+      "candidate_reference": "JL20-02",
+      "current_artifact": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/candidates/JL20-02.approved-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:25e28458c76a8aeb0c4ef3c421b6dda4e4e93e66f4f8e46aaeff971cbba20908",
+      "model_code": "JLJL72",
+      "model_year": 2020,
+      "market": "US",
+      "complete_powertrain": true,
+      "intended_generation_PK": 32,
+      "current_published_coverage": false,
+      "resolver_error": "['Missing reviewed generation correspondence.']",
+      "required_identity_keys": [
+        [
+          "MY2020-JL-2D-2019-08-15",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2019-09-05",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2019-10-08",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2019-11-04",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2020-01-15",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2020-01-23",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2020-02-12",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2020-03-03",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ]
+      ],
+      "status": "blocked by unshared document-qualified selector evidence"
+    },
+    {
+      "candidate_reference": "JL20-03",
+      "current_artifact": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/candidates/JL20-03.approved-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:00da540d07ddac1241afce1ed4991d03580f1fc61aa4cbdd96f54ad0f04e9878",
+      "model_code": "JLJL72",
+      "model_year": 2020,
+      "market": "US",
+      "complete_powertrain": true,
+      "intended_generation_PK": 32,
+      "current_published_coverage": false,
+      "resolver_error": "['Missing reviewed generation correspondence.']",
+      "required_identity_keys": [
+        [
+          "MY2020-JL-2D-2019-10-08",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2019-11-04",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2020-01-15",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2020-01-23",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2020-02-12",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2020-03-03",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2020-04-17",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ]
+      ],
+      "status": "blocked by unshared document-qualified selector evidence"
+    },
+    {
+      "candidate_reference": "JL20-04",
+      "current_artifact": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/candidates/JL20-04.approved-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:c961f39aef999e9420d0c614b246b2b801c1be3de404bfca7ace4dabab0c407f",
+      "model_code": "JLJL72",
+      "model_year": 2020,
+      "market": "US",
+      "complete_powertrain": true,
+      "intended_generation_PK": 32,
+      "current_published_coverage": false,
+      "resolver_error": "['Missing reviewed generation correspondence.']",
+      "required_identity_keys": [
+        [
+          "MY2020-JL-2D-2019-10-08",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2019-11-04",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2020-01-15",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2020-01-23",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2020-02-12",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2020-03-03",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2020-04-17",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ]
+      ],
+      "status": "blocked by unshared document-qualified selector evidence"
+    },
+    {
+      "candidate_reference": "JL20-05",
+      "current_artifact": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/candidates/JL20-05.approved-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:79d24371ed83e4ce16ec18c2e4c80e169d1dff918e62c1dbc05e1ecc425a7945",
+      "model_code": "JLJS72",
+      "model_year": 2020,
+      "market": "US",
+      "complete_powertrain": true,
+      "intended_generation_PK": 32,
+      "current_published_coverage": false,
+      "resolver_error": "['Missing reviewed generation correspondence.']",
+      "required_identity_keys": [
+        [
+          "MY2020-JL-2D-2019-08-15",
+          "source_model_code",
+          "model_code",
+          "JLJS72"
+        ],
+        [
+          "MY2020-JL-2D-2019-09-05",
+          "source_model_code",
+          "model_code",
+          "JLJS72"
+        ],
+        [
+          "MY2020-JL-2D-2019-10-08",
+          "source_model_code",
+          "model_code",
+          "JLJS72"
+        ],
+        [
+          "MY2020-JL-2D-2019-11-04",
+          "source_model_code",
+          "model_code",
+          "JLJS72"
+        ],
+        [
+          "MY2020-JL-2D-2020-01-15",
+          "source_model_code",
+          "model_code",
+          "JLJS72"
+        ],
+        [
+          "MY2020-JL-2D-2020-01-23",
+          "source_model_code",
+          "model_code",
+          "JLJS72"
+        ],
+        [
+          "MY2020-JL-2D-2020-02-12",
+          "source_model_code",
+          "model_code",
+          "JLJS72"
+        ],
+        [
+          "MY2020-JL-2D-2020-03-03",
+          "source_model_code",
+          "model_code",
+          "JLJS72"
+        ],
+        [
+          "MY2020-JL-2D-2020-04-17",
+          "source_model_code",
+          "model_code",
+          "JLJS72"
+        ]
+      ],
+      "status": "blocked by unshared document-qualified selector evidence"
+    },
+    {
+      "candidate_reference": "JL20-06",
+      "current_artifact": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/candidates/JL20-06.approved-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:003dfafc42c86abd976d807d5a4fab7437aafd53ecb390132345ba0fa9c31a8e",
+      "model_code": "JLJS72",
+      "model_year": 2020,
+      "market": "US",
+      "complete_powertrain": true,
+      "intended_generation_PK": 32,
+      "current_published_coverage": false,
+      "resolver_error": "['Missing reviewed generation correspondence.']",
+      "required_identity_keys": [
+        [
+          "MY2020-JL-2D-2019-08-15",
+          "source_model_code",
+          "model_code",
+          "JLJS72"
+        ],
+        [
+          "MY2020-JL-2D-2019-09-05",
+          "source_model_code",
+          "model_code",
+          "JLJS72"
+        ],
+        [
+          "MY2020-JL-2D-2019-10-08",
+          "source_model_code",
+          "model_code",
+          "JLJS72"
+        ],
+        [
+          "MY2020-JL-2D-2019-11-04",
+          "source_model_code",
+          "model_code",
+          "JLJS72"
+        ],
+        [
+          "MY2020-JL-2D-2020-01-15",
+          "source_model_code",
+          "model_code",
+          "JLJS72"
+        ],
+        [
+          "MY2020-JL-2D-2020-01-23",
+          "source_model_code",
+          "model_code",
+          "JLJS72"
+        ],
+        [
+          "MY2020-JL-2D-2020-02-12",
+          "source_model_code",
+          "model_code",
+          "JLJS72"
+        ],
+        [
+          "MY2020-JL-2D-2020-03-03",
+          "source_model_code",
+          "model_code",
+          "JLJS72"
+        ],
+        [
+          "MY2020-JL-2D-2020-04-17",
+          "source_model_code",
+          "model_code",
+          "JLJS72"
+        ]
+      ],
+      "status": "blocked by unshared document-qualified selector evidence"
+    },
+    {
+      "candidate_reference": "JL20-07",
+      "current_artifact": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/candidates/JL20-07.candidate.2.1.0.json",
+      "candidate_hash": "sha256:2ece4444921c7d51fbe8633520fed2ca7dc7dadb1eb8eda077fc7e33501cbcef",
+      "model_code": "JLJS72",
+      "model_year": 2020,
+      "market": "US",
+      "complete_powertrain": true,
+      "intended_generation_PK": 32,
+      "current_published_coverage": false,
+      "resolver_error": "['Missing reviewed generation correspondence.']",
+      "required_identity_keys": [
+        [
+          "MY2020-JL-2D-2020-01-15",
+          "source_model_code",
+          "model_code",
+          "JLJS72"
+        ],
+        [
+          "MY2020-JL-2D-2020-01-23",
+          "source_model_code",
+          "model_code",
+          "JLJS72"
+        ],
+        [
+          "MY2020-JL-2D-2020-02-12",
+          "source_model_code",
+          "model_code",
+          "JLJS72"
+        ],
+        [
+          "MY2020-JL-2D-2020-03-03",
+          "source_model_code",
+          "model_code",
+          "JLJS72"
+        ],
+        [
+          "MY2020-JL-2D-2020-04-17",
+          "source_model_code",
+          "model_code",
+          "JLJS72"
+        ]
+      ],
+      "status": "blocked by unshared document-qualified selector evidence"
+    },
+    {
+      "candidate_reference": "JL20-08",
+      "current_artifact": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/candidates/JL20-08.approved-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:ac7b112a4df965777c1833db385240fd29a91b66e58a0fd1a8dde1b475649966",
+      "model_code": "JLJL72",
+      "model_year": 2020,
+      "market": "US",
+      "complete_powertrain": true,
+      "intended_generation_PK": 32,
+      "current_published_coverage": false,
+      "resolver_error": "['Missing reviewed generation correspondence.']",
+      "required_identity_keys": [
+        [
+          "MY2020-JL-2D-2019-08-15",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2019-09-05",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2019-10-08",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2019-11-04",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2020-01-15",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2020-01-23",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2020-02-12",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2020-03-03",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2020-04-17",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ]
+      ],
+      "status": "blocked by unshared document-qualified selector evidence"
+    },
+    {
+      "candidate_reference": "JL20-09",
+      "current_artifact": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/candidates/JL20-09.approved-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:74aaa0f3afa7c5fd73625a1c8438e6dd036734eac2cb06b75c452b4e566aa7f3",
+      "model_code": "JLJL72",
+      "model_year": 2020,
+      "market": "US",
+      "complete_powertrain": true,
+      "intended_generation_PK": 32,
+      "current_published_coverage": false,
+      "resolver_error": "['Missing reviewed generation correspondence.']",
+      "required_identity_keys": [
+        [
+          "MY2020-JL-2D-2019-08-15",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2019-09-05",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2019-10-08",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2019-11-04",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2020-01-15",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2020-01-23",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2020-02-12",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2020-03-03",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2020-04-17",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ]
+      ],
+      "status": "blocked by unshared document-qualified selector evidence"
+    },
+    {
+      "candidate_reference": "JL20-10",
+      "current_artifact": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/candidates/JL20-10.approved-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:ea1464c2ad82cbc9c6211ed108efa708125e245e446bd22183288bc3be0b9b7c",
+      "model_code": "JLJL72",
+      "model_year": 2020,
+      "market": "US",
+      "complete_powertrain": true,
+      "intended_generation_PK": 32,
+      "current_published_coverage": false,
+      "resolver_error": "['Missing reviewed generation correspondence.']",
+      "required_identity_keys": [
+        [
+          "MY2020-JL-2D-2019-08-15",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2019-09-05",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2019-10-08",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2019-11-04",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2020-01-15",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2020-01-23",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2020-02-12",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2020-03-03",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2020-04-17",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ]
+      ],
+      "status": "blocked by unshared document-qualified selector evidence"
+    },
+    {
+      "candidate_reference": "JL20-11",
+      "current_artifact": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/candidates/JL20-11.approved-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:d790064b00d498525a3a74569b34d77e31d3312e57ff2a94463bb75810bed884",
+      "model_code": "JLJL72",
+      "model_year": 2020,
+      "market": "US",
+      "complete_powertrain": true,
+      "intended_generation_PK": 32,
+      "current_published_coverage": false,
+      "resolver_error": "['Missing reviewed generation correspondence.']",
+      "required_identity_keys": [
+        [
+          "MY2020-JL-2D-2019-08-15",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2019-09-05",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2019-10-08",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2019-11-04",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2020-01-15",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2020-01-23",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2020-02-12",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2020-03-03",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2020-04-17",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ]
+      ],
+      "status": "blocked by unshared document-qualified selector evidence"
+    },
+    {
+      "candidate_reference": "JL20-12",
+      "current_artifact": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/candidates/JL20-12.approved-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:ae5d57d63dfe8e990a2e3b04f00c729a9bf519d9026864c1bf0c6a2e5dbed130",
+      "model_code": "JLJL72",
+      "model_year": 2020,
+      "market": "US",
+      "complete_powertrain": true,
+      "intended_generation_PK": 32,
+      "current_published_coverage": false,
+      "resolver_error": "['Missing reviewed generation correspondence.']",
+      "required_identity_keys": [
+        [
+          "MY2020-JL-2D-2019-09-05",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2019-10-08",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2019-11-04",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2020-01-15",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2020-01-23",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2020-02-12",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2020-03-03",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2020-04-17",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ]
+      ],
+      "status": "blocked by unshared document-qualified selector evidence"
+    },
+    {
+      "candidate_reference": "JL20-13",
+      "current_artifact": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/candidates/JL20-13.approved-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:448aca18fa850d39b653e27b77a12a70772dd3a0a17e479e884f9018fc9e19e3",
+      "model_code": "JLJL72",
+      "model_year": 2020,
+      "market": "US",
+      "complete_powertrain": true,
+      "intended_generation_PK": 32,
+      "current_published_coverage": false,
+      "resolver_error": "['Missing reviewed generation correspondence.']",
+      "required_identity_keys": [
+        [
+          "MY2020-JL-2D-2019-09-05",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2019-10-08",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2019-11-04",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2020-01-15",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2020-01-23",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2020-02-12",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2020-03-03",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2020-04-17",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ]
+      ],
+      "status": "blocked by unshared document-qualified selector evidence"
+    },
+    {
+      "candidate_reference": "JL20-14",
+      "current_artifact": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/candidates/JL20-14.approved-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:e58c7832120d7fc3c7129563af49e553b4a10362ca6ce0b00be5649185746873",
+      "model_code": "JLJL72",
+      "model_year": 2020,
+      "market": "US",
+      "complete_powertrain": true,
+      "intended_generation_PK": 32,
+      "current_published_coverage": false,
+      "resolver_error": "['Missing reviewed generation correspondence.']",
+      "required_identity_keys": [
+        [
+          "MY2020-JL-2D-2019-11-04",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2020-01-15",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2020-01-23",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2020-02-12",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2020-03-03",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2020-04-17",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ]
+      ],
+      "status": "blocked by unshared document-qualified selector evidence"
+    },
+    {
+      "candidate_reference": "JL20-15",
+      "current_artifact": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/candidates/JL20-15.approved-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:fdfcf98191a7150fa552a0dfc58fa8687b857bce1435d5a5d62660745bba818c",
+      "model_code": "JLJL72",
+      "model_year": 2020,
+      "market": "US",
+      "complete_powertrain": true,
+      "intended_generation_PK": 32,
+      "current_published_coverage": false,
+      "resolver_error": "['Missing reviewed generation correspondence.']",
+      "required_identity_keys": [
+        [
+          "MY2020-JL-2D-2019-11-04",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2020-01-15",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2020-01-23",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2020-02-12",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2020-03-03",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ],
+        [
+          "MY2020-JL-2D-2020-04-17",
+          "source_model_code",
+          "model_code",
+          "JLJL72"
+        ]
+      ],
+      "status": "blocked by unshared document-qualified selector evidence"
+    },
+    {
+      "candidate_reference": "JL20-16",
+      "current_artifact": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/candidates/JL20-16.approved-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:ae84d89644ebdfd1c5043def2c2d65df724030d6221cb8c34cdfa339908193b1",
+      "model_code": "JLJL74",
+      "model_year": 2020,
+      "market": "US",
+      "complete_powertrain": true,
+      "intended_generation_PK": 32,
+      "current_published_coverage": false,
+      "resolver_error": "['Missing reviewed generation correspondence.']",
+      "required_identity_keys": [
+        [
+          "MY2020-JL-4D-2019-07-02",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2019-08-15",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2019-09-05",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2019-10-15",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2019-11-13",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2019-12-03",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-01-02",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-01-23",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-02-11",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-03-03",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ]
+      ],
+      "status": "blocked by unshared document-qualified selector evidence"
+    },
+    {
+      "candidate_reference": "JL20-17",
+      "current_artifact": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/candidates/JL20-17.approved-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:59b032f9bb1ebdc338dd66f380d922a13613d33c9e00da5a2587d4f94efcc4f0",
+      "model_code": "JLJL74",
+      "model_year": 2020,
+      "market": "US",
+      "complete_powertrain": true,
+      "intended_generation_PK": 32,
+      "current_published_coverage": false,
+      "resolver_error": "['Missing reviewed generation correspondence.']",
+      "required_identity_keys": [
+        [
+          "MY2020-JL-4D-2019-07-02",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2019-08-15",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2019-09-05",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2019-10-15",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2019-11-13",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2019-12-03",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-01-02",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-01-23",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-02-11",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-03-03",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ]
+      ],
+      "status": "blocked by unshared document-qualified selector evidence"
+    },
+    {
+      "candidate_reference": "JL20-18",
+      "current_artifact": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/candidates/JL20-18.approved-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:47a8128e44f9de11418ef045d87aa047acb9e15aff49b01876ddd67ccb8374ad",
+      "model_code": "JLJL74",
+      "model_year": 2020,
+      "market": "US",
+      "complete_powertrain": true,
+      "intended_generation_PK": 32,
+      "current_published_coverage": false,
+      "resolver_error": "['Missing reviewed generation correspondence.']",
+      "required_identity_keys": [
+        [
+          "MY2020-JL-4D-2019-10-15",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2019-11-13",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2019-12-03",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-01-02",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-01-23",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-02-11",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-03-03",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-04-17",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ]
+      ],
+      "status": "blocked by unshared document-qualified selector evidence"
+    },
+    {
+      "candidate_reference": "JL20-19",
+      "current_artifact": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/candidates/JL20-19.approved-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:efaeecc924da8bc473ea097a84fc930e689c0d441f90ba4ba1f8a741e2604ca2",
+      "model_code": "JLJL74",
+      "model_year": 2020,
+      "market": "US",
+      "complete_powertrain": true,
+      "intended_generation_PK": 32,
+      "current_published_coverage": false,
+      "resolver_error": "['Missing reviewed generation correspondence.']",
+      "required_identity_keys": [
+        [
+          "MY2020-JL-4D-2019-10-15",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2019-11-13",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2019-12-03",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-01-02",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-01-23",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-02-11",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-03-03",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-04-17",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ]
+      ],
+      "status": "blocked by unshared document-qualified selector evidence"
+    },
+    {
+      "candidate_reference": "JL20-20",
+      "current_artifact": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/candidates/JL20-20.candidate.2.1.0.json",
+      "candidate_hash": "sha256:19ecef2569b9228282582a21c2a9a425f16b5e52d8d9f110885bc63490aa9b70",
+      "model_code": "JLJP74",
+      "model_year": 2020,
+      "market": "US",
+      "complete_powertrain": true,
+      "intended_generation_PK": 32,
+      "current_published_coverage": false,
+      "resolver_error": "['Missing reviewed generation correspondence.']",
+      "required_identity_keys": [
+        [
+          "MY2020-JL-4D-2019-10-15",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2019-11-13",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2019-12-03",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2020-01-02",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2020-01-23",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2020-02-11",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2020-03-03",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2020-04-17",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ]
+      ],
+      "status": "blocked by unshared document-qualified selector evidence"
+    },
+    {
+      "candidate_reference": "JL20-21",
+      "current_artifact": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/candidates/JL20-21.approved-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:3f9efced5b2f9bf7ed32f25e22a027b59d71514ccb230a8c0a608fccf6e77519",
+      "model_code": "JLJS74",
+      "model_year": 2020,
+      "market": "US",
+      "complete_powertrain": true,
+      "intended_generation_PK": 32,
+      "current_published_coverage": false,
+      "resolver_error": "['Missing reviewed generation correspondence.']",
+      "required_identity_keys": [
+        [
+          "MY2020-JL-4D-2019-07-02",
+          "source_model_code",
+          "model_code",
+          "JLJS74"
+        ],
+        [
+          "MY2020-JL-4D-2019-08-15",
+          "source_model_code",
+          "model_code",
+          "JLJS74"
+        ],
+        [
+          "MY2020-JL-4D-2019-09-05",
+          "source_model_code",
+          "model_code",
+          "JLJS74"
+        ],
+        [
+          "MY2020-JL-4D-2019-10-15",
+          "source_model_code",
+          "model_code",
+          "JLJS74"
+        ],
+        [
+          "MY2020-JL-4D-2019-11-13",
+          "source_model_code",
+          "model_code",
+          "JLJS74"
+        ],
+        [
+          "MY2020-JL-4D-2019-12-03",
+          "source_model_code",
+          "model_code",
+          "JLJS74"
+        ],
+        [
+          "MY2020-JL-4D-2020-01-02",
+          "source_model_code",
+          "model_code",
+          "JLJS74"
+        ],
+        [
+          "MY2020-JL-4D-2020-01-23",
+          "source_model_code",
+          "model_code",
+          "JLJS74"
+        ],
+        [
+          "MY2020-JL-4D-2020-02-11",
+          "source_model_code",
+          "model_code",
+          "JLJS74"
+        ],
+        [
+          "MY2020-JL-4D-2020-03-03",
+          "source_model_code",
+          "model_code",
+          "JLJS74"
+        ],
+        [
+          "MY2020-JL-4D-2020-04-17",
+          "source_model_code",
+          "model_code",
+          "JLJS74"
+        ]
+      ],
+      "status": "blocked by unshared document-qualified selector evidence"
+    },
+    {
+      "candidate_reference": "JL20-22",
+      "current_artifact": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/candidates/JL20-22.approved-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:30b78b127df2b570407fa78dfb5c4cbcbf49afa48d0746704a72e8464ff08e6a",
+      "model_code": "JLJS74",
+      "model_year": 2020,
+      "market": "US",
+      "complete_powertrain": true,
+      "intended_generation_PK": 32,
+      "current_published_coverage": false,
+      "resolver_error": "['Missing reviewed generation correspondence.']",
+      "required_identity_keys": [
+        [
+          "MY2020-JL-4D-2019-07-02",
+          "source_model_code",
+          "model_code",
+          "JLJS74"
+        ],
+        [
+          "MY2020-JL-4D-2019-08-15",
+          "source_model_code",
+          "model_code",
+          "JLJS74"
+        ],
+        [
+          "MY2020-JL-4D-2019-09-05",
+          "source_model_code",
+          "model_code",
+          "JLJS74"
+        ],
+        [
+          "MY2020-JL-4D-2019-10-15",
+          "source_model_code",
+          "model_code",
+          "JLJS74"
+        ],
+        [
+          "MY2020-JL-4D-2019-11-13",
+          "source_model_code",
+          "model_code",
+          "JLJS74"
+        ],
+        [
+          "MY2020-JL-4D-2019-12-03",
+          "source_model_code",
+          "model_code",
+          "JLJS74"
+        ],
+        [
+          "MY2020-JL-4D-2020-01-02",
+          "source_model_code",
+          "model_code",
+          "JLJS74"
+        ],
+        [
+          "MY2020-JL-4D-2020-01-23",
+          "source_model_code",
+          "model_code",
+          "JLJS74"
+        ],
+        [
+          "MY2020-JL-4D-2020-02-11",
+          "source_model_code",
+          "model_code",
+          "JLJS74"
+        ],
+        [
+          "MY2020-JL-4D-2020-03-03",
+          "source_model_code",
+          "model_code",
+          "JLJS74"
+        ],
+        [
+          "MY2020-JL-4D-2020-04-17",
+          "source_model_code",
+          "model_code",
+          "JLJS74"
+        ]
+      ],
+      "status": "blocked by unshared document-qualified selector evidence"
+    },
+    {
+      "candidate_reference": "JL20-23",
+      "current_artifact": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/candidates/JL20-23.approved-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:48496c34b3a10543ca60b6f0aa74daa38356ef372537db8fc3dded0f4cd7190f",
+      "model_code": "JLJS74",
+      "model_year": 2020,
+      "market": "US",
+      "complete_powertrain": true,
+      "intended_generation_PK": 32,
+      "current_published_coverage": false,
+      "resolver_error": "['Missing reviewed generation correspondence.']",
+      "required_identity_keys": [
+        [
+          "MY2020-JL-4D-2019-10-15",
+          "source_model_code",
+          "model_code",
+          "JLJS74"
+        ],
+        [
+          "MY2020-JL-4D-2019-11-13",
+          "source_model_code",
+          "model_code",
+          "JLJS74"
+        ],
+        [
+          "MY2020-JL-4D-2019-12-03",
+          "source_model_code",
+          "model_code",
+          "JLJS74"
+        ],
+        [
+          "MY2020-JL-4D-2020-01-02",
+          "source_model_code",
+          "model_code",
+          "JLJS74"
+        ],
+        [
+          "MY2020-JL-4D-2020-01-23",
+          "source_model_code",
+          "model_code",
+          "JLJS74"
+        ],
+        [
+          "MY2020-JL-4D-2020-02-11",
+          "source_model_code",
+          "model_code",
+          "JLJS74"
+        ],
+        [
+          "MY2020-JL-4D-2020-03-03",
+          "source_model_code",
+          "model_code",
+          "JLJS74"
+        ]
+      ],
+      "status": "blocked by unshared document-qualified selector evidence"
+    },
+    {
+      "candidate_reference": "JL20-24",
+      "current_artifact": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/candidates/JL20-24.candidate.2.1.0.json",
+      "candidate_hash": "sha256:965ed5c5b44511cc4ab9496f4b119e6b463ae3f0b3e130d91833965a15a894be",
+      "model_code": "JLJS74",
+      "model_year": 2020,
+      "market": "US",
+      "complete_powertrain": true,
+      "intended_generation_PK": 32,
+      "current_published_coverage": false,
+      "resolver_error": "['Missing reviewed generation correspondence.']",
+      "required_identity_keys": [
+        [
+          "MY2020-JL-4D-2020-01-02",
+          "source_model_code",
+          "model_code",
+          "JLJS74"
+        ],
+        [
+          "MY2020-JL-4D-2020-01-23",
+          "source_model_code",
+          "model_code",
+          "JLJS74"
+        ],
+        [
+          "MY2020-JL-4D-2020-02-11",
+          "source_model_code",
+          "model_code",
+          "JLJS74"
+        ],
+        [
+          "MY2020-JL-4D-2020-03-03",
+          "source_model_code",
+          "model_code",
+          "JLJS74"
+        ],
+        [
+          "MY2020-JL-4D-2020-04-17",
+          "source_model_code",
+          "model_code",
+          "JLJS74"
+        ]
+      ],
+      "status": "blocked by unshared document-qualified selector evidence"
+    },
+    {
+      "candidate_reference": "JL20-25",
+      "current_artifact": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/candidates/JL20-25.candidate.2.1.0.json",
+      "candidate_hash": "sha256:a93a90c1eec56fb720e5a5ceadaae2a98304eb7a5b2b403f75193314fc99a1b4",
+      "model_code": "JLJP74",
+      "model_year": 2020,
+      "market": "US",
+      "complete_powertrain": true,
+      "intended_generation_PK": 32,
+      "current_published_coverage": false,
+      "resolver_error": "['Missing reviewed generation correspondence.']",
+      "required_identity_keys": [
+        [
+          "MY2020-JL-4D-2019-07-02",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2019-08-15",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2019-09-05",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2019-10-15",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2019-11-13",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2019-12-03",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2020-01-02",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2020-01-23",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2020-02-11",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2020-03-03",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2020-04-17",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ]
+      ],
+      "status": "blocked by unshared document-qualified selector evidence"
+    },
+    {
+      "candidate_reference": "JL20-26",
+      "current_artifact": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/candidates/JL20-26.approved-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:17b6cb2e60123678eb645ad3442e2893836e491f1706d57ec45f0bf11c4e5ee3",
+      "model_code": "JLJP74",
+      "model_year": 2020,
+      "market": "US",
+      "complete_powertrain": true,
+      "intended_generation_PK": 32,
+      "current_published_coverage": false,
+      "resolver_error": "['Missing reviewed generation correspondence.']",
+      "required_identity_keys": [
+        [
+          "MY2020-JL-4D-2019-07-02",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2019-08-15",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2019-09-05",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2019-10-15",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2019-11-13",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2019-12-03",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2020-01-02",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2020-01-23",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2020-02-11",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2020-03-03",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2020-04-17",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ]
+      ],
+      "status": "blocked by unshared document-qualified selector evidence"
+    },
+    {
+      "candidate_reference": "JL20-27",
+      "current_artifact": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/candidates/JL20-27.approved-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:1c96b05f7ea3ac7ca4e5ee99ffb3231c0ec8da31ac42b47e346f39266fb1bcff",
+      "model_code": "JLJP74",
+      "model_year": 2020,
+      "market": "US",
+      "complete_powertrain": true,
+      "intended_generation_PK": 32,
+      "current_published_coverage": false,
+      "resolver_error": "['Missing reviewed generation correspondence.']",
+      "required_identity_keys": [
+        [
+          "MY2020-JL-4D-2019-07-02",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2019-08-15",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2019-09-05",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2019-10-15",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2019-11-13",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2019-12-03",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2020-01-02",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2020-01-23",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2020-02-11",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2020-03-03",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2020-04-17",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ]
+      ],
+      "status": "blocked by unshared document-qualified selector evidence"
+    },
+    {
+      "candidate_reference": "JL20-28",
+      "current_artifact": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/candidates/JL20-28.approved-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:c154115446c892d6d0215c20788cc77ed16167ecdf3f294f4d5318de5eb900a9",
+      "model_code": "JLJP74",
+      "model_year": 2020,
+      "market": "US",
+      "complete_powertrain": true,
+      "intended_generation_PK": 32,
+      "current_published_coverage": false,
+      "resolver_error": "['Missing reviewed generation correspondence.']",
+      "required_identity_keys": [
+        [
+          "MY2020-JL-4D-2019-10-15",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2019-11-13",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2019-12-03",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2020-01-02",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2020-01-23",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2020-02-11",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2020-03-03",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2020-04-17",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ]
+      ],
+      "status": "blocked by unshared document-qualified selector evidence"
+    },
+    {
+      "candidate_reference": "JL20-29",
+      "current_artifact": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/candidates/JL20-29.candidate.2.1.0.json",
+      "candidate_hash": "sha256:5bb06d8fb486993efc7677c153189768553c5bcf0d65fdc0ec24b77689c879dd",
+      "model_code": "JLJP74",
+      "model_year": 2020,
+      "market": "US",
+      "complete_powertrain": true,
+      "intended_generation_PK": 32,
+      "current_published_coverage": false,
+      "resolver_error": "['Missing reviewed generation correspondence.']",
+      "required_identity_keys": [
+        [
+          "MY2020-JL-4D-2019-07-02",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2019-08-15",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2019-09-05",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2019-10-15",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2019-11-13",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2019-12-03",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2020-01-02",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2020-01-23",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2020-02-11",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2020-03-03",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2020-04-17",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ]
+      ],
+      "status": "blocked by unshared document-qualified selector evidence"
+    },
+    {
+      "candidate_reference": "JL20-30",
+      "current_artifact": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/candidates/JL20-30.approved-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:38bbd152f504217bd74c294e337ecdd40d939310077a37ef68d21b9a436104d0",
+      "model_code": "JLJP74",
+      "model_year": 2020,
+      "market": "US",
+      "complete_powertrain": true,
+      "intended_generation_PK": 32,
+      "current_published_coverage": false,
+      "resolver_error": "['Missing reviewed generation correspondence.']",
+      "required_identity_keys": [
+        [
+          "MY2020-JL-4D-2019-07-02",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2019-08-15",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2019-09-05",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2019-10-15",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2019-11-13",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2019-12-03",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2020-01-02",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2020-01-23",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2020-02-11",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2020-03-03",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2020-04-17",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ]
+      ],
+      "status": "blocked by unshared document-qualified selector evidence"
+    },
+    {
+      "candidate_reference": "JL20-31",
+      "current_artifact": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/candidates/JL20-31.approved-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:d4583015e181236e2fe364d55a777357e855a01b9ba28dba2cab39fd6b55f9d0",
+      "model_code": "JLJP74",
+      "model_year": 2020,
+      "market": "US",
+      "complete_powertrain": true,
+      "intended_generation_PK": 32,
+      "current_published_coverage": false,
+      "resolver_error": "['Missing reviewed generation correspondence.']",
+      "required_identity_keys": [
+        [
+          "MY2020-JL-4D-2019-07-02",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2019-08-15",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2019-09-05",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2019-10-15",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2019-11-13",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2019-12-03",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2020-01-02",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2020-01-23",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2020-02-11",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2020-03-03",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2020-04-17",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ]
+      ],
+      "status": "blocked by unshared document-qualified selector evidence"
+    },
+    {
+      "candidate_reference": "JL20-32",
+      "current_artifact": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/candidates/JL20-32.approved-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:938ba116204cfaaf8e705551a79aa6b7c53fd56e07acc92d609d5ec940bb736b",
+      "model_code": "JLJP74",
+      "model_year": 2020,
+      "market": "US",
+      "complete_powertrain": true,
+      "intended_generation_PK": 32,
+      "current_published_coverage": false,
+      "resolver_error": "['Missing reviewed generation correspondence.']",
+      "required_identity_keys": [
+        [
+          "MY2020-JL-4D-2019-10-15",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2019-11-13",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2019-12-03",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2020-01-02",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2020-01-23",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2020-02-11",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2020-03-03",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2020-04-17",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ]
+      ],
+      "status": "blocked by unshared document-qualified selector evidence"
+    },
+    {
+      "candidate_reference": "JL20-33",
+      "current_artifact": "docs/implementation/handoffs/MY2020_JL/evidence_resolution_20261108/candidate_revisions/JL20-33.naming-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:832486003d9d6c8b8e796c8a3946598714ea9c2e1d928d0a35d0023d9f06a85c",
+      "model_code": "JLJP74",
+      "model_year": 2020,
+      "market": "US",
+      "complete_powertrain": true,
+      "intended_generation_PK": 32,
+      "current_published_coverage": false,
+      "resolver_error": "['Missing reviewed generation correspondence.']",
+      "required_identity_keys": [
+        [
+          "MY2020-JL-4D-2020-03-03",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2020-04-17",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ]
+      ],
+      "status": "blocked by unshared document-qualified selector evidence"
+    },
+    {
+      "candidate_reference": "JL20-34",
+      "current_artifact": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/candidates/JL20-34.approved-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:6f36fadfcb8e48ecb9eb479a5a1ec3f3e550f25ed205df9ceae3315a5947e880",
+      "model_code": "JLJP74",
+      "model_year": 2020,
+      "market": "US",
+      "complete_powertrain": true,
+      "intended_generation_PK": 32,
+      "current_published_coverage": false,
+      "resolver_error": "['Missing reviewed generation correspondence.']",
+      "required_identity_keys": [
+        [
+          "MY2020-JL-4D-2020-03-03",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2020-04-17",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ]
+      ],
+      "status": "blocked by unshared document-qualified selector evidence"
+    },
+    {
+      "candidate_reference": "JL20-35",
+      "current_artifact": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/candidates/JL20-35.approved-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:d0c870168ece4163b2424f77fcd88a909b473576f80685cc00f77d31ec93a585",
+      "model_code": "JLJP74",
+      "model_year": 2020,
+      "market": "US",
+      "complete_powertrain": true,
+      "intended_generation_PK": 32,
+      "current_published_coverage": false,
+      "resolver_error": "['Missing reviewed generation correspondence.']",
+      "required_identity_keys": [
+        [
+          "MY2020-JL-4D-2020-03-03",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ],
+        [
+          "MY2020-JL-4D-2020-04-17",
+          "source_model_code",
+          "model_code",
+          "JLJP74"
+        ]
+      ],
+      "status": "blocked by unshared document-qualified selector evidence"
+    },
+    {
+      "candidate_reference": "JL20-36",
+      "current_artifact": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/candidates/JL20-36.approved-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:9b463d564af54a02874cdf024871153c112656f1c041262d27c78a787d936d40",
+      "model_code": "JLJL74",
+      "model_year": 2020,
+      "market": "US",
+      "complete_powertrain": true,
+      "intended_generation_PK": 32,
+      "current_published_coverage": false,
+      "resolver_error": "['Missing reviewed generation correspondence.']",
+      "required_identity_keys": [
+        [
+          "MY2020-JL-4D-2019-07-02",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2019-08-15",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2019-09-05",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2019-10-15",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2019-11-13",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2019-12-03",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-01-02",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-01-23",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-02-11",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-03-03",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-04-17",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ]
+      ],
+      "status": "blocked by unshared document-qualified selector evidence"
+    },
+    {
+      "candidate_reference": "JL20-37",
+      "current_artifact": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/candidates/JL20-37.approved-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:3c76e96a80c7e06e7931970741c85707ab90cbab28be03d2fcc67db2560b8b1f",
+      "model_code": "JLJL74",
+      "model_year": 2020,
+      "market": "US",
+      "complete_powertrain": true,
+      "intended_generation_PK": 32,
+      "current_published_coverage": false,
+      "resolver_error": "['Missing reviewed generation correspondence.']",
+      "required_identity_keys": [
+        [
+          "MY2020-JL-4D-2019-07-02",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2019-08-15",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2019-09-05",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2019-10-15",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2019-11-13",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2019-12-03",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-01-02",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-01-23",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-02-11",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-03-03",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-04-17",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ]
+      ],
+      "status": "blocked by unshared document-qualified selector evidence"
+    },
+    {
+      "candidate_reference": "JL20-38",
+      "current_artifact": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/candidates/JL20-38.approved-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:de63954210ab8904b068cecd82bef3b9b9f6ce3f4a4cb7e5c77fc514d19fed4c",
+      "model_code": "JLJL74",
+      "model_year": 2020,
+      "market": "US",
+      "complete_powertrain": true,
+      "intended_generation_PK": 32,
+      "current_published_coverage": false,
+      "resolver_error": "['Missing reviewed generation correspondence.']",
+      "required_identity_keys": [
+        [
+          "MY2020-JL-4D-2019-10-15",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2019-11-13",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2019-12-03",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-01-02",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-01-23",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-02-11",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-03-03",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-04-17",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ]
+      ],
+      "status": "blocked by unshared document-qualified selector evidence"
+    },
+    {
+      "candidate_reference": "JL20-39",
+      "current_artifact": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/candidates/JL20-39.approved-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:01061875204cc5a6af98e2d1569bc9061c89610adc6672c3803177cd92c0de64",
+      "model_code": "JLJL74",
+      "model_year": 2020,
+      "market": "US",
+      "complete_powertrain": true,
+      "intended_generation_PK": 32,
+      "current_published_coverage": false,
+      "resolver_error": "['Missing reviewed generation correspondence.']",
+      "required_identity_keys": [
+        [
+          "MY2020-JL-4D-2019-07-02",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2019-08-15",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2019-09-05",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2019-10-15",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2019-11-13",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2019-12-03",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-01-02",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-01-23",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-02-11",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-03-03",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-04-17",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ]
+      ],
+      "status": "blocked by unshared document-qualified selector evidence"
+    },
+    {
+      "candidate_reference": "JL20-40",
+      "current_artifact": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/candidates/JL20-40.approved-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:c2658e1506e2d750d7630718f1503af809d2928fe8fb819d0b5a5a8f1cba53b8",
+      "model_code": "JLJL74",
+      "model_year": 2020,
+      "market": "US",
+      "complete_powertrain": true,
+      "intended_generation_PK": 32,
+      "current_published_coverage": false,
+      "resolver_error": "['Missing reviewed generation correspondence.']",
+      "required_identity_keys": [
+        [
+          "MY2020-JL-4D-2019-07-02",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2019-08-15",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2019-09-05",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2019-10-15",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2019-11-13",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2019-12-03",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-01-02",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-01-23",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-02-11",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-03-03",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-04-17",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ]
+      ],
+      "status": "blocked by unshared document-qualified selector evidence"
+    },
+    {
+      "candidate_reference": "JL20-41",
+      "current_artifact": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/candidates/JL20-41.approved-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:9c12804869806dae66786b63be8c90c438058e285720f068b6789d462038b169",
+      "model_code": "JLJL74",
+      "model_year": 2020,
+      "market": "US",
+      "complete_powertrain": true,
+      "intended_generation_PK": 32,
+      "current_published_coverage": false,
+      "resolver_error": "['Missing reviewed generation correspondence.']",
+      "required_identity_keys": [
+        [
+          "MY2020-JL-4D-2019-10-15",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2019-11-13",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2019-12-03",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-01-02",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-01-23",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-02-11",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-03-03",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-04-17",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ]
+      ],
+      "status": "blocked by unshared document-qualified selector evidence"
+    },
+    {
+      "candidate_reference": "JL20-42",
+      "current_artifact": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/candidates/JL20-42.approved-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:8e9169101339d703ab6bb010d3d0e6f053ce4fafbfa76f6b00fb26b054a561b4",
+      "model_code": "JLJL74",
+      "model_year": 2020,
+      "market": "US",
+      "complete_powertrain": true,
+      "intended_generation_PK": 32,
+      "current_published_coverage": false,
+      "resolver_error": "['Missing reviewed generation correspondence.']",
+      "required_identity_keys": [
+        [
+          "MY2020-JL-4D-2019-07-02",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2019-08-15",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2019-09-05",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2019-10-15",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2019-11-13",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2019-12-03",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-01-02",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-01-23",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-02-11",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-03-03",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-04-17",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ]
+      ],
+      "status": "blocked by unshared document-qualified selector evidence"
+    },
+    {
+      "candidate_reference": "JL20-43",
+      "current_artifact": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/candidates/JL20-43.approved-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:467cdb65bb7c1d4dd5940c4c43f8d99ba3c5b4e3f656bd4c45ef35c237be61f4",
+      "model_code": "JLJL74",
+      "model_year": 2020,
+      "market": "US",
+      "complete_powertrain": true,
+      "intended_generation_PK": 32,
+      "current_published_coverage": false,
+      "resolver_error": "['Missing reviewed generation correspondence.']",
+      "required_identity_keys": [
+        [
+          "MY2020-JL-4D-2019-07-02",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2019-08-15",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2019-09-05",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2019-10-15",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2019-11-13",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2019-12-03",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-01-02",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-01-23",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-02-11",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-03-03",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-04-17",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ]
+      ],
+      "status": "blocked by unshared document-qualified selector evidence"
+    },
+    {
+      "candidate_reference": "JL20-44",
+      "current_artifact": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/candidates/JL20-44.approved-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:721aa971ab8d852e8b7e04d4fb8444af4ffc08b8d7d1890f2651ca68144f2cbd",
+      "model_code": "JLJL74",
+      "model_year": 2020,
+      "market": "US",
+      "complete_powertrain": true,
+      "intended_generation_PK": 32,
+      "current_published_coverage": false,
+      "resolver_error": "['Missing reviewed generation correspondence.']",
+      "required_identity_keys": [
+        [
+          "MY2020-JL-4D-2019-10-15",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2019-11-13",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2019-12-03",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-01-02",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-01-23",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-02-11",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-03-03",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-04-17",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ]
+      ],
+      "status": "blocked by unshared document-qualified selector evidence"
+    },
+    {
+      "candidate_reference": "JL20-45",
+      "current_artifact": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/candidates/JL20-45.approved-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:6bee10f34abf08b208039d298b19742996586d2ef90b3f024f938819e0cfb213",
+      "model_code": "JLJL74",
+      "model_year": 2020,
+      "market": "US",
+      "complete_powertrain": true,
+      "intended_generation_PK": 32,
+      "current_published_coverage": false,
+      "resolver_error": "['Missing reviewed generation correspondence.']",
+      "required_identity_keys": [
+        [
+          "MY2020-JL-4D-2019-09-05",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2019-10-15",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2019-11-13",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2019-12-03",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-01-02",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-01-23",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-02-11",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-03-03",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-04-17",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ]
+      ],
+      "status": "blocked by unshared document-qualified selector evidence"
+    },
+    {
+      "candidate_reference": "JL20-46",
+      "current_artifact": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/candidates/JL20-46.approved-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:f3561b4b0c43d7c12ffb9ac3a7007c8a638e234c39235c154893ac40829b69b0",
+      "model_code": "JLJL74",
+      "model_year": 2020,
+      "market": "US",
+      "complete_powertrain": true,
+      "intended_generation_PK": 32,
+      "current_published_coverage": false,
+      "resolver_error": "['Missing reviewed generation correspondence.']",
+      "required_identity_keys": [
+        [
+          "MY2020-JL-4D-2019-09-05",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2019-10-15",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2019-11-13",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2019-12-03",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-01-02",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-01-23",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-02-11",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-03-03",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-04-17",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ]
+      ],
+      "status": "blocked by unshared document-qualified selector evidence"
+    },
+    {
+      "candidate_reference": "JL20-47",
+      "current_artifact": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/candidates/JL20-47.approved-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:6d7060df77f8ce8fc6232abfcd785b5eeba011e65cd54079aa2bc5577ac087f9",
+      "model_code": "JLJL74",
+      "model_year": 2020,
+      "market": "US",
+      "complete_powertrain": true,
+      "intended_generation_PK": 32,
+      "current_published_coverage": false,
+      "resolver_error": "['Missing reviewed generation correspondence.']",
+      "required_identity_keys": [
+        [
+          "MY2020-JL-4D-2019-10-15",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2019-11-13",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2019-12-03",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-01-02",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-01-23",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-02-11",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-03-03",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-04-17",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ]
+      ],
+      "status": "blocked by unshared document-qualified selector evidence"
+    },
+    {
+      "candidate_reference": "JL20-48",
+      "current_artifact": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/candidates/JL20-48.approved-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:28af616b383046a51a7ba4d8d4219f45affdf65c4e48cbe92a87a538f587feb6",
+      "model_code": "JLJL74",
+      "model_year": 2020,
+      "market": "US",
+      "complete_powertrain": true,
+      "intended_generation_PK": 32,
+      "current_published_coverage": false,
+      "resolver_error": "['Missing reviewed generation correspondence.']",
+      "required_identity_keys": [
+        [
+          "MY2020-JL-4D-2019-11-13",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2019-12-03",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-01-02",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-01-23",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-02-11",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-03-03",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-04-17",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ]
+      ],
+      "status": "blocked by unshared document-qualified selector evidence"
+    },
+    {
+      "candidate_reference": "JL20-49",
+      "current_artifact": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/candidates/JL20-49.approved-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:eb71623da8a1139de70a3a7b017241b7ad8167c5177a1e90454170a508a59bbe",
+      "model_code": "JLJL74",
+      "model_year": 2020,
+      "market": "US",
+      "complete_powertrain": true,
+      "intended_generation_PK": 32,
+      "current_published_coverage": false,
+      "resolver_error": "['Missing reviewed generation correspondence.']",
+      "required_identity_keys": [
+        [
+          "MY2020-JL-4D-2019-11-13",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2019-12-03",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-01-02",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-01-23",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-02-11",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-03-03",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ],
+        [
+          "MY2020-JL-4D-2020-04-17",
+          "source_model_code",
+          "model_code",
+          "JLJL74"
+        ]
+      ],
+      "status": "blocked by unshared document-qualified selector evidence"
+    }
+  ],
+  "backup": "Not created: verification gate failed before any database write/publication was permitted",
+  "smallest_viable_next_step": "Separately authorize versioned candidate evidence packaging revisions using shared immutable per-source/model selector documents and review the resulting exact generation-evidence coverage. Preserve all classifications and prior evidence/approved lineage; human-adjudicated candidates require supported workflow treatment of their exact base hash, not direct mutation. No application/contract change or new architecture is proposed here."
+}

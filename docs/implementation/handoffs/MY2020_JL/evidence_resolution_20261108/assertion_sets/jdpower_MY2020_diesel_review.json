@@ -1,0 +1,39 @@
+{
+  "envelope": {
+    "artifact_type": "rigarchive.source_assertion_set.v1",
+    "created_at": "2026-11-08T22:37:13.602767+00:00",
+    "generator": "bounded_MY2020_evidence_review",
+    "schema_version": "1.1.0"
+  },
+  "provenance": {
+    "acquisition_method": "retained source or explicitly typed browser excerpt",
+    "extraction_provenance": {
+      "extraction_mode": "manually_verified_transcription",
+      "extractor_id": "MY2020_evidence_review",
+      "extractor_version": "1.0",
+      "raw_artifact_hash": "sha256:151d9317ebcc2a8fcef6eb74322046cd4fc09a5c12573732d287b7db945c5283",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/evidence_resolution_20261108/sources/jdpower_browser_observation.json"
+    },
+    "native_record_id": "jdpower_MY2020_diesel_review-review-20261108",
+    "retrieved_at": "2026-11-08T22:37:13.602767+00:00",
+    "review_status": "reviewed",
+    "source_applicability": {
+      "applicability_basis": "Document-specific US MY2020 applicability; scope limitations recorded in notes",
+      "applicability_scope": "model_year",
+      "market": "US",
+      "publisher_jurisdiction": "US"
+    },
+    "source_id": "jdpower_MY2020_diesel_review",
+    "source_locator": "https://www.jdpower.com/cars/expert-reviews/2020-jeep-wrangler-ecodiesel-test-drive",
+    "source_type": "secondary_technical_review",
+    "source_use_notes": "SECONDARY observation. Snapshot hash covers retained observation JSON, not original HTML. Alternator alone does not logically exclude every hybrid architecture. Exact EXJ association uses US MY2020 guide engine/code/transmission linkage."
+  },
+  "source_assertions": [
+    {
+      "assertion_id": "alternator",
+      "attribute_key": "secondary_engine_hardware_observation",
+      "raw_value": "For the Wrangler, engineers moved the alternator higher on the engine to allow higher water fording capability.",
+      "source_context": "Driving Impressions, Ron Sessions, Jan8 2020; browser-rendered excerpt"
+    }
+  ]
+}

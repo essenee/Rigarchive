@@ -1,0 +1,48 @@
+{
+  "envelope": {
+    "artifact_type": "rigarchive.source_assertion_set.v1",
+    "created_at": "2026-11-08T22:19:57.363050+00:00",
+    "generator": "bounded_my2020_review",
+    "schema_version": "1.1.0"
+  },
+  "provenance": {
+    "acquisition_method": "retained authentic PDF",
+    "extraction_provenance": {
+      "extraction_mode": "source_specific_parser",
+      "extractor_id": "pypdf",
+      "extractor_version": "6.16.1",
+      "raw_artifact_hash": "sha256:8ca6c22b9af4a87f33700b3a3455fa3fae9ea5799218f232cbbb1b31eabf8354",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/FCA_2020_Wrangler_US_specifications.pdf"
+    },
+    "native_record_id": "MY2020-US-specs",
+    "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+    "review_status": "reviewed",
+    "source_applicability": {
+      "applicability_basis": "US model-year guide/manual applicability; engine-family joins explicitly scoped",
+      "applicability_scope": "model_year",
+      "market": "US",
+      "publisher_jurisdiction": "US"
+    },
+    "source_id": "FCA_MY2020_Wrangler_US_specs",
+    "source_locator": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/specs/2020_JP_Wrangler_SPmrgun0frgq245rkio8imc5var6.pdf",
+    "source_type": "manufacturer_document",
+    "source_use_notes": "Retained manufacturer US specification; generic early availability does not override later guide offerings.",
+    "target_context": {
+      "model_year": 2020
+    }
+  },
+  "source_assertions": [
+    {
+      "assertion_id": "layout",
+      "attribute_key": "generic_drive_classification",
+      "raw_value": "Longitudinal front engine, four-wheel drive",
+      "source_context": "PDF page1, BODY/CHASSIS Layout"
+    },
+    {
+      "assertion_id": "pentastar",
+      "attribute_key": "manufacturer_powertrain_description",
+      "raw_value": "NEW 2020  JEEP  WRANGLER ECODIESEL  | SPECIFICATIONS  http://media.fcanorthamerica.com  |  1  \n \n2020 Jeep Wrangler \nSPECIFICATIONS  \n \nSpecifications are based on the latest product information available at the time of publication.  \nAll dimensions are in inches (millimeters) unless otherwise noted.  \nAll dimensions measured at curb weight with standard tires and wheels. \n \n \nGENERAL INFORMATION  \nVehicle Type Sport-utility vehicle \nAssembly Plant Toledo Supplier Park, Toledo, Ohio \nEPA Vehicle Class Multipurpose vehicle \nIntroduction Date Fall 2017 as a 2018 model  \n  \nBODY/CHASSIS  \nLayout Longitudinal front engine, four-wheel drive \nConstruction Ladder-type frame, open steel and aluminum body \n  \nENGINE: 3.6-LITER PENTASTAR V-6  \nAvailability Standard — Sport, Sahara (MTX only), Rubicon (all ESS)  \nAvailable — Sahara (with eTorque mild-hybrid assist) \nType and Description 60-degree, V-type, liquid-cooled \nDisplacement (cu. in. / cc) 220 cu. in. (3,604 cu. cm) \nBore x Stroke  3.78 x 3.27 (96 x 83) \nValve System Chain-driven DOHC, 24 valves and hydraulic end-pivot roller rockers \nFuel Injection Sequential, multiport, electronic, returnless \nConstruction Aluminum deep-skirt block, aluminum alloy heads  \nCompression Ratio 11.3:1 \nPower (SAE net) (hp / kW@rpm) 285 hp (213 kW) at 6,400 rpm \nTorque (SAE net) (lb.-ft. / N•m) 260 lb.-ft. (353 N•m) at 4,800 rpm \nMax. Engine Speed (rpm) 6,600 rpm (electronically limited) \nFuel Requirement Unleaded regular, 87 octane (R + M)/2 \nFuel Tank Capacity (gallons) 17.5 (2-door), 21.5 (4-door) \nOil Capacity  5.0 quarts (4.7 liters) \nCoolant Capacity  10 quarts (10.1 liters) \nEmission Controls  Dual three-way catalytic converters, heated oxygen sensors and internal engine \nfeatures ",
+      "source_context": "PDF page1, ENGINE 3.6-LITER PENTASTAR V-6; source-specific guide governs edition availability"
+    }
+  ]
+}

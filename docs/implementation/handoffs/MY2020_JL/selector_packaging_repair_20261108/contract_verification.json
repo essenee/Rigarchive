@@ -1,0 +1,10 @@
+{
+  "allowed": true,
+  "repair": "Add shared selectors under original existing source/namespace/model keys; retain all original documents and generation identities",
+  "minimum_new_shared_documents": 51,
+  "candidate_evidence_enrichment_revisions": 49,
+  "classification_evidence_declaration_revisions": 43,
+  "proof": "Adjudication1.1 permits nonhuman supporting_documents; existing projector appends them and reprojects generation evidence. Claims and original candidate digest binding are unchanged. EC3 no-human declarations can use ordinary additive evidence revisions.",
+  "immutable_constraints": "Existing approved candidates cannot be directly mutated. No chained human declaration; exactly one current human declaration per revised human-classified candidate. All original declarations and predecessors remain retained.",
+  "resolver_guards": "Every generation key must have applicable reviewed correspondence; every mapping evidence document must occur exactly in each candidate; one active valid target; all current validation retained."
+}

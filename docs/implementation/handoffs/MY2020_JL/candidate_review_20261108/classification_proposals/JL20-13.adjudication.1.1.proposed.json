@@ -1,0 +1,302 @@
+{
+  "adjudication_version": "1.1",
+  "created_at": "2026-11-08T22:19:57.363050+00:00",
+  "operator_label": "pending_human_signoff",
+  "original_manifest_hash": "",
+  "candidate_reference": "JL20-13",
+  "source_identity": {
+    "source_id": "human_classification_adjudication",
+    "source_identity_type": "candidate_digest",
+    "native_identifier": "sha256:cf44f63e7f14f09a00676bea02ba60c3b304705253f5ae4f337aeabffcd7e572"
+  },
+  "original_review_category": "missing_classification",
+  "adjudication_category": "evidence_backed_classification",
+  "adjudication_decision": "proposed_classifications",
+  "adjudicated_trim_name": "Willys",
+  "adjudication_notes": "Unapproved bounded engineering proposal; no canonical fact or import authorization.",
+  "evidence_anchors": {
+    "candidate_artifact_reference": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/candidates/JL20-13.candidate.2.1.0.json",
+    "candidate_hash": "sha256:cf44f63e7f14f09a00676bea02ba60c3b304705253f5ae4f337aeabffcd7e572",
+    "supporting_documents": [
+      {
+        "source_id": "Mopar_MY2020_Wrangler_US_manual",
+        "raw_artifact_hash": "sha256:eccf53d564172144d82728cacc2b7f87210c2dd7af0a535e1df78f588a92cd92",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/evidence/Mopar_MY2020_Wrangler_US_owners_manual.pdf",
+        "extractor_id": "pypdf",
+        "extractor_version": "6.16.1",
+        "extraction_mode": "source_specific_parser",
+        "assertion_set_id": "MY2020-manual-fuel-hardware",
+        "source_locator": "https://vehicleinfo.mopar.com/assets/publications/en-us/Jeep/2020/Wrangler/P138305_20_JL_OM_EN_USC_DIGITAL.pdf",
+        "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+        "source_applicability": {
+          "market": "US",
+          "applicability_basis": "US model-year guide/manual applicability; engine-family joins explicitly scoped",
+          "publisher_jurisdiction": "US",
+          "applicability_scope": "model_year",
+          "unknown_fields": {}
+        },
+        "publication_revision": null,
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "assertions": [
+          {
+            "assertion_id": "fuel2",
+            "attribute_key": "fuel_requirements",
+            "raw_value": "\nThis engine is designed to meet all emission \nrequirements, and provide satisfactory fuel \neconomy and performance, when using \nhigh-quality unleaded “regular” gasoline having \nan octane rating of 87, as specified by the (R+M)/\n2 method. The use of 91 or higher octane “premium” \ngasoline will allow these engines to operate to optimal \nperformance. This increase in performance is most \nnoticeable in hot weather or other heavier load conditions, \nsuch as while towing.\nWhile operating on gasoline with the required octane \nnumber, hearing a light knocking sound from the engine is \nnot a cause for concern. However, if the engine is heard \nmaking a heavy knocking sound, see your dealer \nimmediately. Use of gasoline with a lower than \nrecommended octane number can cause engine failure \nand may void or not be covered by the New Vehicle Limited \nWarranty.\nPoor quality gasoline can cause problems such as hard \nstarting, stalling, and hesitations. If you experience these \nsymptoms, try another brand of gasoline before \nconsidering service for the vehicle.\n",
+            "source_context": "PDF page284 / printed282, 2.0L ENGINE"
+          },
+          {
+            "assertion_id": "fuel36",
+            "attribute_key": "fuel_requirements",
+            "raw_value": "\nThis engine is designed to meet all emissions \nregulations and provide satisfactory fuel \neconomy and performance when using \nhigh-quality unleaded “Regular” gasoline \nhaving an octane rating of 87 as specified by the (R+M)/\n2 method. The use of higher octane “Premium” gasoline \nwill not provide any benefit over “Regular” gasoline in \nthese engines.\nWhile operating on gasoline with an octane number of 87, \nhearing a light knocking sound from the engine is not a \ncause for concern. However, if the engine is heard making \na heavy knocking sound, see your dealer immediately. Use \nof gasoline with an octane number lower than 87 can \ncause engine failure and may void or not be covered by the \nNew Vehicle Limited Warranty.\nPoor quality gasoline can cause problems such as hard \nstarting, stalling, and hesitations. If you experience these \nsymptoms, try another brand of gasoline before \nconsidering service for the vehicle.\n",
+            "source_context": "PDF page284 / printed282, 3.6L ENGINE"
+          },
+          {
+            "assertion_id": "hardware",
+            "attribute_key": "engine_hardware",
+            "raw_value": "284 TECHNICAL SPECIFICATIONS  \nFUEL SYSTEM CAUTIONS\nNOTE:\nIntentional tampering with the emissions control system can result in civil penalties being assessed against you.\nFLUID CAPACITIES    \nCAUTION!\nFollow these guidelines to maintain your vehicle’s performance:\n The use of leaded gasoline is prohibited by Federal law. Using leaded gasoline can impair engine performance and damage the emissions control system.\n An out-of-tune engine or certain fuel or ignition malfunctions can cause the catalytic converter to overheat. If you notice a pungent burning odor or some light smoke, your engine \nmay be out of tune or malfunctioning and may require immediate service. Contact an authorized dealer for service assistance.\n The use of fuel additives, which are now being sold as octane enhancers, is not recommended. Most of these products contain high concentrations of methanol. Fuel system \ndamage or vehicle performance problems resulting from the use of such fuels or additives is not the responsibility of the manufacturer and may void or not be covered under the \nNew Vehicle Limited Warranty.\nUS Metric\nFuel (Approximate)\nTwo Door Models 17.5 Gallons 66 Liters\nFour Door Models 21.5 Gallons 81 Liters\nEngine Oil with Filter\n2.0L Engine 5 Quarts 4.73 Liters\n3.6L Engine 5 Quarts 4.73 Liters\nCooling System *\n2.0L Engine (Mopar Antifreeze/Engine Coolant 10 Year/150,000 Mile (240,000 km) Formula or equivalent) 10.3 Quarts 9.7 Liters\n2.0L Engine Intercooler without Motor Generator Unit (MGU) (Mopar Antifreeze/Engine Coolant 10 Year/\n150,000 Mile (240,000 km) Formula or equivalent) 3.2 Quarts 3.0 Liters\n20_JL_OM_EN_USC_t.book  Page 284  \nTECHNICAL SPECIFICATIONS 285\nFLUIDS AND LUBRICANTS\nENGINE     \n2.0L Engine Intercooler with Motor Generator Unit (MGU) (Mopar Antifreeze/Engine Coolant 10 Year/\n150,000 Mile (240,000 km) Formula or equivalent) 3.5 Quarts 3.3 Liters\n2.0L Battery Coolant (Mopar Antifreeze/Engine Coolant 10 Year/150,000 Mile (240,000 km) Formula or \nequivalent) 2.5 Quarts 2.4 Liters\n3.6L Engine (Mopar Antifreeze/Engine Coolant 10 Year/150,000 Mile (240,000 km) Formula or equivalent) 11.2 Quarts 10.6 Liters\n3.6L Motor Generator Unit (MGU) (Mopar Antifreeze/Engine Coolant 10 Year/150,000 Mile (240,000 km) \nFormula or equivalent) 1.9 Quarts 1.8 Liters\n3.6L Battery Coolant (Mopar Antifreeze/Engine Coolant 10 Year/150,000 Mile (240,000 km) Formula or \nequivalent) 2.5 Quarts 2.4 Liters\n* Includes coolant recovery bottle filled to MAX level.\nUS Metric\nComponent Fluid, Lubricant, or Genuine Part\nEngine Coolant\nWe recommend you use Mopar Antifreeze/Coolant 10 Year/150,000 Mile (240,000 km) \nFormula OAT (Organic Additive Technology) or equivalent meeting the requirements of \nFCA Material Standard MS.90032.\nIntercooler/Motor Generator Unit (if equipped)\nWe recommend you use Mopar Antifreeze/Coolant 10 Year/150,000 Mile (240,000 km) \nFormula OAT (Organic Additive Technology) or equivalent meeting the requirements of \nFCA Material Standard MS.90032.\nBattery Coolant (if equipped)\nWe recommend you use Mopar Antifreeze/Coolant 10 Year/150,000 Mile (240,000 km) \nFormula OAT (Organic Additive Technology) or equivalent meeting the requirements of \nFCA Material Standard MS.90032.\n8\n20_JL_OM_EN_USC_t.book  Page 285  \n286 TECHNICAL SPECIFICATIONS  \nEngine Oil — 2.0L Engine\nWe recommend you use Mopar API SN PLUS Certified SAE 5W-30 Full Synthetic Engine \nOil which meets the requirements of FCA Material Standard MS-13340. Equivalent full \nsynthetic SAE 5W-30 engine oil can be used if it meets API SN PLUS Certification. If SN \nPLUS or equivalent oil is unavailable then please contact your local dealership for \nrecommendation.\nCAUTION!\nFailure to use the recommended SN PLUS or equivalent oil can cause engine damage \nnot covered by the vehicle warranty.\nEngine Oil — 3.6L Engine\nWe recommend you use API Certified SAE 0W-20 Engine Oil, meeting the requirements of \nFCA Material Standard MS-6395 such as Mopar, Pennzoil, and Shell Helix. Refer to your \nengine oil filler cap for correct SAE grade.\nEngine Oil Filter We recommend you use Mopar Engine Oil Filter or equivalent.\nSpark Plugs We recommend you use Mopar Spark Plugs.\nFuel Selection — 2.0L Engine 87 Octane (R+M)/2 Method, 0-15% Ethanol.\nFuel Selection — 3.6L Engine 87 Octane (R+M)/2 Method, 0-15% Ethanol.\nComponent Fluid, Lubricant, or Genuine Part\nCAUTION!\n Mixing of engine coolant (antifreeze) other than specified Organic Additive Technology (OAT) engine coolant (antifreeze), may result in engine damage and may decrease corrosion \nprotection. Organic Additive Technology (OAT) engine coolant is different and should not be mixed with Hybrid Organic Additive Technology (HOAT) engine coolant (antifreeze) or \nany “globally compatible” coolant (antifreeze). If a non-OAT engine coolant (antifreeze) is introduced into the cooling system in an emergency, the cooling system will need to be \ndrained, flushed, and refilled with fresh OAT coolant (conforming to MS.90032), by an authorized dealer as soon as possible.\n Do not use water alone or alcohol-based engine coolant (antifreeze) products. Do not use additional rust inhibitors or antirust products, as they may not be compatible with the \nradiator engine coolant and may plug the radiator.\n This vehicle has not been designed for use with propylene glycol-based engine coolant (antifreeze). Use of propylene glycol-based engine coolant (antifreeze) is not recommended.\n20_JL_OM_EN_USC_t.book  Page 286  ",
+            "source_context": "PDF pages286–288; cooling system and underhood drawings; applicability must not be inferred beyond each caption"
+          }
+        ]
+      },
+      {
+        "source_id": "FCA_MY2020_Wrangler_US_specs",
+        "raw_artifact_hash": "sha256:8ca6c22b9af4a87f33700b3a3455fa3fae9ea5799218f232cbbb1b31eabf8354",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/FCA_2020_Wrangler_US_specifications.pdf",
+        "extractor_id": "pypdf",
+        "extractor_version": "6.16.1",
+        "extraction_mode": "source_specific_parser",
+        "assertion_set_id": "MY2020-US-specs",
+        "source_locator": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/specs/2020_JP_Wrangler_SPmrgun0frgq245rkio8imc5var6.pdf",
+        "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+        "source_applicability": {
+          "market": "US",
+          "applicability_basis": "US model-year guide/manual applicability; engine-family joins explicitly scoped",
+          "publisher_jurisdiction": "US",
+          "applicability_scope": "model_year",
+          "unknown_fields": {}
+        },
+        "publication_revision": null,
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "assertions": [
+          {
+            "assertion_id": "layout",
+            "attribute_key": "generic_drive_classification",
+            "raw_value": "Longitudinal front engine, four-wheel drive",
+            "source_context": "PDF page1, BODY/CHASSIS Layout"
+          },
+          {
+            "assertion_id": "pentastar",
+            "attribute_key": "manufacturer_powertrain_description",
+            "raw_value": "NEW 2020  JEEP  WRANGLER ECODIESEL  | SPECIFICATIONS  http://media.fcanorthamerica.com  |  1  \n \n2020 Jeep Wrangler \nSPECIFICATIONS  \n \nSpecifications are based on the latest product information available at the time of publication.  \nAll dimensions are in inches (millimeters) unless otherwise noted.  \nAll dimensions measured at curb weight with standard tires and wheels. \n \n \nGENERAL INFORMATION  \nVehicle Type Sport-utility vehicle \nAssembly Plant Toledo Supplier Park, Toledo, Ohio \nEPA Vehicle Class Multipurpose vehicle \nIntroduction Date Fall 2017 as a 2018 model  \n  \nBODY/CHASSIS  \nLayout Longitudinal front engine, four-wheel drive \nConstruction Ladder-type frame, open steel and aluminum body \n  \nENGINE: 3.6-LITER PENTASTAR V-6  \nAvailability Standard — Sport, Sahara (MTX only), Rubicon (all ESS)  \nAvailable — Sahara (with eTorque mild-hybrid assist) \nType and Description 60-degree, V-type, liquid-cooled \nDisplacement (cu. in. / cc) 220 cu. in. (3,604 cu. cm) \nBore x Stroke  3.78 x 3.27 (96 x 83) \nValve System Chain-driven DOHC, 24 valves and hydraulic end-pivot roller rockers \nFuel Injection Sequential, multiport, electronic, returnless \nConstruction Aluminum deep-skirt block, aluminum alloy heads  \nCompression Ratio 11.3:1 \nPower (SAE net) (hp / kW@rpm) 285 hp (213 kW) at 6,400 rpm \nTorque (SAE net) (lb.-ft. / N•m) 260 lb.-ft. (353 N•m) at 4,800 rpm \nMax. Engine Speed (rpm) 6,600 rpm (electronically limited) \nFuel Requirement Unleaded regular, 87 octane (R + M)/2 \nFuel Tank Capacity (gallons) 17.5 (2-door), 21.5 (4-door) \nOil Capacity  5.0 quarts (4.7 liters) \nCoolant Capacity  10 quarts (10.1 liters) \nEmission Controls  Dual three-way catalytic converters, heated oxygen sensors and internal engine \nfeatures ",
+            "source_context": "PDF page1, ENGINE 3.6-LITER PENTASTAR V-6; source-specific guide governs edition availability"
+          }
+        ]
+      },
+      {
+        "assertion_set_id": "ERC-review-synthesis",
+        "assertions": [
+          {
+            "assertion_id": "aspiration_reasoning",
+            "attribute_key": "classification_review_support",
+            "raw_value": "Propose naturally_aspirated for the offered ERC 3.6L Pentastar V6 ESS. The MY19 technical guide positively classifies the same marketed family/ESS architecture as naturally aspirated; applicable US guide/specification lineage identifies ERC, its marketed dimensions and trim/body offerings. Induction continuity across these regional implementations is an engineering judgment supported by the combined evidence, not a direct US manufacturer assertion, code-equality proof or inference from absent turbo words alone.",
+            "source_context": "Research synthesis; AU p10 and pinned US offering evidence. Human conclusion, not manufacturer text."
+          },
+          {
+            "assertion_id": "electrification_reasoning",
+            "attribute_key": "classification_review_support",
+            "raw_value": "Propose none for the ten offered ERC configurations. US manual hardware descriptions distinguish conventional ESS starting equipment from an eTorque motor-generator with hybrid battery and launch assistance; the MY2019 catalog positively identifies conventional without-eTorque alternator applications and a separate ERG BSG application. US offering lineage binds the ten rows to ERC ESS; contemporary MY2020 powertrain materials separately introduce/describe V6 eTorque Sahara. The combined architecture/applicability judgment requires human adjudication; neither ESS terminology, missing eTorque words nor introduction chronology alone establishes nonhybrid status.",
+            "source_context": "Research synthesis; US manual hardware, catalog applications and MY2020 press context."
+          },
+          {
+            "assertion_id": "scope_limitations",
+            "attribute_key": "classification_review_support",
+            "raw_value": "No explicit US ERC naturally aspirated/nonhybrid statement was found. Australian-to-US induction continuity and the ERC conventional-hardware association are derived. Catalog provenance and MY2020 introduction chronology are not conclusive alone. Regulatory material and retrospective FCA Y40 also describe MY2019 3.6L hybrid/eTorque applications without establishing that they are ERC; the proposal is restricted to the ten retained ERC offerings, not all MY2019 3.6L Wranglers.",
+            "source_context": "All limitations must remain visible to the human reviewer."
+          }
+        ],
+        "extraction_mode": "manually_verified_transcription",
+        "extractor_id": "reviewed_classification_support",
+        "extractor_version": "1.0",
+        "raw_artifact_hash": "sha256:df1686c6c360f451a8c10b94e4c4b6dafc5cabced607e2ecac6f0be8d4521443",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2019_JL/director_review/erc_classification_proposals_20261108/evidence/erc_research_dossier.json",
+        "retrieved_at": "2026-11-08T20:06:44.639511+00:00",
+        "source_applicability": {
+          "applicability_basis": "Targeted review of ten retained US MY2019 ERC offerings; regional source scope remains explicit in dossier.",
+          "applicability_scope": "model_year",
+          "market": "US"
+        },
+        "source_id": "my2019_erc_research_review",
+        "source_locator": "docs/implementation/handoffs/MY2019_JL/director_review/erc_classification_proposals_20261108/evidence/erc_research_dossier.json"
+      },
+      {
+        "assertion_set_id": "US-MY19-hardware",
+        "assertions": [
+          {
+            "assertion_id": "reviewed_context",
+            "attribute_key": "classification_review_support",
+            "raw_value": "ESS versus eTorque hardware distinction; original source lexemes and pages retained.",
+            "source_context": "Context summarized for human review; not an internal-schema manufacturer classification."
+          }
+        ],
+        "extraction_mode": "manually_verified_transcription",
+        "extractor_id": "reviewed_classification_support",
+        "extractor_version": "1.0",
+        "raw_artifact_hash": "sha256:456d7554534a5dae9f0ecf9ca6ae5f74f634d28d841f0c7a62c44fa0e1cfca75",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2019_JL/director_review/erc_supplied_sources_20261108/sources/mopar_hardware_selected_facts.json",
+        "retrieved_at": "2026-11-08T20:06:44.639511+00:00",
+        "source_applicability": {
+          "applicability_basis": "Manufacturer/retailer source scope described in ERC dossier; no unsupported cross-market fact promoted.",
+          "applicability_scope": "model_year",
+          "market": "US"
+        },
+        "source_id": "mopar_2019_hardware_excerpts",
+        "source_locator": "https://vehicleinfo.mopar.com/assets/publications/en-ca/Jeep/2019/Wrangler/10387.pdf"
+      },
+      {
+        "assertion_set_id": "MY19-alternator",
+        "assertions": [
+          {
+            "assertion_id": "reviewed_context",
+            "attribute_key": "classification_review_support",
+            "raw_value": "Without-eTorque 3.6L alternator subset plus separate ERG BSG entry; no explicit ERC token.",
+            "source_context": "Context summarized for human review; not an internal-schema manufacturer classification."
+          }
+        ],
+        "extraction_mode": "manually_verified_transcription",
+        "extractor_id": "reviewed_classification_support",
+        "extractor_version": "1.0",
+        "raw_artifact_hash": "sha256:e558fc4e27edf7f39a04332fadbd65930ee038b76f1377f84be23f0ac4c42843",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2019_JL/director_review/erc_supplied_sources_20261108/sources/alternator-catalog.html",
+        "retrieved_at": "2026-11-08T20:06:44.639511+00:00",
+        "source_applicability": {
+          "applicability_basis": "Manufacturer/retailer source scope described in ERC dossier; no unsupported cross-market fact promoted.",
+          "applicability_scope": "model_year",
+          "market": "US"
+        },
+        "source_id": "jeeppartsdeal_oe_catalog",
+        "source_locator": "https://www.jeeppartsdeal.com/parts-list/2019-jeep-wrangler/charging-starting/alternator"
+      },
+      {
+        "assertion_set_id": "MY19-family",
+        "assertions": [
+          {
+            "assertion_id": "reviewed_context",
+            "attribute_key": "classification_review_support",
+            "raw_value": "MY2019 Wrangler family availability, with distinct hybrid/eTorque family applications.",
+            "source_context": "Context summarized for human review; not an internal-schema manufacturer classification."
+          }
+        ],
+        "extraction_mode": "manually_verified_transcription",
+        "extractor_id": "reviewed_classification_support",
+        "extractor_version": "1.0",
+        "raw_artifact_hash": "sha256:7e16f753401a6711b78b510ad4cf35cecdaa775b7ce719b0050fd6db72dabfef",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2019_JL/director_review/erc_supplied_sources_20261108/sources/pentastar-family-facts.pdf",
+        "retrieved_at": "2026-11-08T20:06:44.639511+00:00",
+        "source_applicability": {
+          "applicability_basis": "Manufacturer/retailer source scope described in ERC dossier; no unsupported cross-market fact promoted.",
+          "applicability_scope": "model_year",
+          "market": "US"
+        },
+        "source_id": "fca_pentastar_family_facts",
+        "source_locator": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/attachments/Pentastar_V-6_facts1suaud45cdq3l94ji0b4a7550n.pdf"
+      },
+      {
+        "assertion_set_id": "carb_2019_3_6_hev",
+        "assertions": [
+          {
+            "assertion_id": "scope_caution",
+            "attribute_key": "classification_review_support",
+            "raw_value": "MY2019 3.6L test group KCRXT03.65P7 is hybrid-electric and lists Wrangler models; no ERC identifier established.",
+            "source_context": "Printed p1; broad model-year scope must not be equated with the targeted ERC offering."
+          }
+        ],
+        "extraction_mode": "manually_verified_transcription",
+        "extractor_id": "reviewed_classification_support",
+        "extractor_version": "1.0",
+        "raw_artifact_hash": "sha256:c82e4ddc543e0142628e1cf66f1ff6e38e233eff474e6b1b93e0c2dd0eae64e6",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2019_JL/director_review/erc_classification_proposals_20261108/evidence/carb-2019-a0091433.pdf",
+        "retrieved_at": "2026-11-08T20:06:44.639511+00:00",
+        "source_applicability": {
+          "applicability_basis": "US certification/service scope; retained as limitation, not as proof of target ERC classification.",
+          "applicability_scope": "model_year",
+          "market": "US"
+        },
+        "source_id": "carb_2019_3_6_hev",
+        "source_locator": "https://ww2.arb.ca.gov/sites/default/files/classic/msprog/nvepb/executive_orders/EO%20Web%20Files/PC-LDT-MDV/2019/0002/pc-ldt-mdv_ldt_a-9-1433__sdt--20180905.pdf"
+      },
+      {
+        "assertion_set_id": "fca_y40_scope",
+        "assertions": [
+          {
+            "assertion_id": "scope_caution",
+            "attribute_key": "classification_review_support",
+            "raw_value": "Retrospective FCA Y40 lists MY2019-2021 Wrangler 3.6L eTorque ERG; does not state ERC is hybrid.",
+            "source_context": "Printed p1; broad model-year scope must not be equated with the targeted ERC offering."
+          }
+        ],
+        "extraction_mode": "manually_verified_transcription",
+        "extractor_id": "reviewed_classification_support",
+        "extractor_version": "1.0",
+        "raw_artifact_hash": "sha256:6af1557c414a22a709a7a0d9d50767ef55f7fc885dab3fe26bbcf8dd35b9c2d7",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2019_JL/director_review/erc_classification_proposals_20261108/evidence/fca-y40-bulletin.pdf",
+        "retrieved_at": "2026-11-08T20:06:44.639511+00:00",
+        "source_applicability": {
+          "applicability_basis": "US certification/service scope; retained as limitation, not as proof of target ERC classification.",
+          "applicability_scope": "model_year",
+          "market": "US"
+        },
+        "source_id": "fca_y40_scope",
+        "source_locator": "https://static.nhtsa.gov/odi/tsbs/2024/MC-10251816-9999.pdf"
+      }
+    ],
+    "classifications": {
+      "engine_aspiration": {
+        "value": "naturally_aspirated",
+        "reasoning": "Pentastar-family induction conclusion proposed from the 3.6L V6 specification/guide family and existing MY2019 research, not an explicit MY2020 aspiration assertion.",
+        "applicability": "Only JL20-13: US MY2020 2-door Willys, ERC, JLJL72, QOP 23W,24W; candidate digest sha256:cf44f63e7f14f09a00676bea02ba60c3b304705253f5ae4f337aeabffcd7e572",
+        "limitations": "No extension of MY2019 approvals. No final human approval. Family joins are engineering conclusions; exact engine-code hardware/induction corroboration required before approval if current evidence is judged insufficient. Missing archive revisions may affect scope history.",
+        "confidence": "moderate",
+        "source_assertion_refs": [
+          "MY2020-JL-2D-2020-03-03|sha256:1270871250ddbdad0fead362ba0df7e1516dd42ce51d37fc599c098f0bf81adc|JL20-13-engine|JL20-13-engine",
+          "Mopar_MY2020_Wrangler_US_manual|sha256:eccf53d564172144d82728cacc2b7f87210c2dd7af0a535e1df78f588a92cd92|MY2020-manual-fuel-hardware|hardware",
+          "my2019_erc_research_review|sha256:df1686c6c360f451a8c10b94e4c4b6dafc5cabced607e2ecac6f0be8d4521443|ERC-review-synthesis|aspiration_reasoning",
+          "my2019_erc_research_review|sha256:df1686c6c360f451a8c10b94e4c4b6dafc5cabced607e2ecac6f0be8d4521443|ERC-review-synthesis|electrification_reasoning",
+          "my2019_erc_research_review|sha256:df1686c6c360f451a8c10b94e4c4b6dafc5cabced607e2ecac6f0be8d4521443|ERC-review-synthesis|scope_limitations",
+          "mopar_2019_hardware_excerpts|sha256:456d7554534a5dae9f0ecf9ca6ae5f74f634d28d841f0c7a62c44fa0e1cfca75|US-MY19-hardware|reviewed_context",
+          "jeeppartsdeal_oe_catalog|sha256:e558fc4e27edf7f39a04332fadbd65930ee038b76f1377f84be23f0ac4c42843|MY19-alternator|reviewed_context",
+          "fca_pentastar_family_facts|sha256:7e16f753401a6711b78b510ad4cf35cecdaa775b7ce719b0050fd6db72dabfef|MY19-family|reviewed_context",
+          "carb_2019_3_6_hev|sha256:c82e4ddc543e0142628e1cf66f1ff6e38e233eff474e6b1b93e0c2dd0eae64e6|carb_2019_3_6_hev|scope_caution",
+          "fca_y40_scope|sha256:6af1557c414a22a709a7a0d9d50767ef55f7fc885dab3fe26bbcf8dd35b9c2d7|fca_y40_scope|scope_caution"
+        ],
+        "evidence_status": "supported"
+      },
+      "electrification_type": {
+        "value": "none",
+        "reasoning": "Combined US MY2020 separate ERC ESS versus ERG eTorque order-guide offerings, manufacturer Pentastar description, MY2020 optional 3.6 MGU/battery hardware, and retained MY2019 conventional alternator versus ERG BSG context support proposed none. Continuity of ERC conventional architecture into these exact MY2020 offerings requires fresh human judgment; no cross-year approval or absence-only reasoning is used.",
+        "applicability": "Only JL20-13: US MY2020 2-door Willys, ERC, JLJL72, QOP 23W,24W; candidate digest sha256:cf44f63e7f14f09a00676bea02ba60c3b304705253f5ae4f337aeabffcd7e572",
+        "limitations": "No extension of MY2019 approvals. No final human approval. Family joins are engineering conclusions; exact engine-code hardware/induction corroboration required before approval if current evidence is judged insufficient. Missing archive revisions may affect scope history.",
+        "confidence": "moderate",
+        "source_assertion_refs": [
+          "MY2020-JL-2D-2020-03-03|sha256:1270871250ddbdad0fead362ba0df7e1516dd42ce51d37fc599c098f0bf81adc|JL20-13-engine|JL20-13-engine",
+          "Mopar_MY2020_Wrangler_US_manual|sha256:eccf53d564172144d82728cacc2b7f87210c2dd7af0a535e1df78f588a92cd92|MY2020-manual-fuel-hardware|hardware",
+          "my2019_erc_research_review|sha256:df1686c6c360f451a8c10b94e4c4b6dafc5cabced607e2ecac6f0be8d4521443|ERC-review-synthesis|aspiration_reasoning",
+          "my2019_erc_research_review|sha256:df1686c6c360f451a8c10b94e4c4b6dafc5cabced607e2ecac6f0be8d4521443|ERC-review-synthesis|electrification_reasoning",
+          "my2019_erc_research_review|sha256:df1686c6c360f451a8c10b94e4c4b6dafc5cabced607e2ecac6f0be8d4521443|ERC-review-synthesis|scope_limitations",
+          "mopar_2019_hardware_excerpts|sha256:456d7554534a5dae9f0ecf9ca6ae5f74f634d28d841f0c7a62c44fa0e1cfca75|US-MY19-hardware|reviewed_context",
+          "jeeppartsdeal_oe_catalog|sha256:e558fc4e27edf7f39a04332fadbd65930ee038b76f1377f84be23f0ac4c42843|MY19-alternator|reviewed_context",
+          "fca_pentastar_family_facts|sha256:7e16f753401a6711b78b510ad4cf35cecdaa775b7ce719b0050fd6db72dabfef|MY19-family|reviewed_context",
+          "carb_2019_3_6_hev|sha256:c82e4ddc543e0142628e1cf66f1ff6e38e233eff474e6b1b93e0c2dd0eae64e6|carb_2019_3_6_hev|scope_caution",
+          "fca_y40_scope|sha256:6af1557c414a22a709a7a0d9d50767ef55f7fc885dab3fe26bbcf8dd35b9c2d7|fca_y40_scope|scope_caution"
+        ],
+        "evidence_status": "supported"
+      }
+    }
+  },
+  "adjudication_hash": "sha256:ddd9c3e7e45fe55bee80a5dc6c6a69b5e7b8d002fc83dc3301b546e01e17215d"
+}

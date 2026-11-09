@@ -1,0 +1,578 @@
+{
+  "secondary_only": true,
+  "not_original_HTML": true,
+  "retrieval_date": "2026-11-08",
+  "trim_index_url": "https://www.edmunds.com/jeep/wrangler/2020/trims/",
+  "records": [
+    {
+      "style_id": "401804418",
+      "url": "https://www.edmunds.com/jeep/wrangler/2020/st-401804418/features-specs/",
+      "manufacturer_grade_join": "Sport",
+      "edmunds_grade": "Sport",
+      "body": "2-door",
+      "base_engine_observation": {
+        "size_liters": "3.6",
+        "cylinders": "V6",
+        "type": "Gas"
+      },
+      "mechanical_engine_options_observed": [
+        "2.0L I4 DOHC DI Turbo Engine w/ESS"
+      ],
+      "quick_order_package_codes_observed": [
+        "23B",
+        "24B",
+        "22B"
+      ],
+      "section_references": [
+        "Engine",
+        "Mechanical Options",
+        "Packages"
+      ],
+      "extraction": "Manual transcription of expanded public specification DOM; no original HTML retained; retrieved 2026-11-08",
+      "limitations": "Engine-code correspondence is derived using manufacturer QOP table, not a claim Edmunds prints ERC/ERG/EC1/EC3/EXJ."
+    },
+    {
+      "style_id": "401845519",
+      "url": "https://www.edmunds.com/jeep/wrangler/2020/st-401845519/features-specs/",
+      "manufacturer_grade_join": "Willys Sport",
+      "edmunds_grade": "Willys Sport",
+      "body": "2-door",
+      "base_engine_observation": {
+        "size_liters": "3.6",
+        "cylinders": "V6",
+        "type": "Gas"
+      },
+      "mechanical_engine_options_observed": [
+        "2.0L I4 DOHC DI Turbo Engine w/ESS"
+      ],
+      "quick_order_package_codes_observed": [
+        "22K",
+        "24K",
+        "23K"
+      ],
+      "section_references": [
+        "Engine",
+        "Mechanical Options",
+        "Packages"
+      ],
+      "extraction": "Manual transcription of expanded public specification DOM; no original HTML retained; retrieved 2026-11-08",
+      "limitations": "Engine-code correspondence is derived using manufacturer QOP table, not a claim Edmunds prints ERC/ERG/EC1/EC3/EXJ."
+    },
+    {
+      "style_id": "401804419",
+      "url": "https://www.edmunds.com/jeep/wrangler/2020/st-401804419/features-specs/",
+      "manufacturer_grade_join": "Sport S",
+      "edmunds_grade": "Sport S",
+      "body": "2-door",
+      "base_engine_observation": {
+        "size_liters": "3.6",
+        "cylinders": "V6",
+        "type": "Gas"
+      },
+      "mechanical_engine_options_observed": [
+        "2.0L I4 DOHC DI Turbo Engine w/ESS"
+      ],
+      "quick_order_package_codes_observed": [
+        "23S",
+        "24S",
+        "22S"
+      ],
+      "section_references": [
+        "Engine",
+        "Mechanical Options",
+        "Packages"
+      ],
+      "extraction": "Manual transcription of expanded public specification DOM; no original HTML retained; retrieved 2026-11-08",
+      "limitations": "Engine-code correspondence is derived using manufacturer QOP table, not a claim Edmunds prints ERC/ERG/EC1/EC3/EXJ."
+    },
+    {
+      "style_id": "401804422",
+      "url": "https://www.edmunds.com/jeep/wrangler/2020/st-401804422/features-specs/",
+      "manufacturer_grade_join": "Unlimited Sport",
+      "edmunds_grade": "Unlimited Sport",
+      "body": "4-door",
+      "base_engine_observation": {
+        "size_liters": "3.6",
+        "cylinders": "V6",
+        "type": "Gas"
+      },
+      "mechanical_engine_options_observed": [
+        "2.0L I4 DOHC DI Turbo Engine w/ESS",
+        "3.0L V6 Turbo Diesel Engine w/ESS G3"
+      ],
+      "quick_order_package_codes_observed": [
+        "23B",
+        "24B",
+        "22B",
+        "26B"
+      ],
+      "section_references": [
+        "Engine",
+        "Mechanical Options",
+        "Packages"
+      ],
+      "extraction": "Manual transcription of expanded public specification DOM; no original HTML retained; retrieved 2026-11-08",
+      "limitations": "Engine-code correspondence is derived using manufacturer QOP table, not a claim Edmunds prints ERC/ERG/EC1/EC3/EXJ."
+    },
+    {
+      "style_id": "401804424",
+      "url": "https://www.edmunds.com/jeep/wrangler/2020/st-401804424/features-specs/",
+      "manufacturer_grade_join": "Black and Tan",
+      "edmunds_grade": "Black and Tan",
+      "body": "2-door",
+      "base_engine_observation": {
+        "size_liters": "3.6",
+        "cylinders": "V6",
+        "type": "Gas"
+      },
+      "mechanical_engine_options_observed": [
+        "2.0L I4 DOHC DI Turbo Engine w/ESS"
+      ],
+      "quick_order_package_codes_observed": [
+        "24D",
+        "22D",
+        "23D"
+      ],
+      "section_references": [
+        "Engine",
+        "Mechanical Options",
+        "Packages"
+      ],
+      "extraction": "Manual transcription of expanded public specification DOM; no original HTML retained; retrieved 2026-11-08",
+      "limitations": "Engine-code correspondence is derived using manufacturer QOP table, not a claim Edmunds prints ERC/ERG/EC1/EC3/EXJ."
+    },
+    {
+      "style_id": "401845575",
+      "url": "https://www.edmunds.com/jeep/wrangler/2020/st-401845575/features-specs/",
+      "manufacturer_grade_join": "Unlimited Willys Sport",
+      "edmunds_grade": "Unlimited Willys Sport",
+      "body": "4-door",
+      "base_engine_observation": {
+        "size_liters": "3.6",
+        "cylinders": "V6",
+        "type": "Gas"
+      },
+      "mechanical_engine_options_observed": [
+        "2.0L I4 DOHC DI Turbo Engine w/ESS"
+      ],
+      "quick_order_package_codes_observed": [
+        "24K",
+        "22K",
+        "23K"
+      ],
+      "section_references": [
+        "Engine",
+        "Mechanical Options",
+        "Packages"
+      ],
+      "extraction": "Manual transcription of expanded public specification DOM; no original HTML retained; retrieved 2026-11-08",
+      "limitations": "Engine-code correspondence is derived using manufacturer QOP table, not a claim Edmunds prints ERC/ERG/EC1/EC3/EXJ."
+    },
+    {
+      "style_id": "401832293",
+      "url": "https://www.edmunds.com/jeep/wrangler/2020/st-401832293/features-specs/",
+      "manufacturer_grade_join": "Willys",
+      "edmunds_grade": "Willys",
+      "body": "2-door",
+      "base_engine_observation": {
+        "size_liters": "3.6",
+        "cylinders": "V6",
+        "type": "Gas"
+      },
+      "mechanical_engine_options_observed": [
+        "2.0L I4 DOHC DI Turbo Engine w/ESS"
+      ],
+      "quick_order_package_codes_observed": [
+        "22W",
+        "24W",
+        "23W"
+      ],
+      "section_references": [
+        "Engine",
+        "Mechanical Options",
+        "Packages"
+      ],
+      "extraction": "Manual transcription of expanded public specification DOM; no original HTML retained; retrieved 2026-11-08",
+      "limitations": "Engine-code correspondence is derived using manufacturer QOP table, not a claim Edmunds prints ERC/ERG/EC1/EC3/EXJ."
+    },
+    {
+      "style_id": "401832294",
+      "url": "https://www.edmunds.com/jeep/wrangler/2020/st-401832294/features-specs/",
+      "manufacturer_grade_join": "Freedom",
+      "edmunds_grade": "Freedom",
+      "body": "2-door",
+      "base_engine_observation": {
+        "size_liters": "3.6",
+        "cylinders": "V6",
+        "type": "Gas"
+      },
+      "mechanical_engine_options_observed": [
+        "2.0L I4 DOHC DI Turbo Engine w/ESS"
+      ],
+      "quick_order_package_codes_observed": [
+        "24F",
+        "23F",
+        "22F"
+      ],
+      "section_references": [
+        "Engine",
+        "Mechanical Options",
+        "Packages"
+      ],
+      "extraction": "Manual transcription of expanded public specification DOM; no original HTML retained; retrieved 2026-11-08",
+      "limitations": "Engine-code correspondence is derived using manufacturer QOP table, not a claim Edmunds prints ERC/ERG/EC1/EC3/EXJ."
+    },
+    {
+      "style_id": "401804423",
+      "url": "https://www.edmunds.com/jeep/wrangler/2020/st-401804423/features-specs/",
+      "manufacturer_grade_join": "Unlimited Sport S",
+      "edmunds_grade": "Unlimited Sport S",
+      "body": "4-door",
+      "base_engine_observation": {
+        "size_liters": "3.6",
+        "cylinders": "V6",
+        "type": "Gas"
+      },
+      "mechanical_engine_options_observed": [
+        "2.0L I4 DOHC DI Turbo Engine w/ESS",
+        "3.0L V6 Turbo Diesel Engine w/ESS G3"
+      ],
+      "quick_order_package_codes_observed": [
+        "26S",
+        "22S",
+        "23S",
+        "24S"
+      ],
+      "section_references": [
+        "Engine",
+        "Mechanical Options",
+        "Packages"
+      ],
+      "extraction": "Manual transcription of expanded public specification DOM; no original HTML retained; retrieved 2026-11-08",
+      "limitations": "Engine-code correspondence is derived using manufacturer QOP table, not a claim Edmunds prints ERC/ERG/EC1/EC3/EXJ."
+    },
+    {
+      "style_id": "401804667",
+      "url": "https://www.edmunds.com/jeep/wrangler/2020/st-401804667/features-specs/",
+      "manufacturer_grade_join": "Unlimited Sport Altitude",
+      "edmunds_grade": "Unlimited Sport Altitude",
+      "body": "4-door",
+      "base_engine_observation": {
+        "size_liters": "3.6",
+        "cylinders": "V6",
+        "type": "Gas"
+      },
+      "mechanical_engine_options_observed": [
+        "2.0L I4 DOHC DI Turbo Engine w/ESS",
+        "3.0L V6 Turbo Diesel Engine w/ESS G3"
+      ],
+      "quick_order_package_codes_observed": [
+        "26L",
+        "23L",
+        "22L",
+        "24L"
+      ],
+      "section_references": [
+        "Engine",
+        "Mechanical Options",
+        "Packages"
+      ],
+      "extraction": "Manual transcription of expanded public specification DOM; no original HTML retained; retrieved 2026-11-08",
+      "limitations": "Engine-code correspondence is derived using manufacturer QOP table, not a claim Edmunds prints ERC/ERG/EC1/EC3/EXJ."
+    },
+    {
+      "style_id": "401804588",
+      "url": "https://www.edmunds.com/jeep/wrangler/2020/st-401804588/features-specs/",
+      "manufacturer_grade_join": "Unlimited Black and Tan",
+      "edmunds_grade": "Unlimited Black and Tan",
+      "body": "4-door",
+      "base_engine_observation": {
+        "size_liters": "3.6",
+        "cylinders": "V6",
+        "type": "Gas"
+      },
+      "mechanical_engine_options_observed": [
+        "2.0L I4 DOHC DI Turbo Engine w/ESS"
+      ],
+      "quick_order_package_codes_observed": [
+        "24D",
+        "22D",
+        "23D"
+      ],
+      "section_references": [
+        "Engine",
+        "Mechanical Options",
+        "Packages"
+      ],
+      "extraction": "Manual transcription of expanded public specification DOM; no original HTML retained; retrieved 2026-11-08",
+      "limitations": "Engine-code correspondence is derived using manufacturer QOP table, not a claim Edmunds prints ERC/ERG/EC1/EC3/EXJ."
+    },
+    {
+      "style_id": "401832542",
+      "url": "https://www.edmunds.com/jeep/wrangler/2020/st-401832542/features-specs/",
+      "manufacturer_grade_join": "Unlimited Willys",
+      "edmunds_grade": "Unlimited Willys",
+      "body": "4-door",
+      "base_engine_observation": {
+        "size_liters": "3.6",
+        "cylinders": "V6",
+        "type": "Gas"
+      },
+      "mechanical_engine_options_observed": [
+        "2.0L I4 DOHC DI Turbo Engine w/ESS",
+        "3.0L V6 Turbo Diesel Engine w/ESS G3"
+      ],
+      "quick_order_package_codes_observed": [
+        "22W",
+        "23W",
+        "24W",
+        "26W"
+      ],
+      "section_references": [
+        "Engine",
+        "Mechanical Options",
+        "Packages"
+      ],
+      "extraction": "Manual transcription of expanded public specification DOM; no original HTML retained; retrieved 2026-11-08",
+      "limitations": "Engine-code correspondence is derived using manufacturer QOP table, not a claim Edmunds prints ERC/ERG/EC1/EC3/EXJ."
+    },
+    {
+      "style_id": "401832543",
+      "url": "https://www.edmunds.com/jeep/wrangler/2020/st-401832543/features-specs/",
+      "manufacturer_grade_join": "Unlimited Freedom",
+      "edmunds_grade": "Unlimited Freedom",
+      "body": "4-door",
+      "base_engine_observation": {
+        "size_liters": "3.6",
+        "cylinders": "V6",
+        "type": "Gas"
+      },
+      "mechanical_engine_options_observed": [
+        "2.0L I4 DOHC DI Turbo Engine w/ESS"
+      ],
+      "quick_order_package_codes_observed": [
+        "22F",
+        "23F",
+        "24F"
+      ],
+      "section_references": [
+        "Engine",
+        "Mechanical Options",
+        "Packages"
+      ],
+      "extraction": "Manual transcription of expanded public specification DOM; no original HTML retained; retrieved 2026-11-08",
+      "limitations": "Engine-code correspondence is derived using manufacturer QOP table, not a claim Edmunds prints ERC/ERG/EC1/EC3/EXJ."
+    },
+    {
+      "style_id": "401804435",
+      "url": "https://www.edmunds.com/jeep/wrangler/2020/st-401804435/features-specs/",
+      "manufacturer_grade_join": "Unlimited Sahara",
+      "edmunds_grade": "Unlimited Sahara",
+      "body": "4-door",
+      "base_engine_observation": {
+        "size_liters": "3.6",
+        "cylinders": "V6",
+        "type": "Gas"
+      },
+      "mechanical_engine_options_observed": [
+        "2.0L I4 DOHC DI Turbo eTorque Engine",
+        "3.6L V6 VVT eTorque Engine",
+        "3.0L V6 Turbo Diesel Engine w/ESS G3"
+      ],
+      "quick_order_package_codes_observed": [
+        "26G",
+        "25G",
+        "28G",
+        "23G"
+      ],
+      "section_references": [
+        "Engine",
+        "Mechanical Options",
+        "Packages"
+      ],
+      "extraction": "Manual transcription of expanded public specification DOM; no original HTML retained; retrieved 2026-11-08",
+      "limitations": "Engine-code correspondence is derived using manufacturer QOP table, not a claim Edmunds prints ERC/ERG/EC1/EC3/EXJ."
+    },
+    {
+      "style_id": "401804421",
+      "url": "https://www.edmunds.com/jeep/wrangler/2020/st-401804421/features-specs/",
+      "manufacturer_grade_join": "Rubicon",
+      "edmunds_grade": "Rubicon",
+      "body": "2-door",
+      "base_engine_observation": {
+        "size_liters": "3.6",
+        "cylinders": "V6",
+        "type": "Gas"
+      },
+      "mechanical_engine_options_observed": [
+        "2.0L I4 DOHC DI Turbo Engine w/ESS"
+      ],
+      "quick_order_package_codes_observed": [
+        "23R",
+        "22R",
+        "24R"
+      ],
+      "section_references": [
+        "Engine",
+        "Mechanical Options",
+        "Packages"
+      ],
+      "extraction": "Manual transcription of expanded public specification DOM; no original HTML retained; retrieved 2026-11-08",
+      "limitations": "Engine-code correspondence is derived using manufacturer QOP table, not a claim Edmunds prints ERC/ERG/EC1/EC3/EXJ."
+    },
+    {
+      "style_id": "401804668",
+      "url": "https://www.edmunds.com/jeep/wrangler/2020/st-401804668/features-specs/",
+      "manufacturer_grade_join": "Unlimited Sahara Altitude",
+      "edmunds_grade": "Unlimited Sahara Altitude",
+      "body": "4-door",
+      "base_engine_observation": {
+        "size_liters": "3.6",
+        "cylinders": "V6",
+        "type": "Gas"
+      },
+      "mechanical_engine_options_observed": [
+        "2.0L I4 DOHC DI Turbo eTorque Engine",
+        "3.6L V6 VVT eTorque Engine",
+        "3.0L V6 Turbo Diesel Engine w/ESS G3"
+      ],
+      "quick_order_package_codes_observed": [
+        "26L",
+        "28L",
+        "23L",
+        "25L"
+      ],
+      "section_references": [
+        "Engine",
+        "Mechanical Options",
+        "Packages"
+      ],
+      "extraction": "Manual transcription of expanded public specification DOM; no original HTML retained; retrieved 2026-11-08",
+      "limitations": "Engine-code correspondence is derived using manufacturer QOP table, not a claim Edmunds prints ERC/ERG/EC1/EC3/EXJ."
+    },
+    {
+      "style_id": "401804420",
+      "url": "https://www.edmunds.com/jeep/wrangler/2020/st-401804420/features-specs/",
+      "manufacturer_grade_join": "Unlimited Rubicon",
+      "edmunds_grade": "Unlimited Rubicon",
+      "body": "4-door",
+      "base_engine_observation": {
+        "size_liters": "3.6",
+        "cylinders": "V6",
+        "type": "Gas"
+      },
+      "mechanical_engine_options_observed": [
+        "2.0L I4 DOHC DI Turbo Engine w/ESS"
+      ],
+      "quick_order_package_codes_observed": [
+        "23R",
+        "22R",
+        "24R"
+      ],
+      "section_references": [
+        "Engine",
+        "Mechanical Options",
+        "Packages"
+      ],
+      "extraction": "Manual transcription of expanded public specification DOM; no original HTML retained; retrieved 2026-11-08",
+      "limitations": "Engine-code correspondence is derived using manufacturer QOP table, not a claim Edmunds prints ERC/ERG/EC1/EC3/EXJ."
+    },
+    {
+      "style_id": "401845566",
+      "url": "https://www.edmunds.com/jeep/wrangler/2020/st-401845566/features-specs/",
+      "manufacturer_grade_join": "Rubicon Recon",
+      "edmunds_grade": "Rubicon Recon",
+      "body": "2-door",
+      "base_engine_observation": {
+        "size_liters": "2.0",
+        "cylinders": "Inline 4",
+        "type": "Mild hybrid"
+      },
+      "mechanical_engine_options_observed": [],
+      "quick_order_package_codes_observed": [
+        "28Y"
+      ],
+      "section_references": [
+        "Engine",
+        "Mechanical Options",
+        "Packages"
+      ],
+      "extraction": "Manual transcription of expanded public specification DOM; no original HTML retained; retrieved 2026-11-08",
+      "limitations": "Engine-code correspondence is derived using manufacturer QOP table, not a claim Edmunds prints ERC/ERG/EC1/EC3/EXJ."
+    },
+    {
+      "style_id": "401832588",
+      "url": "https://www.edmunds.com/jeep/wrangler/2020/st-401832588/features-specs/",
+      "manufacturer_grade_join": "Unlimited North Edition",
+      "edmunds_grade": "Unlimited North Edition",
+      "body": "4-door",
+      "base_engine_observation": {
+        "size_liters": "2.0",
+        "cylinders": "Inline 4",
+        "type": "Mild hybrid"
+      },
+      "mechanical_engine_options_observed": [],
+      "quick_order_package_codes_observed": [
+        "28E"
+      ],
+      "section_references": [
+        "Engine",
+        "Mechanical Options",
+        "Packages"
+      ],
+      "extraction": "Manual transcription of expanded public specification DOM; no original HTML retained; retrieved 2026-11-08",
+      "limitations": "Engine-code correspondence is derived using manufacturer QOP table, not a claim Edmunds prints ERC/ERG/EC1/EC3/EXJ."
+    },
+    {
+      "style_id": "401845579",
+      "url": "https://www.edmunds.com/jeep/wrangler/2020/st-401845579/features-specs/",
+      "manufacturer_grade_join": "Unlimited Rubicon Recon",
+      "edmunds_grade": "Unlimited Rubicon Recon",
+      "body": "4-door",
+      "base_engine_observation": {
+        "size_liters": "2.0",
+        "cylinders": "Inline 4",
+        "type": "Mild hybrid"
+      },
+      "mechanical_engine_options_observed": [],
+      "quick_order_package_codes_observed": [
+        "28Y"
+      ],
+      "section_references": [
+        "Engine",
+        "Mechanical Options",
+        "Packages"
+      ],
+      "extraction": "Manual transcription of expanded public specification DOM; no original HTML retained; retrieved 2026-11-08",
+      "limitations": "Engine-code correspondence is derived using manufacturer QOP table, not a claim Edmunds prints ERC/ERG/EC1/EC3/EXJ."
+    },
+    {
+      "style_id": "401852728",
+      "url": "https://www.edmunds.com/jeep/wrangler/2020/st-401852728/features-specs/",
+      "manufacturer_grade_join": "Unlimited Sahara High Altitude",
+      "edmunds_grade": "Unlimited High Altitude",
+      "body": "4-door",
+      "base_engine_observation": {
+        "size_liters": "2.0",
+        "cylinders": "Inline 4",
+        "type": "Mild hybrid"
+      },
+      "mechanical_engine_options_observed": [
+        "3.6L V6 VVT eTorque Engine",
+        "3.0L V6 Turbo Diesel Engine w/ESS G3"
+      ],
+      "quick_order_package_codes_observed": [
+        "26N",
+        "28N",
+        "25N"
+      ],
+      "section_references": [
+        "Engine",
+        "Mechanical Options",
+        "Packages"
+      ],
+      "extraction": "Manual transcription of expanded public specification DOM; no original HTML retained; retrieved 2026-11-08",
+      "limitations": "Engine-code correspondence is derived using manufacturer QOP table, not a claim Edmunds prints ERC/ERG/EC1/EC3/EXJ."
+    }
+  ]
+}

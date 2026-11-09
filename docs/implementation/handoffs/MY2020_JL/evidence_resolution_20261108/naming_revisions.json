@@ -1,0 +1,31 @@
+{
+  "decision": "Prepared under task-authorized naming normalization, canonical grade approval still pending",
+  "revisions": [
+    {
+      "candidate_reference": "JL20-33",
+      "previous_artifact": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/candidates/JL20-33.candidate.2.1.0.json",
+      "previous_hash": "sha256:321246eee675b3a4141a98d2e308b55eef0af0b880fd88b4f6bd0630a29de4eb",
+      "current_artifact": "docs/implementation/handoffs/MY2020_JL/evidence_resolution_20261108/candidate_revisions/JL20-33.naming-r1.candidate.2.1.0.json",
+      "current_hash": "sha256:832486003d9d6c8b8e796c8a3946598714ea9c2e1d928d0a35d0023d9f06a85c",
+      "structured_powertrain_unchanged": true
+    },
+    {
+      "candidate_reference": "JL20-34",
+      "previous_artifact": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/candidates/JL20-34.candidate.2.1.0.json",
+      "previous_hash": "sha256:fcecbd2cbcb46c01d70483b3069bca9617ae2a82e48034853da9e8ec2cb182e2",
+      "current_artifact": "docs/implementation/handoffs/MY2020_JL/evidence_resolution_20261108/candidate_revisions/JL20-34.naming-r1.candidate.2.1.0.json",
+      "current_hash": "sha256:0fb6967e04498ea88b7ff1bf746c5c727fb0cc97c8a5bc41279aa0f9fa4565ae",
+      "structured_powertrain_unchanged": true
+    },
+    {
+      "candidate_reference": "JL20-35",
+      "previous_artifact": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/candidates/JL20-35.candidate.2.1.0.json",
+      "previous_hash": "sha256:6cf85f98e70c3058e06a73f1be1a19dc774cc432601fed0e593491f17bb10562",
+      "current_artifact": "docs/implementation/handoffs/MY2020_JL/evidence_resolution_20261108/candidate_revisions/JL20-35.naming-r1.candidate.2.1.0.json",
+      "current_hash": "sha256:0890e7b62c21f8ba754f0fb945411baf5e99ded931b973bba0f491ad449ada71",
+      "structured_powertrain_unchanged": true
+    }
+  ],
+  "rule": "Manufacturer marketed edition plus distinct model-family column/QOP baseline, not arbitrary option grouping",
+  "secondary": "Edmunds observed High Altitude style corroborates manufacturer title, not governing authority"
+}

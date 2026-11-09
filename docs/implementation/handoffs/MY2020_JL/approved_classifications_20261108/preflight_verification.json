@@ -1,0 +1,17 @@
+{
+  "result": "passed before any approval",
+  "review_manifest_sha256": "sha256:c655078c2fc0b3d553cc3cc2176bb4f7ee7922441c9eaa01372a4b17612ea5a4",
+  "approval_table_sha256": "sha256:c88c591d717827d6d5e71a9085af81e09848daf50edffe206c9162119f2815b6",
+  "review_hashes_checked": 70,
+  "candidate_count": 49,
+  "proposal_record_count": 43,
+  "field_decision_count": 60,
+  "scope": "US MY2020 Wrangler JL only",
+  "contradiction_assessment": "Validated mapped manufacturer observations/evidence hashes and scoped reviewed derived findings; no contradictory proposal or unsupported taxonomy value found. No new direct-source claim is manufactured by approval.",
+  "High_Altitude_current_revisions": [
+    "JL20-33",
+    "JL20-34",
+    "JL20-35"
+  ],
+  "EXJ_confidence": "moderate; original derived-evidence limitations unchanged"
+}

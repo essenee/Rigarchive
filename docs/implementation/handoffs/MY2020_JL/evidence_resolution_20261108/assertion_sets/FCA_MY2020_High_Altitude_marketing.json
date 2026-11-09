@@ -1,0 +1,39 @@
+{
+  "envelope": {
+    "artifact_type": "rigarchive.source_assertion_set.v1",
+    "created_at": "2026-11-08T22:37:13.602767+00:00",
+    "generator": "bounded_MY2020_evidence_review",
+    "schema_version": "1.1.0"
+  },
+  "provenance": {
+    "acquisition_method": "retained source or explicitly typed browser excerpt",
+    "extraction_provenance": {
+      "extraction_mode": "source_specific_parser",
+      "extractor_id": "MY2020_evidence_review",
+      "extractor_version": "1.0",
+      "raw_artifact_hash": "sha256:71d0d2bfc5bde2c326f05cc1f428ae8442d451f6705f714866a8be7e05bfedad",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/evidence/FCA_High_Altitude_release_2020-02-06.html"
+    },
+    "native_record_id": "FCA_MY2020_High_Altitude_marketing-review-20261108",
+    "retrieved_at": "2026-11-08T22:37:13.602767+00:00",
+    "review_status": "reviewed",
+    "source_applicability": {
+      "applicability_basis": "Document-specific US MY2020 applicability; scope limitations recorded in notes",
+      "applicability_scope": "model_year",
+      "market": "US",
+      "publisher_jurisdiction": "US"
+    },
+    "source_id": "FCA_MY2020_High_Altitude_marketing",
+    "source_locator": "https://cas.vporoom.com/2020-02-06-Jeep-R-Brand-Expands-Wrangler-and-Gladiator-Lineup-With-Premium-High-Altitude-Model",
+    "source_type": "manufacturer_document",
+    "source_use_notes": "Retained manufacturer-issued FCA release syndicated by VPO/PRNewswire, SOURCE FCA. Marketed model/edition supports grade finding together with the specific JLJP74 25N/28N/26N guide column; optional equipment groups remain subordinate."
+  },
+  "source_assertions": [
+    {
+      "assertion_id": "edition_title",
+      "attribute_key": "manufacturer_marketed_edition",
+      "raw_value": "Jeep® Brand Expands Wrangler and Gladiator Lineup With Premium High Altitude Model",
+      "source_context": "Release title, February6 2020"
+    }
+  ]
+}

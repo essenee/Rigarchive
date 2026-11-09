@@ -1,0 +1,436 @@
+{
+  "records": [
+    {
+      "candidate_reference": "JL20-01",
+      "previous_adjudication": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/adjudications/JL20-01.approved-r1.adjudication.1.1.json",
+      "previous_hash": "sha256:2482b20287268138f5c5c339739b58855c066af48cc070b7a856644db4181cdd",
+      "evidence_revision": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/adjudication_evidence_revisions/JL20-01.selector-evidence-r1.approved.json",
+      "new_hash": "sha256:f2d61454e62411f2b394ec7e995df0cee240c0bfe5a1fafa8007af5dc72e01fe",
+      "classification_claims_unchanged": true,
+      "original_approval_timestamp_and_operator_preserved": true,
+      "new_classification_decisions": 0
+    },
+    {
+      "candidate_reference": "JL20-02",
+      "previous_adjudication": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/adjudications/JL20-02.approved-r1.adjudication.1.1.json",
+      "previous_hash": "sha256:f0ca0795e12fe6f0190791831640e5cd37d77e227f836f2f3fcea139bf485567",
+      "evidence_revision": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/adjudication_evidence_revisions/JL20-02.selector-evidence-r1.approved.json",
+      "new_hash": "sha256:d22c1779dc44ecfc6d2e97601e8608cd0f7f9e281a17beb2b2e8d70e859cafe7",
+      "classification_claims_unchanged": true,
+      "original_approval_timestamp_and_operator_preserved": true,
+      "new_classification_decisions": 0
+    },
+    {
+      "candidate_reference": "JL20-03",
+      "previous_adjudication": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/adjudications/JL20-03.approved-r1.adjudication.1.1.json",
+      "previous_hash": "sha256:a43f6ca53f99836ddd458143fd8973698539b539b0c28bd49da6503efba47cf3",
+      "evidence_revision": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/adjudication_evidence_revisions/JL20-03.selector-evidence-r1.approved.json",
+      "new_hash": "sha256:5ed9027e3cfbf56a93bf948f7e84ec5c78f0a581b4de52d8154bb9c17ca4dea2",
+      "classification_claims_unchanged": true,
+      "original_approval_timestamp_and_operator_preserved": true,
+      "new_classification_decisions": 0
+    },
+    {
+      "candidate_reference": "JL20-04",
+      "previous_adjudication": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/adjudications/JL20-04.approved-r1.adjudication.1.1.json",
+      "previous_hash": "sha256:c299c87fffdfee3c42d46c77051041611ab2e3d1f3ac35e9ed12265948735827",
+      "evidence_revision": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/adjudication_evidence_revisions/JL20-04.selector-evidence-r1.approved.json",
+      "new_hash": "sha256:c82bf1cc3d486ce1d7ac25167eb188bcab3c5ef63998acca623ec03e642c161c",
+      "classification_claims_unchanged": true,
+      "original_approval_timestamp_and_operator_preserved": true,
+      "new_classification_decisions": 0
+    },
+    {
+      "candidate_reference": "JL20-05",
+      "previous_adjudication": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/adjudications/JL20-05.approved-r1.adjudication.1.1.json",
+      "previous_hash": "sha256:d9be20bd2c5cad34804fdb1b93c3bf81ad4695e1833ff8f97e1ee9bcd7459099",
+      "evidence_revision": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/adjudication_evidence_revisions/JL20-05.selector-evidence-r1.approved.json",
+      "new_hash": "sha256:eeeab7d344995fdbfd234a1cd49e3f35ad40874e191fb2ccdb5cc15d8ad81a19",
+      "classification_claims_unchanged": true,
+      "original_approval_timestamp_and_operator_preserved": true,
+      "new_classification_decisions": 0
+    },
+    {
+      "candidate_reference": "JL20-06",
+      "previous_adjudication": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/adjudications/JL20-06.approved-r1.adjudication.1.1.json",
+      "previous_hash": "sha256:a3021e686ea104e8b9c3ebd6a7b98634a5b9467afd64a99b29a5faccf06a63cb",
+      "evidence_revision": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/adjudication_evidence_revisions/JL20-06.selector-evidence-r1.approved.json",
+      "new_hash": "sha256:63202fc2163c885d29e3959e03859359396c252f8aa9dc3321f50a6eab87fe92",
+      "classification_claims_unchanged": true,
+      "original_approval_timestamp_and_operator_preserved": true,
+      "new_classification_decisions": 0
+    },
+    {
+      "candidate_reference": "JL20-08",
+      "previous_adjudication": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/adjudications/JL20-08.approved-r1.adjudication.1.1.json",
+      "previous_hash": "sha256:179b0b87c3d58b5def85429b1e7b3a7379be64334f1f33e146d1a7ad763a77f9",
+      "evidence_revision": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/adjudication_evidence_revisions/JL20-08.selector-evidence-r1.approved.json",
+      "new_hash": "sha256:dee32b18700813a9a25147543f9a463ed190bb3bd419521599041a074701e08d",
+      "classification_claims_unchanged": true,
+      "original_approval_timestamp_and_operator_preserved": true,
+      "new_classification_decisions": 0
+    },
+    {
+      "candidate_reference": "JL20-09",
+      "previous_adjudication": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/adjudications/JL20-09.approved-r1.adjudication.1.1.json",
+      "previous_hash": "sha256:c8612ac3ffa060352675ef0ee5af08667d10af04799af5a2969bf520330beac3",
+      "evidence_revision": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/adjudication_evidence_revisions/JL20-09.selector-evidence-r1.approved.json",
+      "new_hash": "sha256:3ddffe49ab32607b6af42f5dbfe516d376112c695bc12ede456daebc998c70ab",
+      "classification_claims_unchanged": true,
+      "original_approval_timestamp_and_operator_preserved": true,
+      "new_classification_decisions": 0
+    },
+    {
+      "candidate_reference": "JL20-10",
+      "previous_adjudication": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/adjudications/JL20-10.approved-r1.adjudication.1.1.json",
+      "previous_hash": "sha256:82cd5e7f0ad661a2ff887a34b6afef6314c316c8523491d0b433eb6d659ea6df",
+      "evidence_revision": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/adjudication_evidence_revisions/JL20-10.selector-evidence-r1.approved.json",
+      "new_hash": "sha256:d815fcef330500357ba9fe4227dbf153c2339a1efb5cb332e35f4bc2f3178688",
+      "classification_claims_unchanged": true,
+      "original_approval_timestamp_and_operator_preserved": true,
+      "new_classification_decisions": 0
+    },
+    {
+      "candidate_reference": "JL20-11",
+      "previous_adjudication": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/adjudications/JL20-11.approved-r1.adjudication.1.1.json",
+      "previous_hash": "sha256:7c379bf89bdec94af106b65aac6549589edc77d2231b3a6ff610b32f54676e29",
+      "evidence_revision": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/adjudication_evidence_revisions/JL20-11.selector-evidence-r1.approved.json",
+      "new_hash": "sha256:7e560212e18a52af68d3da00c4cf1661868e21b5ca62d7c788e4fd850f1948c2",
+      "classification_claims_unchanged": true,
+      "original_approval_timestamp_and_operator_preserved": true,
+      "new_classification_decisions": 0
+    },
+    {
+      "candidate_reference": "JL20-12",
+      "previous_adjudication": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/adjudications/JL20-12.approved-r1.adjudication.1.1.json",
+      "previous_hash": "sha256:979c00d898502dfcd3b6ce57777e1569f19b18df469d60858f8335e0c40a0f03",
+      "evidence_revision": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/adjudication_evidence_revisions/JL20-12.selector-evidence-r1.approved.json",
+      "new_hash": "sha256:af27329c8539d81f1311a82e0cb12a071be58d48a3263bf177d8079f3d5d13b7",
+      "classification_claims_unchanged": true,
+      "original_approval_timestamp_and_operator_preserved": true,
+      "new_classification_decisions": 0
+    },
+    {
+      "candidate_reference": "JL20-13",
+      "previous_adjudication": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/adjudications/JL20-13.approved-r1.adjudication.1.1.json",
+      "previous_hash": "sha256:956cd0bb25dbb8a4cb64bd3338a7cf394eb0dc6f01b4524706751fa971e553fc",
+      "evidence_revision": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/adjudication_evidence_revisions/JL20-13.selector-evidence-r1.approved.json",
+      "new_hash": "sha256:0709b7df809eda321232b71d1aa944c433522a0dbf18215936c728ffb3f52f3e",
+      "classification_claims_unchanged": true,
+      "original_approval_timestamp_and_operator_preserved": true,
+      "new_classification_decisions": 0
+    },
+    {
+      "candidate_reference": "JL20-14",
+      "previous_adjudication": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/adjudications/JL20-14.approved-r1.adjudication.1.1.json",
+      "previous_hash": "sha256:ef86835e176ae7aeb20e0fbdd0e0ee0ed344c70cba315da53d0fc397f257e66f",
+      "evidence_revision": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/adjudication_evidence_revisions/JL20-14.selector-evidence-r1.approved.json",
+      "new_hash": "sha256:8c3479493f88bced555bdc689c21fff0d583df9f2c61d04b9f0e53c7e7f06a31",
+      "classification_claims_unchanged": true,
+      "original_approval_timestamp_and_operator_preserved": true,
+      "new_classification_decisions": 0
+    },
+    {
+      "candidate_reference": "JL20-15",
+      "previous_adjudication": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/adjudications/JL20-15.approved-r1.adjudication.1.1.json",
+      "previous_hash": "sha256:b6e0480e79194439f98d4e7ed868122c606d0ce78ee88d88a71e257ff130a2d9",
+      "evidence_revision": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/adjudication_evidence_revisions/JL20-15.selector-evidence-r1.approved.json",
+      "new_hash": "sha256:b717e4ec9dca0a88e50ea89ea4351a0b64d04b2c9373a0cab1fa95ca013e93f8",
+      "classification_claims_unchanged": true,
+      "original_approval_timestamp_and_operator_preserved": true,
+      "new_classification_decisions": 0
+    },
+    {
+      "candidate_reference": "JL20-16",
+      "previous_adjudication": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/adjudications/JL20-16.approved-r1.adjudication.1.1.json",
+      "previous_hash": "sha256:9bf2ae0953299f9ee463527b1dcdfa32a2a3f9595fef8e6eaa4b8675d0e12e9b",
+      "evidence_revision": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/adjudication_evidence_revisions/JL20-16.selector-evidence-r1.approved.json",
+      "new_hash": "sha256:a3b81f9f825a899616665c6147b2e26433b31dfd5df3c38c36ae45f5141b3c1d",
+      "classification_claims_unchanged": true,
+      "original_approval_timestamp_and_operator_preserved": true,
+      "new_classification_decisions": 0
+    },
+    {
+      "candidate_reference": "JL20-17",
+      "previous_adjudication": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/adjudications/JL20-17.approved-r1.adjudication.1.1.json",
+      "previous_hash": "sha256:92842257daa1061c6df6e8430b9b27c4356e41055b3db78ca3b258fe2cd030b7",
+      "evidence_revision": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/adjudication_evidence_revisions/JL20-17.selector-evidence-r1.approved.json",
+      "new_hash": "sha256:34d57f30d11253da38723c59642188d10c4313dd1278cb45e38c166ed98a6a05",
+      "classification_claims_unchanged": true,
+      "original_approval_timestamp_and_operator_preserved": true,
+      "new_classification_decisions": 0
+    },
+    {
+      "candidate_reference": "JL20-18",
+      "previous_adjudication": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/adjudications/JL20-18.approved-r1.adjudication.1.1.json",
+      "previous_hash": "sha256:8bc4fd4b71098136ac6bbdc6e546f809deab98dd6b6cb6bd5909f6adeb8e1640",
+      "evidence_revision": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/adjudication_evidence_revisions/JL20-18.selector-evidence-r1.approved.json",
+      "new_hash": "sha256:5b2163858ac0d66510dd94cc31dbc80ca675c1b3563ead907b9a98d253a77089",
+      "classification_claims_unchanged": true,
+      "original_approval_timestamp_and_operator_preserved": true,
+      "new_classification_decisions": 0
+    },
+    {
+      "candidate_reference": "JL20-19",
+      "previous_adjudication": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/adjudications/JL20-19.approved-r1.adjudication.1.1.json",
+      "previous_hash": "sha256:708427045aad267af0435ae891f9aa37e6634c2644950233b9ec54b3ef2be871",
+      "evidence_revision": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/adjudication_evidence_revisions/JL20-19.selector-evidence-r1.approved.json",
+      "new_hash": "sha256:45b69389851a90097ef636b74fe9785c44a2eb89e3287c44b29e3b7f2e18c483",
+      "classification_claims_unchanged": true,
+      "original_approval_timestamp_and_operator_preserved": true,
+      "new_classification_decisions": 0
+    },
+    {
+      "candidate_reference": "JL20-21",
+      "previous_adjudication": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/adjudications/JL20-21.approved-r1.adjudication.1.1.json",
+      "previous_hash": "sha256:3bd2952faa5a9eba33438ead3c482728e655577e0334468548b03712e8b004b2",
+      "evidence_revision": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/adjudication_evidence_revisions/JL20-21.selector-evidence-r1.approved.json",
+      "new_hash": "sha256:5b228f471e4496ee857a3da10f8bbbb4da35c965f4e0bc0897e7d00a1f0cb0ed",
+      "classification_claims_unchanged": true,
+      "original_approval_timestamp_and_operator_preserved": true,
+      "new_classification_decisions": 0
+    },
+    {
+      "candidate_reference": "JL20-22",
+      "previous_adjudication": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/adjudications/JL20-22.approved-r1.adjudication.1.1.json",
+      "previous_hash": "sha256:377730c9e7e59b88469f14d37cb4e3485f12bd64dd4777fdcc39427f71f78a5c",
+      "evidence_revision": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/adjudication_evidence_revisions/JL20-22.selector-evidence-r1.approved.json",
+      "new_hash": "sha256:5887c491f05cfde4827e449498b96abfce8ec45bd1c463c911bd36899a927700",
+      "classification_claims_unchanged": true,
+      "original_approval_timestamp_and_operator_preserved": true,
+      "new_classification_decisions": 0
+    },
+    {
+      "candidate_reference": "JL20-23",
+      "previous_adjudication": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/adjudications/JL20-23.approved-r1.adjudication.1.1.json",
+      "previous_hash": "sha256:9d9cc8ed6afe782dbda630136a9ee3c195f667ab8b905922f140f47e5343c439",
+      "evidence_revision": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/adjudication_evidence_revisions/JL20-23.selector-evidence-r1.approved.json",
+      "new_hash": "sha256:6a233ff0b46eb704f0fe08196ac3f359cd762d92e0e0e6786852a9d8c5218ded",
+      "classification_claims_unchanged": true,
+      "original_approval_timestamp_and_operator_preserved": true,
+      "new_classification_decisions": 0
+    },
+    {
+      "candidate_reference": "JL20-26",
+      "previous_adjudication": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/adjudications/JL20-26.approved-r1.adjudication.1.1.json",
+      "previous_hash": "sha256:73b5cac56ffce61d7e69d015454dd309a53b115a08831d0790b5c78ae44de0e1",
+      "evidence_revision": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/adjudication_evidence_revisions/JL20-26.selector-evidence-r1.approved.json",
+      "new_hash": "sha256:142f6169af1c91ae9ca6906bcee50417de5584d60f54498a408b92d3ca9c7f9d",
+      "classification_claims_unchanged": true,
+      "original_approval_timestamp_and_operator_preserved": true,
+      "new_classification_decisions": 0
+    },
+    {
+      "candidate_reference": "JL20-27",
+      "previous_adjudication": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/adjudications/JL20-27.approved-r1.adjudication.1.1.json",
+      "previous_hash": "sha256:f93bdc0b99b070b41eb5d982f74e08a0a440b581632986561fbd423c638d11eb",
+      "evidence_revision": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/adjudication_evidence_revisions/JL20-27.selector-evidence-r1.approved.json",
+      "new_hash": "sha256:5d23a1a8623cf7da96d01216325434557968b8bf0f2d6fb9065abbbb35058f6e",
+      "classification_claims_unchanged": true,
+      "original_approval_timestamp_and_operator_preserved": true,
+      "new_classification_decisions": 0
+    },
+    {
+      "candidate_reference": "JL20-28",
+      "previous_adjudication": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/adjudications/JL20-28.approved-r1.adjudication.1.1.json",
+      "previous_hash": "sha256:efe4d653d7df778fe2d4ceef15e0f9927ef09660b85c49e276c2eb99d7f92562",
+      "evidence_revision": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/adjudication_evidence_revisions/JL20-28.selector-evidence-r1.approved.json",
+      "new_hash": "sha256:1258a90f35cb0d8a5756ee269bb9f46e98e83e043f394a8a83418a4aaba2277e",
+      "classification_claims_unchanged": true,
+      "original_approval_timestamp_and_operator_preserved": true,
+      "new_classification_decisions": 0
+    },
+    {
+      "candidate_reference": "JL20-30",
+      "previous_adjudication": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/adjudications/JL20-30.approved-r1.adjudication.1.1.json",
+      "previous_hash": "sha256:56b46bf5ff3a4d7e1a2e6b10ece0fde1afe535d4727bbba350df4ed3241a68b1",
+      "evidence_revision": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/adjudication_evidence_revisions/JL20-30.selector-evidence-r1.approved.json",
+      "new_hash": "sha256:4eb7257bc3a5af1cf7f657415c086ab913cecb27beead9d210f867a6f9ab7846",
+      "classification_claims_unchanged": true,
+      "original_approval_timestamp_and_operator_preserved": true,
+      "new_classification_decisions": 0
+    },
+    {
+      "candidate_reference": "JL20-31",
+      "previous_adjudication": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/adjudications/JL20-31.approved-r1.adjudication.1.1.json",
+      "previous_hash": "sha256:76bdb1cb4fb139cefd41a6539fa4d47561fb5a1bbdcac4d523af2b4edb467a36",
+      "evidence_revision": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/adjudication_evidence_revisions/JL20-31.selector-evidence-r1.approved.json",
+      "new_hash": "sha256:3f04ed88dfd98e98a8b550e26102c5974376c141de95fd0a68b8241d4da2e9fa",
+      "classification_claims_unchanged": true,
+      "original_approval_timestamp_and_operator_preserved": true,
+      "new_classification_decisions": 0
+    },
+    {
+      "candidate_reference": "JL20-32",
+      "previous_adjudication": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/adjudications/JL20-32.approved-r1.adjudication.1.1.json",
+      "previous_hash": "sha256:a4b603178247e9a54bf8a30ac474d74ec6b7a7b5591b5e62265b105906106631",
+      "evidence_revision": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/adjudication_evidence_revisions/JL20-32.selector-evidence-r1.approved.json",
+      "new_hash": "sha256:1a8f44a2bd57fa1580647f99ee031e4be3f2336f7bd8be851434bef75dda5a40",
+      "classification_claims_unchanged": true,
+      "original_approval_timestamp_and_operator_preserved": true,
+      "new_classification_decisions": 0
+    },
+    {
+      "candidate_reference": "JL20-34",
+      "previous_adjudication": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/adjudications/JL20-34.approved-r1.adjudication.1.1.json",
+      "previous_hash": "sha256:8c01b2ffa3088772a2c6fb94fd434263965f953ce016f24b88c0d6c1f8aafe58",
+      "evidence_revision": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/adjudication_evidence_revisions/JL20-34.selector-evidence-r1.approved.json",
+      "new_hash": "sha256:794054214f443a6cce8d48b1b281d3c5526211c3f0cc20dfa491580f04e5704a",
+      "classification_claims_unchanged": true,
+      "original_approval_timestamp_and_operator_preserved": true,
+      "new_classification_decisions": 0
+    },
+    {
+      "candidate_reference": "JL20-35",
+      "previous_adjudication": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/adjudications/JL20-35.approved-r1.adjudication.1.1.json",
+      "previous_hash": "sha256:07e284510c6abea7f61d16173d668543cd8ec91399f569a3fabfe67643b030b6",
+      "evidence_revision": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/adjudication_evidence_revisions/JL20-35.selector-evidence-r1.approved.json",
+      "new_hash": "sha256:2ee415cb1b7daa3cdab12b8ebb1ee613c03fbb7fcfea7787d861bd3d43b81db3",
+      "classification_claims_unchanged": true,
+      "original_approval_timestamp_and_operator_preserved": true,
+      "new_classification_decisions": 0
+    },
+    {
+      "candidate_reference": "JL20-36",
+      "previous_adjudication": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/adjudications/JL20-36.approved-r1.adjudication.1.1.json",
+      "previous_hash": "sha256:cf7da38ea0db21c47b97541f5b3c803a90484c86b38de547709592cd4fcfc968",
+      "evidence_revision": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/adjudication_evidence_revisions/JL20-36.selector-evidence-r1.approved.json",
+      "new_hash": "sha256:48859fcd2a8ac0d2f70c668ac25e581bc127b36b1dad62483b2115e2250818d7",
+      "classification_claims_unchanged": true,
+      "original_approval_timestamp_and_operator_preserved": true,
+      "new_classification_decisions": 0
+    },
+    {
+      "candidate_reference": "JL20-37",
+      "previous_adjudication": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/adjudications/JL20-37.approved-r1.adjudication.1.1.json",
+      "previous_hash": "sha256:4e106d4d09a0b61a87c4a3245b45a2c455d3a715cfd57aa95b3aacd70d54632e",
+      "evidence_revision": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/adjudication_evidence_revisions/JL20-37.selector-evidence-r1.approved.json",
+      "new_hash": "sha256:21ea22f68c8eb9959520578f9527a8aa1171076de0ff8ee597e36603f53bb080",
+      "classification_claims_unchanged": true,
+      "original_approval_timestamp_and_operator_preserved": true,
+      "new_classification_decisions": 0
+    },
+    {
+      "candidate_reference": "JL20-38",
+      "previous_adjudication": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/adjudications/JL20-38.approved-r1.adjudication.1.1.json",
+      "previous_hash": "sha256:ff383f91dd317cae262f34a1fcd1801c63c664634b9ebb9a07e0f138302c9f8a",
+      "evidence_revision": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/adjudication_evidence_revisions/JL20-38.selector-evidence-r1.approved.json",
+      "new_hash": "sha256:e12f25f7eab888e8033529b5af3a940463a2609d7aabfd50eb7982489867758f",
+      "classification_claims_unchanged": true,
+      "original_approval_timestamp_and_operator_preserved": true,
+      "new_classification_decisions": 0
+    },
+    {
+      "candidate_reference": "JL20-39",
+      "previous_adjudication": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/adjudications/JL20-39.approved-r1.adjudication.1.1.json",
+      "previous_hash": "sha256:7d607ceaa7372afe01548f014231f43a532a986bbc33f33a853f967acae00fa0",
+      "evidence_revision": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/adjudication_evidence_revisions/JL20-39.selector-evidence-r1.approved.json",
+      "new_hash": "sha256:b2af2a767457431ec89dd3c9493fe973b7818a01d644f7958a87a4c27be44068",
+      "classification_claims_unchanged": true,
+      "original_approval_timestamp_and_operator_preserved": true,
+      "new_classification_decisions": 0
+    },
+    {
+      "candidate_reference": "JL20-40",
+      "previous_adjudication": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/adjudications/JL20-40.approved-r1.adjudication.1.1.json",
+      "previous_hash": "sha256:971f9f2089ef513fd1e8758fb74faa5ed0024af9fb09cf2a6297be9c24977582",
+      "evidence_revision": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/adjudication_evidence_revisions/JL20-40.selector-evidence-r1.approved.json",
+      "new_hash": "sha256:f4cfa77c96a3926cd0e5db2d15b559af580c6b05296ef5795bd044eaff0efe9d",
+      "classification_claims_unchanged": true,
+      "original_approval_timestamp_and_operator_preserved": true,
+      "new_classification_decisions": 0
+    },
+    {
+      "candidate_reference": "JL20-41",
+      "previous_adjudication": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/adjudications/JL20-41.approved-r1.adjudication.1.1.json",
+      "previous_hash": "sha256:38c84208387bc4a176fa04e5b661db43be5b338833645583df674722d9f3e67d",
+      "evidence_revision": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/adjudication_evidence_revisions/JL20-41.selector-evidence-r1.approved.json",
+      "new_hash": "sha256:8f5223abcb5c1e4186794cdb3c451590c8e5430ffa1616d94867af1625300f15",
+      "classification_claims_unchanged": true,
+      "original_approval_timestamp_and_operator_preserved": true,
+      "new_classification_decisions": 0
+    },
+    {
+      "candidate_reference": "JL20-42",
+      "previous_adjudication": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/adjudications/JL20-42.approved-r1.adjudication.1.1.json",
+      "previous_hash": "sha256:01447f60ec384ee988dc5d2958b5d010a75bf78b805696c1061dd75ea931ada7",
+      "evidence_revision": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/adjudication_evidence_revisions/JL20-42.selector-evidence-r1.approved.json",
+      "new_hash": "sha256:311b8fb36a954819eb5ec31ce7b5b89218f8373fac876c605321b061ed0fa65d",
+      "classification_claims_unchanged": true,
+      "original_approval_timestamp_and_operator_preserved": true,
+      "new_classification_decisions": 0
+    },
+    {
+      "candidate_reference": "JL20-43",
+      "previous_adjudication": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/adjudications/JL20-43.approved-r1.adjudication.1.1.json",
+      "previous_hash": "sha256:102d9300e5d9d679e56de19a97c5f134966ef39a3bd9b4171c2ebff538cfce27",
+      "evidence_revision": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/adjudication_evidence_revisions/JL20-43.selector-evidence-r1.approved.json",
+      "new_hash": "sha256:4ecafc10db2cf82290a0dbabc789820b58b402d05f697bbf9862b3df633015d4",
+      "classification_claims_unchanged": true,
+      "original_approval_timestamp_and_operator_preserved": true,
+      "new_classification_decisions": 0
+    },
+    {
+      "candidate_reference": "JL20-44",
+      "previous_adjudication": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/adjudications/JL20-44.approved-r1.adjudication.1.1.json",
+      "previous_hash": "sha256:115e2a63af822752dac2d53d889793bfd9c3ebefbe8cf0ff378be056e3f15ad2",
+      "evidence_revision": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/adjudication_evidence_revisions/JL20-44.selector-evidence-r1.approved.json",
+      "new_hash": "sha256:b49b2dfffb0b1f9c5a660264daaadabbbaa16ce43626190bb11a496890382679",
+      "classification_claims_unchanged": true,
+      "original_approval_timestamp_and_operator_preserved": true,
+      "new_classification_decisions": 0
+    },
+    {
+      "candidate_reference": "JL20-45",
+      "previous_adjudication": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/adjudications/JL20-45.approved-r1.adjudication.1.1.json",
+      "previous_hash": "sha256:3459f9afe636256d918c1e7dbb89fb72b9a50a17ce4bc6e7b9711e4cb22d83f1",
+      "evidence_revision": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/adjudication_evidence_revisions/JL20-45.selector-evidence-r1.approved.json",
+      "new_hash": "sha256:3c2155f2ed81cdecad504705b3df6683506ff8b0e5fa03c0222d959fd8e7212a",
+      "classification_claims_unchanged": true,
+      "original_approval_timestamp_and_operator_preserved": true,
+      "new_classification_decisions": 0
+    },
+    {
+      "candidate_reference": "JL20-46",
+      "previous_adjudication": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/adjudications/JL20-46.approved-r1.adjudication.1.1.json",
+      "previous_hash": "sha256:92f65a8bd2579944938bb35635d0cdae184c3cd302816ac72cc6f7e20982d63c",
+      "evidence_revision": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/adjudication_evidence_revisions/JL20-46.selector-evidence-r1.approved.json",
+      "new_hash": "sha256:16797a88120fac14fd8f98e8091ff9b55802a89c2655072ffd1282c07b6096c2",
+      "classification_claims_unchanged": true,
+      "original_approval_timestamp_and_operator_preserved": true,
+      "new_classification_decisions": 0
+    },
+    {
+      "candidate_reference": "JL20-47",
+      "previous_adjudication": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/adjudications/JL20-47.approved-r1.adjudication.1.1.json",
+      "previous_hash": "sha256:03daeac420473a07086c4ae5fd4a0527ad9728d3164d8e3ccd477b9a8210894c",
+      "evidence_revision": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/adjudication_evidence_revisions/JL20-47.selector-evidence-r1.approved.json",
+      "new_hash": "sha256:fb4ac4dfd12e3c04dff72afe527ce11b5bf78dd985d6102c1f8d03aac8a743d5",
+      "classification_claims_unchanged": true,
+      "original_approval_timestamp_and_operator_preserved": true,
+      "new_classification_decisions": 0
+    },
+    {
+      "candidate_reference": "JL20-48",
+      "previous_adjudication": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/adjudications/JL20-48.approved-r1.adjudication.1.1.json",
+      "previous_hash": "sha256:20aeae2bb66d55362632f006961e7d9a33e8da929c7d355475ba4738910ab645",
+      "evidence_revision": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/adjudication_evidence_revisions/JL20-48.selector-evidence-r1.approved.json",
+      "new_hash": "sha256:9fb1357f1772b2964f873394f0a2bb572d814a050161eb72be9c5d0db3ca7686",
+      "classification_claims_unchanged": true,
+      "original_approval_timestamp_and_operator_preserved": true,
+      "new_classification_decisions": 0
+    },
+    {
+      "candidate_reference": "JL20-49",
+      "previous_adjudication": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/adjudications/JL20-49.approved-r1.adjudication.1.1.json",
+      "previous_hash": "sha256:170e3e38d960d52eafa2d5e9754c4f639c73737e1207c6ca2b96b35e480e06ca",
+      "evidence_revision": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/adjudication_evidence_revisions/JL20-49.selector-evidence-r1.approved.json",
+      "new_hash": "sha256:1886b7d92c79e23539145da80473c71810a51abbcefab2743d44711aac39b99b",
+      "classification_claims_unchanged": true,
+      "original_approval_timestamp_and_operator_preserved": true,
+      "new_classification_decisions": 0
+    }
+  ],
+  "approved_field_decisions_preserved": 60,
+  "new_classification_decisions": 0
+}

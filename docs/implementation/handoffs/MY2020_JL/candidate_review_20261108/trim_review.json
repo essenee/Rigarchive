@@ -1,0 +1,464 @@
+{
+  "authority": [
+    "ADR-0005 as narrowly extended by ADR-0010",
+    "ADR-0011 body convention",
+    "ADR-0012/RA-044 powertrain identity"
+  ],
+  "excluded_rows": [],
+  "questioned_label_rows": [
+    "JL20-33",
+    "JL20-34",
+    "JL20-35"
+  ],
+  "variants": [
+    {
+      "proposed_label": "Black and Tan",
+      "body_style": "2-door",
+      "rows": [
+        "JL20-01",
+        "JL20-02"
+      ],
+      "model_code": "JLJL72",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-2D-2020-03-03-p2"
+      ],
+      "qops": [
+        "22D",
+        "23D",
+        "24D"
+      ],
+      "review_finding": "Retain as provisional marketed factory grade: named guide column tied to scoped model heading and populated engine/QOP cells; not a generic optional Group. QOP alone is not sufficient evidence. Transmission choices collapsed.",
+      "canonical_taxonomy_approval": false,
+      "naming_review": "Existing body-aware Unlimited convention; no new body identity model",
+      "classification_boundary": "Research candidate context is not canonical grade approval; any disputed grade must use existing adjudication workflow before promotion"
+    },
+    {
+      "proposed_label": "Freedom",
+      "body_style": "2-door",
+      "rows": [
+        "JL20-03",
+        "JL20-04"
+      ],
+      "model_code": "JLJL72",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-2D-2020-03-03-p2"
+      ],
+      "qops": [
+        "22F",
+        "23F",
+        "24F"
+      ],
+      "review_finding": "Retain as provisional marketed factory grade: named guide column tied to scoped model heading and populated engine/QOP cells; not a generic optional Group. QOP alone is not sufficient evidence. Transmission choices collapsed.",
+      "canonical_taxonomy_approval": false,
+      "naming_review": "Existing body-aware Unlimited convention; no new body identity model",
+      "classification_boundary": "Research candidate context is not canonical grade approval; any disputed grade must use existing adjudication workflow before promotion"
+    },
+    {
+      "proposed_label": "Rubicon",
+      "body_style": "2-door",
+      "rows": [
+        "JL20-05",
+        "JL20-06"
+      ],
+      "model_code": "JLJS72",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-2D-2020-03-03-p7"
+      ],
+      "qops": [
+        "22R",
+        "23R",
+        "24R"
+      ],
+      "review_finding": "Retain as provisional marketed factory grade: named guide column tied to scoped model heading and populated engine/QOP cells; not a generic optional Group. QOP alone is not sufficient evidence. Transmission choices collapsed.",
+      "canonical_taxonomy_approval": false,
+      "naming_review": "Existing body-aware Unlimited convention; no new body identity model",
+      "classification_boundary": "Research candidate context is not canonical grade approval; any disputed grade must use existing adjudication workflow before promotion"
+    },
+    {
+      "proposed_label": "Rubicon Recon",
+      "body_style": "2-door",
+      "rows": [
+        "JL20-07"
+      ],
+      "model_code": "JLJS72",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-2D-2020-03-03-p7"
+      ],
+      "qops": [
+        "28Y"
+      ],
+      "review_finding": "Retain as provisional marketed factory grade: named guide column tied to scoped model heading and populated engine/QOP cells; not a generic optional Group. QOP alone is not sufficient evidence. Transmission choices collapsed.",
+      "canonical_taxonomy_approval": false,
+      "naming_review": "Existing body-aware Unlimited convention; no new body identity model",
+      "classification_boundary": "Research candidate context is not canonical grade approval; any disputed grade must use existing adjudication workflow before promotion"
+    },
+    {
+      "proposed_label": "Sport",
+      "body_style": "2-door",
+      "rows": [
+        "JL20-08",
+        "JL20-09"
+      ],
+      "model_code": "JLJL72",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-2D-2020-03-03-p2"
+      ],
+      "qops": [
+        "22B",
+        "23B",
+        "24B"
+      ],
+      "review_finding": "Retain as provisional marketed factory grade: named guide column tied to scoped model heading and populated engine/QOP cells; not a generic optional Group. QOP alone is not sufficient evidence. Transmission choices collapsed.",
+      "canonical_taxonomy_approval": false,
+      "naming_review": "Existing body-aware Unlimited convention; no new body identity model",
+      "classification_boundary": "Research candidate context is not canonical grade approval; any disputed grade must use existing adjudication workflow before promotion"
+    },
+    {
+      "proposed_label": "Sport S",
+      "body_style": "2-door",
+      "rows": [
+        "JL20-10",
+        "JL20-11"
+      ],
+      "model_code": "JLJL72",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-2D-2020-03-03-p2"
+      ],
+      "qops": [
+        "22S",
+        "23S",
+        "24S"
+      ],
+      "review_finding": "Retain as provisional marketed factory grade: named guide column tied to scoped model heading and populated engine/QOP cells; not a generic optional Group. QOP alone is not sufficient evidence. Transmission choices collapsed.",
+      "canonical_taxonomy_approval": false,
+      "naming_review": "Existing body-aware Unlimited convention; no new body identity model",
+      "classification_boundary": "Research candidate context is not canonical grade approval; any disputed grade must use existing adjudication workflow before promotion"
+    },
+    {
+      "proposed_label": "Unlimited Black and Tan",
+      "body_style": "4-door",
+      "rows": [
+        "JL20-16",
+        "JL20-17"
+      ],
+      "model_code": "JLJL74",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-4D-2020-03-03-p2"
+      ],
+      "qops": [
+        "22D",
+        "23D",
+        "24D"
+      ],
+      "review_finding": "Retain as provisional marketed factory grade: named guide column tied to scoped model heading and populated engine/QOP cells; not a generic optional Group. QOP alone is not sufficient evidence. Transmission choices collapsed.",
+      "canonical_taxonomy_approval": false,
+      "naming_review": "Existing body-aware Unlimited convention; no new body identity model",
+      "classification_boundary": "Research candidate context is not canonical grade approval; any disputed grade must use existing adjudication workflow before promotion"
+    },
+    {
+      "proposed_label": "Unlimited Freedom",
+      "body_style": "4-door",
+      "rows": [
+        "JL20-18",
+        "JL20-19"
+      ],
+      "model_code": "JLJL74",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-4D-2020-03-03-p2"
+      ],
+      "qops": [
+        "22F",
+        "23F",
+        "24F"
+      ],
+      "review_finding": "Retain as provisional marketed factory grade: named guide column tied to scoped model heading and populated engine/QOP cells; not a generic optional Group. QOP alone is not sufficient evidence. Transmission choices collapsed.",
+      "canonical_taxonomy_approval": false,
+      "naming_review": "Existing body-aware Unlimited convention; no new body identity model",
+      "classification_boundary": "Research candidate context is not canonical grade approval; any disputed grade must use existing adjudication workflow before promotion"
+    },
+    {
+      "proposed_label": "Unlimited North Edition",
+      "body_style": "4-door",
+      "rows": [
+        "JL20-20"
+      ],
+      "model_code": "JLJP74",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-4D-2020-03-03-p7"
+      ],
+      "qops": [
+        "28E"
+      ],
+      "review_finding": "Retain as provisional marketed factory grade: named guide column tied to scoped model heading and populated engine/QOP cells; not a generic optional Group. QOP alone is not sufficient evidence. Transmission choices collapsed.",
+      "canonical_taxonomy_approval": false,
+      "naming_review": "Existing body-aware Unlimited convention; no new body identity model",
+      "classification_boundary": "Research candidate context is not canonical grade approval; any disputed grade must use existing adjudication workflow before promotion"
+    },
+    {
+      "proposed_label": "Unlimited Rubicon",
+      "body_style": "4-door",
+      "rows": [
+        "JL20-21",
+        "JL20-22",
+        "JL20-23"
+      ],
+      "model_code": "JLJS74",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-4D-2020-03-03-p12"
+      ],
+      "qops": [
+        "22R",
+        "23R",
+        "24R",
+        "26R"
+      ],
+      "review_finding": "Retain as provisional marketed factory grade: named guide column tied to scoped model heading and populated engine/QOP cells; not a generic optional Group. QOP alone is not sufficient evidence. Transmission choices collapsed.",
+      "canonical_taxonomy_approval": false,
+      "naming_review": "Existing body-aware Unlimited convention; no new body identity model",
+      "classification_boundary": "Research candidate context is not canonical grade approval; any disputed grade must use existing adjudication workflow before promotion"
+    },
+    {
+      "proposed_label": "Unlimited Rubicon Recon",
+      "body_style": "4-door",
+      "rows": [
+        "JL20-24"
+      ],
+      "model_code": "JLJS74",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-4D-2020-03-03-p12"
+      ],
+      "qops": [
+        "28Y"
+      ],
+      "review_finding": "Retain as provisional marketed factory grade: named guide column tied to scoped model heading and populated engine/QOP cells; not a generic optional Group. QOP alone is not sufficient evidence. Transmission choices collapsed.",
+      "canonical_taxonomy_approval": false,
+      "naming_review": "Existing body-aware Unlimited convention; no new body identity model",
+      "classification_boundary": "Research candidate context is not canonical grade approval; any disputed grade must use existing adjudication workflow before promotion"
+    },
+    {
+      "proposed_label": "Unlimited Sahara",
+      "body_style": "4-door",
+      "rows": [
+        "JL20-25",
+        "JL20-26",
+        "JL20-27",
+        "JL20-28"
+      ],
+      "model_code": "JLJP74",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-4D-2020-03-03-p7"
+      ],
+      "qops": [
+        "23G",
+        "25G",
+        "26G",
+        "28G"
+      ],
+      "review_finding": "Retain as provisional marketed factory grade: named guide column tied to scoped model heading and populated engine/QOP cells; not a generic optional Group. QOP alone is not sufficient evidence. Transmission choices collapsed.",
+      "canonical_taxonomy_approval": false,
+      "naming_review": "Existing body-aware Unlimited convention; no new body identity model",
+      "classification_boundary": "Research candidate context is not canonical grade approval; any disputed grade must use existing adjudication workflow before promotion"
+    },
+    {
+      "proposed_label": "Unlimited Sahara Altitude",
+      "body_style": "4-door",
+      "rows": [
+        "JL20-29",
+        "JL20-30",
+        "JL20-31",
+        "JL20-32"
+      ],
+      "model_code": "JLJP74",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-4D-2020-03-03-p7"
+      ],
+      "qops": [
+        "23L",
+        "25L",
+        "26L",
+        "28L"
+      ],
+      "review_finding": "Retain as provisional marketed factory grade: named guide column tied to scoped model heading and populated engine/QOP cells; not a generic optional Group. QOP alone is not sufficient evidence. Transmission choices collapsed.",
+      "canonical_taxonomy_approval": false,
+      "naming_review": "Existing body-aware Unlimited convention; no new body identity model",
+      "classification_boundary": "Research candidate context is not canonical grade approval; any disputed grade must use existing adjudication workflow before promotion"
+    },
+    {
+      "proposed_label": "Unlimited Sahara High Altitude",
+      "body_style": "4-door",
+      "rows": [
+        "JL20-33",
+        "JL20-34",
+        "JL20-35"
+      ],
+      "model_code": "JLJP74",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-4D-2020-03-03-p7"
+      ],
+      "qops": [
+        "25N",
+        "26N",
+        "28N"
+      ],
+      "review_finding": "Retain as provisional marketed factory grade: named guide column tied to scoped model heading and populated engine/QOP cells; not a generic optional Group. QOP alone is not sufficient evidence. Transmission choices collapsed.",
+      "canonical_taxonomy_approval": false,
+      "naming_review": "Sahara High Altitude versus High Altitude; owner normalization review required",
+      "classification_boundary": "Research candidate context is not canonical grade approval; any disputed grade must use existing adjudication workflow before promotion"
+    },
+    {
+      "proposed_label": "Unlimited Sport",
+      "body_style": "4-door",
+      "rows": [
+        "JL20-36",
+        "JL20-37",
+        "JL20-38"
+      ],
+      "model_code": "JLJL74",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-4D-2020-03-03-p2"
+      ],
+      "qops": [
+        "22B",
+        "23B",
+        "24B",
+        "26B"
+      ],
+      "review_finding": "Retain as provisional marketed factory grade: named guide column tied to scoped model heading and populated engine/QOP cells; not a generic optional Group. QOP alone is not sufficient evidence. Transmission choices collapsed.",
+      "canonical_taxonomy_approval": false,
+      "naming_review": "Existing body-aware Unlimited convention; no new body identity model",
+      "classification_boundary": "Research candidate context is not canonical grade approval; any disputed grade must use existing adjudication workflow before promotion"
+    },
+    {
+      "proposed_label": "Unlimited Sport Altitude",
+      "body_style": "4-door",
+      "rows": [
+        "JL20-39",
+        "JL20-40",
+        "JL20-41"
+      ],
+      "model_code": "JLJL74",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-4D-2020-03-03-p2"
+      ],
+      "qops": [
+        "22L",
+        "23L",
+        "24L",
+        "26L"
+      ],
+      "review_finding": "Retain as provisional marketed factory grade: named guide column tied to scoped model heading and populated engine/QOP cells; not a generic optional Group. QOP alone is not sufficient evidence. Transmission choices collapsed.",
+      "canonical_taxonomy_approval": false,
+      "naming_review": "Existing body-aware Unlimited convention; no new body identity model",
+      "classification_boundary": "Research candidate context is not canonical grade approval; any disputed grade must use existing adjudication workflow before promotion"
+    },
+    {
+      "proposed_label": "Unlimited Sport S",
+      "body_style": "4-door",
+      "rows": [
+        "JL20-42",
+        "JL20-43",
+        "JL20-44"
+      ],
+      "model_code": "JLJL74",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-4D-2020-03-03-p2"
+      ],
+      "qops": [
+        "22S",
+        "23S",
+        "24S",
+        "26S"
+      ],
+      "review_finding": "Retain as provisional marketed factory grade: named guide column tied to scoped model heading and populated engine/QOP cells; not a generic optional Group. QOP alone is not sufficient evidence. Transmission choices collapsed.",
+      "canonical_taxonomy_approval": false,
+      "naming_review": "Existing body-aware Unlimited convention; no new body identity model",
+      "classification_boundary": "Research candidate context is not canonical grade approval; any disputed grade must use existing adjudication workflow before promotion"
+    },
+    {
+      "proposed_label": "Unlimited Willys",
+      "body_style": "4-door",
+      "rows": [
+        "JL20-45",
+        "JL20-46",
+        "JL20-47"
+      ],
+      "model_code": "JLJL74",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-4D-2020-03-03-p2"
+      ],
+      "qops": [
+        "22W",
+        "23W",
+        "24W",
+        "26W"
+      ],
+      "review_finding": "Retain as provisional marketed factory grade: named guide column tied to scoped model heading and populated engine/QOP cells; not a generic optional Group. QOP alone is not sufficient evidence. Transmission choices collapsed.",
+      "canonical_taxonomy_approval": false,
+      "naming_review": "Existing body-aware Unlimited convention; no new body identity model",
+      "classification_boundary": "Research candidate context is not canonical grade approval; any disputed grade must use existing adjudication workflow before promotion"
+    },
+    {
+      "proposed_label": "Unlimited Willys Sport",
+      "body_style": "4-door",
+      "rows": [
+        "JL20-48",
+        "JL20-49"
+      ],
+      "model_code": "JLJL74",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-4D-2020-03-03-p2"
+      ],
+      "qops": [
+        "22K",
+        "23K",
+        "24K"
+      ],
+      "review_finding": "Retain as provisional marketed factory grade: named guide column tied to scoped model heading and populated engine/QOP cells; not a generic optional Group. QOP alone is not sufficient evidence. Transmission choices collapsed.",
+      "canonical_taxonomy_approval": false,
+      "naming_review": "Existing body-aware Unlimited convention; no new body identity model",
+      "classification_boundary": "Research candidate context is not canonical grade approval; any disputed grade must use existing adjudication workflow before promotion"
+    },
+    {
+      "proposed_label": "Willys",
+      "body_style": "2-door",
+      "rows": [
+        "JL20-12",
+        "JL20-13"
+      ],
+      "model_code": "JLJL72",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-2D-2020-03-03-p2"
+      ],
+      "qops": [
+        "22W",
+        "23W",
+        "24W"
+      ],
+      "review_finding": "Retain as provisional marketed factory grade: named guide column tied to scoped model heading and populated engine/QOP cells; not a generic optional Group. QOP alone is not sufficient evidence. Transmission choices collapsed.",
+      "canonical_taxonomy_approval": false,
+      "naming_review": "Existing body-aware Unlimited convention; no new body identity model",
+      "classification_boundary": "Research candidate context is not canonical grade approval; any disputed grade must use existing adjudication workflow before promotion"
+    },
+    {
+      "proposed_label": "Willys Sport",
+      "body_style": "2-door",
+      "rows": [
+        "JL20-14",
+        "JL20-15"
+      ],
+      "model_code": "JLJL72",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-2D-2020-03-03-p2"
+      ],
+      "qops": [
+        "22K",
+        "23K",
+        "24K"
+      ],
+      "review_finding": "Retain as provisional marketed factory grade: named guide column tied to scoped model heading and populated engine/QOP cells; not a generic optional Group. QOP alone is not sufficient evidence. Transmission choices collapsed.",
+      "canonical_taxonomy_approval": false,
+      "naming_review": "Existing body-aware Unlimited convention; no new body identity model",
+      "classification_boundary": "Research candidate context is not canonical grade approval; any disputed grade must use existing adjudication workflow before promotion"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "envelope": {
+    "artifact_type": "rigarchive.source_assertion_set.v1",
+    "created_at": "2026-11-08T22:19:57.363050+00:00",
+    "generator": "bounded_my2020_review",
+    "schema_version": "1.1.0"
+  },
+  "provenance": {
+    "acquisition_method": "retained authentic PDF",
+    "extraction_provenance": {
+      "extraction_mode": "source_specific_parser",
+      "extractor_id": "pypdf",
+      "extractor_version": "6.16.1",
+      "raw_artifact_hash": "sha256:787cbb6cd3d08a271f70be106fff7ec0709e2541c79930cb4c3a559c4d164578",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/4 Door 2-11-20.pdf"
+    },
+    "native_record_id": "JL20-20-MY2020-JL-4D-2020-02-11",
+    "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+    "review_status": "reviewed",
+    "source_applicability": {
+      "applicability_basis": "US model-year guide/manual applicability; engine-family joins explicitly scoped",
+      "applicability_scope": "model_year",
+      "market": "US",
+      "publisher_jurisdiction": "US"
+    },
+    "source_id": "MY2020-JL-4D-2020-02-11",
+    "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-2-11-20-pdf.281242/",
+    "source_type": "manufacturer_document",
+    "source_use_notes": "Manufacturer-issued guide, archived copy. Revision omissions do not rescind earlier positive cells.",
+    "target_context": {
+      "model_year": 2020
+    }
+  },
+  "source_assertions": [
+    {
+      "assertion_id": "JL20-20-MY2020-JL-4D-2020-02-11-model",
+      "attribute_key": "source_model_code",
+      "raw_value": "JLJP74",
+      "source_context": "PDF page 7; printed model heading"
+    },
+    {
+      "assertion_id": "JL20-20-MY2020-JL-4D-2020-02-11-table",
+      "attribute_key": "factory_powertrain_table",
+      "raw_value": "ENGINE                               $FWP      $MSRP    TRANSMISSION                    $FWP      $MSRP                                                ALTITUDE            NORTH EDITION\n3.6L V6 24V VVT ENGINE UPG            N/C        N/C    6-SPEED MANUAL                   N/C        N/C           23G               23L\nI W/ESS (ERC)                                           TRANSMISSION (DEM)\n2.0L I4 DOHC DI TURBO                 N/C        N/C    8-SPD AUTO 850RE                1,780      2,000          28G               28L               28E\nETORQUE ENGINE (EC3)                                    TRANS (MAKE) (DFT)\n3.6L V6 24V VVT ETORQUE              1,113      1,250   8-SPD AUTO 850RE                1,780      2,000          25G               25L\nENGINE UPG I (ERG)                                      TRANS (MAKE) (DFT)\n3.0L V6 TURBO DIESEL                 3,560      4,000   8-SPD AUTO 8HP75                1,780      2,000          26G               26L\nENGINE W/ESS G3 (EXJ)                                   TRANS (BUY-GERMANY)\n                                                        (DFV)",
+      "source_context": "PDF page 7; model JLJP74; selected grade Unlimited North Edition; QOP 28E; normalization is not a verbatim manufacturer trim assertion"
+    }
+  ]
+}

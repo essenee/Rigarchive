@@ -1,0 +1,2765 @@
+{
+  "shared_selector_count": 51,
+  "source_PDFs": 20,
+  "selectors": [
+    {
+      "key": [
+        "MY2020-JL-2D-2019-08-15",
+        "source_model_code",
+        "model_code",
+        "JLJL72"
+      ],
+      "assertion_set": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/selectors/MY2020-JL-2D-2019-08-15-JLJL72-shared-selector-r1.source_assertion_set.json",
+      "artifact_sha256": "sha256:ac854f34819569b8bfe2fde9fa8a2f3e48c3bc10105008d8c50a5bbec77fffbb",
+      "document": {
+        "source_id": "MY2020-JL-2D-2019-08-15",
+        "raw_artifact_hash": "sha256:24239a7e5037840a190003d888998522e522fe3406599bb019b00e05ffd67591",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2020_JL_2_door_08_15_2019.pdf",
+        "extractor_id": "my2020_shared_model_code_selector",
+        "extractor_version": "1.0.0",
+        "extraction_mode": "manually_verified_transcription",
+        "assertion_set_id": "MY2020-JL-2D-2019-08-15-JLJL72-shared-selector-r1",
+        "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2020_jl_2_door_08_15_2019-pdf.215559/",
+        "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+        "source_applicability": {
+          "market": "US",
+          "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+          "publisher_jurisdiction": "US",
+          "applicability_scope": "model_year",
+          "unknown_fields": {}
+        },
+        "publication_revision": null,
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "assertions": [
+          {
+            "assertion_id": "model_code",
+            "attribute_key": "source_model_code",
+            "raw_value": "JLJL72",
+            "source_context": "PDF page 2; manufacturer model-code heading, same original location as predecessor assertion JL20-01-MY2020-JL-2D-2019-08-15/JL20-01-MY2020-JL-2D-2019-08-15-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+          }
+        ]
+      },
+      "candidate_references": [
+        "JL20-01",
+        "JL20-02",
+        "JL20-08",
+        "JL20-09",
+        "JL20-10",
+        "JL20-11"
+      ],
+      "source_page": 2,
+      "predecessor_raw_hash": "sha256:24239a7e5037840a190003d888998522e522fe3406599bb019b00e05ffd67591",
+      "manufacturer_fact_unchanged": true
+    },
+    {
+      "key": [
+        "MY2020-JL-2D-2019-08-15",
+        "source_model_code",
+        "model_code",
+        "JLJS72"
+      ],
+      "assertion_set": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/selectors/MY2020-JL-2D-2019-08-15-JLJS72-shared-selector-r1.source_assertion_set.json",
+      "artifact_sha256": "sha256:33c2e80a68498745727cd110653069d2dd852adb3034702f869dbe6205839eed",
+      "document": {
+        "source_id": "MY2020-JL-2D-2019-08-15",
+        "raw_artifact_hash": "sha256:24239a7e5037840a190003d888998522e522fe3406599bb019b00e05ffd67591",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2020_JL_2_door_08_15_2019.pdf",
+        "extractor_id": "my2020_shared_model_code_selector",
+        "extractor_version": "1.0.0",
+        "extraction_mode": "manually_verified_transcription",
+        "assertion_set_id": "MY2020-JL-2D-2019-08-15-JLJS72-shared-selector-r1",
+        "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2020_jl_2_door_08_15_2019-pdf.215559/",
+        "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+        "source_applicability": {
+          "market": "US",
+          "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+          "publisher_jurisdiction": "US",
+          "applicability_scope": "model_year",
+          "unknown_fields": {}
+        },
+        "publication_revision": null,
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "assertions": [
+          {
+            "assertion_id": "model_code",
+            "attribute_key": "source_model_code",
+            "raw_value": "JLJS72",
+            "source_context": "PDF page 6; manufacturer model-code heading, same original location as predecessor assertion JL20-05-MY2020-JL-2D-2019-08-15/JL20-05-MY2020-JL-2D-2019-08-15-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+          }
+        ]
+      },
+      "candidate_references": [
+        "JL20-05",
+        "JL20-06"
+      ],
+      "source_page": 6,
+      "predecessor_raw_hash": "sha256:24239a7e5037840a190003d888998522e522fe3406599bb019b00e05ffd67591",
+      "manufacturer_fact_unchanged": true
+    },
+    {
+      "key": [
+        "MY2020-JL-2D-2019-09-05",
+        "source_model_code",
+        "model_code",
+        "JLJL72"
+      ],
+      "assertion_set": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/selectors/MY2020-JL-2D-2019-09-05-JLJL72-shared-selector-r1.source_assertion_set.json",
+      "artifact_sha256": "sha256:43c3a55050edec483e8141f6adb1d73ed7422c256b360db132fdbbfc7fac5384",
+      "document": {
+        "source_id": "MY2020-JL-2D-2019-09-05",
+        "raw_artifact_hash": "sha256:5e7855d90320a9cdcfe5569b46a74794d552161165a4278b1d68c8ffda8c02fa",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2 Door 9-5-19.pdf",
+        "extractor_id": "my2020_shared_model_code_selector",
+        "extractor_version": "1.0.0",
+        "extraction_mode": "manually_verified_transcription",
+        "assertion_set_id": "MY2020-JL-2D-2019-09-05-JLJL72-shared-selector-r1",
+        "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2-door-9-5-19-pdf.227937/",
+        "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+        "source_applicability": {
+          "market": "US",
+          "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+          "publisher_jurisdiction": "US",
+          "applicability_scope": "model_year",
+          "unknown_fields": {}
+        },
+        "publication_revision": null,
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "assertions": [
+          {
+            "assertion_id": "model_code",
+            "attribute_key": "source_model_code",
+            "raw_value": "JLJL72",
+            "source_context": "PDF page 2; manufacturer model-code heading, same original location as predecessor assertion JL20-01-MY2020-JL-2D-2019-09-05/JL20-01-MY2020-JL-2D-2019-09-05-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+          }
+        ]
+      },
+      "candidate_references": [
+        "JL20-01",
+        "JL20-02",
+        "JL20-08",
+        "JL20-09",
+        "JL20-10",
+        "JL20-11",
+        "JL20-12",
+        "JL20-13"
+      ],
+      "source_page": 2,
+      "predecessor_raw_hash": "sha256:5e7855d90320a9cdcfe5569b46a74794d552161165a4278b1d68c8ffda8c02fa",
+      "manufacturer_fact_unchanged": true
+    },
+    {
+      "key": [
+        "MY2020-JL-2D-2019-09-05",
+        "source_model_code",
+        "model_code",
+        "JLJS72"
+      ],
+      "assertion_set": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/selectors/MY2020-JL-2D-2019-09-05-JLJS72-shared-selector-r1.source_assertion_set.json",
+      "artifact_sha256": "sha256:427b8e5c73266b8c8de85820b7ed4e965b8bcf3cc57b1d92f4dd11e76072331e",
+      "document": {
+        "source_id": "MY2020-JL-2D-2019-09-05",
+        "raw_artifact_hash": "sha256:5e7855d90320a9cdcfe5569b46a74794d552161165a4278b1d68c8ffda8c02fa",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2 Door 9-5-19.pdf",
+        "extractor_id": "my2020_shared_model_code_selector",
+        "extractor_version": "1.0.0",
+        "extraction_mode": "manually_verified_transcription",
+        "assertion_set_id": "MY2020-JL-2D-2019-09-05-JLJS72-shared-selector-r1",
+        "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2-door-9-5-19-pdf.227937/",
+        "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+        "source_applicability": {
+          "market": "US",
+          "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+          "publisher_jurisdiction": "US",
+          "applicability_scope": "model_year",
+          "unknown_fields": {}
+        },
+        "publication_revision": null,
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "assertions": [
+          {
+            "assertion_id": "model_code",
+            "attribute_key": "source_model_code",
+            "raw_value": "JLJS72",
+            "source_context": "PDF page 7; manufacturer model-code heading, same original location as predecessor assertion JL20-05-MY2020-JL-2D-2019-09-05/JL20-05-MY2020-JL-2D-2019-09-05-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+          }
+        ]
+      },
+      "candidate_references": [
+        "JL20-05",
+        "JL20-06"
+      ],
+      "source_page": 7,
+      "predecessor_raw_hash": "sha256:5e7855d90320a9cdcfe5569b46a74794d552161165a4278b1d68c8ffda8c02fa",
+      "manufacturer_fact_unchanged": true
+    },
+    {
+      "key": [
+        "MY2020-JL-2D-2019-10-08",
+        "source_model_code",
+        "model_code",
+        "JLJL72"
+      ],
+      "assertion_set": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/selectors/MY2020-JL-2D-2019-10-08-JLJL72-shared-selector-r1.source_assertion_set.json",
+      "artifact_sha256": "sha256:e6aff93f8c6c91ed713eb3916073db2464341066774a54547224ae1b00a76955",
+      "document": {
+        "source_id": "MY2020-JL-2D-2019-10-08",
+        "raw_artifact_hash": "sha256:e12a2f7f835f34bab14c1f7eb3d884aebbdbe547bc2dcdf8e606041062fb19ef",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2 Door 10-8-19.pdf",
+        "extractor_id": "my2020_shared_model_code_selector",
+        "extractor_version": "1.0.0",
+        "extraction_mode": "manually_verified_transcription",
+        "assertion_set_id": "MY2020-JL-2D-2019-10-08-JLJL72-shared-selector-r1",
+        "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2-door-10-8-19-pdf.239598/",
+        "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+        "source_applicability": {
+          "market": "US",
+          "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+          "publisher_jurisdiction": "US",
+          "applicability_scope": "model_year",
+          "unknown_fields": {}
+        },
+        "publication_revision": null,
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "assertions": [
+          {
+            "assertion_id": "model_code",
+            "attribute_key": "source_model_code",
+            "raw_value": "JLJL72",
+            "source_context": "PDF page 2; manufacturer model-code heading, same original location as predecessor assertion JL20-01-MY2020-JL-2D-2019-10-08/JL20-01-MY2020-JL-2D-2019-10-08-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+          }
+        ]
+      },
+      "candidate_references": [
+        "JL20-01",
+        "JL20-02",
+        "JL20-03",
+        "JL20-04",
+        "JL20-08",
+        "JL20-09",
+        "JL20-10",
+        "JL20-11",
+        "JL20-12",
+        "JL20-13"
+      ],
+      "source_page": 2,
+      "predecessor_raw_hash": "sha256:e12a2f7f835f34bab14c1f7eb3d884aebbdbe547bc2dcdf8e606041062fb19ef",
+      "manufacturer_fact_unchanged": true
+    },
+    {
+      "key": [
+        "MY2020-JL-2D-2019-10-08",
+        "source_model_code",
+        "model_code",
+        "JLJS72"
+      ],
+      "assertion_set": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/selectors/MY2020-JL-2D-2019-10-08-JLJS72-shared-selector-r1.source_assertion_set.json",
+      "artifact_sha256": "sha256:bf979b5bc2334b03b7eaf46bf0e9fca805edca36a2a740f03740b1d76dd22001",
+      "document": {
+        "source_id": "MY2020-JL-2D-2019-10-08",
+        "raw_artifact_hash": "sha256:e12a2f7f835f34bab14c1f7eb3d884aebbdbe547bc2dcdf8e606041062fb19ef",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2 Door 10-8-19.pdf",
+        "extractor_id": "my2020_shared_model_code_selector",
+        "extractor_version": "1.0.0",
+        "extraction_mode": "manually_verified_transcription",
+        "assertion_set_id": "MY2020-JL-2D-2019-10-08-JLJS72-shared-selector-r1",
+        "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2-door-10-8-19-pdf.239598/",
+        "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+        "source_applicability": {
+          "market": "US",
+          "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+          "publisher_jurisdiction": "US",
+          "applicability_scope": "model_year",
+          "unknown_fields": {}
+        },
+        "publication_revision": null,
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "assertions": [
+          {
+            "assertion_id": "model_code",
+            "attribute_key": "source_model_code",
+            "raw_value": "JLJS72",
+            "source_context": "PDF page 7; manufacturer model-code heading, same original location as predecessor assertion JL20-05-MY2020-JL-2D-2019-10-08/JL20-05-MY2020-JL-2D-2019-10-08-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+          }
+        ]
+      },
+      "candidate_references": [
+        "JL20-05",
+        "JL20-06"
+      ],
+      "source_page": 7,
+      "predecessor_raw_hash": "sha256:e12a2f7f835f34bab14c1f7eb3d884aebbdbe547bc2dcdf8e606041062fb19ef",
+      "manufacturer_fact_unchanged": true
+    },
+    {
+      "key": [
+        "MY2020-JL-2D-2019-11-04",
+        "source_model_code",
+        "model_code",
+        "JLJL72"
+      ],
+      "assertion_set": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/selectors/MY2020-JL-2D-2019-11-04-JLJL72-shared-selector-r1.source_assertion_set.json",
+      "artifact_sha256": "sha256:afd74ce561086e334448a91d5ef8d9dc69e0455d641fd6cfdcce95012019f920",
+      "document": {
+        "source_id": "MY2020-JL-2D-2019-11-04",
+        "raw_artifact_hash": "sha256:13b43d0e183acafafc50d3ab6edf74b030aaf0d15fd0ffd77b87f8e87949243f",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2 Door 11-4-19.pdf",
+        "extractor_id": "my2020_shared_model_code_selector",
+        "extractor_version": "1.0.0",
+        "extraction_mode": "manually_verified_transcription",
+        "assertion_set_id": "MY2020-JL-2D-2019-11-04-JLJL72-shared-selector-r1",
+        "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2-door-11-4-19-pdf.255143/",
+        "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+        "source_applicability": {
+          "market": "US",
+          "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+          "publisher_jurisdiction": "US",
+          "applicability_scope": "model_year",
+          "unknown_fields": {}
+        },
+        "publication_revision": null,
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "assertions": [
+          {
+            "assertion_id": "model_code",
+            "attribute_key": "source_model_code",
+            "raw_value": "JLJL72",
+            "source_context": "PDF page 2; manufacturer model-code heading, same original location as predecessor assertion JL20-01-MY2020-JL-2D-2019-11-04/JL20-01-MY2020-JL-2D-2019-11-04-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+          }
+        ]
+      },
+      "candidate_references": [
+        "JL20-01",
+        "JL20-02",
+        "JL20-03",
+        "JL20-04",
+        "JL20-08",
+        "JL20-09",
+        "JL20-10",
+        "JL20-11",
+        "JL20-12",
+        "JL20-13",
+        "JL20-14",
+        "JL20-15"
+      ],
+      "source_page": 2,
+      "predecessor_raw_hash": "sha256:13b43d0e183acafafc50d3ab6edf74b030aaf0d15fd0ffd77b87f8e87949243f",
+      "manufacturer_fact_unchanged": true
+    },
+    {
+      "key": [
+        "MY2020-JL-2D-2019-11-04",
+        "source_model_code",
+        "model_code",
+        "JLJS72"
+      ],
+      "assertion_set": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/selectors/MY2020-JL-2D-2019-11-04-JLJS72-shared-selector-r1.source_assertion_set.json",
+      "artifact_sha256": "sha256:213f105e43424d4bc253aa3b480f29735f826610245cf33cf66295834ec25767",
+      "document": {
+        "source_id": "MY2020-JL-2D-2019-11-04",
+        "raw_artifact_hash": "sha256:13b43d0e183acafafc50d3ab6edf74b030aaf0d15fd0ffd77b87f8e87949243f",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2 Door 11-4-19.pdf",
+        "extractor_id": "my2020_shared_model_code_selector",
+        "extractor_version": "1.0.0",
+        "extraction_mode": "manually_verified_transcription",
+        "assertion_set_id": "MY2020-JL-2D-2019-11-04-JLJS72-shared-selector-r1",
+        "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2-door-11-4-19-pdf.255143/",
+        "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+        "source_applicability": {
+          "market": "US",
+          "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+          "publisher_jurisdiction": "US",
+          "applicability_scope": "model_year",
+          "unknown_fields": {}
+        },
+        "publication_revision": null,
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "assertions": [
+          {
+            "assertion_id": "model_code",
+            "attribute_key": "source_model_code",
+            "raw_value": "JLJS72",
+            "source_context": "PDF page 7; manufacturer model-code heading, same original location as predecessor assertion JL20-05-MY2020-JL-2D-2019-11-04/JL20-05-MY2020-JL-2D-2019-11-04-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+          }
+        ]
+      },
+      "candidate_references": [
+        "JL20-05",
+        "JL20-06"
+      ],
+      "source_page": 7,
+      "predecessor_raw_hash": "sha256:13b43d0e183acafafc50d3ab6edf74b030aaf0d15fd0ffd77b87f8e87949243f",
+      "manufacturer_fact_unchanged": true
+    },
+    {
+      "key": [
+        "MY2020-JL-2D-2020-01-15",
+        "source_model_code",
+        "model_code",
+        "JLJL72"
+      ],
+      "assertion_set": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/selectors/MY2020-JL-2D-2020-01-15-JLJL72-shared-selector-r1.source_assertion_set.json",
+      "artifact_sha256": "sha256:9634ec0e8236114637d9345fdad7df749c41e73f74a972b822c1cc1030108232",
+      "document": {
+        "source_id": "MY2020-JL-2D-2020-01-15",
+        "raw_artifact_hash": "sha256:06c2eaec0efb83c7d8ba5f773fd0be47e1e3ac2cba471b46da17d08fe54dc426",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2 Door 1-15-20.pdf",
+        "extractor_id": "my2020_shared_model_code_selector",
+        "extractor_version": "1.0.0",
+        "extraction_mode": "manually_verified_transcription",
+        "assertion_set_id": "MY2020-JL-2D-2020-01-15-JLJL72-shared-selector-r1",
+        "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2-door-1-15-20-pdf.272500/",
+        "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+        "source_applicability": {
+          "market": "US",
+          "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+          "publisher_jurisdiction": "US",
+          "applicability_scope": "model_year",
+          "unknown_fields": {}
+        },
+        "publication_revision": null,
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "assertions": [
+          {
+            "assertion_id": "model_code",
+            "attribute_key": "source_model_code",
+            "raw_value": "JLJL72",
+            "source_context": "PDF page 2; manufacturer model-code heading, same original location as predecessor assertion JL20-01-MY2020-JL-2D-2020-01-15/JL20-01-MY2020-JL-2D-2020-01-15-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+          }
+        ]
+      },
+      "candidate_references": [
+        "JL20-01",
+        "JL20-02",
+        "JL20-03",
+        "JL20-04",
+        "JL20-08",
+        "JL20-09",
+        "JL20-10",
+        "JL20-11",
+        "JL20-12",
+        "JL20-13",
+        "JL20-14",
+        "JL20-15"
+      ],
+      "source_page": 2,
+      "predecessor_raw_hash": "sha256:06c2eaec0efb83c7d8ba5f773fd0be47e1e3ac2cba471b46da17d08fe54dc426",
+      "manufacturer_fact_unchanged": true
+    },
+    {
+      "key": [
+        "MY2020-JL-2D-2020-01-15",
+        "source_model_code",
+        "model_code",
+        "JLJS72"
+      ],
+      "assertion_set": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/selectors/MY2020-JL-2D-2020-01-15-JLJS72-shared-selector-r1.source_assertion_set.json",
+      "artifact_sha256": "sha256:6943526a7ec1b352183db7dba42f3be5df5be4e5429683602cdb1694ccc7f058",
+      "document": {
+        "source_id": "MY2020-JL-2D-2020-01-15",
+        "raw_artifact_hash": "sha256:06c2eaec0efb83c7d8ba5f773fd0be47e1e3ac2cba471b46da17d08fe54dc426",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2 Door 1-15-20.pdf",
+        "extractor_id": "my2020_shared_model_code_selector",
+        "extractor_version": "1.0.0",
+        "extraction_mode": "manually_verified_transcription",
+        "assertion_set_id": "MY2020-JL-2D-2020-01-15-JLJS72-shared-selector-r1",
+        "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2-door-1-15-20-pdf.272500/",
+        "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+        "source_applicability": {
+          "market": "US",
+          "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+          "publisher_jurisdiction": "US",
+          "applicability_scope": "model_year",
+          "unknown_fields": {}
+        },
+        "publication_revision": null,
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "assertions": [
+          {
+            "assertion_id": "model_code",
+            "attribute_key": "source_model_code",
+            "raw_value": "JLJS72",
+            "source_context": "PDF page 7; manufacturer model-code heading, same original location as predecessor assertion JL20-05-MY2020-JL-2D-2020-01-15/JL20-05-MY2020-JL-2D-2020-01-15-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+          }
+        ]
+      },
+      "candidate_references": [
+        "JL20-05",
+        "JL20-06",
+        "JL20-07"
+      ],
+      "source_page": 7,
+      "predecessor_raw_hash": "sha256:06c2eaec0efb83c7d8ba5f773fd0be47e1e3ac2cba471b46da17d08fe54dc426",
+      "manufacturer_fact_unchanged": true
+    },
+    {
+      "key": [
+        "MY2020-JL-2D-2020-01-23",
+        "source_model_code",
+        "model_code",
+        "JLJL72"
+      ],
+      "assertion_set": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/selectors/MY2020-JL-2D-2020-01-23-JLJL72-shared-selector-r1.source_assertion_set.json",
+      "artifact_sha256": "sha256:c6e47e7ac18e40e568e7196b94a90c2f704d83c6365082edd552b495f8d4722c",
+      "document": {
+        "source_id": "MY2020-JL-2D-2020-01-23",
+        "raw_artifact_hash": "sha256:94155d6e84f45028046435152baf9a5b76281977b24b66accc604112c2edd355",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2 Door 1-23-20.pdf",
+        "extractor_id": "my2020_shared_model_code_selector",
+        "extractor_version": "1.0.0",
+        "extraction_mode": "manually_verified_transcription",
+        "assertion_set_id": "MY2020-JL-2D-2020-01-23-JLJL72-shared-selector-r1",
+        "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2-door-1-23-20-pdf.275369/",
+        "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+        "source_applicability": {
+          "market": "US",
+          "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+          "publisher_jurisdiction": "US",
+          "applicability_scope": "model_year",
+          "unknown_fields": {}
+        },
+        "publication_revision": null,
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "assertions": [
+          {
+            "assertion_id": "model_code",
+            "attribute_key": "source_model_code",
+            "raw_value": "JLJL72",
+            "source_context": "PDF page 2; manufacturer model-code heading, same original location as predecessor assertion JL20-01-MY2020-JL-2D-2020-01-23/JL20-01-MY2020-JL-2D-2020-01-23-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+          }
+        ]
+      },
+      "candidate_references": [
+        "JL20-01",
+        "JL20-02",
+        "JL20-03",
+        "JL20-04",
+        "JL20-08",
+        "JL20-09",
+        "JL20-10",
+        "JL20-11",
+        "JL20-12",
+        "JL20-13",
+        "JL20-14",
+        "JL20-15"
+      ],
+      "source_page": 2,
+      "predecessor_raw_hash": "sha256:94155d6e84f45028046435152baf9a5b76281977b24b66accc604112c2edd355",
+      "manufacturer_fact_unchanged": true
+    },
+    {
+      "key": [
+        "MY2020-JL-2D-2020-01-23",
+        "source_model_code",
+        "model_code",
+        "JLJS72"
+      ],
+      "assertion_set": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/selectors/MY2020-JL-2D-2020-01-23-JLJS72-shared-selector-r1.source_assertion_set.json",
+      "artifact_sha256": "sha256:fd3e96a730a599b87c60f65161adaed98dd00bf1bb9dc774174cb5851e733462",
+      "document": {
+        "source_id": "MY2020-JL-2D-2020-01-23",
+        "raw_artifact_hash": "sha256:94155d6e84f45028046435152baf9a5b76281977b24b66accc604112c2edd355",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2 Door 1-23-20.pdf",
+        "extractor_id": "my2020_shared_model_code_selector",
+        "extractor_version": "1.0.0",
+        "extraction_mode": "manually_verified_transcription",
+        "assertion_set_id": "MY2020-JL-2D-2020-01-23-JLJS72-shared-selector-r1",
+        "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2-door-1-23-20-pdf.275369/",
+        "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+        "source_applicability": {
+          "market": "US",
+          "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+          "publisher_jurisdiction": "US",
+          "applicability_scope": "model_year",
+          "unknown_fields": {}
+        },
+        "publication_revision": null,
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "assertions": [
+          {
+            "assertion_id": "model_code",
+            "attribute_key": "source_model_code",
+            "raw_value": "JLJS72",
+            "source_context": "PDF page 7; manufacturer model-code heading, same original location as predecessor assertion JL20-05-MY2020-JL-2D-2020-01-23/JL20-05-MY2020-JL-2D-2020-01-23-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+          }
+        ]
+      },
+      "candidate_references": [
+        "JL20-05",
+        "JL20-06",
+        "JL20-07"
+      ],
+      "source_page": 7,
+      "predecessor_raw_hash": "sha256:94155d6e84f45028046435152baf9a5b76281977b24b66accc604112c2edd355",
+      "manufacturer_fact_unchanged": true
+    },
+    {
+      "key": [
+        "MY2020-JL-2D-2020-02-12",
+        "source_model_code",
+        "model_code",
+        "JLJL72"
+      ],
+      "assertion_set": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/selectors/MY2020-JL-2D-2020-02-12-JLJL72-shared-selector-r1.source_assertion_set.json",
+      "artifact_sha256": "sha256:fb6e8d836c29281d37c662f40ed7e8522687a5eb2ae1fe110cce1261ff978536",
+      "document": {
+        "source_id": "MY2020-JL-2D-2020-02-12",
+        "raw_artifact_hash": "sha256:75b13996335662290ed71506cb76772da71347e1151ecd4720e8e9b8bc44f848",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2 Door 2-12-20.pdf",
+        "extractor_id": "my2020_shared_model_code_selector",
+        "extractor_version": "1.0.0",
+        "extraction_mode": "manually_verified_transcription",
+        "assertion_set_id": "MY2020-JL-2D-2020-02-12-JLJL72-shared-selector-r1",
+        "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2-door-2-12-20-pdf.281244/",
+        "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+        "source_applicability": {
+          "market": "US",
+          "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+          "publisher_jurisdiction": "US",
+          "applicability_scope": "model_year",
+          "unknown_fields": {}
+        },
+        "publication_revision": null,
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "assertions": [
+          {
+            "assertion_id": "model_code",
+            "attribute_key": "source_model_code",
+            "raw_value": "JLJL72",
+            "source_context": "PDF page 2; manufacturer model-code heading, same original location as predecessor assertion JL20-01-MY2020-JL-2D-2020-02-12/JL20-01-MY2020-JL-2D-2020-02-12-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+          }
+        ]
+      },
+      "candidate_references": [
+        "JL20-01",
+        "JL20-02",
+        "JL20-03",
+        "JL20-04",
+        "JL20-08",
+        "JL20-09",
+        "JL20-10",
+        "JL20-11",
+        "JL20-12",
+        "JL20-13",
+        "JL20-14",
+        "JL20-15"
+      ],
+      "source_page": 2,
+      "predecessor_raw_hash": "sha256:75b13996335662290ed71506cb76772da71347e1151ecd4720e8e9b8bc44f848",
+      "manufacturer_fact_unchanged": true
+    },
+    {
+      "key": [
+        "MY2020-JL-2D-2020-02-12",
+        "source_model_code",
+        "model_code",
+        "JLJS72"
+      ],
+      "assertion_set": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/selectors/MY2020-JL-2D-2020-02-12-JLJS72-shared-selector-r1.source_assertion_set.json",
+      "artifact_sha256": "sha256:35a30dcc1e8f86a48790dbe89c2baea28c0af89101b67a71c8e18f1a0aadaf03",
+      "document": {
+        "source_id": "MY2020-JL-2D-2020-02-12",
+        "raw_artifact_hash": "sha256:75b13996335662290ed71506cb76772da71347e1151ecd4720e8e9b8bc44f848",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2 Door 2-12-20.pdf",
+        "extractor_id": "my2020_shared_model_code_selector",
+        "extractor_version": "1.0.0",
+        "extraction_mode": "manually_verified_transcription",
+        "assertion_set_id": "MY2020-JL-2D-2020-02-12-JLJS72-shared-selector-r1",
+        "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2-door-2-12-20-pdf.281244/",
+        "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+        "source_applicability": {
+          "market": "US",
+          "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+          "publisher_jurisdiction": "US",
+          "applicability_scope": "model_year",
+          "unknown_fields": {}
+        },
+        "publication_revision": null,
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "assertions": [
+          {
+            "assertion_id": "model_code",
+            "attribute_key": "source_model_code",
+            "raw_value": "JLJS72",
+            "source_context": "PDF page 7; manufacturer model-code heading, same original location as predecessor assertion JL20-05-MY2020-JL-2D-2020-02-12/JL20-05-MY2020-JL-2D-2020-02-12-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+          }
+        ]
+      },
+      "candidate_references": [
+        "JL20-05",
+        "JL20-06",
+        "JL20-07"
+      ],
+      "source_page": 7,
+      "predecessor_raw_hash": "sha256:75b13996335662290ed71506cb76772da71347e1151ecd4720e8e9b8bc44f848",
+      "manufacturer_fact_unchanged": true
+    },
+    {
+      "key": [
+        "MY2020-JL-2D-2020-03-03",
+        "source_model_code",
+        "model_code",
+        "JLJL72"
+      ],
+      "assertion_set": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/selectors/MY2020-JL-2D-2020-03-03-JLJL72-shared-selector-r1.source_assertion_set.json",
+      "artifact_sha256": "sha256:1177f1a64a2e3100892c29935f53478705caa5bf9432732b02ea542509946630",
+      "document": {
+        "source_id": "MY2020-JL-2D-2020-03-03",
+        "raw_artifact_hash": "sha256:1270871250ddbdad0fead362ba0df7e1516dd42ce51d37fc599c098f0bf81adc",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2 Door 3-3-20.pdf",
+        "extractor_id": "my2020_shared_model_code_selector",
+        "extractor_version": "1.0.0",
+        "extraction_mode": "manually_verified_transcription",
+        "assertion_set_id": "MY2020-JL-2D-2020-03-03-JLJL72-shared-selector-r1",
+        "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2-door-3-3-20-pdf.288455/",
+        "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+        "source_applicability": {
+          "market": "US",
+          "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+          "publisher_jurisdiction": "US",
+          "applicability_scope": "model_year",
+          "unknown_fields": {}
+        },
+        "publication_revision": null,
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "assertions": [
+          {
+            "assertion_id": "model_code",
+            "attribute_key": "source_model_code",
+            "raw_value": "JLJL72",
+            "source_context": "PDF page 2; manufacturer model-code heading, same original location as predecessor assertion JL20-01-MY2020-JL-2D-2020-03-03/JL20-01-MY2020-JL-2D-2020-03-03-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+          }
+        ]
+      },
+      "candidate_references": [
+        "JL20-01",
+        "JL20-02",
+        "JL20-03",
+        "JL20-04",
+        "JL20-08",
+        "JL20-09",
+        "JL20-10",
+        "JL20-11",
+        "JL20-12",
+        "JL20-13",
+        "JL20-14",
+        "JL20-15"
+      ],
+      "source_page": 2,
+      "predecessor_raw_hash": "sha256:1270871250ddbdad0fead362ba0df7e1516dd42ce51d37fc599c098f0bf81adc",
+      "manufacturer_fact_unchanged": true
+    },
+    {
+      "key": [
+        "MY2020-JL-2D-2020-03-03",
+        "source_model_code",
+        "model_code",
+        "JLJS72"
+      ],
+      "assertion_set": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/selectors/MY2020-JL-2D-2020-03-03-JLJS72-shared-selector-r1.source_assertion_set.json",
+      "artifact_sha256": "sha256:31b8b45518fe55f1bc16c87061794b4eb9079dd7153bbf1fe9907a09f1a56e39",
+      "document": {
+        "source_id": "MY2020-JL-2D-2020-03-03",
+        "raw_artifact_hash": "sha256:1270871250ddbdad0fead362ba0df7e1516dd42ce51d37fc599c098f0bf81adc",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2 Door 3-3-20.pdf",
+        "extractor_id": "my2020_shared_model_code_selector",
+        "extractor_version": "1.0.0",
+        "extraction_mode": "manually_verified_transcription",
+        "assertion_set_id": "MY2020-JL-2D-2020-03-03-JLJS72-shared-selector-r1",
+        "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2-door-3-3-20-pdf.288455/",
+        "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+        "source_applicability": {
+          "market": "US",
+          "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+          "publisher_jurisdiction": "US",
+          "applicability_scope": "model_year",
+          "unknown_fields": {}
+        },
+        "publication_revision": null,
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "assertions": [
+          {
+            "assertion_id": "model_code",
+            "attribute_key": "source_model_code",
+            "raw_value": "JLJS72",
+            "source_context": "PDF page 7; manufacturer model-code heading, same original location as predecessor assertion JL20-05-MY2020-JL-2D-2020-03-03/JL20-05-MY2020-JL-2D-2020-03-03-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+          }
+        ]
+      },
+      "candidate_references": [
+        "JL20-05",
+        "JL20-06",
+        "JL20-07"
+      ],
+      "source_page": 7,
+      "predecessor_raw_hash": "sha256:1270871250ddbdad0fead362ba0df7e1516dd42ce51d37fc599c098f0bf81adc",
+      "manufacturer_fact_unchanged": true
+    },
+    {
+      "key": [
+        "MY2020-JL-2D-2020-04-17",
+        "source_model_code",
+        "model_code",
+        "JLJL72"
+      ],
+      "assertion_set": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/selectors/MY2020-JL-2D-2020-04-17-JLJL72-shared-selector-r1.source_assertion_set.json",
+      "artifact_sha256": "sha256:b34b8c69794ccaa4f4d5388c2bfe884ec4c3dca25cac0a421fa1528a2049c5d7",
+      "document": {
+        "source_id": "MY2020-JL-2D-2020-04-17",
+        "raw_artifact_hash": "sha256:aebf9026be5c1b3a04c11ec4a037b7c5f423eacc875c22d909875f242e2d3fc2",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2 Door 4-17-20.pdf",
+        "extractor_id": "my2020_shared_model_code_selector",
+        "extractor_version": "1.0.0",
+        "extraction_mode": "manually_verified_transcription",
+        "assertion_set_id": "MY2020-JL-2D-2020-04-17-JLJL72-shared-selector-r1",
+        "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2-door-4-17-20-pdf.312615/",
+        "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+        "source_applicability": {
+          "market": "US",
+          "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+          "publisher_jurisdiction": "US",
+          "applicability_scope": "model_year",
+          "unknown_fields": {}
+        },
+        "publication_revision": null,
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "assertions": [
+          {
+            "assertion_id": "model_code",
+            "attribute_key": "source_model_code",
+            "raw_value": "JLJL72",
+            "source_context": "PDF page 2; manufacturer model-code heading, same original location as predecessor assertion JL20-03-MY2020-JL-2D-2020-04-17/JL20-03-MY2020-JL-2D-2020-04-17-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+          }
+        ]
+      },
+      "candidate_references": [
+        "JL20-03",
+        "JL20-04",
+        "JL20-08",
+        "JL20-09",
+        "JL20-10",
+        "JL20-11",
+        "JL20-12",
+        "JL20-13",
+        "JL20-14",
+        "JL20-15"
+      ],
+      "source_page": 2,
+      "predecessor_raw_hash": "sha256:aebf9026be5c1b3a04c11ec4a037b7c5f423eacc875c22d909875f242e2d3fc2",
+      "manufacturer_fact_unchanged": true
+    },
+    {
+      "key": [
+        "MY2020-JL-2D-2020-04-17",
+        "source_model_code",
+        "model_code",
+        "JLJS72"
+      ],
+      "assertion_set": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/selectors/MY2020-JL-2D-2020-04-17-JLJS72-shared-selector-r1.source_assertion_set.json",
+      "artifact_sha256": "sha256:3c90ef1bccf0ea70d4d9184bde512c250378ecc3cab28586bfdf85aa7e8ce2bb",
+      "document": {
+        "source_id": "MY2020-JL-2D-2020-04-17",
+        "raw_artifact_hash": "sha256:aebf9026be5c1b3a04c11ec4a037b7c5f423eacc875c22d909875f242e2d3fc2",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2 Door 4-17-20.pdf",
+        "extractor_id": "my2020_shared_model_code_selector",
+        "extractor_version": "1.0.0",
+        "extraction_mode": "manually_verified_transcription",
+        "assertion_set_id": "MY2020-JL-2D-2020-04-17-JLJS72-shared-selector-r1",
+        "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2-door-4-17-20-pdf.312615/",
+        "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+        "source_applicability": {
+          "market": "US",
+          "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+          "publisher_jurisdiction": "US",
+          "applicability_scope": "model_year",
+          "unknown_fields": {}
+        },
+        "publication_revision": null,
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "assertions": [
+          {
+            "assertion_id": "model_code",
+            "attribute_key": "source_model_code",
+            "raw_value": "JLJS72",
+            "source_context": "PDF page 6; manufacturer model-code heading, same original location as predecessor assertion JL20-05-MY2020-JL-2D-2020-04-17/JL20-05-MY2020-JL-2D-2020-04-17-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+          }
+        ]
+      },
+      "candidate_references": [
+        "JL20-05",
+        "JL20-06",
+        "JL20-07"
+      ],
+      "source_page": 6,
+      "predecessor_raw_hash": "sha256:aebf9026be5c1b3a04c11ec4a037b7c5f423eacc875c22d909875f242e2d3fc2",
+      "manufacturer_fact_unchanged": true
+    },
+    {
+      "key": [
+        "MY2020-JL-4D-2019-07-02",
+        "source_model_code",
+        "model_code",
+        "JLJL74"
+      ],
+      "assertion_set": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/selectors/MY2020-JL-4D-2019-07-02-JLJL74-shared-selector-r1.source_assertion_set.json",
+      "artifact_sha256": "sha256:f6b507461c4eb937e30231052040d4edd82a0b16d97e1a60a9c8578bd74bd5d0",
+      "document": {
+        "source_id": "MY2020-JL-4D-2019-07-02",
+        "raw_artifact_hash": "sha256:0c60b14a8c5113a52bcb841bf8ed3748cb99ad2a5c504f2aa106c87d3a4052d4",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2020_JL_4_door_07_02_2019.pdf",
+        "extractor_id": "my2020_shared_model_code_selector",
+        "extractor_version": "1.0.0",
+        "extraction_mode": "manually_verified_transcription",
+        "assertion_set_id": "MY2020-JL-4D-2019-07-02-JLJL74-shared-selector-r1",
+        "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2020_jl_4_door_07_02_2019-pdf.199502/",
+        "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+        "source_applicability": {
+          "market": "US",
+          "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+          "publisher_jurisdiction": "US",
+          "applicability_scope": "model_year",
+          "unknown_fields": {}
+        },
+        "publication_revision": null,
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "assertions": [
+          {
+            "assertion_id": "model_code",
+            "attribute_key": "source_model_code",
+            "raw_value": "JLJL74",
+            "source_context": "PDF page 2; manufacturer model-code heading, same original location as predecessor assertion JL20-16-MY2020-JL-4D-2019-07-02/JL20-16-MY2020-JL-4D-2019-07-02-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+          }
+        ]
+      },
+      "candidate_references": [
+        "JL20-16",
+        "JL20-17",
+        "JL20-36",
+        "JL20-37",
+        "JL20-39",
+        "JL20-40",
+        "JL20-42",
+        "JL20-43"
+      ],
+      "source_page": 2,
+      "predecessor_raw_hash": "sha256:0c60b14a8c5113a52bcb841bf8ed3748cb99ad2a5c504f2aa106c87d3a4052d4",
+      "manufacturer_fact_unchanged": true
+    },
+    {
+      "key": [
+        "MY2020-JL-4D-2019-07-02",
+        "source_model_code",
+        "model_code",
+        "JLJP74"
+      ],
+      "assertion_set": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/selectors/MY2020-JL-4D-2019-07-02-JLJP74-shared-selector-r1.source_assertion_set.json",
+      "artifact_sha256": "sha256:bbdc211e5e68befdacd490638507f475ce61bf9bec3172e7166f9d6740414bb2",
+      "document": {
+        "source_id": "MY2020-JL-4D-2019-07-02",
+        "raw_artifact_hash": "sha256:0c60b14a8c5113a52bcb841bf8ed3748cb99ad2a5c504f2aa106c87d3a4052d4",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2020_JL_4_door_07_02_2019.pdf",
+        "extractor_id": "my2020_shared_model_code_selector",
+        "extractor_version": "1.0.0",
+        "extraction_mode": "manually_verified_transcription",
+        "assertion_set_id": "MY2020-JL-4D-2019-07-02-JLJP74-shared-selector-r1",
+        "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2020_jl_4_door_07_02_2019-pdf.199502/",
+        "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+        "source_applicability": {
+          "market": "US",
+          "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+          "publisher_jurisdiction": "US",
+          "applicability_scope": "model_year",
+          "unknown_fields": {}
+        },
+        "publication_revision": null,
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "assertions": [
+          {
+            "assertion_id": "model_code",
+            "attribute_key": "source_model_code",
+            "raw_value": "JLJP74",
+            "source_context": "PDF page 7; manufacturer model-code heading, same original location as predecessor assertion JL20-25-MY2020-JL-4D-2019-07-02/JL20-25-MY2020-JL-4D-2019-07-02-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+          }
+        ]
+      },
+      "candidate_references": [
+        "JL20-25",
+        "JL20-26",
+        "JL20-27",
+        "JL20-29",
+        "JL20-30",
+        "JL20-31"
+      ],
+      "source_page": 7,
+      "predecessor_raw_hash": "sha256:0c60b14a8c5113a52bcb841bf8ed3748cb99ad2a5c504f2aa106c87d3a4052d4",
+      "manufacturer_fact_unchanged": true
+    },
+    {
+      "key": [
+        "MY2020-JL-4D-2019-07-02",
+        "source_model_code",
+        "model_code",
+        "JLJS74"
+      ],
+      "assertion_set": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/selectors/MY2020-JL-4D-2019-07-02-JLJS74-shared-selector-r1.source_assertion_set.json",
+      "artifact_sha256": "sha256:fef1c3d9f0678027cdfce6383568ddf1b34f046e388f4e637d0f3066ddbac86f",
+      "document": {
+        "source_id": "MY2020-JL-4D-2019-07-02",
+        "raw_artifact_hash": "sha256:0c60b14a8c5113a52bcb841bf8ed3748cb99ad2a5c504f2aa106c87d3a4052d4",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2020_JL_4_door_07_02_2019.pdf",
+        "extractor_id": "my2020_shared_model_code_selector",
+        "extractor_version": "1.0.0",
+        "extraction_mode": "manually_verified_transcription",
+        "assertion_set_id": "MY2020-JL-4D-2019-07-02-JLJS74-shared-selector-r1",
+        "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2020_jl_4_door_07_02_2019-pdf.199502/",
+        "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+        "source_applicability": {
+          "market": "US",
+          "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+          "publisher_jurisdiction": "US",
+          "applicability_scope": "model_year",
+          "unknown_fields": {}
+        },
+        "publication_revision": null,
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "assertions": [
+          {
+            "assertion_id": "model_code",
+            "attribute_key": "source_model_code",
+            "raw_value": "JLJS74",
+            "source_context": "PDF page 10; manufacturer model-code heading, same original location as predecessor assertion JL20-21-MY2020-JL-4D-2019-07-02/JL20-21-MY2020-JL-4D-2019-07-02-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+          }
+        ]
+      },
+      "candidate_references": [
+        "JL20-21",
+        "JL20-22"
+      ],
+      "source_page": 10,
+      "predecessor_raw_hash": "sha256:0c60b14a8c5113a52bcb841bf8ed3748cb99ad2a5c504f2aa106c87d3a4052d4",
+      "manufacturer_fact_unchanged": true
+    },
+    {
+      "key": [
+        "MY2020-JL-4D-2019-08-15",
+        "source_model_code",
+        "model_code",
+        "JLJL74"
+      ],
+      "assertion_set": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/selectors/MY2020-JL-4D-2019-08-15-JLJL74-shared-selector-r1.source_assertion_set.json",
+      "artifact_sha256": "sha256:7b8ee7f39840a6a94a1b524e525372eb6d66122eade917f4455b6a3ab21f6050",
+      "document": {
+        "source_id": "MY2020-JL-4D-2019-08-15",
+        "raw_artifact_hash": "sha256:0a449afb9f749d277ed3cf72186ca2fa4c943f1a1296235a257d1f884bc41b3d",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2020_JL_4_door_08_15_2019.pdf",
+        "extractor_id": "my2020_shared_model_code_selector",
+        "extractor_version": "1.0.0",
+        "extraction_mode": "manually_verified_transcription",
+        "assertion_set_id": "MY2020-JL-4D-2019-08-15-JLJL74-shared-selector-r1",
+        "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2020_jl_4_door_08_15_2019-pdf.215555/",
+        "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+        "source_applicability": {
+          "market": "US",
+          "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+          "publisher_jurisdiction": "US",
+          "applicability_scope": "model_year",
+          "unknown_fields": {}
+        },
+        "publication_revision": null,
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "assertions": [
+          {
+            "assertion_id": "model_code",
+            "attribute_key": "source_model_code",
+            "raw_value": "JLJL74",
+            "source_context": "PDF page 2; manufacturer model-code heading, same original location as predecessor assertion JL20-16-MY2020-JL-4D-2019-08-15/JL20-16-MY2020-JL-4D-2019-08-15-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+          }
+        ]
+      },
+      "candidate_references": [
+        "JL20-16",
+        "JL20-17",
+        "JL20-36",
+        "JL20-37",
+        "JL20-39",
+        "JL20-40",
+        "JL20-42",
+        "JL20-43"
+      ],
+      "source_page": 2,
+      "predecessor_raw_hash": "sha256:0a449afb9f749d277ed3cf72186ca2fa4c943f1a1296235a257d1f884bc41b3d",
+      "manufacturer_fact_unchanged": true
+    },
+    {
+      "key": [
+        "MY2020-JL-4D-2019-08-15",
+        "source_model_code",
+        "model_code",
+        "JLJP74"
+      ],
+      "assertion_set": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/selectors/MY2020-JL-4D-2019-08-15-JLJP74-shared-selector-r1.source_assertion_set.json",
+      "artifact_sha256": "sha256:b4b8c217cb6d9f79d2cd23a432fc5d3edef2d7f781268ff15eeefe8eb0193041",
+      "document": {
+        "source_id": "MY2020-JL-4D-2019-08-15",
+        "raw_artifact_hash": "sha256:0a449afb9f749d277ed3cf72186ca2fa4c943f1a1296235a257d1f884bc41b3d",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2020_JL_4_door_08_15_2019.pdf",
+        "extractor_id": "my2020_shared_model_code_selector",
+        "extractor_version": "1.0.0",
+        "extraction_mode": "manually_verified_transcription",
+        "assertion_set_id": "MY2020-JL-4D-2019-08-15-JLJP74-shared-selector-r1",
+        "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2020_jl_4_door_08_15_2019-pdf.215555/",
+        "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+        "source_applicability": {
+          "market": "US",
+          "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+          "publisher_jurisdiction": "US",
+          "applicability_scope": "model_year",
+          "unknown_fields": {}
+        },
+        "publication_revision": null,
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "assertions": [
+          {
+            "assertion_id": "model_code",
+            "attribute_key": "source_model_code",
+            "raw_value": "JLJP74",
+            "source_context": "PDF page 7; manufacturer model-code heading, same original location as predecessor assertion JL20-25-MY2020-JL-4D-2019-08-15/JL20-25-MY2020-JL-4D-2019-08-15-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+          }
+        ]
+      },
+      "candidate_references": [
+        "JL20-25",
+        "JL20-26",
+        "JL20-27",
+        "JL20-29",
+        "JL20-30",
+        "JL20-31"
+      ],
+      "source_page": 7,
+      "predecessor_raw_hash": "sha256:0a449afb9f749d277ed3cf72186ca2fa4c943f1a1296235a257d1f884bc41b3d",
+      "manufacturer_fact_unchanged": true
+    },
+    {
+      "key": [
+        "MY2020-JL-4D-2019-08-15",
+        "source_model_code",
+        "model_code",
+        "JLJS74"
+      ],
+      "assertion_set": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/selectors/MY2020-JL-4D-2019-08-15-JLJS74-shared-selector-r1.source_assertion_set.json",
+      "artifact_sha256": "sha256:eec7e0fc8a08b964ab4ee1cb089da2963da8b78b0e930b5a6b3d27eecc4a571f",
+      "document": {
+        "source_id": "MY2020-JL-4D-2019-08-15",
+        "raw_artifact_hash": "sha256:0a449afb9f749d277ed3cf72186ca2fa4c943f1a1296235a257d1f884bc41b3d",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2020_JL_4_door_08_15_2019.pdf",
+        "extractor_id": "my2020_shared_model_code_selector",
+        "extractor_version": "1.0.0",
+        "extraction_mode": "manually_verified_transcription",
+        "assertion_set_id": "MY2020-JL-4D-2019-08-15-JLJS74-shared-selector-r1",
+        "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2020_jl_4_door_08_15_2019-pdf.215555/",
+        "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+        "source_applicability": {
+          "market": "US",
+          "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+          "publisher_jurisdiction": "US",
+          "applicability_scope": "model_year",
+          "unknown_fields": {}
+        },
+        "publication_revision": null,
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "assertions": [
+          {
+            "assertion_id": "model_code",
+            "attribute_key": "source_model_code",
+            "raw_value": "JLJS74",
+            "source_context": "PDF page 10; manufacturer model-code heading, same original location as predecessor assertion JL20-21-MY2020-JL-4D-2019-08-15/JL20-21-MY2020-JL-4D-2019-08-15-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+          }
+        ]
+      },
+      "candidate_references": [
+        "JL20-21",
+        "JL20-22"
+      ],
+      "source_page": 10,
+      "predecessor_raw_hash": "sha256:0a449afb9f749d277ed3cf72186ca2fa4c943f1a1296235a257d1f884bc41b3d",
+      "manufacturer_fact_unchanged": true
+    },
+    {
+      "key": [
+        "MY2020-JL-4D-2019-09-05",
+        "source_model_code",
+        "model_code",
+        "JLJL74"
+      ],
+      "assertion_set": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/selectors/MY2020-JL-4D-2019-09-05-JLJL74-shared-selector-r1.source_assertion_set.json",
+      "artifact_sha256": "sha256:cfcf6e0242d9c29984b662eaa2fd969ce50059032849410bd1c84a58e4b72c71",
+      "document": {
+        "source_id": "MY2020-JL-4D-2019-09-05",
+        "raw_artifact_hash": "sha256:7b3a8bfe861740a65a64631f34b4845f2c8894fd3d00ca35923823149fcda1fb",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/4 Door 9-5-19.pdf",
+        "extractor_id": "my2020_shared_model_code_selector",
+        "extractor_version": "1.0.0",
+        "extraction_mode": "manually_verified_transcription",
+        "assertion_set_id": "MY2020-JL-4D-2019-09-05-JLJL74-shared-selector-r1",
+        "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-9-5-19-pdf.227935/",
+        "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+        "source_applicability": {
+          "market": "US",
+          "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+          "publisher_jurisdiction": "US",
+          "applicability_scope": "model_year",
+          "unknown_fields": {}
+        },
+        "publication_revision": null,
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "assertions": [
+          {
+            "assertion_id": "model_code",
+            "attribute_key": "source_model_code",
+            "raw_value": "JLJL74",
+            "source_context": "PDF page 2; manufacturer model-code heading, same original location as predecessor assertion JL20-16-MY2020-JL-4D-2019-09-05/JL20-16-MY2020-JL-4D-2019-09-05-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+          }
+        ]
+      },
+      "candidate_references": [
+        "JL20-16",
+        "JL20-17",
+        "JL20-36",
+        "JL20-37",
+        "JL20-39",
+        "JL20-40",
+        "JL20-42",
+        "JL20-43",
+        "JL20-45",
+        "JL20-46"
+      ],
+      "source_page": 2,
+      "predecessor_raw_hash": "sha256:7b3a8bfe861740a65a64631f34b4845f2c8894fd3d00ca35923823149fcda1fb",
+      "manufacturer_fact_unchanged": true
+    },
+    {
+      "key": [
+        "MY2020-JL-4D-2019-09-05",
+        "source_model_code",
+        "model_code",
+        "JLJP74"
+      ],
+      "assertion_set": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/selectors/MY2020-JL-4D-2019-09-05-JLJP74-shared-selector-r1.source_assertion_set.json",
+      "artifact_sha256": "sha256:789599b2f0a311be447605cd4eff12af4c979676a19d6c301d24e835b0004d59",
+      "document": {
+        "source_id": "MY2020-JL-4D-2019-09-05",
+        "raw_artifact_hash": "sha256:7b3a8bfe861740a65a64631f34b4845f2c8894fd3d00ca35923823149fcda1fb",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/4 Door 9-5-19.pdf",
+        "extractor_id": "my2020_shared_model_code_selector",
+        "extractor_version": "1.0.0",
+        "extraction_mode": "manually_verified_transcription",
+        "assertion_set_id": "MY2020-JL-4D-2019-09-05-JLJP74-shared-selector-r1",
+        "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-9-5-19-pdf.227935/",
+        "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+        "source_applicability": {
+          "market": "US",
+          "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+          "publisher_jurisdiction": "US",
+          "applicability_scope": "model_year",
+          "unknown_fields": {}
+        },
+        "publication_revision": null,
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "assertions": [
+          {
+            "assertion_id": "model_code",
+            "attribute_key": "source_model_code",
+            "raw_value": "JLJP74",
+            "source_context": "PDF page 7; manufacturer model-code heading, same original location as predecessor assertion JL20-25-MY2020-JL-4D-2019-09-05/JL20-25-MY2020-JL-4D-2019-09-05-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+          }
+        ]
+      },
+      "candidate_references": [
+        "JL20-25",
+        "JL20-26",
+        "JL20-27",
+        "JL20-29",
+        "JL20-30",
+        "JL20-31"
+      ],
+      "source_page": 7,
+      "predecessor_raw_hash": "sha256:7b3a8bfe861740a65a64631f34b4845f2c8894fd3d00ca35923823149fcda1fb",
+      "manufacturer_fact_unchanged": true
+    },
+    {
+      "key": [
+        "MY2020-JL-4D-2019-09-05",
+        "source_model_code",
+        "model_code",
+        "JLJS74"
+      ],
+      "assertion_set": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/selectors/MY2020-JL-4D-2019-09-05-JLJS74-shared-selector-r1.source_assertion_set.json",
+      "artifact_sha256": "sha256:5bedbe883692d47437b5ab32d8531f105e99464cffa20b1b9d645b388acbf6fa",
+      "document": {
+        "source_id": "MY2020-JL-4D-2019-09-05",
+        "raw_artifact_hash": "sha256:7b3a8bfe861740a65a64631f34b4845f2c8894fd3d00ca35923823149fcda1fb",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/4 Door 9-5-19.pdf",
+        "extractor_id": "my2020_shared_model_code_selector",
+        "extractor_version": "1.0.0",
+        "extraction_mode": "manually_verified_transcription",
+        "assertion_set_id": "MY2020-JL-4D-2019-09-05-JLJS74-shared-selector-r1",
+        "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-9-5-19-pdf.227935/",
+        "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+        "source_applicability": {
+          "market": "US",
+          "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+          "publisher_jurisdiction": "US",
+          "applicability_scope": "model_year",
+          "unknown_fields": {}
+        },
+        "publication_revision": null,
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "assertions": [
+          {
+            "assertion_id": "model_code",
+            "attribute_key": "source_model_code",
+            "raw_value": "JLJS74",
+            "source_context": "PDF page 10; manufacturer model-code heading, same original location as predecessor assertion JL20-21-MY2020-JL-4D-2019-09-05/JL20-21-MY2020-JL-4D-2019-09-05-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+          }
+        ]
+      },
+      "candidate_references": [
+        "JL20-21",
+        "JL20-22"
+      ],
+      "source_page": 10,
+      "predecessor_raw_hash": "sha256:7b3a8bfe861740a65a64631f34b4845f2c8894fd3d00ca35923823149fcda1fb",
+      "manufacturer_fact_unchanged": true
+    },
+    {
+      "key": [
+        "MY2020-JL-4D-2019-10-15",
+        "source_model_code",
+        "model_code",
+        "JLJL74"
+      ],
+      "assertion_set": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/selectors/MY2020-JL-4D-2019-10-15-JLJL74-shared-selector-r1.source_assertion_set.json",
+      "artifact_sha256": "sha256:f9da37d57094a2ec26ae4a62c46a861624fb76f0063e1fc720d56c8cbd5c9508",
+      "document": {
+        "source_id": "MY2020-JL-4D-2019-10-15",
+        "raw_artifact_hash": "sha256:02d82592ec31dd5f583211cd8641eb78eec91d1444c31608f549e10bcc7d6dec",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/4 Door 10-15-19.pdf",
+        "extractor_id": "my2020_shared_model_code_selector",
+        "extractor_version": "1.0.0",
+        "extraction_mode": "manually_verified_transcription",
+        "assertion_set_id": "MY2020-JL-4D-2019-10-15-JLJL74-shared-selector-r1",
+        "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-10-15-19-pdf.239596/",
+        "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+        "source_applicability": {
+          "market": "US",
+          "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+          "publisher_jurisdiction": "US",
+          "applicability_scope": "model_year",
+          "unknown_fields": {}
+        },
+        "publication_revision": null,
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "assertions": [
+          {
+            "assertion_id": "model_code",
+            "attribute_key": "source_model_code",
+            "raw_value": "JLJL74",
+            "source_context": "PDF page 2; manufacturer model-code heading, same original location as predecessor assertion JL20-16-MY2020-JL-4D-2019-10-15/JL20-16-MY2020-JL-4D-2019-10-15-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+          }
+        ]
+      },
+      "candidate_references": [
+        "JL20-16",
+        "JL20-17",
+        "JL20-18",
+        "JL20-19",
+        "JL20-36",
+        "JL20-37",
+        "JL20-38",
+        "JL20-39",
+        "JL20-40",
+        "JL20-41",
+        "JL20-42",
+        "JL20-43",
+        "JL20-44",
+        "JL20-45",
+        "JL20-46",
+        "JL20-47"
+      ],
+      "source_page": 2,
+      "predecessor_raw_hash": "sha256:02d82592ec31dd5f583211cd8641eb78eec91d1444c31608f549e10bcc7d6dec",
+      "manufacturer_fact_unchanged": true
+    },
+    {
+      "key": [
+        "MY2020-JL-4D-2019-10-15",
+        "source_model_code",
+        "model_code",
+        "JLJP74"
+      ],
+      "assertion_set": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/selectors/MY2020-JL-4D-2019-10-15-JLJP74-shared-selector-r1.source_assertion_set.json",
+      "artifact_sha256": "sha256:2ed12bd90dcc27a1dba7f3bfcdc029c450c6c46099d733fe9bbea7a18c4fa746",
+      "document": {
+        "source_id": "MY2020-JL-4D-2019-10-15",
+        "raw_artifact_hash": "sha256:02d82592ec31dd5f583211cd8641eb78eec91d1444c31608f549e10bcc7d6dec",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/4 Door 10-15-19.pdf",
+        "extractor_id": "my2020_shared_model_code_selector",
+        "extractor_version": "1.0.0",
+        "extraction_mode": "manually_verified_transcription",
+        "assertion_set_id": "MY2020-JL-4D-2019-10-15-JLJP74-shared-selector-r1",
+        "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-10-15-19-pdf.239596/",
+        "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+        "source_applicability": {
+          "market": "US",
+          "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+          "publisher_jurisdiction": "US",
+          "applicability_scope": "model_year",
+          "unknown_fields": {}
+        },
+        "publication_revision": null,
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "assertions": [
+          {
+            "assertion_id": "model_code",
+            "attribute_key": "source_model_code",
+            "raw_value": "JLJP74",
+            "source_context": "PDF page 7; manufacturer model-code heading, same original location as predecessor assertion JL20-20-MY2020-JL-4D-2019-10-15/JL20-20-MY2020-JL-4D-2019-10-15-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+          }
+        ]
+      },
+      "candidate_references": [
+        "JL20-20",
+        "JL20-25",
+        "JL20-26",
+        "JL20-27",
+        "JL20-28",
+        "JL20-29",
+        "JL20-30",
+        "JL20-31",
+        "JL20-32"
+      ],
+      "source_page": 7,
+      "predecessor_raw_hash": "sha256:02d82592ec31dd5f583211cd8641eb78eec91d1444c31608f549e10bcc7d6dec",
+      "manufacturer_fact_unchanged": true
+    },
+    {
+      "key": [
+        "MY2020-JL-4D-2019-10-15",
+        "source_model_code",
+        "model_code",
+        "JLJS74"
+      ],
+      "assertion_set": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/selectors/MY2020-JL-4D-2019-10-15-JLJS74-shared-selector-r1.source_assertion_set.json",
+      "artifact_sha256": "sha256:a1eef5a914b6e22eea0459115fae8db5d45ff9e8a29c6407ea9ecb96bdff1598",
+      "document": {
+        "source_id": "MY2020-JL-4D-2019-10-15",
+        "raw_artifact_hash": "sha256:02d82592ec31dd5f583211cd8641eb78eec91d1444c31608f549e10bcc7d6dec",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/4 Door 10-15-19.pdf",
+        "extractor_id": "my2020_shared_model_code_selector",
+        "extractor_version": "1.0.0",
+        "extraction_mode": "manually_verified_transcription",
+        "assertion_set_id": "MY2020-JL-4D-2019-10-15-JLJS74-shared-selector-r1",
+        "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-10-15-19-pdf.239596/",
+        "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+        "source_applicability": {
+          "market": "US",
+          "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+          "publisher_jurisdiction": "US",
+          "applicability_scope": "model_year",
+          "unknown_fields": {}
+        },
+        "publication_revision": null,
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "assertions": [
+          {
+            "assertion_id": "model_code",
+            "attribute_key": "source_model_code",
+            "raw_value": "JLJS74",
+            "source_context": "PDF page 12; manufacturer model-code heading, same original location as predecessor assertion JL20-21-MY2020-JL-4D-2019-10-15/JL20-21-MY2020-JL-4D-2019-10-15-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+          }
+        ]
+      },
+      "candidate_references": [
+        "JL20-21",
+        "JL20-22",
+        "JL20-23"
+      ],
+      "source_page": 12,
+      "predecessor_raw_hash": "sha256:02d82592ec31dd5f583211cd8641eb78eec91d1444c31608f549e10bcc7d6dec",
+      "manufacturer_fact_unchanged": true
+    },
+    {
+      "key": [
+        "MY2020-JL-4D-2019-11-13",
+        "source_model_code",
+        "model_code",
+        "JLJL74"
+      ],
+      "assertion_set": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/selectors/MY2020-JL-4D-2019-11-13-JLJL74-shared-selector-r1.source_assertion_set.json",
+      "artifact_sha256": "sha256:98efe9c2157e56cca22811ce4a6e4455f748a78cc24e742ecb1cb85f9d4bcb1b",
+      "document": {
+        "source_id": "MY2020-JL-4D-2019-11-13",
+        "raw_artifact_hash": "sha256:10a10527d9432fb35eedad59cea46c6bea242e4d2b99999281556131281b622e",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/4 Door 11-13-19.pdf",
+        "extractor_id": "my2020_shared_model_code_selector",
+        "extractor_version": "1.0.0",
+        "extraction_mode": "manually_verified_transcription",
+        "assertion_set_id": "MY2020-JL-4D-2019-11-13-JLJL74-shared-selector-r1",
+        "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-11-13-19-pdf.255141/",
+        "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+        "source_applicability": {
+          "market": "US",
+          "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+          "publisher_jurisdiction": "US",
+          "applicability_scope": "model_year",
+          "unknown_fields": {}
+        },
+        "publication_revision": null,
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "assertions": [
+          {
+            "assertion_id": "model_code",
+            "attribute_key": "source_model_code",
+            "raw_value": "JLJL74",
+            "source_context": "PDF page 2; manufacturer model-code heading, same original location as predecessor assertion JL20-16-MY2020-JL-4D-2019-11-13/JL20-16-MY2020-JL-4D-2019-11-13-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+          }
+        ]
+      },
+      "candidate_references": [
+        "JL20-16",
+        "JL20-17",
+        "JL20-18",
+        "JL20-19",
+        "JL20-36",
+        "JL20-37",
+        "JL20-38",
+        "JL20-39",
+        "JL20-40",
+        "JL20-41",
+        "JL20-42",
+        "JL20-43",
+        "JL20-44",
+        "JL20-45",
+        "JL20-46",
+        "JL20-47",
+        "JL20-48",
+        "JL20-49"
+      ],
+      "source_page": 2,
+      "predecessor_raw_hash": "sha256:10a10527d9432fb35eedad59cea46c6bea242e4d2b99999281556131281b622e",
+      "manufacturer_fact_unchanged": true
+    },
+    {
+      "key": [
+        "MY2020-JL-4D-2019-11-13",
+        "source_model_code",
+        "model_code",
+        "JLJP74"
+      ],
+      "assertion_set": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/selectors/MY2020-JL-4D-2019-11-13-JLJP74-shared-selector-r1.source_assertion_set.json",
+      "artifact_sha256": "sha256:3497ef5a60a5f430466ec44cff4d6e23beb020ff9c0f8369178bb87b89665940",
+      "document": {
+        "source_id": "MY2020-JL-4D-2019-11-13",
+        "raw_artifact_hash": "sha256:10a10527d9432fb35eedad59cea46c6bea242e4d2b99999281556131281b622e",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/4 Door 11-13-19.pdf",
+        "extractor_id": "my2020_shared_model_code_selector",
+        "extractor_version": "1.0.0",
+        "extraction_mode": "manually_verified_transcription",
+        "assertion_set_id": "MY2020-JL-4D-2019-11-13-JLJP74-shared-selector-r1",
+        "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-11-13-19-pdf.255141/",
+        "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+        "source_applicability": {
+          "market": "US",
+          "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+          "publisher_jurisdiction": "US",
+          "applicability_scope": "model_year",
+          "unknown_fields": {}
+        },
+        "publication_revision": null,
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "assertions": [
+          {
+            "assertion_id": "model_code",
+            "attribute_key": "source_model_code",
+            "raw_value": "JLJP74",
+            "source_context": "PDF page 7; manufacturer model-code heading, same original location as predecessor assertion JL20-20-MY2020-JL-4D-2019-11-13/JL20-20-MY2020-JL-4D-2019-11-13-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+          }
+        ]
+      },
+      "candidate_references": [
+        "JL20-20",
+        "JL20-25",
+        "JL20-26",
+        "JL20-27",
+        "JL20-28",
+        "JL20-29",
+        "JL20-30",
+        "JL20-31",
+        "JL20-32"
+      ],
+      "source_page": 7,
+      "predecessor_raw_hash": "sha256:10a10527d9432fb35eedad59cea46c6bea242e4d2b99999281556131281b622e",
+      "manufacturer_fact_unchanged": true
+    },
+    {
+      "key": [
+        "MY2020-JL-4D-2019-11-13",
+        "source_model_code",
+        "model_code",
+        "JLJS74"
+      ],
+      "assertion_set": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/selectors/MY2020-JL-4D-2019-11-13-JLJS74-shared-selector-r1.source_assertion_set.json",
+      "artifact_sha256": "sha256:91de909497751b2ab11656e4eea0ec25729e95c06ea90c5b7d85730dfd8f3538",
+      "document": {
+        "source_id": "MY2020-JL-4D-2019-11-13",
+        "raw_artifact_hash": "sha256:10a10527d9432fb35eedad59cea46c6bea242e4d2b99999281556131281b622e",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/4 Door 11-13-19.pdf",
+        "extractor_id": "my2020_shared_model_code_selector",
+        "extractor_version": "1.0.0",
+        "extraction_mode": "manually_verified_transcription",
+        "assertion_set_id": "MY2020-JL-4D-2019-11-13-JLJS74-shared-selector-r1",
+        "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-11-13-19-pdf.255141/",
+        "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+        "source_applicability": {
+          "market": "US",
+          "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+          "publisher_jurisdiction": "US",
+          "applicability_scope": "model_year",
+          "unknown_fields": {}
+        },
+        "publication_revision": null,
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "assertions": [
+          {
+            "assertion_id": "model_code",
+            "attribute_key": "source_model_code",
+            "raw_value": "JLJS74",
+            "source_context": "PDF page 12; manufacturer model-code heading, same original location as predecessor assertion JL20-21-MY2020-JL-4D-2019-11-13/JL20-21-MY2020-JL-4D-2019-11-13-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+          }
+        ]
+      },
+      "candidate_references": [
+        "JL20-21",
+        "JL20-22",
+        "JL20-23"
+      ],
+      "source_page": 12,
+      "predecessor_raw_hash": "sha256:10a10527d9432fb35eedad59cea46c6bea242e4d2b99999281556131281b622e",
+      "manufacturer_fact_unchanged": true
+    },
+    {
+      "key": [
+        "MY2020-JL-4D-2019-12-03",
+        "source_model_code",
+        "model_code",
+        "JLJL74"
+      ],
+      "assertion_set": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/selectors/MY2020-JL-4D-2019-12-03-JLJL74-shared-selector-r1.source_assertion_set.json",
+      "artifact_sha256": "sha256:ae4cf0bd009db4f0014c28a5b93b698f0b09618ee28e130bcc8868e7defc6915",
+      "document": {
+        "source_id": "MY2020-JL-4D-2019-12-03",
+        "raw_artifact_hash": "sha256:b8f9612aa2abc2e6d79675e02fab8888b484a670aa4ab02fe2b4f483a8afd350",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/4 Door 12-3-19.pdf",
+        "extractor_id": "my2020_shared_model_code_selector",
+        "extractor_version": "1.0.0",
+        "extraction_mode": "manually_verified_transcription",
+        "assertion_set_id": "MY2020-JL-4D-2019-12-03-JLJL74-shared-selector-r1",
+        "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-12-3-19-pdf.261313/",
+        "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+        "source_applicability": {
+          "market": "US",
+          "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+          "publisher_jurisdiction": "US",
+          "applicability_scope": "model_year",
+          "unknown_fields": {}
+        },
+        "publication_revision": null,
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "assertions": [
+          {
+            "assertion_id": "model_code",
+            "attribute_key": "source_model_code",
+            "raw_value": "JLJL74",
+            "source_context": "PDF page 2; manufacturer model-code heading, same original location as predecessor assertion JL20-16-MY2020-JL-4D-2019-12-03/JL20-16-MY2020-JL-4D-2019-12-03-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+          }
+        ]
+      },
+      "candidate_references": [
+        "JL20-16",
+        "JL20-17",
+        "JL20-18",
+        "JL20-19",
+        "JL20-36",
+        "JL20-37",
+        "JL20-38",
+        "JL20-39",
+        "JL20-40",
+        "JL20-41",
+        "JL20-42",
+        "JL20-43",
+        "JL20-44",
+        "JL20-45",
+        "JL20-46",
+        "JL20-47",
+        "JL20-48",
+        "JL20-49"
+      ],
+      "source_page": 2,
+      "predecessor_raw_hash": "sha256:b8f9612aa2abc2e6d79675e02fab8888b484a670aa4ab02fe2b4f483a8afd350",
+      "manufacturer_fact_unchanged": true
+    },
+    {
+      "key": [
+        "MY2020-JL-4D-2019-12-03",
+        "source_model_code",
+        "model_code",
+        "JLJP74"
+      ],
+      "assertion_set": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/selectors/MY2020-JL-4D-2019-12-03-JLJP74-shared-selector-r1.source_assertion_set.json",
+      "artifact_sha256": "sha256:0e01f3113e62e093851870affa4337104c2b3aa59f1816ea9c7dbf9416e99e28",
+      "document": {
+        "source_id": "MY2020-JL-4D-2019-12-03",
+        "raw_artifact_hash": "sha256:b8f9612aa2abc2e6d79675e02fab8888b484a670aa4ab02fe2b4f483a8afd350",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/4 Door 12-3-19.pdf",
+        "extractor_id": "my2020_shared_model_code_selector",
+        "extractor_version": "1.0.0",
+        "extraction_mode": "manually_verified_transcription",
+        "assertion_set_id": "MY2020-JL-4D-2019-12-03-JLJP74-shared-selector-r1",
+        "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-12-3-19-pdf.261313/",
+        "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+        "source_applicability": {
+          "market": "US",
+          "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+          "publisher_jurisdiction": "US",
+          "applicability_scope": "model_year",
+          "unknown_fields": {}
+        },
+        "publication_revision": null,
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "assertions": [
+          {
+            "assertion_id": "model_code",
+            "attribute_key": "source_model_code",
+            "raw_value": "JLJP74",
+            "source_context": "PDF page 7; manufacturer model-code heading, same original location as predecessor assertion JL20-20-MY2020-JL-4D-2019-12-03/JL20-20-MY2020-JL-4D-2019-12-03-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+          }
+        ]
+      },
+      "candidate_references": [
+        "JL20-20",
+        "JL20-25",
+        "JL20-26",
+        "JL20-27",
+        "JL20-28",
+        "JL20-29",
+        "JL20-30",
+        "JL20-31",
+        "JL20-32"
+      ],
+      "source_page": 7,
+      "predecessor_raw_hash": "sha256:b8f9612aa2abc2e6d79675e02fab8888b484a670aa4ab02fe2b4f483a8afd350",
+      "manufacturer_fact_unchanged": true
+    },
+    {
+      "key": [
+        "MY2020-JL-4D-2019-12-03",
+        "source_model_code",
+        "model_code",
+        "JLJS74"
+      ],
+      "assertion_set": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/selectors/MY2020-JL-4D-2019-12-03-JLJS74-shared-selector-r1.source_assertion_set.json",
+      "artifact_sha256": "sha256:2357c92594108a8f7c30a5a82aac4bf2bb53121ebd5ddea6804782242854a4a8",
+      "document": {
+        "source_id": "MY2020-JL-4D-2019-12-03",
+        "raw_artifact_hash": "sha256:b8f9612aa2abc2e6d79675e02fab8888b484a670aa4ab02fe2b4f483a8afd350",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/4 Door 12-3-19.pdf",
+        "extractor_id": "my2020_shared_model_code_selector",
+        "extractor_version": "1.0.0",
+        "extraction_mode": "manually_verified_transcription",
+        "assertion_set_id": "MY2020-JL-4D-2019-12-03-JLJS74-shared-selector-r1",
+        "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-12-3-19-pdf.261313/",
+        "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+        "source_applicability": {
+          "market": "US",
+          "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+          "publisher_jurisdiction": "US",
+          "applicability_scope": "model_year",
+          "unknown_fields": {}
+        },
+        "publication_revision": null,
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "assertions": [
+          {
+            "assertion_id": "model_code",
+            "attribute_key": "source_model_code",
+            "raw_value": "JLJS74",
+            "source_context": "PDF page 12; manufacturer model-code heading, same original location as predecessor assertion JL20-21-MY2020-JL-4D-2019-12-03/JL20-21-MY2020-JL-4D-2019-12-03-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+          }
+        ]
+      },
+      "candidate_references": [
+        "JL20-21",
+        "JL20-22",
+        "JL20-23"
+      ],
+      "source_page": 12,
+      "predecessor_raw_hash": "sha256:b8f9612aa2abc2e6d79675e02fab8888b484a670aa4ab02fe2b4f483a8afd350",
+      "manufacturer_fact_unchanged": true
+    },
+    {
+      "key": [
+        "MY2020-JL-4D-2020-01-02",
+        "source_model_code",
+        "model_code",
+        "JLJL74"
+      ],
+      "assertion_set": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/selectors/MY2020-JL-4D-2020-01-02-JLJL74-shared-selector-r1.source_assertion_set.json",
+      "artifact_sha256": "sha256:cb2c22022a18cd384b2888b3bf0bd83f553755faeafde286a191918dcf1ec45d",
+      "document": {
+        "source_id": "MY2020-JL-4D-2020-01-02",
+        "raw_artifact_hash": "sha256:e9cf3ec4f9a641272b9c0c1da87b98277eaebb30d4a4ef3fd2b05dd970815c65",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/4 Door 1-2-20.pdf",
+        "extractor_id": "my2020_shared_model_code_selector",
+        "extractor_version": "1.0.0",
+        "extraction_mode": "manually_verified_transcription",
+        "assertion_set_id": "MY2020-JL-4D-2020-01-02-JLJL74-shared-selector-r1",
+        "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-1-2-20-pdf.268620/",
+        "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+        "source_applicability": {
+          "market": "US",
+          "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+          "publisher_jurisdiction": "US",
+          "applicability_scope": "model_year",
+          "unknown_fields": {}
+        },
+        "publication_revision": null,
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "assertions": [
+          {
+            "assertion_id": "model_code",
+            "attribute_key": "source_model_code",
+            "raw_value": "JLJL74",
+            "source_context": "PDF page 2; manufacturer model-code heading, same original location as predecessor assertion JL20-16-MY2020-JL-4D-2020-01-02/JL20-16-MY2020-JL-4D-2020-01-02-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+          }
+        ]
+      },
+      "candidate_references": [
+        "JL20-16",
+        "JL20-17",
+        "JL20-18",
+        "JL20-19",
+        "JL20-36",
+        "JL20-37",
+        "JL20-38",
+        "JL20-39",
+        "JL20-40",
+        "JL20-41",
+        "JL20-42",
+        "JL20-43",
+        "JL20-44",
+        "JL20-45",
+        "JL20-46",
+        "JL20-47",
+        "JL20-48",
+        "JL20-49"
+      ],
+      "source_page": 2,
+      "predecessor_raw_hash": "sha256:e9cf3ec4f9a641272b9c0c1da87b98277eaebb30d4a4ef3fd2b05dd970815c65",
+      "manufacturer_fact_unchanged": true
+    },
+    {
+      "key": [
+        "MY2020-JL-4D-2020-01-02",
+        "source_model_code",
+        "model_code",
+        "JLJP74"
+      ],
+      "assertion_set": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/selectors/MY2020-JL-4D-2020-01-02-JLJP74-shared-selector-r1.source_assertion_set.json",
+      "artifact_sha256": "sha256:6e648a6b62cd48ed353ed00b746824e620489518c9a0ac059fede30dbe242121",
+      "document": {
+        "source_id": "MY2020-JL-4D-2020-01-02",
+        "raw_artifact_hash": "sha256:e9cf3ec4f9a641272b9c0c1da87b98277eaebb30d4a4ef3fd2b05dd970815c65",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/4 Door 1-2-20.pdf",
+        "extractor_id": "my2020_shared_model_code_selector",
+        "extractor_version": "1.0.0",
+        "extraction_mode": "manually_verified_transcription",
+        "assertion_set_id": "MY2020-JL-4D-2020-01-02-JLJP74-shared-selector-r1",
+        "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-1-2-20-pdf.268620/",
+        "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+        "source_applicability": {
+          "market": "US",
+          "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+          "publisher_jurisdiction": "US",
+          "applicability_scope": "model_year",
+          "unknown_fields": {}
+        },
+        "publication_revision": null,
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "assertions": [
+          {
+            "assertion_id": "model_code",
+            "attribute_key": "source_model_code",
+            "raw_value": "JLJP74",
+            "source_context": "PDF page 7; manufacturer model-code heading, same original location as predecessor assertion JL20-20-MY2020-JL-4D-2020-01-02/JL20-20-MY2020-JL-4D-2020-01-02-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+          }
+        ]
+      },
+      "candidate_references": [
+        "JL20-20",
+        "JL20-25",
+        "JL20-26",
+        "JL20-27",
+        "JL20-28",
+        "JL20-29",
+        "JL20-30",
+        "JL20-31",
+        "JL20-32"
+      ],
+      "source_page": 7,
+      "predecessor_raw_hash": "sha256:e9cf3ec4f9a641272b9c0c1da87b98277eaebb30d4a4ef3fd2b05dd970815c65",
+      "manufacturer_fact_unchanged": true
+    },
+    {
+      "key": [
+        "MY2020-JL-4D-2020-01-02",
+        "source_model_code",
+        "model_code",
+        "JLJS74"
+      ],
+      "assertion_set": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/selectors/MY2020-JL-4D-2020-01-02-JLJS74-shared-selector-r1.source_assertion_set.json",
+      "artifact_sha256": "sha256:2136c6fd276cde5f8b1cc33b1e0b1995ff1a28129ac7ba072cd09f7d0d58e955",
+      "document": {
+        "source_id": "MY2020-JL-4D-2020-01-02",
+        "raw_artifact_hash": "sha256:e9cf3ec4f9a641272b9c0c1da87b98277eaebb30d4a4ef3fd2b05dd970815c65",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/4 Door 1-2-20.pdf",
+        "extractor_id": "my2020_shared_model_code_selector",
+        "extractor_version": "1.0.0",
+        "extraction_mode": "manually_verified_transcription",
+        "assertion_set_id": "MY2020-JL-4D-2020-01-02-JLJS74-shared-selector-r1",
+        "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-1-2-20-pdf.268620/",
+        "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+        "source_applicability": {
+          "market": "US",
+          "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+          "publisher_jurisdiction": "US",
+          "applicability_scope": "model_year",
+          "unknown_fields": {}
+        },
+        "publication_revision": null,
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "assertions": [
+          {
+            "assertion_id": "model_code",
+            "attribute_key": "source_model_code",
+            "raw_value": "JLJS74",
+            "source_context": "PDF page 12; manufacturer model-code heading, same original location as predecessor assertion JL20-21-MY2020-JL-4D-2020-01-02/JL20-21-MY2020-JL-4D-2020-01-02-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+          }
+        ]
+      },
+      "candidate_references": [
+        "JL20-21",
+        "JL20-22",
+        "JL20-23",
+        "JL20-24"
+      ],
+      "source_page": 12,
+      "predecessor_raw_hash": "sha256:e9cf3ec4f9a641272b9c0c1da87b98277eaebb30d4a4ef3fd2b05dd970815c65",
+      "manufacturer_fact_unchanged": true
+    },
+    {
+      "key": [
+        "MY2020-JL-4D-2020-01-23",
+        "source_model_code",
+        "model_code",
+        "JLJL74"
+      ],
+      "assertion_set": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/selectors/MY2020-JL-4D-2020-01-23-JLJL74-shared-selector-r1.source_assertion_set.json",
+      "artifact_sha256": "sha256:4298a71010c8d7a8ffdc674ece41a1b9613104273604f086508d58da99f07e44",
+      "document": {
+        "source_id": "MY2020-JL-4D-2020-01-23",
+        "raw_artifact_hash": "sha256:6ddd581307efa07a282589dcefced72c2d8f967bdddd0c7c3bd0b8cda69b38bb",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/4 Door 1-23-20.pdf",
+        "extractor_id": "my2020_shared_model_code_selector",
+        "extractor_version": "1.0.0",
+        "extraction_mode": "manually_verified_transcription",
+        "assertion_set_id": "MY2020-JL-4D-2020-01-23-JLJL74-shared-selector-r1",
+        "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-1-23-20-pdf.275367/",
+        "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+        "source_applicability": {
+          "market": "US",
+          "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+          "publisher_jurisdiction": "US",
+          "applicability_scope": "model_year",
+          "unknown_fields": {}
+        },
+        "publication_revision": null,
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "assertions": [
+          {
+            "assertion_id": "model_code",
+            "attribute_key": "source_model_code",
+            "raw_value": "JLJL74",
+            "source_context": "PDF page 2; manufacturer model-code heading, same original location as predecessor assertion JL20-16-MY2020-JL-4D-2020-01-23/JL20-16-MY2020-JL-4D-2020-01-23-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+          }
+        ]
+      },
+      "candidate_references": [
+        "JL20-16",
+        "JL20-17",
+        "JL20-18",
+        "JL20-19",
+        "JL20-36",
+        "JL20-37",
+        "JL20-38",
+        "JL20-39",
+        "JL20-40",
+        "JL20-41",
+        "JL20-42",
+        "JL20-43",
+        "JL20-44",
+        "JL20-45",
+        "JL20-46",
+        "JL20-47",
+        "JL20-48",
+        "JL20-49"
+      ],
+      "source_page": 2,
+      "predecessor_raw_hash": "sha256:6ddd581307efa07a282589dcefced72c2d8f967bdddd0c7c3bd0b8cda69b38bb",
+      "manufacturer_fact_unchanged": true
+    },
+    {
+      "key": [
+        "MY2020-JL-4D-2020-01-23",
+        "source_model_code",
+        "model_code",
+        "JLJP74"
+      ],
+      "assertion_set": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/selectors/MY2020-JL-4D-2020-01-23-JLJP74-shared-selector-r1.source_assertion_set.json",
+      "artifact_sha256": "sha256:8a70b92e1c69ff7651194b3ce3323ed2da16ff57fc9583fea75aff3c63c7a0cb",
+      "document": {
+        "source_id": "MY2020-JL-4D-2020-01-23",
+        "raw_artifact_hash": "sha256:6ddd581307efa07a282589dcefced72c2d8f967bdddd0c7c3bd0b8cda69b38bb",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/4 Door 1-23-20.pdf",
+        "extractor_id": "my2020_shared_model_code_selector",
+        "extractor_version": "1.0.0",
+        "extraction_mode": "manually_verified_transcription",
+        "assertion_set_id": "MY2020-JL-4D-2020-01-23-JLJP74-shared-selector-r1",
+        "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-1-23-20-pdf.275367/",
+        "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+        "source_applicability": {
+          "market": "US",
+          "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+          "publisher_jurisdiction": "US",
+          "applicability_scope": "model_year",
+          "unknown_fields": {}
+        },
+        "publication_revision": null,
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "assertions": [
+          {
+            "assertion_id": "model_code",
+            "attribute_key": "source_model_code",
+            "raw_value": "JLJP74",
+            "source_context": "PDF page 7; manufacturer model-code heading, same original location as predecessor assertion JL20-20-MY2020-JL-4D-2020-01-23/JL20-20-MY2020-JL-4D-2020-01-23-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+          }
+        ]
+      },
+      "candidate_references": [
+        "JL20-20",
+        "JL20-25",
+        "JL20-26",
+        "JL20-27",
+        "JL20-28",
+        "JL20-29",
+        "JL20-30",
+        "JL20-31",
+        "JL20-32"
+      ],
+      "source_page": 7,
+      "predecessor_raw_hash": "sha256:6ddd581307efa07a282589dcefced72c2d8f967bdddd0c7c3bd0b8cda69b38bb",
+      "manufacturer_fact_unchanged": true
+    },
+    {
+      "key": [
+        "MY2020-JL-4D-2020-01-23",
+        "source_model_code",
+        "model_code",
+        "JLJS74"
+      ],
+      "assertion_set": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/selectors/MY2020-JL-4D-2020-01-23-JLJS74-shared-selector-r1.source_assertion_set.json",
+      "artifact_sha256": "sha256:e8c9dd96c4d417169abdf71af8a4419d72f0f540c6f42cfd7d41606bd5e8a998",
+      "document": {
+        "source_id": "MY2020-JL-4D-2020-01-23",
+        "raw_artifact_hash": "sha256:6ddd581307efa07a282589dcefced72c2d8f967bdddd0c7c3bd0b8cda69b38bb",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/4 Door 1-23-20.pdf",
+        "extractor_id": "my2020_shared_model_code_selector",
+        "extractor_version": "1.0.0",
+        "extraction_mode": "manually_verified_transcription",
+        "assertion_set_id": "MY2020-JL-4D-2020-01-23-JLJS74-shared-selector-r1",
+        "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-1-23-20-pdf.275367/",
+        "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+        "source_applicability": {
+          "market": "US",
+          "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+          "publisher_jurisdiction": "US",
+          "applicability_scope": "model_year",
+          "unknown_fields": {}
+        },
+        "publication_revision": null,
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "assertions": [
+          {
+            "assertion_id": "model_code",
+            "attribute_key": "source_model_code",
+            "raw_value": "JLJS74",
+            "source_context": "PDF page 12; manufacturer model-code heading, same original location as predecessor assertion JL20-21-MY2020-JL-4D-2020-01-23/JL20-21-MY2020-JL-4D-2020-01-23-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+          }
+        ]
+      },
+      "candidate_references": [
+        "JL20-21",
+        "JL20-22",
+        "JL20-23",
+        "JL20-24"
+      ],
+      "source_page": 12,
+      "predecessor_raw_hash": "sha256:6ddd581307efa07a282589dcefced72c2d8f967bdddd0c7c3bd0b8cda69b38bb",
+      "manufacturer_fact_unchanged": true
+    },
+    {
+      "key": [
+        "MY2020-JL-4D-2020-02-11",
+        "source_model_code",
+        "model_code",
+        "JLJL74"
+      ],
+      "assertion_set": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/selectors/MY2020-JL-4D-2020-02-11-JLJL74-shared-selector-r1.source_assertion_set.json",
+      "artifact_sha256": "sha256:38a8483b17d66d543c657df4174d0dad72a487f89d3c3f3143efe29324847d2a",
+      "document": {
+        "source_id": "MY2020-JL-4D-2020-02-11",
+        "raw_artifact_hash": "sha256:787cbb6cd3d08a271f70be106fff7ec0709e2541c79930cb4c3a559c4d164578",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/4 Door 2-11-20.pdf",
+        "extractor_id": "my2020_shared_model_code_selector",
+        "extractor_version": "1.0.0",
+        "extraction_mode": "manually_verified_transcription",
+        "assertion_set_id": "MY2020-JL-4D-2020-02-11-JLJL74-shared-selector-r1",
+        "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-2-11-20-pdf.281242/",
+        "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+        "source_applicability": {
+          "market": "US",
+          "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+          "publisher_jurisdiction": "US",
+          "applicability_scope": "model_year",
+          "unknown_fields": {}
+        },
+        "publication_revision": null,
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "assertions": [
+          {
+            "assertion_id": "model_code",
+            "attribute_key": "source_model_code",
+            "raw_value": "JLJL74",
+            "source_context": "PDF page 2; manufacturer model-code heading, same original location as predecessor assertion JL20-16-MY2020-JL-4D-2020-02-11/JL20-16-MY2020-JL-4D-2020-02-11-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+          }
+        ]
+      },
+      "candidate_references": [
+        "JL20-16",
+        "JL20-17",
+        "JL20-18",
+        "JL20-19",
+        "JL20-36",
+        "JL20-37",
+        "JL20-38",
+        "JL20-39",
+        "JL20-40",
+        "JL20-41",
+        "JL20-42",
+        "JL20-43",
+        "JL20-44",
+        "JL20-45",
+        "JL20-46",
+        "JL20-47",
+        "JL20-48",
+        "JL20-49"
+      ],
+      "source_page": 2,
+      "predecessor_raw_hash": "sha256:787cbb6cd3d08a271f70be106fff7ec0709e2541c79930cb4c3a559c4d164578",
+      "manufacturer_fact_unchanged": true
+    },
+    {
+      "key": [
+        "MY2020-JL-4D-2020-02-11",
+        "source_model_code",
+        "model_code",
+        "JLJP74"
+      ],
+      "assertion_set": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/selectors/MY2020-JL-4D-2020-02-11-JLJP74-shared-selector-r1.source_assertion_set.json",
+      "artifact_sha256": "sha256:4b97be07625175c2c181560d504caed3f713ff69d5c5e0a87f013c6b9a2326d2",
+      "document": {
+        "source_id": "MY2020-JL-4D-2020-02-11",
+        "raw_artifact_hash": "sha256:787cbb6cd3d08a271f70be106fff7ec0709e2541c79930cb4c3a559c4d164578",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/4 Door 2-11-20.pdf",
+        "extractor_id": "my2020_shared_model_code_selector",
+        "extractor_version": "1.0.0",
+        "extraction_mode": "manually_verified_transcription",
+        "assertion_set_id": "MY2020-JL-4D-2020-02-11-JLJP74-shared-selector-r1",
+        "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-2-11-20-pdf.281242/",
+        "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+        "source_applicability": {
+          "market": "US",
+          "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+          "publisher_jurisdiction": "US",
+          "applicability_scope": "model_year",
+          "unknown_fields": {}
+        },
+        "publication_revision": null,
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "assertions": [
+          {
+            "assertion_id": "model_code",
+            "attribute_key": "source_model_code",
+            "raw_value": "JLJP74",
+            "source_context": "PDF page 7; manufacturer model-code heading, same original location as predecessor assertion JL20-20-MY2020-JL-4D-2020-02-11/JL20-20-MY2020-JL-4D-2020-02-11-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+          }
+        ]
+      },
+      "candidate_references": [
+        "JL20-20",
+        "JL20-25",
+        "JL20-26",
+        "JL20-27",
+        "JL20-28",
+        "JL20-29",
+        "JL20-30",
+        "JL20-31",
+        "JL20-32"
+      ],
+      "source_page": 7,
+      "predecessor_raw_hash": "sha256:787cbb6cd3d08a271f70be106fff7ec0709e2541c79930cb4c3a559c4d164578",
+      "manufacturer_fact_unchanged": true
+    },
+    {
+      "key": [
+        "MY2020-JL-4D-2020-02-11",
+        "source_model_code",
+        "model_code",
+        "JLJS74"
+      ],
+      "assertion_set": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/selectors/MY2020-JL-4D-2020-02-11-JLJS74-shared-selector-r1.source_assertion_set.json",
+      "artifact_sha256": "sha256:a823c41c5c19fbd7740f23b267be40109a5cf1435b5e62d988d5d2c8ae887d3a",
+      "document": {
+        "source_id": "MY2020-JL-4D-2020-02-11",
+        "raw_artifact_hash": "sha256:787cbb6cd3d08a271f70be106fff7ec0709e2541c79930cb4c3a559c4d164578",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/4 Door 2-11-20.pdf",
+        "extractor_id": "my2020_shared_model_code_selector",
+        "extractor_version": "1.0.0",
+        "extraction_mode": "manually_verified_transcription",
+        "assertion_set_id": "MY2020-JL-4D-2020-02-11-JLJS74-shared-selector-r1",
+        "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-2-11-20-pdf.281242/",
+        "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+        "source_applicability": {
+          "market": "US",
+          "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+          "publisher_jurisdiction": "US",
+          "applicability_scope": "model_year",
+          "unknown_fields": {}
+        },
+        "publication_revision": null,
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "assertions": [
+          {
+            "assertion_id": "model_code",
+            "attribute_key": "source_model_code",
+            "raw_value": "JLJS74",
+            "source_context": "PDF page 11; manufacturer model-code heading, same original location as predecessor assertion JL20-21-MY2020-JL-4D-2020-02-11/JL20-21-MY2020-JL-4D-2020-02-11-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+          }
+        ]
+      },
+      "candidate_references": [
+        "JL20-21",
+        "JL20-22",
+        "JL20-23",
+        "JL20-24"
+      ],
+      "source_page": 11,
+      "predecessor_raw_hash": "sha256:787cbb6cd3d08a271f70be106fff7ec0709e2541c79930cb4c3a559c4d164578",
+      "manufacturer_fact_unchanged": true
+    },
+    {
+      "key": [
+        "MY2020-JL-4D-2020-03-03",
+        "source_model_code",
+        "model_code",
+        "JLJL74"
+      ],
+      "assertion_set": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/selectors/MY2020-JL-4D-2020-03-03-JLJL74-shared-selector-r1.source_assertion_set.json",
+      "artifact_sha256": "sha256:6afec58f086c5cdd44743a45fe80a840d76dc28acbf316eac0437f0c4d0f330f",
+      "document": {
+        "source_id": "MY2020-JL-4D-2020-03-03",
+        "raw_artifact_hash": "sha256:b9a2b88de8cf857b845950fec682b460396d802327e12587697da667f69ba731",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/4 Door 3-3-20.pdf",
+        "extractor_id": "my2020_shared_model_code_selector",
+        "extractor_version": "1.0.0",
+        "extraction_mode": "manually_verified_transcription",
+        "assertion_set_id": "MY2020-JL-4D-2020-03-03-JLJL74-shared-selector-r1",
+        "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-3-3-20-pdf.288452/",
+        "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+        "source_applicability": {
+          "market": "US",
+          "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+          "publisher_jurisdiction": "US",
+          "applicability_scope": "model_year",
+          "unknown_fields": {}
+        },
+        "publication_revision": null,
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "assertions": [
+          {
+            "assertion_id": "model_code",
+            "attribute_key": "source_model_code",
+            "raw_value": "JLJL74",
+            "source_context": "PDF page 2; manufacturer model-code heading, same original location as predecessor assertion JL20-16-MY2020-JL-4D-2020-03-03/JL20-16-MY2020-JL-4D-2020-03-03-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+          }
+        ]
+      },
+      "candidate_references": [
+        "JL20-16",
+        "JL20-17",
+        "JL20-18",
+        "JL20-19",
+        "JL20-36",
+        "JL20-37",
+        "JL20-38",
+        "JL20-39",
+        "JL20-40",
+        "JL20-41",
+        "JL20-42",
+        "JL20-43",
+        "JL20-44",
+        "JL20-45",
+        "JL20-46",
+        "JL20-47",
+        "JL20-48",
+        "JL20-49"
+      ],
+      "source_page": 2,
+      "predecessor_raw_hash": "sha256:b9a2b88de8cf857b845950fec682b460396d802327e12587697da667f69ba731",
+      "manufacturer_fact_unchanged": true
+    },
+    {
+      "key": [
+        "MY2020-JL-4D-2020-03-03",
+        "source_model_code",
+        "model_code",
+        "JLJP74"
+      ],
+      "assertion_set": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/selectors/MY2020-JL-4D-2020-03-03-JLJP74-shared-selector-r1.source_assertion_set.json",
+      "artifact_sha256": "sha256:20b8ad15048f36e048905280b10cdd6238856313e3c0eb2db0637a0823803df9",
+      "document": {
+        "source_id": "MY2020-JL-4D-2020-03-03",
+        "raw_artifact_hash": "sha256:b9a2b88de8cf857b845950fec682b460396d802327e12587697da667f69ba731",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/4 Door 3-3-20.pdf",
+        "extractor_id": "my2020_shared_model_code_selector",
+        "extractor_version": "1.0.0",
+        "extraction_mode": "manually_verified_transcription",
+        "assertion_set_id": "MY2020-JL-4D-2020-03-03-JLJP74-shared-selector-r1",
+        "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-3-3-20-pdf.288452/",
+        "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+        "source_applicability": {
+          "market": "US",
+          "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+          "publisher_jurisdiction": "US",
+          "applicability_scope": "model_year",
+          "unknown_fields": {}
+        },
+        "publication_revision": null,
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "assertions": [
+          {
+            "assertion_id": "model_code",
+            "attribute_key": "source_model_code",
+            "raw_value": "JLJP74",
+            "source_context": "PDF page 7; manufacturer model-code heading, same original location as predecessor assertion JL20-20-MY2020-JL-4D-2020-03-03/JL20-20-MY2020-JL-4D-2020-03-03-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+          }
+        ]
+      },
+      "candidate_references": [
+        "JL20-20",
+        "JL20-25",
+        "JL20-26",
+        "JL20-27",
+        "JL20-28",
+        "JL20-29",
+        "JL20-30",
+        "JL20-31",
+        "JL20-32",
+        "JL20-33",
+        "JL20-34",
+        "JL20-35"
+      ],
+      "source_page": 7,
+      "predecessor_raw_hash": "sha256:b9a2b88de8cf857b845950fec682b460396d802327e12587697da667f69ba731",
+      "manufacturer_fact_unchanged": true
+    },
+    {
+      "key": [
+        "MY2020-JL-4D-2020-03-03",
+        "source_model_code",
+        "model_code",
+        "JLJS74"
+      ],
+      "assertion_set": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/selectors/MY2020-JL-4D-2020-03-03-JLJS74-shared-selector-r1.source_assertion_set.json",
+      "artifact_sha256": "sha256:5e6040385cea3020e086088016d43fe7eacc2eccf749283c595b14ef897ac802",
+      "document": {
+        "source_id": "MY2020-JL-4D-2020-03-03",
+        "raw_artifact_hash": "sha256:b9a2b88de8cf857b845950fec682b460396d802327e12587697da667f69ba731",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/4 Door 3-3-20.pdf",
+        "extractor_id": "my2020_shared_model_code_selector",
+        "extractor_version": "1.0.0",
+        "extraction_mode": "manually_verified_transcription",
+        "assertion_set_id": "MY2020-JL-4D-2020-03-03-JLJS74-shared-selector-r1",
+        "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-3-3-20-pdf.288452/",
+        "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+        "source_applicability": {
+          "market": "US",
+          "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+          "publisher_jurisdiction": "US",
+          "applicability_scope": "model_year",
+          "unknown_fields": {}
+        },
+        "publication_revision": null,
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "assertions": [
+          {
+            "assertion_id": "model_code",
+            "attribute_key": "source_model_code",
+            "raw_value": "JLJS74",
+            "source_context": "PDF page 12; manufacturer model-code heading, same original location as predecessor assertion JL20-21-MY2020-JL-4D-2020-03-03/JL20-21-MY2020-JL-4D-2020-03-03-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+          }
+        ]
+      },
+      "candidate_references": [
+        "JL20-21",
+        "JL20-22",
+        "JL20-23",
+        "JL20-24"
+      ],
+      "source_page": 12,
+      "predecessor_raw_hash": "sha256:b9a2b88de8cf857b845950fec682b460396d802327e12587697da667f69ba731",
+      "manufacturer_fact_unchanged": true
+    },
+    {
+      "key": [
+        "MY2020-JL-4D-2020-04-17",
+        "source_model_code",
+        "model_code",
+        "JLJL74"
+      ],
+      "assertion_set": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/selectors/MY2020-JL-4D-2020-04-17-JLJL74-shared-selector-r1.source_assertion_set.json",
+      "artifact_sha256": "sha256:ab5374ce34bcd3598525366cafe18f234426fb1edfe0fbe02e32866a180175d3",
+      "document": {
+        "source_id": "MY2020-JL-4D-2020-04-17",
+        "raw_artifact_hash": "sha256:7149fb0f83344865df93a8c6466439cc29f9993504b37738c0084721fec2f8fd",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/4 Door 4-17-20.pdf",
+        "extractor_id": "my2020_shared_model_code_selector",
+        "extractor_version": "1.0.0",
+        "extraction_mode": "manually_verified_transcription",
+        "assertion_set_id": "MY2020-JL-4D-2020-04-17-JLJL74-shared-selector-r1",
+        "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-4-17-20-pdf.312614/",
+        "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+        "source_applicability": {
+          "market": "US",
+          "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+          "publisher_jurisdiction": "US",
+          "applicability_scope": "model_year",
+          "unknown_fields": {}
+        },
+        "publication_revision": null,
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "assertions": [
+          {
+            "assertion_id": "model_code",
+            "attribute_key": "source_model_code",
+            "raw_value": "JLJL74",
+            "source_context": "PDF page 2; manufacturer model-code heading, same original location as predecessor assertion JL20-18-MY2020-JL-4D-2020-04-17/JL20-18-MY2020-JL-4D-2020-04-17-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+          }
+        ]
+      },
+      "candidate_references": [
+        "JL20-18",
+        "JL20-19",
+        "JL20-36",
+        "JL20-37",
+        "JL20-38",
+        "JL20-39",
+        "JL20-40",
+        "JL20-41",
+        "JL20-42",
+        "JL20-43",
+        "JL20-44",
+        "JL20-45",
+        "JL20-46",
+        "JL20-47",
+        "JL20-48",
+        "JL20-49"
+      ],
+      "source_page": 2,
+      "predecessor_raw_hash": "sha256:7149fb0f83344865df93a8c6466439cc29f9993504b37738c0084721fec2f8fd",
+      "manufacturer_fact_unchanged": true
+    },
+    {
+      "key": [
+        "MY2020-JL-4D-2020-04-17",
+        "source_model_code",
+        "model_code",
+        "JLJP74"
+      ],
+      "assertion_set": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/selectors/MY2020-JL-4D-2020-04-17-JLJP74-shared-selector-r1.source_assertion_set.json",
+      "artifact_sha256": "sha256:ee86fbf05c9d424d209b9d49be2e92a42dd910975ad1783d8d6421e1ae20e13c",
+      "document": {
+        "source_id": "MY2020-JL-4D-2020-04-17",
+        "raw_artifact_hash": "sha256:7149fb0f83344865df93a8c6466439cc29f9993504b37738c0084721fec2f8fd",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/4 Door 4-17-20.pdf",
+        "extractor_id": "my2020_shared_model_code_selector",
+        "extractor_version": "1.0.0",
+        "extraction_mode": "manually_verified_transcription",
+        "assertion_set_id": "MY2020-JL-4D-2020-04-17-JLJP74-shared-selector-r1",
+        "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-4-17-20-pdf.312614/",
+        "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+        "source_applicability": {
+          "market": "US",
+          "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+          "publisher_jurisdiction": "US",
+          "applicability_scope": "model_year",
+          "unknown_fields": {}
+        },
+        "publication_revision": null,
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "assertions": [
+          {
+            "assertion_id": "model_code",
+            "attribute_key": "source_model_code",
+            "raw_value": "JLJP74",
+            "source_context": "PDF page 7; manufacturer model-code heading, same original location as predecessor assertion JL20-20-MY2020-JL-4D-2020-04-17/JL20-20-MY2020-JL-4D-2020-04-17-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+          }
+        ]
+      },
+      "candidate_references": [
+        "JL20-20",
+        "JL20-25",
+        "JL20-26",
+        "JL20-27",
+        "JL20-28",
+        "JL20-29",
+        "JL20-30",
+        "JL20-31",
+        "JL20-32",
+        "JL20-33",
+        "JL20-34",
+        "JL20-35"
+      ],
+      "source_page": 7,
+      "predecessor_raw_hash": "sha256:7149fb0f83344865df93a8c6466439cc29f9993504b37738c0084721fec2f8fd",
+      "manufacturer_fact_unchanged": true
+    },
+    {
+      "key": [
+        "MY2020-JL-4D-2020-04-17",
+        "source_model_code",
+        "model_code",
+        "JLJS74"
+      ],
+      "assertion_set": "docs/implementation/handoffs/MY2020_JL/selector_packaging_repair_20261108/selectors/MY2020-JL-4D-2020-04-17-JLJS74-shared-selector-r1.source_assertion_set.json",
+      "artifact_sha256": "sha256:5e250b16f8d08883211df2072c3de9b7f79c97ea9b87f6e00c557ad9615e72da",
+      "document": {
+        "source_id": "MY2020-JL-4D-2020-04-17",
+        "raw_artifact_hash": "sha256:7149fb0f83344865df93a8c6466439cc29f9993504b37738c0084721fec2f8fd",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/4 Door 4-17-20.pdf",
+        "extractor_id": "my2020_shared_model_code_selector",
+        "extractor_version": "1.0.0",
+        "extraction_mode": "manually_verified_transcription",
+        "assertion_set_id": "MY2020-JL-4D-2020-04-17-JLJS74-shared-selector-r1",
+        "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-4-17-20-pdf.312614/",
+        "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+        "source_applicability": {
+          "market": "US",
+          "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+          "publisher_jurisdiction": "US",
+          "applicability_scope": "model_year",
+          "unknown_fields": {}
+        },
+        "publication_revision": null,
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "assertions": [
+          {
+            "assertion_id": "model_code",
+            "attribute_key": "source_model_code",
+            "raw_value": "JLJS74",
+            "source_context": "PDF page 12; manufacturer model-code heading, same original location as predecessor assertion JL20-21-MY2020-JL-4D-2020-04-17/JL20-21-MY2020-JL-4D-2020-04-17-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+          }
+        ]
+      },
+      "candidate_references": [
+        "JL20-21",
+        "JL20-22",
+        "JL20-24"
+      ],
+      "source_page": 12,
+      "predecessor_raw_hash": "sha256:7149fb0f83344865df93a8c6466439cc29f9993504b37738c0084721fec2f8fd",
+      "manufacturer_fact_unchanged": true
+    }
+  ]
+}

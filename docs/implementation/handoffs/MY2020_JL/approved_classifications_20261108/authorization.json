@@ -1,0 +1,659 @@
+{
+  "created_at": "2026-11-08T22:52:56.347359+00:00",
+  "authority": "Explicit project-owner approval in current task: MY2020 JL Approved Classifications and High Altitude Naming",
+  "human_director": "project_owner",
+  "scope": "Exactly60 reviewed field decisions on43 US MY2020 Wrangler JL candidates; three existing High Altitude naming revisions accepted as distinct marketed trims",
+  "approval_table": "docs/implementation/handoffs/MY2020_JL/evidence_resolution_20261108/owner_approval_table.json",
+  "approval_table_sha256": "sha256:c88c591d717827d6d5e71a9085af81e09848daf50edffe206c9162119f2815b6",
+  "review_manifest": "docs/implementation/handoffs/MY2020_JL/evidence_resolution_20261108/artifact_hashes.json",
+  "review_manifest_sha256": "sha256:c655078c2fc0b3d553cc3cc2176bb4f7ee7922441c9eaa01372a4b17612ea5a4",
+  "classification_proposal_bindings": [
+    {
+      "candidate": "JL20-01",
+      "engine_code": "EC1",
+      "fields": [
+        "electrification_type"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2020_JL/evidence_resolution_20261108/classification_proposals/JL20-01.evidence-r1.adjudication.1.1.proposed.json",
+      "adjudication_hash": "sha256:12d317dcb8ce52bdc17f40bf7527acac64c74251924b4e49380f25d21742726b",
+      "supersedes": {
+        "proposal": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/classification_proposals/JL20-01.adjudication.1.1.proposed.json",
+        "adjudication_hash": "sha256:5cd72db35e83036fcf6db4f5f61f328dabbc537ac57f078e9663562de98dd6ea"
+      },
+      "candidate_hash": "sha256:98c5cc75b4c55de3fd460ec080ac94f24f7b6cfb8a0cd0791d7628360c3fc080"
+    },
+    {
+      "candidate": "JL20-02",
+      "engine_code": "ERC",
+      "fields": [
+        "engine_aspiration",
+        "electrification_type"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2020_JL/evidence_resolution_20261108/classification_proposals/JL20-02.evidence-r1.adjudication.1.1.proposed.json",
+      "adjudication_hash": "sha256:bc5c054976b667c2c6f291674dae65f372007c0bce45aac6617ac6d7f8f75dce",
+      "supersedes": {
+        "proposal": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/classification_proposals/JL20-02.adjudication.1.1.proposed.json",
+        "adjudication_hash": "sha256:583d1c73bc2c16d7fd251b9a7b744d656301f2b2f1dcf3f554da6f6acc821e16"
+      },
+      "candidate_hash": "sha256:c8a7f09e7c5138fd72f75cf77626825de0f7839ab116ccfdfd8d23c5d14db714"
+    },
+    {
+      "candidate": "JL20-03",
+      "engine_code": "EC1",
+      "fields": [
+        "electrification_type"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2020_JL/evidence_resolution_20261108/classification_proposals/JL20-03.evidence-r1.adjudication.1.1.proposed.json",
+      "adjudication_hash": "sha256:06fded7723aff5226c66d2012447ddfd395d8ad1999247b71ed8fbce618ab481",
+      "supersedes": {
+        "proposal": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/classification_proposals/JL20-03.adjudication.1.1.proposed.json",
+        "adjudication_hash": "sha256:3e9138660d4c0f464841d85158b42934d459dce085dc775f325c48849d9410a4"
+      },
+      "candidate_hash": "sha256:82ae4b1f2e4710ec68dc6e8d47d49e313a316d045bf4edf768f915789519488c"
+    },
+    {
+      "candidate": "JL20-04",
+      "engine_code": "ERC",
+      "fields": [
+        "engine_aspiration",
+        "electrification_type"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2020_JL/evidence_resolution_20261108/classification_proposals/JL20-04.evidence-r1.adjudication.1.1.proposed.json",
+      "adjudication_hash": "sha256:e3f6a3b263050f83bd32a3c8e70a497e034515bf6c7b6ba7c6a6d1486bec5314",
+      "supersedes": {
+        "proposal": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/classification_proposals/JL20-04.adjudication.1.1.proposed.json",
+        "adjudication_hash": "sha256:bfda270217a66ac0325f820282db1b25a8bb7f6b0f4b6de4e2346da936bc370b"
+      },
+      "candidate_hash": "sha256:14168a7d097472d5ec8b05a34ac613731fdbd35e9d580385e7fad6248a135914"
+    },
+    {
+      "candidate": "JL20-05",
+      "engine_code": "EC1",
+      "fields": [
+        "electrification_type"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2020_JL/evidence_resolution_20261108/classification_proposals/JL20-05.evidence-r1.adjudication.1.1.proposed.json",
+      "adjudication_hash": "sha256:5cf2e3a540719dc9664b4e92fab67e2b6fe5e1b16bbf5394787cab68a9a0e06d",
+      "supersedes": {
+        "proposal": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/classification_proposals/JL20-05.adjudication.1.1.proposed.json",
+        "adjudication_hash": "sha256:0771dd7018ef4b6576f3d208c64b332cebdf506d989bde4dc5d7204b68f527e3"
+      },
+      "candidate_hash": "sha256:eb1047bae657e01116070c0d2ff52db2ed4ae6f696254ab9aed4c0fbbc0aae63"
+    },
+    {
+      "candidate": "JL20-06",
+      "engine_code": "ERC",
+      "fields": [
+        "engine_aspiration",
+        "electrification_type"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2020_JL/evidence_resolution_20261108/classification_proposals/JL20-06.evidence-r1.adjudication.1.1.proposed.json",
+      "adjudication_hash": "sha256:f0e007a440b5372abf86dee644c89cff7187db163bf1f19c2b811f7677212ef4",
+      "supersedes": {
+        "proposal": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/classification_proposals/JL20-06.adjudication.1.1.proposed.json",
+        "adjudication_hash": "sha256:e15b9893562b40be5e7ca66900a28339a7415103e43f2f7eb03ce2656345fc05"
+      },
+      "candidate_hash": "sha256:b4419e6fdcd85b2ab7dc6c646ce3f1ac2f7154f97eed959201af02eb2c987e39"
+    },
+    {
+      "candidate": "JL20-08",
+      "engine_code": "EC1",
+      "fields": [
+        "electrification_type"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2020_JL/evidence_resolution_20261108/classification_proposals/JL20-08.evidence-r1.adjudication.1.1.proposed.json",
+      "adjudication_hash": "sha256:6dd8309fab3683abaa6948616bc8637a57d270e455b8c945c133d7c6d984d7d7",
+      "supersedes": {
+        "proposal": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/classification_proposals/JL20-08.adjudication.1.1.proposed.json",
+        "adjudication_hash": "sha256:42373cba29d897fc54a9498564c9448d9858311a74697baee8e65c6ee6a4a144"
+      },
+      "candidate_hash": "sha256:bb1ef2253b2d3fd86f853ff077e5fb6667af5173fb6691de908568b36bfa2738"
+    },
+    {
+      "candidate": "JL20-09",
+      "engine_code": "ERC",
+      "fields": [
+        "engine_aspiration",
+        "electrification_type"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2020_JL/evidence_resolution_20261108/classification_proposals/JL20-09.evidence-r1.adjudication.1.1.proposed.json",
+      "adjudication_hash": "sha256:d078829b1c9aebc191fad0c9298e6f0517d5e68598209a5b65063380634abfd0",
+      "supersedes": {
+        "proposal": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/classification_proposals/JL20-09.adjudication.1.1.proposed.json",
+        "adjudication_hash": "sha256:031b355af7d6115301d3cf5448cd2ff90a03465cc86d6b9f7cc195a1d32e8e03"
+      },
+      "candidate_hash": "sha256:8b3e0793e92ebb7d94e317b9da9aa32741b5f11c880b800f17e84ac85d501933"
+    },
+    {
+      "candidate": "JL20-10",
+      "engine_code": "EC1",
+      "fields": [
+        "electrification_type"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2020_JL/evidence_resolution_20261108/classification_proposals/JL20-10.evidence-r1.adjudication.1.1.proposed.json",
+      "adjudication_hash": "sha256:3adcf6608489865d73e2df9c20c5d8967de63a3cb1739dae3dfa8220fb7c63fb",
+      "supersedes": {
+        "proposal": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/classification_proposals/JL20-10.adjudication.1.1.proposed.json",
+        "adjudication_hash": "sha256:e8f778c162a56be19dc5318a9ee10ddd16cf796277251b0cfb82df015562746c"
+      },
+      "candidate_hash": "sha256:3f3c9ed8e320e48af32fe4f8b7b1ba4b6d2729dc4d881bfa38b211d9025f0d34"
+    },
+    {
+      "candidate": "JL20-11",
+      "engine_code": "ERC",
+      "fields": [
+        "engine_aspiration",
+        "electrification_type"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2020_JL/evidence_resolution_20261108/classification_proposals/JL20-11.evidence-r1.adjudication.1.1.proposed.json",
+      "adjudication_hash": "sha256:a86d862b96c19a2215384a940c28a68f4fcd87e6466dd1a64815f4800a93bd4e",
+      "supersedes": {
+        "proposal": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/classification_proposals/JL20-11.adjudication.1.1.proposed.json",
+        "adjudication_hash": "sha256:6b5825d8f80131a37842d1073a40b28818787186deb6d16a413bc462467d364a"
+      },
+      "candidate_hash": "sha256:4da30541821c7432558041f2607c02ac7d96331a0ebc18908606753c44bee790"
+    },
+    {
+      "candidate": "JL20-12",
+      "engine_code": "EC1",
+      "fields": [
+        "electrification_type"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2020_JL/evidence_resolution_20261108/classification_proposals/JL20-12.evidence-r1.adjudication.1.1.proposed.json",
+      "adjudication_hash": "sha256:d2aefd6cfafe61c8e94e4842b694453600ecaf6990fb3dbadc509bc76a726f5a",
+      "supersedes": {
+        "proposal": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/classification_proposals/JL20-12.adjudication.1.1.proposed.json",
+        "adjudication_hash": "sha256:de665d97a122eadf7a48376e1238c875155bb563fa7c11830044a85c180a0113"
+      },
+      "candidate_hash": "sha256:64d0e73fcddbd5645f9f2f49d97c8021f2bf02d0fd73841b8d7497a50f16221e"
+    },
+    {
+      "candidate": "JL20-13",
+      "engine_code": "ERC",
+      "fields": [
+        "engine_aspiration",
+        "electrification_type"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2020_JL/evidence_resolution_20261108/classification_proposals/JL20-13.evidence-r1.adjudication.1.1.proposed.json",
+      "adjudication_hash": "sha256:c0aaca0910904c1484eea1eddc48b549ce992a0512fa8be6fd816312fe35a9df",
+      "supersedes": {
+        "proposal": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/classification_proposals/JL20-13.adjudication.1.1.proposed.json",
+        "adjudication_hash": "sha256:ddd9c3e7e45fe55bee80a5dc6c6a69b5e7b8d002fc83dc3301b546e01e17215d"
+      },
+      "candidate_hash": "sha256:cf44f63e7f14f09a00676bea02ba60c3b304705253f5ae4f337aeabffcd7e572"
+    },
+    {
+      "candidate": "JL20-14",
+      "engine_code": "EC1",
+      "fields": [
+        "electrification_type"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2020_JL/evidence_resolution_20261108/classification_proposals/JL20-14.evidence-r1.adjudication.1.1.proposed.json",
+      "adjudication_hash": "sha256:aad96e4c87902c977973d4ea58bb5f8e4228ef9db52f0510781c7bc52f60c4c2",
+      "supersedes": {
+        "proposal": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/classification_proposals/JL20-14.adjudication.1.1.proposed.json",
+        "adjudication_hash": "sha256:82687c79deebd4a830f6cd295b0d980dda302e9c0354633198d287b29561a241"
+      },
+      "candidate_hash": "sha256:ffa6d9f18ea2309e955a73f8aa39737f71bda5ff50a2447f41ad826d96ad578f"
+    },
+    {
+      "candidate": "JL20-15",
+      "engine_code": "ERC",
+      "fields": [
+        "engine_aspiration",
+        "electrification_type"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2020_JL/evidence_resolution_20261108/classification_proposals/JL20-15.evidence-r1.adjudication.1.1.proposed.json",
+      "adjudication_hash": "sha256:66a6f40142c9d9b1d02d7c1f3ec7b171a4cbdd15f4acfe1462c7cb51d21ef5e3",
+      "supersedes": {
+        "proposal": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/classification_proposals/JL20-15.adjudication.1.1.proposed.json",
+        "adjudication_hash": "sha256:c751dda1374f76537ca31d559acf1e9ccdfa76c1662aef91aa8932ffb613a52b"
+      },
+      "candidate_hash": "sha256:99cb45fd114b5a64f6dfe1f18845490f466cdb7f0246578478f6926fa95c400f"
+    },
+    {
+      "candidate": "JL20-16",
+      "engine_code": "EC1",
+      "fields": [
+        "electrification_type"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2020_JL/evidence_resolution_20261108/classification_proposals/JL20-16.evidence-r1.adjudication.1.1.proposed.json",
+      "adjudication_hash": "sha256:3b28765ecd0c797a9bf4ddb8894a08ba14172c0281ff4a79bbcc9b743ae80769",
+      "supersedes": {
+        "proposal": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/classification_proposals/JL20-16.adjudication.1.1.proposed.json",
+        "adjudication_hash": "sha256:e2bbc2ee445dd18dd377ae11ecf0c579f01bb7e5db9fda3617959429b09e93ff"
+      },
+      "candidate_hash": "sha256:6423a9502a3b852bdfa078c1a7da70ed1e030f5f38f2342c675cfc20a5aac4a8"
+    },
+    {
+      "candidate": "JL20-17",
+      "engine_code": "ERC",
+      "fields": [
+        "engine_aspiration",
+        "electrification_type"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2020_JL/evidence_resolution_20261108/classification_proposals/JL20-17.evidence-r1.adjudication.1.1.proposed.json",
+      "adjudication_hash": "sha256:967d7221acc25b72a0809cc0c0fc52d45069e3af8d35148640a3c29cf2b731ab",
+      "supersedes": {
+        "proposal": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/classification_proposals/JL20-17.adjudication.1.1.proposed.json",
+        "adjudication_hash": "sha256:9180d15bdd44ed01e8a27510a40ba3716bb2270ff929c4935403afa220496149"
+      },
+      "candidate_hash": "sha256:8507193f6c512c8da7236f4e91e6d379f5046d2cf79b8769db2f3c434dc21d18"
+    },
+    {
+      "candidate": "JL20-18",
+      "engine_code": "EC1",
+      "fields": [
+        "electrification_type"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2020_JL/evidence_resolution_20261108/classification_proposals/JL20-18.evidence-r1.adjudication.1.1.proposed.json",
+      "adjudication_hash": "sha256:2af488619b5681b9139bfae586c3b1e66830771d7cc8994e97d88f11fe1d574f",
+      "supersedes": {
+        "proposal": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/classification_proposals/JL20-18.adjudication.1.1.proposed.json",
+        "adjudication_hash": "sha256:c1af5d743028f11b237be682fa89f9e047db7e2bc0ccf62d7ee75705db4796a9"
+      },
+      "candidate_hash": "sha256:9389f714c2b3d4749a4473c040f9e20a774d35cada2e01d37762494952870c5b"
+    },
+    {
+      "candidate": "JL20-19",
+      "engine_code": "ERC",
+      "fields": [
+        "engine_aspiration",
+        "electrification_type"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2020_JL/evidence_resolution_20261108/classification_proposals/JL20-19.evidence-r1.adjudication.1.1.proposed.json",
+      "adjudication_hash": "sha256:856e323d928ddb490c2b0436a2c70881880f03132fc8672b225ac2105b48daf4",
+      "supersedes": {
+        "proposal": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/classification_proposals/JL20-19.adjudication.1.1.proposed.json",
+        "adjudication_hash": "sha256:9652f9fffa2fc3c9aca8a1da871bcd1ddc1671a5a10d5b82928348d2cc19581b"
+      },
+      "candidate_hash": "sha256:0657d986ce7a809279ac2fe4724fa4796ce761907ba545c92d9472dee6151b1f"
+    },
+    {
+      "candidate": "JL20-21",
+      "engine_code": "EC1",
+      "fields": [
+        "electrification_type"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2020_JL/evidence_resolution_20261108/classification_proposals/JL20-21.evidence-r1.adjudication.1.1.proposed.json",
+      "adjudication_hash": "sha256:e16cc3a95985dd4c3449a2b79410f044581948801b0010c5de247e15f1c39984",
+      "supersedes": {
+        "proposal": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/classification_proposals/JL20-21.adjudication.1.1.proposed.json",
+        "adjudication_hash": "sha256:0415fd8f1ca6773a3f59b8e9cce2f06e955126e2ba7dc584e7f1c8e20e1bbf3a"
+      },
+      "candidate_hash": "sha256:fa5e33ab242dcf4627ab2e8b3c6c838cbe0f4e218b153389643133e81db7f6ab"
+    },
+    {
+      "candidate": "JL20-22",
+      "engine_code": "ERC",
+      "fields": [
+        "engine_aspiration",
+        "electrification_type"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2020_JL/evidence_resolution_20261108/classification_proposals/JL20-22.evidence-r1.adjudication.1.1.proposed.json",
+      "adjudication_hash": "sha256:1697546c6501e1b2364240e2896dadd1a17a0bf1b0cea586b96a405f5b283f95",
+      "supersedes": {
+        "proposal": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/classification_proposals/JL20-22.adjudication.1.1.proposed.json",
+        "adjudication_hash": "sha256:8c08581ee260a82abe21a2eeea15700e1f0cf08983a43b770ab1d86db56823cd"
+      },
+      "candidate_hash": "sha256:fcb9281af3b0e89c0294c219c8555830f8ee98a2e7c3d138145d3f88b483db72"
+    },
+    {
+      "candidate": "JL20-23",
+      "engine_code": "EXJ",
+      "fields": [
+        "electrification_type"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2020_JL/evidence_resolution_20261108/classification_proposals/JL20-23.evidence-r1.adjudication.1.1.proposed.json",
+      "adjudication_hash": "sha256:8085240c81fd797ed3fd3baecbbc19370f379deb9d6e092d4c150337c5f61c71",
+      "supersedes": {
+        "proposal": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/classification_proposals/JL20-23.adjudication.1.1.proposed.json",
+        "adjudication_hash": "sha256:5d90315347a78590d41d3697c209e61af608e399d7b28e9e113f79bc2deb4315"
+      },
+      "candidate_hash": "sha256:7b9836906b191ec12fac852d98d9290e5a2fa2a7d5c2e91a559cf3abb8cab466"
+    },
+    {
+      "candidate": "JL20-26",
+      "engine_code": "ERC",
+      "fields": [
+        "engine_aspiration",
+        "electrification_type"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2020_JL/evidence_resolution_20261108/classification_proposals/JL20-26.evidence-r1.adjudication.1.1.proposed.json",
+      "adjudication_hash": "sha256:8d025518d4977211a20b5bb86e78218c0605c3dde4bb0f4d5bd124688f42e580",
+      "supersedes": {
+        "proposal": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/classification_proposals/JL20-26.adjudication.1.1.proposed.json",
+        "adjudication_hash": "sha256:61a92a5e3cbea14ffb96e92b598ee487e08ee94315f72bdeee595eeab0ef58d0"
+      },
+      "candidate_hash": "sha256:fda598d8ab69a57f8f603c142d72f37fc0eddad0123eebe70831c06fa064efa3"
+    },
+    {
+      "candidate": "JL20-27",
+      "engine_code": "ERG",
+      "fields": [
+        "engine_aspiration"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2020_JL/evidence_resolution_20261108/classification_proposals/JL20-27.evidence-r1.adjudication.1.1.proposed.json",
+      "adjudication_hash": "sha256:55c8693f7c56a771912f0657488452b50e999e9811bcb616393724d9fe3d7e9f",
+      "supersedes": {
+        "proposal": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/classification_proposals/JL20-27.adjudication.1.1.proposed.json",
+        "adjudication_hash": "sha256:7f6fae3572974c9de90bcf34b61b4a34b388be98cb524c5fc7da7eb1a9c6fbcb"
+      },
+      "candidate_hash": "sha256:a86e157d3259bbed9a552c576131599256c58862838ea1c790adb8d89d2ac62c"
+    },
+    {
+      "candidate": "JL20-28",
+      "engine_code": "EXJ",
+      "fields": [
+        "electrification_type"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2020_JL/evidence_resolution_20261108/classification_proposals/JL20-28.evidence-r1.adjudication.1.1.proposed.json",
+      "adjudication_hash": "sha256:9efb75f44472fa773042c618d60a27476a602bc51892941d50da457b1a6b1aef",
+      "supersedes": {
+        "proposal": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/classification_proposals/JL20-28.adjudication.1.1.proposed.json",
+        "adjudication_hash": "sha256:fe205a9a47dcedb5b8ed715be7cf740bab7c1003ca0b6a0881ff15fd0eea76d0"
+      },
+      "candidate_hash": "sha256:baad9fb9340160de8e3a0e2d15a456becc62e77f68b015db61986bdda683c1db"
+    },
+    {
+      "candidate": "JL20-30",
+      "engine_code": "ERC",
+      "fields": [
+        "engine_aspiration",
+        "electrification_type"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2020_JL/evidence_resolution_20261108/classification_proposals/JL20-30.evidence-r1.adjudication.1.1.proposed.json",
+      "adjudication_hash": "sha256:9752e08507c454526e3bdb4c9c969caecd916a6322c66e5be24ea20fd1704acb",
+      "supersedes": {
+        "proposal": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/classification_proposals/JL20-30.adjudication.1.1.proposed.json",
+        "adjudication_hash": "sha256:ce40fbb3975dd385d26762e0296447f600eacad9b6e2abfa7483176d0357ba57"
+      },
+      "candidate_hash": "sha256:dc8bd819134c270b00411c38df73e87800f9763d477c27195a4f41e983c471e1"
+    },
+    {
+      "candidate": "JL20-31",
+      "engine_code": "ERG",
+      "fields": [
+        "engine_aspiration"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2020_JL/evidence_resolution_20261108/classification_proposals/JL20-31.evidence-r1.adjudication.1.1.proposed.json",
+      "adjudication_hash": "sha256:1a5d62d11280c960ccf391d0babfb93248e21938e23c8300039c5e4bd7475c3d",
+      "supersedes": {
+        "proposal": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/classification_proposals/JL20-31.adjudication.1.1.proposed.json",
+        "adjudication_hash": "sha256:050d8c7e620010210697b76a33038c380bedc83c45f6320ba02ade950183542b"
+      },
+      "candidate_hash": "sha256:42c06f8c4f04d7afed5127bedc04573d700023f2aab94bb5adc0c6b31c13d566"
+    },
+    {
+      "candidate": "JL20-32",
+      "engine_code": "EXJ",
+      "fields": [
+        "electrification_type"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2020_JL/evidence_resolution_20261108/classification_proposals/JL20-32.evidence-r1.adjudication.1.1.proposed.json",
+      "adjudication_hash": "sha256:7b754c3063fe6885a494463663246a02bc857110d956bdec4c8e00e428de462c",
+      "supersedes": {
+        "proposal": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/classification_proposals/JL20-32.adjudication.1.1.proposed.json",
+        "adjudication_hash": "sha256:d9de9ceb3ef799c0b37400a9fbc8bb5850a84e8dd2748a843f2988e1de783791"
+      },
+      "candidate_hash": "sha256:c67e2ebee08113d04aeb45ef6ee3788e55ed4934e1ca7a7547d0f8f71a0e566e"
+    },
+    {
+      "candidate": "JL20-34",
+      "engine_code": "ERG",
+      "fields": [
+        "engine_aspiration"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2020_JL/evidence_resolution_20261108/classification_proposals/JL20-34.evidence-r1.adjudication.1.1.proposed.json",
+      "adjudication_hash": "sha256:e6a3a128c13a266cf62ba196a974045b7855f94589a5d93e907d05e8c153d6c7",
+      "supersedes": {
+        "proposal": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/classification_proposals/JL20-34.adjudication.1.1.proposed.json",
+        "adjudication_hash": "sha256:de21f9d4ad2dea2b488acc6d694141157de3e8ae765b2c97b83778dfa2c64d28"
+      },
+      "candidate_hash": "sha256:0fb6967e04498ea88b7ff1bf746c5c727fb0cc97c8a5bc41279aa0f9fa4565ae"
+    },
+    {
+      "candidate": "JL20-35",
+      "engine_code": "EXJ",
+      "fields": [
+        "electrification_type"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2020_JL/evidence_resolution_20261108/classification_proposals/JL20-35.evidence-r1.adjudication.1.1.proposed.json",
+      "adjudication_hash": "sha256:3f21eb65bfd03f38e86b70d525e6c7cefcb27ec4dae24da0a75ff48e0a1336d1",
+      "supersedes": {
+        "proposal": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/classification_proposals/JL20-35.adjudication.1.1.proposed.json",
+        "adjudication_hash": "sha256:eb9a52e85ddfa6e3f416d23f6efacdc3d8d0e3c752c1903aa14f92466116e5d1"
+      },
+      "candidate_hash": "sha256:0890e7b62c21f8ba754f0fb945411baf5e99ded931b973bba0f491ad449ada71"
+    },
+    {
+      "candidate": "JL20-36",
+      "engine_code": "EC1",
+      "fields": [
+        "electrification_type"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2020_JL/evidence_resolution_20261108/classification_proposals/JL20-36.evidence-r1.adjudication.1.1.proposed.json",
+      "adjudication_hash": "sha256:ef68c520d93f10fd324e61f23f9e3d4b6288feb668b8eb4aa12cd37b61470062",
+      "supersedes": {
+        "proposal": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/classification_proposals/JL20-36.adjudication.1.1.proposed.json",
+        "adjudication_hash": "sha256:5b167b8db884c43e5ebb7471216c771b000677aa306787c2c7b2c41eba69bdcf"
+      },
+      "candidate_hash": "sha256:6f51368598a9632b65457be04fd9bdc00b71b28ff9b0c33a3b2371191d1e44ba"
+    },
+    {
+      "candidate": "JL20-37",
+      "engine_code": "ERC",
+      "fields": [
+        "engine_aspiration",
+        "electrification_type"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2020_JL/evidence_resolution_20261108/classification_proposals/JL20-37.evidence-r1.adjudication.1.1.proposed.json",
+      "adjudication_hash": "sha256:ff7a7b0f0f166077f0df0b7f56324731982d0a9acce2b863dca18931663ad473",
+      "supersedes": {
+        "proposal": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/classification_proposals/JL20-37.adjudication.1.1.proposed.json",
+        "adjudication_hash": "sha256:94be76530829a94a8fcbe5cb2daf5fe8b4e7f56cf79c906b9d60a0d9036a5054"
+      },
+      "candidate_hash": "sha256:32e65aec4318be55f28930261a1535493ef5e8fff7774af3f5a8f46e460a58cf"
+    },
+    {
+      "candidate": "JL20-38",
+      "engine_code": "EXJ",
+      "fields": [
+        "electrification_type"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2020_JL/evidence_resolution_20261108/classification_proposals/JL20-38.evidence-r1.adjudication.1.1.proposed.json",
+      "adjudication_hash": "sha256:25ac6e640e9d74c71f01e8540173c344cc9f944a864b85c1f53bc26fdde84e25",
+      "supersedes": {
+        "proposal": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/classification_proposals/JL20-38.adjudication.1.1.proposed.json",
+        "adjudication_hash": "sha256:9dde113b2ff7ef75d489b74b13ee6d8e2a987b20a2988efc85e6e51665202ed5"
+      },
+      "candidate_hash": "sha256:195b240a8c8c8afb50a687e7c4c448b5b15fb5135075284e8f2e2feea8fc927c"
+    },
+    {
+      "candidate": "JL20-39",
+      "engine_code": "EC1",
+      "fields": [
+        "electrification_type"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2020_JL/evidence_resolution_20261108/classification_proposals/JL20-39.evidence-r1.adjudication.1.1.proposed.json",
+      "adjudication_hash": "sha256:0dc6e27dc7f7e1ffb74366f8a3436d33ac127df2b741b6e69d80dafe793f99d8",
+      "supersedes": {
+        "proposal": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/classification_proposals/JL20-39.adjudication.1.1.proposed.json",
+        "adjudication_hash": "sha256:24472645639a5cfe87706a296189a285ea548111e5605673a71691c5b4b1027f"
+      },
+      "candidate_hash": "sha256:1c109bf14d1507723ac8a7921fa6c315623df8ac11cc5ccb631606d3df564438"
+    },
+    {
+      "candidate": "JL20-40",
+      "engine_code": "ERC",
+      "fields": [
+        "engine_aspiration",
+        "electrification_type"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2020_JL/evidence_resolution_20261108/classification_proposals/JL20-40.evidence-r1.adjudication.1.1.proposed.json",
+      "adjudication_hash": "sha256:1f3b53613ea0a6f0d2f7d9455207cbe163c102a398b49114d8934569a83f5e64",
+      "supersedes": {
+        "proposal": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/classification_proposals/JL20-40.adjudication.1.1.proposed.json",
+        "adjudication_hash": "sha256:ac70cedd159c7aac79b3d826ed181174b13ca7b9839c162a0b436969455d0f78"
+      },
+      "candidate_hash": "sha256:ee836a171aa1ad07908f242fbdd9156009ba165799ebcd578f56cc8a6ceec216"
+    },
+    {
+      "candidate": "JL20-41",
+      "engine_code": "EXJ",
+      "fields": [
+        "electrification_type"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2020_JL/evidence_resolution_20261108/classification_proposals/JL20-41.evidence-r1.adjudication.1.1.proposed.json",
+      "adjudication_hash": "sha256:4fdd6e5c34b6642a3d98132b5df6b83379de079beca6ed5c8e4f193412e5e304",
+      "supersedes": {
+        "proposal": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/classification_proposals/JL20-41.adjudication.1.1.proposed.json",
+        "adjudication_hash": "sha256:1e1e4166bb2851fc10f024abda2e4e5166f416b3806ab4474bb64795b3618149"
+      },
+      "candidate_hash": "sha256:97498710948979b922d067ceda97d740c545073928327c8394045b15a4e701da"
+    },
+    {
+      "candidate": "JL20-42",
+      "engine_code": "EC1",
+      "fields": [
+        "electrification_type"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2020_JL/evidence_resolution_20261108/classification_proposals/JL20-42.evidence-r1.adjudication.1.1.proposed.json",
+      "adjudication_hash": "sha256:300d29ab63f75ceec42ccaff58bc1eed4ecc5f5efdcc4ec5b35efc8251740ce2",
+      "supersedes": {
+        "proposal": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/classification_proposals/JL20-42.adjudication.1.1.proposed.json",
+        "adjudication_hash": "sha256:79a1dd4596e2996ef5efd0ffda64ddec5fd96dc9e31b7e0fdd303701f6c30e05"
+      },
+      "candidate_hash": "sha256:b5bafe400cb5aa6b17dbc091bf31ee945dd8c2c61fd2cefc38f9b60d5636f719"
+    },
+    {
+      "candidate": "JL20-43",
+      "engine_code": "ERC",
+      "fields": [
+        "engine_aspiration",
+        "electrification_type"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2020_JL/evidence_resolution_20261108/classification_proposals/JL20-43.evidence-r1.adjudication.1.1.proposed.json",
+      "adjudication_hash": "sha256:b5c3294c52b045d6ee5129244b2356ad444b3ca5356e7953af6fc866bb90b7a9",
+      "supersedes": {
+        "proposal": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/classification_proposals/JL20-43.adjudication.1.1.proposed.json",
+        "adjudication_hash": "sha256:23eef7e0ea2e7b6ab9c46836c0e9a412b00447711f811fa6fa7eb7e3cb22b01e"
+      },
+      "candidate_hash": "sha256:ec9253dd9ad6902ca43a5ca858210d713d78d1828eb7c30ddb8a13b953da7518"
+    },
+    {
+      "candidate": "JL20-44",
+      "engine_code": "EXJ",
+      "fields": [
+        "electrification_type"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2020_JL/evidence_resolution_20261108/classification_proposals/JL20-44.evidence-r1.adjudication.1.1.proposed.json",
+      "adjudication_hash": "sha256:11ece1837ba9d93d7c3a7fb151cea6452164f640ace6f8378beb58c0b85ae54a",
+      "supersedes": {
+        "proposal": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/classification_proposals/JL20-44.adjudication.1.1.proposed.json",
+        "adjudication_hash": "sha256:e2e9029d0349dd06740768f647de60f55d1c0eab7ba1d049fc7ea2d1a797033f"
+      },
+      "candidate_hash": "sha256:d64ec77db3e3bffcbf479a4a72e61e857afc1ccd90919acc9e8384d6d41d9187"
+    },
+    {
+      "candidate": "JL20-45",
+      "engine_code": "EC1",
+      "fields": [
+        "electrification_type"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2020_JL/evidence_resolution_20261108/classification_proposals/JL20-45.evidence-r1.adjudication.1.1.proposed.json",
+      "adjudication_hash": "sha256:5102f537b43015a52093ea0f1c6e45e5de9f595f4158a8166100a7024d730532",
+      "supersedes": {
+        "proposal": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/classification_proposals/JL20-45.adjudication.1.1.proposed.json",
+        "adjudication_hash": "sha256:2b7ecff1383c83887f6f2ad9babd517d52c1c9206e9216a04cb7568a23643c7d"
+      },
+      "candidate_hash": "sha256:7541ba5eeef44d6854858e7a5b5fb84e9bbfe3b843a46166a235eb428d0179a9"
+    },
+    {
+      "candidate": "JL20-46",
+      "engine_code": "ERC",
+      "fields": [
+        "engine_aspiration",
+        "electrification_type"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2020_JL/evidence_resolution_20261108/classification_proposals/JL20-46.evidence-r1.adjudication.1.1.proposed.json",
+      "adjudication_hash": "sha256:a19e13d0cfa0a544716397fa98e63bdf6be46501aa516d6c3bde103d01f582b3",
+      "supersedes": {
+        "proposal": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/classification_proposals/JL20-46.adjudication.1.1.proposed.json",
+        "adjudication_hash": "sha256:88dc4b27dee4a68aa7465b8a0c33678ab2f029765294cc99115bc77770050b28"
+      },
+      "candidate_hash": "sha256:a1d66ef98ffc871e09ceaa0b0045df3596e56a8fdffa89295c952fd254df1e73"
+    },
+    {
+      "candidate": "JL20-47",
+      "engine_code": "EXJ",
+      "fields": [
+        "electrification_type"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2020_JL/evidence_resolution_20261108/classification_proposals/JL20-47.evidence-r1.adjudication.1.1.proposed.json",
+      "adjudication_hash": "sha256:b3c85ea2cfec761b80cc9a7f09f752553546aa4f24f5e4cad0d1f9ab3c9efa3a",
+      "supersedes": {
+        "proposal": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/classification_proposals/JL20-47.adjudication.1.1.proposed.json",
+        "adjudication_hash": "sha256:43ecf25b14f2c06c9a964e08272f26cf9b1cb8534198a0edb59822aad34df228"
+      },
+      "candidate_hash": "sha256:d72032b5d3090d05ad54dca7d271274752ddbf6b11a6f808e8db4610230fcd7e"
+    },
+    {
+      "candidate": "JL20-48",
+      "engine_code": "EC1",
+      "fields": [
+        "electrification_type"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2020_JL/evidence_resolution_20261108/classification_proposals/JL20-48.evidence-r1.adjudication.1.1.proposed.json",
+      "adjudication_hash": "sha256:91e66a65adea0c74fae93c66c74490b3baa4c4221b45b47db6c877e1bca8b95a",
+      "supersedes": {
+        "proposal": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/classification_proposals/JL20-48.adjudication.1.1.proposed.json",
+        "adjudication_hash": "sha256:beba82552d5610dc086f38063768fee568922b9e8b9890f0e70af23f19b540b5"
+      },
+      "candidate_hash": "sha256:ab8f846f779a80c8cd7cef686b908d4ee17d3e7d7f4ad07a89acfeceae15c38e"
+    },
+    {
+      "candidate": "JL20-49",
+      "engine_code": "ERC",
+      "fields": [
+        "engine_aspiration",
+        "electrification_type"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2020_JL/evidence_resolution_20261108/classification_proposals/JL20-49.evidence-r1.adjudication.1.1.proposed.json",
+      "adjudication_hash": "sha256:69b685226f332df96d051ca362d3f6e8438158e4c1e11fdfdd8c193aa3d9722e",
+      "supersedes": {
+        "proposal": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/classification_proposals/JL20-49.adjudication.1.1.proposed.json",
+        "adjudication_hash": "sha256:08b9297cfa6ff1c008822584dc313cf6b2f9e3b1f317eaaab9111aa963c96498"
+      },
+      "candidate_hash": "sha256:439123dea548808235751335f5c9a239cb5784bec04a1f122c0c8e03f2dc2c29"
+    }
+  ],
+  "High_Altitude_identity_approval": [
+    {
+      "candidate_reference": "JL20-33",
+      "previous_artifact": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/candidates/JL20-33.candidate.2.1.0.json",
+      "previous_hash": "sha256:321246eee675b3a4141a98d2e308b55eef0af0b880fd88b4f6bd0630a29de4eb",
+      "current_artifact": "docs/implementation/handoffs/MY2020_JL/evidence_resolution_20261108/candidate_revisions/JL20-33.naming-r1.candidate.2.1.0.json",
+      "current_hash": "sha256:832486003d9d6c8b8e796c8a3946598714ea9c2e1d928d0a35d0023d9f06a85c",
+      "structured_powertrain_unchanged": true
+    },
+    {
+      "candidate_reference": "JL20-34",
+      "previous_artifact": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/candidates/JL20-34.candidate.2.1.0.json",
+      "previous_hash": "sha256:fcecbd2cbcb46c01d70483b3069bca9617ae2a82e48034853da9e8ec2cb182e2",
+      "current_artifact": "docs/implementation/handoffs/MY2020_JL/evidence_resolution_20261108/candidate_revisions/JL20-34.naming-r1.candidate.2.1.0.json",
+      "current_hash": "sha256:0fb6967e04498ea88b7ff1bf746c5c727fb0cc97c8a5bc41279aa0f9fa4565ae",
+      "structured_powertrain_unchanged": true
+    },
+    {
+      "candidate_reference": "JL20-35",
+      "previous_artifact": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/candidates/JL20-35.candidate.2.1.0.json",
+      "previous_hash": "sha256:6cf85f98e70c3058e06a73f1be1a19dc774cc432601fed0e593491f17bb10562",
+      "current_artifact": "docs/implementation/handoffs/MY2020_JL/evidence_resolution_20261108/candidate_revisions/JL20-35.naming-r1.candidate.2.1.0.json",
+      "current_hash": "sha256:0890e7b62c21f8ba754f0fb945411baf5e99ded931b973bba0f491ad449ada71",
+      "structured_powertrain_unchanged": true
+    }
+  ],
+  "constraints": "No cross-year/market/engine propagation; no correspondence publication, Matrix certification, import planning/execution or DB writes",
+  "workflow": "adjudicate_canonical_import --classification-review; declared operator project_owner; explicit APPROVE CLASSIFICATIONS response authorized by owner"
+}

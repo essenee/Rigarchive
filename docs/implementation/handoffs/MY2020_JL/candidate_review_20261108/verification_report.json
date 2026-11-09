@@ -1,0 +1,51 @@
+{
+  "environment": {
+    "interpreter": "/Users/cosmo/dev/Rigarchive/.venv/bin/python",
+    "Python": "3.13.1",
+    "Django": "6.0.7",
+    "pypdf": "6.16.1"
+  },
+  "focused_tests": {
+    "classification_powertrain_generation": {
+      "tests": 67,
+      "result": "passed"
+    },
+    "serialization_candidate_construction": {
+      "tests": 29,
+      "result": "passed"
+    }
+  },
+  "database": {
+    "access": "SQLite URI mode=ro; PRAGMA query_only=ON",
+    "sha256": "sha256:f0d32327e0d688b56711a572375e4e462a266ebb8fdb250b97965e392dff07ab",
+    "unchanged": true,
+    "counts": {
+      "VehicleDefinitions": 812,
+      "receipts": 2880,
+      "migrations": 31
+    },
+    "integrity": "ok",
+    "foreign_key_violations": 0
+  },
+  "preservation": {
+    "preexisting_MY2020_files": 68,
+    "all_unchanged": true
+  },
+  "scope": {
+    "candidates": 49,
+    "body_trim_variants": 21,
+    "directly_complete": 6,
+    "classification_review_candidates": 43,
+    "supported_proposed_claims": 52,
+    "unsupported_proposed_claims": 8,
+    "approved_claims": 0,
+    "correspondence_or_import_planning": "not performed"
+  },
+  "edmunds": {
+    "body_trim_variants": 21,
+    "engine_combinations": 49,
+    "corroborated": 48,
+    "manufacturer_only": 1,
+    "secondary_only_observed": 0
+  }
+}

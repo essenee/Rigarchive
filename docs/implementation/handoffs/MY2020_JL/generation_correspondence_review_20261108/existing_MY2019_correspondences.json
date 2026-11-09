@@ -1,0 +1,70 @@
+{
+  "correspondences": [
+    {
+      "PK": 13,
+      "uuid": "a2b7fdee-4c7b-4b4c-b537-e08f08e7413b",
+      "model_code": "JLJS74",
+      "source_id": "reviewed_jeep_order_guide_inventory",
+      "start_year": 2019,
+      "end_year": 2019,
+      "target_generation_PK": 32,
+      "content_hash": "sha256:70544663f878db979874e4b2ea817a098ce7a95f2835e7774f55b66663a7686d",
+      "receipt_PK": 2861,
+      "reusable_for_MY2020": false,
+      "reason": "Year scope is2019 only; source_id also differs from MY2020 retained candidate identities"
+    },
+    {
+      "PK": 11,
+      "uuid": "f2abb41d-7f25-46f6-9205-b04bec7886e0",
+      "model_code": "JLJP74",
+      "source_id": "reviewed_jeep_order_guide_inventory",
+      "start_year": 2019,
+      "end_year": 2019,
+      "target_generation_PK": 32,
+      "content_hash": "sha256:46fe14559da3d434e671d5d14187eabba86acf8d205e17d536fbe1c4b75619d6",
+      "receipt_PK": 2859,
+      "reusable_for_MY2020": false,
+      "reason": "Year scope is2019 only; source_id also differs from MY2020 retained candidate identities"
+    },
+    {
+      "PK": 12,
+      "uuid": "c636ab1b-bed8-4943-a1b0-385a9d3d1ca3",
+      "model_code": "JLJS72",
+      "source_id": "reviewed_jeep_order_guide_inventory",
+      "start_year": 2019,
+      "end_year": 2019,
+      "target_generation_PK": 32,
+      "content_hash": "sha256:def5ebea00410ce4cb662a53d9fd4c481927d6a628e27d5ce434f69cf8ded6ef",
+      "receipt_PK": 2860,
+      "reusable_for_MY2020": false,
+      "reason": "Year scope is2019 only; source_id also differs from MY2020 retained candidate identities"
+    },
+    {
+      "PK": 9,
+      "uuid": "98fc7eb1-f684-413d-be4f-77193bf12fe6",
+      "model_code": "JLJL72",
+      "source_id": "reviewed_jeep_order_guide_inventory",
+      "start_year": 2019,
+      "end_year": 2019,
+      "target_generation_PK": 32,
+      "content_hash": "sha256:a4ae81e161d90a182880790d585ce9083304ee91a35818bba6791bf636ce1130",
+      "receipt_PK": 2857,
+      "reusable_for_MY2020": false,
+      "reason": "Year scope is2019 only; source_id also differs from MY2020 retained candidate identities"
+    },
+    {
+      "PK": 10,
+      "uuid": "c1b9b744-b447-4f6c-9c0c-0960f6482bb1",
+      "model_code": "JLJL74",
+      "source_id": "reviewed_jeep_order_guide_inventory",
+      "start_year": 2019,
+      "end_year": 2019,
+      "target_generation_PK": 32,
+      "content_hash": "sha256:16638781801556503d6723591f7d82292d6d020f197ca4f35b9ccb99987fdd23",
+      "receipt_PK": 2858,
+      "reusable_for_MY2020": false,
+      "reason": "Year scope is2019 only; source_id also differs from MY2020 retained candidate identities"
+    }
+  ],
+  "MY2020_reused": 0
+}

@@ -1,0 +1,41 @@
+{
+  "environment": {
+    "interpreter": "/Users/cosmo/dev/Rigarchive/.venv/bin/python",
+    "Python": "3.13.1",
+    "Django": "6.0.7",
+    "pypdf": "6.16.1"
+  },
+  "candidate_revisions": 49,
+  "shared_selectors": 51,
+  "classification_declaration_evidence_revisions": 43,
+  "approved_claims_preserved": 60,
+  "new_classification_decisions": 0,
+  "High_Altitude_identities_preserved": 3,
+  "simulated_resolver_coverage": 49,
+  "published_resolver_coverage": 0,
+  "model_code_coverage": {
+    "JLJL72": 12,
+    "JLJS72": 3,
+    "JLJL74": 18,
+    "JLJP74": 12,
+    "JLJS74": 4
+  },
+  "proposed_unique_correspondences": 51,
+  "duplicates_or_conflicts": 0,
+  "focused_tests": {
+    "passed": 125,
+    "elapsed_seconds": 2.837,
+    "isolated": true
+  },
+  "Django_checks": "passed",
+  "database_counts": {
+    "VehicleDefinitions": 812,
+    "receipts": 2880,
+    "correspondences": 13
+  },
+  "database_byte_unchanged": true,
+  "database_sha256": "sha256:f0d32327e0d688b56711a572375e4e462a266ebb8fdb250b97965e392dff07ab",
+  "preexisting_files_preserved": 916,
+  "publication_performed": false,
+  "publication_authorization": "separate; pending"
+}

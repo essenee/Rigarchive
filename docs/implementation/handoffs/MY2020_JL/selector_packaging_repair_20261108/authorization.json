@@ -1,0 +1,9 @@
+{
+  "recorded_at": "2026-11-08T23:06:30.530712+00:00",
+  "authority": "Current owner task: MY2020 JL Generation Correspondence Evidence-Packaging Repair",
+  "scope": "Additively revise exactly49 US MY2020 Wrangler JL candidates using51 existing source/model selector groups; preserve60 approved claims and3 High Altitude identities",
+  "prior_approval": "docs/implementation/handoffs/MY2020_JL/approved_classifications_20261108/authorization.json",
+  "prior_approval_sha256": "sha256:17a5ce3cb970fbc4e6f67ed1c80aaf854b23abc59343b5576173f70d12b6e436",
+  "classification_handling": "Carry forward existing approved declarations through supporting-document-only revisions. This is not a new classification decision. Original operator, approval timestamp, base candidate binding and classifications are preserved; notes pin predecessor and current evidence-packaging authorization.",
+  "restrictions": "No correspondence publication, canonical DB write, Matrix certification, import plan, import, migration, application/contract change, commit or push"
+}

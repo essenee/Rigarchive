@@ -1,0 +1,42 @@
+{
+  "envelope": {
+    "artifact_type": "rigarchive.source_assertion_set.v1",
+    "created_at": "2026-11-08T22:19:57.363050+00:00",
+    "generator": "bounded_my2020_review",
+    "schema_version": "1.1.0"
+  },
+  "provenance": {
+    "acquisition_method": "retained authentic PDF",
+    "extraction_provenance": {
+      "extraction_mode": "source_specific_parser",
+      "extractor_id": "pypdf",
+      "extractor_version": "6.16.1",
+      "raw_artifact_hash": "sha256:b9a2b88de8cf857b845950fec682b460396d802327e12587697da667f69ba731",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/4 Door 3-3-20.pdf"
+    },
+    "native_record_id": "JL20-22-heading",
+    "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+    "review_status": "reviewed",
+    "source_applicability": {
+      "applicability_basis": "US model-year guide/manual applicability; engine-family joins explicitly scoped",
+      "applicability_scope": "model_year",
+      "market": "US",
+      "publisher_jurisdiction": "US"
+    },
+    "source_id": "MY2020-JL-4D-2020-03-03",
+    "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-3-3-20-pdf.288452/",
+    "source_type": "manufacturer_document",
+    "source_use_notes": "Explicit document applicability, not caller target context.",
+    "target_context": {
+      "model_year": 2020
+    }
+  },
+  "source_assertions": [
+    {
+      "assertion_id": "JL20-22-heading",
+      "attribute_key": "source_document_heading",
+      "raw_value": "REISSUED: 03/03/2020\nISSUED: 07/02/2019\nPAGE: 1\nUnited States\n2020\nJEEP WRANGLER 4 DOOR\nCUSTOMER PREFERRED CODE GUIDE\nMODEL CODE PAGES\nWRANGLER UNLIMITED SPORT JLJL74 2\nWRANGLER UNLIMITED SAHARA JLJP74 7\nWRANGLER UNLIMITED RUBICON JLJS74 12\nGROUP DETAIL 16\nSTANDARD EQUIPMENT 20\nSTEP #1: SELECT MODEL CODE\nSTEP #2: SELECT QUICK ORDER PACKAGE CODE\nSTEP #3: SELECT $ OPTIONS (IF DESIRED)\nSTEP #4: SELECT COLOR & TRIM CODES\n© 2020 FCA US LLC, All Rights Reserved. IT IS FOR THE USE OF FCA AND ITS AUTHORIZED DEALERS ONLY AND MAY\nNOT BE OTHERWISE USED, RELEASED, OR REPRINTED WITHOUT FCA PRIOR PERMISSION.\nORDERS ARE ACCEPTED ONLY WHEN VEHICLES ARE SHIPPED BY THE FACTORY.\n© 2020 FCA US LLC, All Rights Reserved.\nJ\nE\nE\nP\nW\nR\nA\nN\nG\nL\nE\nR\n4\nD\nO\nO\nR",
+      "source_context": "PDF page1; US MY2020 model/body applicability"
+    }
+  ]
+}

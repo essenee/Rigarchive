@@ -1,0 +1,2488 @@
+{
+  "body_trim_variants": 21,
+  "candidate_construction_performed": false,
+  "created": "2026-11-08T21:56:07.332644+00:00",
+  "research_only": true,
+  "rows": [
+    {
+      "body_style": "2-door",
+      "cpos_codes": [
+        "22D"
+      ],
+      "deduplication": "Transmission/QOP alternatives collapsed; body+marketed-grade+assessed-engine tuple proposed. Engine code retained for traceability, not a new canonical identity dimension.",
+      "engine_code": "EC1",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-2D-2019-08-15-p2",
+        "MY2020-JL-2D-2019-09-05-p2",
+        "MY2020-JL-2D-2019-10-08-p2",
+        "MY2020-JL-2D-2019-11-04-p2",
+        "MY2020-JL-2D-2020-01-15-p2",
+        "MY2020-JL-2D-2020-01-23-p2",
+        "MY2020-JL-2D-2020-02-12-p2",
+        "MY2020-JL-2D-2020-03-03-p2"
+      ],
+      "first_observed_retained_revision": "2019-08-15",
+      "last_observed_retained_revision": "2020-03-03",
+      "market": "US",
+      "model_code": "JLJL72",
+      "model_year": 2020,
+      "proposed_structured_powertrain": {
+        "electrification_type": "none",
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 4,
+        "engine_displacement_liters": "2",
+        "fuel_type": "gasoline"
+      },
+      "research_row_id": "JL20-01",
+      "scope_status": "Proposed discovery row; not a constructed or approved candidate",
+      "source_ids": [
+        "MY2020-JL-2D-2019-08-15",
+        "MY2020-JL-2D-2019-09-05",
+        "MY2020-JL-2D-2019-10-08",
+        "MY2020-JL-2D-2019-11-04",
+        "MY2020-JL-2D-2020-01-15",
+        "MY2020-JL-2D-2020-01-23",
+        "MY2020-JL-2D-2020-02-12",
+        "MY2020-JL-2D-2020-03-03"
+      ],
+      "transmission_codes": [
+        "DFT"
+      ],
+      "trim_name_proposal": "Black and Tan",
+      "unapproved_classification_fields": [
+        "electrification_type"
+      ]
+    },
+    {
+      "body_style": "2-door",
+      "cpos_codes": [
+        "23D",
+        "24D"
+      ],
+      "deduplication": "Transmission/QOP alternatives collapsed; body+marketed-grade+assessed-engine tuple proposed. Engine code retained for traceability, not a new canonical identity dimension.",
+      "engine_code": "ERC",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-2D-2019-08-15-p2",
+        "MY2020-JL-2D-2019-09-05-p2",
+        "MY2020-JL-2D-2019-10-08-p2",
+        "MY2020-JL-2D-2019-11-04-p2",
+        "MY2020-JL-2D-2020-01-15-p2",
+        "MY2020-JL-2D-2020-01-23-p2",
+        "MY2020-JL-2D-2020-02-12-p2",
+        "MY2020-JL-2D-2020-03-03-p2"
+      ],
+      "first_observed_retained_revision": "2019-08-15",
+      "last_observed_retained_revision": "2020-03-03",
+      "market": "US",
+      "model_code": "JLJL72",
+      "model_year": 2020,
+      "proposed_structured_powertrain": {
+        "electrification_type": "none",
+        "engine_aspiration": "naturally_aspirated",
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "fuel_type": "gasoline"
+      },
+      "research_row_id": "JL20-02",
+      "scope_status": "Proposed discovery row; not a constructed or approved candidate",
+      "source_ids": [
+        "MY2020-JL-2D-2019-08-15",
+        "MY2020-JL-2D-2019-09-05",
+        "MY2020-JL-2D-2019-10-08",
+        "MY2020-JL-2D-2019-11-04",
+        "MY2020-JL-2D-2020-01-15",
+        "MY2020-JL-2D-2020-01-23",
+        "MY2020-JL-2D-2020-02-12",
+        "MY2020-JL-2D-2020-03-03"
+      ],
+      "transmission_codes": [
+        "DEM",
+        "DFT"
+      ],
+      "trim_name_proposal": "Black and Tan",
+      "unapproved_classification_fields": [
+        "engine_aspiration",
+        "electrification_type"
+      ]
+    },
+    {
+      "body_style": "2-door",
+      "cpos_codes": [
+        "22F"
+      ],
+      "deduplication": "Transmission/QOP alternatives collapsed; body+marketed-grade+assessed-engine tuple proposed. Engine code retained for traceability, not a new canonical identity dimension.",
+      "engine_code": "EC1",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-2D-2019-10-08-p2",
+        "MY2020-JL-2D-2019-11-04-p2",
+        "MY2020-JL-2D-2020-01-15-p2",
+        "MY2020-JL-2D-2020-01-23-p2",
+        "MY2020-JL-2D-2020-02-12-p2",
+        "MY2020-JL-2D-2020-03-03-p2",
+        "MY2020-JL-2D-2020-04-17-p2"
+      ],
+      "first_observed_retained_revision": "2019-10-08",
+      "last_observed_retained_revision": "2020-04-17",
+      "market": "US",
+      "model_code": "JLJL72",
+      "model_year": 2020,
+      "proposed_structured_powertrain": {
+        "electrification_type": "none",
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 4,
+        "engine_displacement_liters": "2",
+        "fuel_type": "gasoline"
+      },
+      "research_row_id": "JL20-03",
+      "scope_status": "Proposed discovery row; not a constructed or approved candidate",
+      "source_ids": [
+        "MY2020-JL-2D-2019-10-08",
+        "MY2020-JL-2D-2019-11-04",
+        "MY2020-JL-2D-2020-01-15",
+        "MY2020-JL-2D-2020-01-23",
+        "MY2020-JL-2D-2020-02-12",
+        "MY2020-JL-2D-2020-03-03",
+        "MY2020-JL-2D-2020-04-17"
+      ],
+      "transmission_codes": [
+        "DFT"
+      ],
+      "trim_name_proposal": "Freedom",
+      "unapproved_classification_fields": [
+        "electrification_type"
+      ]
+    },
+    {
+      "body_style": "2-door",
+      "cpos_codes": [
+        "23F",
+        "24F"
+      ],
+      "deduplication": "Transmission/QOP alternatives collapsed; body+marketed-grade+assessed-engine tuple proposed. Engine code retained for traceability, not a new canonical identity dimension.",
+      "engine_code": "ERC",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-2D-2019-10-08-p2",
+        "MY2020-JL-2D-2019-11-04-p2",
+        "MY2020-JL-2D-2020-01-15-p2",
+        "MY2020-JL-2D-2020-01-23-p2",
+        "MY2020-JL-2D-2020-02-12-p2",
+        "MY2020-JL-2D-2020-03-03-p2",
+        "MY2020-JL-2D-2020-04-17-p2"
+      ],
+      "first_observed_retained_revision": "2019-10-08",
+      "last_observed_retained_revision": "2020-04-17",
+      "market": "US",
+      "model_code": "JLJL72",
+      "model_year": 2020,
+      "proposed_structured_powertrain": {
+        "electrification_type": "none",
+        "engine_aspiration": "naturally_aspirated",
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "fuel_type": "gasoline"
+      },
+      "research_row_id": "JL20-04",
+      "scope_status": "Proposed discovery row; not a constructed or approved candidate",
+      "source_ids": [
+        "MY2020-JL-2D-2019-10-08",
+        "MY2020-JL-2D-2019-11-04",
+        "MY2020-JL-2D-2020-01-15",
+        "MY2020-JL-2D-2020-01-23",
+        "MY2020-JL-2D-2020-02-12",
+        "MY2020-JL-2D-2020-03-03",
+        "MY2020-JL-2D-2020-04-17"
+      ],
+      "transmission_codes": [
+        "DEM",
+        "DFT"
+      ],
+      "trim_name_proposal": "Freedom",
+      "unapproved_classification_fields": [
+        "engine_aspiration",
+        "electrification_type"
+      ]
+    },
+    {
+      "body_style": "2-door",
+      "cpos_codes": [
+        "22R"
+      ],
+      "deduplication": "Transmission/QOP alternatives collapsed; body+marketed-grade+assessed-engine tuple proposed. Engine code retained for traceability, not a new canonical identity dimension.",
+      "engine_code": "EC1",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-2D-2019-08-15-p6",
+        "MY2020-JL-2D-2019-09-05-p7",
+        "MY2020-JL-2D-2019-10-08-p7",
+        "MY2020-JL-2D-2019-11-04-p7",
+        "MY2020-JL-2D-2020-01-15-p7",
+        "MY2020-JL-2D-2020-01-23-p7",
+        "MY2020-JL-2D-2020-02-12-p7",
+        "MY2020-JL-2D-2020-03-03-p7",
+        "MY2020-JL-2D-2020-04-17-p6"
+      ],
+      "first_observed_retained_revision": "2019-08-15",
+      "last_observed_retained_revision": "2020-04-17",
+      "market": "US",
+      "model_code": "JLJS72",
+      "model_year": 2020,
+      "proposed_structured_powertrain": {
+        "electrification_type": "none",
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 4,
+        "engine_displacement_liters": "2",
+        "fuel_type": "gasoline"
+      },
+      "research_row_id": "JL20-05",
+      "scope_status": "Proposed discovery row; not a constructed or approved candidate",
+      "source_ids": [
+        "MY2020-JL-2D-2019-08-15",
+        "MY2020-JL-2D-2019-09-05",
+        "MY2020-JL-2D-2019-10-08",
+        "MY2020-JL-2D-2019-11-04",
+        "MY2020-JL-2D-2020-01-15",
+        "MY2020-JL-2D-2020-01-23",
+        "MY2020-JL-2D-2020-02-12",
+        "MY2020-JL-2D-2020-03-03",
+        "MY2020-JL-2D-2020-04-17"
+      ],
+      "transmission_codes": [
+        "DFT"
+      ],
+      "trim_name_proposal": "Rubicon",
+      "unapproved_classification_fields": [
+        "electrification_type"
+      ]
+    },
+    {
+      "body_style": "2-door",
+      "cpos_codes": [
+        "23R",
+        "24R"
+      ],
+      "deduplication": "Transmission/QOP alternatives collapsed; body+marketed-grade+assessed-engine tuple proposed. Engine code retained for traceability, not a new canonical identity dimension.",
+      "engine_code": "ERC",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-2D-2019-08-15-p6",
+        "MY2020-JL-2D-2019-09-05-p7",
+        "MY2020-JL-2D-2019-10-08-p7",
+        "MY2020-JL-2D-2019-11-04-p7",
+        "MY2020-JL-2D-2020-01-15-p7",
+        "MY2020-JL-2D-2020-01-23-p7",
+        "MY2020-JL-2D-2020-02-12-p7",
+        "MY2020-JL-2D-2020-03-03-p7",
+        "MY2020-JL-2D-2020-04-17-p6"
+      ],
+      "first_observed_retained_revision": "2019-08-15",
+      "last_observed_retained_revision": "2020-04-17",
+      "market": "US",
+      "model_code": "JLJS72",
+      "model_year": 2020,
+      "proposed_structured_powertrain": {
+        "electrification_type": "none",
+        "engine_aspiration": "naturally_aspirated",
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "fuel_type": "gasoline"
+      },
+      "research_row_id": "JL20-06",
+      "scope_status": "Proposed discovery row; not a constructed or approved candidate",
+      "source_ids": [
+        "MY2020-JL-2D-2019-08-15",
+        "MY2020-JL-2D-2019-09-05",
+        "MY2020-JL-2D-2019-10-08",
+        "MY2020-JL-2D-2019-11-04",
+        "MY2020-JL-2D-2020-01-15",
+        "MY2020-JL-2D-2020-01-23",
+        "MY2020-JL-2D-2020-02-12",
+        "MY2020-JL-2D-2020-03-03",
+        "MY2020-JL-2D-2020-04-17"
+      ],
+      "transmission_codes": [
+        "DEM",
+        "DFT"
+      ],
+      "trim_name_proposal": "Rubicon",
+      "unapproved_classification_fields": [
+        "engine_aspiration",
+        "electrification_type"
+      ]
+    },
+    {
+      "body_style": "2-door",
+      "cpos_codes": [
+        "28Y"
+      ],
+      "deduplication": "Transmission/QOP alternatives collapsed; body+marketed-grade+assessed-engine tuple proposed. Engine code retained for traceability, not a new canonical identity dimension.",
+      "engine_code": "EC3",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-2D-2020-01-15-p7",
+        "MY2020-JL-2D-2020-01-23-p7",
+        "MY2020-JL-2D-2020-02-12-p7",
+        "MY2020-JL-2D-2020-03-03-p7",
+        "MY2020-JL-2D-2020-04-17-p6"
+      ],
+      "first_observed_retained_revision": "2020-01-15",
+      "last_observed_retained_revision": "2020-04-17",
+      "market": "US",
+      "model_code": "JLJS72",
+      "model_year": 2020,
+      "proposed_structured_powertrain": {
+        "electrification_type": "mild_hybrid",
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 4,
+        "engine_displacement_liters": "2",
+        "fuel_type": "gasoline"
+      },
+      "research_row_id": "JL20-07",
+      "scope_status": "Proposed discovery row; not a constructed or approved candidate",
+      "source_ids": [
+        "MY2020-JL-2D-2020-01-15",
+        "MY2020-JL-2D-2020-01-23",
+        "MY2020-JL-2D-2020-02-12",
+        "MY2020-JL-2D-2020-03-03",
+        "MY2020-JL-2D-2020-04-17"
+      ],
+      "transmission_codes": [
+        "DFT"
+      ],
+      "trim_name_proposal": "Rubicon Recon",
+      "unapproved_classification_fields": []
+    },
+    {
+      "body_style": "2-door",
+      "cpos_codes": [
+        "22B"
+      ],
+      "deduplication": "Transmission/QOP alternatives collapsed; body+marketed-grade+assessed-engine tuple proposed. Engine code retained for traceability, not a new canonical identity dimension.",
+      "engine_code": "EC1",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-2D-2019-08-15-p2",
+        "MY2020-JL-2D-2019-09-05-p2",
+        "MY2020-JL-2D-2019-10-08-p2",
+        "MY2020-JL-2D-2019-11-04-p2",
+        "MY2020-JL-2D-2020-01-15-p2",
+        "MY2020-JL-2D-2020-01-23-p2",
+        "MY2020-JL-2D-2020-02-12-p2",
+        "MY2020-JL-2D-2020-03-03-p2",
+        "MY2020-JL-2D-2020-04-17-p2"
+      ],
+      "first_observed_retained_revision": "2019-08-15",
+      "last_observed_retained_revision": "2020-04-17",
+      "market": "US",
+      "model_code": "JLJL72",
+      "model_year": 2020,
+      "proposed_structured_powertrain": {
+        "electrification_type": "none",
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 4,
+        "engine_displacement_liters": "2",
+        "fuel_type": "gasoline"
+      },
+      "research_row_id": "JL20-08",
+      "scope_status": "Proposed discovery row; not a constructed or approved candidate",
+      "source_ids": [
+        "MY2020-JL-2D-2019-08-15",
+        "MY2020-JL-2D-2019-09-05",
+        "MY2020-JL-2D-2019-10-08",
+        "MY2020-JL-2D-2019-11-04",
+        "MY2020-JL-2D-2020-01-15",
+        "MY2020-JL-2D-2020-01-23",
+        "MY2020-JL-2D-2020-02-12",
+        "MY2020-JL-2D-2020-03-03",
+        "MY2020-JL-2D-2020-04-17"
+      ],
+      "transmission_codes": [
+        "DFT"
+      ],
+      "trim_name_proposal": "Sport",
+      "unapproved_classification_fields": [
+        "electrification_type"
+      ]
+    },
+    {
+      "body_style": "2-door",
+      "cpos_codes": [
+        "23B",
+        "24B"
+      ],
+      "deduplication": "Transmission/QOP alternatives collapsed; body+marketed-grade+assessed-engine tuple proposed. Engine code retained for traceability, not a new canonical identity dimension.",
+      "engine_code": "ERC",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-2D-2019-08-15-p2",
+        "MY2020-JL-2D-2019-09-05-p2",
+        "MY2020-JL-2D-2019-10-08-p2",
+        "MY2020-JL-2D-2019-11-04-p2",
+        "MY2020-JL-2D-2020-01-15-p2",
+        "MY2020-JL-2D-2020-01-23-p2",
+        "MY2020-JL-2D-2020-02-12-p2",
+        "MY2020-JL-2D-2020-03-03-p2",
+        "MY2020-JL-2D-2020-04-17-p2"
+      ],
+      "first_observed_retained_revision": "2019-08-15",
+      "last_observed_retained_revision": "2020-04-17",
+      "market": "US",
+      "model_code": "JLJL72",
+      "model_year": 2020,
+      "proposed_structured_powertrain": {
+        "electrification_type": "none",
+        "engine_aspiration": "naturally_aspirated",
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "fuel_type": "gasoline"
+      },
+      "research_row_id": "JL20-09",
+      "scope_status": "Proposed discovery row; not a constructed or approved candidate",
+      "source_ids": [
+        "MY2020-JL-2D-2019-08-15",
+        "MY2020-JL-2D-2019-09-05",
+        "MY2020-JL-2D-2019-10-08",
+        "MY2020-JL-2D-2019-11-04",
+        "MY2020-JL-2D-2020-01-15",
+        "MY2020-JL-2D-2020-01-23",
+        "MY2020-JL-2D-2020-02-12",
+        "MY2020-JL-2D-2020-03-03",
+        "MY2020-JL-2D-2020-04-17"
+      ],
+      "transmission_codes": [
+        "DEM",
+        "DFT"
+      ],
+      "trim_name_proposal": "Sport",
+      "unapproved_classification_fields": [
+        "engine_aspiration",
+        "electrification_type"
+      ]
+    },
+    {
+      "body_style": "2-door",
+      "cpos_codes": [
+        "22S"
+      ],
+      "deduplication": "Transmission/QOP alternatives collapsed; body+marketed-grade+assessed-engine tuple proposed. Engine code retained for traceability, not a new canonical identity dimension.",
+      "engine_code": "EC1",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-2D-2019-08-15-p2",
+        "MY2020-JL-2D-2019-09-05-p2",
+        "MY2020-JL-2D-2019-10-08-p2",
+        "MY2020-JL-2D-2019-11-04-p2",
+        "MY2020-JL-2D-2020-01-15-p2",
+        "MY2020-JL-2D-2020-01-23-p2",
+        "MY2020-JL-2D-2020-02-12-p2",
+        "MY2020-JL-2D-2020-03-03-p2",
+        "MY2020-JL-2D-2020-04-17-p2"
+      ],
+      "first_observed_retained_revision": "2019-08-15",
+      "last_observed_retained_revision": "2020-04-17",
+      "market": "US",
+      "model_code": "JLJL72",
+      "model_year": 2020,
+      "proposed_structured_powertrain": {
+        "electrification_type": "none",
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 4,
+        "engine_displacement_liters": "2",
+        "fuel_type": "gasoline"
+      },
+      "research_row_id": "JL20-10",
+      "scope_status": "Proposed discovery row; not a constructed or approved candidate",
+      "source_ids": [
+        "MY2020-JL-2D-2019-08-15",
+        "MY2020-JL-2D-2019-09-05",
+        "MY2020-JL-2D-2019-10-08",
+        "MY2020-JL-2D-2019-11-04",
+        "MY2020-JL-2D-2020-01-15",
+        "MY2020-JL-2D-2020-01-23",
+        "MY2020-JL-2D-2020-02-12",
+        "MY2020-JL-2D-2020-03-03",
+        "MY2020-JL-2D-2020-04-17"
+      ],
+      "transmission_codes": [
+        "DFT"
+      ],
+      "trim_name_proposal": "Sport S",
+      "unapproved_classification_fields": [
+        "electrification_type"
+      ]
+    },
+    {
+      "body_style": "2-door",
+      "cpos_codes": [
+        "23S",
+        "24S"
+      ],
+      "deduplication": "Transmission/QOP alternatives collapsed; body+marketed-grade+assessed-engine tuple proposed. Engine code retained for traceability, not a new canonical identity dimension.",
+      "engine_code": "ERC",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-2D-2019-08-15-p2",
+        "MY2020-JL-2D-2019-09-05-p2",
+        "MY2020-JL-2D-2019-10-08-p2",
+        "MY2020-JL-2D-2019-11-04-p2",
+        "MY2020-JL-2D-2020-01-15-p2",
+        "MY2020-JL-2D-2020-01-23-p2",
+        "MY2020-JL-2D-2020-02-12-p2",
+        "MY2020-JL-2D-2020-03-03-p2",
+        "MY2020-JL-2D-2020-04-17-p2"
+      ],
+      "first_observed_retained_revision": "2019-08-15",
+      "last_observed_retained_revision": "2020-04-17",
+      "market": "US",
+      "model_code": "JLJL72",
+      "model_year": 2020,
+      "proposed_structured_powertrain": {
+        "electrification_type": "none",
+        "engine_aspiration": "naturally_aspirated",
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "fuel_type": "gasoline"
+      },
+      "research_row_id": "JL20-11",
+      "scope_status": "Proposed discovery row; not a constructed or approved candidate",
+      "source_ids": [
+        "MY2020-JL-2D-2019-08-15",
+        "MY2020-JL-2D-2019-09-05",
+        "MY2020-JL-2D-2019-10-08",
+        "MY2020-JL-2D-2019-11-04",
+        "MY2020-JL-2D-2020-01-15",
+        "MY2020-JL-2D-2020-01-23",
+        "MY2020-JL-2D-2020-02-12",
+        "MY2020-JL-2D-2020-03-03",
+        "MY2020-JL-2D-2020-04-17"
+      ],
+      "transmission_codes": [
+        "DEM",
+        "DFT"
+      ],
+      "trim_name_proposal": "Sport S",
+      "unapproved_classification_fields": [
+        "engine_aspiration",
+        "electrification_type"
+      ]
+    },
+    {
+      "body_style": "2-door",
+      "cpos_codes": [
+        "22W"
+      ],
+      "deduplication": "Transmission/QOP alternatives collapsed; body+marketed-grade+assessed-engine tuple proposed. Engine code retained for traceability, not a new canonical identity dimension.",
+      "engine_code": "EC1",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-2D-2019-09-05-p2",
+        "MY2020-JL-2D-2019-10-08-p2",
+        "MY2020-JL-2D-2019-11-04-p2",
+        "MY2020-JL-2D-2020-01-15-p2",
+        "MY2020-JL-2D-2020-01-23-p2",
+        "MY2020-JL-2D-2020-02-12-p2",
+        "MY2020-JL-2D-2020-03-03-p2",
+        "MY2020-JL-2D-2020-04-17-p2"
+      ],
+      "first_observed_retained_revision": "2019-09-05",
+      "last_observed_retained_revision": "2020-04-17",
+      "market": "US",
+      "model_code": "JLJL72",
+      "model_year": 2020,
+      "proposed_structured_powertrain": {
+        "electrification_type": "none",
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 4,
+        "engine_displacement_liters": "2",
+        "fuel_type": "gasoline"
+      },
+      "research_row_id": "JL20-12",
+      "scope_status": "Proposed discovery row; not a constructed or approved candidate",
+      "source_ids": [
+        "MY2020-JL-2D-2019-09-05",
+        "MY2020-JL-2D-2019-10-08",
+        "MY2020-JL-2D-2019-11-04",
+        "MY2020-JL-2D-2020-01-15",
+        "MY2020-JL-2D-2020-01-23",
+        "MY2020-JL-2D-2020-02-12",
+        "MY2020-JL-2D-2020-03-03",
+        "MY2020-JL-2D-2020-04-17"
+      ],
+      "transmission_codes": [
+        "DFT"
+      ],
+      "trim_name_proposal": "Willys",
+      "unapproved_classification_fields": [
+        "electrification_type"
+      ]
+    },
+    {
+      "body_style": "2-door",
+      "cpos_codes": [
+        "23W",
+        "24W"
+      ],
+      "deduplication": "Transmission/QOP alternatives collapsed; body+marketed-grade+assessed-engine tuple proposed. Engine code retained for traceability, not a new canonical identity dimension.",
+      "engine_code": "ERC",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-2D-2019-09-05-p2",
+        "MY2020-JL-2D-2019-10-08-p2",
+        "MY2020-JL-2D-2019-11-04-p2",
+        "MY2020-JL-2D-2020-01-15-p2",
+        "MY2020-JL-2D-2020-01-23-p2",
+        "MY2020-JL-2D-2020-02-12-p2",
+        "MY2020-JL-2D-2020-03-03-p2",
+        "MY2020-JL-2D-2020-04-17-p2"
+      ],
+      "first_observed_retained_revision": "2019-09-05",
+      "last_observed_retained_revision": "2020-04-17",
+      "market": "US",
+      "model_code": "JLJL72",
+      "model_year": 2020,
+      "proposed_structured_powertrain": {
+        "electrification_type": "none",
+        "engine_aspiration": "naturally_aspirated",
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "fuel_type": "gasoline"
+      },
+      "research_row_id": "JL20-13",
+      "scope_status": "Proposed discovery row; not a constructed or approved candidate",
+      "source_ids": [
+        "MY2020-JL-2D-2019-09-05",
+        "MY2020-JL-2D-2019-10-08",
+        "MY2020-JL-2D-2019-11-04",
+        "MY2020-JL-2D-2020-01-15",
+        "MY2020-JL-2D-2020-01-23",
+        "MY2020-JL-2D-2020-02-12",
+        "MY2020-JL-2D-2020-03-03",
+        "MY2020-JL-2D-2020-04-17"
+      ],
+      "transmission_codes": [
+        "DEM",
+        "DFT"
+      ],
+      "trim_name_proposal": "Willys",
+      "unapproved_classification_fields": [
+        "engine_aspiration",
+        "electrification_type"
+      ]
+    },
+    {
+      "body_style": "2-door",
+      "cpos_codes": [
+        "22K"
+      ],
+      "deduplication": "Transmission/QOP alternatives collapsed; body+marketed-grade+assessed-engine tuple proposed. Engine code retained for traceability, not a new canonical identity dimension.",
+      "engine_code": "EC1",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-2D-2019-11-04-p2",
+        "MY2020-JL-2D-2020-01-15-p2",
+        "MY2020-JL-2D-2020-01-23-p2",
+        "MY2020-JL-2D-2020-02-12-p2",
+        "MY2020-JL-2D-2020-03-03-p2",
+        "MY2020-JL-2D-2020-04-17-p2"
+      ],
+      "first_observed_retained_revision": "2019-11-04",
+      "last_observed_retained_revision": "2020-04-17",
+      "market": "US",
+      "model_code": "JLJL72",
+      "model_year": 2020,
+      "proposed_structured_powertrain": {
+        "electrification_type": "none",
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 4,
+        "engine_displacement_liters": "2",
+        "fuel_type": "gasoline"
+      },
+      "research_row_id": "JL20-14",
+      "scope_status": "Proposed discovery row; not a constructed or approved candidate",
+      "source_ids": [
+        "MY2020-JL-2D-2019-11-04",
+        "MY2020-JL-2D-2020-01-15",
+        "MY2020-JL-2D-2020-01-23",
+        "MY2020-JL-2D-2020-02-12",
+        "MY2020-JL-2D-2020-03-03",
+        "MY2020-JL-2D-2020-04-17"
+      ],
+      "transmission_codes": [
+        "DFT"
+      ],
+      "trim_name_proposal": "Willys Sport",
+      "unapproved_classification_fields": [
+        "electrification_type"
+      ]
+    },
+    {
+      "body_style": "2-door",
+      "cpos_codes": [
+        "23K",
+        "24K"
+      ],
+      "deduplication": "Transmission/QOP alternatives collapsed; body+marketed-grade+assessed-engine tuple proposed. Engine code retained for traceability, not a new canonical identity dimension.",
+      "engine_code": "ERC",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-2D-2019-11-04-p2",
+        "MY2020-JL-2D-2020-01-15-p2",
+        "MY2020-JL-2D-2020-01-23-p2",
+        "MY2020-JL-2D-2020-02-12-p2",
+        "MY2020-JL-2D-2020-03-03-p2",
+        "MY2020-JL-2D-2020-04-17-p2"
+      ],
+      "first_observed_retained_revision": "2019-11-04",
+      "last_observed_retained_revision": "2020-04-17",
+      "market": "US",
+      "model_code": "JLJL72",
+      "model_year": 2020,
+      "proposed_structured_powertrain": {
+        "electrification_type": "none",
+        "engine_aspiration": "naturally_aspirated",
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "fuel_type": "gasoline"
+      },
+      "research_row_id": "JL20-15",
+      "scope_status": "Proposed discovery row; not a constructed or approved candidate",
+      "source_ids": [
+        "MY2020-JL-2D-2019-11-04",
+        "MY2020-JL-2D-2020-01-15",
+        "MY2020-JL-2D-2020-01-23",
+        "MY2020-JL-2D-2020-02-12",
+        "MY2020-JL-2D-2020-03-03",
+        "MY2020-JL-2D-2020-04-17"
+      ],
+      "transmission_codes": [
+        "DEM",
+        "DFT"
+      ],
+      "trim_name_proposal": "Willys Sport",
+      "unapproved_classification_fields": [
+        "engine_aspiration",
+        "electrification_type"
+      ]
+    },
+    {
+      "body_style": "4-door",
+      "cpos_codes": [
+        "22D"
+      ],
+      "deduplication": "Transmission/QOP alternatives collapsed; body+marketed-grade+assessed-engine tuple proposed. Engine code retained for traceability, not a new canonical identity dimension.",
+      "engine_code": "EC1",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-4D-2019-07-02-p2",
+        "MY2020-JL-4D-2019-08-15-p2",
+        "MY2020-JL-4D-2019-09-05-p2",
+        "MY2020-JL-4D-2019-10-15-p2",
+        "MY2020-JL-4D-2019-11-13-p2",
+        "MY2020-JL-4D-2019-12-03-p2",
+        "MY2020-JL-4D-2020-01-02-p2",
+        "MY2020-JL-4D-2020-01-23-p2",
+        "MY2020-JL-4D-2020-02-11-p2",
+        "MY2020-JL-4D-2020-03-03-p2"
+      ],
+      "first_observed_retained_revision": "2019-07-02",
+      "last_observed_retained_revision": "2020-03-03",
+      "market": "US",
+      "model_code": "JLJL74",
+      "model_year": 2020,
+      "proposed_structured_powertrain": {
+        "electrification_type": "none",
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 4,
+        "engine_displacement_liters": "2",
+        "fuel_type": "gasoline"
+      },
+      "research_row_id": "JL20-16",
+      "scope_status": "Proposed discovery row; not a constructed or approved candidate",
+      "source_ids": [
+        "MY2020-JL-4D-2019-07-02",
+        "MY2020-JL-4D-2019-08-15",
+        "MY2020-JL-4D-2019-09-05",
+        "MY2020-JL-4D-2019-10-15",
+        "MY2020-JL-4D-2019-11-13",
+        "MY2020-JL-4D-2019-12-03",
+        "MY2020-JL-4D-2020-01-02",
+        "MY2020-JL-4D-2020-01-23",
+        "MY2020-JL-4D-2020-02-11",
+        "MY2020-JL-4D-2020-03-03"
+      ],
+      "transmission_codes": [
+        "DFT"
+      ],
+      "trim_name_proposal": "Unlimited Black and Tan",
+      "unapproved_classification_fields": [
+        "electrification_type"
+      ]
+    },
+    {
+      "body_style": "4-door",
+      "cpos_codes": [
+        "23D",
+        "24D"
+      ],
+      "deduplication": "Transmission/QOP alternatives collapsed; body+marketed-grade+assessed-engine tuple proposed. Engine code retained for traceability, not a new canonical identity dimension.",
+      "engine_code": "ERC",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-4D-2019-07-02-p2",
+        "MY2020-JL-4D-2019-08-15-p2",
+        "MY2020-JL-4D-2019-09-05-p2",
+        "MY2020-JL-4D-2019-10-15-p2",
+        "MY2020-JL-4D-2019-11-13-p2",
+        "MY2020-JL-4D-2019-12-03-p2",
+        "MY2020-JL-4D-2020-01-02-p2",
+        "MY2020-JL-4D-2020-01-23-p2",
+        "MY2020-JL-4D-2020-02-11-p2",
+        "MY2020-JL-4D-2020-03-03-p2"
+      ],
+      "first_observed_retained_revision": "2019-07-02",
+      "last_observed_retained_revision": "2020-03-03",
+      "market": "US",
+      "model_code": "JLJL74",
+      "model_year": 2020,
+      "proposed_structured_powertrain": {
+        "electrification_type": "none",
+        "engine_aspiration": "naturally_aspirated",
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "fuel_type": "gasoline"
+      },
+      "research_row_id": "JL20-17",
+      "scope_status": "Proposed discovery row; not a constructed or approved candidate",
+      "source_ids": [
+        "MY2020-JL-4D-2019-07-02",
+        "MY2020-JL-4D-2019-08-15",
+        "MY2020-JL-4D-2019-09-05",
+        "MY2020-JL-4D-2019-10-15",
+        "MY2020-JL-4D-2019-11-13",
+        "MY2020-JL-4D-2019-12-03",
+        "MY2020-JL-4D-2020-01-02",
+        "MY2020-JL-4D-2020-01-23",
+        "MY2020-JL-4D-2020-02-11",
+        "MY2020-JL-4D-2020-03-03"
+      ],
+      "transmission_codes": [
+        "DEM",
+        "DFT"
+      ],
+      "trim_name_proposal": "Unlimited Black and Tan",
+      "unapproved_classification_fields": [
+        "engine_aspiration",
+        "electrification_type"
+      ]
+    },
+    {
+      "body_style": "4-door",
+      "cpos_codes": [
+        "22F"
+      ],
+      "deduplication": "Transmission/QOP alternatives collapsed; body+marketed-grade+assessed-engine tuple proposed. Engine code retained for traceability, not a new canonical identity dimension.",
+      "engine_code": "EC1",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-4D-2019-10-15-p2",
+        "MY2020-JL-4D-2019-11-13-p2",
+        "MY2020-JL-4D-2019-12-03-p2",
+        "MY2020-JL-4D-2020-01-02-p2",
+        "MY2020-JL-4D-2020-01-23-p2",
+        "MY2020-JL-4D-2020-02-11-p2",
+        "MY2020-JL-4D-2020-03-03-p2",
+        "MY2020-JL-4D-2020-04-17-p2"
+      ],
+      "first_observed_retained_revision": "2019-10-15",
+      "last_observed_retained_revision": "2020-04-17",
+      "market": "US",
+      "model_code": "JLJL74",
+      "model_year": 2020,
+      "proposed_structured_powertrain": {
+        "electrification_type": "none",
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 4,
+        "engine_displacement_liters": "2",
+        "fuel_type": "gasoline"
+      },
+      "research_row_id": "JL20-18",
+      "scope_status": "Proposed discovery row; not a constructed or approved candidate",
+      "source_ids": [
+        "MY2020-JL-4D-2019-10-15",
+        "MY2020-JL-4D-2019-11-13",
+        "MY2020-JL-4D-2019-12-03",
+        "MY2020-JL-4D-2020-01-02",
+        "MY2020-JL-4D-2020-01-23",
+        "MY2020-JL-4D-2020-02-11",
+        "MY2020-JL-4D-2020-03-03",
+        "MY2020-JL-4D-2020-04-17"
+      ],
+      "transmission_codes": [
+        "DFT"
+      ],
+      "trim_name_proposal": "Unlimited Freedom",
+      "unapproved_classification_fields": [
+        "electrification_type"
+      ]
+    },
+    {
+      "body_style": "4-door",
+      "cpos_codes": [
+        "23F",
+        "24F"
+      ],
+      "deduplication": "Transmission/QOP alternatives collapsed; body+marketed-grade+assessed-engine tuple proposed. Engine code retained for traceability, not a new canonical identity dimension.",
+      "engine_code": "ERC",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-4D-2019-10-15-p2",
+        "MY2020-JL-4D-2019-11-13-p2",
+        "MY2020-JL-4D-2019-12-03-p2",
+        "MY2020-JL-4D-2020-01-02-p2",
+        "MY2020-JL-4D-2020-01-23-p2",
+        "MY2020-JL-4D-2020-02-11-p2",
+        "MY2020-JL-4D-2020-03-03-p2",
+        "MY2020-JL-4D-2020-04-17-p2"
+      ],
+      "first_observed_retained_revision": "2019-10-15",
+      "last_observed_retained_revision": "2020-04-17",
+      "market": "US",
+      "model_code": "JLJL74",
+      "model_year": 2020,
+      "proposed_structured_powertrain": {
+        "electrification_type": "none",
+        "engine_aspiration": "naturally_aspirated",
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "fuel_type": "gasoline"
+      },
+      "research_row_id": "JL20-19",
+      "scope_status": "Proposed discovery row; not a constructed or approved candidate",
+      "source_ids": [
+        "MY2020-JL-4D-2019-10-15",
+        "MY2020-JL-4D-2019-11-13",
+        "MY2020-JL-4D-2019-12-03",
+        "MY2020-JL-4D-2020-01-02",
+        "MY2020-JL-4D-2020-01-23",
+        "MY2020-JL-4D-2020-02-11",
+        "MY2020-JL-4D-2020-03-03",
+        "MY2020-JL-4D-2020-04-17"
+      ],
+      "transmission_codes": [
+        "DEM",
+        "DFT"
+      ],
+      "trim_name_proposal": "Unlimited Freedom",
+      "unapproved_classification_fields": [
+        "engine_aspiration",
+        "electrification_type"
+      ]
+    },
+    {
+      "body_style": "4-door",
+      "cpos_codes": [
+        "28E"
+      ],
+      "deduplication": "Transmission/QOP alternatives collapsed; body+marketed-grade+assessed-engine tuple proposed. Engine code retained for traceability, not a new canonical identity dimension.",
+      "engine_code": "EC3",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-4D-2019-10-15-p7",
+        "MY2020-JL-4D-2019-11-13-p7",
+        "MY2020-JL-4D-2019-12-03-p7",
+        "MY2020-JL-4D-2020-01-02-p7",
+        "MY2020-JL-4D-2020-01-23-p7",
+        "MY2020-JL-4D-2020-02-11-p7",
+        "MY2020-JL-4D-2020-03-03-p7",
+        "MY2020-JL-4D-2020-04-17-p7"
+      ],
+      "first_observed_retained_revision": "2019-10-15",
+      "last_observed_retained_revision": "2020-04-17",
+      "market": "US",
+      "model_code": "JLJP74",
+      "model_year": 2020,
+      "proposed_structured_powertrain": {
+        "electrification_type": "mild_hybrid",
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 4,
+        "engine_displacement_liters": "2",
+        "fuel_type": "gasoline"
+      },
+      "research_row_id": "JL20-20",
+      "scope_status": "Proposed discovery row; not a constructed or approved candidate",
+      "source_ids": [
+        "MY2020-JL-4D-2019-10-15",
+        "MY2020-JL-4D-2019-11-13",
+        "MY2020-JL-4D-2019-12-03",
+        "MY2020-JL-4D-2020-01-02",
+        "MY2020-JL-4D-2020-01-23",
+        "MY2020-JL-4D-2020-02-11",
+        "MY2020-JL-4D-2020-03-03",
+        "MY2020-JL-4D-2020-04-17"
+      ],
+      "transmission_codes": [
+        "DFT"
+      ],
+      "trim_name_proposal": "Unlimited North Edition",
+      "unapproved_classification_fields": []
+    },
+    {
+      "body_style": "4-door",
+      "cpos_codes": [
+        "22R"
+      ],
+      "deduplication": "Transmission/QOP alternatives collapsed; body+marketed-grade+assessed-engine tuple proposed. Engine code retained for traceability, not a new canonical identity dimension.",
+      "engine_code": "EC1",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-4D-2019-07-02-p10",
+        "MY2020-JL-4D-2019-08-15-p10",
+        "MY2020-JL-4D-2019-09-05-p10",
+        "MY2020-JL-4D-2019-10-15-p12",
+        "MY2020-JL-4D-2019-11-13-p12",
+        "MY2020-JL-4D-2019-12-03-p12",
+        "MY2020-JL-4D-2020-01-02-p12",
+        "MY2020-JL-4D-2020-01-23-p12",
+        "MY2020-JL-4D-2020-02-11-p11",
+        "MY2020-JL-4D-2020-03-03-p12",
+        "MY2020-JL-4D-2020-04-17-p12"
+      ],
+      "first_observed_retained_revision": "2019-07-02",
+      "last_observed_retained_revision": "2020-04-17",
+      "market": "US",
+      "model_code": "JLJS74",
+      "model_year": 2020,
+      "proposed_structured_powertrain": {
+        "electrification_type": "none",
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 4,
+        "engine_displacement_liters": "2",
+        "fuel_type": "gasoline"
+      },
+      "research_row_id": "JL20-21",
+      "scope_status": "Proposed discovery row; not a constructed or approved candidate",
+      "source_ids": [
+        "MY2020-JL-4D-2019-07-02",
+        "MY2020-JL-4D-2019-08-15",
+        "MY2020-JL-4D-2019-09-05",
+        "MY2020-JL-4D-2019-10-15",
+        "MY2020-JL-4D-2019-11-13",
+        "MY2020-JL-4D-2019-12-03",
+        "MY2020-JL-4D-2020-01-02",
+        "MY2020-JL-4D-2020-01-23",
+        "MY2020-JL-4D-2020-02-11",
+        "MY2020-JL-4D-2020-03-03",
+        "MY2020-JL-4D-2020-04-17"
+      ],
+      "transmission_codes": [
+        "DFT"
+      ],
+      "trim_name_proposal": "Unlimited Rubicon",
+      "unapproved_classification_fields": [
+        "electrification_type"
+      ]
+    },
+    {
+      "body_style": "4-door",
+      "cpos_codes": [
+        "23R",
+        "24R"
+      ],
+      "deduplication": "Transmission/QOP alternatives collapsed; body+marketed-grade+assessed-engine tuple proposed. Engine code retained for traceability, not a new canonical identity dimension.",
+      "engine_code": "ERC",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-4D-2019-07-02-p10",
+        "MY2020-JL-4D-2019-08-15-p10",
+        "MY2020-JL-4D-2019-09-05-p10",
+        "MY2020-JL-4D-2019-10-15-p12",
+        "MY2020-JL-4D-2019-11-13-p12",
+        "MY2020-JL-4D-2019-12-03-p12",
+        "MY2020-JL-4D-2020-01-02-p12",
+        "MY2020-JL-4D-2020-01-23-p12",
+        "MY2020-JL-4D-2020-02-11-p11",
+        "MY2020-JL-4D-2020-03-03-p12",
+        "MY2020-JL-4D-2020-04-17-p12"
+      ],
+      "first_observed_retained_revision": "2019-07-02",
+      "last_observed_retained_revision": "2020-04-17",
+      "market": "US",
+      "model_code": "JLJS74",
+      "model_year": 2020,
+      "proposed_structured_powertrain": {
+        "electrification_type": "none",
+        "engine_aspiration": "naturally_aspirated",
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "fuel_type": "gasoline"
+      },
+      "research_row_id": "JL20-22",
+      "scope_status": "Proposed discovery row; not a constructed or approved candidate",
+      "source_ids": [
+        "MY2020-JL-4D-2019-07-02",
+        "MY2020-JL-4D-2019-08-15",
+        "MY2020-JL-4D-2019-09-05",
+        "MY2020-JL-4D-2019-10-15",
+        "MY2020-JL-4D-2019-11-13",
+        "MY2020-JL-4D-2019-12-03",
+        "MY2020-JL-4D-2020-01-02",
+        "MY2020-JL-4D-2020-01-23",
+        "MY2020-JL-4D-2020-02-11",
+        "MY2020-JL-4D-2020-03-03",
+        "MY2020-JL-4D-2020-04-17"
+      ],
+      "transmission_codes": [
+        "DEM",
+        "DFT"
+      ],
+      "trim_name_proposal": "Unlimited Rubicon",
+      "unapproved_classification_fields": [
+        "engine_aspiration",
+        "electrification_type"
+      ]
+    },
+    {
+      "body_style": "4-door",
+      "cpos_codes": [
+        "26R"
+      ],
+      "deduplication": "Transmission/QOP alternatives collapsed; body+marketed-grade+assessed-engine tuple proposed. Engine code retained for traceability, not a new canonical identity dimension.",
+      "engine_code": "EXJ",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-4D-2019-10-15-p12",
+        "MY2020-JL-4D-2019-11-13-p12",
+        "MY2020-JL-4D-2019-12-03-p12",
+        "MY2020-JL-4D-2020-01-02-p12",
+        "MY2020-JL-4D-2020-01-23-p12",
+        "MY2020-JL-4D-2020-02-11-p11",
+        "MY2020-JL-4D-2020-03-03-p12"
+      ],
+      "first_observed_retained_revision": "2019-10-15",
+      "last_observed_retained_revision": "2020-03-03",
+      "market": "US",
+      "model_code": "JLJS74",
+      "model_year": 2020,
+      "proposed_structured_powertrain": {
+        "electrification_type": "none",
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3",
+        "fuel_type": "diesel"
+      },
+      "research_row_id": "JL20-23",
+      "scope_status": "Proposed discovery row; not a constructed or approved candidate",
+      "source_ids": [
+        "MY2020-JL-4D-2019-10-15",
+        "MY2020-JL-4D-2019-11-13",
+        "MY2020-JL-4D-2019-12-03",
+        "MY2020-JL-4D-2020-01-02",
+        "MY2020-JL-4D-2020-01-23",
+        "MY2020-JL-4D-2020-02-11",
+        "MY2020-JL-4D-2020-03-03"
+      ],
+      "transmission_codes": [
+        "DFV"
+      ],
+      "trim_name_proposal": "Unlimited Rubicon",
+      "unapproved_classification_fields": [
+        "electrification_type"
+      ]
+    },
+    {
+      "body_style": "4-door",
+      "cpos_codes": [
+        "28Y"
+      ],
+      "deduplication": "Transmission/QOP alternatives collapsed; body+marketed-grade+assessed-engine tuple proposed. Engine code retained for traceability, not a new canonical identity dimension.",
+      "engine_code": "EC3",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-4D-2020-01-02-p12",
+        "MY2020-JL-4D-2020-01-23-p12",
+        "MY2020-JL-4D-2020-02-11-p11",
+        "MY2020-JL-4D-2020-03-03-p12",
+        "MY2020-JL-4D-2020-04-17-p12"
+      ],
+      "first_observed_retained_revision": "2020-01-02",
+      "last_observed_retained_revision": "2020-04-17",
+      "market": "US",
+      "model_code": "JLJS74",
+      "model_year": 2020,
+      "proposed_structured_powertrain": {
+        "electrification_type": "mild_hybrid",
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 4,
+        "engine_displacement_liters": "2",
+        "fuel_type": "gasoline"
+      },
+      "research_row_id": "JL20-24",
+      "scope_status": "Proposed discovery row; not a constructed or approved candidate",
+      "source_ids": [
+        "MY2020-JL-4D-2020-01-02",
+        "MY2020-JL-4D-2020-01-23",
+        "MY2020-JL-4D-2020-02-11",
+        "MY2020-JL-4D-2020-03-03",
+        "MY2020-JL-4D-2020-04-17"
+      ],
+      "transmission_codes": [
+        "DFT"
+      ],
+      "trim_name_proposal": "Unlimited Rubicon Recon",
+      "unapproved_classification_fields": []
+    },
+    {
+      "body_style": "4-door",
+      "cpos_codes": [
+        "28G"
+      ],
+      "deduplication": "Transmission/QOP alternatives collapsed; body+marketed-grade+assessed-engine tuple proposed. Engine code retained for traceability, not a new canonical identity dimension.",
+      "engine_code": "EC3",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-4D-2019-07-02-p7",
+        "MY2020-JL-4D-2019-08-15-p7",
+        "MY2020-JL-4D-2019-09-05-p7",
+        "MY2020-JL-4D-2019-10-15-p7",
+        "MY2020-JL-4D-2019-11-13-p7",
+        "MY2020-JL-4D-2019-12-03-p7",
+        "MY2020-JL-4D-2020-01-02-p7",
+        "MY2020-JL-4D-2020-01-23-p7",
+        "MY2020-JL-4D-2020-02-11-p7",
+        "MY2020-JL-4D-2020-03-03-p7",
+        "MY2020-JL-4D-2020-04-17-p7"
+      ],
+      "first_observed_retained_revision": "2019-07-02",
+      "last_observed_retained_revision": "2020-04-17",
+      "market": "US",
+      "model_code": "JLJP74",
+      "model_year": 2020,
+      "proposed_structured_powertrain": {
+        "electrification_type": "mild_hybrid",
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 4,
+        "engine_displacement_liters": "2",
+        "fuel_type": "gasoline"
+      },
+      "research_row_id": "JL20-25",
+      "scope_status": "Proposed discovery row; not a constructed or approved candidate",
+      "source_ids": [
+        "MY2020-JL-4D-2019-07-02",
+        "MY2020-JL-4D-2019-08-15",
+        "MY2020-JL-4D-2019-09-05",
+        "MY2020-JL-4D-2019-10-15",
+        "MY2020-JL-4D-2019-11-13",
+        "MY2020-JL-4D-2019-12-03",
+        "MY2020-JL-4D-2020-01-02",
+        "MY2020-JL-4D-2020-01-23",
+        "MY2020-JL-4D-2020-02-11",
+        "MY2020-JL-4D-2020-03-03",
+        "MY2020-JL-4D-2020-04-17"
+      ],
+      "transmission_codes": [
+        "DFT"
+      ],
+      "trim_name_proposal": "Unlimited Sahara",
+      "unapproved_classification_fields": []
+    },
+    {
+      "body_style": "4-door",
+      "cpos_codes": [
+        "23G"
+      ],
+      "deduplication": "Transmission/QOP alternatives collapsed; body+marketed-grade+assessed-engine tuple proposed. Engine code retained for traceability, not a new canonical identity dimension.",
+      "engine_code": "ERC",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-4D-2019-07-02-p7",
+        "MY2020-JL-4D-2019-08-15-p7",
+        "MY2020-JL-4D-2019-09-05-p7",
+        "MY2020-JL-4D-2019-10-15-p7",
+        "MY2020-JL-4D-2019-11-13-p7",
+        "MY2020-JL-4D-2019-12-03-p7",
+        "MY2020-JL-4D-2020-01-02-p7",
+        "MY2020-JL-4D-2020-01-23-p7",
+        "MY2020-JL-4D-2020-02-11-p7",
+        "MY2020-JL-4D-2020-03-03-p7",
+        "MY2020-JL-4D-2020-04-17-p7"
+      ],
+      "first_observed_retained_revision": "2019-07-02",
+      "last_observed_retained_revision": "2020-04-17",
+      "market": "US",
+      "model_code": "JLJP74",
+      "model_year": 2020,
+      "proposed_structured_powertrain": {
+        "electrification_type": "none",
+        "engine_aspiration": "naturally_aspirated",
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "fuel_type": "gasoline"
+      },
+      "research_row_id": "JL20-26",
+      "scope_status": "Proposed discovery row; not a constructed or approved candidate",
+      "source_ids": [
+        "MY2020-JL-4D-2019-07-02",
+        "MY2020-JL-4D-2019-08-15",
+        "MY2020-JL-4D-2019-09-05",
+        "MY2020-JL-4D-2019-10-15",
+        "MY2020-JL-4D-2019-11-13",
+        "MY2020-JL-4D-2019-12-03",
+        "MY2020-JL-4D-2020-01-02",
+        "MY2020-JL-4D-2020-01-23",
+        "MY2020-JL-4D-2020-02-11",
+        "MY2020-JL-4D-2020-03-03",
+        "MY2020-JL-4D-2020-04-17"
+      ],
+      "transmission_codes": [
+        "DEM"
+      ],
+      "trim_name_proposal": "Unlimited Sahara",
+      "unapproved_classification_fields": [
+        "engine_aspiration",
+        "electrification_type"
+      ]
+    },
+    {
+      "body_style": "4-door",
+      "cpos_codes": [
+        "25G"
+      ],
+      "deduplication": "Transmission/QOP alternatives collapsed; body+marketed-grade+assessed-engine tuple proposed. Engine code retained for traceability, not a new canonical identity dimension.",
+      "engine_code": "ERG",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-4D-2019-07-02-p7",
+        "MY2020-JL-4D-2019-08-15-p7",
+        "MY2020-JL-4D-2019-09-05-p7",
+        "MY2020-JL-4D-2019-10-15-p7",
+        "MY2020-JL-4D-2019-11-13-p7",
+        "MY2020-JL-4D-2019-12-03-p7",
+        "MY2020-JL-4D-2020-01-02-p7",
+        "MY2020-JL-4D-2020-01-23-p7",
+        "MY2020-JL-4D-2020-02-11-p7",
+        "MY2020-JL-4D-2020-03-03-p7",
+        "MY2020-JL-4D-2020-04-17-p7"
+      ],
+      "first_observed_retained_revision": "2019-07-02",
+      "last_observed_retained_revision": "2020-04-17",
+      "market": "US",
+      "model_code": "JLJP74",
+      "model_year": 2020,
+      "proposed_structured_powertrain": {
+        "electrification_type": "mild_hybrid",
+        "engine_aspiration": "naturally_aspirated",
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "fuel_type": "gasoline"
+      },
+      "research_row_id": "JL20-27",
+      "scope_status": "Proposed discovery row; not a constructed or approved candidate",
+      "source_ids": [
+        "MY2020-JL-4D-2019-07-02",
+        "MY2020-JL-4D-2019-08-15",
+        "MY2020-JL-4D-2019-09-05",
+        "MY2020-JL-4D-2019-10-15",
+        "MY2020-JL-4D-2019-11-13",
+        "MY2020-JL-4D-2019-12-03",
+        "MY2020-JL-4D-2020-01-02",
+        "MY2020-JL-4D-2020-01-23",
+        "MY2020-JL-4D-2020-02-11",
+        "MY2020-JL-4D-2020-03-03",
+        "MY2020-JL-4D-2020-04-17"
+      ],
+      "transmission_codes": [
+        "DFT"
+      ],
+      "trim_name_proposal": "Unlimited Sahara",
+      "unapproved_classification_fields": [
+        "engine_aspiration"
+      ]
+    },
+    {
+      "body_style": "4-door",
+      "cpos_codes": [
+        "26G"
+      ],
+      "deduplication": "Transmission/QOP alternatives collapsed; body+marketed-grade+assessed-engine tuple proposed. Engine code retained for traceability, not a new canonical identity dimension.",
+      "engine_code": "EXJ",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-4D-2019-10-15-p7",
+        "MY2020-JL-4D-2019-11-13-p7",
+        "MY2020-JL-4D-2019-12-03-p7",
+        "MY2020-JL-4D-2020-01-02-p7",
+        "MY2020-JL-4D-2020-01-23-p7",
+        "MY2020-JL-4D-2020-02-11-p7",
+        "MY2020-JL-4D-2020-03-03-p7",
+        "MY2020-JL-4D-2020-04-17-p7"
+      ],
+      "first_observed_retained_revision": "2019-10-15",
+      "last_observed_retained_revision": "2020-04-17",
+      "market": "US",
+      "model_code": "JLJP74",
+      "model_year": 2020,
+      "proposed_structured_powertrain": {
+        "electrification_type": "none",
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3",
+        "fuel_type": "diesel"
+      },
+      "research_row_id": "JL20-28",
+      "scope_status": "Proposed discovery row; not a constructed or approved candidate",
+      "source_ids": [
+        "MY2020-JL-4D-2019-10-15",
+        "MY2020-JL-4D-2019-11-13",
+        "MY2020-JL-4D-2019-12-03",
+        "MY2020-JL-4D-2020-01-02",
+        "MY2020-JL-4D-2020-01-23",
+        "MY2020-JL-4D-2020-02-11",
+        "MY2020-JL-4D-2020-03-03",
+        "MY2020-JL-4D-2020-04-17"
+      ],
+      "transmission_codes": [
+        "DFV"
+      ],
+      "trim_name_proposal": "Unlimited Sahara",
+      "unapproved_classification_fields": [
+        "electrification_type"
+      ]
+    },
+    {
+      "body_style": "4-door",
+      "cpos_codes": [
+        "28L"
+      ],
+      "deduplication": "Transmission/QOP alternatives collapsed; body+marketed-grade+assessed-engine tuple proposed. Engine code retained for traceability, not a new canonical identity dimension.",
+      "engine_code": "EC3",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-4D-2019-07-02-p7",
+        "MY2020-JL-4D-2019-08-15-p7",
+        "MY2020-JL-4D-2019-09-05-p7",
+        "MY2020-JL-4D-2019-10-15-p7",
+        "MY2020-JL-4D-2019-11-13-p7",
+        "MY2020-JL-4D-2019-12-03-p7",
+        "MY2020-JL-4D-2020-01-02-p7",
+        "MY2020-JL-4D-2020-01-23-p7",
+        "MY2020-JL-4D-2020-02-11-p7",
+        "MY2020-JL-4D-2020-03-03-p7",
+        "MY2020-JL-4D-2020-04-17-p7"
+      ],
+      "first_observed_retained_revision": "2019-07-02",
+      "last_observed_retained_revision": "2020-04-17",
+      "market": "US",
+      "model_code": "JLJP74",
+      "model_year": 2020,
+      "proposed_structured_powertrain": {
+        "electrification_type": "mild_hybrid",
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 4,
+        "engine_displacement_liters": "2",
+        "fuel_type": "gasoline"
+      },
+      "research_row_id": "JL20-29",
+      "scope_status": "Proposed discovery row; not a constructed or approved candidate",
+      "source_ids": [
+        "MY2020-JL-4D-2019-07-02",
+        "MY2020-JL-4D-2019-08-15",
+        "MY2020-JL-4D-2019-09-05",
+        "MY2020-JL-4D-2019-10-15",
+        "MY2020-JL-4D-2019-11-13",
+        "MY2020-JL-4D-2019-12-03",
+        "MY2020-JL-4D-2020-01-02",
+        "MY2020-JL-4D-2020-01-23",
+        "MY2020-JL-4D-2020-02-11",
+        "MY2020-JL-4D-2020-03-03",
+        "MY2020-JL-4D-2020-04-17"
+      ],
+      "transmission_codes": [
+        "DFT"
+      ],
+      "trim_name_proposal": "Unlimited Sahara Altitude",
+      "unapproved_classification_fields": []
+    },
+    {
+      "body_style": "4-door",
+      "cpos_codes": [
+        "23L"
+      ],
+      "deduplication": "Transmission/QOP alternatives collapsed; body+marketed-grade+assessed-engine tuple proposed. Engine code retained for traceability, not a new canonical identity dimension.",
+      "engine_code": "ERC",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-4D-2019-07-02-p7",
+        "MY2020-JL-4D-2019-08-15-p7",
+        "MY2020-JL-4D-2019-09-05-p7",
+        "MY2020-JL-4D-2019-10-15-p7",
+        "MY2020-JL-4D-2019-11-13-p7",
+        "MY2020-JL-4D-2019-12-03-p7",
+        "MY2020-JL-4D-2020-01-02-p7",
+        "MY2020-JL-4D-2020-01-23-p7",
+        "MY2020-JL-4D-2020-02-11-p7",
+        "MY2020-JL-4D-2020-03-03-p7",
+        "MY2020-JL-4D-2020-04-17-p7"
+      ],
+      "first_observed_retained_revision": "2019-07-02",
+      "last_observed_retained_revision": "2020-04-17",
+      "market": "US",
+      "model_code": "JLJP74",
+      "model_year": 2020,
+      "proposed_structured_powertrain": {
+        "electrification_type": "none",
+        "engine_aspiration": "naturally_aspirated",
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "fuel_type": "gasoline"
+      },
+      "research_row_id": "JL20-30",
+      "scope_status": "Proposed discovery row; not a constructed or approved candidate",
+      "source_ids": [
+        "MY2020-JL-4D-2019-07-02",
+        "MY2020-JL-4D-2019-08-15",
+        "MY2020-JL-4D-2019-09-05",
+        "MY2020-JL-4D-2019-10-15",
+        "MY2020-JL-4D-2019-11-13",
+        "MY2020-JL-4D-2019-12-03",
+        "MY2020-JL-4D-2020-01-02",
+        "MY2020-JL-4D-2020-01-23",
+        "MY2020-JL-4D-2020-02-11",
+        "MY2020-JL-4D-2020-03-03",
+        "MY2020-JL-4D-2020-04-17"
+      ],
+      "transmission_codes": [
+        "DEM"
+      ],
+      "trim_name_proposal": "Unlimited Sahara Altitude",
+      "unapproved_classification_fields": [
+        "engine_aspiration",
+        "electrification_type"
+      ]
+    },
+    {
+      "body_style": "4-door",
+      "cpos_codes": [
+        "25L"
+      ],
+      "deduplication": "Transmission/QOP alternatives collapsed; body+marketed-grade+assessed-engine tuple proposed. Engine code retained for traceability, not a new canonical identity dimension.",
+      "engine_code": "ERG",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-4D-2019-07-02-p7",
+        "MY2020-JL-4D-2019-08-15-p7",
+        "MY2020-JL-4D-2019-09-05-p7",
+        "MY2020-JL-4D-2019-10-15-p7",
+        "MY2020-JL-4D-2019-11-13-p7",
+        "MY2020-JL-4D-2019-12-03-p7",
+        "MY2020-JL-4D-2020-01-02-p7",
+        "MY2020-JL-4D-2020-01-23-p7",
+        "MY2020-JL-4D-2020-02-11-p7",
+        "MY2020-JL-4D-2020-03-03-p7",
+        "MY2020-JL-4D-2020-04-17-p7"
+      ],
+      "first_observed_retained_revision": "2019-07-02",
+      "last_observed_retained_revision": "2020-04-17",
+      "market": "US",
+      "model_code": "JLJP74",
+      "model_year": 2020,
+      "proposed_structured_powertrain": {
+        "electrification_type": "mild_hybrid",
+        "engine_aspiration": "naturally_aspirated",
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "fuel_type": "gasoline"
+      },
+      "research_row_id": "JL20-31",
+      "scope_status": "Proposed discovery row; not a constructed or approved candidate",
+      "source_ids": [
+        "MY2020-JL-4D-2019-07-02",
+        "MY2020-JL-4D-2019-08-15",
+        "MY2020-JL-4D-2019-09-05",
+        "MY2020-JL-4D-2019-10-15",
+        "MY2020-JL-4D-2019-11-13",
+        "MY2020-JL-4D-2019-12-03",
+        "MY2020-JL-4D-2020-01-02",
+        "MY2020-JL-4D-2020-01-23",
+        "MY2020-JL-4D-2020-02-11",
+        "MY2020-JL-4D-2020-03-03",
+        "MY2020-JL-4D-2020-04-17"
+      ],
+      "transmission_codes": [
+        "DFT"
+      ],
+      "trim_name_proposal": "Unlimited Sahara Altitude",
+      "unapproved_classification_fields": [
+        "engine_aspiration"
+      ]
+    },
+    {
+      "body_style": "4-door",
+      "cpos_codes": [
+        "26L"
+      ],
+      "deduplication": "Transmission/QOP alternatives collapsed; body+marketed-grade+assessed-engine tuple proposed. Engine code retained for traceability, not a new canonical identity dimension.",
+      "engine_code": "EXJ",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-4D-2019-10-15-p7",
+        "MY2020-JL-4D-2019-11-13-p7",
+        "MY2020-JL-4D-2019-12-03-p7",
+        "MY2020-JL-4D-2020-01-02-p7",
+        "MY2020-JL-4D-2020-01-23-p7",
+        "MY2020-JL-4D-2020-02-11-p7",
+        "MY2020-JL-4D-2020-03-03-p7",
+        "MY2020-JL-4D-2020-04-17-p7"
+      ],
+      "first_observed_retained_revision": "2019-10-15",
+      "last_observed_retained_revision": "2020-04-17",
+      "market": "US",
+      "model_code": "JLJP74",
+      "model_year": 2020,
+      "proposed_structured_powertrain": {
+        "electrification_type": "none",
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3",
+        "fuel_type": "diesel"
+      },
+      "research_row_id": "JL20-32",
+      "scope_status": "Proposed discovery row; not a constructed or approved candidate",
+      "source_ids": [
+        "MY2020-JL-4D-2019-10-15",
+        "MY2020-JL-4D-2019-11-13",
+        "MY2020-JL-4D-2019-12-03",
+        "MY2020-JL-4D-2020-01-02",
+        "MY2020-JL-4D-2020-01-23",
+        "MY2020-JL-4D-2020-02-11",
+        "MY2020-JL-4D-2020-03-03",
+        "MY2020-JL-4D-2020-04-17"
+      ],
+      "transmission_codes": [
+        "DFV"
+      ],
+      "trim_name_proposal": "Unlimited Sahara Altitude",
+      "unapproved_classification_fields": [
+        "electrification_type"
+      ]
+    },
+    {
+      "body_style": "4-door",
+      "cpos_codes": [
+        "28N"
+      ],
+      "deduplication": "Transmission/QOP alternatives collapsed; body+marketed-grade+assessed-engine tuple proposed. Engine code retained for traceability, not a new canonical identity dimension.",
+      "engine_code": "EC3",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-4D-2020-03-03-p7",
+        "MY2020-JL-4D-2020-04-17-p7"
+      ],
+      "first_observed_retained_revision": "2020-03-03",
+      "last_observed_retained_revision": "2020-04-17",
+      "market": "US",
+      "model_code": "JLJP74",
+      "model_year": 2020,
+      "proposed_structured_powertrain": {
+        "electrification_type": "mild_hybrid",
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 4,
+        "engine_displacement_liters": "2",
+        "fuel_type": "gasoline"
+      },
+      "research_row_id": "JL20-33",
+      "scope_status": "Proposed discovery row; not a constructed or approved candidate",
+      "source_ids": [
+        "MY2020-JL-4D-2020-03-03",
+        "MY2020-JL-4D-2020-04-17"
+      ],
+      "transmission_codes": [
+        "DFT"
+      ],
+      "trim_name_proposal": "Unlimited Sahara High Altitude",
+      "unapproved_classification_fields": []
+    },
+    {
+      "body_style": "4-door",
+      "cpos_codes": [
+        "25N"
+      ],
+      "deduplication": "Transmission/QOP alternatives collapsed; body+marketed-grade+assessed-engine tuple proposed. Engine code retained for traceability, not a new canonical identity dimension.",
+      "engine_code": "ERG",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-4D-2020-03-03-p7",
+        "MY2020-JL-4D-2020-04-17-p7"
+      ],
+      "first_observed_retained_revision": "2020-03-03",
+      "last_observed_retained_revision": "2020-04-17",
+      "market": "US",
+      "model_code": "JLJP74",
+      "model_year": 2020,
+      "proposed_structured_powertrain": {
+        "electrification_type": "mild_hybrid",
+        "engine_aspiration": "naturally_aspirated",
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "fuel_type": "gasoline"
+      },
+      "research_row_id": "JL20-34",
+      "scope_status": "Proposed discovery row; not a constructed or approved candidate",
+      "source_ids": [
+        "MY2020-JL-4D-2020-03-03",
+        "MY2020-JL-4D-2020-04-17"
+      ],
+      "transmission_codes": [
+        "DFT"
+      ],
+      "trim_name_proposal": "Unlimited Sahara High Altitude",
+      "unapproved_classification_fields": [
+        "engine_aspiration"
+      ]
+    },
+    {
+      "body_style": "4-door",
+      "cpos_codes": [
+        "26N"
+      ],
+      "deduplication": "Transmission/QOP alternatives collapsed; body+marketed-grade+assessed-engine tuple proposed. Engine code retained for traceability, not a new canonical identity dimension.",
+      "engine_code": "EXJ",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-4D-2020-03-03-p7",
+        "MY2020-JL-4D-2020-04-17-p7"
+      ],
+      "first_observed_retained_revision": "2020-03-03",
+      "last_observed_retained_revision": "2020-04-17",
+      "market": "US",
+      "model_code": "JLJP74",
+      "model_year": 2020,
+      "proposed_structured_powertrain": {
+        "electrification_type": "none",
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3",
+        "fuel_type": "diesel"
+      },
+      "research_row_id": "JL20-35",
+      "scope_status": "Proposed discovery row; not a constructed or approved candidate",
+      "source_ids": [
+        "MY2020-JL-4D-2020-03-03",
+        "MY2020-JL-4D-2020-04-17"
+      ],
+      "transmission_codes": [
+        "DFV"
+      ],
+      "trim_name_proposal": "Unlimited Sahara High Altitude",
+      "unapproved_classification_fields": [
+        "electrification_type"
+      ]
+    },
+    {
+      "body_style": "4-door",
+      "cpos_codes": [
+        "22B"
+      ],
+      "deduplication": "Transmission/QOP alternatives collapsed; body+marketed-grade+assessed-engine tuple proposed. Engine code retained for traceability, not a new canonical identity dimension.",
+      "engine_code": "EC1",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-4D-2019-07-02-p2",
+        "MY2020-JL-4D-2019-08-15-p2",
+        "MY2020-JL-4D-2019-09-05-p2",
+        "MY2020-JL-4D-2019-10-15-p2",
+        "MY2020-JL-4D-2019-11-13-p2",
+        "MY2020-JL-4D-2019-12-03-p2",
+        "MY2020-JL-4D-2020-01-02-p2",
+        "MY2020-JL-4D-2020-01-23-p2",
+        "MY2020-JL-4D-2020-02-11-p2",
+        "MY2020-JL-4D-2020-03-03-p2",
+        "MY2020-JL-4D-2020-04-17-p2"
+      ],
+      "first_observed_retained_revision": "2019-07-02",
+      "last_observed_retained_revision": "2020-04-17",
+      "market": "US",
+      "model_code": "JLJL74",
+      "model_year": 2020,
+      "proposed_structured_powertrain": {
+        "electrification_type": "none",
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 4,
+        "engine_displacement_liters": "2",
+        "fuel_type": "gasoline"
+      },
+      "research_row_id": "JL20-36",
+      "scope_status": "Proposed discovery row; not a constructed or approved candidate",
+      "source_ids": [
+        "MY2020-JL-4D-2019-07-02",
+        "MY2020-JL-4D-2019-08-15",
+        "MY2020-JL-4D-2019-09-05",
+        "MY2020-JL-4D-2019-10-15",
+        "MY2020-JL-4D-2019-11-13",
+        "MY2020-JL-4D-2019-12-03",
+        "MY2020-JL-4D-2020-01-02",
+        "MY2020-JL-4D-2020-01-23",
+        "MY2020-JL-4D-2020-02-11",
+        "MY2020-JL-4D-2020-03-03",
+        "MY2020-JL-4D-2020-04-17"
+      ],
+      "transmission_codes": [
+        "DFT"
+      ],
+      "trim_name_proposal": "Unlimited Sport",
+      "unapproved_classification_fields": [
+        "electrification_type"
+      ]
+    },
+    {
+      "body_style": "4-door",
+      "cpos_codes": [
+        "23B",
+        "24B"
+      ],
+      "deduplication": "Transmission/QOP alternatives collapsed; body+marketed-grade+assessed-engine tuple proposed. Engine code retained for traceability, not a new canonical identity dimension.",
+      "engine_code": "ERC",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-4D-2019-07-02-p2",
+        "MY2020-JL-4D-2019-08-15-p2",
+        "MY2020-JL-4D-2019-09-05-p2",
+        "MY2020-JL-4D-2019-10-15-p2",
+        "MY2020-JL-4D-2019-11-13-p2",
+        "MY2020-JL-4D-2019-12-03-p2",
+        "MY2020-JL-4D-2020-01-02-p2",
+        "MY2020-JL-4D-2020-01-23-p2",
+        "MY2020-JL-4D-2020-02-11-p2",
+        "MY2020-JL-4D-2020-03-03-p2",
+        "MY2020-JL-4D-2020-04-17-p2"
+      ],
+      "first_observed_retained_revision": "2019-07-02",
+      "last_observed_retained_revision": "2020-04-17",
+      "market": "US",
+      "model_code": "JLJL74",
+      "model_year": 2020,
+      "proposed_structured_powertrain": {
+        "electrification_type": "none",
+        "engine_aspiration": "naturally_aspirated",
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "fuel_type": "gasoline"
+      },
+      "research_row_id": "JL20-37",
+      "scope_status": "Proposed discovery row; not a constructed or approved candidate",
+      "source_ids": [
+        "MY2020-JL-4D-2019-07-02",
+        "MY2020-JL-4D-2019-08-15",
+        "MY2020-JL-4D-2019-09-05",
+        "MY2020-JL-4D-2019-10-15",
+        "MY2020-JL-4D-2019-11-13",
+        "MY2020-JL-4D-2019-12-03",
+        "MY2020-JL-4D-2020-01-02",
+        "MY2020-JL-4D-2020-01-23",
+        "MY2020-JL-4D-2020-02-11",
+        "MY2020-JL-4D-2020-03-03",
+        "MY2020-JL-4D-2020-04-17"
+      ],
+      "transmission_codes": [
+        "DEM",
+        "DFT"
+      ],
+      "trim_name_proposal": "Unlimited Sport",
+      "unapproved_classification_fields": [
+        "engine_aspiration",
+        "electrification_type"
+      ]
+    },
+    {
+      "body_style": "4-door",
+      "cpos_codes": [
+        "26B"
+      ],
+      "deduplication": "Transmission/QOP alternatives collapsed; body+marketed-grade+assessed-engine tuple proposed. Engine code retained for traceability, not a new canonical identity dimension.",
+      "engine_code": "EXJ",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-4D-2019-10-15-p2",
+        "MY2020-JL-4D-2019-11-13-p2",
+        "MY2020-JL-4D-2019-12-03-p2",
+        "MY2020-JL-4D-2020-01-02-p2",
+        "MY2020-JL-4D-2020-01-23-p2",
+        "MY2020-JL-4D-2020-02-11-p2",
+        "MY2020-JL-4D-2020-03-03-p2",
+        "MY2020-JL-4D-2020-04-17-p2"
+      ],
+      "first_observed_retained_revision": "2019-10-15",
+      "last_observed_retained_revision": "2020-04-17",
+      "market": "US",
+      "model_code": "JLJL74",
+      "model_year": 2020,
+      "proposed_structured_powertrain": {
+        "electrification_type": "none",
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3",
+        "fuel_type": "diesel"
+      },
+      "research_row_id": "JL20-38",
+      "scope_status": "Proposed discovery row; not a constructed or approved candidate",
+      "source_ids": [
+        "MY2020-JL-4D-2019-10-15",
+        "MY2020-JL-4D-2019-11-13",
+        "MY2020-JL-4D-2019-12-03",
+        "MY2020-JL-4D-2020-01-02",
+        "MY2020-JL-4D-2020-01-23",
+        "MY2020-JL-4D-2020-02-11",
+        "MY2020-JL-4D-2020-03-03",
+        "MY2020-JL-4D-2020-04-17"
+      ],
+      "transmission_codes": [
+        "DFV"
+      ],
+      "trim_name_proposal": "Unlimited Sport",
+      "unapproved_classification_fields": [
+        "electrification_type"
+      ]
+    },
+    {
+      "body_style": "4-door",
+      "cpos_codes": [
+        "22L"
+      ],
+      "deduplication": "Transmission/QOP alternatives collapsed; body+marketed-grade+assessed-engine tuple proposed. Engine code retained for traceability, not a new canonical identity dimension.",
+      "engine_code": "EC1",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-4D-2019-07-02-p2",
+        "MY2020-JL-4D-2019-08-15-p2",
+        "MY2020-JL-4D-2019-09-05-p2",
+        "MY2020-JL-4D-2019-10-15-p2",
+        "MY2020-JL-4D-2019-11-13-p2",
+        "MY2020-JL-4D-2019-12-03-p2",
+        "MY2020-JL-4D-2020-01-02-p2",
+        "MY2020-JL-4D-2020-01-23-p2",
+        "MY2020-JL-4D-2020-02-11-p2",
+        "MY2020-JL-4D-2020-03-03-p2",
+        "MY2020-JL-4D-2020-04-17-p2"
+      ],
+      "first_observed_retained_revision": "2019-07-02",
+      "last_observed_retained_revision": "2020-04-17",
+      "market": "US",
+      "model_code": "JLJL74",
+      "model_year": 2020,
+      "proposed_structured_powertrain": {
+        "electrification_type": "none",
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 4,
+        "engine_displacement_liters": "2",
+        "fuel_type": "gasoline"
+      },
+      "research_row_id": "JL20-39",
+      "scope_status": "Proposed discovery row; not a constructed or approved candidate",
+      "source_ids": [
+        "MY2020-JL-4D-2019-07-02",
+        "MY2020-JL-4D-2019-08-15",
+        "MY2020-JL-4D-2019-09-05",
+        "MY2020-JL-4D-2019-10-15",
+        "MY2020-JL-4D-2019-11-13",
+        "MY2020-JL-4D-2019-12-03",
+        "MY2020-JL-4D-2020-01-02",
+        "MY2020-JL-4D-2020-01-23",
+        "MY2020-JL-4D-2020-02-11",
+        "MY2020-JL-4D-2020-03-03",
+        "MY2020-JL-4D-2020-04-17"
+      ],
+      "transmission_codes": [
+        "DFT"
+      ],
+      "trim_name_proposal": "Unlimited Sport Altitude",
+      "unapproved_classification_fields": [
+        "electrification_type"
+      ]
+    },
+    {
+      "body_style": "4-door",
+      "cpos_codes": [
+        "23L",
+        "24L"
+      ],
+      "deduplication": "Transmission/QOP alternatives collapsed; body+marketed-grade+assessed-engine tuple proposed. Engine code retained for traceability, not a new canonical identity dimension.",
+      "engine_code": "ERC",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-4D-2019-07-02-p2",
+        "MY2020-JL-4D-2019-08-15-p2",
+        "MY2020-JL-4D-2019-09-05-p2",
+        "MY2020-JL-4D-2019-10-15-p2",
+        "MY2020-JL-4D-2019-11-13-p2",
+        "MY2020-JL-4D-2019-12-03-p2",
+        "MY2020-JL-4D-2020-01-02-p2",
+        "MY2020-JL-4D-2020-01-23-p2",
+        "MY2020-JL-4D-2020-02-11-p2",
+        "MY2020-JL-4D-2020-03-03-p2",
+        "MY2020-JL-4D-2020-04-17-p2"
+      ],
+      "first_observed_retained_revision": "2019-07-02",
+      "last_observed_retained_revision": "2020-04-17",
+      "market": "US",
+      "model_code": "JLJL74",
+      "model_year": 2020,
+      "proposed_structured_powertrain": {
+        "electrification_type": "none",
+        "engine_aspiration": "naturally_aspirated",
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "fuel_type": "gasoline"
+      },
+      "research_row_id": "JL20-40",
+      "scope_status": "Proposed discovery row; not a constructed or approved candidate",
+      "source_ids": [
+        "MY2020-JL-4D-2019-07-02",
+        "MY2020-JL-4D-2019-08-15",
+        "MY2020-JL-4D-2019-09-05",
+        "MY2020-JL-4D-2019-10-15",
+        "MY2020-JL-4D-2019-11-13",
+        "MY2020-JL-4D-2019-12-03",
+        "MY2020-JL-4D-2020-01-02",
+        "MY2020-JL-4D-2020-01-23",
+        "MY2020-JL-4D-2020-02-11",
+        "MY2020-JL-4D-2020-03-03",
+        "MY2020-JL-4D-2020-04-17"
+      ],
+      "transmission_codes": [
+        "DEM",
+        "DFT"
+      ],
+      "trim_name_proposal": "Unlimited Sport Altitude",
+      "unapproved_classification_fields": [
+        "engine_aspiration",
+        "electrification_type"
+      ]
+    },
+    {
+      "body_style": "4-door",
+      "cpos_codes": [
+        "26L"
+      ],
+      "deduplication": "Transmission/QOP alternatives collapsed; body+marketed-grade+assessed-engine tuple proposed. Engine code retained for traceability, not a new canonical identity dimension.",
+      "engine_code": "EXJ",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-4D-2019-10-15-p2",
+        "MY2020-JL-4D-2019-11-13-p2",
+        "MY2020-JL-4D-2019-12-03-p2",
+        "MY2020-JL-4D-2020-01-02-p2",
+        "MY2020-JL-4D-2020-01-23-p2",
+        "MY2020-JL-4D-2020-02-11-p2",
+        "MY2020-JL-4D-2020-03-03-p2",
+        "MY2020-JL-4D-2020-04-17-p2"
+      ],
+      "first_observed_retained_revision": "2019-10-15",
+      "last_observed_retained_revision": "2020-04-17",
+      "market": "US",
+      "model_code": "JLJL74",
+      "model_year": 2020,
+      "proposed_structured_powertrain": {
+        "electrification_type": "none",
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3",
+        "fuel_type": "diesel"
+      },
+      "research_row_id": "JL20-41",
+      "scope_status": "Proposed discovery row; not a constructed or approved candidate",
+      "source_ids": [
+        "MY2020-JL-4D-2019-10-15",
+        "MY2020-JL-4D-2019-11-13",
+        "MY2020-JL-4D-2019-12-03",
+        "MY2020-JL-4D-2020-01-02",
+        "MY2020-JL-4D-2020-01-23",
+        "MY2020-JL-4D-2020-02-11",
+        "MY2020-JL-4D-2020-03-03",
+        "MY2020-JL-4D-2020-04-17"
+      ],
+      "transmission_codes": [
+        "DFV"
+      ],
+      "trim_name_proposal": "Unlimited Sport Altitude",
+      "unapproved_classification_fields": [
+        "electrification_type"
+      ]
+    },
+    {
+      "body_style": "4-door",
+      "cpos_codes": [
+        "22S"
+      ],
+      "deduplication": "Transmission/QOP alternatives collapsed; body+marketed-grade+assessed-engine tuple proposed. Engine code retained for traceability, not a new canonical identity dimension.",
+      "engine_code": "EC1",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-4D-2019-07-02-p2",
+        "MY2020-JL-4D-2019-08-15-p2",
+        "MY2020-JL-4D-2019-09-05-p2",
+        "MY2020-JL-4D-2019-10-15-p2",
+        "MY2020-JL-4D-2019-11-13-p2",
+        "MY2020-JL-4D-2019-12-03-p2",
+        "MY2020-JL-4D-2020-01-02-p2",
+        "MY2020-JL-4D-2020-01-23-p2",
+        "MY2020-JL-4D-2020-02-11-p2",
+        "MY2020-JL-4D-2020-03-03-p2",
+        "MY2020-JL-4D-2020-04-17-p2"
+      ],
+      "first_observed_retained_revision": "2019-07-02",
+      "last_observed_retained_revision": "2020-04-17",
+      "market": "US",
+      "model_code": "JLJL74",
+      "model_year": 2020,
+      "proposed_structured_powertrain": {
+        "electrification_type": "none",
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 4,
+        "engine_displacement_liters": "2",
+        "fuel_type": "gasoline"
+      },
+      "research_row_id": "JL20-42",
+      "scope_status": "Proposed discovery row; not a constructed or approved candidate",
+      "source_ids": [
+        "MY2020-JL-4D-2019-07-02",
+        "MY2020-JL-4D-2019-08-15",
+        "MY2020-JL-4D-2019-09-05",
+        "MY2020-JL-4D-2019-10-15",
+        "MY2020-JL-4D-2019-11-13",
+        "MY2020-JL-4D-2019-12-03",
+        "MY2020-JL-4D-2020-01-02",
+        "MY2020-JL-4D-2020-01-23",
+        "MY2020-JL-4D-2020-02-11",
+        "MY2020-JL-4D-2020-03-03",
+        "MY2020-JL-4D-2020-04-17"
+      ],
+      "transmission_codes": [
+        "DFT"
+      ],
+      "trim_name_proposal": "Unlimited Sport S",
+      "unapproved_classification_fields": [
+        "electrification_type"
+      ]
+    },
+    {
+      "body_style": "4-door",
+      "cpos_codes": [
+        "23S",
+        "24S"
+      ],
+      "deduplication": "Transmission/QOP alternatives collapsed; body+marketed-grade+assessed-engine tuple proposed. Engine code retained for traceability, not a new canonical identity dimension.",
+      "engine_code": "ERC",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-4D-2019-07-02-p2",
+        "MY2020-JL-4D-2019-08-15-p2",
+        "MY2020-JL-4D-2019-09-05-p2",
+        "MY2020-JL-4D-2019-10-15-p2",
+        "MY2020-JL-4D-2019-11-13-p2",
+        "MY2020-JL-4D-2019-12-03-p2",
+        "MY2020-JL-4D-2020-01-02-p2",
+        "MY2020-JL-4D-2020-01-23-p2",
+        "MY2020-JL-4D-2020-02-11-p2",
+        "MY2020-JL-4D-2020-03-03-p2",
+        "MY2020-JL-4D-2020-04-17-p2"
+      ],
+      "first_observed_retained_revision": "2019-07-02",
+      "last_observed_retained_revision": "2020-04-17",
+      "market": "US",
+      "model_code": "JLJL74",
+      "model_year": 2020,
+      "proposed_structured_powertrain": {
+        "electrification_type": "none",
+        "engine_aspiration": "naturally_aspirated",
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "fuel_type": "gasoline"
+      },
+      "research_row_id": "JL20-43",
+      "scope_status": "Proposed discovery row; not a constructed or approved candidate",
+      "source_ids": [
+        "MY2020-JL-4D-2019-07-02",
+        "MY2020-JL-4D-2019-08-15",
+        "MY2020-JL-4D-2019-09-05",
+        "MY2020-JL-4D-2019-10-15",
+        "MY2020-JL-4D-2019-11-13",
+        "MY2020-JL-4D-2019-12-03",
+        "MY2020-JL-4D-2020-01-02",
+        "MY2020-JL-4D-2020-01-23",
+        "MY2020-JL-4D-2020-02-11",
+        "MY2020-JL-4D-2020-03-03",
+        "MY2020-JL-4D-2020-04-17"
+      ],
+      "transmission_codes": [
+        "DEM",
+        "DFT"
+      ],
+      "trim_name_proposal": "Unlimited Sport S",
+      "unapproved_classification_fields": [
+        "engine_aspiration",
+        "electrification_type"
+      ]
+    },
+    {
+      "body_style": "4-door",
+      "cpos_codes": [
+        "26S"
+      ],
+      "deduplication": "Transmission/QOP alternatives collapsed; body+marketed-grade+assessed-engine tuple proposed. Engine code retained for traceability, not a new canonical identity dimension.",
+      "engine_code": "EXJ",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-4D-2019-10-15-p2",
+        "MY2020-JL-4D-2019-11-13-p2",
+        "MY2020-JL-4D-2019-12-03-p2",
+        "MY2020-JL-4D-2020-01-02-p2",
+        "MY2020-JL-4D-2020-01-23-p2",
+        "MY2020-JL-4D-2020-02-11-p2",
+        "MY2020-JL-4D-2020-03-03-p2",
+        "MY2020-JL-4D-2020-04-17-p2"
+      ],
+      "first_observed_retained_revision": "2019-10-15",
+      "last_observed_retained_revision": "2020-04-17",
+      "market": "US",
+      "model_code": "JLJL74",
+      "model_year": 2020,
+      "proposed_structured_powertrain": {
+        "electrification_type": "none",
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3",
+        "fuel_type": "diesel"
+      },
+      "research_row_id": "JL20-44",
+      "scope_status": "Proposed discovery row; not a constructed or approved candidate",
+      "source_ids": [
+        "MY2020-JL-4D-2019-10-15",
+        "MY2020-JL-4D-2019-11-13",
+        "MY2020-JL-4D-2019-12-03",
+        "MY2020-JL-4D-2020-01-02",
+        "MY2020-JL-4D-2020-01-23",
+        "MY2020-JL-4D-2020-02-11",
+        "MY2020-JL-4D-2020-03-03",
+        "MY2020-JL-4D-2020-04-17"
+      ],
+      "transmission_codes": [
+        "DFV"
+      ],
+      "trim_name_proposal": "Unlimited Sport S",
+      "unapproved_classification_fields": [
+        "electrification_type"
+      ]
+    },
+    {
+      "body_style": "4-door",
+      "cpos_codes": [
+        "22W"
+      ],
+      "deduplication": "Transmission/QOP alternatives collapsed; body+marketed-grade+assessed-engine tuple proposed. Engine code retained for traceability, not a new canonical identity dimension.",
+      "engine_code": "EC1",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-4D-2019-09-05-p2",
+        "MY2020-JL-4D-2019-10-15-p2",
+        "MY2020-JL-4D-2019-11-13-p2",
+        "MY2020-JL-4D-2019-12-03-p2",
+        "MY2020-JL-4D-2020-01-02-p2",
+        "MY2020-JL-4D-2020-01-23-p2",
+        "MY2020-JL-4D-2020-02-11-p2",
+        "MY2020-JL-4D-2020-03-03-p2",
+        "MY2020-JL-4D-2020-04-17-p2"
+      ],
+      "first_observed_retained_revision": "2019-09-05",
+      "last_observed_retained_revision": "2020-04-17",
+      "market": "US",
+      "model_code": "JLJL74",
+      "model_year": 2020,
+      "proposed_structured_powertrain": {
+        "electrification_type": "none",
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 4,
+        "engine_displacement_liters": "2",
+        "fuel_type": "gasoline"
+      },
+      "research_row_id": "JL20-45",
+      "scope_status": "Proposed discovery row; not a constructed or approved candidate",
+      "source_ids": [
+        "MY2020-JL-4D-2019-09-05",
+        "MY2020-JL-4D-2019-10-15",
+        "MY2020-JL-4D-2019-11-13",
+        "MY2020-JL-4D-2019-12-03",
+        "MY2020-JL-4D-2020-01-02",
+        "MY2020-JL-4D-2020-01-23",
+        "MY2020-JL-4D-2020-02-11",
+        "MY2020-JL-4D-2020-03-03",
+        "MY2020-JL-4D-2020-04-17"
+      ],
+      "transmission_codes": [
+        "DFT"
+      ],
+      "trim_name_proposal": "Unlimited Willys",
+      "unapproved_classification_fields": [
+        "electrification_type"
+      ]
+    },
+    {
+      "body_style": "4-door",
+      "cpos_codes": [
+        "23W",
+        "24W"
+      ],
+      "deduplication": "Transmission/QOP alternatives collapsed; body+marketed-grade+assessed-engine tuple proposed. Engine code retained for traceability, not a new canonical identity dimension.",
+      "engine_code": "ERC",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-4D-2019-09-05-p2",
+        "MY2020-JL-4D-2019-10-15-p2",
+        "MY2020-JL-4D-2019-11-13-p2",
+        "MY2020-JL-4D-2019-12-03-p2",
+        "MY2020-JL-4D-2020-01-02-p2",
+        "MY2020-JL-4D-2020-01-23-p2",
+        "MY2020-JL-4D-2020-02-11-p2",
+        "MY2020-JL-4D-2020-03-03-p2",
+        "MY2020-JL-4D-2020-04-17-p2"
+      ],
+      "first_observed_retained_revision": "2019-09-05",
+      "last_observed_retained_revision": "2020-04-17",
+      "market": "US",
+      "model_code": "JLJL74",
+      "model_year": 2020,
+      "proposed_structured_powertrain": {
+        "electrification_type": "none",
+        "engine_aspiration": "naturally_aspirated",
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "fuel_type": "gasoline"
+      },
+      "research_row_id": "JL20-46",
+      "scope_status": "Proposed discovery row; not a constructed or approved candidate",
+      "source_ids": [
+        "MY2020-JL-4D-2019-09-05",
+        "MY2020-JL-4D-2019-10-15",
+        "MY2020-JL-4D-2019-11-13",
+        "MY2020-JL-4D-2019-12-03",
+        "MY2020-JL-4D-2020-01-02",
+        "MY2020-JL-4D-2020-01-23",
+        "MY2020-JL-4D-2020-02-11",
+        "MY2020-JL-4D-2020-03-03",
+        "MY2020-JL-4D-2020-04-17"
+      ],
+      "transmission_codes": [
+        "DEM",
+        "DFT"
+      ],
+      "trim_name_proposal": "Unlimited Willys",
+      "unapproved_classification_fields": [
+        "engine_aspiration",
+        "electrification_type"
+      ]
+    },
+    {
+      "body_style": "4-door",
+      "cpos_codes": [
+        "26W"
+      ],
+      "deduplication": "Transmission/QOP alternatives collapsed; body+marketed-grade+assessed-engine tuple proposed. Engine code retained for traceability, not a new canonical identity dimension.",
+      "engine_code": "EXJ",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-4D-2019-10-15-p2",
+        "MY2020-JL-4D-2019-11-13-p2",
+        "MY2020-JL-4D-2019-12-03-p2",
+        "MY2020-JL-4D-2020-01-02-p2",
+        "MY2020-JL-4D-2020-01-23-p2",
+        "MY2020-JL-4D-2020-02-11-p2",
+        "MY2020-JL-4D-2020-03-03-p2",
+        "MY2020-JL-4D-2020-04-17-p2"
+      ],
+      "first_observed_retained_revision": "2019-10-15",
+      "last_observed_retained_revision": "2020-04-17",
+      "market": "US",
+      "model_code": "JLJL74",
+      "model_year": 2020,
+      "proposed_structured_powertrain": {
+        "electrification_type": "none",
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3",
+        "fuel_type": "diesel"
+      },
+      "research_row_id": "JL20-47",
+      "scope_status": "Proposed discovery row; not a constructed or approved candidate",
+      "source_ids": [
+        "MY2020-JL-4D-2019-10-15",
+        "MY2020-JL-4D-2019-11-13",
+        "MY2020-JL-4D-2019-12-03",
+        "MY2020-JL-4D-2020-01-02",
+        "MY2020-JL-4D-2020-01-23",
+        "MY2020-JL-4D-2020-02-11",
+        "MY2020-JL-4D-2020-03-03",
+        "MY2020-JL-4D-2020-04-17"
+      ],
+      "transmission_codes": [
+        "DFV"
+      ],
+      "trim_name_proposal": "Unlimited Willys",
+      "unapproved_classification_fields": [
+        "electrification_type"
+      ]
+    },
+    {
+      "body_style": "4-door",
+      "cpos_codes": [
+        "22K"
+      ],
+      "deduplication": "Transmission/QOP alternatives collapsed; body+marketed-grade+assessed-engine tuple proposed. Engine code retained for traceability, not a new canonical identity dimension.",
+      "engine_code": "EC1",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-4D-2019-11-13-p2",
+        "MY2020-JL-4D-2019-12-03-p2",
+        "MY2020-JL-4D-2020-01-02-p2",
+        "MY2020-JL-4D-2020-01-23-p2",
+        "MY2020-JL-4D-2020-02-11-p2",
+        "MY2020-JL-4D-2020-03-03-p2",
+        "MY2020-JL-4D-2020-04-17-p2"
+      ],
+      "first_observed_retained_revision": "2019-11-13",
+      "last_observed_retained_revision": "2020-04-17",
+      "market": "US",
+      "model_code": "JLJL74",
+      "model_year": 2020,
+      "proposed_structured_powertrain": {
+        "electrification_type": "none",
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 4,
+        "engine_displacement_liters": "2",
+        "fuel_type": "gasoline"
+      },
+      "research_row_id": "JL20-48",
+      "scope_status": "Proposed discovery row; not a constructed or approved candidate",
+      "source_ids": [
+        "MY2020-JL-4D-2019-11-13",
+        "MY2020-JL-4D-2019-12-03",
+        "MY2020-JL-4D-2020-01-02",
+        "MY2020-JL-4D-2020-01-23",
+        "MY2020-JL-4D-2020-02-11",
+        "MY2020-JL-4D-2020-03-03",
+        "MY2020-JL-4D-2020-04-17"
+      ],
+      "transmission_codes": [
+        "DFT"
+      ],
+      "trim_name_proposal": "Unlimited Willys Sport",
+      "unapproved_classification_fields": [
+        "electrification_type"
+      ]
+    },
+    {
+      "body_style": "4-door",
+      "cpos_codes": [
+        "23K",
+        "24K"
+      ],
+      "deduplication": "Transmission/QOP alternatives collapsed; body+marketed-grade+assessed-engine tuple proposed. Engine code retained for traceability, not a new canonical identity dimension.",
+      "engine_code": "ERC",
+      "evidence_excerpt_ids": [
+        "MY2020-JL-4D-2019-11-13-p2",
+        "MY2020-JL-4D-2019-12-03-p2",
+        "MY2020-JL-4D-2020-01-02-p2",
+        "MY2020-JL-4D-2020-01-23-p2",
+        "MY2020-JL-4D-2020-02-11-p2",
+        "MY2020-JL-4D-2020-03-03-p2",
+        "MY2020-JL-4D-2020-04-17-p2"
+      ],
+      "first_observed_retained_revision": "2019-11-13",
+      "last_observed_retained_revision": "2020-04-17",
+      "market": "US",
+      "model_code": "JLJL74",
+      "model_year": 2020,
+      "proposed_structured_powertrain": {
+        "electrification_type": "none",
+        "engine_aspiration": "naturally_aspirated",
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "fuel_type": "gasoline"
+      },
+      "research_row_id": "JL20-49",
+      "scope_status": "Proposed discovery row; not a constructed or approved candidate",
+      "source_ids": [
+        "MY2020-JL-4D-2019-11-13",
+        "MY2020-JL-4D-2019-12-03",
+        "MY2020-JL-4D-2020-01-02",
+        "MY2020-JL-4D-2020-01-23",
+        "MY2020-JL-4D-2020-02-11",
+        "MY2020-JL-4D-2020-03-03",
+        "MY2020-JL-4D-2020-04-17"
+      ],
+      "transmission_codes": [
+        "DEM",
+        "DFT"
+      ],
+      "trim_name_proposal": "Unlimited Willys Sport",
+      "unapproved_classification_fields": [
+        "engine_aspiration",
+        "electrification_type"
+      ]
+    }
+  ],
+  "status": "Proposed",
+  "unique_configurations": 49
+}

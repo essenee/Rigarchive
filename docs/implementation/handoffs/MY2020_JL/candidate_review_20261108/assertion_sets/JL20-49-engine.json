@@ -1,0 +1,42 @@
+{
+  "envelope": {
+    "artifact_type": "rigarchive.source_assertion_set.v1",
+    "created_at": "2026-11-08T22:19:57.363050+00:00",
+    "generator": "bounded_my2020_review",
+    "schema_version": "1.1.0"
+  },
+  "provenance": {
+    "acquisition_method": "retained authentic PDF",
+    "extraction_provenance": {
+      "extraction_mode": "source_specific_parser",
+      "extractor_id": "pypdf",
+      "extractor_version": "6.16.1",
+      "raw_artifact_hash": "sha256:b9a2b88de8cf857b845950fec682b460396d802327e12587697da667f69ba731",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/4 Door 3-3-20.pdf"
+    },
+    "native_record_id": "JL20-49-engine",
+    "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+    "review_status": "reviewed",
+    "source_applicability": {
+      "applicability_basis": "US model-year guide/manual applicability; engine-family joins explicitly scoped",
+      "applicability_scope": "model_year",
+      "market": "US",
+      "publisher_jurisdiction": "US"
+    },
+    "source_id": "MY2020-JL-4D-2020-03-03",
+    "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-3-3-20-pdf.288452/",
+    "source_type": "manufacturer_document",
+    "source_use_notes": "Explicit descriptor and engine-code binding in the same table; classifications not expressed remain null.",
+    "target_context": {
+      "model_year": 2020
+    }
+  },
+  "source_assertions": [
+    {
+      "assertion_id": "JL20-49-engine",
+      "attribute_key": "engine_descriptor",
+      "raw_value": "3.6L V6 24V VVT ENGINE UPG            N/C       N/C\nI W/ESS (ERC)\n\n",
+      "source_context": "PDF page 2; JLJL74; QOP 23K,24K; exact engine table segment"
+    }
+  ]
+}

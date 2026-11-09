@@ -1,0 +1,45 @@
+{
+  "envelope": {
+    "artifact_type": "rigarchive.source_assertion_set.v1",
+    "created_at": "2026-11-08T22:37:13.602767+00:00",
+    "generator": "bounded_MY2020_evidence_review",
+    "schema_version": "1.1.0"
+  },
+  "provenance": {
+    "acquisition_method": "retained source or explicitly typed browser excerpt",
+    "extraction_provenance": {
+      "extraction_mode": "source_specific_parser",
+      "extractor_id": "MY2020_evidence_review",
+      "extractor_version": "1.0",
+      "raw_artifact_hash": "sha256:eccf53d564172144d82728cacc2b7f87210c2dd7af0a535e1df78f588a92cd92",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/evidence/Mopar_MY2020_Wrangler_US_owners_manual.pdf"
+    },
+    "native_record_id": "Mopar_MY2020_ESS_eTorque_hardware-review-20261108",
+    "retrieved_at": "2026-11-08T22:37:13.602767+00:00",
+    "review_status": "reviewed",
+    "source_applicability": {
+      "applicability_basis": "Document-specific US MY2020 applicability; scope limitations recorded in notes",
+      "applicability_scope": "model_year",
+      "market": "US",
+      "publisher_jurisdiction": "US"
+    },
+    "source_id": "Mopar_MY2020_ESS_eTorque_hardware",
+    "source_locator": "https://vehicleinfo.mopar.com/assets/publications/en-us/Jeep/2020/Wrangler/P138305_20_JL_OM_EN_USC_DIGITAL.pdf",
+    "source_type": "manufacturer_document",
+    "source_use_notes": "Authentic official PDF already retained. Explicit heavy-duty starter/battery versus motor-generator/hybrid-battery/launch-assist hardware. Gasoline-family manual does not by itself prove EXJ diesel hardware applicability."
+  },
+  "source_assertions": [
+    {
+      "assertion_id": "ESS-hardware-180",
+      "attribute_key": "starting_charging_architecture",
+      "raw_value": "ESS vehicles have been upgraded with a heavy duty \nstarter, enhanced battery, and other upgraded engine \nparts, to handle the additional engine starts. Vehicles \nequipped with eTorque contain a heavy duty motor \ngenerator and an additional hybrid electric battery to store \nenergy from vehicle deceleration for use on engine startup \nafter a stop as well as providing launch torque assist.\n",
+      "source_context": "PDF page180, printed178; Stop/Start System; automatic/manual section respectively; generic ESS/eTorque distinction, not EXJ identifier"
+    },
+    {
+      "assertion_id": "ESS-hardware-182",
+      "attribute_key": "starting_charging_architecture",
+      "raw_value": "ESS vehicles have been upgraded with a heavy duty \nstarter, enhanced battery, and other upgraded engine \nparts, to handle the additional engine starts. Vehicles \nequipped with eTorque contain a heavy duty motor \ngenerator and an additional hybrid electric battery to store \nenergy from vehicle deceleration for use on engine startup \nafter a stop as well as providing launch torque assist.\n",
+      "source_context": "PDF page182, printed180; Stop/Start System; automatic/manual section respectively; generic ESS/eTorque distinction, not EXJ identifier"
+    }
+  ]
+}

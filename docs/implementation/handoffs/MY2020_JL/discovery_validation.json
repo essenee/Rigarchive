@@ -1,0 +1,38 @@
+{
+  "all_guide_byte_hashes_verified": true,
+  "body_counts": {
+    "2-door": 15,
+    "4-door": 34
+  },
+  "body_trim_variants": 21,
+  "candidates_constructed": 0,
+  "canonical_imports_or_plans": 0,
+  "classifications_approved_in_this_task": 0,
+  "database_sha256": "sha256:f0d32327e0d688b56711a572375e4e462a266ebb8fdb250b97965e392dff07ab",
+  "development_database_unchanged": true,
+  "engine_counts": {
+    "EC1": 15,
+    "EC3": 6,
+    "ERC": 17,
+    "ERG": 3,
+    "EXJ": 8
+  },
+  "every_row_has_exact_positive_availability_cells": true,
+  "model_codes": [
+    "JLJL72",
+    "JLJL74",
+    "JLJP74",
+    "JLJS72",
+    "JLJS74"
+  ],
+  "no_transmission_only_duplicates": true,
+  "observed_cpos_cells_across_revisions": 547,
+  "powertrain_table_excerpts": 51,
+  "research_rows": 49,
+  "retained_order_guides": 20,
+  "rows_with_unapproved_classification_fields": 43,
+  "scope_note": "Discovery assertions and source rehashing only. No executable candidate contract certification or full test suite claimed.",
+  "unique_model_cpos_pairs": 64,
+  "unique_proposed_body_trim_tuple_identities": true,
+  "unretained_located_guides": 2
+}

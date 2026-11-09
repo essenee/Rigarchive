@@ -1,0 +1,748 @@
+[
+  {
+    "added_since_previous_retained": [
+      [
+        "Black and Tan",
+        "EC1"
+      ],
+      [
+        "Black and Tan",
+        "ERC"
+      ],
+      [
+        "Rubicon",
+        "EC1"
+      ],
+      [
+        "Rubicon",
+        "ERC"
+      ],
+      [
+        "Sport",
+        "EC1"
+      ],
+      [
+        "Sport",
+        "ERC"
+      ],
+      [
+        "Sport S",
+        "EC1"
+      ],
+      [
+        "Sport S",
+        "ERC"
+      ]
+    ],
+    "body_style": "2-door",
+    "date_meaning": "Observed in printed revision only; not production start/end certification.",
+    "offering_count": 8,
+    "omitted_since_previous_retained": [],
+    "package_cells_added": [
+      [
+        "JLJL72",
+        "22B"
+      ],
+      [
+        "JLJL72",
+        "22D"
+      ],
+      [
+        "JLJL72",
+        "22S"
+      ],
+      [
+        "JLJL72",
+        "23B"
+      ],
+      [
+        "JLJL72",
+        "23D"
+      ],
+      [
+        "JLJL72",
+        "23S"
+      ],
+      [
+        "JLJL72",
+        "24B"
+      ],
+      [
+        "JLJL72",
+        "24D"
+      ],
+      [
+        "JLJL72",
+        "24S"
+      ],
+      [
+        "JLJS72",
+        "22R"
+      ],
+      [
+        "JLJS72",
+        "23R"
+      ],
+      [
+        "JLJS72",
+        "24R"
+      ]
+    ],
+    "package_cells_omitted": [],
+    "revision": "2019-08-15",
+    "source_id": "MY2020-JL-2D-2019-08-15"
+  },
+  {
+    "added_since_previous_retained": [
+      [
+        "Willys",
+        "EC1"
+      ],
+      [
+        "Willys",
+        "ERC"
+      ]
+    ],
+    "body_style": "2-door",
+    "date_meaning": "Observed in printed revision only; not production start/end certification.",
+    "offering_count": 10,
+    "omitted_since_previous_retained": [],
+    "package_cells_added": [
+      [
+        "JLJL72",
+        "22W"
+      ],
+      [
+        "JLJL72",
+        "23W"
+      ],
+      [
+        "JLJL72",
+        "24W"
+      ]
+    ],
+    "package_cells_omitted": [],
+    "revision": "2019-09-05",
+    "source_id": "MY2020-JL-2D-2019-09-05"
+  },
+  {
+    "added_since_previous_retained": [
+      [
+        "Freedom",
+        "EC1"
+      ],
+      [
+        "Freedom",
+        "ERC"
+      ]
+    ],
+    "body_style": "2-door",
+    "date_meaning": "Observed in printed revision only; not production start/end certification.",
+    "offering_count": 12,
+    "omitted_since_previous_retained": [],
+    "package_cells_added": [
+      [
+        "JLJL72",
+        "22F"
+      ],
+      [
+        "JLJL72",
+        "23F"
+      ],
+      [
+        "JLJL72",
+        "24F"
+      ]
+    ],
+    "package_cells_omitted": [],
+    "revision": "2019-10-08",
+    "source_id": "MY2020-JL-2D-2019-10-08"
+  },
+  {
+    "added_since_previous_retained": [
+      [
+        "Willys Sport",
+        "EC1"
+      ],
+      [
+        "Willys Sport",
+        "ERC"
+      ]
+    ],
+    "body_style": "2-door",
+    "date_meaning": "Observed in printed revision only; not production start/end certification.",
+    "offering_count": 14,
+    "omitted_since_previous_retained": [],
+    "package_cells_added": [
+      [
+        "JLJL72",
+        "22K"
+      ],
+      [
+        "JLJL72",
+        "23K"
+      ],
+      [
+        "JLJL72",
+        "24K"
+      ]
+    ],
+    "package_cells_omitted": [],
+    "revision": "2019-11-04",
+    "source_id": "MY2020-JL-2D-2019-11-04"
+  },
+  {
+    "added_since_previous_retained": [
+      [
+        "Rubicon Recon",
+        "EC3"
+      ]
+    ],
+    "body_style": "2-door",
+    "date_meaning": "Observed in printed revision only; not production start/end certification.",
+    "offering_count": 15,
+    "omitted_since_previous_retained": [],
+    "package_cells_added": [
+      [
+        "JLJS72",
+        "28Y"
+      ]
+    ],
+    "package_cells_omitted": [],
+    "revision": "2020-01-15",
+    "source_id": "MY2020-JL-2D-2020-01-15"
+  },
+  {
+    "added_since_previous_retained": [],
+    "body_style": "2-door",
+    "date_meaning": "Observed in printed revision only; not production start/end certification.",
+    "offering_count": 15,
+    "omitted_since_previous_retained": [],
+    "package_cells_added": [],
+    "package_cells_omitted": [],
+    "revision": "2020-01-23",
+    "source_id": "MY2020-JL-2D-2020-01-23"
+  },
+  {
+    "added_since_previous_retained": [],
+    "body_style": "2-door",
+    "date_meaning": "Observed in printed revision only; not production start/end certification.",
+    "offering_count": 15,
+    "omitted_since_previous_retained": [],
+    "package_cells_added": [],
+    "package_cells_omitted": [],
+    "revision": "2020-02-12",
+    "source_id": "MY2020-JL-2D-2020-02-12"
+  },
+  {
+    "added_since_previous_retained": [],
+    "body_style": "2-door",
+    "date_meaning": "Observed in printed revision only; not production start/end certification.",
+    "offering_count": 15,
+    "omitted_since_previous_retained": [],
+    "package_cells_added": [],
+    "package_cells_omitted": [],
+    "revision": "2020-03-03",
+    "source_id": "MY2020-JL-2D-2020-03-03"
+  },
+  {
+    "added_since_previous_retained": [],
+    "body_style": "2-door",
+    "date_meaning": "Observed in printed revision only; not production start/end certification.",
+    "offering_count": 13,
+    "omitted_since_previous_retained": [
+      [
+        "Black and Tan",
+        "EC1"
+      ],
+      [
+        "Black and Tan",
+        "ERC"
+      ]
+    ],
+    "package_cells_added": [],
+    "package_cells_omitted": [
+      [
+        "JLJL72",
+        "22D"
+      ],
+      [
+        "JLJL72",
+        "23D"
+      ],
+      [
+        "JLJL72",
+        "24D"
+      ]
+    ],
+    "revision": "2020-04-17",
+    "source_id": "MY2020-JL-2D-2020-04-17"
+  },
+  {
+    "added_since_previous_retained": [
+      [
+        "Unlimited Black and Tan",
+        "EC1"
+      ],
+      [
+        "Unlimited Black and Tan",
+        "ERC"
+      ],
+      [
+        "Unlimited Rubicon",
+        "EC1"
+      ],
+      [
+        "Unlimited Rubicon",
+        "ERC"
+      ],
+      [
+        "Unlimited Sahara",
+        "EC3"
+      ],
+      [
+        "Unlimited Sahara",
+        "ERC"
+      ],
+      [
+        "Unlimited Sahara",
+        "ERG"
+      ],
+      [
+        "Unlimited Sahara Altitude",
+        "EC3"
+      ],
+      [
+        "Unlimited Sahara Altitude",
+        "ERC"
+      ],
+      [
+        "Unlimited Sahara Altitude",
+        "ERG"
+      ],
+      [
+        "Unlimited Sport",
+        "EC1"
+      ],
+      [
+        "Unlimited Sport",
+        "ERC"
+      ],
+      [
+        "Unlimited Sport Altitude",
+        "EC1"
+      ],
+      [
+        "Unlimited Sport Altitude",
+        "ERC"
+      ],
+      [
+        "Unlimited Sport S",
+        "EC1"
+      ],
+      [
+        "Unlimited Sport S",
+        "ERC"
+      ]
+    ],
+    "body_style": "4-door",
+    "date_meaning": "Observed in printed revision only; not production start/end certification.",
+    "offering_count": 16,
+    "omitted_since_previous_retained": [],
+    "package_cells_added": [
+      [
+        "JLJL74",
+        "22B"
+      ],
+      [
+        "JLJL74",
+        "22D"
+      ],
+      [
+        "JLJL74",
+        "22L"
+      ],
+      [
+        "JLJL74",
+        "22S"
+      ],
+      [
+        "JLJL74",
+        "23B"
+      ],
+      [
+        "JLJL74",
+        "23D"
+      ],
+      [
+        "JLJL74",
+        "23L"
+      ],
+      [
+        "JLJL74",
+        "23S"
+      ],
+      [
+        "JLJL74",
+        "24B"
+      ],
+      [
+        "JLJL74",
+        "24D"
+      ],
+      [
+        "JLJL74",
+        "24L"
+      ],
+      [
+        "JLJL74",
+        "24S"
+      ],
+      [
+        "JLJP74",
+        "23G"
+      ],
+      [
+        "JLJP74",
+        "23L"
+      ],
+      [
+        "JLJP74",
+        "25G"
+      ],
+      [
+        "JLJP74",
+        "25L"
+      ],
+      [
+        "JLJP74",
+        "28G"
+      ],
+      [
+        "JLJP74",
+        "28L"
+      ],
+      [
+        "JLJS74",
+        "22R"
+      ],
+      [
+        "JLJS74",
+        "23R"
+      ],
+      [
+        "JLJS74",
+        "24R"
+      ]
+    ],
+    "package_cells_omitted": [],
+    "revision": "2019-07-02",
+    "source_id": "MY2020-JL-4D-2019-07-02"
+  },
+  {
+    "added_since_previous_retained": [],
+    "body_style": "4-door",
+    "date_meaning": "Observed in printed revision only; not production start/end certification.",
+    "offering_count": 16,
+    "omitted_since_previous_retained": [],
+    "package_cells_added": [],
+    "package_cells_omitted": [],
+    "revision": "2019-08-15",
+    "source_id": "MY2020-JL-4D-2019-08-15"
+  },
+  {
+    "added_since_previous_retained": [
+      [
+        "Unlimited Willys",
+        "EC1"
+      ],
+      [
+        "Unlimited Willys",
+        "ERC"
+      ]
+    ],
+    "body_style": "4-door",
+    "date_meaning": "Observed in printed revision only; not production start/end certification.",
+    "offering_count": 18,
+    "omitted_since_previous_retained": [],
+    "package_cells_added": [
+      [
+        "JLJL74",
+        "22W"
+      ],
+      [
+        "JLJL74",
+        "23W"
+      ],
+      [
+        "JLJL74",
+        "24W"
+      ]
+    ],
+    "package_cells_omitted": [],
+    "revision": "2019-09-05",
+    "source_id": "MY2020-JL-4D-2019-09-05"
+  },
+  {
+    "added_since_previous_retained": [
+      [
+        "Unlimited Freedom",
+        "EC1"
+      ],
+      [
+        "Unlimited Freedom",
+        "ERC"
+      ],
+      [
+        "Unlimited North Edition",
+        "EC3"
+      ],
+      [
+        "Unlimited Rubicon",
+        "EXJ"
+      ],
+      [
+        "Unlimited Sahara",
+        "EXJ"
+      ],
+      [
+        "Unlimited Sahara Altitude",
+        "EXJ"
+      ],
+      [
+        "Unlimited Sport",
+        "EXJ"
+      ],
+      [
+        "Unlimited Sport Altitude",
+        "EXJ"
+      ],
+      [
+        "Unlimited Sport S",
+        "EXJ"
+      ],
+      [
+        "Unlimited Willys",
+        "EXJ"
+      ]
+    ],
+    "body_style": "4-door",
+    "date_meaning": "Observed in printed revision only; not production start/end certification.",
+    "offering_count": 28,
+    "omitted_since_previous_retained": [],
+    "package_cells_added": [
+      [
+        "JLJL74",
+        "22F"
+      ],
+      [
+        "JLJL74",
+        "23F"
+      ],
+      [
+        "JLJL74",
+        "24F"
+      ],
+      [
+        "JLJL74",
+        "26B"
+      ],
+      [
+        "JLJL74",
+        "26L"
+      ],
+      [
+        "JLJL74",
+        "26S"
+      ],
+      [
+        "JLJL74",
+        "26W"
+      ],
+      [
+        "JLJP74",
+        "26G"
+      ],
+      [
+        "JLJP74",
+        "26L"
+      ],
+      [
+        "JLJP74",
+        "28E"
+      ],
+      [
+        "JLJS74",
+        "26R"
+      ]
+    ],
+    "package_cells_omitted": [],
+    "revision": "2019-10-15",
+    "source_id": "MY2020-JL-4D-2019-10-15"
+  },
+  {
+    "added_since_previous_retained": [
+      [
+        "Unlimited Willys Sport",
+        "EC1"
+      ],
+      [
+        "Unlimited Willys Sport",
+        "ERC"
+      ]
+    ],
+    "body_style": "4-door",
+    "date_meaning": "Observed in printed revision only; not production start/end certification.",
+    "offering_count": 30,
+    "omitted_since_previous_retained": [],
+    "package_cells_added": [
+      [
+        "JLJL74",
+        "22K"
+      ],
+      [
+        "JLJL74",
+        "23K"
+      ],
+      [
+        "JLJL74",
+        "24K"
+      ]
+    ],
+    "package_cells_omitted": [],
+    "revision": "2019-11-13",
+    "source_id": "MY2020-JL-4D-2019-11-13"
+  },
+  {
+    "added_since_previous_retained": [],
+    "body_style": "4-door",
+    "date_meaning": "Observed in printed revision only; not production start/end certification.",
+    "offering_count": 30,
+    "omitted_since_previous_retained": [],
+    "package_cells_added": [],
+    "package_cells_omitted": [],
+    "revision": "2019-12-03",
+    "source_id": "MY2020-JL-4D-2019-12-03"
+  },
+  {
+    "added_since_previous_retained": [
+      [
+        "Unlimited Rubicon Recon",
+        "EC3"
+      ]
+    ],
+    "body_style": "4-door",
+    "date_meaning": "Observed in printed revision only; not production start/end certification.",
+    "offering_count": 31,
+    "omitted_since_previous_retained": [],
+    "package_cells_added": [
+      [
+        "JLJS74",
+        "28Y"
+      ]
+    ],
+    "package_cells_omitted": [],
+    "revision": "2020-01-02",
+    "source_id": "MY2020-JL-4D-2020-01-02"
+  },
+  {
+    "added_since_previous_retained": [],
+    "body_style": "4-door",
+    "date_meaning": "Observed in printed revision only; not production start/end certification.",
+    "offering_count": 31,
+    "omitted_since_previous_retained": [],
+    "package_cells_added": [],
+    "package_cells_omitted": [],
+    "revision": "2020-01-23",
+    "source_id": "MY2020-JL-4D-2020-01-23"
+  },
+  {
+    "added_since_previous_retained": [],
+    "body_style": "4-door",
+    "date_meaning": "Observed in printed revision only; not production start/end certification.",
+    "offering_count": 31,
+    "omitted_since_previous_retained": [],
+    "package_cells_added": [],
+    "package_cells_omitted": [],
+    "revision": "2020-02-11",
+    "source_id": "MY2020-JL-4D-2020-02-11"
+  },
+  {
+    "added_since_previous_retained": [
+      [
+        "Unlimited Sahara High Altitude",
+        "EC3"
+      ],
+      [
+        "Unlimited Sahara High Altitude",
+        "ERG"
+      ],
+      [
+        "Unlimited Sahara High Altitude",
+        "EXJ"
+      ]
+    ],
+    "body_style": "4-door",
+    "date_meaning": "Observed in printed revision only; not production start/end certification.",
+    "offering_count": 34,
+    "omitted_since_previous_retained": [],
+    "package_cells_added": [
+      [
+        "JLJP74",
+        "25N"
+      ],
+      [
+        "JLJP74",
+        "26N"
+      ],
+      [
+        "JLJP74",
+        "28N"
+      ]
+    ],
+    "package_cells_omitted": [],
+    "revision": "2020-03-03",
+    "source_id": "MY2020-JL-4D-2020-03-03"
+  },
+  {
+    "added_since_previous_retained": [],
+    "body_style": "4-door",
+    "date_meaning": "Observed in printed revision only; not production start/end certification.",
+    "offering_count": 31,
+    "omitted_since_previous_retained": [
+      [
+        "Unlimited Black and Tan",
+        "EC1"
+      ],
+      [
+        "Unlimited Black and Tan",
+        "ERC"
+      ],
+      [
+        "Unlimited Rubicon",
+        "EXJ"
+      ]
+    ],
+    "package_cells_added": [],
+    "package_cells_omitted": [
+      [
+        "JLJL74",
+        "22D"
+      ],
+      [
+        "JLJL74",
+        "23D"
+      ],
+      [
+        "JLJL74",
+        "24D"
+      ],
+      [
+        "JLJS74",
+        "26R"
+      ]
+    ],
+    "revision": "2020-04-17",
+    "source_id": "MY2020-JL-4D-2020-04-17"
+  }
+]

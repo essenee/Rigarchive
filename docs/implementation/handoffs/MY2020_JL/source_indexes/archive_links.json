@@ -1,0 +1,97 @@
+{
+  "notice": "Observed attachment/link inventory, not original index HTML bytes. Original PDF byte hashes are recorded only for retained PDF files.",
+  "threads": [
+    "https://www.jlwranglerforums.com/forum/threads/2020-jeep-wrangler-jl-order-guide-2-door.32991/",
+    "https://www.jlwranglerforums.com/forum/threads/2020-jeep-wrangler-unlimited-order-guide-4-door.32990/"
+  ],
+  "guides": [
+    {
+      "source_id": "MY2020-JL-2D-2019-08-15",
+      "url": "https://www.jlwranglerforums.com/forum/attachments/2020_jl_2_door_08_15_2019-pdf.215559/"
+    },
+    {
+      "source_id": "MY2020-JL-2D-2019-09-05",
+      "url": "https://www.jlwranglerforums.com/forum/attachments/2-door-9-5-19-pdf.227937/"
+    },
+    {
+      "source_id": "MY2020-JL-2D-2019-10-08",
+      "url": "https://www.jlwranglerforums.com/forum/attachments/2-door-10-8-19-pdf.239598/"
+    },
+    {
+      "source_id": "MY2020-JL-2D-2019-11-04",
+      "url": "https://www.jlwranglerforums.com/forum/attachments/2-door-11-4-19-pdf.255143/"
+    },
+    {
+      "source_id": "MY2020-JL-2D-2020-01-15",
+      "url": "https://www.jlwranglerforums.com/forum/attachments/2-door-1-15-20-pdf.272500/"
+    },
+    {
+      "source_id": "MY2020-JL-2D-2020-01-23",
+      "url": "https://www.jlwranglerforums.com/forum/attachments/2-door-1-23-20-pdf.275369/"
+    },
+    {
+      "source_id": "MY2020-JL-2D-2020-02-12",
+      "url": "https://www.jlwranglerforums.com/forum/attachments/2-door-2-12-20-pdf.281244/"
+    },
+    {
+      "source_id": "MY2020-JL-2D-2020-03-03",
+      "url": "https://www.jlwranglerforums.com/forum/attachments/2-door-3-3-20-pdf.288455/"
+    },
+    {
+      "source_id": "MY2020-JL-2D-2020-04-17",
+      "url": "https://www.jlwranglerforums.com/forum/attachments/2-door-4-17-20-pdf.312615/"
+    },
+    {
+      "source_id": "MY2020-JL-4D-2019-07-02",
+      "url": "https://www.jlwranglerforums.com/forum/attachments/2020_jl_4_door_07_02_2019-pdf.199502/"
+    },
+    {
+      "source_id": "MY2020-JL-4D-2019-08-15",
+      "url": "https://www.jlwranglerforums.com/forum/attachments/2020_jl_4_door_08_15_2019-pdf.215555/"
+    },
+    {
+      "source_id": "MY2020-JL-4D-2019-09-05",
+      "url": "https://www.jlwranglerforums.com/forum/attachments/4-door-9-5-19-pdf.227935/"
+    },
+    {
+      "source_id": "MY2020-JL-4D-2019-10-15",
+      "url": "https://www.jlwranglerforums.com/forum/attachments/4-door-10-15-19-pdf.239596/"
+    },
+    {
+      "source_id": "MY2020-JL-4D-2019-11-13",
+      "url": "https://www.jlwranglerforums.com/forum/attachments/4-door-11-13-19-pdf.255141/"
+    },
+    {
+      "source_id": "MY2020-JL-4D-2019-12-03",
+      "url": "https://www.jlwranglerforums.com/forum/attachments/4-door-12-3-19-pdf.261313/"
+    },
+    {
+      "source_id": "MY2020-JL-4D-2020-01-02",
+      "url": "https://www.jlwranglerforums.com/forum/attachments/4-door-1-2-20-pdf.268620/"
+    },
+    {
+      "source_id": "MY2020-JL-4D-2020-01-23",
+      "url": "https://www.jlwranglerforums.com/forum/attachments/4-door-1-23-20-pdf.275367/"
+    },
+    {
+      "source_id": "MY2020-JL-4D-2020-02-11",
+      "url": "https://www.jlwranglerforums.com/forum/attachments/4-door-2-11-20-pdf.281242/"
+    },
+    {
+      "source_id": "MY2020-JL-4D-2020-03-03",
+      "url": "https://www.jlwranglerforums.com/forum/attachments/4-door-3-3-20-pdf.288452/"
+    },
+    {
+      "source_id": "MY2020-JL-4D-2020-04-17",
+      "url": "https://www.jlwranglerforums.com/forum/attachments/4-door-4-17-20-pdf.312614/"
+    },
+    {
+      "source_id": "MY2020-JL-2D-2019-07-02-UNRETAINED",
+      "url": "https://www.jlwranglerforums.com/forum/attachments/2020_jl_2_door_07_02_2019-pdf.199518/"
+    },
+    {
+      "source_id": "MY2020-JL-4D-2020-02-07-UNRETAINED",
+      "url": "https://www.jlwranglerforums.com/forum/attachments/4-door-2-7-20-pdf.280869/"
+    }
+  ]
+}

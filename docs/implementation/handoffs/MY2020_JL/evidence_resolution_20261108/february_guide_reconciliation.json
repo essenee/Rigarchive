@@ -1,0 +1,945 @@
+{
+  "pdf_sha256": "sha256:b12d5bf26114f990358f54793e55d59343e6c64f9193bf39c0e327af55b89f9c",
+  "guide_unique_configurations": 31,
+  "additional_configurations": [],
+  "not_in_guide": [
+    [
+      "Unlimited High Altitude",
+      "EC3"
+    ],
+    [
+      "Unlimited High Altitude",
+      "ERG"
+    ],
+    [
+      "Unlimited High Altitude",
+      "EXJ"
+    ]
+  ],
+  "two_door_applicability": "not applicable; this is a four-door guide",
+  "cells": [
+    {
+      "model_code": "JLJL74",
+      "qop": "23B",
+      "engine_code": "ERC",
+      "trim": "Unlimited Sport",
+      "pdf_page": 2
+    },
+    {
+      "model_code": "JLJL74",
+      "qop": "23K",
+      "engine_code": "ERC",
+      "trim": "Unlimited Willys Sport",
+      "pdf_page": 2
+    },
+    {
+      "model_code": "JLJL74",
+      "qop": "23S",
+      "engine_code": "ERC",
+      "trim": "Unlimited Sport S",
+      "pdf_page": 2
+    },
+    {
+      "model_code": "JLJL74",
+      "qop": "23L",
+      "engine_code": "ERC",
+      "trim": "Unlimited Sport Altitude",
+      "pdf_page": 2
+    },
+    {
+      "model_code": "JLJL74",
+      "qop": "23W",
+      "engine_code": "ERC",
+      "trim": "Unlimited Willys",
+      "pdf_page": 2
+    },
+    {
+      "model_code": "JLJL74",
+      "qop": "23D",
+      "engine_code": "ERC",
+      "trim": "Unlimited Black and Tan",
+      "pdf_page": 2
+    },
+    {
+      "model_code": "JLJL74",
+      "qop": "23F",
+      "engine_code": "ERC",
+      "trim": "Unlimited Freedom",
+      "pdf_page": 2
+    },
+    {
+      "model_code": "JLJL74",
+      "qop": "24B",
+      "engine_code": "ERC",
+      "trim": "Unlimited Sport",
+      "pdf_page": 2
+    },
+    {
+      "model_code": "JLJL74",
+      "qop": "24S",
+      "engine_code": "ERC",
+      "trim": "Unlimited Sport S",
+      "pdf_page": 2
+    },
+    {
+      "model_code": "JLJL74",
+      "qop": "24L",
+      "engine_code": "ERC",
+      "trim": "Unlimited Sport Altitude",
+      "pdf_page": 2
+    },
+    {
+      "model_code": "JLJL74",
+      "qop": "24D",
+      "engine_code": "ERC",
+      "trim": "Unlimited Black and Tan",
+      "pdf_page": 2
+    },
+    {
+      "model_code": "JLJL74",
+      "qop": "24F",
+      "engine_code": "ERC",
+      "trim": "Unlimited Freedom",
+      "pdf_page": 2
+    },
+    {
+      "model_code": "JLJL74",
+      "qop": "22B",
+      "engine_code": "EC1",
+      "trim": "Unlimited Sport",
+      "pdf_page": 2
+    },
+    {
+      "model_code": "JLJL74",
+      "qop": "22S",
+      "engine_code": "EC1",
+      "trim": "Unlimited Sport S",
+      "pdf_page": 2
+    },
+    {
+      "model_code": "JLJL74",
+      "qop": "22L",
+      "engine_code": "EC1",
+      "trim": "Unlimited Sport Altitude",
+      "pdf_page": 2
+    },
+    {
+      "model_code": "JLJL74",
+      "qop": "22D",
+      "engine_code": "EC1",
+      "trim": "Unlimited Black and Tan",
+      "pdf_page": 2
+    },
+    {
+      "model_code": "JLJL74",
+      "qop": "22F",
+      "engine_code": "EC1",
+      "trim": "Unlimited Freedom",
+      "pdf_page": 2
+    },
+    {
+      "model_code": "JLJL74",
+      "qop": "26B",
+      "engine_code": "EXJ",
+      "trim": "Unlimited Sport",
+      "pdf_page": 2
+    },
+    {
+      "model_code": "JLJL74",
+      "qop": "26S",
+      "engine_code": "EXJ",
+      "trim": "Unlimited Sport S",
+      "pdf_page": 2
+    },
+    {
+      "model_code": "JLJL74",
+      "qop": "26L",
+      "engine_code": "EXJ",
+      "trim": "Unlimited Sport Altitude",
+      "pdf_page": 2
+    },
+    {
+      "model_code": "JLJL74",
+      "qop": "26W",
+      "engine_code": "EXJ",
+      "trim": "Unlimited Willys",
+      "pdf_page": 2
+    },
+    {
+      "model_code": "JLJL74",
+      "qop": "24K",
+      "engine_code": "ERC",
+      "trim": "Unlimited Willys Sport",
+      "pdf_page": 2
+    },
+    {
+      "model_code": "JLJL74",
+      "qop": "24W",
+      "engine_code": "ERC",
+      "trim": "Unlimited Willys",
+      "pdf_page": 2
+    },
+    {
+      "model_code": "JLJL74",
+      "qop": "22K",
+      "engine_code": "EC1",
+      "trim": "Unlimited Willys Sport",
+      "pdf_page": 2
+    },
+    {
+      "model_code": "JLJL74",
+      "qop": "22W",
+      "engine_code": "EC1",
+      "trim": "Unlimited Willys",
+      "pdf_page": 2
+    },
+    {
+      "model_code": "JLJP74",
+      "qop": "23G",
+      "engine_code": "ERC",
+      "trim": "Unlimited Sahara",
+      "pdf_page": 7
+    },
+    {
+      "model_code": "JLJP74",
+      "qop": "23L",
+      "engine_code": "ERC",
+      "trim": "Unlimited Sahara Altitude",
+      "pdf_page": 7
+    },
+    {
+      "model_code": "JLJP74",
+      "qop": "28G",
+      "engine_code": "EC3",
+      "trim": "Unlimited Sahara",
+      "pdf_page": 7
+    },
+    {
+      "model_code": "JLJP74",
+      "qop": "28L",
+      "engine_code": "EC3",
+      "trim": "Unlimited Sahara Altitude",
+      "pdf_page": 7
+    },
+    {
+      "model_code": "JLJP74",
+      "qop": "28E",
+      "engine_code": "EC3",
+      "trim": "Unlimited North Edition",
+      "pdf_page": 7
+    },
+    {
+      "model_code": "JLJP74",
+      "qop": "25G",
+      "engine_code": "ERG",
+      "trim": "Unlimited Sahara",
+      "pdf_page": 7
+    },
+    {
+      "model_code": "JLJP74",
+      "qop": "25L",
+      "engine_code": "ERG",
+      "trim": "Unlimited Sahara Altitude",
+      "pdf_page": 7
+    },
+    {
+      "model_code": "JLJP74",
+      "qop": "26G",
+      "engine_code": "EXJ",
+      "trim": "Unlimited Sahara",
+      "pdf_page": 7
+    },
+    {
+      "model_code": "JLJP74",
+      "qop": "26L",
+      "engine_code": "EXJ",
+      "trim": "Unlimited Sahara Altitude",
+      "pdf_page": 7
+    },
+    {
+      "model_code": "JLJS74",
+      "qop": "23R",
+      "engine_code": "ERC",
+      "trim": "Unlimited Rubicon",
+      "pdf_page": 11
+    },
+    {
+      "model_code": "JLJS74",
+      "qop": "24R",
+      "engine_code": "ERC",
+      "trim": "Unlimited Rubicon",
+      "pdf_page": 11
+    },
+    {
+      "model_code": "JLJS74",
+      "qop": "22R",
+      "engine_code": "EC1",
+      "trim": "Unlimited Rubicon",
+      "pdf_page": 11
+    },
+    {
+      "model_code": "JLJS74",
+      "qop": "26R",
+      "engine_code": "EXJ",
+      "trim": "Unlimited Rubicon",
+      "pdf_page": 11
+    },
+    {
+      "model_code": "JLJS74",
+      "qop": "28Y",
+      "engine_code": "EC3",
+      "trim": "Unlimited Rubicon Recon",
+      "pdf_page": 11
+    }
+  ],
+  "rows": [
+    {
+      "candidate_reference": "JL20-01",
+      "trim": "Black and Tan",
+      "engine_code": "EC1",
+      "status": "not_applicable_two_door",
+      "positive_cells": []
+    },
+    {
+      "candidate_reference": "JL20-02",
+      "trim": "Black and Tan",
+      "engine_code": "ERC",
+      "status": "not_applicable_two_door",
+      "positive_cells": []
+    },
+    {
+      "candidate_reference": "JL20-03",
+      "trim": "Freedom",
+      "engine_code": "EC1",
+      "status": "not_applicable_two_door",
+      "positive_cells": []
+    },
+    {
+      "candidate_reference": "JL20-04",
+      "trim": "Freedom",
+      "engine_code": "ERC",
+      "status": "not_applicable_two_door",
+      "positive_cells": []
+    },
+    {
+      "candidate_reference": "JL20-05",
+      "trim": "Rubicon",
+      "engine_code": "EC1",
+      "status": "not_applicable_two_door",
+      "positive_cells": []
+    },
+    {
+      "candidate_reference": "JL20-06",
+      "trim": "Rubicon",
+      "engine_code": "ERC",
+      "status": "not_applicable_two_door",
+      "positive_cells": []
+    },
+    {
+      "candidate_reference": "JL20-07",
+      "trim": "Rubicon Recon",
+      "engine_code": "EC3",
+      "status": "not_applicable_two_door",
+      "positive_cells": []
+    },
+    {
+      "candidate_reference": "JL20-08",
+      "trim": "Sport",
+      "engine_code": "EC1",
+      "status": "not_applicable_two_door",
+      "positive_cells": []
+    },
+    {
+      "candidate_reference": "JL20-09",
+      "trim": "Sport",
+      "engine_code": "ERC",
+      "status": "not_applicable_two_door",
+      "positive_cells": []
+    },
+    {
+      "candidate_reference": "JL20-10",
+      "trim": "Sport S",
+      "engine_code": "EC1",
+      "status": "not_applicable_two_door",
+      "positive_cells": []
+    },
+    {
+      "candidate_reference": "JL20-11",
+      "trim": "Sport S",
+      "engine_code": "ERC",
+      "status": "not_applicable_two_door",
+      "positive_cells": []
+    },
+    {
+      "candidate_reference": "JL20-12",
+      "trim": "Willys",
+      "engine_code": "EC1",
+      "status": "not_applicable_two_door",
+      "positive_cells": []
+    },
+    {
+      "candidate_reference": "JL20-13",
+      "trim": "Willys",
+      "engine_code": "ERC",
+      "status": "not_applicable_two_door",
+      "positive_cells": []
+    },
+    {
+      "candidate_reference": "JL20-14",
+      "trim": "Willys Sport",
+      "engine_code": "EC1",
+      "status": "not_applicable_two_door",
+      "positive_cells": []
+    },
+    {
+      "candidate_reference": "JL20-15",
+      "trim": "Willys Sport",
+      "engine_code": "ERC",
+      "status": "not_applicable_two_door",
+      "positive_cells": []
+    },
+    {
+      "candidate_reference": "JL20-16",
+      "trim": "Unlimited Black and Tan",
+      "engine_code": "EC1",
+      "status": "present",
+      "positive_cells": [
+        {
+          "model_code": "JLJL74",
+          "qop": "22D",
+          "engine_code": "EC1",
+          "trim": "Unlimited Black and Tan",
+          "pdf_page": 2
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL20-17",
+      "trim": "Unlimited Black and Tan",
+      "engine_code": "ERC",
+      "status": "present",
+      "positive_cells": [
+        {
+          "model_code": "JLJL74",
+          "qop": "23D",
+          "engine_code": "ERC",
+          "trim": "Unlimited Black and Tan",
+          "pdf_page": 2
+        },
+        {
+          "model_code": "JLJL74",
+          "qop": "24D",
+          "engine_code": "ERC",
+          "trim": "Unlimited Black and Tan",
+          "pdf_page": 2
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL20-18",
+      "trim": "Unlimited Freedom",
+      "engine_code": "EC1",
+      "status": "present",
+      "positive_cells": [
+        {
+          "model_code": "JLJL74",
+          "qop": "22F",
+          "engine_code": "EC1",
+          "trim": "Unlimited Freedom",
+          "pdf_page": 2
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL20-19",
+      "trim": "Unlimited Freedom",
+      "engine_code": "ERC",
+      "status": "present",
+      "positive_cells": [
+        {
+          "model_code": "JLJL74",
+          "qop": "23F",
+          "engine_code": "ERC",
+          "trim": "Unlimited Freedom",
+          "pdf_page": 2
+        },
+        {
+          "model_code": "JLJL74",
+          "qop": "24F",
+          "engine_code": "ERC",
+          "trim": "Unlimited Freedom",
+          "pdf_page": 2
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL20-20",
+      "trim": "Unlimited North Edition",
+      "engine_code": "EC3",
+      "status": "present",
+      "positive_cells": [
+        {
+          "model_code": "JLJP74",
+          "qop": "28E",
+          "engine_code": "EC3",
+          "trim": "Unlimited North Edition",
+          "pdf_page": 7
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL20-21",
+      "trim": "Unlimited Rubicon",
+      "engine_code": "EC1",
+      "status": "present",
+      "positive_cells": [
+        {
+          "model_code": "JLJS74",
+          "qop": "22R",
+          "engine_code": "EC1",
+          "trim": "Unlimited Rubicon",
+          "pdf_page": 11
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL20-22",
+      "trim": "Unlimited Rubicon",
+      "engine_code": "ERC",
+      "status": "present",
+      "positive_cells": [
+        {
+          "model_code": "JLJS74",
+          "qop": "23R",
+          "engine_code": "ERC",
+          "trim": "Unlimited Rubicon",
+          "pdf_page": 11
+        },
+        {
+          "model_code": "JLJS74",
+          "qop": "24R",
+          "engine_code": "ERC",
+          "trim": "Unlimited Rubicon",
+          "pdf_page": 11
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL20-23",
+      "trim": "Unlimited Rubicon",
+      "engine_code": "EXJ",
+      "status": "present",
+      "positive_cells": [
+        {
+          "model_code": "JLJS74",
+          "qop": "26R",
+          "engine_code": "EXJ",
+          "trim": "Unlimited Rubicon",
+          "pdf_page": 11
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL20-24",
+      "trim": "Unlimited Rubicon Recon",
+      "engine_code": "EC3",
+      "status": "present",
+      "positive_cells": [
+        {
+          "model_code": "JLJS74",
+          "qop": "28Y",
+          "engine_code": "EC3",
+          "trim": "Unlimited Rubicon Recon",
+          "pdf_page": 11
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL20-25",
+      "trim": "Unlimited Sahara",
+      "engine_code": "EC3",
+      "status": "present",
+      "positive_cells": [
+        {
+          "model_code": "JLJP74",
+          "qop": "28G",
+          "engine_code": "EC3",
+          "trim": "Unlimited Sahara",
+          "pdf_page": 7
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL20-26",
+      "trim": "Unlimited Sahara",
+      "engine_code": "ERC",
+      "status": "present",
+      "positive_cells": [
+        {
+          "model_code": "JLJP74",
+          "qop": "23G",
+          "engine_code": "ERC",
+          "trim": "Unlimited Sahara",
+          "pdf_page": 7
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL20-27",
+      "trim": "Unlimited Sahara",
+      "engine_code": "ERG",
+      "status": "present",
+      "positive_cells": [
+        {
+          "model_code": "JLJP74",
+          "qop": "25G",
+          "engine_code": "ERG",
+          "trim": "Unlimited Sahara",
+          "pdf_page": 7
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL20-28",
+      "trim": "Unlimited Sahara",
+      "engine_code": "EXJ",
+      "status": "present",
+      "positive_cells": [
+        {
+          "model_code": "JLJP74",
+          "qop": "26G",
+          "engine_code": "EXJ",
+          "trim": "Unlimited Sahara",
+          "pdf_page": 7
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL20-29",
+      "trim": "Unlimited Sahara Altitude",
+      "engine_code": "EC3",
+      "status": "present",
+      "positive_cells": [
+        {
+          "model_code": "JLJP74",
+          "qop": "28L",
+          "engine_code": "EC3",
+          "trim": "Unlimited Sahara Altitude",
+          "pdf_page": 7
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL20-30",
+      "trim": "Unlimited Sahara Altitude",
+      "engine_code": "ERC",
+      "status": "present",
+      "positive_cells": [
+        {
+          "model_code": "JLJP74",
+          "qop": "23L",
+          "engine_code": "ERC",
+          "trim": "Unlimited Sahara Altitude",
+          "pdf_page": 7
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL20-31",
+      "trim": "Unlimited Sahara Altitude",
+      "engine_code": "ERG",
+      "status": "present",
+      "positive_cells": [
+        {
+          "model_code": "JLJP74",
+          "qop": "25L",
+          "engine_code": "ERG",
+          "trim": "Unlimited Sahara Altitude",
+          "pdf_page": 7
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL20-32",
+      "trim": "Unlimited Sahara Altitude",
+      "engine_code": "EXJ",
+      "status": "present",
+      "positive_cells": [
+        {
+          "model_code": "JLJP74",
+          "qop": "26L",
+          "engine_code": "EXJ",
+          "trim": "Unlimited Sahara Altitude",
+          "pdf_page": 7
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL20-33",
+      "trim": "Unlimited High Altitude",
+      "engine_code": "EC3",
+      "status": "not_observed_in_Feb7",
+      "positive_cells": []
+    },
+    {
+      "candidate_reference": "JL20-34",
+      "trim": "Unlimited High Altitude",
+      "engine_code": "ERG",
+      "status": "not_observed_in_Feb7",
+      "positive_cells": []
+    },
+    {
+      "candidate_reference": "JL20-35",
+      "trim": "Unlimited High Altitude",
+      "engine_code": "EXJ",
+      "status": "not_observed_in_Feb7",
+      "positive_cells": []
+    },
+    {
+      "candidate_reference": "JL20-36",
+      "trim": "Unlimited Sport",
+      "engine_code": "EC1",
+      "status": "present",
+      "positive_cells": [
+        {
+          "model_code": "JLJL74",
+          "qop": "22B",
+          "engine_code": "EC1",
+          "trim": "Unlimited Sport",
+          "pdf_page": 2
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL20-37",
+      "trim": "Unlimited Sport",
+      "engine_code": "ERC",
+      "status": "present",
+      "positive_cells": [
+        {
+          "model_code": "JLJL74",
+          "qop": "23B",
+          "engine_code": "ERC",
+          "trim": "Unlimited Sport",
+          "pdf_page": 2
+        },
+        {
+          "model_code": "JLJL74",
+          "qop": "24B",
+          "engine_code": "ERC",
+          "trim": "Unlimited Sport",
+          "pdf_page": 2
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL20-38",
+      "trim": "Unlimited Sport",
+      "engine_code": "EXJ",
+      "status": "present",
+      "positive_cells": [
+        {
+          "model_code": "JLJL74",
+          "qop": "26B",
+          "engine_code": "EXJ",
+          "trim": "Unlimited Sport",
+          "pdf_page": 2
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL20-39",
+      "trim": "Unlimited Sport Altitude",
+      "engine_code": "EC1",
+      "status": "present",
+      "positive_cells": [
+        {
+          "model_code": "JLJL74",
+          "qop": "22L",
+          "engine_code": "EC1",
+          "trim": "Unlimited Sport Altitude",
+          "pdf_page": 2
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL20-40",
+      "trim": "Unlimited Sport Altitude",
+      "engine_code": "ERC",
+      "status": "present",
+      "positive_cells": [
+        {
+          "model_code": "JLJL74",
+          "qop": "23L",
+          "engine_code": "ERC",
+          "trim": "Unlimited Sport Altitude",
+          "pdf_page": 2
+        },
+        {
+          "model_code": "JLJL74",
+          "qop": "24L",
+          "engine_code": "ERC",
+          "trim": "Unlimited Sport Altitude",
+          "pdf_page": 2
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL20-41",
+      "trim": "Unlimited Sport Altitude",
+      "engine_code": "EXJ",
+      "status": "present",
+      "positive_cells": [
+        {
+          "model_code": "JLJL74",
+          "qop": "26L",
+          "engine_code": "EXJ",
+          "trim": "Unlimited Sport Altitude",
+          "pdf_page": 2
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL20-42",
+      "trim": "Unlimited Sport S",
+      "engine_code": "EC1",
+      "status": "present",
+      "positive_cells": [
+        {
+          "model_code": "JLJL74",
+          "qop": "22S",
+          "engine_code": "EC1",
+          "trim": "Unlimited Sport S",
+          "pdf_page": 2
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL20-43",
+      "trim": "Unlimited Sport S",
+      "engine_code": "ERC",
+      "status": "present",
+      "positive_cells": [
+        {
+          "model_code": "JLJL74",
+          "qop": "23S",
+          "engine_code": "ERC",
+          "trim": "Unlimited Sport S",
+          "pdf_page": 2
+        },
+        {
+          "model_code": "JLJL74",
+          "qop": "24S",
+          "engine_code": "ERC",
+          "trim": "Unlimited Sport S",
+          "pdf_page": 2
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL20-44",
+      "trim": "Unlimited Sport S",
+      "engine_code": "EXJ",
+      "status": "present",
+      "positive_cells": [
+        {
+          "model_code": "JLJL74",
+          "qop": "26S",
+          "engine_code": "EXJ",
+          "trim": "Unlimited Sport S",
+          "pdf_page": 2
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL20-45",
+      "trim": "Unlimited Willys",
+      "engine_code": "EC1",
+      "status": "present",
+      "positive_cells": [
+        {
+          "model_code": "JLJL74",
+          "qop": "22W",
+          "engine_code": "EC1",
+          "trim": "Unlimited Willys",
+          "pdf_page": 2
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL20-46",
+      "trim": "Unlimited Willys",
+      "engine_code": "ERC",
+      "status": "present",
+      "positive_cells": [
+        {
+          "model_code": "JLJL74",
+          "qop": "23W",
+          "engine_code": "ERC",
+          "trim": "Unlimited Willys",
+          "pdf_page": 2
+        },
+        {
+          "model_code": "JLJL74",
+          "qop": "24W",
+          "engine_code": "ERC",
+          "trim": "Unlimited Willys",
+          "pdf_page": 2
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL20-47",
+      "trim": "Unlimited Willys",
+      "engine_code": "EXJ",
+      "status": "present",
+      "positive_cells": [
+        {
+          "model_code": "JLJL74",
+          "qop": "26W",
+          "engine_code": "EXJ",
+          "trim": "Unlimited Willys",
+          "pdf_page": 2
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL20-48",
+      "trim": "Unlimited Willys Sport",
+      "engine_code": "EC1",
+      "status": "present",
+      "positive_cells": [
+        {
+          "model_code": "JLJL74",
+          "qop": "22K",
+          "engine_code": "EC1",
+          "trim": "Unlimited Willys Sport",
+          "pdf_page": 2
+        }
+      ]
+    },
+    {
+      "candidate_reference": "JL20-49",
+      "trim": "Unlimited Willys Sport",
+      "engine_code": "ERC",
+      "status": "present",
+      "positive_cells": [
+        {
+          "model_code": "JLJL74",
+          "qop": "23K",
+          "engine_code": "ERC",
+          "trim": "Unlimited Willys Sport",
+          "pdf_page": 2
+        },
+        {
+          "model_code": "JLJL74",
+          "qop": "24K",
+          "engine_code": "ERC",
+          "trim": "Unlimited Willys Sport",
+          "pdf_page": 2
+        }
+      ]
+    }
+  ],
+  "conclusion": "Earlier/later observed manufacturer union preserved; absence is not cancellation evidence."
+}

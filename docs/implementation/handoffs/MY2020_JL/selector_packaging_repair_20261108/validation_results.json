@@ -1,0 +1,25 @@
+{
+  "candidate_revisions": 49,
+  "source_selectors": 51,
+  "classification_evidence_revisions": 43,
+  "approved_field_decisions_preserved": 60,
+  "new_classification_decisions": 0,
+  "complete_powertrain_identities": 49,
+  "High_Altitude_identities_preserved": 3,
+  "contract_validation": "passed",
+  "raw_source_hashes_and_lineage": "passed",
+  "serialization_roundtrips": "passed",
+  "uniqueness": "49 distinct identities",
+  "correspondence_simulation": "49/49 target JL32;51 unique unpublished reviews",
+  "Django_checks": "System check identified no issues (0 silenced).",
+  "database_counts": {
+    "VehicleDefinitions": 812,
+    "receipts": 2880,
+    "correspondences": 13
+  },
+  "database_sha256_before_and_after": "sha256:f0d32327e0d688b56711a572375e4e462a266ebb8fdb250b97965e392dff07ab",
+  "database_unchanged": true,
+  "SQLite_integrity_and_foreign_keys": "passed",
+  "preexisting_files_unchanged": 916,
+  "publications_or_import_plans": 0
+}

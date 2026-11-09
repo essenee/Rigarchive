@@ -1,0 +1,14 @@
+2026-11-08; approved interpreter .venv/bin/python; PYTHONDONTWRITEBYTECODE=1.
+Both test runs used RIGARCHIVE_TEST_DB_PATH=:memory: and Django isolated test DBs.
+
+Command:
+.venv/bin/python -B manage.py test reference.tests.test_classification_adjudication reference.tests.test_structured_powertrain reference.tests.test_generation_projection_completeness --verbosity 1
+Result: Ran 67 tests in 2.771s; OK. System check identified no issues (0 silenced).
+
+Command:
+.venv/bin/python -B manage.py test reference.tests.test_ingestion_serialization reference.tests.test_candidate_construction --verbosity 1
+Result: Ran 29 tests in 0.015s; OK. System check identified no issues (0 silenced).
+
+Total: 96 tests passed. No full suite was run.
+Artifact validation was performed separately by build_candidate_review.py and
+finalize_review.py; those scripts do not invoke canonical planning/import workflows.

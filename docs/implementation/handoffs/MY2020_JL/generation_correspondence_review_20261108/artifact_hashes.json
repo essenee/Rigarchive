@@ -1,0 +1,11 @@
+{
+  "docs/implementation/handoffs/MY2020_JL/generation_correspondence_review_20261108/README.md": "sha256:736da4ed363fcef3f9961212a129c49b8cb34407dd48a966eea563219a2cd85a",
+  "docs/implementation/handoffs/MY2020_JL/generation_correspondence_review_20261108/counterexample.json": "sha256:fe7c73a0b2ba5220ab7e0b31ca2e4dc6cec50decfb33faa9056f5eb6ca1260e5",
+  "docs/implementation/handoffs/MY2020_JL/generation_correspondence_review_20261108/coverage_assessment.json": "sha256:cc0e3801dcefaa506aa8798902b3f228e750f3db5d3f14450f4df37cdda45488",
+  "docs/implementation/handoffs/MY2020_JL/generation_correspondence_review_20261108/existing_MY2019_correspondences.json": "sha256:24c2614db63139989a48280b33afee687ad073b39ba171fa360d42ef251fa459",
+  "docs/implementation/handoffs/MY2020_JL/generation_correspondence_review_20261108/focused_test_results.txt": "sha256:bfb25e0cafaf448be540fdcabecd63a39d23d0dbf22320e74a6d84e76d830618",
+  "docs/implementation/handoffs/MY2020_JL/generation_correspondence_review_20261108/identity_key_assessment.json": "sha256:12c39558dbe41dd7eb5956210e6574fb31112361a2cc4c2bc14ffa17df4478f2",
+  "docs/implementation/handoffs/MY2020_JL/generation_correspondence_review_20261108/preservation.json": "sha256:b5e402428f9f824f403e9e9ae1f709aad11b8b7491bb07fb7e86a1223e1559cd",
+  "docs/implementation/handoffs/MY2020_JL/generation_correspondence_review_20261108/verification_results.json": "sha256:d376c2c6c932b6a86fa7d7cce2e0137110b42c610d0fc663540a5d1d11948130",
+  "docs/implementation/handoffs/MY2020_JL/generation_correspondence_review_20261108/verify_coverage.py": "sha256:b507b86df3878cd10da0bc0e386904c7fd4ad3abfbe8700711ea794c99dc606e"
+}

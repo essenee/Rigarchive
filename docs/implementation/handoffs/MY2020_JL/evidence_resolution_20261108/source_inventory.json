@@ -1,0 +1,54 @@
+{
+  "sources": [
+    {
+      "source_id": "MY2020_JL_4D_2020_02_07",
+      "title": "US MY2020 Jeep Wrangler 4 Door Customer Preferred Code Guide, reissued February7",
+      "url": "https://www.jlwranglerforums.com/forum/attachments/4-door-2-7-20-pdf.280869/",
+      "retained_path": "docs/implementation/handoffs/MY2020_JL/evidence_resolution_20261108/sources/4-door-2-7-20.pdf",
+      "raw_artifact_hash": "sha256:b12d5bf26114f990358f54793e55d59343e6c64f9193bf39c0e327af55b89f9c",
+      "assertion_set": "docs/implementation/handoffs/MY2020_JL/evidence_resolution_20261108/assertion_sets/MY2020_JL_4D_2020_02_07.json",
+      "notes": "Authentic archived PDF recovered through link download on Recon thread; FCA footer and US/MY/revision headings verified. Rubicon page11 visually inspected. No cryptographic signature claim."
+    },
+    {
+      "source_id": "Mopar_MY2020_ESS_eTorque_hardware",
+      "title": "2020 Wrangler US/Canada Owner’s Manual",
+      "url": "https://vehicleinfo.mopar.com/assets/publications/en-us/Jeep/2020/Wrangler/P138305_20_JL_OM_EN_USC_DIGITAL.pdf",
+      "retained_path": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/evidence/Mopar_MY2020_Wrangler_US_owners_manual.pdf",
+      "raw_artifact_hash": "sha256:eccf53d564172144d82728cacc2b7f87210c2dd7af0a535e1df78f588a92cd92",
+      "assertion_set": "docs/implementation/handoffs/MY2020_JL/evidence_resolution_20261108/assertion_sets/Mopar_MY2020_ESS_eTorque_hardware.json",
+      "notes": "Authentic official PDF already retained. Explicit heavy-duty starter/battery versus motor-generator/hybrid-battery/launch-assist hardware. Gasoline-family manual does not by itself prove EXJ diesel hardware applicability."
+    },
+    {
+      "source_id": "jdpower_MY2020_diesel_review",
+      "title": "2020 Jeep Wrangler EcoDiesel Test Drive",
+      "url": "https://www.jdpower.com/cars/expert-reviews/2020-jeep-wrangler-ecodiesel-test-drive",
+      "retained_path": "docs/implementation/handoffs/MY2020_JL/evidence_resolution_20261108/sources/jdpower_browser_observation.json",
+      "raw_artifact_hash": "sha256:151d9317ebcc2a8fcef6eb74322046cd4fc09a5c12573732d287b7db945c5283",
+      "assertion_set": "docs/implementation/handoffs/MY2020_JL/evidence_resolution_20261108/assertion_sets/jdpower_MY2020_diesel_review.json",
+      "notes": "SECONDARY observation. Snapshot hash covers retained observation JSON, not original HTML. Alternator alone does not logically exclude every hybrid architecture. Exact EXJ association uses US MY2020 guide engine/code/transmission linkage."
+    },
+    {
+      "source_id": "Stellantis_cached_blog_context",
+      "url": "https://blog.stellantisnorthamerica.com/2019/11/12/2020-jeep-wrangler-ecodiesel-offers-the-ultimate-fuel-efficiency-and-driving-range-for-a-wrangler/",
+      "retained_path": "docs/implementation/handoffs/MY2020_JL/evidence_resolution_20261108/sources/stellantis_cached_observation.json",
+      "retained_observation_hash": "sha256:80f279d7d550e647f43f2e5b7d4e0cb921051b67f1e8e911abd607b0e9894835",
+      "original_source_hash": null,
+      "use": "Context only; executable primary Rubicon proof is retained original guide PDF"
+    },
+    {
+      "source_id": "FCA_MY2020_High_Altitude_marketing",
+      "title": "Jeep Brand Expands Wrangler and Gladiator Lineup With Premium High Altitude Model",
+      "url": "https://cas.vporoom.com/2020-02-06-Jeep-R-Brand-Expands-Wrangler-and-Gladiator-Lineup-With-Premium-High-Altitude-Model",
+      "retained_path": "docs/implementation/handoffs/MY2020_JL/evidence/FCA_High_Altitude_release_2020-02-06.html",
+      "raw_artifact_hash": "sha256:71d0d2bfc5bde2c326f05cc1f428ae8442d451f6705f714866a8be7e05bfedad",
+      "assertion_set": "docs/implementation/handoffs/MY2020_JL/evidence_resolution_20261108/assertion_sets/FCA_MY2020_High_Altitude_marketing.json",
+      "notes": "Retained manufacturer-issued FCA release syndicated by VPO/PRNewswire, SOURCE FCA. Marketed model/edition supports grade finding together with the specific JLJP74 25N/28N/26N guide column; optional equipment groups remain subordinate."
+    }
+  ],
+  "remaining_archive_gaps": [
+    "2-door July2 PDF original bytes unavailable"
+  ],
+  "prior_gap_resolved": "4-door February7 authentic PDF recovered",
+  "edmunds_reference": "https://www.edmunds.com/jeep/wrangler/2020/st-401852728/features-specs/",
+  "edmunds_retained_evidence": "docs/implementation/handoffs/MY2020_JL/candidate_review_20261108/evidence/edmunds_observed_identity_facts.json"
+}

@@ -1,0 +1,12 @@
+{
+  "candidates": 49,
+  "unique": 49,
+  "source_assertion_sets": 513,
+  "candidate_and_source_roundtrips": "passed",
+  "evidence_byte_validation": "passed",
+  "proposals": 43,
+  "field_proposals": 60,
+  "approval_guard": "all proposals rejected as unapproved",
+  "complete_structured_powertrains": 6,
+  "database_access": "none"
+}

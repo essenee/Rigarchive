@@ -1,0 +1,45 @@
+{
+  "environment": {
+    "interpreter": "/Users/cosmo/dev/Rigarchive/.venv/bin/python",
+    "Python": "3.13.1",
+    "Django": "6.0.7",
+    "pypdf": "6.16.1"
+  },
+  "focused_tests": {
+    "passed": 96,
+    "result": "OK",
+    "isolated": true,
+    "elapsed_seconds": 2.821,
+    "Django_system_checks": "passed"
+  },
+  "final_candidates": {
+    "validated_complete": 49,
+    "new_classification_revisions": 43,
+    "unchanged_EC3": 6,
+    "High_Altitude_names_and_Sahara_provenance": 3,
+    "field_decisions_applied": 60,
+    "approved_adjudication_records": 43,
+    "evidence_hashes_qualified_lineage_and_roundtrips": "passed",
+    "uniqueness": "passed;49 distinct final tuples",
+    "EXJ_confidence": "moderate; derived conclusion and original limitations unchanged"
+  },
+  "database": {
+    "access": "SQLite mode=ro; query_only=ON",
+    "unchanged": true,
+    "sha256": "sha256:f0d32327e0d688b56711a572375e4e462a266ebb8fdb250b97965e392dff07ab",
+    "counts": {
+      "VehicleDefinitions": 812,
+      "receipts": 2880,
+      "correspondences": 13,
+      "MY2020_JL_VehicleDefinitions": 0,
+      "US_MY2020_correspondences": 0
+    },
+    "integrity": "ok",
+    "foreign_keys": "passed"
+  },
+  "preservation": {
+    "preexisting_MY2020_files_unchanged": 766,
+    "all_preserved": true
+  },
+  "remaining_publication_work": "Separate scoped generation-correspondence proposals/review, intended existing target verification, source namespace/identity coverage and owner publication authorization. None published here. Classification/naming evidence blockers for this reviewed49set are resolved; no import eligibility/planning assessment performed."
+}

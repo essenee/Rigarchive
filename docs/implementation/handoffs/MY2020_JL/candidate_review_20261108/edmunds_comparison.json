@@ -1,0 +1,451 @@
+{
+  "body_trim_variants_compared": 21,
+  "candidate_combinations_compared": 49,
+  "corroborated": 48,
+  "manufacturer_supported_absent": 1,
+  "Edmunds_only_configurations_observed": [],
+  "no_scope_changes": true,
+  "rows": [
+    {
+      "research_row_id": "JL20-01",
+      "trim": "Black and Tan",
+      "engine_code": "EC1",
+      "edmunds_url": "https://www.edmunds.com/jeep/wrangler/2020/st-401804424/features-specs/",
+      "status": "corroborated",
+      "basis": "Base engine / explicit engine option plus QOP correspondence",
+      "caveat": ""
+    },
+    {
+      "research_row_id": "JL20-02",
+      "trim": "Black and Tan",
+      "engine_code": "ERC",
+      "edmunds_url": "https://www.edmunds.com/jeep/wrangler/2020/st-401804424/features-specs/",
+      "status": "corroborated",
+      "basis": "Base engine / explicit engine option plus QOP correspondence",
+      "caveat": ""
+    },
+    {
+      "research_row_id": "JL20-03",
+      "trim": "Freedom",
+      "engine_code": "EC1",
+      "edmunds_url": "https://www.edmunds.com/jeep/wrangler/2020/st-401832294/features-specs/",
+      "status": "corroborated",
+      "basis": "Base engine / explicit engine option plus QOP correspondence",
+      "caveat": ""
+    },
+    {
+      "research_row_id": "JL20-04",
+      "trim": "Freedom",
+      "engine_code": "ERC",
+      "edmunds_url": "https://www.edmunds.com/jeep/wrangler/2020/st-401832294/features-specs/",
+      "status": "corroborated",
+      "basis": "Base engine / explicit engine option plus QOP correspondence",
+      "caveat": ""
+    },
+    {
+      "research_row_id": "JL20-05",
+      "trim": "Rubicon",
+      "engine_code": "EC1",
+      "edmunds_url": "https://www.edmunds.com/jeep/wrangler/2020/st-401804421/features-specs/",
+      "status": "corroborated",
+      "basis": "Base engine / explicit engine option plus QOP correspondence",
+      "caveat": ""
+    },
+    {
+      "research_row_id": "JL20-06",
+      "trim": "Rubicon",
+      "engine_code": "ERC",
+      "edmunds_url": "https://www.edmunds.com/jeep/wrangler/2020/st-401804421/features-specs/",
+      "status": "corroborated",
+      "basis": "Base engine / explicit engine option plus QOP correspondence",
+      "caveat": ""
+    },
+    {
+      "research_row_id": "JL20-07",
+      "trim": "Rubicon Recon",
+      "engine_code": "EC3",
+      "edmunds_url": "https://www.edmunds.com/jeep/wrangler/2020/st-401845566/features-specs/",
+      "status": "corroborated",
+      "basis": "Base engine / explicit engine option plus QOP correspondence",
+      "caveat": ""
+    },
+    {
+      "research_row_id": "JL20-08",
+      "trim": "Sport",
+      "engine_code": "EC1",
+      "edmunds_url": "https://www.edmunds.com/jeep/wrangler/2020/st-401804418/features-specs/",
+      "status": "corroborated",
+      "basis": "Base engine / explicit engine option plus QOP correspondence",
+      "caveat": ""
+    },
+    {
+      "research_row_id": "JL20-09",
+      "trim": "Sport",
+      "engine_code": "ERC",
+      "edmunds_url": "https://www.edmunds.com/jeep/wrangler/2020/st-401804418/features-specs/",
+      "status": "corroborated",
+      "basis": "Base engine / explicit engine option plus QOP correspondence",
+      "caveat": ""
+    },
+    {
+      "research_row_id": "JL20-10",
+      "trim": "Sport S",
+      "engine_code": "EC1",
+      "edmunds_url": "https://www.edmunds.com/jeep/wrangler/2020/st-401804419/features-specs/",
+      "status": "corroborated",
+      "basis": "Base engine / explicit engine option plus QOP correspondence",
+      "caveat": ""
+    },
+    {
+      "research_row_id": "JL20-11",
+      "trim": "Sport S",
+      "engine_code": "ERC",
+      "edmunds_url": "https://www.edmunds.com/jeep/wrangler/2020/st-401804419/features-specs/",
+      "status": "corroborated",
+      "basis": "Base engine / explicit engine option plus QOP correspondence",
+      "caveat": ""
+    },
+    {
+      "research_row_id": "JL20-12",
+      "trim": "Willys",
+      "engine_code": "EC1",
+      "edmunds_url": "https://www.edmunds.com/jeep/wrangler/2020/st-401832293/features-specs/",
+      "status": "corroborated",
+      "basis": "Base engine / explicit engine option plus QOP correspondence",
+      "caveat": ""
+    },
+    {
+      "research_row_id": "JL20-13",
+      "trim": "Willys",
+      "engine_code": "ERC",
+      "edmunds_url": "https://www.edmunds.com/jeep/wrangler/2020/st-401832293/features-specs/",
+      "status": "corroborated",
+      "basis": "Base engine / explicit engine option plus QOP correspondence",
+      "caveat": ""
+    },
+    {
+      "research_row_id": "JL20-14",
+      "trim": "Willys Sport",
+      "engine_code": "EC1",
+      "edmunds_url": "https://www.edmunds.com/jeep/wrangler/2020/st-401845519/features-specs/",
+      "status": "corroborated",
+      "basis": "Base engine / explicit engine option plus QOP correspondence",
+      "caveat": ""
+    },
+    {
+      "research_row_id": "JL20-15",
+      "trim": "Willys Sport",
+      "engine_code": "ERC",
+      "edmunds_url": "https://www.edmunds.com/jeep/wrangler/2020/st-401845519/features-specs/",
+      "status": "corroborated",
+      "basis": "Base engine / explicit engine option plus QOP correspondence",
+      "caveat": ""
+    },
+    {
+      "research_row_id": "JL20-16",
+      "trim": "Unlimited Black and Tan",
+      "engine_code": "EC1",
+      "edmunds_url": "https://www.edmunds.com/jeep/wrangler/2020/st-401804588/features-specs/",
+      "status": "corroborated",
+      "basis": "Base engine / explicit engine option plus QOP correspondence",
+      "caveat": ""
+    },
+    {
+      "research_row_id": "JL20-17",
+      "trim": "Unlimited Black and Tan",
+      "engine_code": "ERC",
+      "edmunds_url": "https://www.edmunds.com/jeep/wrangler/2020/st-401804588/features-specs/",
+      "status": "corroborated",
+      "basis": "Base engine / explicit engine option plus QOP correspondence",
+      "caveat": ""
+    },
+    {
+      "research_row_id": "JL20-18",
+      "trim": "Unlimited Freedom",
+      "engine_code": "EC1",
+      "edmunds_url": "https://www.edmunds.com/jeep/wrangler/2020/st-401832543/features-specs/",
+      "status": "corroborated",
+      "basis": "Base engine / explicit engine option plus QOP correspondence",
+      "caveat": ""
+    },
+    {
+      "research_row_id": "JL20-19",
+      "trim": "Unlimited Freedom",
+      "engine_code": "ERC",
+      "edmunds_url": "https://www.edmunds.com/jeep/wrangler/2020/st-401832543/features-specs/",
+      "status": "corroborated",
+      "basis": "Base engine / explicit engine option plus QOP correspondence",
+      "caveat": ""
+    },
+    {
+      "research_row_id": "JL20-20",
+      "trim": "Unlimited North Edition",
+      "engine_code": "EC3",
+      "edmunds_url": "https://www.edmunds.com/jeep/wrangler/2020/st-401832588/features-specs/",
+      "status": "corroborated",
+      "basis": "Base engine / explicit engine option plus QOP correspondence",
+      "caveat": ""
+    },
+    {
+      "research_row_id": "JL20-21",
+      "trim": "Unlimited Rubicon",
+      "engine_code": "EC1",
+      "edmunds_url": "https://www.edmunds.com/jeep/wrangler/2020/st-401804420/features-specs/",
+      "status": "corroborated",
+      "basis": "Base engine / explicit engine option plus QOP correspondence",
+      "caveat": ""
+    },
+    {
+      "research_row_id": "JL20-22",
+      "trim": "Unlimited Rubicon",
+      "engine_code": "ERC",
+      "edmunds_url": "https://www.edmunds.com/jeep/wrangler/2020/st-401804420/features-specs/",
+      "status": "corroborated",
+      "basis": "Base engine / explicit engine option plus QOP correspondence",
+      "caveat": ""
+    },
+    {
+      "research_row_id": "JL20-23",
+      "trim": "Unlimited Rubicon",
+      "engine_code": "EXJ",
+      "edmunds_url": "https://www.edmunds.com/jeep/wrangler/2020/st-401804420/features-specs/",
+      "status": "manufacturer_supported_absent_from_Edmunds",
+      "basis": "No diesel mechanical option or 26R package in inspected Unlimited Rubicon listing",
+      "caveat": ""
+    },
+    {
+      "research_row_id": "JL20-24",
+      "trim": "Unlimited Rubicon Recon",
+      "engine_code": "EC3",
+      "edmunds_url": "https://www.edmunds.com/jeep/wrangler/2020/st-401845579/features-specs/",
+      "status": "corroborated",
+      "basis": "Base engine / explicit engine option plus QOP correspondence",
+      "caveat": ""
+    },
+    {
+      "research_row_id": "JL20-25",
+      "trim": "Unlimited Sahara",
+      "engine_code": "EC3",
+      "edmunds_url": "https://www.edmunds.com/jeep/wrangler/2020/st-401804435/features-specs/",
+      "status": "corroborated",
+      "basis": "Base engine / explicit engine option plus QOP correspondence",
+      "caveat": ""
+    },
+    {
+      "research_row_id": "JL20-26",
+      "trim": "Unlimited Sahara",
+      "engine_code": "ERC",
+      "edmunds_url": "https://www.edmunds.com/jeep/wrangler/2020/st-401804435/features-specs/",
+      "status": "corroborated",
+      "basis": "Base engine / explicit engine option plus QOP correspondence",
+      "caveat": ""
+    },
+    {
+      "research_row_id": "JL20-27",
+      "trim": "Unlimited Sahara",
+      "engine_code": "ERG",
+      "edmunds_url": "https://www.edmunds.com/jeep/wrangler/2020/st-401804435/features-specs/",
+      "status": "corroborated",
+      "basis": "Base engine / explicit engine option plus QOP correspondence",
+      "caveat": ""
+    },
+    {
+      "research_row_id": "JL20-28",
+      "trim": "Unlimited Sahara",
+      "engine_code": "EXJ",
+      "edmunds_url": "https://www.edmunds.com/jeep/wrangler/2020/st-401804435/features-specs/",
+      "status": "corroborated",
+      "basis": "Base engine / explicit engine option plus QOP correspondence",
+      "caveat": ""
+    },
+    {
+      "research_row_id": "JL20-29",
+      "trim": "Unlimited Sahara Altitude",
+      "engine_code": "EC3",
+      "edmunds_url": "https://www.edmunds.com/jeep/wrangler/2020/st-401804668/features-specs/",
+      "status": "corroborated",
+      "basis": "Base engine / explicit engine option plus QOP correspondence",
+      "caveat": ""
+    },
+    {
+      "research_row_id": "JL20-30",
+      "trim": "Unlimited Sahara Altitude",
+      "engine_code": "ERC",
+      "edmunds_url": "https://www.edmunds.com/jeep/wrangler/2020/st-401804668/features-specs/",
+      "status": "corroborated",
+      "basis": "Base engine / explicit engine option plus QOP correspondence",
+      "caveat": ""
+    },
+    {
+      "research_row_id": "JL20-31",
+      "trim": "Unlimited Sahara Altitude",
+      "engine_code": "ERG",
+      "edmunds_url": "https://www.edmunds.com/jeep/wrangler/2020/st-401804668/features-specs/",
+      "status": "corroborated",
+      "basis": "Base engine / explicit engine option plus QOP correspondence",
+      "caveat": ""
+    },
+    {
+      "research_row_id": "JL20-32",
+      "trim": "Unlimited Sahara Altitude",
+      "engine_code": "EXJ",
+      "edmunds_url": "https://www.edmunds.com/jeep/wrangler/2020/st-401804668/features-specs/",
+      "status": "corroborated",
+      "basis": "Base engine / explicit engine option plus QOP correspondence",
+      "caveat": "Sahara Altitude 26L package mislabeled Unlimited Sport Altitude on page; diesel option independently listed"
+    },
+    {
+      "research_row_id": "JL20-33",
+      "trim": "Unlimited Sahara High Altitude",
+      "engine_code": "EC3",
+      "edmunds_url": "https://www.edmunds.com/jeep/wrangler/2020/st-401852728/features-specs/",
+      "status": "corroborated",
+      "basis": "Base engine / explicit engine option plus QOP correspondence",
+      "caveat": ""
+    },
+    {
+      "research_row_id": "JL20-34",
+      "trim": "Unlimited Sahara High Altitude",
+      "engine_code": "ERG",
+      "edmunds_url": "https://www.edmunds.com/jeep/wrangler/2020/st-401852728/features-specs/",
+      "status": "corroborated",
+      "basis": "Base engine / explicit engine option plus QOP correspondence",
+      "caveat": ""
+    },
+    {
+      "research_row_id": "JL20-35",
+      "trim": "Unlimited Sahara High Altitude",
+      "engine_code": "EXJ",
+      "edmunds_url": "https://www.edmunds.com/jeep/wrangler/2020/st-401852728/features-specs/",
+      "status": "corroborated",
+      "basis": "Base engine / explicit engine option plus QOP correspondence",
+      "caveat": ""
+    },
+    {
+      "research_row_id": "JL20-36",
+      "trim": "Unlimited Sport",
+      "engine_code": "EC1",
+      "edmunds_url": "https://www.edmunds.com/jeep/wrangler/2020/st-401804422/features-specs/",
+      "status": "corroborated",
+      "basis": "Base engine / explicit engine option plus QOP correspondence",
+      "caveat": ""
+    },
+    {
+      "research_row_id": "JL20-37",
+      "trim": "Unlimited Sport",
+      "engine_code": "ERC",
+      "edmunds_url": "https://www.edmunds.com/jeep/wrangler/2020/st-401804422/features-specs/",
+      "status": "corroborated",
+      "basis": "Base engine / explicit engine option plus QOP correspondence",
+      "caveat": ""
+    },
+    {
+      "research_row_id": "JL20-38",
+      "trim": "Unlimited Sport",
+      "engine_code": "EXJ",
+      "edmunds_url": "https://www.edmunds.com/jeep/wrangler/2020/st-401804422/features-specs/",
+      "status": "corroborated",
+      "basis": "Base engine / explicit engine option plus QOP correspondence",
+      "caveat": ""
+    },
+    {
+      "research_row_id": "JL20-39",
+      "trim": "Unlimited Sport Altitude",
+      "engine_code": "EC1",
+      "edmunds_url": "https://www.edmunds.com/jeep/wrangler/2020/st-401804667/features-specs/",
+      "status": "corroborated",
+      "basis": "Base engine / explicit engine option plus QOP correspondence",
+      "caveat": ""
+    },
+    {
+      "research_row_id": "JL20-40",
+      "trim": "Unlimited Sport Altitude",
+      "engine_code": "ERC",
+      "edmunds_url": "https://www.edmunds.com/jeep/wrangler/2020/st-401804667/features-specs/",
+      "status": "corroborated",
+      "basis": "Base engine / explicit engine option plus QOP correspondence",
+      "caveat": ""
+    },
+    {
+      "research_row_id": "JL20-41",
+      "trim": "Unlimited Sport Altitude",
+      "engine_code": "EXJ",
+      "edmunds_url": "https://www.edmunds.com/jeep/wrangler/2020/st-401804667/features-specs/",
+      "status": "corroborated",
+      "basis": "Base engine / explicit engine option plus QOP correspondence",
+      "caveat": ""
+    },
+    {
+      "research_row_id": "JL20-42",
+      "trim": "Unlimited Sport S",
+      "engine_code": "EC1",
+      "edmunds_url": "https://www.edmunds.com/jeep/wrangler/2020/st-401804423/features-specs/",
+      "status": "corroborated",
+      "basis": "Base engine / explicit engine option plus QOP correspondence",
+      "caveat": ""
+    },
+    {
+      "research_row_id": "JL20-43",
+      "trim": "Unlimited Sport S",
+      "engine_code": "ERC",
+      "edmunds_url": "https://www.edmunds.com/jeep/wrangler/2020/st-401804423/features-specs/",
+      "status": "corroborated",
+      "basis": "Base engine / explicit engine option plus QOP correspondence",
+      "caveat": ""
+    },
+    {
+      "research_row_id": "JL20-44",
+      "trim": "Unlimited Sport S",
+      "engine_code": "EXJ",
+      "edmunds_url": "https://www.edmunds.com/jeep/wrangler/2020/st-401804423/features-specs/",
+      "status": "corroborated",
+      "basis": "Base engine / explicit engine option plus QOP correspondence",
+      "caveat": ""
+    },
+    {
+      "research_row_id": "JL20-45",
+      "trim": "Unlimited Willys",
+      "engine_code": "EC1",
+      "edmunds_url": "https://www.edmunds.com/jeep/wrangler/2020/st-401832542/features-specs/",
+      "status": "corroborated",
+      "basis": "Base engine / explicit engine option plus QOP correspondence",
+      "caveat": ""
+    },
+    {
+      "research_row_id": "JL20-46",
+      "trim": "Unlimited Willys",
+      "engine_code": "ERC",
+      "edmunds_url": "https://www.edmunds.com/jeep/wrangler/2020/st-401832542/features-specs/",
+      "status": "corroborated",
+      "basis": "Base engine / explicit engine option plus QOP correspondence",
+      "caveat": ""
+    },
+    {
+      "research_row_id": "JL20-47",
+      "trim": "Unlimited Willys",
+      "engine_code": "EXJ",
+      "edmunds_url": "https://www.edmunds.com/jeep/wrangler/2020/st-401832542/features-specs/",
+      "status": "corroborated",
+      "basis": "Base engine / explicit engine option plus QOP correspondence",
+      "caveat": ""
+    },
+    {
+      "research_row_id": "JL20-48",
+      "trim": "Unlimited Willys Sport",
+      "engine_code": "EC1",
+      "edmunds_url": "https://www.edmunds.com/jeep/wrangler/2020/st-401845575/features-specs/",
+      "status": "corroborated",
+      "basis": "Base engine / explicit engine option plus QOP correspondence",
+      "caveat": ""
+    },
+    {
+      "research_row_id": "JL20-49",
+      "trim": "Unlimited Willys Sport",
+      "engine_code": "ERC",
+      "edmunds_url": "https://www.edmunds.com/jeep/wrangler/2020/st-401845575/features-specs/",
+      "status": "corroborated",
+      "basis": "Base engine / explicit engine option plus QOP correspondence",
+      "caveat": ""
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "April_pair_rows": 44,
+  "MY2020_JL_definitions": 0,
+  "all_49_covered_by_March_pair": true,
+  "application_or_contract_changes": false,
+  "application_tests_run": false,
+  "body_counts": {
+    "2-door": 15,
+    "4-door": 34
+  },
+  "candidates_created": 0,
+  "database_sha256": "sha256:f0d32327e0d688b56711a572375e4e462a266ebb8fdb250b97965e392dff07ab",
+  "database_unchanged": true,
+  "definitions": 812,
+  "django": "6.0.7",
+  "engine_counts": {
+    "EC1": 15,
+    "EC3": 6,
+    "ERC": 17,
+    "ERG": 3,
+    "EXJ": 8
+  },
+  "foreign_key_violations": 0,
+  "imports_migrations_backfills_commits_pushes": false,
+  "interpreter": "/Users/cosmo/dev/Rigarchive/.venv/bin/python",
+  "pypdf": "6.16.1",
+  "python": "3.13.1",
+  "reason_no_application_tests": "Research-only artifacts; focused source/lineage/uniqueness/read-only checks performed.",
+  "receipts": 2880,
+  "research_rows": 49,
+  "result": "passed",
+  "scope_gaps": [
+    "July 2-door PDF not retained or internally reviewed",
+    "Additional February 7 4-door PDF web-readable but not retained",
+    "No certification that all issued revisions or all delivered configurations are archived"
+  ],
+  "source_PDFs_rehashed_and_reextracted": 20,
+  "sqlite_integrity": "ok",
+  "staged_changes": false,
+  "structured_proposal_vocabulary": "valid; this is not evidence approval or candidate certification",
+  "supplementary_primary_files_rehashed": 2,
+  "system_check": "System check identified no issues (0 silenced).",
+  "table_lineages_verified": 51,
+  "tracked_changes_only_preexisting_live_database": true
+}

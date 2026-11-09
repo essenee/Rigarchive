@@ -1,0 +1,56 @@
+{
+  "environment": {
+    "interpreter": "/Users/cosmo/dev/Rigarchive/.venv/bin/python",
+    "Python": "3.13.1",
+    "Django": "6.0.7",
+    "pypdf": "6.16.1"
+  },
+  "focused_tests": {
+    "passed": 96,
+    "isolated": true,
+    "elapsed_seconds": 2.646,
+    "Django_system_checks": "passed"
+  },
+  "artifacts": {
+    "candidates_validated": 49,
+    "proposal_records_validated": 43,
+    "field_decisions": 60,
+    "complete_identities": 6,
+    "incomplete_identities": 43,
+    "classification_approval_applied": 0,
+    "all_proposal_approval_guards_rejected": true,
+    "serialization_roundtrips": "passed",
+    "source_byte_validation": "passed",
+    "unique_body_trim_engine_combinations": 49,
+    "naming_revisions": 3
+  },
+  "database": {
+    "read_only": true,
+    "byte_identical_to_baseline": true,
+    "sha256": "sha256:f0d32327e0d688b56711a572375e4e462a266ebb8fdb250b97965e392dff07ab",
+    "counts": {
+      "VehicleDefinitions": 812,
+      "receipts": 2880,
+      "MY2020_JL": 0
+    },
+    "integrity": "ok",
+    "foreign_keys": "passed"
+  },
+  "preservation": {
+    "unchanged_preexisting_files": 695,
+    "all_preserved": true
+  },
+  "visual_evidence_review": {
+    "Feb7_PDF_pages": [
+      2,
+      7,
+      11
+    ],
+    "findings": "Scoped grade/QOP cell alignment confirmed, including Rubicon 26R and no High Altitude column"
+  },
+  "remaining_acquisition_limitations": [
+    "Stellantis live blog stopped; original HTML unavailable; cached observation context only",
+    "J.D. Power original HTTP HTML unavailable; retained verified browser excerpt has separately typed snapshot hash",
+    "Two-door July2 original PDF still unavailable"
+  ]
+}

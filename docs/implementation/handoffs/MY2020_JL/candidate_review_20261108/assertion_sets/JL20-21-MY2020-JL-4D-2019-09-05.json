@@ -1,0 +1,48 @@
+{
+  "envelope": {
+    "artifact_type": "rigarchive.source_assertion_set.v1",
+    "created_at": "2026-11-08T22:19:57.363050+00:00",
+    "generator": "bounded_my2020_review",
+    "schema_version": "1.1.0"
+  },
+  "provenance": {
+    "acquisition_method": "retained authentic PDF",
+    "extraction_provenance": {
+      "extraction_mode": "source_specific_parser",
+      "extractor_id": "pypdf",
+      "extractor_version": "6.16.1",
+      "raw_artifact_hash": "sha256:7b3a8bfe861740a65a64631f34b4845f2c8894fd3d00ca35923823149fcda1fb",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/4 Door 9-5-19.pdf"
+    },
+    "native_record_id": "JL20-21-MY2020-JL-4D-2019-09-05",
+    "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+    "review_status": "reviewed",
+    "source_applicability": {
+      "applicability_basis": "US model-year guide/manual applicability; engine-family joins explicitly scoped",
+      "applicability_scope": "model_year",
+      "market": "US",
+      "publisher_jurisdiction": "US"
+    },
+    "source_id": "MY2020-JL-4D-2019-09-05",
+    "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-9-5-19-pdf.227935/",
+    "source_type": "manufacturer_document",
+    "source_use_notes": "Manufacturer-issued guide, archived copy. Revision omissions do not rescind earlier positive cells.",
+    "target_context": {
+      "model_year": 2020
+    }
+  },
+  "source_assertions": [
+    {
+      "assertion_id": "JL20-21-MY2020-JL-4D-2019-09-05-model",
+      "attribute_key": "source_model_code",
+      "raw_value": "JLJS74",
+      "source_context": "PDF page 10; printed model heading"
+    },
+    {
+      "assertion_id": "JL20-21-MY2020-JL-4D-2019-09-05-table",
+      "attribute_key": "factory_powertrain_table",
+      "raw_value": "ENGINE                              $FWP      $MSRP    TRANSMISSION                   $FWP      $MSRP\n3.6L V6 24V VVT ENGINE UPG           N/C       N/C     6-SPEED MANUAL                  N/C       N/C                             23R\nI W/ESS (ERC)                                          TRANSMISSION (DEM)\n                                                       8-SPD AUTO 850RE               2,225      2,500                           24R\n                                                       TRANS (MAKE) (DFT)\n2.0L I4 DOHC DI TURBO                N/C       N/C     8-SPD AUTO 850RE               1,335      1,500                           22R\nENGINE W/ ESS (EC1)                                    TRANS (MAKE) (DFT)\n\nPRICE INCLUDES - BASE PRICE, ENGINE/TRANSMISSION AND QUICK ORDER PACKAGE\n(ALSO INCLUDES PACKAGE DISCOUNT WHERE APPLICABLE - ADD DESTINATION CHARGE)\nFACTORY WHOLESALE PRICE $                                                                            23-                       39,842\n                                                                                                     24-                       42,067\n                                                                                                     22-                       41,177\n\nMANUFACTURER SUGGESTED RETAIL PRICE $                                                                23-                       41,795\n                                                                                                     24-                       44,295\n                                                                                                     22-                       43,295",
+      "source_context": "PDF page 10; model JLJS74; selected grade Unlimited Rubicon; QOP 22R; normalization is not a verbatim manufacturer trim assertion"
+    }
+  ]
+}

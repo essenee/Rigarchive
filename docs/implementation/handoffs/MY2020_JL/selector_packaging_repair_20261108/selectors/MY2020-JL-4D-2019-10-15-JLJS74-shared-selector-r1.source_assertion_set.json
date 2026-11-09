@@ -1,0 +1,39 @@
+{
+  "envelope": {
+    "artifact_type": "rigarchive.source_assertion_set.v1",
+    "created_at": "2026-11-08T23:06:30.530712+00:00",
+    "generator": "MY2020_shared_selector_packaging",
+    "schema_version": "1.1.0"
+  },
+  "provenance": {
+    "acquisition_method": "reuse retained authentic manufacturer PDF",
+    "extraction_provenance": {
+      "extraction_mode": "manually_verified_transcription",
+      "extractor_id": "my2020_shared_model_code_selector",
+      "extractor_version": "1.0.0",
+      "raw_artifact_hash": "sha256:02d82592ec31dd5f583211cd8641eb78eec91d1444c31608f549e10bcc7d6dec",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/4 Door 10-15-19.pdf"
+    },
+    "native_record_id": "MY2020-JL-4D-2019-10-15-JLJS74-shared-selector-r1",
+    "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+    "review_status": "reviewed",
+    "source_applicability": {
+      "applicability_basis": "Printed US/MY2020 document cover and exact model-code page heading; same document revision",
+      "applicability_scope": "model_year",
+      "market": "US",
+      "publisher_jurisdiction": "US"
+    },
+    "source_id": "MY2020-JL-4D-2019-10-15",
+    "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-10-15-19-pdf.239596/",
+    "source_type": "manufacturer_issued_order_guide_archived_copy",
+    "source_use_notes": "Shared extraction of same explicit model-code heading; US MY2020 applicability from cover. Per-candidate facts remain in their original documents."
+  },
+  "source_assertions": [
+    {
+      "assertion_id": "model_code",
+      "attribute_key": "source_model_code",
+      "raw_value": "JLJS74",
+      "source_context": "PDF page 12; manufacturer model-code heading, same original location as predecessor assertion JL20-21-MY2020-JL-4D-2019-10-15/JL20-21-MY2020-JL-4D-2019-10-15-model. Shared across applicable candidate configurations; no engine/trim availability inferred."
+    }
+  ]
+}

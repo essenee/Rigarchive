@@ -1,0 +1,48 @@
+{
+  "envelope": {
+    "artifact_type": "rigarchive.source_assertion_set.v1",
+    "created_at": "2026-11-08T22:19:57.363050+00:00",
+    "generator": "bounded_my2020_review",
+    "schema_version": "1.1.0"
+  },
+  "provenance": {
+    "acquisition_method": "retained authentic PDF",
+    "extraction_provenance": {
+      "extraction_mode": "source_specific_parser",
+      "extractor_id": "pypdf",
+      "extractor_version": "6.16.1",
+      "raw_artifact_hash": "sha256:6ddd581307efa07a282589dcefced72c2d8f967bdddd0c7c3bd0b8cda69b38bb",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/4 Door 1-23-20.pdf"
+    },
+    "native_record_id": "JL20-36-MY2020-JL-4D-2020-01-23",
+    "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+    "review_status": "reviewed",
+    "source_applicability": {
+      "applicability_basis": "US model-year guide/manual applicability; engine-family joins explicitly scoped",
+      "applicability_scope": "model_year",
+      "market": "US",
+      "publisher_jurisdiction": "US"
+    },
+    "source_id": "MY2020-JL-4D-2020-01-23",
+    "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-1-23-20-pdf.275367/",
+    "source_type": "manufacturer_document",
+    "source_use_notes": "Manufacturer-issued guide, archived copy. Revision omissions do not rescind earlier positive cells.",
+    "target_context": {
+      "model_year": 2020
+    }
+  },
+  "source_assertions": [
+    {
+      "assertion_id": "JL20-36-MY2020-JL-4D-2020-01-23-model",
+      "attribute_key": "source_model_code",
+      "raw_value": "JLJL74",
+      "source_context": "PDF page 2; printed model heading"
+    },
+    {
+      "assertion_id": "JL20-36-MY2020-JL-4D-2020-01-23-table",
+      "attribute_key": "factory_powertrain_table",
+      "raw_value": "ENGINE                               $FWP      $MSRP    TRANSMISSION                    $FWP      $MSRP                                           BLACK\n                                                                                                                   WILLYS  SPORT                   AND\n                                                                                                           SPORT   SPORT     S     ALTITUDEWILLYS  TAN  FREEDOM\n3.6L V6 24V VVT ENGINE UPG            N/C       N/C     6-SPEED MANUAL                   N/C       N/C      23B     23K     23S    23L     23W     23D    23F\nI W/ESS (ERC)                                           TRANSMISSION (DEM)\n                                                        8-SPD AUTO 850RE                2,448     2,750     24B     24K     24S    24L     24W     24D    24F\n                                                        TRANS (MAKE) (DFT)\n2.0L I4 DOHC DI TURBO                 N/C       N/C     8-SPD AUTO 850RE                1,335     1,500     22B     22K     22S    22L     22W     22D    22F\nENGINE W/ ESS (EC1)                                     TRANS (MAKE) (DFT)\n3.0L V6 TURBO DIESEL                 3,560     4,000    8-SPD AUTO 8HP75                1,780     2,000     26B             26S    26L     26W\nENGINE W/ESS G3 (EXJ)                                   TRANS (BUY-GERMANY)\n                                                        (DFV)",
+      "source_context": "PDF page 2; model JLJL74; selected grade Unlimited Sport; QOP 22B; normalization is not a verbatim manufacturer trim assertion"
+    }
+  ]
+}

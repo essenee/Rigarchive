@@ -1,0 +1,15 @@
+{
+  "candidates_reviewed": 49,
+  "naming_revisions": 3,
+  "classification_proposals": 43,
+  "field_decisions": 60,
+  "proposals_approved_or_applied": 0,
+  "candidate_and_source_contracts": "passed",
+  "source_bytes_and_lineage": "passed",
+  "roundtrips": "passed",
+  "approval_guard": "all43 rejected as unapproved",
+  "preexisting_files_preserved": 695,
+  "database_sha256_before_and_after": "sha256:f0d32327e0d688b56711a572375e4e462a266ebb8fdb250b97965e392dff07ab",
+  "Feb7_unique_four_door_configurations": 31,
+  "additional_configurations": 0
+}

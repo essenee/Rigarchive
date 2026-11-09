@@ -1,0 +1,4 @@
+PYTHONDONTWRITEBYTECODE=1 RIGARCHIVE_TEST_DB_PATH=:memory: .venv/bin/python -B manage.py test reference.tests.test_generation_correspondence reference.tests.test_generation_projection_completeness reference.tests.test_classification_adjudication reference.tests.test_structured_powertrain reference.tests.test_ingestion_serialization reference.tests.test_candidate_construction --verbosity 1
+Ran125 tests in2.837s; OK.
+System check identified no issues (0 silenced).
+An isolated Django test database was created and destroyed. The live DB was not used.

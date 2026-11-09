@@ -1,0 +1,32 @@
+[
+  {
+    "path": "docs/implementation/handoffs/MY2020_JL/evidence/visual_jan-two-rubicon.png",
+    "sha256": "sha256:4ae7fec1da79a94beb8aadffc028f813e8abad09542da40f1a3d0a7f38e3bf78",
+    "purpose": "Rendered table layout and blank-cell review; derived image, not original PDF bytes."
+  },
+  {
+    "path": "docs/implementation/handoffs/MY2020_JL/evidence/visual_jan-four-rubicon.png",
+    "sha256": "sha256:86122034417f259fdf06f3e65b361d66d083db7aaba5ce8924caac6ce6a649ec",
+    "purpose": "Rendered table layout and blank-cell review; derived image, not original PDF bytes."
+  },
+  {
+    "path": "docs/implementation/handoffs/MY2020_JL/evidence/visual_march-four-sahara.png",
+    "sha256": "sha256:0df2414a963270f131d6ee75b8d356fb5021dca3cdeba6809a83e6ca283ad4e4",
+    "purpose": "Rendered table layout and blank-cell review; derived image, not original PDF bytes."
+  },
+  {
+    "path": "docs/implementation/handoffs/MY2020_JL/evidence/visual_april-four-rubicon.png",
+    "sha256": "sha256:0c17042a97b08c83062582801fba638c708f5edc1c953aff0a1b5dd7936800ca",
+    "purpose": "Rendered table layout and blank-cell review; derived image, not original PDF bytes."
+  },
+  {
+    "path": "docs/implementation/handoffs/MY2020_JL/evidence/visual_april-two-sport.png",
+    "sha256": "sha256:57a7c18941b3456bccac3b032378976c897e37ce4f9f9ff1827a0b7e6194cebe",
+    "purpose": "Rendered table layout and blank-cell review; derived image, not original PDF bytes."
+  },
+  {
+    "path": "docs/implementation/handoffs/MY2020_JL/evidence/visual_april-sahara.png",
+    "sha256": "sha256:c9baf7755e5cd6a77d716792947d929a0e6a2e9a655ccf6e63542ddce91de440",
+    "purpose": "Rendered table layout and blank-cell review; derived image, not original PDF bytes."
+  }
+]

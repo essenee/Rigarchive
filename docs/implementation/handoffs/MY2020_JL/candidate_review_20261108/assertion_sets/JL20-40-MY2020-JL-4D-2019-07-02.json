@@ -1,0 +1,48 @@
+{
+  "envelope": {
+    "artifact_type": "rigarchive.source_assertion_set.v1",
+    "created_at": "2026-11-08T22:19:57.363050+00:00",
+    "generator": "bounded_my2020_review",
+    "schema_version": "1.1.0"
+  },
+  "provenance": {
+    "acquisition_method": "retained authentic PDF",
+    "extraction_provenance": {
+      "extraction_mode": "source_specific_parser",
+      "extractor_id": "pypdf",
+      "extractor_version": "6.16.1",
+      "raw_artifact_hash": "sha256:0c60b14a8c5113a52bcb841bf8ed3748cb99ad2a5c504f2aa106c87d3a4052d4",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2020_JL/source_pdfs/2020_JL_4_door_07_02_2019.pdf"
+    },
+    "native_record_id": "JL20-40-MY2020-JL-4D-2019-07-02",
+    "retrieved_at": "2026-11-08T22:19:57.363050+00:00",
+    "review_status": "reviewed",
+    "source_applicability": {
+      "applicability_basis": "US model-year guide/manual applicability; engine-family joins explicitly scoped",
+      "applicability_scope": "model_year",
+      "market": "US",
+      "publisher_jurisdiction": "US"
+    },
+    "source_id": "MY2020-JL-4D-2019-07-02",
+    "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2020_jl_4_door_07_02_2019-pdf.199502/",
+    "source_type": "manufacturer_document",
+    "source_use_notes": "Manufacturer-issued guide, archived copy. Revision omissions do not rescind earlier positive cells.",
+    "target_context": {
+      "model_year": 2020
+    }
+  },
+  "source_assertions": [
+    {
+      "assertion_id": "JL20-40-MY2020-JL-4D-2019-07-02-model",
+      "attribute_key": "source_model_code",
+      "raw_value": "JLJL74",
+      "source_context": "PDF page 2; printed model heading"
+    },
+    {
+      "assertion_id": "JL20-40-MY2020-JL-4D-2019-07-02-table",
+      "attribute_key": "factory_powertrain_table",
+      "raw_value": "ENGINE                                $FWP       $MSRP     TRANSMISSION                    $FWP       $MSRP          SPORT            SPORT S          ALTITUDEBLACK AND\n                                                                                                                                                              TAN\n3.6L V6 24V VVT ENGINE UPG             N/C        N/C      6-SPEED MANUAL                   N/C         N/C         23B           23S           23L           23D\nI W/ESS (ERC)                                              TRANSMISSION (DEM)\n                                                           8-SPD AUTO 850RE                2,225       2,500        24B           24S           24L           24D\n                                                           TRANS (MAKE) (DFT)\n2.0L I4 DOHC DI TURBO                  N/C        N/C      8-SPD AUTO 850RE                1,335       1,500        22B           22S           22L           22D\nENGINE W/ ESS (EC1)                                        TRANS (MAKE) (DFT)",
+      "source_context": "PDF page 2; model JLJL74; selected grade Unlimited Sport Altitude; QOP 23L,24L; normalization is not a verbatim manufacturer trim assertion"
+    }
+  ]
+}

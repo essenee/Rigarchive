@@ -1,0 +1,14 @@
+{
+  "database_counts": {
+    "VehicleDefinitions": 812,
+    "receipts": 2880,
+    "correspondences": 13
+  },
+  "database_byte_unchanged": true,
+  "SQLite_integrity": "ok",
+  "FK_violations": 0,
+  "Django_check": "System check identified no issues (0 silenced).",
+  "original_candidate_classification_and_evidence_files_preserved": 906,
+  "publication_performed": false,
+  "no_application_contract_or_candidate_change": true
+}
