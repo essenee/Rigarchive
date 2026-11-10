@@ -1,7 +1,47 @@
 RigArchive Project Status Document
 Version: 1.3
-Last Updated: 2026-11-09
+Last Updated: 2026-11-10
 Purpose: Current implementation status and development roadmap
+
+## Wrangler ingestion workflow W2 — Edmunds-first provisional source (2026-11-10)
+
+Owner-approved direction for remaining Wrangler model years, beginning MY2022: use Edmunds' trim-specific Mechanical Options, Packages/QOP and marketed taxonomy as the **primary provisional working evidence**; defer exhaustive manufacturer-guide reconciliation until warranted by usage/time. The earlier 21-source discovery, 56-row comparison and 55 incomplete candidates remain a historical checkpoint, not a completed W2 import. See the [W2 change-of-course record](handoffs/MY2022_JL/WORKFLOW_EXPERIMENT_20261109.md) and [ingestion protocol](../development/INGESTION_PROTOCOL.md). “Edmunds-supported” is not “manufacturer-verified”; explicit relationships must not be inferred from co-listed options. Mandatory classification, Engine Proof, correspondence, Matrix, human authorization, import and receipt safeguards remain unchanged; any contract incompatibility requires separate approval. This ingestion W2 is **distinct** from the W2 full-specifications architecture.
+
+Known deferred MY2021 and MY2022 Sport RHD offerings are recorded in the [Canonical Coverage and Deferrals Register](CANONICAL_COVERAGE_AND_DEFERRALS.md), with consumer-market applicability unresolved; neither is permanently excluded or presumed fleet-only. No canonical data changes or imports were made by this documentation decision.
+
+## MY2022 US Wrangler JL — experimental lightweight candidates prepared (2026-11-09)
+
+The [owner-authorized workflow experiment](handoffs/MY2022_JL/WORKFLOW_EXPERIMENT_20261109.md)
+reuses the 21-source manufacturer discovery (18 guides, nine revisions per body)
+and bounded Edmunds taxonomy reconciliation instead of repeating comprehensive
+acquisition/historical investigation. All 56 discovered offerings have counterparts:
+45 same-name / 11 equivalent-name; zero unmatched baselines or genuine contradictions
+identified. Eight manufacturer-supported transmission/QOP alternatives remain review
+items. Offering agreement is not a complete five-field powertrain proof.
+
+The [provisional candidate checkpoint](handoffs/MY2022_JL/lightweight_candidates_20261109/README.md)
+contains **55 schema-valid Candidate 2.1.0 artifacts: 15 two-door / 40 four-door**, all
+six powertrain families and 44/11 consumer Edmunds mappings. One RHD offering is
+preserved/deferred. **0 complete, 55 incomplete, 55 blocked, 0 eligible**, with 112
+null field instances (29 aspiration / 46 fuel / 37 electrification), 13 uncertain
+ERC/eTorque identity pairs and 72 missing MY2022 source/model generation keys.
+Generation 32 remains the existing intended target; no correspondence was published.
+No Engine Proof 2.0 can yet be emitted, and no Matrix/import manifest was certified
+or canonical import executed. All unknowns and material owner decisions remain explicit.
+
+Existing builder/serialization/lineage/Engine Proof rejection and actual read-only
+planner checks pass, including deterministic rebuilds and negative controls. System
+and migration dry-run checks pass; no full Django suite was rerun for this artifact-only
+task. Initial script construction/rebuild checking measured 1.257802 seconds, planning
+0.143702 seconds and instrumented script elapsed 1.875675 seconds; these are not total
+processing/chat time or evidence of savings. The experiment's success remains unevaluated
+until classification, revisions and certified/imported outcomes are known. Mandatory
+identity, human approval, generation, Matrix, stale-state, atomic create-only and audit
+receipt gates remain unchanged. Database/source bytes are preserved; totals remain
+934 definitions / 3,148 receipts / 159 correspondences and zero MY2022 definitions
+for Generation 32. Next work requires owner classification findings and separately
+authorized correspondence review/publication. No architecture/schema changes or Git
+publication were performed.
 
 ## Configurator drive-wheel labels — owner-approved feature checkpoint (2026-11-09)
 

@@ -1,0 +1,2091 @@
+{
+  "candidate_contract": "2.1.0",
+  "revision": "provisional-r1",
+  "rows": [
+    {
+      "candidate_reference": "JL22-01",
+      "candidate_artifact": "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/candidates/JL22-01.provisional-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:f8d048ca740cc993fc518fba0aad63ff6ece566e0f8949f7456a21abb17b802b",
+      "artifact_sha256": "sha256:381bf32637f3e1b6a5b206b70d0bf3d7118618c6e1afb3d3713ff994f155742b",
+      "body_style": "2-door",
+      "trim_name": "Sport",
+      "manufacturer_model_code": "JLJL72",
+      "engine_code": "EC1",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": null,
+        "electrification_type": null
+      },
+      "unresolved_fields": [
+        "fuel_type",
+        "electrification_type"
+      ],
+      "edmunds_outcome": "Exact match",
+      "edmunds_style_id": "401883308",
+      "assertion_sets": [
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-10-8-21-pdf.519659-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-11-10-21-pdf.534732-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-12-7-21-pdf.543725-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-1-12-22-pdf.553817-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-1-17-22-pdf.555729-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-2-10-22-pdf.567215-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-3-11-22-pdf.579259-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-4-7-22-pdf.591775-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-6-3-22-pdf.615028-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/MY2022-technical-layout-p1.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/JL22-01-edmunds-transcription.source_assertion_set.1.1.0.json"
+      ],
+      "generation_identity_count": 9,
+      "complete_five_field_identity": false
+    },
+    {
+      "candidate_reference": "JL22-02",
+      "candidate_artifact": "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/candidates/JL22-02.provisional-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:b11fbd5e910ff88f6731a57876426515e4ea5671681a9afc1aedeea440702878",
+      "artifact_sha256": "sha256:0178f5e7259e325085265a263a1c043a1603b8f299c954f878870b934630d4b4",
+      "body_style": "2-door",
+      "trim_name": "Sport",
+      "manufacturer_model_code": "JLJL72",
+      "engine_code": "ERC",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": null,
+        "fuel_type": null,
+        "electrification_type": null
+      },
+      "unresolved_fields": [
+        "engine_aspiration",
+        "fuel_type",
+        "electrification_type"
+      ],
+      "edmunds_outcome": "Exact match",
+      "edmunds_style_id": "401883308",
+      "assertion_sets": [
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-10-8-21-pdf.519659-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-11-10-21-pdf.534732-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-12-7-21-pdf.543725-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-1-12-22-pdf.553817-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-1-17-22-pdf.555729-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-2-10-22-pdf.567215-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-3-11-22-pdf.579259-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-4-7-22-pdf.591775-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-6-3-22-pdf.615028-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/MY2022-technical-layout-p1.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/JL22-02-edmunds-transcription.source_assertion_set.1.1.0.json"
+      ],
+      "generation_identity_count": 9,
+      "complete_five_field_identity": false
+    },
+    {
+      "candidate_reference": "JL22-03",
+      "candidate_artifact": "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/candidates/JL22-03.provisional-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:793de9a460c4df52e14b2650d5fdd8ac07fccb1cf958bc7882f1fbc9cb2bd1a5",
+      "artifact_sha256": "sha256:31545bb09ad5d4989b455ec66e880db5248b153c49ca9e37094c4726176ad596",
+      "body_style": "2-door",
+      "trim_name": "Sport",
+      "manufacturer_model_code": "JLJL72",
+      "engine_code": "ERG",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": null,
+        "fuel_type": null,
+        "electrification_type": "mild_hybrid"
+      },
+      "unresolved_fields": [
+        "engine_aspiration",
+        "fuel_type"
+      ],
+      "edmunds_outcome": "Exact match",
+      "edmunds_style_id": "401883308",
+      "assertion_sets": [
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-10-8-21-pdf.519659-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-11-10-21-pdf.534732-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-12-7-21-pdf.543725-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-1-12-22-pdf.553817-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-1-17-22-pdf.555729-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-2-10-22-pdf.567215-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-3-11-22-pdf.579259-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-4-7-22-pdf.591775-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-6-3-22-pdf.615028-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/MY2022-technical-layout-p1.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/JL22-03-edmunds-transcription.source_assertion_set.1.1.0.json"
+      ],
+      "generation_identity_count": 9,
+      "complete_five_field_identity": false
+    },
+    {
+      "candidate_reference": "JL22-04",
+      "candidate_artifact": "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/candidates/JL22-04.provisional-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:5579f944c40cd432c1315c829b45b3d6c6e0536df98bb77fefe06e4866e097ca",
+      "artifact_sha256": "sha256:5e3653c9e8dc68535d61e5aa6c373d21ca3f19c618cb247bfde38b81b94ab0e2",
+      "body_style": "2-door",
+      "trim_name": "Sport S",
+      "manufacturer_model_code": "JLJL72",
+      "engine_code": "EC1",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": null,
+        "electrification_type": null
+      },
+      "unresolved_fields": [
+        "fuel_type",
+        "electrification_type"
+      ],
+      "edmunds_outcome": "Exact match",
+      "edmunds_style_id": "401915624",
+      "assertion_sets": [
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-10-8-21-pdf.519659-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-11-10-21-pdf.534732-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-12-7-21-pdf.543725-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-1-12-22-pdf.553817-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-1-17-22-pdf.555729-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-2-10-22-pdf.567215-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-3-11-22-pdf.579259-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-4-7-22-pdf.591775-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-6-3-22-pdf.615028-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/MY2022-technical-layout-p1.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/JL22-04-edmunds-transcription.source_assertion_set.1.1.0.json"
+      ],
+      "generation_identity_count": 9,
+      "complete_five_field_identity": false
+    },
+    {
+      "candidate_reference": "JL22-05",
+      "candidate_artifact": "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/candidates/JL22-05.provisional-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:39d10ecb30f0313e7cc973875bfe7ead680e23f8a7f619bc60352e622dd7b0f9",
+      "artifact_sha256": "sha256:22e588e2ccbd9ab4b5b9dc39eb10b4ad0fdd371e3b0ef5f85efa362131a47a07",
+      "body_style": "2-door",
+      "trim_name": "Sport S",
+      "manufacturer_model_code": "JLJL72",
+      "engine_code": "ERC",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": null,
+        "fuel_type": null,
+        "electrification_type": null
+      },
+      "unresolved_fields": [
+        "engine_aspiration",
+        "fuel_type",
+        "electrification_type"
+      ],
+      "edmunds_outcome": "Exact match",
+      "edmunds_style_id": "401915624",
+      "assertion_sets": [
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-10-8-21-pdf.519659-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-11-10-21-pdf.534732-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-12-7-21-pdf.543725-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-1-12-22-pdf.553817-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-1-17-22-pdf.555729-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-2-10-22-pdf.567215-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-3-11-22-pdf.579259-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-4-7-22-pdf.591775-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-6-3-22-pdf.615028-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/MY2022-technical-layout-p1.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/JL22-05-edmunds-transcription.source_assertion_set.1.1.0.json"
+      ],
+      "generation_identity_count": 9,
+      "complete_five_field_identity": false
+    },
+    {
+      "candidate_reference": "JL22-06",
+      "candidate_artifact": "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/candidates/JL22-06.provisional-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:342b5e0d167cde8a5b759fbadd0a078b1d0e9f0cc8ad17c8151f7d65f7bb33ae",
+      "artifact_sha256": "sha256:71f1961c336638a11e4b2879b6071aa778755509623ebab62597066bb51ddd28",
+      "body_style": "2-door",
+      "trim_name": "Sport S",
+      "manufacturer_model_code": "JLJL72",
+      "engine_code": "ERG",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": null,
+        "fuel_type": null,
+        "electrification_type": "mild_hybrid"
+      },
+      "unresolved_fields": [
+        "engine_aspiration",
+        "fuel_type"
+      ],
+      "edmunds_outcome": "Exact match",
+      "edmunds_style_id": "401915624",
+      "assertion_sets": [
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-10-8-21-pdf.519659-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-11-10-21-pdf.534732-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-12-7-21-pdf.543725-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-1-12-22-pdf.553817-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-1-17-22-pdf.555729-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-2-10-22-pdf.567215-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-3-11-22-pdf.579259-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-4-7-22-pdf.591775-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-6-3-22-pdf.615028-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/MY2022-technical-layout-p1.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/JL22-06-edmunds-transcription.source_assertion_set.1.1.0.json"
+      ],
+      "generation_identity_count": 9,
+      "complete_five_field_identity": false
+    },
+    {
+      "candidate_reference": "JL22-07",
+      "candidate_artifact": "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/candidates/JL22-07.provisional-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:b4acb1f6ecaed56d260aa340e36c2292dc6cfae8d97424b4f444fda54b7fe9a8",
+      "artifact_sha256": "sha256:30ce8abe3268622753b7f2d0b2ae970997f9041acaca7797414f356e8faff9f3",
+      "body_style": "2-door",
+      "trim_name": "Willys",
+      "manufacturer_model_code": "JLJL72",
+      "engine_code": "EC1",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": null,
+        "electrification_type": null
+      },
+      "unresolved_fields": [
+        "fuel_type",
+        "electrification_type"
+      ],
+      "edmunds_outcome": "Exact match",
+      "edmunds_style_id": "401915625",
+      "assertion_sets": [
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-10-8-21-pdf.519659-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-11-10-21-pdf.534732-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-12-7-21-pdf.543725-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-1-12-22-pdf.553817-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-1-17-22-pdf.555729-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-2-10-22-pdf.567215-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-3-11-22-pdf.579259-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-4-7-22-pdf.591775-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-6-3-22-pdf.615028-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/MY2022-technical-layout-p1.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/JL22-07-edmunds-transcription.source_assertion_set.1.1.0.json"
+      ],
+      "generation_identity_count": 9,
+      "complete_five_field_identity": false
+    },
+    {
+      "candidate_reference": "JL22-08",
+      "candidate_artifact": "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/candidates/JL22-08.provisional-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:9784cfb3e1f22bd9a7d1f3185d3c1bb6b80005f3a6f04508c3d5fa40a8c146f7",
+      "artifact_sha256": "sha256:3fa3bf653295bc3f1c286697c9b71f78aefa6033bc29a26358c030e53161cbfd",
+      "body_style": "2-door",
+      "trim_name": "Willys",
+      "manufacturer_model_code": "JLJL72",
+      "engine_code": "ERC",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": null,
+        "fuel_type": null,
+        "electrification_type": null
+      },
+      "unresolved_fields": [
+        "engine_aspiration",
+        "fuel_type",
+        "electrification_type"
+      ],
+      "edmunds_outcome": "Exact match",
+      "edmunds_style_id": "401915625",
+      "assertion_sets": [
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-10-8-21-pdf.519659-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-11-10-21-pdf.534732-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-12-7-21-pdf.543725-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-1-12-22-pdf.553817-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-1-17-22-pdf.555729-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-2-10-22-pdf.567215-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-3-11-22-pdf.579259-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-4-7-22-pdf.591775-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-6-3-22-pdf.615028-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/MY2022-technical-layout-p1.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/JL22-08-edmunds-transcription.source_assertion_set.1.1.0.json"
+      ],
+      "generation_identity_count": 9,
+      "complete_five_field_identity": false
+    },
+    {
+      "candidate_reference": "JL22-09",
+      "candidate_artifact": "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/candidates/JL22-09.provisional-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:6bcf258fcb46bbe4a2c8489fed4cd0e4a90f4afa69515a554858b17c60d2ed5d",
+      "artifact_sha256": "sha256:30e8f632d59b840f0f60137f4ea37c1d6a08f41d3fce37ba3c4a368e126bd096",
+      "body_style": "2-door",
+      "trim_name": "Willys",
+      "manufacturer_model_code": "JLJL72",
+      "engine_code": "ERG",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": null,
+        "fuel_type": null,
+        "electrification_type": "mild_hybrid"
+      },
+      "unresolved_fields": [
+        "engine_aspiration",
+        "fuel_type"
+      ],
+      "edmunds_outcome": "Exact match",
+      "edmunds_style_id": "401915625",
+      "assertion_sets": [
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-10-8-21-pdf.519659-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-11-10-21-pdf.534732-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-12-7-21-pdf.543725-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-1-12-22-pdf.553817-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-1-17-22-pdf.555729-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-2-10-22-pdf.567215-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-3-11-22-pdf.579259-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-4-7-22-pdf.591775-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-6-3-22-pdf.615028-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/MY2022-technical-layout-p1.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/JL22-09-edmunds-transcription.source_assertion_set.1.1.0.json"
+      ],
+      "generation_identity_count": 9,
+      "complete_five_field_identity": false
+    },
+    {
+      "candidate_reference": "JL22-10",
+      "candidate_artifact": "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/candidates/JL22-10.provisional-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:0fcfc38edea1a7f0012c5f7e88c264efaf874c15ef117b27516756542fb37bcc",
+      "artifact_sha256": "sha256:c90a8a900fdfa6941c781748e05980fe47500cc70861f1f93f2b80808d5fa10f",
+      "body_style": "2-door",
+      "trim_name": "Willys Sport",
+      "manufacturer_model_code": "JLJL72",
+      "engine_code": "EC1",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": null,
+        "electrification_type": null
+      },
+      "unresolved_fields": [
+        "fuel_type",
+        "electrification_type"
+      ],
+      "edmunds_outcome": "Exact match",
+      "edmunds_style_id": "401915623",
+      "assertion_sets": [
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-10-8-21-pdf.519659-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-11-10-21-pdf.534732-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-12-7-21-pdf.543725-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-1-12-22-pdf.553817-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-1-17-22-pdf.555729-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-2-10-22-pdf.567215-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-3-11-22-pdf.579259-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-4-7-22-pdf.591775-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-6-3-22-pdf.615028-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/MY2022-technical-layout-p1.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/JL22-10-edmunds-transcription.source_assertion_set.1.1.0.json"
+      ],
+      "generation_identity_count": 9,
+      "complete_five_field_identity": false
+    },
+    {
+      "candidate_reference": "JL22-11",
+      "candidate_artifact": "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/candidates/JL22-11.provisional-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:32fd0c3221ddd628eaa4c50fe7041e1deaa554f325ab02d3e74a349b39a59205",
+      "artifact_sha256": "sha256:c1bb67c8dd9539435e6d50efc5fe0df4666b31b78923e53fcd3ff0a9b53a1ac9",
+      "body_style": "2-door",
+      "trim_name": "Willys Sport",
+      "manufacturer_model_code": "JLJL72",
+      "engine_code": "ERC",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": null,
+        "fuel_type": null,
+        "electrification_type": null
+      },
+      "unresolved_fields": [
+        "engine_aspiration",
+        "fuel_type",
+        "electrification_type"
+      ],
+      "edmunds_outcome": "Exact match",
+      "edmunds_style_id": "401915623",
+      "assertion_sets": [
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-10-8-21-pdf.519659-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-11-10-21-pdf.534732-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-12-7-21-pdf.543725-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-1-12-22-pdf.553817-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-1-17-22-pdf.555729-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-2-10-22-pdf.567215-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-3-11-22-pdf.579259-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-4-7-22-pdf.591775-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-6-3-22-pdf.615028-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/MY2022-technical-layout-p1.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/JL22-11-edmunds-transcription.source_assertion_set.1.1.0.json"
+      ],
+      "generation_identity_count": 9,
+      "complete_five_field_identity": false
+    },
+    {
+      "candidate_reference": "JL22-12",
+      "candidate_artifact": "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/candidates/JL22-12.provisional-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:6878507462dd2586cf92d5d6b50006c1cc24f906d1b822677539bc5a1665c813",
+      "artifact_sha256": "sha256:a09f345e06d9e6514c1fd0c5ce90d1982061ca454aaeb91a9288b92907bb5d1b",
+      "body_style": "2-door",
+      "trim_name": "Willys Sport",
+      "manufacturer_model_code": "JLJL72",
+      "engine_code": "ERG",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": null,
+        "fuel_type": null,
+        "electrification_type": "mild_hybrid"
+      },
+      "unresolved_fields": [
+        "engine_aspiration",
+        "fuel_type"
+      ],
+      "edmunds_outcome": "Exact match",
+      "edmunds_style_id": "401915623",
+      "assertion_sets": [
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-10-8-21-pdf.519659-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-11-10-21-pdf.534732-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-12-7-21-pdf.543725-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-1-12-22-pdf.553817-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-1-17-22-pdf.555729-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-2-10-22-pdf.567215-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-3-11-22-pdf.579259-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-4-7-22-pdf.591775-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-6-3-22-pdf.615028-JLJL72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/MY2022-technical-layout-p1.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/JL22-12-edmunds-transcription.source_assertion_set.1.1.0.json"
+      ],
+      "generation_identity_count": 9,
+      "complete_five_field_identity": false
+    },
+    {
+      "candidate_reference": "JL22-13",
+      "candidate_artifact": "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/candidates/JL22-13.provisional-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:acb08ced113bd065193dc25762ca2963c4d96e1799edbfe5164273fd6d8e8a7e",
+      "artifact_sha256": "sha256:ce5da35cd6332c5b9584933e57eb3500cbf336c7afa2308aceeee9ec26b6d759",
+      "body_style": "2-door",
+      "trim_name": "Rubicon",
+      "manufacturer_model_code": "JLJS72",
+      "engine_code": "EC1",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": null,
+        "electrification_type": null
+      },
+      "unresolved_fields": [
+        "fuel_type",
+        "electrification_type"
+      ],
+      "edmunds_outcome": "Exact match",
+      "edmunds_style_id": "401915646",
+      "assertion_sets": [
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-10-8-21-pdf.519659-JLJS72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-11-10-21-pdf.534732-JLJS72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-12-7-21-pdf.543725-JLJS72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-1-12-22-pdf.553817-JLJS72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-1-17-22-pdf.555729-JLJS72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-2-10-22-pdf.567215-JLJS72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-3-11-22-pdf.579259-JLJS72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-4-7-22-pdf.591775-JLJS72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-6-3-22-pdf.615028-JLJS72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/MY2022-technical-layout-p1.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/JL22-13-edmunds-transcription.source_assertion_set.1.1.0.json"
+      ],
+      "generation_identity_count": 9,
+      "complete_five_field_identity": false
+    },
+    {
+      "candidate_reference": "JL22-14",
+      "candidate_artifact": "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/candidates/JL22-14.provisional-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:f01b713baf6aab33e088dc6e8e3da0b23a241f206d589e2a25216e889dda5609",
+      "artifact_sha256": "sha256:db7370852605381e0ec54163328192489521c8f9ba982d7db9a9d5d8c456a3fc",
+      "body_style": "2-door",
+      "trim_name": "Rubicon",
+      "manufacturer_model_code": "JLJS72",
+      "engine_code": "ERC",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": null,
+        "fuel_type": null,
+        "electrification_type": null
+      },
+      "unresolved_fields": [
+        "engine_aspiration",
+        "fuel_type",
+        "electrification_type"
+      ],
+      "edmunds_outcome": "Exact match",
+      "edmunds_style_id": "401915646",
+      "assertion_sets": [
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-10-8-21-pdf.519659-JLJS72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-11-10-21-pdf.534732-JLJS72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-12-7-21-pdf.543725-JLJS72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-1-12-22-pdf.553817-JLJS72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-1-17-22-pdf.555729-JLJS72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-2-10-22-pdf.567215-JLJS72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-3-11-22-pdf.579259-JLJS72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-4-7-22-pdf.591775-JLJS72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-6-3-22-pdf.615028-JLJS72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/MY2022-technical-layout-p1.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/JL22-14-edmunds-transcription.source_assertion_set.1.1.0.json"
+      ],
+      "generation_identity_count": 9,
+      "complete_five_field_identity": false
+    },
+    {
+      "candidate_reference": "JL22-15",
+      "candidate_artifact": "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/candidates/JL22-15.provisional-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:410155dc4200a8d4a7348a6bf7597b269ee9fba6583b24789bd7e04a6e3d4a73",
+      "artifact_sha256": "sha256:b9d7408bf376988815203fa439580b66d0d3dfec9b1fb5181dd9d8fc416cf408",
+      "body_style": "2-door",
+      "trim_name": "Rubicon",
+      "manufacturer_model_code": "JLJS72",
+      "engine_code": "ERG",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": null,
+        "fuel_type": null,
+        "electrification_type": "mild_hybrid"
+      },
+      "unresolved_fields": [
+        "engine_aspiration",
+        "fuel_type"
+      ],
+      "edmunds_outcome": "Exact match",
+      "edmunds_style_id": "401915646",
+      "assertion_sets": [
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-10-8-21-pdf.519659-JLJS72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-11-10-21-pdf.534732-JLJS72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-12-7-21-pdf.543725-JLJS72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-1-12-22-pdf.553817-JLJS72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-1-17-22-pdf.555729-JLJS72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-2-10-22-pdf.567215-JLJS72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-3-11-22-pdf.579259-JLJS72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-4-7-22-pdf.591775-JLJS72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/2-door-6-3-22-pdf.615028-JLJS72.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/MY2022-technical-layout-p1.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/JL22-15-edmunds-transcription.source_assertion_set.1.1.0.json"
+      ],
+      "generation_identity_count": 9,
+      "complete_five_field_identity": false
+    },
+    {
+      "candidate_reference": "JL22-16",
+      "candidate_artifact": "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/candidates/JL22-16.provisional-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:80325291f3cd3f73ee1fee85098990364640c3cacd4ad2115f3d83fd5720c3a1",
+      "artifact_sha256": "sha256:e89c5f31092f699252a90d34a07e35c4d1e6541ab4f92bc6b7ae9e575a93e8ce",
+      "body_style": "4-door",
+      "trim_name": "Unlimited Sport Altitude",
+      "manufacturer_model_code": "JLJL74",
+      "engine_code": "EC1",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": null,
+        "electrification_type": null
+      },
+      "unresolved_fields": [
+        "fuel_type",
+        "electrification_type"
+      ],
+      "edmunds_outcome": "Equivalent configuration with different naming",
+      "edmunds_style_id": "401915654",
+      "assertion_sets": [
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/wrangler-4-dr-2022-10-08-2021-pdf.519330-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-11-10-21-pdf.534724-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-12-7-21-pdf.543723-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-12-22-pdf.553816-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-17-22-pdf.555728-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-2-10-22-pdf.567217-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-3-11-22-pdf.579260-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-4-7-22-pdf.591773-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-6-1-22-pdf.615030-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/MY2022-technical-layout-p1.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/JL22-16-edmunds-transcription.source_assertion_set.1.1.0.json"
+      ],
+      "generation_identity_count": 9,
+      "complete_five_field_identity": false
+    },
+    {
+      "candidate_reference": "JL22-17",
+      "candidate_artifact": "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/candidates/JL22-17.provisional-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:d7c749bdcecb9e3612ae364b64d6c25b9bf8fa6771a7dfb0563b5c43151c9bd3",
+      "artifact_sha256": "sha256:9f70f950b429a42503a2b8800af8c6667660b1575b71732fd400b870fb180c47",
+      "body_style": "4-door",
+      "trim_name": "Unlimited Sport Altitude",
+      "manufacturer_model_code": "JLJL74",
+      "engine_code": "ERC",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": null,
+        "fuel_type": null,
+        "electrification_type": null
+      },
+      "unresolved_fields": [
+        "engine_aspiration",
+        "fuel_type",
+        "electrification_type"
+      ],
+      "edmunds_outcome": "Equivalent configuration with different naming",
+      "edmunds_style_id": "401915654",
+      "assertion_sets": [
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/wrangler-4-dr-2022-10-08-2021-pdf.519330-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-11-10-21-pdf.534724-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-12-7-21-pdf.543723-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-12-22-pdf.553816-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-17-22-pdf.555728-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-2-10-22-pdf.567217-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-3-11-22-pdf.579260-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-4-7-22-pdf.591773-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-6-1-22-pdf.615030-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/MY2022-technical-layout-p1.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/JL22-17-edmunds-transcription.source_assertion_set.1.1.0.json"
+      ],
+      "generation_identity_count": 9,
+      "complete_five_field_identity": false
+    },
+    {
+      "candidate_reference": "JL22-18",
+      "candidate_artifact": "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/candidates/JL22-18.provisional-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:7d7aca23bb08da6211014a11396d3755e90857eae743c0876aea5e6284328d78",
+      "artifact_sha256": "sha256:a8a5fd8384985d0de597df283ee65322de4fcbdb02234563e707913192999442",
+      "body_style": "4-door",
+      "trim_name": "Unlimited Sport Altitude",
+      "manufacturer_model_code": "JLJL74",
+      "engine_code": "ERG",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": null,
+        "fuel_type": null,
+        "electrification_type": "mild_hybrid"
+      },
+      "unresolved_fields": [
+        "engine_aspiration",
+        "fuel_type"
+      ],
+      "edmunds_outcome": "Equivalent configuration with different naming",
+      "edmunds_style_id": "401915654",
+      "assertion_sets": [
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/wrangler-4-dr-2022-10-08-2021-pdf.519330-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-11-10-21-pdf.534724-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-12-7-21-pdf.543723-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-12-22-pdf.553816-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-17-22-pdf.555728-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-2-10-22-pdf.567217-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-3-11-22-pdf.579260-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-4-7-22-pdf.591773-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-6-1-22-pdf.615030-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/MY2022-technical-layout-p1.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/JL22-18-edmunds-transcription.source_assertion_set.1.1.0.json"
+      ],
+      "generation_identity_count": 9,
+      "complete_five_field_identity": false
+    },
+    {
+      "candidate_reference": "JL22-19",
+      "candidate_artifact": "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/candidates/JL22-19.provisional-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:1d4ecd3d43e551053dec3a26cd66f984143aeaee21bfc1ff069093d30b927baf",
+      "artifact_sha256": "sha256:c1a9ecdb564e2178ce41a6d7cd3f242c2bacffc56935000ce1a671c96b854706",
+      "body_style": "4-door",
+      "trim_name": "Unlimited Sport Altitude",
+      "manufacturer_model_code": "JLJL74",
+      "engine_code": "EXJ",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "3",
+        "engine_cylinders": 6,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "diesel",
+        "electrification_type": null
+      },
+      "unresolved_fields": [
+        "electrification_type"
+      ],
+      "edmunds_outcome": "Equivalent configuration with different naming",
+      "edmunds_style_id": "401915654",
+      "assertion_sets": [
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/wrangler-4-dr-2022-10-08-2021-pdf.519330-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-11-10-21-pdf.534724-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-12-7-21-pdf.543723-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-12-22-pdf.553816-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-17-22-pdf.555728-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-2-10-22-pdf.567217-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-3-11-22-pdf.579260-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-4-7-22-pdf.591773-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-6-1-22-pdf.615030-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/MY2022-technical-layout-p1.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/JL22-19-edmunds-transcription.source_assertion_set.1.1.0.json"
+      ],
+      "generation_identity_count": 9,
+      "complete_five_field_identity": false
+    },
+    {
+      "candidate_reference": "JL22-20",
+      "candidate_artifact": "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/candidates/JL22-20.provisional-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:cb68e016ce8678293f7b1239674c7436d8a2bf749a6b5e353efd250561e53a82",
+      "artifact_sha256": "sha256:306f7376a39bf6fc7b1dc38b1798881c8c71c51a73e36dcd35e6cfa1d401a8ae",
+      "body_style": "4-door",
+      "trim_name": "Unlimited High Tide",
+      "manufacturer_model_code": "JLJL74",
+      "engine_code": "ERG",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": null,
+        "fuel_type": null,
+        "electrification_type": "mild_hybrid"
+      },
+      "unresolved_fields": [
+        "engine_aspiration",
+        "fuel_type"
+      ],
+      "edmunds_outcome": "Exact match",
+      "edmunds_style_id": "401927272",
+      "assertion_sets": [
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-2-10-22-pdf.567217-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-3-11-22-pdf.579260-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-4-7-22-pdf.591773-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-6-1-22-pdf.615030-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/MY2022-technical-layout-p1.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/JL22-20-edmunds-transcription.source_assertion_set.1.1.0.json"
+      ],
+      "generation_identity_count": 4,
+      "complete_five_field_identity": false
+    },
+    {
+      "candidate_reference": "JL22-21",
+      "candidate_artifact": "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/candidates/JL22-21.provisional-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:44ae9b95f04326351c2ea94a509741b5594999eed89db54ded1f1584805f3d4f",
+      "artifact_sha256": "sha256:662a74d4d8e6bd5d89826381a5197b5a4b06880d83ed45734bf2e45e06a2641e",
+      "body_style": "4-door",
+      "trim_name": "Unlimited Sport",
+      "manufacturer_model_code": "JLJL74",
+      "engine_code": "EC1",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": null,
+        "electrification_type": null
+      },
+      "unresolved_fields": [
+        "fuel_type",
+        "electrification_type"
+      ],
+      "edmunds_outcome": "Exact match",
+      "edmunds_style_id": "401915650",
+      "assertion_sets": [
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/wrangler-4-dr-2022-10-08-2021-pdf.519330-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-11-10-21-pdf.534724-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-12-7-21-pdf.543723-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-12-22-pdf.553816-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-17-22-pdf.555728-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-2-10-22-pdf.567217-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-3-11-22-pdf.579260-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-4-7-22-pdf.591773-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-6-1-22-pdf.615030-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/MY2022-technical-layout-p1.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/JL22-21-edmunds-transcription.source_assertion_set.1.1.0.json"
+      ],
+      "generation_identity_count": 9,
+      "complete_five_field_identity": false
+    },
+    {
+      "candidate_reference": "JL22-22",
+      "candidate_artifact": "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/candidates/JL22-22.provisional-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:21fbd978bba61b040e84585ab9c9d0aad1a1b1ee0f458a8b47476e0cb827baeb",
+      "artifact_sha256": "sha256:2dd3726f74d9d96ebdeaaf73ab83ff5bd5686c7a3e424a90f2b4eb7929ae2ab7",
+      "body_style": "4-door",
+      "trim_name": "Unlimited Sport",
+      "manufacturer_model_code": "JLJL74",
+      "engine_code": "ERC",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": null,
+        "fuel_type": null,
+        "electrification_type": null
+      },
+      "unresolved_fields": [
+        "engine_aspiration",
+        "fuel_type",
+        "electrification_type"
+      ],
+      "edmunds_outcome": "Exact match",
+      "edmunds_style_id": "401915650",
+      "assertion_sets": [
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/wrangler-4-dr-2022-10-08-2021-pdf.519330-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-11-10-21-pdf.534724-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-12-7-21-pdf.543723-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-12-22-pdf.553816-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-17-22-pdf.555728-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-2-10-22-pdf.567217-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-3-11-22-pdf.579260-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-4-7-22-pdf.591773-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-6-1-22-pdf.615030-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/MY2022-technical-layout-p1.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/JL22-22-edmunds-transcription.source_assertion_set.1.1.0.json"
+      ],
+      "generation_identity_count": 9,
+      "complete_five_field_identity": false
+    },
+    {
+      "candidate_reference": "JL22-23",
+      "candidate_artifact": "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/candidates/JL22-23.provisional-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:42ed3344bc383a9d7f4651cb774472c4320dfbadb874bcc6a3b89d95ebdbc4ab",
+      "artifact_sha256": "sha256:63876e4e45173904328270d676b45bf7f3860273c83a75e2a424a15fdc45ac1f",
+      "body_style": "4-door",
+      "trim_name": "Unlimited Sport",
+      "manufacturer_model_code": "JLJL74",
+      "engine_code": "ERG",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": null,
+        "fuel_type": null,
+        "electrification_type": "mild_hybrid"
+      },
+      "unresolved_fields": [
+        "engine_aspiration",
+        "fuel_type"
+      ],
+      "edmunds_outcome": "Exact match",
+      "edmunds_style_id": "401915650",
+      "assertion_sets": [
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/wrangler-4-dr-2022-10-08-2021-pdf.519330-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-11-10-21-pdf.534724-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-12-7-21-pdf.543723-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-12-22-pdf.553816-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-17-22-pdf.555728-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-2-10-22-pdf.567217-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-3-11-22-pdf.579260-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-4-7-22-pdf.591773-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-6-1-22-pdf.615030-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/MY2022-technical-layout-p1.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/JL22-23-edmunds-transcription.source_assertion_set.1.1.0.json"
+      ],
+      "generation_identity_count": 9,
+      "complete_five_field_identity": false
+    },
+    {
+      "candidate_reference": "JL22-24",
+      "candidate_artifact": "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/candidates/JL22-24.provisional-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:a0cc6bf8e65c8deb3b2b61d7ca6aa795b767c9931a11bae9e265864d211e8a7d",
+      "artifact_sha256": "sha256:da3081a03d2a4df96305fd9b0c4af798e5302031cf63402c7c8df9c9f531c830",
+      "body_style": "4-door",
+      "trim_name": "Unlimited Sport",
+      "manufacturer_model_code": "JLJL74",
+      "engine_code": "EXJ",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "3",
+        "engine_cylinders": 6,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "diesel",
+        "electrification_type": null
+      },
+      "unresolved_fields": [
+        "electrification_type"
+      ],
+      "edmunds_outcome": "Exact match",
+      "edmunds_style_id": "401915650",
+      "assertion_sets": [
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/wrangler-4-dr-2022-10-08-2021-pdf.519330-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-11-10-21-pdf.534724-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-12-7-21-pdf.543723-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-12-22-pdf.553816-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-17-22-pdf.555728-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-2-10-22-pdf.567217-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-3-11-22-pdf.579260-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-4-7-22-pdf.591773-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-6-1-22-pdf.615030-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/MY2022-technical-layout-p1.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/JL22-24-edmunds-transcription.source_assertion_set.1.1.0.json"
+      ],
+      "generation_identity_count": 9,
+      "complete_five_field_identity": false
+    },
+    {
+      "candidate_reference": "JL22-25",
+      "candidate_artifact": "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/candidates/JL22-25.provisional-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:b9b0c44efffebce6b49421abae9c61faf1e8dcfaf43fa7ce4387724d79785df9",
+      "artifact_sha256": "sha256:0f9190da77679f768a91b7be3dac25967f1d652c0c36abc5eca18e588f6d1a50",
+      "body_style": "4-door",
+      "trim_name": "Unlimited Sport S",
+      "manufacturer_model_code": "JLJL74",
+      "engine_code": "EC1",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": null,
+        "electrification_type": null
+      },
+      "unresolved_fields": [
+        "fuel_type",
+        "electrification_type"
+      ],
+      "edmunds_outcome": "Exact match",
+      "edmunds_style_id": "401915652",
+      "assertion_sets": [
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/wrangler-4-dr-2022-10-08-2021-pdf.519330-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-11-10-21-pdf.534724-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-12-7-21-pdf.543723-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-12-22-pdf.553816-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-17-22-pdf.555728-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-2-10-22-pdf.567217-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-3-11-22-pdf.579260-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-4-7-22-pdf.591773-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-6-1-22-pdf.615030-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/MY2022-technical-layout-p1.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/JL22-25-edmunds-transcription.source_assertion_set.1.1.0.json"
+      ],
+      "generation_identity_count": 9,
+      "complete_five_field_identity": false
+    },
+    {
+      "candidate_reference": "JL22-26",
+      "candidate_artifact": "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/candidates/JL22-26.provisional-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:ed92eefd73425513fefc937f211ee2eccbdd0b3450dad357aa13fdc6efaf13e0",
+      "artifact_sha256": "sha256:648be0b5f30d93e1654ebe930c2e5afeb859857180079913575e621e8b1928b8",
+      "body_style": "4-door",
+      "trim_name": "Unlimited Sport S",
+      "manufacturer_model_code": "JLJL74",
+      "engine_code": "ERC",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": null,
+        "fuel_type": null,
+        "electrification_type": null
+      },
+      "unresolved_fields": [
+        "engine_aspiration",
+        "fuel_type",
+        "electrification_type"
+      ],
+      "edmunds_outcome": "Exact match",
+      "edmunds_style_id": "401915652",
+      "assertion_sets": [
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/wrangler-4-dr-2022-10-08-2021-pdf.519330-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-11-10-21-pdf.534724-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-12-7-21-pdf.543723-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-12-22-pdf.553816-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-17-22-pdf.555728-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-2-10-22-pdf.567217-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-3-11-22-pdf.579260-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-4-7-22-pdf.591773-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-6-1-22-pdf.615030-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/MY2022-technical-layout-p1.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/JL22-26-edmunds-transcription.source_assertion_set.1.1.0.json"
+      ],
+      "generation_identity_count": 9,
+      "complete_five_field_identity": false
+    },
+    {
+      "candidate_reference": "JL22-27",
+      "candidate_artifact": "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/candidates/JL22-27.provisional-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:ed4900fe0d19dbc7d2dae66009825a115b6ac800d8f7cb7c2901f4206f05edf5",
+      "artifact_sha256": "sha256:3ee7b38d3896072051cc949a9ff7fd912d62e790a6bbfa3feaa999b491ec1959",
+      "body_style": "4-door",
+      "trim_name": "Unlimited Sport S",
+      "manufacturer_model_code": "JLJL74",
+      "engine_code": "ERG",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": null,
+        "fuel_type": null,
+        "electrification_type": "mild_hybrid"
+      },
+      "unresolved_fields": [
+        "engine_aspiration",
+        "fuel_type"
+      ],
+      "edmunds_outcome": "Exact match",
+      "edmunds_style_id": "401915652",
+      "assertion_sets": [
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/wrangler-4-dr-2022-10-08-2021-pdf.519330-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-11-10-21-pdf.534724-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-12-7-21-pdf.543723-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-12-22-pdf.553816-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-17-22-pdf.555728-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-2-10-22-pdf.567217-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-3-11-22-pdf.579260-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-4-7-22-pdf.591773-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-6-1-22-pdf.615030-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/MY2022-technical-layout-p1.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/JL22-27-edmunds-transcription.source_assertion_set.1.1.0.json"
+      ],
+      "generation_identity_count": 9,
+      "complete_five_field_identity": false
+    },
+    {
+      "candidate_reference": "JL22-28",
+      "candidate_artifact": "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/candidates/JL22-28.provisional-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:7690f228cecbb302c50ba15a6937767d5d7d5dbd91df61e191073195f3ec50b8",
+      "artifact_sha256": "sha256:934e0ef4b8cb723971af2637501edac77c7feda50b00647dcd5432159ba1c67a",
+      "body_style": "4-door",
+      "trim_name": "Unlimited Sport S",
+      "manufacturer_model_code": "JLJL74",
+      "engine_code": "EXJ",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "3",
+        "engine_cylinders": 6,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "diesel",
+        "electrification_type": null
+      },
+      "unresolved_fields": [
+        "electrification_type"
+      ],
+      "edmunds_outcome": "Exact match",
+      "edmunds_style_id": "401915652",
+      "assertion_sets": [
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/wrangler-4-dr-2022-10-08-2021-pdf.519330-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-11-10-21-pdf.534724-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-12-7-21-pdf.543723-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-12-22-pdf.553816-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-17-22-pdf.555728-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-2-10-22-pdf.567217-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-3-11-22-pdf.579260-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-4-7-22-pdf.591773-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-6-1-22-pdf.615030-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/MY2022-technical-layout-p1.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/JL22-28-edmunds-transcription.source_assertion_set.1.1.0.json"
+      ],
+      "generation_identity_count": 9,
+      "complete_five_field_identity": false
+    },
+    {
+      "candidate_reference": "JL22-29",
+      "candidate_artifact": "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/candidates/JL22-29.provisional-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:e967a3563c47c92ff5f700e238d61777b529a2edef7c23710edbaf3765bc1f28",
+      "artifact_sha256": "sha256:5fb94a8cfd93fbf2abf6607925745586435cf655e048d0de3c6c1691219520f6",
+      "body_style": "4-door",
+      "trim_name": "Unlimited Willys",
+      "manufacturer_model_code": "JLJL74",
+      "engine_code": "EC1",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": null,
+        "electrification_type": null
+      },
+      "unresolved_fields": [
+        "fuel_type",
+        "electrification_type"
+      ],
+      "edmunds_outcome": "Exact match",
+      "edmunds_style_id": "401915653",
+      "assertion_sets": [
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/wrangler-4-dr-2022-10-08-2021-pdf.519330-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-11-10-21-pdf.534724-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-12-7-21-pdf.543723-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-12-22-pdf.553816-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-17-22-pdf.555728-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-2-10-22-pdf.567217-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-3-11-22-pdf.579260-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-4-7-22-pdf.591773-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-6-1-22-pdf.615030-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/MY2022-technical-layout-p1.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/JL22-29-edmunds-transcription.source_assertion_set.1.1.0.json"
+      ],
+      "generation_identity_count": 9,
+      "complete_five_field_identity": false
+    },
+    {
+      "candidate_reference": "JL22-30",
+      "candidate_artifact": "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/candidates/JL22-30.provisional-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:4cd0ac91f63704b4e84aa8128cac7ebb02f70cb399f206d4bef72a894937bf94",
+      "artifact_sha256": "sha256:cd4a2ed37c0da2df739de5c67254eac92fe0e1aafa83ba358ea6e1d72f373b83",
+      "body_style": "4-door",
+      "trim_name": "Unlimited Willys",
+      "manufacturer_model_code": "JLJL74",
+      "engine_code": "ERC",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": null,
+        "fuel_type": null,
+        "electrification_type": null
+      },
+      "unresolved_fields": [
+        "engine_aspiration",
+        "fuel_type",
+        "electrification_type"
+      ],
+      "edmunds_outcome": "Exact match",
+      "edmunds_style_id": "401915653",
+      "assertion_sets": [
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/wrangler-4-dr-2022-10-08-2021-pdf.519330-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-11-10-21-pdf.534724-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-12-7-21-pdf.543723-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-12-22-pdf.553816-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-17-22-pdf.555728-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-2-10-22-pdf.567217-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-3-11-22-pdf.579260-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-4-7-22-pdf.591773-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-6-1-22-pdf.615030-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/MY2022-technical-layout-p1.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/JL22-30-edmunds-transcription.source_assertion_set.1.1.0.json"
+      ],
+      "generation_identity_count": 9,
+      "complete_five_field_identity": false
+    },
+    {
+      "candidate_reference": "JL22-31",
+      "candidate_artifact": "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/candidates/JL22-31.provisional-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:97c438f916c9ebbe28fef48fe11ad3dd9b13226f939c50c1a581b95b8a56d87c",
+      "artifact_sha256": "sha256:c397457e4c6c9f23eab7a07bd4a20807599fea27f2b3d1f266039879a00a1032",
+      "body_style": "4-door",
+      "trim_name": "Unlimited Willys",
+      "manufacturer_model_code": "JLJL74",
+      "engine_code": "ERG",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": null,
+        "fuel_type": null,
+        "electrification_type": "mild_hybrid"
+      },
+      "unresolved_fields": [
+        "engine_aspiration",
+        "fuel_type"
+      ],
+      "edmunds_outcome": "Exact match",
+      "edmunds_style_id": "401915653",
+      "assertion_sets": [
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/wrangler-4-dr-2022-10-08-2021-pdf.519330-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-11-10-21-pdf.534724-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-12-7-21-pdf.543723-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-12-22-pdf.553816-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-17-22-pdf.555728-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-2-10-22-pdf.567217-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-3-11-22-pdf.579260-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-4-7-22-pdf.591773-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-6-1-22-pdf.615030-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/MY2022-technical-layout-p1.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/JL22-31-edmunds-transcription.source_assertion_set.1.1.0.json"
+      ],
+      "generation_identity_count": 9,
+      "complete_five_field_identity": false
+    },
+    {
+      "candidate_reference": "JL22-32",
+      "candidate_artifact": "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/candidates/JL22-32.provisional-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:92cb1e06fbd7d2b8e53a1dab1ba98aea2ed3173d1d69696f6a6302bb10bf9901",
+      "artifact_sha256": "sha256:37487741358b713352ff75c078ba07f4f7eb2418e1395a75c1e93b125a1cac40",
+      "body_style": "4-door",
+      "trim_name": "Unlimited Willys",
+      "manufacturer_model_code": "JLJL74",
+      "engine_code": "EXJ",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "3",
+        "engine_cylinders": 6,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "diesel",
+        "electrification_type": null
+      },
+      "unresolved_fields": [
+        "electrification_type"
+      ],
+      "edmunds_outcome": "Exact match",
+      "edmunds_style_id": "401915653",
+      "assertion_sets": [
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/wrangler-4-dr-2022-10-08-2021-pdf.519330-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-11-10-21-pdf.534724-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-12-7-21-pdf.543723-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-12-22-pdf.553816-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-17-22-pdf.555728-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-2-10-22-pdf.567217-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-3-11-22-pdf.579260-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-4-7-22-pdf.591773-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-6-1-22-pdf.615030-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/MY2022-technical-layout-p1.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/JL22-32-edmunds-transcription.source_assertion_set.1.1.0.json"
+      ],
+      "generation_identity_count": 9,
+      "complete_five_field_identity": false
+    },
+    {
+      "candidate_reference": "JL22-33",
+      "candidate_artifact": "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/candidates/JL22-33.provisional-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:437175e13d3a2a97c6ba0d63273f1be8eed707442f03bc26550e8ea723cc8b15",
+      "artifact_sha256": "sha256:9698f8da860c238e5e11ba32536a34509c915618be5754aff1d1e9e677d73780",
+      "body_style": "4-door",
+      "trim_name": "Unlimited Willys Sport",
+      "manufacturer_model_code": "JLJL74",
+      "engine_code": "EC1",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": null,
+        "electrification_type": null
+      },
+      "unresolved_fields": [
+        "fuel_type",
+        "electrification_type"
+      ],
+      "edmunds_outcome": "Exact match",
+      "edmunds_style_id": "401915651",
+      "assertion_sets": [
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/wrangler-4-dr-2022-10-08-2021-pdf.519330-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-11-10-21-pdf.534724-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-12-7-21-pdf.543723-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-12-22-pdf.553816-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-17-22-pdf.555728-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-2-10-22-pdf.567217-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-3-11-22-pdf.579260-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-4-7-22-pdf.591773-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-6-1-22-pdf.615030-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/MY2022-technical-layout-p1.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/JL22-33-edmunds-transcription.source_assertion_set.1.1.0.json"
+      ],
+      "generation_identity_count": 9,
+      "complete_five_field_identity": false
+    },
+    {
+      "candidate_reference": "JL22-34",
+      "candidate_artifact": "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/candidates/JL22-34.provisional-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:3cb7bcf74f11481e39d78e004ef624573df11b59b356e5f583d2104585f83a7e",
+      "artifact_sha256": "sha256:c07bc2897cddc858ff1b487b1824392b4308709d350909cb233aa76e5b7680a1",
+      "body_style": "4-door",
+      "trim_name": "Unlimited Willys Sport",
+      "manufacturer_model_code": "JLJL74",
+      "engine_code": "ERC",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": null,
+        "fuel_type": null,
+        "electrification_type": null
+      },
+      "unresolved_fields": [
+        "engine_aspiration",
+        "fuel_type",
+        "electrification_type"
+      ],
+      "edmunds_outcome": "Exact match",
+      "edmunds_style_id": "401915651",
+      "assertion_sets": [
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/wrangler-4-dr-2022-10-08-2021-pdf.519330-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-11-10-21-pdf.534724-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-12-7-21-pdf.543723-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-12-22-pdf.553816-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-17-22-pdf.555728-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-2-10-22-pdf.567217-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-3-11-22-pdf.579260-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-4-7-22-pdf.591773-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-6-1-22-pdf.615030-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/MY2022-technical-layout-p1.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/JL22-34-edmunds-transcription.source_assertion_set.1.1.0.json"
+      ],
+      "generation_identity_count": 9,
+      "complete_five_field_identity": false
+    },
+    {
+      "candidate_reference": "JL22-35",
+      "candidate_artifact": "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/candidates/JL22-35.provisional-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:d8d87b3c8cfd9ea528dec6c4e2b00dfd138b3b651ab23e87078c3fad30ed03fc",
+      "artifact_sha256": "sha256:7e42645cf0f4eeb2466a18aeed5174c451d74ec6bbe313b2a362c0dbd34a4b84",
+      "body_style": "4-door",
+      "trim_name": "Unlimited Willys Sport",
+      "manufacturer_model_code": "JLJL74",
+      "engine_code": "ERG",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": null,
+        "fuel_type": null,
+        "electrification_type": "mild_hybrid"
+      },
+      "unresolved_fields": [
+        "engine_aspiration",
+        "fuel_type"
+      ],
+      "edmunds_outcome": "Exact match",
+      "edmunds_style_id": "401915651",
+      "assertion_sets": [
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/wrangler-4-dr-2022-10-08-2021-pdf.519330-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-11-10-21-pdf.534724-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-12-7-21-pdf.543723-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-12-22-pdf.553816-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-17-22-pdf.555728-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-2-10-22-pdf.567217-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-3-11-22-pdf.579260-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-4-7-22-pdf.591773-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-6-1-22-pdf.615030-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/MY2022-technical-layout-p1.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/JL22-35-edmunds-transcription.source_assertion_set.1.1.0.json"
+      ],
+      "generation_identity_count": 9,
+      "complete_five_field_identity": false
+    },
+    {
+      "candidate_reference": "JL22-36",
+      "candidate_artifact": "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/candidates/JL22-36.provisional-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:1f8fe6616c19f5a2397c6e9e1c42700e4ea44809720fe72f1695d17cc6477cd7",
+      "artifact_sha256": "sha256:ac3febf74c2fc4bd224eaa4e038f0a3ef11c05c3cfe6c1152edd9177b3882f3f",
+      "body_style": "4-door",
+      "trim_name": "Unlimited Willys Sport",
+      "manufacturer_model_code": "JLJL74",
+      "engine_code": "EXJ",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "3",
+        "engine_cylinders": 6,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "diesel",
+        "electrification_type": null
+      },
+      "unresolved_fields": [
+        "electrification_type"
+      ],
+      "edmunds_outcome": "Exact match",
+      "edmunds_style_id": "401915651",
+      "assertion_sets": [
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/wrangler-4-dr-2022-10-08-2021-pdf.519330-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-11-10-21-pdf.534724-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-12-7-21-pdf.543723-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-12-22-pdf.553816-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-17-22-pdf.555728-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-2-10-22-pdf.567217-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-3-11-22-pdf.579260-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-4-7-22-pdf.591773-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-6-1-22-pdf.615030-JLJL74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/MY2022-technical-layout-p1.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/JL22-36-edmunds-transcription.source_assertion_set.1.1.0.json"
+      ],
+      "generation_identity_count": 9,
+      "complete_five_field_identity": false
+    },
+    {
+      "candidate_reference": "JL22-37",
+      "candidate_artifact": "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/candidates/JL22-37.provisional-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:8fa0b4d6b710bd495480b69879a116fb3412f6336276853e7b3645998abad4f1",
+      "artifact_sha256": "sha256:b047f5b6e18182366a8d3ea1bb7ef5b0a888e51eaecfa28ba0820b7f3ef41bf4",
+      "body_style": "4-door",
+      "trim_name": "Unlimited Sahara Altitude",
+      "manufacturer_model_code": "JLJP74",
+      "engine_code": "EC1",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": null,
+        "electrification_type": null
+      },
+      "unresolved_fields": [
+        "fuel_type",
+        "electrification_type"
+      ],
+      "edmunds_outcome": "Equivalent configuration with different naming",
+      "edmunds_style_id": "401915656",
+      "assertion_sets": [
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/wrangler-4-dr-2022-10-08-2021-pdf.519330-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-11-10-21-pdf.534724-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-12-7-21-pdf.543723-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-12-22-pdf.553816-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-17-22-pdf.555728-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-2-10-22-pdf.567217-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-3-11-22-pdf.579260-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-4-7-22-pdf.591773-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-6-1-22-pdf.615030-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/MY2022-technical-layout-p1.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/JL22-37-edmunds-transcription.source_assertion_set.1.1.0.json"
+      ],
+      "generation_identity_count": 9,
+      "complete_five_field_identity": false
+    },
+    {
+      "candidate_reference": "JL22-38",
+      "candidate_artifact": "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/candidates/JL22-38.provisional-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:60e4da0fabfcccd1b8f87e9e3a74f004411ba0abb16add9fa4fea09fb487a1db",
+      "artifact_sha256": "sha256:4869fdecdc89912bd534eeb25cd13941bb06cbf84e319386be3801ecd6c70115",
+      "body_style": "4-door",
+      "trim_name": "Unlimited Sahara Altitude",
+      "manufacturer_model_code": "JLJP74",
+      "engine_code": "ERC",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": null,
+        "fuel_type": null,
+        "electrification_type": null
+      },
+      "unresolved_fields": [
+        "engine_aspiration",
+        "fuel_type",
+        "electrification_type"
+      ],
+      "edmunds_outcome": "Equivalent configuration with different naming",
+      "edmunds_style_id": "401915656",
+      "assertion_sets": [
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/wrangler-4-dr-2022-10-08-2021-pdf.519330-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-11-10-21-pdf.534724-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-12-7-21-pdf.543723-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-12-22-pdf.553816-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-17-22-pdf.555728-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-2-10-22-pdf.567217-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-3-11-22-pdf.579260-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-4-7-22-pdf.591773-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-6-1-22-pdf.615030-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/MY2022-technical-layout-p1.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/JL22-38-edmunds-transcription.source_assertion_set.1.1.0.json"
+      ],
+      "generation_identity_count": 9,
+      "complete_five_field_identity": false
+    },
+    {
+      "candidate_reference": "JL22-39",
+      "candidate_artifact": "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/candidates/JL22-39.provisional-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:503a45cde11205b4d80add26be18ac030c4c3062d3af923c8520051e3b7c8475",
+      "artifact_sha256": "sha256:30296a32112a3430474e7b6154ebb739924ed35521c4483fc8a2513e0582f5ba",
+      "body_style": "4-door",
+      "trim_name": "Unlimited Sahara Altitude",
+      "manufacturer_model_code": "JLJP74",
+      "engine_code": "ERG",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": null,
+        "fuel_type": null,
+        "electrification_type": "mild_hybrid"
+      },
+      "unresolved_fields": [
+        "engine_aspiration",
+        "fuel_type"
+      ],
+      "edmunds_outcome": "Equivalent configuration with different naming",
+      "edmunds_style_id": "401915656",
+      "assertion_sets": [
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/wrangler-4-dr-2022-10-08-2021-pdf.519330-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-11-10-21-pdf.534724-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-12-7-21-pdf.543723-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-12-22-pdf.553816-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-17-22-pdf.555728-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-2-10-22-pdf.567217-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-3-11-22-pdf.579260-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-4-7-22-pdf.591773-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-6-1-22-pdf.615030-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/MY2022-technical-layout-p1.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/JL22-39-edmunds-transcription.source_assertion_set.1.1.0.json"
+      ],
+      "generation_identity_count": 9,
+      "complete_five_field_identity": false
+    },
+    {
+      "candidate_reference": "JL22-40",
+      "candidate_artifact": "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/candidates/JL22-40.provisional-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:186857f1ab494cba184286367a03b64561779f4f35ecb676b746eafdec8e90d4",
+      "artifact_sha256": "sha256:abdfba69750e0d8cb29bc07031e4d3c9a40fb4beb0ad714cb5eb00ac98695465",
+      "body_style": "4-door",
+      "trim_name": "Unlimited Sahara Altitude",
+      "manufacturer_model_code": "JLJP74",
+      "engine_code": "EXJ",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "3",
+        "engine_cylinders": 6,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "diesel",
+        "electrification_type": null
+      },
+      "unresolved_fields": [
+        "electrification_type"
+      ],
+      "edmunds_outcome": "Equivalent configuration with different naming",
+      "edmunds_style_id": "401915656",
+      "assertion_sets": [
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/wrangler-4-dr-2022-10-08-2021-pdf.519330-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-11-10-21-pdf.534724-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-12-7-21-pdf.543723-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-12-22-pdf.553816-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-17-22-pdf.555728-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-2-10-22-pdf.567217-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-3-11-22-pdf.579260-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-4-7-22-pdf.591773-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-6-1-22-pdf.615030-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/MY2022-technical-layout-p1.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/JL22-40-edmunds-transcription.source_assertion_set.1.1.0.json"
+      ],
+      "generation_identity_count": 9,
+      "complete_five_field_identity": false
+    },
+    {
+      "candidate_reference": "JL22-41",
+      "candidate_artifact": "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/candidates/JL22-41.provisional-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:6d0277492673d40c29a576cefc27f8dd4229c1fac9d5d3f20d0f1b7c2458b094",
+      "artifact_sha256": "sha256:5c50c966a55d7f20c177d0ad1aa3ea380ac8dc3db3fbaa4c0e09e0e336d24d95",
+      "body_style": "4-door",
+      "trim_name": "Unlimited High Altitude",
+      "manufacturer_model_code": "JLJP74",
+      "engine_code": "EC1",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": null,
+        "electrification_type": null
+      },
+      "unresolved_fields": [
+        "fuel_type",
+        "electrification_type"
+      ],
+      "edmunds_outcome": "Exact match",
+      "edmunds_style_id": "401915657",
+      "assertion_sets": [
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-11-10-21-pdf.534724-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-12-7-21-pdf.543723-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-12-22-pdf.553816-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-17-22-pdf.555728-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-2-10-22-pdf.567217-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-3-11-22-pdf.579260-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-4-7-22-pdf.591773-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-6-1-22-pdf.615030-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/MY2022-technical-layout-p1.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/JL22-41-edmunds-transcription.source_assertion_set.1.1.0.json"
+      ],
+      "generation_identity_count": 8,
+      "complete_five_field_identity": false
+    },
+    {
+      "candidate_reference": "JL22-42",
+      "candidate_artifact": "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/candidates/JL22-42.provisional-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:9967bda3c97211e2a23f751577f8e12564b52c25af5f09e260fdcaae724ff18c",
+      "artifact_sha256": "sha256:be92fd0eb53036d4b8ec595e3c179c8e6f4fdd395bf72d5c7c45710ead758e76",
+      "body_style": "4-door",
+      "trim_name": "Unlimited High Altitude",
+      "manufacturer_model_code": "JLJP74",
+      "engine_code": "ERG",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": null,
+        "fuel_type": null,
+        "electrification_type": "mild_hybrid"
+      },
+      "unresolved_fields": [
+        "engine_aspiration",
+        "fuel_type"
+      ],
+      "edmunds_outcome": "Exact match",
+      "edmunds_style_id": "401915657",
+      "assertion_sets": [
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-11-10-21-pdf.534724-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-12-7-21-pdf.543723-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-12-22-pdf.553816-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-17-22-pdf.555728-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-2-10-22-pdf.567217-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-3-11-22-pdf.579260-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-4-7-22-pdf.591773-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-6-1-22-pdf.615030-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/MY2022-technical-layout-p1.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/JL22-42-edmunds-transcription.source_assertion_set.1.1.0.json"
+      ],
+      "generation_identity_count": 8,
+      "complete_five_field_identity": false
+    },
+    {
+      "candidate_reference": "JL22-43",
+      "candidate_artifact": "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/candidates/JL22-43.provisional-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:8f0707c917a608d0856e4c971783a5544df5ddb0964babadd947eb2fdf6bed95",
+      "artifact_sha256": "sha256:360afb9b3ab34116ce4a682110c3ff75ffd383c527a2d77e6c49deb6bfed967a",
+      "body_style": "4-door",
+      "trim_name": "Unlimited High Altitude",
+      "manufacturer_model_code": "JLJP74",
+      "engine_code": "EXJ",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "3",
+        "engine_cylinders": 6,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "diesel",
+        "electrification_type": null
+      },
+      "unresolved_fields": [
+        "electrification_type"
+      ],
+      "edmunds_outcome": "Exact match",
+      "edmunds_style_id": "401915657",
+      "assertion_sets": [
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/wrangler-4-dr-2022-10-08-2021-pdf.519330-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-11-10-21-pdf.534724-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-12-7-21-pdf.543723-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-12-22-pdf.553816-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-17-22-pdf.555728-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-2-10-22-pdf.567217-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-3-11-22-pdf.579260-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-4-7-22-pdf.591773-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-6-1-22-pdf.615030-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/MY2022-technical-layout-p1.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/JL22-43-edmunds-transcription.source_assertion_set.1.1.0.json"
+      ],
+      "generation_identity_count": 9,
+      "complete_five_field_identity": false
+    },
+    {
+      "candidate_reference": "JL22-44",
+      "candidate_artifact": "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/candidates/JL22-44.provisional-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:a647e855373fc78a4f9141b0e97ab05605bd71c83c1ee9f0e4c8793a97f7ecb2",
+      "artifact_sha256": "sha256:d0620275b35dfb5d32f4c0a2adc6176767d9849f2cb2d15b0d52238b7eca062f",
+      "body_style": "4-door",
+      "trim_name": "Unlimited Sahara",
+      "manufacturer_model_code": "JLJP74",
+      "engine_code": "EC1",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": null,
+        "electrification_type": null
+      },
+      "unresolved_fields": [
+        "fuel_type",
+        "electrification_type"
+      ],
+      "edmunds_outcome": "Exact match",
+      "edmunds_style_id": "401915655",
+      "assertion_sets": [
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/wrangler-4-dr-2022-10-08-2021-pdf.519330-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-11-10-21-pdf.534724-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-12-7-21-pdf.543723-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-12-22-pdf.553816-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-17-22-pdf.555728-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-2-10-22-pdf.567217-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-3-11-22-pdf.579260-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-4-7-22-pdf.591773-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-6-1-22-pdf.615030-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/MY2022-technical-layout-p1.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/JL22-44-edmunds-transcription.source_assertion_set.1.1.0.json"
+      ],
+      "generation_identity_count": 9,
+      "complete_five_field_identity": false
+    },
+    {
+      "candidate_reference": "JL22-45",
+      "candidate_artifact": "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/candidates/JL22-45.provisional-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:394712f87db86868b3cdf6a2777af6dcc48ab458657c777c4952ba7006a18478",
+      "artifact_sha256": "sha256:4add3b4c36f5bb8edcf4bcc0cdf0077f4e99adfb7848e9aa1fbe104ff1c74621",
+      "body_style": "4-door",
+      "trim_name": "Unlimited Sahara",
+      "manufacturer_model_code": "JLJP74",
+      "engine_code": "ERC",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": null,
+        "fuel_type": null,
+        "electrification_type": null
+      },
+      "unresolved_fields": [
+        "engine_aspiration",
+        "fuel_type",
+        "electrification_type"
+      ],
+      "edmunds_outcome": "Exact match",
+      "edmunds_style_id": "401915655",
+      "assertion_sets": [
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/wrangler-4-dr-2022-10-08-2021-pdf.519330-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-11-10-21-pdf.534724-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-12-7-21-pdf.543723-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-12-22-pdf.553816-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-17-22-pdf.555728-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-2-10-22-pdf.567217-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-3-11-22-pdf.579260-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-4-7-22-pdf.591773-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-6-1-22-pdf.615030-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/MY2022-technical-layout-p1.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/JL22-45-edmunds-transcription.source_assertion_set.1.1.0.json"
+      ],
+      "generation_identity_count": 9,
+      "complete_five_field_identity": false
+    },
+    {
+      "candidate_reference": "JL22-46",
+      "candidate_artifact": "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/candidates/JL22-46.provisional-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:63a6f5c52403b6da0a3b3be940e844c531d5325199561f429f2ffe3d5c1656e5",
+      "artifact_sha256": "sha256:d863d79d22f94dc38195eab5896ea10fde48aa20f27d0088185e37fec06e3e3c",
+      "body_style": "4-door",
+      "trim_name": "Unlimited Sahara",
+      "manufacturer_model_code": "JLJP74",
+      "engine_code": "ERG",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": null,
+        "fuel_type": null,
+        "electrification_type": "mild_hybrid"
+      },
+      "unresolved_fields": [
+        "engine_aspiration",
+        "fuel_type"
+      ],
+      "edmunds_outcome": "Exact match",
+      "edmunds_style_id": "401915655",
+      "assertion_sets": [
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/wrangler-4-dr-2022-10-08-2021-pdf.519330-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-11-10-21-pdf.534724-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-12-7-21-pdf.543723-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-12-22-pdf.553816-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-17-22-pdf.555728-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-2-10-22-pdf.567217-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-3-11-22-pdf.579260-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-4-7-22-pdf.591773-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-6-1-22-pdf.615030-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/MY2022-technical-layout-p1.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/JL22-46-edmunds-transcription.source_assertion_set.1.1.0.json"
+      ],
+      "generation_identity_count": 9,
+      "complete_five_field_identity": false
+    },
+    {
+      "candidate_reference": "JL22-47",
+      "candidate_artifact": "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/candidates/JL22-47.provisional-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:f40c9e213827e7ef4f44c4d522f34bc1fcd31dfb721ff928273dd0298a796cca",
+      "artifact_sha256": "sha256:967ca61d78582cf2bd8c89579228e69263728d8a90af47e7f8e8d15102376708",
+      "body_style": "4-door",
+      "trim_name": "Unlimited Sahara",
+      "manufacturer_model_code": "JLJP74",
+      "engine_code": "EXJ",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "3",
+        "engine_cylinders": 6,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "diesel",
+        "electrification_type": null
+      },
+      "unresolved_fields": [
+        "electrification_type"
+      ],
+      "edmunds_outcome": "Exact match",
+      "edmunds_style_id": "401915655",
+      "assertion_sets": [
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/wrangler-4-dr-2022-10-08-2021-pdf.519330-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-11-10-21-pdf.534724-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-12-7-21-pdf.543723-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-12-22-pdf.553816-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-17-22-pdf.555728-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-2-10-22-pdf.567217-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-3-11-22-pdf.579260-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-4-7-22-pdf.591773-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-6-1-22-pdf.615030-JLJP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/MY2022-technical-layout-p1.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/JL22-47-edmunds-transcription.source_assertion_set.1.1.0.json"
+      ],
+      "generation_identity_count": 9,
+      "complete_five_field_identity": false
+    },
+    {
+      "candidate_reference": "JL22-48",
+      "candidate_artifact": "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/candidates/JL22-48.provisional-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:9fcaf009311a64bd61ab7976a80073f017ddd024973b1677409a87a7f26a497f",
+      "artifact_sha256": "sha256:de35ce28ffbcef1dca31d7f61e6e428135cc1fd7cb74692e9b603181a6c42069",
+      "body_style": "4-door",
+      "trim_name": "Unlimited Rubicon",
+      "manufacturer_model_code": "JLJS74",
+      "engine_code": "EC1",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": null,
+        "electrification_type": null
+      },
+      "unresolved_fields": [
+        "fuel_type",
+        "electrification_type"
+      ],
+      "edmunds_outcome": "Exact match",
+      "edmunds_style_id": "401915667",
+      "assertion_sets": [
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/wrangler-4-dr-2022-10-08-2021-pdf.519330-JLJS74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-11-10-21-pdf.534724-JLJS74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-12-7-21-pdf.543723-JLJS74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-12-22-pdf.553816-JLJS74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-17-22-pdf.555728-JLJS74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-2-10-22-pdf.567217-JLJS74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-3-11-22-pdf.579260-JLJS74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-4-7-22-pdf.591773-JLJS74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-6-1-22-pdf.615030-JLJS74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/MY2022-technical-layout-p1.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/JL22-48-edmunds-transcription.source_assertion_set.1.1.0.json"
+      ],
+      "generation_identity_count": 9,
+      "complete_five_field_identity": false
+    },
+    {
+      "candidate_reference": "JL22-49",
+      "candidate_artifact": "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/candidates/JL22-49.provisional-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:45e17838c44fb07651056a839134fae66d6d4cd4c256bdf1e3fab061fecf9161",
+      "artifact_sha256": "sha256:2039d24f65801f375152b4d2b538ee4f7fae47cf4efe7e84e1b1d661602ab6d8",
+      "body_style": "4-door",
+      "trim_name": "Unlimited Rubicon",
+      "manufacturer_model_code": "JLJS74",
+      "engine_code": "ERC",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": null,
+        "fuel_type": null,
+        "electrification_type": null
+      },
+      "unresolved_fields": [
+        "engine_aspiration",
+        "fuel_type",
+        "electrification_type"
+      ],
+      "edmunds_outcome": "Exact match",
+      "edmunds_style_id": "401915667",
+      "assertion_sets": [
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/wrangler-4-dr-2022-10-08-2021-pdf.519330-JLJS74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-11-10-21-pdf.534724-JLJS74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-12-7-21-pdf.543723-JLJS74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-12-22-pdf.553816-JLJS74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-17-22-pdf.555728-JLJS74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-2-10-22-pdf.567217-JLJS74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-3-11-22-pdf.579260-JLJS74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-4-7-22-pdf.591773-JLJS74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-6-1-22-pdf.615030-JLJS74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/MY2022-technical-layout-p1.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/JL22-49-edmunds-transcription.source_assertion_set.1.1.0.json"
+      ],
+      "generation_identity_count": 9,
+      "complete_five_field_identity": false
+    },
+    {
+      "candidate_reference": "JL22-50",
+      "candidate_artifact": "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/candidates/JL22-50.provisional-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:4e6a76f41868de99b6717c0608e580e571a90cfa47aa31002e7e29045a7f90b3",
+      "artifact_sha256": "sha256:734d6ff0cbe0b8e340f490f9f7bb64f447148570865c66df652869cedfd5a193",
+      "body_style": "4-door",
+      "trim_name": "Unlimited Rubicon",
+      "manufacturer_model_code": "JLJS74",
+      "engine_code": "ERG",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": null,
+        "fuel_type": null,
+        "electrification_type": "mild_hybrid"
+      },
+      "unresolved_fields": [
+        "engine_aspiration",
+        "fuel_type"
+      ],
+      "edmunds_outcome": "Exact match",
+      "edmunds_style_id": "401915667",
+      "assertion_sets": [
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/wrangler-4-dr-2022-10-08-2021-pdf.519330-JLJS74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-11-10-21-pdf.534724-JLJS74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-12-7-21-pdf.543723-JLJS74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-12-22-pdf.553816-JLJS74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-17-22-pdf.555728-JLJS74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-2-10-22-pdf.567217-JLJS74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-3-11-22-pdf.579260-JLJS74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-4-7-22-pdf.591773-JLJS74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-6-1-22-pdf.615030-JLJS74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/MY2022-technical-layout-p1.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/JL22-50-edmunds-transcription.source_assertion_set.1.1.0.json"
+      ],
+      "generation_identity_count": 9,
+      "complete_five_field_identity": false
+    },
+    {
+      "candidate_reference": "JL22-51",
+      "candidate_artifact": "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/candidates/JL22-51.provisional-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:83ccb8543340adbd0d529c3bbae6f83a7306be7695fb6d1303a1e5bd46c5e076",
+      "artifact_sha256": "sha256:1e374579252c4fc4445ef12cb37bbb5c161c336b6eeb743342c65d06aa34160e",
+      "body_style": "4-door",
+      "trim_name": "Unlimited Rubicon",
+      "manufacturer_model_code": "JLJS74",
+      "engine_code": "EXJ",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "3",
+        "engine_cylinders": 6,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "diesel",
+        "electrification_type": null
+      },
+      "unresolved_fields": [
+        "electrification_type"
+      ],
+      "edmunds_outcome": "Exact match",
+      "edmunds_style_id": "401915667",
+      "assertion_sets": [
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/wrangler-4-dr-2022-10-08-2021-pdf.519330-JLJS74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-11-10-21-pdf.534724-JLJS74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-12-7-21-pdf.543723-JLJS74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-12-22-pdf.553816-JLJS74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-17-22-pdf.555728-JLJS74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-2-10-22-pdf.567217-JLJS74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-3-11-22-pdf.579260-JLJS74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-4-7-22-pdf.591773-JLJS74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-6-1-22-pdf.615030-JLJS74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/MY2022-technical-layout-p1.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/JL22-51-edmunds-transcription.source_assertion_set.1.1.0.json"
+      ],
+      "generation_identity_count": 9,
+      "complete_five_field_identity": false
+    },
+    {
+      "candidate_reference": "JL22-52",
+      "candidate_artifact": "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/candidates/JL22-52.provisional-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:3d49c86b7407f06e5afacf08d656bc4061acfa7618538aa9051cd8943e52e835",
+      "artifact_sha256": "sha256:50df7e81e6477fdccdbe6e62ab802ffaf6535d52d510897859e5eec16d090b1c",
+      "body_style": "4-door",
+      "trim_name": "Unlimited Rubicon 392",
+      "manufacturer_model_code": "JLJX74",
+      "engine_code": "ESG",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "6.4",
+        "engine_cylinders": 8,
+        "engine_aspiration": null,
+        "fuel_type": null,
+        "electrification_type": null
+      },
+      "unresolved_fields": [
+        "engine_aspiration",
+        "fuel_type",
+        "electrification_type"
+      ],
+      "edmunds_outcome": "Exact match",
+      "edmunds_style_id": "401915668",
+      "assertion_sets": [
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/wrangler-4-dr-2022-10-08-2021-pdf.519330-JLJX74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-11-10-21-pdf.534724-JLJX74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-12-7-21-pdf.543723-JLJX74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-12-22-pdf.553816-JLJX74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-17-22-pdf.555728-JLJX74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-2-10-22-pdf.567217-JLJX74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-3-11-22-pdf.579260-JLJX74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-4-7-22-pdf.591773-JLJX74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-6-1-22-pdf.615030-JLJX74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/MY2022-technical-layout-p1.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/JL22-52-edmunds-transcription.source_assertion_set.1.1.0.json"
+      ],
+      "generation_identity_count": 9,
+      "complete_five_field_identity": false
+    },
+    {
+      "candidate_reference": "JL22-54",
+      "candidate_artifact": "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/candidates/JL22-54.provisional-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:b9e2d93f87e686305c8bc0c93433b1e2e4659fb16537fec90976a3c33d5ce33f",
+      "artifact_sha256": "sha256:3eac1c1f268804477eb9c1051bd9bd9106efd07f16be2c09e6addc043f4c6d7f",
+      "body_style": "4-door",
+      "trim_name": "Unlimited High Altitude 4xe",
+      "manufacturer_model_code": "JLXP74",
+      "engine_code": "ECX",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": null,
+        "electrification_type": "plug_in_hybrid"
+      },
+      "unresolved_fields": [
+        "fuel_type"
+      ],
+      "edmunds_outcome": "Equivalent configuration with different naming",
+      "edmunds_style_id": "401926718",
+      "assertion_sets": [
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/wrangler-4-dr-2022-10-08-2021-pdf.519330-JLXP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-11-10-21-pdf.534724-JLXP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-12-7-21-pdf.543723-JLXP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-12-22-pdf.553816-JLXP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-17-22-pdf.555728-JLXP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-2-10-22-pdf.567217-JLXP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-3-11-22-pdf.579260-JLXP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-4-7-22-pdf.591773-JLXP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-6-1-22-pdf.615030-JLXP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/MY2022-technical-layout-p1.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/JL22-54-edmunds-transcription.source_assertion_set.1.1.0.json"
+      ],
+      "generation_identity_count": 9,
+      "complete_five_field_identity": false
+    },
+    {
+      "candidate_reference": "JL22-55",
+      "candidate_artifact": "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/candidates/JL22-55.provisional-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:0df005673ac7cbe99eb1c300d3780db081ce2b5383099287de049cd4f6ef7e27",
+      "artifact_sha256": "sha256:145e099459cdae8d48e981d988e4eba62a844ebb6d77bb7f329281ef9ac0a0ec",
+      "body_style": "4-door",
+      "trim_name": "Unlimited Sahara 4xe",
+      "manufacturer_model_code": "JLXP74",
+      "engine_code": "ECX",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": null,
+        "electrification_type": "plug_in_hybrid"
+      },
+      "unresolved_fields": [
+        "fuel_type"
+      ],
+      "edmunds_outcome": "Equivalent configuration with different naming",
+      "edmunds_style_id": "401926717",
+      "assertion_sets": [
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/wrangler-4-dr-2022-10-08-2021-pdf.519330-JLXP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-11-10-21-pdf.534724-JLXP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-12-7-21-pdf.543723-JLXP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-12-22-pdf.553816-JLXP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-17-22-pdf.555728-JLXP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-2-10-22-pdf.567217-JLXP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-3-11-22-pdf.579260-JLXP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-4-7-22-pdf.591773-JLXP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-6-1-22-pdf.615030-JLXP74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/MY2022-technical-layout-p1.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/JL22-55-edmunds-transcription.source_assertion_set.1.1.0.json"
+      ],
+      "generation_identity_count": 9,
+      "complete_five_field_identity": false
+    },
+    {
+      "candidate_reference": "JL22-56",
+      "candidate_artifact": "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/candidates/JL22-56.provisional-r1.candidate.2.1.0.json",
+      "candidate_hash": "sha256:b600b7c000d684ddf486de132ee3082cd6995d182067bc5d46e15fb9f7a19536",
+      "artifact_sha256": "sha256:8bacc37a27bfc9b591ea79bf5b0d0d4a29695a08a6c663ff48c9e108efd5b749",
+      "body_style": "4-door",
+      "trim_name": "Unlimited Rubicon 4xe",
+      "manufacturer_model_code": "JLXS74",
+      "engine_code": "ECX",
+      "canonical_powertrain": {
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": null,
+        "electrification_type": "plug_in_hybrid"
+      },
+      "unresolved_fields": [
+        "fuel_type"
+      ],
+      "edmunds_outcome": "Equivalent configuration with different naming",
+      "edmunds_style_id": "401926719",
+      "assertion_sets": [
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/wrangler-4-dr-2022-10-08-2021-pdf.519330-JLXS74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-11-10-21-pdf.534724-JLXS74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-12-7-21-pdf.543723-JLXS74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-12-22-pdf.553816-JLXS74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-1-17-22-pdf.555728-JLXS74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-2-10-22-pdf.567217-JLXS74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-3-11-22-pdf.579260-JLXS74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-4-7-22-pdf.591773-JLXS74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/4-door-6-1-22-pdf.615030-JLXS74.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/MY2022-technical-layout-p1.source_assertion_set.1.1.0.json",
+        "docs/implementation/handoffs/MY2022_JL/lightweight_candidates_20261109/assertion_sets/JL22-56-edmunds-transcription.source_assertion_set.1.1.0.json"
+      ],
+      "generation_identity_count": 9,
+      "complete_five_field_identity": false
+    }
+  ]
+}

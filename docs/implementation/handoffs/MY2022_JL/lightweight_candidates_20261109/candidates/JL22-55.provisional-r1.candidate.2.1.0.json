@@ -1,0 +1,1289 @@
+{
+  "attribute_provenance": {
+    "engine_cylinders": [
+      "4-door-6-1-22-pdf.615030|sha256:e1d4b82e8e4c96ea171a530a2805cdee338c7c1f36c3acb889f3d9d247cc9e42|4-door-6-1-22-pdf.615030-JLXP74|JL22-55-engine_cylinders"
+    ],
+    "engine_displacement_liters": [
+      "4-door-6-1-22-pdf.615030|sha256:e1d4b82e8e4c96ea171a530a2805cdee338c7c1f36c3acb889f3d9d247cc9e42|4-door-6-1-22-pdf.615030-JLXP74|JL22-55-engine_displacement_liters"
+    ],
+    "generic_drive_classification": [
+      "2022_JP_Wrangler_SP|sha256:e71292bb3e8fd98cff9b2b9478eade0490e01a93dc404f12e89d66f22d8323a9|MY2022-technical-layout-p1|JL22-55-generic_drive_classification"
+    ],
+    "make": [
+      "4-door-6-1-22-pdf.615030|sha256:e1d4b82e8e4c96ea171a530a2805cdee338c7c1f36c3acb889f3d9d247cc9e42|4-door-6-1-22-pdf.615030-JLXP74|JL22-55-make"
+    ],
+    "model": [
+      "4-door-6-1-22-pdf.615030|sha256:e1d4b82e8e4c96ea171a530a2805cdee338c7c1f36c3acb889f3d9d247cc9e42|4-door-6-1-22-pdf.615030-JLXP74|JL22-55-model"
+    ],
+    "model_year": [
+      "4-door-6-1-22-pdf.615030|sha256:e1d4b82e8e4c96ea171a530a2805cdee338c7c1f36c3acb889f3d9d247cc9e42|4-door-6-1-22-pdf.615030-JLXP74|JL22-55-model_year"
+    ]
+  },
+  "candidate_identity": {
+    "manufacturer_name": "Jeep",
+    "market": "US",
+    "model_year": 2022,
+    "trim_name": "Unlimited Sahara 4xe",
+    "vehicle_model_name": "Wrangler"
+  },
+  "candidate_reference": "JL22-55",
+  "canonical_powertrain": {
+    "electrification_type": "plug_in_hybrid",
+    "engine_aspiration": "turbocharged",
+    "engine_cylinders": 4,
+    "engine_displacement_liters": "2",
+    "fuel_type": null
+  },
+  "envelope": {
+    "artifact_type": "rigarchive.candidate_configuration.v2",
+    "created_at": "2026-11-10T00:36:51.194499+00:00",
+    "generator": "RigArchive-CandidateConstruction/0.1.0",
+    "schema_version": "2.1.0"
+  },
+  "evidence_documents": [
+    {
+      "assertion_set_id": "wrangler-4-dr-2022-10-08-2021-pdf.519330-JLXP74",
+      "assertions": [
+        {
+          "assertion_id": "wrangler-4-dr-2022-10-08-2021-pdf.519330-JLXP74-table",
+          "attribute_key": "factory_powertrain_table",
+          "raw_value": "\nENGINE               $FWP   $MSRP   TRANSMISSION          $FWP    $MSRP                                                                                                                         HIGH ALTITUDE\n2.0L I4 DOHC DI      N/C      N/C   8-SPD AUTO             N/C     N/C                         29P                                          29N\nTURBO PHEV                          8P75PH PHEV\nENGINE (ECX)                        TRANSMISSION\n                                    (DFY)\n\n",
+          "source_context": "PDF page 21; model JLXP74; named marketed columns and positive QOP cells"
+        },
+        {
+          "assertion_id": "wrangler-4-dr-2022-10-08-2021-pdf.519330-JLXP74-heading",
+          "attribute_key": "source_document_heading",
+          "raw_value": "ISSUED: 10/08/2021                                                                                                                                                    PAGE: 1      JEEP\n\n\n                                                                        United States\n                                                                                 2022                                                                                             WRANGLER\n\n                                                           JEEP        WRANGLER                  4  DOOR\n\n                                                        CUSTOMER PREFERRED CODE GUIDE\n\n\n         MODEL                                                                                                   CODE                   PAGES\n         WRANGLER UNLIMITED SPORT                                                               JLJL74                  2                                                          4\n\n         WRANGLER UNLIMITED SAHARA                                                            JLJP74                  8                                                           DOOR\n\n         WRANGLER UNLIMITED RUBICON                                                           JLJS74                 14\n         WRANGLER UNLIMITED RUBICON 392                                                    JLJX74                 17\n         WRANGLER UNLIMITED SPORT RHD                                                       JLUL74                 20\n         WRANGLER UNLIMITED SAHARA 4XE                                                     JLXP74                 21\n         WRANGLER UNLIMITED RUBICON 4XE                                                   JLXS74                 24\n         GROUP DETAIL                                                                                                                          27\n         STANDARD EQUIPMENT                                                                                                          33\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n         STEP #1: SELECT                                                                                        MODEL CODE\n\n         STEP #2: SELECT                                                                                        QUICK ORDER PACKAGE CODE\n\n         STEP #3: SELECT                                                                                        $ OPTIONS (IF DESIRED)\n\n         STEP #4: SELECT                                                                                        COLOR & TRIM CODES\n\n\n\n\n\n       © 2020 FCA US LLC, All Rights Reserved. IT IS FOR THE USE OF FCA AND ITS AUTHORIZED DEALERS ONLY AND MAY\n                       NOT BE OTHERWISE USED, RELEASED, OR REPRINTED WITHOUT FCA PRIOR PERMISSION.\n\n                              ORDERS ARE ACCEPTED ONLY WHEN VEHICLES ARE SHIPPED BY THE FACTORY.\n                                                           © 2020 FCA US LLC, All Rights Reserved.",
+          "source_context": "PDF page 1; United States / MY2022 / Wrangler / body heading"
+        },
+        {
+          "assertion_id": "wrangler-4-dr-2022-10-08-2021-pdf.519330-JLXP74-model",
+          "attribute_key": "source_model_code",
+          "raw_value": "JLXP74",
+          "source_context": "PDF page 21; exact manufacturer model code"
+        },
+        {
+          "assertion_id": "wrangler-4-dr-2022-10-08-2021-pdf.519330-JLXP74-ECX-segment-0",
+          "attribute_key": "engine_transmission_QOP_segment",
+          "raw_value": "2.0L I4 DOHC DI      N/C      N/C   8-SPD AUTO             N/C     N/C                         29P                                          29N\nTURBO PHEV                          8P75PH PHEV\nENGINE (ECX)                        TRANSMISSION\n                                    (DFY)",
+          "source_context": "PDF page 21; full engine/transmission/QOP segment 0; ECX"
+        },
+        {
+          "assertion_id": "wrangler-4-dr-2022-10-08-2021-pdf.519330-JLXP74-ECX-engine-column",
+          "attribute_key": "engine_descriptor",
+          "raw_value": "2.0L I4 DOHC DI TURBO PHEV ENGINE (ECX) ",
+          "source_context": "PDF page 21; first 21 characters of each retained layout-segment line; full segments retained; no codes or QOP values interpreted as powertrain classes"
+        }
+      ],
+      "extraction_mode": "manually_verified_transcription",
+      "extractor_id": "MY2022_retained_discovery_transcription",
+      "extractor_version": "1.0.0",
+      "generation_normalizer": {
+        "id": "explicit_generation_identity",
+        "version": "1.0.0"
+      },
+      "publication_revision": "2021-10-08",
+      "raw_artifact_hash": "sha256:2a4eb89d27b1b9d8c6c1fafbc21255082fc1bf2dc0f6ffbd004d765863649673",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2022_JL/discovery_20261109/source_pdfs/wrangler-4-dr-2022-10-08-2021-pdf.519330.pdf",
+      "retrieved_at": "2026-11-09T23:52:21.665010+00:00",
+      "source_applicability": {
+        "applicability_basis": "Existing MY2022 US guide scope; joins bound to exact model, table, QOP and research row",
+        "applicability_scope": "model_year",
+        "market": "US",
+        "publisher_jurisdiction": "US",
+        "unknown_fields": {}
+      },
+      "source_id": "wrangler-4-dr-2022-10-08-2021-pdf.519330",
+      "source_locator": "https://www.jlwranglerforums.com/forum/attachments/wrangler-4-dr-2022-10-08-2021-pdf.519330/"
+    },
+    {
+      "assertion_set_id": "4-door-11-10-21-pdf.534724-JLXP74",
+      "assertions": [
+        {
+          "assertion_id": "4-door-11-10-21-pdf.534724-JLXP74-table",
+          "attribute_key": "factory_powertrain_table",
+          "raw_value": "\nENGINE              $FWP    $MSRP   TRANSMISSION          $FWP   $MSRP                                                                                                                         HIGH ALTITUDE\n2.0L I4 DOHC DI      N/C      N/C   8-SPD AUTO             N/C     N/C                        29P                                           29N\nTURBO PHEV                          8P75PH PHEV\nENGINE (ECX)                        TRANSMISSION\n                                    (DFY)\n\n",
+          "source_context": "PDF page 21; model JLXP74; named marketed columns and positive QOP cells"
+        },
+        {
+          "assertion_id": "4-door-11-10-21-pdf.534724-JLXP74-heading",
+          "attribute_key": "source_document_heading",
+          "raw_value": "REISSUED: 11/10/2021                                                                                                                                        PAGE: 1           JEEP\nISSUED:      10/08/2021\n\n                                                                      United States\n                                                                               2022                                                                                          WRANGLER\n\n                                                         JEEP        WRANGLER                 4   DOOR\n\n                                                       CUSTOMER PREFERRED CODE GUIDE\n\n\n         MODEL                                                                                                 CODE                  PAGES\n         WRANGLER UNLIMITED SPORT                                                               JLJL74                  2                                                     4\n\n         WRANGLER UNLIMITED SAHARA                                                            JLJP74                  8                                                       DOOR\n\n         WRANGLER UNLIMITED RUBICON                                                           JLJS74                 14\n         WRANGLER UNLIMITED RUBICON 392                                                    JLJX74                 17\n         WRANGLER UNLIMITED SPORT RHD                                                       JLUL74                 20\n         WRANGLER UNLIMITED SAHARA 4XE                                                     JLXP74                 21\n         WRANGLER UNLIMITED RUBICON 4XE                                                   JLXS74                 24\n         GROUP DETAIL                                                                                                                          27\n         STANDARD EQUIPMENT                                                                                                          33\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n         STEP #1: SELECT                                                                                        MODEL CODE\n\n         STEP #2: SELECT                                                                                        QUICK ORDER PACKAGE CODE\n\n         STEP #3: SELECT                                                                                        $ OPTIONS (IF DESIRED)\n\n         STEP #4: SELECT                                                                                        COLOR & TRIM CODES\n\n\n\n\n\n       © 2020 FCA US LLC, All Rights Reserved. IT IS FOR THE USE OF FCA AND ITS AUTHORIZED DEALERS ONLY AND MAY\n                       NOT BE OTHERWISE USED, RELEASED, OR REPRINTED WITHOUT FCA PRIOR PERMISSION.\n\n                             ORDERS ARE ACCEPTED ONLY WHEN VEHICLES ARE SHIPPED BY THE FACTORY.\n                                                          © 2020 FCA US LLC, All Rights Reserved.",
+          "source_context": "PDF page 1; United States / MY2022 / Wrangler / body heading"
+        },
+        {
+          "assertion_id": "4-door-11-10-21-pdf.534724-JLXP74-model",
+          "attribute_key": "source_model_code",
+          "raw_value": "JLXP74",
+          "source_context": "PDF page 21; exact manufacturer model code"
+        },
+        {
+          "assertion_id": "4-door-11-10-21-pdf.534724-JLXP74-ECX-segment-0",
+          "attribute_key": "engine_transmission_QOP_segment",
+          "raw_value": "2.0L I4 DOHC DI      N/C      N/C   8-SPD AUTO             N/C     N/C                        29P                                           29N\nTURBO PHEV                          8P75PH PHEV\nENGINE (ECX)                        TRANSMISSION\n                                    (DFY)",
+          "source_context": "PDF page 21; full engine/transmission/QOP segment 0; ECX"
+        },
+        {
+          "assertion_id": "4-door-11-10-21-pdf.534724-JLXP74-ECX-engine-column",
+          "attribute_key": "engine_descriptor",
+          "raw_value": "2.0L I4 DOHC DI TURBO PHEV ENGINE (ECX) ",
+          "source_context": "PDF page 21; first 21 characters of each retained layout-segment line; full segments retained; no codes or QOP values interpreted as powertrain classes"
+        }
+      ],
+      "extraction_mode": "manually_verified_transcription",
+      "extractor_id": "MY2022_retained_discovery_transcription",
+      "extractor_version": "1.0.0",
+      "generation_normalizer": {
+        "id": "explicit_generation_identity",
+        "version": "1.0.0"
+      },
+      "publication_revision": "2021-11-10",
+      "raw_artifact_hash": "sha256:eaf0bd745ffcd9a256bff7aa484dee60cabb7276fe20b6b56bc8ba12344d31ce",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2022_JL/discovery_20261109/source_pdfs/4-door-11-10-21-pdf.534724.pdf",
+      "retrieved_at": "2026-11-09T23:52:24.187588+00:00",
+      "source_applicability": {
+        "applicability_basis": "Existing MY2022 US guide scope; joins bound to exact model, table, QOP and research row",
+        "applicability_scope": "model_year",
+        "market": "US",
+        "publisher_jurisdiction": "US",
+        "unknown_fields": {}
+      },
+      "source_id": "4-door-11-10-21-pdf.534724",
+      "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-11-10-21-pdf.534724/"
+    },
+    {
+      "assertion_set_id": "4-door-12-7-21-pdf.543723-JLXP74",
+      "assertions": [
+        {
+          "assertion_id": "4-door-12-7-21-pdf.543723-JLXP74-table",
+          "attribute_key": "factory_powertrain_table",
+          "raw_value": "\nENGINE              $FWP    $MSRP   TRANSMISSION          $FWP   $MSRP                                                                                                                         HIGH ALTITUDE\n2.0L I4 DOHC DI      N/C      N/C   8-SPD AUTO             N/C     N/C                        29P                                           29N\nTURBO PHEV                          8P75PH PHEV\nENGINE (ECX)                        TRANSMISSION\n                                    (DFY)\n\n",
+          "source_context": "PDF page 21; model JLXP74; named marketed columns and positive QOP cells"
+        },
+        {
+          "assertion_id": "4-door-12-7-21-pdf.543723-JLXP74-heading",
+          "attribute_key": "source_document_heading",
+          "raw_value": "REISSUED: 12/07/2021                                                                                                                                        PAGE: 1           JEEP\nISSUED:      10/08/2021\n\n                                                                      United States\n                                                                               2022                                                                                          WRANGLER\n\n                                                         JEEP        WRANGLER                 4   DOOR\n\n                                                       CUSTOMER PREFERRED CODE GUIDE\n\n\n         MODEL                                                                                                 CODE                  PAGES\n         WRANGLER UNLIMITED SPORT                                                               JLJL74                  2                                                     4\n\n         WRANGLER UNLIMITED SAHARA                                                            JLJP74                  8                                                       DOOR\n\n         WRANGLER UNLIMITED RUBICON                                                           JLJS74                 14\n         WRANGLER UNLIMITED RUBICON 392                                                    JLJX74                 17\n         WRANGLER UNLIMITED SPORT RHD                                                       JLUL74                 20\n         WRANGLER UNLIMITED SAHARA 4XE                                                     JLXP74                 21\n         WRANGLER UNLIMITED RUBICON 4XE                                                   JLXS74                 24\n         GROUP DETAIL                                                                                                                          27\n         STANDARD EQUIPMENT                                                                                                          33\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n         STEP #1: SELECT                                                                                        MODEL CODE\n\n         STEP #2: SELECT                                                                                        QUICK ORDER PACKAGE CODE\n\n         STEP #3: SELECT                                                                                        $ OPTIONS (IF DESIRED)\n\n         STEP #4: SELECT                                                                                        COLOR & TRIM CODES\n\n\n\n\n\n       © 2020 FCA US LLC, All Rights Reserved. IT IS FOR THE USE OF FCA AND ITS AUTHORIZED DEALERS ONLY AND MAY\n                       NOT BE OTHERWISE USED, RELEASED, OR REPRINTED WITHOUT FCA PRIOR PERMISSION.\n\n                             ORDERS ARE ACCEPTED ONLY WHEN VEHICLES ARE SHIPPED BY THE FACTORY.\n                                                          © 2020 FCA US LLC, All Rights Reserved.",
+          "source_context": "PDF page 1; United States / MY2022 / Wrangler / body heading"
+        },
+        {
+          "assertion_id": "4-door-12-7-21-pdf.543723-JLXP74-model",
+          "attribute_key": "source_model_code",
+          "raw_value": "JLXP74",
+          "source_context": "PDF page 21; exact manufacturer model code"
+        },
+        {
+          "assertion_id": "4-door-12-7-21-pdf.543723-JLXP74-ECX-segment-0",
+          "attribute_key": "engine_transmission_QOP_segment",
+          "raw_value": "2.0L I4 DOHC DI      N/C      N/C   8-SPD AUTO             N/C     N/C                        29P                                           29N\nTURBO PHEV                          8P75PH PHEV\nENGINE (ECX)                        TRANSMISSION\n                                    (DFY)",
+          "source_context": "PDF page 21; full engine/transmission/QOP segment 0; ECX"
+        },
+        {
+          "assertion_id": "4-door-12-7-21-pdf.543723-JLXP74-ECX-engine-column",
+          "attribute_key": "engine_descriptor",
+          "raw_value": "2.0L I4 DOHC DI TURBO PHEV ENGINE (ECX) ",
+          "source_context": "PDF page 21; first 21 characters of each retained layout-segment line; full segments retained; no codes or QOP values interpreted as powertrain classes"
+        }
+      ],
+      "extraction_mode": "manually_verified_transcription",
+      "extractor_id": "MY2022_retained_discovery_transcription",
+      "extractor_version": "1.0.0",
+      "generation_normalizer": {
+        "id": "explicit_generation_identity",
+        "version": "1.0.0"
+      },
+      "publication_revision": "2021-12-07",
+      "raw_artifact_hash": "sha256:8758c1507395dc8dcc1921ab7513b4430d346b6d71f6a8d8d04d5a28c96126d3",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2022_JL/discovery_20261109/source_pdfs/4-door-12-7-21-pdf.543723.pdf",
+      "retrieved_at": "2026-11-09T23:52:25.818554+00:00",
+      "source_applicability": {
+        "applicability_basis": "Existing MY2022 US guide scope; joins bound to exact model, table, QOP and research row",
+        "applicability_scope": "model_year",
+        "market": "US",
+        "publisher_jurisdiction": "US",
+        "unknown_fields": {}
+      },
+      "source_id": "4-door-12-7-21-pdf.543723",
+      "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-12-7-21-pdf.543723/"
+    },
+    {
+      "assertion_set_id": "4-door-1-12-22-pdf.553816-JLXP74",
+      "assertions": [
+        {
+          "assertion_id": "4-door-1-12-22-pdf.553816-JLXP74-table",
+          "attribute_key": "factory_powertrain_table",
+          "raw_value": "\nENGINE              $FWP    $MSRP   TRANSMISSION          $FWP   $MSRP                                                                                                                         HIGH ALTITUDE\n2.0L I4 DOHC DI      N/C      N/C   8-SPD AUTO             N/C     N/C                        29P                                           29N\nTURBO PHEV                          8P75PH PHEV\nENGINE (ECX)                        TRANSMISSION\n                                    (DFY)\n\n",
+          "source_context": "PDF page 22; model JLXP74; named marketed columns and positive QOP cells"
+        },
+        {
+          "assertion_id": "4-door-1-12-22-pdf.553816-JLXP74-heading",
+          "attribute_key": "source_document_heading",
+          "raw_value": "REISSUED: 01/12/2022                                                                                                                                        PAGE: 1           JEEP\nISSUED:      10/08/2021\n\n                                                                      United States\n                                                                               2022                                                                                          WRANGLER\n\n                                                         JEEP        WRANGLER                 4   DOOR\n\n                                                       CUSTOMER PREFERRED CODE GUIDE\n\n\n         MODEL                                                                                                 CODE                  PAGES\n         WRANGLER UNLIMITED SPORT                                                               JLJL74                  2                                                     4\n\n         WRANGLER UNLIMITED SAHARA                                                            JLJP74                  8                                                       DOOR\n\n         WRANGLER UNLIMITED RUBICON                                                           JLJS74                 14\n         WRANGLER UNLIMITED RUBICON 392                                                    JLJX74                 18\n         WRANGLER UNLIMITED SPORT RHD                                                       JLUL74                 21\n         WRANGLER UNLIMITED SAHARA 4XE                                                     JLXP74                 22\n         WRANGLER UNLIMITED RUBICON 4XE                                                   JLXS74                 25\n         GROUP DETAIL                                                                                                                          28\n         STANDARD EQUIPMENT                                                                                                          34\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n         STEP #1: SELECT                                                                                        MODEL CODE\n\n         STEP #2: SELECT                                                                                        QUICK ORDER PACKAGE CODE\n\n         STEP #3: SELECT                                                                                        $ OPTIONS (IF DESIRED)\n\n         STEP #4: SELECT                                                                                        COLOR & TRIM CODES\n\n\n\n\n\n       © 2020 FCA US LLC, All Rights Reserved. IT IS FOR THE USE OF FCA AND ITS AUTHORIZED DEALERS ONLY AND MAY\n                       NOT BE OTHERWISE USED, RELEASED, OR REPRINTED WITHOUT FCA PRIOR PERMISSION.\n\n                             ORDERS ARE ACCEPTED ONLY WHEN VEHICLES ARE SHIPPED BY THE FACTORY.\n                                                          © 2020 FCA US LLC, All Rights Reserved.",
+          "source_context": "PDF page 1; United States / MY2022 / Wrangler / body heading"
+        },
+        {
+          "assertion_id": "4-door-1-12-22-pdf.553816-JLXP74-model",
+          "attribute_key": "source_model_code",
+          "raw_value": "JLXP74",
+          "source_context": "PDF page 22; exact manufacturer model code"
+        },
+        {
+          "assertion_id": "4-door-1-12-22-pdf.553816-JLXP74-ECX-segment-0",
+          "attribute_key": "engine_transmission_QOP_segment",
+          "raw_value": "2.0L I4 DOHC DI      N/C      N/C   8-SPD AUTO             N/C     N/C                        29P                                           29N\nTURBO PHEV                          8P75PH PHEV\nENGINE (ECX)                        TRANSMISSION\n                                    (DFY)",
+          "source_context": "PDF page 22; full engine/transmission/QOP segment 0; ECX"
+        },
+        {
+          "assertion_id": "4-door-1-12-22-pdf.553816-JLXP74-ECX-engine-column",
+          "attribute_key": "engine_descriptor",
+          "raw_value": "2.0L I4 DOHC DI TURBO PHEV ENGINE (ECX) ",
+          "source_context": "PDF page 22; first 21 characters of each retained layout-segment line; full segments retained; no codes or QOP values interpreted as powertrain classes"
+        }
+      ],
+      "extraction_mode": "manually_verified_transcription",
+      "extractor_id": "MY2022_retained_discovery_transcription",
+      "extractor_version": "1.0.0",
+      "generation_normalizer": {
+        "id": "explicit_generation_identity",
+        "version": "1.0.0"
+      },
+      "publication_revision": "2022-01-12",
+      "raw_artifact_hash": "sha256:1652bbbf452521502a414777cd5c6d3bd7e32a22cabbbb1bc9ff4da056d53e6d",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2022_JL/discovery_20261109/source_pdfs/4-door-1-12-22-pdf.553816.pdf",
+      "retrieved_at": "2026-11-09T23:52:27.142256+00:00",
+      "source_applicability": {
+        "applicability_basis": "Existing MY2022 US guide scope; joins bound to exact model, table, QOP and research row",
+        "applicability_scope": "model_year",
+        "market": "US",
+        "publisher_jurisdiction": "US",
+        "unknown_fields": {}
+      },
+      "source_id": "4-door-1-12-22-pdf.553816",
+      "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-1-12-22-pdf.553816/"
+    },
+    {
+      "assertion_set_id": "4-door-1-17-22-pdf.555728-JLXP74",
+      "assertions": [
+        {
+          "assertion_id": "4-door-1-17-22-pdf.555728-JLXP74-table",
+          "attribute_key": "factory_powertrain_table",
+          "raw_value": "\nENGINE              $FWP    $MSRP   TRANSMISSION          $FWP   $MSRP                                                                                                                         HIGH ALTITUDE\n2.0L I4 DOHC DI      N/C      N/C   8-SPD AUTO             N/C     N/C                        29P                                           29N\nTURBO PHEV                          8P75PH PHEV\nENGINE (ECX)                        TRANSMISSION\n                                    (DFY)\n\n",
+          "source_context": "PDF page 22; model JLXP74; named marketed columns and positive QOP cells"
+        },
+        {
+          "assertion_id": "4-door-1-17-22-pdf.555728-JLXP74-heading",
+          "attribute_key": "source_document_heading",
+          "raw_value": "REISSUED: 01/17/2022                                                                                                                                        PAGE: 1           JEEP\nISSUED:      10/08/2021\n\n                                                                      United States\n                                                                               2022                                                                                          WRANGLER\n\n                                                         JEEP        WRANGLER                 4   DOOR\n\n                                                       CUSTOMER PREFERRED CODE GUIDE\n\n\n         MODEL                                                                                                 CODE                  PAGES\n         WRANGLER UNLIMITED SPORT                                                               JLJL74                  2                                                     4\n\n         WRANGLER UNLIMITED SAHARA                                                            JLJP74                  8                                                       DOOR\n\n         WRANGLER UNLIMITED RUBICON                                                           JLJS74                 14\n         WRANGLER UNLIMITED RUBICON 392                                                    JLJX74                 18\n         WRANGLER UNLIMITED SPORT RHD                                                       JLUL74                 21\n         WRANGLER UNLIMITED SAHARA 4XE                                                     JLXP74                 22\n         WRANGLER UNLIMITED RUBICON 4XE                                                   JLXS74                 25\n         GROUP DETAIL                                                                                                                          28\n         STANDARD EQUIPMENT                                                                                                          34\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n         STEP #1: SELECT                                                                                        MODEL CODE\n\n         STEP #2: SELECT                                                                                        QUICK ORDER PACKAGE CODE\n\n         STEP #3: SELECT                                                                                        $ OPTIONS (IF DESIRED)\n\n         STEP #4: SELECT                                                                                        COLOR & TRIM CODES\n\n\n\n\n\n       © 2020 FCA US LLC, All Rights Reserved. IT IS FOR THE USE OF FCA AND ITS AUTHORIZED DEALERS ONLY AND MAY\n                       NOT BE OTHERWISE USED, RELEASED, OR REPRINTED WITHOUT FCA PRIOR PERMISSION.\n\n                             ORDERS ARE ACCEPTED ONLY WHEN VEHICLES ARE SHIPPED BY THE FACTORY.\n                                                          © 2020 FCA US LLC, All Rights Reserved.",
+          "source_context": "PDF page 1; United States / MY2022 / Wrangler / body heading"
+        },
+        {
+          "assertion_id": "4-door-1-17-22-pdf.555728-JLXP74-model",
+          "attribute_key": "source_model_code",
+          "raw_value": "JLXP74",
+          "source_context": "PDF page 22; exact manufacturer model code"
+        },
+        {
+          "assertion_id": "4-door-1-17-22-pdf.555728-JLXP74-ECX-segment-0",
+          "attribute_key": "engine_transmission_QOP_segment",
+          "raw_value": "2.0L I4 DOHC DI      N/C      N/C   8-SPD AUTO             N/C     N/C                        29P                                           29N\nTURBO PHEV                          8P75PH PHEV\nENGINE (ECX)                        TRANSMISSION\n                                    (DFY)",
+          "source_context": "PDF page 22; full engine/transmission/QOP segment 0; ECX"
+        },
+        {
+          "assertion_id": "4-door-1-17-22-pdf.555728-JLXP74-ECX-engine-column",
+          "attribute_key": "engine_descriptor",
+          "raw_value": "2.0L I4 DOHC DI TURBO PHEV ENGINE (ECX) ",
+          "source_context": "PDF page 22; first 21 characters of each retained layout-segment line; full segments retained; no codes or QOP values interpreted as powertrain classes"
+        }
+      ],
+      "extraction_mode": "manually_verified_transcription",
+      "extractor_id": "MY2022_retained_discovery_transcription",
+      "extractor_version": "1.0.0",
+      "generation_normalizer": {
+        "id": "explicit_generation_identity",
+        "version": "1.0.0"
+      },
+      "publication_revision": "2022-01-17",
+      "raw_artifact_hash": "sha256:11821c4e1144bf7a6f0df6f468f1cb4c80826527901cbd5dbe861bbd85a5a60b",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2022_JL/discovery_20261109/source_pdfs/4-door-1-17-22-pdf.555728.pdf",
+      "retrieved_at": "2026-11-09T23:52:28.637026+00:00",
+      "source_applicability": {
+        "applicability_basis": "Existing MY2022 US guide scope; joins bound to exact model, table, QOP and research row",
+        "applicability_scope": "model_year",
+        "market": "US",
+        "publisher_jurisdiction": "US",
+        "unknown_fields": {}
+      },
+      "source_id": "4-door-1-17-22-pdf.555728",
+      "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-1-17-22-pdf.555728/"
+    },
+    {
+      "assertion_set_id": "4-door-2-10-22-pdf.567217-JLXP74",
+      "assertions": [
+        {
+          "assertion_id": "4-door-2-10-22-pdf.567217-JLXP74-table",
+          "attribute_key": "factory_powertrain_table",
+          "raw_value": "\nENGINE              $FWP    $MSRP   TRANSMISSION          $FWP   $MSRP                                                                                                                         HIGH ALTITUDE\n2.0L I4 DOHC DI      N/C      N/C   8-SPD AUTO             N/C     N/C                        29P                                           29N\nTURBO PHEV                          8P75PH PHEV                                         W/ALP M/H AJ1\nENGINE (ECX)                        TRANSMISSION\n                                    (DFY)\n\n",
+          "source_context": "PDF page 22; model JLXP74; named marketed columns and positive QOP cells"
+        },
+        {
+          "assertion_id": "4-door-2-10-22-pdf.567217-JLXP74-heading",
+          "attribute_key": "source_document_heading",
+          "raw_value": "REISSUED: 02/10/2022                                                                                                                                        PAGE: 1           JEEP\nISSUED:      10/08/2021\n\n                                                                      United States\n                                                                               2022                                                                                          WRANGLER\n\n                                                         JEEP        WRANGLER                 4   DOOR\n\n                                                       CUSTOMER PREFERRED CODE GUIDE\n\n\n         MODEL                                                                                                 CODE                  PAGES\n         WRANGLER UNLIMITED SPORT                                                               JLJL74                  2                                                     4\n\n         WRANGLER UNLIMITED SAHARA                                                            JLJP74                  8                                                       DOOR\n\n         WRANGLER UNLIMITED RUBICON                                                           JLJS74                 14\n         WRANGLER UNLIMITED RUBICON 392                                                    JLJX74                 18\n         WRANGLER UNLIMITED SPORT RHD                                                       JLUL74                 21\n         WRANGLER UNLIMITED SAHARA 4XE                                                     JLXP74                 22\n         WRANGLER UNLIMITED RUBICON 4XE                                                   JLXS74                 25\n         GROUP DETAIL                                                                                                                          28\n         STANDARD EQUIPMENT                                                                                                          34\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n         STEP #1: SELECT                                                                                        MODEL CODE\n\n         STEP #2: SELECT                                                                                        QUICK ORDER PACKAGE CODE\n\n         STEP #3: SELECT                                                                                        $ OPTIONS (IF DESIRED)\n\n         STEP #4: SELECT                                                                                        COLOR & TRIM CODES\n\n\n\n\n\n       © 2020 FCA US LLC, All Rights Reserved. IT IS FOR THE USE OF FCA AND ITS AUTHORIZED DEALERS ONLY AND MAY\n                       NOT BE OTHERWISE USED, RELEASED, OR REPRINTED WITHOUT FCA PRIOR PERMISSION.\n\n                             ORDERS ARE ACCEPTED ONLY WHEN VEHICLES ARE SHIPPED BY THE FACTORY.\n                                                          © 2020 FCA US LLC, All Rights Reserved.",
+          "source_context": "PDF page 1; United States / MY2022 / Wrangler / body heading"
+        },
+        {
+          "assertion_id": "4-door-2-10-22-pdf.567217-JLXP74-model",
+          "attribute_key": "source_model_code",
+          "raw_value": "JLXP74",
+          "source_context": "PDF page 22; exact manufacturer model code"
+        },
+        {
+          "assertion_id": "4-door-2-10-22-pdf.567217-JLXP74-ECX-segment-0",
+          "attribute_key": "engine_transmission_QOP_segment",
+          "raw_value": "2.0L I4 DOHC DI      N/C      N/C   8-SPD AUTO             N/C     N/C                        29P                                           29N\nTURBO PHEV                          8P75PH PHEV                                         W/ALP M/H AJ1\nENGINE (ECX)                        TRANSMISSION\n                                    (DFY)",
+          "source_context": "PDF page 22; full engine/transmission/QOP segment 0; ECX"
+        },
+        {
+          "assertion_id": "4-door-2-10-22-pdf.567217-JLXP74-ECX-engine-column",
+          "attribute_key": "engine_descriptor",
+          "raw_value": "2.0L I4 DOHC DI TURBO PHEV ENGINE (ECX) ",
+          "source_context": "PDF page 22; first 21 characters of each retained layout-segment line; full segments retained; no codes or QOP values interpreted as powertrain classes"
+        }
+      ],
+      "extraction_mode": "manually_verified_transcription",
+      "extractor_id": "MY2022_retained_discovery_transcription",
+      "extractor_version": "1.0.0",
+      "generation_normalizer": {
+        "id": "explicit_generation_identity",
+        "version": "1.0.0"
+      },
+      "publication_revision": "2022-02-10",
+      "raw_artifact_hash": "sha256:1ea77968970b9d60cda1f7f8cb71a806386a8ab833e0be49368282c3c3cfb0ca",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2022_JL/discovery_20261109/source_pdfs/4-door-2-10-22-pdf.567217.pdf",
+      "retrieved_at": "2026-11-09T23:52:43.904769+00:00",
+      "source_applicability": {
+        "applicability_basis": "Existing MY2022 US guide scope; joins bound to exact model, table, QOP and research row",
+        "applicability_scope": "model_year",
+        "market": "US",
+        "publisher_jurisdiction": "US",
+        "unknown_fields": {}
+      },
+      "source_id": "4-door-2-10-22-pdf.567217",
+      "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-2-10-22-pdf.567217/"
+    },
+    {
+      "assertion_set_id": "4-door-3-11-22-pdf.579260-JLXP74",
+      "assertions": [
+        {
+          "assertion_id": "4-door-3-11-22-pdf.579260-JLXP74-table",
+          "attribute_key": "factory_powertrain_table",
+          "raw_value": "\nENGINE              $FWP    $MSRP   TRANSMISSION          $FWP   $MSRP                                                                                                                         HIGH ALTITUDE\n2.0L I4 DOHC DI      N/C      N/C   8-SPD AUTO             N/C     N/C                        29P                                           29N\nTURBO PHEV                          8P75PH PHEV                                         W/ALP M/H AJ1\nENGINE (ECX)                        TRANSMISSION\n                                    (DFY)\n\n",
+          "source_context": "PDF page 22; model JLXP74; named marketed columns and positive QOP cells"
+        },
+        {
+          "assertion_id": "4-door-3-11-22-pdf.579260-JLXP74-heading",
+          "attribute_key": "source_document_heading",
+          "raw_value": "REISSUED: 03/11/2022                                                                                                                                        PAGE: 1           JEEP\nISSUED:      10/08/2021\n\n                                                                      United States\n                                                                               2022                                                                                          WRANGLER\n\n                                                         JEEP        WRANGLER                 4   DOOR\n\n                                                       CUSTOMER PREFERRED CODE GUIDE\n\n\n         MODEL                                                                                                 CODE                  PAGES\n         WRANGLER UNLIMITED SPORT                                                               JLJL74                  2                                                     4\n\n         WRANGLER UNLIMITED SAHARA                                                            JLJP74                  8                                                       DOOR\n\n         WRANGLER UNLIMITED RUBICON                                                           JLJS74                 14\n         WRANGLER UNLIMITED RUBICON 392                                                    JLJX74                 18\n         WRANGLER UNLIMITED SPORT RHD                                                       JLUL74                 21\n         WRANGLER UNLIMITED SAHARA 4XE                                                     JLXP74                 22\n         WRANGLER UNLIMITED RUBICON 4XE                                                   JLXS74                 25\n         GROUP DETAIL                                                                                                                          28\n         STANDARD EQUIPMENT                                                                                                          34\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n         STEP #1: SELECT                                                                                        MODEL CODE\n\n         STEP #2: SELECT                                                                                        QUICK ORDER PACKAGE CODE\n\n         STEP #3: SELECT                                                                                        $ OPTIONS (IF DESIRED)\n\n         STEP #4: SELECT                                                                                        COLOR & TRIM CODES\n\n\n\n\n\n       © 2020 FCA US LLC, All Rights Reserved. IT IS FOR THE USE OF FCA AND ITS AUTHORIZED DEALERS ONLY AND MAY\n                       NOT BE OTHERWISE USED, RELEASED, OR REPRINTED WITHOUT FCA PRIOR PERMISSION.\n\n                             ORDERS ARE ACCEPTED ONLY WHEN VEHICLES ARE SHIPPED BY THE FACTORY.\n                                                          © 2020 FCA US LLC, All Rights Reserved.",
+          "source_context": "PDF page 1; United States / MY2022 / Wrangler / body heading"
+        },
+        {
+          "assertion_id": "4-door-3-11-22-pdf.579260-JLXP74-model",
+          "attribute_key": "source_model_code",
+          "raw_value": "JLXP74",
+          "source_context": "PDF page 22; exact manufacturer model code"
+        },
+        {
+          "assertion_id": "4-door-3-11-22-pdf.579260-JLXP74-ECX-segment-0",
+          "attribute_key": "engine_transmission_QOP_segment",
+          "raw_value": "2.0L I4 DOHC DI      N/C      N/C   8-SPD AUTO             N/C     N/C                        29P                                           29N\nTURBO PHEV                          8P75PH PHEV                                         W/ALP M/H AJ1\nENGINE (ECX)                        TRANSMISSION\n                                    (DFY)",
+          "source_context": "PDF page 22; full engine/transmission/QOP segment 0; ECX"
+        },
+        {
+          "assertion_id": "4-door-3-11-22-pdf.579260-JLXP74-ECX-engine-column",
+          "attribute_key": "engine_descriptor",
+          "raw_value": "2.0L I4 DOHC DI TURBO PHEV ENGINE (ECX) ",
+          "source_context": "PDF page 22; first 21 characters of each retained layout-segment line; full segments retained; no codes or QOP values interpreted as powertrain classes"
+        }
+      ],
+      "extraction_mode": "manually_verified_transcription",
+      "extractor_id": "MY2022_retained_discovery_transcription",
+      "extractor_version": "1.0.0",
+      "generation_normalizer": {
+        "id": "explicit_generation_identity",
+        "version": "1.0.0"
+      },
+      "publication_revision": "2022-03-11",
+      "raw_artifact_hash": "sha256:c980f8fd08b22affda11243eac36b0621895daa06138a9b6e8e97ba8f1104fcf",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2022_JL/discovery_20261109/source_pdfs/4-door-3-11-22-pdf.579260.pdf",
+      "retrieved_at": "2026-11-09T23:52:45.523837+00:00",
+      "source_applicability": {
+        "applicability_basis": "Existing MY2022 US guide scope; joins bound to exact model, table, QOP and research row",
+        "applicability_scope": "model_year",
+        "market": "US",
+        "publisher_jurisdiction": "US",
+        "unknown_fields": {}
+      },
+      "source_id": "4-door-3-11-22-pdf.579260",
+      "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-3-11-22-pdf.579260/"
+    },
+    {
+      "assertion_set_id": "4-door-4-7-22-pdf.591773-JLXP74",
+      "assertions": [
+        {
+          "assertion_id": "4-door-4-7-22-pdf.591773-JLXP74-table",
+          "attribute_key": "factory_powertrain_table",
+          "raw_value": "\nENGINE              $FWP    $MSRP   TRANSMISSION          $FWP   $MSRP                                                                                                                         HIGH ALTITUDE\n2.0L I4 DOHC DI      N/C      N/C   8-SPD AUTO             N/C     N/C                        29P                                           29N\nTURBO PHEV                          8P75PH PHEV                                         W/ALP M/H AJ1\nENGINE (ECX)                        TRANSMISSION\n                                    (DFY)\n\n",
+          "source_context": "PDF page 22; model JLXP74; named marketed columns and positive QOP cells"
+        },
+        {
+          "assertion_id": "4-door-4-7-22-pdf.591773-JLXP74-heading",
+          "attribute_key": "source_document_heading",
+          "raw_value": "REISSUED: 04/07/2022                                                                                                                                        PAGE: 1           JEEP\nISSUED:      10/08/2021\n\n                                                                      United States\n                                                                               2022                                                                                          WRANGLER\n\n                                                         JEEP        WRANGLER                 4   DOOR\n\n                                                       CUSTOMER PREFERRED CODE GUIDE\n\n\n         MODEL                                                                                                 CODE                  PAGES\n         WRANGLER UNLIMITED SPORT                                                               JLJL74                  2                                                     4\n\n         WRANGLER UNLIMITED SAHARA                                                            JLJP74                  8                                                       DOOR\n\n         WRANGLER UNLIMITED RUBICON                                                           JLJS74                 14\n         WRANGLER UNLIMITED RUBICON 392                                                    JLJX74                 18\n         WRANGLER UNLIMITED SPORT RHD                                                       JLUL74                 21\n         WRANGLER UNLIMITED SAHARA 4XE                                                     JLXP74                 22\n         WRANGLER UNLIMITED RUBICON 4XE                                                   JLXS74                 25\n         GROUP DETAIL                                                                                                                          28\n         STANDARD EQUIPMENT                                                                                                          34\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n         STEP #1: SELECT                                                                                        MODEL CODE\n\n         STEP #2: SELECT                                                                                        QUICK ORDER PACKAGE CODE\n\n         STEP #3: SELECT                                                                                        $ OPTIONS (IF DESIRED)\n\n         STEP #4: SELECT                                                                                        COLOR & TRIM CODES\n\n\n\n\n\n       © 2020 FCA US LLC, All Rights Reserved. IT IS FOR THE USE OF FCA AND ITS AUTHORIZED DEALERS ONLY AND MAY\n                       NOT BE OTHERWISE USED, RELEASED, OR REPRINTED WITHOUT FCA PRIOR PERMISSION.\n\n                             ORDERS ARE ACCEPTED ONLY WHEN VEHICLES ARE SHIPPED BY THE FACTORY.\n                                                          © 2020 FCA US LLC, All Rights Reserved.",
+          "source_context": "PDF page 1; United States / MY2022 / Wrangler / body heading"
+        },
+        {
+          "assertion_id": "4-door-4-7-22-pdf.591773-JLXP74-model",
+          "attribute_key": "source_model_code",
+          "raw_value": "JLXP74",
+          "source_context": "PDF page 22; exact manufacturer model code"
+        },
+        {
+          "assertion_id": "4-door-4-7-22-pdf.591773-JLXP74-ECX-segment-0",
+          "attribute_key": "engine_transmission_QOP_segment",
+          "raw_value": "2.0L I4 DOHC DI      N/C      N/C   8-SPD AUTO             N/C     N/C                        29P                                           29N\nTURBO PHEV                          8P75PH PHEV                                         W/ALP M/H AJ1\nENGINE (ECX)                        TRANSMISSION\n                                    (DFY)",
+          "source_context": "PDF page 22; full engine/transmission/QOP segment 0; ECX"
+        },
+        {
+          "assertion_id": "4-door-4-7-22-pdf.591773-JLXP74-ECX-engine-column",
+          "attribute_key": "engine_descriptor",
+          "raw_value": "2.0L I4 DOHC DI TURBO PHEV ENGINE (ECX) ",
+          "source_context": "PDF page 22; first 21 characters of each retained layout-segment line; full segments retained; no codes or QOP values interpreted as powertrain classes"
+        }
+      ],
+      "extraction_mode": "manually_verified_transcription",
+      "extractor_id": "MY2022_retained_discovery_transcription",
+      "extractor_version": "1.0.0",
+      "generation_normalizer": {
+        "id": "explicit_generation_identity",
+        "version": "1.0.0"
+      },
+      "publication_revision": "2022-04-07",
+      "raw_artifact_hash": "sha256:b652e62a3bebae7fd2b96570f4031ff8b4f7266b337afe4cfcb6ce1794d71b0f",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2022_JL/discovery_20261109/source_pdfs/4-door-4-7-22-pdf.591773.pdf",
+      "retrieved_at": "2026-11-09T23:52:47.069234+00:00",
+      "source_applicability": {
+        "applicability_basis": "Existing MY2022 US guide scope; joins bound to exact model, table, QOP and research row",
+        "applicability_scope": "model_year",
+        "market": "US",
+        "publisher_jurisdiction": "US",
+        "unknown_fields": {}
+      },
+      "source_id": "4-door-4-7-22-pdf.591773",
+      "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-4-7-22-pdf.591773/"
+    },
+    {
+      "assertion_set_id": "4-door-6-1-22-pdf.615030-JLXP74",
+      "assertions": [
+        {
+          "assertion_id": "4-door-6-1-22-pdf.615030-JLXP74-table",
+          "attribute_key": "factory_powertrain_table",
+          "raw_value": "\nENGINE              $FWP    $MSRP   TRANSMISSION          $FWP   $MSRP                                                                                                                         HIGH ALTITUDE\n2.0L I4 DOHC DI      N/C      N/C   8-SPD AUTO             N/C     N/C                        29P                                           29N\nTURBO PHEV                          8P75PH PHEV                                         W/ALP M/H AJ1\nENGINE (ECX)                        TRANSMISSION\n                                    (DFY)\n\n",
+          "source_context": "PDF page 22; model JLXP74; named marketed columns and positive QOP cells"
+        },
+        {
+          "assertion_id": "4-door-6-1-22-pdf.615030-JLXP74-heading",
+          "attribute_key": "source_document_heading",
+          "raw_value": "REISSUED: 06/01/2022                                                                                                                                        PAGE: 1           JEEP\nISSUED:      10/08/2021\n\n                                                                      United States\n                                                                               2022                                                                                          WRANGLER\n\n                                                         JEEP        WRANGLER                 4   DOOR\n\n                                                       CUSTOMER PREFERRED CODE GUIDE\n\n\n         MODEL                                                                                                 CODE                  PAGES\n         WRANGLER UNLIMITED SPORT                                                               JLJL74                  2                                                     4\n\n         WRANGLER UNLIMITED SAHARA                                                            JLJP74                  8                                                       DOOR\n\n         WRANGLER UNLIMITED RUBICON                                                           JLJS74                 14\n         WRANGLER UNLIMITED RUBICON 392                                                    JLJX74                 18\n         WRANGLER UNLIMITED SPORT RHD                                                       JLUL74                 21\n         WRANGLER UNLIMITED SAHARA 4XE                                                     JLXP74                 22\n         WRANGLER UNLIMITED RUBICON 4XE                                                   JLXS74                 25\n         GROUP DETAIL                                                                                                                          28\n         STANDARD EQUIPMENT                                                                                                          34\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n         STEP #1: SELECT                                                                                        MODEL CODE\n\n         STEP #2: SELECT                                                                                        QUICK ORDER PACKAGE CODE\n\n         STEP #3: SELECT                                                                                        $ OPTIONS (IF DESIRED)\n\n         STEP #4: SELECT                                                                                        COLOR & TRIM CODES\n\n\n\n\n\n       © 2020 FCA US LLC, All Rights Reserved. IT IS FOR THE USE OF FCA AND ITS AUTHORIZED DEALERS ONLY AND MAY\n                       NOT BE OTHERWISE USED, RELEASED, OR REPRINTED WITHOUT FCA PRIOR PERMISSION.\n\n                             ORDERS ARE ACCEPTED ONLY WHEN VEHICLES ARE SHIPPED BY THE FACTORY.\n                                                          © 2020 FCA US LLC, All Rights Reserved.",
+          "source_context": "PDF page 1; United States / MY2022 / Wrangler / body heading"
+        },
+        {
+          "assertion_id": "4-door-6-1-22-pdf.615030-JLXP74-model",
+          "attribute_key": "source_model_code",
+          "raw_value": "JLXP74",
+          "source_context": "PDF page 22; exact manufacturer model code"
+        },
+        {
+          "assertion_id": "4-door-6-1-22-pdf.615030-JLXP74-ECX-segment-0",
+          "attribute_key": "engine_transmission_QOP_segment",
+          "raw_value": "2.0L I4 DOHC DI      N/C      N/C   8-SPD AUTO             N/C     N/C                        29P                                           29N\nTURBO PHEV                          8P75PH PHEV                                         W/ALP M/H AJ1\nENGINE (ECX)                        TRANSMISSION\n                                    (DFY)",
+          "source_context": "PDF page 22; full engine/transmission/QOP segment 0; ECX"
+        },
+        {
+          "assertion_id": "4-door-6-1-22-pdf.615030-JLXP74-ECX-engine-column",
+          "attribute_key": "engine_descriptor",
+          "raw_value": "2.0L I4 DOHC DI TURBO PHEV ENGINE (ECX) ",
+          "source_context": "PDF page 22; first 21 characters of each retained layout-segment line; full segments retained; no codes or QOP values interpreted as powertrain classes"
+        }
+      ],
+      "extraction_mode": "manually_verified_transcription",
+      "extractor_id": "MY2022_retained_discovery_transcription",
+      "extractor_version": "1.0.0",
+      "generation_normalizer": {
+        "id": "explicit_generation_identity",
+        "version": "1.0.0"
+      },
+      "publication_revision": "2022-06-01",
+      "raw_artifact_hash": "sha256:e1d4b82e8e4c96ea171a530a2805cdee338c7c1f36c3acb889f3d9d247cc9e42",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2022_JL/discovery_20261109/source_pdfs/4-door-6-1-22-pdf.615030.pdf",
+      "retrieved_at": "2026-11-09T23:52:48.644737+00:00",
+      "source_applicability": {
+        "applicability_basis": "Existing MY2022 US guide scope; joins bound to exact model, table, QOP and research row",
+        "applicability_scope": "model_year",
+        "market": "US",
+        "publisher_jurisdiction": "US",
+        "unknown_fields": {}
+      },
+      "source_id": "4-door-6-1-22-pdf.615030",
+      "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-6-1-22-pdf.615030/"
+    },
+    {
+      "assertion_set_id": "MY2022-technical-layout-p1",
+      "assertions": [
+        {
+          "assertion_id": "MY2022-layout-p1",
+          "attribute_key": "manufacturer_technical_page",
+          "raw_value": "2022 Jeep® Wrangler\nSPECIFICATIONS\n\nSpecifications are based on the latest product information available at the time of publication.\nAll dimensions are in inches (millimeters) unless otherwise noted.\nAll dimensions measured at curb weight with standard tires and wheels.\n\n\nGENERAL INFORMATION\nVehicle Type                                                      Sport-utility vehicle\nAssembly Plant                                                    Toledo Supplier Park, Toledo, Ohio\nEPA Vehicle Class                                                 Multipurpose vehicle\nIntroduction Date                                                 Fall 2017 as a 2018 model\n\n\nBODY/CHASSIS\nLayout                                                            Longitudinal front engine, four-wheel drive\nConstruction                                                      Ladder-type frame, open steel and aluminum body\n\n\nENGINE: 3.6-LITER PENTASTAR V-6\nAvailability                                                      Standard (all engine stop-start, MTX only) — Sport, Sahara, Rubicon\n                                                                  Available (all eTorque mild-hybrid assist, ATX only) — Sport, Sahara,\n                                                                  Rubicon\nType and Description                                              60-degree, V-type, liquid-cooled\nDisplacement (cu. in. / cc)                                       220 cu. in. (3,604 cu. cm)\nBore x Stroke                                                     3.78 x 3.27 (96 x 83)\nValve System                                                      Chain-driven DOHC, 24 valves and hydraulic end-pivot roller rockers\nFuel Injection                                                    Sequential, multiport, electronic, returnless\nConstruction                                                      Aluminum deep-skirt block, aluminum alloy heads\nCompression Ratio                                                 11.3:1\n\nPower (SAE net)\n(hp / kW@rpm)                                                     285 hp (213 kW) at 6,400 rpm\nTorque (SAE net)\n(lb.-ft. / N•m)                                                   260 lb.-ft. (353 N•m) at 4,800 rpm\n\nMax. Engine Speed (rpm)                                           6,600 rpm (electronically limited)\nFuel Requirement                                                  Unleaded regular, 87 octane (R + M)/2\nFuel Tank Capacity (gallons)                                      17.5 (2-door), 21.5 (4-door)\nOil Capacity                                                      5.0 quarts (4.7 liters)\nCoolant Capacity                                                  10 quarts (10.1 liters)\nEmission Controls                                                 Dual three-way catalytic converters, heated oxygen sensors and\n                                                                  internal engine features\n\n\n\n2022 JEEP®  |  WRANGLER  |  SPECIFICATIONS                                                                                                           |  1",
+          "source_context": "PDF page 1; GENERAL INFORMATION and BODY/CHASSIS; 2022 Jeep Wrangler"
+        }
+      ],
+      "extraction_mode": "manually_verified_transcription",
+      "extractor_id": "MY2022_retained_discovery_transcription",
+      "extractor_version": "1.0.0",
+      "generation_normalizer": {
+        "id": "explicit_generation_identity",
+        "version": "1.0.0"
+      },
+      "publication_revision": null,
+      "raw_artifact_hash": "sha256:e71292bb3e8fd98cff9b2b9478eade0490e01a93dc404f12e89d66f22d8323a9",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2022_JL/discovery_20261109/source_pdfs/2022_JP_Wrangler_SP.pdf",
+      "retrieved_at": "2026-11-09T23:53:04.491351+00:00",
+      "source_applicability": {
+        "applicability_basis": "Existing MY2022 US guide scope; joins bound to exact model, table, QOP and research row",
+        "applicability_scope": "model_year",
+        "market": "US",
+        "publisher_jurisdiction": "US",
+        "unknown_fields": {}
+      },
+      "source_id": "2022_JP_Wrangler_SP",
+      "source_locator": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/specs/2022_JP_Wrangler_SP.pdf"
+    },
+    {
+      "assertion_set_id": "JL22-55-edmunds-transcription",
+      "assertions": [
+        {
+          "assertion_id": "JL22-55-edmunds-correspondence",
+          "attribute_key": "research_offering_correspondence",
+          "raw_value": {
+            "body_style": "4-door",
+            "cylinders": "4",
+            "displacement_liters": "2.0",
+            "edmunds_aspiration": "turbocharged",
+            "edmunds_drive_category": "4WD",
+            "edmunds_electrification": "plug_in_hybrid",
+            "edmunds_fuel": "gas/electric; regular unleaded",
+            "edmunds_style_id": "401926717",
+            "edmunds_transmission": "8-speed shiftable automatic",
+            "edmunds_trim": "Unlimited Sahara [Wrangler 4xe]",
+            "edmunds_url": "https://www.edmunds.com/jeep/wrangler-4xe/2022/features-specs/",
+            "engine_code": "ECX",
+            "identity_evidence_status": "Five-field family corroboration from explicit gas/electric turbo PHEV description; mapping not applied",
+            "manufacturer_QOPs_not_observed_on_Edmunds": "",
+            "manufacturer_drive_projection": "not present in existing 56-row matrix; not independently matched",
+            "manufacturer_five_fields": "{\"engine_displacement_liters\":\"2\",\"engine_cylinders\":4,\"engine_aspiration\":\"turbocharged\",\"fuel_type\":null,\"electrification_type\":\"plug_in_hybrid\"}",
+            "manufacturer_model_code": "JLXP74",
+            "manufacturer_row": "JL22-55",
+            "manufacturer_transmission_codes": "DFY",
+            "manufacturer_trim": "Sahara 4xe",
+            "matched_QOPs": "29P",
+            "outcome": "Equivalent configuration with different naming",
+            "outcome_scope": "Observed offering counterpart; incomplete fields below are not certified",
+            "owner_scope_note": "No classification approval applied"
+          },
+          "source_context": "Existing reconciliation CSV row JL22-55; Edmunds live selector style 401926717; methodology/date in companion README"
+        }
+      ],
+      "extraction_mode": "manually_verified_transcription",
+      "extractor_id": "MY2022_retained_discovery_transcription",
+      "extractor_version": "1.0.0",
+      "generation_normalizer": {
+        "id": "explicit_generation_identity",
+        "version": "1.0.0"
+      },
+      "publication_revision": null,
+      "raw_artifact_hash": "sha256:616c53e282ed1680ced33ec3f6b0ab5e9c9e283d2d9d79d3e756ef322a930c84",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2022_JL/edmunds_comparison_20261109/row_comparison.csv",
+      "retrieved_at": "2026-11-10T00:36:51.194499+00:00",
+      "source_applicability": {
+        "applicability_basis": "Existing MY2022 US guide scope; joins bound to exact model, table, QOP and research row",
+        "applicability_scope": "model_year",
+        "market": "US",
+        "publisher_jurisdiction": null,
+        "unknown_fields": {}
+      },
+      "source_id": "rigarchive_MY2022_edmunds_reconciliation",
+      "source_locator": "https://www.edmunds.com/jeep/wrangler-4xe/2022/features-specs/"
+    }
+  ],
+  "evidence_raw_hashes": [
+    "sha256:11821c4e1144bf7a6f0df6f468f1cb4c80826527901cbd5dbe861bbd85a5a60b",
+    "sha256:1652bbbf452521502a414777cd5c6d3bd7e32a22cabbbb1bc9ff4da056d53e6d",
+    "sha256:1ea77968970b9d60cda1f7f8cb71a806386a8ab833e0be49368282c3c3cfb0ca",
+    "sha256:2a4eb89d27b1b9d8c6c1fafbc21255082fc1bf2dc0f6ffbd004d765863649673",
+    "sha256:616c53e282ed1680ced33ec3f6b0ab5e9c9e283d2d9d79d3e756ef322a930c84",
+    "sha256:8758c1507395dc8dcc1921ab7513b4430d346b6d71f6a8d8d04d5a28c96126d3",
+    "sha256:b652e62a3bebae7fd2b96570f4031ff8b4f7266b337afe4cfcb6ce1794d71b0f",
+    "sha256:c980f8fd08b22affda11243eac36b0621895daa06138a9b6e8e97ba8f1104fcf",
+    "sha256:e1d4b82e8e4c96ea171a530a2805cdee338c7c1f36c3acb889f3d9d247cc9e42",
+    "sha256:e71292bb3e8fd98cff9b2b9478eade0490e01a93dc404f12e89d66f22d8323a9",
+    "sha256:eaf0bd745ffcd9a256bff7aa484dee60cabb7276fe20b6b56bc8ba12344d31ce"
+  ],
+  "generation_evidence": [
+    {
+      "assertion_id": "wrangler-4-dr-2022-10-08-2021-pdf.519330-JLXP74-model",
+      "assertion_set_id": "wrangler-4-dr-2022-10-08-2021-pdf.519330-JLXP74",
+      "document_hash": "sha256:2a4eb89d27b1b9d8c6c1fafbc21255082fc1bf2dc0f6ffbd004d765863649673",
+      "identity_type": "model_code",
+      "native_identifier": "JLXP74",
+      "normalizer_id": "explicit_generation_identity",
+      "normalizer_version": "1.0.0",
+      "source_id": "wrangler-4-dr-2022-10-08-2021-pdf.519330",
+      "source_namespace": "source_model_code"
+    },
+    {
+      "assertion_id": "4-door-11-10-21-pdf.534724-JLXP74-model",
+      "assertion_set_id": "4-door-11-10-21-pdf.534724-JLXP74",
+      "document_hash": "sha256:eaf0bd745ffcd9a256bff7aa484dee60cabb7276fe20b6b56bc8ba12344d31ce",
+      "identity_type": "model_code",
+      "native_identifier": "JLXP74",
+      "normalizer_id": "explicit_generation_identity",
+      "normalizer_version": "1.0.0",
+      "source_id": "4-door-11-10-21-pdf.534724",
+      "source_namespace": "source_model_code"
+    },
+    {
+      "assertion_id": "4-door-12-7-21-pdf.543723-JLXP74-model",
+      "assertion_set_id": "4-door-12-7-21-pdf.543723-JLXP74",
+      "document_hash": "sha256:8758c1507395dc8dcc1921ab7513b4430d346b6d71f6a8d8d04d5a28c96126d3",
+      "identity_type": "model_code",
+      "native_identifier": "JLXP74",
+      "normalizer_id": "explicit_generation_identity",
+      "normalizer_version": "1.0.0",
+      "source_id": "4-door-12-7-21-pdf.543723",
+      "source_namespace": "source_model_code"
+    },
+    {
+      "assertion_id": "4-door-1-12-22-pdf.553816-JLXP74-model",
+      "assertion_set_id": "4-door-1-12-22-pdf.553816-JLXP74",
+      "document_hash": "sha256:1652bbbf452521502a414777cd5c6d3bd7e32a22cabbbb1bc9ff4da056d53e6d",
+      "identity_type": "model_code",
+      "native_identifier": "JLXP74",
+      "normalizer_id": "explicit_generation_identity",
+      "normalizer_version": "1.0.0",
+      "source_id": "4-door-1-12-22-pdf.553816",
+      "source_namespace": "source_model_code"
+    },
+    {
+      "assertion_id": "4-door-1-17-22-pdf.555728-JLXP74-model",
+      "assertion_set_id": "4-door-1-17-22-pdf.555728-JLXP74",
+      "document_hash": "sha256:11821c4e1144bf7a6f0df6f468f1cb4c80826527901cbd5dbe861bbd85a5a60b",
+      "identity_type": "model_code",
+      "native_identifier": "JLXP74",
+      "normalizer_id": "explicit_generation_identity",
+      "normalizer_version": "1.0.0",
+      "source_id": "4-door-1-17-22-pdf.555728",
+      "source_namespace": "source_model_code"
+    },
+    {
+      "assertion_id": "4-door-2-10-22-pdf.567217-JLXP74-model",
+      "assertion_set_id": "4-door-2-10-22-pdf.567217-JLXP74",
+      "document_hash": "sha256:1ea77968970b9d60cda1f7f8cb71a806386a8ab833e0be49368282c3c3cfb0ca",
+      "identity_type": "model_code",
+      "native_identifier": "JLXP74",
+      "normalizer_id": "explicit_generation_identity",
+      "normalizer_version": "1.0.0",
+      "source_id": "4-door-2-10-22-pdf.567217",
+      "source_namespace": "source_model_code"
+    },
+    {
+      "assertion_id": "4-door-3-11-22-pdf.579260-JLXP74-model",
+      "assertion_set_id": "4-door-3-11-22-pdf.579260-JLXP74",
+      "document_hash": "sha256:c980f8fd08b22affda11243eac36b0621895daa06138a9b6e8e97ba8f1104fcf",
+      "identity_type": "model_code",
+      "native_identifier": "JLXP74",
+      "normalizer_id": "explicit_generation_identity",
+      "normalizer_version": "1.0.0",
+      "source_id": "4-door-3-11-22-pdf.579260",
+      "source_namespace": "source_model_code"
+    },
+    {
+      "assertion_id": "4-door-4-7-22-pdf.591773-JLXP74-model",
+      "assertion_set_id": "4-door-4-7-22-pdf.591773-JLXP74",
+      "document_hash": "sha256:b652e62a3bebae7fd2b96570f4031ff8b4f7266b337afe4cfcb6ce1794d71b0f",
+      "identity_type": "model_code",
+      "native_identifier": "JLXP74",
+      "normalizer_id": "explicit_generation_identity",
+      "normalizer_version": "1.0.0",
+      "source_id": "4-door-4-7-22-pdf.591773",
+      "source_namespace": "source_model_code"
+    },
+    {
+      "assertion_id": "4-door-6-1-22-pdf.615030-JLXP74-model",
+      "assertion_set_id": "4-door-6-1-22-pdf.615030-JLXP74",
+      "document_hash": "sha256:e1d4b82e8e4c96ea171a530a2805cdee338c7c1f36c3acb889f3d9d247cc9e42",
+      "identity_type": "model_code",
+      "native_identifier": "JLXP74",
+      "normalizer_id": "explicit_generation_identity",
+      "normalizer_version": "1.0.0",
+      "source_id": "4-door-6-1-22-pdf.615030",
+      "source_namespace": "source_model_code"
+    }
+  ],
+  "normalized_assertions": [
+    {
+      "interpretation_id": "2022_JP_Wrangler_SP|sha256:e71292bb3e8fd98cff9b2b9478eade0490e01a93dc404f12e89d66f22d8323a9|MY2022-technical-layout-p1|JL22-55-generic_drive_classification",
+      "mapping_status": "mapped",
+      "normalization_notes": "Explicit 2022 model-wide BODY/CHASSIS four-wheel-drive layout in retained manufacturer technical p1; no equipment/mode inference.",
+      "normalized_concept": "4WD",
+      "raw_source_value": "2022 Jeep® Wrangler\nSPECIFICATIONS\n\nSpecifications are based on the latest product information available at the time of publication.\nAll dimensions are in inches (millimeters) unless otherwise noted.\nAll dimensions measured at curb weight with standard tires and wheels.\n\n\nGENERAL INFORMATION\nVehicle Type                                                      Sport-utility vehicle\nAssembly Plant                                                    Toledo Supplier Park, Toledo, Ohio\nEPA Vehicle Class                                                 Multipurpose vehicle\nIntroduction Date                                                 Fall 2017 as a 2018 model\n\n\nBODY/CHASSIS\nLayout                                                            Longitudinal front engine, four-wheel drive\nConstruction                                                      Ladder-type frame, open steel and aluminum body\n\n\nENGINE: 3.6-LITER PENTASTAR V-6\nAvailability                                                      Standard (all engine stop-start, MTX only) — Sport, Sahara, Rubicon\n                                                                  Available (all eTorque mild-hybrid assist, ATX only) — Sport, Sahara,\n                                                                  Rubicon\nType and Description                                              60-degree, V-type, liquid-cooled\nDisplacement (cu. in. / cc)                                       220 cu. in. (3,604 cu. cm)\nBore x Stroke                                                     3.78 x 3.27 (96 x 83)\nValve System                                                      Chain-driven DOHC, 24 valves and hydraulic end-pivot roller rockers\nFuel Injection                                                    Sequential, multiport, electronic, returnless\nConstruction                                                      Aluminum deep-skirt block, aluminum alloy heads\nCompression Ratio                                                 11.3:1\n\nPower (SAE net)\n(hp / kW@rpm)                                                     285 hp (213 kW) at 6,400 rpm\nTorque (SAE net)\n(lb.-ft. / N•m)                                                   260 lb.-ft. (353 N•m) at 4,800 rpm\n\nMax. Engine Speed (rpm)                                           6,600 rpm (electronically limited)\nFuel Requirement                                                  Unleaded regular, 87 octane (R + M)/2\nFuel Tank Capacity (gallons)                                      17.5 (2-door), 21.5 (4-door)\nOil Capacity                                                      5.0 quarts (4.7 liters)\nCoolant Capacity                                                  10 quarts (10.1 liters)\nEmission Controls                                                 Dual three-way catalytic converters, heated oxygen sensors and\n                                                                  internal engine features\n\n\n\n2022 JEEP®  |  WRANGLER  |  SPECIFICATIONS                                                                                                           |  1",
+      "source_assertion_ref": "2022_JP_Wrangler_SP|sha256:e71292bb3e8fd98cff9b2b9478eade0490e01a93dc404f12e89d66f22d8323a9|MY2022-technical-layout-p1|MY2022-layout-p1",
+      "target_attribute_key": "generic_drive_classification"
+    },
+    {
+      "interpretation_id": "4-door-6-1-22-pdf.615030|sha256:e1d4b82e8e4c96ea171a530a2805cdee338c7c1f36c3acb889f3d9d247cc9e42|4-door-6-1-22-pdf.615030-JLXP74|JL22-55-electrification_type",
+      "mapping_status": "mapped",
+      "normalization_notes": "Existing discovery direct projection only; qualified engine column and exact positive trim/QOP membership. No inferred values or approvals.",
+      "normalized_concept": "plug_in_hybrid",
+      "raw_source_value": "2.0L I4 DOHC DI TURBO PHEV ENGINE (ECX) ",
+      "source_assertion_ref": "4-door-6-1-22-pdf.615030|sha256:e1d4b82e8e4c96ea171a530a2805cdee338c7c1f36c3acb889f3d9d247cc9e42|4-door-6-1-22-pdf.615030-JLXP74|4-door-6-1-22-pdf.615030-JLXP74-ECX-engine-column",
+      "target_attribute_key": "electrification_type"
+    },
+    {
+      "interpretation_id": "4-door-6-1-22-pdf.615030|sha256:e1d4b82e8e4c96ea171a530a2805cdee338c7c1f36c3acb889f3d9d247cc9e42|4-door-6-1-22-pdf.615030-JLXP74|JL22-55-engine_aspiration",
+      "mapping_status": "mapped",
+      "normalization_notes": "Existing discovery direct projection only; qualified engine column and exact positive trim/QOP membership. No inferred values or approvals.",
+      "normalized_concept": "turbocharged",
+      "raw_source_value": "2.0L I4 DOHC DI TURBO PHEV ENGINE (ECX) ",
+      "source_assertion_ref": "4-door-6-1-22-pdf.615030|sha256:e1d4b82e8e4c96ea171a530a2805cdee338c7c1f36c3acb889f3d9d247cc9e42|4-door-6-1-22-pdf.615030-JLXP74|4-door-6-1-22-pdf.615030-JLXP74-ECX-engine-column",
+      "target_attribute_key": "engine_aspiration"
+    },
+    {
+      "interpretation_id": "4-door-6-1-22-pdf.615030|sha256:e1d4b82e8e4c96ea171a530a2805cdee338c7c1f36c3acb889f3d9d247cc9e42|4-door-6-1-22-pdf.615030-JLXP74|JL22-55-engine_cylinders",
+      "mapping_status": "mapped",
+      "normalization_notes": "Existing discovery direct projection only; qualified engine column and exact positive trim/QOP membership. No inferred values or approvals.",
+      "normalized_concept": 4,
+      "raw_source_value": "2.0L I4 DOHC DI TURBO PHEV ENGINE (ECX) ",
+      "source_assertion_ref": "4-door-6-1-22-pdf.615030|sha256:e1d4b82e8e4c96ea171a530a2805cdee338c7c1f36c3acb889f3d9d247cc9e42|4-door-6-1-22-pdf.615030-JLXP74|4-door-6-1-22-pdf.615030-JLXP74-ECX-engine-column",
+      "target_attribute_key": "engine_cylinders"
+    },
+    {
+      "interpretation_id": "4-door-6-1-22-pdf.615030|sha256:e1d4b82e8e4c96ea171a530a2805cdee338c7c1f36c3acb889f3d9d247cc9e42|4-door-6-1-22-pdf.615030-JLXP74|JL22-55-engine_displacement_liters",
+      "mapping_status": "mapped",
+      "normalization_notes": "Existing discovery direct projection only; qualified engine column and exact positive trim/QOP membership. No inferred values or approvals.",
+      "normalized_concept": {
+        "normalized_unit": "L",
+        "normalized_value": "2",
+        "raw_source_string": "2.0L I4 DOHC DI TURBO PHEV ENGINE (ECX) "
+      },
+      "raw_source_value": "2.0L I4 DOHC DI TURBO PHEV ENGINE (ECX) ",
+      "source_assertion_ref": "4-door-6-1-22-pdf.615030|sha256:e1d4b82e8e4c96ea171a530a2805cdee338c7c1f36c3acb889f3d9d247cc9e42|4-door-6-1-22-pdf.615030-JLXP74|4-door-6-1-22-pdf.615030-JLXP74-ECX-engine-column",
+      "target_attribute_key": "engine_displacement_liters"
+    },
+    {
+      "interpretation_id": "4-door-6-1-22-pdf.615030|sha256:e1d4b82e8e4c96ea171a530a2805cdee338c7c1f36c3acb889f3d9d247cc9e42|4-door-6-1-22-pdf.615030-JLXP74|JL22-55-engine_name",
+      "mapping_status": "mapped",
+      "normalization_notes": "Display descriptor only; manufacturer engine codes and names do not substitute for five-field identity.",
+      "normalized_concept": "2.0L I4 Turbo PHEV",
+      "raw_source_value": "2.0L I4 DOHC DI TURBO PHEV ENGINE (ECX) ",
+      "source_assertion_ref": "4-door-6-1-22-pdf.615030|sha256:e1d4b82e8e4c96ea171a530a2805cdee338c7c1f36c3acb889f3d9d247cc9e42|4-door-6-1-22-pdf.615030-JLXP74|4-door-6-1-22-pdf.615030-JLXP74-ECX-engine-column",
+      "target_attribute_key": "engine_name"
+    },
+    {
+      "interpretation_id": "4-door-6-1-22-pdf.615030|sha256:e1d4b82e8e4c96ea171a530a2805cdee338c7c1f36c3acb889f3d9d247cc9e42|4-door-6-1-22-pdf.615030-JLXP74|JL22-55-make",
+      "mapping_status": "mapped",
+      "normalization_notes": "Independent retained US MY2022 document heading; caller target is not evidence.",
+      "normalized_concept": "Jeep",
+      "raw_source_value": "REISSUED: 06/01/2022                                                                                                                                        PAGE: 1           JEEP\nISSUED:      10/08/2021\n\n                                                                      United States\n                                                                               2022                                                                                          WRANGLER\n\n                                                         JEEP        WRANGLER                 4   DOOR\n\n                                                       CUSTOMER PREFERRED CODE GUIDE\n\n\n         MODEL                                                                                                 CODE                  PAGES\n         WRANGLER UNLIMITED SPORT                                                               JLJL74                  2                                                     4\n\n         WRANGLER UNLIMITED SAHARA                                                            JLJP74                  8                                                       DOOR\n\n         WRANGLER UNLIMITED RUBICON                                                           JLJS74                 14\n         WRANGLER UNLIMITED RUBICON 392                                                    JLJX74                 18\n         WRANGLER UNLIMITED SPORT RHD                                                       JLUL74                 21\n         WRANGLER UNLIMITED SAHARA 4XE                                                     JLXP74                 22\n         WRANGLER UNLIMITED RUBICON 4XE                                                   JLXS74                 25\n         GROUP DETAIL                                                                                                                          28\n         STANDARD EQUIPMENT                                                                                                          34\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n         STEP #1: SELECT                                                                                        MODEL CODE\n\n         STEP #2: SELECT                                                                                        QUICK ORDER PACKAGE CODE\n\n         STEP #3: SELECT                                                                                        $ OPTIONS (IF DESIRED)\n\n         STEP #4: SELECT                                                                                        COLOR & TRIM CODES\n\n\n\n\n\n       © 2020 FCA US LLC, All Rights Reserved. IT IS FOR THE USE OF FCA AND ITS AUTHORIZED DEALERS ONLY AND MAY\n                       NOT BE OTHERWISE USED, RELEASED, OR REPRINTED WITHOUT FCA PRIOR PERMISSION.\n\n                             ORDERS ARE ACCEPTED ONLY WHEN VEHICLES ARE SHIPPED BY THE FACTORY.\n                                                          © 2020 FCA US LLC, All Rights Reserved.",
+      "source_assertion_ref": "4-door-6-1-22-pdf.615030|sha256:e1d4b82e8e4c96ea171a530a2805cdee338c7c1f36c3acb889f3d9d247cc9e42|4-door-6-1-22-pdf.615030-JLXP74|4-door-6-1-22-pdf.615030-JLXP74-heading",
+      "target_attribute_key": "make"
+    },
+    {
+      "interpretation_id": "4-door-6-1-22-pdf.615030|sha256:e1d4b82e8e4c96ea171a530a2805cdee338c7c1f36c3acb889f3d9d247cc9e42|4-door-6-1-22-pdf.615030-JLXP74|JL22-55-market",
+      "mapping_status": "mapped",
+      "normalization_notes": "Independent retained US MY2022 document heading; caller target is not evidence.",
+      "normalized_concept": "US",
+      "raw_source_value": "REISSUED: 06/01/2022                                                                                                                                        PAGE: 1           JEEP\nISSUED:      10/08/2021\n\n                                                                      United States\n                                                                               2022                                                                                          WRANGLER\n\n                                                         JEEP        WRANGLER                 4   DOOR\n\n                                                       CUSTOMER PREFERRED CODE GUIDE\n\n\n         MODEL                                                                                                 CODE                  PAGES\n         WRANGLER UNLIMITED SPORT                                                               JLJL74                  2                                                     4\n\n         WRANGLER UNLIMITED SAHARA                                                            JLJP74                  8                                                       DOOR\n\n         WRANGLER UNLIMITED RUBICON                                                           JLJS74                 14\n         WRANGLER UNLIMITED RUBICON 392                                                    JLJX74                 18\n         WRANGLER UNLIMITED SPORT RHD                                                       JLUL74                 21\n         WRANGLER UNLIMITED SAHARA 4XE                                                     JLXP74                 22\n         WRANGLER UNLIMITED RUBICON 4XE                                                   JLXS74                 25\n         GROUP DETAIL                                                                                                                          28\n         STANDARD EQUIPMENT                                                                                                          34\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n         STEP #1: SELECT                                                                                        MODEL CODE\n\n         STEP #2: SELECT                                                                                        QUICK ORDER PACKAGE CODE\n\n         STEP #3: SELECT                                                                                        $ OPTIONS (IF DESIRED)\n\n         STEP #4: SELECT                                                                                        COLOR & TRIM CODES\n\n\n\n\n\n       © 2020 FCA US LLC, All Rights Reserved. IT IS FOR THE USE OF FCA AND ITS AUTHORIZED DEALERS ONLY AND MAY\n                       NOT BE OTHERWISE USED, RELEASED, OR REPRINTED WITHOUT FCA PRIOR PERMISSION.\n\n                             ORDERS ARE ACCEPTED ONLY WHEN VEHICLES ARE SHIPPED BY THE FACTORY.\n                                                          © 2020 FCA US LLC, All Rights Reserved.",
+      "source_assertion_ref": "4-door-6-1-22-pdf.615030|sha256:e1d4b82e8e4c96ea171a530a2805cdee338c7c1f36c3acb889f3d9d247cc9e42|4-door-6-1-22-pdf.615030-JLXP74|4-door-6-1-22-pdf.615030-JLXP74-heading",
+      "target_attribute_key": "market"
+    },
+    {
+      "interpretation_id": "4-door-6-1-22-pdf.615030|sha256:e1d4b82e8e4c96ea171a530a2805cdee338c7c1f36c3acb889f3d9d247cc9e42|4-door-6-1-22-pdf.615030-JLXP74|JL22-55-model",
+      "mapping_status": "mapped",
+      "normalization_notes": "Independent retained US MY2022 document heading; caller target is not evidence.",
+      "normalized_concept": "Wrangler",
+      "raw_source_value": "REISSUED: 06/01/2022                                                                                                                                        PAGE: 1           JEEP\nISSUED:      10/08/2021\n\n                                                                      United States\n                                                                               2022                                                                                          WRANGLER\n\n                                                         JEEP        WRANGLER                 4   DOOR\n\n                                                       CUSTOMER PREFERRED CODE GUIDE\n\n\n         MODEL                                                                                                 CODE                  PAGES\n         WRANGLER UNLIMITED SPORT                                                               JLJL74                  2                                                     4\n\n         WRANGLER UNLIMITED SAHARA                                                            JLJP74                  8                                                       DOOR\n\n         WRANGLER UNLIMITED RUBICON                                                           JLJS74                 14\n         WRANGLER UNLIMITED RUBICON 392                                                    JLJX74                 18\n         WRANGLER UNLIMITED SPORT RHD                                                       JLUL74                 21\n         WRANGLER UNLIMITED SAHARA 4XE                                                     JLXP74                 22\n         WRANGLER UNLIMITED RUBICON 4XE                                                   JLXS74                 25\n         GROUP DETAIL                                                                                                                          28\n         STANDARD EQUIPMENT                                                                                                          34\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n         STEP #1: SELECT                                                                                        MODEL CODE\n\n         STEP #2: SELECT                                                                                        QUICK ORDER PACKAGE CODE\n\n         STEP #3: SELECT                                                                                        $ OPTIONS (IF DESIRED)\n\n         STEP #4: SELECT                                                                                        COLOR & TRIM CODES\n\n\n\n\n\n       © 2020 FCA US LLC, All Rights Reserved. IT IS FOR THE USE OF FCA AND ITS AUTHORIZED DEALERS ONLY AND MAY\n                       NOT BE OTHERWISE USED, RELEASED, OR REPRINTED WITHOUT FCA PRIOR PERMISSION.\n\n                             ORDERS ARE ACCEPTED ONLY WHEN VEHICLES ARE SHIPPED BY THE FACTORY.\n                                                          © 2020 FCA US LLC, All Rights Reserved.",
+      "source_assertion_ref": "4-door-6-1-22-pdf.615030|sha256:e1d4b82e8e4c96ea171a530a2805cdee338c7c1f36c3acb889f3d9d247cc9e42|4-door-6-1-22-pdf.615030-JLXP74|4-door-6-1-22-pdf.615030-JLXP74-heading",
+      "target_attribute_key": "model"
+    },
+    {
+      "interpretation_id": "4-door-6-1-22-pdf.615030|sha256:e1d4b82e8e4c96ea171a530a2805cdee338c7c1f36c3acb889f3d9d247cc9e42|4-door-6-1-22-pdf.615030-JLXP74|JL22-55-model_year",
+      "mapping_status": "mapped",
+      "normalization_notes": "Independent retained US MY2022 document heading; caller target is not evidence.",
+      "normalized_concept": 2022,
+      "raw_source_value": "REISSUED: 06/01/2022                                                                                                                                        PAGE: 1           JEEP\nISSUED:      10/08/2021\n\n                                                                      United States\n                                                                               2022                                                                                          WRANGLER\n\n                                                         JEEP        WRANGLER                 4   DOOR\n\n                                                       CUSTOMER PREFERRED CODE GUIDE\n\n\n         MODEL                                                                                                 CODE                  PAGES\n         WRANGLER UNLIMITED SPORT                                                               JLJL74                  2                                                     4\n\n         WRANGLER UNLIMITED SAHARA                                                            JLJP74                  8                                                       DOOR\n\n         WRANGLER UNLIMITED RUBICON                                                           JLJS74                 14\n         WRANGLER UNLIMITED RUBICON 392                                                    JLJX74                 18\n         WRANGLER UNLIMITED SPORT RHD                                                       JLUL74                 21\n         WRANGLER UNLIMITED SAHARA 4XE                                                     JLXP74                 22\n         WRANGLER UNLIMITED RUBICON 4XE                                                   JLXS74                 25\n         GROUP DETAIL                                                                                                                          28\n         STANDARD EQUIPMENT                                                                                                          34\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n         STEP #1: SELECT                                                                                        MODEL CODE\n\n         STEP #2: SELECT                                                                                        QUICK ORDER PACKAGE CODE\n\n         STEP #3: SELECT                                                                                        $ OPTIONS (IF DESIRED)\n\n         STEP #4: SELECT                                                                                        COLOR & TRIM CODES\n\n\n\n\n\n       © 2020 FCA US LLC, All Rights Reserved. IT IS FOR THE USE OF FCA AND ITS AUTHORIZED DEALERS ONLY AND MAY\n                       NOT BE OTHERWISE USED, RELEASED, OR REPRINTED WITHOUT FCA PRIOR PERMISSION.\n\n                             ORDERS ARE ACCEPTED ONLY WHEN VEHICLES ARE SHIPPED BY THE FACTORY.\n                                                          © 2020 FCA US LLC, All Rights Reserved.",
+      "source_assertion_ref": "4-door-6-1-22-pdf.615030|sha256:e1d4b82e8e4c96ea171a530a2805cdee338c7c1f36c3acb889f3d9d247cc9e42|4-door-6-1-22-pdf.615030-JLXP74|4-door-6-1-22-pdf.615030-JLXP74-heading",
+      "target_attribute_key": "model_year"
+    },
+    {
+      "interpretation_id": "4-door-6-1-22-pdf.615030|sha256:e1d4b82e8e4c96ea171a530a2805cdee338c7c1f36c3acb889f3d9d247cc9e42|4-door-6-1-22-pdf.615030-JLXP74|JL22-55-trim",
+      "mapping_status": "mapped",
+      "normalization_notes": "Provisional body-aware marketed-label normalization using exact manufacturer section, QOP column and existing Edmunds mapping; established Wrangler naming convention, no new-grade adjudication approval.",
+      "normalized_concept": "Unlimited Sahara 4xe",
+      "raw_source_value": "\nENGINE              $FWP    $MSRP   TRANSMISSION          $FWP   $MSRP                                                                                                                         HIGH ALTITUDE\n2.0L I4 DOHC DI      N/C      N/C   8-SPD AUTO             N/C     N/C                        29P                                           29N\nTURBO PHEV                          8P75PH PHEV                                         W/ALP M/H AJ1\nENGINE (ECX)                        TRANSMISSION\n                                    (DFY)\n\n",
+      "source_assertion_ref": "4-door-6-1-22-pdf.615030|sha256:e1d4b82e8e4c96ea171a530a2805cdee338c7c1f36c3acb889f3d9d247cc9e42|4-door-6-1-22-pdf.615030-JLXP74|4-door-6-1-22-pdf.615030-JLXP74-table",
+      "target_attribute_key": "trim"
+    }
+  ],
+  "normalized_technical_details": {
+    "drivetrain_details": {
+      "generic_classification": "4WD"
+    },
+    "engine": {
+      "cylinders": 4,
+      "displacement": {
+        "normalized_unit": "L",
+        "normalized_value": "2",
+        "raw_source_string": "2.0L I4 DOHC DI TURBO PHEV ENGINE (ECX) "
+      }
+    }
+  },
+  "reconciliation_and_review": {
+    "attribute_states": {
+      "engine_cylinders": {
+        "reconciliation_state": "single_source",
+        "review_disposition": "not_required"
+      },
+      "engine_displacement_liters": {
+        "reconciliation_state": "single_source",
+        "review_disposition": "not_required"
+      },
+      "fuel_type": {
+        "conflict_details": "Unresolved evidence-backed classification; remains null",
+        "reconciliation_state": "incomplete",
+        "review_disposition": "pending_review"
+      },
+      "generic_drive_classification": {
+        "reconciliation_state": "single_source",
+        "review_disposition": "not_required"
+      },
+      "make": {
+        "reconciliation_state": "single_source",
+        "review_disposition": "not_required"
+      },
+      "model": {
+        "reconciliation_state": "single_source",
+        "review_disposition": "not_required"
+      },
+      "model_year": {
+        "reconciliation_state": "single_source",
+        "review_disposition": "not_required"
+      }
+    },
+    "reconciliation_notes": "Provisional lightweight construction. Missing five-field classifications and unpublished MY2022 source correspondence block canonical eligibility; no approval is implied.",
+    "requires_human_review": true,
+    "review_workflow_disposition": "pending_review"
+  },
+  "research_revision_lineage": {
+    "classification_approval": "None; all unsupported values retained as null",
+    "edmunds_mapping": {
+      "body_style": "4-door",
+      "cylinders": "4",
+      "displacement_liters": "2.0",
+      "edmunds_aspiration": "turbocharged",
+      "edmunds_drive_category": "4WD",
+      "edmunds_electrification": "plug_in_hybrid",
+      "edmunds_fuel": "gas/electric; regular unleaded",
+      "edmunds_style_id": "401926717",
+      "edmunds_transmission": "8-speed shiftable automatic",
+      "edmunds_trim": "Unlimited Sahara [Wrangler 4xe]",
+      "edmunds_url": "https://www.edmunds.com/jeep/wrangler-4xe/2022/features-specs/",
+      "engine_code": "ECX",
+      "identity_evidence_status": "Five-field family corroboration from explicit gas/electric turbo PHEV description; mapping not applied",
+      "manufacturer_QOPs_not_observed_on_Edmunds": "",
+      "manufacturer_drive_projection": "not present in existing 56-row matrix; not independently matched",
+      "manufacturer_five_fields": "{\"engine_displacement_liters\":\"2\",\"engine_cylinders\":4,\"engine_aspiration\":\"turbocharged\",\"fuel_type\":null,\"electrification_type\":\"plug_in_hybrid\"}",
+      "manufacturer_model_code": "JLXP74",
+      "manufacturer_row": "JL22-55",
+      "manufacturer_transmission_codes": "DFY",
+      "manufacturer_trim": "Sahara 4xe",
+      "matched_QOPs": "29P",
+      "outcome": "Equivalent configuration with different naming",
+      "outcome_scope": "Observed offering counterpart; incomplete fields below are not certified",
+      "owner_scope_note": "No classification approval applied"
+    },
+    "edmunds_matrix": "docs/implementation/handoffs/MY2022_JL/edmunds_comparison_20261109/row_comparison.csv",
+    "edmunds_matrix_sha256": "sha256:616c53e282ed1680ced33ec3f6b0ab5e9c9e283d2d9d79d3e756ef322a930c84",
+    "edmunds_notice": "Secondary research transcription; exact offering/name match is not complete canonical identity proof",
+    "manufacturer_model_code": "JLXP74",
+    "package_inventory": "docs/implementation/handoffs/MY2022_JL/discovery_20261109/factory_package_availability_excerpts.json",
+    "package_inventory_sha256": "sha256:83afd1ec6ff5bb54216757e8d96d17ed7880b9765499ec817d24895ea43ac556",
+    "package_page_scope_notice": "Raw retention only; not normalized, authorized optional-equipment ingestion or evaluated compatibility",
+    "package_source_locators": [
+      {
+        "extraction_path": "docs/implementation/handoffs/MY2022_JL/discovery_20261109/evidence/4-door-1-12-22-pdf.553816.text.json",
+        "source_id": "4-door-1-12-22-pdf.553816",
+        "source_sha256": "sha256:1652bbbf452521502a414777cd5c6d3bd7e32a22cabbbb1bc9ff4da056d53e6d"
+      },
+      {
+        "extraction_path": "docs/implementation/handoffs/MY2022_JL/discovery_20261109/evidence/4-door-1-17-22-pdf.555728.text.json",
+        "source_id": "4-door-1-17-22-pdf.555728",
+        "source_sha256": "sha256:11821c4e1144bf7a6f0df6f468f1cb4c80826527901cbd5dbe861bbd85a5a60b"
+      },
+      {
+        "extraction_path": "docs/implementation/handoffs/MY2022_JL/discovery_20261109/evidence/4-door-11-10-21-pdf.534724.text.json",
+        "source_id": "4-door-11-10-21-pdf.534724",
+        "source_sha256": "sha256:eaf0bd745ffcd9a256bff7aa484dee60cabb7276fe20b6b56bc8ba12344d31ce"
+      },
+      {
+        "extraction_path": "docs/implementation/handoffs/MY2022_JL/discovery_20261109/evidence/4-door-12-7-21-pdf.543723.text.json",
+        "source_id": "4-door-12-7-21-pdf.543723",
+        "source_sha256": "sha256:8758c1507395dc8dcc1921ab7513b4430d346b6d71f6a8d8d04d5a28c96126d3"
+      },
+      {
+        "extraction_path": "docs/implementation/handoffs/MY2022_JL/discovery_20261109/evidence/4-door-2-10-22-pdf.567217.text.json",
+        "source_id": "4-door-2-10-22-pdf.567217",
+        "source_sha256": "sha256:1ea77968970b9d60cda1f7f8cb71a806386a8ab833e0be49368282c3c3cfb0ca"
+      },
+      {
+        "extraction_path": "docs/implementation/handoffs/MY2022_JL/discovery_20261109/evidence/4-door-3-11-22-pdf.579260.text.json",
+        "source_id": "4-door-3-11-22-pdf.579260",
+        "source_sha256": "sha256:c980f8fd08b22affda11243eac36b0621895daa06138a9b6e8e97ba8f1104fcf"
+      },
+      {
+        "extraction_path": "docs/implementation/handoffs/MY2022_JL/discovery_20261109/evidence/4-door-4-7-22-pdf.591773.text.json",
+        "source_id": "4-door-4-7-22-pdf.591773",
+        "source_sha256": "sha256:b652e62a3bebae7fd2b96570f4031ff8b4f7266b337afe4cfcb6ce1794d71b0f"
+      },
+      {
+        "extraction_path": "docs/implementation/handoffs/MY2022_JL/discovery_20261109/evidence/4-door-6-1-22-pdf.615030.text.json",
+        "source_id": "4-door-6-1-22-pdf.615030",
+        "source_sha256": "sha256:e1d4b82e8e4c96ea171a530a2805cdee338c7c1f36c3acb889f3d9d247cc9e42"
+      },
+      {
+        "extraction_path": "docs/implementation/handoffs/MY2022_JL/discovery_20261109/evidence/wrangler-4-dr-2022-10-08-2021-pdf.519330.text.json",
+        "source_id": "wrangler-4-dr-2022-10-08-2021-pdf.519330",
+        "source_sha256": "sha256:2a4eb89d27b1b9d8c6c1fafbc21255082fc1bf2dc0f6ffbd004d765863649673"
+      }
+    ],
+    "positive_QOP_observations": [
+      {
+        "body_style": "4-door",
+        "engine_code": "ECX",
+        "excerpt_id": "wrangler-4-dr-2022-10-08-2021-pdf.519330-p21",
+        "manufacturer_engine_segment": "2.0L I4 DOHC DI      N/C      N/C   8-SPD AUTO             N/C     N/C                         29P                                          29N\nTURBO PHEV                          8P75PH PHEV\nENGINE (ECX)                        TRANSMISSION\n                                    (DFY)",
+        "market": "US",
+        "marketed_column_label": "Sahara 4xe",
+        "model_code": "JLXP74",
+        "pdf_page_1_based": 21,
+        "quick_order_package": "29P",
+        "revision_date": "2021-10-08",
+        "source_id": "wrangler-4-dr-2022-10-08-2021-pdf.519330",
+        "source_sha256": "sha256:2a4eb89d27b1b9d8c6c1fafbc21255082fc1bf2dc0f6ffbd004d765863649673",
+        "transmission_code": "DFY"
+      },
+      {
+        "body_style": "4-door",
+        "engine_code": "ECX",
+        "excerpt_id": "4-door-11-10-21-pdf.534724-p21",
+        "manufacturer_engine_segment": "2.0L I4 DOHC DI      N/C      N/C   8-SPD AUTO             N/C     N/C                        29P                                           29N\nTURBO PHEV                          8P75PH PHEV\nENGINE (ECX)                        TRANSMISSION\n                                    (DFY)",
+        "market": "US",
+        "marketed_column_label": "Sahara 4xe",
+        "model_code": "JLXP74",
+        "pdf_page_1_based": 21,
+        "quick_order_package": "29P",
+        "revision_date": "2021-11-10",
+        "source_id": "4-door-11-10-21-pdf.534724",
+        "source_sha256": "sha256:eaf0bd745ffcd9a256bff7aa484dee60cabb7276fe20b6b56bc8ba12344d31ce",
+        "transmission_code": "DFY"
+      },
+      {
+        "body_style": "4-door",
+        "engine_code": "ECX",
+        "excerpt_id": "4-door-12-7-21-pdf.543723-p21",
+        "manufacturer_engine_segment": "2.0L I4 DOHC DI      N/C      N/C   8-SPD AUTO             N/C     N/C                        29P                                           29N\nTURBO PHEV                          8P75PH PHEV\nENGINE (ECX)                        TRANSMISSION\n                                    (DFY)",
+        "market": "US",
+        "marketed_column_label": "Sahara 4xe",
+        "model_code": "JLXP74",
+        "pdf_page_1_based": 21,
+        "quick_order_package": "29P",
+        "revision_date": "2021-12-07",
+        "source_id": "4-door-12-7-21-pdf.543723",
+        "source_sha256": "sha256:8758c1507395dc8dcc1921ab7513b4430d346b6d71f6a8d8d04d5a28c96126d3",
+        "transmission_code": "DFY"
+      },
+      {
+        "body_style": "4-door",
+        "engine_code": "ECX",
+        "excerpt_id": "4-door-1-12-22-pdf.553816-p22",
+        "manufacturer_engine_segment": "2.0L I4 DOHC DI      N/C      N/C   8-SPD AUTO             N/C     N/C                        29P                                           29N\nTURBO PHEV                          8P75PH PHEV\nENGINE (ECX)                        TRANSMISSION\n                                    (DFY)",
+        "market": "US",
+        "marketed_column_label": "Sahara 4xe",
+        "model_code": "JLXP74",
+        "pdf_page_1_based": 22,
+        "quick_order_package": "29P",
+        "revision_date": "2022-01-12",
+        "source_id": "4-door-1-12-22-pdf.553816",
+        "source_sha256": "sha256:1652bbbf452521502a414777cd5c6d3bd7e32a22cabbbb1bc9ff4da056d53e6d",
+        "transmission_code": "DFY"
+      },
+      {
+        "body_style": "4-door",
+        "engine_code": "ECX",
+        "excerpt_id": "4-door-1-17-22-pdf.555728-p22",
+        "manufacturer_engine_segment": "2.0L I4 DOHC DI      N/C      N/C   8-SPD AUTO             N/C     N/C                        29P                                           29N\nTURBO PHEV                          8P75PH PHEV\nENGINE (ECX)                        TRANSMISSION\n                                    (DFY)",
+        "market": "US",
+        "marketed_column_label": "Sahara 4xe",
+        "model_code": "JLXP74",
+        "pdf_page_1_based": 22,
+        "quick_order_package": "29P",
+        "revision_date": "2022-01-17",
+        "source_id": "4-door-1-17-22-pdf.555728",
+        "source_sha256": "sha256:11821c4e1144bf7a6f0df6f468f1cb4c80826527901cbd5dbe861bbd85a5a60b",
+        "transmission_code": "DFY"
+      },
+      {
+        "body_style": "4-door",
+        "engine_code": "ECX",
+        "excerpt_id": "4-door-2-10-22-pdf.567217-p22",
+        "manufacturer_engine_segment": "2.0L I4 DOHC DI      N/C      N/C   8-SPD AUTO             N/C     N/C                        29P                                           29N\nTURBO PHEV                          8P75PH PHEV                                         W/ALP M/H AJ1\nENGINE (ECX)                        TRANSMISSION\n                                    (DFY)",
+        "market": "US",
+        "marketed_column_label": "Sahara 4xe",
+        "model_code": "JLXP74",
+        "pdf_page_1_based": 22,
+        "quick_order_package": "29P",
+        "revision_date": "2022-02-10",
+        "source_id": "4-door-2-10-22-pdf.567217",
+        "source_sha256": "sha256:1ea77968970b9d60cda1f7f8cb71a806386a8ab833e0be49368282c3c3cfb0ca",
+        "transmission_code": "DFY"
+      },
+      {
+        "body_style": "4-door",
+        "engine_code": "ECX",
+        "excerpt_id": "4-door-3-11-22-pdf.579260-p22",
+        "manufacturer_engine_segment": "2.0L I4 DOHC DI      N/C      N/C   8-SPD AUTO             N/C     N/C                        29P                                           29N\nTURBO PHEV                          8P75PH PHEV                                         W/ALP M/H AJ1\nENGINE (ECX)                        TRANSMISSION\n                                    (DFY)",
+        "market": "US",
+        "marketed_column_label": "Sahara 4xe",
+        "model_code": "JLXP74",
+        "pdf_page_1_based": 22,
+        "quick_order_package": "29P",
+        "revision_date": "2022-03-11",
+        "source_id": "4-door-3-11-22-pdf.579260",
+        "source_sha256": "sha256:c980f8fd08b22affda11243eac36b0621895daa06138a9b6e8e97ba8f1104fcf",
+        "transmission_code": "DFY"
+      },
+      {
+        "body_style": "4-door",
+        "engine_code": "ECX",
+        "excerpt_id": "4-door-4-7-22-pdf.591773-p22",
+        "manufacturer_engine_segment": "2.0L I4 DOHC DI      N/C      N/C   8-SPD AUTO             N/C     N/C                        29P                                           29N\nTURBO PHEV                          8P75PH PHEV                                         W/ALP M/H AJ1\nENGINE (ECX)                        TRANSMISSION\n                                    (DFY)",
+        "market": "US",
+        "marketed_column_label": "Sahara 4xe",
+        "model_code": "JLXP74",
+        "pdf_page_1_based": 22,
+        "quick_order_package": "29P",
+        "revision_date": "2022-04-07",
+        "source_id": "4-door-4-7-22-pdf.591773",
+        "source_sha256": "sha256:b652e62a3bebae7fd2b96570f4031ff8b4f7266b337afe4cfcb6ce1794d71b0f",
+        "transmission_code": "DFY"
+      },
+      {
+        "body_style": "4-door",
+        "engine_code": "ECX",
+        "excerpt_id": "4-door-6-1-22-pdf.615030-p22",
+        "manufacturer_engine_segment": "2.0L I4 DOHC DI      N/C      N/C   8-SPD AUTO             N/C     N/C                        29P                                           29N\nTURBO PHEV                          8P75PH PHEV                                         W/ALP M/H AJ1\nENGINE (ECX)                        TRANSMISSION\n                                    (DFY)",
+        "market": "US",
+        "marketed_column_label": "Sahara 4xe",
+        "model_code": "JLXP74",
+        "pdf_page_1_based": 22,
+        "quick_order_package": "29P",
+        "revision_date": "2022-06-01",
+        "source_id": "4-door-6-1-22-pdf.615030",
+        "source_sha256": "sha256:e1d4b82e8e4c96ea171a530a2805cdee338c7c1f36c3acb889f3d9d247cc9e42",
+        "transmission_code": "DFY"
+      }
+    ],
+    "research_matrix": "docs/implementation/handoffs/MY2022_JL/discovery_20261109/provisional_configuration_inventory.json",
+    "research_matrix_sha256": "sha256:c07f3b2aba1876011ac88751f51e725d3658f7a559d0d80110b2935fb15bb656",
+    "research_row": {
+      "body_style": "4-door",
+      "classification_status": "research projection only; unassessed fields remain null; no owner approval applied",
+      "confidence": "high for positive guide cell; canonical classification pending",
+      "electrification_type": "plug_in_hybrid",
+      "engine_code": "ECX",
+      "evidence": [
+        {
+          "pdf_page_1_based": 21,
+          "quick_order_package": "29P",
+          "revision_date": "2021-10-08",
+          "source_id": "wrangler-4-dr-2022-10-08-2021-pdf.519330",
+          "source_sha256": "sha256:2a4eb89d27b1b9d8c6c1fafbc21255082fc1bf2dc0f6ffbd004d765863649673",
+          "transmission_code": "DFY"
+        },
+        {
+          "pdf_page_1_based": 21,
+          "quick_order_package": "29P",
+          "revision_date": "2021-11-10",
+          "source_id": "4-door-11-10-21-pdf.534724",
+          "source_sha256": "sha256:eaf0bd745ffcd9a256bff7aa484dee60cabb7276fe20b6b56bc8ba12344d31ce",
+          "transmission_code": "DFY"
+        },
+        {
+          "pdf_page_1_based": 21,
+          "quick_order_package": "29P",
+          "revision_date": "2021-12-07",
+          "source_id": "4-door-12-7-21-pdf.543723",
+          "source_sha256": "sha256:8758c1507395dc8dcc1921ab7513b4430d346b6d71f6a8d8d04d5a28c96126d3",
+          "transmission_code": "DFY"
+        },
+        {
+          "pdf_page_1_based": 22,
+          "quick_order_package": "29P",
+          "revision_date": "2022-01-12",
+          "source_id": "4-door-1-12-22-pdf.553816",
+          "source_sha256": "sha256:1652bbbf452521502a414777cd5c6d3bd7e32a22cabbbb1bc9ff4da056d53e6d",
+          "transmission_code": "DFY"
+        },
+        {
+          "pdf_page_1_based": 22,
+          "quick_order_package": "29P",
+          "revision_date": "2022-01-17",
+          "source_id": "4-door-1-17-22-pdf.555728",
+          "source_sha256": "sha256:11821c4e1144bf7a6f0df6f468f1cb4c80826527901cbd5dbe861bbd85a5a60b",
+          "transmission_code": "DFY"
+        },
+        {
+          "pdf_page_1_based": 22,
+          "quick_order_package": "29P",
+          "revision_date": "2022-02-10",
+          "source_id": "4-door-2-10-22-pdf.567217",
+          "source_sha256": "sha256:1ea77968970b9d60cda1f7f8cb71a806386a8ab833e0be49368282c3c3cfb0ca",
+          "transmission_code": "DFY"
+        },
+        {
+          "pdf_page_1_based": 22,
+          "quick_order_package": "29P",
+          "revision_date": "2022-03-11",
+          "source_id": "4-door-3-11-22-pdf.579260",
+          "source_sha256": "sha256:c980f8fd08b22affda11243eac36b0621895daa06138a9b6e8e97ba8f1104fcf",
+          "transmission_code": "DFY"
+        },
+        {
+          "pdf_page_1_based": 22,
+          "quick_order_package": "29P",
+          "revision_date": "2022-04-07",
+          "source_id": "4-door-4-7-22-pdf.591773",
+          "source_sha256": "sha256:b652e62a3bebae7fd2b96570f4031ff8b4f7266b337afe4cfcb6ce1794d71b0f",
+          "transmission_code": "DFY"
+        },
+        {
+          "pdf_page_1_based": 22,
+          "quick_order_package": "29P",
+          "revision_date": "2022-06-01",
+          "source_id": "4-door-6-1-22-pdf.615030",
+          "source_sha256": "sha256:e1d4b82e8e4c96ea171a530a2805cdee338c7c1f36c3acb889f3d9d247cc9e42",
+          "transmission_code": "DFY"
+        }
+      ],
+      "first_observed_revision": "2021-10-08",
+      "last_observed_revision": "2022-06-01",
+      "market": "US",
+      "marketed_column_label": "Sahara 4xe",
+      "model_code": "JLXP74",
+      "model_year": 2022,
+      "quick_order_packages": [
+        "29P"
+      ],
+      "research_row_id": "JL22-55",
+      "scope_status": "provisional_consumer",
+      "transmission_codes": [
+        "DFY"
+      ],
+      "unresolved_questions": [
+        "Approve MY2022 trim normalization and five-field classification; no MY2021 approval carried forward"
+      ]
+    },
+    "target_generation_context": {
+      "authorization_status": "intended existing target only; not a published correspondence",
+      "pk": 32,
+      "uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4"
+    },
+    "trim_review": "Provisional established marketed naming; no new human finding asserted"
+  },
+  "source_configuration_identities": [
+    {
+      "identity_type": "record_id",
+      "native_identifier": "MY2022-technical-layout-p1",
+      "source_description": "2022_JP_Wrangler_SP record_id MY2022-technical-layout-p1",
+      "source_id": "2022_JP_Wrangler_SP"
+    },
+    {
+      "identity_type": "record_id",
+      "native_identifier": "4-door-1-12-22-pdf.553816-JLXP74",
+      "source_description": "4-door-1-12-22-pdf.553816 record_id 4-door-1-12-22-pdf.553816-JLXP74",
+      "source_id": "4-door-1-12-22-pdf.553816"
+    },
+    {
+      "identity_type": "record_id",
+      "native_identifier": "4-door-1-17-22-pdf.555728-JLXP74",
+      "source_description": "4-door-1-17-22-pdf.555728 record_id 4-door-1-17-22-pdf.555728-JLXP74",
+      "source_id": "4-door-1-17-22-pdf.555728"
+    },
+    {
+      "identity_type": "record_id",
+      "native_identifier": "4-door-11-10-21-pdf.534724-JLXP74",
+      "source_description": "4-door-11-10-21-pdf.534724 record_id 4-door-11-10-21-pdf.534724-JLXP74",
+      "source_id": "4-door-11-10-21-pdf.534724"
+    },
+    {
+      "identity_type": "record_id",
+      "native_identifier": "4-door-12-7-21-pdf.543723-JLXP74",
+      "source_description": "4-door-12-7-21-pdf.543723 record_id 4-door-12-7-21-pdf.543723-JLXP74",
+      "source_id": "4-door-12-7-21-pdf.543723"
+    },
+    {
+      "identity_type": "record_id",
+      "native_identifier": "4-door-2-10-22-pdf.567217-JLXP74",
+      "source_description": "4-door-2-10-22-pdf.567217 record_id 4-door-2-10-22-pdf.567217-JLXP74",
+      "source_id": "4-door-2-10-22-pdf.567217"
+    },
+    {
+      "identity_type": "record_id",
+      "native_identifier": "4-door-3-11-22-pdf.579260-JLXP74",
+      "source_description": "4-door-3-11-22-pdf.579260 record_id 4-door-3-11-22-pdf.579260-JLXP74",
+      "source_id": "4-door-3-11-22-pdf.579260"
+    },
+    {
+      "identity_type": "record_id",
+      "native_identifier": "4-door-4-7-22-pdf.591773-JLXP74",
+      "source_description": "4-door-4-7-22-pdf.591773 record_id 4-door-4-7-22-pdf.591773-JLXP74",
+      "source_id": "4-door-4-7-22-pdf.591773"
+    },
+    {
+      "identity_type": "record_id",
+      "native_identifier": "4-door-6-1-22-pdf.615030-JLXP74",
+      "source_description": "4-door-6-1-22-pdf.615030 record_id 4-door-6-1-22-pdf.615030-JLXP74",
+      "source_id": "4-door-6-1-22-pdf.615030"
+    },
+    {
+      "identity_type": "record_id",
+      "native_identifier": "JL22-55-edmunds-transcription",
+      "source_description": "rigarchive_MY2022_edmunds_reconciliation record_id JL22-55-edmunds-transcription",
+      "source_id": "rigarchive_MY2022_edmunds_reconciliation"
+    },
+    {
+      "identity_type": "record_id",
+      "native_identifier": "wrangler-4-dr-2022-10-08-2021-pdf.519330-JLXP74",
+      "source_description": "wrangler-4-dr-2022-10-08-2021-pdf.519330 record_id wrangler-4-dr-2022-10-08-2021-pdf.519330-JLXP74",
+      "source_id": "wrangler-4-dr-2022-10-08-2021-pdf.519330"
+    }
+  ]
+}

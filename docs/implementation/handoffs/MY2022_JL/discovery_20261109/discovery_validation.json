@@ -1,0 +1,29 @@
+{
+  "status": "discovery_prepared_for_review",
+  "source_PDFs": 20,
+  "manufacturer_authored_press_releases": 1,
+  "order_guides": 18,
+  "provisional_guide_rows": 56,
+  "consumer_proposals": 55,
+  "RHD_review_rows": 1,
+  "Jeep_Beach": "separate unresolved edition relationship",
+  "source_integrity_tests": {
+    "passed": 6,
+    "failed": 0
+  },
+  "Django_tests": {
+    "passed": 724,
+    "failed": 0
+  },
+  "system_check": "passed",
+  "migration_dry_run": "no changes detected",
+  "operational_database_hash_preserved": true,
+  "DATA_PRESERVATION_bytes_preserved": true,
+  "candidate_construction": false,
+  "Matrix_certification": false,
+  "canonical_writes": false,
+  "commit_or_push_performed": false,
+  "initial_HEAD": "bef7d76e3fe4f33990180694f845a436b7987da3",
+  "externally_observed_later_HEAD": "035bfcf3862f2c0f5e20d616d086218afd7e57d3",
+  "interpreter_deviation": "owner authorized existing .venv: Python 3.13.1 / Django 6.0.7 / pypdf 6.16.1"
+}

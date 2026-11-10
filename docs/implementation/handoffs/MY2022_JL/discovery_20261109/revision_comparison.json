@@ -1,0 +1,629 @@
+[
+  {
+    "source_id": "2-door-10-8-21-pdf.519659",
+    "revision_date": "2021-10-08",
+    "positive_pairings": 19,
+    "added": [
+      [
+        "JLJL72",
+        "Sport",
+        "EC1",
+        "DFT"
+      ],
+      [
+        "JLJL72",
+        "Sport",
+        "ERC",
+        "DEM"
+      ],
+      [
+        "JLJL72",
+        "Sport",
+        "ERC",
+        "DFT"
+      ],
+      [
+        "JLJL72",
+        "Sport",
+        "ERG",
+        "DFT"
+      ],
+      [
+        "JLJL72",
+        "Sport S",
+        "EC1",
+        "DFT"
+      ],
+      [
+        "JLJL72",
+        "Sport S",
+        "ERC",
+        "DEM"
+      ],
+      [
+        "JLJL72",
+        "Sport S",
+        "ERC",
+        "DFT"
+      ],
+      [
+        "JLJL72",
+        "Sport S",
+        "ERG",
+        "DFT"
+      ],
+      [
+        "JLJL72",
+        "Willys",
+        "EC1",
+        "DFT"
+      ],
+      [
+        "JLJL72",
+        "Willys",
+        "ERC",
+        "DEM"
+      ],
+      [
+        "JLJL72",
+        "Willys",
+        "ERC",
+        "DFT"
+      ],
+      [
+        "JLJL72",
+        "Willys",
+        "ERG",
+        "DFT"
+      ],
+      [
+        "JLJL72",
+        "Willys Sport",
+        "EC1",
+        "DFT"
+      ],
+      [
+        "JLJL72",
+        "Willys Sport",
+        "ERC",
+        "DEM"
+      ],
+      [
+        "JLJL72",
+        "Willys Sport",
+        "ERC",
+        "DFT"
+      ],
+      [
+        "JLJL72",
+        "Willys Sport",
+        "ERG",
+        "DFT"
+      ],
+      [
+        "JLJS72",
+        "Rubicon",
+        "EC1",
+        "DFT"
+      ],
+      [
+        "JLJS72",
+        "Rubicon",
+        "ERC",
+        "DEM"
+      ],
+      [
+        "JLJS72",
+        "Rubicon",
+        "ERG",
+        "DFT"
+      ]
+    ],
+    "absent_since_previous": [],
+    "notice": "Omission is not proven discontinuation; guide observation date is not production boundary."
+  },
+  {
+    "source_id": "2-door-11-10-21-pdf.534732",
+    "revision_date": "2021-11-10",
+    "positive_pairings": 15,
+    "added": [],
+    "absent_since_previous": [
+      [
+        "JLJL72",
+        "Sport",
+        "ERC",
+        "DFT"
+      ],
+      [
+        "JLJL72",
+        "Sport S",
+        "ERC",
+        "DFT"
+      ],
+      [
+        "JLJL72",
+        "Willys",
+        "ERC",
+        "DFT"
+      ],
+      [
+        "JLJL72",
+        "Willys Sport",
+        "ERC",
+        "DFT"
+      ]
+    ],
+    "notice": "Omission is not proven discontinuation; guide observation date is not production boundary."
+  },
+  {
+    "source_id": "2-door-12-7-21-pdf.543725",
+    "revision_date": "2021-12-07",
+    "positive_pairings": 15,
+    "added": [],
+    "absent_since_previous": [],
+    "notice": "Omission is not proven discontinuation; guide observation date is not production boundary."
+  },
+  {
+    "source_id": "2-door-1-12-22-pdf.553817",
+    "revision_date": "2022-01-12",
+    "positive_pairings": 16,
+    "added": [
+      [
+        "JLJL72",
+        "Willys",
+        "ERC",
+        "DFT"
+      ]
+    ],
+    "absent_since_previous": [],
+    "notice": "Omission is not proven discontinuation; guide observation date is not production boundary."
+  },
+  {
+    "source_id": "2-door-1-17-22-pdf.555729",
+    "revision_date": "2022-01-17",
+    "positive_pairings": 16,
+    "added": [],
+    "absent_since_previous": [],
+    "notice": "Omission is not proven discontinuation; guide observation date is not production boundary."
+  },
+  {
+    "source_id": "2-door-2-10-22-pdf.567215",
+    "revision_date": "2022-02-10",
+    "positive_pairings": 16,
+    "added": [],
+    "absent_since_previous": [],
+    "notice": "Omission is not proven discontinuation; guide observation date is not production boundary."
+  },
+  {
+    "source_id": "2-door-3-11-22-pdf.579259",
+    "revision_date": "2022-03-11",
+    "positive_pairings": 16,
+    "added": [],
+    "absent_since_previous": [],
+    "notice": "Omission is not proven discontinuation; guide observation date is not production boundary."
+  },
+  {
+    "source_id": "2-door-4-7-22-pdf.591775",
+    "revision_date": "2022-04-07",
+    "positive_pairings": 16,
+    "added": [],
+    "absent_since_previous": [],
+    "notice": "Omission is not proven discontinuation; guide observation date is not production boundary."
+  },
+  {
+    "source_id": "2-door-6-3-22-pdf.615028",
+    "revision_date": "2022-06-03",
+    "positive_pairings": 16,
+    "added": [],
+    "absent_since_previous": [],
+    "notice": "Omission is not proven discontinuation; guide observation date is not production boundary."
+  },
+  {
+    "source_id": "wrangler-4-dr-2022-10-08-2021-pdf.519330",
+    "revision_date": "2021-10-08",
+    "positive_pairings": 45,
+    "added": [
+      [
+        "JLJL74",
+        "Altitude",
+        "EC1",
+        "DFT"
+      ],
+      [
+        "JLJL74",
+        "Altitude",
+        "ERC",
+        "DEM"
+      ],
+      [
+        "JLJL74",
+        "Altitude",
+        "ERC",
+        "DFT"
+      ],
+      [
+        "JLJL74",
+        "Altitude",
+        "ERG",
+        "DFT"
+      ],
+      [
+        "JLJL74",
+        "Altitude",
+        "EXJ",
+        "DFV"
+      ],
+      [
+        "JLJL74",
+        "Sport",
+        "EC1",
+        "DFT"
+      ],
+      [
+        "JLJL74",
+        "Sport",
+        "ERC",
+        "DEM"
+      ],
+      [
+        "JLJL74",
+        "Sport",
+        "ERC",
+        "DFT"
+      ],
+      [
+        "JLJL74",
+        "Sport",
+        "ERG",
+        "DFT"
+      ],
+      [
+        "JLJL74",
+        "Sport",
+        "EXJ",
+        "DFV"
+      ],
+      [
+        "JLJL74",
+        "Sport S",
+        "EC1",
+        "DFT"
+      ],
+      [
+        "JLJL74",
+        "Sport S",
+        "ERC",
+        "DEM"
+      ],
+      [
+        "JLJL74",
+        "Sport S",
+        "ERC",
+        "DFT"
+      ],
+      [
+        "JLJL74",
+        "Sport S",
+        "ERG",
+        "DFT"
+      ],
+      [
+        "JLJL74",
+        "Sport S",
+        "EXJ",
+        "DFV"
+      ],
+      [
+        "JLJL74",
+        "Willys",
+        "EC1",
+        "DFT"
+      ],
+      [
+        "JLJL74",
+        "Willys",
+        "ERC",
+        "DEM"
+      ],
+      [
+        "JLJL74",
+        "Willys",
+        "ERC",
+        "DFT"
+      ],
+      [
+        "JLJL74",
+        "Willys",
+        "ERG",
+        "DFT"
+      ],
+      [
+        "JLJL74",
+        "Willys",
+        "EXJ",
+        "DFV"
+      ],
+      [
+        "JLJL74",
+        "Willys Sport",
+        "EC1",
+        "DFT"
+      ],
+      [
+        "JLJL74",
+        "Willys Sport",
+        "ERC",
+        "DEM"
+      ],
+      [
+        "JLJL74",
+        "Willys Sport",
+        "ERC",
+        "DFT"
+      ],
+      [
+        "JLJL74",
+        "Willys Sport",
+        "ERG",
+        "DFT"
+      ],
+      [
+        "JLJL74",
+        "Willys Sport",
+        "EXJ",
+        "DFV"
+      ],
+      [
+        "JLJP74",
+        "Altitude",
+        "EC1",
+        "DFT"
+      ],
+      [
+        "JLJP74",
+        "Altitude",
+        "ERC",
+        "DEM"
+      ],
+      [
+        "JLJP74",
+        "Altitude",
+        "ERC",
+        "DFT"
+      ],
+      [
+        "JLJP74",
+        "Altitude",
+        "ERG",
+        "DFT"
+      ],
+      [
+        "JLJP74",
+        "Altitude",
+        "EXJ",
+        "DFV"
+      ],
+      [
+        "JLJP74",
+        "High Altitude",
+        "EXJ",
+        "DFV"
+      ],
+      [
+        "JLJP74",
+        "Sahara",
+        "EC1",
+        "DFT"
+      ],
+      [
+        "JLJP74",
+        "Sahara",
+        "ERC",
+        "DEM"
+      ],
+      [
+        "JLJP74",
+        "Sahara",
+        "ERC",
+        "DFT"
+      ],
+      [
+        "JLJP74",
+        "Sahara",
+        "ERG",
+        "DFT"
+      ],
+      [
+        "JLJP74",
+        "Sahara",
+        "EXJ",
+        "DFV"
+      ],
+      [
+        "JLJS74",
+        "Rubicon",
+        "EC1",
+        "DFT"
+      ],
+      [
+        "JLJS74",
+        "Rubicon",
+        "ERC",
+        "DEM"
+      ],
+      [
+        "JLJS74",
+        "Rubicon",
+        "ERG",
+        "DFT"
+      ],
+      [
+        "JLJS74",
+        "Rubicon",
+        "EXJ",
+        "DFV"
+      ],
+      [
+        "JLJX74",
+        "Rubicon 392",
+        "ESG",
+        "DFV"
+      ],
+      [
+        "JLUL74",
+        "Sport RHD",
+        "EC1",
+        "DFT"
+      ],
+      [
+        "JLXP74",
+        "High Altitude",
+        "ECX",
+        "DFY"
+      ],
+      [
+        "JLXP74",
+        "Sahara 4xe",
+        "ECX",
+        "DFY"
+      ],
+      [
+        "JLXS74",
+        "Rubicon 4xe",
+        "ECX",
+        "DFY"
+      ]
+    ],
+    "absent_since_previous": [],
+    "notice": "Omission is not proven discontinuation; guide observation date is not production boundary."
+  },
+  {
+    "source_id": "4-door-11-10-21-pdf.534724",
+    "revision_date": "2021-11-10",
+    "positive_pairings": 42,
+    "added": [
+      [
+        "JLJP74",
+        "High Altitude",
+        "EC1",
+        "DFT"
+      ],
+      [
+        "JLJP74",
+        "High Altitude",
+        "ERG",
+        "DFT"
+      ]
+    ],
+    "absent_since_previous": [
+      [
+        "JLJL74",
+        "Altitude",
+        "ERC",
+        "DFT"
+      ],
+      [
+        "JLJL74",
+        "Sport S",
+        "ERC",
+        "DFT"
+      ],
+      [
+        "JLJL74",
+        "Willys",
+        "ERC",
+        "DFT"
+      ],
+      [
+        "JLJP74",
+        "Altitude",
+        "ERC",
+        "DFT"
+      ],
+      [
+        "JLJP74",
+        "Sahara",
+        "ERC",
+        "DFT"
+      ]
+    ],
+    "notice": "Omission is not proven discontinuation; guide observation date is not production boundary."
+  },
+  {
+    "source_id": "4-door-12-7-21-pdf.543723",
+    "revision_date": "2021-12-07",
+    "positive_pairings": 43,
+    "added": [
+      [
+        "JLJL74",
+        "Sport S",
+        "ERC",
+        "DFT"
+      ]
+    ],
+    "absent_since_previous": [],
+    "notice": "Omission is not proven discontinuation; guide observation date is not production boundary."
+  },
+  {
+    "source_id": "4-door-1-12-22-pdf.553816",
+    "revision_date": "2022-01-12",
+    "positive_pairings": 44,
+    "added": [
+      [
+        "JLJL74",
+        "Willys",
+        "ERC",
+        "DFT"
+      ]
+    ],
+    "absent_since_previous": [],
+    "notice": "Omission is not proven discontinuation; guide observation date is not production boundary."
+  },
+  {
+    "source_id": "4-door-1-17-22-pdf.555728",
+    "revision_date": "2022-01-17",
+    "positive_pairings": 44,
+    "added": [],
+    "absent_since_previous": [],
+    "notice": "Omission is not proven discontinuation; guide observation date is not production boundary."
+  },
+  {
+    "source_id": "4-door-2-10-22-pdf.567217",
+    "revision_date": "2022-02-10",
+    "positive_pairings": 45,
+    "added": [
+      [
+        "JLJL74",
+        "High Tide",
+        "ERG",
+        "DFT"
+      ]
+    ],
+    "absent_since_previous": [],
+    "notice": "Omission is not proven discontinuation; guide observation date is not production boundary."
+  },
+  {
+    "source_id": "4-door-3-11-22-pdf.579260",
+    "revision_date": "2022-03-11",
+    "positive_pairings": 45,
+    "added": [],
+    "absent_since_previous": [],
+    "notice": "Omission is not proven discontinuation; guide observation date is not production boundary."
+  },
+  {
+    "source_id": "4-door-4-7-22-pdf.591773",
+    "revision_date": "2022-04-07",
+    "positive_pairings": 45,
+    "added": [],
+    "absent_since_previous": [],
+    "notice": "Omission is not proven discontinuation; guide observation date is not production boundary."
+  },
+  {
+    "source_id": "4-door-6-1-22-pdf.615030",
+    "revision_date": "2022-06-01",
+    "positive_pairings": 45,
+    "added": [],
+    "absent_since_previous": [],
+    "notice": "Omission is not proven discontinuation; guide observation date is not production boundary."
+  }
+]

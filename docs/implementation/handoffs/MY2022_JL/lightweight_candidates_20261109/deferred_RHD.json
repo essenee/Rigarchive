@@ -1,0 +1,129 @@
+{
+  "research_row": {
+    "research_row_id": "JL22-53",
+    "model_year": 2022,
+    "market": "US",
+    "body_style": "4-door",
+    "model_code": "JLUL74",
+    "marketed_column_label": "Sport RHD",
+    "engine_code": "EC1",
+    "electrification_type": null,
+    "classification_status": "research projection only; unassessed fields remain null; no owner approval applied",
+    "confidence": "high for positive guide cell; canonical classification pending",
+    "scope_status": "owner_RHD_scope_decision",
+    "transmission_codes": [
+      "DFT"
+    ],
+    "quick_order_packages": [
+      "22A"
+    ],
+    "first_observed_revision": "2021-10-08",
+    "last_observed_revision": "2022-06-01",
+    "evidence": [
+      {
+        "source_id": "wrangler-4-dr-2022-10-08-2021-pdf.519330",
+        "source_sha256": "sha256:2a4eb89d27b1b9d8c6c1fafbc21255082fc1bf2dc0f6ffbd004d765863649673",
+        "pdf_page_1_based": 20,
+        "revision_date": "2021-10-08",
+        "quick_order_package": "22A",
+        "transmission_code": "DFT"
+      },
+      {
+        "source_id": "4-door-11-10-21-pdf.534724",
+        "source_sha256": "sha256:eaf0bd745ffcd9a256bff7aa484dee60cabb7276fe20b6b56bc8ba12344d31ce",
+        "pdf_page_1_based": 20,
+        "revision_date": "2021-11-10",
+        "quick_order_package": "22A",
+        "transmission_code": "DFT"
+      },
+      {
+        "source_id": "4-door-12-7-21-pdf.543723",
+        "source_sha256": "sha256:8758c1507395dc8dcc1921ab7513b4430d346b6d71f6a8d8d04d5a28c96126d3",
+        "pdf_page_1_based": 20,
+        "revision_date": "2021-12-07",
+        "quick_order_package": "22A",
+        "transmission_code": "DFT"
+      },
+      {
+        "source_id": "4-door-1-12-22-pdf.553816",
+        "source_sha256": "sha256:1652bbbf452521502a414777cd5c6d3bd7e32a22cabbbb1bc9ff4da056d53e6d",
+        "pdf_page_1_based": 21,
+        "revision_date": "2022-01-12",
+        "quick_order_package": "22A",
+        "transmission_code": "DFT"
+      },
+      {
+        "source_id": "4-door-1-17-22-pdf.555728",
+        "source_sha256": "sha256:11821c4e1144bf7a6f0df6f468f1cb4c80826527901cbd5dbe861bbd85a5a60b",
+        "pdf_page_1_based": 21,
+        "revision_date": "2022-01-17",
+        "quick_order_package": "22A",
+        "transmission_code": "DFT"
+      },
+      {
+        "source_id": "4-door-2-10-22-pdf.567217",
+        "source_sha256": "sha256:1ea77968970b9d60cda1f7f8cb71a806386a8ab833e0be49368282c3c3cfb0ca",
+        "pdf_page_1_based": 21,
+        "revision_date": "2022-02-10",
+        "quick_order_package": "22A",
+        "transmission_code": "DFT"
+      },
+      {
+        "source_id": "4-door-3-11-22-pdf.579260",
+        "source_sha256": "sha256:c980f8fd08b22affda11243eac36b0621895daa06138a9b6e8e97ba8f1104fcf",
+        "pdf_page_1_based": 21,
+        "revision_date": "2022-03-11",
+        "quick_order_package": "22A",
+        "transmission_code": "DFT"
+      },
+      {
+        "source_id": "4-door-4-7-22-pdf.591773",
+        "source_sha256": "sha256:b652e62a3bebae7fd2b96570f4031ff8b4f7266b337afe4cfcb6ce1794d71b0f",
+        "pdf_page_1_based": 21,
+        "revision_date": "2022-04-07",
+        "quick_order_package": "22A",
+        "transmission_code": "DFT"
+      },
+      {
+        "source_id": "4-door-6-1-22-pdf.615030",
+        "source_sha256": "sha256:e1d4b82e8e4c96ea171a530a2805cdee338c7c1f36c3acb889f3d9d247cc9e42",
+        "pdf_page_1_based": 21,
+        "revision_date": "2022-06-01",
+        "quick_order_package": "22A",
+        "transmission_code": "DFT"
+      }
+    ],
+    "unresolved_questions": [
+      "Approve MY2022 trim normalization and five-field classification; no MY2021 approval carried forward",
+      "RHD market/fleet/consumer scope and identity require owner decision"
+    ]
+  },
+  "edmunds_mapping": {
+    "manufacturer_row": "JL22-53",
+    "body_style": "4-door",
+    "manufacturer_model_code": "JLUL74",
+    "manufacturer_trim": "Sport RHD",
+    "engine_code": "EC1",
+    "edmunds_trim": "Unlimited Sport RHD",
+    "edmunds_style_id": "401915672",
+    "edmunds_url": "https://www.edmunds.com/jeep/wrangler/2022/features-specs/",
+    "outcome": "Exact match",
+    "outcome_scope": "Observed offering counterpart; incomplete fields below are not certified",
+    "displacement_liters": "2.0",
+    "cylinders": "4",
+    "edmunds_aspiration": "turbocharged",
+    "edmunds_fuel": "Gas explicit for RHD/High Altitude bases; turbo option on other trims",
+    "edmunds_electrification": "not explicitly stated for every optional pairing",
+    "manufacturer_five_fields": "{\"engine_displacement_liters\":\"2\",\"engine_cylinders\":4,\"engine_aspiration\":\"turbocharged\",\"fuel_type\":null,\"electrification_type\":null}",
+    "manufacturer_transmission_codes": "DFT",
+    "edmunds_transmission": "8-speed automatic / 850RE",
+    "matched_QOPs": "22A",
+    "manufacturer_QOPs_not_observed_on_Edmunds": "",
+    "edmunds_drive_category": "4WD",
+    "manufacturer_drive_projection": "not present in existing 56-row matrix; not independently matched",
+    "identity_evidence_status": "Insufficient evidence for complete five-field corroboration",
+    "owner_scope_note": "RHD scope remains owner decision"
+  },
+  "candidate_created": false,
+  "reason": "Explicitly deferred by owner scope; existence corroborated, no scope or steering identity decision"
+}

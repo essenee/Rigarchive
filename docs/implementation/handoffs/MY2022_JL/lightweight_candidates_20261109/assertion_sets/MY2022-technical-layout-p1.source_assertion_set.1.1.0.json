@@ -1,0 +1,41 @@
+{
+  "envelope": {
+    "artifact_type": "rigarchive.source_assertion_set.v1",
+    "created_at": "2026-11-10T00:36:51.194499+00:00",
+    "generator": "MY2022_lightweight_retained_evidence",
+    "schema_version": "1.1.0"
+  },
+  "provenance": {
+    "acquisition_method": "retained_local_evidence; no new acquisition",
+    "extraction_provenance": {
+      "extraction_mode": "manually_verified_transcription",
+      "extractor_id": "MY2022_retained_discovery_transcription",
+      "extractor_version": "1.0.0",
+      "notes": "Reuses discovery extraction; not a new production extractor or original Edmunds page acquisition",
+      "raw_artifact_hash": "sha256:e71292bb3e8fd98cff9b2b9478eade0490e01a93dc404f12e89d66f22d8323a9",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2022_JL/discovery_20261109/source_pdfs/2022_JP_Wrangler_SP.pdf"
+    },
+    "native_record_id": "MY2022-technical-layout-p1",
+    "publication_revision": null,
+    "retrieved_at": "2026-11-09T23:53:04.491351+00:00",
+    "review_status": "pending_review",
+    "source_applicability": {
+      "applicability_basis": "Existing MY2022 US guide scope; joins bound to exact model, table, QOP and research row",
+      "applicability_scope": "model_year",
+      "market": "US",
+      "publisher_jurisdiction": "US"
+    },
+    "source_id": "2022_JP_Wrangler_SP",
+    "source_locator": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/specs/2022_JP_Wrangler_SP.pdf",
+    "source_type": "manufacturer_document",
+    "source_use_notes": "Explicit model-wide four-wheel-drive layout. No engine classification inferred from overview availability."
+  },
+  "source_assertions": [
+    {
+      "assertion_id": "MY2022-layout-p1",
+      "attribute_key": "manufacturer_technical_page",
+      "raw_value": "2022 Jeep® Wrangler\nSPECIFICATIONS\n\nSpecifications are based on the latest product information available at the time of publication.\nAll dimensions are in inches (millimeters) unless otherwise noted.\nAll dimensions measured at curb weight with standard tires and wheels.\n\n\nGENERAL INFORMATION\nVehicle Type                                                      Sport-utility vehicle\nAssembly Plant                                                    Toledo Supplier Park, Toledo, Ohio\nEPA Vehicle Class                                                 Multipurpose vehicle\nIntroduction Date                                                 Fall 2017 as a 2018 model\n\n\nBODY/CHASSIS\nLayout                                                            Longitudinal front engine, four-wheel drive\nConstruction                                                      Ladder-type frame, open steel and aluminum body\n\n\nENGINE: 3.6-LITER PENTASTAR V-6\nAvailability                                                      Standard (all engine stop-start, MTX only) — Sport, Sahara, Rubicon\n                                                                  Available (all eTorque mild-hybrid assist, ATX only) — Sport, Sahara,\n                                                                  Rubicon\nType and Description                                              60-degree, V-type, liquid-cooled\nDisplacement (cu. in. / cc)                                       220 cu. in. (3,604 cu. cm)\nBore x Stroke                                                     3.78 x 3.27 (96 x 83)\nValve System                                                      Chain-driven DOHC, 24 valves and hydraulic end-pivot roller rockers\nFuel Injection                                                    Sequential, multiport, electronic, returnless\nConstruction                                                      Aluminum deep-skirt block, aluminum alloy heads\nCompression Ratio                                                 11.3:1\n\nPower (SAE net)\n(hp / kW@rpm)                                                     285 hp (213 kW) at 6,400 rpm\nTorque (SAE net)\n(lb.-ft. / N•m)                                                   260 lb.-ft. (353 N•m) at 4,800 rpm\n\nMax. Engine Speed (rpm)                                           6,600 rpm (electronically limited)\nFuel Requirement                                                  Unleaded regular, 87 octane (R + M)/2\nFuel Tank Capacity (gallons)                                      17.5 (2-door), 21.5 (4-door)\nOil Capacity                                                      5.0 quarts (4.7 liters)\nCoolant Capacity                                                  10 quarts (10.1 liters)\nEmission Controls                                                 Dual three-way catalytic converters, heated oxygen sensors and\n                                                                  internal engine features\n\n\n\n2022 JEEP®  |  WRANGLER  |  SPECIFICATIONS                                                                                                           |  1",
+      "source_context": "PDF page 1; GENERAL INFORMATION and BODY/CHASSIS; 2022 Jeep Wrangler"
+    }
+  ]
+}

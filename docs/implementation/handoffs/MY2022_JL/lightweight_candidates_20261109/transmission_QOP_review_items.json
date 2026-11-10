@@ -1,0 +1,374 @@
+[
+  {
+    "candidate_reference": "JL22-02",
+    "quick_order_package": "24B",
+    "engine_code": "ERC",
+    "transmission_code": "DFT",
+    "status": "manufacturer_supported; Edmunds_not_observed; preserved_review_item",
+    "evidence": [
+      {
+        "source_id": "2-door-10-8-21-pdf.519659",
+        "source_sha256": "sha256:24f8d8e5013e928113b9e71a2d9de6002e7686622d6b4ec05c13abfdd33ef45c",
+        "revision_date": "2021-10-08",
+        "pdf_page_1_based": 2,
+        "excerpt_id": "2-door-10-8-21-pdf.519659-p2",
+        "model_code": "JLJL72",
+        "body_style": "2-door",
+        "market": "US",
+        "marketed_column_label": "Sport",
+        "engine_code": "ERC",
+        "transmission_code": "DFT",
+        "quick_order_package": "24B",
+        "manufacturer_engine_segment": "3.6L V6 24V VVT       N/C      N/C   8-SPD AUTO             2,250   2,500            24B                     24K                     24S                    24W\nENGINE UPG I                         850RE TRANS\nW/ESS (ERC)                          (MAKE) (DFT)"
+      }
+    ]
+  },
+  {
+    "candidate_reference": "JL22-05",
+    "quick_order_package": "24S",
+    "engine_code": "ERC",
+    "transmission_code": "DFT",
+    "status": "manufacturer_supported; Edmunds_not_observed; preserved_review_item",
+    "evidence": [
+      {
+        "source_id": "2-door-10-8-21-pdf.519659",
+        "source_sha256": "sha256:24f8d8e5013e928113b9e71a2d9de6002e7686622d6b4ec05c13abfdd33ef45c",
+        "revision_date": "2021-10-08",
+        "pdf_page_1_based": 2,
+        "excerpt_id": "2-door-10-8-21-pdf.519659-p2",
+        "model_code": "JLJL72",
+        "body_style": "2-door",
+        "market": "US",
+        "marketed_column_label": "Sport S",
+        "engine_code": "ERC",
+        "transmission_code": "DFT",
+        "quick_order_package": "24S",
+        "manufacturer_engine_segment": "3.6L V6 24V VVT       N/C      N/C   8-SPD AUTO             2,250   2,500            24B                     24K                     24S                    24W\nENGINE UPG I                         850RE TRANS\nW/ESS (ERC)                          (MAKE) (DFT)"
+      }
+    ]
+  },
+  {
+    "candidate_reference": "JL22-08",
+    "quick_order_package": "24W",
+    "engine_code": "ERC",
+    "transmission_code": "DFT",
+    "status": "manufacturer_supported; Edmunds_not_observed; preserved_review_item",
+    "evidence": [
+      {
+        "source_id": "2-door-10-8-21-pdf.519659",
+        "source_sha256": "sha256:24f8d8e5013e928113b9e71a2d9de6002e7686622d6b4ec05c13abfdd33ef45c",
+        "revision_date": "2021-10-08",
+        "pdf_page_1_based": 2,
+        "excerpt_id": "2-door-10-8-21-pdf.519659-p2",
+        "model_code": "JLJL72",
+        "body_style": "2-door",
+        "market": "US",
+        "marketed_column_label": "Willys",
+        "engine_code": "ERC",
+        "transmission_code": "DFT",
+        "quick_order_package": "24W",
+        "manufacturer_engine_segment": "3.6L V6 24V VVT       N/C      N/C   8-SPD AUTO             2,250   2,500            24B                     24K                     24S                    24W\nENGINE UPG I                         850RE TRANS\nW/ESS (ERC)                          (MAKE) (DFT)"
+      },
+      {
+        "source_id": "2-door-1-12-22-pdf.553817",
+        "source_sha256": "sha256:c3ab77058435adacfa5425a9206f721529236e6bf3933235f91e18b778bd7c31",
+        "revision_date": "2022-01-12",
+        "pdf_page_1_based": 2,
+        "excerpt_id": "2-door-1-12-22-pdf.553817-p2",
+        "model_code": "JLJL72",
+        "body_style": "2-door",
+        "market": "US",
+        "marketed_column_label": "Willys",
+        "engine_code": "ERC",
+        "transmission_code": "DFT",
+        "quick_order_package": "24W",
+        "manufacturer_engine_segment": "3.6L V6 24V VVT       N/C     N/C    8-SPD AUTO            2,250    2,500                                                                                  24W\nENGINE UPG I                         850RE TRANS\nW/ESS (ERC)                          (MAKE) (DFT)"
+      },
+      {
+        "source_id": "2-door-1-17-22-pdf.555729",
+        "source_sha256": "sha256:4134ffb840b1ee50439f9b6105137f4884950b584e81a440fbcb2c8d8f675b4e",
+        "revision_date": "2022-01-17",
+        "pdf_page_1_based": 2,
+        "excerpt_id": "2-door-1-17-22-pdf.555729-p2",
+        "model_code": "JLJL72",
+        "body_style": "2-door",
+        "market": "US",
+        "marketed_column_label": "Willys",
+        "engine_code": "ERC",
+        "transmission_code": "DFT",
+        "quick_order_package": "24W",
+        "manufacturer_engine_segment": "3.6L V6 24V VVT       N/C     N/C    8-SPD AUTO            2,250    2,500                                                                                  24W\nENGINE UPG I                         850RE TRANS\nW/ESS (ERC)                          (MAKE) (DFT)"
+      },
+      {
+        "source_id": "2-door-2-10-22-pdf.567215",
+        "source_sha256": "sha256:a8b6f53856cea833d7b55d582a7d957b2315a689040af9883aa3f2dd973dd6a8",
+        "revision_date": "2022-02-10",
+        "pdf_page_1_based": 2,
+        "excerpt_id": "2-door-2-10-22-pdf.567215-p2",
+        "model_code": "JLJL72",
+        "body_style": "2-door",
+        "market": "US",
+        "marketed_column_label": "Willys",
+        "engine_code": "ERC",
+        "transmission_code": "DFT",
+        "quick_order_package": "24W",
+        "manufacturer_engine_segment": "3.6L V6 24V VVT       N/C     N/C    8-SPD AUTO            2,250    2,500                                                                                  24W\nENGINE UPG I                         850RE TRANS\nW/ESS (ERC)                          (MAKE) (DFT)"
+      },
+      {
+        "source_id": "2-door-3-11-22-pdf.579259",
+        "source_sha256": "sha256:dd2a9bd40a4372ebc13ce3e5edc861e0874c25eb13ce695559a40e9b12e4f45a",
+        "revision_date": "2022-03-11",
+        "pdf_page_1_based": 2,
+        "excerpt_id": "2-door-3-11-22-pdf.579259-p2",
+        "model_code": "JLJL72",
+        "body_style": "2-door",
+        "market": "US",
+        "marketed_column_label": "Willys",
+        "engine_code": "ERC",
+        "transmission_code": "DFT",
+        "quick_order_package": "24W",
+        "manufacturer_engine_segment": "3.6L V6 24V VVT       N/C     N/C    8-SPD AUTO            2,250    2,500                                                                                  24W\nENGINE UPG I                         850RE TRANS\nW/ESS (ERC)                          (MAKE) (DFT)"
+      },
+      {
+        "source_id": "2-door-4-7-22-pdf.591775",
+        "source_sha256": "sha256:9b062b7106fe6c772c3b206c728ea294c9ce55bcdc05cd5401c3f460ff2c2577",
+        "revision_date": "2022-04-07",
+        "pdf_page_1_based": 2,
+        "excerpt_id": "2-door-4-7-22-pdf.591775-p2",
+        "model_code": "JLJL72",
+        "body_style": "2-door",
+        "market": "US",
+        "marketed_column_label": "Willys",
+        "engine_code": "ERC",
+        "transmission_code": "DFT",
+        "quick_order_package": "24W",
+        "manufacturer_engine_segment": "3.6L V6 24V VVT       N/C     N/C    8-SPD AUTO            2,250    2,500                                                                                  24W\nENGINE UPG I                         850RE TRANS\nW/ESS (ERC)                          (MAKE) (DFT)"
+      },
+      {
+        "source_id": "2-door-6-3-22-pdf.615028",
+        "source_sha256": "sha256:d6ed6d790619ef63ce9fc822228b7d0346fe55841b80903128a26e3f2a02e1ea",
+        "revision_date": "2022-06-03",
+        "pdf_page_1_based": 2,
+        "excerpt_id": "2-door-6-3-22-pdf.615028-p2",
+        "model_code": "JLJL72",
+        "body_style": "2-door",
+        "market": "US",
+        "marketed_column_label": "Willys",
+        "engine_code": "ERC",
+        "transmission_code": "DFT",
+        "quick_order_package": "24W",
+        "manufacturer_engine_segment": "3.6L V6 24V VVT       N/C     N/C    8-SPD AUTO            3,376    3,750                                                                                 24W\nENGINE UPG I                         850RE TRANS\nW/ESS (ERC)                          (MAKE) (DFT)"
+      }
+    ]
+  },
+  {
+    "candidate_reference": "JL22-11",
+    "quick_order_package": "24K",
+    "engine_code": "ERC",
+    "transmission_code": "DFT",
+    "status": "manufacturer_supported; Edmunds_not_observed; preserved_review_item",
+    "evidence": [
+      {
+        "source_id": "2-door-10-8-21-pdf.519659",
+        "source_sha256": "sha256:24f8d8e5013e928113b9e71a2d9de6002e7686622d6b4ec05c13abfdd33ef45c",
+        "revision_date": "2021-10-08",
+        "pdf_page_1_based": 2,
+        "excerpt_id": "2-door-10-8-21-pdf.519659-p2",
+        "model_code": "JLJL72",
+        "body_style": "2-door",
+        "market": "US",
+        "marketed_column_label": "Willys Sport",
+        "engine_code": "ERC",
+        "transmission_code": "DFT",
+        "quick_order_package": "24K",
+        "manufacturer_engine_segment": "3.6L V6 24V VVT       N/C      N/C   8-SPD AUTO             2,250   2,500            24B                     24K                     24S                    24W\nENGINE UPG I                         850RE TRANS\nW/ESS (ERC)                          (MAKE) (DFT)"
+      }
+    ]
+  },
+  {
+    "candidate_reference": "JL22-17",
+    "quick_order_package": "24L",
+    "engine_code": "ERC",
+    "transmission_code": "DFT",
+    "status": "manufacturer_supported; Edmunds_not_observed; preserved_review_item",
+    "evidence": [
+      {
+        "source_id": "wrangler-4-dr-2022-10-08-2021-pdf.519330",
+        "source_sha256": "sha256:2a4eb89d27b1b9d8c6c1fafbc21255082fc1bf2dc0f6ffbd004d765863649673",
+        "revision_date": "2021-10-08",
+        "pdf_page_1_based": 2,
+        "excerpt_id": "wrangler-4-dr-2022-10-08-2021-pdf.519330-p2",
+        "model_code": "JLJL74",
+        "body_style": "4-door",
+        "market": "US",
+        "marketed_column_label": "Altitude",
+        "engine_code": "ERC",
+        "transmission_code": "DFT",
+        "quick_order_package": "24L",
+        "manufacturer_engine_segment": "3.6L V6 24V VVT       N/C     N/C    8-SPD AUTO           2,250    2,500         24B               24K                24S               24W                24L\nENGINE UPG I                         850RE TRANS\nW/ESS (ERC)                          (MAKE) (DFT)"
+      }
+    ]
+  },
+  {
+    "candidate_reference": "JL22-30",
+    "quick_order_package": "24W",
+    "engine_code": "ERC",
+    "transmission_code": "DFT",
+    "status": "manufacturer_supported; Edmunds_not_observed; preserved_review_item",
+    "evidence": [
+      {
+        "source_id": "wrangler-4-dr-2022-10-08-2021-pdf.519330",
+        "source_sha256": "sha256:2a4eb89d27b1b9d8c6c1fafbc21255082fc1bf2dc0f6ffbd004d765863649673",
+        "revision_date": "2021-10-08",
+        "pdf_page_1_based": 2,
+        "excerpt_id": "wrangler-4-dr-2022-10-08-2021-pdf.519330-p2",
+        "model_code": "JLJL74",
+        "body_style": "4-door",
+        "market": "US",
+        "marketed_column_label": "Willys",
+        "engine_code": "ERC",
+        "transmission_code": "DFT",
+        "quick_order_package": "24W",
+        "manufacturer_engine_segment": "3.6L V6 24V VVT       N/C     N/C    8-SPD AUTO           2,250    2,500         24B               24K                24S               24W                24L\nENGINE UPG I                         850RE TRANS\nW/ESS (ERC)                          (MAKE) (DFT)"
+      },
+      {
+        "source_id": "4-door-1-12-22-pdf.553816",
+        "source_sha256": "sha256:1652bbbf452521502a414777cd5c6d3bd7e32a22cabbbb1bc9ff4da056d53e6d",
+        "revision_date": "2022-01-12",
+        "pdf_page_1_based": 2,
+        "excerpt_id": "4-door-1-12-22-pdf.553816-p2",
+        "model_code": "JLJL74",
+        "body_style": "4-door",
+        "market": "US",
+        "marketed_column_label": "Willys",
+        "engine_code": "ERC",
+        "transmission_code": "DFT",
+        "quick_order_package": "24W",
+        "manufacturer_engine_segment": "3.6L V6 24V VVT      N/C      N/C   8-SPD AUTO            2,250   2,500         24B               24K                24S               24W\nENGINE UPG I                        850RE TRANS\nW/ESS (ERC)                         (MAKE) (DFT)"
+      },
+      {
+        "source_id": "4-door-1-17-22-pdf.555728",
+        "source_sha256": "sha256:11821c4e1144bf7a6f0df6f468f1cb4c80826527901cbd5dbe861bbd85a5a60b",
+        "revision_date": "2022-01-17",
+        "pdf_page_1_based": 2,
+        "excerpt_id": "4-door-1-17-22-pdf.555728-p2",
+        "model_code": "JLJL74",
+        "body_style": "4-door",
+        "market": "US",
+        "marketed_column_label": "Willys",
+        "engine_code": "ERC",
+        "transmission_code": "DFT",
+        "quick_order_package": "24W",
+        "manufacturer_engine_segment": "3.6L V6 24V VVT      N/C      N/C   8-SPD AUTO            2,250   2,500         24B                24K               24S               24W\nENGINE UPG I                        850RE TRANS\nW/ESS (ERC)                         (MAKE) (DFT)"
+      },
+      {
+        "source_id": "4-door-2-10-22-pdf.567217",
+        "source_sha256": "sha256:1ea77968970b9d60cda1f7f8cb71a806386a8ab833e0be49368282c3c3cfb0ca",
+        "revision_date": "2022-02-10",
+        "pdf_page_1_based": 2,
+        "excerpt_id": "4-door-2-10-22-pdf.567217-p2",
+        "model_code": "JLJL74",
+        "body_style": "4-door",
+        "market": "US",
+        "marketed_column_label": "Willys",
+        "engine_code": "ERC",
+        "transmission_code": "DFT",
+        "quick_order_package": "24W",
+        "manufacturer_engine_segment": "3.6L V6 24V VVT      N/C     N/C    8-SPD AUTO           2,250    2,500       24B            24K             24S           24W\nENGINE UPG I                        850RE TRANS\nW/ESS (ERC)                         (MAKE) (DFT)"
+      },
+      {
+        "source_id": "4-door-3-11-22-pdf.579260",
+        "source_sha256": "sha256:c980f8fd08b22affda11243eac36b0621895daa06138a9b6e8e97ba8f1104fcf",
+        "revision_date": "2022-03-11",
+        "pdf_page_1_based": 2,
+        "excerpt_id": "4-door-3-11-22-pdf.579260-p2",
+        "model_code": "JLJL74",
+        "body_style": "4-door",
+        "market": "US",
+        "marketed_column_label": "Willys",
+        "engine_code": "ERC",
+        "transmission_code": "DFT",
+        "quick_order_package": "24W",
+        "manufacturer_engine_segment": "3.6L V6 24V VVT      N/C     N/C    8-SPD AUTO           2,250    2,500       24B            24K             24S           24W\nENGINE UPG I                        850RE TRANS\nW/ESS (ERC)                         (MAKE) (DFT)"
+      },
+      {
+        "source_id": "4-door-4-7-22-pdf.591773",
+        "source_sha256": "sha256:b652e62a3bebae7fd2b96570f4031ff8b4f7266b337afe4cfcb6ce1794d71b0f",
+        "revision_date": "2022-04-07",
+        "pdf_page_1_based": 2,
+        "excerpt_id": "4-door-4-7-22-pdf.591773-p2",
+        "model_code": "JLJL74",
+        "body_style": "4-door",
+        "market": "US",
+        "marketed_column_label": "Willys",
+        "engine_code": "ERC",
+        "transmission_code": "DFT",
+        "quick_order_package": "24W",
+        "manufacturer_engine_segment": "3.6L V6 24V VVT      N/C     N/C    8-SPD AUTO           2,250    2,500       24B            24K             24S           24W\nENGINE UPG I                        850RE TRANS\nW/ESS (ERC)                         (MAKE) (DFT)"
+      },
+      {
+        "source_id": "4-door-6-1-22-pdf.615030",
+        "source_sha256": "sha256:e1d4b82e8e4c96ea171a530a2805cdee338c7c1f36c3acb889f3d9d247cc9e42",
+        "revision_date": "2022-06-01",
+        "pdf_page_1_based": 2,
+        "excerpt_id": "4-door-6-1-22-pdf.615030-p2",
+        "model_code": "JLJL74",
+        "body_style": "4-door",
+        "market": "US",
+        "marketed_column_label": "Willys",
+        "engine_code": "ERC",
+        "transmission_code": "DFT",
+        "quick_order_package": "24W",
+        "manufacturer_engine_segment": "3.6L V6 24V VVT      N/C     N/C    8-SPD AUTO           3,376    3,750       24B            24K            24S            24W\nENGINE UPG I                        850RE TRANS\nW/ESS (ERC)                         (MAKE) (DFT)"
+      }
+    ]
+  },
+  {
+    "candidate_reference": "JL22-38",
+    "quick_order_package": "24L",
+    "engine_code": "ERC",
+    "transmission_code": "DFT",
+    "status": "manufacturer_supported; Edmunds_not_observed; preserved_review_item",
+    "evidence": [
+      {
+        "source_id": "wrangler-4-dr-2022-10-08-2021-pdf.519330",
+        "source_sha256": "sha256:2a4eb89d27b1b9d8c6c1fafbc21255082fc1bf2dc0f6ffbd004d765863649673",
+        "revision_date": "2021-10-08",
+        "pdf_page_1_based": 8,
+        "excerpt_id": "wrangler-4-dr-2022-10-08-2021-pdf.519330-p8",
+        "model_code": "JLJP74",
+        "body_style": "4-door",
+        "market": "US",
+        "marketed_column_label": "Altitude",
+        "engine_code": "ERC",
+        "transmission_code": "DFT",
+        "quick_order_package": "24L",
+        "manufacturer_engine_segment": "3.6L V6 24V VVT       N/C      N/C    6-SPEED                N/C     N/C                 23G                             23L\nENGINE UPG I                          MANUAL\nW/ESS (ERC)                           TRANSMISSION\n                                      (DEM)\n                                      8-SPD AUTO            2,250    2,500               24G                             24L\n                                      850RE TRANS\n                                      (MAKE) (DFT)"
+      }
+    ]
+  },
+  {
+    "candidate_reference": "JL22-45",
+    "quick_order_package": "24G",
+    "engine_code": "ERC",
+    "transmission_code": "DFT",
+    "status": "manufacturer_supported; Edmunds_not_observed; preserved_review_item",
+    "evidence": [
+      {
+        "source_id": "wrangler-4-dr-2022-10-08-2021-pdf.519330",
+        "source_sha256": "sha256:2a4eb89d27b1b9d8c6c1fafbc21255082fc1bf2dc0f6ffbd004d765863649673",
+        "revision_date": "2021-10-08",
+        "pdf_page_1_based": 8,
+        "excerpt_id": "wrangler-4-dr-2022-10-08-2021-pdf.519330-p8",
+        "model_code": "JLJP74",
+        "body_style": "4-door",
+        "market": "US",
+        "marketed_column_label": "Sahara",
+        "engine_code": "ERC",
+        "transmission_code": "DFT",
+        "quick_order_package": "24G",
+        "manufacturer_engine_segment": "3.6L V6 24V VVT       N/C      N/C    6-SPEED                N/C     N/C                 23G                             23L\nENGINE UPG I                          MANUAL\nW/ESS (ERC)                           TRANSMISSION\n                                      (DEM)\n                                      8-SPD AUTO            2,250    2,500               24G                             24L\n                                      850RE TRANS\n                                      (MAKE) (DFT)"
+      }
+    ]
+  }
+]

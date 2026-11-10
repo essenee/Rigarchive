@@ -113,3 +113,7 @@ configuration was identified. See EDMUNDS_COMPARISON.md for limitations.
 Verification uses `.venv/bin/python`, offline retained-source checks and read-only
 SQLite inspection. The development database is preserved byte-for-byte. No commit
 or push. Candidate construction requires a separate owner-approved task.
+
+## Subsequent coverage disposition (2026-11-10)
+
+The observed `JLUL74` Unlimited Sport RHD offering remains **deferred — consumer-market applicability unresolved**. It was not imported as an ordinary consumer configuration, is not declared fleet-only or permanently excluded, and requires supported market/customer applicability and canonical identity before reopening. See the [Canonical Coverage and Deferrals Register](../../CANONICAL_COVERAGE_AND_DEFERRALS.md). This note does not change the original discovery counts or prior decisions.

@@ -1,0 +1,15 @@
+{
+  "connection_mode": "mode=ro; query_only=ON",
+  "counts": {
+    "reference_vehicledefinition": 934,
+    "reference_importexecutionreceipt": 3148,
+    "reference_generationcorrespondencerevision": 159
+  },
+  "generation": [
+    [
+      32,
+      "38d3c3acf8254406abb5c2d12b9129a4"
+    ]
+  ],
+  "MY2022_generation_32_vehicledefinitions": 0
+}

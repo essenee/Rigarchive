@@ -1,0 +1,662 @@
+[
+  {
+    "candidate_reference": "JL22-01",
+    "eligibility_status": "requires_review",
+    "planned_action": "flag_review",
+    "review_category": "generation_correspondence",
+    "reasons": [
+      "Missing reviewed generation correspondence."
+    ],
+    "resolved_generation_id": null,
+    "intended_generation_id": 32,
+    "executable_manifest_created": false
+  },
+  {
+    "candidate_reference": "JL22-02",
+    "eligibility_status": "requires_review",
+    "planned_action": "flag_review",
+    "review_category": "generation_correspondence",
+    "reasons": [
+      "Missing reviewed generation correspondence."
+    ],
+    "resolved_generation_id": null,
+    "intended_generation_id": 32,
+    "executable_manifest_created": false
+  },
+  {
+    "candidate_reference": "JL22-03",
+    "eligibility_status": "requires_review",
+    "planned_action": "flag_review",
+    "review_category": "generation_correspondence",
+    "reasons": [
+      "Missing reviewed generation correspondence."
+    ],
+    "resolved_generation_id": null,
+    "intended_generation_id": 32,
+    "executable_manifest_created": false
+  },
+  {
+    "candidate_reference": "JL22-04",
+    "eligibility_status": "requires_review",
+    "planned_action": "flag_review",
+    "review_category": "generation_correspondence",
+    "reasons": [
+      "Missing reviewed generation correspondence."
+    ],
+    "resolved_generation_id": null,
+    "intended_generation_id": 32,
+    "executable_manifest_created": false
+  },
+  {
+    "candidate_reference": "JL22-05",
+    "eligibility_status": "requires_review",
+    "planned_action": "flag_review",
+    "review_category": "generation_correspondence",
+    "reasons": [
+      "Missing reviewed generation correspondence."
+    ],
+    "resolved_generation_id": null,
+    "intended_generation_id": 32,
+    "executable_manifest_created": false
+  },
+  {
+    "candidate_reference": "JL22-06",
+    "eligibility_status": "requires_review",
+    "planned_action": "flag_review",
+    "review_category": "generation_correspondence",
+    "reasons": [
+      "Missing reviewed generation correspondence."
+    ],
+    "resolved_generation_id": null,
+    "intended_generation_id": 32,
+    "executable_manifest_created": false
+  },
+  {
+    "candidate_reference": "JL22-07",
+    "eligibility_status": "requires_review",
+    "planned_action": "flag_review",
+    "review_category": "generation_correspondence",
+    "reasons": [
+      "Missing reviewed generation correspondence."
+    ],
+    "resolved_generation_id": null,
+    "intended_generation_id": 32,
+    "executable_manifest_created": false
+  },
+  {
+    "candidate_reference": "JL22-08",
+    "eligibility_status": "requires_review",
+    "planned_action": "flag_review",
+    "review_category": "generation_correspondence",
+    "reasons": [
+      "Missing reviewed generation correspondence."
+    ],
+    "resolved_generation_id": null,
+    "intended_generation_id": 32,
+    "executable_manifest_created": false
+  },
+  {
+    "candidate_reference": "JL22-09",
+    "eligibility_status": "requires_review",
+    "planned_action": "flag_review",
+    "review_category": "generation_correspondence",
+    "reasons": [
+      "Missing reviewed generation correspondence."
+    ],
+    "resolved_generation_id": null,
+    "intended_generation_id": 32,
+    "executable_manifest_created": false
+  },
+  {
+    "candidate_reference": "JL22-10",
+    "eligibility_status": "requires_review",
+    "planned_action": "flag_review",
+    "review_category": "generation_correspondence",
+    "reasons": [
+      "Missing reviewed generation correspondence."
+    ],
+    "resolved_generation_id": null,
+    "intended_generation_id": 32,
+    "executable_manifest_created": false
+  },
+  {
+    "candidate_reference": "JL22-11",
+    "eligibility_status": "requires_review",
+    "planned_action": "flag_review",
+    "review_category": "generation_correspondence",
+    "reasons": [
+      "Missing reviewed generation correspondence."
+    ],
+    "resolved_generation_id": null,
+    "intended_generation_id": 32,
+    "executable_manifest_created": false
+  },
+  {
+    "candidate_reference": "JL22-12",
+    "eligibility_status": "requires_review",
+    "planned_action": "flag_review",
+    "review_category": "generation_correspondence",
+    "reasons": [
+      "Missing reviewed generation correspondence."
+    ],
+    "resolved_generation_id": null,
+    "intended_generation_id": 32,
+    "executable_manifest_created": false
+  },
+  {
+    "candidate_reference": "JL22-13",
+    "eligibility_status": "requires_review",
+    "planned_action": "flag_review",
+    "review_category": "generation_correspondence",
+    "reasons": [
+      "Missing reviewed generation correspondence."
+    ],
+    "resolved_generation_id": null,
+    "intended_generation_id": 32,
+    "executable_manifest_created": false
+  },
+  {
+    "candidate_reference": "JL22-14",
+    "eligibility_status": "requires_review",
+    "planned_action": "flag_review",
+    "review_category": "generation_correspondence",
+    "reasons": [
+      "Missing reviewed generation correspondence."
+    ],
+    "resolved_generation_id": null,
+    "intended_generation_id": 32,
+    "executable_manifest_created": false
+  },
+  {
+    "candidate_reference": "JL22-15",
+    "eligibility_status": "requires_review",
+    "planned_action": "flag_review",
+    "review_category": "generation_correspondence",
+    "reasons": [
+      "Missing reviewed generation correspondence."
+    ],
+    "resolved_generation_id": null,
+    "intended_generation_id": 32,
+    "executable_manifest_created": false
+  },
+  {
+    "candidate_reference": "JL22-16",
+    "eligibility_status": "requires_review",
+    "planned_action": "flag_review",
+    "review_category": "generation_correspondence",
+    "reasons": [
+      "Missing reviewed generation correspondence."
+    ],
+    "resolved_generation_id": null,
+    "intended_generation_id": 32,
+    "executable_manifest_created": false
+  },
+  {
+    "candidate_reference": "JL22-17",
+    "eligibility_status": "requires_review",
+    "planned_action": "flag_review",
+    "review_category": "generation_correspondence",
+    "reasons": [
+      "Missing reviewed generation correspondence."
+    ],
+    "resolved_generation_id": null,
+    "intended_generation_id": 32,
+    "executable_manifest_created": false
+  },
+  {
+    "candidate_reference": "JL22-18",
+    "eligibility_status": "requires_review",
+    "planned_action": "flag_review",
+    "review_category": "generation_correspondence",
+    "reasons": [
+      "Missing reviewed generation correspondence."
+    ],
+    "resolved_generation_id": null,
+    "intended_generation_id": 32,
+    "executable_manifest_created": false
+  },
+  {
+    "candidate_reference": "JL22-19",
+    "eligibility_status": "requires_review",
+    "planned_action": "flag_review",
+    "review_category": "generation_correspondence",
+    "reasons": [
+      "Missing reviewed generation correspondence."
+    ],
+    "resolved_generation_id": null,
+    "intended_generation_id": 32,
+    "executable_manifest_created": false
+  },
+  {
+    "candidate_reference": "JL22-20",
+    "eligibility_status": "requires_review",
+    "planned_action": "flag_review",
+    "review_category": "generation_correspondence",
+    "reasons": [
+      "Missing reviewed generation correspondence."
+    ],
+    "resolved_generation_id": null,
+    "intended_generation_id": 32,
+    "executable_manifest_created": false
+  },
+  {
+    "candidate_reference": "JL22-21",
+    "eligibility_status": "requires_review",
+    "planned_action": "flag_review",
+    "review_category": "generation_correspondence",
+    "reasons": [
+      "Missing reviewed generation correspondence."
+    ],
+    "resolved_generation_id": null,
+    "intended_generation_id": 32,
+    "executable_manifest_created": false
+  },
+  {
+    "candidate_reference": "JL22-22",
+    "eligibility_status": "requires_review",
+    "planned_action": "flag_review",
+    "review_category": "generation_correspondence",
+    "reasons": [
+      "Missing reviewed generation correspondence."
+    ],
+    "resolved_generation_id": null,
+    "intended_generation_id": 32,
+    "executable_manifest_created": false
+  },
+  {
+    "candidate_reference": "JL22-23",
+    "eligibility_status": "requires_review",
+    "planned_action": "flag_review",
+    "review_category": "generation_correspondence",
+    "reasons": [
+      "Missing reviewed generation correspondence."
+    ],
+    "resolved_generation_id": null,
+    "intended_generation_id": 32,
+    "executable_manifest_created": false
+  },
+  {
+    "candidate_reference": "JL22-24",
+    "eligibility_status": "requires_review",
+    "planned_action": "flag_review",
+    "review_category": "generation_correspondence",
+    "reasons": [
+      "Missing reviewed generation correspondence."
+    ],
+    "resolved_generation_id": null,
+    "intended_generation_id": 32,
+    "executable_manifest_created": false
+  },
+  {
+    "candidate_reference": "JL22-25",
+    "eligibility_status": "requires_review",
+    "planned_action": "flag_review",
+    "review_category": "generation_correspondence",
+    "reasons": [
+      "Missing reviewed generation correspondence."
+    ],
+    "resolved_generation_id": null,
+    "intended_generation_id": 32,
+    "executable_manifest_created": false
+  },
+  {
+    "candidate_reference": "JL22-26",
+    "eligibility_status": "requires_review",
+    "planned_action": "flag_review",
+    "review_category": "generation_correspondence",
+    "reasons": [
+      "Missing reviewed generation correspondence."
+    ],
+    "resolved_generation_id": null,
+    "intended_generation_id": 32,
+    "executable_manifest_created": false
+  },
+  {
+    "candidate_reference": "JL22-27",
+    "eligibility_status": "requires_review",
+    "planned_action": "flag_review",
+    "review_category": "generation_correspondence",
+    "reasons": [
+      "Missing reviewed generation correspondence."
+    ],
+    "resolved_generation_id": null,
+    "intended_generation_id": 32,
+    "executable_manifest_created": false
+  },
+  {
+    "candidate_reference": "JL22-28",
+    "eligibility_status": "requires_review",
+    "planned_action": "flag_review",
+    "review_category": "generation_correspondence",
+    "reasons": [
+      "Missing reviewed generation correspondence."
+    ],
+    "resolved_generation_id": null,
+    "intended_generation_id": 32,
+    "executable_manifest_created": false
+  },
+  {
+    "candidate_reference": "JL22-29",
+    "eligibility_status": "requires_review",
+    "planned_action": "flag_review",
+    "review_category": "generation_correspondence",
+    "reasons": [
+      "Missing reviewed generation correspondence."
+    ],
+    "resolved_generation_id": null,
+    "intended_generation_id": 32,
+    "executable_manifest_created": false
+  },
+  {
+    "candidate_reference": "JL22-30",
+    "eligibility_status": "requires_review",
+    "planned_action": "flag_review",
+    "review_category": "generation_correspondence",
+    "reasons": [
+      "Missing reviewed generation correspondence."
+    ],
+    "resolved_generation_id": null,
+    "intended_generation_id": 32,
+    "executable_manifest_created": false
+  },
+  {
+    "candidate_reference": "JL22-31",
+    "eligibility_status": "requires_review",
+    "planned_action": "flag_review",
+    "review_category": "generation_correspondence",
+    "reasons": [
+      "Missing reviewed generation correspondence."
+    ],
+    "resolved_generation_id": null,
+    "intended_generation_id": 32,
+    "executable_manifest_created": false
+  },
+  {
+    "candidate_reference": "JL22-32",
+    "eligibility_status": "requires_review",
+    "planned_action": "flag_review",
+    "review_category": "generation_correspondence",
+    "reasons": [
+      "Missing reviewed generation correspondence."
+    ],
+    "resolved_generation_id": null,
+    "intended_generation_id": 32,
+    "executable_manifest_created": false
+  },
+  {
+    "candidate_reference": "JL22-33",
+    "eligibility_status": "requires_review",
+    "planned_action": "flag_review",
+    "review_category": "generation_correspondence",
+    "reasons": [
+      "Missing reviewed generation correspondence."
+    ],
+    "resolved_generation_id": null,
+    "intended_generation_id": 32,
+    "executable_manifest_created": false
+  },
+  {
+    "candidate_reference": "JL22-34",
+    "eligibility_status": "requires_review",
+    "planned_action": "flag_review",
+    "review_category": "generation_correspondence",
+    "reasons": [
+      "Missing reviewed generation correspondence."
+    ],
+    "resolved_generation_id": null,
+    "intended_generation_id": 32,
+    "executable_manifest_created": false
+  },
+  {
+    "candidate_reference": "JL22-35",
+    "eligibility_status": "requires_review",
+    "planned_action": "flag_review",
+    "review_category": "generation_correspondence",
+    "reasons": [
+      "Missing reviewed generation correspondence."
+    ],
+    "resolved_generation_id": null,
+    "intended_generation_id": 32,
+    "executable_manifest_created": false
+  },
+  {
+    "candidate_reference": "JL22-36",
+    "eligibility_status": "requires_review",
+    "planned_action": "flag_review",
+    "review_category": "generation_correspondence",
+    "reasons": [
+      "Missing reviewed generation correspondence."
+    ],
+    "resolved_generation_id": null,
+    "intended_generation_id": 32,
+    "executable_manifest_created": false
+  },
+  {
+    "candidate_reference": "JL22-37",
+    "eligibility_status": "requires_review",
+    "planned_action": "flag_review",
+    "review_category": "generation_correspondence",
+    "reasons": [
+      "Missing reviewed generation correspondence."
+    ],
+    "resolved_generation_id": null,
+    "intended_generation_id": 32,
+    "executable_manifest_created": false
+  },
+  {
+    "candidate_reference": "JL22-38",
+    "eligibility_status": "requires_review",
+    "planned_action": "flag_review",
+    "review_category": "generation_correspondence",
+    "reasons": [
+      "Missing reviewed generation correspondence."
+    ],
+    "resolved_generation_id": null,
+    "intended_generation_id": 32,
+    "executable_manifest_created": false
+  },
+  {
+    "candidate_reference": "JL22-39",
+    "eligibility_status": "requires_review",
+    "planned_action": "flag_review",
+    "review_category": "generation_correspondence",
+    "reasons": [
+      "Missing reviewed generation correspondence."
+    ],
+    "resolved_generation_id": null,
+    "intended_generation_id": 32,
+    "executable_manifest_created": false
+  },
+  {
+    "candidate_reference": "JL22-40",
+    "eligibility_status": "requires_review",
+    "planned_action": "flag_review",
+    "review_category": "generation_correspondence",
+    "reasons": [
+      "Missing reviewed generation correspondence."
+    ],
+    "resolved_generation_id": null,
+    "intended_generation_id": 32,
+    "executable_manifest_created": false
+  },
+  {
+    "candidate_reference": "JL22-41",
+    "eligibility_status": "requires_review",
+    "planned_action": "flag_review",
+    "review_category": "generation_correspondence",
+    "reasons": [
+      "Missing reviewed generation correspondence."
+    ],
+    "resolved_generation_id": null,
+    "intended_generation_id": 32,
+    "executable_manifest_created": false
+  },
+  {
+    "candidate_reference": "JL22-42",
+    "eligibility_status": "requires_review",
+    "planned_action": "flag_review",
+    "review_category": "generation_correspondence",
+    "reasons": [
+      "Missing reviewed generation correspondence."
+    ],
+    "resolved_generation_id": null,
+    "intended_generation_id": 32,
+    "executable_manifest_created": false
+  },
+  {
+    "candidate_reference": "JL22-43",
+    "eligibility_status": "requires_review",
+    "planned_action": "flag_review",
+    "review_category": "generation_correspondence",
+    "reasons": [
+      "Missing reviewed generation correspondence."
+    ],
+    "resolved_generation_id": null,
+    "intended_generation_id": 32,
+    "executable_manifest_created": false
+  },
+  {
+    "candidate_reference": "JL22-44",
+    "eligibility_status": "requires_review",
+    "planned_action": "flag_review",
+    "review_category": "generation_correspondence",
+    "reasons": [
+      "Missing reviewed generation correspondence."
+    ],
+    "resolved_generation_id": null,
+    "intended_generation_id": 32,
+    "executable_manifest_created": false
+  },
+  {
+    "candidate_reference": "JL22-45",
+    "eligibility_status": "requires_review",
+    "planned_action": "flag_review",
+    "review_category": "generation_correspondence",
+    "reasons": [
+      "Missing reviewed generation correspondence."
+    ],
+    "resolved_generation_id": null,
+    "intended_generation_id": 32,
+    "executable_manifest_created": false
+  },
+  {
+    "candidate_reference": "JL22-46",
+    "eligibility_status": "requires_review",
+    "planned_action": "flag_review",
+    "review_category": "generation_correspondence",
+    "reasons": [
+      "Missing reviewed generation correspondence."
+    ],
+    "resolved_generation_id": null,
+    "intended_generation_id": 32,
+    "executable_manifest_created": false
+  },
+  {
+    "candidate_reference": "JL22-47",
+    "eligibility_status": "requires_review",
+    "planned_action": "flag_review",
+    "review_category": "generation_correspondence",
+    "reasons": [
+      "Missing reviewed generation correspondence."
+    ],
+    "resolved_generation_id": null,
+    "intended_generation_id": 32,
+    "executable_manifest_created": false
+  },
+  {
+    "candidate_reference": "JL22-48",
+    "eligibility_status": "requires_review",
+    "planned_action": "flag_review",
+    "review_category": "generation_correspondence",
+    "reasons": [
+      "Missing reviewed generation correspondence."
+    ],
+    "resolved_generation_id": null,
+    "intended_generation_id": 32,
+    "executable_manifest_created": false
+  },
+  {
+    "candidate_reference": "JL22-49",
+    "eligibility_status": "requires_review",
+    "planned_action": "flag_review",
+    "review_category": "generation_correspondence",
+    "reasons": [
+      "Missing reviewed generation correspondence."
+    ],
+    "resolved_generation_id": null,
+    "intended_generation_id": 32,
+    "executable_manifest_created": false
+  },
+  {
+    "candidate_reference": "JL22-50",
+    "eligibility_status": "requires_review",
+    "planned_action": "flag_review",
+    "review_category": "generation_correspondence",
+    "reasons": [
+      "Missing reviewed generation correspondence."
+    ],
+    "resolved_generation_id": null,
+    "intended_generation_id": 32,
+    "executable_manifest_created": false
+  },
+  {
+    "candidate_reference": "JL22-51",
+    "eligibility_status": "requires_review",
+    "planned_action": "flag_review",
+    "review_category": "generation_correspondence",
+    "reasons": [
+      "Missing reviewed generation correspondence."
+    ],
+    "resolved_generation_id": null,
+    "intended_generation_id": 32,
+    "executable_manifest_created": false
+  },
+  {
+    "candidate_reference": "JL22-52",
+    "eligibility_status": "requires_review",
+    "planned_action": "flag_review",
+    "review_category": "generation_correspondence",
+    "reasons": [
+      "Missing reviewed generation correspondence."
+    ],
+    "resolved_generation_id": null,
+    "intended_generation_id": 32,
+    "executable_manifest_created": false
+  },
+  {
+    "candidate_reference": "JL22-54",
+    "eligibility_status": "requires_review",
+    "planned_action": "flag_review",
+    "review_category": "generation_correspondence",
+    "reasons": [
+      "Missing reviewed generation correspondence."
+    ],
+    "resolved_generation_id": null,
+    "intended_generation_id": 32,
+    "executable_manifest_created": false
+  },
+  {
+    "candidate_reference": "JL22-55",
+    "eligibility_status": "requires_review",
+    "planned_action": "flag_review",
+    "review_category": "generation_correspondence",
+    "reasons": [
+      "Missing reviewed generation correspondence."
+    ],
+    "resolved_generation_id": null,
+    "intended_generation_id": 32,
+    "executable_manifest_created": false
+  },
+  {
+    "candidate_reference": "JL22-56",
+    "eligibility_status": "requires_review",
+    "planned_action": "flag_review",
+    "review_category": "generation_correspondence",
+    "reasons": [
+      "Missing reviewed generation correspondence."
+    ],
+    "resolved_generation_id": null,
+    "intended_generation_id": 32,
+    "executable_manifest_created": false
+  }
+]

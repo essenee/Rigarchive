@@ -1,0 +1,65 @@
+{
+  "envelope": {
+    "artifact_type": "rigarchive.source_assertion_set.v1",
+    "created_at": "2026-11-10T00:36:51.194499+00:00",
+    "generator": "MY2022_lightweight_retained_evidence",
+    "schema_version": "1.1.0"
+  },
+  "provenance": {
+    "acquisition_method": "retained_local_evidence; no new acquisition",
+    "extraction_provenance": {
+      "extraction_mode": "manually_verified_transcription",
+      "extractor_id": "MY2022_retained_discovery_transcription",
+      "extractor_version": "1.0.0",
+      "notes": "Reuses discovery extraction; not a new production extractor or original Edmunds page acquisition",
+      "raw_artifact_hash": "sha256:616c53e282ed1680ced33ec3f6b0ab5e9c9e283d2d9d79d3e756ef322a930c84",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2022_JL/edmunds_comparison_20261109/row_comparison.csv"
+    },
+    "native_record_id": "JL22-49-edmunds-transcription",
+    "publication_revision": null,
+    "retrieved_at": "2026-11-10T00:36:51.194499+00:00",
+    "review_status": "pending_review",
+    "source_applicability": {
+      "applicability_basis": "Existing MY2022 US guide scope; joins bound to exact model, table, QOP and research row",
+      "applicability_scope": "model_year",
+      "market": "US"
+    },
+    "source_id": "rigarchive_MY2022_edmunds_reconciliation",
+    "source_locator": "https://www.edmunds.com/jeep/wrangler/2022/features-specs/",
+    "source_type": "research_transcription",
+    "source_use_notes": "RigArchive-authored research transcription, not retained original Edmunds HTML or direct manufacturer classification. Offering-level corroboration only; no powertrain values mapped from this secondary interpretation."
+  },
+  "source_assertions": [
+    {
+      "assertion_id": "JL22-49-edmunds-correspondence",
+      "attribute_key": "research_offering_correspondence",
+      "raw_value": {
+        "body_style": "4-door",
+        "cylinders": "6",
+        "displacement_liters": "3.6",
+        "edmunds_aspiration": "not explicitly stated",
+        "edmunds_drive_category": "4WD",
+        "edmunds_electrification": "Gas Engine for manual base; nonhybrid interpretation requires review",
+        "edmunds_fuel": "Gas / regular unleaded",
+        "edmunds_style_id": "401915667",
+        "edmunds_transmission": "6-speed manual; 8-speed automatic only where 24x observed",
+        "edmunds_trim": "Unlimited Rubicon",
+        "edmunds_url": "https://www.edmunds.com/jeep/wrangler/2022/features-specs/",
+        "engine_code": "ERC",
+        "identity_evidence_status": "Insufficient evidence for complete five-field corroboration",
+        "manufacturer_QOPs_not_observed_on_Edmunds": "",
+        "manufacturer_drive_projection": "not present in existing 56-row matrix; not independently matched",
+        "manufacturer_five_fields": "{\"engine_displacement_liters\":\"3.6\",\"engine_cylinders\":6,\"engine_aspiration\":null,\"fuel_type\":null,\"electrification_type\":null}",
+        "manufacturer_model_code": "JLJS74",
+        "manufacturer_row": "JL22-49",
+        "manufacturer_transmission_codes": "DEM",
+        "manufacturer_trim": "Rubicon",
+        "matched_QOPs": "23R",
+        "outcome": "Exact match",
+        "outcome_scope": "Observed offering counterpart; incomplete fields below are not certified",
+        "owner_scope_note": "No classification approval applied"
+      },
+      "source_context": "Existing reconciliation CSV row JL22-49; Edmunds live selector style 401915667; methodology/date in companion README"
+    }
+  ]
+}

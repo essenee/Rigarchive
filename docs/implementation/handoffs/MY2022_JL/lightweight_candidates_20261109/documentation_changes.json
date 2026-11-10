@@ -1,0 +1,12 @@
+{
+  "owner_authorization": "Current explicit additional task to document the MY2022 workflow experiment",
+  "files": {
+    "docs/implementation/CURRENT_STATE.md": "sha256:052ace0ba2e7a34a4cee79c3501da71e1478681d807e57345a5342b388aacfb7",
+    "CHANGELOG.md": "sha256:37d33d0883114c79a9052f29ea12976fb68d7741d49b8d35c04a998e0d672ac8",
+    "docs/development/INGESTION_PROTOCOL.md": "sha256:9f6fdc7a8d8ec286468cbc146e292b05792e7d3dffa276bd1ed9f21672de2dae",
+    "docs/implementation/handoffs/MY2022_JL/WORKFLOW_EXPERIMENT_20261109.md": "sha256:38089ea4dbd96575c0ced713874da9620661b084564cb61305646f80b35c0da1"
+  },
+  "protected_governance_modified": false,
+  "historical_MY2019_MY2021_documents_modified": false,
+  "architecture_schema_or_ADR_changes": false
+}

@@ -2,6 +2,31 @@
 
 Authority: accepted [ADR-0010](../architecture/ADR/ADR-0010-Generation-Correspondence-Selectable-Factory-Alternatives.md), particularly Milestone 1, together with ADR-0004/0006/0007/0008. Transmission and factory-package persistence remain future work.
 
+## Wrangler ingestion workflow W2 — Edmunds-first (2026-11-10)
+
+For the remaining Wrangler model years starting MY2022, the owner has approved **Edmunds as the primary provisional working source** for marketed trims, body styles, engines, transmissions, trim-specific Mechanical Options and Quick Order Packages. The working assumption is that Edmunds is likely correct or mostly correct based on prior Wrangler comparisons; this is an explicit provisional source-confidence choice, not completed manufacturer verification. Comprehensive order-guide/revision validation is deferred until usage, time and priorities justify it. Targeted manufacturer evidence remains appropriate for ambiguous, inconsistent or missing relationships.
+
+Do not use only the default powertrain displayed by a trim selector. Preserve QOP-to-engine/transmission links only where supported; co-listed options alone do not authorize a combination or Cartesian expansion. Maintain source URLs, dates, identifiers, retained-original versus research-transcription distinctions and attribution. Unknowns remain unknown. Existing Candidate, Engine Proof, five-field identity, qualified evidence, human adjudication, generation correspondence, Matrix, stale-plan, atomic import and receipt controls are **not waived**. Record any incompatibility between provisional Edmunds evidence and existing eligibility/proof contracts for a separately authorized decision; never fabricate proof or claim manufacturer verification.
+
+This workflow label **W2** is unrelated to the separate **W2 full-specifications domain architecture** documented below. See the [MY2022 change-of-course and original experiment results](../implementation/handoffs/MY2022_JL/WORKFLOW_EXPERIMENT_20261109.md) and the [coverage/deferrals register](../implementation/CANONICAL_COVERAGE_AND_DEFERRALS.md). No general source-policy change for other vehicle models is implied.
+
+## MY2022 JL experimental lightweight workflow (2026-11-09)
+
+The owner-authorized [MY2022 process experiment](../implementation/handoffs/MY2022_JL/WORKFLOW_EXPERIMENT_20261109.md)
+uses the existing 21-source discovery and bounded Edmunds offering comparison to
+construct 55 provisional Candidate 2.1.0 artifacts, with unsupported fields left null,
+one RHD row deferred and eight transmission/QOP gaps preserved. It narrows repeated
+acquisition, historical revision research and discrepancy investigation to material
+identity questions; it does not replace the established MY2019–MY2021 procedures or
+generalize this exception to other ingestions.
+
+Candidate/Engine Proof validation, qualified lineage, human classification approval,
+source-bound generation publication, Matrix certification, stale-plan checks, atomic
+create-only import and execution receipts remain mandatory. Offering agreement cannot
+supply missing five-field identity values or authorize import. See the linked record
+for the comparison, rationale, actual measurements and post-MY2022 evaluation criteria;
+experiment success is not yet established. No architecture or wire contract changed.
+
 ## W2 approved design contracts — not operational yet
 
 The [W2 domain](../architecture/designs/W2-Full-Specifications-Domain-Architecture.md), [property/applicability](../architecture/designs/W2-Specification-Property-Applicability-Contract.md), [enrichment/publication](../architecture/designs/W2-Enrichment-Publication-Contract.md) and [implementation plan](../architecture/designs/W2-Phase-A-Implementation-Plan.md) are approved Phase A architecture contracts. [ADR-0011](../architecture/ADR/ADR-0011-Factory-Body-Configuration-Identity.md) records the accepted narrow van-body identity amendment; historical ADR-0010 remains unchanged. None introduces implemented commands, changes current Candidate v2/manifest 2.0 execution semantics, authorizes data writes or expands accessory scope. Keep using the implemented protocol below until separately authorized implementation supplies new validated operations.

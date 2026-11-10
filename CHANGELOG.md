@@ -6,6 +6,11 @@ All notable changes to RigArchive will be documented in this file.
 
 ### Changed
 
+- Approved Wrangler ingestion workflow **W2 (Edmunds-first provisional)** for MY2022 and remaining Wrangler model years: use Edmunds trim-specific Mechanical Options, Packages/QOP and taxonomy as primary working evidence; postpone comprehensive manufacturer-order-guide validation, with targeted checks for ambiguities. This does not assert manufacturer verification or relax existing proof, identity, human approval, correspondence, Matrix or import safeguards. Distinct from the separate W2 specifications architecture. Historical MY2022 experiment findings and 55 blocked candidates remain unchanged.
+
+
+- Authorized a bounded MY2022 Wrangler JL lightweight ingestion experiment: reuse the existing 21-source/18-guide discovery and 56/56 Edmunds offering reconciliation, investigate material discrepancies, and allow incomplete provisional candidates without weakening identity, lineage, human approval, generation correspondence, Matrix, stale-plan, atomic import or receipt safeguards. The rationale balances prior processing effort and third-party source-host availability risks against durable retained evidence and maintainability; success and quantitative savings remain unproven.
+
 - Owner-verified drive-wheel feature correction: configurator labels consistently include canonical 2WD/4WD/AWD once, with explicit missing/review states and no mode or front/rear inference. Audited all 934 definitions and 105 groups; public omissions fall from 283 year-view / 183 trim-view labels to zero. Existing selector behavior and canonical data are preserved. 724 Django tests, 31 frontend callbacks and 15 read-only canonical page renders passed; operational database unchanged. The owner visually verified Tacoma, Touareg and Wrangler JL and authorized the feature-only commit; fresh 55 relevant Django tests and 31 frontend callbacks/checks passed. Operational database excluded; no push, merge or deployment.
 
 - The configurator preserves trim-list scrolling across nearby selections, reveals obscured deep-linked selections without centering, and fits up to eight natural-height one-line trim buttons with CSS-based spacing and focus room. Short lists stay compact; long labels wrap and scroll. Existing automatic first-trim selection and keyboard focus are preserved. Full 715-test suite, 46 focused tests, 31 frontend callbacks and isolated browser checks passed; operational database unchanged.
@@ -13,6 +18,13 @@ All notable changes to RigArchive will be documented in this file.
 - The public generation configurator automatically selects the first displayed trim when the selected model year has more than 10 active configurations and no explicit selection. Existing URL selections, small lists and invalid-selection fallbacks are preserved.
 
 ### Added
+
+- Created `docs/implementation/CANONICAL_COVERAGE_AND_DEFERRALS.md` as the durable register for known canonical coverage gaps, initially recording MY2021 and MY2022 Wrangler JL Unlimited Sport RHD (`JLUL74`) as deferred pending US consumer-market applicability, not excluded or presumed fleet-only.
+
+
+- Constructed 55 provisional MY2022 JL Candidate 2.1.0 artifacts (15 two-door / 40 four-door; all six families), preserving the full 56-row Edmunds mapping, deferred RHD and eight transmission/QOP review items. All 55 validate but remain incomplete/blocked: 112 null fields, 13 uncertain ERC/eTorque peer pairs and 72 missing generation source keys; zero supported Engine Proofs, eligible imports, publications or certifications. Deterministic/lineage/negative-control and read-only planner checks plus system/migration checks passed; source and operational database bytes preserved. Recorded measured script phases and future experiment evaluation criteria; no application/schema changes or full-suite rerun.
+
+- Prepared MY2022 US Wrangler JL manufacturer discovery: 18 dated archived ordering guides, two official technical PDFs and a manufacturer-authored press release, with raw hashes, 543 positive QOP observations, 56 provisional guide rows, six-family powertrain evidence and MY2021 comparison. Beach/RHD taxonomy, classification and revision gaps remain explicit. Six integrity tests and all 724 Django tests passed, plus system/migration checks; operational database preserved. No candidate construction, Matrix certification or canonical writes.
 
 - Prepared and validated the MY2021 JL Git milestone: complete retained evidence chain, 73 canonical mappings/execution receipts, 95 published correspondences and the certified Matrix, with 934/3,148/159 database totals. A separate copied SQLite checkpoint follows the MY2020 account/session sanitization policy and preserves all canonical/provenance data; operational database remains byte-for-byte unchanged. All 1,897 prior artifact hash entries, full 713-test suite plus 8 session-guard tests, Django/migration checks, SQLite integrity/foreign keys and restoration/credential scans passed. No further configurator or drive-wheel work.
 

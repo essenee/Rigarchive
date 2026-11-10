@@ -1,0 +1,497 @@
+[
+  {
+    "candidate_reference": "JL22-01",
+    "requested_contract": "Engine Proof 2.0",
+    "status": "not_supported",
+    "reason": [
+      "Missing evidenced powertrain attribute: fuel_type."
+    ],
+    "proof_created": false
+  },
+  {
+    "candidate_reference": "JL22-02",
+    "requested_contract": "Engine Proof 2.0",
+    "status": "not_supported",
+    "reason": [
+      "Missing evidenced powertrain attribute: engine_aspiration."
+    ],
+    "proof_created": false
+  },
+  {
+    "candidate_reference": "JL22-03",
+    "requested_contract": "Engine Proof 2.0",
+    "status": "not_supported",
+    "reason": [
+      "Missing evidenced powertrain attribute: engine_aspiration."
+    ],
+    "proof_created": false
+  },
+  {
+    "candidate_reference": "JL22-04",
+    "requested_contract": "Engine Proof 2.0",
+    "status": "not_supported",
+    "reason": [
+      "Missing evidenced powertrain attribute: fuel_type."
+    ],
+    "proof_created": false
+  },
+  {
+    "candidate_reference": "JL22-05",
+    "requested_contract": "Engine Proof 2.0",
+    "status": "not_supported",
+    "reason": [
+      "Missing evidenced powertrain attribute: engine_aspiration."
+    ],
+    "proof_created": false
+  },
+  {
+    "candidate_reference": "JL22-06",
+    "requested_contract": "Engine Proof 2.0",
+    "status": "not_supported",
+    "reason": [
+      "Missing evidenced powertrain attribute: engine_aspiration."
+    ],
+    "proof_created": false
+  },
+  {
+    "candidate_reference": "JL22-07",
+    "requested_contract": "Engine Proof 2.0",
+    "status": "not_supported",
+    "reason": [
+      "Missing evidenced powertrain attribute: fuel_type."
+    ],
+    "proof_created": false
+  },
+  {
+    "candidate_reference": "JL22-08",
+    "requested_contract": "Engine Proof 2.0",
+    "status": "not_supported",
+    "reason": [
+      "Missing evidenced powertrain attribute: engine_aspiration."
+    ],
+    "proof_created": false
+  },
+  {
+    "candidate_reference": "JL22-09",
+    "requested_contract": "Engine Proof 2.0",
+    "status": "not_supported",
+    "reason": [
+      "Missing evidenced powertrain attribute: engine_aspiration."
+    ],
+    "proof_created": false
+  },
+  {
+    "candidate_reference": "JL22-10",
+    "requested_contract": "Engine Proof 2.0",
+    "status": "not_supported",
+    "reason": [
+      "Missing evidenced powertrain attribute: fuel_type."
+    ],
+    "proof_created": false
+  },
+  {
+    "candidate_reference": "JL22-11",
+    "requested_contract": "Engine Proof 2.0",
+    "status": "not_supported",
+    "reason": [
+      "Missing evidenced powertrain attribute: engine_aspiration."
+    ],
+    "proof_created": false
+  },
+  {
+    "candidate_reference": "JL22-12",
+    "requested_contract": "Engine Proof 2.0",
+    "status": "not_supported",
+    "reason": [
+      "Missing evidenced powertrain attribute: engine_aspiration."
+    ],
+    "proof_created": false
+  },
+  {
+    "candidate_reference": "JL22-13",
+    "requested_contract": "Engine Proof 2.0",
+    "status": "not_supported",
+    "reason": [
+      "Missing evidenced powertrain attribute: fuel_type."
+    ],
+    "proof_created": false
+  },
+  {
+    "candidate_reference": "JL22-14",
+    "requested_contract": "Engine Proof 2.0",
+    "status": "not_supported",
+    "reason": [
+      "Missing evidenced powertrain attribute: engine_aspiration."
+    ],
+    "proof_created": false
+  },
+  {
+    "candidate_reference": "JL22-15",
+    "requested_contract": "Engine Proof 2.0",
+    "status": "not_supported",
+    "reason": [
+      "Missing evidenced powertrain attribute: engine_aspiration."
+    ],
+    "proof_created": false
+  },
+  {
+    "candidate_reference": "JL22-16",
+    "requested_contract": "Engine Proof 2.0",
+    "status": "not_supported",
+    "reason": [
+      "Missing evidenced powertrain attribute: fuel_type."
+    ],
+    "proof_created": false
+  },
+  {
+    "candidate_reference": "JL22-17",
+    "requested_contract": "Engine Proof 2.0",
+    "status": "not_supported",
+    "reason": [
+      "Missing evidenced powertrain attribute: engine_aspiration."
+    ],
+    "proof_created": false
+  },
+  {
+    "candidate_reference": "JL22-18",
+    "requested_contract": "Engine Proof 2.0",
+    "status": "not_supported",
+    "reason": [
+      "Missing evidenced powertrain attribute: engine_aspiration."
+    ],
+    "proof_created": false
+  },
+  {
+    "candidate_reference": "JL22-19",
+    "requested_contract": "Engine Proof 2.0",
+    "status": "not_supported",
+    "reason": [
+      "Missing evidenced powertrain attribute: electrification_type."
+    ],
+    "proof_created": false
+  },
+  {
+    "candidate_reference": "JL22-20",
+    "requested_contract": "Engine Proof 2.0",
+    "status": "not_supported",
+    "reason": [
+      "Missing evidenced powertrain attribute: engine_aspiration."
+    ],
+    "proof_created": false
+  },
+  {
+    "candidate_reference": "JL22-21",
+    "requested_contract": "Engine Proof 2.0",
+    "status": "not_supported",
+    "reason": [
+      "Missing evidenced powertrain attribute: fuel_type."
+    ],
+    "proof_created": false
+  },
+  {
+    "candidate_reference": "JL22-22",
+    "requested_contract": "Engine Proof 2.0",
+    "status": "not_supported",
+    "reason": [
+      "Missing evidenced powertrain attribute: engine_aspiration."
+    ],
+    "proof_created": false
+  },
+  {
+    "candidate_reference": "JL22-23",
+    "requested_contract": "Engine Proof 2.0",
+    "status": "not_supported",
+    "reason": [
+      "Missing evidenced powertrain attribute: engine_aspiration."
+    ],
+    "proof_created": false
+  },
+  {
+    "candidate_reference": "JL22-24",
+    "requested_contract": "Engine Proof 2.0",
+    "status": "not_supported",
+    "reason": [
+      "Missing evidenced powertrain attribute: electrification_type."
+    ],
+    "proof_created": false
+  },
+  {
+    "candidate_reference": "JL22-25",
+    "requested_contract": "Engine Proof 2.0",
+    "status": "not_supported",
+    "reason": [
+      "Missing evidenced powertrain attribute: fuel_type."
+    ],
+    "proof_created": false
+  },
+  {
+    "candidate_reference": "JL22-26",
+    "requested_contract": "Engine Proof 2.0",
+    "status": "not_supported",
+    "reason": [
+      "Missing evidenced powertrain attribute: engine_aspiration."
+    ],
+    "proof_created": false
+  },
+  {
+    "candidate_reference": "JL22-27",
+    "requested_contract": "Engine Proof 2.0",
+    "status": "not_supported",
+    "reason": [
+      "Missing evidenced powertrain attribute: engine_aspiration."
+    ],
+    "proof_created": false
+  },
+  {
+    "candidate_reference": "JL22-28",
+    "requested_contract": "Engine Proof 2.0",
+    "status": "not_supported",
+    "reason": [
+      "Missing evidenced powertrain attribute: electrification_type."
+    ],
+    "proof_created": false
+  },
+  {
+    "candidate_reference": "JL22-29",
+    "requested_contract": "Engine Proof 2.0",
+    "status": "not_supported",
+    "reason": [
+      "Missing evidenced powertrain attribute: fuel_type."
+    ],
+    "proof_created": false
+  },
+  {
+    "candidate_reference": "JL22-30",
+    "requested_contract": "Engine Proof 2.0",
+    "status": "not_supported",
+    "reason": [
+      "Missing evidenced powertrain attribute: engine_aspiration."
+    ],
+    "proof_created": false
+  },
+  {
+    "candidate_reference": "JL22-31",
+    "requested_contract": "Engine Proof 2.0",
+    "status": "not_supported",
+    "reason": [
+      "Missing evidenced powertrain attribute: engine_aspiration."
+    ],
+    "proof_created": false
+  },
+  {
+    "candidate_reference": "JL22-32",
+    "requested_contract": "Engine Proof 2.0",
+    "status": "not_supported",
+    "reason": [
+      "Missing evidenced powertrain attribute: electrification_type."
+    ],
+    "proof_created": false
+  },
+  {
+    "candidate_reference": "JL22-33",
+    "requested_contract": "Engine Proof 2.0",
+    "status": "not_supported",
+    "reason": [
+      "Missing evidenced powertrain attribute: fuel_type."
+    ],
+    "proof_created": false
+  },
+  {
+    "candidate_reference": "JL22-34",
+    "requested_contract": "Engine Proof 2.0",
+    "status": "not_supported",
+    "reason": [
+      "Missing evidenced powertrain attribute: engine_aspiration."
+    ],
+    "proof_created": false
+  },
+  {
+    "candidate_reference": "JL22-35",
+    "requested_contract": "Engine Proof 2.0",
+    "status": "not_supported",
+    "reason": [
+      "Missing evidenced powertrain attribute: engine_aspiration."
+    ],
+    "proof_created": false
+  },
+  {
+    "candidate_reference": "JL22-36",
+    "requested_contract": "Engine Proof 2.0",
+    "status": "not_supported",
+    "reason": [
+      "Missing evidenced powertrain attribute: electrification_type."
+    ],
+    "proof_created": false
+  },
+  {
+    "candidate_reference": "JL22-37",
+    "requested_contract": "Engine Proof 2.0",
+    "status": "not_supported",
+    "reason": [
+      "Missing evidenced powertrain attribute: fuel_type."
+    ],
+    "proof_created": false
+  },
+  {
+    "candidate_reference": "JL22-38",
+    "requested_contract": "Engine Proof 2.0",
+    "status": "not_supported",
+    "reason": [
+      "Missing evidenced powertrain attribute: engine_aspiration."
+    ],
+    "proof_created": false
+  },
+  {
+    "candidate_reference": "JL22-39",
+    "requested_contract": "Engine Proof 2.0",
+    "status": "not_supported",
+    "reason": [
+      "Missing evidenced powertrain attribute: engine_aspiration."
+    ],
+    "proof_created": false
+  },
+  {
+    "candidate_reference": "JL22-40",
+    "requested_contract": "Engine Proof 2.0",
+    "status": "not_supported",
+    "reason": [
+      "Missing evidenced powertrain attribute: electrification_type."
+    ],
+    "proof_created": false
+  },
+  {
+    "candidate_reference": "JL22-41",
+    "requested_contract": "Engine Proof 2.0",
+    "status": "not_supported",
+    "reason": [
+      "Missing evidenced powertrain attribute: fuel_type."
+    ],
+    "proof_created": false
+  },
+  {
+    "candidate_reference": "JL22-42",
+    "requested_contract": "Engine Proof 2.0",
+    "status": "not_supported",
+    "reason": [
+      "Missing evidenced powertrain attribute: engine_aspiration."
+    ],
+    "proof_created": false
+  },
+  {
+    "candidate_reference": "JL22-43",
+    "requested_contract": "Engine Proof 2.0",
+    "status": "not_supported",
+    "reason": [
+      "Missing evidenced powertrain attribute: electrification_type."
+    ],
+    "proof_created": false
+  },
+  {
+    "candidate_reference": "JL22-44",
+    "requested_contract": "Engine Proof 2.0",
+    "status": "not_supported",
+    "reason": [
+      "Missing evidenced powertrain attribute: fuel_type."
+    ],
+    "proof_created": false
+  },
+  {
+    "candidate_reference": "JL22-45",
+    "requested_contract": "Engine Proof 2.0",
+    "status": "not_supported",
+    "reason": [
+      "Missing evidenced powertrain attribute: engine_aspiration."
+    ],
+    "proof_created": false
+  },
+  {
+    "candidate_reference": "JL22-46",
+    "requested_contract": "Engine Proof 2.0",
+    "status": "not_supported",
+    "reason": [
+      "Missing evidenced powertrain attribute: engine_aspiration."
+    ],
+    "proof_created": false
+  },
+  {
+    "candidate_reference": "JL22-47",
+    "requested_contract": "Engine Proof 2.0",
+    "status": "not_supported",
+    "reason": [
+      "Missing evidenced powertrain attribute: electrification_type."
+    ],
+    "proof_created": false
+  },
+  {
+    "candidate_reference": "JL22-48",
+    "requested_contract": "Engine Proof 2.0",
+    "status": "not_supported",
+    "reason": [
+      "Missing evidenced powertrain attribute: fuel_type."
+    ],
+    "proof_created": false
+  },
+  {
+    "candidate_reference": "JL22-49",
+    "requested_contract": "Engine Proof 2.0",
+    "status": "not_supported",
+    "reason": [
+      "Missing evidenced powertrain attribute: engine_aspiration."
+    ],
+    "proof_created": false
+  },
+  {
+    "candidate_reference": "JL22-50",
+    "requested_contract": "Engine Proof 2.0",
+    "status": "not_supported",
+    "reason": [
+      "Missing evidenced powertrain attribute: engine_aspiration."
+    ],
+    "proof_created": false
+  },
+  {
+    "candidate_reference": "JL22-51",
+    "requested_contract": "Engine Proof 2.0",
+    "status": "not_supported",
+    "reason": [
+      "Missing evidenced powertrain attribute: electrification_type."
+    ],
+    "proof_created": false
+  },
+  {
+    "candidate_reference": "JL22-52",
+    "requested_contract": "Engine Proof 2.0",
+    "status": "not_supported",
+    "reason": [
+      "Missing evidenced powertrain attribute: engine_aspiration."
+    ],
+    "proof_created": false
+  },
+  {
+    "candidate_reference": "JL22-54",
+    "requested_contract": "Engine Proof 2.0",
+    "status": "not_supported",
+    "reason": [
+      "Missing evidenced powertrain attribute: fuel_type."
+    ],
+    "proof_created": false
+  },
+  {
+    "candidate_reference": "JL22-55",
+    "requested_contract": "Engine Proof 2.0",
+    "status": "not_supported",
+    "reason": [
+      "Missing evidenced powertrain attribute: fuel_type."
+    ],
+    "proof_created": false
+  },
+  {
+    "candidate_reference": "JL22-56",
+    "requested_contract": "Engine Proof 2.0",
+    "status": "not_supported",
+    "reason": [
+      "Missing evidenced powertrain attribute: fuel_type."
+    ],
+    "proof_created": false
+  }
+]

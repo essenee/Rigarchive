@@ -1,0 +1,241 @@
+{
+  "approval_status": "not_requested_or_applied",
+  "classification_review_groups": [
+    {
+      "engine_code": "EC1",
+      "field": "electrification_type",
+      "possible_value_for_review": "none",
+      "candidate_references": [
+        "JL22-01",
+        "JL22-04",
+        "JL22-07",
+        "JL22-10",
+        "JL22-13",
+        "JL22-16",
+        "JL22-21",
+        "JL22-25",
+        "JL22-29",
+        "JL22-33",
+        "JL22-37",
+        "JL22-41",
+        "JL22-44",
+        "JL22-48"
+      ],
+      "affected_candidates": 14,
+      "required_gate": "Existing exact-candidate classification adjudication; no batch default or raw-assertion rewrite"
+    },
+    {
+      "engine_code": "EC1",
+      "field": "fuel_type",
+      "possible_value_for_review": "gasoline",
+      "candidate_references": [
+        "JL22-01",
+        "JL22-04",
+        "JL22-07",
+        "JL22-10",
+        "JL22-13",
+        "JL22-16",
+        "JL22-21",
+        "JL22-25",
+        "JL22-29",
+        "JL22-33",
+        "JL22-37",
+        "JL22-41",
+        "JL22-44",
+        "JL22-48"
+      ],
+      "affected_candidates": 14,
+      "required_gate": "Existing exact-candidate classification adjudication; no batch default or raw-assertion rewrite"
+    },
+    {
+      "engine_code": "ECX",
+      "field": "fuel_type",
+      "possible_value_for_review": "gasoline",
+      "candidate_references": [
+        "JL22-54",
+        "JL22-55",
+        "JL22-56"
+      ],
+      "affected_candidates": 3,
+      "required_gate": "Existing exact-candidate classification adjudication; no batch default or raw-assertion rewrite"
+    },
+    {
+      "engine_code": "ERC",
+      "field": "electrification_type",
+      "possible_value_for_review": "none",
+      "candidate_references": [
+        "JL22-02",
+        "JL22-05",
+        "JL22-08",
+        "JL22-11",
+        "JL22-14",
+        "JL22-17",
+        "JL22-22",
+        "JL22-26",
+        "JL22-30",
+        "JL22-34",
+        "JL22-38",
+        "JL22-45",
+        "JL22-49"
+      ],
+      "affected_candidates": 13,
+      "required_gate": "Existing exact-candidate classification adjudication; no batch default or raw-assertion rewrite"
+    },
+    {
+      "engine_code": "ERC",
+      "field": "engine_aspiration",
+      "possible_value_for_review": "naturally_aspirated",
+      "candidate_references": [
+        "JL22-02",
+        "JL22-05",
+        "JL22-08",
+        "JL22-11",
+        "JL22-14",
+        "JL22-17",
+        "JL22-22",
+        "JL22-26",
+        "JL22-30",
+        "JL22-34",
+        "JL22-38",
+        "JL22-45",
+        "JL22-49"
+      ],
+      "affected_candidates": 13,
+      "required_gate": "Existing exact-candidate classification adjudication; no batch default or raw-assertion rewrite"
+    },
+    {
+      "engine_code": "ERC",
+      "field": "fuel_type",
+      "possible_value_for_review": "gasoline",
+      "candidate_references": [
+        "JL22-02",
+        "JL22-05",
+        "JL22-08",
+        "JL22-11",
+        "JL22-14",
+        "JL22-17",
+        "JL22-22",
+        "JL22-26",
+        "JL22-30",
+        "JL22-34",
+        "JL22-38",
+        "JL22-45",
+        "JL22-49"
+      ],
+      "affected_candidates": 13,
+      "required_gate": "Existing exact-candidate classification adjudication; no batch default or raw-assertion rewrite"
+    },
+    {
+      "engine_code": "ERG",
+      "field": "engine_aspiration",
+      "possible_value_for_review": "naturally_aspirated",
+      "candidate_references": [
+        "JL22-03",
+        "JL22-06",
+        "JL22-09",
+        "JL22-12",
+        "JL22-15",
+        "JL22-18",
+        "JL22-20",
+        "JL22-23",
+        "JL22-27",
+        "JL22-31",
+        "JL22-35",
+        "JL22-39",
+        "JL22-42",
+        "JL22-46",
+        "JL22-50"
+      ],
+      "affected_candidates": 15,
+      "required_gate": "Existing exact-candidate classification adjudication; no batch default or raw-assertion rewrite"
+    },
+    {
+      "engine_code": "ERG",
+      "field": "fuel_type",
+      "possible_value_for_review": "gasoline",
+      "candidate_references": [
+        "JL22-03",
+        "JL22-06",
+        "JL22-09",
+        "JL22-12",
+        "JL22-15",
+        "JL22-18",
+        "JL22-20",
+        "JL22-23",
+        "JL22-27",
+        "JL22-31",
+        "JL22-35",
+        "JL22-39",
+        "JL22-42",
+        "JL22-46",
+        "JL22-50"
+      ],
+      "affected_candidates": 15,
+      "required_gate": "Existing exact-candidate classification adjudication; no batch default or raw-assertion rewrite"
+    },
+    {
+      "engine_code": "ESG",
+      "field": "electrification_type",
+      "possible_value_for_review": "none",
+      "candidate_references": [
+        "JL22-52"
+      ],
+      "affected_candidates": 1,
+      "required_gate": "Existing exact-candidate classification adjudication; no batch default or raw-assertion rewrite"
+    },
+    {
+      "engine_code": "ESG",
+      "field": "engine_aspiration",
+      "possible_value_for_review": "naturally_aspirated",
+      "candidate_references": [
+        "JL22-52"
+      ],
+      "affected_candidates": 1,
+      "required_gate": "Existing exact-candidate classification adjudication; no batch default or raw-assertion rewrite"
+    },
+    {
+      "engine_code": "ESG",
+      "field": "fuel_type",
+      "possible_value_for_review": "gasoline",
+      "candidate_references": [
+        "JL22-52"
+      ],
+      "affected_candidates": 1,
+      "required_gate": "Existing exact-candidate classification adjudication; no batch default or raw-assertion rewrite"
+    },
+    {
+      "engine_code": "EXJ",
+      "field": "electrification_type",
+      "possible_value_for_review": "none",
+      "candidate_references": [
+        "JL22-19",
+        "JL22-24",
+        "JL22-28",
+        "JL22-32",
+        "JL22-36",
+        "JL22-40",
+        "JL22-43",
+        "JL22-47",
+        "JL22-51"
+      ],
+      "affected_candidates": 9,
+      "required_gate": "Existing exact-candidate classification adjudication; no batch default or raw-assertion rewrite"
+    }
+  ],
+  "other_material_decisions": [
+    {
+      "topic": "High Tide / Jeep Beach",
+      "finding_requested": "Confirm provisional Unlimited High Tide grade; retain Jeep Beach as subordinate edition/equipment unless owner establishes independent factory-grade identity",
+      "candidate_reference": "JL22-20"
+    },
+    {
+      "topic": "Generation correspondence",
+      "finding_requested": "Review source-bound MY2022 applicability to existing Generation 32; separately authorize publication before eligibility",
+      "source_model_keys": 72
+    },
+    {
+      "topic": "RHD",
+      "finding_requested": "No decision required for current 55-row construction; remains excluded and deferred"
+    }
+  ]
+}

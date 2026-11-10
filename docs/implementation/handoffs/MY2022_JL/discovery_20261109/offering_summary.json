@@ -1,0 +1,22 @@
+{
+  "provisional_rows": 56,
+  "consumer_proposals": 55,
+  "RHD_review_rows": 1,
+  "by_body": {
+    "2-door": 15,
+    "4-door": 41
+  },
+  "by_engine": {
+    "EC1": 15,
+    "ERC": 13,
+    "ERG": 15,
+    "EXJ": 9,
+    "ESG": 1,
+    "ECX": 3
+  },
+  "body_model_label_groups": 20,
+  "positive_cells": 543,
+  "powertrain_pages": 81,
+  "package_pages": 224,
+  "notice": "Observed guide union, not certified complete MY2022 factory space or canonical count. Jeep Beach retained separately pending classification."
+}

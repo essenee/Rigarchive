@@ -1,0 +1,11 @@
+test_comparison_and_package_pages (__main__.DiscoveryChecks.test_comparison_and_package_pages) ... ok
+test_exact_lineage_and_union (__main__.DiscoveryChecks.test_exact_lineage_and_union) ... ok
+test_independent_plain_text_availability (__main__.DiscoveryChecks.test_independent_plain_text_availability) ... ok
+test_preservation (__main__.DiscoveryChecks.test_preservation) ... ok
+test_retained_sources_and_extraction (__main__.DiscoveryChecks.test_retained_sources_and_extraction) ... ok
+test_review_and_scope_boundaries (__main__.DiscoveryChecks.test_review_and_scope_boundaries) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 23.358s
+
+OK

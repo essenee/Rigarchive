@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "schema_valid_candidates": 55,
+  "roundtrips": 55,
+  "manufacturer_Edmunds_lineage_checks": 55,
+  "source_assertion_sets_validated": 128,
+  "null_field_instances_preserved": 112,
+  "unsupported_null_fill_controls_rejected": 2,
+  "changed_generation_projection_control_rejected": 1,
+  "incomplete_engine_proof_rejections": 55,
+  "construction_phase_SQLite_connections": 0,
+  "guarded_read_only_SQLite_connections": 1,
+  "writable_SQLite_connection_control_rejected": true,
+  "query_only_pragma": true,
+  "actual_planner_review_required": 55,
+  "database_hash_preserved": true,
+  "source_and_contract_hashes_preserved": true,
+  "elapsed_seconds": 0.891836,
+  "full_Django_suite_run": false
+}

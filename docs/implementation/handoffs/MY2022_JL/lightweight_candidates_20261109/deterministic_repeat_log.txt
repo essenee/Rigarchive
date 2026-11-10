@@ -1,0 +1,79 @@
+{
+  "candidate_contract": "2.1.0",
+  "engine_proof_contract": "2.0",
+  "schema_valid_candidates": 55,
+  "complete_candidates": 0,
+  "incomplete_candidates": 55,
+  "blocked_candidates": 55,
+  "eligible_candidates": 0,
+  "count_semantics": "Complete/incomplete partition 55; blocked overlaps completeness and is not an additional candidate set",
+  "by_body": {
+    "2-door": 15,
+    "4-door": 40
+  },
+  "by_engine": {
+    "EC1": 14,
+    "ERC": 13,
+    "ERG": 15,
+    "EXJ": 9,
+    "ESG": 1,
+    "ECX": 3
+  },
+  "unresolved_field_instances": 112,
+  "unresolved_by_field": {
+    "fuel_type": 46,
+    "electrification_type": 37,
+    "engine_aspiration": 29
+  },
+  "consumer_Edmunds_outcomes": {
+    "Exact match": 44,
+    "Equivalent configuration with different naming": 11
+  },
+  "RHD_deferred": 1,
+  "transmission_review_items": 8,
+  "assertion_sets": 128,
+  "engine_proofs_created": 0,
+  "possible_identity_overlap_pairs": 13,
+  "planner_status_counts": {
+    "requires_review": 55
+  },
+  "planner_review_categories": {
+    "generation_correspondence": 55
+  },
+  "missing_generation_source_keys": 72,
+  "database_preserved": true,
+  "canonical_writes": 0,
+  "correspondences_published": 0,
+  "matrices_certified": 0,
+  "source_acquisitions": 0,
+  "candidate_revisions_per_row": 1,
+  "checks": {
+    "schema": "passed",
+    "serialization_roundtrip": "passed",
+    "deterministic_rebuild": "passed",
+    "qualified_source_and_raw_byte_lineage": "passed",
+    "Edmunds_correspondence": "passed",
+    "RHD_exclusion": "passed",
+    "null_preservation": "passed",
+    "generation_evidence_projection": "passed",
+    "Engine_Proof_2_0_incomplete_rejection": "passed",
+    "actual_read_only_planner": "passed",
+    "preservation": "passed"
+  }
+}
+{
+  "measured_at": "2026-11-10T00:36:52.658300+00:00",
+  "construction_and_duplicate_rebuild_and_contract_validation_seconds": 1.257802,
+  "read_only_planning_and_generation_readiness_seconds": 0.143702,
+  "script_elapsed_seconds": 1.875675,
+  "sqlite_read_only_connections": null,
+  "new_source_acquisitions": 0,
+  "candidate_artifacts": 55,
+  "source_assertion_sets": 128,
+  "candidate_bytes": 8111439,
+  "assertion_set_bytes": 824644,
+  "python": "3.13.1",
+  "django": "6.0.7",
+  "limitations": "Script measurements only, not complete chat wall time or model processing. No reliable token counters or comparable MY2019\u2013MY2021 timing baseline available; no savings asserted.",
+  "sqlite_instrumentation_note": "Initial timer run configured SQLite mode=ro/uri=True, but the counter patched sqlite3.connect rather than Django dbapi2.connect. Connection count was not measured. Both entry points are guarded for the independent repeat validation."
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "label": "Jeep Beach",
+    "status": "manufacturer_confirmed_marketed_edition; identity_unresolved",
+    "source_id": "Stellantis_High_Tide_20220207",
+    "source_sha256": "sha256:013792bfaf9de3f7635868d402f707e72b6f72b07e0356d1b92c41c2874e0560",
+    "locator": "article body: first 500 High Tide vehicles",
+    "model_code": null,
+    "engine_code": null,
+    "transmission_code": null,
+    "related_research_row": "JL22-20",
+    "notice": "Do not assign High Tide codes by inference or create a separate canonical row without owner review; not counted in 56 guide-union rows"
+  },
+  {
+    "label": "Sport RHD",
+    "status": "separate_owner_scope_review",
+    "model_code": "JLUL74",
+    "guide_row": "JL22-53",
+    "notice": "US guide evidence exists; no claim that RHD is automatically fleet-only or excluded from consumer scope"
+  },
+  {
+    "label": "Willys 4xe / Freedom / 80th Anniversary / Islander",
+    "status": "not_established_in_retained_MY2022_guides",
+    "notice": "No automatic carryforward from MY2021. Calendar-year 2022 announcements may concern MY2023. Not proven nonexistent worldwide or at every production date."
+  }
+]

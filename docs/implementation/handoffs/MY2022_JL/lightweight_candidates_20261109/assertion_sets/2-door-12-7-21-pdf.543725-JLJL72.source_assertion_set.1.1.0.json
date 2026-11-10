@@ -1,0 +1,89 @@
+{
+  "envelope": {
+    "artifact_type": "rigarchive.source_assertion_set.v1",
+    "created_at": "2026-11-10T00:36:51.194499+00:00",
+    "generator": "MY2022_lightweight_retained_evidence",
+    "schema_version": "1.1.0"
+  },
+  "provenance": {
+    "acquisition_method": "retained_local_evidence; no new acquisition",
+    "extraction_provenance": {
+      "extraction_mode": "manually_verified_transcription",
+      "extractor_id": "MY2022_retained_discovery_transcription",
+      "extractor_version": "1.0.0",
+      "notes": "Reuses discovery extraction; not a new production extractor or original Edmunds page acquisition",
+      "raw_artifact_hash": "sha256:c62aa593e1f7374b37af2ce447aaa9878b627891eaca82b646dced702492ac8e",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2022_JL/discovery_20261109/source_pdfs/2-door-12-7-21-pdf.543725.pdf"
+    },
+    "native_record_id": "2-door-12-7-21-pdf.543725-JLJL72",
+    "publication_revision": "2021-12-07",
+    "retrieved_at": "2026-11-09T23:51:59.393582+00:00",
+    "review_status": "pending_review",
+    "source_applicability": {
+      "applicability_basis": "Existing MY2022 US guide scope; joins bound to exact model, table, QOP and research row",
+      "applicability_scope": "model_year",
+      "market": "US",
+      "publisher_jurisdiction": "US"
+    },
+    "source_id": "2-door-12-7-21-pdf.543725",
+    "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2-door-12-7-21-pdf.543725/",
+    "source_type": "manufacturer_document",
+    "source_use_notes": "Manufacturer-issued third-party archived guide. Raw heading, model and positive engine/QOP group retained; no cross-year availability inference."
+  },
+  "source_assertions": [
+    {
+      "assertion_id": "2-door-12-7-21-pdf.543725-JLJL72-EC1-engine-column",
+      "attribute_key": "engine_descriptor",
+      "raw_value": "2.0L I4 DOHC DI     ( TURBO ENGINE W/ ESS (EC1)",
+      "source_context": "PDF page 2; first 21 characters of each retained layout-segment line; full segments retained; no codes or QOP values interpreted as powertrain classes"
+    },
+    {
+      "assertion_id": "2-door-12-7-21-pdf.543725-JLJL72-EC1-segment-0",
+      "attribute_key": "engine_transmission_QOP_segment",
+      "raw_value": "2.0L I4 DOHC DI     (450)   (500)  8-SPD AUTO           2,250    2,500           22B                   22K                   22S                   22W\nTURBO ENGINE                       850RE TRANS\nW/ ESS (EC1)                       (MAKE) (DFT)",
+      "source_context": "PDF page 2; full engine/transmission/QOP segment 0; EC1"
+    },
+    {
+      "assertion_id": "2-door-12-7-21-pdf.543725-JLJL72-ERC-engine-column",
+      "attribute_key": "engine_descriptor",
+      "raw_value": "3.6L V6 24V VVT ENGINE UPG I W/ESS (ERC) ",
+      "source_context": "PDF page 2; first 21 characters of each retained layout-segment line; full segments retained; no codes or QOP values interpreted as powertrain classes"
+    },
+    {
+      "assertion_id": "2-door-12-7-21-pdf.543725-JLJL72-ERC-segment-0",
+      "attribute_key": "engine_transmission_QOP_segment",
+      "raw_value": "3.6L V6 24V VVT      N/C     N/C   6-SPEED               N/C     N/C             23B                   23K                   23S                   23W\nENGINE UPG I                       MANUAL\nW/ESS (ERC)                        TRANSMISSION\n                                   (DEM)",
+      "source_context": "PDF page 2; full engine/transmission/QOP segment 0; ERC"
+    },
+    {
+      "assertion_id": "2-door-12-7-21-pdf.543725-JLJL72-ERG-engine-column",
+      "attribute_key": "engine_descriptor",
+      "raw_value": "3.6L V6 24V VVT ETORQUE ENGINE UPG I (ERG)",
+      "source_context": "PDF page 2; first 21 characters of each retained layout-segment line; full segments retained; no codes or QOP values interpreted as powertrain classes"
+    },
+    {
+      "assertion_id": "2-door-12-7-21-pdf.543725-JLJL72-ERG-segment-0",
+      "attribute_key": "engine_transmission_QOP_segment",
+      "raw_value": "3.6L V6 24V VVT      676     750   8-SPD AUTO           2,250    2,500           25B                   25K                   25S                   25W\nETORQUE                            850RE TRANS\nENGINE UPG I                       (MAKE) (DFT)\n(ERG)",
+      "source_context": "PDF page 2; full engine/transmission/QOP segment 0; ERG"
+    },
+    {
+      "assertion_id": "2-door-12-7-21-pdf.543725-JLJL72-heading",
+      "attribute_key": "source_document_heading",
+      "raw_value": "REISSUED: 12/07/2021                                                                                                                                         PAGE: 1           JEEP\nISSUED:      10/08/2021\n\n                                                                       United States\n                                                                               2022                                                                                           WRANGLER\n\n                                                          JEEP       WRANGLER                  2  DOOR\n\n                                                       CUSTOMER PREFERRED CODE GUIDE\n\n\n         MODEL                                                                                                 CODE                   PAGES\n         WRANGLER SPORT                                                                                    JLJL72                  2                                           2\n\n         WRANGLER RUBICON                                                                                JLJS72                  6                                             DOOR\n\n         GROUP DETAIL                                                                                                                           9\n         STANDARD EQUIPMENT                                                                                                          12\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n         STEP #1: SELECT                                                                                        MODEL CODE\n\n         STEP #2: SELECT                                                                                        QUICK ORDER PACKAGE CODE\n\n         STEP #3: SELECT                                                                                        $ OPTIONS (IF DESIRED)\n\n         STEP #4: SELECT                                                                                        COLOR & TRIM CODES\n\n\n\n\n\n       © 2020 FCA US LLC, All Rights Reserved. IT IS FOR THE USE OF FCA AND ITS AUTHORIZED DEALERS ONLY AND MAY\n                       NOT BE OTHERWISE USED, RELEASED, OR REPRINTED WITHOUT FCA PRIOR PERMISSION.\n\n                             ORDERS ARE ACCEPTED ONLY WHEN VEHICLES ARE SHIPPED BY THE FACTORY.\n                                                          © 2020 FCA US LLC, All Rights Reserved.",
+      "source_context": "PDF page 1; United States / MY2022 / Wrangler / body heading"
+    },
+    {
+      "assertion_id": "2-door-12-7-21-pdf.543725-JLJL72-model",
+      "attribute_key": "source_model_code",
+      "raw_value": "JLJL72",
+      "source_context": "PDF page 2; exact manufacturer model code"
+    },
+    {
+      "assertion_id": "2-door-12-7-21-pdf.543725-JLJL72-table",
+      "attribute_key": "factory_powertrain_table",
+      "raw_value": "\nENGINE              $FWP   $MSRP   TRANSMISSION          $FWP   $MSRP                 SPORT                         WILLYS SPORT                       SPORT S                              WILLYS\n3.6L V6 24V VVT      N/C     N/C   6-SPEED               N/C     N/C             23B                   23K                   23S                   23W\nENGINE UPG I                       MANUAL\nW/ESS (ERC)                        TRANSMISSION\n                                   (DEM)\n2.0L I4 DOHC DI     (450)   (500)  8-SPD AUTO           2,250    2,500           22B                   22K                   22S                   22W\nTURBO ENGINE                       850RE TRANS\nW/ ESS (EC1)                       (MAKE) (DFT)\n3.6L V6 24V VVT      676     750   8-SPD AUTO           2,250    2,500           25B                   25K                   25S                   25W\nETORQUE                            850RE TRANS\nENGINE UPG I                       (MAKE) (DFT)\n(ERG)\n\n",
+      "source_context": "PDF page 2; model JLJL72; named marketed columns and positive QOP cells"
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "confirmed_complete_duplicates": [],
+  "possible_overlap_pairs": [
+    {
+      "candidates": [
+        "JL22-02",
+        "JL22-03"
+      ],
+      "status": "unknown_overlap_not_proven_duplicate_or_distinct",
+      "reason": "Same trim/body/market/drive and no established unequal five-field dimension; null is not an equality or difference proof"
+    },
+    {
+      "candidates": [
+        "JL22-05",
+        "JL22-06"
+      ],
+      "status": "unknown_overlap_not_proven_duplicate_or_distinct",
+      "reason": "Same trim/body/market/drive and no established unequal five-field dimension; null is not an equality or difference proof"
+    },
+    {
+      "candidates": [
+        "JL22-08",
+        "JL22-09"
+      ],
+      "status": "unknown_overlap_not_proven_duplicate_or_distinct",
+      "reason": "Same trim/body/market/drive and no established unequal five-field dimension; null is not an equality or difference proof"
+    },
+    {
+      "candidates": [
+        "JL22-11",
+        "JL22-12"
+      ],
+      "status": "unknown_overlap_not_proven_duplicate_or_distinct",
+      "reason": "Same trim/body/market/drive and no established unequal five-field dimension; null is not an equality or difference proof"
+    },
+    {
+      "candidates": [
+        "JL22-14",
+        "JL22-15"
+      ],
+      "status": "unknown_overlap_not_proven_duplicate_or_distinct",
+      "reason": "Same trim/body/market/drive and no established unequal five-field dimension; null is not an equality or difference proof"
+    },
+    {
+      "candidates": [
+        "JL22-17",
+        "JL22-18"
+      ],
+      "status": "unknown_overlap_not_proven_duplicate_or_distinct",
+      "reason": "Same trim/body/market/drive and no established unequal five-field dimension; null is not an equality or difference proof"
+    },
+    {
+      "candidates": [
+        "JL22-22",
+        "JL22-23"
+      ],
+      "status": "unknown_overlap_not_proven_duplicate_or_distinct",
+      "reason": "Same trim/body/market/drive and no established unequal five-field dimension; null is not an equality or difference proof"
+    },
+    {
+      "candidates": [
+        "JL22-26",
+        "JL22-27"
+      ],
+      "status": "unknown_overlap_not_proven_duplicate_or_distinct",
+      "reason": "Same trim/body/market/drive and no established unequal five-field dimension; null is not an equality or difference proof"
+    },
+    {
+      "candidates": [
+        "JL22-30",
+        "JL22-31"
+      ],
+      "status": "unknown_overlap_not_proven_duplicate_or_distinct",
+      "reason": "Same trim/body/market/drive and no established unequal five-field dimension; null is not an equality or difference proof"
+    },
+    {
+      "candidates": [
+        "JL22-34",
+        "JL22-35"
+      ],
+      "status": "unknown_overlap_not_proven_duplicate_or_distinct",
+      "reason": "Same trim/body/market/drive and no established unequal five-field dimension; null is not an equality or difference proof"
+    },
+    {
+      "candidates": [
+        "JL22-38",
+        "JL22-39"
+      ],
+      "status": "unknown_overlap_not_proven_duplicate_or_distinct",
+      "reason": "Same trim/body/market/drive and no established unequal five-field dimension; null is not an equality or difference proof"
+    },
+    {
+      "candidates": [
+        "JL22-45",
+        "JL22-46"
+      ],
+      "status": "unknown_overlap_not_proven_duplicate_or_distinct",
+      "reason": "Same trim/body/market/drive and no established unequal five-field dimension; null is not an equality or difference proof"
+    },
+    {
+      "candidates": [
+        "JL22-49",
+        "JL22-50"
+      ],
+      "status": "unknown_overlap_not_proven_duplicate_or_distinct",
+      "reason": "Same trim/body/market/drive and no established unequal five-field dimension; null is not an equality or difference proof"
+    }
+  ],
+  "source_row_duplicates": 0,
+  "candidate_reference_duplicates": 0
+}

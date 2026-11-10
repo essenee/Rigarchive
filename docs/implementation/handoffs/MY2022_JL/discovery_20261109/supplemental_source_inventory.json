@@ -1,0 +1,18 @@
+[
+  {
+    "source_id": "Stellantis_High_Tide_20220207",
+    "url": "https://www.prnewswire.com/news-releases/jeep-brand-makes-big-splashes-with-2022-wrangler-high-tide-model-and-new-high-velocity-yellow-301476721.html",
+    "retained_path": "docs/implementation/handoffs/MY2022_JL/discovery_20261109/evidence/stellantis_high_tide_release.html",
+    "sha256": "sha256:013792bfaf9de3f7635868d402f707e72b6f72b07e0356d1b92c41c2874e0560",
+    "publication_date": "2022-02-07",
+    "publication_time": "13:15 ET",
+    "retained_at": "2026-11-09T23:58:52.582850+00:00",
+    "timestamp_basis": "Retention verification; download earlier this session",
+    "authenticity": "Manufacturer-authored release distributed by PR Newswire; News provided by Stellantis and SOURCE Stellantis on retained HTML; not a publisher-hosted domain",
+    "source_use": "Jeep Beach first-500 High Tide edition relationship and US MY2022 announcement; no separate model/QOP code established",
+    "extraction_path": "docs/implementation/handoffs/MY2022_JL/discovery_20261109/evidence/stellantis_high_tide_release.txt",
+    "extraction_sha256": "sha256:060c746589a8fe61733e506655fb682ca885b4ac1c9cff6680a3137a319797e4",
+    "acquired_at": "2026-11-09T23:55:59.816804+00:00",
+    "acquisition_timestamp_basis": "Filesystem creation time of direct HTTP output; approximate transfer start, not response-completion timestamp"
+  }
+]
