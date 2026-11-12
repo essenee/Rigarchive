@@ -1,0 +1,81 @@
+{
+  "review": {
+    "review_version": "1.0",
+    "revision_uuid": "a0702b66-2f12-5923-98cf-8d353d9ba8ad",
+    "correspondence_uuid": "9da2bea7-11bb-592f-866f-857b4b05221c",
+    "revision_number": 1,
+    "supersedes_uuid": null,
+    "vehicle_model_uuid": "5ec5f58a-b140-484c-97f0-c90ec9c134d6",
+    "generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+    "source_id": "4-door-3-11-22-pdf.579260",
+    "source_namespace": "source_model_code",
+    "identity_type": "model_code",
+    "native_identifier": "JLJX74",
+    "market": "US",
+    "start_year": 2022,
+    "end_year": 2022,
+    "restrictions": {},
+    "evidence": [
+      {
+        "assertion_set_id": "4-door-3-11-22-pdf.579260-JLJX74",
+        "assertions": [
+          {
+            "assertion_id": "4-door-3-11-22-pdf.579260-JLJX74-table",
+            "attribute_key": "factory_powertrain_table",
+            "raw_value": "\nENGINE              $FWP   $MSRP   TRANSMISSION        $FWP    $MSRP\n6.4L V8 SRT         N/C     N/C    8-SPD AUTO           N/C     N/C                                             27X\nHEMI MDS                           8HP75 TRANS\nENGINE (ESG)                       (BUY-GERMANY)\n                                   (DFV)\n\n",
+            "source_context": "PDF page 18; model JLJX74; named marketed columns and positive QOP cells"
+          },
+          {
+            "assertion_id": "4-door-3-11-22-pdf.579260-JLJX74-heading",
+            "attribute_key": "source_document_heading",
+            "raw_value": "REISSUED: 03/11/2022                                                                                                                                        PAGE: 1           JEEP\nISSUED:      10/08/2021\n\n                                                                      United States\n                                                                               2022                                                                                          WRANGLER\n\n                                                         JEEP        WRANGLER                 4   DOOR\n\n                                                       CUSTOMER PREFERRED CODE GUIDE\n\n\n         MODEL                                                                                                 CODE                  PAGES\n         WRANGLER UNLIMITED SPORT                                                               JLJL74                  2                                                     4\n\n         WRANGLER UNLIMITED SAHARA                                                            JLJP74                  8                                                       DOOR\n\n         WRANGLER UNLIMITED RUBICON                                                           JLJS74                 14\n         WRANGLER UNLIMITED RUBICON 392                                                    JLJX74                 18\n         WRANGLER UNLIMITED SPORT RHD                                                       JLUL74                 21\n         WRANGLER UNLIMITED SAHARA 4XE                                                     JLXP74                 22\n         WRANGLER UNLIMITED RUBICON 4XE                                                   JLXS74                 25\n         GROUP DETAIL                                                                                                                          28\n         STANDARD EQUIPMENT                                                                                                          34\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n         STEP #1: SELECT                                                                                        MODEL CODE\n\n         STEP #2: SELECT                                                                                        QUICK ORDER PACKAGE CODE\n\n         STEP #3: SELECT                                                                                        $ OPTIONS (IF DESIRED)\n\n         STEP #4: SELECT                                                                                        COLOR & TRIM CODES\n\n\n\n\n\n       © 2020 FCA US LLC, All Rights Reserved. IT IS FOR THE USE OF FCA AND ITS AUTHORIZED DEALERS ONLY AND MAY\n                       NOT BE OTHERWISE USED, RELEASED, OR REPRINTED WITHOUT FCA PRIOR PERMISSION.\n\n                             ORDERS ARE ACCEPTED ONLY WHEN VEHICLES ARE SHIPPED BY THE FACTORY.\n                                                          © 2020 FCA US LLC, All Rights Reserved.",
+            "source_context": "PDF page 1; United States / MY2022 / Wrangler / body heading"
+          },
+          {
+            "assertion_id": "4-door-3-11-22-pdf.579260-JLJX74-model",
+            "attribute_key": "source_model_code",
+            "raw_value": "JLJX74",
+            "source_context": "PDF page 18; exact manufacturer model code"
+          },
+          {
+            "assertion_id": "4-door-3-11-22-pdf.579260-JLJX74-ESG-segment-0",
+            "attribute_key": "engine_transmission_QOP_segment",
+            "raw_value": "6.4L V8 SRT         N/C     N/C    8-SPD AUTO           N/C     N/C                                             27X\nHEMI MDS                           8HP75 TRANS\nENGINE (ESG)                       (BUY-GERMANY)\n                                   (DFV)",
+            "source_context": "PDF page 18; full engine/transmission/QOP segment 0; ESG"
+          },
+          {
+            "assertion_id": "4-door-3-11-22-pdf.579260-JLJX74-ESG-engine-column",
+            "attribute_key": "engine_descriptor",
+            "raw_value": "6.4L V8 SRT         N HEMI MDS ENGINE (ESG) ",
+            "source_context": "PDF page 18; first 21 characters of each retained layout-segment line; full segments retained; no codes or QOP values interpreted as powertrain classes"
+          }
+        ],
+        "extraction_mode": "manually_verified_transcription",
+        "extractor_id": "MY2022_retained_discovery_transcription",
+        "extractor_version": "1.0.0",
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "publication_revision": "2022-03-11",
+        "raw_artifact_hash": "sha256:c980f8fd08b22affda11243eac36b0621895daa06138a9b6e8e97ba8f1104fcf",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2022_JL/discovery_20261109/source_pdfs/4-door-3-11-22-pdf.579260.pdf",
+        "retrieved_at": "2026-11-09T23:52:45.523837+00:00",
+        "source_applicability": {
+          "applicability_basis": "Existing MY2022 US guide scope; joins bound to exact model, table, QOP and research row",
+          "applicability_scope": "model_year",
+          "market": "US",
+          "publisher_jurisdiction": "US",
+          "unknown_fields": {}
+        },
+        "source_id": "4-door-3-11-22-pdf.579260",
+        "source_locator": "https://www.jlwranglerforums.com/forum/attachments/4-door-3-11-22-pdf.579260/"
+      }
+    ],
+    "finding": "established",
+    "reviewer": "project_owner",
+    "reviewed_at": "2026-11-12T18:32:47.998517+00:00",
+    "review_notes": "Owner-authorized generation correspondence for MY2022 US Wrangler JL (Generation PK 32, UUID 38d3c3ac-f825-4406-abb5-c2d12b9129a4). Verified selector evidence and native model code."
+  },
+  "content_hash": "sha256:3fc15d65088dc21a52a3e7670175ca4a65dc4d427720429ada3f8340a7e11d22"
+}

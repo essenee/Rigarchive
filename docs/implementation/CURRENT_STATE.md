@@ -1,7 +1,64 @@
 RigArchive Project Status Document
-Version: 1.3
-Last Updated: 2026-11-10
+Version: 1.6
+Last Updated: 2026-11-12
 Purpose: Current implementation status and development roadmap
+
+## Configuration Browser — Redundant Turbo Label Presentation Formatting Corrected (2026-11-12)
+
+- **Presentation Normalization**: Updated `engine_label` and introduced `_clean_engine_name` in `reference/powertrain.py` to remove redundant standalone "Turbo" terminology from the engine-name portion when a configuration separately displays `Turbocharged` as its aspiration.
+- **Normalized Label Behaviors**:
+  - `2.0L I4 Turbo · Turbocharged · 4WD` cleanly formats to `2.0L I4 · Turbocharged · 4WD`.
+  - `3.0L V6 Turbo Diesel · Turbocharged · Diesel · 4WD` cleanly formats to `3.0L V6 · Turbocharged · Diesel · 4WD`.
+  - `2.0L I4 Turbo PHEV · Turbocharged · PHEV · 4WD` cleanly formats to `2.0L I4 · Turbocharged · PHEV · 4WD`.
+  - Invariant designations (`3.6L V6 ESS · 4WD`, `3.6L V6 eTorque · MHEV · 4WD`, `6.4L V8 HEMI · 4WD`, and unclassified descriptors such as `2.4L Turbo I4`) remain strictly preserved.
+  - Model and trim names (such as "Turbo S" or "TwinTurbo") are never corrupted.
+- **Database Immutability**: All canonical engine names and database records in `db.sqlite3` remain byte-for-byte unchanged. No database writes, schema changes, or migrations were executed. Operational counts remain strictly at 989 `VehicleDefinition`, 3,275 `ImportExecutionReceipt`, and 231 `GenerationCorrespondenceRevision`.
+- **Verification**: Added focused unit and integration regression tests in `reference/tests/test_structured_powertrain.py` and `reference/tests/test_configuration_label_formatting.py`. Full test suite passes 742/742 tests (`OK`).
+
+## MY2022 US Wrangler JL — Canonical Reference Import Executed and Verified (2026-11-12)
+
+Under explicit Project Owner authorization, all 55 approved MY2022 US Jeep Wrangler JL canonical configurations were successfully imported into the operational database (`db.sqlite3`):
+- **Database Backup**: Captured and verified Layer 1 physical database snapshot `db_snapshot_pre_my2022_canonical_import_20261112_190312.sqlite3` (47.2MB, SHA-256 `5b97afb9c0fbfb7af9be5a84daaee63d5e33e838c0906b1e6d8cac151de75e20`) prior to execution.
+- **Execution Mechanism**: Executed via the accepted Matrix workflow (`execute_matrix_year` / Matrix 2.1 digest: `sha256:e92f9ab6d7b585406e86f697e9cae8400233fc874f4ea884bec718b9148c56cb`) inside a single outer durable atomic transaction with per-row fresh planning, stale-plan guards, and pre-commit reconciliation.
+- **Attribution**: Human director `project_owner`, execution agent `codex`, execution channel `cli`.
+- **Operational Database Totals**:
+  - `VehicleDefinition`: **989** (+55 new canonical definitions for Generation PK 32, MY2022 US).
+  - `ImportExecutionReceipt`: **3,275** (+55 durable audit receipts, PK 3221–3275).
+  - `GenerationCorrespondenceRevision`: **231** (strictly unchanged).
+- **Canonical Distinctions Preserved**:
+  - `Unlimited High Tide` (`JL22-20` / `JLJL74`): Preserved as distinct canonical marketed trim (`2022-unlimited-high-tide-36l-v6-etorque-4wd-us-mhev`, 3.6L V6 eTorque mild-hybrid) retaining QOP `25D` and Jeep Beach Package `A1A` provenance.
+  - Powertrain distinctions: 14 EC1 (2.0L turbo gas), 13 ERC (3.6L non-hybrid gas), 15 ERG (3.6L eTorque mild-hybrid gas), 9 EXJ (3.0L turbo diesel), 3 ECX (2.0L 4xe PHEV), 1 ESG (6.4L V8 392). ERC vs. ERG distinction strictly preserved.
+  - Deferred Sport RHD candidate `JL22-53` (`JLUL74`) strictly excluded.
+- **Public Browsing Hierarchy**: Verified HTTP 200 resolution and template rendering for both the MY2022 generation overview (`/vehicles/jeep/wrangler/jl/2022/`) and candidate vehicle detail views (including `/vehicles/jeep/wrangler/jl/2022-unlimited-high-tide-36l-v6-etorque-4wd-us-mhev/`).
+- **Integrity and Test Suite**: Operational database passes `PRAGMA integrity_check` and `PRAGMA foreign_key_check`. Django system checks pass with 0 issues. Migration dry-run detects 0 changes. Full project test suite passes 733/733 tests (`OK`).
+- **Handoff Artifacts**: Complete execution handoff persisted at `docs/implementation/handoffs/MY2022_JL/canonical_import_execution_20261112/`.
+
+## MY2022 US Wrangler JL — Pre-Import Integrity Review Completed (2026-11-12)
+
+Under explicit Project Owner authorization, the pre-import integrity review for MY2022 US Jeep Wrangler JL completed successfully:
+- **Database Backup**: Captured verified Layer 1 physical database snapshot `db_snapshot_pre_my2022_correspondence_20261112_183247.sqlite3` (45.7MB, SHA-256 `c4286d7208077253491bb5b7bc0d31d09a09dd62b926840685b6b4da0f74c83c`) via `snapshot_db`.
+- **Correspondence Publication**: Finalized and published 72 source-scoped `GenerationCorrespondenceRevision` records targeting Generation PK 32 (Wrangler JL) with director attribution `project_owner` and agent `codex`, persisting 72 audit receipts (revisions 160–231, receipts 3149–3220).
+- **Operational Database Totals**: Advanced to 934 `VehicleDefinition` (strictly zero canonical records imported), 3,220 `ImportExecutionReceipt`, and 231 `GenerationCorrespondenceRevision`. Zero canonical writes or deletions were executed.
+- **Classification Adjudications**: Finalized and approved 55 `CanonicalImportAdjudication` 1.1 artifacts resolving all 112 powertrain null attributes across six engine codes (`EC1`, `ERC`, `ERG`, `EXJ`, `ECX`, `ESG`) under `project_owner` signoff.
+- **Candidate Regeneration**: Regenerated 55 Candidate 2.1.0 revisions with 100% complete 5-field powertrains (zero null fields). Preserved `Unlimited High Tide` (`JL22-20`) as an independent canonical trim following Edmunds, retaining QOP `25D` and Jeep Beach Package `A1A` provenance.
+- **Engine Proof 2.0 & Matrix Certification**: Generated 55 verified peer-absence `EngineProof` 2.0 artifacts and certified the 55-configuration candidate matrix with zero duplicates.
+- **Read-Only Planning**: Produced 55 `CanonicalImportManifest` 2.1 plans. Fresh live re-planning against `db.sqlite3` confirmed 100% (55/55) return `eligibility_status = "eligible"` and `planned_action = "create"` under `create_basis = "first_representation"`, with zero internal slug collisions and zero database slug collisions.
+- **Classification Projection Alignment & Regression Testing**: Verified and hardened `_project` in `reference/ingestion/classification_adjudication.py`. Added 9 comprehensive negative/invariant regression tests to `reference/tests/test_classification_adjudication.py`. Full test suite now passes with 733 tests (up from 724).
+- **Pre-Import Integrity Assessment**: Verified that all 55 candidates satisfy every required invariant, proof requirement, and taxonomy rule. The 55 `VehicleDefinition` imports are verified safe to authorize for canonical promotion.
+- **Canonical Import Boundary**: Canonical `VehicleDefinition` import execution remains strictly unauthorized and deferred for separate owner review.
+
+## MY2022 US Wrangler JL — Correspondence Published, Classifications Approved, and Candidates Regenerated (2026-11-12)
+
+Under explicit Project Owner authorization, the ingestion finalization phase for MY2022 US Jeep Wrangler JL completed successfully:
+- **Database Backup**: Captured verified Layer 1 physical database snapshot `db_snapshot_pre_my2022_correspondence_20261112_183247.sqlite3` (45.7MB, SHA-256 `c4286d7208077253491bb5b7bc0d31d09a09dd62b926840685b6b4da0f74c83c`) via `snapshot_db`.
+- **Correspondence Publication**: Finalized and published 72 source-scoped `GenerationCorrespondenceRevision` records targeting Generation PK 32 (Wrangler JL) with director attribution `project_owner` and agent `codex`, persisting 72 audit receipts (revisions 160–231, receipts 3149–3220).
+- **Operational Database Totals**: Advanced to 934 `VehicleDefinition` (strictly zero canonical records imported), 3,220 `ImportExecutionReceipt`, and 231 `GenerationCorrespondenceRevision`. Zero canonical writes or deletions were executed.
+- **Classification Adjudications**: Finalized and approved 55 `CanonicalImportAdjudication` 1.1 artifacts resolving all 112 powertrain null attributes across six engine codes (`EC1`, `ERC`, `ERG`, `EXJ`, `ECX`, `ESG`) under `project_owner` signoff.
+- **Candidate Regeneration**: Regenerated 55 Candidate 2.1.0 revisions with 100% complete 5-field powertrains (zero null fields). Preserved `Unlimited High Tide` (`JL22-20`) as an independent canonical trim following Edmunds, retaining QOP `25D` and Jeep Beach Package `A1A` provenance.
+- **Engine Proof 2.0 & Matrix Certification**: Generated 55 verified peer-absence `EngineProof` 2.0 artifacts and certified the 55-configuration candidate matrix with zero duplicates.
+- **Read-Only Planning**: Produced 55 `CanonicalImportManifest` 2.1 plans. 100% returned `eligibility_status = "eligible"` and `planned_action = "create"` under `create_basis = "first_representation"`, with zero internal slug collisions and zero database slug collisions.
+- **Classification Projection Alignment**: Updated `_project` in `reference/ingestion/classification_adjudication.py` so that applying approved classification adjudications resolves incomplete review attributes when all fields are established.
+- **Canonical Import Boundary**: Canonical `VehicleDefinition` import execution remains strictly unauthorized and deferred for separate owner review.
 
 ## Wrangler ingestion workflow W2 — Edmunds-first provisional source (2026-11-10)
 

@@ -1,0 +1,1937 @@
+{
+  "status": "NOT_PUBLISHED",
+  "notice": "Unpublished review proposals awaiting explicit owner authorization. Zero database writes performed.",
+  "proposal_count": 72,
+  "target_generation_PK": 32,
+  "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+  "proposals": [
+    {
+      "key": [
+        "2-door-1-12-22-pdf.553817",
+        "source_model_code",
+        "model_code",
+        "JLJL72"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/2-door-1-12-22-pdf.553817-JLJL72.review.json",
+      "proposal_file_sha256": "sha256:6b2108cb33f75a7657454407389148e58a8080b2feb556f1599465db0ef8502f",
+      "content_hash": "sha256:5b93255116fb189e84cfe02b6ea946a1d8b22c3e341c161e177dc8a42110d61f",
+      "revision_uuid": "1f5660c2-f31b-5432-ad86-1a7db5161c18",
+      "correspondence_uuid": "70f09c93-0f77-5a8a-a4e2-24833d656922",
+      "candidate_count": 12,
+      "candidate_references": [
+        "JL22-01",
+        "JL22-02",
+        "JL22-03",
+        "JL22-04",
+        "JL22-05",
+        "JL22-06",
+        "JL22-07",
+        "JL22-08",
+        "JL22-09",
+        "JL22-10",
+        "JL22-11",
+        "JL22-12"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/2-door-1-12-22-pdf.553817-JLJL72.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "2-door-1-12-22-pdf.553817",
+        "source_model_code",
+        "model_code",
+        "JLJS72"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/2-door-1-12-22-pdf.553817-JLJS72.review.json",
+      "proposal_file_sha256": "sha256:d27e468c985533d62efc9ad25d43a465b4ce4222136d99771ca6e77a9fb613d1",
+      "content_hash": "sha256:99a19de1eff4bc1aca2ba03047090117194a86e29359f6ad74999cfde4803c2e",
+      "revision_uuid": "4e816d26-0fb0-5c6d-9140-b68e399644e6",
+      "correspondence_uuid": "32cbe181-8847-5726-8281-6ee329f4fbb9",
+      "candidate_count": 3,
+      "candidate_references": [
+        "JL22-13",
+        "JL22-14",
+        "JL22-15"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/2-door-1-12-22-pdf.553817-JLJS72.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "2-door-1-17-22-pdf.555729",
+        "source_model_code",
+        "model_code",
+        "JLJL72"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/2-door-1-17-22-pdf.555729-JLJL72.review.json",
+      "proposal_file_sha256": "sha256:6b18d5bdf0790d62ceabee1f39dc9b0c26216c85d08e04df81d68ed84fe27386",
+      "content_hash": "sha256:77d28ad760eaf02ccf32402ba9cf37b4a0e638c485916cb03587fc9d9ba12740",
+      "revision_uuid": "06915a6c-7587-59ed-a746-424032158d83",
+      "correspondence_uuid": "65c42e4b-d46c-571a-b59a-b475946dfe71",
+      "candidate_count": 12,
+      "candidate_references": [
+        "JL22-01",
+        "JL22-02",
+        "JL22-03",
+        "JL22-04",
+        "JL22-05",
+        "JL22-06",
+        "JL22-07",
+        "JL22-08",
+        "JL22-09",
+        "JL22-10",
+        "JL22-11",
+        "JL22-12"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/2-door-1-17-22-pdf.555729-JLJL72.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "2-door-1-17-22-pdf.555729",
+        "source_model_code",
+        "model_code",
+        "JLJS72"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/2-door-1-17-22-pdf.555729-JLJS72.review.json",
+      "proposal_file_sha256": "sha256:9c3dd1e89c2f64aba53f8ce57e11c91769781688f2aac7506eed65cb0ba02f3a",
+      "content_hash": "sha256:0b17d9590ef8eca7eb2832ac5c422ab2360871d6a4dae26a131b9ab8472b7580",
+      "revision_uuid": "4da94965-d677-54bd-baf5-3b97c6a15157",
+      "correspondence_uuid": "ec207614-e68a-56ca-8430-b4099d3b876d",
+      "candidate_count": 3,
+      "candidate_references": [
+        "JL22-13",
+        "JL22-14",
+        "JL22-15"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/2-door-1-17-22-pdf.555729-JLJS72.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "2-door-10-8-21-pdf.519659",
+        "source_model_code",
+        "model_code",
+        "JLJL72"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/2-door-10-8-21-pdf.519659-JLJL72.review.json",
+      "proposal_file_sha256": "sha256:e73e29e4abe67af98caaa7aaaa95add23cffc9a60ccb94b3ce1f6a44342e66ff",
+      "content_hash": "sha256:f4065e6107948855ebdcc1cc6489510d37700cff2bf162f317656ede6dcea497",
+      "revision_uuid": "bd3d73c9-66a1-5805-a6e9-db949a3ceb52",
+      "correspondence_uuid": "10b97d8f-0655-576c-bf6d-1539ac460e2b",
+      "candidate_count": 12,
+      "candidate_references": [
+        "JL22-01",
+        "JL22-02",
+        "JL22-03",
+        "JL22-04",
+        "JL22-05",
+        "JL22-06",
+        "JL22-07",
+        "JL22-08",
+        "JL22-09",
+        "JL22-10",
+        "JL22-11",
+        "JL22-12"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/2-door-10-8-21-pdf.519659-JLJL72.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "2-door-10-8-21-pdf.519659",
+        "source_model_code",
+        "model_code",
+        "JLJS72"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/2-door-10-8-21-pdf.519659-JLJS72.review.json",
+      "proposal_file_sha256": "sha256:466187b061f507e1afc3ef81f106764d07f33e5c206c92fc7d885a12edffa841",
+      "content_hash": "sha256:a4566a7b626f8dddead9f86174891b156803e10a9a5229c620fa81e11e4b1c7e",
+      "revision_uuid": "6053b808-1d4d-5922-878e-1f85199377b2",
+      "correspondence_uuid": "05d0c8a2-4056-5c9a-9685-22026f0a81c7",
+      "candidate_count": 3,
+      "candidate_references": [
+        "JL22-13",
+        "JL22-14",
+        "JL22-15"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/2-door-10-8-21-pdf.519659-JLJS72.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "2-door-11-10-21-pdf.534732",
+        "source_model_code",
+        "model_code",
+        "JLJL72"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/2-door-11-10-21-pdf.534732-JLJL72.review.json",
+      "proposal_file_sha256": "sha256:b648036b86f0783e4c73d8b0f19570e149b8d315108c630ea5094e9bb23739d9",
+      "content_hash": "sha256:7d3cb820549cf3e4441e4ab2f3619a1e57c174ff0b4e180c6e3ce2c16113f7a9",
+      "revision_uuid": "4ab6c98c-7bd4-5310-a57a-890b1d5fc00a",
+      "correspondence_uuid": "57f86b7e-3b68-58c2-99c4-313c50552d48",
+      "candidate_count": 12,
+      "candidate_references": [
+        "JL22-01",
+        "JL22-02",
+        "JL22-03",
+        "JL22-04",
+        "JL22-05",
+        "JL22-06",
+        "JL22-07",
+        "JL22-08",
+        "JL22-09",
+        "JL22-10",
+        "JL22-11",
+        "JL22-12"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/2-door-11-10-21-pdf.534732-JLJL72.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "2-door-11-10-21-pdf.534732",
+        "source_model_code",
+        "model_code",
+        "JLJS72"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/2-door-11-10-21-pdf.534732-JLJS72.review.json",
+      "proposal_file_sha256": "sha256:9eb137d8a6af760ac0456b041f4cbd548ec90f710843497364a71c2e696551e5",
+      "content_hash": "sha256:cae0b8c267e7efa7ca41e0e7b0cc5f73b1b5f640775fa0c9532a0c57c60acaf1",
+      "revision_uuid": "b40d1a56-c48d-5bf7-a2b8-4b5034068d01",
+      "correspondence_uuid": "4931b136-9325-51da-85f2-7d2daae52bb2",
+      "candidate_count": 3,
+      "candidate_references": [
+        "JL22-13",
+        "JL22-14",
+        "JL22-15"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/2-door-11-10-21-pdf.534732-JLJS72.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "2-door-12-7-21-pdf.543725",
+        "source_model_code",
+        "model_code",
+        "JLJL72"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/2-door-12-7-21-pdf.543725-JLJL72.review.json",
+      "proposal_file_sha256": "sha256:952d07d5a59f8890657daed8493c027038b0eb97e69e0603647963a34e86d372",
+      "content_hash": "sha256:6dd3332b574b35ac7cecba810f6d71131357bceaf08efcb80e226bcebaa18f25",
+      "revision_uuid": "a3becf98-2884-5c99-8e7b-87cf7b774718",
+      "correspondence_uuid": "a3ffe6ac-ec36-5491-81bb-26096b0a42c5",
+      "candidate_count": 12,
+      "candidate_references": [
+        "JL22-01",
+        "JL22-02",
+        "JL22-03",
+        "JL22-04",
+        "JL22-05",
+        "JL22-06",
+        "JL22-07",
+        "JL22-08",
+        "JL22-09",
+        "JL22-10",
+        "JL22-11",
+        "JL22-12"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/2-door-12-7-21-pdf.543725-JLJL72.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "2-door-12-7-21-pdf.543725",
+        "source_model_code",
+        "model_code",
+        "JLJS72"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/2-door-12-7-21-pdf.543725-JLJS72.review.json",
+      "proposal_file_sha256": "sha256:21e18a212f39361f1231284004c5781039ef52395a2696b107502df2906b996f",
+      "content_hash": "sha256:4d7b4775fd628b37c45dee02838488f37fac3e750aafc5142ff88157e03be067",
+      "revision_uuid": "c0cf27f1-5026-5c90-9758-49ba48f0f0f1",
+      "correspondence_uuid": "6de280a2-12d1-50dc-927b-4011031f0eaf",
+      "candidate_count": 3,
+      "candidate_references": [
+        "JL22-13",
+        "JL22-14",
+        "JL22-15"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/2-door-12-7-21-pdf.543725-JLJS72.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "2-door-2-10-22-pdf.567215",
+        "source_model_code",
+        "model_code",
+        "JLJL72"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/2-door-2-10-22-pdf.567215-JLJL72.review.json",
+      "proposal_file_sha256": "sha256:661e5d122c0739344f578191dbc602a92b9a56046c4a3862779c3f6c0640829b",
+      "content_hash": "sha256:adc694ab12613bbd582bc30986b2598f434ce9a473da290be201254539bfc793",
+      "revision_uuid": "eb335c42-4d85-524d-8c03-bb1d91865555",
+      "correspondence_uuid": "04e21340-bb27-594c-9d86-c2a92921ca98",
+      "candidate_count": 12,
+      "candidate_references": [
+        "JL22-01",
+        "JL22-02",
+        "JL22-03",
+        "JL22-04",
+        "JL22-05",
+        "JL22-06",
+        "JL22-07",
+        "JL22-08",
+        "JL22-09",
+        "JL22-10",
+        "JL22-11",
+        "JL22-12"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/2-door-2-10-22-pdf.567215-JLJL72.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "2-door-2-10-22-pdf.567215",
+        "source_model_code",
+        "model_code",
+        "JLJS72"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/2-door-2-10-22-pdf.567215-JLJS72.review.json",
+      "proposal_file_sha256": "sha256:9256ad8139cf42c7dcd15b00081981b1158141dad5cf4ad3524edecdb18c39c4",
+      "content_hash": "sha256:a724010821347e20bc64e535d09ee4a37fb352ab57f9d65866b62438c4cf7c50",
+      "revision_uuid": "046a8e52-ba2b-583d-ad6e-6b47da5bc419",
+      "correspondence_uuid": "7d661562-1c90-5c77-bbc8-5d1247417711",
+      "candidate_count": 3,
+      "candidate_references": [
+        "JL22-13",
+        "JL22-14",
+        "JL22-15"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/2-door-2-10-22-pdf.567215-JLJS72.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "2-door-3-11-22-pdf.579259",
+        "source_model_code",
+        "model_code",
+        "JLJL72"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/2-door-3-11-22-pdf.579259-JLJL72.review.json",
+      "proposal_file_sha256": "sha256:b113b27310b6026b9a6729d0a296d915653a5c612fb2b5c5733ce3f170e019c3",
+      "content_hash": "sha256:ed109941a3c13b0d514a590864b5f4dec8ac005ebdd52981be116a0597e6d1c3",
+      "revision_uuid": "ade1cf5a-b4b7-584f-a8c9-45475dbe5134",
+      "correspondence_uuid": "5ca91880-f436-5d8a-ba8a-4d932257ebac",
+      "candidate_count": 12,
+      "candidate_references": [
+        "JL22-01",
+        "JL22-02",
+        "JL22-03",
+        "JL22-04",
+        "JL22-05",
+        "JL22-06",
+        "JL22-07",
+        "JL22-08",
+        "JL22-09",
+        "JL22-10",
+        "JL22-11",
+        "JL22-12"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/2-door-3-11-22-pdf.579259-JLJL72.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "2-door-3-11-22-pdf.579259",
+        "source_model_code",
+        "model_code",
+        "JLJS72"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/2-door-3-11-22-pdf.579259-JLJS72.review.json",
+      "proposal_file_sha256": "sha256:93afce89c9bff7c244100230d43fa79065b9b1cc61fe442c835103d1906f310a",
+      "content_hash": "sha256:8c6984193dd269a5d22cfb53cdee9a28926247c40e77364904a29fcbf5bdf499",
+      "revision_uuid": "c66d1094-d3b1-5f2c-ba8b-c1d36119bcd2",
+      "correspondence_uuid": "fd26e0c2-7e01-5a6b-ab02-7c3bae741e3f",
+      "candidate_count": 3,
+      "candidate_references": [
+        "JL22-13",
+        "JL22-14",
+        "JL22-15"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/2-door-3-11-22-pdf.579259-JLJS72.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "2-door-4-7-22-pdf.591775",
+        "source_model_code",
+        "model_code",
+        "JLJL72"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/2-door-4-7-22-pdf.591775-JLJL72.review.json",
+      "proposal_file_sha256": "sha256:d291069435d2c6cb2dfd0d0d32e1761869aee08ca340dd4ef67efe76ad8146c8",
+      "content_hash": "sha256:7ce5329a582c34d12c16184e439818e7b5b2232da7551b7f87650740eaef19d8",
+      "revision_uuid": "d12f4b5d-66a6-5428-bf23-6dd897f8da9e",
+      "correspondence_uuid": "d941dc12-57d9-59f0-88c0-1f36b38ae85d",
+      "candidate_count": 12,
+      "candidate_references": [
+        "JL22-01",
+        "JL22-02",
+        "JL22-03",
+        "JL22-04",
+        "JL22-05",
+        "JL22-06",
+        "JL22-07",
+        "JL22-08",
+        "JL22-09",
+        "JL22-10",
+        "JL22-11",
+        "JL22-12"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/2-door-4-7-22-pdf.591775-JLJL72.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "2-door-4-7-22-pdf.591775",
+        "source_model_code",
+        "model_code",
+        "JLJS72"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/2-door-4-7-22-pdf.591775-JLJS72.review.json",
+      "proposal_file_sha256": "sha256:cae81aa50ec46173aa61c9e5aba2a90d2869b0eb1f8ecb0337ff149231937194",
+      "content_hash": "sha256:5d77873d5aafc29fc8516c17ddaa32e0f5aa4213bb729aa794906d83be687ab3",
+      "revision_uuid": "c5f47216-ba71-5d1a-9834-767745d85f8c",
+      "correspondence_uuid": "ec620d81-7ee5-5a52-90cc-eba3b2a22938",
+      "candidate_count": 3,
+      "candidate_references": [
+        "JL22-13",
+        "JL22-14",
+        "JL22-15"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/2-door-4-7-22-pdf.591775-JLJS72.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "2-door-6-3-22-pdf.615028",
+        "source_model_code",
+        "model_code",
+        "JLJL72"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/2-door-6-3-22-pdf.615028-JLJL72.review.json",
+      "proposal_file_sha256": "sha256:47ef3c94b6e81e5233cbb54e91e8ccc53b730a15170721cf0725f14f2b83d46b",
+      "content_hash": "sha256:113cf1888ce1d542a8f6498d729953a255965b5cd588032ad13789141658a22d",
+      "revision_uuid": "49335563-620b-536d-b7f6-db97f9c7e723",
+      "correspondence_uuid": "2f42ad9b-55c0-5017-a8c6-a4049530eb3b",
+      "candidate_count": 12,
+      "candidate_references": [
+        "JL22-01",
+        "JL22-02",
+        "JL22-03",
+        "JL22-04",
+        "JL22-05",
+        "JL22-06",
+        "JL22-07",
+        "JL22-08",
+        "JL22-09",
+        "JL22-10",
+        "JL22-11",
+        "JL22-12"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/2-door-6-3-22-pdf.615028-JLJL72.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "2-door-6-3-22-pdf.615028",
+        "source_model_code",
+        "model_code",
+        "JLJS72"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/2-door-6-3-22-pdf.615028-JLJS72.review.json",
+      "proposal_file_sha256": "sha256:40da9b17dcd1d6c379de71adec67b354f03a932e451c2c97b175cdcc3a42e291",
+      "content_hash": "sha256:77dd462cabad28acb54ca0fd4d6d391ff1fca4eb30e7acd37f6b17fb7ccd0ffd",
+      "revision_uuid": "c5f93896-f5dc-5576-a0f2-15ffc0f7cf20",
+      "correspondence_uuid": "0fa6224f-170e-533a-9150-ea213484ad19",
+      "candidate_count": 3,
+      "candidate_references": [
+        "JL22-13",
+        "JL22-14",
+        "JL22-15"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/2-door-6-3-22-pdf.615028-JLJS72.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "4-door-1-12-22-pdf.553816",
+        "source_model_code",
+        "model_code",
+        "JLJL74"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/4-door-1-12-22-pdf.553816-JLJL74.review.json",
+      "proposal_file_sha256": "sha256:e737d459e33ead25081cfa503e22e8ee6fcf16424b70de891dc1915766ea39ac",
+      "content_hash": "sha256:3ca3a5cbb7ec45b6111eba4c14c22f1cdabb71fb91428c512559e818ed342236",
+      "revision_uuid": "8a62a07a-19b6-56b7-b1b2-ac284ad87fd4",
+      "correspondence_uuid": "4caf989f-3ed2-5ed6-a2f7-ff5dc435e89d",
+      "candidate_count": 20,
+      "candidate_references": [
+        "JL22-16",
+        "JL22-17",
+        "JL22-18",
+        "JL22-19",
+        "JL22-21",
+        "JL22-22",
+        "JL22-23",
+        "JL22-24",
+        "JL22-25",
+        "JL22-26",
+        "JL22-27",
+        "JL22-28",
+        "JL22-29",
+        "JL22-30",
+        "JL22-31",
+        "JL22-32",
+        "JL22-33",
+        "JL22-34",
+        "JL22-35",
+        "JL22-36"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/4-door-1-12-22-pdf.553816-JLJL74.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "4-door-1-12-22-pdf.553816",
+        "source_model_code",
+        "model_code",
+        "JLJP74"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/4-door-1-12-22-pdf.553816-JLJP74.review.json",
+      "proposal_file_sha256": "sha256:1829b887ed451bcf7c483f3bfe3afa9f06f79d3da8c07459324f1a57761b9e55",
+      "content_hash": "sha256:034a8f4e5b92b683d9474d563bba6c84d70c0d55033ea78fe1574c709d7233ff",
+      "revision_uuid": "8d4925e7-1d01-5d3d-ab87-17e17f98f706",
+      "correspondence_uuid": "4998656c-52b4-5fea-9664-ef4d29056f3a",
+      "candidate_count": 11,
+      "candidate_references": [
+        "JL22-37",
+        "JL22-38",
+        "JL22-39",
+        "JL22-40",
+        "JL22-41",
+        "JL22-42",
+        "JL22-43",
+        "JL22-44",
+        "JL22-45",
+        "JL22-46",
+        "JL22-47"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/4-door-1-12-22-pdf.553816-JLJP74.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "4-door-1-12-22-pdf.553816",
+        "source_model_code",
+        "model_code",
+        "JLJS74"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/4-door-1-12-22-pdf.553816-JLJS74.review.json",
+      "proposal_file_sha256": "sha256:f389372843e34249f5e69b72c1efbdddd0165d9ae67d0b87acd3c855341ca35a",
+      "content_hash": "sha256:f0e9716bf04c28c32e7390168c81cd15d395825f1e06917afb30bf4a1c4868db",
+      "revision_uuid": "50dd959a-3fdd-5632-b422-cf28014fdac6",
+      "correspondence_uuid": "473da9f6-a90e-53bb-8553-a87d1fad92c5",
+      "candidate_count": 4,
+      "candidate_references": [
+        "JL22-48",
+        "JL22-49",
+        "JL22-50",
+        "JL22-51"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/4-door-1-12-22-pdf.553816-JLJS74.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "4-door-1-12-22-pdf.553816",
+        "source_model_code",
+        "model_code",
+        "JLJX74"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/4-door-1-12-22-pdf.553816-JLJX74.review.json",
+      "proposal_file_sha256": "sha256:ef130aec0021fa290f8970d926adf5d4ccfed7b66296f74c0b4602876b075446",
+      "content_hash": "sha256:069a39363f5503e1958db8a107803dd0ea0c24fc7ecd7aacfc944f8ebe04a0ff",
+      "revision_uuid": "26124258-d1ba-5ff7-847e-f1dc31e611dc",
+      "correspondence_uuid": "6cc53be2-94fd-5864-87d8-9d32d1a5b2ca",
+      "candidate_count": 1,
+      "candidate_references": [
+        "JL22-52"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/4-door-1-12-22-pdf.553816-JLJX74.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "4-door-1-12-22-pdf.553816",
+        "source_model_code",
+        "model_code",
+        "JLXP74"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/4-door-1-12-22-pdf.553816-JLXP74.review.json",
+      "proposal_file_sha256": "sha256:c4b0cd3c4234c1853fabb8b2b1df48ac2713f2277fb85c58cdc3be496eba99de",
+      "content_hash": "sha256:32b451b06dcc2f813fb69492ab3cca469c2854175ac9abfbfb034880ab012181",
+      "revision_uuid": "84656684-b57d-55f6-b28a-7b02f8bfe3e3",
+      "correspondence_uuid": "d60e788e-0f8b-55a0-95e8-bd6465552f6b",
+      "candidate_count": 2,
+      "candidate_references": [
+        "JL22-54",
+        "JL22-55"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/4-door-1-12-22-pdf.553816-JLXP74.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "4-door-1-12-22-pdf.553816",
+        "source_model_code",
+        "model_code",
+        "JLXS74"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/4-door-1-12-22-pdf.553816-JLXS74.review.json",
+      "proposal_file_sha256": "sha256:756aa4eb07208e70fab5f8fafcb68b4d828108140c696a021a041e34eb1a96a1",
+      "content_hash": "sha256:216f6ea6f10873ec58f044b237763c6d3b62484343f9980b24749a266e95159b",
+      "revision_uuid": "cfbb752a-7648-5af4-8fd1-aa2131e16b9d",
+      "correspondence_uuid": "40f2ba06-7d77-5ad2-832c-364bd4e57739",
+      "candidate_count": 1,
+      "candidate_references": [
+        "JL22-56"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/4-door-1-12-22-pdf.553816-JLXS74.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "4-door-1-17-22-pdf.555728",
+        "source_model_code",
+        "model_code",
+        "JLJL74"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/4-door-1-17-22-pdf.555728-JLJL74.review.json",
+      "proposal_file_sha256": "sha256:542103c3d44e339fc4cb4fdaec1b35cef0470ee452df0ce32952767967e8cc48",
+      "content_hash": "sha256:c5ebbcc6a185708f1fa85b51f9bf8e467054c940725d516f1144c17f3fe363ec",
+      "revision_uuid": "eb711f35-bdfa-5de3-ac55-cab8d20010ad",
+      "correspondence_uuid": "45b86155-b7b7-555c-8112-10756038c597",
+      "candidate_count": 20,
+      "candidate_references": [
+        "JL22-16",
+        "JL22-17",
+        "JL22-18",
+        "JL22-19",
+        "JL22-21",
+        "JL22-22",
+        "JL22-23",
+        "JL22-24",
+        "JL22-25",
+        "JL22-26",
+        "JL22-27",
+        "JL22-28",
+        "JL22-29",
+        "JL22-30",
+        "JL22-31",
+        "JL22-32",
+        "JL22-33",
+        "JL22-34",
+        "JL22-35",
+        "JL22-36"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/4-door-1-17-22-pdf.555728-JLJL74.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "4-door-1-17-22-pdf.555728",
+        "source_model_code",
+        "model_code",
+        "JLJP74"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/4-door-1-17-22-pdf.555728-JLJP74.review.json",
+      "proposal_file_sha256": "sha256:406a8ea25e2c9923cec06f8f91c02bfe7d1940d0e8a48175bb4f75ca7339b248",
+      "content_hash": "sha256:f7b55e2ca2f8890cceab43fc5b43c55c83b4bd72fbb7a8ab26a66a36e0e7e6cd",
+      "revision_uuid": "664cfb2c-bc52-541d-82d1-2ff79151d117",
+      "correspondence_uuid": "925200a6-11ee-5da9-b80c-67a169777da3",
+      "candidate_count": 11,
+      "candidate_references": [
+        "JL22-37",
+        "JL22-38",
+        "JL22-39",
+        "JL22-40",
+        "JL22-41",
+        "JL22-42",
+        "JL22-43",
+        "JL22-44",
+        "JL22-45",
+        "JL22-46",
+        "JL22-47"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/4-door-1-17-22-pdf.555728-JLJP74.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "4-door-1-17-22-pdf.555728",
+        "source_model_code",
+        "model_code",
+        "JLJS74"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/4-door-1-17-22-pdf.555728-JLJS74.review.json",
+      "proposal_file_sha256": "sha256:8b0f18db5b48ed7707cde89a12be9e419970319ecbddb3de59222deec665e6bb",
+      "content_hash": "sha256:b379ff54581f5f6383d07d4f4176edf33b58b2b7238ff6d04c10562db31cf842",
+      "revision_uuid": "94bcd22b-c7ac-5366-a37f-1ea250a31959",
+      "correspondence_uuid": "1db90c0e-4881-5624-8de9-1c6f380f90f3",
+      "candidate_count": 4,
+      "candidate_references": [
+        "JL22-48",
+        "JL22-49",
+        "JL22-50",
+        "JL22-51"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/4-door-1-17-22-pdf.555728-JLJS74.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "4-door-1-17-22-pdf.555728",
+        "source_model_code",
+        "model_code",
+        "JLJX74"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/4-door-1-17-22-pdf.555728-JLJX74.review.json",
+      "proposal_file_sha256": "sha256:d5e67f7ae97bbf9589e68ec5a6ecfee1d8e9ce21c49eada31a144557ab590f5f",
+      "content_hash": "sha256:0e9ca2adc2ca8b5c1e8e1e9328efe8c645ac6cafa6512d1a819411816f505fc3",
+      "revision_uuid": "ad06089d-1c35-52a2-8e16-c0700b68f85f",
+      "correspondence_uuid": "6464224f-5abd-5353-aa37-fee7faa75057",
+      "candidate_count": 1,
+      "candidate_references": [
+        "JL22-52"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/4-door-1-17-22-pdf.555728-JLJX74.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "4-door-1-17-22-pdf.555728",
+        "source_model_code",
+        "model_code",
+        "JLXP74"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/4-door-1-17-22-pdf.555728-JLXP74.review.json",
+      "proposal_file_sha256": "sha256:df854297ffb339b55f28e7723a18b7f2ef0cd8693e040111fc81e5e395d8d23d",
+      "content_hash": "sha256:143d7c5884c9c95f5ef466539ed350a0186a793623669a0cf946c7d5f9b97a15",
+      "revision_uuid": "02f76018-78cb-5ed9-8111-74624d0ae208",
+      "correspondence_uuid": "da1dfd9e-32e4-5e58-99f0-1f7f5a813dac",
+      "candidate_count": 2,
+      "candidate_references": [
+        "JL22-54",
+        "JL22-55"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/4-door-1-17-22-pdf.555728-JLXP74.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "4-door-1-17-22-pdf.555728",
+        "source_model_code",
+        "model_code",
+        "JLXS74"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/4-door-1-17-22-pdf.555728-JLXS74.review.json",
+      "proposal_file_sha256": "sha256:4ae7bb09d90ce289b1475401a8a850abfeff6acc23b471a1147742031519b0e5",
+      "content_hash": "sha256:6205ad68ffc220930b6498a9a58c088fc3357dabc8a9185686f350c2e10fe924",
+      "revision_uuid": "38dd2ca1-bee7-54d0-ba9b-b0fe5fbc66cc",
+      "correspondence_uuid": "c75c9ce9-61a8-5aea-96d0-230d4cb67809",
+      "candidate_count": 1,
+      "candidate_references": [
+        "JL22-56"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/4-door-1-17-22-pdf.555728-JLXS74.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "4-door-11-10-21-pdf.534724",
+        "source_model_code",
+        "model_code",
+        "JLJL74"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/4-door-11-10-21-pdf.534724-JLJL74.review.json",
+      "proposal_file_sha256": "sha256:d174a689002087fef0df475a0996c2dca097255690a04ad7fcb016fe372f9872",
+      "content_hash": "sha256:df4042070270877ac6502ef4a6b93bcf4bcd38d6fee3b136b2c4e554e0f7ecac",
+      "revision_uuid": "8bdc7db2-9049-5aa3-b998-a78bab9da387",
+      "correspondence_uuid": "eb1884de-740c-584d-8eab-5a56e7272681",
+      "candidate_count": 20,
+      "candidate_references": [
+        "JL22-16",
+        "JL22-17",
+        "JL22-18",
+        "JL22-19",
+        "JL22-21",
+        "JL22-22",
+        "JL22-23",
+        "JL22-24",
+        "JL22-25",
+        "JL22-26",
+        "JL22-27",
+        "JL22-28",
+        "JL22-29",
+        "JL22-30",
+        "JL22-31",
+        "JL22-32",
+        "JL22-33",
+        "JL22-34",
+        "JL22-35",
+        "JL22-36"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/4-door-11-10-21-pdf.534724-JLJL74.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "4-door-11-10-21-pdf.534724",
+        "source_model_code",
+        "model_code",
+        "JLJP74"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/4-door-11-10-21-pdf.534724-JLJP74.review.json",
+      "proposal_file_sha256": "sha256:c5dd2cb33a216df356bcbb5241db8ec3bce7c5e30994f8ce077d0b632bbd1d5d",
+      "content_hash": "sha256:1a68d53ad4ae5cd21bd6ca30f335ce589605db5d3999dccadb50209b0e84044b",
+      "revision_uuid": "597c1bc3-0fa8-57d2-a279-1cb3cffe1ed3",
+      "correspondence_uuid": "08451d11-7eac-501a-bf64-3174c536bb96",
+      "candidate_count": 11,
+      "candidate_references": [
+        "JL22-37",
+        "JL22-38",
+        "JL22-39",
+        "JL22-40",
+        "JL22-41",
+        "JL22-42",
+        "JL22-43",
+        "JL22-44",
+        "JL22-45",
+        "JL22-46",
+        "JL22-47"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/4-door-11-10-21-pdf.534724-JLJP74.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "4-door-11-10-21-pdf.534724",
+        "source_model_code",
+        "model_code",
+        "JLJS74"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/4-door-11-10-21-pdf.534724-JLJS74.review.json",
+      "proposal_file_sha256": "sha256:54105199176015fd735be4b651431a4efd695f049aea17aa45f4f2c9a3c12dcd",
+      "content_hash": "sha256:d689a9b1fe45821e2f1a360a39295cb3d56396eb04eb84de5dce3610641e763f",
+      "revision_uuid": "67469d7c-6b7f-5840-950f-2b0df8de1d30",
+      "correspondence_uuid": "f3ad8132-12ef-5b05-8a1c-badf4b382430",
+      "candidate_count": 4,
+      "candidate_references": [
+        "JL22-48",
+        "JL22-49",
+        "JL22-50",
+        "JL22-51"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/4-door-11-10-21-pdf.534724-JLJS74.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "4-door-11-10-21-pdf.534724",
+        "source_model_code",
+        "model_code",
+        "JLJX74"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/4-door-11-10-21-pdf.534724-JLJX74.review.json",
+      "proposal_file_sha256": "sha256:d32ec9aa111fa4bbbb01473cafbf8ab280f659382e68248a95b8472741a1b7a2",
+      "content_hash": "sha256:7aac9db09374b29f8cd973d14b16734150bbe1e9e70ea241328d0fe71c406fb1",
+      "revision_uuid": "e5f52cce-5bc6-5109-bf30-c1a324eb903d",
+      "correspondence_uuid": "35bb3ee6-5deb-52b3-8955-1791567ff0eb",
+      "candidate_count": 1,
+      "candidate_references": [
+        "JL22-52"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/4-door-11-10-21-pdf.534724-JLJX74.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "4-door-11-10-21-pdf.534724",
+        "source_model_code",
+        "model_code",
+        "JLXP74"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/4-door-11-10-21-pdf.534724-JLXP74.review.json",
+      "proposal_file_sha256": "sha256:003c7666ffdfc3f5eec2e87aebe6ea09362a5aadc5bacc2ca3cc8f94b8ad3990",
+      "content_hash": "sha256:06aaca58a7b08ed2ee07a7114166421287eeac0b439dcdeb7a8428ec02386a55",
+      "revision_uuid": "83193eee-0cab-5538-89c1-50ccf68f8614",
+      "correspondence_uuid": "cb93f262-b56f-5d4c-af03-724c46e915f3",
+      "candidate_count": 2,
+      "candidate_references": [
+        "JL22-54",
+        "JL22-55"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/4-door-11-10-21-pdf.534724-JLXP74.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "4-door-11-10-21-pdf.534724",
+        "source_model_code",
+        "model_code",
+        "JLXS74"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/4-door-11-10-21-pdf.534724-JLXS74.review.json",
+      "proposal_file_sha256": "sha256:ed778d7fa503d4ef83ad96f6f2103caa14dfcfc271b5ef934e0e85973c32c8dc",
+      "content_hash": "sha256:f7758b28202eea129561a6c4e9a922a29fac207edd43556d4086cd6e91e35d4d",
+      "revision_uuid": "30fb88e4-d578-521a-a2d2-906e738304cd",
+      "correspondence_uuid": "86214d2e-7277-5dc9-bcc1-71b18cbe437c",
+      "candidate_count": 1,
+      "candidate_references": [
+        "JL22-56"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/4-door-11-10-21-pdf.534724-JLXS74.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "4-door-12-7-21-pdf.543723",
+        "source_model_code",
+        "model_code",
+        "JLJL74"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/4-door-12-7-21-pdf.543723-JLJL74.review.json",
+      "proposal_file_sha256": "sha256:22e239a2f8341ec7ae9f988d8a6c2ad3f5d0b3eea553f7c59a99136eb8c33957",
+      "content_hash": "sha256:1c268fd2323581d4c97825dfb39d785ba110adc08b36c9c7616de36a1cb8c98f",
+      "revision_uuid": "feddbc37-4e9f-532d-8351-3c49457e20ab",
+      "correspondence_uuid": "7f521fe9-d093-5440-9806-6bd93c9d545d",
+      "candidate_count": 20,
+      "candidate_references": [
+        "JL22-16",
+        "JL22-17",
+        "JL22-18",
+        "JL22-19",
+        "JL22-21",
+        "JL22-22",
+        "JL22-23",
+        "JL22-24",
+        "JL22-25",
+        "JL22-26",
+        "JL22-27",
+        "JL22-28",
+        "JL22-29",
+        "JL22-30",
+        "JL22-31",
+        "JL22-32",
+        "JL22-33",
+        "JL22-34",
+        "JL22-35",
+        "JL22-36"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/4-door-12-7-21-pdf.543723-JLJL74.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "4-door-12-7-21-pdf.543723",
+        "source_model_code",
+        "model_code",
+        "JLJP74"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/4-door-12-7-21-pdf.543723-JLJP74.review.json",
+      "proposal_file_sha256": "sha256:01edfdbea171aa76b43d994a28432f4cd07a272e563b7c3a154e787f5a9b48ba",
+      "content_hash": "sha256:45c82d7f9ca371e24a54353a450a8e7ea8b9b2cd9fea94258399175977e22b83",
+      "revision_uuid": "fa63c30e-703a-528d-800e-64243e0d05ff",
+      "correspondence_uuid": "aef9fb62-bb4d-5bf0-babe-43e67544ed53",
+      "candidate_count": 11,
+      "candidate_references": [
+        "JL22-37",
+        "JL22-38",
+        "JL22-39",
+        "JL22-40",
+        "JL22-41",
+        "JL22-42",
+        "JL22-43",
+        "JL22-44",
+        "JL22-45",
+        "JL22-46",
+        "JL22-47"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/4-door-12-7-21-pdf.543723-JLJP74.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "4-door-12-7-21-pdf.543723",
+        "source_model_code",
+        "model_code",
+        "JLJS74"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/4-door-12-7-21-pdf.543723-JLJS74.review.json",
+      "proposal_file_sha256": "sha256:9601b41792003b2efafbc0d2a14907ff1a27ca7d455d4c7aadaf5774c3927d5e",
+      "content_hash": "sha256:a0c3e9d0c85e11f201d07edcb5cc80d917abbbfbbea9b1c9edb20d8a6f1cab7e",
+      "revision_uuid": "ef3ab2d8-47af-5cf5-9df0-0299d2381991",
+      "correspondence_uuid": "b4044e42-3738-5906-bc84-bc6f0dbb82ef",
+      "candidate_count": 4,
+      "candidate_references": [
+        "JL22-48",
+        "JL22-49",
+        "JL22-50",
+        "JL22-51"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/4-door-12-7-21-pdf.543723-JLJS74.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "4-door-12-7-21-pdf.543723",
+        "source_model_code",
+        "model_code",
+        "JLJX74"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/4-door-12-7-21-pdf.543723-JLJX74.review.json",
+      "proposal_file_sha256": "sha256:28a95f01fe362bf415fcebf466668187e680286a000ccb82f4780e2ddf6a460a",
+      "content_hash": "sha256:638a16e682e9c0e394eba7485f8e1c83a6363b399e108927235ef85b4e5ccd94",
+      "revision_uuid": "4b1e3cd7-e89c-5372-a36b-c4f3c2de386a",
+      "correspondence_uuid": "6fec1dfa-8274-527a-b726-1ba708a4cd4a",
+      "candidate_count": 1,
+      "candidate_references": [
+        "JL22-52"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/4-door-12-7-21-pdf.543723-JLJX74.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "4-door-12-7-21-pdf.543723",
+        "source_model_code",
+        "model_code",
+        "JLXP74"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/4-door-12-7-21-pdf.543723-JLXP74.review.json",
+      "proposal_file_sha256": "sha256:05687a4e344ec59e6a3d74ced663904e87fb2065081ddbb255dbd09eefd361c5",
+      "content_hash": "sha256:7402d72c98876f34b4db9c26cb694f8cca2e127faedee8454c9921d6c16c1cd7",
+      "revision_uuid": "163e894a-614c-551c-8b75-7a32f8a48b99",
+      "correspondence_uuid": "a9a9d1ed-5a4c-5ab8-a052-eb6bc8c6c017",
+      "candidate_count": 2,
+      "candidate_references": [
+        "JL22-54",
+        "JL22-55"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/4-door-12-7-21-pdf.543723-JLXP74.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "4-door-12-7-21-pdf.543723",
+        "source_model_code",
+        "model_code",
+        "JLXS74"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/4-door-12-7-21-pdf.543723-JLXS74.review.json",
+      "proposal_file_sha256": "sha256:5f8ff1c00d6de9c72a29ffc59ed4f07aca53cb99fd58eed5d2c407cfc0db4e67",
+      "content_hash": "sha256:a2101fcc25473e31cd87682669ca8483dc888fe1606bda880e87495f4dcac312",
+      "revision_uuid": "59e23023-0910-59b4-b930-72db6cb1f053",
+      "correspondence_uuid": "0cb7c2a9-7a1d-5439-8fc6-e93840a386d7",
+      "candidate_count": 1,
+      "candidate_references": [
+        "JL22-56"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/4-door-12-7-21-pdf.543723-JLXS74.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "4-door-2-10-22-pdf.567217",
+        "source_model_code",
+        "model_code",
+        "JLJL74"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/4-door-2-10-22-pdf.567217-JLJL74.review.json",
+      "proposal_file_sha256": "sha256:8810f00d8362bd15829983fc4e679a00816b43e3b7cd58f79b940036b3186434",
+      "content_hash": "sha256:5ad73f908f61a92eaec4b3fd56b1ff6ab806ffcd663d3c1faa0747e2ae550cf7",
+      "revision_uuid": "9776bad2-e4b6-5df0-901c-0e8399412713",
+      "correspondence_uuid": "79b260c5-a72f-522f-8f21-61ec9c3e5cfc",
+      "candidate_count": 21,
+      "candidate_references": [
+        "JL22-16",
+        "JL22-17",
+        "JL22-18",
+        "JL22-19",
+        "JL22-20",
+        "JL22-21",
+        "JL22-22",
+        "JL22-23",
+        "JL22-24",
+        "JL22-25",
+        "JL22-26",
+        "JL22-27",
+        "JL22-28",
+        "JL22-29",
+        "JL22-30",
+        "JL22-31",
+        "JL22-32",
+        "JL22-33",
+        "JL22-34",
+        "JL22-35",
+        "JL22-36"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/4-door-2-10-22-pdf.567217-JLJL74.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "4-door-2-10-22-pdf.567217",
+        "source_model_code",
+        "model_code",
+        "JLJP74"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/4-door-2-10-22-pdf.567217-JLJP74.review.json",
+      "proposal_file_sha256": "sha256:c393c54ae72d4c7dbcb5562e53fa5d0e94501a5bb62b375fd9561a6af0d2bf8d",
+      "content_hash": "sha256:02d13f2cca9d9ae8a05f1182325972a6df873a7ac9fefecda85b6f5782a59da6",
+      "revision_uuid": "97936023-62c1-5a78-bd8c-635785b602dc",
+      "correspondence_uuid": "cc67babf-51a0-5029-badf-e47acee6f1a9",
+      "candidate_count": 11,
+      "candidate_references": [
+        "JL22-37",
+        "JL22-38",
+        "JL22-39",
+        "JL22-40",
+        "JL22-41",
+        "JL22-42",
+        "JL22-43",
+        "JL22-44",
+        "JL22-45",
+        "JL22-46",
+        "JL22-47"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/4-door-2-10-22-pdf.567217-JLJP74.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "4-door-2-10-22-pdf.567217",
+        "source_model_code",
+        "model_code",
+        "JLJS74"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/4-door-2-10-22-pdf.567217-JLJS74.review.json",
+      "proposal_file_sha256": "sha256:3af551152b98facc24b8c410f7364f5f451855923a0f3a62fabdc41905faa4da",
+      "content_hash": "sha256:32a1bab84bcd89fbebabd34cf95b663dd8b447f093f923d97e16276f9a75ece4",
+      "revision_uuid": "b987c3d8-1caa-505f-b59e-b6400a5fdb4a",
+      "correspondence_uuid": "906b844f-69f9-5f25-a783-9c15216cb7f6",
+      "candidate_count": 4,
+      "candidate_references": [
+        "JL22-48",
+        "JL22-49",
+        "JL22-50",
+        "JL22-51"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/4-door-2-10-22-pdf.567217-JLJS74.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "4-door-2-10-22-pdf.567217",
+        "source_model_code",
+        "model_code",
+        "JLJX74"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/4-door-2-10-22-pdf.567217-JLJX74.review.json",
+      "proposal_file_sha256": "sha256:5152673a691410b81ff9196c09262c5f9bb8f2b89ada7d510e5cf1cb850f26da",
+      "content_hash": "sha256:8e1b0d597ead880f62e8dbece4ce9977f48a4257951a7359dffd41bdc1e50b38",
+      "revision_uuid": "9252c995-664d-5934-bfe9-8ba9ad86c8bd",
+      "correspondence_uuid": "f205e61f-521f-5eba-8844-c386c36f28a9",
+      "candidate_count": 1,
+      "candidate_references": [
+        "JL22-52"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/4-door-2-10-22-pdf.567217-JLJX74.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "4-door-2-10-22-pdf.567217",
+        "source_model_code",
+        "model_code",
+        "JLXP74"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/4-door-2-10-22-pdf.567217-JLXP74.review.json",
+      "proposal_file_sha256": "sha256:fd98f9033ca5482c3ec91bb587bace0a4bd42bcbe80f5a794eba974552fcf267",
+      "content_hash": "sha256:6fd5e56a4f1bfb58146215b9694710fa732934d8dd90895a06b82396859d37e1",
+      "revision_uuid": "f58074a8-31f3-5435-ad44-1c70948e1e28",
+      "correspondence_uuid": "32fa159e-ca81-5e50-966b-26eb499b16af",
+      "candidate_count": 2,
+      "candidate_references": [
+        "JL22-54",
+        "JL22-55"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/4-door-2-10-22-pdf.567217-JLXP74.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "4-door-2-10-22-pdf.567217",
+        "source_model_code",
+        "model_code",
+        "JLXS74"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/4-door-2-10-22-pdf.567217-JLXS74.review.json",
+      "proposal_file_sha256": "sha256:3127ea0007ffd3640e7917b7567b614a174f1e00889aca23afcdd18b37876162",
+      "content_hash": "sha256:00b307781af7098841d6ada6bbff210ae9f5d7b551cb62b6ffa040931317768f",
+      "revision_uuid": "9e32b34c-a7de-564c-b54b-18e1c1a9e25e",
+      "correspondence_uuid": "6339598b-1138-575c-971d-ee8e7a559bad",
+      "candidate_count": 1,
+      "candidate_references": [
+        "JL22-56"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/4-door-2-10-22-pdf.567217-JLXS74.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "4-door-3-11-22-pdf.579260",
+        "source_model_code",
+        "model_code",
+        "JLJL74"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/4-door-3-11-22-pdf.579260-JLJL74.review.json",
+      "proposal_file_sha256": "sha256:3f1bd0a1ca84ad1830e6492d71792c1a7f361c92959d51baa78caeb1dc1301eb",
+      "content_hash": "sha256:043d913ef6e5e96c9858f2ae509bd616531548266bca9802514401febb205521",
+      "revision_uuid": "9a26b908-7aef-5431-a7de-f0231dfb5596",
+      "correspondence_uuid": "b43a0d8a-877e-56db-9dfe-76e382e4a3ba",
+      "candidate_count": 21,
+      "candidate_references": [
+        "JL22-16",
+        "JL22-17",
+        "JL22-18",
+        "JL22-19",
+        "JL22-20",
+        "JL22-21",
+        "JL22-22",
+        "JL22-23",
+        "JL22-24",
+        "JL22-25",
+        "JL22-26",
+        "JL22-27",
+        "JL22-28",
+        "JL22-29",
+        "JL22-30",
+        "JL22-31",
+        "JL22-32",
+        "JL22-33",
+        "JL22-34",
+        "JL22-35",
+        "JL22-36"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/4-door-3-11-22-pdf.579260-JLJL74.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "4-door-3-11-22-pdf.579260",
+        "source_model_code",
+        "model_code",
+        "JLJP74"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/4-door-3-11-22-pdf.579260-JLJP74.review.json",
+      "proposal_file_sha256": "sha256:d341e3e094279dde6deb7073c4af9a526da5d752df1ccd7aba24764b8e89a3c9",
+      "content_hash": "sha256:e7a5aa36638a8f38c8305d855cc2dbf03d7e8e624200a2405826077358cb816c",
+      "revision_uuid": "b38152d0-3246-5075-a265-6d6bdbebdc97",
+      "correspondence_uuid": "3c031a10-eef3-52a2-8ce6-b476682da8d8",
+      "candidate_count": 11,
+      "candidate_references": [
+        "JL22-37",
+        "JL22-38",
+        "JL22-39",
+        "JL22-40",
+        "JL22-41",
+        "JL22-42",
+        "JL22-43",
+        "JL22-44",
+        "JL22-45",
+        "JL22-46",
+        "JL22-47"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/4-door-3-11-22-pdf.579260-JLJP74.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "4-door-3-11-22-pdf.579260",
+        "source_model_code",
+        "model_code",
+        "JLJS74"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/4-door-3-11-22-pdf.579260-JLJS74.review.json",
+      "proposal_file_sha256": "sha256:bca0dbea32ea4d68545b38bb1909de4ab209fb6c33c5c2b23a9cba3bb97c7160",
+      "content_hash": "sha256:0980bf6eff223e0a5079e8e065081fc0ec56058970d7f06cf0e6a8fb3791b0fe",
+      "revision_uuid": "1bbfd394-2b9d-574a-9efc-4eb5feeee432",
+      "correspondence_uuid": "85802124-6dd6-599a-b9a1-786bb93007db",
+      "candidate_count": 4,
+      "candidate_references": [
+        "JL22-48",
+        "JL22-49",
+        "JL22-50",
+        "JL22-51"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/4-door-3-11-22-pdf.579260-JLJS74.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "4-door-3-11-22-pdf.579260",
+        "source_model_code",
+        "model_code",
+        "JLJX74"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/4-door-3-11-22-pdf.579260-JLJX74.review.json",
+      "proposal_file_sha256": "sha256:4db4ce73124c53f233928a7e603eea1ea64c7534a9438d580bb5659f525a2dce",
+      "content_hash": "sha256:4ef4dd5939ef5c8e9dae8f98644aaf5cc4718d94920314f8c6db023a8de56506",
+      "revision_uuid": "a0702b66-2f12-5923-98cf-8d353d9ba8ad",
+      "correspondence_uuid": "9da2bea7-11bb-592f-866f-857b4b05221c",
+      "candidate_count": 1,
+      "candidate_references": [
+        "JL22-52"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/4-door-3-11-22-pdf.579260-JLJX74.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "4-door-3-11-22-pdf.579260",
+        "source_model_code",
+        "model_code",
+        "JLXP74"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/4-door-3-11-22-pdf.579260-JLXP74.review.json",
+      "proposal_file_sha256": "sha256:5bb3bd1ad2f279c22a36acee93c4550ae0900bdee391121aae13a5daa583b975",
+      "content_hash": "sha256:88752bbfdddb4c9c72a19f294b9d5486cb9c39aa1cc6e54170fb6a8f3f3d0d0c",
+      "revision_uuid": "8ebf4e40-b167-5a0f-a90b-72752bf2d347",
+      "correspondence_uuid": "047e44fe-a187-5636-a752-c89e34f3feb9",
+      "candidate_count": 2,
+      "candidate_references": [
+        "JL22-54",
+        "JL22-55"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/4-door-3-11-22-pdf.579260-JLXP74.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "4-door-3-11-22-pdf.579260",
+        "source_model_code",
+        "model_code",
+        "JLXS74"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/4-door-3-11-22-pdf.579260-JLXS74.review.json",
+      "proposal_file_sha256": "sha256:7ba8829499756c5d8d0c627a2709769b52c846a2cc89e94129ef2c2966d07110",
+      "content_hash": "sha256:7c6f6d7989e242941d79b269117f116f7f4ba332d9be874fd1e727fc415369d5",
+      "revision_uuid": "f19d27ba-ddbf-5750-8647-15ca8f9c48e4",
+      "correspondence_uuid": "c5cfe39e-0b9f-5d10-85a9-5b637806454f",
+      "candidate_count": 1,
+      "candidate_references": [
+        "JL22-56"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/4-door-3-11-22-pdf.579260-JLXS74.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "4-door-4-7-22-pdf.591773",
+        "source_model_code",
+        "model_code",
+        "JLJL74"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/4-door-4-7-22-pdf.591773-JLJL74.review.json",
+      "proposal_file_sha256": "sha256:8a8344bec3f1dc07c3f012d4428fb15310bf5793650a169f9d2c4bf167819722",
+      "content_hash": "sha256:54baa368867f5a68e65b4d3fa9953eaffecf14f78b2856cb4d66a136925fba4b",
+      "revision_uuid": "8ae393ae-352f-5d25-9818-5a4312c2dfe2",
+      "correspondence_uuid": "1faf5b41-86b9-5553-a072-b2b0c138efbd",
+      "candidate_count": 21,
+      "candidate_references": [
+        "JL22-16",
+        "JL22-17",
+        "JL22-18",
+        "JL22-19",
+        "JL22-20",
+        "JL22-21",
+        "JL22-22",
+        "JL22-23",
+        "JL22-24",
+        "JL22-25",
+        "JL22-26",
+        "JL22-27",
+        "JL22-28",
+        "JL22-29",
+        "JL22-30",
+        "JL22-31",
+        "JL22-32",
+        "JL22-33",
+        "JL22-34",
+        "JL22-35",
+        "JL22-36"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/4-door-4-7-22-pdf.591773-JLJL74.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "4-door-4-7-22-pdf.591773",
+        "source_model_code",
+        "model_code",
+        "JLJP74"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/4-door-4-7-22-pdf.591773-JLJP74.review.json",
+      "proposal_file_sha256": "sha256:2d416438722231c62b56ab42f880b387b21a7b1d0c2c0ac7aaf483f6527f931a",
+      "content_hash": "sha256:64aecf82d8e2a7731fb575a0652eae417bebee7d4175519846c78ac181c2d014",
+      "revision_uuid": "c5fbbb79-f8dc-5f35-942e-42bfc31e7607",
+      "correspondence_uuid": "b135759b-77a1-5bb9-89a0-13fa790fd651",
+      "candidate_count": 11,
+      "candidate_references": [
+        "JL22-37",
+        "JL22-38",
+        "JL22-39",
+        "JL22-40",
+        "JL22-41",
+        "JL22-42",
+        "JL22-43",
+        "JL22-44",
+        "JL22-45",
+        "JL22-46",
+        "JL22-47"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/4-door-4-7-22-pdf.591773-JLJP74.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "4-door-4-7-22-pdf.591773",
+        "source_model_code",
+        "model_code",
+        "JLJS74"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/4-door-4-7-22-pdf.591773-JLJS74.review.json",
+      "proposal_file_sha256": "sha256:507e0d2c61d5811f1e4222cd6f4389e158ddd720458cb90568d9d1586c8c09b2",
+      "content_hash": "sha256:13c6f1574ada91b0413a3d5dc162109052d570f259b4ef1096dd26f4952ed547",
+      "revision_uuid": "50245c15-d340-5eb5-bf90-474607b3af4f",
+      "correspondence_uuid": "af9636a0-71f7-56f9-b6e8-e4dc7be9f64b",
+      "candidate_count": 4,
+      "candidate_references": [
+        "JL22-48",
+        "JL22-49",
+        "JL22-50",
+        "JL22-51"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/4-door-4-7-22-pdf.591773-JLJS74.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "4-door-4-7-22-pdf.591773",
+        "source_model_code",
+        "model_code",
+        "JLJX74"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/4-door-4-7-22-pdf.591773-JLJX74.review.json",
+      "proposal_file_sha256": "sha256:01e040b35dbd33172b08f159013ca1315d0e7de2cfa3338875c3064403c213c3",
+      "content_hash": "sha256:e71c52b87d1940ca0e5a883050ffb09e5a4ef55fd84e87c274fbfedffc2753c6",
+      "revision_uuid": "75cf8964-dd35-5105-8068-5c3dcf543042",
+      "correspondence_uuid": "e0046e34-73aa-59c2-b551-ef3fde31db30",
+      "candidate_count": 1,
+      "candidate_references": [
+        "JL22-52"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/4-door-4-7-22-pdf.591773-JLJX74.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "4-door-4-7-22-pdf.591773",
+        "source_model_code",
+        "model_code",
+        "JLXP74"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/4-door-4-7-22-pdf.591773-JLXP74.review.json",
+      "proposal_file_sha256": "sha256:cb3483e75c843985bdec1d9a9b3723807b2bf6d7523c7ff7fce9b4f7c6cde99a",
+      "content_hash": "sha256:131472f4098b3be38c2dcb19d4ad1fdcee32b62b2e6fd79c99fcca28889d3b65",
+      "revision_uuid": "92cf7938-1bb0-5b7f-8988-1f383db2995a",
+      "correspondence_uuid": "9cfdb823-5f2c-5951-8fbb-fc125baccd92",
+      "candidate_count": 2,
+      "candidate_references": [
+        "JL22-54",
+        "JL22-55"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/4-door-4-7-22-pdf.591773-JLXP74.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "4-door-4-7-22-pdf.591773",
+        "source_model_code",
+        "model_code",
+        "JLXS74"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/4-door-4-7-22-pdf.591773-JLXS74.review.json",
+      "proposal_file_sha256": "sha256:1948593eaa660fc0ca92fa49d5228374ad31d677909cc90bf87a5c0366c921d9",
+      "content_hash": "sha256:8e4e79e3a17ed86e01eaf9c9d1b365d147d0e54fd25a32d9488ae9acbee6d96a",
+      "revision_uuid": "a70378c2-79ef-5ba1-b3a9-2cfe8ced4fbe",
+      "correspondence_uuid": "32a3a699-e605-5f6c-a2fa-2ad726ee5952",
+      "candidate_count": 1,
+      "candidate_references": [
+        "JL22-56"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/4-door-4-7-22-pdf.591773-JLXS74.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "4-door-6-1-22-pdf.615030",
+        "source_model_code",
+        "model_code",
+        "JLJL74"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/4-door-6-1-22-pdf.615030-JLJL74.review.json",
+      "proposal_file_sha256": "sha256:094f4c370045c844af48ab8f5c5c6a3e864d7555417afea6f1689e1e9c8445f4",
+      "content_hash": "sha256:0f3cf1a143fef7c76faa04fad58b188d62aec35758ec4b56685f54d8c34cf533",
+      "revision_uuid": "49f086f3-0f5e-5a60-897e-68439a6b9086",
+      "correspondence_uuid": "171e8c00-2afe-5707-8768-f8cd96b0d498",
+      "candidate_count": 21,
+      "candidate_references": [
+        "JL22-16",
+        "JL22-17",
+        "JL22-18",
+        "JL22-19",
+        "JL22-20",
+        "JL22-21",
+        "JL22-22",
+        "JL22-23",
+        "JL22-24",
+        "JL22-25",
+        "JL22-26",
+        "JL22-27",
+        "JL22-28",
+        "JL22-29",
+        "JL22-30",
+        "JL22-31",
+        "JL22-32",
+        "JL22-33",
+        "JL22-34",
+        "JL22-35",
+        "JL22-36"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/4-door-6-1-22-pdf.615030-JLJL74.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "4-door-6-1-22-pdf.615030",
+        "source_model_code",
+        "model_code",
+        "JLJP74"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/4-door-6-1-22-pdf.615030-JLJP74.review.json",
+      "proposal_file_sha256": "sha256:7ee2ba5e66502ce963e35f1f24ea5216f1c196bf23a961e7d043f54e06a77aca",
+      "content_hash": "sha256:6e7ba9e9d062cc9f09168d7dd09ac7df932218185bac039b51dc297a932789f1",
+      "revision_uuid": "cec1c15c-1c5f-5574-9f0c-88fb0ff47037",
+      "correspondence_uuid": "e09ac254-2727-5ce7-a50e-faa0b22d2118",
+      "candidate_count": 11,
+      "candidate_references": [
+        "JL22-37",
+        "JL22-38",
+        "JL22-39",
+        "JL22-40",
+        "JL22-41",
+        "JL22-42",
+        "JL22-43",
+        "JL22-44",
+        "JL22-45",
+        "JL22-46",
+        "JL22-47"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/4-door-6-1-22-pdf.615030-JLJP74.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "4-door-6-1-22-pdf.615030",
+        "source_model_code",
+        "model_code",
+        "JLJS74"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/4-door-6-1-22-pdf.615030-JLJS74.review.json",
+      "proposal_file_sha256": "sha256:b015386fcebb015828447ff6f50e36faa2605a4e3cae9355ee82951d9570ca7e",
+      "content_hash": "sha256:d7e9d7a9755aff8a902beb611d2aef5cc7abe70601d8b2aca1c52f520c081c32",
+      "revision_uuid": "fb345b77-db9f-5bc3-be4c-b6ffdaaef96a",
+      "correspondence_uuid": "a9504dc6-3f85-576f-857e-dca43f34dc1d",
+      "candidate_count": 4,
+      "candidate_references": [
+        "JL22-48",
+        "JL22-49",
+        "JL22-50",
+        "JL22-51"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/4-door-6-1-22-pdf.615030-JLJS74.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "4-door-6-1-22-pdf.615030",
+        "source_model_code",
+        "model_code",
+        "JLJX74"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/4-door-6-1-22-pdf.615030-JLJX74.review.json",
+      "proposal_file_sha256": "sha256:b05aa4c9607b16182ea8712a9e7eaf4eaf4ff37f483c0a5cfce3a473a78abaf7",
+      "content_hash": "sha256:8fbe489c7b1f8ac69d85bec16d1e80d1262f721c3b7d999ed3c145b78772ab40",
+      "revision_uuid": "84bc636f-c785-56a4-a125-f6e7d1635f9b",
+      "correspondence_uuid": "4ecb2c59-6199-5c18-92a6-bcc5e9311723",
+      "candidate_count": 1,
+      "candidate_references": [
+        "JL22-52"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/4-door-6-1-22-pdf.615030-JLJX74.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "4-door-6-1-22-pdf.615030",
+        "source_model_code",
+        "model_code",
+        "JLXP74"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/4-door-6-1-22-pdf.615030-JLXP74.review.json",
+      "proposal_file_sha256": "sha256:abf8ee4cd1776265720bd409894faeff758ad9f69c9bc889c79db594d3c7ac49",
+      "content_hash": "sha256:0bc02f6f9a1e004c756e863d14a7c13dadbd7f6a3465f4c697637bf524c902ae",
+      "revision_uuid": "58665481-0153-5f87-a86f-a3ed60716221",
+      "correspondence_uuid": "939913e1-ef20-57cf-8d09-8b2dc3f057c1",
+      "candidate_count": 2,
+      "candidate_references": [
+        "JL22-54",
+        "JL22-55"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/4-door-6-1-22-pdf.615030-JLXP74.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "4-door-6-1-22-pdf.615030",
+        "source_model_code",
+        "model_code",
+        "JLXS74"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/4-door-6-1-22-pdf.615030-JLXS74.review.json",
+      "proposal_file_sha256": "sha256:dad5f954b0b49313cade6e1aa9dfb2ec7414b429bf19766246709b629d303b71",
+      "content_hash": "sha256:7ce7f5038bb356f08d2a6d468016510881c6c4f225f6fc1ec28593d3f4c30866",
+      "revision_uuid": "e8b77713-3773-50a9-90a1-55ac641cdd49",
+      "correspondence_uuid": "ddd95b09-31a4-59df-aed2-2a8cc88ad1ac",
+      "candidate_count": 1,
+      "candidate_references": [
+        "JL22-56"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/4-door-6-1-22-pdf.615030-JLXS74.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "wrangler-4-dr-2022-10-08-2021-pdf.519330",
+        "source_model_code",
+        "model_code",
+        "JLJL74"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/wrangler-4-dr-2022-10-08-2021-pdf.519330-JLJL74.review.json",
+      "proposal_file_sha256": "sha256:c4fb936e18a6b1b18f2e5c9a266feb1c6aa97fccbd8507032b983c05eedd2795",
+      "content_hash": "sha256:86494283cc118a3fa210cfd7411eab77abd549cc7c54a11abc886c642128dbfd",
+      "revision_uuid": "15032ff5-729b-5cff-9e59-f2564d4e5827",
+      "correspondence_uuid": "7680bd98-533d-53a1-a5f4-872951d3a84f",
+      "candidate_count": 20,
+      "candidate_references": [
+        "JL22-16",
+        "JL22-17",
+        "JL22-18",
+        "JL22-19",
+        "JL22-21",
+        "JL22-22",
+        "JL22-23",
+        "JL22-24",
+        "JL22-25",
+        "JL22-26",
+        "JL22-27",
+        "JL22-28",
+        "JL22-29",
+        "JL22-30",
+        "JL22-31",
+        "JL22-32",
+        "JL22-33",
+        "JL22-34",
+        "JL22-35",
+        "JL22-36"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/wrangler-4-dr-2022-10-08-2021-pdf.519330-JLJL74.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "wrangler-4-dr-2022-10-08-2021-pdf.519330",
+        "source_model_code",
+        "model_code",
+        "JLJP74"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/wrangler-4-dr-2022-10-08-2021-pdf.519330-JLJP74.review.json",
+      "proposal_file_sha256": "sha256:e20ef7fdafd125f2b42acc9da98379565f05c92de8c5da9e99d41da75cc5879a",
+      "content_hash": "sha256:ced64cdf5369eb3fb9cd0a614bd8ce7b21ab8bcb58ce9bd19c654a9afac58fda",
+      "revision_uuid": "0d0e5423-3924-59ac-b204-56b888c31c8f",
+      "correspondence_uuid": "e7bbfcdb-a2e9-5961-85ef-797f8b22c20c",
+      "candidate_count": 9,
+      "candidate_references": [
+        "JL22-37",
+        "JL22-38",
+        "JL22-39",
+        "JL22-40",
+        "JL22-43",
+        "JL22-44",
+        "JL22-45",
+        "JL22-46",
+        "JL22-47"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/wrangler-4-dr-2022-10-08-2021-pdf.519330-JLJP74.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "wrangler-4-dr-2022-10-08-2021-pdf.519330",
+        "source_model_code",
+        "model_code",
+        "JLJS74"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/wrangler-4-dr-2022-10-08-2021-pdf.519330-JLJS74.review.json",
+      "proposal_file_sha256": "sha256:c37b283630a31769ff320577c455c4aad035ae87c40a98433a70942b5c47da70",
+      "content_hash": "sha256:e17e4ac906c5b95e5d8876b7e7e5e9e0a36646dbb8170eded6ffc67985584dac",
+      "revision_uuid": "3cf31a37-872d-5f7d-bbd5-01ab934cb3ad",
+      "correspondence_uuid": "0f3b4386-b1f6-5cfe-a751-2d2a01c70987",
+      "candidate_count": 4,
+      "candidate_references": [
+        "JL22-48",
+        "JL22-49",
+        "JL22-50",
+        "JL22-51"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/wrangler-4-dr-2022-10-08-2021-pdf.519330-JLJS74.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "wrangler-4-dr-2022-10-08-2021-pdf.519330",
+        "source_model_code",
+        "model_code",
+        "JLJX74"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/wrangler-4-dr-2022-10-08-2021-pdf.519330-JLJX74.review.json",
+      "proposal_file_sha256": "sha256:dfd2f75e3468adbcd9856ba009d765391d758681a15fcdd08e250e515e1b6e65",
+      "content_hash": "sha256:fecc43388b8c5b421ea10b231523d52e4ea3bb7e3c51261120deff027d2fc527",
+      "revision_uuid": "c12b34c9-32ad-5281-b931-c0cf7e979955",
+      "correspondence_uuid": "a823e2fa-ef3f-5b20-8a26-285d559e8a15",
+      "candidate_count": 1,
+      "candidate_references": [
+        "JL22-52"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/wrangler-4-dr-2022-10-08-2021-pdf.519330-JLJX74.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "wrangler-4-dr-2022-10-08-2021-pdf.519330",
+        "source_model_code",
+        "model_code",
+        "JLXP74"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/wrangler-4-dr-2022-10-08-2021-pdf.519330-JLXP74.review.json",
+      "proposal_file_sha256": "sha256:2f8b3700cd70ebbfc6b91a82d77ba70b6ae320290cee49307a5c280d48f07ac2",
+      "content_hash": "sha256:e2f84aeff291e382f1832bb9ee7cbff722e644ed90b101b8be588dc94563f667",
+      "revision_uuid": "9112c080-bbca-523d-969f-fc87a7ad5170",
+      "correspondence_uuid": "0d2cbd67-38fb-50f4-a2e5-10ca1d63e04e",
+      "candidate_count": 2,
+      "candidate_references": [
+        "JL22-54",
+        "JL22-55"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/wrangler-4-dr-2022-10-08-2021-pdf.519330-JLXP74.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    },
+    {
+      "key": [
+        "wrangler-4-dr-2022-10-08-2021-pdf.519330",
+        "source_model_code",
+        "model_code",
+        "JLXS74"
+      ],
+      "proposal": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/new_correspondence_proposals/wrangler-4-dr-2022-10-08-2021-pdf.519330-JLXS74.review.json",
+      "proposal_file_sha256": "sha256:eaeb0e85cb62ab32d7b428dfaa49b450b9fb34328c4eff19b8cfb891dc1487aa",
+      "content_hash": "sha256:8063a24d5270a55ff5c875615ecfd76355a3e1222ae445f5003a6429a6860f16",
+      "revision_uuid": "7b063d04-289a-5e53-8d9d-c2c85539db6b",
+      "correspondence_uuid": "5453ed17-34ff-59ea-8f60-fc9e1aae831d",
+      "candidate_count": 1,
+      "candidate_references": [
+        "JL22-56"
+      ],
+      "target_generation_PK": 32,
+      "target_generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "shared_selector": "docs/implementation/handoffs/MY2022_JL/correspondence_and_review_audit_20261112/shared_selectors/wrangler-4-dr-2022-10-08-2021-pdf.519330-JLXS74.document.json",
+      "publication_status": "NOT_PUBLISHED"
+    }
+  ]
+}

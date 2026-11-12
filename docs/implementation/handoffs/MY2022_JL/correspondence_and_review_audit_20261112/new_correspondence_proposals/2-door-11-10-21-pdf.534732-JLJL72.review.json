@@ -1,0 +1,105 @@
+{
+  "review": {
+    "review_version": "1.0",
+    "revision_uuid": "4ab6c98c-7bd4-5310-a57a-890b1d5fc00a",
+    "correspondence_uuid": "57f86b7e-3b68-58c2-99c4-313c50552d48",
+    "revision_number": 1,
+    "supersedes_uuid": null,
+    "vehicle_model_uuid": "5ec5f58a-b140-484c-97f0-c90ec9c134d6",
+    "generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+    "source_id": "2-door-11-10-21-pdf.534732",
+    "source_namespace": "source_model_code",
+    "identity_type": "model_code",
+    "native_identifier": "JLJL72",
+    "market": "US",
+    "start_year": 2022,
+    "end_year": 2022,
+    "restrictions": {},
+    "evidence": [
+      {
+        "assertion_set_id": "2-door-11-10-21-pdf.534732-JLJL72",
+        "assertions": [
+          {
+            "assertion_id": "2-door-11-10-21-pdf.534732-JLJL72-table",
+            "attribute_key": "factory_powertrain_table",
+            "raw_value": "\nENGINE               $FWP    $MSRP    TRANSMISSION          $FWP    $MSRP                 SPORT                         WILLYS SPORT                       SPORT S                              WILLYS\n3.6L V6 24V VVT       N/C      N/C    6-SPEED                N/C      N/C             23B                    23K                     23S                    23W\nENGINE UPG I                          MANUAL\nW/ESS (ERC)                           TRANSMISSION\n                                      (DEM)\n2.0L I4 DOHC DI      (450)    (500)   8-SPD AUTO            2,250    2,500            22B                    22K                     22S                    22W\nTURBO ENGINE                          850RE TRANS\nW/ ESS (EC1)                          (MAKE) (DFT)\n3.6L V6 24V VVT       676      750    8-SPD AUTO            2,250    2,500            25B                    25K                     25S                    25W\nETORQUE                               850RE TRANS\nENGINE UPG I                          (MAKE) (DFT)\n(ERG)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+            "source_context": "PDF page 2; model JLJL72; named marketed columns and positive QOP cells"
+          },
+          {
+            "assertion_id": "2-door-11-10-21-pdf.534732-JLJL72-heading",
+            "attribute_key": "source_document_heading",
+            "raw_value": "REISSUED: 11/10/2021                                                                                                                                         PAGE: 1           JEEP\nISSUED:      10/08/2021\n\n                                                                       United States\n                                                                               2022                                                                                           WRANGLER\n\n                                                          JEEP       WRANGLER                  2  DOOR\n\n                                                       CUSTOMER PREFERRED CODE GUIDE\n\n\n         MODEL                                                                                                 CODE                   PAGES\n         WRANGLER SPORT                                                                                    JLJL72                  2                                           2\n\n         WRANGLER RUBICON                                                                                JLJS72                  6                                             DOOR\n\n         GROUP DETAIL                                                                                                                           9\n         STANDARD EQUIPMENT                                                                                                          12\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n         STEP #1: SELECT                                                                                        MODEL CODE\n\n         STEP #2: SELECT                                                                                        QUICK ORDER PACKAGE CODE\n\n         STEP #3: SELECT                                                                                        $ OPTIONS (IF DESIRED)\n\n         STEP #4: SELECT                                                                                        COLOR & TRIM CODES\n\n\n\n\n\n       © 2020 FCA US LLC, All Rights Reserved. IT IS FOR THE USE OF FCA AND ITS AUTHORIZED DEALERS ONLY AND MAY\n                       NOT BE OTHERWISE USED, RELEASED, OR REPRINTED WITHOUT FCA PRIOR PERMISSION.\n\n                             ORDERS ARE ACCEPTED ONLY WHEN VEHICLES ARE SHIPPED BY THE FACTORY.\n                                                          © 2020 FCA US LLC, All Rights Reserved.",
+            "source_context": "PDF page 1; United States / MY2022 / Wrangler / body heading"
+          },
+          {
+            "assertion_id": "2-door-11-10-21-pdf.534732-JLJL72-model",
+            "attribute_key": "source_model_code",
+            "raw_value": "JLJL72",
+            "source_context": "PDF page 2; exact manufacturer model code"
+          },
+          {
+            "assertion_id": "2-door-11-10-21-pdf.534732-JLJL72-EC1-segment-0",
+            "attribute_key": "engine_transmission_QOP_segment",
+            "raw_value": "2.0L I4 DOHC DI      (450)    (500)   8-SPD AUTO            2,250    2,500            22B                    22K                     22S                    22W\nTURBO ENGINE                          850RE TRANS\nW/ ESS (EC1)                          (MAKE) (DFT)",
+            "source_context": "PDF page 2; full engine/transmission/QOP segment 0; EC1"
+          },
+          {
+            "assertion_id": "2-door-11-10-21-pdf.534732-JLJL72-EC1-engine-column",
+            "attribute_key": "engine_descriptor",
+            "raw_value": "2.0L I4 DOHC DI TURBO ENGINE W/ ESS (EC1)",
+            "source_context": "PDF page 2; first 21 characters of each retained layout-segment line; full segments retained; no codes or QOP values interpreted as powertrain classes"
+          },
+          {
+            "assertion_id": "2-door-11-10-21-pdf.534732-JLJL72-ERC-segment-0",
+            "attribute_key": "engine_transmission_QOP_segment",
+            "raw_value": "3.6L V6 24V VVT       N/C      N/C    6-SPEED                N/C      N/C             23B                    23K                     23S                    23W\nENGINE UPG I                          MANUAL\nW/ESS (ERC)                           TRANSMISSION\n                                      (DEM)",
+            "source_context": "PDF page 2; full engine/transmission/QOP segment 0; ERC"
+          },
+          {
+            "assertion_id": "2-door-11-10-21-pdf.534732-JLJL72-ERC-engine-column",
+            "attribute_key": "engine_descriptor",
+            "raw_value": "3.6L V6 24V VVT ENGINE UPG I W/ESS (ERC) ",
+            "source_context": "PDF page 2; first 21 characters of each retained layout-segment line; full segments retained; no codes or QOP values interpreted as powertrain classes"
+          },
+          {
+            "assertion_id": "2-door-11-10-21-pdf.534732-JLJL72-ERG-segment-0",
+            "attribute_key": "engine_transmission_QOP_segment",
+            "raw_value": "3.6L V6 24V VVT       676      750    8-SPD AUTO            2,250    2,500            25B                    25K                     25S                    25W\nETORQUE                               850RE TRANS\nENGINE UPG I                          (MAKE) (DFT)\n(ERG)",
+            "source_context": "PDF page 2; full engine/transmission/QOP segment 0; ERG"
+          },
+          {
+            "assertion_id": "2-door-11-10-21-pdf.534732-JLJL72-ERG-engine-column",
+            "attribute_key": "engine_descriptor",
+            "raw_value": "3.6L V6 24V VVT ETORQUE ENGINE UPG I (ERG)",
+            "source_context": "PDF page 2; first 21 characters of each retained layout-segment line; full segments retained; no codes or QOP values interpreted as powertrain classes"
+          }
+        ],
+        "extraction_mode": "manually_verified_transcription",
+        "extractor_id": "MY2022_retained_discovery_transcription",
+        "extractor_version": "1.0.0",
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "publication_revision": "2021-11-10",
+        "raw_artifact_hash": "sha256:52781c4cd2222dd4400d8d1e85eb099cc4345f154a329eede597b490f5ffb849",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2022_JL/discovery_20261109/source_pdfs/2-door-11-10-21-pdf.534732.pdf",
+        "retrieved_at": "2026-11-09T23:51:57.550248+00:00",
+        "source_applicability": {
+          "applicability_basis": "Existing MY2022 US guide scope; joins bound to exact model, table, QOP and research row",
+          "applicability_scope": "model_year",
+          "market": "US",
+          "publisher_jurisdiction": "US",
+          "unknown_fields": {}
+        },
+        "source_id": "2-door-11-10-21-pdf.534732",
+        "source_locator": "https://www.jlwranglerforums.com/forum/attachments/2-door-11-10-21-pdf.534732/"
+      }
+    ],
+    "finding": "established",
+    "reviewer": "Codex MY2022 evidence review; unpublished proposal; owner publication authorization pending",
+    "reviewed_at": "2026-11-12T00:00:00+00:00",
+    "review_notes": "Unpublished MY2022 US-only proposal for the exact retained manufacturer guide/model key. Original United States / 2022 / Wrangler body heading and model-code table establish applicability. The verified US MY2022 Wrangler JL offering context, manufacturer model/body lineage and active canonical JL target (PK 32, starts 2018) establish the proposed relation; not a code-prefix or name-only automatic match. Earlier-year publications were inspected but do not authorize reuse: their year scopes and source identities differ. For 4xe and 392, retain their manufacturer Wrangler Unlimited family headings; no separate model/Generation is invented. The exact existing shared selector document is present in every matching current candidate. No candidate, classification, source key or raw evidence is revised. Publication requires separate explicit owner authorization."
+  },
+  "content_hash": "sha256:7d3cb820549cf3e4441e4ab2f3619a1e57c174ff0b4e180c6e3ce2c16113f7a9"
+}

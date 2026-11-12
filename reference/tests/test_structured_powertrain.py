@@ -267,6 +267,27 @@ class StructuredPowertrainTests(SyntheticWranglerSetup, TestCase):
             record = VehicleDefinition(engine_name="3.6L V6 ESS", electrification_type=value)
             self.assertEqual(engine_label(record, short=True), "3.6L V6 ESS")
 
+    def test_redundant_turbo_engine_label_normalization(self):
+        # Redundant standalone Turbo is removed when aspiration is turbocharged
+        turbo_gas = VehicleDefinition(engine_name="2.0L I4 Turbo", engine_aspiration="turbocharged", fuel_type="gasoline")
+        self.assertEqual(engine_label(turbo_gas, short=True), "2.0L I4 · Turbocharged")
+        self.assertEqual(engine_label(turbo_gas, short=False), "2.0L I4, Turbocharged")
+
+        # Redundant Turbo Diesel is normalized when aspiration is turbocharged and fuel is diesel
+        turbo_diesel = VehicleDefinition(engine_name="3.0L V6 Turbo Diesel", engine_aspiration="turbocharged", fuel_type="diesel")
+        self.assertEqual(engine_label(turbo_diesel, short=True), "3.0L V6 · Turbocharged · Diesel")
+        self.assertEqual(engine_label(turbo_diesel, short=False), "3.0L V6, Turbocharged, Diesel")
+
+        # 4xe PHEV retains electrification designation without duplicate Turbo
+        turbo_phev = VehicleDefinition(engine_name="2.0L I4 Turbo PHEV", engine_aspiration="turbocharged", fuel_type="gasoline", electrification_type="plug_in_hybrid")
+        self.assertEqual(engine_label(turbo_phev, short=True), "2.0L I4 · Turbocharged · PHEV")
+        self.assertEqual(engine_label(turbo_phev, short=False), "2.0L I4, Turbocharged, Plug-in hybrid (PHEV)")
+
+        # Unspecified or non-turbo aspiration preserves meaningful descriptor
+        unspecified = VehicleDefinition(engine_name="2.4L Turbo I4")
+        self.assertEqual(engine_label(unspecified, short=True), "2.4L Turbo I4")
+        self.assertEqual(engine_label(unspecified, short=False), "2.4L Turbo I4")
+
     def matrix(self, candidates):
         rows = []
         for index, candidate in enumerate(candidates):

@@ -1,0 +1,3738 @@
+{
+  "candidate_count": 55,
+  "all_flagged_for_human_review": true,
+  "total_null_powertrain_instances": 112,
+  "review_cause_counts": {
+    "INCOMPLETE_POWERTRAIN_FIELDS": 55,
+    "ERC_ERG_PEER_AMBIGUITY": 28,
+    "HIGH_TIDE_TRIM_VS_PACKAGE_RELATIONSHIP": 1
+  },
+  "candidates": [
+    {
+      "candidate_reference": "JL22-01",
+      "body_style": "2-door",
+      "manufacturer_model_code": "JLJL72",
+      "trim_name": "Sport",
+      "engine_code": "EC1",
+      "canonical_powertrain": {
+        "electrification_type": null,
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 4,
+        "engine_displacement_liters": "2",
+        "fuel_type": null
+      },
+      "null_field_count": 2,
+      "null_fields": [
+        "fuel_type",
+        "electrification_type"
+      ],
+      "requires_human_review": true,
+      "attribute_states": {
+        "electrification_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_cylinders": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "engine_displacement_liters": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "fuel_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "generic_drive_classification": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "make": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model_year": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        }
+      },
+      "review_causes": [
+        "INCOMPLETE_POWERTRAIN_FIELDS"
+      ],
+      "review_status_classification": "Review flag caused by a known, documented classification decision still awaiting approval",
+      "disposition_notes": "Candidate has 2 null powertrain fields (fuel_type, electrification_type) for engine EC1. Documented in unresolved classification register (12 review groups); awaiting owner classification adjudication."
+    },
+    {
+      "candidate_reference": "JL22-02",
+      "body_style": "2-door",
+      "manufacturer_model_code": "JLJL72",
+      "trim_name": "Sport",
+      "engine_code": "ERC",
+      "canonical_powertrain": {
+        "electrification_type": null,
+        "engine_aspiration": null,
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "fuel_type": null
+      },
+      "null_field_count": 3,
+      "null_fields": [
+        "engine_aspiration",
+        "fuel_type",
+        "electrification_type"
+      ],
+      "requires_human_review": true,
+      "attribute_states": {
+        "electrification_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_aspiration": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_cylinders": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "engine_displacement_liters": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "fuel_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "generic_drive_classification": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "make": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model_year": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        }
+      },
+      "review_causes": [
+        "INCOMPLETE_POWERTRAIN_FIELDS",
+        "ERC_ERG_PEER_AMBIGUITY"
+      ],
+      "review_status_classification": "Review flag caused by a known, documented classification decision still awaiting approval",
+      "disposition_notes": "Candidate has 3 null powertrain fields (engine_aspiration, fuel_type, electrification_type) for engine ERC. Documented in unresolved classification register (12 review groups); awaiting owner classification adjudication."
+    },
+    {
+      "candidate_reference": "JL22-03",
+      "body_style": "2-door",
+      "manufacturer_model_code": "JLJL72",
+      "trim_name": "Sport",
+      "engine_code": "ERG",
+      "canonical_powertrain": {
+        "electrification_type": "mild_hybrid",
+        "engine_aspiration": null,
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "fuel_type": null
+      },
+      "null_field_count": 2,
+      "null_fields": [
+        "engine_aspiration",
+        "fuel_type"
+      ],
+      "requires_human_review": true,
+      "attribute_states": {
+        "engine_aspiration": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_cylinders": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "engine_displacement_liters": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "fuel_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "generic_drive_classification": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "make": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model_year": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        }
+      },
+      "review_causes": [
+        "INCOMPLETE_POWERTRAIN_FIELDS",
+        "ERC_ERG_PEER_AMBIGUITY"
+      ],
+      "review_status_classification": "Review flag caused by a known, documented classification decision still awaiting approval",
+      "disposition_notes": "Candidate has 2 null powertrain fields (engine_aspiration, fuel_type) for engine ERG. Documented in unresolved classification register (12 review groups); awaiting owner classification adjudication."
+    },
+    {
+      "candidate_reference": "JL22-04",
+      "body_style": "2-door",
+      "manufacturer_model_code": "JLJL72",
+      "trim_name": "Sport S",
+      "engine_code": "EC1",
+      "canonical_powertrain": {
+        "electrification_type": null,
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 4,
+        "engine_displacement_liters": "2",
+        "fuel_type": null
+      },
+      "null_field_count": 2,
+      "null_fields": [
+        "fuel_type",
+        "electrification_type"
+      ],
+      "requires_human_review": true,
+      "attribute_states": {
+        "electrification_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_cylinders": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "engine_displacement_liters": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "fuel_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "generic_drive_classification": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "make": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model_year": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        }
+      },
+      "review_causes": [
+        "INCOMPLETE_POWERTRAIN_FIELDS"
+      ],
+      "review_status_classification": "Review flag caused by a known, documented classification decision still awaiting approval",
+      "disposition_notes": "Candidate has 2 null powertrain fields (fuel_type, electrification_type) for engine EC1. Documented in unresolved classification register (12 review groups); awaiting owner classification adjudication."
+    },
+    {
+      "candidate_reference": "JL22-05",
+      "body_style": "2-door",
+      "manufacturer_model_code": "JLJL72",
+      "trim_name": "Sport S",
+      "engine_code": "ERC",
+      "canonical_powertrain": {
+        "electrification_type": null,
+        "engine_aspiration": null,
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "fuel_type": null
+      },
+      "null_field_count": 3,
+      "null_fields": [
+        "engine_aspiration",
+        "fuel_type",
+        "electrification_type"
+      ],
+      "requires_human_review": true,
+      "attribute_states": {
+        "electrification_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_aspiration": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_cylinders": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "engine_displacement_liters": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "fuel_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "generic_drive_classification": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "make": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model_year": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        }
+      },
+      "review_causes": [
+        "INCOMPLETE_POWERTRAIN_FIELDS",
+        "ERC_ERG_PEER_AMBIGUITY"
+      ],
+      "review_status_classification": "Review flag caused by a known, documented classification decision still awaiting approval",
+      "disposition_notes": "Candidate has 3 null powertrain fields (engine_aspiration, fuel_type, electrification_type) for engine ERC. Documented in unresolved classification register (12 review groups); awaiting owner classification adjudication."
+    },
+    {
+      "candidate_reference": "JL22-06",
+      "body_style": "2-door",
+      "manufacturer_model_code": "JLJL72",
+      "trim_name": "Sport S",
+      "engine_code": "ERG",
+      "canonical_powertrain": {
+        "electrification_type": "mild_hybrid",
+        "engine_aspiration": null,
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "fuel_type": null
+      },
+      "null_field_count": 2,
+      "null_fields": [
+        "engine_aspiration",
+        "fuel_type"
+      ],
+      "requires_human_review": true,
+      "attribute_states": {
+        "engine_aspiration": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_cylinders": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "engine_displacement_liters": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "fuel_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "generic_drive_classification": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "make": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model_year": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        }
+      },
+      "review_causes": [
+        "INCOMPLETE_POWERTRAIN_FIELDS",
+        "ERC_ERG_PEER_AMBIGUITY"
+      ],
+      "review_status_classification": "Review flag caused by a known, documented classification decision still awaiting approval",
+      "disposition_notes": "Candidate has 2 null powertrain fields (engine_aspiration, fuel_type) for engine ERG. Documented in unresolved classification register (12 review groups); awaiting owner classification adjudication."
+    },
+    {
+      "candidate_reference": "JL22-07",
+      "body_style": "2-door",
+      "manufacturer_model_code": "JLJL72",
+      "trim_name": "Willys",
+      "engine_code": "EC1",
+      "canonical_powertrain": {
+        "electrification_type": null,
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 4,
+        "engine_displacement_liters": "2",
+        "fuel_type": null
+      },
+      "null_field_count": 2,
+      "null_fields": [
+        "fuel_type",
+        "electrification_type"
+      ],
+      "requires_human_review": true,
+      "attribute_states": {
+        "electrification_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_cylinders": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "engine_displacement_liters": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "fuel_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "generic_drive_classification": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "make": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model_year": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        }
+      },
+      "review_causes": [
+        "INCOMPLETE_POWERTRAIN_FIELDS"
+      ],
+      "review_status_classification": "Review flag caused by a known, documented classification decision still awaiting approval",
+      "disposition_notes": "Candidate has 2 null powertrain fields (fuel_type, electrification_type) for engine EC1. Documented in unresolved classification register (12 review groups); awaiting owner classification adjudication."
+    },
+    {
+      "candidate_reference": "JL22-08",
+      "body_style": "2-door",
+      "manufacturer_model_code": "JLJL72",
+      "trim_name": "Willys",
+      "engine_code": "ERC",
+      "canonical_powertrain": {
+        "electrification_type": null,
+        "engine_aspiration": null,
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "fuel_type": null
+      },
+      "null_field_count": 3,
+      "null_fields": [
+        "engine_aspiration",
+        "fuel_type",
+        "electrification_type"
+      ],
+      "requires_human_review": true,
+      "attribute_states": {
+        "electrification_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_aspiration": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_cylinders": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "engine_displacement_liters": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "fuel_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "generic_drive_classification": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "make": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model_year": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        }
+      },
+      "review_causes": [
+        "INCOMPLETE_POWERTRAIN_FIELDS",
+        "ERC_ERG_PEER_AMBIGUITY"
+      ],
+      "review_status_classification": "Review flag caused by a known, documented classification decision still awaiting approval",
+      "disposition_notes": "Candidate has 3 null powertrain fields (engine_aspiration, fuel_type, electrification_type) for engine ERC. Documented in unresolved classification register (12 review groups); awaiting owner classification adjudication."
+    },
+    {
+      "candidate_reference": "JL22-09",
+      "body_style": "2-door",
+      "manufacturer_model_code": "JLJL72",
+      "trim_name": "Willys",
+      "engine_code": "ERG",
+      "canonical_powertrain": {
+        "electrification_type": "mild_hybrid",
+        "engine_aspiration": null,
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "fuel_type": null
+      },
+      "null_field_count": 2,
+      "null_fields": [
+        "engine_aspiration",
+        "fuel_type"
+      ],
+      "requires_human_review": true,
+      "attribute_states": {
+        "engine_aspiration": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_cylinders": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "engine_displacement_liters": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "fuel_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "generic_drive_classification": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "make": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model_year": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        }
+      },
+      "review_causes": [
+        "INCOMPLETE_POWERTRAIN_FIELDS",
+        "ERC_ERG_PEER_AMBIGUITY"
+      ],
+      "review_status_classification": "Review flag caused by a known, documented classification decision still awaiting approval",
+      "disposition_notes": "Candidate has 2 null powertrain fields (engine_aspiration, fuel_type) for engine ERG. Documented in unresolved classification register (12 review groups); awaiting owner classification adjudication."
+    },
+    {
+      "candidate_reference": "JL22-10",
+      "body_style": "2-door",
+      "manufacturer_model_code": "JLJL72",
+      "trim_name": "Willys Sport",
+      "engine_code": "EC1",
+      "canonical_powertrain": {
+        "electrification_type": null,
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 4,
+        "engine_displacement_liters": "2",
+        "fuel_type": null
+      },
+      "null_field_count": 2,
+      "null_fields": [
+        "fuel_type",
+        "electrification_type"
+      ],
+      "requires_human_review": true,
+      "attribute_states": {
+        "electrification_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_cylinders": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "engine_displacement_liters": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "fuel_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "generic_drive_classification": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "make": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model_year": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        }
+      },
+      "review_causes": [
+        "INCOMPLETE_POWERTRAIN_FIELDS"
+      ],
+      "review_status_classification": "Review flag caused by a known, documented classification decision still awaiting approval",
+      "disposition_notes": "Candidate has 2 null powertrain fields (fuel_type, electrification_type) for engine EC1. Documented in unresolved classification register (12 review groups); awaiting owner classification adjudication."
+    },
+    {
+      "candidate_reference": "JL22-11",
+      "body_style": "2-door",
+      "manufacturer_model_code": "JLJL72",
+      "trim_name": "Willys Sport",
+      "engine_code": "ERC",
+      "canonical_powertrain": {
+        "electrification_type": null,
+        "engine_aspiration": null,
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "fuel_type": null
+      },
+      "null_field_count": 3,
+      "null_fields": [
+        "engine_aspiration",
+        "fuel_type",
+        "electrification_type"
+      ],
+      "requires_human_review": true,
+      "attribute_states": {
+        "electrification_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_aspiration": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_cylinders": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "engine_displacement_liters": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "fuel_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "generic_drive_classification": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "make": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model_year": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        }
+      },
+      "review_causes": [
+        "INCOMPLETE_POWERTRAIN_FIELDS",
+        "ERC_ERG_PEER_AMBIGUITY"
+      ],
+      "review_status_classification": "Review flag caused by a known, documented classification decision still awaiting approval",
+      "disposition_notes": "Candidate has 3 null powertrain fields (engine_aspiration, fuel_type, electrification_type) for engine ERC. Documented in unresolved classification register (12 review groups); awaiting owner classification adjudication."
+    },
+    {
+      "candidate_reference": "JL22-12",
+      "body_style": "2-door",
+      "manufacturer_model_code": "JLJL72",
+      "trim_name": "Willys Sport",
+      "engine_code": "ERG",
+      "canonical_powertrain": {
+        "electrification_type": "mild_hybrid",
+        "engine_aspiration": null,
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "fuel_type": null
+      },
+      "null_field_count": 2,
+      "null_fields": [
+        "engine_aspiration",
+        "fuel_type"
+      ],
+      "requires_human_review": true,
+      "attribute_states": {
+        "engine_aspiration": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_cylinders": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "engine_displacement_liters": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "fuel_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "generic_drive_classification": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "make": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model_year": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        }
+      },
+      "review_causes": [
+        "INCOMPLETE_POWERTRAIN_FIELDS",
+        "ERC_ERG_PEER_AMBIGUITY"
+      ],
+      "review_status_classification": "Review flag caused by a known, documented classification decision still awaiting approval",
+      "disposition_notes": "Candidate has 2 null powertrain fields (engine_aspiration, fuel_type) for engine ERG. Documented in unresolved classification register (12 review groups); awaiting owner classification adjudication."
+    },
+    {
+      "candidate_reference": "JL22-13",
+      "body_style": "2-door",
+      "manufacturer_model_code": "JLJS72",
+      "trim_name": "Rubicon",
+      "engine_code": "EC1",
+      "canonical_powertrain": {
+        "electrification_type": null,
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 4,
+        "engine_displacement_liters": "2",
+        "fuel_type": null
+      },
+      "null_field_count": 2,
+      "null_fields": [
+        "fuel_type",
+        "electrification_type"
+      ],
+      "requires_human_review": true,
+      "attribute_states": {
+        "electrification_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_cylinders": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "engine_displacement_liters": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "fuel_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "generic_drive_classification": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "make": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model_year": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        }
+      },
+      "review_causes": [
+        "INCOMPLETE_POWERTRAIN_FIELDS"
+      ],
+      "review_status_classification": "Review flag caused by a known, documented classification decision still awaiting approval",
+      "disposition_notes": "Candidate has 2 null powertrain fields (fuel_type, electrification_type) for engine EC1. Documented in unresolved classification register (12 review groups); awaiting owner classification adjudication."
+    },
+    {
+      "candidate_reference": "JL22-14",
+      "body_style": "2-door",
+      "manufacturer_model_code": "JLJS72",
+      "trim_name": "Rubicon",
+      "engine_code": "ERC",
+      "canonical_powertrain": {
+        "electrification_type": null,
+        "engine_aspiration": null,
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "fuel_type": null
+      },
+      "null_field_count": 3,
+      "null_fields": [
+        "engine_aspiration",
+        "fuel_type",
+        "electrification_type"
+      ],
+      "requires_human_review": true,
+      "attribute_states": {
+        "electrification_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_aspiration": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_cylinders": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "engine_displacement_liters": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "fuel_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "generic_drive_classification": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "make": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model_year": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        }
+      },
+      "review_causes": [
+        "INCOMPLETE_POWERTRAIN_FIELDS",
+        "ERC_ERG_PEER_AMBIGUITY"
+      ],
+      "review_status_classification": "Review flag caused by a known, documented classification decision still awaiting approval",
+      "disposition_notes": "Candidate has 3 null powertrain fields (engine_aspiration, fuel_type, electrification_type) for engine ERC. Documented in unresolved classification register (12 review groups); awaiting owner classification adjudication."
+    },
+    {
+      "candidate_reference": "JL22-15",
+      "body_style": "2-door",
+      "manufacturer_model_code": "JLJS72",
+      "trim_name": "Rubicon",
+      "engine_code": "ERG",
+      "canonical_powertrain": {
+        "electrification_type": "mild_hybrid",
+        "engine_aspiration": null,
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "fuel_type": null
+      },
+      "null_field_count": 2,
+      "null_fields": [
+        "engine_aspiration",
+        "fuel_type"
+      ],
+      "requires_human_review": true,
+      "attribute_states": {
+        "engine_aspiration": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_cylinders": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "engine_displacement_liters": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "fuel_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "generic_drive_classification": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "make": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model_year": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        }
+      },
+      "review_causes": [
+        "INCOMPLETE_POWERTRAIN_FIELDS",
+        "ERC_ERG_PEER_AMBIGUITY"
+      ],
+      "review_status_classification": "Review flag caused by a known, documented classification decision still awaiting approval",
+      "disposition_notes": "Candidate has 2 null powertrain fields (engine_aspiration, fuel_type) for engine ERG. Documented in unresolved classification register (12 review groups); awaiting owner classification adjudication."
+    },
+    {
+      "candidate_reference": "JL22-16",
+      "body_style": "4-door",
+      "manufacturer_model_code": "JLJL74",
+      "trim_name": "Unlimited Sport Altitude",
+      "engine_code": "EC1",
+      "canonical_powertrain": {
+        "electrification_type": null,
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 4,
+        "engine_displacement_liters": "2",
+        "fuel_type": null
+      },
+      "null_field_count": 2,
+      "null_fields": [
+        "fuel_type",
+        "electrification_type"
+      ],
+      "requires_human_review": true,
+      "attribute_states": {
+        "electrification_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_cylinders": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "engine_displacement_liters": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "fuel_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "generic_drive_classification": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "make": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model_year": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        }
+      },
+      "review_causes": [
+        "INCOMPLETE_POWERTRAIN_FIELDS"
+      ],
+      "review_status_classification": "Review flag caused by a known, documented classification decision still awaiting approval",
+      "disposition_notes": "Candidate has 2 null powertrain fields (fuel_type, electrification_type) for engine EC1. Documented in unresolved classification register (12 review groups); awaiting owner classification adjudication."
+    },
+    {
+      "candidate_reference": "JL22-17",
+      "body_style": "4-door",
+      "manufacturer_model_code": "JLJL74",
+      "trim_name": "Unlimited Sport Altitude",
+      "engine_code": "ERC",
+      "canonical_powertrain": {
+        "electrification_type": null,
+        "engine_aspiration": null,
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "fuel_type": null
+      },
+      "null_field_count": 3,
+      "null_fields": [
+        "engine_aspiration",
+        "fuel_type",
+        "electrification_type"
+      ],
+      "requires_human_review": true,
+      "attribute_states": {
+        "electrification_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_aspiration": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_cylinders": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "engine_displacement_liters": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "fuel_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "generic_drive_classification": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "make": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model_year": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        }
+      },
+      "review_causes": [
+        "INCOMPLETE_POWERTRAIN_FIELDS",
+        "ERC_ERG_PEER_AMBIGUITY"
+      ],
+      "review_status_classification": "Review flag caused by a known, documented classification decision still awaiting approval",
+      "disposition_notes": "Candidate has 3 null powertrain fields (engine_aspiration, fuel_type, electrification_type) for engine ERC. Documented in unresolved classification register (12 review groups); awaiting owner classification adjudication."
+    },
+    {
+      "candidate_reference": "JL22-18",
+      "body_style": "4-door",
+      "manufacturer_model_code": "JLJL74",
+      "trim_name": "Unlimited Sport Altitude",
+      "engine_code": "ERG",
+      "canonical_powertrain": {
+        "electrification_type": "mild_hybrid",
+        "engine_aspiration": null,
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "fuel_type": null
+      },
+      "null_field_count": 2,
+      "null_fields": [
+        "engine_aspiration",
+        "fuel_type"
+      ],
+      "requires_human_review": true,
+      "attribute_states": {
+        "engine_aspiration": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_cylinders": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "engine_displacement_liters": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "fuel_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "generic_drive_classification": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "make": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model_year": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        }
+      },
+      "review_causes": [
+        "INCOMPLETE_POWERTRAIN_FIELDS",
+        "ERC_ERG_PEER_AMBIGUITY"
+      ],
+      "review_status_classification": "Review flag caused by a known, documented classification decision still awaiting approval",
+      "disposition_notes": "Candidate has 2 null powertrain fields (engine_aspiration, fuel_type) for engine ERG. Documented in unresolved classification register (12 review groups); awaiting owner classification adjudication."
+    },
+    {
+      "candidate_reference": "JL22-19",
+      "body_style": "4-door",
+      "manufacturer_model_code": "JLJL74",
+      "trim_name": "Unlimited Sport Altitude",
+      "engine_code": "EXJ",
+      "canonical_powertrain": {
+        "electrification_type": null,
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3",
+        "fuel_type": "diesel"
+      },
+      "null_field_count": 1,
+      "null_fields": [
+        "electrification_type"
+      ],
+      "requires_human_review": true,
+      "attribute_states": {
+        "electrification_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_cylinders": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "engine_displacement_liters": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "generic_drive_classification": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "make": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model_year": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        }
+      },
+      "review_causes": [
+        "INCOMPLETE_POWERTRAIN_FIELDS"
+      ],
+      "review_status_classification": "Review flag caused by a known, documented classification decision still awaiting approval",
+      "disposition_notes": "Candidate has 1 null powertrain fields (electrification_type) for engine EXJ. Documented in unresolved classification register (12 review groups); awaiting owner classification adjudication."
+    },
+    {
+      "candidate_reference": "JL22-20",
+      "body_style": "4-door",
+      "manufacturer_model_code": "JLJL74",
+      "trim_name": "Unlimited High Tide",
+      "engine_code": "ERG",
+      "canonical_powertrain": {
+        "electrification_type": "mild_hybrid",
+        "engine_aspiration": null,
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "fuel_type": null
+      },
+      "null_field_count": 2,
+      "null_fields": [
+        "engine_aspiration",
+        "fuel_type"
+      ],
+      "requires_human_review": true,
+      "attribute_states": {
+        "engine_aspiration": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_cylinders": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "engine_displacement_liters": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "fuel_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "generic_drive_classification": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "make": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model_year": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        }
+      },
+      "review_causes": [
+        "INCOMPLETE_POWERTRAIN_FIELDS",
+        "HIGH_TIDE_TRIM_VS_PACKAGE_RELATIONSHIP",
+        "ERC_ERG_PEER_AMBIGUITY"
+      ],
+      "review_status_classification": "Review flag supported by unresolved evidence",
+      "disposition_notes": "Candidate has 2 null powertrain fields (aspiration, fuel) AND unresolved High Tide grade vs. Jeep Beach package relationship. Requires owner classification approval."
+    },
+    {
+      "candidate_reference": "JL22-21",
+      "body_style": "4-door",
+      "manufacturer_model_code": "JLJL74",
+      "trim_name": "Unlimited Sport",
+      "engine_code": "EC1",
+      "canonical_powertrain": {
+        "electrification_type": null,
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 4,
+        "engine_displacement_liters": "2",
+        "fuel_type": null
+      },
+      "null_field_count": 2,
+      "null_fields": [
+        "fuel_type",
+        "electrification_type"
+      ],
+      "requires_human_review": true,
+      "attribute_states": {
+        "electrification_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_cylinders": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "engine_displacement_liters": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "fuel_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "generic_drive_classification": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "make": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model_year": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        }
+      },
+      "review_causes": [
+        "INCOMPLETE_POWERTRAIN_FIELDS"
+      ],
+      "review_status_classification": "Review flag caused by a known, documented classification decision still awaiting approval",
+      "disposition_notes": "Candidate has 2 null powertrain fields (fuel_type, electrification_type) for engine EC1. Documented in unresolved classification register (12 review groups); awaiting owner classification adjudication."
+    },
+    {
+      "candidate_reference": "JL22-22",
+      "body_style": "4-door",
+      "manufacturer_model_code": "JLJL74",
+      "trim_name": "Unlimited Sport",
+      "engine_code": "ERC",
+      "canonical_powertrain": {
+        "electrification_type": null,
+        "engine_aspiration": null,
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "fuel_type": null
+      },
+      "null_field_count": 3,
+      "null_fields": [
+        "engine_aspiration",
+        "fuel_type",
+        "electrification_type"
+      ],
+      "requires_human_review": true,
+      "attribute_states": {
+        "electrification_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_aspiration": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_cylinders": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "engine_displacement_liters": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "fuel_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "generic_drive_classification": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "make": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model_year": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        }
+      },
+      "review_causes": [
+        "INCOMPLETE_POWERTRAIN_FIELDS",
+        "ERC_ERG_PEER_AMBIGUITY"
+      ],
+      "review_status_classification": "Review flag caused by a known, documented classification decision still awaiting approval",
+      "disposition_notes": "Candidate has 3 null powertrain fields (engine_aspiration, fuel_type, electrification_type) for engine ERC. Documented in unresolved classification register (12 review groups); awaiting owner classification adjudication."
+    },
+    {
+      "candidate_reference": "JL22-23",
+      "body_style": "4-door",
+      "manufacturer_model_code": "JLJL74",
+      "trim_name": "Unlimited Sport",
+      "engine_code": "ERG",
+      "canonical_powertrain": {
+        "electrification_type": "mild_hybrid",
+        "engine_aspiration": null,
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "fuel_type": null
+      },
+      "null_field_count": 2,
+      "null_fields": [
+        "engine_aspiration",
+        "fuel_type"
+      ],
+      "requires_human_review": true,
+      "attribute_states": {
+        "engine_aspiration": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_cylinders": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "engine_displacement_liters": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "fuel_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "generic_drive_classification": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "make": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model_year": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        }
+      },
+      "review_causes": [
+        "INCOMPLETE_POWERTRAIN_FIELDS",
+        "ERC_ERG_PEER_AMBIGUITY"
+      ],
+      "review_status_classification": "Review flag caused by a known, documented classification decision still awaiting approval",
+      "disposition_notes": "Candidate has 2 null powertrain fields (engine_aspiration, fuel_type) for engine ERG. Documented in unresolved classification register (12 review groups); awaiting owner classification adjudication."
+    },
+    {
+      "candidate_reference": "JL22-24",
+      "body_style": "4-door",
+      "manufacturer_model_code": "JLJL74",
+      "trim_name": "Unlimited Sport",
+      "engine_code": "EXJ",
+      "canonical_powertrain": {
+        "electrification_type": null,
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3",
+        "fuel_type": "diesel"
+      },
+      "null_field_count": 1,
+      "null_fields": [
+        "electrification_type"
+      ],
+      "requires_human_review": true,
+      "attribute_states": {
+        "electrification_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_cylinders": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "engine_displacement_liters": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "generic_drive_classification": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "make": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model_year": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        }
+      },
+      "review_causes": [
+        "INCOMPLETE_POWERTRAIN_FIELDS"
+      ],
+      "review_status_classification": "Review flag caused by a known, documented classification decision still awaiting approval",
+      "disposition_notes": "Candidate has 1 null powertrain fields (electrification_type) for engine EXJ. Documented in unresolved classification register (12 review groups); awaiting owner classification adjudication."
+    },
+    {
+      "candidate_reference": "JL22-25",
+      "body_style": "4-door",
+      "manufacturer_model_code": "JLJL74",
+      "trim_name": "Unlimited Sport S",
+      "engine_code": "EC1",
+      "canonical_powertrain": {
+        "electrification_type": null,
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 4,
+        "engine_displacement_liters": "2",
+        "fuel_type": null
+      },
+      "null_field_count": 2,
+      "null_fields": [
+        "fuel_type",
+        "electrification_type"
+      ],
+      "requires_human_review": true,
+      "attribute_states": {
+        "electrification_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_cylinders": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "engine_displacement_liters": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "fuel_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "generic_drive_classification": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "make": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model_year": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        }
+      },
+      "review_causes": [
+        "INCOMPLETE_POWERTRAIN_FIELDS"
+      ],
+      "review_status_classification": "Review flag caused by a known, documented classification decision still awaiting approval",
+      "disposition_notes": "Candidate has 2 null powertrain fields (fuel_type, electrification_type) for engine EC1. Documented in unresolved classification register (12 review groups); awaiting owner classification adjudication."
+    },
+    {
+      "candidate_reference": "JL22-26",
+      "body_style": "4-door",
+      "manufacturer_model_code": "JLJL74",
+      "trim_name": "Unlimited Sport S",
+      "engine_code": "ERC",
+      "canonical_powertrain": {
+        "electrification_type": null,
+        "engine_aspiration": null,
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "fuel_type": null
+      },
+      "null_field_count": 3,
+      "null_fields": [
+        "engine_aspiration",
+        "fuel_type",
+        "electrification_type"
+      ],
+      "requires_human_review": true,
+      "attribute_states": {
+        "electrification_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_aspiration": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_cylinders": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "engine_displacement_liters": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "fuel_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "generic_drive_classification": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "make": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model_year": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        }
+      },
+      "review_causes": [
+        "INCOMPLETE_POWERTRAIN_FIELDS",
+        "ERC_ERG_PEER_AMBIGUITY"
+      ],
+      "review_status_classification": "Review flag caused by a known, documented classification decision still awaiting approval",
+      "disposition_notes": "Candidate has 3 null powertrain fields (engine_aspiration, fuel_type, electrification_type) for engine ERC. Documented in unresolved classification register (12 review groups); awaiting owner classification adjudication."
+    },
+    {
+      "candidate_reference": "JL22-27",
+      "body_style": "4-door",
+      "manufacturer_model_code": "JLJL74",
+      "trim_name": "Unlimited Sport S",
+      "engine_code": "ERG",
+      "canonical_powertrain": {
+        "electrification_type": "mild_hybrid",
+        "engine_aspiration": null,
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "fuel_type": null
+      },
+      "null_field_count": 2,
+      "null_fields": [
+        "engine_aspiration",
+        "fuel_type"
+      ],
+      "requires_human_review": true,
+      "attribute_states": {
+        "engine_aspiration": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_cylinders": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "engine_displacement_liters": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "fuel_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "generic_drive_classification": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "make": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model_year": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        }
+      },
+      "review_causes": [
+        "INCOMPLETE_POWERTRAIN_FIELDS",
+        "ERC_ERG_PEER_AMBIGUITY"
+      ],
+      "review_status_classification": "Review flag caused by a known, documented classification decision still awaiting approval",
+      "disposition_notes": "Candidate has 2 null powertrain fields (engine_aspiration, fuel_type) for engine ERG. Documented in unresolved classification register (12 review groups); awaiting owner classification adjudication."
+    },
+    {
+      "candidate_reference": "JL22-28",
+      "body_style": "4-door",
+      "manufacturer_model_code": "JLJL74",
+      "trim_name": "Unlimited Sport S",
+      "engine_code": "EXJ",
+      "canonical_powertrain": {
+        "electrification_type": null,
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3",
+        "fuel_type": "diesel"
+      },
+      "null_field_count": 1,
+      "null_fields": [
+        "electrification_type"
+      ],
+      "requires_human_review": true,
+      "attribute_states": {
+        "electrification_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_cylinders": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "engine_displacement_liters": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "generic_drive_classification": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "make": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model_year": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        }
+      },
+      "review_causes": [
+        "INCOMPLETE_POWERTRAIN_FIELDS"
+      ],
+      "review_status_classification": "Review flag caused by a known, documented classification decision still awaiting approval",
+      "disposition_notes": "Candidate has 1 null powertrain fields (electrification_type) for engine EXJ. Documented in unresolved classification register (12 review groups); awaiting owner classification adjudication."
+    },
+    {
+      "candidate_reference": "JL22-29",
+      "body_style": "4-door",
+      "manufacturer_model_code": "JLJL74",
+      "trim_name": "Unlimited Willys",
+      "engine_code": "EC1",
+      "canonical_powertrain": {
+        "electrification_type": null,
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 4,
+        "engine_displacement_liters": "2",
+        "fuel_type": null
+      },
+      "null_field_count": 2,
+      "null_fields": [
+        "fuel_type",
+        "electrification_type"
+      ],
+      "requires_human_review": true,
+      "attribute_states": {
+        "electrification_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_cylinders": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "engine_displacement_liters": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "fuel_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "generic_drive_classification": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "make": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model_year": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        }
+      },
+      "review_causes": [
+        "INCOMPLETE_POWERTRAIN_FIELDS"
+      ],
+      "review_status_classification": "Review flag caused by a known, documented classification decision still awaiting approval",
+      "disposition_notes": "Candidate has 2 null powertrain fields (fuel_type, electrification_type) for engine EC1. Documented in unresolved classification register (12 review groups); awaiting owner classification adjudication."
+    },
+    {
+      "candidate_reference": "JL22-30",
+      "body_style": "4-door",
+      "manufacturer_model_code": "JLJL74",
+      "trim_name": "Unlimited Willys",
+      "engine_code": "ERC",
+      "canonical_powertrain": {
+        "electrification_type": null,
+        "engine_aspiration": null,
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "fuel_type": null
+      },
+      "null_field_count": 3,
+      "null_fields": [
+        "engine_aspiration",
+        "fuel_type",
+        "electrification_type"
+      ],
+      "requires_human_review": true,
+      "attribute_states": {
+        "electrification_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_aspiration": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_cylinders": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "engine_displacement_liters": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "fuel_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "generic_drive_classification": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "make": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model_year": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        }
+      },
+      "review_causes": [
+        "INCOMPLETE_POWERTRAIN_FIELDS",
+        "ERC_ERG_PEER_AMBIGUITY"
+      ],
+      "review_status_classification": "Review flag caused by a known, documented classification decision still awaiting approval",
+      "disposition_notes": "Candidate has 3 null powertrain fields (engine_aspiration, fuel_type, electrification_type) for engine ERC. Documented in unresolved classification register (12 review groups); awaiting owner classification adjudication."
+    },
+    {
+      "candidate_reference": "JL22-31",
+      "body_style": "4-door",
+      "manufacturer_model_code": "JLJL74",
+      "trim_name": "Unlimited Willys",
+      "engine_code": "ERG",
+      "canonical_powertrain": {
+        "electrification_type": "mild_hybrid",
+        "engine_aspiration": null,
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "fuel_type": null
+      },
+      "null_field_count": 2,
+      "null_fields": [
+        "engine_aspiration",
+        "fuel_type"
+      ],
+      "requires_human_review": true,
+      "attribute_states": {
+        "engine_aspiration": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_cylinders": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "engine_displacement_liters": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "fuel_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "generic_drive_classification": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "make": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model_year": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        }
+      },
+      "review_causes": [
+        "INCOMPLETE_POWERTRAIN_FIELDS",
+        "ERC_ERG_PEER_AMBIGUITY"
+      ],
+      "review_status_classification": "Review flag caused by a known, documented classification decision still awaiting approval",
+      "disposition_notes": "Candidate has 2 null powertrain fields (engine_aspiration, fuel_type) for engine ERG. Documented in unresolved classification register (12 review groups); awaiting owner classification adjudication."
+    },
+    {
+      "candidate_reference": "JL22-32",
+      "body_style": "4-door",
+      "manufacturer_model_code": "JLJL74",
+      "trim_name": "Unlimited Willys",
+      "engine_code": "EXJ",
+      "canonical_powertrain": {
+        "electrification_type": null,
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3",
+        "fuel_type": "diesel"
+      },
+      "null_field_count": 1,
+      "null_fields": [
+        "electrification_type"
+      ],
+      "requires_human_review": true,
+      "attribute_states": {
+        "electrification_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_cylinders": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "engine_displacement_liters": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "generic_drive_classification": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "make": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model_year": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        }
+      },
+      "review_causes": [
+        "INCOMPLETE_POWERTRAIN_FIELDS"
+      ],
+      "review_status_classification": "Review flag caused by a known, documented classification decision still awaiting approval",
+      "disposition_notes": "Candidate has 1 null powertrain fields (electrification_type) for engine EXJ. Documented in unresolved classification register (12 review groups); awaiting owner classification adjudication."
+    },
+    {
+      "candidate_reference": "JL22-33",
+      "body_style": "4-door",
+      "manufacturer_model_code": "JLJL74",
+      "trim_name": "Unlimited Willys Sport",
+      "engine_code": "EC1",
+      "canonical_powertrain": {
+        "electrification_type": null,
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 4,
+        "engine_displacement_liters": "2",
+        "fuel_type": null
+      },
+      "null_field_count": 2,
+      "null_fields": [
+        "fuel_type",
+        "electrification_type"
+      ],
+      "requires_human_review": true,
+      "attribute_states": {
+        "electrification_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_cylinders": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "engine_displacement_liters": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "fuel_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "generic_drive_classification": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "make": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model_year": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        }
+      },
+      "review_causes": [
+        "INCOMPLETE_POWERTRAIN_FIELDS"
+      ],
+      "review_status_classification": "Review flag caused by a known, documented classification decision still awaiting approval",
+      "disposition_notes": "Candidate has 2 null powertrain fields (fuel_type, electrification_type) for engine EC1. Documented in unresolved classification register (12 review groups); awaiting owner classification adjudication."
+    },
+    {
+      "candidate_reference": "JL22-34",
+      "body_style": "4-door",
+      "manufacturer_model_code": "JLJL74",
+      "trim_name": "Unlimited Willys Sport",
+      "engine_code": "ERC",
+      "canonical_powertrain": {
+        "electrification_type": null,
+        "engine_aspiration": null,
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "fuel_type": null
+      },
+      "null_field_count": 3,
+      "null_fields": [
+        "engine_aspiration",
+        "fuel_type",
+        "electrification_type"
+      ],
+      "requires_human_review": true,
+      "attribute_states": {
+        "electrification_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_aspiration": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_cylinders": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "engine_displacement_liters": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "fuel_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "generic_drive_classification": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "make": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model_year": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        }
+      },
+      "review_causes": [
+        "INCOMPLETE_POWERTRAIN_FIELDS",
+        "ERC_ERG_PEER_AMBIGUITY"
+      ],
+      "review_status_classification": "Review flag caused by a known, documented classification decision still awaiting approval",
+      "disposition_notes": "Candidate has 3 null powertrain fields (engine_aspiration, fuel_type, electrification_type) for engine ERC. Documented in unresolved classification register (12 review groups); awaiting owner classification adjudication."
+    },
+    {
+      "candidate_reference": "JL22-35",
+      "body_style": "4-door",
+      "manufacturer_model_code": "JLJL74",
+      "trim_name": "Unlimited Willys Sport",
+      "engine_code": "ERG",
+      "canonical_powertrain": {
+        "electrification_type": "mild_hybrid",
+        "engine_aspiration": null,
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "fuel_type": null
+      },
+      "null_field_count": 2,
+      "null_fields": [
+        "engine_aspiration",
+        "fuel_type"
+      ],
+      "requires_human_review": true,
+      "attribute_states": {
+        "engine_aspiration": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_cylinders": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "engine_displacement_liters": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "fuel_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "generic_drive_classification": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "make": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model_year": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        }
+      },
+      "review_causes": [
+        "INCOMPLETE_POWERTRAIN_FIELDS",
+        "ERC_ERG_PEER_AMBIGUITY"
+      ],
+      "review_status_classification": "Review flag caused by a known, documented classification decision still awaiting approval",
+      "disposition_notes": "Candidate has 2 null powertrain fields (engine_aspiration, fuel_type) for engine ERG. Documented in unresolved classification register (12 review groups); awaiting owner classification adjudication."
+    },
+    {
+      "candidate_reference": "JL22-36",
+      "body_style": "4-door",
+      "manufacturer_model_code": "JLJL74",
+      "trim_name": "Unlimited Willys Sport",
+      "engine_code": "EXJ",
+      "canonical_powertrain": {
+        "electrification_type": null,
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3",
+        "fuel_type": "diesel"
+      },
+      "null_field_count": 1,
+      "null_fields": [
+        "electrification_type"
+      ],
+      "requires_human_review": true,
+      "attribute_states": {
+        "electrification_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_cylinders": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "engine_displacement_liters": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "generic_drive_classification": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "make": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model_year": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        }
+      },
+      "review_causes": [
+        "INCOMPLETE_POWERTRAIN_FIELDS"
+      ],
+      "review_status_classification": "Review flag caused by a known, documented classification decision still awaiting approval",
+      "disposition_notes": "Candidate has 1 null powertrain fields (electrification_type) for engine EXJ. Documented in unresolved classification register (12 review groups); awaiting owner classification adjudication."
+    },
+    {
+      "candidate_reference": "JL22-37",
+      "body_style": "4-door",
+      "manufacturer_model_code": "JLJP74",
+      "trim_name": "Unlimited Sahara Altitude",
+      "engine_code": "EC1",
+      "canonical_powertrain": {
+        "electrification_type": null,
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 4,
+        "engine_displacement_liters": "2",
+        "fuel_type": null
+      },
+      "null_field_count": 2,
+      "null_fields": [
+        "fuel_type",
+        "electrification_type"
+      ],
+      "requires_human_review": true,
+      "attribute_states": {
+        "electrification_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_cylinders": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "engine_displacement_liters": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "fuel_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "generic_drive_classification": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "make": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model_year": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        }
+      },
+      "review_causes": [
+        "INCOMPLETE_POWERTRAIN_FIELDS"
+      ],
+      "review_status_classification": "Review flag caused by a known, documented classification decision still awaiting approval",
+      "disposition_notes": "Candidate has 2 null powertrain fields (fuel_type, electrification_type) for engine EC1. Documented in unresolved classification register (12 review groups); awaiting owner classification adjudication."
+    },
+    {
+      "candidate_reference": "JL22-38",
+      "body_style": "4-door",
+      "manufacturer_model_code": "JLJP74",
+      "trim_name": "Unlimited Sahara Altitude",
+      "engine_code": "ERC",
+      "canonical_powertrain": {
+        "electrification_type": null,
+        "engine_aspiration": null,
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "fuel_type": null
+      },
+      "null_field_count": 3,
+      "null_fields": [
+        "engine_aspiration",
+        "fuel_type",
+        "electrification_type"
+      ],
+      "requires_human_review": true,
+      "attribute_states": {
+        "electrification_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_aspiration": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_cylinders": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "engine_displacement_liters": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "fuel_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "generic_drive_classification": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "make": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model_year": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        }
+      },
+      "review_causes": [
+        "INCOMPLETE_POWERTRAIN_FIELDS",
+        "ERC_ERG_PEER_AMBIGUITY"
+      ],
+      "review_status_classification": "Review flag caused by a known, documented classification decision still awaiting approval",
+      "disposition_notes": "Candidate has 3 null powertrain fields (engine_aspiration, fuel_type, electrification_type) for engine ERC. Documented in unresolved classification register (12 review groups); awaiting owner classification adjudication."
+    },
+    {
+      "candidate_reference": "JL22-39",
+      "body_style": "4-door",
+      "manufacturer_model_code": "JLJP74",
+      "trim_name": "Unlimited Sahara Altitude",
+      "engine_code": "ERG",
+      "canonical_powertrain": {
+        "electrification_type": "mild_hybrid",
+        "engine_aspiration": null,
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "fuel_type": null
+      },
+      "null_field_count": 2,
+      "null_fields": [
+        "engine_aspiration",
+        "fuel_type"
+      ],
+      "requires_human_review": true,
+      "attribute_states": {
+        "engine_aspiration": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_cylinders": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "engine_displacement_liters": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "fuel_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "generic_drive_classification": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "make": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model_year": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        }
+      },
+      "review_causes": [
+        "INCOMPLETE_POWERTRAIN_FIELDS",
+        "ERC_ERG_PEER_AMBIGUITY"
+      ],
+      "review_status_classification": "Review flag caused by a known, documented classification decision still awaiting approval",
+      "disposition_notes": "Candidate has 2 null powertrain fields (engine_aspiration, fuel_type) for engine ERG. Documented in unresolved classification register (12 review groups); awaiting owner classification adjudication."
+    },
+    {
+      "candidate_reference": "JL22-40",
+      "body_style": "4-door",
+      "manufacturer_model_code": "JLJP74",
+      "trim_name": "Unlimited Sahara Altitude",
+      "engine_code": "EXJ",
+      "canonical_powertrain": {
+        "electrification_type": null,
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3",
+        "fuel_type": "diesel"
+      },
+      "null_field_count": 1,
+      "null_fields": [
+        "electrification_type"
+      ],
+      "requires_human_review": true,
+      "attribute_states": {
+        "electrification_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_cylinders": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "engine_displacement_liters": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "generic_drive_classification": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "make": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model_year": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        }
+      },
+      "review_causes": [
+        "INCOMPLETE_POWERTRAIN_FIELDS"
+      ],
+      "review_status_classification": "Review flag caused by a known, documented classification decision still awaiting approval",
+      "disposition_notes": "Candidate has 1 null powertrain fields (electrification_type) for engine EXJ. Documented in unresolved classification register (12 review groups); awaiting owner classification adjudication."
+    },
+    {
+      "candidate_reference": "JL22-41",
+      "body_style": "4-door",
+      "manufacturer_model_code": "JLJP74",
+      "trim_name": "Unlimited High Altitude",
+      "engine_code": "EC1",
+      "canonical_powertrain": {
+        "electrification_type": null,
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 4,
+        "engine_displacement_liters": "2",
+        "fuel_type": null
+      },
+      "null_field_count": 2,
+      "null_fields": [
+        "fuel_type",
+        "electrification_type"
+      ],
+      "requires_human_review": true,
+      "attribute_states": {
+        "electrification_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_cylinders": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "engine_displacement_liters": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "fuel_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "generic_drive_classification": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "make": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model_year": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        }
+      },
+      "review_causes": [
+        "INCOMPLETE_POWERTRAIN_FIELDS"
+      ],
+      "review_status_classification": "Review flag caused by a known, documented classification decision still awaiting approval",
+      "disposition_notes": "Candidate has 2 null powertrain fields (fuel_type, electrification_type) for engine EC1. Documented in unresolved classification register (12 review groups); awaiting owner classification adjudication."
+    },
+    {
+      "candidate_reference": "JL22-42",
+      "body_style": "4-door",
+      "manufacturer_model_code": "JLJP74",
+      "trim_name": "Unlimited High Altitude",
+      "engine_code": "ERG",
+      "canonical_powertrain": {
+        "electrification_type": "mild_hybrid",
+        "engine_aspiration": null,
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "fuel_type": null
+      },
+      "null_field_count": 2,
+      "null_fields": [
+        "engine_aspiration",
+        "fuel_type"
+      ],
+      "requires_human_review": true,
+      "attribute_states": {
+        "engine_aspiration": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_cylinders": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "engine_displacement_liters": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "fuel_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "generic_drive_classification": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "make": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model_year": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        }
+      },
+      "review_causes": [
+        "INCOMPLETE_POWERTRAIN_FIELDS",
+        "ERC_ERG_PEER_AMBIGUITY"
+      ],
+      "review_status_classification": "Review flag caused by a known, documented classification decision still awaiting approval",
+      "disposition_notes": "Candidate has 2 null powertrain fields (engine_aspiration, fuel_type) for engine ERG. Documented in unresolved classification register (12 review groups); awaiting owner classification adjudication."
+    },
+    {
+      "candidate_reference": "JL22-43",
+      "body_style": "4-door",
+      "manufacturer_model_code": "JLJP74",
+      "trim_name": "Unlimited High Altitude",
+      "engine_code": "EXJ",
+      "canonical_powertrain": {
+        "electrification_type": null,
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3",
+        "fuel_type": "diesel"
+      },
+      "null_field_count": 1,
+      "null_fields": [
+        "electrification_type"
+      ],
+      "requires_human_review": true,
+      "attribute_states": {
+        "electrification_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_cylinders": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "engine_displacement_liters": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "generic_drive_classification": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "make": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model_year": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        }
+      },
+      "review_causes": [
+        "INCOMPLETE_POWERTRAIN_FIELDS"
+      ],
+      "review_status_classification": "Review flag caused by a known, documented classification decision still awaiting approval",
+      "disposition_notes": "Candidate has 1 null powertrain fields (electrification_type) for engine EXJ. Documented in unresolved classification register (12 review groups); awaiting owner classification adjudication."
+    },
+    {
+      "candidate_reference": "JL22-44",
+      "body_style": "4-door",
+      "manufacturer_model_code": "JLJP74",
+      "trim_name": "Unlimited Sahara",
+      "engine_code": "EC1",
+      "canonical_powertrain": {
+        "electrification_type": null,
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 4,
+        "engine_displacement_liters": "2",
+        "fuel_type": null
+      },
+      "null_field_count": 2,
+      "null_fields": [
+        "fuel_type",
+        "electrification_type"
+      ],
+      "requires_human_review": true,
+      "attribute_states": {
+        "electrification_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_cylinders": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "engine_displacement_liters": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "fuel_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "generic_drive_classification": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "make": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model_year": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        }
+      },
+      "review_causes": [
+        "INCOMPLETE_POWERTRAIN_FIELDS"
+      ],
+      "review_status_classification": "Review flag caused by a known, documented classification decision still awaiting approval",
+      "disposition_notes": "Candidate has 2 null powertrain fields (fuel_type, electrification_type) for engine EC1. Documented in unresolved classification register (12 review groups); awaiting owner classification adjudication."
+    },
+    {
+      "candidate_reference": "JL22-45",
+      "body_style": "4-door",
+      "manufacturer_model_code": "JLJP74",
+      "trim_name": "Unlimited Sahara",
+      "engine_code": "ERC",
+      "canonical_powertrain": {
+        "electrification_type": null,
+        "engine_aspiration": null,
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "fuel_type": null
+      },
+      "null_field_count": 3,
+      "null_fields": [
+        "engine_aspiration",
+        "fuel_type",
+        "electrification_type"
+      ],
+      "requires_human_review": true,
+      "attribute_states": {
+        "electrification_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_aspiration": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_cylinders": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "engine_displacement_liters": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "fuel_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "generic_drive_classification": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "make": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model_year": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        }
+      },
+      "review_causes": [
+        "INCOMPLETE_POWERTRAIN_FIELDS",
+        "ERC_ERG_PEER_AMBIGUITY"
+      ],
+      "review_status_classification": "Review flag caused by a known, documented classification decision still awaiting approval",
+      "disposition_notes": "Candidate has 3 null powertrain fields (engine_aspiration, fuel_type, electrification_type) for engine ERC. Documented in unresolved classification register (12 review groups); awaiting owner classification adjudication."
+    },
+    {
+      "candidate_reference": "JL22-46",
+      "body_style": "4-door",
+      "manufacturer_model_code": "JLJP74",
+      "trim_name": "Unlimited Sahara",
+      "engine_code": "ERG",
+      "canonical_powertrain": {
+        "electrification_type": "mild_hybrid",
+        "engine_aspiration": null,
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "fuel_type": null
+      },
+      "null_field_count": 2,
+      "null_fields": [
+        "engine_aspiration",
+        "fuel_type"
+      ],
+      "requires_human_review": true,
+      "attribute_states": {
+        "engine_aspiration": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_cylinders": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "engine_displacement_liters": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "fuel_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "generic_drive_classification": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "make": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model_year": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        }
+      },
+      "review_causes": [
+        "INCOMPLETE_POWERTRAIN_FIELDS",
+        "ERC_ERG_PEER_AMBIGUITY"
+      ],
+      "review_status_classification": "Review flag caused by a known, documented classification decision still awaiting approval",
+      "disposition_notes": "Candidate has 2 null powertrain fields (engine_aspiration, fuel_type) for engine ERG. Documented in unresolved classification register (12 review groups); awaiting owner classification adjudication."
+    },
+    {
+      "candidate_reference": "JL22-47",
+      "body_style": "4-door",
+      "manufacturer_model_code": "JLJP74",
+      "trim_name": "Unlimited Sahara",
+      "engine_code": "EXJ",
+      "canonical_powertrain": {
+        "electrification_type": null,
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3",
+        "fuel_type": "diesel"
+      },
+      "null_field_count": 1,
+      "null_fields": [
+        "electrification_type"
+      ],
+      "requires_human_review": true,
+      "attribute_states": {
+        "electrification_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_cylinders": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "engine_displacement_liters": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "generic_drive_classification": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "make": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model_year": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        }
+      },
+      "review_causes": [
+        "INCOMPLETE_POWERTRAIN_FIELDS"
+      ],
+      "review_status_classification": "Review flag caused by a known, documented classification decision still awaiting approval",
+      "disposition_notes": "Candidate has 1 null powertrain fields (electrification_type) for engine EXJ. Documented in unresolved classification register (12 review groups); awaiting owner classification adjudication."
+    },
+    {
+      "candidate_reference": "JL22-48",
+      "body_style": "4-door",
+      "manufacturer_model_code": "JLJS74",
+      "trim_name": "Unlimited Rubicon",
+      "engine_code": "EC1",
+      "canonical_powertrain": {
+        "electrification_type": null,
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 4,
+        "engine_displacement_liters": "2",
+        "fuel_type": null
+      },
+      "null_field_count": 2,
+      "null_fields": [
+        "fuel_type",
+        "electrification_type"
+      ],
+      "requires_human_review": true,
+      "attribute_states": {
+        "electrification_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_cylinders": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "engine_displacement_liters": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "fuel_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "generic_drive_classification": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "make": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model_year": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        }
+      },
+      "review_causes": [
+        "INCOMPLETE_POWERTRAIN_FIELDS"
+      ],
+      "review_status_classification": "Review flag caused by a known, documented classification decision still awaiting approval",
+      "disposition_notes": "Candidate has 2 null powertrain fields (fuel_type, electrification_type) for engine EC1. Documented in unresolved classification register (12 review groups); awaiting owner classification adjudication."
+    },
+    {
+      "candidate_reference": "JL22-49",
+      "body_style": "4-door",
+      "manufacturer_model_code": "JLJS74",
+      "trim_name": "Unlimited Rubicon",
+      "engine_code": "ERC",
+      "canonical_powertrain": {
+        "electrification_type": null,
+        "engine_aspiration": null,
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "fuel_type": null
+      },
+      "null_field_count": 3,
+      "null_fields": [
+        "engine_aspiration",
+        "fuel_type",
+        "electrification_type"
+      ],
+      "requires_human_review": true,
+      "attribute_states": {
+        "electrification_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_aspiration": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_cylinders": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "engine_displacement_liters": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "fuel_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "generic_drive_classification": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "make": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model_year": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        }
+      },
+      "review_causes": [
+        "INCOMPLETE_POWERTRAIN_FIELDS",
+        "ERC_ERG_PEER_AMBIGUITY"
+      ],
+      "review_status_classification": "Review flag caused by a known, documented classification decision still awaiting approval",
+      "disposition_notes": "Candidate has 3 null powertrain fields (engine_aspiration, fuel_type, electrification_type) for engine ERC. Documented in unresolved classification register (12 review groups); awaiting owner classification adjudication."
+    },
+    {
+      "candidate_reference": "JL22-50",
+      "body_style": "4-door",
+      "manufacturer_model_code": "JLJS74",
+      "trim_name": "Unlimited Rubicon",
+      "engine_code": "ERG",
+      "canonical_powertrain": {
+        "electrification_type": "mild_hybrid",
+        "engine_aspiration": null,
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3.6",
+        "fuel_type": null
+      },
+      "null_field_count": 2,
+      "null_fields": [
+        "engine_aspiration",
+        "fuel_type"
+      ],
+      "requires_human_review": true,
+      "attribute_states": {
+        "engine_aspiration": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_cylinders": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "engine_displacement_liters": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "fuel_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "generic_drive_classification": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "make": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model_year": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        }
+      },
+      "review_causes": [
+        "INCOMPLETE_POWERTRAIN_FIELDS",
+        "ERC_ERG_PEER_AMBIGUITY"
+      ],
+      "review_status_classification": "Review flag caused by a known, documented classification decision still awaiting approval",
+      "disposition_notes": "Candidate has 2 null powertrain fields (engine_aspiration, fuel_type) for engine ERG. Documented in unresolved classification register (12 review groups); awaiting owner classification adjudication."
+    },
+    {
+      "candidate_reference": "JL22-51",
+      "body_style": "4-door",
+      "manufacturer_model_code": "JLJS74",
+      "trim_name": "Unlimited Rubicon",
+      "engine_code": "EXJ",
+      "canonical_powertrain": {
+        "electrification_type": null,
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 6,
+        "engine_displacement_liters": "3",
+        "fuel_type": "diesel"
+      },
+      "null_field_count": 1,
+      "null_fields": [
+        "electrification_type"
+      ],
+      "requires_human_review": true,
+      "attribute_states": {
+        "electrification_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_cylinders": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "engine_displacement_liters": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "generic_drive_classification": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "make": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model_year": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        }
+      },
+      "review_causes": [
+        "INCOMPLETE_POWERTRAIN_FIELDS"
+      ],
+      "review_status_classification": "Review flag caused by a known, documented classification decision still awaiting approval",
+      "disposition_notes": "Candidate has 1 null powertrain fields (electrification_type) for engine EXJ. Documented in unresolved classification register (12 review groups); awaiting owner classification adjudication."
+    },
+    {
+      "candidate_reference": "JL22-52",
+      "body_style": "4-door",
+      "manufacturer_model_code": "JLJX74",
+      "trim_name": "Unlimited Rubicon 392",
+      "engine_code": "ESG",
+      "canonical_powertrain": {
+        "electrification_type": null,
+        "engine_aspiration": null,
+        "engine_cylinders": 8,
+        "engine_displacement_liters": "6.4",
+        "fuel_type": null
+      },
+      "null_field_count": 3,
+      "null_fields": [
+        "engine_aspiration",
+        "fuel_type",
+        "electrification_type"
+      ],
+      "requires_human_review": true,
+      "attribute_states": {
+        "electrification_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_aspiration": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "engine_cylinders": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "engine_displacement_liters": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "fuel_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "generic_drive_classification": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "make": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model_year": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        }
+      },
+      "review_causes": [
+        "INCOMPLETE_POWERTRAIN_FIELDS"
+      ],
+      "review_status_classification": "Review flag caused by a known, documented classification decision still awaiting approval",
+      "disposition_notes": "Candidate has 3 null powertrain fields (engine_aspiration, fuel_type, electrification_type) for engine ESG. Documented in unresolved classification register (12 review groups); awaiting owner classification adjudication."
+    },
+    {
+      "candidate_reference": "JL22-54",
+      "body_style": "4-door",
+      "manufacturer_model_code": "JLXP74",
+      "trim_name": "Unlimited High Altitude 4xe",
+      "engine_code": "ECX",
+      "canonical_powertrain": {
+        "electrification_type": "plug_in_hybrid",
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 4,
+        "engine_displacement_liters": "2",
+        "fuel_type": null
+      },
+      "null_field_count": 1,
+      "null_fields": [
+        "fuel_type"
+      ],
+      "requires_human_review": true,
+      "attribute_states": {
+        "engine_cylinders": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "engine_displacement_liters": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "fuel_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "generic_drive_classification": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "make": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model_year": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        }
+      },
+      "review_causes": [
+        "INCOMPLETE_POWERTRAIN_FIELDS"
+      ],
+      "review_status_classification": "Review flag caused by a known, documented classification decision still awaiting approval",
+      "disposition_notes": "Candidate has 1 null powertrain fields (fuel_type) for engine ECX. Documented in unresolved classification register (12 review groups); awaiting owner classification adjudication."
+    },
+    {
+      "candidate_reference": "JL22-55",
+      "body_style": "4-door",
+      "manufacturer_model_code": "JLXP74",
+      "trim_name": "Unlimited Sahara 4xe",
+      "engine_code": "ECX",
+      "canonical_powertrain": {
+        "electrification_type": "plug_in_hybrid",
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 4,
+        "engine_displacement_liters": "2",
+        "fuel_type": null
+      },
+      "null_field_count": 1,
+      "null_fields": [
+        "fuel_type"
+      ],
+      "requires_human_review": true,
+      "attribute_states": {
+        "engine_cylinders": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "engine_displacement_liters": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "fuel_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "generic_drive_classification": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "make": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model_year": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        }
+      },
+      "review_causes": [
+        "INCOMPLETE_POWERTRAIN_FIELDS"
+      ],
+      "review_status_classification": "Review flag caused by a known, documented classification decision still awaiting approval",
+      "disposition_notes": "Candidate has 1 null powertrain fields (fuel_type) for engine ECX. Documented in unresolved classification register (12 review groups); awaiting owner classification adjudication."
+    },
+    {
+      "candidate_reference": "JL22-56",
+      "body_style": "4-door",
+      "manufacturer_model_code": "JLXS74",
+      "trim_name": "Unlimited Rubicon 4xe",
+      "engine_code": "ECX",
+      "canonical_powertrain": {
+        "electrification_type": "plug_in_hybrid",
+        "engine_aspiration": "turbocharged",
+        "engine_cylinders": 4,
+        "engine_displacement_liters": "2",
+        "fuel_type": null
+      },
+      "null_field_count": 1,
+      "null_fields": [
+        "fuel_type"
+      ],
+      "requires_human_review": true,
+      "attribute_states": {
+        "engine_cylinders": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "engine_displacement_liters": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "fuel_type": {
+          "reconciliation_state": "incomplete",
+          "review_disposition": "pending_review",
+          "conflict_details": "Unresolved evidence-backed classification; remains null"
+        },
+        "generic_drive_classification": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "make": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        },
+        "model_year": {
+          "reconciliation_state": "single_source",
+          "review_disposition": "not_required",
+          "conflict_details": null
+        }
+      },
+      "review_causes": [
+        "INCOMPLETE_POWERTRAIN_FIELDS"
+      ],
+      "review_status_classification": "Review flag caused by a known, documented classification decision still awaiting approval",
+      "disposition_notes": "Candidate has 1 null powertrain fields (fuel_type) for engine ECX. Documented in unresolved classification register (12 review groups); awaiting owner classification adjudication."
+    }
+  ]
+}

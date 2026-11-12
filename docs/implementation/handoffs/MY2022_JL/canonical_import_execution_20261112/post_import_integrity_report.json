@@ -1,0 +1,16 @@
+{
+  "status": "VERIFIED_CLEAN",
+  "verification_timestamp_utc": "2026-11-12T19:08:51.759833+00:00",
+  "database_integrity_check": "ok",
+  "foreign_key_violations": 0,
+  "total_new_vehicle_definitions": 55,
+  "all_target_generation_pk_32": true,
+  "all_target_model_year_2022": true,
+  "all_target_market_us": true,
+  "unique_slug_count": 55,
+  "unique_uuid_count": 55,
+  "slug_collision_against_existing": false,
+  "high_tide_canonical_integrity": true,
+  "erc_erg_distinction_verified": true,
+  "deferred_sport_rhd_excluded": true
+}

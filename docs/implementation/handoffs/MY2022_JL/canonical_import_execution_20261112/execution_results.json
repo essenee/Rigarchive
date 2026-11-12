@@ -1,0 +1,51 @@
+{
+  "execution_status": "COMPLETED_AND_VERIFIED",
+  "attempt_directory": "docs/implementation/handoffs/MY2022_JL/canonical_import_execution_20261112/attempts/matrix-2022-28s3gq0a",
+  "matrix_digest": "sha256:e92f9ab6d7b585406e86f697e9cae8400233fc874f4ea884bec718b9148c56cb",
+  "model_year": 2022,
+  "authorized_count": 55,
+  "newly_created_count": 55,
+  "report_counts": {
+    "newly_created": 55
+  },
+  "database_counts_before": {
+    "VehicleDefinition": 934,
+    "ImportExecutionReceipt": 3220,
+    "GenerationCorrespondenceRevision": 231
+  },
+  "database_counts_after": {
+    "VehicleDefinition": 989,
+    "ImportExecutionReceipt": 3275,
+    "GenerationCorrespondenceRevision": 231
+  },
+  "powertrain_distinctions": {
+    "EC1_2.0L_turbo_gasoline_none": 14,
+    "ERC_3.6L_NA_gasoline_none": 13,
+    "ERG_3.6L_NA_gasoline_mild_hybrid_eTorque": 15,
+    "EXJ_3.0L_turbo_diesel_none": 9,
+    "ECX_2.0L_turbo_gasoline_phev_4xe": 3,
+    "ESG_6.4L_NA_gasoline_v8_392_none": 1,
+    "total": 55
+  },
+  "high_tide_preservation": {
+    "candidate_reference": "JL22-20",
+    "trim_name": "Unlimited High Tide",
+    "vehicle_definition_pk": 969,
+    "vehicle_definition_uuid": "95287974-ff0f-4260-87fb-45fa86940f9a",
+    "slug": "2022-unlimited-high-tide-36l-v6-etorque-4wd-us-mhev",
+    "engine_displacement_liters": "3.60",
+    "electrification_type": "mild_hybrid",
+    "status": "PRESERVED_AS_DISTINCT_CANONICAL_TRIM"
+  },
+  "sport_rhd_exclusion": {
+    "candidate_reference": "JL22-53",
+    "model_code": "JLUL74",
+    "status": "CONFIRMED_EXCLUDED"
+  },
+  "outer_transaction_mode": "atomic_durable_single_transaction",
+  "operator_attribution": {
+    "director": "project_owner",
+    "agent": "codex",
+    "channel": "cli"
+  }
+}

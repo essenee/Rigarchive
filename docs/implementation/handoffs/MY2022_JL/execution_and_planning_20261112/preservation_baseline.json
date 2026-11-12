@@ -1,0 +1,29 @@
+{
+  "preexisting_handoff_dir": "docs/implementation/handoffs/MY2022_JL/classification_and_correspondence_proposals_20261112",
+  "database_counts_before": {
+    "VehicleDefinition": 934,
+    "ImportExecutionReceipt": 3148,
+    "GenerationCorrespondenceRevision": 159
+  },
+  "database_counts_after": {
+    "VehicleDefinition": 934,
+    "ImportExecutionReceipt": 3220,
+    "GenerationCorrespondenceRevision": 231
+  },
+  "snapshot": {
+    "path": "backups/snapshots/db_snapshot_pre_my2022_correspondence_20261112_183247.sqlite3",
+    "size_bytes": 45764608,
+    "sha256": "sha256:c4286d7208077253491bb5b7bc0d31d09a09dd62b926840685b6b4da0f74c83c",
+    "integrity": "ok"
+  },
+  "code_and_contract_hashes": {
+    "reference/models.py": "sha256:a8af9750fe19a1e28fa8188a9305194056f347d9bf2369e15e8007987de1788f",
+    "reference/ingestion/generation_correspondence.py": "sha256:7537104bd1fb42d28eaf898ed4b85b696b6d1cbd18622e4a2251d7cf30bf758c",
+    "reference/management/commands/publish_generation_correspondence.py": "sha256:2a415b554cd05996b705c84a72ef63fa2dce78dde198493198d43f8e2ac6ab5f",
+    "reference/ingestion/contracts.py": "sha256:9bed10c5861e19554387860f9a2500f0a9de52ff6401b463b4195ab514c88959",
+    "reference/ingestion/serialization.py": "sha256:cdabc311b8b9cc534ea0109c55ffb5f24b9f46ff91411bdd95f0da3fb851cef8",
+    "reference/ingestion/classification_adjudication.py": "sha256:8f62a56849773d72716ba0ba11957ee82ffba5860167a81733539e43d9e4cf26",
+    "reference/ingestion/importing/planner.py": "sha256:4f8f6bf284a9c14b6b7225542dc106c9e185f1958e8e963ba09b39b72eee44b1",
+    "reference/ingestion/importing/powertrain_identity.py": "sha256:4d7e31f68126ea3233ff9e179ee11d6532c8e6668e3a90c6b4ec3bb9a1c27508"
+  }
+}

@@ -199,3 +199,127 @@ class ClassificationAdjudicationTests(SyntheticWranglerSetup, TestCase):
             'evidence_documents':[{'source_id':SOURCE_ID,'extractor_id':'approved_human_classification'}]}))
         with self.assertRaisesRegex(ValidationError,'Chained classification'):
             validate_adjudication(adj)
+
+    def test_unrelated_evidence_conflict_blocks_despite_approved_adjudication(self):
+        from reference.ingestion.contracts import AttributeReconciliationState, ReconciliationState
+        from reference.ingestion.importing.planner import plan_candidate_import
+        self.base.reconciliation_and_review.requires_human_review = True
+        self.base.reconciliation_and_review.attribute_states['trim'] = AttributeReconciliationState(
+            ReconciliationState.CONFLICTING.value, 'pending_review', 'Unrelated conflict across sources',
+        )
+        self.base_path.write_text(serialize_artifact(self.base))
+        adj = self.artifact(approved=True)
+        classified = apply_classification_adjudication(self.save(adj))
+        self.assertTrue(classified.reconciliation_and_review.requires_human_review)
+        self.assertIn('trim', classified.reconciliation_and_review.attribute_states)
+        self.assertEqual(
+            classified.reconciliation_and_review.attribute_states['trim'].reconciliation_state,
+            ReconciliationState.CONFLICTING.value,
+        )
+        plan = plan_candidate_import(classified)
+        self.assertEqual(plan.planned_action.value, 'flag_review')
+        self.assertTrue(any('trim' in r or 'human review' in r for r in plan.reasons))
+
+    def test_unresolved_non_powertrain_context_contradiction_blocks(self):
+        from reference.ingestion.importing.planner import plan_candidate_import
+        self.base.reconciliation_and_review.requires_human_review = True
+        self.base.reconciliation_and_review.reconciliation_notes = 'Context contradiction detected: model_year context 2022 vs evidence 2021'
+        self.base_path.write_text(serialize_artifact(self.base))
+        adj = self.artifact(approved=True)
+        classified = apply_classification_adjudication(self.save(adj))
+        self.assertTrue(classified.reconciliation_and_review.requires_human_review)
+        plan = plan_candidate_import(classified)
+        self.assertEqual(plan.planned_action.value, 'flag_review')
+
+    def test_partially_resolved_powertrain_classification_blocks(self):
+        from reference.ingestion.contracts import AttributeReconciliationState, ReconciliationState
+        from reference.ingestion.importing.planner import plan_candidate_import
+        self.base.reconciliation_and_review.requires_human_review = True
+        self.base.reconciliation_and_review.attribute_states['engine_aspiration'] = AttributeReconciliationState(
+            ReconciliationState.INCOMPLETE.value, 'pending_review', 'Null field',
+        )
+        self.base.reconciliation_and_review.attribute_states['electrification_type'] = AttributeReconciliationState(
+            ReconciliationState.INCOMPLETE.value, 'pending_review', 'Null field',
+        )
+        self.base_path.write_text(serialize_artifact(self.base))
+        adj = self.artifact(approved=True)
+        del adj.evidence_anchors['classifications']['electrification_type']
+        self.rehash(adj)
+        classified = apply_classification_adjudication(self.save(adj))
+        self.assertIsNone(classified.canonical_powertrain['electrification_type'])
+        self.assertTrue(classified.reconciliation_and_review.requires_human_review)
+        self.assertIn('electrification_type', classified.reconciliation_and_review.attribute_states)
+        plan = plan_candidate_import(classified)
+        self.assertEqual(plan.planned_action.value, 'flag_review')
+
+    def test_unapproved_adjudication_cannot_clear_holds_or_project(self):
+        proposal = self.artifact(approved=False)
+        self.assertEqual(proposal.adjudication_decision, 'proposed_classifications')
+        with self.assertRaises(ValidationError):
+            apply_classification_adjudication(self.save(proposal))
+
+    def test_rejected_adjudication_rejected_by_validator(self):
+        rejected = self.artifact(approved=True)
+        rejected.adjudication_decision = 'rejected'
+        self.rehash(rejected)
+        with self.assertRaises(ValidationError):
+            validate_classification_adjudication(rejected)
+
+    def test_mismatched_candidate_digest_raises_stale_validation(self):
+        adj = self.artifact(approved=True)
+        new_digest = 'sha256:' + 'f' * 64
+        adj.evidence_anchors['candidate_hash'] = new_digest
+        adj.source_identity['native_identifier'] = new_digest
+        self.rehash(adj)
+        with self.assertRaisesRegex(ValidationError, 'Adjudication candidate became stale.'):
+            apply_classification_adjudication(self.save(adj))
+
+    def test_missing_supporting_evidence_fails_verification(self):
+        adj = self.artifact(approved=True)
+        adj.evidence_anchors['supporting_documents'][0]['raw_artifact_reference'] = 'nonexistent_file.pdf'
+        self.rehash(adj)
+        with self.assertRaises((ValidationError, OSError)):
+            apply_classification_adjudication(self.save(adj))
+
+    def test_conflicting_classification_evidence_remains_blocker(self):
+        from reference.ingestion.contracts import AttributeReconciliationState, ReconciliationState
+        from reference.ingestion.importing.planner import plan_candidate_import
+        self.base.reconciliation_and_review.requires_human_review = True
+        self.base.reconciliation_and_review.attribute_states['engine_aspiration'] = AttributeReconciliationState(
+            ReconciliationState.CONFLICTING.value, 'pending_review', 'Conflicting aspiration evidence',
+        )
+        self.base_path.write_text(serialize_artifact(self.base))
+        adj = self.artifact(approved=True)
+        classified = apply_classification_adjudication(self.save(adj))
+        self.assertIn('engine_aspiration', classified.reconciliation_and_review.attribute_states)
+        self.assertEqual(
+            classified.reconciliation_and_review.attribute_states['engine_aspiration'].reconciliation_state,
+            ReconciliationState.CONFLICTING.value,
+        )
+        self.assertTrue(classified.reconciliation_and_review.requires_human_review)
+        plan = plan_candidate_import(classified)
+        self.assertEqual(plan.planned_action.value, 'flag_review')
+
+    def test_legitimate_classification_holds_resolved_enables_create(self):
+        from reference.ingestion.contracts import AttributeReconciliationState, ReconciliationState, ReviewDisposition
+        from reference.ingestion.importing.planner import plan_candidate_import
+        self.base.reconciliation_and_review.requires_human_review = True
+        self.base.reconciliation_and_review.attribute_states['engine_aspiration'] = AttributeReconciliationState(
+            ReconciliationState.INCOMPLETE.value, 'pending_review', 'Missing aspiration',
+        )
+        self.base.reconciliation_and_review.attribute_states['electrification_type'] = AttributeReconciliationState(
+            ReconciliationState.INCOMPLETE.value, 'pending_review', 'Missing electrification',
+        )
+        self.base_path.write_text(serialize_artifact(self.base))
+        adj = self.artifact(approved=True)
+        classified = apply_classification_adjudication(self.save(adj))
+        self.assertFalse(classified.reconciliation_and_review.requires_human_review)
+        self.assertEqual(
+            classified.reconciliation_and_review.review_workflow_disposition,
+            ReviewDisposition.NOT_REQUIRED.value,
+        )
+        self.assertNotIn('engine_aspiration', classified.reconciliation_and_review.attribute_states)
+        self.assertNotIn('electrification_type', classified.reconciliation_and_review.attribute_states)
+        plan = plan_candidate_import(classified)
+        self.assertEqual(plan.planned_action.value, 'create')
+        self.assertEqual(plan.eligibility_status.value, 'eligible')

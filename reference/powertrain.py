@@ -77,8 +77,26 @@ def qualified_slug(base, values, engine_name):
     return slug
 
 
+def _clean_engine_name(record, label):
+    """Remove redundant standalone turbo and associated fuel/electrification tags from engine descriptor when separately displayed."""
+    if getattr(record, "engine_aspiration", None) == "turbocharged":
+        cleaned = label
+        if getattr(record, "fuel_type", None) == "diesel":
+            cleaned = re.sub(r"\b(Turbo\s*[-/]?\s*Diesel|Diesel\s*[-/]?\s*Turbo)\b", "", cleaned, flags=re.IGNORECASE)
+        if getattr(record, "electrification_type", None) in ("plug_in_hybrid", "hybrid", "mild_hybrid"):
+            cleaned = re.sub(r"\b(Turbo\s*[-/]?\s*PHEV|PHEV\s*[-/]?\s*Turbo)\b", "", cleaned, flags=re.IGNORECASE)
+            cleaned = re.sub(r"\b(Turbo\s*[-/]?\s*HEV|HEV\s*[-/]?\s*Turbo)\b", "", cleaned, flags=re.IGNORECASE)
+            cleaned = re.sub(r"\b(Turbo\s*[-/]?\s*MHEV|MHEV\s*[-/]?\s*Turbo)\b", "", cleaned, flags=re.IGNORECASE)
+        cleaned = re.sub(r"\bTurbo\b", "", cleaned, flags=re.IGNORECASE)
+        cleaned = re.sub(r"\s+", " ", cleaned).strip()
+        if cleaned:
+            return cleaned
+    return label
+
+
 def engine_label(record, *, short=False):
-    label = record.engine_name or "Engine not specified"
+    raw_label = record.engine_name or "Engine not specified"
+    label = _clean_engine_name(record, raw_label)
     extras = [ASPIRATION.get(record.engine_aspiration) if record.engine_aspiration not in (None, "naturally_aspirated") else None,
               FUEL.get(record.fuel_type) if record.fuel_type == "diesel" else None]
     if short:

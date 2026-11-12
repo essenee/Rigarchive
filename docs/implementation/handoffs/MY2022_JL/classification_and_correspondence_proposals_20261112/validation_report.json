@@ -1,0 +1,25 @@
+{
+  "validation_timestamp": "2026-11-12T17:50:00+00:00",
+  "task": "MY2022 Classification Adjudication Proposals and Corrected Correspondence Review",
+  "checks": {
+    "classification_proposals_count": 55,
+    "classification_schema_and_contract_passed": true,
+    "total_adjudicated_null_fields": 112,
+    "projected_powertrain_null_count": 0,
+    "classification_validation_errors": [],
+    "correspondence_proposals_count": 72,
+    "correspondence_schema_and_contract_passed": true,
+    "unique_revision_uuids": 72,
+    "unique_correspondence_uuids": 72,
+    "zero_db_uuid_collisions": true,
+    "automated_agent_attribution_eliminated": true,
+    "correspondence_validation_errors": [],
+    "selector_documents_count": 72,
+    "all_selectors_pass_byte_verification": true,
+    "selector_errors": [],
+    "db_vehicle_definitions_count": 934,
+    "db_import_receipts_count": 3148,
+    "db_correspondence_revisions_count": 159,
+    "db_preservation_intact": true
+  }
+}

@@ -1,0 +1,56 @@
+candidate_reference,model_year,make,model,trim_name,drivetrain,market,engine_displacement_liters,engine_cylinders,engine_aspiration,fuel_type,electrification_type
+JL22-01,2022,Jeep,Wrangler,Sport,4WD,US,2,4,turbocharged,gasoline,none
+JL22-02,2022,Jeep,Wrangler,Sport,4WD,US,3.6,6,naturally_aspirated,gasoline,none
+JL22-03,2022,Jeep,Wrangler,Sport,4WD,US,3.6,6,naturally_aspirated,gasoline,mild_hybrid
+JL22-04,2022,Jeep,Wrangler,Sport S,4WD,US,2,4,turbocharged,gasoline,none
+JL22-05,2022,Jeep,Wrangler,Sport S,4WD,US,3.6,6,naturally_aspirated,gasoline,none
+JL22-06,2022,Jeep,Wrangler,Sport S,4WD,US,3.6,6,naturally_aspirated,gasoline,mild_hybrid
+JL22-07,2022,Jeep,Wrangler,Willys,4WD,US,2,4,turbocharged,gasoline,none
+JL22-08,2022,Jeep,Wrangler,Willys,4WD,US,3.6,6,naturally_aspirated,gasoline,none
+JL22-09,2022,Jeep,Wrangler,Willys,4WD,US,3.6,6,naturally_aspirated,gasoline,mild_hybrid
+JL22-10,2022,Jeep,Wrangler,Willys Sport,4WD,US,2,4,turbocharged,gasoline,none
+JL22-11,2022,Jeep,Wrangler,Willys Sport,4WD,US,3.6,6,naturally_aspirated,gasoline,none
+JL22-12,2022,Jeep,Wrangler,Willys Sport,4WD,US,3.6,6,naturally_aspirated,gasoline,mild_hybrid
+JL22-13,2022,Jeep,Wrangler,Rubicon,4WD,US,2,4,turbocharged,gasoline,none
+JL22-14,2022,Jeep,Wrangler,Rubicon,4WD,US,3.6,6,naturally_aspirated,gasoline,none
+JL22-15,2022,Jeep,Wrangler,Rubicon,4WD,US,3.6,6,naturally_aspirated,gasoline,mild_hybrid
+JL22-16,2022,Jeep,Wrangler,Unlimited Sport Altitude,4WD,US,2,4,turbocharged,gasoline,none
+JL22-17,2022,Jeep,Wrangler,Unlimited Sport Altitude,4WD,US,3.6,6,naturally_aspirated,gasoline,none
+JL22-18,2022,Jeep,Wrangler,Unlimited Sport Altitude,4WD,US,3.6,6,naturally_aspirated,gasoline,mild_hybrid
+JL22-19,2022,Jeep,Wrangler,Unlimited Sport Altitude,4WD,US,3,6,turbocharged,diesel,none
+JL22-20,2022,Jeep,Wrangler,Unlimited High Tide,4WD,US,3.6,6,naturally_aspirated,gasoline,mild_hybrid
+JL22-21,2022,Jeep,Wrangler,Unlimited Sport,4WD,US,2,4,turbocharged,gasoline,none
+JL22-22,2022,Jeep,Wrangler,Unlimited Sport,4WD,US,3.6,6,naturally_aspirated,gasoline,none
+JL22-23,2022,Jeep,Wrangler,Unlimited Sport,4WD,US,3.6,6,naturally_aspirated,gasoline,mild_hybrid
+JL22-24,2022,Jeep,Wrangler,Unlimited Sport,4WD,US,3,6,turbocharged,diesel,none
+JL22-25,2022,Jeep,Wrangler,Unlimited Sport S,4WD,US,2,4,turbocharged,gasoline,none
+JL22-26,2022,Jeep,Wrangler,Unlimited Sport S,4WD,US,3.6,6,naturally_aspirated,gasoline,none
+JL22-27,2022,Jeep,Wrangler,Unlimited Sport S,4WD,US,3.6,6,naturally_aspirated,gasoline,mild_hybrid
+JL22-28,2022,Jeep,Wrangler,Unlimited Sport S,4WD,US,3,6,turbocharged,diesel,none
+JL22-29,2022,Jeep,Wrangler,Unlimited Willys,4WD,US,2,4,turbocharged,gasoline,none
+JL22-30,2022,Jeep,Wrangler,Unlimited Willys,4WD,US,3.6,6,naturally_aspirated,gasoline,none
+JL22-31,2022,Jeep,Wrangler,Unlimited Willys,4WD,US,3.6,6,naturally_aspirated,gasoline,mild_hybrid
+JL22-32,2022,Jeep,Wrangler,Unlimited Willys,4WD,US,3,6,turbocharged,diesel,none
+JL22-33,2022,Jeep,Wrangler,Unlimited Willys Sport,4WD,US,2,4,turbocharged,gasoline,none
+JL22-34,2022,Jeep,Wrangler,Unlimited Willys Sport,4WD,US,3.6,6,naturally_aspirated,gasoline,none
+JL22-35,2022,Jeep,Wrangler,Unlimited Willys Sport,4WD,US,3.6,6,naturally_aspirated,gasoline,mild_hybrid
+JL22-36,2022,Jeep,Wrangler,Unlimited Willys Sport,4WD,US,3,6,turbocharged,diesel,none
+JL22-37,2022,Jeep,Wrangler,Unlimited Sahara Altitude,4WD,US,2,4,turbocharged,gasoline,none
+JL22-38,2022,Jeep,Wrangler,Unlimited Sahara Altitude,4WD,US,3.6,6,naturally_aspirated,gasoline,none
+JL22-39,2022,Jeep,Wrangler,Unlimited Sahara Altitude,4WD,US,3.6,6,naturally_aspirated,gasoline,mild_hybrid
+JL22-40,2022,Jeep,Wrangler,Unlimited Sahara Altitude,4WD,US,3,6,turbocharged,diesel,none
+JL22-41,2022,Jeep,Wrangler,Unlimited High Altitude,4WD,US,2,4,turbocharged,gasoline,none
+JL22-42,2022,Jeep,Wrangler,Unlimited High Altitude,4WD,US,3.6,6,naturally_aspirated,gasoline,mild_hybrid
+JL22-43,2022,Jeep,Wrangler,Unlimited High Altitude,4WD,US,3,6,turbocharged,diesel,none
+JL22-44,2022,Jeep,Wrangler,Unlimited Sahara,4WD,US,2,4,turbocharged,gasoline,none
+JL22-45,2022,Jeep,Wrangler,Unlimited Sahara,4WD,US,3.6,6,naturally_aspirated,gasoline,none
+JL22-46,2022,Jeep,Wrangler,Unlimited Sahara,4WD,US,3.6,6,naturally_aspirated,gasoline,mild_hybrid
+JL22-47,2022,Jeep,Wrangler,Unlimited Sahara,4WD,US,3,6,turbocharged,diesel,none
+JL22-48,2022,Jeep,Wrangler,Unlimited Rubicon,4WD,US,2,4,turbocharged,gasoline,none
+JL22-49,2022,Jeep,Wrangler,Unlimited Rubicon,4WD,US,3.6,6,naturally_aspirated,gasoline,none
+JL22-50,2022,Jeep,Wrangler,Unlimited Rubicon,4WD,US,3.6,6,naturally_aspirated,gasoline,mild_hybrid
+JL22-51,2022,Jeep,Wrangler,Unlimited Rubicon,4WD,US,3,6,turbocharged,diesel,none
+JL22-52,2022,Jeep,Wrangler,Unlimited Rubicon 392,4WD,US,6.4,8,naturally_aspirated,gasoline,none
+JL22-54,2022,Jeep,Wrangler,Unlimited High Altitude 4xe,4WD,US,2,4,turbocharged,gasoline,plug_in_hybrid
+JL22-55,2022,Jeep,Wrangler,Unlimited Sahara 4xe,4WD,US,2,4,turbocharged,gasoline,plug_in_hybrid
+JL22-56,2022,Jeep,Wrangler,Unlimited Rubicon 4xe,4WD,US,2,4,turbocharged,gasoline,plug_in_hybrid

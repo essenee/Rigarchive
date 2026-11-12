@@ -1,0 +1,11 @@
+{
+  "README.md": "sha256:05c708b0b39e5912d67fe3e22940cecbd00cbc8c5d4faffc2917c7b4af794f44",
+  "execution_results.json": "sha256:c0c7c3f0c09fb81571f89077b91736ecd63cc4457726f789e24a18f6f8cad5c9",
+  "git_status_report.md": "sha256:856000554c2cd55185059a109887d6d00eea5839e8392c257e7b0b95c840ad9e",
+  "import_receipts.json": "sha256:39c8632ba42321921322c951799d9b388eff0f64ff444fede2f2dbf5504c8b24",
+  "imported_vehicle_definitions.csv": "sha256:163235a6f1097b0991e9c4e08255fe1b63dd3beadd0e027f6491438d205d446c",
+  "post_import_integrity_report.json": "sha256:c798c1830bcac51b61e257cbd41104b853653821bc644c77b65e6cb2f92bb8e7",
+  "preflight_report.json": "sha256:755078191368cadac40e274412e021c8fd0c6b9b22def50804343c1e0cf3856e",
+  "snapshot_verification.json": "sha256:3bfaee2b303533041c63f10e2603e30122b48c850810cdc426f6f3538e3aeaf8",
+  "test_results.md": "sha256:d2ec6c8b3e541afdc0e2cdcda9e5d9710aa5b0d98310d5e1b74fab93553b845e"
+}

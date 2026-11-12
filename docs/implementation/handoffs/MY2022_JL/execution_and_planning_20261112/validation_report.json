@@ -1,0 +1,40 @@
+{
+  "validation_timestamp": "2026-11-12T18:33:02.912291+00:00",
+  "task": "MY2022 Wrangler JL Human Review Finalization, Correspondence Publication, and Candidate Regeneration",
+  "governing_authority": "Project Owner Authorization",
+  "metrics": {
+    "correspondences_finalized": 72,
+    "correspondences_published": 72,
+    "classification_adjudications_approved": 55,
+    "candidates_regenerated": 55,
+    "candidates_with_zero_null_powertrain": 55,
+    "engine_proofs_generated": 55,
+    "eligible_create_plans": 55,
+    "slug_collisions_internal": 0,
+    "slug_collisions_database": 0,
+    "database_pre_counts": {
+      "VehicleDefinition": 934,
+      "ImportExecutionReceipt": 3148,
+      "CorrespondenceRevision": 159
+    },
+    "database_post_counts": {
+      "VehicleDefinition": 934,
+      "ImportExecutionReceipt": 3220,
+      "CorrespondenceRevision": 231
+    },
+    "snapshot": {
+      "path": "backups/snapshots/db_snapshot_pre_my2022_correspondence_20261112_183247.sqlite3",
+      "size_bytes": 45764608,
+      "sha256": "sha256:c4286d7208077253491bb5b7bc0d31d09a09dd62b926840685b6b4da0f74c83c",
+      "integrity": "ok"
+    },
+    "high_tide_verified": {
+      "trim_name": "Unlimited High Tide",
+      "target_slug": "2022-unlimited-high-tide-36l-v6-etorque-4wd-us-mhev",
+      "electrification_type": "mild_hybrid",
+      "engine_aspiration": "naturally_aspirated"
+    },
+    "canonical_imports_executed": 0,
+    "git_commits_created": 0
+  }
+}

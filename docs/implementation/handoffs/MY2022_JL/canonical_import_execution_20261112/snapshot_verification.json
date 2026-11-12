@@ -1,0 +1,14 @@
+{
+  "snapshot_path": "backups/snapshots/db_snapshot_pre_my2022_canonical_import_20261112_190312.sqlite3",
+  "timestamp_utc": "2026-11-12T19:08:51.634755+00:00",
+  "file_size_bytes": 47181824,
+  "sha256": "sha256:5b97afb9c0fbfb7af9be5a84daaee63d5e33e838c0906b1e6d8cac151de75e20",
+  "sqlite_integrity_check": "ok",
+  "foreign_key_violations": 0,
+  "verified_row_counts": {
+    "VehicleDefinition": 934,
+    "ImportExecutionReceipt": 3220,
+    "GenerationCorrespondenceRevision": 231
+  },
+  "status": "VERIFIED_USABLE"
+}

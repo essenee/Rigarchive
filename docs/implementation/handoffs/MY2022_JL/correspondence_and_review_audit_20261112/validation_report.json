@@ -1,0 +1,26 @@
+{
+  "validation_timestamp": "2026-11-12T13:45:32.089818+00:00",
+  "task": "MY2022 Correspondence Proposal Preparation and Candidate Review Audit",
+  "checks": {
+    "candidate_count": 55,
+    "proposals_prepared": 72,
+    "shared_selectors_prepared": 72,
+    "all_proposals_pass_schema_validation": true,
+    "all_selectors_pass_byte_verification": true,
+    "simulation_resolution_to_generation_32_success_count": 55,
+    "simulation_distinct_target_slugs": 55,
+    "simulation_database_slug_collisions": 0,
+    "downstream_review_categories": {
+      "evidence_conflict": 55
+    },
+    "downstream_planned_actions": {
+      "flag_review": 55
+    },
+    "downstream_eligibility_statuses": {
+      "requires_review": 55
+    },
+    "total_null_powertrain_instances": 112,
+    "sport_rhd_excluded_from_proposals": true,
+    "operational_database_unmodified": true
+  }
+}

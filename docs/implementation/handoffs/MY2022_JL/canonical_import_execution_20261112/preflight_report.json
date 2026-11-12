@@ -1,0 +1,744 @@
+{
+  "execution_date_utc": "2026-11-12T19:08:51.758651+00:00",
+  "database_baseline_before": {
+    "VehicleDefinition": 934,
+    "ImportExecutionReceipt": 3220,
+    "GenerationCorrespondenceRevision": 231
+  },
+  "target_canonical_generation": {
+    "pk": 32,
+    "uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+    "name": "JL",
+    "model_name": "Wrangler",
+    "model_pk": 21,
+    "manufacturer_name": "Jeep",
+    "manufacturer_pk": 20
+  },
+  "matrix_digest": "sha256:e92f9ab6d7b585406e86f697e9cae8400233fc874f4ea884bec718b9148c56cb",
+  "approval_version": "1.0",
+  "approval_operator": "project_owner",
+  "approved_at_utc": "2026-11-12T19:03:20Z",
+  "preflight_status": {
+    "pending_create": 55
+  },
+  "total_authorized_candidates": 55,
+  "excluded_candidates": [
+    "JL22-53 (Sport RHD JLUL74 deferred)"
+  ],
+  "plans": [
+    {
+      "candidate_reference": "JL22-01",
+      "target_slug": "2022-sport-20l-i4-turbo-4wd-us-turbo",
+      "trim_name": "Sport",
+      "engine_name": "2.0L I4 Turbo",
+      "drivetrain": "4WD",
+      "eligibility_status": "eligible",
+      "planned_action": "create",
+      "permitted_create_bases": [
+        "first_representation"
+      ]
+    },
+    {
+      "candidate_reference": "JL22-02",
+      "target_slug": "2022-sport-36l-v6-ess-4wd-us",
+      "trim_name": "Sport",
+      "engine_name": "3.6L V6 ESS",
+      "drivetrain": "4WD",
+      "eligibility_status": "eligible",
+      "planned_action": "create",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ]
+    },
+    {
+      "candidate_reference": "JL22-03",
+      "target_slug": "2022-sport-36l-v6-etorque-4wd-us-mhev",
+      "trim_name": "Sport",
+      "engine_name": "3.6L V6 eTorque",
+      "drivetrain": "4WD",
+      "eligibility_status": "eligible",
+      "planned_action": "create",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ]
+    },
+    {
+      "candidate_reference": "JL22-04",
+      "target_slug": "2022-sport-s-20l-i4-turbo-4wd-us-turbo",
+      "trim_name": "Sport S",
+      "engine_name": "2.0L I4 Turbo",
+      "drivetrain": "4WD",
+      "eligibility_status": "eligible",
+      "planned_action": "create",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ]
+    },
+    {
+      "candidate_reference": "JL22-05",
+      "target_slug": "2022-sport-s-36l-v6-ess-4wd-us",
+      "trim_name": "Sport S",
+      "engine_name": "3.6L V6 ESS",
+      "drivetrain": "4WD",
+      "eligibility_status": "eligible",
+      "planned_action": "create",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ]
+    },
+    {
+      "candidate_reference": "JL22-06",
+      "target_slug": "2022-sport-s-36l-v6-etorque-4wd-us-mhev",
+      "trim_name": "Sport S",
+      "engine_name": "3.6L V6 eTorque",
+      "drivetrain": "4WD",
+      "eligibility_status": "eligible",
+      "planned_action": "create",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ]
+    },
+    {
+      "candidate_reference": "JL22-07",
+      "target_slug": "2022-willys-20l-i4-turbo-4wd-us-turbo",
+      "trim_name": "Willys",
+      "engine_name": "2.0L I4 Turbo",
+      "drivetrain": "4WD",
+      "eligibility_status": "eligible",
+      "planned_action": "create",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ]
+    },
+    {
+      "candidate_reference": "JL22-08",
+      "target_slug": "2022-willys-36l-v6-ess-4wd-us",
+      "trim_name": "Willys",
+      "engine_name": "3.6L V6 ESS",
+      "drivetrain": "4WD",
+      "eligibility_status": "eligible",
+      "planned_action": "create",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ]
+    },
+    {
+      "candidate_reference": "JL22-09",
+      "target_slug": "2022-willys-36l-v6-etorque-4wd-us-mhev",
+      "trim_name": "Willys",
+      "engine_name": "3.6L V6 eTorque",
+      "drivetrain": "4WD",
+      "eligibility_status": "eligible",
+      "planned_action": "create",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ]
+    },
+    {
+      "candidate_reference": "JL22-10",
+      "target_slug": "2022-willys-sport-20l-i4-turbo-4wd-us-turbo",
+      "trim_name": "Willys Sport",
+      "engine_name": "2.0L I4 Turbo",
+      "drivetrain": "4WD",
+      "eligibility_status": "eligible",
+      "planned_action": "create",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ]
+    },
+    {
+      "candidate_reference": "JL22-11",
+      "target_slug": "2022-willys-sport-36l-v6-ess-4wd-us",
+      "trim_name": "Willys Sport",
+      "engine_name": "3.6L V6 ESS",
+      "drivetrain": "4WD",
+      "eligibility_status": "eligible",
+      "planned_action": "create",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ]
+    },
+    {
+      "candidate_reference": "JL22-12",
+      "target_slug": "2022-willys-sport-36l-v6-etorque-4wd-us-mhev",
+      "trim_name": "Willys Sport",
+      "engine_name": "3.6L V6 eTorque",
+      "drivetrain": "4WD",
+      "eligibility_status": "eligible",
+      "planned_action": "create",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ]
+    },
+    {
+      "candidate_reference": "JL22-13",
+      "target_slug": "2022-rubicon-20l-i4-turbo-4wd-us-turbo",
+      "trim_name": "Rubicon",
+      "engine_name": "2.0L I4 Turbo",
+      "drivetrain": "4WD",
+      "eligibility_status": "eligible",
+      "planned_action": "create",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ]
+    },
+    {
+      "candidate_reference": "JL22-14",
+      "target_slug": "2022-rubicon-36l-v6-ess-4wd-us",
+      "trim_name": "Rubicon",
+      "engine_name": "3.6L V6 ESS",
+      "drivetrain": "4WD",
+      "eligibility_status": "eligible",
+      "planned_action": "create",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ]
+    },
+    {
+      "candidate_reference": "JL22-15",
+      "target_slug": "2022-rubicon-36l-v6-etorque-4wd-us-mhev",
+      "trim_name": "Rubicon",
+      "engine_name": "3.6L V6 eTorque",
+      "drivetrain": "4WD",
+      "eligibility_status": "eligible",
+      "planned_action": "create",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ]
+    },
+    {
+      "candidate_reference": "JL22-16",
+      "target_slug": "2022-unlimited-sport-altitude-20l-i4-turbo-4wd-us-turbo",
+      "trim_name": "Unlimited Sport Altitude",
+      "engine_name": "2.0L I4 Turbo",
+      "drivetrain": "4WD",
+      "eligibility_status": "eligible",
+      "planned_action": "create",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ]
+    },
+    {
+      "candidate_reference": "JL22-17",
+      "target_slug": "2022-unlimited-sport-altitude-36l-v6-ess-4wd-us",
+      "trim_name": "Unlimited Sport Altitude",
+      "engine_name": "3.6L V6 ESS",
+      "drivetrain": "4WD",
+      "eligibility_status": "eligible",
+      "planned_action": "create",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ]
+    },
+    {
+      "candidate_reference": "JL22-18",
+      "target_slug": "2022-unlimited-sport-altitude-36l-v6-etorque-4wd-us-mhev",
+      "trim_name": "Unlimited Sport Altitude",
+      "engine_name": "3.6L V6 eTorque",
+      "drivetrain": "4WD",
+      "eligibility_status": "eligible",
+      "planned_action": "create",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ]
+    },
+    {
+      "candidate_reference": "JL22-19",
+      "target_slug": "2022-unlimited-sport-altitude-30l-v6-turbo-diesel-4wd-us-turbo-diesel",
+      "trim_name": "Unlimited Sport Altitude",
+      "engine_name": "3.0L V6 Turbo Diesel",
+      "drivetrain": "4WD",
+      "eligibility_status": "eligible",
+      "planned_action": "create",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ]
+    },
+    {
+      "candidate_reference": "JL22-20",
+      "target_slug": "2022-unlimited-high-tide-36l-v6-etorque-4wd-us-mhev",
+      "trim_name": "Unlimited High Tide",
+      "engine_name": "3.6L V6 eTorque",
+      "drivetrain": "4WD",
+      "eligibility_status": "eligible",
+      "planned_action": "create",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ]
+    },
+    {
+      "candidate_reference": "JL22-21",
+      "target_slug": "2022-unlimited-sport-20l-i4-turbo-4wd-us-turbo",
+      "trim_name": "Unlimited Sport",
+      "engine_name": "2.0L I4 Turbo",
+      "drivetrain": "4WD",
+      "eligibility_status": "eligible",
+      "planned_action": "create",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ]
+    },
+    {
+      "candidate_reference": "JL22-22",
+      "target_slug": "2022-unlimited-sport-36l-v6-ess-4wd-us",
+      "trim_name": "Unlimited Sport",
+      "engine_name": "3.6L V6 ESS",
+      "drivetrain": "4WD",
+      "eligibility_status": "eligible",
+      "planned_action": "create",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ]
+    },
+    {
+      "candidate_reference": "JL22-23",
+      "target_slug": "2022-unlimited-sport-36l-v6-etorque-4wd-us-mhev",
+      "trim_name": "Unlimited Sport",
+      "engine_name": "3.6L V6 eTorque",
+      "drivetrain": "4WD",
+      "eligibility_status": "eligible",
+      "planned_action": "create",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ]
+    },
+    {
+      "candidate_reference": "JL22-24",
+      "target_slug": "2022-unlimited-sport-30l-v6-turbo-diesel-4wd-us-turbo-diesel",
+      "trim_name": "Unlimited Sport",
+      "engine_name": "3.0L V6 Turbo Diesel",
+      "drivetrain": "4WD",
+      "eligibility_status": "eligible",
+      "planned_action": "create",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ]
+    },
+    {
+      "candidate_reference": "JL22-25",
+      "target_slug": "2022-unlimited-sport-s-20l-i4-turbo-4wd-us-turbo",
+      "trim_name": "Unlimited Sport S",
+      "engine_name": "2.0L I4 Turbo",
+      "drivetrain": "4WD",
+      "eligibility_status": "eligible",
+      "planned_action": "create",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ]
+    },
+    {
+      "candidate_reference": "JL22-26",
+      "target_slug": "2022-unlimited-sport-s-36l-v6-ess-4wd-us",
+      "trim_name": "Unlimited Sport S",
+      "engine_name": "3.6L V6 ESS",
+      "drivetrain": "4WD",
+      "eligibility_status": "eligible",
+      "planned_action": "create",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ]
+    },
+    {
+      "candidate_reference": "JL22-27",
+      "target_slug": "2022-unlimited-sport-s-36l-v6-etorque-4wd-us-mhev",
+      "trim_name": "Unlimited Sport S",
+      "engine_name": "3.6L V6 eTorque",
+      "drivetrain": "4WD",
+      "eligibility_status": "eligible",
+      "planned_action": "create",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ]
+    },
+    {
+      "candidate_reference": "JL22-28",
+      "target_slug": "2022-unlimited-sport-s-30l-v6-turbo-diesel-4wd-us-turbo-diesel",
+      "trim_name": "Unlimited Sport S",
+      "engine_name": "3.0L V6 Turbo Diesel",
+      "drivetrain": "4WD",
+      "eligibility_status": "eligible",
+      "planned_action": "create",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ]
+    },
+    {
+      "candidate_reference": "JL22-29",
+      "target_slug": "2022-unlimited-willys-20l-i4-turbo-4wd-us-turbo",
+      "trim_name": "Unlimited Willys",
+      "engine_name": "2.0L I4 Turbo",
+      "drivetrain": "4WD",
+      "eligibility_status": "eligible",
+      "planned_action": "create",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ]
+    },
+    {
+      "candidate_reference": "JL22-30",
+      "target_slug": "2022-unlimited-willys-36l-v6-ess-4wd-us",
+      "trim_name": "Unlimited Willys",
+      "engine_name": "3.6L V6 ESS",
+      "drivetrain": "4WD",
+      "eligibility_status": "eligible",
+      "planned_action": "create",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ]
+    },
+    {
+      "candidate_reference": "JL22-31",
+      "target_slug": "2022-unlimited-willys-36l-v6-etorque-4wd-us-mhev",
+      "trim_name": "Unlimited Willys",
+      "engine_name": "3.6L V6 eTorque",
+      "drivetrain": "4WD",
+      "eligibility_status": "eligible",
+      "planned_action": "create",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ]
+    },
+    {
+      "candidate_reference": "JL22-32",
+      "target_slug": "2022-unlimited-willys-30l-v6-turbo-diesel-4wd-us-turbo-diesel",
+      "trim_name": "Unlimited Willys",
+      "engine_name": "3.0L V6 Turbo Diesel",
+      "drivetrain": "4WD",
+      "eligibility_status": "eligible",
+      "planned_action": "create",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ]
+    },
+    {
+      "candidate_reference": "JL22-33",
+      "target_slug": "2022-unlimited-willys-sport-20l-i4-turbo-4wd-us-turbo",
+      "trim_name": "Unlimited Willys Sport",
+      "engine_name": "2.0L I4 Turbo",
+      "drivetrain": "4WD",
+      "eligibility_status": "eligible",
+      "planned_action": "create",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ]
+    },
+    {
+      "candidate_reference": "JL22-34",
+      "target_slug": "2022-unlimited-willys-sport-36l-v6-ess-4wd-us",
+      "trim_name": "Unlimited Willys Sport",
+      "engine_name": "3.6L V6 ESS",
+      "drivetrain": "4WD",
+      "eligibility_status": "eligible",
+      "planned_action": "create",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ]
+    },
+    {
+      "candidate_reference": "JL22-35",
+      "target_slug": "2022-unlimited-willys-sport-36l-v6-etorque-4wd-us-mhev",
+      "trim_name": "Unlimited Willys Sport",
+      "engine_name": "3.6L V6 eTorque",
+      "drivetrain": "4WD",
+      "eligibility_status": "eligible",
+      "planned_action": "create",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ]
+    },
+    {
+      "candidate_reference": "JL22-36",
+      "target_slug": "2022-unlimited-willys-sport-30l-v6-turbo-diesel-4wd-us-turbo-diesel",
+      "trim_name": "Unlimited Willys Sport",
+      "engine_name": "3.0L V6 Turbo Diesel",
+      "drivetrain": "4WD",
+      "eligibility_status": "eligible",
+      "planned_action": "create",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ]
+    },
+    {
+      "candidate_reference": "JL22-37",
+      "target_slug": "2022-unlimited-sahara-altitude-20l-i4-turbo-4wd-us-turbo",
+      "trim_name": "Unlimited Sahara Altitude",
+      "engine_name": "2.0L I4 Turbo",
+      "drivetrain": "4WD",
+      "eligibility_status": "eligible",
+      "planned_action": "create",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ]
+    },
+    {
+      "candidate_reference": "JL22-38",
+      "target_slug": "2022-unlimited-sahara-altitude-36l-v6-ess-4wd-us",
+      "trim_name": "Unlimited Sahara Altitude",
+      "engine_name": "3.6L V6 ESS",
+      "drivetrain": "4WD",
+      "eligibility_status": "eligible",
+      "planned_action": "create",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ]
+    },
+    {
+      "candidate_reference": "JL22-39",
+      "target_slug": "2022-unlimited-sahara-altitude-36l-v6-etorque-4wd-us-mhev",
+      "trim_name": "Unlimited Sahara Altitude",
+      "engine_name": "3.6L V6 eTorque",
+      "drivetrain": "4WD",
+      "eligibility_status": "eligible",
+      "planned_action": "create",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ]
+    },
+    {
+      "candidate_reference": "JL22-40",
+      "target_slug": "2022-unlimited-sahara-altitude-30l-v6-turbo-diesel-4wd-us-turbo-diesel",
+      "trim_name": "Unlimited Sahara Altitude",
+      "engine_name": "3.0L V6 Turbo Diesel",
+      "drivetrain": "4WD",
+      "eligibility_status": "eligible",
+      "planned_action": "create",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ]
+    },
+    {
+      "candidate_reference": "JL22-41",
+      "target_slug": "2022-unlimited-high-altitude-20l-i4-turbo-4wd-us-turbo",
+      "trim_name": "Unlimited High Altitude",
+      "engine_name": "2.0L I4 Turbo",
+      "drivetrain": "4WD",
+      "eligibility_status": "eligible",
+      "planned_action": "create",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ]
+    },
+    {
+      "candidate_reference": "JL22-42",
+      "target_slug": "2022-unlimited-high-altitude-36l-v6-etorque-4wd-us-mhev",
+      "trim_name": "Unlimited High Altitude",
+      "engine_name": "3.6L V6 eTorque",
+      "drivetrain": "4WD",
+      "eligibility_status": "eligible",
+      "planned_action": "create",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ]
+    },
+    {
+      "candidate_reference": "JL22-43",
+      "target_slug": "2022-unlimited-high-altitude-30l-v6-turbo-diesel-4wd-us-turbo-diesel",
+      "trim_name": "Unlimited High Altitude",
+      "engine_name": "3.0L V6 Turbo Diesel",
+      "drivetrain": "4WD",
+      "eligibility_status": "eligible",
+      "planned_action": "create",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ]
+    },
+    {
+      "candidate_reference": "JL22-44",
+      "target_slug": "2022-unlimited-sahara-20l-i4-turbo-4wd-us-turbo",
+      "trim_name": "Unlimited Sahara",
+      "engine_name": "2.0L I4 Turbo",
+      "drivetrain": "4WD",
+      "eligibility_status": "eligible",
+      "planned_action": "create",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ]
+    },
+    {
+      "candidate_reference": "JL22-45",
+      "target_slug": "2022-unlimited-sahara-36l-v6-ess-4wd-us",
+      "trim_name": "Unlimited Sahara",
+      "engine_name": "3.6L V6 ESS",
+      "drivetrain": "4WD",
+      "eligibility_status": "eligible",
+      "planned_action": "create",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ]
+    },
+    {
+      "candidate_reference": "JL22-46",
+      "target_slug": "2022-unlimited-sahara-36l-v6-etorque-4wd-us-mhev",
+      "trim_name": "Unlimited Sahara",
+      "engine_name": "3.6L V6 eTorque",
+      "drivetrain": "4WD",
+      "eligibility_status": "eligible",
+      "planned_action": "create",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ]
+    },
+    {
+      "candidate_reference": "JL22-47",
+      "target_slug": "2022-unlimited-sahara-30l-v6-turbo-diesel-4wd-us-turbo-diesel",
+      "trim_name": "Unlimited Sahara",
+      "engine_name": "3.0L V6 Turbo Diesel",
+      "drivetrain": "4WD",
+      "eligibility_status": "eligible",
+      "planned_action": "create",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ]
+    },
+    {
+      "candidate_reference": "JL22-48",
+      "target_slug": "2022-unlimited-rubicon-20l-i4-turbo-4wd-us-turbo",
+      "trim_name": "Unlimited Rubicon",
+      "engine_name": "2.0L I4 Turbo",
+      "drivetrain": "4WD",
+      "eligibility_status": "eligible",
+      "planned_action": "create",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ]
+    },
+    {
+      "candidate_reference": "JL22-49",
+      "target_slug": "2022-unlimited-rubicon-36l-v6-ess-4wd-us",
+      "trim_name": "Unlimited Rubicon",
+      "engine_name": "3.6L V6 ESS",
+      "drivetrain": "4WD",
+      "eligibility_status": "eligible",
+      "planned_action": "create",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ]
+    },
+    {
+      "candidate_reference": "JL22-50",
+      "target_slug": "2022-unlimited-rubicon-36l-v6-etorque-4wd-us-mhev",
+      "trim_name": "Unlimited Rubicon",
+      "engine_name": "3.6L V6 eTorque",
+      "drivetrain": "4WD",
+      "eligibility_status": "eligible",
+      "planned_action": "create",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ]
+    },
+    {
+      "candidate_reference": "JL22-51",
+      "target_slug": "2022-unlimited-rubicon-30l-v6-turbo-diesel-4wd-us-turbo-diesel",
+      "trim_name": "Unlimited Rubicon",
+      "engine_name": "3.0L V6 Turbo Diesel",
+      "drivetrain": "4WD",
+      "eligibility_status": "eligible",
+      "planned_action": "create",
+      "permitted_create_bases": [
+        "first_representation",
+        "mechanical_dimension"
+      ]
+    },
+    {
+      "candidate_reference": "JL22-52",
+      "target_slug": "2022-unlimited-rubicon-392-64l-v8-hemi-4wd-us",
+      "trim_name": "Unlimited Rubicon 392",
+      "engine_name": "6.4L V8 HEMI",
+      "drivetrain": "4WD",
+      "eligibility_status": "eligible",
+      "planned_action": "create",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ]
+    },
+    {
+      "candidate_reference": "JL22-54",
+      "target_slug": "2022-unlimited-high-altitude-4xe-20l-i4-turbo-phev-4wd-us-turbo-phev",
+      "trim_name": "Unlimited High Altitude 4xe",
+      "engine_name": "2.0L I4 Turbo PHEV",
+      "drivetrain": "4WD",
+      "eligibility_status": "eligible",
+      "planned_action": "create",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ]
+    },
+    {
+      "candidate_reference": "JL22-55",
+      "target_slug": "2022-unlimited-sahara-4xe-20l-i4-turbo-phev-4wd-us-turbo-phev",
+      "trim_name": "Unlimited Sahara 4xe",
+      "engine_name": "2.0L I4 Turbo PHEV",
+      "drivetrain": "4WD",
+      "eligibility_status": "eligible",
+      "planned_action": "create",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ]
+    },
+    {
+      "candidate_reference": "JL22-56",
+      "target_slug": "2022-unlimited-rubicon-4xe-20l-i4-turbo-phev-4wd-us-turbo-phev",
+      "trim_name": "Unlimited Rubicon 4xe",
+      "engine_name": "2.0L I4 Turbo PHEV",
+      "drivetrain": "4WD",
+      "eligibility_status": "eligible",
+      "planned_action": "create",
+      "permitted_create_bases": [
+        "first_representation",
+        "source_established_grade"
+      ]
+    }
+  ]
+}

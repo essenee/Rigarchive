@@ -147,6 +147,22 @@ def _project(base, adj, doc):
         result.attribute_provenance.setdefault(key, []).append(ref)
         result.canonical_powertrain[key] = claim["value"]
     result.evidence_raw_hashes = sorted({d["raw_artifact_hash"] for d in result.evidence_documents})
+    if result.reconciliation_and_review:
+        from reference.ingestion.contracts import ReconciliationState, ReviewDisposition
+        for key in adj.evidence_anchors["classifications"]:
+            state = result.reconciliation_and_review.attribute_states.get(key)
+            if state and state.reconciliation_state == ReconciliationState.INCOMPLETE.value:
+                del result.reconciliation_and_review.attribute_states[key]
+        remaining_conflicts = [s for s in result.reconciliation_and_review.attribute_states.values()
+                               if s.reconciliation_state in (ReconciliationState.CONFLICTING.value,
+                                                             ReconciliationState.AMBIGUOUS.value,
+                                                             ReconciliationState.INCOMPLETE.value)]
+        has_null_powertrain = any(v is None for v in result.canonical_powertrain.values())
+        notes = result.reconciliation_and_review.reconciliation_notes or ""
+        has_context_contradiction = "Context contradiction detected" in notes
+        if not remaining_conflicts and not has_null_powertrain and not has_context_contradiction:
+            result.reconciliation_and_review.requires_human_review = False
+            result.reconciliation_and_review.review_workflow_disposition = ReviewDisposition.NOT_REQUIRED.value
     return result
 
 

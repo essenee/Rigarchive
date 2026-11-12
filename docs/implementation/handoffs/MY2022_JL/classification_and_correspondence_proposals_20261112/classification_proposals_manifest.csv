@@ -1,0 +1,113 @@
+candidate_reference,trim_name,engine_code,field,proposed_value,confidence,evidence_status,adjudication_hash,proposal_file
+JL22-01,Sport,EC1,electrification_type,none,high,supported,sha256:7642ead44c186cd71925b1ff41d37c1e8d5cb7595935dc142320a67d056d97c9,JL22-01.proposed.adjudication.1.1.json
+JL22-01,Sport,EC1,fuel_type,gasoline,high,supported,sha256:7642ead44c186cd71925b1ff41d37c1e8d5cb7595935dc142320a67d056d97c9,JL22-01.proposed.adjudication.1.1.json
+JL22-02,Sport,ERC,electrification_type,none,high,supported,sha256:ebfa7650ea782b497021cde204991274624d8cb28f1d9371b8da6012e3993a18,JL22-02.proposed.adjudication.1.1.json
+JL22-02,Sport,ERC,engine_aspiration,naturally_aspirated,high,supported,sha256:ebfa7650ea782b497021cde204991274624d8cb28f1d9371b8da6012e3993a18,JL22-02.proposed.adjudication.1.1.json
+JL22-02,Sport,ERC,fuel_type,gasoline,high,supported,sha256:ebfa7650ea782b497021cde204991274624d8cb28f1d9371b8da6012e3993a18,JL22-02.proposed.adjudication.1.1.json
+JL22-03,Sport,ERG,engine_aspiration,naturally_aspirated,high,supported,sha256:6f7e859dc659e02369f4597ab1e59743d4ef10ecf90b022d986bab029f965754,JL22-03.proposed.adjudication.1.1.json
+JL22-03,Sport,ERG,fuel_type,gasoline,high,supported,sha256:6f7e859dc659e02369f4597ab1e59743d4ef10ecf90b022d986bab029f965754,JL22-03.proposed.adjudication.1.1.json
+JL22-04,Sport S,EC1,electrification_type,none,high,supported,sha256:7075a80485c16c088a0ea91211cd37e34f7ea8f5affed7ef68158b2c0a242de0,JL22-04.proposed.adjudication.1.1.json
+JL22-04,Sport S,EC1,fuel_type,gasoline,high,supported,sha256:7075a80485c16c088a0ea91211cd37e34f7ea8f5affed7ef68158b2c0a242de0,JL22-04.proposed.adjudication.1.1.json
+JL22-05,Sport S,ERC,electrification_type,none,high,supported,sha256:8eba6f24a7b63e40852b9bc951422fa4b1a81a87fc16e9f47f52277862283315,JL22-05.proposed.adjudication.1.1.json
+JL22-05,Sport S,ERC,engine_aspiration,naturally_aspirated,high,supported,sha256:8eba6f24a7b63e40852b9bc951422fa4b1a81a87fc16e9f47f52277862283315,JL22-05.proposed.adjudication.1.1.json
+JL22-05,Sport S,ERC,fuel_type,gasoline,high,supported,sha256:8eba6f24a7b63e40852b9bc951422fa4b1a81a87fc16e9f47f52277862283315,JL22-05.proposed.adjudication.1.1.json
+JL22-06,Sport S,ERG,engine_aspiration,naturally_aspirated,high,supported,sha256:5bed12bf842f3fa737a59ed7eed3134b247043add1c7654dd0cd1f79c5b4466c,JL22-06.proposed.adjudication.1.1.json
+JL22-06,Sport S,ERG,fuel_type,gasoline,high,supported,sha256:5bed12bf842f3fa737a59ed7eed3134b247043add1c7654dd0cd1f79c5b4466c,JL22-06.proposed.adjudication.1.1.json
+JL22-07,Willys,EC1,electrification_type,none,high,supported,sha256:90efc8e6f31988c586b9f2846dc66d44f2fab45824deaf502ef6894e75070c7d,JL22-07.proposed.adjudication.1.1.json
+JL22-07,Willys,EC1,fuel_type,gasoline,high,supported,sha256:90efc8e6f31988c586b9f2846dc66d44f2fab45824deaf502ef6894e75070c7d,JL22-07.proposed.adjudication.1.1.json
+JL22-08,Willys,ERC,electrification_type,none,high,supported,sha256:9d8981ab6521852e448a60f6ad14b33b5f1bc4136adf723b690b490fa1a99fa4,JL22-08.proposed.adjudication.1.1.json
+JL22-08,Willys,ERC,engine_aspiration,naturally_aspirated,high,supported,sha256:9d8981ab6521852e448a60f6ad14b33b5f1bc4136adf723b690b490fa1a99fa4,JL22-08.proposed.adjudication.1.1.json
+JL22-08,Willys,ERC,fuel_type,gasoline,high,supported,sha256:9d8981ab6521852e448a60f6ad14b33b5f1bc4136adf723b690b490fa1a99fa4,JL22-08.proposed.adjudication.1.1.json
+JL22-09,Willys,ERG,engine_aspiration,naturally_aspirated,high,supported,sha256:f91f3fddcae15d6cc96c6b0d793983f94eb440190925face37d89d935cebd53e,JL22-09.proposed.adjudication.1.1.json
+JL22-09,Willys,ERG,fuel_type,gasoline,high,supported,sha256:f91f3fddcae15d6cc96c6b0d793983f94eb440190925face37d89d935cebd53e,JL22-09.proposed.adjudication.1.1.json
+JL22-10,Willys Sport,EC1,electrification_type,none,high,supported,sha256:c224759cff7bdc90705e46c0d7d22dbb117cdda962e6acb4f4c9178664cb6e70,JL22-10.proposed.adjudication.1.1.json
+JL22-10,Willys Sport,EC1,fuel_type,gasoline,high,supported,sha256:c224759cff7bdc90705e46c0d7d22dbb117cdda962e6acb4f4c9178664cb6e70,JL22-10.proposed.adjudication.1.1.json
+JL22-11,Willys Sport,ERC,electrification_type,none,high,supported,sha256:ec4abbc666a1285dc6b880fd20d1eb5975c45b8d9565840d9b8968167c2e3cd6,JL22-11.proposed.adjudication.1.1.json
+JL22-11,Willys Sport,ERC,engine_aspiration,naturally_aspirated,high,supported,sha256:ec4abbc666a1285dc6b880fd20d1eb5975c45b8d9565840d9b8968167c2e3cd6,JL22-11.proposed.adjudication.1.1.json
+JL22-11,Willys Sport,ERC,fuel_type,gasoline,high,supported,sha256:ec4abbc666a1285dc6b880fd20d1eb5975c45b8d9565840d9b8968167c2e3cd6,JL22-11.proposed.adjudication.1.1.json
+JL22-12,Willys Sport,ERG,engine_aspiration,naturally_aspirated,high,supported,sha256:9f4e8e1c2b159e79bced8f3a34d1c2e410cff58ed5c62661fd743c6ac5787b5c,JL22-12.proposed.adjudication.1.1.json
+JL22-12,Willys Sport,ERG,fuel_type,gasoline,high,supported,sha256:9f4e8e1c2b159e79bced8f3a34d1c2e410cff58ed5c62661fd743c6ac5787b5c,JL22-12.proposed.adjudication.1.1.json
+JL22-13,Rubicon,EC1,electrification_type,none,high,supported,sha256:e6b880c3f4c5b6e462fe0da9e2250846232b8d7f57314143008495f10a376952,JL22-13.proposed.adjudication.1.1.json
+JL22-13,Rubicon,EC1,fuel_type,gasoline,high,supported,sha256:e6b880c3f4c5b6e462fe0da9e2250846232b8d7f57314143008495f10a376952,JL22-13.proposed.adjudication.1.1.json
+JL22-14,Rubicon,ERC,electrification_type,none,high,supported,sha256:90a5ac2dcac812194771437beb4ffafa34af59310a39dbc2295d81a454e58500,JL22-14.proposed.adjudication.1.1.json
+JL22-14,Rubicon,ERC,engine_aspiration,naturally_aspirated,high,supported,sha256:90a5ac2dcac812194771437beb4ffafa34af59310a39dbc2295d81a454e58500,JL22-14.proposed.adjudication.1.1.json
+JL22-14,Rubicon,ERC,fuel_type,gasoline,high,supported,sha256:90a5ac2dcac812194771437beb4ffafa34af59310a39dbc2295d81a454e58500,JL22-14.proposed.adjudication.1.1.json
+JL22-15,Rubicon,ERG,engine_aspiration,naturally_aspirated,high,supported,sha256:3e391cb46cd96f48f0b7d4ed18f3e181802d6c9d1ca04d24068f509c761a7720,JL22-15.proposed.adjudication.1.1.json
+JL22-15,Rubicon,ERG,fuel_type,gasoline,high,supported,sha256:3e391cb46cd96f48f0b7d4ed18f3e181802d6c9d1ca04d24068f509c761a7720,JL22-15.proposed.adjudication.1.1.json
+JL22-16,Unlimited Sport Altitude,EC1,electrification_type,none,high,supported,sha256:694abebb76848c5ea1180103fad44d3b4b09a90d39d4a41f8b2f8f586fa8b476,JL22-16.proposed.adjudication.1.1.json
+JL22-16,Unlimited Sport Altitude,EC1,fuel_type,gasoline,high,supported,sha256:694abebb76848c5ea1180103fad44d3b4b09a90d39d4a41f8b2f8f586fa8b476,JL22-16.proposed.adjudication.1.1.json
+JL22-17,Unlimited Sport Altitude,ERC,electrification_type,none,high,supported,sha256:06291a0e4ee07c2402d0c7acf8bc243fa8e3c2c4bb7cb2402cdcd3ac27027bbf,JL22-17.proposed.adjudication.1.1.json
+JL22-17,Unlimited Sport Altitude,ERC,engine_aspiration,naturally_aspirated,high,supported,sha256:06291a0e4ee07c2402d0c7acf8bc243fa8e3c2c4bb7cb2402cdcd3ac27027bbf,JL22-17.proposed.adjudication.1.1.json
+JL22-17,Unlimited Sport Altitude,ERC,fuel_type,gasoline,high,supported,sha256:06291a0e4ee07c2402d0c7acf8bc243fa8e3c2c4bb7cb2402cdcd3ac27027bbf,JL22-17.proposed.adjudication.1.1.json
+JL22-18,Unlimited Sport Altitude,ERG,engine_aspiration,naturally_aspirated,high,supported,sha256:8b3e0a34ca55e07941bfb7ba1f9c16a00bffd9092c618bfca9c6359451060755,JL22-18.proposed.adjudication.1.1.json
+JL22-18,Unlimited Sport Altitude,ERG,fuel_type,gasoline,high,supported,sha256:8b3e0a34ca55e07941bfb7ba1f9c16a00bffd9092c618bfca9c6359451060755,JL22-18.proposed.adjudication.1.1.json
+JL22-19,Unlimited Sport Altitude,EXJ,electrification_type,none,high,supported,sha256:fedc19773c89352c1ecf7b39bccbba217f9b2fc34a8a63f9d0366435ee74e1ce,JL22-19.proposed.adjudication.1.1.json
+JL22-20,Unlimited High Tide,ERG,engine_aspiration,naturally_aspirated,high,supported,sha256:d85eb04bcd0cbdb08a90e9183adb449728d60416d9b765fc65c99312a2572d65,JL22-20.proposed.adjudication.1.1.json
+JL22-20,Unlimited High Tide,ERG,fuel_type,gasoline,high,supported,sha256:d85eb04bcd0cbdb08a90e9183adb449728d60416d9b765fc65c99312a2572d65,JL22-20.proposed.adjudication.1.1.json
+JL22-21,Unlimited Sport,EC1,electrification_type,none,high,supported,sha256:69f9eb9dee3bb86282c5d9a526de735269c77142127b0e0a74a7bcc66566092e,JL22-21.proposed.adjudication.1.1.json
+JL22-21,Unlimited Sport,EC1,fuel_type,gasoline,high,supported,sha256:69f9eb9dee3bb86282c5d9a526de735269c77142127b0e0a74a7bcc66566092e,JL22-21.proposed.adjudication.1.1.json
+JL22-22,Unlimited Sport,ERC,electrification_type,none,high,supported,sha256:ddd48c0e7851983807f17409b1694d875671c10269796c76c37a168992e3449b,JL22-22.proposed.adjudication.1.1.json
+JL22-22,Unlimited Sport,ERC,engine_aspiration,naturally_aspirated,high,supported,sha256:ddd48c0e7851983807f17409b1694d875671c10269796c76c37a168992e3449b,JL22-22.proposed.adjudication.1.1.json
+JL22-22,Unlimited Sport,ERC,fuel_type,gasoline,high,supported,sha256:ddd48c0e7851983807f17409b1694d875671c10269796c76c37a168992e3449b,JL22-22.proposed.adjudication.1.1.json
+JL22-23,Unlimited Sport,ERG,engine_aspiration,naturally_aspirated,high,supported,sha256:3f5d0494339ad9cba479178bcc8503c4067db00b1cefc112736cd5de78178ac5,JL22-23.proposed.adjudication.1.1.json
+JL22-23,Unlimited Sport,ERG,fuel_type,gasoline,high,supported,sha256:3f5d0494339ad9cba479178bcc8503c4067db00b1cefc112736cd5de78178ac5,JL22-23.proposed.adjudication.1.1.json
+JL22-24,Unlimited Sport,EXJ,electrification_type,none,high,supported,sha256:59e3b02d77391c4bf48daaa3f43b0e40787cc155a904cd7bca4f019e88754b30,JL22-24.proposed.adjudication.1.1.json
+JL22-25,Unlimited Sport S,EC1,electrification_type,none,high,supported,sha256:2904de7e54c2dd8a22eafef42266a68a4080c89c78a916bb15769f3134b645ed,JL22-25.proposed.adjudication.1.1.json
+JL22-25,Unlimited Sport S,EC1,fuel_type,gasoline,high,supported,sha256:2904de7e54c2dd8a22eafef42266a68a4080c89c78a916bb15769f3134b645ed,JL22-25.proposed.adjudication.1.1.json
+JL22-26,Unlimited Sport S,ERC,electrification_type,none,high,supported,sha256:d3896e68626dca1b9d1db4aad4d7a8dabbb2ee67ffd6bed9828fab90181170f7,JL22-26.proposed.adjudication.1.1.json
+JL22-26,Unlimited Sport S,ERC,engine_aspiration,naturally_aspirated,high,supported,sha256:d3896e68626dca1b9d1db4aad4d7a8dabbb2ee67ffd6bed9828fab90181170f7,JL22-26.proposed.adjudication.1.1.json
+JL22-26,Unlimited Sport S,ERC,fuel_type,gasoline,high,supported,sha256:d3896e68626dca1b9d1db4aad4d7a8dabbb2ee67ffd6bed9828fab90181170f7,JL22-26.proposed.adjudication.1.1.json
+JL22-27,Unlimited Sport S,ERG,engine_aspiration,naturally_aspirated,high,supported,sha256:1833359895f45dc097e27ce9e9af15ab212bec127da217d24818befae1369df4,JL22-27.proposed.adjudication.1.1.json
+JL22-27,Unlimited Sport S,ERG,fuel_type,gasoline,high,supported,sha256:1833359895f45dc097e27ce9e9af15ab212bec127da217d24818befae1369df4,JL22-27.proposed.adjudication.1.1.json
+JL22-28,Unlimited Sport S,EXJ,electrification_type,none,high,supported,sha256:aba4b826534bb624704c7acf1631d979b7aa6ee04826a4f46ae47a8282cfb0bc,JL22-28.proposed.adjudication.1.1.json
+JL22-29,Unlimited Willys,EC1,electrification_type,none,high,supported,sha256:d29fa99a0450e8fc0e01427494666053d3125bbbf770f14eeae9d3e92caacc00,JL22-29.proposed.adjudication.1.1.json
+JL22-29,Unlimited Willys,EC1,fuel_type,gasoline,high,supported,sha256:d29fa99a0450e8fc0e01427494666053d3125bbbf770f14eeae9d3e92caacc00,JL22-29.proposed.adjudication.1.1.json
+JL22-30,Unlimited Willys,ERC,electrification_type,none,high,supported,sha256:67ffff1efe6701590733d837c2ebe6cdd3be925b2394a768e2c1af84c68cb6ea,JL22-30.proposed.adjudication.1.1.json
+JL22-30,Unlimited Willys,ERC,engine_aspiration,naturally_aspirated,high,supported,sha256:67ffff1efe6701590733d837c2ebe6cdd3be925b2394a768e2c1af84c68cb6ea,JL22-30.proposed.adjudication.1.1.json
+JL22-30,Unlimited Willys,ERC,fuel_type,gasoline,high,supported,sha256:67ffff1efe6701590733d837c2ebe6cdd3be925b2394a768e2c1af84c68cb6ea,JL22-30.proposed.adjudication.1.1.json
+JL22-31,Unlimited Willys,ERG,engine_aspiration,naturally_aspirated,high,supported,sha256:5527846052c03b5e4b180f34e044943ebcc29b5187b0e4c04145188b3fd318cc,JL22-31.proposed.adjudication.1.1.json
+JL22-31,Unlimited Willys,ERG,fuel_type,gasoline,high,supported,sha256:5527846052c03b5e4b180f34e044943ebcc29b5187b0e4c04145188b3fd318cc,JL22-31.proposed.adjudication.1.1.json
+JL22-32,Unlimited Willys,EXJ,electrification_type,none,high,supported,sha256:e0bf0351ca1382f4163ec7b231767a997a51959d67e7f4a75a8cbb9891d45d55,JL22-32.proposed.adjudication.1.1.json
+JL22-33,Unlimited Willys Sport,EC1,electrification_type,none,high,supported,sha256:34eb48aeaecda52cf6602b5139dac4d6ca4efc892d5ae1f558f3485aac04a940,JL22-33.proposed.adjudication.1.1.json
+JL22-33,Unlimited Willys Sport,EC1,fuel_type,gasoline,high,supported,sha256:34eb48aeaecda52cf6602b5139dac4d6ca4efc892d5ae1f558f3485aac04a940,JL22-33.proposed.adjudication.1.1.json
+JL22-34,Unlimited Willys Sport,ERC,electrification_type,none,high,supported,sha256:66588d68a3a7ec109c3599bc2a029d8cc55acd2bd08b3b689725ad93e4dbf2cb,JL22-34.proposed.adjudication.1.1.json
+JL22-34,Unlimited Willys Sport,ERC,engine_aspiration,naturally_aspirated,high,supported,sha256:66588d68a3a7ec109c3599bc2a029d8cc55acd2bd08b3b689725ad93e4dbf2cb,JL22-34.proposed.adjudication.1.1.json
+JL22-34,Unlimited Willys Sport,ERC,fuel_type,gasoline,high,supported,sha256:66588d68a3a7ec109c3599bc2a029d8cc55acd2bd08b3b689725ad93e4dbf2cb,JL22-34.proposed.adjudication.1.1.json
+JL22-35,Unlimited Willys Sport,ERG,engine_aspiration,naturally_aspirated,high,supported,sha256:8d78f1ea35094c11de15107ec2560c168072a92e8464326583269329a78acb2e,JL22-35.proposed.adjudication.1.1.json
+JL22-35,Unlimited Willys Sport,ERG,fuel_type,gasoline,high,supported,sha256:8d78f1ea35094c11de15107ec2560c168072a92e8464326583269329a78acb2e,JL22-35.proposed.adjudication.1.1.json
+JL22-36,Unlimited Willys Sport,EXJ,electrification_type,none,high,supported,sha256:ab64fff8e50ae7a6a78b2ee2ab87ba56feca4312b1b888f0cb2e82b13a372599,JL22-36.proposed.adjudication.1.1.json
+JL22-37,Unlimited Sahara Altitude,EC1,electrification_type,none,high,supported,sha256:d99fcad5289e0e329e9663d48453810c99f0ff107b088fa9dd1fcad012a5d606,JL22-37.proposed.adjudication.1.1.json
+JL22-37,Unlimited Sahara Altitude,EC1,fuel_type,gasoline,high,supported,sha256:d99fcad5289e0e329e9663d48453810c99f0ff107b088fa9dd1fcad012a5d606,JL22-37.proposed.adjudication.1.1.json
+JL22-38,Unlimited Sahara Altitude,ERC,electrification_type,none,high,supported,sha256:c94f241a1a6b44f10703a883b06550278c68eab6484cc736b89863be54385c57,JL22-38.proposed.adjudication.1.1.json
+JL22-38,Unlimited Sahara Altitude,ERC,engine_aspiration,naturally_aspirated,high,supported,sha256:c94f241a1a6b44f10703a883b06550278c68eab6484cc736b89863be54385c57,JL22-38.proposed.adjudication.1.1.json
+JL22-38,Unlimited Sahara Altitude,ERC,fuel_type,gasoline,high,supported,sha256:c94f241a1a6b44f10703a883b06550278c68eab6484cc736b89863be54385c57,JL22-38.proposed.adjudication.1.1.json
+JL22-39,Unlimited Sahara Altitude,ERG,engine_aspiration,naturally_aspirated,high,supported,sha256:50b3e8da4bd3227f57160d5505bb4d8a3ebc871fcf3caa5b64214df3c26b039f,JL22-39.proposed.adjudication.1.1.json
+JL22-39,Unlimited Sahara Altitude,ERG,fuel_type,gasoline,high,supported,sha256:50b3e8da4bd3227f57160d5505bb4d8a3ebc871fcf3caa5b64214df3c26b039f,JL22-39.proposed.adjudication.1.1.json
+JL22-40,Unlimited Sahara Altitude,EXJ,electrification_type,none,high,supported,sha256:5b9a4fbb59bf1bebcc98d5fed0fa123f45654fc06eff525fa2a1a08e0bcd4c59,JL22-40.proposed.adjudication.1.1.json
+JL22-41,Unlimited High Altitude,EC1,electrification_type,none,high,supported,sha256:ebd751eaf8343960901e187a6236d638e73e06c9a726e062e9a50d82ce1a7d86,JL22-41.proposed.adjudication.1.1.json
+JL22-41,Unlimited High Altitude,EC1,fuel_type,gasoline,high,supported,sha256:ebd751eaf8343960901e187a6236d638e73e06c9a726e062e9a50d82ce1a7d86,JL22-41.proposed.adjudication.1.1.json
+JL22-42,Unlimited High Altitude,ERG,engine_aspiration,naturally_aspirated,high,supported,sha256:2d8c8e99f75686482ad149415037235db005ea355e0bc5ef85bcb2cd06da1abf,JL22-42.proposed.adjudication.1.1.json
+JL22-42,Unlimited High Altitude,ERG,fuel_type,gasoline,high,supported,sha256:2d8c8e99f75686482ad149415037235db005ea355e0bc5ef85bcb2cd06da1abf,JL22-42.proposed.adjudication.1.1.json
+JL22-43,Unlimited High Altitude,EXJ,electrification_type,none,high,supported,sha256:4b4a7f78ee9ae1a2fc06289fcdc657f70506ae8699c756d5034c61cdbda62a49,JL22-43.proposed.adjudication.1.1.json
+JL22-44,Unlimited Sahara,EC1,electrification_type,none,high,supported,sha256:6a08060d85cf96f64ff01e7e07e8399213178a47faeab995b1a764223942e47b,JL22-44.proposed.adjudication.1.1.json
+JL22-44,Unlimited Sahara,EC1,fuel_type,gasoline,high,supported,sha256:6a08060d85cf96f64ff01e7e07e8399213178a47faeab995b1a764223942e47b,JL22-44.proposed.adjudication.1.1.json
+JL22-45,Unlimited Sahara,ERC,electrification_type,none,high,supported,sha256:99590a89db07ce64c05b8ca53dedf3f8f77adc00a4f788f80c614c4f64bf75c5,JL22-45.proposed.adjudication.1.1.json
+JL22-45,Unlimited Sahara,ERC,engine_aspiration,naturally_aspirated,high,supported,sha256:99590a89db07ce64c05b8ca53dedf3f8f77adc00a4f788f80c614c4f64bf75c5,JL22-45.proposed.adjudication.1.1.json
+JL22-45,Unlimited Sahara,ERC,fuel_type,gasoline,high,supported,sha256:99590a89db07ce64c05b8ca53dedf3f8f77adc00a4f788f80c614c4f64bf75c5,JL22-45.proposed.adjudication.1.1.json
+JL22-46,Unlimited Sahara,ERG,engine_aspiration,naturally_aspirated,high,supported,sha256:fad8681b003dfe8859325936040d51fc3acbd4fe8c6e50535176dcf73758a37f,JL22-46.proposed.adjudication.1.1.json
+JL22-46,Unlimited Sahara,ERG,fuel_type,gasoline,high,supported,sha256:fad8681b003dfe8859325936040d51fc3acbd4fe8c6e50535176dcf73758a37f,JL22-46.proposed.adjudication.1.1.json
+JL22-47,Unlimited Sahara,EXJ,electrification_type,none,high,supported,sha256:0a89052a69f82843452b886c1c6e31bea6d7efe0a4943cf8c87bc56e716956bf,JL22-47.proposed.adjudication.1.1.json
+JL22-48,Unlimited Rubicon,EC1,electrification_type,none,high,supported,sha256:1c183826411eff8fb4af1c93c1a710dd5a78d12243557f47c473ac0e12b99370,JL22-48.proposed.adjudication.1.1.json
+JL22-48,Unlimited Rubicon,EC1,fuel_type,gasoline,high,supported,sha256:1c183826411eff8fb4af1c93c1a710dd5a78d12243557f47c473ac0e12b99370,JL22-48.proposed.adjudication.1.1.json
+JL22-49,Unlimited Rubicon,ERC,electrification_type,none,high,supported,sha256:c26bd432435ba6391b4f4df2f936b5ba8c604926b23250fcbe98e814102b5616,JL22-49.proposed.adjudication.1.1.json
+JL22-49,Unlimited Rubicon,ERC,engine_aspiration,naturally_aspirated,high,supported,sha256:c26bd432435ba6391b4f4df2f936b5ba8c604926b23250fcbe98e814102b5616,JL22-49.proposed.adjudication.1.1.json
+JL22-49,Unlimited Rubicon,ERC,fuel_type,gasoline,high,supported,sha256:c26bd432435ba6391b4f4df2f936b5ba8c604926b23250fcbe98e814102b5616,JL22-49.proposed.adjudication.1.1.json
+JL22-50,Unlimited Rubicon,ERG,engine_aspiration,naturally_aspirated,high,supported,sha256:6745673dfe9a339e8394dd194fc1e2b81fa65414b045269c888b58a0391421ea,JL22-50.proposed.adjudication.1.1.json
+JL22-50,Unlimited Rubicon,ERG,fuel_type,gasoline,high,supported,sha256:6745673dfe9a339e8394dd194fc1e2b81fa65414b045269c888b58a0391421ea,JL22-50.proposed.adjudication.1.1.json
+JL22-51,Unlimited Rubicon,EXJ,electrification_type,none,high,supported,sha256:53c623b867ebc904cb2e4646f0c2131bd1f5bd5e82e0afc9393e1d0c18887b94,JL22-51.proposed.adjudication.1.1.json
+JL22-52,Unlimited Rubicon 392,ESG,electrification_type,none,high,supported,sha256:ba4c4a357a4d6a721be822880b3d4718635dd28d33ec893b5b17ebb657f6d18d,JL22-52.proposed.adjudication.1.1.json
+JL22-52,Unlimited Rubicon 392,ESG,engine_aspiration,naturally_aspirated,high,supported,sha256:ba4c4a357a4d6a721be822880b3d4718635dd28d33ec893b5b17ebb657f6d18d,JL22-52.proposed.adjudication.1.1.json
+JL22-52,Unlimited Rubicon 392,ESG,fuel_type,gasoline,high,supported,sha256:ba4c4a357a4d6a721be822880b3d4718635dd28d33ec893b5b17ebb657f6d18d,JL22-52.proposed.adjudication.1.1.json
+JL22-54,Unlimited High Altitude 4xe,ECX,fuel_type,gasoline,high,supported,sha256:411d597a7e495ec5b080a90ccc43beaf70cb1a9287f7affae2afcfc1bbf3eab5,JL22-54.proposed.adjudication.1.1.json
+JL22-55,Unlimited Sahara 4xe,ECX,fuel_type,gasoline,high,supported,sha256:ef0354c751fcc8b9df492f46a30920ed5c86bd4be5982dab30dbabaf12bb4eb7,JL22-55.proposed.adjudication.1.1.json
+JL22-56,Unlimited Rubicon 4xe,ECX,fuel_type,gasoline,high,supported,sha256:a2aafef77a897a42ed78b13e3c6ffa63ab87ef37d9ec095ca670e7c5311f6290,JL22-56.proposed.adjudication.1.1.json
