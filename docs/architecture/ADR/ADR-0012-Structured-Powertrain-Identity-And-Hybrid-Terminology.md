@@ -102,3 +102,12 @@ Illustrative VehicleDescription rendering is “2020 Jeep Wrangler Unlimited Sah
 5. Approve the display integration scope and the paired-output assertion linkage in the existing closed specifications contracts.
 
 No shared engine entity, new Django application, new source hierarchy or generalized ingestion framework is implied. This ADR records approved direction and its remaining implementation contracts.
+
+## Scoped amendment — ADR-0013 (2026-11-13)
+
+By explicit Project Owner acceptance, [ADR-0013](ADR-0013-Unified-Factory-Body-Identity.md)
+is governing within the following scope; the historical decision above is preserved.
+
+The required body-aware successor is the accepted sparse vehicle-definition-body/2 direction with the existing five-field canonical powertrain and optional body/series digests. Historical /1 preimages and Candidate 2.1.0/Engine Proof 2.0 hashes remain unchanged. Sparse body absence does not relax engine classification requirements, evidence safeguards or exact canonical write authorization.
+
+This amendment authorizes no operational migration, backfill, publication or import.

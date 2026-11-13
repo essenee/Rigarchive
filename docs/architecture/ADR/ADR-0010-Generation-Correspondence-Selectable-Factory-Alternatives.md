@@ -319,3 +319,12 @@ Separating baselines from selectable offerings preserves stable archive identiti
 - **Reuse Measurements as the equipment catalogue or factory specification store**: Rejected because physical feature conditions and independent reports have different responsibilities.
 - **Assume compatibility unless forbidden**: Rejected because incomplete rules do not establish coexistence.
 - **Silently enrich old manifests or backfill from labels**: Rejected because reviewed evidence and exact authorization cannot be inferred.
+
+## Scoped amendment — ADR-0013 (2026-11-13)
+
+By explicit Project Owner acceptance, [ADR-0013](ADR-0013-Unified-Factory-Body-Identity.md)
+is governing within the following scope; the historical decision above is preserved.
+
+Decision 2’s Wrangler trim-only workaround is superseded only for new body-assessed MY2024+ records: canonical marketed trim excludes Unlimited/door terminology; independently evidenced doors establish body identity. Historical MY2019–MY2023 identities remain unchanged. Transmission/package subordination, Generation correspondence and exact authorization remain in force.
+
+This amendment authorizes no operational migration, backfill, publication or import.

@@ -43,3 +43,12 @@ Acceptance requires independent dimension queries; distinct same-wheelbase bodie
 Domain §8 fixes the manufacturer-scoped semantic identity preimages, explicit missingness tokens, controlled-token normalization and cross-profile-version equivalence safeguards. UUIDs, display labels, provenance and serialization profile versions never manufacture a new semantic identity. Full body/series UUID suffixes apply only to new assessed records; full slug length over 180 characters blocks, without truncation or retry suffixes.
 
 Candidate v3/schema 3.0.0 and body-aware import manifest 3.0 are approved future boundaries. Enrichment/publication v1 and predicate language 1.0 are separate, explicitly versioned contracts. Existing Candidate v2/manifest 2.0 and W1 Jeep records remain unchanged. Body/series curation publication manifests and receipts are explicitly deferred to B5; current approval authorizes no such writes. Pickup/bed profiles remain undesigned.
+
+## Scoped amendment — ADR-0013 (2026-11-13)
+
+By explicit Project Owner acceptance, [ADR-0013](ADR-0013-Unified-Factory-Body-Identity.md)
+is governing within the following scope; the historical decision above is preserved.
+
+The van-only five-field scope, universal four-state missingness checklist, blanket null-legacy overlap review, independent duplicate parent-publication review and planned full-UUID slug default are narrowly amended. Unified body identity has seven explicit optional dimensions; blanks alone cause no review or ineligibility. Reuse existing reviewed Wrangler door evidence in the normal workflow; actual ambiguity still requires review. Readable qualifiers and appropriate verified scoped codes precede explicitly reviewed unavoidable opaque fallback. Protected references, immutable history, version isolation and explicit canonical write authorization covering parents/bindings remain mandatory. The UUID slug policy was planned, not deployed.
+
+This amendment authorizes no operational migration, backfill, publication or import.

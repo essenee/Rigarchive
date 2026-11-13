@@ -3,6 +3,18 @@ Version: 1.6
 Last Updated: 2026-11-12
 Purpose: Current implementation status and development roadmap
 
+## Unified factory body identity — architecture accepted; first pure phase authorized (2026-11-13)
+
+The Project Owner accepted [ADR-0013](../architecture/ADR/ADR-0013-Unified-Factory-Body-Identity.md)
+and approved RA-045, including narrow recorded amendments to ADR-0010/0011/0012.
+The governing direction is optional sparse Generation-scoped body identity, separate
+series where warranted, no review for blanks alone, existing reviewed Wrangler door
+evidence reuse, readable immutable slugs and version-isolated successor preimages.
+Only pure identity/contract foundations and isolated tests are authorized at this
+checkpoint; completion is not yet claimed. Operational migrations, body/series record
+creation, MY2024 candidate regeneration, correspondence publication and canonical
+imports remain unauthorized. Persistence, execution and presentation are not integrated.
+
 ## Configuration Browser — Redundant Turbo Label Presentation Formatting Corrected (2026-11-12)
 
 - **Presentation Normalization**: Updated `engine_label` and introduced `_clean_engine_name` in `reference/powertrain.py` to remove redundant standalone "Turbo" terminology from the engine-name portion when a configuration separately displays `Turbocharged` as its aspiration.

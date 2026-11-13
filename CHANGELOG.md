@@ -6,6 +6,8 @@ All notable changes to RigArchive will be documented in this file.
 
 ### Changed
 
+- Accepted ADR-0013 and approved RA-045 by explicit Project Owner authorization (2026-11-13), with narrow historical-preserving amendments to ADR-0010/0011/0012: sparse optional body identity, no blank-field review, existing Wrangler evidence reuse and readable-first immutable slugs. Authorized only the first pure identity/contract-foundation phase with isolated tests; no operational migrations, canonical parent creation, MY2024 regeneration, publication or imports. Implementation completion is not claimed at this acceptance checkpoint.
+
 - Corrected redundant turbocharger presentation formatting in the public vehicle browser's factory configuration labels (`reference/powertrain.py`). When a vehicle configuration separately displays `Turbocharged` as its aspiration, redundant standalone 'Turbo' terminology and associated duplicated fuel/electrification tags ('Turbo Diesel', 'Turbo PHEV') are cleanly removed from the engine-name portion in presentation labels (`engine_label` and `_label_configuration_choices`). Canonical database records and stored engine names (`VehicleDefinition.engine_name`) remain strictly unchanged with zero database migrations or writes. Preserved all other meaningful designations, including displacement, cylinder configuration, ESS, eTorque, MHEV, PHEV, Diesel, AWD, and 4WD. Added focused regression tests in `reference/tests/test_structured_powertrain.py` and dedicated test module `reference/tests/test_configuration_label_formatting.py`. All 742 project tests pass.
 
 ### Added
