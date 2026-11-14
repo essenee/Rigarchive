@@ -78,6 +78,26 @@ def normalize_engine_code(value):
     return value
 
 
+class EngineCodeCharacters(models.Func):
+    """Keep both uses of the code expression paired with their SQL parameters."""
+
+    def as_sql(self, compiler, connection, **extra_context):
+        sql, params = super().as_sql(compiler, connection, **extra_context)
+        return sql, (*params, *params)
+
+    @property
+    def identity(self):
+        # Migration comparison must retain the original expression identity too.
+        _, args, kwargs = self.deconstruct()
+        return models.Func(*args, **kwargs).identity
+
+    def deconstruct(self):
+        # This is the same database expression as the applied 0012 migration.
+        # Only compilation of bound values (used by full_clean) is corrected.
+        _, args, kwargs = super().deconstruct()
+        return "django.db.models.Func", args, kwargs
+
+
 class EngineQuerySet(models.QuerySet):
     def update(self, **kwargs):
         raise ValidationError("Maintain Engine records through validated individual saves.")
@@ -114,7 +134,7 @@ class Engine(BaseModel):
         ordering = ("manufacturer__name", "engine_code")
         constraints = [
             models.UniqueConstraint(models.F("manufacturer"), Upper(Trim("engine_code")), name="reference_unique_engine_manufacturer_code"),
-            models.CheckConstraint(condition=models.Q(engine_code=Upper(Trim("engine_code"))) & models.Func("engine_code", template="(%(expressions)s GLOB '[A-Z0-9]*' AND %(expressions)s NOT GLOB '*[^A-Z0-9._-]*')", output_field=models.BooleanField()), name="reference_engine_code_normalized"),
+            models.CheckConstraint(condition=models.Q(engine_code=Upper(Trim("engine_code"))) & EngineCodeCharacters("engine_code", template="(%(expressions)s GLOB '[A-Z0-9]*' AND %(expressions)s NOT GLOB '*[^A-Z0-9._-]*')", output_field=models.BooleanField()), name="reference_engine_code_normalized"),
             models.CheckConstraint(condition=~models.Q(name=""), name="reference_engine_name_nonempty"),
             models.CheckConstraint(condition=models.Q(engine_displacement_liters__isnull=True) | models.Q(engine_displacement_liters__gt=0), name="reference_engine_displacement_positive"),
             models.CheckConstraint(condition=models.Q(engine_cylinders__isnull=True) | models.Q(engine_cylinders__gt=0), name="reference_engine_cylinders_positive"),

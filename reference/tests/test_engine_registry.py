@@ -40,6 +40,51 @@ class EngineRegistryTests(TestCase):
         with self.assertRaises(ValidationError):
             Engine.objects.create(manufacturer=self.maker,engine_code=' eC1 ', name='Duplicate',**PT)
 
+    def test_full_clean_bound_code_constraint_and_persistence(self):
+        for supplied, normalized in (("ERC", "ERC"), ("  ea888-cjxc  ", "EA888-CJXC")):
+            with self.subTest(code=supplied):
+                engine = Engine(manufacturer=self.maker, engine_code=supplied,
+                                name="Validated engine", **PT)
+                engine.full_clean()
+                self.assertIsNone(engine.pk)
+                self.assertEqual(engine.engine_code, normalized)
+                engine.save()
+                engine.refresh_from_db()
+                self.assertEqual(engine.engine_code, normalized)
+                duplicate = Engine(manufacturer=self.maker, engine_code=supplied.lower(),
+                                   name="Duplicate", **PT)
+                with self.assertRaises(ValidationError):
+                    duplicate.full_clean()
+
+    def test_code_constraint_preserves_applied_migration_sql_and_identity(self):
+        executor = MigrationExecutor(connection)
+        historical = executor.loader.project_state(
+            [("reference", "0012_engine_registry")]
+        ).apps.get_model("reference", "Engine")
+        current = next(c for c in Engine._meta.constraints
+                       if c.name == "reference_engine_code_normalized")
+        previous = next(c for c in historical._meta.constraints
+                        if c.name == current.name)
+        self.assertEqual(current, previous)
+        editor = connection.schema_editor(collect_sql=True)
+        self.assertEqual(current.constraint_sql(Engine, editor),
+                         previous.constraint_sql(historical, editor))
+
+    def test_code_constraint_rejects_invalid_bound_values(self):
+        constraint = next(c for c in Engine._meta.constraints
+                          if c.name == "reference_engine_code_normalized")
+        for code in ("", "ec2", " EC2", "EC2 ", "EC/2", "ÉC2", "-EC2"):
+            with self.subTest(code=code):
+                engine = Engine(manufacturer=self.maker, engine_code=code,
+                                name="Invalid", **PT)
+                with self.assertRaises(ValidationError):
+                    constraint.validate(Engine, engine)
+                if code not in ("ec2", " EC2", "EC2 "):
+                    with self.assertRaises(ValidationError):
+                        engine.full_clean()
+                with self.assertRaises(IntegrityError), transaction.atomic():
+                    engine.save_base(raw=True)
+
     def test_code_scoped_to_manufacturer(self):
         other=Engine.objects.create(manufacturer=self.other,engine_code='EC1',name='Different maker',**PT)
         self.assertEqual(resolve_engine(self.other,'ec1'),other)
