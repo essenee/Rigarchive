@@ -1,0 +1,412 @@
+{
+  "notice": "Read-only regression projection of retained provisional inventory; not approval of classifications or source originals. Scope keys are illustrative test keys, not registry publication.",
+  "sources": {
+    "docs/implementation/handoffs/MY2024_JL/lightweight_ingestion_review_20261113/candidate_matrix.csv": "cf56ed8ca5f6f112be9caf0de4ad00b7354e140634e9c532adc6be6726423edc",
+    "docs/implementation/handoffs/MY2024_JL/lightweight_ingestion_review_20261113/trim_normalization_audit.csv": "50e131316f054efaf760b59b81f70f19481a14268e90ed720427a7df194e4dbb"
+  },
+  "rows": [
+    {
+      "candidate_id": "JL24-01",
+      "raw_trim": "Sport",
+      "trim_name": "Sport",
+      "doors": "2-door",
+      "powertrain": {
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none"
+      }
+    },
+    {
+      "candidate_id": "JL24-02",
+      "raw_trim": "Sport",
+      "trim_name": "Sport",
+      "doors": "2-door",
+      "powertrain": {
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": "naturally_aspirated",
+        "fuel_type": "gasoline",
+        "electrification_type": "none"
+      }
+    },
+    {
+      "candidate_id": "JL24-03",
+      "raw_trim": "Sport S",
+      "trim_name": "Sport S",
+      "doors": "2-door",
+      "powertrain": {
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none"
+      }
+    },
+    {
+      "candidate_id": "JL24-04",
+      "raw_trim": "Sport S",
+      "trim_name": "Sport S",
+      "doors": "2-door",
+      "powertrain": {
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": "naturally_aspirated",
+        "fuel_type": "gasoline",
+        "electrification_type": "none"
+      }
+    },
+    {
+      "candidate_id": "JL24-05",
+      "raw_trim": "Willys",
+      "trim_name": "Willys",
+      "doors": "2-door",
+      "powertrain": {
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none"
+      }
+    },
+    {
+      "candidate_id": "JL24-06",
+      "raw_trim": "Willys",
+      "trim_name": "Willys",
+      "doors": "2-door",
+      "powertrain": {
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": "naturally_aspirated",
+        "fuel_type": "gasoline",
+        "electrification_type": "none"
+      }
+    },
+    {
+      "candidate_id": "JL24-07",
+      "raw_trim": "Rubicon",
+      "trim_name": "Rubicon",
+      "doors": "2-door",
+      "powertrain": {
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none"
+      }
+    },
+    {
+      "candidate_id": "JL24-08",
+      "raw_trim": "Rubicon",
+      "trim_name": "Rubicon",
+      "doors": "2-door",
+      "powertrain": {
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": "naturally_aspirated",
+        "fuel_type": "gasoline",
+        "electrification_type": "none"
+      }
+    },
+    {
+      "candidate_id": "JL24-09",
+      "raw_trim": "Rubicon X",
+      "trim_name": "Rubicon X",
+      "doors": "2-door",
+      "powertrain": {
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none"
+      }
+    },
+    {
+      "candidate_id": "JL24-10",
+      "raw_trim": "Rubicon X",
+      "trim_name": "Rubicon X",
+      "doors": "2-door",
+      "powertrain": {
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": "naturally_aspirated",
+        "fuel_type": "gasoline",
+        "electrification_type": "none"
+      }
+    },
+    {
+      "candidate_id": "JL24-11",
+      "raw_trim": "Unlimited Sport",
+      "trim_name": "Sport",
+      "doors": "4-door",
+      "powertrain": {
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none"
+      }
+    },
+    {
+      "candidate_id": "JL24-12",
+      "raw_trim": "Unlimited Sport",
+      "trim_name": "Sport",
+      "doors": "4-door",
+      "powertrain": {
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": "naturally_aspirated",
+        "fuel_type": "gasoline",
+        "electrification_type": "none"
+      }
+    },
+    {
+      "candidate_id": "JL24-13",
+      "raw_trim": "Unlimited Sport S",
+      "trim_name": "Sport S",
+      "doors": "4-door",
+      "powertrain": {
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none"
+      }
+    },
+    {
+      "candidate_id": "JL24-14",
+      "raw_trim": "Unlimited Sport S",
+      "trim_name": "Sport S",
+      "doors": "4-door",
+      "powertrain": {
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": "naturally_aspirated",
+        "fuel_type": "gasoline",
+        "electrification_type": "none"
+      }
+    },
+    {
+      "candidate_id": "JL24-15",
+      "raw_trim": "Unlimited Willys",
+      "trim_name": "Willys",
+      "doors": "4-door",
+      "powertrain": {
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none"
+      }
+    },
+    {
+      "candidate_id": "JL24-16",
+      "raw_trim": "Unlimited Willys",
+      "trim_name": "Willys",
+      "doors": "4-door",
+      "powertrain": {
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": "naturally_aspirated",
+        "fuel_type": "gasoline",
+        "electrification_type": "none"
+      }
+    },
+    {
+      "candidate_id": "JL24-17",
+      "raw_trim": "Unlimited Sahara",
+      "trim_name": "Sahara",
+      "doors": "4-door",
+      "powertrain": {
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none"
+      }
+    },
+    {
+      "candidate_id": "JL24-18",
+      "raw_trim": "Unlimited Sahara",
+      "trim_name": "Sahara",
+      "doors": "4-door",
+      "powertrain": {
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": "naturally_aspirated",
+        "fuel_type": "gasoline",
+        "electrification_type": "none"
+      }
+    },
+    {
+      "candidate_id": "JL24-19",
+      "raw_trim": "Unlimited Rubicon",
+      "trim_name": "Rubicon",
+      "doors": "4-door",
+      "powertrain": {
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none"
+      }
+    },
+    {
+      "candidate_id": "JL24-20",
+      "raw_trim": "Unlimited Rubicon",
+      "trim_name": "Rubicon",
+      "doors": "4-door",
+      "powertrain": {
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": "naturally_aspirated",
+        "fuel_type": "gasoline",
+        "electrification_type": "none"
+      }
+    },
+    {
+      "candidate_id": "JL24-21",
+      "raw_trim": "Unlimited Rubicon X",
+      "trim_name": "Rubicon X",
+      "doors": "4-door",
+      "powertrain": {
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none"
+      }
+    },
+    {
+      "candidate_id": "JL24-22",
+      "raw_trim": "Unlimited Rubicon X",
+      "trim_name": "Rubicon X",
+      "doors": "4-door",
+      "powertrain": {
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": "naturally_aspirated",
+        "fuel_type": "gasoline",
+        "electrification_type": "none"
+      }
+    },
+    {
+      "candidate_id": "JL24-23",
+      "raw_trim": "Unlimited Rubicon 392",
+      "trim_name": "Rubicon 392",
+      "doors": "4-door",
+      "powertrain": {
+        "engine_displacement_liters": "6.4",
+        "engine_cylinders": 8,
+        "engine_aspiration": "naturally_aspirated",
+        "fuel_type": "gasoline",
+        "electrification_type": "none"
+      }
+    },
+    {
+      "candidate_id": "JL24-24",
+      "raw_trim": "Unlimited Rubicon 392 Final Edition",
+      "trim_name": "Rubicon 392 Final Edition",
+      "doors": "4-door",
+      "powertrain": {
+        "engine_displacement_liters": "6.4",
+        "engine_cylinders": 8,
+        "engine_aspiration": "naturally_aspirated",
+        "fuel_type": "gasoline",
+        "electrification_type": "none"
+      }
+    },
+    {
+      "candidate_id": "JL24-25",
+      "raw_trim": "Unlimited Sport S 4xe",
+      "trim_name": "Sport S 4xe",
+      "doors": "4-door",
+      "powertrain": {
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "plug_in_hybrid"
+      }
+    },
+    {
+      "candidate_id": "JL24-26",
+      "raw_trim": "Unlimited Willys 4xe",
+      "trim_name": "Willys 4xe",
+      "doors": "4-door",
+      "powertrain": {
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "plug_in_hybrid"
+      }
+    },
+    {
+      "candidate_id": "JL24-27",
+      "raw_trim": "Unlimited Jeep Beach 4xe",
+      "trim_name": "Jeep Beach 4xe",
+      "doors": "4-door",
+      "powertrain": {
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "plug_in_hybrid"
+      }
+    },
+    {
+      "candidate_id": "JL24-28",
+      "raw_trim": "Unlimited Sahara 4xe",
+      "trim_name": "Sahara 4xe",
+      "doors": "4-door",
+      "powertrain": {
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "plug_in_hybrid"
+      }
+    },
+    {
+      "candidate_id": "JL24-29",
+      "raw_trim": "Unlimited High Altitude 4xe",
+      "trim_name": "High Altitude 4xe",
+      "doors": "4-door",
+      "powertrain": {
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "plug_in_hybrid"
+      }
+    },
+    {
+      "candidate_id": "JL24-30",
+      "raw_trim": "Unlimited Rubicon 4xe",
+      "trim_name": "Rubicon 4xe",
+      "doors": "4-door",
+      "powertrain": {
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "plug_in_hybrid"
+      }
+    },
+    {
+      "candidate_id": "JL24-31",
+      "raw_trim": "Unlimited Rubicon X 4xe",
+      "trim_name": "Rubicon X 4xe",
+      "doors": "4-door",
+      "powertrain": {
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "plug_in_hybrid"
+      }
+    }
+  ]
+}

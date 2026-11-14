@@ -1,7 +1,42 @@
 RigArchive Project Status Document
 Version: 1.6
-Last Updated: 2026-11-12
+Last Updated: 2026-11-13
 Purpose: Current implementation status and development roadmap
+
+## Unified factory body identity — pure foundations completed; v3 wire contract bounded (2026-11-13)
+
+Architecture acceptance is committed as `b98f078` (documentation only, no push).
+`reference/body_identity.py` now provides the seven-field sparse normalizer, scoped
+reviewed aliases, body/2 and structured-powertrain baseline/2 preimages, canonical
+SHA-256 hashing, known-value comparison and whole-alternative-set ambiguity detection.
+Blank/null dimensions are neutral; empty placeholder bodies are rejected. Compatibility
+is not semantic equality or permission to attach a parent; actual differing bodies
+remain distinct and same-configuration contradictory assertions return conflict.
+
+`reference/ingestion/candidate/v3_foundations.py` implements explicit schema 3.0.0
+identity-field dispatch, closed optional projection validation, deterministic projection
+serialization/checksums, and retained document-qualified lineage validation. These are
+**foundations, not a complete Candidate v3 serializer, schema, proof or eligibility path**.
+Non-null body/series binding payloads explicitly raise `UnresolvedV3Contract`: RA-045
+leaves exact existing/pending-parent binding, evidence/normalization and full candidate
+envelope/hash details for approval. No wire policy was invented and no legacy reader,
+validator, hash, adjudication or operational importer was changed.
+
+Verification: 35 pure `SimpleTestCase` tests and 98 existing targeted ingestion/identity
+regressions passed (133 total; zero final failures), using isolated test resources.
+System checks passed; migration check/dry-run detected no changes. Read-only regression
+fixtures preserve 31 active provisional MY2024 rows (10 two-door / 21 four-door),
+21 keys without doors versus 31 with doors, raw Unlimited wording and a byte-pinned
+Candidate 2.1.0 round-trip. Fixture classifications remain provisional, not approved.
+Operational database and all prior candidate/receipt/correspondence artifacts remain
+byte-identical to the task baseline. No migration or operational data write occurred.
+
+Implementation is uncommitted. Parent models/FKs, approved full v3 contracts, proofs,
+planning/execution, readable slug generation and UI facets are not integrated. Next:
+approve the exact remaining v3 wire details and finish pure contract fixtures before
+separately authorizing persistence/integration. MY2024 candidate regeneration, source
+or classification approval, correspondence publication and canonical import remain
+unauthorized. See [phase-one handoff](handoffs/RA045_phase1_20261113/README.md).
 
 ## Unified factory body identity — architecture accepted; first pure phase authorized (2026-11-13)
 
