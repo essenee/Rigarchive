@@ -490,7 +490,21 @@ def _plan_candidate_import(
 
 
 
-def plan_candidate_import(candidate: CandidateConfigurationDocument) -> CanonicalImportPlan:
+def plan_candidate_import(candidate: CandidateConfigurationDocument, *, body_release=None) -> CanonicalImportPlan:
+    from reference.candidate_v3 import CandidateV3Document, parse_candidate
+    v3_dict = isinstance(candidate, dict) and (
+        candidate.get("envelope", {}).get("artifact_type") == "rigarchive.candidate_configuration.v3"
+        or str(candidate.get("envelope", {}).get("schema_version", "")).startswith("3.")
+    )
+    if isinstance(candidate, CandidateV3Document) or v3_dict:
+        from reference.ingestion.body_import_contracts import require
+        document = parse_candidate(candidate.to_dict() if isinstance(candidate, CandidateV3Document) else candidate).to_dict()
+        require(body_release is not None, "Candidate v3 requires complete body-aware release resolution.")
+        result = body_release.plan(document["candidate_reference"])
+        if "plan_version" in result:
+            require(result["candidate_snapshot"] == document, "Supplied candidate differs from retained release artifact.")
+        return result
+
     from reference.ingestion.generation_correspondence import resolve_generation, digest
     from reference.ingestion.normalization.generation import GENERATION_KEYS
     from reference.ingestion.serialization import candidate_config_doc_to_dict

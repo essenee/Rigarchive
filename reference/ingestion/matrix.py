@@ -93,6 +93,10 @@ def _references(value: Any, path: str) -> None:
 
 def validate_matrix(matrix: Mapping[str, Any]) -> None:
     """Validate exact v1 schema; reject execution/approval fields in scope."""
+    if isinstance(matrix, dict) and matrix.get("matrix_version") == "3.0.0":
+        from reference.ingestion.body_import_contracts import validate
+        validate("Matrix3", matrix)
+        return
     _keys(matrix, _MATRIX_KEYS, "matrix")
     version = matrix["matrix_version"]
     if version not in (MATRIX_VERSION, MATRIX_RESOLUTION_VERSION, MATRIX_POWERTRAIN_VERSION):
@@ -180,6 +184,8 @@ def validate_matrix(matrix: Mapping[str, Any]) -> None:
 def canonical_matrix_payload(matrix: Mapping[str, Any]) -> dict[str, Any]:
     """Return normalized, detached scope; never include mutable progress metadata."""
     validate_matrix(matrix)
+    if matrix.get("matrix_version") == "3.0.0":
+        return deepcopy(matrix)
     result = deepcopy(matrix)
     result["rows"].sort(key=lambda r: (r["model_year"], r["row_id"]))
     for row in result["rows"]:
@@ -191,6 +197,10 @@ def canonical_matrix_payload(matrix: Mapping[str, Any]) -> dict[str, Any]:
 
 def compute_matrix_digest(matrix: Mapping[str, Any]) -> str:
     """Content hash; not an approval or authorization to import."""
+    if isinstance(matrix, dict) and matrix.get("matrix_version") == "3.0.0":
+        from reference.ingestion.body_import_contracts import validate, digest
+        validate("Matrix3", matrix)
+        return digest(matrix)
     payload = canonical_matrix_payload(matrix)
     try:
         encoded = json.dumps(payload, sort_keys=True, ensure_ascii=False, separators=(",", ":"), allow_nan=False).encode("utf-8")

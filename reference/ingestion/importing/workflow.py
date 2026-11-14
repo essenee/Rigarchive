@@ -46,6 +46,8 @@ def execute_canonical_import_workflow(
     ImportExecutionReceipt persistence MUST succeed together inside the same transaction.atomic() block.
     If receipt creation fails, the outer transaction rolls back the VehicleDefinition creation cleanly.
     """
+    if isinstance(manifest, dict) and manifest.get("manifest_version") == "3.0.0":
+        raise CanonicalExecutionWorkflowError("Manifest3 requires the explicitly confirmed execute_body_import_batch; legacy single-plan execution is unsupported.")
     # Service-level exact-plan validation; callers cannot substitute a freshly planned object.
     from dataclasses import asdict
     from reference.ingestion.manifest import dict_to_manifest, manifest_to_dict, reconstruct_plan_from_manifest

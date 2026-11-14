@@ -3,6 +3,45 @@ Version: 1.6
 Last Updated: 2026-11-13
 Purpose: Current implementation status and development roadmap
 
+## RA-049 body-aware Candidate v3 import — accepted (2026-11-13)
+
+The Project Owner approved the exact RA-049 contract and its narrowly scoped
+RA-046 runtime exception for PendingBody reuse. RA-046 §15 records that exception;
+ExistingBody and historical wire/binding semantics remain unchanged. The implementation
+supports only the 31 reviewed MY2024 US JL consumer offerings, existing body parents,
+complete five-field powertrain and null series. No new models, FKs or migrations.
+
+Closed 3.0.0 plans/proofs/Matrix/manifests/revalidation/receipt snapshots, independently
+verified full-family identity and readable slugs, existing affirmative approval1,
+common pre-batch transactional revalidation and atomic create/no-op receipts are
+implemented. Unknown source/review dependencies, pending material classifications,
+sparse/null ambiguity and inactive slug occupancy fail closed. Legacy slug generation,
+Candidate 2.1.0, pure v3 wire/hash code and historical receipts are preserved.
+
+Final source review: **PASS WITH CORRECTIONS**. The Project Owner formally
+accepted the exact implementation and final corrections on 2026-11-13.
+Corrections enforce exact execution order/version dispatch, typed source fidelity,
+known body distinctions, original Generation review/restriction support, one Generation
+chain across the complete family, nested proof/receipt consistency and receipt scalar
+mirrors. Unsupported legacy body metadata can no longer establish a v3 match.
+Blank unreported attributes remain optional; no contract/model/migration changes.
+
+Fresh review verification: **86 focused, 362 targeted and 957 full-suite tests passed**
+(full suite 90.054 seconds), including all 31 isolated offerings, ten exact collision
+pairs, adversarial evidence/authority tests, real SQLite races and post-commit reporting
+behavior. System checks, migration drift and whitespace checks pass. Implementation is **ACCEPTED**; operational deployment and publication are not
+authorized. The review results above remain historical; fresh acceptance results
+are recorded in the handoff: **86 focused, 362 targeted and 957 full-suite tests
+passed** (88.227 seconds full suite), with system/migration/whitespace checks passing.
+
+Operational database remains byte-identical and unmigrated. Production body parents,
+complete real v3 artifacts/evidence/findings/correspondences and exact affirmative
+production Matrix approval are still required. No operational writes, historical body
+assignments or candidate regeneration/publication occurred. One narrowly scoped local
+RA-049 commit is authorized; unrelated shared-document changes and data are excluded.
+No push is authorized.
+See the [RA-049 implementation handoff](handoffs/RA049_body_aware_import_contract_20261113/README.md).
+
 ## RA-048 minimal body persistence — accepted (2026-11-13)
 
 The Project Owner superseded the unapproved D1–D3 proposal with one

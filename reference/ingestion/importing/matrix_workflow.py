@@ -55,6 +55,8 @@ def _references(plan):
 
 class MatrixYear:
     def __init__(self, matrix, approval, year, candidates, *, review_only=False):
+        if isinstance(matrix, dict) and matrix.get("matrix_version") == "3.0.0":
+            raise MatrixExecutionError("Body Matrix3 requires execute_body_matrix and complete family revalidation.")
         self.matrix = canonical_matrix_payload(matrix)
         if type(year) is not int or year not in self.matrix["model_years"]:
             raise MatrixExecutionError("Year is outside approved scope.")
@@ -347,3 +349,9 @@ def execute_matrix_year(matrix, approval, year, candidates, output_dir, *, execu
             "Run read-only reconciliation with the same matrix, approval and candidates before retrying."
         ) from exc
     return attempt, report
+
+
+def execute_body_matrix(manifest, plans, release, **confirmation):
+    """Explicit RA-049 entry point; never downgrade to the legacy MatrixYear."""
+    from reference.ingestion.importing.body_import import execute_body_import_batch
+    return execute_body_import_batch(manifest, plans, release, **confirmation)

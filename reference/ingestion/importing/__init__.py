@@ -107,3 +107,9 @@ __all__ = [
     "plan_candidate_import",
     "execute_candidate_import",
 ]
+
+
+def execute_body_import_batch(*args, **kwargs):
+    """Explicit versioned batch path, with the same required human confirmation boundary."""
+    from .body_import import execute_body_import_batch as execute
+    return execute(*args, **kwargs)

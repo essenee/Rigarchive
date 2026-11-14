@@ -93,6 +93,8 @@ def assess_peer(record):
     if len(receipts) != 1:
         raise ValidationError("Canonical peer lacks a unique successful creation receipt.")
     receipt = receipts[0]
+    if "body_import" in receipt.resolution_snapshot_json:
+        raise ValidationError("Body import receipt 3.0.0 requires its versioned body-aware reader; Engine Proof 2.0 is unsupported.")
     fields = target_values(record)
     recorded = receipt.target_fields_json
     if (receipt.created_vehicle_definition_pk_snapshot != record.pk

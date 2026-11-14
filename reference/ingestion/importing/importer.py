@@ -40,6 +40,9 @@ def execute_candidate_import(
     Never updates existing VehicleDefinition records, never deletes records, and
     never automatically creates parent entities.
     """
+
+    if isinstance(plan, dict):
+        raise ValidationError("Versioned body plans require exact authorized execute_body_import_batch; legacy execution is unsupported.")
     ref_id = plan.candidate_reference
 
     # 1. Non-Create / Review / Reject Plan Handling (0 Writes)

@@ -2526,3 +2526,23 @@ The current reviewed contract choices are approved and RA-047 pure implementatio
 is accepted. Later source/review decoder coverage, canonical binding/proof consumers,
 persistence, live resolution, authorization and execution remain separately scoped
 prerequisites. This approval does not extend to those future milestones.
+
+
+## 15. Owner-approved scoped runtime clarification — 2026-11-13
+
+Explicit Project Owner approval of RA-049 §11 authorizes the following exception
+to §5 BindingRevision, §5.1 exact reuse, §7.2 reuse, §10 coordination and §14
+decisions 2/3/10 only. All historical wire formats and other requirements remain.
+
+> For the my2024-wrangler-jl-consumer/1 downstream import profile only, a valid
+> PendingBody may resolve exact reuse of an existing RA-048 body row through the
+> RA-049 versioned plan/proof/Matrix/authorization/receipt state snapshots and
+> independent evidence, applicability and transactional stale-state checks. This
+> replaces the mandatory persisted immutable binding-revision prerequisite for
+> this reuse operation only; it is not equivalent to such a revision. The body row
+> remains editable under RA-048. No parent creation or update is authorized by this
+> executor. Candidate ExistingBody retains its unchanged BindingRevision wire
+> requirements and remains unsupported here without its real dependency. No
+> source support, whole-set ambiguity, human authorization or atomic receipt
+> safeguard is relaxed. Other profiles, existing-mode contracts and historical
+> artifacts retain their prior meaning.
