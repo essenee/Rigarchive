@@ -1,6 +1,8 @@
 from django.contrib import admin, messages
+from reference.powertrain import FIELDS
 
 from .models import (
+    Engine,
     FactoryBodyConfiguration,
     BODY_ATTRIBUTES,
     GenerationCorrespondenceRevision,
@@ -200,6 +202,18 @@ class GenerationAdmin(admin.ModelAdmin):
     )
 
 
+@admin.register(Engine)
+class EngineAdmin(admin.ModelAdmin):
+    list_display = ("manufacturer", "engine_code", "name", *FIELDS)
+    list_filter = ("manufacturer",)
+    search_fields = ("manufacturer__name", "engine_code", "name")
+    autocomplete_fields = ("manufacturer",)
+    readonly_fields = ("uuid", "created_at", "updated_at")
+
+    def get_readonly_fields(self, request, obj=None):
+        return self.readonly_fields + (("manufacturer", "engine_code") if obj else ())
+
+
 @admin.register(FactoryBodyConfiguration)
 class FactoryBodyConfigurationAdmin(admin.ModelAdmin):
     list_display = ("generation", *BODY_ATTRIBUTES)
@@ -222,10 +236,15 @@ class FactoryBodyConfigurationAdmin(admin.ModelAdmin):
 
 @admin.register(VehicleDefinition)
 class VehicleDefinitionAdmin(admin.ModelAdmin):
+    def get_readonly_fields(self, request, obj=None):
+        # Registered properties are maintained once, on Engine, not per vehicle.
+        return self.readonly_fields + (("engine_name", *FIELDS) if obj and obj.engine_id else ())
+
     list_display = (
         "model_year",
         "generation",
         "factory_body_configuration",
+        "engine",
         "trim_name",
         "engine_name",
         "drivetrain",
@@ -253,6 +272,7 @@ class VehicleDefinitionAdmin(admin.ModelAdmin):
     autocomplete_fields = (
         "generation",
         "factory_body_configuration",
+        "engine",
     )
 
     readonly_fields = (
@@ -269,6 +289,7 @@ class VehicleDefinitionAdmin(admin.ModelAdmin):
                 "fields": (
                     "generation",
                     "factory_body_configuration",
+                    "engine",
                     "model_year",
                     "trim_name",
                     "engine_name",

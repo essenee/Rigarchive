@@ -6,6 +6,7 @@ from django.core.validators import MinValueValidator, RegexValidator
 from reference.powertrain import ASPIRATION, FUEL, ELECTRIFICATION, FIELDS, TAXONOMIES, engine_label
 from django.db import models, transaction
 from django.db.models.functions import Coalesce
+from django.db.models.functions import Upper, Trim
 from reference.body_identity import TOKEN
 from django.urls import reverse
 from django.utils.text import slugify
@@ -61,6 +62,96 @@ class Manufacturer(BaseModel):
             "reference:manufacturer-detail",
             kwargs={"manufacturer_slug": self.slug},
         )
+
+
+def normalize_engine_code(value):
+    """Trim and uppercase the complete ASCII code, preserving separators/suffixes.
+
+    EA888-CJXC and EA888-CHHB are distinct identities, never family aliases.
+    """
+    if not isinstance(value, str) or not value.isascii():
+        raise ValidationError("Engine code must be an ASCII manufacturer code.")
+    value = value.strip().upper()
+    import re
+    if not re.fullmatch(r"[A-Z0-9][A-Z0-9._-]{0,99}", value):
+        raise ValidationError("Use a nonempty manufacturer engine code (letters, digits, dot, dash or underscore).")
+    return value
+
+
+class EngineQuerySet(models.QuerySet):
+    def update(self, **kwargs):
+        raise ValidationError("Maintain Engine records through validated individual saves.")
+
+    def bulk_create(self, objs, **kwargs):
+        raise ValidationError("Author Engine records through validated individual saves.")
+
+    def bulk_update(self, objs, fields, batch_size=None):
+        raise ValidationError("Maintain Engine records through validated individual saves.")
+
+
+class Engine(BaseModel):
+    """Human-maintained manufacturer/code identity, reused across models and years."""
+    manufacturer = models.ForeignKey(Manufacturer, on_delete=models.PROTECT, related_name="engines")
+    engine_code = models.CharField(max_length=100)
+    name = models.CharField(max_length=100)
+    engine_displacement_liters = models.DecimalField(
+        max_digits=5, decimal_places=2, null=True, blank=True,
+        validators=[MinValueValidator(Decimal("0.01"))],
+    )
+    engine_cylinders = models.PositiveSmallIntegerField(
+        null=True, blank=True, validators=[MinValueValidator(1)],
+    )
+    engine_aspiration = models.CharField(max_length=24, null=True, blank=True, choices=list(ASPIRATION.items()))
+    fuel_type = models.CharField(max_length=24, null=True, blank=True, choices=list(FUEL.items()))
+    electrification_type = models.CharField(
+        max_length=24, null=True, blank=True,
+        choices=[(key, labels[0]) for key, labels in ELECTRIFICATION.items()],
+    )
+
+    objects = EngineQuerySet.as_manager()
+
+    class Meta:
+        ordering = ("manufacturer__name", "engine_code")
+        constraints = [
+            models.UniqueConstraint(models.F("manufacturer"), Upper(Trim("engine_code")), name="reference_unique_engine_manufacturer_code"),
+            models.CheckConstraint(condition=models.Q(engine_code=Upper(Trim("engine_code"))) & models.Func("engine_code", template="(%(expressions)s GLOB '[A-Z0-9]*' AND %(expressions)s NOT GLOB '*[^A-Z0-9._-]*')", output_field=models.BooleanField()), name="reference_engine_code_normalized"),
+            models.CheckConstraint(condition=~models.Q(name=""), name="reference_engine_name_nonempty"),
+            models.CheckConstraint(condition=models.Q(engine_displacement_liters__isnull=True) | models.Q(engine_displacement_liters__gt=0), name="reference_engine_displacement_positive"),
+            models.CheckConstraint(condition=models.Q(engine_cylinders__isnull=True) | models.Q(engine_cylinders__gt=0), name="reference_engine_cylinders_positive"),
+            *[models.CheckConstraint(condition=models.Q(**{key + "__isnull": True}) | models.Q(**{key + "__in": list(values)}), name="reference_engine_" + key) for key, values in TAXONOMIES.items()],
+        ]
+
+    def clean_fields(self, exclude=None):
+        self.engine_code = normalize_engine_code(self.engine_code)
+        for key in FIELDS:
+            if isinstance(getattr(self, key), bool):
+                raise ValidationError({key: "Boolean is not a powertrain value."})
+            if getattr(self, key) == "":
+                setattr(self, key, None)
+        return super().clean_fields(exclude=exclude)
+
+    def clean(self):
+        super().clean()
+        from reference.powertrain import record_powertrain, validate_powertrain
+        validate_powertrain(record_powertrain(self))
+        if not isinstance(self.name, str) or not self.name.strip():
+            raise ValidationError({"name": "Engine name must not be blank."})
+        if self.pk:
+            old = type(self).objects.using(self._state.db).filter(pk=self.pk).first()
+            if old and (old.manufacturer_id != self.manufacturer_id or old.engine_code != self.engine_code or old.uuid != self.uuid):
+                raise ValidationError("Engine manufacturer and code are immutable; create a distinct record for a different identity.")
+
+    def save(self, *args, **kwargs):
+        if kwargs.get("update_fields") is not None:
+            raise ValidationError("Save the complete Engine record for identity validation.")
+        with transaction.atomic(using=kwargs.get("using") or self._state.db):
+            if self.pk:
+                type(self).objects.using(kwargs.get("using") or self._state.db).select_for_update().get(pk=self.pk)
+            self.full_clean()
+            return super().save(*args, **kwargs)
+
+    def __str__(self):
+        return f"{self.manufacturer} {self.engine_code} — {self.name}"
 
 
 class VehicleModel(BaseModel):
@@ -317,6 +408,10 @@ class FactoryBodyConfiguration(BaseModel):
 
 class VehicleDefinitionQuerySet(models.QuerySet):
     def update(self, **kwargs):
+        if {"engine", "engine_id"} & kwargs.keys():
+            raise ValidationError("Assign Engines through individual validated saves.")
+        if (set(FIELDS) | {"generation", "generation_id"}) & kwargs.keys() and self.filter(engine__isnull=False).exists():
+            raise ValidationError("Maintain engine-associated vehicle snapshots through individual saves.")
         if {"factory_body_configuration", "factory_body_configuration_id"} & kwargs.keys():
             raise ValidationError("Assign body configurations with instance.save() for scope validation.")
         if {"generation", "generation_id"} & kwargs.keys() and self.filter(factory_body_configuration__isnull=False).exists():
@@ -327,6 +422,10 @@ class VehicleDefinitionQuerySet(models.QuerySet):
         objs = list(objs)
         if kwargs.get("update_fields") is not None:
             kwargs["update_fields"] = tuple(kwargs["update_fields"])
+        if any(obj.engine_id is not None for obj in objs):
+            raise ValidationError("Create engine-associated vehicles through individual validated saves.")
+        if kwargs.get("update_conflicts") and (set(FIELDS) | {"engine", "engine_id", "generation", "generation_id"}) & set(kwargs.get("update_fields") or ()):
+            raise ValidationError("Engine/generation conflict updates require individual saves.")
         # An incoming null body does not describe the existing conflict target's body.
         if kwargs.get("update_conflicts") and {
             "generation", "generation_id", "factory_body_configuration",
@@ -367,6 +466,7 @@ class VehicleDefinition(BaseModel):
         FactoryBodyConfiguration, on_delete=models.PROTECT, null=True, blank=True,
         related_name="vehicle_definitions",
     )
+    engine = models.ForeignKey(Engine, on_delete=models.PROTECT, null=True, blank=True, related_name="vehicle_definitions")
     objects = VehicleDefinitionQuerySet.as_manager()
 
     model_year = models.PositiveSmallIntegerField()
@@ -384,8 +484,8 @@ class VehicleDefinition(BaseModel):
         max_length=100,
         blank=True,
         help_text=(
-            "Human-readable engine description. This remains free text "
-            "until a shared engine-definition domain is justified."
+            "Human-readable compatibility snapshot; registered Engine properties "
+            "are authoritative for new engine-associated construction."
         ),
     )
 
@@ -464,6 +564,7 @@ class VehicleDefinition(BaseModel):
                 raise ValidationError({key: "Boolean is not a powertrain value."})
 
         self._validate_body_scope()
+        self._validate_registry_engine()
 
         if not self.generation_id:
             return
@@ -527,6 +628,36 @@ class VehicleDefinition(BaseModel):
         ).exists():
             raise ValidationError({"factory_body_configuration": "Body configuration must belong to the vehicle's Generation."})
 
+    def _validate_registry_engine(self, stored=None):
+        """New associations use the registry; old snapshots are never cascaded on edits."""
+        if self.engine_id is None:
+            return
+        from reference.powertrain import record_powertrain, validate_powertrain
+        try:
+            registry = self.engine
+        except Engine.DoesNotExist as exc:
+            raise ValidationError({"engine": "ENGINE_NOT_REGISTERED: Engine record is unavailable."}) from exc
+        if self.generation_id and registry.manufacturer_id != self.generation.vehicle_model.manufacturer_id:
+            raise ValidationError({"engine": "Engine manufacturer must match the vehicle manufacturer."})
+        if stored is None and self.pk:
+            stored = type(self).objects.using(self._state.db).get(pk=self.pk)
+        changed = stored is None or stored.engine_id != self.engine_id or any(
+            getattr(stored, key) != getattr(self, key) for key in FIELDS)
+        if not changed:
+            return
+        values = record_powertrain(registry)
+        validate_powertrain(values, complete=True)
+        incoming_values = record_powertrain(self)
+        validate_powertrain(incoming_values)
+        for key in FIELDS:
+            incoming = incoming_values[key]
+            if incoming is None and stored is None:
+                setattr(self, key, getattr(registry, key))
+            elif incoming != values[key]:
+                raise ValidationError({key: ValidationError("Vehicle snapshot differs from registered Engine.", code="ENGINE_REGISTRY_CONFLICT")})
+        if not self.engine_name and stored is None:
+            self.engine_name = registry.name
+
     def save(self, *args, **kwargs) -> None:
         using = kwargs.get("using") or self._state.db
         with transaction.atomic(using=using):
@@ -545,6 +676,19 @@ class VehicleDefinition(BaseModel):
                 body = FactoryBodyConfiguration.objects.using(using).select_for_update().filter(pk=body_id).first()
                 if body is None or body.generation_id != generation_id:
                     raise ValidationError({"factory_body_configuration": "Body configuration must belong to the vehicle's Generation."})
+            # Validate the effective saved snapshot, not omitted dirty instance fields.
+            effective = self
+            if fields is not None and self.pk:
+                effective = stored
+                for field in self._meta.concrete_fields:
+                    if field.name in fields or field.attname in fields:
+                        setattr(effective, field.attname, getattr(self, field.attname))
+            if effective.engine_id is not None:
+                try:
+                    effective.engine = Engine.objects.using(using).select_for_update().get(pk=effective.engine_id)
+                except Engine.DoesNotExist as exc:
+                    raise ValidationError({"engine": "ENGINE_NOT_REGISTERED: Engine record is unavailable."}) from exc
+                effective._validate_registry_engine()
             if not self.slug:
                 self.slug = self.build_slug()
             super().save(*args, **kwargs)

@@ -1,7 +1,35 @@
 RigArchive Project Status Document
 Version: 1.6
-Last Updated: 2026-11-13
+Last Updated: 2026-11-14
 Purpose: Current implementation status and development roadmap
+
+## Human-maintained Engine registry — accepted, undeployed (2026-11-14)
+
+`Engine` provides protected manufacturer/complete-code identity, existing five-field
+powertrain definitions, UUID/timestamps and ordinary human Admin authoring. Code
+normalization trims outer whitespace and uppercases ASCII, preserving hyphens and
+variant suffixes: EA888-CJXC and EA888-CHHB remain distinct, with no family-prefix
+lookup. Manufacturer/code/UUID are immutable on saved instances; normalized-code
+uniqueness is enforced per manufacturer. `VehicleDefinition.engine` is nullable/
+PROTECT; new associations use registry properties while historical snapshots, slugs
+and receipts remain unchanged. Lookup never researches or creates Engine records.
+Registered parameters are reused across models/years; unknown codes require human
+authoring and concrete conflicts are reported. No new import executor or review system.
+
+The Project Owner accepted the implementation following final verification.
+Migration 0012 is generated and isolated-tested only; no operational migration or
+population. The unchanged seven-code Jeep seed proposal includes additional EXJ.
+Volkswagen examples are isolated tests only. RA-049 consumption remains stopped at
+its closed registry-state/authority contract boundary; accepted schemas/hashes,
+semantic identity, authorization and receipts are unchanged.
+
+Fresh final verification: 31 focused/backup tests, 457 targeted regressions and
+997 complete-suite tests passed (85.807s full suite, one run). The prior backup
+REGEXP defect remains corrected with built-in SQLite checks. System, migration drift,
+working-tree and pre-commit staged whitespace checks pass. Operational DB remains
+byte-identical; RA-050 and unrelated work are preserved. One Engine-only local
+acceptance commit is authorized; no push or operational work.
+See the [accepted handoff](handoffs/engine_registry_20261114/README.md).
 
 ## RA-049 body-aware Candidate v3 import — accepted (2026-11-13)
 
