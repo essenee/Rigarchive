@@ -1,6 +1,8 @@
-from django.contrib import admin
+from django.contrib import admin, messages
 
 from .models import (
+    FactoryBodyConfiguration,
+    BODY_ATTRIBUTES,
     GenerationCorrespondenceRevision,
     CanonicalRecordCorrection,
     Generation,
@@ -198,11 +200,32 @@ class GenerationAdmin(admin.ModelAdmin):
     )
 
 
+@admin.register(FactoryBodyConfiguration)
+class FactoryBodyConfigurationAdmin(admin.ModelAdmin):
+    list_display = ("generation", *BODY_ATTRIBUTES)
+    list_filter = ("generation",)
+    search_fields = ("generation__name", "generation__vehicle_model__name", *BODY_ATTRIBUTES)
+    autocomplete_fields = ("generation",)
+    readonly_fields = ("uuid", "created_at", "updated_at")
+
+    def change_view(self, request, object_id, form_url="", extra_context=None):
+        obj = self.get_object(request, object_id)
+        if obj is not None and self.has_view_or_change_permission(request, obj):
+            count = obj.vehicle_definitions.count()
+            if count:
+                self.message_user(request,
+                    f"This shared body configuration affects all {count} referencing VehicleDefinitions. "
+                    "Prefer correcting an incorrect vehicle body association or creating a distinct body configuration.",
+                    level=messages.WARNING)
+        return super().change_view(request, object_id, form_url, extra_context)
+
+
 @admin.register(VehicleDefinition)
 class VehicleDefinitionAdmin(admin.ModelAdmin):
     list_display = (
         "model_year",
         "generation",
+        "factory_body_configuration",
         "trim_name",
         "engine_name",
         "drivetrain",
@@ -229,6 +252,7 @@ class VehicleDefinitionAdmin(admin.ModelAdmin):
 
     autocomplete_fields = (
         "generation",
+        "factory_body_configuration",
     )
 
     readonly_fields = (
@@ -244,6 +268,7 @@ class VehicleDefinitionAdmin(admin.ModelAdmin):
             {
                 "fields": (
                     "generation",
+                    "factory_body_configuration",
                     "model_year",
                     "trim_name",
                     "engine_name",

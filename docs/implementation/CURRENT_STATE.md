@@ -3,6 +3,36 @@ Version: 1.6
 Last Updated: 2026-11-13
 Purpose: Current implementation status and development roadmap
 
+## RA-048 minimal body persistence — accepted (2026-11-13)
+
+The Project Owner superseded the unapproved D1–D3 proposal with one
+Generation-scoped FactoryBodyConfiguration and one nullable protected
+VehicleDefinition body FK. The seven sparse dimension groups, exact normalized tuple
+uniqueness (including nulls), scope validation on model saves and ordinary Admin
+correction are implemented. Shared edits warn about all referring vehicles; standard
+Admin permissions/audit logging and protected deletion apply. No Series, Scope registry,
+digest storage or binding revision infrastructure is added.
+
+Additive migration `0011_factory_body_configuration` is generated and tested only on
+an isolated database. It has no backfill; historical vehicle fields and receipts are
+preserved. The operational database remains byte-for-byte unchanged and unmigrated.
+The legacy slug builder and importer remain body-independent: this storage milestone
+does not establish MY2024 import readiness or authorize Wrangler record changes.
+Candidate v3/2.1 contracts, hashes, fixtures and evidence remain unchanged.
+
+Final source review: **PASS WITH CORRECTIONS** (bulk upsert scope bypass and
+iterator-valued partial saves corrected; no schema/contract change). Review verification:
+**34 focused, 187 targeted and 871 full-suite tests passed** (full suite 43.409 seconds),
+with system checks, migration drift and whitespace checks passing. Acceptance rerun:
+**187 targeted tests passed in 3.840 seconds**; the full-suite result is historical.
+Status: **ACCEPTED** by explicit Project Owner decision on 2026-11-13. Exact inventory is in the
+[RA-048 handoff](handoffs/RA048_body_series_persistence_20261113/README.md).
+The [revised RA-048](../architecture/designs/RA-048-Factory-Body-Series-Persistence-And-Immutable-Binding.md)
+records the owner-approved minimal direction and explicitly defers original D1–D3.
+One local RA-048 commit is authorized with milestone-only shared-document hunks;
+no push, operational migration or Wrangler data assignment is authorized.
+Unrelated working-tree changes are preserved.
+
 ## RA-046 approved / RA-047 accepted — commit preparation (2026-11-13)
 
 By explicit Project Owner decision, **RA-046 is Approved** as the governing exact

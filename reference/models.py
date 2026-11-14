@@ -2,9 +2,11 @@ import uuid
 from decimal import Decimal
 
 from django.core.exceptions import ValidationError
-from django.core.validators import MinValueValidator
+from django.core.validators import MinValueValidator, RegexValidator
 from reference.powertrain import ASPIRATION, FUEL, ELECTRIFICATION, FIELDS, TAXONOMIES, engine_label
-from django.db import models
+from django.db import models, transaction
+from django.db.models.functions import Coalesce
+from reference.body_identity import TOKEN
 from django.urls import reverse
 from django.utils.text import slugify
 
@@ -211,6 +213,131 @@ class Generation(BaseModel):
         )
 
 
+BODY_ATTRIBUTES = (
+    "body_style", "wheelbase_designation", "body_length_designation",
+    "roof_height_designation", "door_configuration", "side_door_arrangement",
+    "body_code", "body_code_namespace",
+)
+
+
+class FactoryBodyQuerySet(models.QuerySet):
+    def update(self, **kwargs):
+        raise ValidationError("Correct body configurations with instance.save(), which validates scope and identity.")
+
+    def bulk_update(self, objs, fields, batch_size=None):
+        raise ValidationError("Correct body configurations individually with instance.save().")
+
+    def bulk_create(self, objs, **kwargs):
+        raise ValidationError("Create body configurations individually with instance.save().")
+
+
+class FactoryBodyConfiguration(BaseModel):
+    """Generation-scoped sparse designations; null means unspecified."""
+
+    generation = models.ForeignKey(
+        Generation, on_delete=models.PROTECT, related_name="factory_body_configurations",
+    )
+    body_style = models.CharField(max_length=128, null=True, blank=True,
+        validators=[RegexValidator(r"\A" + TOKEN.pattern + r"\Z", "Use a reviewed canonical designation token.")])
+    wheelbase_designation = models.CharField(max_length=128, null=True, blank=True,
+        validators=[RegexValidator(r"\A" + TOKEN.pattern + r"\Z", "Use a reviewed canonical designation token.")])
+    body_length_designation = models.CharField(max_length=128, null=True, blank=True,
+        validators=[RegexValidator(r"\A" + TOKEN.pattern + r"\Z", "Use a reviewed canonical designation token.")])
+    roof_height_designation = models.CharField(max_length=128, null=True, blank=True,
+        validators=[RegexValidator(r"\A" + TOKEN.pattern + r"\Z", "Use a reviewed canonical designation token.")])
+    door_configuration = models.CharField(max_length=128, null=True, blank=True,
+        validators=[RegexValidator(r"\A" + TOKEN.pattern + r"\Z", "Use a reviewed canonical designation token.")])
+    side_door_arrangement = models.CharField(max_length=128, null=True, blank=True,
+        validators=[RegexValidator(r"\A" + TOKEN.pattern + r"\Z", "Use a reviewed canonical designation token.")])
+    body_code = models.CharField(max_length=128, null=True, blank=True,
+        validators=[RegexValidator(r"\A" + TOKEN.pattern + r"\Z", "Use a reviewed canonical designation token.")])
+    body_code_namespace = models.CharField(max_length=128, null=True, blank=True,
+        validators=[RegexValidator(r"\A" + TOKEN.pattern + r"\Z", "Use a reviewed canonical designation token.")])
+
+    objects = FactoryBodyQuerySet.as_manager()
+
+    class Meta:
+        constraints = [
+            models.CheckConstraint(
+                condition=models.Q(body_code__isnull=True, body_code_namespace__isnull=True)
+                | models.Q(body_code__isnull=False, body_code_namespace__isnull=False),
+                name="reference_body_code_pair",
+            ),
+            models.CheckConstraint(
+                condition=(models.Q(body_style__isnull=False)
+                    | models.Q(wheelbase_designation__isnull=False)
+                    | models.Q(body_length_designation__isnull=False)
+                    | models.Q(roof_height_designation__isnull=False)
+                    | models.Q(door_configuration__isnull=False)
+                    | models.Q(side_door_arrangement__isnull=False)
+                    | models.Q(body_code__isnull=False)),
+                name="reference_body_has_dimension",
+            ),
+            *[models.CheckConstraint(
+                condition=models.Q(**{field + "__isnull": True}) | ~models.Q(**{field: ""}),
+                name="reference_body_nonempty_" + field,
+            ) for field in BODY_ATTRIBUTES],
+            models.UniqueConstraint(
+                models.F("generation"),
+                *[Coalesce(field, models.Value("")) for field in BODY_ATTRIBUTES],
+                name="reference_body_exact_tuple",
+            ),
+        ]
+
+    def clean_fields(self, exclude=None):
+        for field in BODY_ATTRIBUTES:
+            if field in (exclude or ()):
+                continue
+            value = getattr(self, field)
+            if isinstance(value, str) and not value.strip():
+                setattr(self, field, None)
+            elif value is not None and type(value) is not str:
+                raise ValidationError({field: "Expected a canonical designation token, not a measurement."})
+        super().clean_fields(exclude=exclude)
+
+    def clean(self):
+        super().clean()
+        if self.pk and self.vehicle_definitions.exclude(generation_id=self.generation_id).exists():
+            raise ValidationError({"generation": "Generation must match every referencing VehicleDefinition."})
+
+    def save(self, *args, **kwargs):
+        # Partial attribute saves can validate a tuple different from the persisted tuple.
+        if kwargs.get("update_fields") is not None:
+            raise ValidationError("Save the complete body configuration for identity validation.")
+        with transaction.atomic(using=kwargs.get("using") or self._state.db):
+            if self.pk:
+                type(self).objects.select_for_update().get(pk=self.pk)
+            self.full_clean()
+            return super().save(*args, **kwargs)
+
+    def __str__(self):
+        attributes = ", ".join(f"{field}: {getattr(self, field)}" for field in BODY_ATTRIBUTES if getattr(self, field))
+        return f"{self.generation} — {attributes}"
+
+
+class VehicleDefinitionQuerySet(models.QuerySet):
+    def update(self, **kwargs):
+        if {"factory_body_configuration", "factory_body_configuration_id"} & kwargs.keys():
+            raise ValidationError("Assign body configurations with instance.save() for scope validation.")
+        if {"generation", "generation_id"} & kwargs.keys() and self.filter(factory_body_configuration__isnull=False).exists():
+            raise ValidationError("Change generation on body-associated vehicles individually with instance.save().")
+        return super().update(**kwargs)
+
+    def bulk_create(self, objs, **kwargs):
+        objs = list(objs)
+        if kwargs.get("update_fields") is not None:
+            kwargs["update_fields"] = tuple(kwargs["update_fields"])
+        # An incoming null body does not describe the existing conflict target's body.
+        if kwargs.get("update_conflicts") and {
+            "generation", "generation_id", "factory_body_configuration",
+            "factory_body_configuration_id",
+        } & set(kwargs.get("update_fields") or ()):
+            raise ValidationError("Correct generation/body associations individually with instance.save().")
+        if any(obj.factory_body_configuration_id is not None for obj in objs):
+            raise ValidationError("Create body-associated vehicles individually with instance.save().")
+        return super().bulk_create(objs, **kwargs)
+
+
 class VehicleDefinition(BaseModel):
     """
     Represents a canonical vehicle configuration in the Reference Domain.
@@ -235,6 +362,12 @@ class VehicleDefinition(BaseModel):
         on_delete=models.PROTECT,
         related_name="vehicle_definitions",
     )
+
+    factory_body_configuration = models.ForeignKey(
+        FactoryBodyConfiguration, on_delete=models.PROTECT, null=True, blank=True,
+        related_name="vehicle_definitions",
+    )
+    objects = VehicleDefinitionQuerySet.as_manager()
 
     model_year = models.PositiveSmallIntegerField()
 
@@ -330,6 +463,8 @@ class VehicleDefinition(BaseModel):
             elif isinstance(value, bool):
                 raise ValidationError({key: "Boolean is not a powertrain value."})
 
+        self._validate_body_scope()
+
         if not self.generation_id:
             return
 
@@ -384,11 +519,35 @@ class VehicleDefinition(BaseModel):
             return qualified_slug(base, record_powertrain(self), self.engine_name)
         return base
 
-    def save(self, *args, **kwargs) -> None:
-        if not self.slug:
-            self.slug = self.build_slug()
+    def _validate_body_scope(self, generation_id=None, body_id=None):
+        generation_id = self.generation_id if generation_id is None else generation_id
+        body_id = self.factory_body_configuration_id if body_id is None else body_id
+        if body_id is not None and not FactoryBodyConfiguration.objects.filter(
+            pk=body_id, generation_id=generation_id,
+        ).exists():
+            raise ValidationError({"factory_body_configuration": "Body configuration must belong to the vehicle's Generation."})
 
-        super().save(*args, **kwargs)
+    def save(self, *args, **kwargs) -> None:
+        using = kwargs.get("using") or self._state.db
+        with transaction.atomic(using=using):
+            generation_id, body_id = self.generation_id, self.factory_body_configuration_id
+            fields = kwargs.get("update_fields")
+            if fields is not None:
+                fields = frozenset(fields)
+                kwargs["update_fields"] = fields
+            if fields is not None and self.pk:
+                stored = type(self).objects.using(using).get(pk=self.pk)
+                if not {"generation", "generation_id"} & fields:
+                    generation_id = stored.generation_id
+                if not {"factory_body_configuration", "factory_body_configuration_id"} & fields:
+                    body_id = stored.factory_body_configuration_id
+            if body_id is not None:
+                body = FactoryBodyConfiguration.objects.using(using).select_for_update().filter(pk=body_id).first()
+                if body is None or body.generation_id != generation_id:
+                    raise ValidationError({"factory_body_configuration": "Body configuration must belong to the vehicle's Generation."})
+            if not self.slug:
+                self.slug = self.build_slug()
+            super().save(*args, **kwargs)
 
     @property
     def engine_description(self):
