@@ -3,6 +3,99 @@ Version: 1.6
 Last Updated: 2026-11-13
 Purpose: Current implementation status and development roadmap
 
+## RA-046 approved / RA-047 accepted — commit preparation (2026-11-13)
+
+By explicit Project Owner decision, **RA-046 is Approved** as the governing exact
+Candidate v3.0.0 wire contract and **RA-047 is Accepted** as its conforming pure
+implementation, including the EvidenceReport property removal. Both decisions apply
+only to the current reviewed revisions. RA-046's formal-approval blocker is resolved.
+
+Accepted verification remains **837 full-suite tests passed in 40.890 seconds**,
+zero failures/errors/skips, including all 193 targeted tests. No executable change
+is made here; the full suite is not repeated. Documentation finalization is checked
+with system checks, migration drift, whitespace and preservation checks, recorded in
+[handoff §H](handoffs/RA047_candidate_v3_20261113/README.md#h-formal-owner-acceptance-and-commit-preparation).
+
+RA-047 covers (1) contract/cryptographic validation and (2) supplied-evidence checks
+within their specified limits. It does not complete (3) external dependency verification,
+(4) live canonical parent resolution, (5) human authorization, or (6) canonical import
+execution/publication. No persistence or immutable-binding milestone has begun.
+
+**READY WITH COMMIT-BOUNDARY DECISION REQUIRED:** earlier uncommitted foundation work
+requires its own owner acceptance/readiness decision; it is not automatically accepted
+by these RA-046/RA-047 decisions. CURRENT_STATE/CHANGELOG mix foundation, RA-047 and
+unrelated historical work, so only milestone-specific hunks belong in the proposed
+commits. The handoff separates Groups A–D, lists exact paths and conditional safe
+commands. Branch/HEAD remain main / `b98f078`; index empty. No staging, commit or push.
+
+## RA-047 final verification — historical checkpoint before acceptance (2026-11-13)
+
+Fresh final verification ran the **complete Django suite: 837 tests passed in 40.890
+seconds**, zero failures/errors/skips. System checks, `makemigrations --check` and
+`git diff --check` passed. Tests used an explicitly isolated database configuration;
+the operational database, historical Candidate 2.1.0 fixture, all eight RA-046 vectors
+and all implementation files remained unchanged. No behavioral correction was made.
+
+The misleading affirmative EvidenceReport property is absent; the sole remaining
+repository reference is a negative API-regression assertion, with no operational
+consumer. `has_evidence_errors` and unresolved dependencies remain separate. Contract/
+cryptographic validity, supplied-evidence checks, unresolved external dependencies,
+live canonical resolution, and human authorization/import eligibility are distinct;
+RA-047 supplies neither complete evidence acceptance nor canonical import readiness.
+
+**Historical closeout dependency, now resolved by the acceptance above:** RA-046
+was formally Proposed. The
+implementation was explicitly authorized, but the Project Owner still needed to record the
+specification's formal approval and milestone acceptance; the verification itself
+did not supply either. No technical regression or correction blocker was identified. Persistence,
+immutable binding architecture, live parent resolution, planning/execution, candidate
+regeneration and MY2024 publication remain outside scope and have not begun.
+
+This closeout changes documentation only (CURRENT_STATE, CHANGELOG and the existing
+[RA-047 handoff](handoffs/RA047_candidate_v3_20261113/README.md#g-final-verification-and-documentation-closeout)).
+Branch/HEAD remain main / `b98f078`; all changes remain unstaged/uncommitted. The handoff
+records exact commands, initial/final status, architecture checks and a proposed commit
+scope separating RA-047 from pre-existing foundation/specification work. No commit made.
+
+## RA-047 — Candidate 3.0.0 pure wire contract implemented (2026-11-13)
+
+Under the current Project Owner implementation assignment, `reference/candidate_v3.py`
+implements the reviewed RA-046 full closed wire contract: explicit dispatch triple,
+recursive duplicate-aware parsing, nullable sparse identities, existing/pending body
+and independent series unions, qualified local references, deterministic canonical
+serialization, semantic/hash verification, derived pending-descriptor checksums and
+proposed baseline/2 reconstruction when complete. RA-046 remained Proposed at that
+implementation checkpoint; its later formal approval is recorded above. No technical
+specification or example was rewritten.
+
+`reference/candidate_v3_evidence.py` separately checks supplied-data normalized support,
+applicability, source grouping, contradictions and projections. Two alternative rows
+cannot form a body/engine tuple without coexistence evidence. Missing bytes, broader
+reviewed trim mapping, specialized cross-reference/review decoders, registry/Generation
+proof and live binding/peer verification remain explicit dependencies. Pure validity
+or supported local projection is not evidence acceptance, eligibility or authorization.
+There is no parent creation, live lookup, import action, publication or UI integration.
+
+The shared artifact serializer/validator dispatches the new typed document explicitly;
+direct legacy readers/writers reject v3 instead of dropping its dimensions. Existing
+Candidate 2.1.0 semantics/bytes remain unchanged. The existing RA-044 explicit terminology
+checker moved unchanged to pure `reference/powertrain_evidence.py`, used by both paths.
+Existing RA-045 body identity and projection-foundation files remain untouched.
+
+Verification: **193 targeted tests passed** (60 new wire/evidence/compatibility tests,
+35 existing body tests, 98 existing ingestion/identity regressions), zero failures or
+skips. All eight RA-046 JSON fixtures reproduce exact published hashes; the pinned
+historical Candidate 2.1.0 SHA-256 remains unchanged. Django system checks pass;
+`makemigrations --check --dry-run` finds no changes. Tests/checks use isolated temporary
+database paths, not operational data. The initial bounded implementation did not run
+the full suite; final full-suite verification is recorded above.
+
+No database model/schema changes, operational data mutations, canonical records,
+historical rewrites, candidate regeneration, approvals, correspondence publication,
+imports, staging, commits or pushes occurred. The implementation remains uncommitted;
+pre-existing work is preserved. See the [RA-047 handoff](handoffs/RA047_candidate_v3_20261113/README.md)
+for section conformance, file inventory, exact commands and remaining phases.
+
 ## Unified factory body identity — pure foundations completed; v3 wire contract bounded (2026-11-13)
 
 Architecture acceptance is committed as `b98f078` (documentation only, no push).

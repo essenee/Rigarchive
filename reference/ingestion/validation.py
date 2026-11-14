@@ -230,7 +230,11 @@ def validate_artifact(
     Validates structural integrity, envelope metadata, unique IDs, reference traceability,
     and reconciliation/review status boundaries.
     """
-    if isinstance(obj, SourceAssertionSet):
+    from reference.candidate_v3 import CandidateV3Document, validate_structure
+    if isinstance(obj, CandidateV3Document):
+        # Structural/cryptographic checks only. Never adjudication or eligibility.
+        validate_structure(obj)
+    elif isinstance(obj, SourceAssertionSet):
         validate_source_assertion_set(obj)
     elif isinstance(obj, CandidateConfigurationDocument):
         validate_candidate_configuration(obj, source_assertion_set=source_assertion_set)

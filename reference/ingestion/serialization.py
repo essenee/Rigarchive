@@ -362,6 +362,9 @@ def reconciliation_and_review_to_dict(rar: ReconciliationAndReview) -> Dict[str,
 
 
 def candidate_config_doc_to_dict(obj: CandidateConfigurationDocument) -> Dict[str, Any]:
+    if obj.envelope.artifact_type == "rigarchive.candidate_configuration.v3" or obj.envelope.schema_version.startswith("3."):
+        from reference.ingestion.validation import IngestionValidationError
+        raise IngestionValidationError("Candidate v3 requires its explicit typed wire serializer.")
     # Sort lists deterministically where appropriate
     sorted_interps = sorted(obj.normalized_assertions, key=lambda x: x.interpretation_id)
     sorted_features = sorted(obj.factory_technical_features, key=lambda x: x.feature_name)
@@ -713,6 +716,10 @@ def reconciliation_and_review_from_dict(d: Dict[str, Any]) -> ReconciliationAndR
 
 
 def candidate_config_doc_from_dict(d: Dict[str, Any]) -> CandidateConfigurationDocument:
+    env = d.get("envelope", {})
+    if env.get("artifact_type") == "rigarchive.candidate_configuration.v3" or str(env.get("schema_version", "")).startswith("3."):
+        from reference.ingestion.validation import IngestionValidationError
+        raise IngestionValidationError("Candidate v3 requires explicit wire-contract dispatch.")
     known_keys = {
         "envelope", "candidate_reference", "candidate_identity",
         "source_configuration_identities", "normalized_assertions",
@@ -761,9 +768,12 @@ def candidate_config_doc_from_dict(d: Dict[str, Any]) -> CandidateConfigurationD
 
 def serialize_artifact(obj: Union[SourceAssertionSet, CandidateConfigurationDocument]) -> str:
     """
-    Deterministically serialize an artifact dataclass to a UTF-8 JSON string
-    with 2-space indentation and sorted object keys.
+    Serialize legacy artifacts with their original 2-space JSON representation.
+    Explicit Candidate v3 documents use their validated canonical wire serializer.
     """
+    from reference.candidate_v3 import CandidateV3Document, serialize_candidate
+    if isinstance(obj, CandidateV3Document):
+        return serialize_candidate(obj)
     if isinstance(obj, SourceAssertionSet):
         raw_dict = source_assertion_set_to_dict(obj)
     elif isinstance(obj, CandidateConfigurationDocument):
@@ -780,8 +790,8 @@ def serialize_artifact(obj: Union[SourceAssertionSet, CandidateConfigurationDocu
 
 def deserialize_artifact(json_input: Union[str, Dict[str, Any]]) -> Union[SourceAssertionSet, CandidateConfigurationDocument]:
     """
-    Deserialize a JSON string or dict into a SourceAssertionSet or CandidateConfigurationDocument
-    dataclass while preserving any unknown/unmodeled fields.
+    Deserialize through explicit artifact dispatch. Legacy dataclasses preserve
+    unknown fields; Candidate v3 has a separate closed, duplicate-aware reader.
     """
     if isinstance(json_input, str):
         data = json.loads(json_input)
@@ -796,6 +806,10 @@ def deserialize_artifact(json_input: Union[str, Dict[str, Any]]) -> Union[Source
     env_dict = data.get("envelope", {})
     artifact_type = env_dict.get("artifact_type")
 
+    from reference.candidate_v3 import ARTIFACT_TYPE as V3_TYPE, parse_candidate
+    if artifact_type == V3_TYPE:
+        # Pass the original text to preserve duplicate-key detection at every level.
+        return parse_candidate(json_input)
     if artifact_type == ArtifactType.SOURCE_ASSERTION_SET.value:
         return source_assertion_set_from_dict(data)
     elif artifact_type in (ArtifactType.CANDIDATE_CONFIGURATION.value, ArtifactType.CANDIDATE_CONFIGURATION_V2.value):

@@ -1,0 +1,235 @@
+{
+  "envelope": {
+    "artifact_type": "rigarchive.candidate_configuration.v3",
+    "schema_version": "3.0.0",
+    "$schema": "urn:rigarchive:contract:candidate_configuration:3.0.0"
+  },
+  "candidate_reference": "illustration-A",
+  "candidate_identity": {
+    "manufacturer_name": "Toyota",
+    "vehicle_model_name": "4Runner",
+    "model_year": 2007,
+    "market": "US",
+    "trim_name": "SR5"
+  },
+  "canonical_scope": {
+    "manufacturer_key": "toyota",
+    "model_key": "4runner",
+    "generation_key": "example-fourth"
+  },
+  "canonical_identity_contract": "vehicle-definition-body/2",
+  "drivetrain": "4WD",
+  "configuration_refs": [
+    "example_only_a|sha256:22eec990fae9c9f984d600e760e2941c5fe35ff1105f8bcb310871e4ba3ecd00|example-set|configuration"
+  ],
+  "applicability": [
+    {
+      "applicability_id": "app",
+      "scope": {
+        "manufacturer_key": "toyota",
+        "model_key": "4runner",
+        "generation_key": "example-fourth"
+      },
+      "market": "US",
+      "start_year": 2007,
+      "end_year": 2007,
+      "configuration_refs": [
+        "example_only_a|sha256:22eec990fae9c9f984d600e760e2941c5fe35ff1105f8bcb310871e4ba3ecd00|example-set|configuration"
+      ],
+      "source_assertion_refs": [
+        "example_only_a|sha256:22eec990fae9c9f984d600e760e2941c5fe35ff1105f8bcb310871e4ba3ecd00|example-set|configuration"
+      ],
+      "finding_refs": []
+    }
+  ],
+  "evidence_documents": [
+    {
+      "source_id": "example_only_a",
+      "raw_artifact_hash": "sha256:22eec990fae9c9f984d600e760e2941c5fe35ff1105f8bcb310871e4ba3ecd00",
+      "raw_artifact_reference": "docs/examples/not-retained/A.json",
+      "extractor_id": "example-only",
+      "extractor_version": "1.0.0",
+      "extraction_mode": "illustration",
+      "assertion_set_id": "example-set",
+      "assertions": [
+        {
+          "assertion_id": "configuration",
+          "attribute_key": "configuration",
+          "raw_value": {
+            "make": "Toyota",
+            "model": "4Runner",
+            "model_year": 2007,
+            "market": "US",
+            "trim_name": "SR5",
+            "engine_displacement_liters": "4",
+            "engine_cylinders": 6,
+            "engine_aspiration": "naturally_aspirated",
+            "fuel_type": "gasoline",
+            "electrification_type": "none",
+            "generic_drive_classification": "4WD"
+          },
+          "source_context": "Hypothetical positive configuration; not verified manufacturer evidence"
+        }
+      ]
+    }
+  ],
+  "evidence_raw_hashes": [
+    "sha256:22eec990fae9c9f984d600e760e2941c5fe35ff1105f8bcb310871e4ba3ecd00"
+  ],
+  "generation_evidence": [],
+  "normalized_assertions": [
+    {
+      "interpretation_id": "i-electrification_type",
+      "source_assertion_ref": "example_only_a|sha256:22eec990fae9c9f984d600e760e2941c5fe35ff1105f8bcb310871e4ba3ecd00|example-set|configuration",
+      "target_attribute_key": "electrification_type",
+      "normalized_concept": "none",
+      "mapping_status": "mapped",
+      "applicability_ref": "app",
+      "normalization": {
+        "id": "source_literal",
+        "version": "1.0.0"
+      },
+      "finding_refs": []
+    },
+    {
+      "interpretation_id": "i-engine_aspiration",
+      "source_assertion_ref": "example_only_a|sha256:22eec990fae9c9f984d600e760e2941c5fe35ff1105f8bcb310871e4ba3ecd00|example-set|configuration",
+      "target_attribute_key": "engine_aspiration",
+      "normalized_concept": "naturally_aspirated",
+      "mapping_status": "mapped",
+      "applicability_ref": "app",
+      "normalization": {
+        "id": "source_literal",
+        "version": "1.0.0"
+      },
+      "finding_refs": []
+    },
+    {
+      "interpretation_id": "i-engine_cylinders",
+      "source_assertion_ref": "example_only_a|sha256:22eec990fae9c9f984d600e760e2941c5fe35ff1105f8bcb310871e4ba3ecd00|example-set|configuration",
+      "target_attribute_key": "engine_cylinders",
+      "normalized_concept": 6,
+      "mapping_status": "mapped",
+      "applicability_ref": "app",
+      "normalization": {
+        "id": "source_literal",
+        "version": "1.0.0"
+      },
+      "finding_refs": []
+    },
+    {
+      "interpretation_id": "i-engine_displacement_liters",
+      "source_assertion_ref": "example_only_a|sha256:22eec990fae9c9f984d600e760e2941c5fe35ff1105f8bcb310871e4ba3ecd00|example-set|configuration",
+      "target_attribute_key": "engine_displacement_liters",
+      "normalized_concept": "4",
+      "mapping_status": "mapped",
+      "applicability_ref": "app",
+      "normalization": {
+        "id": "source_literal",
+        "version": "1.0.0"
+      },
+      "finding_refs": []
+    },
+    {
+      "interpretation_id": "i-fuel_type",
+      "source_assertion_ref": "example_only_a|sha256:22eec990fae9c9f984d600e760e2941c5fe35ff1105f8bcb310871e4ba3ecd00|example-set|configuration",
+      "target_attribute_key": "fuel_type",
+      "normalized_concept": "gasoline",
+      "mapping_status": "mapped",
+      "applicability_ref": "app",
+      "normalization": {
+        "id": "source_literal",
+        "version": "1.0.0"
+      },
+      "finding_refs": []
+    },
+    {
+      "interpretation_id": "i-generic_drive_classification",
+      "source_assertion_ref": "example_only_a|sha256:22eec990fae9c9f984d600e760e2941c5fe35ff1105f8bcb310871e4ba3ecd00|example-set|configuration",
+      "target_attribute_key": "generic_drive_classification",
+      "normalized_concept": "4WD",
+      "mapping_status": "mapped",
+      "applicability_ref": "app",
+      "normalization": {
+        "id": "source_literal",
+        "version": "1.0.0"
+      },
+      "finding_refs": []
+    },
+    {
+      "interpretation_id": "i-make",
+      "source_assertion_ref": "example_only_a|sha256:22eec990fae9c9f984d600e760e2941c5fe35ff1105f8bcb310871e4ba3ecd00|example-set|configuration",
+      "target_attribute_key": "make",
+      "normalized_concept": "Toyota",
+      "mapping_status": "mapped",
+      "applicability_ref": "app",
+      "normalization": {
+        "id": "source_literal",
+        "version": "1.0.0"
+      },
+      "finding_refs": []
+    },
+    {
+      "interpretation_id": "i-market",
+      "source_assertion_ref": "example_only_a|sha256:22eec990fae9c9f984d600e760e2941c5fe35ff1105f8bcb310871e4ba3ecd00|example-set|configuration",
+      "target_attribute_key": "market",
+      "normalized_concept": "US",
+      "mapping_status": "mapped",
+      "applicability_ref": "app",
+      "normalization": {
+        "id": "source_literal",
+        "version": "1.0.0"
+      },
+      "finding_refs": []
+    },
+    {
+      "interpretation_id": "i-model",
+      "source_assertion_ref": "example_only_a|sha256:22eec990fae9c9f984d600e760e2941c5fe35ff1105f8bcb310871e4ba3ecd00|example-set|configuration",
+      "target_attribute_key": "model",
+      "normalized_concept": "4Runner",
+      "mapping_status": "mapped",
+      "applicability_ref": "app",
+      "normalization": {
+        "id": "source_literal",
+        "version": "1.0.0"
+      },
+      "finding_refs": []
+    },
+    {
+      "interpretation_id": "i-model_year",
+      "source_assertion_ref": "example_only_a|sha256:22eec990fae9c9f984d600e760e2941c5fe35ff1105f8bcb310871e4ba3ecd00|example-set|configuration",
+      "target_attribute_key": "model_year",
+      "normalized_concept": 2007,
+      "mapping_status": "mapped",
+      "applicability_ref": "app",
+      "normalization": {
+        "id": "source_literal",
+        "version": "1.0.0"
+      },
+      "finding_refs": []
+    },
+    {
+      "interpretation_id": "i-trim_name",
+      "source_assertion_ref": "example_only_a|sha256:22eec990fae9c9f984d600e760e2941c5fe35ff1105f8bcb310871e4ba3ecd00|example-set|configuration",
+      "target_attribute_key": "trim_name",
+      "normalized_concept": "SR5",
+      "mapping_status": "mapped",
+      "applicability_ref": "app",
+      "normalization": {
+        "id": "source_literal",
+        "version": "1.0.0"
+      },
+      "finding_refs": []
+    }
+  ],
+  "canonical_powertrain": {
+    "engine_displacement_liters": "4",
+    "engine_cylinders": 6,
+    "engine_aspiration": "naturally_aspirated",
+    "fuel_type": "gasoline",
+    "electrification_type": "none"
+  },
+  "factory_body": null,
+  "factory_series": null,
+  "candidate_hash": "sha256:6544ca772bf73fa9fa337fac4c57c432ea1e097b14b69da674e7048304bdd845"
+}

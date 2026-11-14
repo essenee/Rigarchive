@@ -1,0 +1,186 @@
+{
+  "envelope": {
+    "artifact_type": "rigarchive.candidate_configuration.v3",
+    "schema_version": "3.0.0",
+    "$schema": "urn:rigarchive:contract:candidate_configuration:3.0.0"
+  },
+  "candidate_reference": "illustration-E",
+  "candidate_identity": {
+    "manufacturer_name": "Ford",
+    "vehicle_model_name": "Transit",
+    "model_year": 2024,
+    "market": "US",
+    "trim_name": "Cargo"
+  },
+  "canonical_scope": {
+    "manufacturer_key": "ford",
+    "model_key": "transit",
+    "generation_key": "example-generation"
+  },
+  "canonical_identity_contract": "vehicle-definition-body/2",
+  "drivetrain": null,
+  "configuration_refs": [
+    "example_only_e|sha256:50a72149d9746fd753bf4b88c929ef438f6ae1f8f1b23493338f35fa567f6763|example-set|configuration"
+  ],
+  "applicability": [
+    {
+      "applicability_id": "app",
+      "scope": {
+        "manufacturer_key": "ford",
+        "model_key": "transit",
+        "generation_key": "example-generation"
+      },
+      "market": "US",
+      "start_year": 2024,
+      "end_year": 2024,
+      "configuration_refs": [
+        "example_only_e|sha256:50a72149d9746fd753bf4b88c929ef438f6ae1f8f1b23493338f35fa567f6763|example-set|configuration"
+      ],
+      "source_assertion_refs": [
+        "example_only_e|sha256:50a72149d9746fd753bf4b88c929ef438f6ae1f8f1b23493338f35fa567f6763|example-set|configuration"
+      ],
+      "finding_refs": []
+    }
+  ],
+  "evidence_documents": [
+    {
+      "source_id": "example_only_e",
+      "raw_artifact_hash": "sha256:50a72149d9746fd753bf4b88c929ef438f6ae1f8f1b23493338f35fa567f6763",
+      "raw_artifact_reference": "docs/examples/not-retained/E.json",
+      "extractor_id": "example-only",
+      "extractor_version": "1.0.0",
+      "extraction_mode": "illustration",
+      "assertion_set_id": "example-set",
+      "assertions": [
+        {
+          "assertion_id": "configuration",
+          "attribute_key": "configuration",
+          "raw_value": {
+            "make": "Ford",
+            "model": "Transit",
+            "model_year": 2024,
+            "market": "US",
+            "trim_name": "Cargo",
+            "factory_body.door_configuration": "two-door"
+          },
+          "source_context": "Hypothetical positive configuration; not verified manufacturer evidence"
+        }
+      ]
+    }
+  ],
+  "evidence_raw_hashes": [
+    "sha256:50a72149d9746fd753bf4b88c929ef438f6ae1f8f1b23493338f35fa567f6763"
+  ],
+  "generation_evidence": [],
+  "normalized_assertions": [
+    {
+      "interpretation_id": "i-factory_body.door_configuration",
+      "source_assertion_ref": "example_only_e|sha256:50a72149d9746fd753bf4b88c929ef438f6ae1f8f1b23493338f35fa567f6763|example-set|configuration",
+      "target_attribute_key": "factory_body.door_configuration",
+      "normalized_concept": "two-door",
+      "mapping_status": "mapped",
+      "applicability_ref": "app",
+      "normalization": {
+        "id": "source_literal",
+        "version": "1.0.0"
+      },
+      "finding_refs": []
+    },
+    {
+      "interpretation_id": "i-make",
+      "source_assertion_ref": "example_only_e|sha256:50a72149d9746fd753bf4b88c929ef438f6ae1f8f1b23493338f35fa567f6763|example-set|configuration",
+      "target_attribute_key": "make",
+      "normalized_concept": "Ford",
+      "mapping_status": "mapped",
+      "applicability_ref": "app",
+      "normalization": {
+        "id": "source_literal",
+        "version": "1.0.0"
+      },
+      "finding_refs": []
+    },
+    {
+      "interpretation_id": "i-market",
+      "source_assertion_ref": "example_only_e|sha256:50a72149d9746fd753bf4b88c929ef438f6ae1f8f1b23493338f35fa567f6763|example-set|configuration",
+      "target_attribute_key": "market",
+      "normalized_concept": "US",
+      "mapping_status": "mapped",
+      "applicability_ref": "app",
+      "normalization": {
+        "id": "source_literal",
+        "version": "1.0.0"
+      },
+      "finding_refs": []
+    },
+    {
+      "interpretation_id": "i-model",
+      "source_assertion_ref": "example_only_e|sha256:50a72149d9746fd753bf4b88c929ef438f6ae1f8f1b23493338f35fa567f6763|example-set|configuration",
+      "target_attribute_key": "model",
+      "normalized_concept": "Transit",
+      "mapping_status": "mapped",
+      "applicability_ref": "app",
+      "normalization": {
+        "id": "source_literal",
+        "version": "1.0.0"
+      },
+      "finding_refs": []
+    },
+    {
+      "interpretation_id": "i-model_year",
+      "source_assertion_ref": "example_only_e|sha256:50a72149d9746fd753bf4b88c929ef438f6ae1f8f1b23493338f35fa567f6763|example-set|configuration",
+      "target_attribute_key": "model_year",
+      "normalized_concept": 2024,
+      "mapping_status": "mapped",
+      "applicability_ref": "app",
+      "normalization": {
+        "id": "source_literal",
+        "version": "1.0.0"
+      },
+      "finding_refs": []
+    },
+    {
+      "interpretation_id": "i-trim_name",
+      "source_assertion_ref": "example_only_e|sha256:50a72149d9746fd753bf4b88c929ef438f6ae1f8f1b23493338f35fa567f6763|example-set|configuration",
+      "target_attribute_key": "trim_name",
+      "normalized_concept": "Cargo",
+      "mapping_status": "mapped",
+      "applicability_ref": "app",
+      "normalization": {
+        "id": "source_literal",
+        "version": "1.0.0"
+      },
+      "finding_refs": []
+    }
+  ],
+  "canonical_powertrain": null,
+  "factory_body": {
+    "disposition": "pending",
+    "identity": {
+      "semantic_digest": "sha256:182d22e6a33de7901382f57117c1b835da8f4c25244dafddccc7688391badbe8",
+      "preimage": {
+        "identity_contract": "factory-body-semantic/2",
+        "profile_family": "factory-body",
+        "scope": {
+          "manufacturer_key": "ford",
+          "model_key": "transit",
+          "generation_key": "example-generation"
+        },
+        "dimensions": {
+          "door_configuration": "two-door"
+        }
+      }
+    },
+    "support": {
+      "applicability_ref": "app",
+      "configuration_refs": [
+        "example_only_e|sha256:50a72149d9746fd753bf4b88c929ef438f6ae1f8f1b23493338f35fa567f6763|example-set|configuration"
+      ],
+      "interpretation_refs": [
+        "i-factory_body.door_configuration"
+      ],
+      "equivalence_interpretation_ref": null
+    }
+  },
+  "factory_series": null,
+  "candidate_hash": "sha256:2570d7f349b1cc9a63444ac6d582841b5ad7e6c26ce9718d7058bec42dabe877"
+}
