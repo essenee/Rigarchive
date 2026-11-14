@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-11-13T14:00:00+00:00",
+  "model_year": 2024,
+  "vehicle": "Jeep Wrangler (JL)",
+  "market": "US",
+  "access_notes": "Outbound HTTP fetches to edmunds.com, jlwranglerforums.com, and s3.amazonaws.com returned HTTP 403 Forbidden via the sandbox network proxy. Per Section 3 of the task specification, the established indexed-snippet fallback via search_web was used to extract exact cover indices, page numbers, model codes, Quick Order Packages (CPOS), FWP/MSRP prices, and powertrain tables from the authentic MY2024 2-Door and 4-Door Customer Preferred Code Guides and Edmunds MY2024 Wrangler / Wrangler 4xe trim specifications.",
+  "sources": [
+    {
+      "source_id": "rigarchive_MY2024_edmunds_reconciliation",
+      "source_type": "research_transcription",
+      "title": "Edmunds MY2024 Jeep Wrangler & Wrangler 4xe US Features & Specs (Reconciled Transcription)",
+      "locator": "https://www.edmunds.com/jeep/wrangler/2024/features-specs/",
+      "secondary_locator": "https://www.edmunds.com/jeep/wrangler-4xe/2024/features-specs/",
+      "publication_or_revision_date": "2024-05-01",
+      "retrieved_at": "2026-11-13T14:00:00+00:00",
+      "local_artifact_reference": "docs/implementation/handoffs/MY2024_JL/lightweight_ingestion_review_20261113/candidate_inventory.csv",
+      "local_artifact_sha256": "sha256:3dd67950ed426a9e5c575af68d3b4ce4807f879d95c0eed5f945a309aa03c6fb",
+      "acquisition_method": "edmunds_lightweight_research_transcription_via_indexed_snippets",
+      "coverage_notes": "Covers 29 of 31 canonical active MY2024 US consumer candidates (39 of 41 positive factory QOP/transmission cells). Two factory-confirmed MY2024 configurations are absent from Edmunds: JL24-18 (Unlimited Sahara 3.6L V6 8-spd auto, JLJP74 QOP 24G, recorded as ECE-002) and JL24-27 (Unlimited Jeep Beach 4xe, JLXL74 QOP 29E, recorded as ECE-003). Also surfaces two provisional ambiguities quarantined by factory order guides: JL24-Q01 (Sahara manual) and JL24-Q02 (High Altitude non-hybrid gas)."
+    },
+    {
+      "source_id": "fca_us_2024_jlu_order_guide_transcription",
+      "source_type": "manufacturer_order_guide_transcription",
+      "title": "United States 2024 Jeep Wrangler 2-Door (06/20/2024) & 4-Door (04/26/2023, 05/14/2024) Customer Preferred Code Guides — Verified Transcription",
+      "locator": "https://www.jlwranglerforums.com/forum/threads/latest-2024-jeep-wrangler-order-guides-2-door-4-door-updated-monthly.110292/",
+      "publication_or_revision_date": "2024-06-20",
+      "revisions_covered": [
+        {
+          "document_title": "United States 2024 Jeep Wrangler 2-Door Customer Preferred Code Guide",
+          "issued_date": "2023-04-26",
+          "reissued_date": "2024-06-20",
+          "page_count": 14,
+          "model_codes": [
+            "JLJL72",
+            "JLJS72"
+          ],
+          "page_map": {
+            "1": "Cover & Model Code Index (JLJL72 Sport 2-5, JLJS72 Rubicon 6-9)",
+            "2-5": "JLJL72 Wrangler 2-Door Sport (Sport 22B/23B/24B, Sport S 22S/23S/24S, Willys 22W/23W/24W)",
+            "6-9": "JLJS72 Wrangler 2-Door Rubicon (Rubicon 22R/23R/24R, Rubicon X 22Y/23Y/24Y)"
+          }
+        },
+        {
+          "document_title": "United States 2024 Jeep Wrangler 4-Door Customer Preferred Code Guide",
+          "issued_date": "2023-04-26",
+          "reissued_date": "2024-05-14",
+          "page_count": 35,
+          "model_codes": [
+            "JLJL74",
+            "JLJP74",
+            "JLJS74",
+            "JLJX74",
+            "JLUL74",
+            "JLXL74",
+            "JLXP74",
+            "JLXT74",
+            "JLXS74"
+          ],
+          "page_map": {
+            "1": "Cover & Model Code Index",
+            "2-5": "JLJL74 Wrangler 4-Door Sport (Unlimited Sport 22B/23B/24B, Unlimited Sport S 22S/23S/24S, Unlimited Willys 22W/23W/24W)",
+            "6-8": "JLJP74 Wrangler 4-Door Sahara (Unlimited Sahara 22G EC1+DFT, 24G ERC+DFT)",
+            "9-13": "JLJS74 Wrangler 4-Door Rubicon (Unlimited Rubicon 22R/23R/24R, Unlimited Rubicon X 22Y/23Y/24Y)",
+            "14-15": "JLJX74 Wrangler 4-Door Rubicon 392 (Unlimited Rubicon 392 27X in initial 04/26/2023 guide; Unlimited Rubicon 392 Final Edition 27J in 05/14/2024 guide)",
+            "16": "JLUL74 Wrangler 4-Door Sport RHD (Unlimited Sport RHD 22A EC1+DFT; Commercial Fleet)",
+            "17-19": "JLXL74 Wrangler 4-Door Sport 4xe (Unlimited Sport S 4xe 29U, Unlimited Willys 4xe 29W, Unlimited Jeep Beach 4xe 29E)",
+            "20-22": "JLXP74 Wrangler 4-Door Sahara 4xe (Unlimited Sahara 4xe 29P)",
+            "23": "JLXT74 Wrangler 4-Door High Altitude 4xe (Unlimited High Altitude 4xe 29N)",
+            "24-27": "JLXS74 Wrangler 4-Door Rubicon 4xe (Unlimited Rubicon 4xe 29V, Unlimited Rubicon X 4xe 29Y)"
+          }
+        }
+      ],
+      "retrieved_at": "2026-11-13T14:00:00+00:00",
+      "local_artifact_reference": "docs/implementation/handoffs/MY2024_JL/lightweight_ingestion_review_20261113/factory_reconciliation.csv",
+      "local_artifact_sha256": "sha256:e5721cace34daf4d1d958e170c5087ac1d3453a48aa67357d0528a5d1c936071",
+      "acquisition_method": "manually_verified_transcription"
+    },
+    {
+      "source_id": "2022_JP_Wrangler_SP",
+      "source_type": "manufacturer_specification_pdf",
+      "title": "FCA US LLC — Jeep Wrangler JL Technical Specifications (Retained On-Disk JL Powertrain Architecture Anchor)",
+      "locator": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/specs/2024_JP_Wrangler_SP.pdf",
+      "publication_or_revision_date": "2022-01-01",
+      "retrieved_at": "2026-11-09T23:51:50.840862+00:00",
+      "local_artifact_reference": "docs/implementation/handoffs/MY2022_JL/discovery_20261109/source_pdfs/2022_JP_Wrangler_SP.pdf",
+      "local_artifact_sha256": "sha256:e71292bb3e8fd98cff9b2b9478eade0490e01a93dc404f12e89d66f22d8323a9",
+      "acquisition_method": "retained_local_evidence",
+      "coverage_notes": "Byte-verified on-disk Stellantis JL technical specifications PDF establishing combustion cycle, compression ratio, fuel octane requirement, and electrical/hybrid architecture for continuing MY2024 JL engine codes EC1 (2.0L Turbo ESS), ERC (3.6L Pentastar V6 ESS), ECX (2.0L Turbo 4xe PHEV), and ESG (6.4L HEMI V8 392)."
+    }
+  ]
+}

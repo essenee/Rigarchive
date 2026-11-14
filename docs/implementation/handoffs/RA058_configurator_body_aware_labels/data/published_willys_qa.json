@@ -1,0 +1,55 @@
+{
+  "method": "actual Django URL-resolved views and rendered templates, RequestFactory with ephemeral in-memory sessions; no session persistence middleware",
+  "database_before": "f1cf9de2f448711b2b445b959a0d5145a9cba4247409698b56cf488e194a755c",
+  "database_after": "f1cf9de2f448711b2b445b959a0d5145a9cba4247409698b56cf488e194a755c",
+  "model_year": 2024,
+  "trim_choice_count": 20,
+  "published_2024_count": 31,
+  "willys_configurations": [
+    {
+      "trim_group": "Willys \u00b7 2-Door",
+      "vehicle_pk": 1073,
+      "vehicle_uuid": "ec652bca-0296-43b8-bfe9-833a8cb23ee6",
+      "engine_label": "2.0L I4 \u00b7 Turbocharged",
+      "body": "two-door",
+      "specs_url": "/vehicles/jeep/wrangler/jl/2024-willys-20l-i4-turbo-4wd-us-turbo-2-door/",
+      "specs_status": 200,
+      "selected_exactly": true
+    },
+    {
+      "trim_group": "Willys \u00b7 2-Door",
+      "vehicle_pk": 1074,
+      "vehicle_uuid": "8ee4f9a4-bdc7-43e4-8880-f5e49b52b5ab",
+      "engine_label": "3.6L V6 ESS",
+      "body": "two-door",
+      "specs_url": "/vehicles/jeep/wrangler/jl/2024-willys-36l-v6-ess-4wd-us-2-door/",
+      "specs_status": 200,
+      "selected_exactly": true
+    },
+    {
+      "trim_group": "Willys \u00b7 4-Door",
+      "vehicle_pk": 1083,
+      "vehicle_uuid": "84bfd7a4-02d6-4c0f-8001-e2b653fbe585",
+      "engine_label": "2.0L I4 \u00b7 Turbocharged",
+      "body": "four-door",
+      "specs_url": "/vehicles/jeep/wrangler/jl/2024-willys-20l-i4-turbo-4wd-us-turbo-4-door/",
+      "specs_status": 200,
+      "selected_exactly": true
+    },
+    {
+      "trim_group": "Willys \u00b7 4-Door",
+      "vehicle_pk": 1084,
+      "vehicle_uuid": "7419882b-3dd5-4a7c-b55f-28d1f2a140d6",
+      "engine_label": "3.6L V6 ESS",
+      "body": "four-door",
+      "specs_url": "/vehicles/jeep/wrangler/jl/2024-willys-36l-v6-ess-4wd-us-4-door/",
+      "specs_status": 200,
+      "selected_exactly": true
+    }
+  ],
+  "system_check": "passed",
+  "migration_drift": "none",
+  "python_tests_passed": 51,
+  "javascript_test_limit": "node executable unavailable; JavaScript is unchanged",
+  "operational_writes": false
+}

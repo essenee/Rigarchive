@@ -1,0 +1,62 @@
+{
+  "review": {
+    "review_version": "1.0",
+    "revision_uuid": "16446e6a-dcad-5758-a665-8b0e760f89a6",
+    "correspondence_uuid": "445b14e7-e49b-59d7-9bfb-a5ae030349e9",
+    "revision_number": 1,
+    "supersedes_uuid": null,
+    "vehicle_model_uuid": "5ec5f58a-b140-484c-97f0-c90ec9c134d6",
+    "generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+    "source_id": "rigarchive_MY2024_edmunds_reconciliation",
+    "source_namespace": "source_model_code",
+    "identity_type": "model_code",
+    "native_identifier": "JLJS74",
+    "market": "US",
+    "start_year": 2024,
+    "end_year": 2024,
+    "restrictions": {},
+    "evidence": [
+      {
+        "assertion_set_id": "rigarchive_MY2024_edmunds_reconciliation-JLJS74-shared-selector-r1",
+        "assertions": [
+          {
+            "assertion_id": "JLJS74-reconciled-heading",
+            "attribute_key": "source_document_heading",
+            "raw_value": "United States / MY2024 / Jeep Wrangler (4-door) / Model Code Family JLJS74",
+            "source_context": "Reconciled MY2024 inventory (candidate_inventory.csv); Wrangler 4-Door Rubicon Family (Unlimited Rubicon, Unlimited Rubicon X); 4 active consumer configurations"
+          },
+          {
+            "assertion_id": "JLJS74-selector-model-code",
+            "attribute_key": "source_model_code",
+            "raw_value": "JLJS74",
+            "source_context": "Shared source-scoped model-code selector for JLJS74 across applicable MY2024 candidates: JL24-19, JL24-20, JL24-21, JL24-22"
+          }
+        ],
+        "extraction_mode": "manually_verified_transcription",
+        "extractor_id": "MY2024_shared_model_code_selector",
+        "extractor_version": "1.0.0",
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "publication_revision": "2024-reconciled-r1",
+        "raw_artifact_hash": "sha256:3dd67950ed426a9e5c575af68d3b4ce4807f879d95c0eed5f945a309aa03c6fb",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2024_JL/lightweight_ingestion_review_20261113/candidate_inventory.csv",
+        "retrieved_at": "2026-11-13T14:00:00Z",
+        "source_applicability": {
+          "applicability_basis": "Reconciled US MY2024 Jeep Wrangler inventory selector for model code JLJS74",
+          "applicability_scope": "model_year",
+          "market": "US",
+          "publisher_jurisdiction": null
+        },
+        "source_id": "rigarchive_MY2024_edmunds_reconciliation",
+        "source_locator": "https://www.edmunds.com/jeep/wrangler/2024/features-specs/"
+      }
+    ],
+    "finding": "established",
+    "reviewer": "codex",
+    "reviewed_at": "2026-11-14T16:45:57.863298+00:00",
+    "review_notes": "RA-052 proposed established finding, prepared by Codex; pending explicit Project Owner publication authorization. Exact rigarchive_MY2024_edmunds_reconciliation/source_model_code/model_code/JLJS74, US MY2024 only, targets existing Jeep Wrangler JL Generation 32 (38d3c3ac-f825-4406-abb5-c2d12b9129a4). Retained candidate_inventory.csv rows JL24-19, JL24-20, JL24-21, JL24-22 explicitly name generation JL, model Wrangler, manufacturer Jeep, market US, year 2024 and model code JLJS74; the original retained source selector and applicability are preserved. Published JL precedent PK 237, UUID 67538afd-5b91-5821-8e59-10905611603e, source rigarchive_MY2023_edmunds_reconciliation, years 2023-2023, has the same exact model code; it corroborates the already-established Generation identity, not new MY2024 engine/equipment availability. Evidence is the exact unchanged shared-selector document from RA-051 Candidate 3.1.0 snapshots, retaining source assertion IDs/values, raw artifact hash/reference and source revision. Transcribed/reconciled provenance is not reclassified as an original manufacturer document. No assertion is synthesized from a code prefix, trim label or adjacent-year availability. Original unpublished proposal is superseded as a preparation artifact only; this is revision 1 of its still-unpublished chain. No canonical publication or approval is asserted by this preparation."
+  },
+  "content_hash": "sha256:4d1ee20a029198352638ee0d27accad767ce8698781b5889345a2622ad10f6b2"
+}

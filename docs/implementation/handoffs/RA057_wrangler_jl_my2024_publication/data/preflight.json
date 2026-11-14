@@ -1,0 +1,24 @@
+{
+  "status": "PREFLIGHT_PASSED",
+  "operational_database": "/Users/cosmo/dev/Rigarchive/db.sqlite3",
+  "database_sha256": "d0274e8748f3f4ff39cdb4f18c822b46461a914d26364c1e505ada0131d43260",
+  "counts": {
+    "vehicles": 1053,
+    "correspondences": 254,
+    "receipts": 3362,
+    "engines": 7,
+    "bodies": 2
+  },
+  "approval_sha256": "66052581559a02d9400b7dfa6322628cd9c4094285ebde230eaac7d90fc115d3",
+  "approval": {
+    "approval_version": "1.0",
+    "approved_at_utc": "2026-11-14T18:21:34.592507Z",
+    "decision": "approved",
+    "matrix_digest": "sha256:84c0f0a630e1547593001b7e4ce25158b5f51528633c6f6ce1e2815ac83c44dd",
+    "operator": "project_owner"
+  },
+  "runtime_manifest_hash": "sha256:aef600464c56c80dd2160cdf857d6aad6b5d6825de949db1e891831c8261fd4f",
+  "plan_count": 31,
+  "preflight_revalidation": "valid",
+  "head": "a99187227e862a5c97fcdb12491a5bac2e2f1ffb"
+}

@@ -4,6 +4,14 @@ All notable changes to RigArchive will be documented in this file.
 
 ## Unreleased
 
+### MY2024 Wrangler publication and presentation — RA-054–RA-058 (2026-11-14)
+
+- Published exactly 31 approved MY2024 US Wrangler JL configurations as one atomic Plan3.1 batch using the recorded RA-056A Approval1; created VehicleDefinitions PK1069–1099 and 31 receipts PK3363–3393. Preserved all historical records, exact marketed trims, body/Engine UUIDs and 31 unique slugs (ten body-pair vectors). Corrected the historical drivetrain dependency and CSV projection scope; added bounded door-aware public names and generic trim/body configurator choices without market/slug labels. Recorded approval/database verification and publication inventories. Retained focused checks passed (128 planning, 38 naming/body, 51 configurator tests); no full-suite rerun. Operational databases/backups and unrelated work are excluded from this source/documentation commit. See RA-057 and RA-058 handoffs.
+
+### RA-058 — configurator body grouping (2026-11-14)
+
+- Added presentation-only groups for actual published trim/FactoryBodyConfiguration combinations and compact engine/drive choices without market/slug fallbacks. Blank stored trims use body labels without inventing a marketed designation. Read-only MY2024 Wrangler view/template QA verifies both Willys door groups and all four Specs links; 51 focused tests, system and migration-drift checks pass. No schema or operational data changes; JavaScript is unchanged (Node unavailable). Implemented and verified; see `docs/implementation/handoffs/RA058_configurator_body_aware_labels/README.md`.
+
 ### Added
 
 - Accepted the minimal MY2024 Engine Registry 3.1.0 integration (2026-11-14): closed 3.1.0 candidate/plan/Matrix/manifest/revalidation/receipt envelopes pin the complete Engine code, manufacturer, UUID, five properties and state hash while reusing RA-049 body/family/slug planning, Approval1 and its atomic executor. Known codes inherit registry parameters without repeated classification; conflicts/unknown codes fail closed, state drift stales approval, creates persist Engine FKs and no-ops preserve existing associations. Existing 3.0.0 contracts/receipts, original candidates, Jeep seeds and RA-050 remain unchanged. Verification passed 45 focused, 390 targeted and 1,013 full-suite tests (96.963s; one full run), plus system/migration/whitespace checks. No new models/migrations, operational records or production candidates/Matrix. Owner authorization covers one exact eleven-path local acceptance commit, with no push. Existing passing verification is retained without a full-suite rerun. See the existing Engine Registry handoff integration section.

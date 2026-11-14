@@ -1,0 +1,41 @@
+{
+  "status": "COMMITTED_AND_VERIFIED",
+  "started_at_utc": "2026-11-14T18:26:08.344991+00:00",
+  "committed_at_utc": "2026-11-14T18:26:11.513257+00:00",
+  "duration_seconds": 3.168266,
+  "atomic": true,
+  "planned": 31,
+  "created": 31,
+  "failed": 0,
+  "receipts_created": 31,
+  "before_counts": {
+    "vehicles": 1053,
+    "correspondences": 254,
+    "receipts": 3362,
+    "engines": 7,
+    "bodies": 2
+  },
+  "after_counts": {
+    "vehicles": 1084,
+    "correspondences": 254,
+    "receipts": 3393,
+    "engines": 7,
+    "bodies": 2
+  },
+  "before_sha256": "d0274e8748f3f4ff39cdb4f18c822b46461a914d26364c1e505ada0131d43260",
+  "after_sha256": "e9df6504144eff726ef431366a1ec198cd94bc740c8d11368282e97e860ba026",
+  "backup": {
+    "path": "/Users/cosmo/dev/Rigarchive/backups/snapshots/db_snapshot_pre_ra057_20261114T182607824464Z.sqlite3",
+    "sha256": "ef48daa8e29abc9c6586c9b2803dd63277b2fae7c466e27d7553adf3c90024d6",
+    "bytes": 56926208,
+    "integrity_check": "ok",
+    "foreign_key_violations": 0,
+    "all_schemas_and_rows_match_source": true
+  },
+  "historical_rows_preserved": true,
+  "all_other_tables_preserved": true,
+  "integrity_check": "ok",
+  "foreign_key_violations": 0,
+  "manifest_hash": "sha256:aef600464c56c80dd2160cdf857d6aad6b5d6825de949db1e891831c8261fd4f",
+  "approval_sha256": "66052581559a02d9400b7dfa6322628cd9c4094285ebde230eaac7d90fc115d3"
+}

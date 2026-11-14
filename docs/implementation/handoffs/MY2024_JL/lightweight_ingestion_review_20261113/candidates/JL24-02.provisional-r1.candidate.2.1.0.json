@@ -1,0 +1,447 @@
+{
+  "attribute_provenance": {
+    "engine_cylinders": [
+      "rigarchive_MY2024_edmunds_reconciliation|sha256:3dd67950ed426a9e5c575af68d3b4ce4807f879d95c0eed5f945a309aa03c6fb|JL24-02-edmunds-transcription|JL24-02-cyl"
+    ],
+    "engine_displacement_liters": [
+      "rigarchive_MY2024_edmunds_reconciliation|sha256:3dd67950ed426a9e5c575af68d3b4ce4807f879d95c0eed5f945a309aa03c6fb|JL24-02-edmunds-transcription|JL24-02-disp"
+    ],
+    "generic_drive_classification": [
+      "2022_JP_Wrangler_SP|sha256:e71292bb3e8fd98cff9b2b9478eade0490e01a93dc404f12e89d66f22d8323a9|MY2024_Wrangler_technical_layout|JL24-02-drive"
+    ],
+    "make": [
+      "rigarchive_MY2024_edmunds_reconciliation|sha256:3dd67950ed426a9e5c575af68d3b4ce4807f879d95c0eed5f945a309aa03c6fb|JL24-02-edmunds-transcription|JL24-02-make"
+    ],
+    "model": [
+      "rigarchive_MY2024_edmunds_reconciliation|sha256:3dd67950ed426a9e5c575af68d3b4ce4807f879d95c0eed5f945a309aa03c6fb|JL24-02-edmunds-transcription|JL24-02-model"
+    ],
+    "model_year": [
+      "rigarchive_MY2024_edmunds_reconciliation|sha256:3dd67950ed426a9e5c575af68d3b4ce4807f879d95c0eed5f945a309aa03c6fb|JL24-02-edmunds-transcription|JL24-02-year"
+    ]
+  },
+  "candidate_identity": {
+    "manufacturer_name": "Jeep",
+    "market": "US",
+    "model_year": 2024,
+    "trim_name": "Sport",
+    "vehicle_model_name": "Wrangler"
+  },
+  "candidate_reference": "JL24-02",
+  "canonical_powertrain": {
+    "electrification_type": null,
+    "engine_aspiration": null,
+    "engine_cylinders": 6,
+    "engine_displacement_liters": "3.6",
+    "fuel_type": null
+  },
+  "envelope": {
+    "artifact_type": "rigarchive.candidate_configuration.v2",
+    "created_at": "2026-11-13T14:00:00+00:00",
+    "generator": "RigArchive-CandidateConstruction/0.1.0",
+    "schema_version": "2.1.0"
+  },
+  "evidence_documents": [
+    {
+      "assertion_set_id": "JL24-02-edmunds-transcription",
+      "assertions": [
+        {
+          "assertion_id": "JL24-02-heading",
+          "attribute_key": "source_document_heading",
+          "raw_value": "United States / MY2024 / Jeep Wrangler (2-door) / Sport [JLJL72 / 23B;24B]",
+          "source_context": "Edmunds features-specs selector; model year 2024; trim Sport"
+        },
+        {
+          "assertion_id": "JL24-02-model",
+          "attribute_key": "source_model_code",
+          "raw_value": "JLJL72",
+          "source_context": "Jeep Wrangler JL factory model code JLJL72"
+        },
+        {
+          "assertion_id": "JL24-02-engine-column",
+          "attribute_key": "engine_descriptor",
+          "raw_value": "3.6L V6 24V VVT Engine with Stop/Start (ERC)",
+          "source_context": "Engine specification for JL24-02 (ERC): 3.6L V6 ESS"
+        },
+        {
+          "assertion_id": "JL24-02-trans-column",
+          "attribute_key": "transmission_descriptor",
+          "raw_value": "6-speed manual (23_ CPOS) or 8-speed shiftable automatic 850RE (24_ CPOS)",
+          "source_context": "Transmission specification for JL24-02 (DEM;DFT): 6-SPEED MANUAL TRANSMISSION (DEM) / 8-SPD AUTO 850RE TRANS (DFT)"
+        },
+        {
+          "assertion_id": "JL24-02-correspondence",
+          "attribute_key": "research_offering_correspondence",
+          "raw_value": {
+            "body_style": "2-door",
+            "candidate_id": "JL24-02",
+            "drivetrain": "4WD",
+            "engine_code": "ERC",
+            "engine_cylinders": 6,
+            "engine_displacement_liters": "3.6",
+            "engine_family": "3.6 V6 ESS",
+            "evidence_confidence": "high",
+            "evidence_tier": "tier_1_edmunds_and_factory_order_guide",
+            "factory_order_guide_page": "2024_JL_2D_OG_20240620:p.2",
+            "fwp_usd": "31093;35368",
+            "generation": "JL",
+            "manufacturer": "Jeep",
+            "market": "US",
+            "marketed_trim": "Sport",
+            "model": "Wrangler",
+            "model_code": "JLJL72",
+            "model_year": 2024,
+            "msrp_usd": "31995;36495",
+            "notes": "2024 2-Door Order Guide (04/26/2023 & 06/20/2024, p. 2; QOP 23B DEM 6-spd manual & QOP 24B DFT 8-spd auto)",
+            "outstanding_classification_questions": "engine_aspiration;fuel_type;electrification_type",
+            "proposed_aspiration": "naturally_aspirated",
+            "proposed_electrification_type": "none",
+            "proposed_fuel_type": "gasoline",
+            "provisional_aspiration": "",
+            "provisional_electrification_type": "",
+            "provisional_fuel_type": "",
+            "quick_order_package": "23B;24B",
+            "reconciliation_classification": "matched_edmunds_and_factory",
+            "source_id": "rigarchive_MY2024_edmunds_reconciliation",
+            "status": "ACTIVE_CONSUMER",
+            "transmission_code": "DEM;DFT",
+            "transmission_speeds": "6;8",
+            "transmission_type": "manual;automatic"
+          },
+          "source_context": "Reconciled MY2024 configuration row JL24-02; trim Sport; QOP 23B;24B"
+        }
+      ],
+      "extraction_mode": "manually_verified_transcription",
+      "extractor_id": "MY2024_lightweight_edmunds_builder",
+      "extractor_version": "1.0.0",
+      "generation_normalizer": {
+        "id": "explicit_generation_identity",
+        "version": "1.0.0"
+      },
+      "publication_revision": "2024-reconciled-r1",
+      "raw_artifact_hash": "sha256:3dd67950ed426a9e5c575af68d3b4ce4807f879d95c0eed5f945a309aa03c6fb",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2024_JL/lightweight_ingestion_review_20261113/candidate_inventory.csv",
+      "retrieved_at": "2026-11-13T14:00:00+00:00",
+      "source_applicability": {
+        "applicability_basis": "MY2024 US Jeep Wrangler JL candidate JL24-02 (Sport)",
+        "applicability_scope": "model_year",
+        "market": "US",
+        "publisher_jurisdiction": null,
+        "unknown_fields": {}
+      },
+      "source_id": "rigarchive_MY2024_edmunds_reconciliation",
+      "source_locator": "https://www.edmunds.com/jeep/wrangler/2024/features-specs/"
+    },
+    {
+      "assertion_set_id": "rigarchive_MY2024_edmunds_reconciliation-JLJL72-shared-selector-r1",
+      "assertions": [
+        {
+          "assertion_id": "JLJL72-reconciled-heading",
+          "attribute_key": "source_document_heading",
+          "raw_value": "United States / MY2024 / Jeep Wrangler (2-door) / Model Code Family JLJL72",
+          "source_context": "Reconciled MY2024 inventory (candidate_inventory.csv); Wrangler 2-Door Sport Family (Sport, Sport S, Willys); 6 active consumer configurations"
+        },
+        {
+          "assertion_id": "JLJL72-selector-model-code",
+          "attribute_key": "source_model_code",
+          "raw_value": "JLJL72",
+          "source_context": "Shared source-scoped model-code selector for JLJL72 across applicable MY2024 candidates: JL24-01, JL24-02, JL24-03, JL24-04, JL24-05, JL24-06"
+        }
+      ],
+      "extraction_mode": "manually_verified_transcription",
+      "extractor_id": "MY2024_shared_model_code_selector",
+      "extractor_version": "1.0.0",
+      "generation_normalizer": {
+        "id": "explicit_generation_identity",
+        "version": "1.0.0"
+      },
+      "publication_revision": "2024-reconciled-r1",
+      "raw_artifact_hash": "sha256:3dd67950ed426a9e5c575af68d3b4ce4807f879d95c0eed5f945a309aa03c6fb",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2024_JL/lightweight_ingestion_review_20261113/candidate_inventory.csv",
+      "retrieved_at": "2026-11-13T14:00:00+00:00",
+      "source_applicability": {
+        "applicability_basis": "Reconciled US MY2024 Jeep Wrangler inventory selector for model code JLJL72",
+        "applicability_scope": "model_year",
+        "market": "US",
+        "publisher_jurisdiction": null,
+        "unknown_fields": {}
+      },
+      "source_id": "rigarchive_MY2024_edmunds_reconciliation",
+      "source_locator": "https://www.edmunds.com/jeep/wrangler/2024/features-specs/"
+    },
+    {
+      "assertion_set_id": "MY2024_Wrangler_technical_layout",
+      "assertions": [
+        {
+          "assertion_id": "tech-4wd",
+          "attribute_key": "drivetrain",
+          "raw_value": "4WD",
+          "source_context": "Standard 4WD across all US Jeep Wrangler JL trims (Command-Trac, Selec-Trac, Rock-Trac)"
+        }
+      ],
+      "extraction_mode": "manually_verified_transcription",
+      "extractor_id": "MY2024_lightweight_edmunds_builder",
+      "extractor_version": "1.0.0",
+      "generation_normalizer": {
+        "id": "explicit_generation_identity",
+        "version": "1.0.0"
+      },
+      "publication_revision": "2022-01-01",
+      "raw_artifact_hash": "sha256:e71292bb3e8fd98cff9b2b9478eade0490e01a93dc404f12e89d66f22d8323a9",
+      "raw_artifact_reference": "docs/implementation/handoffs/MY2022_JL/discovery_20261109/source_pdfs/2022_JP_Wrangler_SP.pdf",
+      "retrieved_at": "2026-11-09T23:51:50.840862+00:00",
+      "source_applicability": {
+        "applicability_basis": "Jeep Wrangler JL continuing platform technical specifications",
+        "applicability_scope": "generation",
+        "market": "US",
+        "publisher_jurisdiction": "US",
+        "unknown_fields": {}
+      },
+      "source_id": "2022_JP_Wrangler_SP",
+      "source_locator": "docs/implementation/handoffs/MY2022_JL/discovery_20261109/source_pdfs/2022_JP_Wrangler_SP.pdf"
+    }
+  ],
+  "evidence_raw_hashes": [
+    "sha256:3dd67950ed426a9e5c575af68d3b4ce4807f879d95c0eed5f945a309aa03c6fb",
+    "sha256:e71292bb3e8fd98cff9b2b9478eade0490e01a93dc404f12e89d66f22d8323a9"
+  ],
+  "generation_evidence": [
+    {
+      "assertion_id": "JL24-02-model",
+      "assertion_set_id": "JL24-02-edmunds-transcription",
+      "document_hash": "sha256:3dd67950ed426a9e5c575af68d3b4ce4807f879d95c0eed5f945a309aa03c6fb",
+      "identity_type": "model_code",
+      "native_identifier": "JLJL72",
+      "normalizer_id": "explicit_generation_identity",
+      "normalizer_version": "1.0.0",
+      "source_id": "rigarchive_MY2024_edmunds_reconciliation",
+      "source_namespace": "source_model_code"
+    },
+    {
+      "assertion_id": "JLJL72-selector-model-code",
+      "assertion_set_id": "rigarchive_MY2024_edmunds_reconciliation-JLJL72-shared-selector-r1",
+      "document_hash": "sha256:3dd67950ed426a9e5c575af68d3b4ce4807f879d95c0eed5f945a309aa03c6fb",
+      "identity_type": "model_code",
+      "native_identifier": "JLJL72",
+      "normalizer_id": "explicit_generation_identity",
+      "normalizer_version": "1.0.0",
+      "source_id": "rigarchive_MY2024_edmunds_reconciliation",
+      "source_namespace": "source_model_code"
+    }
+  ],
+  "normalized_assertions": [
+    {
+      "interpretation_id": "2022_JP_Wrangler_SP|sha256:e71292bb3e8fd98cff9b2b9478eade0490e01a93dc404f12e89d66f22d8323a9|MY2024_Wrangler_technical_layout|JL24-02-drive",
+      "mapping_status": "mapped",
+      "normalization_notes": "Explicit model-wide 4WD layout in retained chassis documentation",
+      "normalized_concept": "4WD",
+      "raw_source_value": "4WD",
+      "source_assertion_ref": "2022_JP_Wrangler_SP|sha256:e71292bb3e8fd98cff9b2b9478eade0490e01a93dc404f12e89d66f22d8323a9|MY2024_Wrangler_technical_layout|tech-4wd",
+      "target_attribute_key": "generic_drive_classification"
+    },
+    {
+      "interpretation_id": "rigarchive_MY2024_edmunds_reconciliation|sha256:3dd67950ed426a9e5c575af68d3b4ce4807f879d95c0eed5f945a309aa03c6fb|JL24-02-edmunds-transcription|JL24-02-cyl",
+      "mapping_status": "mapped",
+      "normalization_notes": "Direct cylinder count projection from qualified descriptor",
+      "normalized_concept": 6,
+      "raw_source_value": "3.6L V6 24V VVT Engine with Stop/Start (ERC)",
+      "source_assertion_ref": "rigarchive_MY2024_edmunds_reconciliation|sha256:3dd67950ed426a9e5c575af68d3b4ce4807f879d95c0eed5f945a309aa03c6fb|JL24-02-edmunds-transcription|JL24-02-engine-column",
+      "target_attribute_key": "engine_cylinders"
+    },
+    {
+      "interpretation_id": "rigarchive_MY2024_edmunds_reconciliation|sha256:3dd67950ed426a9e5c575af68d3b4ce4807f879d95c0eed5f945a309aa03c6fb|JL24-02-edmunds-transcription|JL24-02-disp",
+      "mapping_status": "mapped",
+      "normalization_notes": "Direct displacement projection from qualified descriptor",
+      "normalized_concept": {
+        "normalized_unit": "L",
+        "normalized_value": "3.6",
+        "raw_source_string": "3.6L V6 24V VVT Engine with Stop/Start (ERC)"
+      },
+      "raw_source_value": "3.6L V6 24V VVT Engine with Stop/Start (ERC)",
+      "source_assertion_ref": "rigarchive_MY2024_edmunds_reconciliation|sha256:3dd67950ed426a9e5c575af68d3b4ce4807f879d95c0eed5f945a309aa03c6fb|JL24-02-edmunds-transcription|JL24-02-engine-column",
+      "target_attribute_key": "engine_displacement_liters"
+    },
+    {
+      "interpretation_id": "rigarchive_MY2024_edmunds_reconciliation|sha256:3dd67950ed426a9e5c575af68d3b4ce4807f879d95c0eed5f945a309aa03c6fb|JL24-02-edmunds-transcription|JL24-02-engine-name",
+      "mapping_status": "mapped",
+      "normalization_notes": "Display descriptor; codes and names do not substitute for 5-field identity",
+      "normalized_concept": "3.6L V6 ESS",
+      "raw_source_value": "3.6L V6 24V VVT Engine with Stop/Start (ERC)",
+      "source_assertion_ref": "rigarchive_MY2024_edmunds_reconciliation|sha256:3dd67950ed426a9e5c575af68d3b4ce4807f879d95c0eed5f945a309aa03c6fb|JL24-02-edmunds-transcription|JL24-02-engine-column",
+      "target_attribute_key": "engine_name"
+    },
+    {
+      "interpretation_id": "rigarchive_MY2024_edmunds_reconciliation|sha256:3dd67950ed426a9e5c575af68d3b4ce4807f879d95c0eed5f945a309aa03c6fb|JL24-02-edmunds-transcription|JL24-02-make",
+      "mapping_status": "mapped",
+      "normalization_notes": "MY2024 research transcription heading",
+      "normalized_concept": "Jeep",
+      "raw_source_value": "Jeep",
+      "source_assertion_ref": "rigarchive_MY2024_edmunds_reconciliation|sha256:3dd67950ed426a9e5c575af68d3b4ce4807f879d95c0eed5f945a309aa03c6fb|JL24-02-edmunds-transcription|JL24-02-heading",
+      "target_attribute_key": "make"
+    },
+    {
+      "interpretation_id": "rigarchive_MY2024_edmunds_reconciliation|sha256:3dd67950ed426a9e5c575af68d3b4ce4807f879d95c0eed5f945a309aa03c6fb|JL24-02-edmunds-transcription|JL24-02-market",
+      "mapping_status": "mapped",
+      "normalization_notes": "US domestic market applicability",
+      "normalized_concept": "US",
+      "raw_source_value": "US",
+      "source_assertion_ref": "rigarchive_MY2024_edmunds_reconciliation|sha256:3dd67950ed426a9e5c575af68d3b4ce4807f879d95c0eed5f945a309aa03c6fb|JL24-02-edmunds-transcription|JL24-02-heading",
+      "target_attribute_key": "market"
+    },
+    {
+      "interpretation_id": "rigarchive_MY2024_edmunds_reconciliation|sha256:3dd67950ed426a9e5c575af68d3b4ce4807f879d95c0eed5f945a309aa03c6fb|JL24-02-edmunds-transcription|JL24-02-model",
+      "mapping_status": "mapped",
+      "normalization_notes": "MY2024 research transcription heading",
+      "normalized_concept": "Wrangler",
+      "raw_source_value": "Wrangler",
+      "source_assertion_ref": "rigarchive_MY2024_edmunds_reconciliation|sha256:3dd67950ed426a9e5c575af68d3b4ce4807f879d95c0eed5f945a309aa03c6fb|JL24-02-edmunds-transcription|JL24-02-heading",
+      "target_attribute_key": "model"
+    },
+    {
+      "interpretation_id": "rigarchive_MY2024_edmunds_reconciliation|sha256:3dd67950ed426a9e5c575af68d3b4ce4807f879d95c0eed5f945a309aa03c6fb|JL24-02-edmunds-transcription|JL24-02-trim",
+      "mapping_status": "mapped",
+      "normalization_notes": "Body-aware marketed trim name normalization",
+      "normalized_concept": "Sport",
+      "raw_source_value": "Sport",
+      "source_assertion_ref": "rigarchive_MY2024_edmunds_reconciliation|sha256:3dd67950ed426a9e5c575af68d3b4ce4807f879d95c0eed5f945a309aa03c6fb|JL24-02-edmunds-transcription|JL24-02-heading",
+      "target_attribute_key": "trim"
+    },
+    {
+      "interpretation_id": "rigarchive_MY2024_edmunds_reconciliation|sha256:3dd67950ed426a9e5c575af68d3b4ce4807f879d95c0eed5f945a309aa03c6fb|JL24-02-edmunds-transcription|JL24-02-year",
+      "mapping_status": "mapped",
+      "normalization_notes": "MY2024 model year",
+      "normalized_concept": 2024,
+      "raw_source_value": 2024,
+      "source_assertion_ref": "rigarchive_MY2024_edmunds_reconciliation|sha256:3dd67950ed426a9e5c575af68d3b4ce4807f879d95c0eed5f945a309aa03c6fb|JL24-02-edmunds-transcription|JL24-02-heading",
+      "target_attribute_key": "model_year"
+    }
+  ],
+  "normalized_technical_details": {
+    "drivetrain_details": {
+      "generic_classification": "4WD"
+    },
+    "engine": {
+      "cylinders": 6,
+      "displacement": {
+        "normalized_unit": "L",
+        "normalized_value": "3.6",
+        "raw_source_string": "3.6L V6 24V VVT Engine with Stop/Start (ERC)"
+      }
+    }
+  },
+  "reconciliation_and_review": {
+    "attribute_states": {
+      "electrification_type": {
+        "conflict_details": "Unresolved evidence-backed classification; remains null pending owner adjudication approval",
+        "reconciliation_state": "incomplete",
+        "review_disposition": "pending_review"
+      },
+      "engine_aspiration": {
+        "conflict_details": "Unresolved evidence-backed classification; remains null pending owner adjudication approval",
+        "reconciliation_state": "incomplete",
+        "review_disposition": "pending_review"
+      },
+      "engine_cylinders": {
+        "reconciliation_state": "single_source",
+        "review_disposition": "not_required"
+      },
+      "engine_displacement_liters": {
+        "reconciliation_state": "single_source",
+        "review_disposition": "not_required"
+      },
+      "fuel_type": {
+        "conflict_details": "Unresolved evidence-backed classification; remains null pending owner adjudication approval",
+        "reconciliation_state": "incomplete",
+        "review_disposition": "pending_review"
+      },
+      "generic_drive_classification": {
+        "reconciliation_state": "single_source",
+        "review_disposition": "not_required"
+      },
+      "make": {
+        "reconciliation_state": "single_source",
+        "review_disposition": "not_required"
+      },
+      "model": {
+        "reconciliation_state": "single_source",
+        "review_disposition": "not_required"
+      },
+      "model_year": {
+        "reconciliation_state": "single_source",
+        "review_disposition": "not_required"
+      }
+    },
+    "reconciliation_notes": "Provisional MY2024 lightweight construction (2-door Sport, JLJL72 / QOP 23B;24B, ACTIVE_CONSUMER). Missing five-field classifications (engine_aspiration, fuel_type, electrification_type) and unpublished MY2024 source correspondence block canonical eligibility prior to owner sign-off.",
+    "requires_human_review": true,
+    "review_workflow_disposition": "pending_review"
+  },
+  "research_revision_lineage": {
+    "body_style": "2-door",
+    "candidate_id": "JL24-02",
+    "engine_code": "ERC",
+    "inventory_row": {
+      "body_style": "2-door",
+      "candidate_id": "JL24-02",
+      "drivetrain": "4WD",
+      "engine_code": "ERC",
+      "engine_cylinders": 6,
+      "engine_displacement_liters": "3.6",
+      "engine_family": "3.6 V6 ESS",
+      "evidence_confidence": "high",
+      "evidence_tier": "tier_1_edmunds_and_factory_order_guide",
+      "factory_order_guide_page": "2024_JL_2D_OG_20240620:p.2",
+      "fwp_usd": "31093;35368",
+      "generation": "JL",
+      "manufacturer": "Jeep",
+      "market": "US",
+      "marketed_trim": "Sport",
+      "model": "Wrangler",
+      "model_code": "JLJL72",
+      "model_year": 2024,
+      "msrp_usd": "31995;36495",
+      "notes": "2024 2-Door Order Guide (04/26/2023 & 06/20/2024, p. 2; QOP 23B DEM 6-spd manual & QOP 24B DFT 8-spd auto)",
+      "outstanding_classification_questions": "engine_aspiration;fuel_type;electrification_type",
+      "proposed_aspiration": "naturally_aspirated",
+      "proposed_electrification_type": "none",
+      "proposed_fuel_type": "gasoline",
+      "provisional_aspiration": "",
+      "provisional_electrification_type": "",
+      "provisional_fuel_type": "",
+      "quick_order_package": "23B;24B",
+      "reconciliation_classification": "matched_edmunds_and_factory",
+      "source_id": "rigarchive_MY2024_edmunds_reconciliation",
+      "status": "ACTIVE_CONSUMER",
+      "transmission_code": "DEM;DFT",
+      "transmission_speeds": "6;8",
+      "transmission_type": "manual;automatic"
+    },
+    "manufacturer_model_code": "JLJL72",
+    "quick_order_package": "23B;24B",
+    "target_generation_context": {
+      "authorization_status": "intended existing target only; correspondence not yet published",
+      "pk": 32,
+      "uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4"
+    },
+    "transmission_code": "DEM;DFT",
+    "transmission_type": "manual;automatic"
+  },
+  "source_configuration_identities": [
+    {
+      "identity_type": "record_id",
+      "native_identifier": "MY2024_Wrangler_technical_layout",
+      "source_description": "2022_JP_Wrangler_SP record_id MY2024_Wrangler_technical_layout",
+      "source_id": "2022_JP_Wrangler_SP"
+    },
+    {
+      "identity_type": "record_id",
+      "native_identifier": "JL24-02-edmunds-transcription",
+      "source_description": "rigarchive_MY2024_edmunds_reconciliation record_id JL24-02-edmunds-transcription",
+      "source_id": "rigarchive_MY2024_edmunds_reconciliation"
+    },
+    {
+      "identity_type": "record_id",
+      "native_identifier": "rigarchive_MY2024_edmunds_reconciliation-JLJL72-shared-selector-r1",
+      "source_description": "rigarchive_MY2024_edmunds_reconciliation record_id rigarchive_MY2024_edmunds_reconciliation-JLJL72-shared-selector-r1",
+      "source_id": "rigarchive_MY2024_edmunds_reconciliation"
+    }
+  ]
+}

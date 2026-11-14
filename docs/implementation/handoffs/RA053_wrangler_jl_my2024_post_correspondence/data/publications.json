@@ -1,0 +1,962 @@
+[
+  {
+    "source_id": "fca_us_2024_jlu_order_guide_transcription",
+    "model_code": "JLJP74",
+    "revision_pk": 243,
+    "revision_uuid": "b3c91097-e5d5-5fd5-b227-41f461a16c1b",
+    "correspondence_uuid": "b55117b0-40e6-5187-ab50-d03a3942b9c6",
+    "content_hash": "sha256:795db6bf9df841e26ca2bf72231c7d21b07c95cc79f3c2a00f9f3527614a69dd",
+    "receipt_pk": 3351,
+    "receipt_uuid": "7d6bdeb8-8515-4bbc-a2dc-bae4a1df0663",
+    "receipt_manifest_hash": "sha256:795db6bf9df841e26ca2bf72231c7d21b07c95cc79f3c2a00f9f3527614a69dd",
+    "outcome": "created",
+    "operator_label": "project_owner",
+    "execution_agent": "codex",
+    "receipt_snapshot": {
+      "review": {
+        "review_version": "1.0",
+        "revision_uuid": "b3c91097-e5d5-5fd5-b227-41f461a16c1b",
+        "correspondence_uuid": "b55117b0-40e6-5187-ab50-d03a3942b9c6",
+        "revision_number": 1,
+        "supersedes_uuid": null,
+        "vehicle_model_uuid": "5ec5f58a-b140-484c-97f0-c90ec9c134d6",
+        "generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+        "source_id": "fca_us_2024_jlu_order_guide_transcription",
+        "source_namespace": "source_model_code",
+        "identity_type": "model_code",
+        "native_identifier": "JLJP74",
+        "market": "US",
+        "start_year": 2024,
+        "end_year": 2024,
+        "restrictions": {},
+        "evidence": [
+          {
+            "assertion_set_id": "fca_us_2024_jlu_order_guide_transcription-JLJP74-shared-selector-r1",
+            "assertions": [
+              {
+                "assertion_id": "JLJP74-og-cover-heading",
+                "attribute_key": "source_document_heading",
+                "raw_value": "UNITED STATES / 2024 / JEEP WRANGLER 4 DOOR CUSTOMER PREFERRED CODE GUIDE \u2014 Model Code JLJP74 (Page 6)",
+                "source_context": "2024 4-Door Customer Preferred Code Guide page 1 index and page 6 model table (2024_JL_4D_OG_20240514)"
+              },
+              {
+                "assertion_id": "JLJP74-selector-model-code",
+                "attribute_key": "source_model_code",
+                "raw_value": "JLJP74",
+                "source_context": "2024 4-Door Customer Preferred Code Guide page 1 index and page 6 model heading; exact manufacturer model code JLJP74"
+              }
+            ],
+            "extraction_mode": "manually_verified_transcription",
+            "extractor_id": "MY2024_shared_model_code_selector",
+            "extractor_version": "1.0.0",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": "2024-05-14",
+            "raw_artifact_hash": "sha256:e5721cace34daf4d1d958e170c5087ac1d3453a48aa67357d0528a5d1c936071",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2024_JL/lightweight_ingestion_review_20261113/factory_reconciliation.csv",
+            "retrieved_at": "2026-11-13T14:00:00Z",
+            "source_applicability": {
+              "applicability_basis": "United States 2024 Jeep Wrangler 4-Door Customer Preferred Code Guide (Issued 04/26/2023, Reissued 05/14/2024)",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": "US"
+            },
+            "source_id": "fca_us_2024_jlu_order_guide_transcription",
+            "source_locator": "https://www.jlwranglerforums.com/forum/threads/latest-2024-jeep-wrangler-order-guides-2-door-4-door-updated-monthly.110292/"
+          }
+        ],
+        "finding": "established",
+        "reviewer": "codex",
+        "reviewed_at": "2026-11-14T16:45:57.863298+00:00",
+        "review_notes": "RA-052 proposed established finding, prepared by Codex; pending explicit Project Owner publication authorization. Exact fca_us_2024_jlu_order_guide_transcription/source_model_code/model_code/JLJP74, US MY2024 only, targets existing Jeep Wrangler JL Generation 32 (38d3c3ac-f825-4406-abb5-c2d12b9129a4). Retained candidate_inventory.csv rows JL24-18 explicitly name generation JL, model Wrangler, manufacturer Jeep, market US, year 2024 and model code JLJP74; the original retained source selector and applicability are preserved. Published JL precedent PK 235, UUID 8f255fd9-d610-539c-beb7-f5ab5a06d46a, source rigarchive_MY2023_edmunds_reconciliation, years 2023-2023, has the same exact model code; it corroborates the already-established Generation identity, not new MY2024 engine/equipment availability. Evidence is the exact unchanged shared-selector document from RA-051 Candidate 3.1.0 snapshots, retaining source assertion IDs/values, raw artifact hash/reference and source revision. Transcribed/reconciled provenance is not reclassified as an original manufacturer document. No assertion is synthesized from a code prefix, trim label or adjacent-year availability. Original unpublished proposal is superseded as a preparation artifact only; this is revision 1 of its still-unpublished chain. No canonical publication or approval is asserted by this preparation."
+      },
+      "content_hash": "sha256:795db6bf9df841e26ca2bf72231c7d21b07c95cc79f3c2a00f9f3527614a69dd",
+      "attribution": {
+        "version": "1.0",
+        "execution_agent": "codex"
+      }
+    }
+  },
+  {
+    "source_id": "fca_us_2024_jlu_order_guide_transcription",
+    "model_code": "JLXL74",
+    "revision_pk": 244,
+    "revision_uuid": "8d117ccb-786f-5915-b3be-d6cc199e931d",
+    "correspondence_uuid": "3916bbc2-05a5-51d8-a737-50eaf6b133ee",
+    "content_hash": "sha256:8eb8db1658870ba33598bbd61bfd98ec96ed2ed92eba1f350b379b071e2a2023",
+    "receipt_pk": 3352,
+    "receipt_uuid": "cb9479ec-7b1f-4e79-9d63-30b38f029829",
+    "receipt_manifest_hash": "sha256:8eb8db1658870ba33598bbd61bfd98ec96ed2ed92eba1f350b379b071e2a2023",
+    "outcome": "created",
+    "operator_label": "project_owner",
+    "execution_agent": "codex",
+    "receipt_snapshot": {
+      "review": {
+        "review_version": "1.0",
+        "revision_uuid": "8d117ccb-786f-5915-b3be-d6cc199e931d",
+        "correspondence_uuid": "3916bbc2-05a5-51d8-a737-50eaf6b133ee",
+        "revision_number": 1,
+        "supersedes_uuid": null,
+        "vehicle_model_uuid": "5ec5f58a-b140-484c-97f0-c90ec9c134d6",
+        "generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+        "source_id": "fca_us_2024_jlu_order_guide_transcription",
+        "source_namespace": "source_model_code",
+        "identity_type": "model_code",
+        "native_identifier": "JLXL74",
+        "market": "US",
+        "start_year": 2024,
+        "end_year": 2024,
+        "restrictions": {},
+        "evidence": [
+          {
+            "assertion_set_id": "fca_us_2024_jlu_order_guide_transcription-JLXL74-shared-selector-r1",
+            "assertions": [
+              {
+                "assertion_id": "JLXL74-og-cover-heading",
+                "attribute_key": "source_document_heading",
+                "raw_value": "UNITED STATES / 2024 / JEEP WRANGLER 4 DOOR CUSTOMER PREFERRED CODE GUIDE \u2014 Model Code JLXL74 (Page 17)",
+                "source_context": "2024 4-Door Customer Preferred Code Guide page 1 index and page 17 model table (2024_JL_4D_OG_20240514)"
+              },
+              {
+                "assertion_id": "JLXL74-selector-model-code",
+                "attribute_key": "source_model_code",
+                "raw_value": "JLXL74",
+                "source_context": "2024 4-Door Customer Preferred Code Guide page 1 index and page 17 model heading; exact manufacturer model code JLXL74"
+              }
+            ],
+            "extraction_mode": "manually_verified_transcription",
+            "extractor_id": "MY2024_shared_model_code_selector",
+            "extractor_version": "1.0.0",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": "2024-05-14",
+            "raw_artifact_hash": "sha256:e5721cace34daf4d1d958e170c5087ac1d3453a48aa67357d0528a5d1c936071",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2024_JL/lightweight_ingestion_review_20261113/factory_reconciliation.csv",
+            "retrieved_at": "2026-11-13T14:00:00Z",
+            "source_applicability": {
+              "applicability_basis": "United States 2024 Jeep Wrangler 4-Door Customer Preferred Code Guide (Issued 04/26/2023, Reissued 05/14/2024)",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": "US"
+            },
+            "source_id": "fca_us_2024_jlu_order_guide_transcription",
+            "source_locator": "https://www.jlwranglerforums.com/forum/threads/latest-2024-jeep-wrangler-order-guides-2-door-4-door-updated-monthly.110292/"
+          }
+        ],
+        "finding": "established",
+        "reviewer": "codex",
+        "reviewed_at": "2026-11-14T16:45:57.863298+00:00",
+        "review_notes": "RA-052 proposed established finding, prepared by Codex; pending explicit Project Owner publication authorization. Exact fca_us_2024_jlu_order_guide_transcription/source_model_code/model_code/JLXL74, US MY2024 only, targets existing Jeep Wrangler JL Generation 32 (38d3c3ac-f825-4406-abb5-c2d12b9129a4). Retained candidate_inventory.csv rows JL24-27 explicitly name generation JL, model Wrangler, manufacturer Jeep, market US, year 2024 and model code JLXL74; the original retained source selector and applicability are preserved. Published JL precedent PK 239, UUID dc793ec9-1373-5e8d-b707-c5125aed4eb0, source rigarchive_MY2023_edmunds_reconciliation, years 2023-2023, has the same exact model code; it corroborates the already-established Generation identity, not new MY2024 engine/equipment availability. Evidence is the exact unchanged shared-selector document from RA-051 Candidate 3.1.0 snapshots, retaining source assertion IDs/values, raw artifact hash/reference and source revision. Transcribed/reconciled provenance is not reclassified as an original manufacturer document. No assertion is synthesized from a code prefix, trim label or adjacent-year availability. Original unpublished proposal is superseded as a preparation artifact only; this is revision 1 of its still-unpublished chain. No canonical publication or approval is asserted by this preparation."
+      },
+      "content_hash": "sha256:8eb8db1658870ba33598bbd61bfd98ec96ed2ed92eba1f350b379b071e2a2023",
+      "attribution": {
+        "version": "1.0",
+        "execution_agent": "codex"
+      }
+    }
+  },
+  {
+    "source_id": "rigarchive_MY2024_edmunds_reconciliation",
+    "model_code": "JLJL72",
+    "revision_pk": 245,
+    "revision_uuid": "ae320fb4-e719-5b88-bdd8-6a6e4cff2a37",
+    "correspondence_uuid": "7dfc4d83-2a5f-5819-82f4-4a3e05e9ec92",
+    "content_hash": "sha256:bbafb6a847b554e4f31dba084410c0367a810a61595d649e910c3911291c855c",
+    "receipt_pk": 3353,
+    "receipt_uuid": "1573af0b-2c82-4166-8084-7d31777f6976",
+    "receipt_manifest_hash": "sha256:bbafb6a847b554e4f31dba084410c0367a810a61595d649e910c3911291c855c",
+    "outcome": "created",
+    "operator_label": "project_owner",
+    "execution_agent": "codex",
+    "receipt_snapshot": {
+      "review": {
+        "review_version": "1.0",
+        "revision_uuid": "ae320fb4-e719-5b88-bdd8-6a6e4cff2a37",
+        "correspondence_uuid": "7dfc4d83-2a5f-5819-82f4-4a3e05e9ec92",
+        "revision_number": 1,
+        "supersedes_uuid": null,
+        "vehicle_model_uuid": "5ec5f58a-b140-484c-97f0-c90ec9c134d6",
+        "generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+        "source_id": "rigarchive_MY2024_edmunds_reconciliation",
+        "source_namespace": "source_model_code",
+        "identity_type": "model_code",
+        "native_identifier": "JLJL72",
+        "market": "US",
+        "start_year": 2024,
+        "end_year": 2024,
+        "restrictions": {},
+        "evidence": [
+          {
+            "assertion_set_id": "rigarchive_MY2024_edmunds_reconciliation-JLJL72-shared-selector-r1",
+            "assertions": [
+              {
+                "assertion_id": "JLJL72-reconciled-heading",
+                "attribute_key": "source_document_heading",
+                "raw_value": "United States / MY2024 / Jeep Wrangler (2-door) / Model Code Family JLJL72",
+                "source_context": "Reconciled MY2024 inventory (candidate_inventory.csv); Wrangler 2-Door Sport Family (Sport, Sport S, Willys); 6 active consumer configurations"
+              },
+              {
+                "assertion_id": "JLJL72-selector-model-code",
+                "attribute_key": "source_model_code",
+                "raw_value": "JLJL72",
+                "source_context": "Shared source-scoped model-code selector for JLJL72 across applicable MY2024 candidates: JL24-01, JL24-02, JL24-03, JL24-04, JL24-05, JL24-06"
+              }
+            ],
+            "extraction_mode": "manually_verified_transcription",
+            "extractor_id": "MY2024_shared_model_code_selector",
+            "extractor_version": "1.0.0",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": "2024-reconciled-r1",
+            "raw_artifact_hash": "sha256:3dd67950ed426a9e5c575af68d3b4ce4807f879d95c0eed5f945a309aa03c6fb",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2024_JL/lightweight_ingestion_review_20261113/candidate_inventory.csv",
+            "retrieved_at": "2026-11-13T14:00:00Z",
+            "source_applicability": {
+              "applicability_basis": "Reconciled US MY2024 Jeep Wrangler inventory selector for model code JLJL72",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": null
+            },
+            "source_id": "rigarchive_MY2024_edmunds_reconciliation",
+            "source_locator": "https://www.edmunds.com/jeep/wrangler/2024/features-specs/"
+          }
+        ],
+        "finding": "established",
+        "reviewer": "codex",
+        "reviewed_at": "2026-11-14T16:45:57.863298+00:00",
+        "review_notes": "RA-052 proposed established finding, prepared by Codex; pending explicit Project Owner publication authorization. Exact rigarchive_MY2024_edmunds_reconciliation/source_model_code/model_code/JLJL72, US MY2024 only, targets existing Jeep Wrangler JL Generation 32 (38d3c3ac-f825-4406-abb5-c2d12b9129a4). Retained candidate_inventory.csv rows JL24-01, JL24-02, JL24-03, JL24-04, JL24-05, JL24-06 explicitly name generation JL, model Wrangler, manufacturer Jeep, market US, year 2024 and model code JLJL72; the original retained source selector and applicability are preserved. Published JL precedent PK 233, UUID 74c6514d-9f84-5b35-b542-7958728e761f, source rigarchive_MY2023_edmunds_reconciliation, years 2023-2023, has the same exact model code; it corroborates the already-established Generation identity, not new MY2024 engine/equipment availability. Evidence is the exact unchanged shared-selector document from RA-051 Candidate 3.1.0 snapshots, retaining source assertion IDs/values, raw artifact hash/reference and source revision. Transcribed/reconciled provenance is not reclassified as an original manufacturer document. No assertion is synthesized from a code prefix, trim label or adjacent-year availability. Original unpublished proposal is superseded as a preparation artifact only; this is revision 1 of its still-unpublished chain. No canonical publication or approval is asserted by this preparation."
+      },
+      "content_hash": "sha256:bbafb6a847b554e4f31dba084410c0367a810a61595d649e910c3911291c855c",
+      "attribution": {
+        "version": "1.0",
+        "execution_agent": "codex"
+      }
+    }
+  },
+  {
+    "source_id": "rigarchive_MY2024_edmunds_reconciliation",
+    "model_code": "JLJL74",
+    "revision_pk": 246,
+    "revision_uuid": "e8ed83bd-86ad-52ed-9ac8-5ecf4fea76d9",
+    "correspondence_uuid": "81ba80f2-649d-5154-a601-ea520294625a",
+    "content_hash": "sha256:cfd443253af049873622de26db9e7d4747ba55eed3b91100c38b8728cc6006da",
+    "receipt_pk": 3354,
+    "receipt_uuid": "e683dd8c-0fb4-4eed-a7fc-1f432d5706fa",
+    "receipt_manifest_hash": "sha256:cfd443253af049873622de26db9e7d4747ba55eed3b91100c38b8728cc6006da",
+    "outcome": "created",
+    "operator_label": "project_owner",
+    "execution_agent": "codex",
+    "receipt_snapshot": {
+      "review": {
+        "review_version": "1.0",
+        "revision_uuid": "e8ed83bd-86ad-52ed-9ac8-5ecf4fea76d9",
+        "correspondence_uuid": "81ba80f2-649d-5154-a601-ea520294625a",
+        "revision_number": 1,
+        "supersedes_uuid": null,
+        "vehicle_model_uuid": "5ec5f58a-b140-484c-97f0-c90ec9c134d6",
+        "generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+        "source_id": "rigarchive_MY2024_edmunds_reconciliation",
+        "source_namespace": "source_model_code",
+        "identity_type": "model_code",
+        "native_identifier": "JLJL74",
+        "market": "US",
+        "start_year": 2024,
+        "end_year": 2024,
+        "restrictions": {},
+        "evidence": [
+          {
+            "assertion_set_id": "rigarchive_MY2024_edmunds_reconciliation-JLJL74-shared-selector-r1",
+            "assertions": [
+              {
+                "assertion_id": "JLJL74-reconciled-heading",
+                "attribute_key": "source_document_heading",
+                "raw_value": "United States / MY2024 / Jeep Wrangler (4-door) / Model Code Family JLJL74",
+                "source_context": "Reconciled MY2024 inventory (candidate_inventory.csv); Wrangler 4-Door Sport Family (Unlimited Sport, Unlimited Sport S, Unlimited Willys); 6 active consumer configurations"
+              },
+              {
+                "assertion_id": "JLJL74-selector-model-code",
+                "attribute_key": "source_model_code",
+                "raw_value": "JLJL74",
+                "source_context": "Shared source-scoped model-code selector for JLJL74 across applicable MY2024 candidates: JL24-11, JL24-12, JL24-13, JL24-14, JL24-15, JL24-16"
+              }
+            ],
+            "extraction_mode": "manually_verified_transcription",
+            "extractor_id": "MY2024_shared_model_code_selector",
+            "extractor_version": "1.0.0",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": "2024-reconciled-r1",
+            "raw_artifact_hash": "sha256:3dd67950ed426a9e5c575af68d3b4ce4807f879d95c0eed5f945a309aa03c6fb",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2024_JL/lightweight_ingestion_review_20261113/candidate_inventory.csv",
+            "retrieved_at": "2026-11-13T14:00:00Z",
+            "source_applicability": {
+              "applicability_basis": "Reconciled US MY2024 Jeep Wrangler inventory selector for model code JLJL74",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": null
+            },
+            "source_id": "rigarchive_MY2024_edmunds_reconciliation",
+            "source_locator": "https://www.edmunds.com/jeep/wrangler/2024/features-specs/"
+          }
+        ],
+        "finding": "established",
+        "reviewer": "codex",
+        "reviewed_at": "2026-11-14T16:45:57.863298+00:00",
+        "review_notes": "RA-052 proposed established finding, prepared by Codex; pending explicit Project Owner publication authorization. Exact rigarchive_MY2024_edmunds_reconciliation/source_model_code/model_code/JLJL74, US MY2024 only, targets existing Jeep Wrangler JL Generation 32 (38d3c3ac-f825-4406-abb5-c2d12b9129a4). Retained candidate_inventory.csv rows JL24-11, JL24-12, JL24-13, JL24-14, JL24-15, JL24-16 explicitly name generation JL, model Wrangler, manufacturer Jeep, market US, year 2024 and model code JLJL74; the original retained source selector and applicability are preserved. Published JL precedent PK 232, UUID 6195b3ad-df3a-5ee7-8646-d79c88dfc057, source 4-door-9-14-22-pdf, years 2023-2023, has the same exact model code; it corroborates the already-established Generation identity, not new MY2024 engine/equipment availability. Evidence is the exact unchanged shared-selector document from RA-051 Candidate 3.1.0 snapshots, retaining source assertion IDs/values, raw artifact hash/reference and source revision. Transcribed/reconciled provenance is not reclassified as an original manufacturer document. No assertion is synthesized from a code prefix, trim label or adjacent-year availability. Original unpublished proposal is superseded as a preparation artifact only; this is revision 1 of its still-unpublished chain. No canonical publication or approval is asserted by this preparation."
+      },
+      "content_hash": "sha256:cfd443253af049873622de26db9e7d4747ba55eed3b91100c38b8728cc6006da",
+      "attribution": {
+        "version": "1.0",
+        "execution_agent": "codex"
+      }
+    }
+  },
+  {
+    "source_id": "rigarchive_MY2024_edmunds_reconciliation",
+    "model_code": "JLJP74",
+    "revision_pk": 247,
+    "revision_uuid": "9da92aff-42b5-5557-a9a2-5fab8e99c7db",
+    "correspondence_uuid": "a61db10b-c4a7-56da-921b-f15a2c8cec44",
+    "content_hash": "sha256:638ac097b85bf168ea0b9e102eed8238bcfd1cd6e067c01171e7d5c0502bad05",
+    "receipt_pk": 3355,
+    "receipt_uuid": "a4f06383-9011-4bd3-92bc-882308a60d01",
+    "receipt_manifest_hash": "sha256:638ac097b85bf168ea0b9e102eed8238bcfd1cd6e067c01171e7d5c0502bad05",
+    "outcome": "created",
+    "operator_label": "project_owner",
+    "execution_agent": "codex",
+    "receipt_snapshot": {
+      "review": {
+        "review_version": "1.0",
+        "revision_uuid": "9da92aff-42b5-5557-a9a2-5fab8e99c7db",
+        "correspondence_uuid": "a61db10b-c4a7-56da-921b-f15a2c8cec44",
+        "revision_number": 1,
+        "supersedes_uuid": null,
+        "vehicle_model_uuid": "5ec5f58a-b140-484c-97f0-c90ec9c134d6",
+        "generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+        "source_id": "rigarchive_MY2024_edmunds_reconciliation",
+        "source_namespace": "source_model_code",
+        "identity_type": "model_code",
+        "native_identifier": "JLJP74",
+        "market": "US",
+        "start_year": 2024,
+        "end_year": 2024,
+        "restrictions": {},
+        "evidence": [
+          {
+            "assertion_set_id": "rigarchive_MY2024_edmunds_reconciliation-JLJP74-shared-selector-r1",
+            "assertions": [
+              {
+                "assertion_id": "JLJP74-reconciled-heading",
+                "attribute_key": "source_document_heading",
+                "raw_value": "United States / MY2024 / Jeep Wrangler (4-door) / Model Code Family JLJP74",
+                "source_context": "Reconciled MY2024 inventory (candidate_inventory.csv); Wrangler 4-Door Sahara Family (Unlimited Sahara); 1 active consumer configurations"
+              },
+              {
+                "assertion_id": "JLJP74-selector-model-code",
+                "attribute_key": "source_model_code",
+                "raw_value": "JLJP74",
+                "source_context": "Shared source-scoped model-code selector for JLJP74 across applicable MY2024 candidates: JL24-17"
+              }
+            ],
+            "extraction_mode": "manually_verified_transcription",
+            "extractor_id": "MY2024_shared_model_code_selector",
+            "extractor_version": "1.0.0",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": "2024-reconciled-r1",
+            "raw_artifact_hash": "sha256:3dd67950ed426a9e5c575af68d3b4ce4807f879d95c0eed5f945a309aa03c6fb",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2024_JL/lightweight_ingestion_review_20261113/candidate_inventory.csv",
+            "retrieved_at": "2026-11-13T14:00:00Z",
+            "source_applicability": {
+              "applicability_basis": "Reconciled US MY2024 Jeep Wrangler inventory selector for model code JLJP74",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": null
+            },
+            "source_id": "rigarchive_MY2024_edmunds_reconciliation",
+            "source_locator": "https://www.edmunds.com/jeep/wrangler/2024/features-specs/"
+          }
+        ],
+        "finding": "established",
+        "reviewer": "codex",
+        "reviewed_at": "2026-11-14T16:45:57.863298+00:00",
+        "review_notes": "RA-052 proposed established finding, prepared by Codex; pending explicit Project Owner publication authorization. Exact rigarchive_MY2024_edmunds_reconciliation/source_model_code/model_code/JLJP74, US MY2024 only, targets existing Jeep Wrangler JL Generation 32 (38d3c3ac-f825-4406-abb5-c2d12b9129a4). Retained candidate_inventory.csv rows JL24-17 explicitly name generation JL, model Wrangler, manufacturer Jeep, market US, year 2024 and model code JLJP74; the original retained source selector and applicability are preserved. Published JL precedent PK 235, UUID 8f255fd9-d610-539c-beb7-f5ab5a06d46a, source rigarchive_MY2023_edmunds_reconciliation, years 2023-2023, has the same exact model code; it corroborates the already-established Generation identity, not new MY2024 engine/equipment availability. Evidence is the exact unchanged shared-selector document from RA-051 Candidate 3.1.0 snapshots, retaining source assertion IDs/values, raw artifact hash/reference and source revision. Transcribed/reconciled provenance is not reclassified as an original manufacturer document. No assertion is synthesized from a code prefix, trim label or adjacent-year availability. Original unpublished proposal is superseded as a preparation artifact only; this is revision 1 of its still-unpublished chain. No canonical publication or approval is asserted by this preparation."
+      },
+      "content_hash": "sha256:638ac097b85bf168ea0b9e102eed8238bcfd1cd6e067c01171e7d5c0502bad05",
+      "attribution": {
+        "version": "1.0",
+        "execution_agent": "codex"
+      }
+    }
+  },
+  {
+    "source_id": "rigarchive_MY2024_edmunds_reconciliation",
+    "model_code": "JLJS72",
+    "revision_pk": 248,
+    "revision_uuid": "1f93a4e6-456c-559f-bff7-7e853603400a",
+    "correspondence_uuid": "de4daac3-8b1b-5973-b3a5-e89740215ce4",
+    "content_hash": "sha256:26ba605321049ecdde457add9d90fea9e4e4bbe581c51870743be41f171995da",
+    "receipt_pk": 3356,
+    "receipt_uuid": "ddb6c9cd-3689-4226-a63a-68ce10f97872",
+    "receipt_manifest_hash": "sha256:26ba605321049ecdde457add9d90fea9e4e4bbe581c51870743be41f171995da",
+    "outcome": "created",
+    "operator_label": "project_owner",
+    "execution_agent": "codex",
+    "receipt_snapshot": {
+      "review": {
+        "review_version": "1.0",
+        "revision_uuid": "1f93a4e6-456c-559f-bff7-7e853603400a",
+        "correspondence_uuid": "de4daac3-8b1b-5973-b3a5-e89740215ce4",
+        "revision_number": 1,
+        "supersedes_uuid": null,
+        "vehicle_model_uuid": "5ec5f58a-b140-484c-97f0-c90ec9c134d6",
+        "generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+        "source_id": "rigarchive_MY2024_edmunds_reconciliation",
+        "source_namespace": "source_model_code",
+        "identity_type": "model_code",
+        "native_identifier": "JLJS72",
+        "market": "US",
+        "start_year": 2024,
+        "end_year": 2024,
+        "restrictions": {},
+        "evidence": [
+          {
+            "assertion_set_id": "rigarchive_MY2024_edmunds_reconciliation-JLJS72-shared-selector-r1",
+            "assertions": [
+              {
+                "assertion_id": "JLJS72-reconciled-heading",
+                "attribute_key": "source_document_heading",
+                "raw_value": "United States / MY2024 / Jeep Wrangler (2-door) / Model Code Family JLJS72",
+                "source_context": "Reconciled MY2024 inventory (candidate_inventory.csv); Wrangler 2-Door Rubicon Family (Rubicon, Rubicon X); 4 active consumer configurations"
+              },
+              {
+                "assertion_id": "JLJS72-selector-model-code",
+                "attribute_key": "source_model_code",
+                "raw_value": "JLJS72",
+                "source_context": "Shared source-scoped model-code selector for JLJS72 across applicable MY2024 candidates: JL24-07, JL24-08, JL24-09, JL24-10"
+              }
+            ],
+            "extraction_mode": "manually_verified_transcription",
+            "extractor_id": "MY2024_shared_model_code_selector",
+            "extractor_version": "1.0.0",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": "2024-reconciled-r1",
+            "raw_artifact_hash": "sha256:3dd67950ed426a9e5c575af68d3b4ce4807f879d95c0eed5f945a309aa03c6fb",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2024_JL/lightweight_ingestion_review_20261113/candidate_inventory.csv",
+            "retrieved_at": "2026-11-13T14:00:00Z",
+            "source_applicability": {
+              "applicability_basis": "Reconciled US MY2024 Jeep Wrangler inventory selector for model code JLJS72",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": null
+            },
+            "source_id": "rigarchive_MY2024_edmunds_reconciliation",
+            "source_locator": "https://www.edmunds.com/jeep/wrangler/2024/features-specs/"
+          }
+        ],
+        "finding": "established",
+        "reviewer": "codex",
+        "reviewed_at": "2026-11-14T16:45:57.863298+00:00",
+        "review_notes": "RA-052 proposed established finding, prepared by Codex; pending explicit Project Owner publication authorization. Exact rigarchive_MY2024_edmunds_reconciliation/source_model_code/model_code/JLJS72, US MY2024 only, targets existing Jeep Wrangler JL Generation 32 (38d3c3ac-f825-4406-abb5-c2d12b9129a4). Retained candidate_inventory.csv rows JL24-07, JL24-08, JL24-09, JL24-10 explicitly name generation JL, model Wrangler, manufacturer Jeep, market US, year 2024 and model code JLJS72; the original retained source selector and applicability are preserved. Published JL precedent PK 236, UUID 1a96bf36-9f91-5c89-87fb-386b6b989bec, source rigarchive_MY2023_edmunds_reconciliation, years 2023-2023, has the same exact model code; it corroborates the already-established Generation identity, not new MY2024 engine/equipment availability. Evidence is the exact unchanged shared-selector document from RA-051 Candidate 3.1.0 snapshots, retaining source assertion IDs/values, raw artifact hash/reference and source revision. Transcribed/reconciled provenance is not reclassified as an original manufacturer document. No assertion is synthesized from a code prefix, trim label or adjacent-year availability. Original unpublished proposal is superseded as a preparation artifact only; this is revision 1 of its still-unpublished chain. No canonical publication or approval is asserted by this preparation."
+      },
+      "content_hash": "sha256:26ba605321049ecdde457add9d90fea9e4e4bbe581c51870743be41f171995da",
+      "attribution": {
+        "version": "1.0",
+        "execution_agent": "codex"
+      }
+    }
+  },
+  {
+    "source_id": "rigarchive_MY2024_edmunds_reconciliation",
+    "model_code": "JLJS74",
+    "revision_pk": 249,
+    "revision_uuid": "16446e6a-dcad-5758-a665-8b0e760f89a6",
+    "correspondence_uuid": "445b14e7-e49b-59d7-9bfb-a5ae030349e9",
+    "content_hash": "sha256:4d1ee20a029198352638ee0d27accad767ce8698781b5889345a2622ad10f6b2",
+    "receipt_pk": 3357,
+    "receipt_uuid": "4ea2cd47-5dd2-41c3-87c5-44b5df8d3d80",
+    "receipt_manifest_hash": "sha256:4d1ee20a029198352638ee0d27accad767ce8698781b5889345a2622ad10f6b2",
+    "outcome": "created",
+    "operator_label": "project_owner",
+    "execution_agent": "codex",
+    "receipt_snapshot": {
+      "review": {
+        "review_version": "1.0",
+        "revision_uuid": "16446e6a-dcad-5758-a665-8b0e760f89a6",
+        "correspondence_uuid": "445b14e7-e49b-59d7-9bfb-a5ae030349e9",
+        "revision_number": 1,
+        "supersedes_uuid": null,
+        "vehicle_model_uuid": "5ec5f58a-b140-484c-97f0-c90ec9c134d6",
+        "generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+        "source_id": "rigarchive_MY2024_edmunds_reconciliation",
+        "source_namespace": "source_model_code",
+        "identity_type": "model_code",
+        "native_identifier": "JLJS74",
+        "market": "US",
+        "start_year": 2024,
+        "end_year": 2024,
+        "restrictions": {},
+        "evidence": [
+          {
+            "assertion_set_id": "rigarchive_MY2024_edmunds_reconciliation-JLJS74-shared-selector-r1",
+            "assertions": [
+              {
+                "assertion_id": "JLJS74-reconciled-heading",
+                "attribute_key": "source_document_heading",
+                "raw_value": "United States / MY2024 / Jeep Wrangler (4-door) / Model Code Family JLJS74",
+                "source_context": "Reconciled MY2024 inventory (candidate_inventory.csv); Wrangler 4-Door Rubicon Family (Unlimited Rubicon, Unlimited Rubicon X); 4 active consumer configurations"
+              },
+              {
+                "assertion_id": "JLJS74-selector-model-code",
+                "attribute_key": "source_model_code",
+                "raw_value": "JLJS74",
+                "source_context": "Shared source-scoped model-code selector for JLJS74 across applicable MY2024 candidates: JL24-19, JL24-20, JL24-21, JL24-22"
+              }
+            ],
+            "extraction_mode": "manually_verified_transcription",
+            "extractor_id": "MY2024_shared_model_code_selector",
+            "extractor_version": "1.0.0",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": "2024-reconciled-r1",
+            "raw_artifact_hash": "sha256:3dd67950ed426a9e5c575af68d3b4ce4807f879d95c0eed5f945a309aa03c6fb",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2024_JL/lightweight_ingestion_review_20261113/candidate_inventory.csv",
+            "retrieved_at": "2026-11-13T14:00:00Z",
+            "source_applicability": {
+              "applicability_basis": "Reconciled US MY2024 Jeep Wrangler inventory selector for model code JLJS74",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": null
+            },
+            "source_id": "rigarchive_MY2024_edmunds_reconciliation",
+            "source_locator": "https://www.edmunds.com/jeep/wrangler/2024/features-specs/"
+          }
+        ],
+        "finding": "established",
+        "reviewer": "codex",
+        "reviewed_at": "2026-11-14T16:45:57.863298+00:00",
+        "review_notes": "RA-052 proposed established finding, prepared by Codex; pending explicit Project Owner publication authorization. Exact rigarchive_MY2024_edmunds_reconciliation/source_model_code/model_code/JLJS74, US MY2024 only, targets existing Jeep Wrangler JL Generation 32 (38d3c3ac-f825-4406-abb5-c2d12b9129a4). Retained candidate_inventory.csv rows JL24-19, JL24-20, JL24-21, JL24-22 explicitly name generation JL, model Wrangler, manufacturer Jeep, market US, year 2024 and model code JLJS74; the original retained source selector and applicability are preserved. Published JL precedent PK 237, UUID 67538afd-5b91-5821-8e59-10905611603e, source rigarchive_MY2023_edmunds_reconciliation, years 2023-2023, has the same exact model code; it corroborates the already-established Generation identity, not new MY2024 engine/equipment availability. Evidence is the exact unchanged shared-selector document from RA-051 Candidate 3.1.0 snapshots, retaining source assertion IDs/values, raw artifact hash/reference and source revision. Transcribed/reconciled provenance is not reclassified as an original manufacturer document. No assertion is synthesized from a code prefix, trim label or adjacent-year availability. Original unpublished proposal is superseded as a preparation artifact only; this is revision 1 of its still-unpublished chain. No canonical publication or approval is asserted by this preparation."
+      },
+      "content_hash": "sha256:4d1ee20a029198352638ee0d27accad767ce8698781b5889345a2622ad10f6b2",
+      "attribution": {
+        "version": "1.0",
+        "execution_agent": "codex"
+      }
+    }
+  },
+  {
+    "source_id": "rigarchive_MY2024_edmunds_reconciliation",
+    "model_code": "JLJX74",
+    "revision_pk": 250,
+    "revision_uuid": "2cd85807-8246-5f18-bc46-11d8e2458b14",
+    "correspondence_uuid": "ff378a23-ad8b-5775-a62e-e4ce44ebc15f",
+    "content_hash": "sha256:8fad45ef11c896cae5a3bc6003f0b26c7a7a9d8bfaa7c835948d0381f07cff4a",
+    "receipt_pk": 3358,
+    "receipt_uuid": "38277f40-b10b-4aaa-bd22-40292737f366",
+    "receipt_manifest_hash": "sha256:8fad45ef11c896cae5a3bc6003f0b26c7a7a9d8bfaa7c835948d0381f07cff4a",
+    "outcome": "created",
+    "operator_label": "project_owner",
+    "execution_agent": "codex",
+    "receipt_snapshot": {
+      "review": {
+        "review_version": "1.0",
+        "revision_uuid": "2cd85807-8246-5f18-bc46-11d8e2458b14",
+        "correspondence_uuid": "ff378a23-ad8b-5775-a62e-e4ce44ebc15f",
+        "revision_number": 1,
+        "supersedes_uuid": null,
+        "vehicle_model_uuid": "5ec5f58a-b140-484c-97f0-c90ec9c134d6",
+        "generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+        "source_id": "rigarchive_MY2024_edmunds_reconciliation",
+        "source_namespace": "source_model_code",
+        "identity_type": "model_code",
+        "native_identifier": "JLJX74",
+        "market": "US",
+        "start_year": 2024,
+        "end_year": 2024,
+        "restrictions": {},
+        "evidence": [
+          {
+            "assertion_set_id": "rigarchive_MY2024_edmunds_reconciliation-JLJX74-shared-selector-r1",
+            "assertions": [
+              {
+                "assertion_id": "JLJX74-reconciled-heading",
+                "attribute_key": "source_document_heading",
+                "raw_value": "United States / MY2024 / Jeep Wrangler (4-door) / Model Code Family JLJX74",
+                "source_context": "Reconciled MY2024 inventory (candidate_inventory.csv); Wrangler 4-Door Rubicon 392 Family (Unlimited Rubicon 392, Unlimited Rubicon 392 Final Edition); 2 active consumer configurations"
+              },
+              {
+                "assertion_id": "JLJX74-selector-model-code",
+                "attribute_key": "source_model_code",
+                "raw_value": "JLJX74",
+                "source_context": "Shared source-scoped model-code selector for JLJX74 across applicable MY2024 candidates: JL24-23, JL24-24"
+              }
+            ],
+            "extraction_mode": "manually_verified_transcription",
+            "extractor_id": "MY2024_shared_model_code_selector",
+            "extractor_version": "1.0.0",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": "2024-reconciled-r1",
+            "raw_artifact_hash": "sha256:3dd67950ed426a9e5c575af68d3b4ce4807f879d95c0eed5f945a309aa03c6fb",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2024_JL/lightweight_ingestion_review_20261113/candidate_inventory.csv",
+            "retrieved_at": "2026-11-13T14:00:00Z",
+            "source_applicability": {
+              "applicability_basis": "Reconciled US MY2024 Jeep Wrangler inventory selector for model code JLJX74",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": null
+            },
+            "source_id": "rigarchive_MY2024_edmunds_reconciliation",
+            "source_locator": "https://www.edmunds.com/jeep/wrangler/2024/features-specs/"
+          }
+        ],
+        "finding": "established",
+        "reviewer": "codex",
+        "reviewed_at": "2026-11-14T16:45:57.863298+00:00",
+        "review_notes": "RA-052 proposed established finding, prepared by Codex; pending explicit Project Owner publication authorization. Exact rigarchive_MY2024_edmunds_reconciliation/source_model_code/model_code/JLJX74, US MY2024 only, targets existing Jeep Wrangler JL Generation 32 (38d3c3ac-f825-4406-abb5-c2d12b9129a4). Retained candidate_inventory.csv rows JL24-23, JL24-24 explicitly name generation JL, model Wrangler, manufacturer Jeep, market US, year 2024 and model code JLJX74; the original retained source selector and applicability are preserved. Published JL precedent PK 238, UUID 9a12e9fd-9356-50c2-b823-cb116774324f, source rigarchive_MY2023_edmunds_reconciliation, years 2023-2023, has the same exact model code; it corroborates the already-established Generation identity, not new MY2024 engine/equipment availability. Evidence is the exact unchanged shared-selector document from RA-051 Candidate 3.1.0 snapshots, retaining source assertion IDs/values, raw artifact hash/reference and source revision. Transcribed/reconciled provenance is not reclassified as an original manufacturer document. No assertion is synthesized from a code prefix, trim label or adjacent-year availability. Original unpublished proposal is superseded as a preparation artifact only; this is revision 1 of its still-unpublished chain. No canonical publication or approval is asserted by this preparation."
+      },
+      "content_hash": "sha256:8fad45ef11c896cae5a3bc6003f0b26c7a7a9d8bfaa7c835948d0381f07cff4a",
+      "attribution": {
+        "version": "1.0",
+        "execution_agent": "codex"
+      }
+    }
+  },
+  {
+    "source_id": "rigarchive_MY2024_edmunds_reconciliation",
+    "model_code": "JLXL74",
+    "revision_pk": 251,
+    "revision_uuid": "3e4787a2-2657-5b87-9c89-a8074994415f",
+    "correspondence_uuid": "7466e361-0ef8-516e-848c-723af5d67d3e",
+    "content_hash": "sha256:15ae333556fba814267c8271bb9384c199dbabe049f7f23dfa1775575e0115e5",
+    "receipt_pk": 3359,
+    "receipt_uuid": "9236c536-be32-407b-9a99-ffb334a5682e",
+    "receipt_manifest_hash": "sha256:15ae333556fba814267c8271bb9384c199dbabe049f7f23dfa1775575e0115e5",
+    "outcome": "created",
+    "operator_label": "project_owner",
+    "execution_agent": "codex",
+    "receipt_snapshot": {
+      "review": {
+        "review_version": "1.0",
+        "revision_uuid": "3e4787a2-2657-5b87-9c89-a8074994415f",
+        "correspondence_uuid": "7466e361-0ef8-516e-848c-723af5d67d3e",
+        "revision_number": 1,
+        "supersedes_uuid": null,
+        "vehicle_model_uuid": "5ec5f58a-b140-484c-97f0-c90ec9c134d6",
+        "generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+        "source_id": "rigarchive_MY2024_edmunds_reconciliation",
+        "source_namespace": "source_model_code",
+        "identity_type": "model_code",
+        "native_identifier": "JLXL74",
+        "market": "US",
+        "start_year": 2024,
+        "end_year": 2024,
+        "restrictions": {},
+        "evidence": [
+          {
+            "assertion_set_id": "rigarchive_MY2024_edmunds_reconciliation-JLXL74-shared-selector-r1",
+            "assertions": [
+              {
+                "assertion_id": "JLXL74-reconciled-heading",
+                "attribute_key": "source_document_heading",
+                "raw_value": "United States / MY2024 / Jeep Wrangler (4-door) / Model Code Family JLXL74",
+                "source_context": "Reconciled MY2024 inventory (candidate_inventory.csv); Wrangler 4-Door Sport 4xe Family (Unlimited Sport S 4xe, Unlimited Willys 4xe, Unlimited Jeep Beach 4xe); 2 active consumer configurations"
+              },
+              {
+                "assertion_id": "JLXL74-selector-model-code",
+                "attribute_key": "source_model_code",
+                "raw_value": "JLXL74",
+                "source_context": "Shared source-scoped model-code selector for JLXL74 across applicable MY2024 candidates: JL24-25, JL24-26"
+              }
+            ],
+            "extraction_mode": "manually_verified_transcription",
+            "extractor_id": "MY2024_shared_model_code_selector",
+            "extractor_version": "1.0.0",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": "2024-reconciled-r1",
+            "raw_artifact_hash": "sha256:3dd67950ed426a9e5c575af68d3b4ce4807f879d95c0eed5f945a309aa03c6fb",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2024_JL/lightweight_ingestion_review_20261113/candidate_inventory.csv",
+            "retrieved_at": "2026-11-13T14:00:00Z",
+            "source_applicability": {
+              "applicability_basis": "Reconciled US MY2024 Jeep Wrangler inventory selector for model code JLXL74",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": null
+            },
+            "source_id": "rigarchive_MY2024_edmunds_reconciliation",
+            "source_locator": "https://www.edmunds.com/jeep/wrangler/2024/features-specs/"
+          }
+        ],
+        "finding": "established",
+        "reviewer": "codex",
+        "reviewed_at": "2026-11-14T16:45:57.863298+00:00",
+        "review_notes": "RA-052 proposed established finding, prepared by Codex; pending explicit Project Owner publication authorization. Exact rigarchive_MY2024_edmunds_reconciliation/source_model_code/model_code/JLXL74, US MY2024 only, targets existing Jeep Wrangler JL Generation 32 (38d3c3ac-f825-4406-abb5-c2d12b9129a4). Retained candidate_inventory.csv rows JL24-25, JL24-26 explicitly name generation JL, model Wrangler, manufacturer Jeep, market US, year 2024 and model code JLXL74; the original retained source selector and applicability are preserved. Published JL precedent PK 239, UUID dc793ec9-1373-5e8d-b707-c5125aed4eb0, source rigarchive_MY2023_edmunds_reconciliation, years 2023-2023, has the same exact model code; it corroborates the already-established Generation identity, not new MY2024 engine/equipment availability. Evidence is the exact unchanged shared-selector document from RA-051 Candidate 3.1.0 snapshots, retaining source assertion IDs/values, raw artifact hash/reference and source revision. Transcribed/reconciled provenance is not reclassified as an original manufacturer document. No assertion is synthesized from a code prefix, trim label or adjacent-year availability. Original unpublished proposal is superseded as a preparation artifact only; this is revision 1 of its still-unpublished chain. No canonical publication or approval is asserted by this preparation."
+      },
+      "content_hash": "sha256:15ae333556fba814267c8271bb9384c199dbabe049f7f23dfa1775575e0115e5",
+      "attribution": {
+        "version": "1.0",
+        "execution_agent": "codex"
+      }
+    }
+  },
+  {
+    "source_id": "rigarchive_MY2024_edmunds_reconciliation",
+    "model_code": "JLXP74",
+    "revision_pk": 252,
+    "revision_uuid": "b465bb4b-44a4-5c02-9ae0-4775342c2ac5",
+    "correspondence_uuid": "30b0c6e3-524a-5497-9c9e-91aa5385f985",
+    "content_hash": "sha256:f320339aff7e9fccada22ec9122b32c12c87f70c456cb60a02013eded01a9e80",
+    "receipt_pk": 3360,
+    "receipt_uuid": "76e350ea-5fdc-4c20-9d89-f0a9f955bfd2",
+    "receipt_manifest_hash": "sha256:f320339aff7e9fccada22ec9122b32c12c87f70c456cb60a02013eded01a9e80",
+    "outcome": "created",
+    "operator_label": "project_owner",
+    "execution_agent": "codex",
+    "receipt_snapshot": {
+      "review": {
+        "review_version": "1.0",
+        "revision_uuid": "b465bb4b-44a4-5c02-9ae0-4775342c2ac5",
+        "correspondence_uuid": "30b0c6e3-524a-5497-9c9e-91aa5385f985",
+        "revision_number": 1,
+        "supersedes_uuid": null,
+        "vehicle_model_uuid": "5ec5f58a-b140-484c-97f0-c90ec9c134d6",
+        "generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+        "source_id": "rigarchive_MY2024_edmunds_reconciliation",
+        "source_namespace": "source_model_code",
+        "identity_type": "model_code",
+        "native_identifier": "JLXP74",
+        "market": "US",
+        "start_year": 2024,
+        "end_year": 2024,
+        "restrictions": {},
+        "evidence": [
+          {
+            "assertion_set_id": "rigarchive_MY2024_edmunds_reconciliation-JLXP74-shared-selector-r1",
+            "assertions": [
+              {
+                "assertion_id": "JLXP74-reconciled-heading",
+                "attribute_key": "source_document_heading",
+                "raw_value": "United States / MY2024 / Jeep Wrangler (4-door) / Model Code Family JLXP74",
+                "source_context": "Reconciled MY2024 inventory (candidate_inventory.csv); Wrangler 4-Door Sahara 4xe Family (Unlimited Sahara 4xe); 1 active consumer configurations"
+              },
+              {
+                "assertion_id": "JLXP74-selector-model-code",
+                "attribute_key": "source_model_code",
+                "raw_value": "JLXP74",
+                "source_context": "Shared source-scoped model-code selector for JLXP74 across applicable MY2024 candidates: JL24-28"
+              }
+            ],
+            "extraction_mode": "manually_verified_transcription",
+            "extractor_id": "MY2024_shared_model_code_selector",
+            "extractor_version": "1.0.0",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": "2024-reconciled-r1",
+            "raw_artifact_hash": "sha256:3dd67950ed426a9e5c575af68d3b4ce4807f879d95c0eed5f945a309aa03c6fb",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2024_JL/lightweight_ingestion_review_20261113/candidate_inventory.csv",
+            "retrieved_at": "2026-11-13T14:00:00Z",
+            "source_applicability": {
+              "applicability_basis": "Reconciled US MY2024 Jeep Wrangler inventory selector for model code JLXP74",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": null
+            },
+            "source_id": "rigarchive_MY2024_edmunds_reconciliation",
+            "source_locator": "https://www.edmunds.com/jeep/wrangler/2024/features-specs/"
+          }
+        ],
+        "finding": "established",
+        "reviewer": "codex",
+        "reviewed_at": "2026-11-14T16:45:57.863298+00:00",
+        "review_notes": "RA-052 proposed established finding, prepared by Codex; pending explicit Project Owner publication authorization. Exact rigarchive_MY2024_edmunds_reconciliation/source_model_code/model_code/JLXP74, US MY2024 only, targets existing Jeep Wrangler JL Generation 32 (38d3c3ac-f825-4406-abb5-c2d12b9129a4). Retained candidate_inventory.csv rows JL24-28 explicitly name generation JL, model Wrangler, manufacturer Jeep, market US, year 2024 and model code JLXP74; the original retained source selector and applicability are preserved. Published JL precedent PK 240, UUID 78efa420-cc56-51b6-833b-33e916503626, source rigarchive_MY2023_edmunds_reconciliation, years 2023-2023, has the same exact model code; it corroborates the already-established Generation identity, not new MY2024 engine/equipment availability. Evidence is the exact unchanged shared-selector document from RA-051 Candidate 3.1.0 snapshots, retaining source assertion IDs/values, raw artifact hash/reference and source revision. Transcribed/reconciled provenance is not reclassified as an original manufacturer document. No assertion is synthesized from a code prefix, trim label or adjacent-year availability. Original unpublished proposal is superseded as a preparation artifact only; this is revision 1 of its still-unpublished chain. No canonical publication or approval is asserted by this preparation."
+      },
+      "content_hash": "sha256:f320339aff7e9fccada22ec9122b32c12c87f70c456cb60a02013eded01a9e80",
+      "attribution": {
+        "version": "1.0",
+        "execution_agent": "codex"
+      }
+    }
+  },
+  {
+    "source_id": "rigarchive_MY2024_edmunds_reconciliation",
+    "model_code": "JLXS74",
+    "revision_pk": 253,
+    "revision_uuid": "1fe28650-5d5b-574e-98d2-594e86654682",
+    "correspondence_uuid": "4914a831-8d52-5402-9a77-485e5bb6750c",
+    "content_hash": "sha256:ff81a71a5e778fc27cf947607817831a82aef91522b6ec10371623a9c1241506",
+    "receipt_pk": 3361,
+    "receipt_uuid": "6148e86b-4fcc-4db5-baa7-80ecd4a7fef6",
+    "receipt_manifest_hash": "sha256:ff81a71a5e778fc27cf947607817831a82aef91522b6ec10371623a9c1241506",
+    "outcome": "created",
+    "operator_label": "project_owner",
+    "execution_agent": "codex",
+    "receipt_snapshot": {
+      "review": {
+        "review_version": "1.0",
+        "revision_uuid": "1fe28650-5d5b-574e-98d2-594e86654682",
+        "correspondence_uuid": "4914a831-8d52-5402-9a77-485e5bb6750c",
+        "revision_number": 1,
+        "supersedes_uuid": null,
+        "vehicle_model_uuid": "5ec5f58a-b140-484c-97f0-c90ec9c134d6",
+        "generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+        "source_id": "rigarchive_MY2024_edmunds_reconciliation",
+        "source_namespace": "source_model_code",
+        "identity_type": "model_code",
+        "native_identifier": "JLXS74",
+        "market": "US",
+        "start_year": 2024,
+        "end_year": 2024,
+        "restrictions": {},
+        "evidence": [
+          {
+            "assertion_set_id": "rigarchive_MY2024_edmunds_reconciliation-JLXS74-shared-selector-r1",
+            "assertions": [
+              {
+                "assertion_id": "JLXS74-reconciled-heading",
+                "attribute_key": "source_document_heading",
+                "raw_value": "United States / MY2024 / Jeep Wrangler (4-door) / Model Code Family JLXS74",
+                "source_context": "Reconciled MY2024 inventory (candidate_inventory.csv); Wrangler 4-Door Rubicon 4xe Family (Unlimited Rubicon 4xe, Unlimited Rubicon X 4xe); 2 active consumer configurations"
+              },
+              {
+                "assertion_id": "JLXS74-selector-model-code",
+                "attribute_key": "source_model_code",
+                "raw_value": "JLXS74",
+                "source_context": "Shared source-scoped model-code selector for JLXS74 across applicable MY2024 candidates: JL24-30, JL24-31"
+              }
+            ],
+            "extraction_mode": "manually_verified_transcription",
+            "extractor_id": "MY2024_shared_model_code_selector",
+            "extractor_version": "1.0.0",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": "2024-reconciled-r1",
+            "raw_artifact_hash": "sha256:3dd67950ed426a9e5c575af68d3b4ce4807f879d95c0eed5f945a309aa03c6fb",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2024_JL/lightweight_ingestion_review_20261113/candidate_inventory.csv",
+            "retrieved_at": "2026-11-13T14:00:00Z",
+            "source_applicability": {
+              "applicability_basis": "Reconciled US MY2024 Jeep Wrangler inventory selector for model code JLXS74",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": null
+            },
+            "source_id": "rigarchive_MY2024_edmunds_reconciliation",
+            "source_locator": "https://www.edmunds.com/jeep/wrangler/2024/features-specs/"
+          }
+        ],
+        "finding": "established",
+        "reviewer": "codex",
+        "reviewed_at": "2026-11-14T16:45:57.863298+00:00",
+        "review_notes": "RA-052 proposed established finding, prepared by Codex; pending explicit Project Owner publication authorization. Exact rigarchive_MY2024_edmunds_reconciliation/source_model_code/model_code/JLXS74, US MY2024 only, targets existing Jeep Wrangler JL Generation 32 (38d3c3ac-f825-4406-abb5-c2d12b9129a4). Retained candidate_inventory.csv rows JL24-30, JL24-31 explicitly name generation JL, model Wrangler, manufacturer Jeep, market US, year 2024 and model code JLXS74; the original retained source selector and applicability are preserved. Published JL precedent PK 241, UUID 305c7064-385e-53f4-9dd2-e994a6763d68, source rigarchive_MY2023_edmunds_reconciliation, years 2023-2023, has the same exact model code; it corroborates the already-established Generation identity, not new MY2024 engine/equipment availability. Evidence is the exact unchanged shared-selector document from RA-051 Candidate 3.1.0 snapshots, retaining source assertion IDs/values, raw artifact hash/reference and source revision. Transcribed/reconciled provenance is not reclassified as an original manufacturer document. No assertion is synthesized from a code prefix, trim label or adjacent-year availability. Original unpublished proposal is superseded as a preparation artifact only; this is revision 1 of its still-unpublished chain. No canonical publication or approval is asserted by this preparation."
+      },
+      "content_hash": "sha256:ff81a71a5e778fc27cf947607817831a82aef91522b6ec10371623a9c1241506",
+      "attribution": {
+        "version": "1.0",
+        "execution_agent": "codex"
+      }
+    }
+  },
+  {
+    "source_id": "rigarchive_MY2024_edmunds_reconciliation",
+    "model_code": "JLXT74",
+    "revision_pk": 254,
+    "revision_uuid": "0e9f54a9-bcc4-5411-85f9-500cbcb3551d",
+    "correspondence_uuid": "06607099-5d44-5ae2-b4e9-c208eab9617a",
+    "content_hash": "sha256:29d718ddf926e8fc03fc1c7ffd0a8a3576eee4222de2adb96219f49762cccb35",
+    "receipt_pk": 3362,
+    "receipt_uuid": "245a64b9-1a0a-436b-a747-8248386d6938",
+    "receipt_manifest_hash": "sha256:29d718ddf926e8fc03fc1c7ffd0a8a3576eee4222de2adb96219f49762cccb35",
+    "outcome": "created",
+    "operator_label": "project_owner",
+    "execution_agent": "codex",
+    "receipt_snapshot": {
+      "review": {
+        "review_version": "1.0",
+        "revision_uuid": "0e9f54a9-bcc4-5411-85f9-500cbcb3551d",
+        "correspondence_uuid": "06607099-5d44-5ae2-b4e9-c208eab9617a",
+        "revision_number": 1,
+        "supersedes_uuid": null,
+        "vehicle_model_uuid": "5ec5f58a-b140-484c-97f0-c90ec9c134d6",
+        "generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+        "source_id": "rigarchive_MY2024_edmunds_reconciliation",
+        "source_namespace": "source_model_code",
+        "identity_type": "model_code",
+        "native_identifier": "JLXT74",
+        "market": "US",
+        "start_year": 2024,
+        "end_year": 2024,
+        "restrictions": {},
+        "evidence": [
+          {
+            "assertion_set_id": "rigarchive_MY2024_edmunds_reconciliation-JLXT74-shared-selector-r1",
+            "assertions": [
+              {
+                "assertion_id": "JLXT74-reconciled-heading",
+                "attribute_key": "source_document_heading",
+                "raw_value": "United States / MY2024 / Jeep Wrangler (4-door) / Model Code Family JLXT74",
+                "source_context": "Reconciled MY2024 inventory (candidate_inventory.csv); Wrangler 4-Door High Altitude 4xe Family (Unlimited High Altitude 4xe); 1 active consumer configurations"
+              },
+              {
+                "assertion_id": "JLXT74-selector-model-code",
+                "attribute_key": "source_model_code",
+                "raw_value": "JLXT74",
+                "source_context": "Shared source-scoped model-code selector for JLXT74 across applicable MY2024 candidates: JL24-29"
+              }
+            ],
+            "extraction_mode": "manually_verified_transcription",
+            "extractor_id": "MY2024_shared_model_code_selector",
+            "extractor_version": "1.0.0",
+            "generation_normalizer": {
+              "id": "explicit_generation_identity",
+              "version": "1.0.0"
+            },
+            "publication_revision": "2024-reconciled-r1",
+            "raw_artifact_hash": "sha256:3dd67950ed426a9e5c575af68d3b4ce4807f879d95c0eed5f945a309aa03c6fb",
+            "raw_artifact_reference": "docs/implementation/handoffs/MY2024_JL/lightweight_ingestion_review_20261113/candidate_inventory.csv",
+            "retrieved_at": "2026-11-13T14:00:00Z",
+            "source_applicability": {
+              "applicability_basis": "Reconciled US MY2024 Jeep Wrangler inventory selector for model code JLXT74",
+              "applicability_scope": "model_year",
+              "market": "US",
+              "publisher_jurisdiction": null
+            },
+            "source_id": "rigarchive_MY2024_edmunds_reconciliation",
+            "source_locator": "https://www.edmunds.com/jeep/wrangler/2024/features-specs/"
+          }
+        ],
+        "finding": "established",
+        "reviewer": "codex",
+        "reviewed_at": "2026-11-14T16:45:57.863298+00:00",
+        "review_notes": "RA-052 proposed established finding, prepared by Codex; pending explicit Project Owner publication authorization. Exact rigarchive_MY2024_edmunds_reconciliation/source_model_code/model_code/JLXT74, US MY2024 only, targets existing Jeep Wrangler JL Generation 32 (38d3c3ac-f825-4406-abb5-c2d12b9129a4). Retained candidate_inventory.csv rows JL24-29 explicitly name generation JL, model Wrangler, manufacturer Jeep, market US, year 2024 and model code JLXT74; the original retained source selector and applicability are preserved. Published JL precedent PK 239, UUID dc793ec9-1373-5e8d-b707-c5125aed4eb0, source rigarchive_MY2023_edmunds_reconciliation, years 2023-2023, is a JL 4xe publication-pattern precedent only (different model code JLXL74); no earlier exact-code correspondence was found. The MY2024 retained row explicitly establishes this selector as JL; no adjacent-year availability is inferred. Evidence is the exact unchanged shared-selector document from RA-051 Candidate 3.1.0 snapshots, retaining source assertion IDs/values, raw artifact hash/reference and source revision. Transcribed/reconciled provenance is not reclassified as an original manufacturer document. No assertion is synthesized from a code prefix, trim label or adjacent-year availability. Original unpublished proposal is superseded as a preparation artifact only; this is revision 1 of its still-unpublished chain. No canonical publication or approval is asserted by this preparation."
+      },
+      "content_hash": "sha256:29d718ddf926e8fc03fc1c7ffd0a8a3576eee4222de2adb96219f49762cccb35",
+      "attribution": {
+        "version": "1.0",
+        "execution_agent": "codex"
+      }
+    }
+  }
+]

@@ -1,0 +1,405 @@
+{
+  "JL24-01": {
+    "assessment_version": "3.0.0",
+    "candidate_reference": "JL24-01",
+    "candidate_hash": "sha256:55737b9e96cd1fbba347172c18911fddafcc36be4836b6e041b9562426a550ed",
+    "diagnostics": [
+      {
+        "stage": "evidence",
+        "code": "PROJECTION_MISMATCH",
+        "path": "/",
+        "message": "Retained CSV assertion differs from its exact row."
+      }
+    ]
+  },
+  "JL24-02": {
+    "assessment_version": "3.0.0",
+    "candidate_reference": "JL24-02",
+    "candidate_hash": "sha256:ca59908bc4dcf442ccb6ed96784193153c9ad4dd00a850530adf9817e979d838",
+    "diagnostics": [
+      {
+        "stage": "evidence",
+        "code": "PROJECTION_MISMATCH",
+        "path": "/",
+        "message": "Retained CSV assertion differs from its exact row."
+      }
+    ]
+  },
+  "JL24-03": {
+    "assessment_version": "3.0.0",
+    "candidate_reference": "JL24-03",
+    "candidate_hash": "sha256:0379909e533c13cbc3392ca03e96380ba68bb826d03abcd97cb3d8bd2692a4bf",
+    "diagnostics": [
+      {
+        "stage": "evidence",
+        "code": "PROJECTION_MISMATCH",
+        "path": "/",
+        "message": "Retained CSV assertion differs from its exact row."
+      }
+    ]
+  },
+  "JL24-04": {
+    "assessment_version": "3.0.0",
+    "candidate_reference": "JL24-04",
+    "candidate_hash": "sha256:bcb693ab2265d8267ada4b72d0e6b6915aafcbaf669c8d52d4da706d84695c64",
+    "diagnostics": [
+      {
+        "stage": "evidence",
+        "code": "PROJECTION_MISMATCH",
+        "path": "/",
+        "message": "Retained CSV assertion differs from its exact row."
+      }
+    ]
+  },
+  "JL24-05": {
+    "assessment_version": "3.0.0",
+    "candidate_reference": "JL24-05",
+    "candidate_hash": "sha256:7334d7f4a6003b5d551cd9f81c6f9237a1292d4edcc555236f10f0afb37f5d85",
+    "diagnostics": [
+      {
+        "stage": "evidence",
+        "code": "PROJECTION_MISMATCH",
+        "path": "/",
+        "message": "Retained CSV assertion differs from its exact row."
+      }
+    ]
+  },
+  "JL24-06": {
+    "assessment_version": "3.0.0",
+    "candidate_reference": "JL24-06",
+    "candidate_hash": "sha256:b110d44d1ffd3cd5d7735cd66f841ed5852cc48c7609bab25e5cdb202d7c9c59",
+    "diagnostics": [
+      {
+        "stage": "evidence",
+        "code": "PROJECTION_MISMATCH",
+        "path": "/",
+        "message": "Retained CSV assertion differs from its exact row."
+      }
+    ]
+  },
+  "JL24-07": {
+    "assessment_version": "3.0.0",
+    "candidate_reference": "JL24-07",
+    "candidate_hash": "sha256:a1bef0d333886ced2fd6ef4c97313f6a6a04aa864187565a290722c3e226e872",
+    "diagnostics": [
+      {
+        "stage": "evidence",
+        "code": "PROJECTION_MISMATCH",
+        "path": "/",
+        "message": "Retained CSV assertion differs from its exact row."
+      }
+    ]
+  },
+  "JL24-08": {
+    "assessment_version": "3.0.0",
+    "candidate_reference": "JL24-08",
+    "candidate_hash": "sha256:3905196282b86e90288ea030869e717a8585ec9090e374e1bcb1b92ee191f850",
+    "diagnostics": [
+      {
+        "stage": "evidence",
+        "code": "PROJECTION_MISMATCH",
+        "path": "/",
+        "message": "Retained CSV assertion differs from its exact row."
+      }
+    ]
+  },
+  "JL24-09": {
+    "assessment_version": "3.0.0",
+    "candidate_reference": "JL24-09",
+    "candidate_hash": "sha256:885ddbb8c775dd20c75b5604ad239002f11bae8a6dcc971b1f3cf74e71ad1be6",
+    "diagnostics": [
+      {
+        "stage": "evidence",
+        "code": "PROJECTION_MISMATCH",
+        "path": "/",
+        "message": "Retained CSV assertion differs from its exact row."
+      }
+    ]
+  },
+  "JL24-10": {
+    "assessment_version": "3.0.0",
+    "candidate_reference": "JL24-10",
+    "candidate_hash": "sha256:d110d31f82b708aae414e2cdaffa159c655dce82f48832f9bc298da09551c824",
+    "diagnostics": [
+      {
+        "stage": "evidence",
+        "code": "PROJECTION_MISMATCH",
+        "path": "/",
+        "message": "Retained CSV assertion differs from its exact row."
+      }
+    ]
+  },
+  "JL24-11": {
+    "assessment_version": "3.0.0",
+    "candidate_reference": "JL24-11",
+    "candidate_hash": "sha256:478e35b6c9c438b337fbe3e7b4d425ee9fb64a74c6479d0dd7767d073620aca9",
+    "diagnostics": [
+      {
+        "stage": "evidence",
+        "code": "PROJECTION_MISMATCH",
+        "path": "/",
+        "message": "Retained CSV assertion differs from its exact row."
+      }
+    ]
+  },
+  "JL24-12": {
+    "assessment_version": "3.0.0",
+    "candidate_reference": "JL24-12",
+    "candidate_hash": "sha256:1913d18c8e55eac62307d29da506870b8a76f577443a17890ce20634e72d4c13",
+    "diagnostics": [
+      {
+        "stage": "evidence",
+        "code": "PROJECTION_MISMATCH",
+        "path": "/",
+        "message": "Retained CSV assertion differs from its exact row."
+      }
+    ]
+  },
+  "JL24-13": {
+    "assessment_version": "3.0.0",
+    "candidate_reference": "JL24-13",
+    "candidate_hash": "sha256:a102c951974cba9a45090f3e938a8141782efe0d9c7dcd4cd3466a134aa66cf8",
+    "diagnostics": [
+      {
+        "stage": "evidence",
+        "code": "PROJECTION_MISMATCH",
+        "path": "/",
+        "message": "Retained CSV assertion differs from its exact row."
+      }
+    ]
+  },
+  "JL24-14": {
+    "assessment_version": "3.0.0",
+    "candidate_reference": "JL24-14",
+    "candidate_hash": "sha256:4dbfe5c3d5b37ad6730843d8ef5058bfc9f6615b2dc361878ac5846b0ac5838d",
+    "diagnostics": [
+      {
+        "stage": "evidence",
+        "code": "PROJECTION_MISMATCH",
+        "path": "/",
+        "message": "Retained CSV assertion differs from its exact row."
+      }
+    ]
+  },
+  "JL24-15": {
+    "assessment_version": "3.0.0",
+    "candidate_reference": "JL24-15",
+    "candidate_hash": "sha256:3516f11674a8bbc3bcf11ae102e8ab2f4bf69cfc39433b75da1e894f229fa7a6",
+    "diagnostics": [
+      {
+        "stage": "evidence",
+        "code": "PROJECTION_MISMATCH",
+        "path": "/",
+        "message": "Retained CSV assertion differs from its exact row."
+      }
+    ]
+  },
+  "JL24-16": {
+    "assessment_version": "3.0.0",
+    "candidate_reference": "JL24-16",
+    "candidate_hash": "sha256:737e94ea5c7484ab08a721c2b0dde1035bed723ff66ad58b37d6c7fb082b8d89",
+    "diagnostics": [
+      {
+        "stage": "evidence",
+        "code": "PROJECTION_MISMATCH",
+        "path": "/",
+        "message": "Retained CSV assertion differs from its exact row."
+      }
+    ]
+  },
+  "JL24-17": {
+    "assessment_version": "3.0.0",
+    "candidate_reference": "JL24-17",
+    "candidate_hash": "sha256:53c867e54bf7b7bf3d7ce54e29f03771d0878018889fb663573bcfffc7d084d0",
+    "diagnostics": [
+      {
+        "stage": "evidence",
+        "code": "PROJECTION_MISMATCH",
+        "path": "/",
+        "message": "Retained CSV assertion differs from its exact row."
+      }
+    ]
+  },
+  "JL24-18": {
+    "assessment_version": "3.0.0",
+    "candidate_reference": "JL24-18",
+    "candidate_hash": "sha256:823df8553e8a220f01688745b326e277265de4a6d085b8d568eccb63a0ec4f9a",
+    "diagnostics": [
+      {
+        "stage": "evidence",
+        "code": "PROJECTION_MISMATCH",
+        "path": "/",
+        "message": "Retained CSV assertion differs from its exact row."
+      }
+    ]
+  },
+  "JL24-19": {
+    "assessment_version": "3.0.0",
+    "candidate_reference": "JL24-19",
+    "candidate_hash": "sha256:b6d5be8ccbedad067e41044a400b0fef4b9bcab55fb05596c3b44d2dc50c8405",
+    "diagnostics": [
+      {
+        "stage": "evidence",
+        "code": "PROJECTION_MISMATCH",
+        "path": "/",
+        "message": "Retained CSV assertion differs from its exact row."
+      }
+    ]
+  },
+  "JL24-20": {
+    "assessment_version": "3.0.0",
+    "candidate_reference": "JL24-20",
+    "candidate_hash": "sha256:824c6239fc24b1f13296c36dfcebe6459411956dba21fe57a8042849e7ca8811",
+    "diagnostics": [
+      {
+        "stage": "evidence",
+        "code": "PROJECTION_MISMATCH",
+        "path": "/",
+        "message": "Retained CSV assertion differs from its exact row."
+      }
+    ]
+  },
+  "JL24-21": {
+    "assessment_version": "3.0.0",
+    "candidate_reference": "JL24-21",
+    "candidate_hash": "sha256:9df4baa03732a7719e4b661d6c462002a8260714b0d3af76b0e627d5826deaea",
+    "diagnostics": [
+      {
+        "stage": "evidence",
+        "code": "PROJECTION_MISMATCH",
+        "path": "/",
+        "message": "Retained CSV assertion differs from its exact row."
+      }
+    ]
+  },
+  "JL24-22": {
+    "assessment_version": "3.0.0",
+    "candidate_reference": "JL24-22",
+    "candidate_hash": "sha256:b63910e2bcbe8c3f92d796a2bdec692979873c94e97281e244f094e228dade94",
+    "diagnostics": [
+      {
+        "stage": "evidence",
+        "code": "PROJECTION_MISMATCH",
+        "path": "/",
+        "message": "Retained CSV assertion differs from its exact row."
+      }
+    ]
+  },
+  "JL24-23": {
+    "assessment_version": "3.0.0",
+    "candidate_reference": "JL24-23",
+    "candidate_hash": "sha256:77560e8a64740cbaf70b21bf58ea42cc0771bcd08d714b311586c867b02f0285",
+    "diagnostics": [
+      {
+        "stage": "evidence",
+        "code": "PROJECTION_MISMATCH",
+        "path": "/",
+        "message": "Retained CSV assertion differs from its exact row."
+      }
+    ]
+  },
+  "JL24-24": {
+    "assessment_version": "3.0.0",
+    "candidate_reference": "JL24-24",
+    "candidate_hash": "sha256:2d107263f170897acc0aec2cb780ce1d2c39d4c1efb3dd273205ffb3776eab0a",
+    "diagnostics": [
+      {
+        "stage": "evidence",
+        "code": "PROJECTION_MISMATCH",
+        "path": "/",
+        "message": "Retained CSV assertion differs from its exact row."
+      }
+    ]
+  },
+  "JL24-25": {
+    "assessment_version": "3.0.0",
+    "candidate_reference": "JL24-25",
+    "candidate_hash": "sha256:d4b8677dd9addae25907bcef66c42b583d92ed121d2ba0b0927d338c140d1cfc",
+    "diagnostics": [
+      {
+        "stage": "evidence",
+        "code": "PROJECTION_MISMATCH",
+        "path": "/",
+        "message": "Retained CSV assertion differs from its exact row."
+      }
+    ]
+  },
+  "JL24-26": {
+    "assessment_version": "3.0.0",
+    "candidate_reference": "JL24-26",
+    "candidate_hash": "sha256:725267d2e99cf50ea058bf1422c9f2e25eb9a45004c4b9ddf72e2191931b11b3",
+    "diagnostics": [
+      {
+        "stage": "evidence",
+        "code": "PROJECTION_MISMATCH",
+        "path": "/",
+        "message": "Retained CSV assertion differs from its exact row."
+      }
+    ]
+  },
+  "JL24-27": {
+    "assessment_version": "3.0.0",
+    "candidate_reference": "JL24-27",
+    "candidate_hash": "sha256:364dc56858eacf5181440992abad292c8abb4c788bc9a1e6506a927f24a75434",
+    "diagnostics": [
+      {
+        "stage": "evidence",
+        "code": "PROJECTION_MISMATCH",
+        "path": "/",
+        "message": "Retained CSV assertion differs from its exact row."
+      }
+    ]
+  },
+  "JL24-28": {
+    "assessment_version": "3.0.0",
+    "candidate_reference": "JL24-28",
+    "candidate_hash": "sha256:e07064f70fd892210e9a91d2cbd54c643dcac2328aba63aaf2eac67cd4decea3",
+    "diagnostics": [
+      {
+        "stage": "evidence",
+        "code": "PROJECTION_MISMATCH",
+        "path": "/",
+        "message": "Retained CSV assertion differs from its exact row."
+      }
+    ]
+  },
+  "JL24-29": {
+    "assessment_version": "3.0.0",
+    "candidate_reference": "JL24-29",
+    "candidate_hash": "sha256:85a34791ab6563997b5586058f44aea39854b2268c4136bbb71017c0870d0740",
+    "diagnostics": [
+      {
+        "stage": "evidence",
+        "code": "PROJECTION_MISMATCH",
+        "path": "/",
+        "message": "Retained CSV assertion differs from its exact row."
+      }
+    ]
+  },
+  "JL24-30": {
+    "assessment_version": "3.0.0",
+    "candidate_reference": "JL24-30",
+    "candidate_hash": "sha256:9120ce9136dd0c085e2f88f9f762f105a0a30508df635f826952f99b6bb9b834",
+    "diagnostics": [
+      {
+        "stage": "evidence",
+        "code": "PROJECTION_MISMATCH",
+        "path": "/",
+        "message": "Retained CSV assertion differs from its exact row."
+      }
+    ]
+  },
+  "JL24-31": {
+    "assessment_version": "3.0.0",
+    "candidate_reference": "JL24-31",
+    "candidate_hash": "sha256:510fed39a7f6194adb68fcef46463741f3eb1d5beed6ebcc00cdf46ebdb7700c",
+    "diagnostics": [
+      {
+        "stage": "evidence",
+        "code": "PROJECTION_MISMATCH",
+        "path": "/",
+        "message": "Retained CSV assertion differs from its exact row."
+      }
+    ]
+  }
+}

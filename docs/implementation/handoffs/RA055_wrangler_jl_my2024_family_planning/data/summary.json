@@ -1,0 +1,30 @@
+{
+  "constructed": 31,
+  "contract_valid": 31,
+  "parent_resolutions": 31,
+  "planning_attempts": 31,
+  "executable_plans": 31,
+  "ready": 31,
+  "blocked": 0,
+  "diagnostics": {},
+  "slug_family_planning": "PASSED: 31 unique slugs; ten exact RA-049 pair vectors",
+  "database_before": "46aafa64d6b34f880a441a000675becedb890ff6a225a745208dd00bcb75e5ef",
+  "database_after": "46aafa64d6b34f880a441a000675becedb890ff6a225a745208dd00bcb75e5ef",
+  "all_table_rows_unchanged": true,
+  "integrity_check": "ok",
+  "foreign_key_violations": 0,
+  "counts": {
+    "reference_engine": 7,
+    "reference_factorybodyconfiguration": 2,
+    "reference_generationcorrespondencerevision": 254,
+    "reference_importexecutionreceipt": 3362,
+    "reference_vehicledefinition": 1053
+  },
+  "historical_engine_body_fks_all_null": true,
+  "my2024_jl_vehicles": 0,
+  "actions": {
+    "create": 31,
+    "no_op": 0,
+    "blocked": 0
+  }
+}

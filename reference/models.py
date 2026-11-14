@@ -718,10 +718,19 @@ class VehicleDefinition(BaseModel):
         return engine_label(self) if self.engine_name else ""
 
     def __str__(self) -> str:
+        model = self.generation.vehicle_model
+        body_designation = ""
+        if (self.model_year == 2024 and self.generation.slug == "jl"
+                and model.slug == "wrangler" and model.manufacturer.slug == "jeep"
+                and self.factory_body_configuration_id is not None):
+            body_designation = {"two-door": "2-Door", "four-door": "4-Door"}.get(
+                self.factory_body_configuration.door_configuration, "",
+            )
         details = [
             str(self.model_year),
-            str(self.generation.vehicle_model),
+            str(model),
             self.trim_name,
+            body_designation,
             self.engine_description,
             self.get_drivetrain_display(),
         ]

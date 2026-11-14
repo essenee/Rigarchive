@@ -1,0 +1,23 @@
+{
+  "before_sha256": "6edc62df2940eab2019593f9fcc6c8c239787733879e2f6ef00edf8c56d07e2a",
+  "after_publication_sha256": "46aafa64d6b34f880a441a000675becedb890ff6a225a745208dd00bcb75e5ef",
+  "existing_rows_unchanged": true,
+  "new_revisions": 12,
+  "new_receipts": 12,
+  "vehicle_count": 1053,
+  "receipt_count": 3362,
+  "correspondence_count": 254,
+  "engines": 7,
+  "bodies": 2,
+  "generation_resolution_count": 31,
+  "integrity_check": "ok",
+  "foreign_key_violations": 0,
+  "backup": {
+    "path": "/Users/cosmo/dev/Rigarchive/backups/snapshots/db_snapshot_pre_ra053_20261114T165126282187Z.sqlite3",
+    "sha256": "4f25c195428887d4528d119292bcf5bc2c750992e6482407d1ae7692310523b3",
+    "bytes": 56815616,
+    "integrity_check": "ok",
+    "foreign_key_violations": 0,
+    "all_schemas_and_rows_match_source": true
+  }
+}

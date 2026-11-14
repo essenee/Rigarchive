@@ -1,0 +1,8 @@
+{
+  "path": "/Users/cosmo/dev/Rigarchive/backups/snapshots/db_snapshot_pre_ra057_20261114T182607824464Z.sqlite3",
+  "sha256": "ef48daa8e29abc9c6586c9b2803dd63277b2fae7c466e27d7553adf3c90024d6",
+  "bytes": 56926208,
+  "integrity_check": "ok",
+  "foreign_key_violations": 0,
+  "all_schemas_and_rows_match_source": true
+}

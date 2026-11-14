@@ -3,6 +3,44 @@ Version: 1.6
 Last Updated: 2026-11-14
 Purpose: Current implementation status and development roadmap
 
+## MY2024 Wrangler JL — published; RA-054 through RA-058 complete (2026-11-14)
+
+All 31 reviewed US MY2024 JL consumer configurations were published atomically under
+RA-057 after exact RA-056A Approval1 and fresh transactional revalidation. New
+VehicleDefinitions PK1069–1099 and receipts PK3363–3393 preserve the approved marketed
+trims, registered Engines, Generation32 and exact two-/four-door bodies. Operational
+totals after publication: 1,084 VehicleDefinitions, 3,393 receipts, 254 correspondence
+revisions, seven Engines and two bodies. Historical canonical records were unchanged.
+
+RA-054 removed the false MY2022 drivetrain dependency using the established MY2024
+row; RA-055 corrected shared-family/individual CSV projection scope and factory-only
+rows. All 31 create plans and unique slugs passed, including ten exact body collision
+pairs. RA-056A adds body-derived public names without changing trim or immutable plans;
+RA-056B verified the unrelated session update did not stale those plans. The revised
+approval package and recorded Approval1 were used unchanged for publication.
+
+Retained verification: 128 focused RA-054/055 regressions, 38 naming/body tests and
+51 configurator tests passed; no full suite rerun for commit preparation. Publication
+integrity/FK/system checks and actual published Willys view/Specs QA passed. Native
+Matrix digest: `sha256:84c0f0a630e1547593001b7e4ce25158b5f51528633c6f6ce1e2815ac83c44dd`.
+Review manifest: `fb8e3a69066d5ee3b317c5c0eb64a458c9a5fe47590c30cbac6b504ff7cfbd07`.
+[Publication inventory and audit](handoffs/RA057_wrangler_jl_my2024_publication/README.md).
+[Configurator implementation](handoffs/RA058_configurator_body_aware_labels/README.md).
+Older milestone sections below describe historical prerequisites, superseded by
+this verified operational status. No further imports or deferred redesign are begun.
+
+## RA-058 — body-aware configurator labels (2026-11-14; implemented and verified)
+
+The existing three-column Generation configurator now groups actual published rows
+by canonical trim and exact FactoryBodyConfiguration. MY2024 Wrangler presents
+separate 2-Door/4-Door choices; Configuration labels exclude market, slug and
+redundant selected body details. Public-attribute ambiguity retains every record
+and displays a warning. Empty stored trim strings use body-derived presentation;
+absent trim in the bounded 3.1.0 import contract remains separate follow-up work.
+Verified 51 focused tests and actual read-only Django responses for all four Willys
+records/Specs links, with no migration or operational writes. No representative van
+inventory was validated. See [RA-058 handoff](handoffs/RA058_configurator_body_aware_labels/README.md).
+
 ## Human-maintained Engine registry — accepted, undeployed (2026-11-14)
 
 `Engine` provides protected manufacturer/complete-code identity, existing five-field

@@ -1,0 +1,63 @@
+{
+  "review": {
+    "review_version": "1.0",
+    "revision_uuid": "d1b4a4c9-cab1-540f-9897-dbb45928d7cd",
+    "correspondence_uuid": "b55117b0-40e6-5187-ab50-d03a3942b9c6",
+    "revision_number": 1,
+    "supersedes_uuid": null,
+    "vehicle_model_uuid": "5ec5f58a-b140-484c-97f0-c90ec9c134d6",
+    "generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+    "source_id": "fca_us_2024_jlu_order_guide_transcription",
+    "source_namespace": "source_model_code",
+    "identity_type": "model_code",
+    "native_identifier": "JLJP74",
+    "market": "US",
+    "start_year": 2024,
+    "end_year": 2024,
+    "restrictions": {},
+    "evidence": [
+      {
+        "source_id": "fca_us_2024_jlu_order_guide_transcription",
+        "raw_artifact_hash": "sha256:e5721cace34daf4d1d958e170c5087ac1d3453a48aa67357d0528a5d1c936071",
+        "raw_artifact_reference": "docs/implementation/handoffs/MY2024_JL/lightweight_ingestion_review_20261113/factory_reconciliation.csv",
+        "extractor_id": "MY2024_shared_model_code_selector",
+        "extractor_version": "1.0.0",
+        "extraction_mode": "manually_verified_transcription",
+        "assertion_set_id": "fca_us_2024_jlu_order_guide_transcription-JLJP74-shared-selector-r1",
+        "source_locator": "https://www.jlwranglerforums.com/forum/threads/latest-2024-jeep-wrangler-order-guides-2-door-4-door-updated-monthly.110292/",
+        "retrieved_at": "2026-11-13T14:00:00+00:00",
+        "source_applicability": {
+          "market": "US",
+          "applicability_basis": "United States 2024 Jeep Wrangler 4-Door Customer Preferred Code Guide (Issued 04/26/2023, Reissued 05/14/2024)",
+          "publisher_jurisdiction": "US",
+          "applicability_scope": "model_year",
+          "unknown_fields": {}
+        },
+        "publication_revision": "2024-05-14",
+        "generation_normalizer": {
+          "id": "explicit_generation_identity",
+          "version": "1.0.0"
+        },
+        "assertions": [
+          {
+            "assertion_id": "JLJP74-og-cover-heading",
+            "attribute_key": "source_document_heading",
+            "raw_value": "UNITED STATES / 2024 / JEEP WRANGLER 4 DOOR CUSTOMER PREFERRED CODE GUIDE — Model Code JLJP74 (Page 6)",
+            "source_context": "2024 4-Door Customer Preferred Code Guide page 1 index and page 6 model table (2024_JL_4D_OG_20240514)"
+          },
+          {
+            "assertion_id": "JLJP74-selector-model-code",
+            "attribute_key": "source_model_code",
+            "raw_value": "JLJP74",
+            "source_context": "2024 4-Door Customer Preferred Code Guide page 1 index and page 6 model heading; exact manufacturer model code JLJP74"
+          }
+        ]
+      }
+    ],
+    "finding": "established",
+    "reviewer": "project_owner",
+    "reviewed_at": "2026-11-13T14:00:00+00:00",
+    "review_notes": "Proposed MY2024 US Jeep Wrangler JL generation correspondence for model code JLJP74 under manufacturer order-guide source fca_us_2024_jlu_order_guide_transcription targeting Generation PK 32 (UUID 38d3c3ac-f825-4406-abb5-c2d12b9129a4). Covers factory order-guide addition candidate(s) JL24-18 absent from Edmunds initial discovery."
+  },
+  "content_hash": "sha256:24a8c380d11c2436840f445809bf93d030fc256021765a170f9c41bf2add188c"
+}

@@ -245,10 +245,99 @@ class RegistryRelease(Release):
     def _requires_source_reader(self,doc):
         return bool(self._source_claims(doc))
 
+    def _reviewed_csv_projection(self, doc, raw, candidate, inventory, generation):
+        """Validate MY2024 family selectors and offering rows at their own scopes."""
+        import csv
+        import io
+        from .body_identity import INVENTORY_ROOT
+        reference = doc['raw_artifact_reference']
+        if reference not in (INVENTORY_ROOT + 'candidate_inventory.csv',
+                             INVENTORY_ROOT + 'factory_reconciliation.csv'):
+            return False
+        need(doc['source_id'] == inventory['source_id'], 'PROJECTION_MISMATCH',
+             'CSV source differs from the offering source.', stage='evidence')
+        rows = list(csv.DictReader(io.StringIO(raw.decode('utf-8'))))
+        selected = [row for row in rows if row.get('candidate_id') == candidate['candidate_reference']]
+        need(bool(selected), 'PROJECTION_MISMATCH', 'CSV lacks the exact offering.', stage='evidence')
+        for row in selected:
+            need(all(row.get(k) == inventory[k] for k in
+                     ('model_code', 'marketed_trim', 'body_style', 'engine_code')),
+                 'PROJECTION_MISMATCH', 'CSV offering identity differs.', stage='evidence')
+        need(set(inventory['quick_order_package'].split(';')) ==
+             {q for row in selected for q in row['quick_order_package'].split(';')},
+             'PROJECTION_MISMATCH', 'CSV offering QOPs differ.', stage='evidence')
+        published = [doc for revision in generation['correspondences']
+                     for doc in revision['review_payload']['evidence']]
+        if doc in published:
+            # The exact immutable published document establishes a family heading,
+            # not an individual trim/QOP heading. Its selector still must match.
+            need(any(a['attribute_key'] == 'source_model_code' and
+                     a['raw_value'] == inventory['model_code'] for a in doc['assertions']),
+                 'PROJECTION_MISMATCH', 'Published selector differs from offering.', stage='evidence')
+            return True
+        expected_heading = (f"United States / MY2024 / Jeep Wrangler ({inventory['body_style']}) / "
+                            f"{inventory['marketed_trim']} [{inventory['model_code']} / {inventory['quick_order_package']}]")
+        for assertion in self._source_claims(doc):
+            key, value = assertion['attribute_key'], assertion['raw_value']
+            if key == 'source_model_code':
+                ok = value == inventory['model_code']
+            elif key == 'source_document_heading':
+                ok = value == expected_heading
+            elif key == 'research_offering_correspondence':
+                ok = (type(value) is dict and value.get('candidate_id') == candidate['candidate_reference']
+                      and all(k in inventory and type(v) in (str, int) and str(v) == inventory[k]
+                              for k,v in value.items()))
+            else:
+                raise ResolutionError('UNSUPPORTED_SOURCE_READER',
+                                      'Unsupported MY2024 CSV claim: ' + key, stage='dependency')
+            need(ok, 'PROJECTION_MISMATCH', 'CSV offering assertion differs.', stage='evidence')
+        return True
+
+    def _established_drive(self, candidate):
+        """Read the already-reviewed MY2024 offering row, never a prior-year PDF."""
+        drives = [i for i in candidate['normalized_assertions']
+                  if i['target_attribute_key'] == 'generic_drive_classification']
+        # Synthetic/native configuration evidence continues through the ordinary
+        # pure validator. Only the retained MY2024 row spelling needs this adapter.
+        if len(drives) != 1:
+            return False
+        item = drives[0]
+        doc, assertion = wire.evidence_index(candidate)[item['source_assertion_ref']]
+        if assertion['attribute_key'] != 'research_offering_correspondence':
+            return False
+        from .body_identity import INVENTORY_ROOT
+        need(doc['raw_artifact_reference'] in (
+                 INVENTORY_ROOT + 'candidate_inventory.csv',
+                 INVENTORY_ROOT + 'factory_reconciliation.csv'),
+             'UNSUPPORTED_SOURCE_READER', 'Unsupported MY2024 drivetrain row source.', stage='dependency')
+        raw = assertion['raw_value']
+        need(type(raw) is dict and raw.get('candidate_id') == candidate['candidate_reference']
+             and raw.get('model_year') == 2024 and raw.get('market') == 'US',
+             'PROJECTION_MISMATCH', 'Drivetrain row belongs to another offering.', stage='evidence')
+        need(raw.get('drivetrain') == item['normalized_concept'] == candidate['drivetrain'] == '4WD'
+             and item['mapping_status'] == 'mapped'
+             and item['normalization'] == {'id': 'source_literal', 'version': '1.0.0'},
+             'PROJECTION_MISMATCH', 'MY2024 offering drivetrain differs.', stage='evidence')
+        app = next(a for a in candidate['applicability'] if a['applicability_id'] == item['applicability_ref'])
+        need(app['market'] == 'US' and app['start_year'] == app['end_year'] == 2024
+             and item['source_assertion_ref'] in app['source_assertion_refs']
+             and any(wire.evidence_index(candidate)[q][0] is doc
+                     for q in app['configuration_refs'] if q in candidate['configuration_refs']),
+             'COEXISTENCE_NOT_ESTABLISHED', 'MY2024 drivetrain lacks its exact offering grouping.', stage='evidence')
+        # Retained byte and exact CSV-row verification remains in _evidence;
+        # this projection adapter grants no source-reader exemption.
+        return True
+
     def _evidence_projection(self,candidate):
         # Registry authority supplies only the five engine targets. Body/scope/drive,
         # source bytes, positive coexistence and all other diagnostics stay mandatory.
         value=deepcopy(candidate);value['canonical_powertrain']=None
+        if self._established_drive(candidate):
+            value['drivetrain'] = None
+            value['normalized_assertions'] = [i for i in value['normalized_assertions']
+                                             if i['target_attribute_key'] != 'generic_drive_classification']
+            value['attribute_provenance'] = {k:v for k,v in value.get('attribute_provenance',{}).items()
+                                           if k != 'generic_drive_classification'}
         value['normalized_assertions']=[i for i in value['normalized_assertions'] if i['target_attribute_key'] not in FIELDS]
         value['attribute_provenance']={k:v for k,v in value.get('attribute_provenance',{}).items() if k not in FIELDS}
         value['candidate_hash']=wire.candidate_hash(value)
@@ -337,8 +426,8 @@ def persist(plan,manifest,report,agent):
 def prepare_retained_candidate(reference, *, root=None):
     """Prepare one retained 2.1.0 offering in memory; never write source/candidates.
 
-    Registry rows must already exist. Retained headings/code rows establish only
-    this offering's taxonomy/code association, not repeated engine classifications.
+    Registry rows must already exist. Retained MY2024 rows establish offering
+    taxonomy, code and the already-reviewed drivetrain, not engine reclassification.
     Non-engine source/Generation/body dependencies still gate executable planning.
     """
     import json
@@ -377,9 +466,17 @@ def prepare_retained_candidate(reference, *, root=None):
     q=headings[0];door={'2-door':'two-door','4-door':'four-door'}[active[reference]['body_style']]
     values={'make':'Jeep','model':'Wrangler','model_year':2024,'market':'US','trim_name':audit[reference]['owner_required_canonical_trim'],'factory_body.door_configuration':door}
     interpretations=[{'interpretation_id':'registry-preparation-'+k,'source_assertion_ref':q,'target_attribute_key':k,'normalized_concept':v,'mapping_status':'mapped','applicability_ref':'offering','normalization':{'id':'wrangler_door_taxonomy' if k.startswith('factory_body.') else 'wrangler_selector_heading','version':'1.0.0'},'finding_refs':[]} for k,v in values.items()]
-    for i in original['normalized_assertions']:
-        if i['target_attribute_key']=='generic_drive_classification':
-            interpretations.append({'interpretation_id':'registry-preparation-drive','source_assertion_ref':i['source_assertion_ref'],'target_attribute_key':'generic_drive_classification','normalized_concept':i['normalized_concept'],'mapping_status':i['mapping_status'],'applicability_ref':'offering','normalization':{'id':'source_literal','version':'1.0.0'},'finding_refs':[]})
+    drive = refs[code_refs[0]][1]['raw_value'].get('drivetrain')
+    need(drive == active[reference]['drivetrain'] == '4WD', 'PROJECTION_MISMATCH',
+         'Retained MY2024 offering lacks its established drivetrain.', stage='evidence')
+    interpretations.append({'interpretation_id':'registry-preparation-drive','source_assertion_ref':code_refs[0],
+        'target_attribute_key':'generic_drive_classification','normalized_concept':drive,'mapping_status':'mapped',
+        'applicability_ref':'offering','normalization':{'id':'source_literal','version':'1.0.0'},'finding_refs':[]})
+    # Retain full historical provenance in the hash-pinned source_candidate.
+    # Its MY2022 technical layout is no longer an active MY2024 evidence source.
+    documents = [d for d in documents if not (
+        d['source_id'] == '2022_JP_Wrangler_SP'
+        and d['assertion_set_id'] == 'MY2024_Wrangler_technical_layout')]
     pre=body_preimage(SCOPE,{'door_configuration':door})
     candidate={'envelope':{'artifact_type':wire.ARTIFACT_TYPE,'schema_version':'3.0.0','$schema':'urn:rigarchive:contract:candidate_configuration:3.0.0','generator':'registry-aware-preparation/3.1.0'},
         'candidate_reference':reference,'candidate_identity':{'manufacturer_name':'Jeep','vehicle_model_name':'Wrangler','model_year':2024,'market':'US','trim_name':values['trim_name']},

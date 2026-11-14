@@ -1,0 +1,405 @@
+{
+  "JL24-01": {
+    "assessment_version": "3.0.0",
+    "candidate_reference": "JL24-01",
+    "candidate_hash": "sha256:e8922c1dd04068e94f0ba734cb3f3956669fd13628274b05a60c8861c855a985",
+    "diagnostics": [
+      {
+        "stage": "dependency",
+        "code": "UNSUPPORTED_SOURCE_READER",
+        "path": "/",
+        "message": "Source extraction cannot be independently checked by this profile."
+      }
+    ]
+  },
+  "JL24-02": {
+    "assessment_version": "3.0.0",
+    "candidate_reference": "JL24-02",
+    "candidate_hash": "sha256:ecbccdb352fb98f849327e9048c1132574a1dc1db627ac9719b09caa8b573938",
+    "diagnostics": [
+      {
+        "stage": "dependency",
+        "code": "UNSUPPORTED_SOURCE_READER",
+        "path": "/",
+        "message": "Source extraction cannot be independently checked by this profile."
+      }
+    ]
+  },
+  "JL24-03": {
+    "assessment_version": "3.0.0",
+    "candidate_reference": "JL24-03",
+    "candidate_hash": "sha256:2e393c21578ac02994f951dbcdca5918b1857af087bb4bdfad09d965ddd86bcf",
+    "diagnostics": [
+      {
+        "stage": "dependency",
+        "code": "UNSUPPORTED_SOURCE_READER",
+        "path": "/",
+        "message": "Source extraction cannot be independently checked by this profile."
+      }
+    ]
+  },
+  "JL24-04": {
+    "assessment_version": "3.0.0",
+    "candidate_reference": "JL24-04",
+    "candidate_hash": "sha256:2a62723dc8087bcc2055dd49954595abd397d158f259d6f571515341a327490e",
+    "diagnostics": [
+      {
+        "stage": "dependency",
+        "code": "UNSUPPORTED_SOURCE_READER",
+        "path": "/",
+        "message": "Source extraction cannot be independently checked by this profile."
+      }
+    ]
+  },
+  "JL24-05": {
+    "assessment_version": "3.0.0",
+    "candidate_reference": "JL24-05",
+    "candidate_hash": "sha256:3309b20041a5362834d0d98d45e4c66399180d6211ef0a39b47dd0c770cd234e",
+    "diagnostics": [
+      {
+        "stage": "dependency",
+        "code": "UNSUPPORTED_SOURCE_READER",
+        "path": "/",
+        "message": "Source extraction cannot be independently checked by this profile."
+      }
+    ]
+  },
+  "JL24-06": {
+    "assessment_version": "3.0.0",
+    "candidate_reference": "JL24-06",
+    "candidate_hash": "sha256:d7468f0a07f302396726c907decb168baaa7cf2da89c0c9749116b3778a9ab72",
+    "diagnostics": [
+      {
+        "stage": "dependency",
+        "code": "UNSUPPORTED_SOURCE_READER",
+        "path": "/",
+        "message": "Source extraction cannot be independently checked by this profile."
+      }
+    ]
+  },
+  "JL24-07": {
+    "assessment_version": "3.0.0",
+    "candidate_reference": "JL24-07",
+    "candidate_hash": "sha256:1e79123c638142384bf729654475f6e9804f2a2ae9f7773fb763b75596930716",
+    "diagnostics": [
+      {
+        "stage": "dependency",
+        "code": "UNSUPPORTED_SOURCE_READER",
+        "path": "/",
+        "message": "Source extraction cannot be independently checked by this profile."
+      }
+    ]
+  },
+  "JL24-08": {
+    "assessment_version": "3.0.0",
+    "candidate_reference": "JL24-08",
+    "candidate_hash": "sha256:d2732105017f1e651da6c0667e4cb0a65857fe22deca7c0a6ed9b756c44a3a6f",
+    "diagnostics": [
+      {
+        "stage": "dependency",
+        "code": "UNSUPPORTED_SOURCE_READER",
+        "path": "/",
+        "message": "Source extraction cannot be independently checked by this profile."
+      }
+    ]
+  },
+  "JL24-09": {
+    "assessment_version": "3.0.0",
+    "candidate_reference": "JL24-09",
+    "candidate_hash": "sha256:1267e6b8f75953012b1b5f6f0833ecd7590f913cd6d269c6d6d2c4a625f9a12a",
+    "diagnostics": [
+      {
+        "stage": "dependency",
+        "code": "UNSUPPORTED_SOURCE_READER",
+        "path": "/",
+        "message": "Source extraction cannot be independently checked by this profile."
+      }
+    ]
+  },
+  "JL24-10": {
+    "assessment_version": "3.0.0",
+    "candidate_reference": "JL24-10",
+    "candidate_hash": "sha256:2ab1ef43114349d1b8e971ec1ae3f8f02d592ce1efcbe921daef77df0f00de53",
+    "diagnostics": [
+      {
+        "stage": "dependency",
+        "code": "UNSUPPORTED_SOURCE_READER",
+        "path": "/",
+        "message": "Source extraction cannot be independently checked by this profile."
+      }
+    ]
+  },
+  "JL24-11": {
+    "assessment_version": "3.0.0",
+    "candidate_reference": "JL24-11",
+    "candidate_hash": "sha256:524e8da51255e8d25be478e3883a624848761b04908a029f8d067a2325862cd4",
+    "diagnostics": [
+      {
+        "stage": "dependency",
+        "code": "UNSUPPORTED_SOURCE_READER",
+        "path": "/",
+        "message": "Source extraction cannot be independently checked by this profile."
+      }
+    ]
+  },
+  "JL24-12": {
+    "assessment_version": "3.0.0",
+    "candidate_reference": "JL24-12",
+    "candidate_hash": "sha256:9c44d9c2faee390dddae153f20ce5e4b85866c69d3e90ae5feba7b0d02a1192c",
+    "diagnostics": [
+      {
+        "stage": "dependency",
+        "code": "UNSUPPORTED_SOURCE_READER",
+        "path": "/",
+        "message": "Source extraction cannot be independently checked by this profile."
+      }
+    ]
+  },
+  "JL24-13": {
+    "assessment_version": "3.0.0",
+    "candidate_reference": "JL24-13",
+    "candidate_hash": "sha256:1732f7e7f755a2f0ad11cdb5a044804ac6404b856d3ec065cb5e910f34c500f5",
+    "diagnostics": [
+      {
+        "stage": "dependency",
+        "code": "UNSUPPORTED_SOURCE_READER",
+        "path": "/",
+        "message": "Source extraction cannot be independently checked by this profile."
+      }
+    ]
+  },
+  "JL24-14": {
+    "assessment_version": "3.0.0",
+    "candidate_reference": "JL24-14",
+    "candidate_hash": "sha256:68200f9a449c4ecd23a6d31822d4cc03dc81a4cc8f836a475cadc414dc1c4c5c",
+    "diagnostics": [
+      {
+        "stage": "dependency",
+        "code": "UNSUPPORTED_SOURCE_READER",
+        "path": "/",
+        "message": "Source extraction cannot be independently checked by this profile."
+      }
+    ]
+  },
+  "JL24-15": {
+    "assessment_version": "3.0.0",
+    "candidate_reference": "JL24-15",
+    "candidate_hash": "sha256:dc22717ccf2f8c4dfe0146cfbcf9cb50bac4cd3ba0ab6b88d0c709c95397b9b5",
+    "diagnostics": [
+      {
+        "stage": "dependency",
+        "code": "UNSUPPORTED_SOURCE_READER",
+        "path": "/",
+        "message": "Source extraction cannot be independently checked by this profile."
+      }
+    ]
+  },
+  "JL24-16": {
+    "assessment_version": "3.0.0",
+    "candidate_reference": "JL24-16",
+    "candidate_hash": "sha256:bfdb6acf1ac8a38c572f4c041dfbcbbe23efad95d3050d5b617eefa75d1bcea5",
+    "diagnostics": [
+      {
+        "stage": "dependency",
+        "code": "UNSUPPORTED_SOURCE_READER",
+        "path": "/",
+        "message": "Source extraction cannot be independently checked by this profile."
+      }
+    ]
+  },
+  "JL24-17": {
+    "assessment_version": "3.0.0",
+    "candidate_reference": "JL24-17",
+    "candidate_hash": "sha256:852371930dc6b3fbe3cb57f6257586c447e7fa9f73c24c50853355708916531b",
+    "diagnostics": [
+      {
+        "stage": "dependency",
+        "code": "UNSUPPORTED_SOURCE_READER",
+        "path": "/",
+        "message": "Source extraction cannot be independently checked by this profile."
+      }
+    ]
+  },
+  "JL24-18": {
+    "assessment_version": "3.0.0",
+    "candidate_reference": "JL24-18",
+    "candidate_hash": "sha256:06485020df899ff4caf121f70431c2af2a550dad7a3343ba0f1406fb0b9f340a",
+    "diagnostics": [
+      {
+        "stage": "dependency",
+        "code": "UNSUPPORTED_SOURCE_READER",
+        "path": "/",
+        "message": "Source extraction cannot be independently checked by this profile."
+      }
+    ]
+  },
+  "JL24-19": {
+    "assessment_version": "3.0.0",
+    "candidate_reference": "JL24-19",
+    "candidate_hash": "sha256:b21490ba524146e4241d3e56b43e1c8fb9407a7aceb17551a7ad97a8e7162aba",
+    "diagnostics": [
+      {
+        "stage": "dependency",
+        "code": "UNSUPPORTED_SOURCE_READER",
+        "path": "/",
+        "message": "Source extraction cannot be independently checked by this profile."
+      }
+    ]
+  },
+  "JL24-20": {
+    "assessment_version": "3.0.0",
+    "candidate_reference": "JL24-20",
+    "candidate_hash": "sha256:2d8a86ff776f816a344c07d331658c95bb3221469217ca1f7fa6cef258e29c88",
+    "diagnostics": [
+      {
+        "stage": "dependency",
+        "code": "UNSUPPORTED_SOURCE_READER",
+        "path": "/",
+        "message": "Source extraction cannot be independently checked by this profile."
+      }
+    ]
+  },
+  "JL24-21": {
+    "assessment_version": "3.0.0",
+    "candidate_reference": "JL24-21",
+    "candidate_hash": "sha256:1c72252ff021dede7c832af073004bc36ceebeb8b870ae956a5a07c9649386d2",
+    "diagnostics": [
+      {
+        "stage": "dependency",
+        "code": "UNSUPPORTED_SOURCE_READER",
+        "path": "/",
+        "message": "Source extraction cannot be independently checked by this profile."
+      }
+    ]
+  },
+  "JL24-22": {
+    "assessment_version": "3.0.0",
+    "candidate_reference": "JL24-22",
+    "candidate_hash": "sha256:e779c21df5c4c410e9a3c5b2021870147e8e23fe994a6917e4b97ab93a752cf2",
+    "diagnostics": [
+      {
+        "stage": "dependency",
+        "code": "UNSUPPORTED_SOURCE_READER",
+        "path": "/",
+        "message": "Source extraction cannot be independently checked by this profile."
+      }
+    ]
+  },
+  "JL24-23": {
+    "assessment_version": "3.0.0",
+    "candidate_reference": "JL24-23",
+    "candidate_hash": "sha256:755e1c30f272a702e53ee8a29599fcf7e25b3acecd106a6d0e067e207b63f898",
+    "diagnostics": [
+      {
+        "stage": "dependency",
+        "code": "UNSUPPORTED_SOURCE_READER",
+        "path": "/",
+        "message": "Source extraction cannot be independently checked by this profile."
+      }
+    ]
+  },
+  "JL24-24": {
+    "assessment_version": "3.0.0",
+    "candidate_reference": "JL24-24",
+    "candidate_hash": "sha256:03b91f28f9cf9712e2b953d9421cce8e92ea0397170e641a9faf1fa8605aa99b",
+    "diagnostics": [
+      {
+        "stage": "dependency",
+        "code": "UNSUPPORTED_SOURCE_READER",
+        "path": "/",
+        "message": "Source extraction cannot be independently checked by this profile."
+      }
+    ]
+  },
+  "JL24-25": {
+    "assessment_version": "3.0.0",
+    "candidate_reference": "JL24-25",
+    "candidate_hash": "sha256:b86f27c9921e7399a0fb993642cb1ac66594cc214835f587744ab9852ad0cca5",
+    "diagnostics": [
+      {
+        "stage": "dependency",
+        "code": "UNSUPPORTED_SOURCE_READER",
+        "path": "/",
+        "message": "Source extraction cannot be independently checked by this profile."
+      }
+    ]
+  },
+  "JL24-26": {
+    "assessment_version": "3.0.0",
+    "candidate_reference": "JL24-26",
+    "candidate_hash": "sha256:595ccb59cd8d15bc75a6bbd0b868056c1c344e5c72ed0d4845aa459ac52deb6f",
+    "diagnostics": [
+      {
+        "stage": "dependency",
+        "code": "UNSUPPORTED_SOURCE_READER",
+        "path": "/",
+        "message": "Source extraction cannot be independently checked by this profile."
+      }
+    ]
+  },
+  "JL24-27": {
+    "assessment_version": "3.0.0",
+    "candidate_reference": "JL24-27",
+    "candidate_hash": "sha256:60c539a23b277f2d91ac64b2d9c41bffe9cf70ae127beb9915a277f8ae81634f",
+    "diagnostics": [
+      {
+        "stage": "dependency",
+        "code": "UNSUPPORTED_SOURCE_READER",
+        "path": "/",
+        "message": "Source extraction cannot be independently checked by this profile."
+      }
+    ]
+  },
+  "JL24-28": {
+    "assessment_version": "3.0.0",
+    "candidate_reference": "JL24-28",
+    "candidate_hash": "sha256:4c76e52b007b2e67def26aef8f905df4f3c25303354d9305de9024a0c2761e73",
+    "diagnostics": [
+      {
+        "stage": "dependency",
+        "code": "UNSUPPORTED_SOURCE_READER",
+        "path": "/",
+        "message": "Source extraction cannot be independently checked by this profile."
+      }
+    ]
+  },
+  "JL24-29": {
+    "assessment_version": "3.0.0",
+    "candidate_reference": "JL24-29",
+    "candidate_hash": "sha256:6ac6a6e6507b6f676593cf9cfc8c214aa6808bb238c789acb6e1a3cc6f678e01",
+    "diagnostics": [
+      {
+        "stage": "dependency",
+        "code": "UNSUPPORTED_SOURCE_READER",
+        "path": "/",
+        "message": "Source extraction cannot be independently checked by this profile."
+      }
+    ]
+  },
+  "JL24-30": {
+    "assessment_version": "3.0.0",
+    "candidate_reference": "JL24-30",
+    "candidate_hash": "sha256:af3ca1d9c621348f55cabbefd0b180733bce572f8f9530d95b73819210508c09",
+    "diagnostics": [
+      {
+        "stage": "dependency",
+        "code": "UNSUPPORTED_SOURCE_READER",
+        "path": "/",
+        "message": "Source extraction cannot be independently checked by this profile."
+      }
+    ]
+  },
+  "JL24-31": {
+    "assessment_version": "3.0.0",
+    "candidate_reference": "JL24-31",
+    "candidate_hash": "sha256:aea5b4388e25c9a3e4e2c2659ce86951c6fb62701fb78644e1144fa1cb59232a",
+    "diagnostics": [
+      {
+        "stage": "dependency",
+        "code": "UNSUPPORTED_SOURCE_READER",
+        "path": "/",
+        "message": "Source extraction cannot be independently checked by this profile."
+      }
+    ]
+  }
+}

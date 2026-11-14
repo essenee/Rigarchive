@@ -404,7 +404,7 @@ class ExperimentalVehicleHubAndHomepageTests(TestCase):
         self.assertEqual(response.context["selected_trim"], "")
         self.assertTrue(response.context["trim_filter_active"])
         self.assertEqual(list(response.context["displayed_configurations"]), [unnamed])
-        self.assertContains(response, "Unnamed trim")
+        self.assertContains(response, "Factory configuration")
         self.assertContains(response, unnamed.get_absolute_url())
         self.assertContains(response, '?year=2003&amp;trim=#configurations')
         self.assertIsNone(response.context["selected_config"])
@@ -535,26 +535,28 @@ class ExperimentalVehicleHubAndHomepageTests(TestCase):
         self.assertEqual(response.context["selected_config"].market, "US")
         self.assertContains(self.client.get(sibling.get_absolute_url()), "United States")
 
-    def test_market_is_only_added_when_needed_to_distinguish_choices(self):
+    def test_market_only_duplicates_are_reported_without_market_labels(self):
         canadian = VehicleDefinition.objects.create(generation=self.fourth_generation,
                     model_year=2003, trim_name="SR5", engine_name="4.0L V6", drivetrain="2WD", market="CA")
         response = self.client.get(self.fourth_generation.get_absolute_url(), {"year": 2003, "trim": "SR5"})
         choices = response.context["configuration_browser_choices"]
         self.assertEqual({c.pk for c in choices}, {canadian.pk, self.vd_2003_v6.pk})
-        self.assertEqual(len({c.choice_label for c in choices}), 2)
-        self.assertTrue(any("Canada (CA)" in c.choice_label for c in choices))
-        self.assertTrue(any("United States (US)" in c.choice_label for c in choices))
+        self.assertTrue(response.context["configuration_label_ambiguity"])
+        self.assertTrue(all(c.choice_ambiguous for c in choices))
+        self.assertTrue(all("Canada" not in c.choice_label and "United States" not in c.choice_label for c in choices))
+        self.assertContains(response, "Some factory records share the same public attributes")
 
-    def test_identical_attributes_use_real_canonical_identifiers(self):
+    def test_identical_attributes_remain_separate_without_identifier_labels(self):
         duplicate = VehicleDefinition.objects.create(generation=self.fourth_generation,
                     model_year=2003, trim_name="SR5", engine_name="4.0L V6", drivetrain="2WD", market="US",
                     slug="alternate-canonical-record")
         context = get_generation_hub_context(self.fourth_generation, model_year="2003", trim_name="SR5")
         choices = context["configuration_browser_choices"]
         self.assertEqual(len(choices), 2)
-        self.assertEqual(len({c.choice_label for c in choices}), 2)
+        self.assertTrue(context["configuration_label_ambiguity"])
         for choice in choices:
-            self.assertIn(choice.slug, choice.choice_label)
+            self.assertNotIn(choice.slug, choice.choice_label)
+            self.assertTrue(choice.choice_ambiguous)
         self.assertEqual({c.pk for c in choices}, {self.vd_2003_v6.pk, duplicate.pk})
 
 

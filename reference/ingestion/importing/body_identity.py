@@ -148,6 +148,9 @@ class Release:
         c.validate("Receipt3", snapshot)
         return snapshot
 
+    def _reviewed_csv_projection(self, doc, raw, candidate, inventory, generation):
+        return False  # Historical 3.0.0 reader semantics are unchanged.
+
     def _evidence(self, candidate, inventory, audit, pins, generation):
         content_map = {}
         for doc in candidate["evidence_documents"]:
@@ -156,6 +159,8 @@ class Release:
             content_map[reference] = raw
             pins.append({"reference": reference, "byte_hash": expected})
             if not self._requires_source_reader(doc):
+                continue
+            if self._reviewed_csv_projection(doc, raw, candidate, inventory, generation):
                 continue
             # Verify a source-native JSON assertion projection where available. CSV and
             # reviewed headings are checked separately; arbitrary extracted PDF claims

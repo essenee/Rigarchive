@@ -1,0 +1,53 @@
+[
+  {
+    "source_id": "2022_JP_Wrangler_SP",
+    "raw_artifact_reference": "docs/implementation/handoffs/MY2022_JL/discovery_20261109/source_pdfs/2022_JP_Wrangler_SP.pdf",
+    "raw_artifact_hash": "sha256:e71292bb3e8fd98cff9b2b9478eade0490e01a93dc404f12e89d66f22d8323a9",
+    "assertion_set_id": "MY2024_Wrangler_technical_layout",
+    "requires_reader": true,
+    "non_engine_claims": [
+      {
+        "assertion_id": "tech-4wd",
+        "attribute_key": "drivetrain"
+      }
+    ]
+  },
+  {
+    "source_id": "rigarchive_MY2024_edmunds_reconciliation",
+    "raw_artifact_reference": "docs/implementation/handoffs/MY2024_JL/lightweight_ingestion_review_20261113/candidate_inventory.csv",
+    "raw_artifact_hash": "sha256:3dd67950ed426a9e5c575af68d3b4ce4807f879d95c0eed5f945a309aa03c6fb",
+    "assertion_set_id": "JL24-01-edmunds-transcription",
+    "requires_reader": true,
+    "non_engine_claims": [
+      {
+        "assertion_id": "JL24-01-correspondence",
+        "attribute_key": "research_offering_correspondence"
+      },
+      {
+        "assertion_id": "JL24-01-heading",
+        "attribute_key": "source_document_heading"
+      },
+      {
+        "assertion_id": "JL24-01-model",
+        "attribute_key": "source_model_code"
+      }
+    ]
+  },
+  {
+    "source_id": "rigarchive_MY2024_edmunds_reconciliation",
+    "raw_artifact_reference": "docs/implementation/handoffs/MY2024_JL/lightweight_ingestion_review_20261113/candidate_inventory.csv",
+    "raw_artifact_hash": "sha256:3dd67950ed426a9e5c575af68d3b4ce4807f879d95c0eed5f945a309aa03c6fb",
+    "assertion_set_id": "rigarchive_MY2024_edmunds_reconciliation-JLJL72-shared-selector-r1",
+    "requires_reader": true,
+    "non_engine_claims": [
+      {
+        "assertion_id": "JLJL72-reconciled-heading",
+        "attribute_key": "source_document_heading"
+      },
+      {
+        "assertion_id": "JLJL72-selector-model-code",
+        "attribute_key": "source_model_code"
+      }
+    ]
+  }
+]

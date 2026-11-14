@@ -1,0 +1,53 @@
+{
+  "created": "2026-11-14",
+  "prepared_at_utc": "2026-11-14T16:45:57.863298+00:00",
+  "head": "a99187227e862a5c97fcdb12491a5bac2e2f1ffb",
+  "selectors_prepared": 12,
+  "supported": 12,
+  "blocked": 0,
+  "conflicting_published_revisions": 0,
+  "offering_coverage": 31,
+  "expected_database_sha256": "6edc62df2940eab2019593f9fcc6c8c239787733879e2f6ef00edf8c56d07e2a",
+  "database_before": "6edc62df2940eab2019593f9fcc6c8c239787733879e2f6ef00edf8c56d07e2a",
+  "database_after": "6edc62df2940eab2019593f9fcc6c8c239787733879e2f6ef00edf8c56d07e2a",
+  "matches_expected_baseline": true,
+  "all_database_table_rows_unchanged": true,
+  "counts": {
+    "reference_engine": 7,
+    "reference_factorybodyconfiguration": 2,
+    "reference_generationcorrespondencerevision": 242,
+    "reference_importexecutionreceipt": 3350,
+    "reference_vehicledefinition": 1053
+  },
+  "validation": {
+    "review_payloads": 12,
+    "retained_document_bytes": 12,
+    "unsaved_model_full_clean": 12,
+    "unique_exact_selectors": 12,
+    "candidate_generation_evidence": 31,
+    "candidate_exact_evidence_subset": 31,
+    "integrity_check": "ok",
+    "foreign_key_violations": 0
+  },
+  "canonical_parents": {
+    "manufacturer_id": 20,
+    "manufacturer_uuid": "42eefe42-0f2f-4e31-b4b2-f3e520ea0e50",
+    "manufacturer_name": "Jeep",
+    "manufacturer_active": true,
+    "vehicle_model_id": 21,
+    "vehicle_model_uuid": "5ec5f58a-b140-484c-97f0-c90ec9c134d6",
+    "vehicle_model_name": "Wrangler",
+    "vehicle_model_active": true,
+    "generation_id": 32,
+    "generation_uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+    "generation_active": true,
+    "generation_model_id": 21,
+    "start_year": 2018,
+    "end_year": null
+  },
+  "generation_notes": "Reviewed parent taxonomy: Wrangler JL, beginning with model year 2018. The official launch publication dated November 29, 2017 identifies the all-new 2018 Wrangler; its calendar publication date is not its model year:\nhttps://www.media.stellantis.com/em-en/jeep/press/all-new-2018-jeep-wrangler-the-most-capable-suv-ever-debuts-at-the-los-angeles-auto-show\n\nJeep's current Wrangler FAQ identifies continuing JL designation:\nhttps://www.jeep.com/wrangler/faq.html\n\nThe 2018 model-year overlap with JK is intentional. The open-ended range represents the currently known lifecycle, not confirmed future configurations. Active means available for archive use. Manufacturer terminology concerning the 2024 refresh remains inconsistent; no separate Generation is established by this record, and the ordinal remains unset. No VehicleDefinition availability is inferred. These are research references; raw-document retention and generation-correspondence publication have not occurred.",
+  "market_note": "Generation has no market field; each proposal is restricted to US and MY2024 by the correspondence contract.",
+  "historical_engine_and_body_fks_all_null": true,
+  "my2024_jl_vehicles": 0,
+  "published": false
+}

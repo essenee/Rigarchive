@@ -48,6 +48,104 @@ class RegistryBodyImportTests(TestCase):
                 self.assertTrue(all(i['target_attribute_key'] not in r.FIELDS for i in wrapped['candidate']['normalized_assertions']))
                 self.assertIsNone(wrapped['candidate']['factory_series'])
 
+    def test_retained_my2024_drive_reuses_offering_and_preserves_lineage(self):
+        from reference.tests.body_import_support import REPOSITORY
+        from reference.ingestion.importing.body_identity import Release
+        for n in range(1, 32):
+            with self.subTest(offering=n):
+                wrapped = r.prepare_retained_candidate(f'JL24-{n:02d}', root=REPOSITORY)
+                candidate = wrapped['candidate']
+                drive = next(i for i in candidate['normalized_assertions']
+                             if i['target_attribute_key'] == 'generic_drive_classification')
+                doc, assertion = r.wire.evidence_index(candidate)[drive['source_assertion_ref']]
+                self.assertEqual(assertion['attribute_key'], 'research_offering_correspondence')
+                self.assertEqual(assertion['raw_value']['drivetrain'], '4WD')
+                self.assertEqual(candidate['drivetrain'], '4WD')
+                self.assertNotIn('tech-4wd', drive['source_assertion_ref'])
+                self.assertFalse(any(d['source_id'] == '2022_JP_Wrangler_SP'
+                                     for d in candidate['evidence_documents']))
+                original = json.loads((REPOSITORY / wrapped['source_candidate']['reference']).read_text())
+                self.assertTrue(any(d['source_id'] == '2022_JP_Wrangler_SP'
+                                    for d in original['evidence_documents']))
+                self.assertTrue(self.fx.release._established_drive(candidate))
+                projected = self.fx.release._evidence_projection(candidate)
+                self.assertIsNone(projected['drivetrain'])
+                self.assertEqual(Release([], root=REPOSITORY)._evidence_projection(candidate), candidate)
+                self.assertIn(doc, candidate['evidence_documents'])
+
+    def test_retained_drive_rejects_contradiction_and_wrong_group(self):
+        from reference.tests.body_import_support import REPOSITORY
+        candidate = r.prepare_retained_candidate('JL24-01', root=REPOSITORY)['candidate']
+        for field, value in (('drivetrain', '2WD'), ('candidate_id', 'JL24-02'),
+                             ('model_year', 2022), ('market', 'CA')):
+            with self.subTest(field=field):
+                altered = deepcopy(candidate)
+                drive = next(i for i in altered['normalized_assertions']
+                             if i['target_attribute_key'] == 'generic_drive_classification')
+                _, assertion = r.wire.evidence_index(altered)[drive['source_assertion_ref']]
+                assertion['raw_value'][field] = value
+                with self.assertRaises(ValidationError):
+                    self.fx.release._evidence_projection(altered)
+
+    def test_unrelated_unsupported_evidence_still_blocks_registry_planning(self):
+        from reference.ingestion.importing.body_identity import byte_hash
+        wrapped = deepcopy(self.fx.candidates['JL24-01'])
+        candidate = wrapped['candidate']
+        doc = deepcopy(candidate['evidence_documents'][0])
+        raw = b'%PDF unsupported non-engine evidence'
+        doc.update(source_id='unsupported-source', assertion_set_id='unsupported',
+                   raw_artifact_reference='evidence/unsupported.pdf', raw_artifact_hash=byte_hash(raw),
+                   assertions=[{'assertion_id':'unknown', 'attribute_key':'unknown_nonengine',
+                                'raw_value':'unsupported', 'source_context':'isolated test'}])
+        (self.fx.root / doc['raw_artifact_reference']).write_bytes(raw)
+        candidate['evidence_documents'].append(doc)
+        candidate['evidence_documents'].sort(key=lambda d:(d['source_id'],d['raw_artifact_hash'],d['assertion_set_id']))
+        candidate['evidence_raw_hashes'] = sorted({d['raw_artifact_hash'] for d in candidate['evidence_documents']})
+        candidate['candidate_hash'] = r.wire.candidate_hash(candidate)
+        wrapped = r.seal('Candidate', wrapped)
+        (self.fx.root / 'candidates/JL24-01.json').write_bytes(r.serialize('Candidate', wrapped))
+        result = self.fx.release.plan('JL24-01')
+        self.assertEqual(result['diagnostics'][0]['code'], 'UNSUPPORTED_SOURCE_READER')
+
+    def test_retained_csv_family_and_offering_scopes(self):
+        from reference.tests.body_import_support import REPOSITORY
+        from reference.ingestion.importing.body_identity import Release
+        active, _, _ = r.Release([], root=REPOSITORY)._inventories()
+        for n in range(1, 32):
+            key = f'JL24-{n:02d}'
+            candidate = r.prepare_retained_candidate(key, root=REPOSITORY)['candidate']
+            shared = [d for d in candidate['evidence_documents']
+                      if 'shared-selector' in d['assertion_set_id']]
+            generation = {'correspondences':[{'review_payload':{'evidence':shared}}]}
+            for doc in candidate['evidence_documents']:
+                with self.subTest(offering=key, document=doc['assertion_set_id']):
+                    raw = (REPOSITORY / doc['raw_artifact_reference']).read_bytes()
+                    self.assertTrue(self.fx.release._reviewed_csv_projection(
+                        doc, raw, candidate, active[key], generation))
+                    self.assertFalse(Release([], root=REPOSITORY)._reviewed_csv_projection(
+                        doc, raw, candidate, active[key], generation))
+
+    def test_csv_heading_source_row_and_qop_mismatches_still_fail(self):
+        from reference.tests.body_import_support import REPOSITORY
+        active, _, _ = r.Release([], root=REPOSITORY)._inventories()
+        candidate = r.prepare_retained_candidate('JL24-01', root=REPOSITORY)['candidate']
+        shared = next(d for d in candidate['evidence_documents']
+                      if 'shared-selector' in d['assertion_set_id'])
+        generation = {'correspondences':[{'review_payload':{'evidence':[shared]}}]}
+        raw = (REPOSITORY / shared['raw_artifact_reference']).read_bytes()
+        altered = deepcopy(shared)
+        next(a for a in altered['assertions'] if a['attribute_key'] == 'source_document_heading')['raw_value'] += ' WRONG'
+        with self.assertRaises(ValidationError):
+            self.fx.release._reviewed_csv_projection(altered, raw, candidate, active['JL24-01'], generation)
+        altered = deepcopy(shared);altered['source_id'] = 'wrong-source'
+        with self.assertRaises(ValidationError):
+            self.fx.release._reviewed_csv_projection(altered, raw, candidate, active['JL24-01'], generation)
+        for key, value in (('model_code','WRONG'), ('marketed_trim','Wrong trim'),
+                           ('quick_order_package','WRONG'), ('engine_code','WRONG')):
+            with self.subTest(field=key), self.assertRaises(ValidationError):
+                row = dict(active['JL24-01']);row[key] = value
+                self.fx.release._reviewed_csv_projection(shared, raw, candidate, row, generation)
+
     def test_create_and_receipt_bind_engine_uuid(self):
         plan=self.fx.plan()
         receipt=self.execute([plan])[0]

@@ -228,26 +228,80 @@ def _drive_wheel_label(configuration):
     return "Drive wheels require review"
 
 
-def _label_configuration_choices(configurations):
-    """Attach presentation-only labels without collapsing canonical records."""
+def _body_dimensions(body):
+    if body is None:
+        return {}
+    fields = ("body_style", "wheelbase_designation", "body_length_designation",
+              "roof_height_designation", "door_configuration", "side_door_arrangement")
+    return {key: getattr(body, key) for key in fields} | {
+        "body_code": (body.body_code_namespace, body.body_code) if body.body_code else None,
+    }
+
+
+def _body_dimension_label(key, value):
+    if value is None:
+        return key.replace("_designation", "").replace("_", " ").capitalize() + " unspecified"
+    if key == "body_code":
+        return f"Body {value[1]} ({value[0]})"
+    if key == "door_configuration":
+        return {"two-door": "2-Door", "four-door": "4-Door"}.get(value, value.replace("-", " ").title())
+    text = value.replace("-", " ").title()
+    suffix = {"wheelbase_designation": "Wheelbase", "body_length_designation": "Length",
+              "roof_height_designation": "Roof", "side_door_arrangement": "Side Doors"}.get(key)
+    return f"{text} {suffix}" if suffix else text
+
+
+def _trim_body_groups(configurations):
+    """Group only actual rows; labels are separate from exact selection keys."""
+    groups = {}
+    for vd in configurations:
+        body = vd.factory_body_configuration
+        trim = vd.trim_name or ""
+        key = f"body:{body.uuid}:{trim}" if body else trim
+        group = groups.setdefault(key, {"key": key, "trim": trim, "body": body, "pks": []})
+        group["pks"].append(vd.pk)
+    dimensions = {key: _body_dimensions(group["body"]) for key, group in groups.items()}
+    fields = tuple(_body_dimensions(next((g["body"] for g in groups.values() if g["body"]), None)))
+    global_varying = [field for field in fields if len({d.get(field) for d in dimensions.values()}) > 1]
+    for key, group in groups.items():
+        peers = [dimensions[k] for k, g in groups.items() if g["trim"] == group["trim"]]
+        varying = [field for field in fields if len({d.get(field) for d in peers}) > 1]
+        selected = varying or [field for field in global_varying if dimensions[key].get(field) is not None]
+        if not group["trim"] and not selected:
+            selected = [field for field, value in dimensions[key].items() if value is not None]
+        parts = ([group["trim"]] if group["trim"] else []) + [
+            _body_dimension_label(field, dimensions[key].get(field)) for field in selected]
+        group["label"] = " · ".join(parts) or "Factory configuration"
+    return sorted(groups.values(), key=lambda g: (g["trim"], g["label"], g["key"]))
+
+
+def _label_configuration_choices(configurations, group_labels=None):
+    """Public technical labels; ambiguous records remain separate and explicit."""
     choices = list(configurations)
-    attributes = [
-        lambda vd: vd.trim_name or "Unnamed trim",
-        lambda vd: engine_label(vd, short=True),
-    ]
-    varying = [attribute for attribute in attributes if len({attribute(vd) for vd in choices}) > 1]
-    drive_labels = [_drive_wheel_label(vd) for vd in choices]
-    # Keep compact differing descriptors, but always show the canonical drive
-    # category once. Drive-only alternatives need no repeated engine descriptor.
-    fields = varying or ([] if len(set(drive_labels)) > 1 else attributes[1:])
-    labels = [" · ".join([attribute(vd) for attribute in fields] + [drive])
-              for vd, drive in zip(choices, drive_labels)]
-    counts = Counter(labels)
-    labels = [f"{label} · {vd.get_market_display()} ({vd.market})" if counts[label] > 1 else label
-              for vd, label in zip(choices, labels)]
+    group_labels = group_labels or {}
+    show_group = len({group_labels.get(vd.pk, vd.trim_name or "") for vd in choices}) > 1
+    labels = [" · ".join(filter(None, [group_labels.get(vd.pk, vd.trim_name or "") if show_group else "",
+                                      engine_label(vd, short=True)])) or "Factory configuration" for vd in choices]
+    if (not show_group and len({engine_label(vd, short=True) for vd in choices}) == 1
+            and len({_drive_wheel_label(vd) for vd in choices}) > 1):
+        labels = [_drive_wheel_label(vd) for vd in choices]
+    fields = [(lambda vd: _drive_wheel_label(vd)),
+              (lambda vd: vd.engine.engine_code if vd.engine_id else ""),
+              (lambda vd: vd.get_engine_aspiration_display() if vd.engine_aspiration else ""),
+              (lambda vd: vd.get_fuel_type_display() if vd.fuel_type else ""),
+              (lambda vd: vd.get_electrification_type_display() if vd.electrification_type else "")]
+    for attribute in fields:
+        counts = Counter(labels)
+        for label in set(labels):
+            indexes = [i for i, value in enumerate(labels) if value == label]
+            values = [attribute(choices[i]) for i in indexes]
+            if counts[label] > 1 and len(set(values)) > 1:
+                for i, value in zip(indexes, values):
+                    labels[i] += " · " + (value or "Not specified")
     counts = Counter(labels)
     for vd, label in zip(choices, labels):
-        vd.choice_label = f"{label} · {vd.slug}" if counts[label] > 1 else label
+        vd.choice_ambiguous = counts[label] > 1
+        vd.choice_label = label
     return choices
 
 
@@ -265,13 +319,13 @@ def get_generation_hub_context(
       physical measurements, statistics, and full list of available trims and powertrains.
     - Model Year filter: Refines available configurations and trims to that specific year.
       Generation-wide measurements remain applicable and visible.
-    - Trim filter: Refines configurations to a specific manufacturer-marketed trim.
+    - Trim filter: Refines configurations to one published trim/body group.
     - Exact Configuration filter: Refines to a single canonical VehicleDefinition.
     """
     # 1. Retrieve all active canonical configurations for this generation
     active_defs = (
         generation.vehicle_definitions.filter(is_active=True)
-        .select_related("generation__vehicle_model__manufacturer")
+        .select_related("generation__vehicle_model__manufacturer", "factory_body_configuration", "engine")
         .order_by("-model_year", "trim_name", "drivetrain", "engine_name", "market", "slug")
     )
 
@@ -297,7 +351,11 @@ def get_generation_hub_context(
         selected_year = candidate.model_year
 
     year_filtered_defs = active_defs.filter(model_year=selected_year) if selected_year is not None else active_defs
-    available_trims = sorted(set(year_filtered_defs.values_list("trim_name", flat=True))) if selected_year is not None else []
+    trim_groups = _trim_body_groups(year_filtered_defs) if selected_year is not None else []
+    groups_by_key = {group["key"]: group for group in trim_groups}
+    group_for_pk = {pk: group["key"] for group in trim_groups for pk in group["pks"]}
+    group_labels = {pk: group["label"] for group in trim_groups for pk in group["pks"]}
+    available_trims = [group["key"] for group in trim_groups]
     selected_trim = None
     if trim_name is not None:
         # Empty string is an actual unnamed trim, distinct from no trim filter.
@@ -310,9 +368,9 @@ def get_generation_hub_context(
     if config_slug:
         if (candidate is not None and selected_year == candidate.model_year
                 and not filter_errors
-                and (selected_trim is None or candidate.trim_name == selected_trim)):
+                and (selected_trim is None or group_for_pk.get(candidate.pk) == selected_trim)):
             selected_config = candidate
-            selected_trim = candidate.trim_name
+            selected_trim = group_for_pk[candidate.pk]
         else:
             filter_errors.append("The requested configuration is unavailable for this selection.")
 
@@ -325,14 +383,14 @@ def get_generation_hub_context(
 
     displayed_defs = year_filtered_defs
     if selected_trim is not None:
-        displayed_defs = displayed_defs.filter(trim_name=selected_trim)
+        displayed_defs = displayed_defs.filter(pk__in=groups_by_key[selected_trim]["pks"])
     if selected_config is not None:
         displayed_defs = displayed_defs.filter(pk=selected_config.pk)
 
     # 9. Group displayed configurations by trim name
     trims_dict: Dict[str, List[VehicleDefinition]] = {}
     for vd in displayed_defs:
-        trim_key = vd.trim_name or "Base / Standard"
+        trim_key = group_labels.get(vd.pk, vd.trim_name or "Factory configuration")
         if trim_key not in trims_dict:
             trims_dict[trim_key] = []
         trims_dict[trim_key].append(vd)
@@ -399,10 +457,10 @@ def get_generation_hub_context(
             "model_year": selected_year,
         })
 
-    configuration_choices = _label_configuration_choices(year_filtered_defs) if selected_year is not None else []
-    browser_defs = year_filtered_defs.filter(trim_name=selected_trim) if selected_trim is not None else year_filtered_defs
+    configuration_choices = _label_configuration_choices(year_filtered_defs, group_labels) if selected_year is not None else []
+    browser_defs = year_filtered_defs.filter(pk__in=groups_by_key[selected_trim]["pks"]) if selected_trim is not None else year_filtered_defs
     # Keep sibling choices available after exact selection, with a visible marker.
-    browser_choices = _label_configuration_choices(browser_defs) if selected_year is not None else []
+    browser_choices = _label_configuration_choices(browser_defs, group_labels) if selected_year is not None else []
 
     filter_active = (
         (selected_year is not None)
@@ -420,6 +478,8 @@ def get_generation_hub_context(
         "selected_trim": selected_trim,
         "selected_config": selected_config,
         "available_trims": available_trims,
+        "available_trim_groups": trim_groups,
+        "configuration_label_ambiguity": any(vd.choice_ambiguous for vd in browser_choices),
         "active_configurations": active_defs,
         "year_filtered_defs": year_filtered_defs,
         "displayed_configurations": displayed_defs,
