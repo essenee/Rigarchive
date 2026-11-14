@@ -491,6 +491,15 @@ def _plan_candidate_import(
 
 
 def plan_candidate_import(candidate: CandidateConfigurationDocument, *, body_release=None) -> CanonicalImportPlan:
+    if isinstance(candidate, dict) and "registry_candidate_version" in candidate:
+        from .registry_body_import import validate
+        from reference.ingestion.body_import_contracts import require
+        validate("Candidate", candidate)
+        require(body_release is not None and getattr(body_release, "registry_aware", False), "Registry candidate requires registry-aware complete release.")
+        result = body_release.plan(candidate["candidate"]["candidate_reference"])
+        if "plan_version" in result:
+            require(result["body_plan"]["candidate_snapshot"] == candidate["candidate"], "Supplied registry candidate differs from retained bytes.")
+        return result
     from reference.candidate_v3 import CandidateV3Document, parse_candidate
     v3_dict = isinstance(candidate, dict) and (
         candidate.get("envelope", {}).get("artifact_type") == "rigarchive.candidate_configuration.v3"
@@ -500,6 +509,7 @@ def plan_candidate_import(candidate: CandidateConfigurationDocument, *, body_rel
         from reference.ingestion.body_import_contracts import require
         document = parse_candidate(candidate.to_dict() if isinstance(candidate, CandidateV3Document) else candidate).to_dict()
         require(body_release is not None, "Candidate v3 requires complete body-aware release resolution.")
+        require(not getattr(body_release, "registry_aware", False), "Registry-aware construction requires its explicit 3.1.0 candidate envelope.")
         result = body_release.plan(document["candidate_reference"])
         if "plan_version" in result:
             require(result["candidate_snapshot"] == document, "Supplied candidate differs from retained release artifact.")

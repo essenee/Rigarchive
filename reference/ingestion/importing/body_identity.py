@@ -132,6 +132,22 @@ class Release:
         need(len(active) == 31, "FAMILY_INCOMPLETE", "Reviewed active inventory must contain 31 offerings.")
         return active, data["trim_normalization_audit.csv"], pins
 
+    def _read_candidate(self, reference):
+        return wire.parse_candidate(read_retained(self.root, reference).decode("utf-8")).to_dict()
+
+    def _source_claims(self, doc):
+        return doc["assertions"]
+
+    def _requires_source_reader(self, doc):
+        return True
+
+    def _evidence_projection(self, candidate):
+        return candidate
+
+    def _peer_receipt(self, snapshot):
+        c.validate("Receipt3", snapshot)
+        return snapshot
+
     def _evidence(self, candidate, inventory, audit, pins, generation):
         content_map = {}
         for doc in candidate["evidence_documents"]:
@@ -139,6 +155,8 @@ class Release:
             raw = read_retained(self.root, reference, expected)
             content_map[reference] = raw
             pins.append({"reference": reference, "byte_hash": expected})
+            if not self._requires_source_reader(doc):
+                continue
             # Verify a source-native JSON assertion projection where available. CSV and
             # reviewed headings are checked separately; arbitrary extracted PDF claims
             # never acquire support merely because their PDF hash exists.
@@ -155,7 +173,7 @@ class Release:
                 native_assertions = {canonical_json(a) for a in native["assertions"]}
                 need(all(canonical_json(a) in native_assertions for a in doc["assertions"]), "PROJECTION_MISMATCH", "Retained source assertions differ in value/type.", stage="evidence")
             elif reference == INVENTORY_ROOT + "candidate_inventory.csv":
-                for ast in doc["assertions"]:
+                for ast in self._source_claims(doc):
                     key, raw_value = ast["attribute_key"], ast["raw_value"]
                     if key == "source_model_code":
                         ok = raw_value == inventory["model_code"]
@@ -186,7 +204,7 @@ class Release:
                         need(dimension in basis, "KNOWN_DISCRIMINATOR_OMITTED", "Declared body discriminator omitted: " + dimension, stage="evidence")
                         need(canonical_json(basis[dimension]) == canonical_json(raw_value[key]), "PROJECTION_MISMATCH", "Declared body discriminator differs: " + dimension, stage="evidence")
         reviewed, resolved_findings, resolved_interpretations = self._generation_findings(candidate, generation, content_map, pins)
-        report = validate_evidence(candidate, retained_artifacts=content_map)
+        report = validate_evidence(self._evidence_projection(candidate), retained_artifacts=content_map)
         for d in report.diagnostics:
             if d.stage == "dependency" and (d.path in resolved_findings or d.path in resolved_interpretations):
                 continue  # Exact original Generation-only reader independently resolved these dependencies.
@@ -303,7 +321,7 @@ class Release:
         candidates, contexts, members, reviewed = {}, {}, [], []
         for reference in self.candidate_paths:
             raw = read_retained(self.root, reference)
-            candidate = wire.parse_candidate(raw.decode("utf-8")).to_dict()
+            candidate = self._read_candidate(reference)
             key = candidate["candidate_reference"]
             need(key in active and key not in candidates, "FAMILY_INCOMPLETE", "Unknown, duplicate or quarantined release member.")
             pins.append({"reference": reference, "byte_hash": byte_hash(raw)})
@@ -346,7 +364,7 @@ class Release:
             candidate_hash = None
             for path in self.candidate_paths:
                 try:
-                    candidate = wire.parse_candidate(read_retained(self.root, path).decode("utf-8")).to_dict()
+                    candidate = self._read_candidate(path)
                     if candidate["candidate_reference"] == reference:
                         candidate_hash = candidate["candidate_hash"]
                         break
@@ -370,7 +388,7 @@ def _peer(vehicle, candidate, release):
     snapshot = receipt.resolution_snapshot_json.get("body_import")
     if snapshot is not None:
         try:
-            c.validate("Receipt3", snapshot)
+            snapshot = release._peer_receipt(snapshot)
             need(set(receipt.resolution_snapshot_json) == {"body_import"}, "PEER_RECEIPT_MISMATCH", "Versioned receipt root differs.")
             need(snapshot["outcome"] == "created" and snapshot["plan"]["action"] == "create", "PEER_RECEIPT_MISMATCH", "Creation receipt scalar outcome contradicts its snapshot.")
             need(receipt.manifest_hash == snapshot["manifest"]["manifest_hash"] and receipt.target_fields_json == snapshot["persisted_fields"]

@@ -19,9 +19,22 @@ authoring and concrete conflicts are reported. No new import executor or review 
 The Project Owner accepted the implementation following final verification.
 Migration 0012 is generated and isolated-tested only; no operational migration or
 population. The unchanged seven-code Jeep seed proposal includes additional EXJ.
-Volkswagen examples are isolated tests only. RA-049 consumption remains stopped at
-its closed registry-state/authority contract boundary; accepted schemas/hashes,
-semantic identity, authorization and receipts are unchanged.
+Volkswagen examples are isolated tests only.
+
+The Project Owner accepted the bounded registry-aware 3.1.0 integration on 2026-11-14. It binds
+manufacturer/full engine code, Engine UUID/properties/state and the complete family
+to exact approval; the existing atomic executor independently revalidates registry
+state and persists Engine FKs on creates without no-op backfill. Closed 3.1.0 envelopes
+reuse unchanged 3.0.0 body components, hashing, Approval1 and body/family/slug checks.
+Known codes inherit their five parameters without research or repeated adjudication.
+All 31 retained candidates prepare in isolated registry tests; no production wrappers
+are emitted against absent operational rows. Generation/non-engine evidence gates
+remain mandatory. No schema changes, operational writes or RA-050 remediation.
+Integration verification passes 45 focused, 390 targeted and 1,013 full-suite tests
+(96.963s; one full run), with system/migration/whitespace checks passing. The work
+is authorized for one Engine-integration-only local acceptance commit. Operational
+prerequisites remain unauthorized. The unchanged implementation retains its passing
+1,013-test verification; acceptance does not repeat the full suite.
 
 Fresh final verification: 31 focused/backup tests, 457 targeted regressions and
 997 complete-suite tests passed (85.807s full suite, one run). The prior backup

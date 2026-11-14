@@ -13,6 +13,9 @@ from reference.models import VehicleDefinition, ImportExecutionReceipt
 
 
 def build_matrix(plans):
+    if plans and plans[0].get("plan_version") == "3.1.0":
+        from .registry_body_import import build_matrix as build
+        return build(plans)
     plans = sorted(plans, key=lambda p: p["candidate_reference"])
     c.require(bool(plans), "No selected plans.")
     for plan in plans:
@@ -35,6 +38,9 @@ def build_matrix(plans):
 
 
 def build_manifest(matrix, approval):
+    if matrix.get("matrix_version") == "3.1.0":
+        from .registry_body_import import build_manifest as build
+        return build(matrix, approval)
     c.validate("Matrix3", matrix)
     validate_matrix_approval(matrix, approval)
     result = c.seal({"manifest_version": c.VERSION, "matrix": deepcopy(matrix), "matrix_digest": c.digest(matrix), "approval": deepcopy(approval), "approval_hash": c.digest(approval)}, "manifest_hash")
@@ -42,6 +48,9 @@ def build_manifest(matrix, approval):
 
 
 def validate_selection(manifest, plans):
+    if manifest.get("manifest_version") == "3.1.0":
+        from .registry_body_import import validate_selection as validate
+        return validate(manifest, plans)
     c.validate("Manifest3", manifest)
     validate_matrix_approval(manifest["matrix"], manifest["approval"])
     c.require(type(plans) is list and [p["candidate_reference"] for p in plans] == [r["candidate_reference"] for r in manifest["matrix"]["rows"]], "Execution plan order/membership differs from authorized Matrix.")
@@ -50,6 +59,9 @@ def validate_selection(manifest, plans):
 
 
 def revalidate(manifest, plans, release):
+    if manifest.get("manifest_version") == "3.1.0":
+        from .registry_body_import import revalidate as validate
+        return validate(manifest, plans, release)
     validate_selection(manifest, plans)
     diagnostics = []
     try:
@@ -66,11 +78,12 @@ def revalidate(manifest, plans, release):
     return c.validate("Revalidation3", report)
 
 
-def _persist(plan, manifest, report, agent):
+def _persist(plan, manifest, report, agent, *, registry_plan=None):
     fields = plan["target_fields"]
     if plan["action"] == "create":
         vd = VehicleDefinition(generation_id=plan["generation"]["scope"]["generation"]["pk"],
             factory_body_configuration_id=plan["body"]["pk"], slug=plan["target_slug"],
+            **({"engine_id": next(e["binding"]["engine"]["pk"] for e in registry_plan["engine_bindings"] if e["candidate_reference"] == plan["candidate_reference"])} if registry_plan else {}),
             **{k: fields[k] for k in ("model_year", "trim_name", "engine_name", "drivetrain", "market")}, **fields["canonical_powertrain"])
         vd.full_clean()
         vd.save()
@@ -79,10 +92,14 @@ def _persist(plan, manifest, report, agent):
     actual = vehicle_state(vd)
     persisted = actual["fields"] | {"factory_body_configuration_uuid": actual["body"]["uuid"] if actual["body"] else None}
     c.require(persisted == fields and vd.slug == plan["target_slug"], "Persisted state differs from exact plan.")
-    snapshot = c.seal({"receipt_version": c.VERSION, "profile": c.PROFILE, "manifest": deepcopy(manifest), "plan": deepcopy(plan), "revalidation": deepcopy(report),
+    if registry_plan is not None:
+        from .registry_body_import import receipt_snapshot
+        snapshot = receipt_snapshot(registry_plan, manifest, report, vd, persisted, agent)
+    else:
+        snapshot = c.seal({"receipt_version": c.VERSION, "profile": c.PROFILE, "manifest": deepcopy(manifest), "plan": deepcopy(plan), "revalidation": deepcopy(report),
         "outcome": "created" if plan["action"] == "create" else "no_op", "vehicle": {"pk": vd.pk, "uuid": str(vd.uuid), "slug": vd.slug}, "persisted_fields": persisted,
         "execution_agent": agent, "executed_at_utc": stamp(datetime.now(timezone.utc))}, "snapshot_hash")
-    c.validate("Receipt3", snapshot)
+        c.validate("Receipt3", snapshot)
     candidate = plan["candidate_snapshot"]
     first_ref = candidate["configuration_refs"][0]
     doc, _ = wire.evidence_index(candidate)[first_ref]
@@ -111,17 +128,23 @@ def execute_body_import_batch(manifest, plans, release, *, operator, execution_a
     never retries SQLite conflicts and never catches an error inside the transaction.
     The caller handles rolled-back failures separately from post-commit reporting.
     """
+    protocol = None
+    if isinstance(manifest, dict) and manifest.get("manifest_version") == "3.1.0":
+        from . import registry_body_import as protocol
+    c.require(bool(getattr(release, "registry_aware", False)) == bool(protocol), "Registry-aware releases require the exact 3.1.0 authorization envelope.")
     c.require(confirmed is True and review_only is False, "Explicit human confirmation required; review-only cannot execute.")
     from reference.ingestion.attribution import resolve_attribution
     attribution = resolve_attribution(operator=operator, agent=execution_agent)
     c.require(attribution.director == operator and attribution.agent == execution_agent, "Attribution mismatch.")
     c.validate("Text", execution_agent)
-    c.validate("Manifest3", manifest)
+    (protocol.validate("Manifest", manifest) if protocol else c.validate("Manifest3", manifest))
     c.require(operator == manifest.get("approval", {}).get("operator"), "Execution operator differs from affirmative approval.")
-    validate_selection(manifest, plans)
+    (protocol.validate_selection(manifest, plans) if protocol else validate_selection(manifest, plans))
     with transaction.atomic():
-        report = revalidate(manifest, plans, release)
+        if protocol:
+            protocol.lock_engines(plans)
+        report = protocol.revalidate(manifest, plans, release) if protocol else revalidate(manifest, plans, release)
         c.require(report["result"] == "valid", "STALE_PLAN: complete independent revalidation failed.")
         # Every selected row was revalidated against the same pre-batch database state.
-        receipts = [_persist(p, manifest, report, execution_agent) for p in sorted(plans, key=lambda p: p["candidate_reference"])]
+        receipts = [(protocol.persist(p, manifest, report, execution_agent) if protocol else _persist(p, manifest, report, execution_agent)) for p in sorted(plans, key=lambda p: p.get("candidate_reference", p.get("body_plan", {}).get("candidate_reference")))]
     return receipts

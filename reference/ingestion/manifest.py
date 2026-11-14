@@ -178,6 +178,11 @@ def build_review_manifest(
 
 def manifest_to_dict(manifest: CanonicalImportReviewManifest) -> Dict[str, Any]:
     """Converts a CanonicalImportReviewManifest object to a serializable dictionary."""
+    if isinstance(manifest, dict) and manifest.get("manifest_version") == "3.1.0":
+        from reference.ingestion.importing.registry_body_import import validate
+        from copy import deepcopy
+        validate("Manifest", manifest)
+        return deepcopy(manifest)
     if isinstance(manifest, dict) and manifest.get("manifest_version") == "3.0.0":
         from reference.ingestion.body_import_contracts import validate
         from copy import deepcopy
@@ -207,6 +212,11 @@ def dict_to_manifest(d: Dict[str, Any]) -> CanonicalImportReviewManifest:
     """
     if not isinstance(d, dict):
         raise ManifestValidationError("Manifest root must be a JSON object.")
+    if d.get("manifest_version") == "3.1.0":
+        from reference.ingestion.importing.registry_body_import import validate
+        from copy import deepcopy
+        validate("Manifest", d)
+        return deepcopy(d)
     if d.get("manifest_version") == "3.0.0":
         from reference.ingestion.body_import_contracts import validate
         validate("Manifest3", d)

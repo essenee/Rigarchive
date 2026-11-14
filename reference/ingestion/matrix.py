@@ -93,6 +93,10 @@ def _references(value: Any, path: str) -> None:
 
 def validate_matrix(matrix: Mapping[str, Any]) -> None:
     """Validate exact v1 schema; reject execution/approval fields in scope."""
+    if isinstance(matrix, dict) and matrix.get("matrix_version") == "3.1.0":
+        from reference.ingestion.importing.registry_body_import import validate
+        validate("Matrix", matrix)
+        return
     if isinstance(matrix, dict) and matrix.get("matrix_version") == "3.0.0":
         from reference.ingestion.body_import_contracts import validate
         validate("Matrix3", matrix)
@@ -184,6 +188,9 @@ def validate_matrix(matrix: Mapping[str, Any]) -> None:
 def canonical_matrix_payload(matrix: Mapping[str, Any]) -> dict[str, Any]:
     """Return normalized, detached scope; never include mutable progress metadata."""
     validate_matrix(matrix)
+    if matrix.get("matrix_version") == "3.1.0":
+        validate_matrix(matrix)
+        return deepcopy(matrix)
     if matrix.get("matrix_version") == "3.0.0":
         return deepcopy(matrix)
     result = deepcopy(matrix)
@@ -197,6 +204,10 @@ def canonical_matrix_payload(matrix: Mapping[str, Any]) -> dict[str, Any]:
 
 def compute_matrix_digest(matrix: Mapping[str, Any]) -> str:
     """Content hash; not an approval or authorization to import."""
+    if isinstance(matrix, dict) and matrix.get("matrix_version") == "3.1.0":
+        validate_matrix(matrix)
+        from reference.ingestion.body_import_contracts import digest
+        return digest(matrix)
     if isinstance(matrix, dict) and matrix.get("matrix_version") == "3.0.0":
         from reference.ingestion.body_import_contracts import validate, digest
         validate("Matrix3", matrix)
