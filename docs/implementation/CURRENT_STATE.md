@@ -3,6 +3,42 @@ Version: 1.6
 Last Updated: 2026-11-15
 Purpose: Current implementation status and development roadmap
 
+## VehicleDefinition public visibility — implemented and migrated locally (2026-11-15)
+
+Owner-approved `is_public=True` is independent of `is_active`. Active/public records
+with active ancestors supply ordinary public discovery, hub groups/options, Specs,
+related links and counts. Hidden exact URLs return 404 even for staff; general model/
+generation catalogue and generation measurements remain available. An opt-in public
+QuerySet and shared coverage queries implement this without filtering the default
+manager or internal ingestion. Admin provides an individual checkbox/list/filter and
+normal history; no bulk visibility changes or slug-policy changes.
+
+Explicit correction replacements inherit predecessor visibility, including existing
+replacement links, unless deliberately overridden via `replacement_is_public` or
+`--replacement-visibility public|hidden`. Ordinary creation defaults public and import
+no-ops preserve existing flags. Existing correction scope/authorization and atomic
+audit boundaries remain; repeated completed corrections do not change visibility.
+
+Applied the single additive reference migration 0014 after a verified backup and SQL
+review. All 1,150 existing definitions are public by default; inactive records remain
+inactive. Every original row/column across 50 tables, eight Engines, owner prices,
+identities, timestamps, receipts, images, indexes/constraints/FKs and Git staging is
+preserved; only the new field and one migration receipt were added. PK1116/1155 remain
+active/public. Live read-only RHD Specs and hubs pass: MY2025 31 definitions/20 groups,
+MY2026 35/19. System, migration state/drift and integrity/FK checks pass. All 228 focused tests
+pass. Full suite: 1,107 tests, the identical 25 prior label/drive failures, no errors or
+new failures; the full suite remains non-green. Details are in the updated visibility plan.
+No RHD reconciliation, hiding, Engine/MSRP writes, commit, push or deployment.
+
+Owner manual QA approved the completed visibility milestone. Post-QA PK1116/1155
+are hidden and active; their visibility/save timestamps are preserved as owner edits.
+All 1,150 definitions and eight Engines remain; other canonical fields are unchanged.
+Fresh 228 focused tests and checks pass. Visibility-only staging uses a separate index,
+excluding pending homepage implementation and unrelated image staging. HEAD's
+homepage-titled commit contains only images; no history repair or commit performed.
+The isolated visibility-only snapshot independently passes 217 focused tests and
+system/drift checks, excluding pending homepage configuration code.
+
 ## VehicleDefinition MSRP, trim ordering and controlled slugs (2026-11-15)
 
 Implemented optional descriptive `base_msrp` (Decimal 10,2) with nonnegative

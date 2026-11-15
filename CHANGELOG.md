@@ -4,6 +4,28 @@ All notable changes to RigArchive will be documented in this file.
 
 ## Unreleased
 
+### VehicleDefinition public visibility (2026-11-15)
+
+- Added default-public metadata separate from active lifecycle and canonical identity.
+  Shared opt-in public queries filter discovery/configurator/Specs/related links/counts;
+  hidden exact URLs are 404. Internal matching/default managers and Admin remain full.
+- Admin supports individual visibility editing, list/filter and ordinary history.
+  Explicit correction replacements inherit predecessor visibility unless deliberately
+  overridden; ordinary import reruns preserve hidden flags. No bulk visibility actions.
+- Applied reference 0014 after verified backup/SQL review. All 1,150 definitions default
+  public; original records across 50 tables, eight Engines, prices, images, identity,
+  indexes/constraints/FKs and staging preserved. RHD PK1116/1155 remain active/public.
+  Read-only live pages and system/migration/integrity checks pass. All 228 focused
+  tests pass; full suite 1,107 tests with the same 25 known failures, no errors/new
+  failures. Details: `docs/implementation/tasks/vehicledefinition-public-visibility-plan.md`.
+
+- Owner QA accepted the milestone. Post-QA RHD PK1116/1155 are hidden but active;
+  original canonical fields and eight Engines remain intact. Preserved owner edits.
+  Fresh 228 focused tests/checks pass. Prepare only visibility changes in an isolated
+  index; pending homepage code and unrelated staged images remain excluded.
+  The isolated visibility snapshot independently passes 217 focused tests and checks.
+
+
 ### VehicleDefinition MSRP and trim ordering (2026-11-15)
 
 - Added optional Decimal(10,2) base MSRP, nonnegative model/database validation,

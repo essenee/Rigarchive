@@ -329,3 +329,51 @@ class CanonicalCorrectionLifecycleTests(TestCase):
         )
         self.assertEqual(corr_records.count(), 1)
         self.assertEqual(corr_records.first().replacement_vehicle_definition_slug_snapshot, res.replacement_vehicle_definition_slug)
+
+    def test_hidden_predecessor_visibility_inherited_and_repeated_correction_is_noop(self):
+        self.old_vd.is_public = False
+        self.old_vd.save()
+        result = execute_canonical_record_correction(self.old_vd, replacement_plan=self.replacement_plan)
+        replacement = VehicleDefinition.objects.get(pk=result.replacement_vehicle_definition_id)
+        self.assertFalse(replacement.is_public)
+        self.assertTrue(replacement.is_active)
+        self.old_vd.refresh_from_db()
+        self.assertFalse(self.old_vd.is_active)
+        self.assertFalse(self.old_vd.is_public)
+        repeated = execute_canonical_record_correction(self.old_vd, replacement_plan=self.replacement_plan,
+                                                      replacement_is_public=True)
+        self.assertEqual(repeated.outcome, 'NO_OP_ALREADY_CORRECTED')
+        replacement.refresh_from_db()
+        self.assertFalse(replacement.is_public)
+
+    def test_correction_deliberate_visibility_override(self):
+        self.old_vd.is_public = False
+        self.old_vd.save()
+        result = execute_canonical_record_correction(self.old_vd, replacement_plan=self.replacement_plan,
+                                                    replacement_is_public=True)
+        self.assertTrue(VehicleDefinition.objects.get(pk=result.replacement_vehicle_definition_id).is_public)
+
+    def test_visibility_inherited_when_linking_existing_replacement(self):
+        replacement = VehicleDefinition.objects.create(generation=self.gen,
+            **self.replacement_plan.target_vehicle_definition_fields)
+        self.old_vd.is_public = False
+        self.old_vd.save()
+        result = execute_canonical_record_correction(self.old_vd, replacement_plan=self.replacement_plan)
+        self.assertEqual(result.replacement_vehicle_definition_id, replacement.pk)
+        replacement.refresh_from_db()
+        self.assertFalse(replacement.is_public)
+
+    def test_visibility_inheritance_rolls_back_with_correction_audit_failure(self):
+        self.old_vd.is_public = False
+        self.old_vd.save()
+        replacement = VehicleDefinition.objects.create(generation=self.gen,
+            **self.replacement_plan.target_vehicle_definition_fields)
+        with patch('reference.ingestion.importing.correction.CanonicalRecordCorrection.objects.create',
+                   side_effect=RuntimeError('audit failure')):
+            with self.assertRaisesRegex(RuntimeError, 'audit failure'):
+                execute_canonical_record_correction(self.old_vd, replacement_plan=self.replacement_plan)
+        self.old_vd.refresh_from_db()
+        replacement.refresh_from_db()
+        self.assertTrue(self.old_vd.is_active)
+        self.assertFalse(self.old_vd.is_public)
+        self.assertTrue(replacement.is_public)

@@ -296,3 +296,20 @@ class My2026WranglerImportTests(TestCase):
     def test_execution_rejects_nonlocal_or_production_settings(self):
         with self.assertRaisesRegex(ValidationError, 'local desktop'):
             importer.execute(importer.preview()['plan_hash'])
+
+    def test_hidden_rhd_remains_canonical_and_rerun_preserves_visibility(self):
+        self.publish()
+        row = VehicleDefinition.objects.get(model_year=2026, trim_name='Sport RHD')
+        original = (row.pk, row.uuid, row.slug, row.engine_id, row.base_msrp)
+        row.is_public = False
+        row.save()
+        plan = importer.preview()
+        self.assertEqual(plan['counts'], {'create': 0, 'skip': 35, 'block': 0})
+        self.publish(plan)
+        row.refresh_from_db()
+        self.assertFalse(row.is_public)
+        self.assertTrue(row.is_active)
+        self.assertEqual((row.pk, row.uuid, row.slug, row.engine_id, row.base_msrp), original)
+        self.assertEqual(VehicleDefinition.objects.filter(model_year=2026).count(), 35)
+        self.assertEqual(VehicleDefinition.objects.publicly_visible().filter(model_year=2026).count(), 34)
+        self.assertEqual(self.client.get(row.get_absolute_url()).status_code, 404)

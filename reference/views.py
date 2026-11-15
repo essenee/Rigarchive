@@ -10,6 +10,8 @@ from .forms import VehicleSelectorForm
 from .models import Generation, Manufacturer, VehicleDefinition, VehicleModel
 from .services import (
     discover_manufacturers,
+    discover_vehicle_models,
+    publicly_covered_generations,
     get_vehicle_context,
     get_vehicle_selector_context,
     get_full_specifications_context,
@@ -96,19 +98,11 @@ class ManufacturerDetailView(DetailView):
             .prefetch_related(
                 Prefetch(
                     "vehicle_models",
-                    queryset=VehicleModel.objects.filter(
-                        is_active=True,
-                        generations__is_active=True,
-                        generations__vehicle_definitions__is_active=True,
-                    )
-                    .distinct()
+                    queryset=discover_vehicle_models(populated_only=True)
                     .prefetch_related(
                         Prefetch(
                             "generations",
-                            queryset=Generation.objects.filter(
-                                is_active=True,
-                                vehicle_definitions__is_active=True,
-                            ).distinct(),
+                            queryset=publicly_covered_generations(),
                             to_attr="active_generations",
                         )
                     ),
@@ -183,7 +177,6 @@ class GenerationDetailView(DetailView):
                 "vehicle_model",
                 "vehicle_model__manufacturer",
             )
-            .prefetch_related("vehicle_definitions")
         )
 
     def get_context_data(self, **kwargs):
@@ -228,7 +221,6 @@ class ModelYearOverviewView(DetailView):
                 vehicle_model__slug=self.kwargs["vehicle_model_slug"],
             )
             .select_related("vehicle_model", "vehicle_model__manufacturer")
-            .prefetch_related("vehicle_definitions")
         )
 
     def get_context_data(self, **kwargs):
@@ -244,7 +236,7 @@ class ModelYearOverviewView(DetailView):
                 raise Http404(f"Model year {model_year} is out of bounds for generation {self.object.name}.")
 
         active_defs = list(
-            self.object.vehicle_definitions.filter(
+            self.object.vehicle_definitions.publicly_visible().filter(
                 model_year=model_year,
                 is_active=True,
             ).order_by("trim_name", "drivetrain", "engine_name")
@@ -282,7 +274,7 @@ class VehicleDefinitionDetailView(DetailView):
     slug_url_kwarg = "vehicle_definition_slug"
 
     def get_queryset(self):
-        return VehicleDefinition.objects.filter(
+        return VehicleDefinition.objects.publicly_visible().filter(
             is_active=True,
             generation__is_active=True,
             generation__vehicle_model__is_active=True,

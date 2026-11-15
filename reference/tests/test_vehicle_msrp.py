@@ -140,6 +140,7 @@ class MsrpMigrationTests(TransactionTestCase):
         before = [('reference', '0012_engine_registry')]
         after = [('reference', '0013_vehicledefinition_base_msrp')]
         executor = MigrationExecutor(connection)
+        latest = executor.loader.graph.leaf_nodes()
         try:
             executor.migrate(before)
             apps = executor.loader.project_state(before).apps
@@ -155,4 +156,4 @@ class MsrpMigrationTests(TransactionTestCase):
             self.assertIsNone(new.base_msrp)
             self.assertEqual((new.pk, new.uuid, new.slug, new.generation_id), identity)
         finally:
-            MigrationExecutor(connection).migrate(after)
+            MigrationExecutor(connection).migrate(latest)

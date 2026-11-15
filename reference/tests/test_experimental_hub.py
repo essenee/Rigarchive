@@ -456,7 +456,7 @@ class ExperimentalVehicleHubAndHomepageTests(TestCase):
     def test_empty_generation_and_filter_reset(self):
         self.fourth_generation.vehicle_definitions.all().update(is_active=False)
         response = self.client.get(self.fourth_generation.get_absolute_url())
-        self.assertContains(response, "No active configurations are available")
+        self.assertContains(response, "No configurations are publicly available")
         self.assertEqual(list(response.context["configuration_choices"]), [])
         self.assertNotContains(response, 'class="configuration-choice"')
         response = self.client.get(self.fifth_generation.get_absolute_url(), {"configuration": self.vd_fifth_gen.slug})

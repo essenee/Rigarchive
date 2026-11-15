@@ -58,6 +58,7 @@ def execute_canonical_record_correction(
     candidate_document: Optional[Any] = None,
     *,
     execution_agent: Optional[str] = None,
+    replacement_is_public: Optional[bool] = None,
 ) -> CanonicalRecordCorrectionResult:
     """
     Execute a canonical record correction and supersession workflow inside an atomic transaction.
@@ -70,6 +71,8 @@ def execute_canonical_record_correction(
     5. Return CanonicalRecordCorrectionResult.
     """
     from reference.ingestion.generation_correspondence import guard_legacy_scope, require
+    if replacement_is_public is not None and type(replacement_is_public) is not bool:
+        raise CanonicalCorrectionWorkflowError("Replacement visibility must be a Boolean or omitted for inheritance.")
     vm = superseded_vehicle_definition.generation.vehicle_model
     guard_legacy_scope(vm.manufacturer.name, vm.name, candidates=[candidate_document] if candidate_document else [])
     require(not (replacement_plan and replacement_plan.generation_resolution),
@@ -118,6 +121,9 @@ def execute_canonical_record_correction(
 
     # 2. Atomic Correction Execution Block
     with transaction.atomic():
+        current_vd = VehicleDefinition.objects.select_for_update().get(pk=superseded_id)
+        if not current_vd.is_active:
+            raise CanonicalCorrectionWorkflowError("Predecessor changed during correction; recheck its current state.")
         # Deactivate superseded record
         current_vd.is_active = False
         current_vd.save(update_fields=["is_active", "updated_at"])
@@ -160,7 +166,11 @@ def execute_canonical_record_correction(
             )
 
         replacement_vd_id = import_res.vehicle_definition_id
-        replacement_vd = VehicleDefinition.objects.get(id=replacement_vd_id)
+        replacement_vd = VehicleDefinition.objects.select_for_update().get(id=replacement_vd_id)
+        visibility = current_vd.is_public if replacement_is_public is None else replacement_is_public
+        if replacement_vd.is_public != visibility:
+            replacement_vd.is_public = visibility
+            replacement_vd.save(update_fields=["is_public", "updated_at"])
 
         # Persist durable CanonicalRecordCorrection audit record
         correction_audit = CanonicalRecordCorrection.objects.create(

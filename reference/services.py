@@ -52,6 +52,8 @@ def get_vehicle_context(route_object):
     manufacturer = model.manufacturer
     if not all(obj.is_active for obj in (manufacturer, model, generation, definition) if obj is not None):
         raise Http404("Vehicle context is unavailable.")
+    if definition is not None and not definition.is_public:
+        raise Http404("Vehicle context is unavailable.")
     return VehicleContext(manufacturer, model, generation, definition)
 
 
@@ -72,7 +74,7 @@ def discover_vehicle_models(query="", manufacturer_slug=None, *, populated_only=
     """Shared name search with an explicit legacy canonical-coverage policy."""
     models = VehicleModel.objects.filter(is_active=True, manufacturer__is_active=True)
     if populated_only:
-        models = models.filter(generations__is_active=True, generations__vehicle_definitions__is_active=True)
+        models = models.filter(pk__in=VehicleDefinition.objects.publicly_visible().values("generation__vehicle_model_id"))
     if manufacturer_slug:
         models = models.filter(manufacturer__slug=manufacturer_slug)
     query = query.strip()
@@ -88,9 +90,7 @@ def discover_manufacturers(query="", manufacturer_slug=None, *, populated_only=F
         # Preserve the legacy directory's manufacturer eligibility independently
         # of the filtered model prefetch (including empty matching groups).
         manufacturers = Manufacturer.objects.filter(
-            is_active=True, vehicle_models__is_active=True,
-            vehicle_models__generations__is_active=True,
-            vehicle_models__generations__vehicle_definitions__is_active=True,
+            is_active=True, pk__in=discover_vehicle_models(populated_only=True).values("manufacturer_id"),
         )
         if query.strip():
             manufacturers = manufacturers.filter(_vehicle_name_filter(
@@ -102,6 +102,13 @@ def discover_manufacturers(query="", manufacturer_slug=None, *, populated_only=F
         manufacturers = manufacturers.filter(slug=manufacturer_slug)
     return manufacturers.distinct().prefetch_related(
         Prefetch("vehicle_models", queryset=models, to_attr="active_vehicle_models")
+    )
+
+
+def publicly_covered_generations():
+    """Coverage must be supplied by one eligible definition, never mixed children."""
+    return Generation.objects.filter(
+        pk__in=VehicleDefinition.objects.publicly_visible().values("generation_id"),
     )
 
 
@@ -332,7 +339,7 @@ def get_generation_hub_context(
     """
     # 1. Retrieve all active canonical configurations for this generation
     active_defs = (
-        generation.vehicle_definitions.filter(is_active=True)
+        generation.vehicle_definitions.publicly_visible()
         .select_related("generation__vehicle_model__manufacturer", "factory_body_configuration", "engine")
         .order_by("-model_year", "trim_name", "drivetrain", "engine_name", "market", "slug")
     )
@@ -524,10 +531,7 @@ def get_homepage_context(request: Optional[Any] = None) -> Dict[str, Any]:
         .prefetch_related(
             Prefetch(
                 "generations",
-                queryset=Generation.objects.filter(
-                    is_active=True,
-                    vehicle_definitions__is_active=True,
-                ).distinct().order_by("generation_number", "start_year"),
+                queryset=publicly_covered_generations().order_by("generation_number", "start_year"),
                 to_attr="active_generations",
             )
         )
@@ -546,7 +550,7 @@ def get_homepage_context(request: Optional[Any] = None) -> Dict[str, Any]:
         if not generations:
             continue
 
-        configs_count = VehicleDefinition.objects.filter(
+        configs_count = VehicleDefinition.objects.publicly_visible().filter(
             generation__in=generations,
             is_active=True,
         ).count()
@@ -645,13 +649,14 @@ def get_full_specifications_context(
     """
     Assemble the complete context for the Full Specifications page.
     """
+    get_vehicle_context(vehicle_definition)
     generation = vehicle_definition.generation
     vehicle_model = generation.vehicle_model
     manufacturer = vehicle_model.manufacturer
 
     # Sibling trims from the same generation and model year
     sibling_configs = (
-        generation.vehicle_definitions.filter(
+        generation.vehicle_definitions.publicly_visible().filter(
             model_year=vehicle_definition.model_year,
             is_active=True,
         )

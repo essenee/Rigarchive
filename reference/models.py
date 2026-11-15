@@ -427,6 +427,14 @@ class FactoryBodyConfiguration(BaseModel):
 
 
 class VehicleDefinitionQuerySet(models.QuerySet):
+    def publicly_visible(self):
+        """Opt-in public boundary; archival/default queries remain unfiltered."""
+        return self.filter(
+            is_public=True, is_active=True, generation__is_active=True,
+            generation__vehicle_model__is_active=True,
+            generation__vehicle_model__manufacturer__is_active=True,
+        )
+
     def update(self, **kwargs):
         if "slug" in kwargs:
             raise ValidationError("Correct stored slugs through authorized individual Admin saves.")
@@ -557,6 +565,10 @@ class VehicleDefinition(BaseModel):
 
     notes = models.TextField(blank=True)
     is_active = models.BooleanField(default=True)
+    is_public = models.BooleanField(
+        "Visible on public site", default=True,
+        help_text="Hide from public selection and Specs without deactivating or deleting this canonical record.",
+    )
 
     class Meta:
         ordering = (

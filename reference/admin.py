@@ -318,9 +318,11 @@ class VehicleDefinitionAdmin(admin.ModelAdmin):
         "market",
         "base_msrp",
         "is_active",
+        "is_public",
     )
 
     list_filter = (
+        "is_public",
         "is_active",
         "market",
         "drivetrain",
@@ -373,6 +375,7 @@ class VehicleDefinitionAdmin(admin.ModelAdmin):
                     "base_msrp",
                     "notes",
                     "is_active",
+                    "is_public",
                 )
             },
         ),

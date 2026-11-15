@@ -27,6 +27,10 @@ class Command(BaseCommand):
 
     def add_arguments(self, parser):
         parser.add_argument(
+            "--replacement-visibility", choices=["public", "hidden"], default=None,
+            help="Deliberate publication override; omitted inherits the predecessor's visibility.",
+        )
+        parser.add_argument(
             "--superseded-id",
             type=int,
             required=True,
@@ -152,6 +156,7 @@ class Command(BaseCommand):
         self.stdout.write(f"Superseded Current Slug:         {superseded_vd.slug}")
         self.stdout.write(f"Superseded Current Drivetrain:   {superseded_vd.drivetrain}")
         self.stdout.write(f"Superseded Active Status:         {superseded_vd.is_active}")
+        self.stdout.write(f"Superseded Public Status:         {superseded_vd.is_public}")
         self.stdout.write("-" * 80)
         self.stdout.write(f"Replacement Source ID:           {source_id}")
         self.stdout.write(f"Replacement Native ID:           {native_id}")
@@ -159,6 +164,7 @@ class Command(BaseCommand):
         self.stdout.write(f"Replacement Planned Fields:      {plan.target_vehicle_definition_fields}")
         self.stdout.write(f"Planned Action:                  {plan.planned_action.value}")
         self.stdout.write(f"Correction Reason:               {reason}")
+        self.stdout.write(f"Replacement Visibility:          {options['replacement_visibility'] or 'inherit predecessor'}")
         self.stdout.write(attribution.describe_cli())
         self.stdout.write("=" * 80)
 
@@ -175,6 +181,8 @@ class Command(BaseCommand):
             correction_reason=reason,
             operator_label=operator,
             execution_agent=attribution.agent,
+            replacement_is_public=(None if options["replacement_visibility"] is None
+                                   else options["replacement_visibility"] == "public"),
         )
 
         self.stdout.write(self.style.SUCCESS("=" * 80))

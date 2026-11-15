@@ -875,3 +875,18 @@ class CanonicalImportTestCase(TestCase):
         self.assertEqual(res2.vehicle_definition_id, res1.vehicle_definition_id)
 
         self.assertEqual(VehicleDefinition.objects.count(), 1)
+
+    def test_hidden_exact_identity_remains_an_internal_noop(self):
+        assertions, cid = self._build_full_synthetic_assertions()
+        candidate = self._build_candidate_doc(normalized_assertions=assertions, candidate_identity=cid)
+        plan = plan_candidate_import(candidate)
+        fields = dict(plan.target_vehicle_definition_fields, slug=plan.target_slug, is_public=False)
+        row = VehicleDefinition.objects.create(generation_id=plan.resolved_generation_id, **fields)
+        before = VehicleDefinition.objects.count()
+        refreshed = plan_candidate_import(candidate)
+        self.assertEqual(refreshed.existing_vehicle_definition_id, row.pk)
+        result = execute_candidate_import(refreshed)
+        self.assertEqual(result.outcome, ImportExecutionOutcome.NO_OP_EXACT_MATCH)
+        row.refresh_from_db()
+        self.assertFalse(row.is_public)
+        self.assertEqual(VehicleDefinition.objects.count(), before)
