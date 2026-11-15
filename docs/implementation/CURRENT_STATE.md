@@ -1,7 +1,49 @@
 RigArchive Project Status Document
 Version: 1.6
-Last Updated: 2026-11-14
+Last Updated: 2026-11-15
 Purpose: Current implementation status and development roadmap
+
+## VehicleDefinition MSRP, trim ordering and controlled slugs (2026-11-15)
+
+Implemented optional descriptive `base_msrp` (Decimal 10,2) with nonnegative
+field/database validation and authorized Admin decimal editing/history. US values
+represent original base USD excluding delivery/destination, taxes, registration,
+dealer adjustments and optional equipment; no automatic refresh or backfill.
+Reference migration 0013 is applied locally. Existing rows were migrated with NULL
+MSRP. Owner Admin QA subsequently set five prices; 1,145 remain NULL.
+Configurator ordering now uses each marketed trim's minimum known MSRP across its
+engines/bodies for the selected year, known prices first, deterministic ties/unknowns,
+contiguous body groups and unchanged alphabetical behavior for all-NULL years.
+No added grouping queries, identity changes or filter/URL changes.
+
+Implementation-time preservation covered all pre-existing rows across 49 tables.
+Final owner-QA comparison preserves every MY2018–2026 identity, slug, drivetrain,
+body and Engine association; only seven definition save timestamps and five MSRP
+values differ. The original seven Engines are unchanged; owner-authored Jeep EGT
+PK8 brings the registry total to eight and is outside the code milestone.
+Django post_migrate additionally populated eight previously
+missing Engine/body permissions and one body content type, plus its migration receipt.
+MY2026 remains 35 active definitions/19 groups, ERC16/EC1 17/ESG2, ten two-door/25
+four-door, zero PHEV. Read-only public rendering passes for MY2018–2026. System,
+migration drift/state, integrity/FK checks and 130 focused/regression tests pass.
+
+The owner approved a narrow ADR-0002 amendment on 2026-11-15, now recorded in
+that Accepted ADR. Existing VehicleDefinition Admin forms expose a deliberate slug
+correction input for authorized staff, with formatting/generation-scoped uniqueness,
+a URL-breakage warning and old/new values in normal Admin history. Creation still
+generates automatically; unrelated updates retain stored slugs. The model field
+remains non-editable; save guards require an authorized actor for corrections and
+reject automated/bulk slug updates. Other-model policies, PKs and UUIDs are unchanged.
+No operational slug correction or database write was performed for this enhancement.
+201 focused regressions pass; system/drift/state/integrity/FK checks pass. No new
+migration. Owner QA edits are preserved; no database correction performed.
+Known full-suite
+label/drive failures remain: full rerun ran 1,079 tests with exactly the same 25
+failure entries and no errors/new failures; the full suite is not green. See the
+updated task report for details.
+Owner manual QA is complete: Admin MSRP/slug editing, corrected URL resolution and
+slug stability after drivetrain edits verified. Preparing the focused milestone commit;
+known full-suite failures remain documented. No database staging, commit or deployment.
 
 ## MY2026 Wrangler JL — registry-backed local publication complete (2026-11-14)
 

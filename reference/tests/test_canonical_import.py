@@ -698,9 +698,8 @@ class CanonicalImportTestCase(TestCase):
             engine_name="4.0L V6",
             drivetrain="2WD",  # Conflicting drivetrain
             market="US",
+            slug=plan.target_slug,
         )
-        existing_vd.slug = plan.target_slug
-        existing_vd.save(update_fields=["slug"])
 
         # Patch pre-check filter to return None so save() is attempted and raises IntegrityError, then re-query returns existing_vd
         original_filter = VehicleDefinition.objects.filter

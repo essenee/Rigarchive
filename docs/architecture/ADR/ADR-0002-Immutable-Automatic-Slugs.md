@@ -35,3 +35,25 @@ Enforce automatic, immutable slug generation for domain entities:
 
 - **Mutable Slugs (Re-slugify on Save)**: Re-calculates slugs whenever names change. Rejected because it breaks existing public links and causes link rot.
 - **Manually Editable Slugs**: Allows Django Admin users to edit slug fields freely. Rejected to protect URL stability and ensure uniform slug formatting.
+
+## Owner-approved amendment — VehicleDefinition corrections
+
+Last Updated: 2026-11-15
+
+The owner explicitly approved this narrow exception on 2026-11-15. The original
+rationale and general policy above remain in force for automatic updates and all
+other models.
+
+- VehicleDefinition stored slugs never change automatically when other attributes
+  are edited. Initial creation retains automatic slug generation.
+- Active staff administrators with VehicleDefinition change permission may
+  deliberately correct an existing stored slug through Admin, preserving slug
+  formatting and generation-scoped uniqueness.
+- Admin warns that corrections may invalidate existing public URLs and records
+  the old and new values in normal Django Admin change history.
+- Primary keys and UUIDs remain immutable. Automated imports cannot correct existing
+  slugs; no bulk correction, redirect, alias or slug-history table is introduced.
+
+This exception permits deliberate correction despite the original rejection of
+freely editable slugs. It accepts the warned URL-breakage risk for an explicit,
+authorized correction while preserving stable URLs under ordinary edits.

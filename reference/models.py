@@ -428,6 +428,8 @@ class FactoryBodyConfiguration(BaseModel):
 
 class VehicleDefinitionQuerySet(models.QuerySet):
     def update(self, **kwargs):
+        if "slug" in kwargs:
+            raise ValidationError("Correct stored slugs through authorized individual Admin saves.")
         if {"engine", "engine_id"} & kwargs.keys():
             raise ValidationError("Assign Engines through individual validated saves.")
         if (set(FIELDS) | {"generation", "generation_id"}) & kwargs.keys() and self.filter(engine__isnull=False).exists():
@@ -442,6 +444,8 @@ class VehicleDefinitionQuerySet(models.QuerySet):
         objs = list(objs)
         if kwargs.get("update_fields") is not None:
             kwargs["update_fields"] = tuple(kwargs["update_fields"])
+        if kwargs.get("update_conflicts") and "slug" in (kwargs.get("update_fields") or ()):
+            raise ValidationError("Bulk conflict updates cannot correct stored slugs.")
         if any(obj.engine_id is not None for obj in objs):
             raise ValidationError("Create engine-associated vehicles through individual validated saves.")
         if kwargs.get("update_conflicts") and (set(FIELDS) | {"engine", "engine_id", "generation", "generation_id"}) & set(kwargs.get("update_fields") or ()):
@@ -490,6 +494,16 @@ class VehicleDefinition(BaseModel):
     objects = VehicleDefinitionQuerySet.as_manager()
 
     model_year = models.PositiveSmallIntegerField()
+
+    base_msrp = models.DecimalField(
+        max_digits=10, decimal_places=2, null=True, blank=True,
+        validators=[MinValueValidator(Decimal("0.00"))],
+        help_text=(
+            "Original manufacturer base price in the configuration's market and model year. "
+            "For US vehicles, USD excluding destination/delivery, taxes, registration, "
+            "dealer adjustments and optional equipment. Leave unknown prices blank."
+        ),
+    )
 
     trim_name = models.CharField(
         max_length=100,
@@ -556,6 +570,10 @@ class VehicleDefinition(BaseModel):
 
         constraints = [
             models.CheckConstraint(condition=models.Q(engine_displacement_liters__isnull=True) | models.Q(engine_displacement_liters__gt=0), name="reference_powertrain_displacement_positive"),
+            models.CheckConstraint(
+                condition=models.Q(base_msrp__isnull=True) | models.Q(base_msrp__gte=0),
+                name="reference_vehicle_base_msrp_nonnegative",
+            ),
             models.CheckConstraint(condition=models.Q(engine_cylinders__isnull=True) | models.Q(engine_cylinders__gt=0), name="reference_powertrain_cylinders_positive"),
             *[models.CheckConstraint(condition=models.Q(**{key + "__isnull": True}) | models.Q(**{key + "__in": list(values)}), name="reference_powertrain_" + key) for key, values in TAXONOMIES.items()],
             models.UniqueConstraint(
@@ -678,9 +696,24 @@ class VehicleDefinition(BaseModel):
         if not self.engine_name and stored is None:
             self.engine_name = registry.name
 
-    def save(self, *args, **kwargs) -> None:
+    def save(self, *args, slug_correction_actor=None, **kwargs) -> None:
         using = kwargs.get("using") or self._state.db
         with transaction.atomic(using=using):
+            if kwargs.get("update_fields") is not None:
+                kwargs["update_fields"] = frozenset(kwargs["update_fields"])
+            if self.pk:
+                previous = type(self).objects.using(using).select_for_update().filter(pk=self.pk).first()
+                saving_slug = kwargs.get("update_fields") is None or "slug" in kwargs["update_fields"]
+                if previous is not None and saving_slug and previous.slug != self.slug:
+                    if not (slug_correction_actor and slug_correction_actor.is_active
+                            and slug_correction_actor.is_staff
+                            and slug_correction_actor.has_perm("reference.change_vehicledefinition")):
+                        raise ValidationError({"slug": "Stored slug corrections require an authorized administrator."})
+                    self._meta.get_field("slug").clean(self.slug, self)
+                    if not self.slug:
+                        raise ValidationError({"slug": "A corrected slug cannot be empty."})
+                    if type(self).objects.using(using).filter(generation_id=self.generation_id, slug=self.slug).exclude(pk=self.pk).exists():
+                        raise ValidationError({"slug": "This generation already has that slug."})
             generation_id, body_id = self.generation_id, self.factory_body_configuration_id
             fields = kwargs.get("update_fields")
             if fields is not None:

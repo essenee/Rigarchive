@@ -1,4 +1,5 @@
 from django.contrib import admin, messages
+from django import forms
 from reference.powertrain import FIELDS
 
 from .models import (
@@ -234,8 +235,74 @@ class FactoryBodyConfigurationAdmin(admin.ModelAdmin):
         return super().change_view(request, object_id, form_url, extra_context)
 
 
+class VehicleDefinitionAdminForm(forms.ModelForm):
+    slug_correction = forms.SlugField(
+        label="Slug", max_length=180, required=False,
+        help_text="Warning: changing this stored slug may invalidate existing public URLs. No redirect is created.",
+    )
+
+    class Meta:
+        model = VehicleDefinition
+        fields = "__all__"
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        if self.instance.pk:
+            self.initial["slug_correction"] = self.instance.slug
+            # Older Admin submissions omit this new input; omission is not a correction.
+            key = self.add_prefix("slug_correction")
+            if self.is_bound and key not in self.data:
+                self.data = self.data.copy()
+                self.data[key] = self.instance.slug
+
+    def clean_slug_correction(self):
+        if self.add_prefix("slug_correction") not in self.data:
+            return self.instance.slug
+        value = self.cleaned_data["slug_correction"]
+        if not value:
+            raise forms.ValidationError("A corrected slug cannot be empty.")
+        generation = self.cleaned_data.get("generation", self.instance.generation)
+        if VehicleDefinition.objects.filter(generation=generation, slug=value).exclude(pk=self.instance.pk).exists():
+            raise forms.ValidationError("This generation already has that slug.")
+        return value
+
+
 @admin.register(VehicleDefinition)
 class VehicleDefinitionAdmin(admin.ModelAdmin):
+    form = VehicleDefinitionAdminForm
+
+    def get_form(self, request, obj=None, **kwargs):
+        form = super().get_form(request, obj, **kwargs)
+        if obj is None or not self.has_change_permission(request, obj):
+            form.base_fields.pop("slug_correction", None)
+        return form
+
+    def get_fieldsets(self, request, obj=None):
+        fieldsets = super().get_fieldsets(request, obj)
+        if obj is None or not self.has_change_permission(request, obj):
+            return fieldsets
+        return tuple((title, {**options, "fields": tuple(
+            "slug_correction" if field == "slug" else field for field in options["fields"]
+        )}) for title, options in fieldsets)
+
+    def save_model(self, request, obj, form, change):
+        if change and "slug_correction" in form.changed_data:
+            if not self.has_change_permission(request, obj):
+                from django.core.exceptions import PermissionDenied
+                raise PermissionDenied
+            obj.slug = form.cleaned_data["slug_correction"]
+            obj.save(slug_correction_actor=request.user)
+        else:
+            super().save_model(request, obj, form, change)
+
+    def construct_change_message(self, request, form, formsets, add=False):
+        message = super().construct_change_message(request, form, formsets, add)
+        if not add and "slug_correction" in form.changed_data:
+            message.append({"changed": {"fields": [
+                f"Slug: {form.initial['slug_correction']} → {form.cleaned_data['slug_correction']}"
+            ]}})
+        return message
+
     def get_readonly_fields(self, request, obj=None):
         # Registered properties are maintained once, on Engine, not per vehicle.
         return self.readonly_fields + (("engine_name", *FIELDS) if obj and obj.engine_id else ())
@@ -249,6 +316,7 @@ class VehicleDefinitionAdmin(admin.ModelAdmin):
         "engine_name",
         "drivetrain",
         "market",
+        "base_msrp",
         "is_active",
     )
 
@@ -302,6 +370,7 @@ class VehicleDefinitionAdmin(admin.ModelAdmin):
             "Record details",
             {
                 "fields": (
+                    "base_msrp",
                     "notes",
                     "is_active",
                 )

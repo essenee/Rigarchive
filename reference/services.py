@@ -254,9 +254,12 @@ def _body_dimension_label(key, value):
 def _trim_body_groups(configurations):
     """Group only actual rows; labels are separate from exact selection keys."""
     groups = {}
+    trim_prices = {}
     for vd in configurations:
         body = vd.factory_body_configuration
         trim = vd.trim_name or ""
+        if vd.base_msrp is not None:
+            trim_prices[trim] = min(trim_prices.get(trim, vd.base_msrp), vd.base_msrp)
         key = f"body:{body.uuid}:{trim}" if body else trim
         group = groups.setdefault(key, {"key": key, "trim": trim, "body": body, "pks": []})
         group["pks"].append(vd.pk)
@@ -272,7 +275,12 @@ def _trim_body_groups(configurations):
         parts = ([group["trim"]] if group["trim"] else []) + [
             _body_dimension_label(field, dimensions[key].get(field)) for field in selected]
         group["label"] = " · ".join(parts) or "Factory configuration"
-    return sorted(groups.values(), key=lambda g: (g["trim"], g["label"], g["key"]))
+    # Price the marketed trim across all its bodies and engines. Body groups stay
+    # contiguous, with their established ordering; all-unknown years sort as before.
+    return sorted(groups.values(), key=lambda g: (
+        g["trim"] not in trim_prices, trim_prices.get(g["trim"], 0),
+        g["trim"], g["label"], g["key"],
+    ))
 
 
 def _label_configuration_choices(configurations, group_labels=None):

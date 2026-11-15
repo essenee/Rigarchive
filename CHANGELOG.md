@@ -4,6 +4,33 @@ All notable changes to RigArchive will be documented in this file.
 
 ## Unreleased
 
+### VehicleDefinition MSRP and trim ordering (2026-11-15)
+
+- Added optional Decimal(10,2) base MSRP, nonnegative model/database validation,
+  Admin decimal editing/history and local migration 0013. Existing 1,150 prices
+  migrated as NULL; MSRP is descriptive and preserves canonical identity.
+- Order marketed trims by minimum known price across engines/bodies within the
+  selected year; preserve contiguous body ordering, deterministic ties and the
+  existing all-NULL fallback without additional grouping queries.
+- Verified all original values across 49 tables, MY2018–2026 identities and seven
+  Engines unchanged; MY2026 retains 35 definitions/19 groups and expected counts.
+  Django post_migrate filled eight missing permissions and one body content type.
+  Checks, migration state/drift, integrity/FKs and 130 focused tests pass.
+- Owner approved the narrow ADR-0002 VehicleDefinition correction exception.
+  Existing Admin records now support authorized deliberate corrections, with
+  formatting/uniqueness validation, URL-stability warning and old/new Admin history.
+  Automatic creation/stability and other-model policies remain; automated and bulk
+  slug updates are blocked. No existing slugs or other development data changed.
+  No additional migration; 201 focused regressions and Django checks pass.
+  Full rerun: 1,079 tests, the same 25 known label/drive failures, no errors or new
+  failures. Verification details are recorded in
+  `docs/implementation/tasks/vehicledefinition-msrp-ordering.md`.
+- Owner manual QA completed: editable MSRP/slugs, corrected URL resolution and
+  stable slugs after drivetrain edits. Final read-only comparison finds no remaining
+  slug/drivetrain/identity changes; five owner MSRP values and seven save timestamps
+  are preserved. The original seven Engines remain unchanged; owner-authored EGT
+  PK8 brings the local total to eight. No database correction or database staging.
+
 ### MY2026 Wrangler America250 supplement (2026-11-14)
 
 - Added the two owner-confirmed America250 four-door configurations using existing
