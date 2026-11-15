@@ -1,0 +1,174 @@
+{
+  "extraction_date": "2026-11-14",
+  "status": "Owner-authorized America250 supplement; separate from the unchanged Edmunds extraction",
+  "source": "Owner-confirmed Jeep.com official builder",
+  "scope": {
+    "manufacturer": "Jeep",
+    "vehicle_model": "Wrangler",
+    "generation": "JL",
+    "model_year": 2026,
+    "market": "US"
+  },
+  "enumeration_urls": [
+    "https://www.jeep.com/bmo.wrangler.html#/build/packages/95141/CUJ202610JLJL74M/2TE/APA,PW7,X9,ERC,DEM,DMF,TXA,WAJ,N3,UBP,23E"
+  ],
+  "counts": {
+    "canonical_configurations": 2,
+    "gasoline_configurations": 2,
+    "phev_configurations": 0,
+    "four_door_configurations": 2,
+    "canonical_trim_body_groups": 1,
+    "edmunds_styles": 0
+  },
+  "engine_profiles": {
+    "gas_36_v6": {
+      "engine_name": "3.6L V6 ESS",
+      "engine_displacement_liters": "3.6",
+      "engine_cylinders": 6,
+      "engine_aspiration": "naturally_aspirated",
+      "fuel_type": "gasoline",
+      "electrification_type": "none",
+      "manufacturer_engine_code": "ERC",
+      "registered_engine_pk": 1,
+      "registered_engine_uuid": "f5a7caba-2fdd-43e1-a337-33429399bff3",
+      "source_engine_code": null,
+      "properties_authority": "Existing authored Engine registry; read-only snapshot 2026-11-14",
+      "mapping_basis": "Owner-supplied established Wrangler engine/profile association; independent MY2026 builder/specification evidence establishes offering. Code is project mapping, not an Edmunds quotation."
+    },
+    "gas_20_turbo": {
+      "engine_name": "2.0L I4 Turbo",
+      "engine_displacement_liters": "2",
+      "engine_cylinders": 4,
+      "engine_aspiration": "turbocharged",
+      "fuel_type": "gasoline",
+      "electrification_type": "none",
+      "manufacturer_engine_code": "EC1",
+      "registered_engine_pk": 2,
+      "registered_engine_uuid": "ba7b32b8-f69e-4bc4-952f-c493e0e417f4",
+      "source_engine_code": null,
+      "properties_authority": "Existing authored Engine registry; read-only snapshot 2026-11-14",
+      "mapping_basis": "Owner-supplied established Wrangler engine/profile association; independent MY2026 builder/specification evidence establishes offering. Code is project mapping, not an Edmunds quotation."
+    }
+  },
+  "styles": [],
+  "canonical_configurations": [
+    {
+      "inventory_id": "america250-four-door:gas_36_v6",
+      "edmunds_style_ids": [],
+      "engine_availability": "owner_confirmed",
+      "engine_profile": "gas_36_v6",
+      "canonical_fields": {
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2026,
+        "market": "US",
+        "trim_name": "America250",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "engine_name": "3.6L V6 ESS",
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": "naturally_aspirated",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": "ERC"
+      },
+      "registered_engine_pk": 1,
+      "registered_engine_uuid": "f5a7caba-2fdd-43e1-a337-33429399bff3",
+      "engine_properties_authority": "Existing authored Engine registry",
+      "source_engine_code": "ERC",
+      "source_engine_description": "3.6L V6 ESS",
+      "source_engine_description_authority": "Registered Engine name; not claimed as an extracted Jeep label",
+      "source_urls": [
+        "https://www.jeep.com/bmo.wrangler.html#/build/packages/95141/CUJ202610JLJL74M/2TE/APA,PW7,X9,ERC,DEM,DMF,TXA,WAJ,N3,UBP,23E"
+      ],
+      "engine_evidence_section": "Owner-confirmed official Jeep.com builder configuration/alternative",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": null,
+      "unresolved_fields": [],
+      "manufacturer_engine_code_not_reported": false,
+      "source_id": "jeep_my2026_owner_confirmed_builder",
+      "source_identity_type": "owner_confirmed_configuration",
+      "native_identifier": "America250-four-door-ERC",
+      "source_confirmation": {
+        "publisher": "Jeep.com",
+        "confirmation_method": "Owner verification supplied in the task; no automated builder inspection claimed",
+        "confirmed_by": "project_owner",
+        "confirmation_date": "2026-11-14",
+        "evidence_basis": "Owner supplied official Jeep builder URL explicitly contains ERC.",
+        "supplied_url_demonstrates_engine_code": "ERC",
+        "url_proves_this_engine": true,
+        "scope": "2026 US Wrangler JL America250, four-door, ERC",
+        "transmission_pairing": "Not established. URL option tokens are retained as provenance only; no transmission interpretation."
+      }
+    },
+    {
+      "inventory_id": "america250-four-door:gas_20_turbo",
+      "edmunds_style_ids": [],
+      "engine_availability": "owner_confirmed",
+      "engine_profile": "gas_20_turbo",
+      "canonical_fields": {
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2026,
+        "market": "US",
+        "trim_name": "America250",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "engine_name": "2.0L I4 Turbo",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": "EC1"
+      },
+      "registered_engine_pk": 2,
+      "registered_engine_uuid": "ba7b32b8-f69e-4bc4-952f-c493e0e417f4",
+      "engine_properties_authority": "Existing authored Engine registry",
+      "source_engine_code": "EC1",
+      "source_engine_description": "2.0L I4 Turbo",
+      "source_engine_description_authority": "Registered Engine name; not claimed as an extracted Jeep label",
+      "source_urls": [
+        "https://www.jeep.com/bmo.wrangler.html#/build/packages/95141/CUJ202610JLJL74M/2TE/APA,PW7,X9,ERC,DEM,DMF,TXA,WAJ,N3,UBP,23E"
+      ],
+      "engine_evidence_section": "Owner-confirmed official Jeep.com builder configuration/alternative",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": null,
+      "unresolved_fields": [],
+      "manufacturer_engine_code_not_reported": false,
+      "source_id": "jeep_my2026_owner_confirmed_builder",
+      "source_identity_type": "owner_confirmed_configuration",
+      "native_identifier": "America250-four-door-EC1",
+      "source_confirmation": {
+        "publisher": "Jeep.com",
+        "confirmation_method": "Owner verification supplied in the task; no automated builder inspection claimed",
+        "confirmed_by": "project_owner",
+        "confirmation_date": "2026-11-14",
+        "evidence_basis": "Owner independently confirmed EC1 as an America250 alternative in the official Jeep builder. The supplied URL demonstrates ERC, not EC1.",
+        "supplied_url_demonstrates_engine_code": "ERC",
+        "url_proves_this_engine": false,
+        "scope": "2026 US Wrangler JL America250, four-door, EC1",
+        "transmission_pairing": "Not established. URL option tokens are retained as provenance only; no transmission interpretation."
+      }
+    }
+  ],
+  "unresolved_source_ambiguities": [
+    "EC1 availability is an explicit owner-confirmed fact, not proven by the supplied ERC URL.",
+    "Standard-versus-optional engine status and transmission pairings are not asserted.",
+    "No Edmunds style ID or independently fetched Jeep style ID is fabricated."
+  ],
+  "relationship_to_edmunds_inventory": {
+    "reference": "docs/research/MY2026_JL_edmunds_builder_20261114/inventory.json",
+    "sha256": "aafe8c3005c95937d6269fee4a1808cf16b453e156cc1c500beddf17237525d0",
+    "edmunds_configurations": 33,
+    "combined_configurations": 35,
+    "combined_canonical_trim_body_groups": 19
+  }
+}

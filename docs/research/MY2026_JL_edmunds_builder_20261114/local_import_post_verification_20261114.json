@@ -1,0 +1,397 @@
+{
+  "date": "2026-11-14",
+  "status": "Published locally; actual rerun idempotent",
+  "counts": {
+    "active_my2026_jl": 33,
+    "gasoline": 33,
+    "phev": 0,
+    "two_door": 10,
+    "four_door": 23
+  },
+  "engine_counts": [
+    {
+      "engine__engine_code": "ERC",
+      "engine_id": 1,
+      "count": 15
+    },
+    {
+      "engine__engine_code": "EC1",
+      "engine_id": 2,
+      "count": 16
+    },
+    {
+      "engine__engine_code": "ESG",
+      "engine_id": 3,
+      "count": 2
+    }
+  ],
+  "jl_year_counts": [
+    {
+      "model_year": 2018,
+      "count": 15
+    },
+    {
+      "model_year": 2019,
+      "count": 19
+    },
+    {
+      "model_year": 2020,
+      "count": 49
+    },
+    {
+      "model_year": 2021,
+      "count": 73
+    },
+    {
+      "model_year": 2022,
+      "count": 55
+    },
+    {
+      "model_year": 2023,
+      "count": 64
+    },
+    {
+      "model_year": 2024,
+      "count": 31
+    },
+    {
+      "model_year": 2025,
+      "count": 31
+    },
+    {
+      "model_year": 2026,
+      "count": 33
+    }
+  ],
+  "all_preexisting_table_rows_preserved": {
+    "accounts_user": {
+      "before": 1,
+      "after": 1,
+      "added": 0,
+      "all_preexisting_fields_unchanged": true
+    },
+    "accounts_user_groups": {
+      "before": 0,
+      "after": 0,
+      "added": 0,
+      "all_preexisting_fields_unchanged": true
+    },
+    "accounts_user_user_permissions": {
+      "before": 0,
+      "after": 0,
+      "added": 0,
+      "all_preexisting_fields_unchanged": true
+    },
+    "auth_group": {
+      "before": 0,
+      "after": 0,
+      "added": 0,
+      "all_preexisting_fields_unchanged": true
+    },
+    "auth_group_permissions": {
+      "before": 0,
+      "after": 0,
+      "added": 0,
+      "all_preexisting_fields_unchanged": true
+    },
+    "auth_permission": {
+      "before": 172,
+      "after": 172,
+      "added": 0,
+      "all_preexisting_fields_unchanged": true
+    },
+    "django_admin_log": {
+      "before": 23,
+      "after": 23,
+      "added": 0,
+      "all_preexisting_fields_unchanged": true
+    },
+    "django_content_type": {
+      "before": 44,
+      "after": 44,
+      "added": 0,
+      "all_preexisting_fields_unchanged": true
+    },
+    "django_migrations": {
+      "before": 33,
+      "after": 33,
+      "added": 0,
+      "all_preexisting_fields_unchanged": true
+    },
+    "django_session": {
+      "before": 5,
+      "after": 5,
+      "added": 0,
+      "all_preexisting_fields_unchanged": true
+    },
+    "measurements_applicabilityfeature": {
+      "before": 0,
+      "after": 0,
+      "added": 0,
+      "all_preexisting_fields_unchanged": true
+    },
+    "measurements_applicabilitystate": {
+      "before": 0,
+      "after": 0,
+      "added": 0,
+      "all_preexisting_fields_unchanged": true
+    },
+    "measurements_measurementdefinition": {
+      "before": 4,
+      "after": 4,
+      "added": 0,
+      "all_preexisting_fields_unchanged": true
+    },
+    "measurements_measurementresult": {
+      "before": 2,
+      "after": 2,
+      "added": 0,
+      "all_preexisting_fields_unchanged": true
+    },
+    "measurements_measurementresultcondition": {
+      "before": 0,
+      "after": 0,
+      "added": 0,
+      "all_preexisting_fields_unchanged": true
+    },
+    "observation_observation": {
+      "before": 0,
+      "after": 0,
+      "added": 0,
+      "all_preexisting_fields_unchanged": true
+    },
+    "reference_canonicalrecordcorrection": {
+      "before": 31,
+      "after": 31,
+      "added": 0,
+      "all_preexisting_fields_unchanged": true
+    },
+    "reference_compatibilityrule": {
+      "before": 0,
+      "after": 0,
+      "added": 0,
+      "all_preexisting_fields_unchanged": true
+    },
+    "reference_compatibilityrulerevision": {
+      "before": 0,
+      "after": 0,
+      "added": 0,
+      "all_preexisting_fields_unchanged": true
+    },
+    "reference_engine": {
+      "before": 7,
+      "after": 7,
+      "added": 0,
+      "all_preexisting_fields_unchanged": true
+    },
+    "reference_equipmentitem": {
+      "before": 0,
+      "after": 0,
+      "added": 0,
+      "all_preexisting_fields_unchanged": true
+    },
+    "reference_equipmentitemrevision": {
+      "before": 0,
+      "after": 0,
+      "added": 0,
+      "all_preexisting_fields_unchanged": true
+    },
+    "reference_equipmentoffering": {
+      "before": 0,
+      "after": 0,
+      "added": 0,
+      "all_preexisting_fields_unchanged": true
+    },
+    "reference_equipmentofferingrevision": {
+      "before": 0,
+      "after": 0,
+      "added": 0,
+      "all_preexisting_fields_unchanged": true
+    },
+    "reference_evidenceassertionreference": {
+      "before": 0,
+      "after": 0,
+      "added": 0,
+      "all_preexisting_fields_unchanged": true
+    },
+    "reference_evidencedocument": {
+      "before": 0,
+      "after": 0,
+      "added": 0,
+      "all_preexisting_fields_unchanged": true
+    },
+    "reference_factorybodyconfiguration": {
+      "before": 2,
+      "after": 2,
+      "added": 0,
+      "all_preexisting_fields_unchanged": true
+    },
+    "reference_generation": {
+      "before": 16,
+      "after": 16,
+      "added": 0,
+      "all_preexisting_fields_unchanged": true
+    },
+    "reference_generationcorrespondencerevision": {
+      "before": 254,
+      "after": 254,
+      "added": 0,
+      "all_preexisting_fields_unchanged": true
+    },
+    "reference_importexecutionreceipt": {
+      "before": 3455,
+      "after": 3521,
+      "added": 66,
+      "all_preexisting_fields_unchanged": true
+    },
+    "reference_manufacturer": {
+      "before": 5,
+      "after": 5,
+      "added": 0,
+      "all_preexisting_fields_unchanged": true
+    },
+    "reference_specificationassertion": {
+      "before": 0,
+      "after": 0,
+      "added": 0,
+      "all_preexisting_fields_unchanged": true
+    },
+    "reference_specificationcatalogue": {
+      "before": 0,
+      "after": 0,
+      "added": 0,
+      "all_preexisting_fields_unchanged": true
+    },
+    "reference_specificationcataloguecoverage": {
+      "before": 0,
+      "after": 0,
+      "added": 0,
+      "all_preexisting_fields_unchanged": true
+    },
+    "reference_specificationcataloguemembership": {
+      "before": 0,
+      "after": 0,
+      "added": 0,
+      "all_preexisting_fields_unchanged": true
+    },
+    "reference_specificationcataloguerevision": {
+      "before": 0,
+      "after": 0,
+      "added": 0,
+      "all_preexisting_fields_unchanged": true
+    },
+    "reference_specificationdefinition": {
+      "before": 0,
+      "after": 0,
+      "added": 0,
+      "all_preexisting_fields_unchanged": true
+    },
+    "reference_specificationdefinitiondependency": {
+      "before": 0,
+      "after": 0,
+      "added": 0,
+      "all_preexisting_fields_unchanged": true
+    },
+    "reference_specificationdefinitionrevision": {
+      "before": 0,
+      "after": 0,
+      "added": 0,
+      "all_preexisting_fields_unchanged": true
+    },
+    "reference_specificationevidencelink": {
+      "before": 0,
+      "after": 0,
+      "added": 0,
+      "all_preexisting_fields_unchanged": true
+    },
+    "reference_specificationpublicationreceipt": {
+      "before": 0,
+      "after": 0,
+      "added": 0,
+      "all_preexisting_fields_unchanged": true
+    },
+    "reference_specificationunitregistry": {
+      "before": 0,
+      "after": 0,
+      "added": 0,
+      "all_preexisting_fields_unchanged": true
+    },
+    "reference_transmissiondescription": {
+      "before": 0,
+      "after": 0,
+      "added": 0,
+      "all_preexisting_fields_unchanged": true
+    },
+    "reference_transmissiondescriptionrevision": {
+      "before": 0,
+      "after": 0,
+      "added": 0,
+      "all_preexisting_fields_unchanged": true
+    },
+    "reference_transmissionengineeringassertion": {
+      "before": 0,
+      "after": 0,
+      "added": 0,
+      "all_preexisting_fields_unchanged": true
+    },
+    "reference_transmissionoffering": {
+      "before": 0,
+      "after": 0,
+      "added": 0,
+      "all_preexisting_fields_unchanged": true
+    },
+    "reference_transmissionofferingrevision": {
+      "before": 0,
+      "after": 0,
+      "added": 0,
+      "all_preexisting_fields_unchanged": true
+    },
+    "reference_vehicledefinition": {
+      "before": 1115,
+      "after": 1148,
+      "added": 33,
+      "all_preexisting_fields_unchanged": true
+    },
+    "reference_vehiclemodel": {
+      "before": 6,
+      "after": 6,
+      "added": 0,
+      "all_preexisting_fields_unchanged": true
+    }
+  },
+  "schema_unchanged": true,
+  "integrity_check": "ok",
+  "foreign_key_violations": 0,
+  "public_rendering": {
+    "trim_body_groups": 18,
+    "canonical_members_verified": 33,
+    "generation_group_responses": 18,
+    "specification_responses": 33,
+    "status": 200,
+    "database_unchanged_during_rendering": true
+  },
+  "execution": {
+    "created": 33,
+    "skipped": 0,
+    "failed": 0
+  },
+  "actual_second_execution": {
+    "created": 0,
+    "skipped": 33,
+    "failed": 0,
+    "all_vehicledefinition_fields_unchanged": true
+  },
+  "receipt_additions": {
+    "created": 33,
+    "no_op_exact_match": 33
+  },
+  "source_artifacts_unchanged": true,
+  "database_sha256_after": "e7f6e4f8c9053f3830449c24e59bc708f21087129cf7ca21d90fca8fb92f9f8b",
+  "tests": {
+    "focused_passed": 67,
+    "scope": "MY2025/MY2026 importers, body grouping and Engine registry",
+    "system_check": "passed",
+    "migration_drift": "none",
+    "prior_full_suite_limitation": "25 pre-existing configuration-label failures remain recorded from MY2025. Complete suite not rerun for this focused milestone."
+  }
+}

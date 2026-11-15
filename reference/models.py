@@ -720,7 +720,7 @@ class VehicleDefinition(BaseModel):
     def __str__(self) -> str:
         model = self.generation.vehicle_model
         body_designation = ""
-        if (self.model_year in (2024, 2025) and self.generation.slug == "jl"
+        if (self.model_year in (2024, 2025, 2026) and self.generation.slug == "jl"
                 and model.slug == "wrangler" and model.manufacturer.slug == "jeep"
                 and self.factory_body_configuration_id is not None):
             body_designation = {"two-door": "2-Door", "four-door": "4-Door"}.get(

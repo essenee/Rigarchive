@@ -4,6 +4,38 @@ All notable changes to RigArchive will be documented in this file.
 
 ## Unreleased
 
+### MY2026 Wrangler America250 supplement (2026-11-14)
+
+- Added the two owner-confirmed America250 four-door configurations using existing
+  ERC PK1 and EC1 PK2. Preserved the original 33-row Edmunds source bytes and bound
+  a separate Jeep.com/owner-confirmed supplement with per-row publisher/hash/identity
+  audit provenance. The supplied URL establishes ERC; EC1 is the owner's independent
+  confirmation, without invented style IDs, transmission pairings or engine ranking.
+  Incremental execution created two/skipped 33; actual rerun skipped all 35. Final
+  MY2026 counts: 35 definitions, 19 groups, ERC 16/EC1 17/ESG 2, ten two-door/25
+  four-door, no PHEV. Every preexisting row across 49 tables remains unchanged.
+  All 72 focused tests and Django checks pass; public groups/Specs verified read-only.
+  No Engine writes, migration, pricing/ordering/Admin change, commit or deployment.
+- Completed owner human QA and approval of the final combined MY2026 inventory.
+  Commit-preparation verification reconfirmed 35 active definitions/19 groups,
+  ERC16/EC1 17/ESG2, ten two-door/25 four-door, zero PHEV, 35-skip preview,
+  intact historical records, 72 passing focused tests, applied migrations and
+  SQLite integrity/FK consistency. Prepared only focused source/artifact/documentation
+  staging; the mixed development database and unrelated work remain unstaged.
+
+### MY2026 Wrangler registry import (2026-11-14)
+
+- Added a bounded registry-backed MY2026 preview/explicit local execution command,
+  reusing MY2025 safety and identity helpers. Published exactly 33 configurations
+  from 18 independently observed styles: 15 ERC, 16 EC1, two ESG; ten two-door,
+  23 four-door; all gasoline. Actual rerun skips all 33 without duplicate definitions.
+  Added 33 creation and 33 no-op receipts; all preexisting records across 49 tables
+  remain unchanged. Extended body-derived public names to MY2026. No Engine writes,
+  schema migration, pricing behavior or Admin slug change. All 67 focused tests and
+  Django checks pass; 18 configurator groups and 33 Specs pages verified read-only.
+  Prior full-suite label-test limitations and unsupported source pairings/notes remain
+  documented. See `docs/implementation/tasks/my2026-wrangler-registry-import.md`.
+
 ### MY2025 Wrangler registry import (2026-11-14)
 
 - Added a bounded read-only preview and explicit digest-authorized local import

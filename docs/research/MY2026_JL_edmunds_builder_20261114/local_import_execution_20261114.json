@@ -1,0 +1,272 @@
+{
+  "plan_hash": "sha256:14cc91a525060048b2e6aa37b7781b0e7f13b8c226b84d5f46225a47a209930a",
+  "created": 33,
+  "skipped": 0,
+  "failed": 0,
+  "outcomes": [
+    {
+      "inventory_id": "402087661:gas_36_v6",
+      "outcome": "created",
+      "pk": 1131,
+      "uuid": "1c2c2537-de6f-40d1-b5be-5d0e334c1f7b",
+      "slug": "2026-sport-36l-v6-ess-4wd-us-2-door",
+      "receipt_pk": 3456
+    },
+    {
+      "inventory_id": "402087661:gas_20_turbo",
+      "outcome": "created",
+      "pk": 1132,
+      "uuid": "ecdd4b14-4365-4a39-841f-dcc60c00da06",
+      "slug": "2026-sport-20l-i4-turbo-4wd-us-turbo-2-door",
+      "receipt_pk": 3457
+    },
+    {
+      "inventory_id": "402087699:gas_36_v6",
+      "outcome": "created",
+      "pk": 1133,
+      "uuid": "33c08199-4f28-4767-9b3d-723a369fbc90",
+      "slug": "2026-sport-36l-v6-ess-4wd-us-4-door",
+      "receipt_pk": 3458
+    },
+    {
+      "inventory_id": "402087699:gas_20_turbo",
+      "outcome": "created",
+      "pk": 1134,
+      "uuid": "426e94c7-b2b0-454a-bdd4-500af85a3ba6",
+      "slug": "2026-sport-20l-i4-turbo-4wd-us-turbo-4-door",
+      "receipt_pk": 3459
+    },
+    {
+      "inventory_id": "402087662:gas_36_v6",
+      "outcome": "created",
+      "pk": 1135,
+      "uuid": "ca2019d8-46fd-4244-8af1-f713c6b7cf31",
+      "slug": "2026-sport-s-36l-v6-ess-4wd-us-2-door",
+      "receipt_pk": 3460
+    },
+    {
+      "inventory_id": "402087662:gas_20_turbo",
+      "outcome": "created",
+      "pk": 1136,
+      "uuid": "c913ce7c-bbc5-4fad-bdc8-a30019efd3af",
+      "slug": "2026-sport-s-20l-i4-turbo-4wd-us-turbo-2-door",
+      "receipt_pk": 3461
+    },
+    {
+      "inventory_id": "402087700:gas_36_v6",
+      "outcome": "created",
+      "pk": 1137,
+      "uuid": "f48c94f2-f25a-43a3-8e03-7bf2c69719bd",
+      "slug": "2026-sport-s-36l-v6-ess-4wd-us-4-door",
+      "receipt_pk": 3462
+    },
+    {
+      "inventory_id": "402087700:gas_20_turbo",
+      "outcome": "created",
+      "pk": 1138,
+      "uuid": "f91e9803-982f-4cc8-93bf-b408d55ba6d5",
+      "slug": "2026-sport-s-20l-i4-turbo-4wd-us-turbo-4-door",
+      "receipt_pk": 3463
+    },
+    {
+      "inventory_id": "402087663:gas_36_v6",
+      "outcome": "created",
+      "pk": 1139,
+      "uuid": "0142a199-9897-4985-8358-e51c5d14acce",
+      "slug": "2026-willys-36l-v6-ess-4wd-us-2-door",
+      "receipt_pk": 3464
+    },
+    {
+      "inventory_id": "402087663:gas_20_turbo",
+      "outcome": "created",
+      "pk": 1140,
+      "uuid": "e9c71439-ed19-4808-a831-f3e87605cef9",
+      "slug": "2026-willys-20l-i4-turbo-4wd-us-turbo-2-door",
+      "receipt_pk": 3465
+    },
+    {
+      "inventory_id": "402087701:gas_36_v6",
+      "outcome": "created",
+      "pk": 1141,
+      "uuid": "e106bc4e-8841-4006-95d4-b20e3ccd9f58",
+      "slug": "2026-willys-36l-v6-ess-4wd-us-4-door",
+      "receipt_pk": 3466
+    },
+    {
+      "inventory_id": "402087701:gas_20_turbo",
+      "outcome": "created",
+      "pk": 1142,
+      "uuid": "4e0bf5bf-ad0b-47cf-9081-613ec1f7dbe3",
+      "slug": "2026-willys-20l-i4-turbo-4wd-us-turbo-4-door",
+      "receipt_pk": 3467
+    },
+    {
+      "inventory_id": "402112417:gas_36_v6",
+      "outcome": "created",
+      "pk": 1143,
+      "uuid": "762c16d2-3183-4231-99f9-754334fcea6e",
+      "slug": "2026-california-edition-36l-v6-ess-4wd-us",
+      "receipt_pk": 3468
+    },
+    {
+      "inventory_id": "402112417:gas_20_turbo",
+      "outcome": "created",
+      "pk": 1144,
+      "uuid": "4e79d1f0-1dc3-4270-ba95-e7e63e652500",
+      "slug": "2026-california-edition-20l-i4-turbo-4wd-us-turbo",
+      "receipt_pk": 3469
+    },
+    {
+      "inventory_id": "402087664:gas_36_v6",
+      "outcome": "created",
+      "pk": 1145,
+      "uuid": "e4bd6966-d9e0-40eb-861c-e9fff386cd49",
+      "slug": "2026-rubicon-36l-v6-ess-4wd-us-2-door",
+      "receipt_pk": 3470
+    },
+    {
+      "inventory_id": "402087664:gas_20_turbo",
+      "outcome": "created",
+      "pk": 1146,
+      "uuid": "e66b1a76-2f75-41f3-a516-0f2674ff35b5",
+      "slug": "2026-rubicon-20l-i4-turbo-4wd-us-turbo-2-door",
+      "receipt_pk": 3471
+    },
+    {
+      "inventory_id": "402087708:gas_36_v6",
+      "outcome": "created",
+      "pk": 1147,
+      "uuid": "3a2c0f2e-e2d7-43d5-b7b5-a6fe473c3717",
+      "slug": "2026-rubicon-36l-v6-ess-4wd-us-4-door",
+      "receipt_pk": 3472
+    },
+    {
+      "inventory_id": "402087708:gas_20_turbo",
+      "outcome": "created",
+      "pk": 1148,
+      "uuid": "81b18cb5-59fa-4f2b-a1a7-179e1b159497",
+      "slug": "2026-rubicon-20l-i4-turbo-4wd-us-turbo-4-door",
+      "receipt_pk": 3473
+    },
+    {
+      "inventory_id": "402101163:gas_20_turbo",
+      "outcome": "created",
+      "pk": 1149,
+      "uuid": "5a03d5f7-0552-4713-9ddc-b1cff83443af",
+      "slug": "2026-85th-anniversary-edition-20l-i4-turbo-4wd-us-turbo",
+      "receipt_pk": 3474
+    },
+    {
+      "inventory_id": "402101163:gas_36_v6",
+      "outcome": "created",
+      "pk": 1150,
+      "uuid": "f536dd2f-80ce-4c73-9359-6a52975747ae",
+      "slug": "2026-85th-anniversary-edition-36l-v6-ess-4wd-us",
+      "receipt_pk": 3475
+    },
+    {
+      "inventory_id": "402101072:gas_20_turbo",
+      "outcome": "created",
+      "pk": 1151,
+      "uuid": "0ef38e6f-6417-4643-bda5-b3b7f10228fa",
+      "slug": "2026-willys-41-20l-i4-turbo-4wd-us-turbo",
+      "receipt_pk": 3476
+    },
+    {
+      "inventory_id": "402101072:gas_36_v6",
+      "outcome": "created",
+      "pk": 1152,
+      "uuid": "7e3b0893-adbb-44e8-a5b0-bef920426f84",
+      "slug": "2026-willys-41-36l-v6-ess-4wd-us",
+      "receipt_pk": 3477
+    },
+    {
+      "inventory_id": "402087705:gas_20_turbo",
+      "outcome": "created",
+      "pk": 1153,
+      "uuid": "bc8b0fe4-7c36-42f1-9011-6e6fcdf6f347",
+      "slug": "2026-sahara-20l-i4-turbo-4wd-us-turbo",
+      "receipt_pk": 3478
+    },
+    {
+      "inventory_id": "402087705:gas_36_v6",
+      "outcome": "created",
+      "pk": 1154,
+      "uuid": "f63cd4fe-b097-4532-bf5b-6ab57c84380f",
+      "slug": "2026-sahara-36l-v6-ess-4wd-us",
+      "receipt_pk": 3479
+    },
+    {
+      "inventory_id": "402087713:gas_20_turbo",
+      "outcome": "created",
+      "pk": 1155,
+      "uuid": "c214700a-98a8-41f1-846b-826c26b7e093",
+      "slug": "2026-sport-rhd-20l-i4-turbo-4wd-us-turbo",
+      "receipt_pk": 3480
+    },
+    {
+      "inventory_id": "402112416:gas_20_turbo",
+      "outcome": "created",
+      "pk": 1156,
+      "uuid": "5c30d7d0-c255-48c8-a0b1-0c2154c3f5a9",
+      "slug": "2026-rewind-20l-i4-turbo-4wd-us-turbo",
+      "receipt_pk": 3481
+    },
+    {
+      "inventory_id": "402112416:gas_36_v6",
+      "outcome": "created",
+      "pk": 1157,
+      "uuid": "10469e2b-687f-499e-8cfc-4d32ef2a8924",
+      "slug": "2026-rewind-36l-v6-ess-4wd-us",
+      "receipt_pk": 3482
+    },
+    {
+      "inventory_id": "402087665:gas_36_v6",
+      "outcome": "created",
+      "pk": 1158,
+      "uuid": "7654bce4-fd5b-4ff4-84a5-0ad36c11d439",
+      "slug": "2026-rubicon-x-36l-v6-ess-4wd-us-2-door",
+      "receipt_pk": 3483
+    },
+    {
+      "inventory_id": "402087665:gas_20_turbo",
+      "outcome": "created",
+      "pk": 1159,
+      "uuid": "00fec2c6-ed14-4980-bb10-8f358998bf5c",
+      "slug": "2026-rubicon-x-20l-i4-turbo-4wd-us-turbo-2-door",
+      "receipt_pk": 3484
+    },
+    {
+      "inventory_id": "402087709:gas_36_v6",
+      "outcome": "created",
+      "pk": 1160,
+      "uuid": "21d06534-8b18-48bc-ac27-a9386d0b6c69",
+      "slug": "2026-rubicon-x-36l-v6-ess-4wd-us-4-door",
+      "receipt_pk": 3485
+    },
+    {
+      "inventory_id": "402087709:gas_20_turbo",
+      "outcome": "created",
+      "pk": 1161,
+      "uuid": "cbfc10f2-768c-4a4e-a1f4-6135f9de62f0",
+      "slug": "2026-rubicon-x-20l-i4-turbo-4wd-us-turbo-4-door",
+      "receipt_pk": 3486
+    },
+    {
+      "inventory_id": "402112349:gas_64_v8",
+      "outcome": "created",
+      "pk": 1162,
+      "uuid": "bdc4d4f2-2881-4812-94cd-b863269a81de",
+      "slug": "2026-willys-392-64l-v8-hemi-4wd-us",
+      "receipt_pk": 3487
+    },
+    {
+      "inventory_id": "402100986:gas_64_v8",
+      "outcome": "created",
+      "pk": 1163,
+      "uuid": "1225cb07-2e21-4661-bfae-f760ff397306",
+      "slug": "2026-moab-392-64l-v8-hemi-4wd-us",
+      "receipt_pk": 3488
+    }
+  ]
+}

@@ -1,0 +1,387 @@
+{
+  "date": "2026-11-14",
+  "status": "America250 supplement published locally; actual rerun idempotent",
+  "counts": {
+    "active_my2026": 35,
+    "configurator_groups": 19,
+    "ERC": 16,
+    "EC1": 17,
+    "ESG": 2,
+    "two_door": 10,
+    "four_door": 25,
+    "phev": 0
+  },
+  "incremental_execution": {
+    "created": 2,
+    "skipped": 33,
+    "failed": 0
+  },
+  "second_execution": {
+    "created": 0,
+    "skipped": 35,
+    "failed": 0,
+    "all_vehicledefinition_fields_unchanged": true
+  },
+  "preexisting_rows_preserved": {
+    "accounts_user": {
+      "all_preexisting_fields_unchanged": true,
+      "before": 1,
+      "after": 1,
+      "added": 0
+    },
+    "accounts_user_groups": {
+      "all_preexisting_fields_unchanged": true,
+      "before": 0,
+      "after": 0,
+      "added": 0
+    },
+    "accounts_user_user_permissions": {
+      "all_preexisting_fields_unchanged": true,
+      "before": 0,
+      "after": 0,
+      "added": 0
+    },
+    "auth_group": {
+      "all_preexisting_fields_unchanged": true,
+      "before": 0,
+      "after": 0,
+      "added": 0
+    },
+    "auth_group_permissions": {
+      "all_preexisting_fields_unchanged": true,
+      "before": 0,
+      "after": 0,
+      "added": 0
+    },
+    "auth_permission": {
+      "all_preexisting_fields_unchanged": true,
+      "before": 172,
+      "after": 172,
+      "added": 0
+    },
+    "django_admin_log": {
+      "all_preexisting_fields_unchanged": true,
+      "before": 23,
+      "after": 23,
+      "added": 0
+    },
+    "django_content_type": {
+      "all_preexisting_fields_unchanged": true,
+      "before": 44,
+      "after": 44,
+      "added": 0
+    },
+    "django_migrations": {
+      "all_preexisting_fields_unchanged": true,
+      "before": 33,
+      "after": 33,
+      "added": 0
+    },
+    "django_session": {
+      "all_preexisting_fields_unchanged": true,
+      "before": 5,
+      "after": 5,
+      "added": 0
+    },
+    "measurements_applicabilityfeature": {
+      "all_preexisting_fields_unchanged": true,
+      "before": 0,
+      "after": 0,
+      "added": 0
+    },
+    "measurements_applicabilitystate": {
+      "all_preexisting_fields_unchanged": true,
+      "before": 0,
+      "after": 0,
+      "added": 0
+    },
+    "measurements_measurementdefinition": {
+      "all_preexisting_fields_unchanged": true,
+      "before": 4,
+      "after": 4,
+      "added": 0
+    },
+    "measurements_measurementresult": {
+      "all_preexisting_fields_unchanged": true,
+      "before": 2,
+      "after": 2,
+      "added": 0
+    },
+    "measurements_measurementresultcondition": {
+      "all_preexisting_fields_unchanged": true,
+      "before": 0,
+      "after": 0,
+      "added": 0
+    },
+    "observation_observation": {
+      "all_preexisting_fields_unchanged": true,
+      "before": 0,
+      "after": 0,
+      "added": 0
+    },
+    "reference_canonicalrecordcorrection": {
+      "all_preexisting_fields_unchanged": true,
+      "before": 31,
+      "after": 31,
+      "added": 0
+    },
+    "reference_compatibilityrule": {
+      "all_preexisting_fields_unchanged": true,
+      "before": 0,
+      "after": 0,
+      "added": 0
+    },
+    "reference_compatibilityrulerevision": {
+      "all_preexisting_fields_unchanged": true,
+      "before": 0,
+      "after": 0,
+      "added": 0
+    },
+    "reference_engine": {
+      "all_preexisting_fields_unchanged": true,
+      "before": 7,
+      "after": 7,
+      "added": 0
+    },
+    "reference_equipmentitem": {
+      "all_preexisting_fields_unchanged": true,
+      "before": 0,
+      "after": 0,
+      "added": 0
+    },
+    "reference_equipmentitemrevision": {
+      "all_preexisting_fields_unchanged": true,
+      "before": 0,
+      "after": 0,
+      "added": 0
+    },
+    "reference_equipmentoffering": {
+      "all_preexisting_fields_unchanged": true,
+      "before": 0,
+      "after": 0,
+      "added": 0
+    },
+    "reference_equipmentofferingrevision": {
+      "all_preexisting_fields_unchanged": true,
+      "before": 0,
+      "after": 0,
+      "added": 0
+    },
+    "reference_evidenceassertionreference": {
+      "all_preexisting_fields_unchanged": true,
+      "before": 0,
+      "after": 0,
+      "added": 0
+    },
+    "reference_evidencedocument": {
+      "all_preexisting_fields_unchanged": true,
+      "before": 0,
+      "after": 0,
+      "added": 0
+    },
+    "reference_factorybodyconfiguration": {
+      "all_preexisting_fields_unchanged": true,
+      "before": 2,
+      "after": 2,
+      "added": 0
+    },
+    "reference_generation": {
+      "all_preexisting_fields_unchanged": true,
+      "before": 16,
+      "after": 16,
+      "added": 0
+    },
+    "reference_generationcorrespondencerevision": {
+      "all_preexisting_fields_unchanged": true,
+      "before": 254,
+      "after": 254,
+      "added": 0
+    },
+    "reference_importexecutionreceipt": {
+      "all_preexisting_fields_unchanged": true,
+      "before": 3521,
+      "after": 3591,
+      "added": 70
+    },
+    "reference_manufacturer": {
+      "all_preexisting_fields_unchanged": true,
+      "before": 5,
+      "after": 5,
+      "added": 0
+    },
+    "reference_specificationassertion": {
+      "all_preexisting_fields_unchanged": true,
+      "before": 0,
+      "after": 0,
+      "added": 0
+    },
+    "reference_specificationcatalogue": {
+      "all_preexisting_fields_unchanged": true,
+      "before": 0,
+      "after": 0,
+      "added": 0
+    },
+    "reference_specificationcataloguecoverage": {
+      "all_preexisting_fields_unchanged": true,
+      "before": 0,
+      "after": 0,
+      "added": 0
+    },
+    "reference_specificationcataloguemembership": {
+      "all_preexisting_fields_unchanged": true,
+      "before": 0,
+      "after": 0,
+      "added": 0
+    },
+    "reference_specificationcataloguerevision": {
+      "all_preexisting_fields_unchanged": true,
+      "before": 0,
+      "after": 0,
+      "added": 0
+    },
+    "reference_specificationdefinition": {
+      "all_preexisting_fields_unchanged": true,
+      "before": 0,
+      "after": 0,
+      "added": 0
+    },
+    "reference_specificationdefinitiondependency": {
+      "all_preexisting_fields_unchanged": true,
+      "before": 0,
+      "after": 0,
+      "added": 0
+    },
+    "reference_specificationdefinitionrevision": {
+      "all_preexisting_fields_unchanged": true,
+      "before": 0,
+      "after": 0,
+      "added": 0
+    },
+    "reference_specificationevidencelink": {
+      "all_preexisting_fields_unchanged": true,
+      "before": 0,
+      "after": 0,
+      "added": 0
+    },
+    "reference_specificationpublicationreceipt": {
+      "all_preexisting_fields_unchanged": true,
+      "before": 0,
+      "after": 0,
+      "added": 0
+    },
+    "reference_specificationunitregistry": {
+      "all_preexisting_fields_unchanged": true,
+      "before": 0,
+      "after": 0,
+      "added": 0
+    },
+    "reference_transmissiondescription": {
+      "all_preexisting_fields_unchanged": true,
+      "before": 0,
+      "after": 0,
+      "added": 0
+    },
+    "reference_transmissiondescriptionrevision": {
+      "all_preexisting_fields_unchanged": true,
+      "before": 0,
+      "after": 0,
+      "added": 0
+    },
+    "reference_transmissionengineeringassertion": {
+      "all_preexisting_fields_unchanged": true,
+      "before": 0,
+      "after": 0,
+      "added": 0
+    },
+    "reference_transmissionoffering": {
+      "all_preexisting_fields_unchanged": true,
+      "before": 0,
+      "after": 0,
+      "added": 0
+    },
+    "reference_transmissionofferingrevision": {
+      "all_preexisting_fields_unchanged": true,
+      "before": 0,
+      "after": 0,
+      "added": 0
+    },
+    "reference_vehicledefinition": {
+      "all_preexisting_fields_unchanged": true,
+      "before": 1148,
+      "after": 1150,
+      "added": 2
+    },
+    "reference_vehiclemodel": {
+      "all_preexisting_fields_unchanged": true,
+      "before": 6,
+      "after": 6,
+      "added": 0
+    }
+  },
+  "schema_unchanged": true,
+  "integrity_check": "ok",
+  "foreign_key_violations": 0,
+  "added_receipts": {
+    "created": 2,
+    "no_op_exact_match": 68
+  },
+  "america250_source_provenance": [
+    {
+      "pk": 1165,
+      "engine_code": "EC1",
+      "engine_pk": 2,
+      "receipt_pk": 3556,
+      "source_id": "jeep_my2026_owner_confirmed_builder",
+      "source_reference": "docs/research/MY2026_JL_edmunds_builder_20261114/america250_supplement.json",
+      "confirmation": {
+        "publisher": "Jeep.com",
+        "confirmation_method": "Owner verification supplied in the task; no automated builder inspection claimed",
+        "confirmed_by": "project_owner",
+        "confirmation_date": "2026-11-14",
+        "evidence_basis": "Owner independently confirmed EC1 as an America250 alternative in the official Jeep builder. The supplied URL demonstrates ERC, not EC1.",
+        "supplied_url_demonstrates_engine_code": "ERC",
+        "url_proves_this_engine": false,
+        "scope": "2026 US Wrangler JL America250, four-door, EC1",
+        "transmission_pairing": "Not established. URL option tokens are retained as provenance only; no transmission interpretation."
+      }
+    },
+    {
+      "pk": 1164,
+      "engine_code": "ERC",
+      "engine_pk": 1,
+      "receipt_pk": 3555,
+      "source_id": "jeep_my2026_owner_confirmed_builder",
+      "source_reference": "docs/research/MY2026_JL_edmunds_builder_20261114/america250_supplement.json",
+      "confirmation": {
+        "publisher": "Jeep.com",
+        "confirmation_method": "Owner verification supplied in the task; no automated builder inspection claimed",
+        "confirmed_by": "project_owner",
+        "confirmation_date": "2026-11-14",
+        "evidence_basis": "Owner supplied official Jeep builder URL explicitly contains ERC.",
+        "supplied_url_demonstrates_engine_code": "ERC",
+        "url_proves_this_engine": true,
+        "scope": "2026 US Wrangler JL America250, four-door, ERC",
+        "transmission_pairing": "Not established. URL option tokens are retained as provenance only; no transmission interpretation."
+      }
+    }
+  ],
+  "original_edmunds_inventory_unchanged": true,
+  "tests": {
+    "focused_passed": 72,
+    "system_check": "passed",
+    "migration_drift": "none",
+    "full_suite": "Not rerun; known preexisting label-test limitations remain documented."
+  },
+  "public_rendering": {
+    "groups_verified": 19,
+    "members_and_specs_verified": 35,
+    "http_status": 200,
+    "database_unchanged": true
+  },
+  "database_sha256_after": "3221115aee8e063743a6187e18aada6c2bc205588e2ac9e2e52f9a1fadcbc0a2",
+  "git_index_unchanged": true,
+  "unresolved_source_limitations": [
+    "EC1 owner confirmation is distinct from supplied ERC URL proof.",
+    "No engine standard/optional ranking or transmission pairing inferred."
+  ]
+}

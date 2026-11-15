@@ -1,0 +1,3485 @@
+{
+  "extraction_date": "2026-11-14",
+  "status": "Complete observed Edmunds inventory; acquisition only, awaiting owner review; no import authorization",
+  "source": "Edmunds JavaScript-rendered MY2026 US builder and exact-style specifications; existing authored Engine registry",
+  "method": "Normal in-app browser navigation; enumerate all three submodel categories, expand all five multi-body trim groups, deduplicate IDs; inspect every individual builder and all 18 exact-style specification pages with selected ID verified and Engine expanded. Rendered labels/descriptions only; no access-control workaround. Read-only registry queries supply canonical engine properties.",
+  "scope": {
+    "manufacturer": "Jeep",
+    "vehicle_model": "Wrangler",
+    "generation": "JL",
+    "model_year": 2026,
+    "market": "US"
+  },
+  "enumeration_urls": [
+    "https://www.edmunds.com/jeep/wrangler/build/?defaultYear=2026",
+    "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&submodel=SUV&allStyles",
+    "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&submodel=Willys%20392&allStyles",
+    "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&submodel=Moab%20392&allStyles"
+  ],
+  "counts": {
+    "styles": 18,
+    "gasoline_styles": 18,
+    "phev_styles": 0,
+    "canonical_configurations": 33,
+    "gasoline_configurations": 33,
+    "phev_configurations": 0,
+    "unique_marketed_trims": 13,
+    "two_door_styles": 5,
+    "four_door_styles": 13,
+    "two_door_configurations": 10,
+    "four_door_configurations": 23,
+    "engine_counts": {
+      "ERC": 15,
+      "EC1": 16,
+      "ESG": 2
+    }
+  },
+  "normalization_notes": [
+    "Follow MY2025 identity dimensions; separate trim and factory body, retain manufacturer trim spelling.",
+    "Deduplicate two repeated 392 style IDs across submodel catalogues; do not split transmission/axle/tire/package alternatives.",
+    "MY2026 offerings are independently observed. No MY2025 row, PHEV availability or engine combination carried forward.",
+    "Canonical engine properties are verbatim registry values with authored project code mappings; source engine-code absence is separately recorded and is not an aspiration blocker.",
+    "Engine profiles are local artifact references. Manufacturer codes in canonical_fields are project-resolved, not source-reported codes. No Engine authoring or update occurred.",
+    "Drivetrain is canonical 4WD; part-time/full-time remains supporting source detail. US market comes from US Edmunds MSRP/catalogue context, not final-assembly country.",
+    "No UUIDs, slugs or new parent records assigned. Engine UUID/PK are existing registry references only."
+  ],
+  "engine_profiles": {
+    "gas_36_v6": {
+      "engine_name": "3.6L V6 ESS",
+      "engine_displacement_liters": "3.6",
+      "engine_cylinders": 6,
+      "engine_aspiration": "naturally_aspirated",
+      "fuel_type": "gasoline",
+      "electrification_type": "none",
+      "manufacturer_engine_code": "ERC",
+      "registered_engine_pk": 1,
+      "registered_engine_uuid": "f5a7caba-2fdd-43e1-a337-33429399bff3",
+      "source_engine_code": null,
+      "properties_authority": "Existing authored Engine registry; read-only snapshot 2026-11-14",
+      "mapping_basis": "Owner-supplied established Wrangler engine/profile association; independent MY2026 builder/specification evidence establishes offering. Code is project mapping, not an Edmunds quotation."
+    },
+    "gas_20_turbo": {
+      "engine_name": "2.0L I4 Turbo",
+      "engine_displacement_liters": "2",
+      "engine_cylinders": 4,
+      "engine_aspiration": "turbocharged",
+      "fuel_type": "gasoline",
+      "electrification_type": "none",
+      "manufacturer_engine_code": "EC1",
+      "registered_engine_pk": 2,
+      "registered_engine_uuid": "ba7b32b8-f69e-4bc4-952f-c493e0e417f4",
+      "source_engine_code": null,
+      "properties_authority": "Existing authored Engine registry; read-only snapshot 2026-11-14",
+      "mapping_basis": "Owner-supplied established Wrangler engine/profile association; independent MY2026 builder/specification evidence establishes offering. Code is project mapping, not an Edmunds quotation."
+    },
+    "gas_64_v8": {
+      "engine_name": "6.4L V8 HEMI",
+      "engine_displacement_liters": "6.4",
+      "engine_cylinders": 8,
+      "engine_aspiration": "naturally_aspirated",
+      "fuel_type": "gasoline",
+      "electrification_type": "none",
+      "manufacturer_engine_code": "ESG",
+      "registered_engine_pk": 3,
+      "registered_engine_uuid": "d56ecfba-5f5d-4166-82a2-77572d4a6f2d",
+      "source_engine_code": null,
+      "properties_authority": "Existing authored Engine registry; read-only snapshot 2026-11-14",
+      "mapping_basis": "Owner-supplied established Wrangler engine/profile association; independent MY2026 builder/specification evidence establishes offering. Code is project mapping, not an Edmunds quotation."
+    }
+  },
+  "engine_registry_reference": {
+    "ERC": {
+      "pk": 1,
+      "uuid": "f5a7caba-2fdd-43e1-a337-33429399bff3",
+      "code": "ERC",
+      "name": "3.6L V6 ESS",
+      "properties": {
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": "naturally_aspirated",
+        "fuel_type": "gasoline",
+        "electrification_type": "none"
+      }
+    },
+    "EC1": {
+      "pk": 2,
+      "uuid": "ba7b32b8-f69e-4bc4-952f-c493e0e417f4",
+      "code": "EC1",
+      "name": "2.0L I4 Turbo",
+      "properties": {
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none"
+      }
+    },
+    "ESG": {
+      "pk": 3,
+      "uuid": "d56ecfba-5f5d-4166-82a2-77572d4a6f2d",
+      "code": "ESG",
+      "name": "6.4L V8 HEMI",
+      "properties": {
+        "engine_displacement_liters": "6.4",
+        "engine_cylinders": 8,
+        "engine_aspiration": "naturally_aspirated",
+        "fuel_type": "gasoline",
+        "electrification_type": "none"
+      }
+    },
+    "ECX": {
+      "pk": 6,
+      "uuid": "0b84bd7a-2de4-45d9-9f7e-34223e91cb70",
+      "code": "ECX",
+      "name": "2.0L I4 Turbo PHEV",
+      "properties": {
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "plug_in_hybrid"
+      }
+    }
+  },
+  "styles": [
+    {
+      "edmunds_style_id": "402087661",
+      "edmunds_modelyear_id": "402076473",
+      "source_model": "wrangler",
+      "source_submodel": "SUV",
+      "marketed_trim": "Sport",
+      "canonical_trim": "Sport",
+      "door_count": 2,
+      "factory_body": {
+        "door_configuration": "two-door"
+      },
+      "builder_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402087661&submodel=SUV",
+      "specifications_url": "https://www.edmunds.com/jeep/wrangler/2026/st-402087661/features-specs/",
+      "displayed_trim_summary": "Sport 2dr SUV 4WD (3.6L 6cyl 6M)",
+      "starting_msrp_usd": 36035,
+      "standard_engine_profile": "gas_36_v6",
+      "optional_engines": [
+        {
+          "engine_profile": "gas_20_turbo",
+          "label": "2.0L I4 DOHC DI Turbo Engine w/ESS",
+          "price_usd": 0,
+          "displayed_description": [
+            "2.0L I4 DOHC turbo engine with 270 hp @ 5250 rpm and 295 lb. ft. of torque @ 3000 rpm",
+            "Auxiliary battery",
+            "Non-lock fuel cap without discriminator",
+            "Stop-start dual battery system"
+          ],
+          "manufacturer_engine_code": "EC1",
+          "source_engine_code": null,
+          "engine_code_authority": "Established project mapping to existing authored Engine",
+          "source_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402087661&submodel=SUV",
+          "source_section": "Mechanical options"
+        }
+      ],
+      "standard_transmission": {
+        "label": "6-speed manual",
+        "manufacturer_code": null,
+        "source_url": "https://www.edmunds.com/jeep/wrangler/2026/st-402087661/features-specs/",
+        "source_section": "Drivetrain"
+      },
+      "optional_transmissions": [
+        {
+          "label": "8-Speed Automatic 850RE Transmission",
+          "price_usd": 2500,
+          "manufacturer_transmission_designation": "850RE",
+          "displayed_description": [
+            "Adaptive cruise control with stop",
+            "4-wheel anti-lock disc brakes",
+            "Selec-Speed Control",
+            "Note: Dana M200 rear axle and Integrated radar camera module are included on Sport 4DR, Sport S 4DR, and Willys 4DR."
+          ],
+          "source_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402087661&submodel=SUV",
+          "source_section": "Mechanical options"
+        }
+      ],
+      "standard_drivetrain": {
+        "canonical": "4WD",
+        "displayed_drive_type": "Four wheel drive",
+        "displayed_mode": "Part time 4WD",
+        "availability": "Standard",
+        "source_url": "https://www.edmunds.com/jeep/wrangler/2026/st-402087661/features-specs/"
+      },
+      "source_evidence": {
+        "builder_trim_summary": "Sport 2dr SUV 4WD (3.6L 6cyl 6M)",
+        "specification_selected_style_id": "402087661",
+        "expanded_engine_rows": {
+          "Base engine size": "3.6 L",
+          "Cylinders": "V6",
+          "Base engine type": "Gas",
+          "Horsepower": "285 hp @ 6,400 rpm",
+          "Torque": "260 lb-ft @ 4,800 rpm",
+          "Valves": "24",
+          "Cam type": "Double overhead cam (DOHC)",
+          "Valve timing": "Variable"
+        },
+        "fuel_type_row": "Regular unleaded",
+        "drivetrain_rows": {
+          "Transmission": "6-speed manual",
+          "Drive type": "Four wheel drive",
+          "Part time 4WD": "Standard"
+        },
+        "source_engine_code": null,
+        "mechanical_section_present": true,
+        "engine_and_transmission_options_exhaustively_inspected": true
+      },
+      "dependencies_and_restrictions": {
+        "explicit_engine_transmission_restrictions": [],
+        "selection_test": "Not performed; displayed labels and descriptions captured. Co-listing is not pairing evidence.",
+        "optional_engine_transmission_pairing_established": false
+      },
+      "unresolved": [
+        "Optional engine/transmission pairing is not expressly established; no manual/turbo combination or cross-product inferred."
+      ]
+    },
+    {
+      "edmunds_style_id": "402087699",
+      "edmunds_modelyear_id": "402076473",
+      "source_model": "wrangler",
+      "source_submodel": "SUV",
+      "marketed_trim": "Sport",
+      "canonical_trim": "Sport",
+      "door_count": 4,
+      "factory_body": {
+        "door_configuration": "four-door"
+      },
+      "builder_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402087699&submodel=SUV",
+      "specifications_url": "https://www.edmunds.com/jeep/wrangler/2026/st-402087699/features-specs/",
+      "displayed_trim_summary": "Sport 4dr SUV 4WD (3.6L 6cyl 6M)",
+      "starting_msrp_usd": 39040,
+      "standard_engine_profile": "gas_36_v6",
+      "optional_engines": [
+        {
+          "engine_profile": "gas_20_turbo",
+          "label": "2.0L I4 DOHC DI Turbo Engine w/ESS",
+          "price_usd": 0,
+          "displayed_description": [
+            "2.0L I4 DOHC turbo engine with 270 hp @ 5250 rpm and 295 lb. ft. of torque @ 3000 rpm",
+            "Auxiliary battery",
+            "Non-lock fuel cap without discriminator",
+            "Stop-start dual battery system"
+          ],
+          "manufacturer_engine_code": "EC1",
+          "source_engine_code": null,
+          "engine_code_authority": "Established project mapping to existing authored Engine",
+          "source_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402087699&submodel=SUV",
+          "source_section": "Mechanical options"
+        }
+      ],
+      "standard_transmission": {
+        "label": "6-speed manual",
+        "manufacturer_code": null,
+        "source_url": "https://www.edmunds.com/jeep/wrangler/2026/st-402087699/features-specs/",
+        "source_section": "Drivetrain"
+      },
+      "optional_transmissions": [
+        {
+          "label": "8-Speed Automatic 850RE Transmission",
+          "price_usd": 2500,
+          "manufacturer_transmission_designation": "850RE",
+          "displayed_description": [
+            "Adaptive cruise control with stop",
+            "4-wheel anti-lock disc brakes",
+            "Selec-Speed Control",
+            "Note: Dana M200 rear axle and Integrated radar camera module are included on Sport 4DR, Sport S 4DR, and Willys 4DR."
+          ],
+          "source_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402087699&submodel=SUV",
+          "source_section": "Mechanical options"
+        }
+      ],
+      "standard_drivetrain": {
+        "canonical": "4WD",
+        "displayed_drive_type": "Four wheel drive",
+        "displayed_mode": "Part time 4WD",
+        "availability": "Standard",
+        "source_url": "https://www.edmunds.com/jeep/wrangler/2026/st-402087699/features-specs/"
+      },
+      "source_evidence": {
+        "builder_trim_summary": "Sport 4dr SUV 4WD (3.6L 6cyl 6M)",
+        "specification_selected_style_id": "402087699",
+        "expanded_engine_rows": {
+          "Base engine size": "3.6 L",
+          "Cylinders": "V6",
+          "Base engine type": "Gas",
+          "Horsepower": "285 hp @ 6,400 rpm",
+          "Torque": "260 lb-ft @ 4,800 rpm",
+          "Valves": "24",
+          "Cam type": "Double overhead cam (DOHC)",
+          "Valve timing": "Variable"
+        },
+        "fuel_type_row": "Regular unleaded",
+        "drivetrain_rows": {
+          "Transmission": "6-speed manual",
+          "Drive type": "Four wheel drive",
+          "Part time 4WD": "Standard"
+        },
+        "source_engine_code": null,
+        "mechanical_section_present": true,
+        "engine_and_transmission_options_exhaustively_inspected": true
+      },
+      "dependencies_and_restrictions": {
+        "explicit_engine_transmission_restrictions": [],
+        "selection_test": "Not performed; displayed labels and descriptions captured. Co-listing is not pairing evidence.",
+        "optional_engine_transmission_pairing_established": false
+      },
+      "unresolved": [
+        "Optional engine/transmission pairing is not expressly established; no manual/turbo combination or cross-product inferred."
+      ]
+    },
+    {
+      "edmunds_style_id": "402087662",
+      "edmunds_modelyear_id": "402076473",
+      "source_model": "wrangler",
+      "source_submodel": "SUV",
+      "marketed_trim": "Sport S",
+      "canonical_trim": "Sport S",
+      "door_count": 2,
+      "factory_body": {
+        "door_configuration": "two-door"
+      },
+      "builder_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402087662&submodel=SUV",
+      "specifications_url": "https://www.edmunds.com/jeep/wrangler/2026/st-402087662/features-specs/",
+      "displayed_trim_summary": "Sport S 2dr SUV 4WD (3.6L 6cyl 6M)",
+      "starting_msrp_usd": 39685,
+      "standard_engine_profile": "gas_36_v6",
+      "optional_engines": [
+        {
+          "engine_profile": "gas_20_turbo",
+          "label": "2.0L I4 DOHC DI Turbo Engine w/ESS",
+          "price_usd": 0,
+          "displayed_description": [
+            "2.0L I4 DOHC turbo engine with 270 hp @ 5250 rpm and 295 lb. ft. of torque @ 3000 rpm",
+            "Auxiliary battery",
+            "Non-lock fuel cap without discriminator",
+            "Stop-start dual battery system"
+          ],
+          "manufacturer_engine_code": "EC1",
+          "source_engine_code": null,
+          "engine_code_authority": "Established project mapping to existing authored Engine",
+          "source_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402087662&submodel=SUV",
+          "source_section": "Mechanical options"
+        }
+      ],
+      "standard_transmission": {
+        "label": "6-speed manual",
+        "manufacturer_code": null,
+        "source_url": "https://www.edmunds.com/jeep/wrangler/2026/st-402087662/features-specs/",
+        "source_section": "Drivetrain"
+      },
+      "optional_transmissions": [
+        {
+          "label": "8-Speed Automatic 850RE Transmission",
+          "price_usd": 2500,
+          "manufacturer_transmission_designation": "850RE",
+          "displayed_description": [
+            "Adaptive cruise control with stop",
+            "4-wheel anti-lock disc brakes",
+            "Selec-Speed Control",
+            "Note: Dana M200 rear axle and Integrated radar camera module are included on Sport 4DR, Sport S 4DR, and Willys 4DR."
+          ],
+          "source_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402087662&submodel=SUV",
+          "source_section": "Mechanical options"
+        }
+      ],
+      "standard_drivetrain": {
+        "canonical": "4WD",
+        "displayed_drive_type": "Four wheel drive",
+        "displayed_mode": "Part time 4WD",
+        "availability": "Standard",
+        "source_url": "https://www.edmunds.com/jeep/wrangler/2026/st-402087662/features-specs/"
+      },
+      "source_evidence": {
+        "builder_trim_summary": "Sport S 2dr SUV 4WD (3.6L 6cyl 6M)",
+        "specification_selected_style_id": "402087662",
+        "expanded_engine_rows": {
+          "Base engine size": "3.6 L",
+          "Cylinders": "V6",
+          "Base engine type": "Gas",
+          "Horsepower": "285 hp @ 6,400 rpm",
+          "Torque": "260 lb-ft @ 4,800 rpm",
+          "Valves": "24",
+          "Cam type": "Double overhead cam (DOHC)",
+          "Valve timing": "Variable"
+        },
+        "fuel_type_row": "Regular unleaded",
+        "drivetrain_rows": {
+          "Transmission": "6-speed manual",
+          "Drive type": "Four wheel drive",
+          "Part time 4WD": "Standard"
+        },
+        "source_engine_code": null,
+        "mechanical_section_present": true,
+        "engine_and_transmission_options_exhaustively_inspected": true
+      },
+      "dependencies_and_restrictions": {
+        "explicit_engine_transmission_restrictions": [],
+        "selection_test": "Not performed; displayed labels and descriptions captured. Co-listing is not pairing evidence.",
+        "optional_engine_transmission_pairing_established": false
+      },
+      "unresolved": [
+        "Optional engine/transmission pairing is not expressly established; no manual/turbo combination or cross-product inferred."
+      ]
+    },
+    {
+      "edmunds_style_id": "402087700",
+      "edmunds_modelyear_id": "402076473",
+      "source_model": "wrangler",
+      "source_submodel": "SUV",
+      "marketed_trim": "Sport S",
+      "canonical_trim": "Sport S",
+      "door_count": 4,
+      "factory_body": {
+        "door_configuration": "four-door"
+      },
+      "builder_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402087700&submodel=SUV",
+      "specifications_url": "https://www.edmunds.com/jeep/wrangler/2026/st-402087700/features-specs/",
+      "displayed_trim_summary": "Sport S 4dr SUV 4WD (3.6L 6cyl 6M)",
+      "starting_msrp_usd": 41440,
+      "standard_engine_profile": "gas_36_v6",
+      "optional_engines": [
+        {
+          "engine_profile": "gas_20_turbo",
+          "label": "2.0L I4 DOHC DI Turbo Engine w/ESS",
+          "price_usd": 0,
+          "displayed_description": [
+            "2.0L I4 DOHC turbo engine with 270 hp @ 5250 rpm and 295 lb. ft. of torque @ 3000 rpm",
+            "Auxiliary battery",
+            "Non-lock fuel cap without discriminator",
+            "Stop-start dual battery system"
+          ],
+          "manufacturer_engine_code": "EC1",
+          "source_engine_code": null,
+          "engine_code_authority": "Established project mapping to existing authored Engine",
+          "source_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402087700&submodel=SUV",
+          "source_section": "Mechanical options"
+        }
+      ],
+      "standard_transmission": {
+        "label": "6-speed manual",
+        "manufacturer_code": null,
+        "source_url": "https://www.edmunds.com/jeep/wrangler/2026/st-402087700/features-specs/",
+        "source_section": "Drivetrain"
+      },
+      "optional_transmissions": [
+        {
+          "label": "8-Speed Automatic 850RE Transmission",
+          "price_usd": 2500,
+          "manufacturer_transmission_designation": "850RE",
+          "displayed_description": [
+            "Adaptive cruise control with stop",
+            "4-wheel anti-lock disc brakes",
+            "Selec-Speed Control",
+            "Note: Dana M200 rear axle and Integrated radar camera module are included on Sport 4DR, Sport S 4DR, and Willys 4DR."
+          ],
+          "source_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402087700&submodel=SUV",
+          "source_section": "Mechanical options"
+        }
+      ],
+      "standard_drivetrain": {
+        "canonical": "4WD",
+        "displayed_drive_type": "Four wheel drive",
+        "displayed_mode": "Part time 4WD",
+        "availability": "Standard",
+        "source_url": "https://www.edmunds.com/jeep/wrangler/2026/st-402087700/features-specs/"
+      },
+      "source_evidence": {
+        "builder_trim_summary": "Sport S 4dr SUV 4WD (3.6L 6cyl 6M)",
+        "specification_selected_style_id": "402087700",
+        "expanded_engine_rows": {
+          "Base engine size": "3.6 L",
+          "Cylinders": "V6",
+          "Base engine type": "Gas",
+          "Horsepower": "285 hp @ 6,400 rpm",
+          "Torque": "260 lb-ft @ 4,800 rpm",
+          "Valves": "24",
+          "Cam type": "Double overhead cam (DOHC)",
+          "Valve timing": "Variable"
+        },
+        "fuel_type_row": "Regular unleaded",
+        "drivetrain_rows": {
+          "Transmission": "6-speed manual",
+          "Drive type": "Four wheel drive",
+          "Part time 4WD": "Standard"
+        },
+        "source_engine_code": null,
+        "mechanical_section_present": true,
+        "engine_and_transmission_options_exhaustively_inspected": true
+      },
+      "dependencies_and_restrictions": {
+        "explicit_engine_transmission_restrictions": [],
+        "selection_test": "Not performed; displayed labels and descriptions captured. Co-listing is not pairing evidence.",
+        "optional_engine_transmission_pairing_established": false
+      },
+      "unresolved": [
+        "Optional engine/transmission pairing is not expressly established; no manual/turbo combination or cross-product inferred."
+      ]
+    },
+    {
+      "edmunds_style_id": "402087663",
+      "edmunds_modelyear_id": "402076473",
+      "source_model": "wrangler",
+      "source_submodel": "SUV",
+      "marketed_trim": "Willys",
+      "canonical_trim": "Willys",
+      "door_count": 2,
+      "factory_body": {
+        "door_configuration": "two-door"
+      },
+      "builder_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402087663&submodel=SUV",
+      "specifications_url": "https://www.edmunds.com/jeep/wrangler/2026/st-402087663/features-specs/",
+      "displayed_trim_summary": "Willys 2dr SUV 4WD (3.6L 6cyl 6M)",
+      "starting_msrp_usd": 43755,
+      "standard_engine_profile": "gas_36_v6",
+      "optional_engines": [
+        {
+          "engine_profile": "gas_20_turbo",
+          "label": "2.0L I4 DOHC DI Turbo Engine w/ESS",
+          "price_usd": 0,
+          "displayed_description": [
+            "2.0L I4 DOHC turbo engine with 270 hp @ 5250 rpm and 295 lb. ft. of torque @ 3000 rpm",
+            "Auxiliary battery",
+            "Non-lock fuel cap without discriminator",
+            "Stop-start dual battery system"
+          ],
+          "manufacturer_engine_code": "EC1",
+          "source_engine_code": null,
+          "engine_code_authority": "Established project mapping to existing authored Engine",
+          "source_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402087663&submodel=SUV",
+          "source_section": "Mechanical options"
+        }
+      ],
+      "standard_transmission": {
+        "label": "6-speed manual",
+        "manufacturer_code": null,
+        "source_url": "https://www.edmunds.com/jeep/wrangler/2026/st-402087663/features-specs/",
+        "source_section": "Drivetrain"
+      },
+      "optional_transmissions": [
+        {
+          "label": "8-Speed Automatic 850RE Transmission",
+          "price_usd": 2500,
+          "manufacturer_transmission_designation": "850RE",
+          "displayed_description": [
+            "Adaptive cruise control with stop",
+            "4-wheel anti-lock disc brakes",
+            "Selec-Speed Control",
+            "Note: Dana M200 rear axle and Integrated radar camera module are included on Sport 4DR, Sport S 4DR, and Willys 4DR."
+          ],
+          "source_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402087663&submodel=SUV",
+          "source_section": "Mechanical options"
+        }
+      ],
+      "standard_drivetrain": {
+        "canonical": "4WD",
+        "displayed_drive_type": "Four wheel drive",
+        "displayed_mode": "Part time 4WD",
+        "availability": "Standard",
+        "source_url": "https://www.edmunds.com/jeep/wrangler/2026/st-402087663/features-specs/"
+      },
+      "source_evidence": {
+        "builder_trim_summary": "Willys 2dr SUV 4WD (3.6L 6cyl 6M)",
+        "specification_selected_style_id": "402087663",
+        "expanded_engine_rows": {
+          "Base engine size": "3.6 L",
+          "Cylinders": "V6",
+          "Base engine type": "Gas",
+          "Horsepower": "285 hp @ 6,400 rpm",
+          "Torque": "260 lb-ft @ 4,800 rpm",
+          "Valves": "24",
+          "Cam type": "Double overhead cam (DOHC)",
+          "Valve timing": "Variable"
+        },
+        "fuel_type_row": "Regular unleaded",
+        "drivetrain_rows": {
+          "Transmission": "6-speed manual",
+          "Drive type": "Four wheel drive",
+          "Part time 4WD": "Standard"
+        },
+        "source_engine_code": null,
+        "mechanical_section_present": true,
+        "engine_and_transmission_options_exhaustively_inspected": true
+      },
+      "dependencies_and_restrictions": {
+        "explicit_engine_transmission_restrictions": [],
+        "selection_test": "Not performed; displayed labels and descriptions captured. Co-listing is not pairing evidence.",
+        "optional_engine_transmission_pairing_established": false
+      },
+      "unresolved": [
+        "Optional engine/transmission pairing is not expressly established; no manual/turbo combination or cross-product inferred."
+      ]
+    },
+    {
+      "edmunds_style_id": "402087701",
+      "edmunds_modelyear_id": "402076473",
+      "source_model": "wrangler",
+      "source_submodel": "SUV",
+      "marketed_trim": "Willys",
+      "canonical_trim": "Willys",
+      "door_count": 4,
+      "factory_body": {
+        "door_configuration": "four-door"
+      },
+      "builder_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402087701&submodel=SUV",
+      "specifications_url": "https://www.edmunds.com/jeep/wrangler/2026/st-402087701/features-specs/",
+      "displayed_trim_summary": "Willys 4dr SUV 4WD (3.6L 6cyl 6M)",
+      "starting_msrp_usd": 44940,
+      "standard_engine_profile": "gas_36_v6",
+      "optional_engines": [
+        {
+          "engine_profile": "gas_20_turbo",
+          "label": "2.0L I4 DOHC DI Turbo Engine w/ESS",
+          "price_usd": 0,
+          "displayed_description": [
+            "2.0L I4 DOHC turbo engine with 270 hp @ 5250 rpm and 295 lb. ft. of torque @ 3000 rpm",
+            "Auxiliary battery",
+            "Non-lock fuel cap without discriminator",
+            "Stop-start dual battery system"
+          ],
+          "manufacturer_engine_code": "EC1",
+          "source_engine_code": null,
+          "engine_code_authority": "Established project mapping to existing authored Engine",
+          "source_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402087701&submodel=SUV",
+          "source_section": "Mechanical options"
+        }
+      ],
+      "standard_transmission": {
+        "label": "6-speed manual",
+        "manufacturer_code": null,
+        "source_url": "https://www.edmunds.com/jeep/wrangler/2026/st-402087701/features-specs/",
+        "source_section": "Drivetrain"
+      },
+      "optional_transmissions": [
+        {
+          "label": "8-Speed Automatic 850RE Transmission",
+          "price_usd": 2500,
+          "manufacturer_transmission_designation": "850RE",
+          "displayed_description": [
+            "Adaptive cruise control with stop",
+            "4-wheel anti-lock disc brakes",
+            "Selec-Speed Control",
+            "Note: Dana M200 rear axle and Integrated radar camera module are included on Sport 4DR, Sport S 4DR, and Willys 4DR."
+          ],
+          "source_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402087701&submodel=SUV",
+          "source_section": "Mechanical options"
+        }
+      ],
+      "standard_drivetrain": {
+        "canonical": "4WD",
+        "displayed_drive_type": "Four wheel drive",
+        "displayed_mode": "Part time 4WD",
+        "availability": "Standard",
+        "source_url": "https://www.edmunds.com/jeep/wrangler/2026/st-402087701/features-specs/"
+      },
+      "source_evidence": {
+        "builder_trim_summary": "Willys 4dr SUV 4WD (3.6L 6cyl 6M)",
+        "specification_selected_style_id": "402087701",
+        "expanded_engine_rows": {
+          "Base engine size": "3.6 L",
+          "Cylinders": "V6",
+          "Base engine type": "Gas",
+          "Horsepower": "285 hp @ 6,400 rpm",
+          "Torque": "260 lb-ft @ 4,800 rpm",
+          "Valves": "24",
+          "Cam type": "Double overhead cam (DOHC)",
+          "Valve timing": "Variable"
+        },
+        "fuel_type_row": "Regular unleaded",
+        "drivetrain_rows": {
+          "Transmission": "6-speed manual",
+          "Drive type": "Four wheel drive",
+          "Part time 4WD": "Standard"
+        },
+        "source_engine_code": null,
+        "mechanical_section_present": true,
+        "engine_and_transmission_options_exhaustively_inspected": true
+      },
+      "dependencies_and_restrictions": {
+        "explicit_engine_transmission_restrictions": [],
+        "selection_test": "Not performed; displayed labels and descriptions captured. Co-listing is not pairing evidence.",
+        "optional_engine_transmission_pairing_established": false
+      },
+      "unresolved": [
+        "Optional engine/transmission pairing is not expressly established; no manual/turbo combination or cross-product inferred."
+      ]
+    },
+    {
+      "edmunds_style_id": "402112417",
+      "edmunds_modelyear_id": "402076473",
+      "source_model": "wrangler",
+      "source_submodel": "SUV",
+      "marketed_trim": "California Edition",
+      "canonical_trim": "California Edition",
+      "door_count": 4,
+      "factory_body": {
+        "door_configuration": "four-door"
+      },
+      "builder_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402112417&submodel=SUV",
+      "specifications_url": "https://www.edmunds.com/jeep/wrangler/2026/st-402112417/features-specs/",
+      "displayed_trim_summary": "California Edition 4dr SUV 4WD (3.6L 6cyl 6M)",
+      "starting_msrp_usd": 44035,
+      "standard_engine_profile": "gas_36_v6",
+      "optional_engines": [
+        {
+          "engine_profile": "gas_20_turbo",
+          "label": "2.0L I4 DOHC DI Turbo Engine w/ESS",
+          "price_usd": 0,
+          "displayed_description": [
+            "2.0L I4 DOHC turbo engine with 270 hp @ 5250 rpm and 295 lb. ft. of torque @ 3000 rpm",
+            "Auxiliary battery",
+            "Non-lock fuel cap without discriminator",
+            "Stop-start dual battery system"
+          ],
+          "manufacturer_engine_code": "EC1",
+          "source_engine_code": null,
+          "engine_code_authority": "Established project mapping to existing authored Engine",
+          "source_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402112417&submodel=SUV",
+          "source_section": "Mechanical options"
+        }
+      ],
+      "standard_transmission": {
+        "label": "6-speed manual",
+        "manufacturer_code": null,
+        "source_url": "https://www.edmunds.com/jeep/wrangler/2026/st-402112417/features-specs/",
+        "source_section": "Drivetrain"
+      },
+      "optional_transmissions": [
+        {
+          "label": "8-Speed Automatic 850RE Transmission",
+          "price_usd": 2500,
+          "manufacturer_transmission_designation": "850RE",
+          "displayed_description": [
+            "Adaptive cruise control with stop",
+            "4-wheel anti-lock disc brakes",
+            "Selec-Speed Control",
+            "Note: Dana M200 rear axle and Integrated radar camera module are included on Sport 4DR, Sport S 4DR, and Willys 4DR."
+          ],
+          "source_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402112417&submodel=SUV",
+          "source_section": "Mechanical options"
+        }
+      ],
+      "standard_drivetrain": {
+        "canonical": "4WD",
+        "displayed_drive_type": "Four wheel drive",
+        "displayed_mode": "Part time 4WD",
+        "availability": "Standard",
+        "source_url": "https://www.edmunds.com/jeep/wrangler/2026/st-402112417/features-specs/"
+      },
+      "source_evidence": {
+        "builder_trim_summary": "California Edition 4dr SUV 4WD (3.6L 6cyl 6M)",
+        "specification_selected_style_id": "402112417",
+        "expanded_engine_rows": {
+          "Base engine size": "3.6 L",
+          "Cylinders": "V6",
+          "Base engine type": "Gas",
+          "Horsepower": "285 hp @ 6,400 rpm",
+          "Torque": "260 lb-ft @ 4,800 rpm",
+          "Valves": "24",
+          "Cam type": "Double overhead cam (DOHC)",
+          "Valve timing": "Variable"
+        },
+        "fuel_type_row": "Regular unleaded",
+        "drivetrain_rows": {
+          "Transmission": "6-speed manual",
+          "Drive type": "Four wheel drive",
+          "Part time 4WD": "Standard"
+        },
+        "source_engine_code": null,
+        "mechanical_section_present": true,
+        "engine_and_transmission_options_exhaustively_inspected": true,
+        "ancillary_source_issue": "Fuel table displays Range in miles (city/hwy) 0/0 mi.; not ingested as a real mechanical specification."
+      },
+      "dependencies_and_restrictions": {
+        "explicit_engine_transmission_restrictions": [],
+        "selection_test": "Not performed; displayed labels and descriptions captured. Co-listing is not pairing evidence.",
+        "optional_engine_transmission_pairing_established": false
+      },
+      "unresolved": [
+        "Optional engine/transmission pairing is not expressly established; no manual/turbo combination or cross-product inferred.",
+        "Automatic option note names Sport/Sport S/Willys; no unsupported axle or camera applicability inferred for California Edition."
+      ]
+    },
+    {
+      "edmunds_style_id": "402087664",
+      "edmunds_modelyear_id": "402076473",
+      "source_model": "wrangler",
+      "source_submodel": "SUV",
+      "marketed_trim": "Rubicon",
+      "canonical_trim": "Rubicon",
+      "door_count": 2,
+      "factory_body": {
+        "door_configuration": "two-door"
+      },
+      "builder_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402087664&submodel=SUV",
+      "specifications_url": "https://www.edmunds.com/jeep/wrangler/2026/st-402087664/features-specs/",
+      "displayed_trim_summary": "Rubicon 2dr SUV 4WD (3.6L 6cyl 6M)",
+      "starting_msrp_usd": 45815,
+      "standard_engine_profile": "gas_36_v6",
+      "optional_engines": [
+        {
+          "engine_profile": "gas_20_turbo",
+          "label": "2.0L I4 DOHC DI Turbo Engine w/ESS",
+          "price_usd": 0,
+          "displayed_description": [
+            "2.0L I4 DOHC turbo engine with 270 hp @ 5250 rpm and 295 lb. ft. of torque @ 3000 rpm",
+            "17\" x 8.0\" machined wheels with Black pockets",
+            "35\" tire suspension",
+            "4.56 rear axle ratio",
+            "Auxiliary battery",
+            "LT315/70R17C 113/110S tires",
+            "Mopar hinge-gate reinforcement",
+            "Mopar jack spacer",
+            "Mopar tire relocation kit",
+            "Non-lock fuel cap without discriminator",
+            "Stop-start dual battery system",
+            "Wheel flare extensions"
+          ],
+          "manufacturer_engine_code": "EC1",
+          "source_engine_code": null,
+          "engine_code_authority": "Established project mapping to existing authored Engine",
+          "source_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402087664&submodel=SUV",
+          "source_section": "Mechanical options"
+        }
+      ],
+      "standard_transmission": {
+        "label": "6-speed manual",
+        "manufacturer_code": null,
+        "source_url": "https://www.edmunds.com/jeep/wrangler/2026/st-402087664/features-specs/",
+        "source_section": "Drivetrain"
+      },
+      "optional_transmissions": [
+        {
+          "label": "8-Speed Automatic 850RE Transmission",
+          "price_usd": 2500,
+          "manufacturer_transmission_designation": "850RE",
+          "displayed_description": [
+            "4:1 Rock-Trac heavy duty full time 4WD system",
+            "Adaptive cruise control with stop",
+            "Remote start system",
+            "Selec-speed control"
+          ],
+          "source_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402087664&submodel=SUV",
+          "source_section": "Mechanical options"
+        }
+      ],
+      "standard_drivetrain": {
+        "canonical": "4WD",
+        "displayed_drive_type": "Four wheel drive",
+        "displayed_mode": "Part time 4WD",
+        "availability": "Standard",
+        "source_url": "https://www.edmunds.com/jeep/wrangler/2026/st-402087664/features-specs/"
+      },
+      "source_evidence": {
+        "builder_trim_summary": "Rubicon 2dr SUV 4WD (3.6L 6cyl 6M)",
+        "specification_selected_style_id": "402087664",
+        "expanded_engine_rows": {
+          "Base engine size": "3.6 L",
+          "Cylinders": "V6",
+          "Base engine type": "Gas",
+          "Horsepower": "285 hp @ 6,400 rpm",
+          "Torque": "260 lb-ft @ 4,800 rpm",
+          "Valves": "24",
+          "Cam type": "Double overhead cam (DOHC)",
+          "Valve timing": "Variable"
+        },
+        "fuel_type_row": "Regular unleaded",
+        "drivetrain_rows": {
+          "Transmission": "6-speed manual",
+          "Drive type": "Four wheel drive",
+          "Part time 4WD": "Standard"
+        },
+        "source_engine_code": null,
+        "mechanical_section_present": true,
+        "engine_and_transmission_options_exhaustively_inspected": true
+      },
+      "dependencies_and_restrictions": {
+        "explicit_engine_transmission_restrictions": [],
+        "selection_test": "Not performed; displayed labels and descriptions captured. Co-listing is not pairing evidence.",
+        "optional_engine_transmission_pairing_established": false
+      },
+      "unresolved": [
+        "Optional engine/transmission pairing is not expressly established; no manual/turbo combination or cross-product inferred."
+      ]
+    },
+    {
+      "edmunds_style_id": "402087708",
+      "edmunds_modelyear_id": "402076473",
+      "source_model": "wrangler",
+      "source_submodel": "SUV",
+      "marketed_trim": "Rubicon",
+      "canonical_trim": "Rubicon",
+      "door_count": 4,
+      "factory_body": {
+        "door_configuration": "four-door"
+      },
+      "builder_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402087708&submodel=SUV",
+      "specifications_url": "https://www.edmunds.com/jeep/wrangler/2026/st-402087708/features-specs/",
+      "displayed_trim_summary": "Rubicon 4dr SUV 4WD (3.6L 6cyl 6M)",
+      "starting_msrp_usd": 49740,
+      "standard_engine_profile": "gas_36_v6",
+      "optional_engines": [
+        {
+          "engine_profile": "gas_20_turbo",
+          "label": "2.0L I4 DOHC DI Turbo Engine w/ESS",
+          "price_usd": 0,
+          "displayed_description": [
+            "2.0L I4 DOHC turbo engine with 270 hp @ 5250 rpm and 295 lb. ft. of torque @ 3000 rpm",
+            "Auxiliary battery",
+            "Non-lock fuel cap without discriminator",
+            "Stop-start dual battery system"
+          ],
+          "manufacturer_engine_code": "EC1",
+          "source_engine_code": null,
+          "engine_code_authority": "Established project mapping to existing authored Engine",
+          "source_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402087708&submodel=SUV",
+          "source_section": "Mechanical options"
+        }
+      ],
+      "standard_transmission": {
+        "label": "6-speed manual",
+        "manufacturer_code": null,
+        "source_url": "https://www.edmunds.com/jeep/wrangler/2026/st-402087708/features-specs/",
+        "source_section": "Drivetrain"
+      },
+      "optional_transmissions": [
+        {
+          "label": "8-Speed Automatic 850RE Transmission",
+          "price_usd": 3000,
+          "manufacturer_transmission_designation": "850RE",
+          "displayed_description": [
+            "17\" x 8.0\" machined wheels with Black pockets",
+            "35\" tire suspension",
+            "4:1 Rock-Trac heavy duty full time 4WD system",
+            "4.56 rear axle ratio",
+            "Adaptive cruise control with stop",
+            "Anti-lock 4-wheel disc performance brakes",
+            "LT315/70R17C 113/110S tires",
+            "Mopar hinge-gate reinforcement",
+            "Mopar jack spacer",
+            "Mopar tire relocation kit",
+            "Remote start system",
+            "Selec-speed control",
+            "Wheel flare extensions"
+          ],
+          "source_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402087708&submodel=SUV",
+          "source_section": "Mechanical options"
+        }
+      ],
+      "standard_drivetrain": {
+        "canonical": "4WD",
+        "displayed_drive_type": "Four wheel drive",
+        "displayed_mode": "Part time 4WD",
+        "availability": "Standard",
+        "source_url": "https://www.edmunds.com/jeep/wrangler/2026/st-402087708/features-specs/"
+      },
+      "source_evidence": {
+        "builder_trim_summary": "Rubicon 4dr SUV 4WD (3.6L 6cyl 6M)",
+        "specification_selected_style_id": "402087708",
+        "expanded_engine_rows": {
+          "Base engine size": "3.6 L",
+          "Cylinders": "V6",
+          "Base engine type": "Gas",
+          "Horsepower": "285 hp @ 6,400 rpm",
+          "Torque": "260 lb-ft @ 4,800 rpm",
+          "Valves": "24",
+          "Cam type": "Double overhead cam (DOHC)",
+          "Valve timing": "Variable"
+        },
+        "fuel_type_row": "Regular unleaded",
+        "drivetrain_rows": {
+          "Transmission": "6-speed manual",
+          "Drive type": "Four wheel drive",
+          "Part time 4WD": "Standard"
+        },
+        "source_engine_code": null,
+        "mechanical_section_present": true,
+        "engine_and_transmission_options_exhaustively_inspected": true
+      },
+      "dependencies_and_restrictions": {
+        "explicit_engine_transmission_restrictions": [],
+        "selection_test": "Not performed; displayed labels and descriptions captured. Co-listing is not pairing evidence.",
+        "optional_engine_transmission_pairing_established": false
+      },
+      "unresolved": [
+        "Optional engine/transmission pairing is not expressly established; no manual/turbo combination or cross-product inferred."
+      ]
+    },
+    {
+      "edmunds_style_id": "402101163",
+      "edmunds_modelyear_id": "402076473",
+      "source_model": "wrangler",
+      "source_submodel": "SUV",
+      "marketed_trim": "85th Anniversary Edition",
+      "canonical_trim": "85th Anniversary Edition",
+      "door_count": 4,
+      "factory_body": {
+        "door_configuration": "four-door"
+      },
+      "builder_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402101163&submodel=SUV",
+      "specifications_url": "https://www.edmunds.com/jeep/wrangler/2026/st-402101163/features-specs/",
+      "displayed_trim_summary": "85th Anniversary Edition 4dr SUV 4WD (2.0L 4cyl Turbo 8A)",
+      "starting_msrp_usd": 47240,
+      "standard_engine_profile": "gas_20_turbo",
+      "optional_engines": [
+        {
+          "engine_profile": "gas_36_v6",
+          "label": "3.6L V6 24V VVT Engine UPG I w/ESS",
+          "price_usd": 500,
+          "displayed_description": [
+            "3.6L V6 24V VVT Engine UPG I with 285 hp @ 6400 rpm and 260 lb. ft. of torque @ 4800 rpm",
+            "Auxiliary battery",
+            "Engine oil cooler",
+            "Non-lock fuel cap without discriminator",
+            "Stop-start dual battery system",
+            "Note: Dana M220 rear axle is included on Sahara."
+          ],
+          "manufacturer_engine_code": "ERC",
+          "source_engine_code": null,
+          "engine_code_authority": "Established project mapping to existing authored Engine",
+          "source_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402101163&submodel=SUV",
+          "source_section": "Mechanical options"
+        }
+      ],
+      "standard_transmission": {
+        "label": "8-speed shiftable automatic",
+        "manufacturer_code": null,
+        "source_url": "https://www.edmunds.com/jeep/wrangler/2026/st-402101163/features-specs/",
+        "source_section": "Drivetrain"
+      },
+      "optional_transmissions": [
+        {
+          "label": "8-Speed Automatic 850RE Transmission",
+          "price_usd": 2500,
+          "manufacturer_transmission_designation": "850RE",
+          "displayed_description": [
+            "Adaptive cruise control with stop",
+            "4-wheel anti-lock disc brakes",
+            "Selec-Speed Control",
+            "Note: Dana M200 rear axle and Integrated radar camera module are included on Sport 4DR, Sport S 4DR, and Willys 4DR."
+          ],
+          "source_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402101163&submodel=SUV",
+          "source_section": "Mechanical options"
+        }
+      ],
+      "standard_drivetrain": {
+        "canonical": "4WD",
+        "displayed_drive_type": "Four wheel drive",
+        "displayed_mode": "Part time 4WD",
+        "availability": "Standard",
+        "source_url": "https://www.edmunds.com/jeep/wrangler/2026/st-402101163/features-specs/"
+      },
+      "source_evidence": {
+        "builder_trim_summary": "85th Anniversary Edition 4dr SUV 4WD (2.0L 4cyl Turbo 8A)",
+        "specification_selected_style_id": "402101163",
+        "expanded_engine_rows": {
+          "Base engine size": "2.0 L",
+          "Cylinders": "Inline 4",
+          "Base engine type": "Gas",
+          "Horsepower": "270 hp @ 5,250 rpm",
+          "Torque": "295 lb-ft @ 3,000 rpm",
+          "Valves": "16",
+          "Cam type": "Double overhead cam (DOHC)",
+          "Valve timing": "Variable",
+          "Direct injection": "Standard"
+        },
+        "fuel_type_row": "Premium unleaded (recommended)",
+        "drivetrain_rows": {
+          "Transmission": "8-speed shiftable automatic",
+          "Drive type": "Four wheel drive",
+          "Part time 4WD": "Standard"
+        },
+        "source_engine_code": null,
+        "mechanical_section_present": true,
+        "engine_and_transmission_options_exhaustively_inspected": true
+      },
+      "dependencies_and_restrictions": {
+        "explicit_engine_transmission_restrictions": [],
+        "selection_test": "Not performed; displayed labels and descriptions captured. Co-listing is not pairing evidence.",
+        "optional_engine_transmission_pairing_established": false
+      },
+      "unresolved": [
+        "Optional engine/transmission pairing is not expressly established; no manual/turbo combination or cross-product inferred.",
+        "Standard specification is eight-speed automatic but builder also lists an eight-speed 850RE option; applicability/price relationship is not explained.",
+        "V6 option description includes a Sahara-specific rear-axle note; retained as source wording without extending that axle claim to other trims."
+      ]
+    },
+    {
+      "edmunds_style_id": "402101072",
+      "edmunds_modelyear_id": "402076473",
+      "source_model": "wrangler",
+      "source_submodel": "SUV",
+      "marketed_trim": "Willys 41",
+      "canonical_trim": "Willys 41",
+      "door_count": 4,
+      "factory_body": {
+        "door_configuration": "four-door"
+      },
+      "builder_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402101072&submodel=SUV",
+      "specifications_url": "https://www.edmunds.com/jeep/wrangler/2026/st-402101072/features-specs/",
+      "displayed_trim_summary": "Willys 41 4dr SUV 4WD (2.0L 4cyl Turbo 8A)",
+      "starting_msrp_usd": 48740,
+      "standard_engine_profile": "gas_20_turbo",
+      "optional_engines": [
+        {
+          "engine_profile": "gas_36_v6",
+          "label": "3.6L V6 24V VVT Engine UPG I w/ESS",
+          "price_usd": 500,
+          "displayed_description": [
+            "3.6L V6 24V VVT Engine UPG I with 285 hp @ 6400 rpm and 260 lb. ft. of torque @ 4800 rpm",
+            "Auxiliary battery",
+            "Engine oil cooler",
+            "Non-lock fuel cap without discriminator",
+            "Stop-start dual battery system",
+            "Note: Dana M220 rear axle is included on Sahara."
+          ],
+          "manufacturer_engine_code": "ERC",
+          "source_engine_code": null,
+          "engine_code_authority": "Established project mapping to existing authored Engine",
+          "source_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402101072&submodel=SUV",
+          "source_section": "Mechanical options"
+        }
+      ],
+      "standard_transmission": {
+        "label": "8-speed shiftable automatic",
+        "manufacturer_code": null,
+        "source_url": "https://www.edmunds.com/jeep/wrangler/2026/st-402101072/features-specs/",
+        "source_section": "Drivetrain"
+      },
+      "optional_transmissions": [
+        {
+          "label": "8-Speed Automatic 850RE Transmission",
+          "price_usd": 2500,
+          "manufacturer_transmission_designation": "850RE",
+          "displayed_description": [
+            "Adaptive cruise control with stop",
+            "4-wheel anti-lock disc brakes",
+            "Selec-Speed Control",
+            "Note: Dana M200 rear axle and Integrated radar camera module are included on Sport 4DR, Sport S 4DR, and Willys 4DR."
+          ],
+          "source_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402101072&submodel=SUV",
+          "source_section": "Mechanical options"
+        }
+      ],
+      "standard_drivetrain": {
+        "canonical": "4WD",
+        "displayed_drive_type": "Four wheel drive",
+        "displayed_mode": "Part time 4WD",
+        "availability": "Standard",
+        "source_url": "https://www.edmunds.com/jeep/wrangler/2026/st-402101072/features-specs/"
+      },
+      "source_evidence": {
+        "builder_trim_summary": "Willys 41 4dr SUV 4WD (2.0L 4cyl Turbo 8A)",
+        "specification_selected_style_id": "402101072",
+        "expanded_engine_rows": {
+          "Base engine size": "2.0 L",
+          "Cylinders": "Inline 4",
+          "Base engine type": "Gas",
+          "Horsepower": "270 hp @ 5,250 rpm",
+          "Torque": "295 lb-ft @ 3,000 rpm",
+          "Valves": "16",
+          "Cam type": "Double overhead cam (DOHC)",
+          "Valve timing": "Variable",
+          "Direct injection": "Standard"
+        },
+        "fuel_type_row": "Premium unleaded (recommended)",
+        "drivetrain_rows": {
+          "Transmission": "8-speed shiftable automatic",
+          "Drive type": "Four wheel drive",
+          "Part time 4WD": "Standard"
+        },
+        "source_engine_code": null,
+        "mechanical_section_present": true,
+        "engine_and_transmission_options_exhaustively_inspected": true
+      },
+      "dependencies_and_restrictions": {
+        "explicit_engine_transmission_restrictions": [],
+        "selection_test": "Not performed; displayed labels and descriptions captured. Co-listing is not pairing evidence.",
+        "optional_engine_transmission_pairing_established": false
+      },
+      "unresolved": [
+        "Optional engine/transmission pairing is not expressly established; no manual/turbo combination or cross-product inferred.",
+        "Standard specification is eight-speed automatic but builder also lists an eight-speed 850RE option; applicability/price relationship is not explained.",
+        "V6 option description includes a Sahara-specific rear-axle note; retained as source wording without extending that axle claim to other trims."
+      ]
+    },
+    {
+      "edmunds_style_id": "402087705",
+      "edmunds_modelyear_id": "402076473",
+      "source_model": "wrangler",
+      "source_submodel": "SUV",
+      "marketed_trim": "Sahara",
+      "canonical_trim": "Sahara",
+      "door_count": 4,
+      "factory_body": {
+        "door_configuration": "four-door"
+      },
+      "builder_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402087705&submodel=SUV",
+      "specifications_url": "https://www.edmunds.com/jeep/wrangler/2026/st-402087705/features-specs/",
+      "displayed_trim_summary": "Sahara 4dr SUV 4WD (2.0L 4cyl Turbo 8A)",
+      "starting_msrp_usd": 48910,
+      "standard_engine_profile": "gas_20_turbo",
+      "optional_engines": [
+        {
+          "engine_profile": "gas_36_v6",
+          "label": "3.6L V6 24V VVT Engine UPG I w/ESS",
+          "price_usd": 500,
+          "displayed_description": [
+            "3.6L V6 24V VVT Engine UPG I with 285 hp @ 6400 rpm and 260 lb. ft. of torque @ 4800 rpm",
+            "Auxiliary battery",
+            "Engine oil cooler",
+            "Non-lock fuel cap without discriminator",
+            "Stop-start dual battery system",
+            "Note: Dana M220 rear axle is included on Sahara."
+          ],
+          "manufacturer_engine_code": "ERC",
+          "source_engine_code": null,
+          "engine_code_authority": "Established project mapping to existing authored Engine",
+          "source_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402087705&submodel=SUV",
+          "source_section": "Mechanical options"
+        }
+      ],
+      "standard_transmission": {
+        "label": "8-speed shiftable automatic",
+        "manufacturer_code": null,
+        "source_url": "https://www.edmunds.com/jeep/wrangler/2026/st-402087705/features-specs/",
+        "source_section": "Drivetrain"
+      },
+      "optional_transmissions": [],
+      "standard_drivetrain": {
+        "canonical": "4WD",
+        "displayed_drive_type": "Four wheel drive",
+        "displayed_mode": "Part time 4WD",
+        "availability": "Standard",
+        "source_url": "https://www.edmunds.com/jeep/wrangler/2026/st-402087705/features-specs/"
+      },
+      "source_evidence": {
+        "builder_trim_summary": "Sahara 4dr SUV 4WD (2.0L 4cyl Turbo 8A)",
+        "specification_selected_style_id": "402087705",
+        "expanded_engine_rows": {
+          "Base engine size": "2.0 L",
+          "Cylinders": "Inline 4",
+          "Base engine type": "Gas",
+          "Horsepower": "270 hp @ 5,250 rpm",
+          "Torque": "295 lb-ft @ 3,000 rpm",
+          "Valves": "16",
+          "Cam type": "Double overhead cam (DOHC)",
+          "Valve timing": "Variable",
+          "Direct injection": "Standard"
+        },
+        "fuel_type_row": "Premium unleaded (recommended)",
+        "drivetrain_rows": {
+          "Transmission": "8-speed shiftable automatic",
+          "Drive type": "Four wheel drive",
+          "Part time 4WD": "Standard"
+        },
+        "source_engine_code": null,
+        "mechanical_section_present": true,
+        "engine_and_transmission_options_exhaustively_inspected": true
+      },
+      "dependencies_and_restrictions": {
+        "explicit_engine_transmission_restrictions": [],
+        "selection_test": "Not performed; displayed labels and descriptions captured. Co-listing is not pairing evidence.",
+        "optional_engine_transmission_pairing_established": false
+      },
+      "unresolved": [
+        "Optional engine/transmission pairing is not expressly established; no manual/turbo combination or cross-product inferred.",
+        "V6 option description includes a Sahara-specific rear-axle note; retained as source wording without extending that axle claim to other trims."
+      ]
+    },
+    {
+      "edmunds_style_id": "402087713",
+      "edmunds_modelyear_id": "402076473",
+      "source_model": "wrangler",
+      "source_submodel": "SUV",
+      "marketed_trim": "Sport RHD",
+      "canonical_trim": "Sport RHD",
+      "door_count": 4,
+      "factory_body": {
+        "door_configuration": "four-door"
+      },
+      "builder_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402087713&submodel=SUV",
+      "specifications_url": "https://www.edmunds.com/jeep/wrangler/2026/st-402087713/features-specs/",
+      "displayed_trim_summary": "Sport RHD 4dr SUV 4WD (2.0L 4cyl Turbo 8A)",
+      "starting_msrp_usd": 49790,
+      "standard_engine_profile": "gas_20_turbo",
+      "optional_engines": [],
+      "standard_transmission": {
+        "label": "8-speed shiftable automatic",
+        "manufacturer_code": null,
+        "source_url": "https://www.edmunds.com/jeep/wrangler/2026/st-402087713/features-specs/",
+        "source_section": "Drivetrain"
+      },
+      "optional_transmissions": [],
+      "standard_drivetrain": {
+        "canonical": "4WD",
+        "displayed_drive_type": "Four wheel drive",
+        "displayed_mode": "Part time 4WD",
+        "availability": "Standard",
+        "source_url": "https://www.edmunds.com/jeep/wrangler/2026/st-402087713/features-specs/"
+      },
+      "source_evidence": {
+        "builder_trim_summary": "Sport RHD 4dr SUV 4WD (2.0L 4cyl Turbo 8A)",
+        "specification_selected_style_id": "402087713",
+        "expanded_engine_rows": {
+          "Base engine size": "2.0 L",
+          "Cylinders": "Inline 4",
+          "Base engine type": "Gas",
+          "Horsepower": "270 hp @ 5,250 rpm",
+          "Torque": "295 lb-ft @ 3,000 rpm",
+          "Valves": "16",
+          "Cam type": "Double overhead cam (DOHC)",
+          "Valve timing": "Variable",
+          "Direct injection": "Standard"
+        },
+        "fuel_type_row": "Premium unleaded (recommended)",
+        "drivetrain_rows": {
+          "Transmission": "8-speed shiftable automatic",
+          "Drive type": "Four wheel drive",
+          "Part time 4WD": "Standard"
+        },
+        "source_engine_code": null,
+        "mechanical_section_present": true,
+        "engine_and_transmission_options_exhaustively_inspected": true
+      },
+      "dependencies_and_restrictions": {
+        "explicit_engine_transmission_restrictions": [],
+        "selection_test": "Not performed; displayed labels and descriptions captured. Co-listing is not pairing evidence.",
+        "optional_engine_transmission_pairing_established": null
+      },
+      "unresolved": []
+    },
+    {
+      "edmunds_style_id": "402112416",
+      "edmunds_modelyear_id": "402076473",
+      "source_model": "wrangler",
+      "source_submodel": "SUV",
+      "marketed_trim": "Rewind",
+      "canonical_trim": "Rewind",
+      "door_count": 4,
+      "factory_body": {
+        "door_configuration": "four-door"
+      },
+      "builder_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402112416&submodel=SUV",
+      "specifications_url": "https://www.edmunds.com/jeep/wrangler/2026/st-402112416/features-specs/",
+      "displayed_trim_summary": "Rewind 4dr SUV 4WD (2.0L 4cyl Turbo 8A)",
+      "starting_msrp_usd": 50935,
+      "standard_engine_profile": "gas_20_turbo",
+      "optional_engines": [
+        {
+          "engine_profile": "gas_36_v6",
+          "label": "3.6L V6 24V VVT Engine UPG I w/ESS",
+          "price_usd": 500,
+          "displayed_description": [
+            "3.6L V6 24V VVT Engine UPG I with 285 hp @ 6400 rpm and 260 lb. ft. of torque @ 4800 rpm",
+            "Auxiliary battery",
+            "Engine oil cooler",
+            "Non-lock fuel cap without discriminator",
+            "Stop-start dual battery system",
+            "Note: Dana M220 rear axle is included on Sahara."
+          ],
+          "manufacturer_engine_code": "ERC",
+          "source_engine_code": null,
+          "engine_code_authority": "Established project mapping to existing authored Engine",
+          "source_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402112416&submodel=SUV",
+          "source_section": "Mechanical options"
+        }
+      ],
+      "standard_transmission": {
+        "label": "8-speed shiftable automatic",
+        "manufacturer_code": null,
+        "source_url": "https://www.edmunds.com/jeep/wrangler/2026/st-402112416/features-specs/",
+        "source_section": "Drivetrain"
+      },
+      "optional_transmissions": [
+        {
+          "label": "8-Speed Automatic 850RE Transmission",
+          "price_usd": 2500,
+          "manufacturer_transmission_designation": "850RE",
+          "displayed_description": [
+            "Adaptive cruise control with stop",
+            "4-wheel anti-lock disc brakes",
+            "Selec-Speed Control",
+            "Note: Dana M200 rear axle and Integrated radar camera module are included on Sport 4DR, Sport S 4DR, and Willys 4DR."
+          ],
+          "source_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402112416&submodel=SUV",
+          "source_section": "Mechanical options"
+        }
+      ],
+      "standard_drivetrain": {
+        "canonical": "4WD",
+        "displayed_drive_type": "Four wheel drive",
+        "displayed_mode": "Part time 4WD",
+        "availability": "Standard",
+        "source_url": "https://www.edmunds.com/jeep/wrangler/2026/st-402112416/features-specs/"
+      },
+      "source_evidence": {
+        "builder_trim_summary": "Rewind 4dr SUV 4WD (2.0L 4cyl Turbo 8A)",
+        "specification_selected_style_id": "402112416",
+        "expanded_engine_rows": {
+          "Base engine size": "2.0 L",
+          "Cylinders": "Inline 4",
+          "Base engine type": "Gas",
+          "Horsepower": "270 hp @ 5,250 rpm",
+          "Torque": "295 lb-ft @ 3,000 rpm",
+          "Valves": "16",
+          "Cam type": "Double overhead cam (DOHC)",
+          "Valve timing": "Variable",
+          "Direct injection": "Standard"
+        },
+        "fuel_type_row": "Premium unleaded (recommended)",
+        "drivetrain_rows": {
+          "Transmission": "8-speed shiftable automatic",
+          "Drive type": "Four wheel drive",
+          "Part time 4WD": "Standard"
+        },
+        "source_engine_code": null,
+        "mechanical_section_present": true,
+        "engine_and_transmission_options_exhaustively_inspected": true,
+        "ancillary_source_issue": "Fuel table displays Range in miles (city/hwy) 0/0 mi.; not ingested as a real mechanical specification."
+      },
+      "dependencies_and_restrictions": {
+        "explicit_engine_transmission_restrictions": [],
+        "selection_test": "Not performed; displayed labels and descriptions captured. Co-listing is not pairing evidence.",
+        "optional_engine_transmission_pairing_established": false
+      },
+      "unresolved": [
+        "Optional engine/transmission pairing is not expressly established; no manual/turbo combination or cross-product inferred.",
+        "Standard specification is eight-speed automatic but builder also lists an eight-speed 850RE option; applicability/price relationship is not explained.",
+        "V6 option description includes a Sahara-specific rear-axle note; retained as source wording without extending that axle claim to other trims."
+      ]
+    },
+    {
+      "edmunds_style_id": "402087665",
+      "edmunds_modelyear_id": "402076473",
+      "source_model": "wrangler",
+      "source_submodel": "SUV",
+      "marketed_trim": "Rubicon X",
+      "canonical_trim": "Rubicon X",
+      "door_count": 2,
+      "factory_body": {
+        "door_configuration": "two-door"
+      },
+      "builder_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402087665&submodel=SUV",
+      "specifications_url": "https://www.edmunds.com/jeep/wrangler/2026/st-402087665/features-specs/",
+      "displayed_trim_summary": "Rubicon X 2dr SUV 4WD (3.6L 6cyl 6M)",
+      "starting_msrp_usd": 55765,
+      "standard_engine_profile": "gas_36_v6",
+      "optional_engines": [
+        {
+          "engine_profile": "gas_20_turbo",
+          "label": "2.0L I4 DOHC DI Turbo Engine w/ESS",
+          "price_usd": 0,
+          "displayed_description": [
+            "2.0L I4 DOHC turbo engine with 270 hp @ 5250 rpm and 295 lb. ft. of torque @ 3000 rpm",
+            "17\" x 8.0\" machined wheels with Black pockets",
+            "35\" tire suspension",
+            "4.56 rear axle ratio",
+            "Auxiliary battery",
+            "LT315/70R17C 113/110S tires",
+            "Mopar hinge-gate reinforcement",
+            "Mopar jack spacer",
+            "Mopar tire relocation kit",
+            "Non-lock fuel cap without discriminator",
+            "Stop-start dual battery system",
+            "Wheel flare extensions"
+          ],
+          "manufacturer_engine_code": "EC1",
+          "source_engine_code": null,
+          "engine_code_authority": "Established project mapping to existing authored Engine",
+          "source_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402087665&submodel=SUV",
+          "source_section": "Mechanical options"
+        }
+      ],
+      "standard_transmission": {
+        "label": "6-speed manual",
+        "manufacturer_code": null,
+        "source_url": "https://www.edmunds.com/jeep/wrangler/2026/st-402087665/features-specs/",
+        "source_section": "Drivetrain"
+      },
+      "optional_transmissions": [
+        {
+          "label": "8-Speed Automatic 850RE Transmission",
+          "price_usd": 2500,
+          "manufacturer_transmission_designation": "850RE",
+          "displayed_description": [
+            "4:1 Rock-Trac heavy duty full time 4WD system",
+            "Adaptive cruise control with stop",
+            "Remote start system",
+            "Selec-speed control"
+          ],
+          "source_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402087665&submodel=SUV",
+          "source_section": "Mechanical options"
+        }
+      ],
+      "standard_drivetrain": {
+        "canonical": "4WD",
+        "displayed_drive_type": "Four wheel drive",
+        "displayed_mode": "Part time 4WD",
+        "availability": "Standard",
+        "source_url": "https://www.edmunds.com/jeep/wrangler/2026/st-402087665/features-specs/"
+      },
+      "source_evidence": {
+        "builder_trim_summary": "Rubicon X 2dr SUV 4WD (3.6L 6cyl 6M)",
+        "specification_selected_style_id": "402087665",
+        "expanded_engine_rows": {
+          "Base engine size": "3.6 L",
+          "Cylinders": "V6",
+          "Base engine type": "Gas",
+          "Horsepower": "285 hp @ 6,400 rpm",
+          "Torque": "260 lb-ft @ 4,800 rpm",
+          "Valves": "24",
+          "Cam type": "Double overhead cam (DOHC)",
+          "Valve timing": "Variable"
+        },
+        "fuel_type_row": "Regular unleaded",
+        "drivetrain_rows": {
+          "Transmission": "6-speed manual",
+          "Drive type": "Four wheel drive",
+          "Part time 4WD": "Standard"
+        },
+        "source_engine_code": null,
+        "mechanical_section_present": true,
+        "engine_and_transmission_options_exhaustively_inspected": true
+      },
+      "dependencies_and_restrictions": {
+        "explicit_engine_transmission_restrictions": [],
+        "selection_test": "Not performed; displayed labels and descriptions captured. Co-listing is not pairing evidence.",
+        "optional_engine_transmission_pairing_established": false
+      },
+      "unresolved": [
+        "Optional engine/transmission pairing is not expressly established; no manual/turbo combination or cross-product inferred."
+      ]
+    },
+    {
+      "edmunds_style_id": "402087709",
+      "edmunds_modelyear_id": "402076473",
+      "source_model": "wrangler",
+      "source_submodel": "SUV",
+      "marketed_trim": "Rubicon X",
+      "canonical_trim": "Rubicon X",
+      "door_count": 4,
+      "factory_body": {
+        "door_configuration": "four-door"
+      },
+      "builder_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402087709&submodel=SUV",
+      "specifications_url": "https://www.edmunds.com/jeep/wrangler/2026/st-402087709/features-specs/",
+      "displayed_trim_summary": "Rubicon X 4dr SUV 4WD (3.6L 6cyl 6M)",
+      "starting_msrp_usd": 60435,
+      "standard_engine_profile": "gas_36_v6",
+      "optional_engines": [
+        {
+          "engine_profile": "gas_20_turbo",
+          "label": "2.0L I4 DOHC DI Turbo Engine w/ESS",
+          "price_usd": 0,
+          "displayed_description": [
+            "2.0L I4 DOHC turbo engine with 270 hp @ 5250 rpm and 295 lb. ft. of torque @ 3000 rpm",
+            "Auxiliary battery",
+            "Non-lock fuel cap without discriminator",
+            "Stop-start dual battery system"
+          ],
+          "manufacturer_engine_code": "EC1",
+          "source_engine_code": null,
+          "engine_code_authority": "Established project mapping to existing authored Engine",
+          "source_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402087709&submodel=SUV",
+          "source_section": "Mechanical options"
+        }
+      ],
+      "standard_transmission": {
+        "label": "6-speed manual",
+        "manufacturer_code": null,
+        "source_url": "https://www.edmunds.com/jeep/wrangler/2026/st-402087709/features-specs/",
+        "source_section": "Drivetrain"
+      },
+      "optional_transmissions": [
+        {
+          "label": "8-Speed Automatic 850RE Transmission",
+          "price_usd": 3000,
+          "manufacturer_transmission_designation": "850RE",
+          "displayed_description": [
+            "17\" x 8.0\" machined wheels with Black pockets",
+            "35\" tire suspension",
+            "4:1 Rock-Trac heavy duty full time 4WD system",
+            "4.56 rear axle ratio",
+            "Adaptive cruise control with stop",
+            "Anti-lock 4-wheel disc performance brakes",
+            "LT315/70R17C 113/110S tires",
+            "Mopar hinge-gate reinforcement",
+            "Mopar jack spacer",
+            "Mopar tire relocation kit",
+            "Remote start system",
+            "Selec-speed control",
+            "Wheel flare extensions"
+          ],
+          "source_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402087709&submodel=SUV",
+          "source_section": "Mechanical options"
+        }
+      ],
+      "standard_drivetrain": {
+        "canonical": "4WD",
+        "displayed_drive_type": "Four wheel drive",
+        "displayed_mode": "Part time 4WD",
+        "availability": "Standard",
+        "source_url": "https://www.edmunds.com/jeep/wrangler/2026/st-402087709/features-specs/"
+      },
+      "source_evidence": {
+        "builder_trim_summary": "Rubicon X 4dr SUV 4WD (3.6L 6cyl 6M)",
+        "specification_selected_style_id": "402087709",
+        "expanded_engine_rows": {
+          "Base engine size": "3.6 L",
+          "Cylinders": "V6",
+          "Base engine type": "Gas",
+          "Horsepower": "285 hp @ 6,400 rpm",
+          "Torque": "260 lb-ft @ 4,800 rpm",
+          "Valves": "24",
+          "Cam type": "Double overhead cam (DOHC)",
+          "Valve timing": "Variable"
+        },
+        "fuel_type_row": "Regular unleaded",
+        "drivetrain_rows": {
+          "Transmission": "6-speed manual",
+          "Drive type": "Four wheel drive",
+          "Part time 4WD": "Standard"
+        },
+        "source_engine_code": null,
+        "mechanical_section_present": true,
+        "engine_and_transmission_options_exhaustively_inspected": true
+      },
+      "dependencies_and_restrictions": {
+        "explicit_engine_transmission_restrictions": [],
+        "selection_test": "Not performed; displayed labels and descriptions captured. Co-listing is not pairing evidence.",
+        "optional_engine_transmission_pairing_established": false
+      },
+      "unresolved": [
+        "Optional engine/transmission pairing is not expressly established; no manual/turbo combination or cross-product inferred."
+      ]
+    },
+    {
+      "edmunds_style_id": "402112349",
+      "edmunds_modelyear_id": "402076473",
+      "source_model": "wrangler",
+      "source_submodel": "Willys 392",
+      "marketed_trim": "Willys 392",
+      "canonical_trim": "Willys 392",
+      "door_count": 4,
+      "factory_body": {
+        "door_configuration": "four-door"
+      },
+      "builder_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402112349&submodel=Willys%20392",
+      "specifications_url": "https://www.edmunds.com/jeep/wrangler/2026/st-402112349/features-specs/",
+      "displayed_trim_summary": "Willys 392 4dr SUV 4WD (6.4L 8cyl 8A)",
+      "starting_msrp_usd": 69995,
+      "standard_engine_profile": "gas_64_v8",
+      "optional_engines": [],
+      "standard_transmission": {
+        "label": "8-speed shiftable automatic",
+        "manufacturer_code": null,
+        "source_url": "https://www.edmunds.com/jeep/wrangler/2026/st-402112349/features-specs/",
+        "source_section": "Drivetrain"
+      },
+      "optional_transmissions": [],
+      "standard_drivetrain": {
+        "canonical": "4WD",
+        "displayed_drive_type": "Four wheel drive",
+        "displayed_mode": "Full time 4WD",
+        "availability": "Standard",
+        "source_url": "https://www.edmunds.com/jeep/wrangler/2026/st-402112349/features-specs/"
+      },
+      "source_evidence": {
+        "builder_trim_summary": "Willys 392 4dr SUV 4WD (6.4L 8cyl 8A)",
+        "specification_selected_style_id": "402112349",
+        "expanded_engine_rows": {
+          "Base engine size": "6.4 L",
+          "Cylinders": "V8",
+          "Base engine type": "Gas",
+          "Horsepower": "470 hp @ 6,000 rpm",
+          "Torque": "470 lb-ft @ 4,300 rpm",
+          "Valves": "16",
+          "Cam type": "Overhead valves (OHV)",
+          "Cylinder deactivation": "Standard"
+        },
+        "fuel_type_row": "Premium unleaded (recommended)",
+        "drivetrain_rows": {
+          "Transmission": "8-speed shiftable automatic",
+          "Drive type": "Four wheel drive",
+          "Full time 4WD": "Standard"
+        },
+        "source_engine_code": null,
+        "mechanical_section_present": false,
+        "engine_and_transmission_options_exhaustively_inspected": true
+      },
+      "dependencies_and_restrictions": {
+        "explicit_engine_transmission_restrictions": [],
+        "selection_test": "Not performed; displayed labels and descriptions captured. Co-listing is not pairing evidence.",
+        "optional_engine_transmission_pairing_established": null
+      },
+      "unresolved": [],
+      "alternate_builder_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402112349&submodel=SUV"
+      ]
+    },
+    {
+      "edmunds_style_id": "402100986",
+      "edmunds_modelyear_id": "402076473",
+      "source_model": "wrangler",
+      "source_submodel": "Moab 392",
+      "marketed_trim": "Moab 392",
+      "canonical_trim": "Moab 392",
+      "door_count": 4,
+      "factory_body": {
+        "door_configuration": "four-door"
+      },
+      "builder_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402100986&submodel=Moab%20392",
+      "specifications_url": "https://www.edmunds.com/jeep/wrangler/2026/st-402100986/features-specs/",
+      "displayed_trim_summary": "Moab 392 4dr SUV 4WD (6.4L 8cyl 8A)",
+      "starting_msrp_usd": 79995,
+      "standard_engine_profile": "gas_64_v8",
+      "optional_engines": [],
+      "standard_transmission": {
+        "label": "8-speed shiftable automatic",
+        "manufacturer_code": null,
+        "source_url": "https://www.edmunds.com/jeep/wrangler/2026/st-402100986/features-specs/",
+        "source_section": "Drivetrain"
+      },
+      "optional_transmissions": [],
+      "standard_drivetrain": {
+        "canonical": "4WD",
+        "displayed_drive_type": "Four wheel drive",
+        "displayed_mode": "Full time 4WD",
+        "availability": "Standard",
+        "source_url": "https://www.edmunds.com/jeep/wrangler/2026/st-402100986/features-specs/"
+      },
+      "source_evidence": {
+        "builder_trim_summary": "Moab 392 4dr SUV 4WD (6.4L 8cyl 8A)",
+        "specification_selected_style_id": "402100986",
+        "expanded_engine_rows": {
+          "Base engine size": "6.4 L",
+          "Cylinders": "V8",
+          "Base engine type": "Gas",
+          "Horsepower": "470 hp @ 6,000 rpm",
+          "Torque": "470 lb-ft @ 4,300 rpm",
+          "Valves": "16",
+          "Cam type": "Overhead valves (OHV)",
+          "Cylinder deactivation": "Standard"
+        },
+        "fuel_type_row": "Premium unleaded (recommended)",
+        "drivetrain_rows": {
+          "Transmission": "8-speed shiftable automatic",
+          "Drive type": "Four wheel drive",
+          "Full time 4WD": "Standard"
+        },
+        "source_engine_code": null,
+        "mechanical_section_present": false,
+        "engine_and_transmission_options_exhaustively_inspected": true
+      },
+      "dependencies_and_restrictions": {
+        "explicit_engine_transmission_restrictions": [],
+        "selection_test": "Not performed; displayed labels and descriptions captured. Co-listing is not pairing evidence.",
+        "optional_engine_transmission_pairing_established": null
+      },
+      "unresolved": [],
+      "alternate_builder_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402100986&submodel=SUV"
+      ]
+    }
+  ],
+  "canonical_configurations": [
+    {
+      "inventory_id": "402087661:gas_36_v6",
+      "edmunds_style_ids": [
+        "402087661"
+      ],
+      "engine_availability": "standard",
+      "engine_profile": "gas_36_v6",
+      "canonical_fields": {
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2026,
+        "market": "US",
+        "trim_name": "Sport",
+        "factory_body_configuration": {
+          "door_configuration": "two-door"
+        },
+        "drivetrain": "4WD",
+        "engine_name": "3.6L V6 ESS",
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": "naturally_aspirated",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": "ERC"
+      },
+      "registered_engine_pk": 1,
+      "registered_engine_uuid": "f5a7caba-2fdd-43e1-a337-33429399bff3",
+      "engine_properties_authority": "Authored Engine registry",
+      "engine_mapping_basis": "Owner-supplied established Wrangler engine/profile association; independent MY2026 builder/specification evidence establishes offering. Code is project mapping, not an Edmunds quotation.",
+      "source_engine_code": null,
+      "source_engine_description": "3.6L 6cyl 6M",
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402087661&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2026/st-402087661/features-specs/"
+      ],
+      "engine_evidence_section": "Trim summary; exact-style Engine/Fuel & MPG/Drivetrain",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": "6-speed manual",
+      "unresolved_fields": [],
+      "manufacturer_engine_code_not_reported": true
+    },
+    {
+      "inventory_id": "402087661:gas_20_turbo",
+      "edmunds_style_ids": [
+        "402087661"
+      ],
+      "engine_availability": "optional",
+      "engine_profile": "gas_20_turbo",
+      "canonical_fields": {
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2026,
+        "market": "US",
+        "trim_name": "Sport",
+        "factory_body_configuration": {
+          "door_configuration": "two-door"
+        },
+        "drivetrain": "4WD",
+        "engine_name": "2.0L I4 Turbo",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": "EC1"
+      },
+      "registered_engine_pk": 2,
+      "registered_engine_uuid": "ba7b32b8-f69e-4bc4-952f-c493e0e417f4",
+      "engine_properties_authority": "Authored Engine registry",
+      "engine_mapping_basis": "Owner-supplied established Wrangler engine/profile association; independent MY2026 builder/specification evidence establishes offering. Code is project mapping, not an Edmunds quotation.",
+      "source_engine_code": null,
+      "source_engine_description": "2.0L I4 DOHC DI Turbo Engine w/ESS",
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402087661&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2026/st-402087661/features-specs/"
+      ],
+      "engine_evidence_section": "Mechanical options",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": null,
+      "unresolved_fields": [],
+      "manufacturer_engine_code_not_reported": true
+    },
+    {
+      "inventory_id": "402087699:gas_36_v6",
+      "edmunds_style_ids": [
+        "402087699"
+      ],
+      "engine_availability": "standard",
+      "engine_profile": "gas_36_v6",
+      "canonical_fields": {
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2026,
+        "market": "US",
+        "trim_name": "Sport",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "engine_name": "3.6L V6 ESS",
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": "naturally_aspirated",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": "ERC"
+      },
+      "registered_engine_pk": 1,
+      "registered_engine_uuid": "f5a7caba-2fdd-43e1-a337-33429399bff3",
+      "engine_properties_authority": "Authored Engine registry",
+      "engine_mapping_basis": "Owner-supplied established Wrangler engine/profile association; independent MY2026 builder/specification evidence establishes offering. Code is project mapping, not an Edmunds quotation.",
+      "source_engine_code": null,
+      "source_engine_description": "3.6L 6cyl 6M",
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402087699&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2026/st-402087699/features-specs/"
+      ],
+      "engine_evidence_section": "Trim summary; exact-style Engine/Fuel & MPG/Drivetrain",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": "6-speed manual",
+      "unresolved_fields": [],
+      "manufacturer_engine_code_not_reported": true
+    },
+    {
+      "inventory_id": "402087699:gas_20_turbo",
+      "edmunds_style_ids": [
+        "402087699"
+      ],
+      "engine_availability": "optional",
+      "engine_profile": "gas_20_turbo",
+      "canonical_fields": {
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2026,
+        "market": "US",
+        "trim_name": "Sport",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "engine_name": "2.0L I4 Turbo",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": "EC1"
+      },
+      "registered_engine_pk": 2,
+      "registered_engine_uuid": "ba7b32b8-f69e-4bc4-952f-c493e0e417f4",
+      "engine_properties_authority": "Authored Engine registry",
+      "engine_mapping_basis": "Owner-supplied established Wrangler engine/profile association; independent MY2026 builder/specification evidence establishes offering. Code is project mapping, not an Edmunds quotation.",
+      "source_engine_code": null,
+      "source_engine_description": "2.0L I4 DOHC DI Turbo Engine w/ESS",
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402087699&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2026/st-402087699/features-specs/"
+      ],
+      "engine_evidence_section": "Mechanical options",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": null,
+      "unresolved_fields": [],
+      "manufacturer_engine_code_not_reported": true
+    },
+    {
+      "inventory_id": "402087662:gas_36_v6",
+      "edmunds_style_ids": [
+        "402087662"
+      ],
+      "engine_availability": "standard",
+      "engine_profile": "gas_36_v6",
+      "canonical_fields": {
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2026,
+        "market": "US",
+        "trim_name": "Sport S",
+        "factory_body_configuration": {
+          "door_configuration": "two-door"
+        },
+        "drivetrain": "4WD",
+        "engine_name": "3.6L V6 ESS",
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": "naturally_aspirated",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": "ERC"
+      },
+      "registered_engine_pk": 1,
+      "registered_engine_uuid": "f5a7caba-2fdd-43e1-a337-33429399bff3",
+      "engine_properties_authority": "Authored Engine registry",
+      "engine_mapping_basis": "Owner-supplied established Wrangler engine/profile association; independent MY2026 builder/specification evidence establishes offering. Code is project mapping, not an Edmunds quotation.",
+      "source_engine_code": null,
+      "source_engine_description": "3.6L 6cyl 6M",
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402087662&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2026/st-402087662/features-specs/"
+      ],
+      "engine_evidence_section": "Trim summary; exact-style Engine/Fuel & MPG/Drivetrain",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": "6-speed manual",
+      "unresolved_fields": [],
+      "manufacturer_engine_code_not_reported": true
+    },
+    {
+      "inventory_id": "402087662:gas_20_turbo",
+      "edmunds_style_ids": [
+        "402087662"
+      ],
+      "engine_availability": "optional",
+      "engine_profile": "gas_20_turbo",
+      "canonical_fields": {
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2026,
+        "market": "US",
+        "trim_name": "Sport S",
+        "factory_body_configuration": {
+          "door_configuration": "two-door"
+        },
+        "drivetrain": "4WD",
+        "engine_name": "2.0L I4 Turbo",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": "EC1"
+      },
+      "registered_engine_pk": 2,
+      "registered_engine_uuid": "ba7b32b8-f69e-4bc4-952f-c493e0e417f4",
+      "engine_properties_authority": "Authored Engine registry",
+      "engine_mapping_basis": "Owner-supplied established Wrangler engine/profile association; independent MY2026 builder/specification evidence establishes offering. Code is project mapping, not an Edmunds quotation.",
+      "source_engine_code": null,
+      "source_engine_description": "2.0L I4 DOHC DI Turbo Engine w/ESS",
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402087662&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2026/st-402087662/features-specs/"
+      ],
+      "engine_evidence_section": "Mechanical options",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": null,
+      "unresolved_fields": [],
+      "manufacturer_engine_code_not_reported": true
+    },
+    {
+      "inventory_id": "402087700:gas_36_v6",
+      "edmunds_style_ids": [
+        "402087700"
+      ],
+      "engine_availability": "standard",
+      "engine_profile": "gas_36_v6",
+      "canonical_fields": {
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2026,
+        "market": "US",
+        "trim_name": "Sport S",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "engine_name": "3.6L V6 ESS",
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": "naturally_aspirated",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": "ERC"
+      },
+      "registered_engine_pk": 1,
+      "registered_engine_uuid": "f5a7caba-2fdd-43e1-a337-33429399bff3",
+      "engine_properties_authority": "Authored Engine registry",
+      "engine_mapping_basis": "Owner-supplied established Wrangler engine/profile association; independent MY2026 builder/specification evidence establishes offering. Code is project mapping, not an Edmunds quotation.",
+      "source_engine_code": null,
+      "source_engine_description": "3.6L 6cyl 6M",
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402087700&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2026/st-402087700/features-specs/"
+      ],
+      "engine_evidence_section": "Trim summary; exact-style Engine/Fuel & MPG/Drivetrain",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": "6-speed manual",
+      "unresolved_fields": [],
+      "manufacturer_engine_code_not_reported": true
+    },
+    {
+      "inventory_id": "402087700:gas_20_turbo",
+      "edmunds_style_ids": [
+        "402087700"
+      ],
+      "engine_availability": "optional",
+      "engine_profile": "gas_20_turbo",
+      "canonical_fields": {
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2026,
+        "market": "US",
+        "trim_name": "Sport S",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "engine_name": "2.0L I4 Turbo",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": "EC1"
+      },
+      "registered_engine_pk": 2,
+      "registered_engine_uuid": "ba7b32b8-f69e-4bc4-952f-c493e0e417f4",
+      "engine_properties_authority": "Authored Engine registry",
+      "engine_mapping_basis": "Owner-supplied established Wrangler engine/profile association; independent MY2026 builder/specification evidence establishes offering. Code is project mapping, not an Edmunds quotation.",
+      "source_engine_code": null,
+      "source_engine_description": "2.0L I4 DOHC DI Turbo Engine w/ESS",
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402087700&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2026/st-402087700/features-specs/"
+      ],
+      "engine_evidence_section": "Mechanical options",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": null,
+      "unresolved_fields": [],
+      "manufacturer_engine_code_not_reported": true
+    },
+    {
+      "inventory_id": "402087663:gas_36_v6",
+      "edmunds_style_ids": [
+        "402087663"
+      ],
+      "engine_availability": "standard",
+      "engine_profile": "gas_36_v6",
+      "canonical_fields": {
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2026,
+        "market": "US",
+        "trim_name": "Willys",
+        "factory_body_configuration": {
+          "door_configuration": "two-door"
+        },
+        "drivetrain": "4WD",
+        "engine_name": "3.6L V6 ESS",
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": "naturally_aspirated",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": "ERC"
+      },
+      "registered_engine_pk": 1,
+      "registered_engine_uuid": "f5a7caba-2fdd-43e1-a337-33429399bff3",
+      "engine_properties_authority": "Authored Engine registry",
+      "engine_mapping_basis": "Owner-supplied established Wrangler engine/profile association; independent MY2026 builder/specification evidence establishes offering. Code is project mapping, not an Edmunds quotation.",
+      "source_engine_code": null,
+      "source_engine_description": "3.6L 6cyl 6M",
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402087663&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2026/st-402087663/features-specs/"
+      ],
+      "engine_evidence_section": "Trim summary; exact-style Engine/Fuel & MPG/Drivetrain",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": "6-speed manual",
+      "unresolved_fields": [],
+      "manufacturer_engine_code_not_reported": true
+    },
+    {
+      "inventory_id": "402087663:gas_20_turbo",
+      "edmunds_style_ids": [
+        "402087663"
+      ],
+      "engine_availability": "optional",
+      "engine_profile": "gas_20_turbo",
+      "canonical_fields": {
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2026,
+        "market": "US",
+        "trim_name": "Willys",
+        "factory_body_configuration": {
+          "door_configuration": "two-door"
+        },
+        "drivetrain": "4WD",
+        "engine_name": "2.0L I4 Turbo",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": "EC1"
+      },
+      "registered_engine_pk": 2,
+      "registered_engine_uuid": "ba7b32b8-f69e-4bc4-952f-c493e0e417f4",
+      "engine_properties_authority": "Authored Engine registry",
+      "engine_mapping_basis": "Owner-supplied established Wrangler engine/profile association; independent MY2026 builder/specification evidence establishes offering. Code is project mapping, not an Edmunds quotation.",
+      "source_engine_code": null,
+      "source_engine_description": "2.0L I4 DOHC DI Turbo Engine w/ESS",
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402087663&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2026/st-402087663/features-specs/"
+      ],
+      "engine_evidence_section": "Mechanical options",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": null,
+      "unresolved_fields": [],
+      "manufacturer_engine_code_not_reported": true
+    },
+    {
+      "inventory_id": "402087701:gas_36_v6",
+      "edmunds_style_ids": [
+        "402087701"
+      ],
+      "engine_availability": "standard",
+      "engine_profile": "gas_36_v6",
+      "canonical_fields": {
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2026,
+        "market": "US",
+        "trim_name": "Willys",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "engine_name": "3.6L V6 ESS",
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": "naturally_aspirated",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": "ERC"
+      },
+      "registered_engine_pk": 1,
+      "registered_engine_uuid": "f5a7caba-2fdd-43e1-a337-33429399bff3",
+      "engine_properties_authority": "Authored Engine registry",
+      "engine_mapping_basis": "Owner-supplied established Wrangler engine/profile association; independent MY2026 builder/specification evidence establishes offering. Code is project mapping, not an Edmunds quotation.",
+      "source_engine_code": null,
+      "source_engine_description": "3.6L 6cyl 6M",
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402087701&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2026/st-402087701/features-specs/"
+      ],
+      "engine_evidence_section": "Trim summary; exact-style Engine/Fuel & MPG/Drivetrain",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": "6-speed manual",
+      "unresolved_fields": [],
+      "manufacturer_engine_code_not_reported": true
+    },
+    {
+      "inventory_id": "402087701:gas_20_turbo",
+      "edmunds_style_ids": [
+        "402087701"
+      ],
+      "engine_availability": "optional",
+      "engine_profile": "gas_20_turbo",
+      "canonical_fields": {
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2026,
+        "market": "US",
+        "trim_name": "Willys",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "engine_name": "2.0L I4 Turbo",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": "EC1"
+      },
+      "registered_engine_pk": 2,
+      "registered_engine_uuid": "ba7b32b8-f69e-4bc4-952f-c493e0e417f4",
+      "engine_properties_authority": "Authored Engine registry",
+      "engine_mapping_basis": "Owner-supplied established Wrangler engine/profile association; independent MY2026 builder/specification evidence establishes offering. Code is project mapping, not an Edmunds quotation.",
+      "source_engine_code": null,
+      "source_engine_description": "2.0L I4 DOHC DI Turbo Engine w/ESS",
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402087701&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2026/st-402087701/features-specs/"
+      ],
+      "engine_evidence_section": "Mechanical options",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": null,
+      "unresolved_fields": [],
+      "manufacturer_engine_code_not_reported": true
+    },
+    {
+      "inventory_id": "402112417:gas_36_v6",
+      "edmunds_style_ids": [
+        "402112417"
+      ],
+      "engine_availability": "standard",
+      "engine_profile": "gas_36_v6",
+      "canonical_fields": {
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2026,
+        "market": "US",
+        "trim_name": "California Edition",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "engine_name": "3.6L V6 ESS",
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": "naturally_aspirated",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": "ERC"
+      },
+      "registered_engine_pk": 1,
+      "registered_engine_uuid": "f5a7caba-2fdd-43e1-a337-33429399bff3",
+      "engine_properties_authority": "Authored Engine registry",
+      "engine_mapping_basis": "Owner-supplied established Wrangler engine/profile association; independent MY2026 builder/specification evidence establishes offering. Code is project mapping, not an Edmunds quotation.",
+      "source_engine_code": null,
+      "source_engine_description": "3.6L 6cyl 6M",
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402112417&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2026/st-402112417/features-specs/"
+      ],
+      "engine_evidence_section": "Trim summary; exact-style Engine/Fuel & MPG/Drivetrain",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": "6-speed manual",
+      "unresolved_fields": [],
+      "manufacturer_engine_code_not_reported": true
+    },
+    {
+      "inventory_id": "402112417:gas_20_turbo",
+      "edmunds_style_ids": [
+        "402112417"
+      ],
+      "engine_availability": "optional",
+      "engine_profile": "gas_20_turbo",
+      "canonical_fields": {
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2026,
+        "market": "US",
+        "trim_name": "California Edition",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "engine_name": "2.0L I4 Turbo",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": "EC1"
+      },
+      "registered_engine_pk": 2,
+      "registered_engine_uuid": "ba7b32b8-f69e-4bc4-952f-c493e0e417f4",
+      "engine_properties_authority": "Authored Engine registry",
+      "engine_mapping_basis": "Owner-supplied established Wrangler engine/profile association; independent MY2026 builder/specification evidence establishes offering. Code is project mapping, not an Edmunds quotation.",
+      "source_engine_code": null,
+      "source_engine_description": "2.0L I4 DOHC DI Turbo Engine w/ESS",
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402112417&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2026/st-402112417/features-specs/"
+      ],
+      "engine_evidence_section": "Mechanical options",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": null,
+      "unresolved_fields": [],
+      "manufacturer_engine_code_not_reported": true
+    },
+    {
+      "inventory_id": "402087664:gas_36_v6",
+      "edmunds_style_ids": [
+        "402087664"
+      ],
+      "engine_availability": "standard",
+      "engine_profile": "gas_36_v6",
+      "canonical_fields": {
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2026,
+        "market": "US",
+        "trim_name": "Rubicon",
+        "factory_body_configuration": {
+          "door_configuration": "two-door"
+        },
+        "drivetrain": "4WD",
+        "engine_name": "3.6L V6 ESS",
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": "naturally_aspirated",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": "ERC"
+      },
+      "registered_engine_pk": 1,
+      "registered_engine_uuid": "f5a7caba-2fdd-43e1-a337-33429399bff3",
+      "engine_properties_authority": "Authored Engine registry",
+      "engine_mapping_basis": "Owner-supplied established Wrangler engine/profile association; independent MY2026 builder/specification evidence establishes offering. Code is project mapping, not an Edmunds quotation.",
+      "source_engine_code": null,
+      "source_engine_description": "3.6L 6cyl 6M",
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402087664&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2026/st-402087664/features-specs/"
+      ],
+      "engine_evidence_section": "Trim summary; exact-style Engine/Fuel & MPG/Drivetrain",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": "6-speed manual",
+      "unresolved_fields": [],
+      "manufacturer_engine_code_not_reported": true
+    },
+    {
+      "inventory_id": "402087664:gas_20_turbo",
+      "edmunds_style_ids": [
+        "402087664"
+      ],
+      "engine_availability": "optional",
+      "engine_profile": "gas_20_turbo",
+      "canonical_fields": {
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2026,
+        "market": "US",
+        "trim_name": "Rubicon",
+        "factory_body_configuration": {
+          "door_configuration": "two-door"
+        },
+        "drivetrain": "4WD",
+        "engine_name": "2.0L I4 Turbo",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": "EC1"
+      },
+      "registered_engine_pk": 2,
+      "registered_engine_uuid": "ba7b32b8-f69e-4bc4-952f-c493e0e417f4",
+      "engine_properties_authority": "Authored Engine registry",
+      "engine_mapping_basis": "Owner-supplied established Wrangler engine/profile association; independent MY2026 builder/specification evidence establishes offering. Code is project mapping, not an Edmunds quotation.",
+      "source_engine_code": null,
+      "source_engine_description": "2.0L I4 DOHC DI Turbo Engine w/ESS",
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402087664&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2026/st-402087664/features-specs/"
+      ],
+      "engine_evidence_section": "Mechanical options",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": null,
+      "unresolved_fields": [],
+      "manufacturer_engine_code_not_reported": true
+    },
+    {
+      "inventory_id": "402087708:gas_36_v6",
+      "edmunds_style_ids": [
+        "402087708"
+      ],
+      "engine_availability": "standard",
+      "engine_profile": "gas_36_v6",
+      "canonical_fields": {
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2026,
+        "market": "US",
+        "trim_name": "Rubicon",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "engine_name": "3.6L V6 ESS",
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": "naturally_aspirated",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": "ERC"
+      },
+      "registered_engine_pk": 1,
+      "registered_engine_uuid": "f5a7caba-2fdd-43e1-a337-33429399bff3",
+      "engine_properties_authority": "Authored Engine registry",
+      "engine_mapping_basis": "Owner-supplied established Wrangler engine/profile association; independent MY2026 builder/specification evidence establishes offering. Code is project mapping, not an Edmunds quotation.",
+      "source_engine_code": null,
+      "source_engine_description": "3.6L 6cyl 6M",
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402087708&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2026/st-402087708/features-specs/"
+      ],
+      "engine_evidence_section": "Trim summary; exact-style Engine/Fuel & MPG/Drivetrain",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": "6-speed manual",
+      "unresolved_fields": [],
+      "manufacturer_engine_code_not_reported": true
+    },
+    {
+      "inventory_id": "402087708:gas_20_turbo",
+      "edmunds_style_ids": [
+        "402087708"
+      ],
+      "engine_availability": "optional",
+      "engine_profile": "gas_20_turbo",
+      "canonical_fields": {
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2026,
+        "market": "US",
+        "trim_name": "Rubicon",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "engine_name": "2.0L I4 Turbo",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": "EC1"
+      },
+      "registered_engine_pk": 2,
+      "registered_engine_uuid": "ba7b32b8-f69e-4bc4-952f-c493e0e417f4",
+      "engine_properties_authority": "Authored Engine registry",
+      "engine_mapping_basis": "Owner-supplied established Wrangler engine/profile association; independent MY2026 builder/specification evidence establishes offering. Code is project mapping, not an Edmunds quotation.",
+      "source_engine_code": null,
+      "source_engine_description": "2.0L I4 DOHC DI Turbo Engine w/ESS",
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402087708&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2026/st-402087708/features-specs/"
+      ],
+      "engine_evidence_section": "Mechanical options",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": null,
+      "unresolved_fields": [],
+      "manufacturer_engine_code_not_reported": true
+    },
+    {
+      "inventory_id": "402101163:gas_20_turbo",
+      "edmunds_style_ids": [
+        "402101163"
+      ],
+      "engine_availability": "standard",
+      "engine_profile": "gas_20_turbo",
+      "canonical_fields": {
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2026,
+        "market": "US",
+        "trim_name": "85th Anniversary Edition",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "engine_name": "2.0L I4 Turbo",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": "EC1"
+      },
+      "registered_engine_pk": 2,
+      "registered_engine_uuid": "ba7b32b8-f69e-4bc4-952f-c493e0e417f4",
+      "engine_properties_authority": "Authored Engine registry",
+      "engine_mapping_basis": "Owner-supplied established Wrangler engine/profile association; independent MY2026 builder/specification evidence establishes offering. Code is project mapping, not an Edmunds quotation.",
+      "source_engine_code": null,
+      "source_engine_description": "2.0L 4cyl Turbo 8A",
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402101163&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2026/st-402101163/features-specs/"
+      ],
+      "engine_evidence_section": "Trim summary; exact-style Engine/Fuel & MPG/Drivetrain",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": "8-speed shiftable automatic",
+      "unresolved_fields": [],
+      "manufacturer_engine_code_not_reported": true
+    },
+    {
+      "inventory_id": "402101163:gas_36_v6",
+      "edmunds_style_ids": [
+        "402101163"
+      ],
+      "engine_availability": "optional",
+      "engine_profile": "gas_36_v6",
+      "canonical_fields": {
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2026,
+        "market": "US",
+        "trim_name": "85th Anniversary Edition",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "engine_name": "3.6L V6 ESS",
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": "naturally_aspirated",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": "ERC"
+      },
+      "registered_engine_pk": 1,
+      "registered_engine_uuid": "f5a7caba-2fdd-43e1-a337-33429399bff3",
+      "engine_properties_authority": "Authored Engine registry",
+      "engine_mapping_basis": "Owner-supplied established Wrangler engine/profile association; independent MY2026 builder/specification evidence establishes offering. Code is project mapping, not an Edmunds quotation.",
+      "source_engine_code": null,
+      "source_engine_description": "3.6L V6 24V VVT Engine UPG I w/ESS",
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402101163&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2026/st-402101163/features-specs/"
+      ],
+      "engine_evidence_section": "Mechanical options",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": null,
+      "unresolved_fields": [],
+      "manufacturer_engine_code_not_reported": true
+    },
+    {
+      "inventory_id": "402101072:gas_20_turbo",
+      "edmunds_style_ids": [
+        "402101072"
+      ],
+      "engine_availability": "standard",
+      "engine_profile": "gas_20_turbo",
+      "canonical_fields": {
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2026,
+        "market": "US",
+        "trim_name": "Willys 41",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "engine_name": "2.0L I4 Turbo",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": "EC1"
+      },
+      "registered_engine_pk": 2,
+      "registered_engine_uuid": "ba7b32b8-f69e-4bc4-952f-c493e0e417f4",
+      "engine_properties_authority": "Authored Engine registry",
+      "engine_mapping_basis": "Owner-supplied established Wrangler engine/profile association; independent MY2026 builder/specification evidence establishes offering. Code is project mapping, not an Edmunds quotation.",
+      "source_engine_code": null,
+      "source_engine_description": "2.0L 4cyl Turbo 8A",
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402101072&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2026/st-402101072/features-specs/"
+      ],
+      "engine_evidence_section": "Trim summary; exact-style Engine/Fuel & MPG/Drivetrain",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": "8-speed shiftable automatic",
+      "unresolved_fields": [],
+      "manufacturer_engine_code_not_reported": true
+    },
+    {
+      "inventory_id": "402101072:gas_36_v6",
+      "edmunds_style_ids": [
+        "402101072"
+      ],
+      "engine_availability": "optional",
+      "engine_profile": "gas_36_v6",
+      "canonical_fields": {
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2026,
+        "market": "US",
+        "trim_name": "Willys 41",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "engine_name": "3.6L V6 ESS",
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": "naturally_aspirated",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": "ERC"
+      },
+      "registered_engine_pk": 1,
+      "registered_engine_uuid": "f5a7caba-2fdd-43e1-a337-33429399bff3",
+      "engine_properties_authority": "Authored Engine registry",
+      "engine_mapping_basis": "Owner-supplied established Wrangler engine/profile association; independent MY2026 builder/specification evidence establishes offering. Code is project mapping, not an Edmunds quotation.",
+      "source_engine_code": null,
+      "source_engine_description": "3.6L V6 24V VVT Engine UPG I w/ESS",
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402101072&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2026/st-402101072/features-specs/"
+      ],
+      "engine_evidence_section": "Mechanical options",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": null,
+      "unresolved_fields": [],
+      "manufacturer_engine_code_not_reported": true
+    },
+    {
+      "inventory_id": "402087705:gas_20_turbo",
+      "edmunds_style_ids": [
+        "402087705"
+      ],
+      "engine_availability": "standard",
+      "engine_profile": "gas_20_turbo",
+      "canonical_fields": {
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2026,
+        "market": "US",
+        "trim_name": "Sahara",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "engine_name": "2.0L I4 Turbo",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": "EC1"
+      },
+      "registered_engine_pk": 2,
+      "registered_engine_uuid": "ba7b32b8-f69e-4bc4-952f-c493e0e417f4",
+      "engine_properties_authority": "Authored Engine registry",
+      "engine_mapping_basis": "Owner-supplied established Wrangler engine/profile association; independent MY2026 builder/specification evidence establishes offering. Code is project mapping, not an Edmunds quotation.",
+      "source_engine_code": null,
+      "source_engine_description": "2.0L 4cyl Turbo 8A",
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402087705&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2026/st-402087705/features-specs/"
+      ],
+      "engine_evidence_section": "Trim summary; exact-style Engine/Fuel & MPG/Drivetrain",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": "8-speed shiftable automatic",
+      "unresolved_fields": [],
+      "manufacturer_engine_code_not_reported": true
+    },
+    {
+      "inventory_id": "402087705:gas_36_v6",
+      "edmunds_style_ids": [
+        "402087705"
+      ],
+      "engine_availability": "optional",
+      "engine_profile": "gas_36_v6",
+      "canonical_fields": {
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2026,
+        "market": "US",
+        "trim_name": "Sahara",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "engine_name": "3.6L V6 ESS",
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": "naturally_aspirated",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": "ERC"
+      },
+      "registered_engine_pk": 1,
+      "registered_engine_uuid": "f5a7caba-2fdd-43e1-a337-33429399bff3",
+      "engine_properties_authority": "Authored Engine registry",
+      "engine_mapping_basis": "Owner-supplied established Wrangler engine/profile association; independent MY2026 builder/specification evidence establishes offering. Code is project mapping, not an Edmunds quotation.",
+      "source_engine_code": null,
+      "source_engine_description": "3.6L V6 24V VVT Engine UPG I w/ESS",
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402087705&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2026/st-402087705/features-specs/"
+      ],
+      "engine_evidence_section": "Mechanical options",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": null,
+      "unresolved_fields": [],
+      "manufacturer_engine_code_not_reported": true
+    },
+    {
+      "inventory_id": "402087713:gas_20_turbo",
+      "edmunds_style_ids": [
+        "402087713"
+      ],
+      "engine_availability": "standard",
+      "engine_profile": "gas_20_turbo",
+      "canonical_fields": {
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2026,
+        "market": "US",
+        "trim_name": "Sport RHD",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "engine_name": "2.0L I4 Turbo",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": "EC1"
+      },
+      "registered_engine_pk": 2,
+      "registered_engine_uuid": "ba7b32b8-f69e-4bc4-952f-c493e0e417f4",
+      "engine_properties_authority": "Authored Engine registry",
+      "engine_mapping_basis": "Owner-supplied established Wrangler engine/profile association; independent MY2026 builder/specification evidence establishes offering. Code is project mapping, not an Edmunds quotation.",
+      "source_engine_code": null,
+      "source_engine_description": "2.0L 4cyl Turbo 8A",
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402087713&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2026/st-402087713/features-specs/"
+      ],
+      "engine_evidence_section": "Trim summary; exact-style Engine/Fuel & MPG/Drivetrain",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": "8-speed shiftable automatic",
+      "unresolved_fields": [],
+      "manufacturer_engine_code_not_reported": true
+    },
+    {
+      "inventory_id": "402112416:gas_20_turbo",
+      "edmunds_style_ids": [
+        "402112416"
+      ],
+      "engine_availability": "standard",
+      "engine_profile": "gas_20_turbo",
+      "canonical_fields": {
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2026,
+        "market": "US",
+        "trim_name": "Rewind",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "engine_name": "2.0L I4 Turbo",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": "EC1"
+      },
+      "registered_engine_pk": 2,
+      "registered_engine_uuid": "ba7b32b8-f69e-4bc4-952f-c493e0e417f4",
+      "engine_properties_authority": "Authored Engine registry",
+      "engine_mapping_basis": "Owner-supplied established Wrangler engine/profile association; independent MY2026 builder/specification evidence establishes offering. Code is project mapping, not an Edmunds quotation.",
+      "source_engine_code": null,
+      "source_engine_description": "2.0L 4cyl Turbo 8A",
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402112416&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2026/st-402112416/features-specs/"
+      ],
+      "engine_evidence_section": "Trim summary; exact-style Engine/Fuel & MPG/Drivetrain",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": "8-speed shiftable automatic",
+      "unresolved_fields": [],
+      "manufacturer_engine_code_not_reported": true
+    },
+    {
+      "inventory_id": "402112416:gas_36_v6",
+      "edmunds_style_ids": [
+        "402112416"
+      ],
+      "engine_availability": "optional",
+      "engine_profile": "gas_36_v6",
+      "canonical_fields": {
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2026,
+        "market": "US",
+        "trim_name": "Rewind",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "engine_name": "3.6L V6 ESS",
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": "naturally_aspirated",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": "ERC"
+      },
+      "registered_engine_pk": 1,
+      "registered_engine_uuid": "f5a7caba-2fdd-43e1-a337-33429399bff3",
+      "engine_properties_authority": "Authored Engine registry",
+      "engine_mapping_basis": "Owner-supplied established Wrangler engine/profile association; independent MY2026 builder/specification evidence establishes offering. Code is project mapping, not an Edmunds quotation.",
+      "source_engine_code": null,
+      "source_engine_description": "3.6L V6 24V VVT Engine UPG I w/ESS",
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402112416&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2026/st-402112416/features-specs/"
+      ],
+      "engine_evidence_section": "Mechanical options",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": null,
+      "unresolved_fields": [],
+      "manufacturer_engine_code_not_reported": true
+    },
+    {
+      "inventory_id": "402087665:gas_36_v6",
+      "edmunds_style_ids": [
+        "402087665"
+      ],
+      "engine_availability": "standard",
+      "engine_profile": "gas_36_v6",
+      "canonical_fields": {
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2026,
+        "market": "US",
+        "trim_name": "Rubicon X",
+        "factory_body_configuration": {
+          "door_configuration": "two-door"
+        },
+        "drivetrain": "4WD",
+        "engine_name": "3.6L V6 ESS",
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": "naturally_aspirated",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": "ERC"
+      },
+      "registered_engine_pk": 1,
+      "registered_engine_uuid": "f5a7caba-2fdd-43e1-a337-33429399bff3",
+      "engine_properties_authority": "Authored Engine registry",
+      "engine_mapping_basis": "Owner-supplied established Wrangler engine/profile association; independent MY2026 builder/specification evidence establishes offering. Code is project mapping, not an Edmunds quotation.",
+      "source_engine_code": null,
+      "source_engine_description": "3.6L 6cyl 6M",
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402087665&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2026/st-402087665/features-specs/"
+      ],
+      "engine_evidence_section": "Trim summary; exact-style Engine/Fuel & MPG/Drivetrain",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": "6-speed manual",
+      "unresolved_fields": [],
+      "manufacturer_engine_code_not_reported": true
+    },
+    {
+      "inventory_id": "402087665:gas_20_turbo",
+      "edmunds_style_ids": [
+        "402087665"
+      ],
+      "engine_availability": "optional",
+      "engine_profile": "gas_20_turbo",
+      "canonical_fields": {
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2026,
+        "market": "US",
+        "trim_name": "Rubicon X",
+        "factory_body_configuration": {
+          "door_configuration": "two-door"
+        },
+        "drivetrain": "4WD",
+        "engine_name": "2.0L I4 Turbo",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": "EC1"
+      },
+      "registered_engine_pk": 2,
+      "registered_engine_uuid": "ba7b32b8-f69e-4bc4-952f-c493e0e417f4",
+      "engine_properties_authority": "Authored Engine registry",
+      "engine_mapping_basis": "Owner-supplied established Wrangler engine/profile association; independent MY2026 builder/specification evidence establishes offering. Code is project mapping, not an Edmunds quotation.",
+      "source_engine_code": null,
+      "source_engine_description": "2.0L I4 DOHC DI Turbo Engine w/ESS",
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402087665&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2026/st-402087665/features-specs/"
+      ],
+      "engine_evidence_section": "Mechanical options",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": null,
+      "unresolved_fields": [],
+      "manufacturer_engine_code_not_reported": true
+    },
+    {
+      "inventory_id": "402087709:gas_36_v6",
+      "edmunds_style_ids": [
+        "402087709"
+      ],
+      "engine_availability": "standard",
+      "engine_profile": "gas_36_v6",
+      "canonical_fields": {
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2026,
+        "market": "US",
+        "trim_name": "Rubicon X",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "engine_name": "3.6L V6 ESS",
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": "naturally_aspirated",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": "ERC"
+      },
+      "registered_engine_pk": 1,
+      "registered_engine_uuid": "f5a7caba-2fdd-43e1-a337-33429399bff3",
+      "engine_properties_authority": "Authored Engine registry",
+      "engine_mapping_basis": "Owner-supplied established Wrangler engine/profile association; independent MY2026 builder/specification evidence establishes offering. Code is project mapping, not an Edmunds quotation.",
+      "source_engine_code": null,
+      "source_engine_description": "3.6L 6cyl 6M",
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402087709&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2026/st-402087709/features-specs/"
+      ],
+      "engine_evidence_section": "Trim summary; exact-style Engine/Fuel & MPG/Drivetrain",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": "6-speed manual",
+      "unresolved_fields": [],
+      "manufacturer_engine_code_not_reported": true
+    },
+    {
+      "inventory_id": "402087709:gas_20_turbo",
+      "edmunds_style_ids": [
+        "402087709"
+      ],
+      "engine_availability": "optional",
+      "engine_profile": "gas_20_turbo",
+      "canonical_fields": {
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2026,
+        "market": "US",
+        "trim_name": "Rubicon X",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "engine_name": "2.0L I4 Turbo",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": "EC1"
+      },
+      "registered_engine_pk": 2,
+      "registered_engine_uuid": "ba7b32b8-f69e-4bc4-952f-c493e0e417f4",
+      "engine_properties_authority": "Authored Engine registry",
+      "engine_mapping_basis": "Owner-supplied established Wrangler engine/profile association; independent MY2026 builder/specification evidence establishes offering. Code is project mapping, not an Edmunds quotation.",
+      "source_engine_code": null,
+      "source_engine_description": "2.0L I4 DOHC DI Turbo Engine w/ESS",
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402087709&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2026/st-402087709/features-specs/"
+      ],
+      "engine_evidence_section": "Mechanical options",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": null,
+      "unresolved_fields": [],
+      "manufacturer_engine_code_not_reported": true
+    },
+    {
+      "inventory_id": "402112349:gas_64_v8",
+      "edmunds_style_ids": [
+        "402112349"
+      ],
+      "engine_availability": "standard",
+      "engine_profile": "gas_64_v8",
+      "canonical_fields": {
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2026,
+        "market": "US",
+        "trim_name": "Willys 392",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "engine_name": "6.4L V8 HEMI",
+        "engine_displacement_liters": "6.4",
+        "engine_cylinders": 8,
+        "engine_aspiration": "naturally_aspirated",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": "ESG"
+      },
+      "registered_engine_pk": 3,
+      "registered_engine_uuid": "d56ecfba-5f5d-4166-82a2-77572d4a6f2d",
+      "engine_properties_authority": "Authored Engine registry",
+      "engine_mapping_basis": "Owner-supplied established Wrangler engine/profile association; independent MY2026 builder/specification evidence establishes offering. Code is project mapping, not an Edmunds quotation.",
+      "source_engine_code": null,
+      "source_engine_description": "6.4L 8cyl 8A",
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402112349&submodel=Willys%20392",
+        "https://www.edmunds.com/jeep/wrangler/2026/st-402112349/features-specs/"
+      ],
+      "engine_evidence_section": "Trim summary; exact-style Engine/Fuel & MPG/Drivetrain",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": "8-speed shiftable automatic",
+      "unresolved_fields": [],
+      "manufacturer_engine_code_not_reported": true
+    },
+    {
+      "inventory_id": "402100986:gas_64_v8",
+      "edmunds_style_ids": [
+        "402100986"
+      ],
+      "engine_availability": "standard",
+      "engine_profile": "gas_64_v8",
+      "canonical_fields": {
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2026,
+        "market": "US",
+        "trim_name": "Moab 392",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "engine_name": "6.4L V8 HEMI",
+        "engine_displacement_liters": "6.4",
+        "engine_cylinders": 8,
+        "engine_aspiration": "naturally_aspirated",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": "ESG"
+      },
+      "registered_engine_pk": 3,
+      "registered_engine_uuid": "d56ecfba-5f5d-4166-82a2-77572d4a6f2d",
+      "engine_properties_authority": "Authored Engine registry",
+      "engine_mapping_basis": "Owner-supplied established Wrangler engine/profile association; independent MY2026 builder/specification evidence establishes offering. Code is project mapping, not an Edmunds quotation.",
+      "source_engine_code": null,
+      "source_engine_description": "6.4L 8cyl 8A",
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402100986&submodel=Moab%20392",
+        "https://www.edmunds.com/jeep/wrangler/2026/st-402100986/features-specs/"
+      ],
+      "engine_evidence_section": "Trim summary; exact-style Engine/Fuel & MPG/Drivetrain",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": "8-speed shiftable automatic",
+      "unresolved_fields": [],
+      "manufacturer_engine_code_not_reported": true
+    }
+  ],
+  "comparison_with_my2025": {
+    "baseline_inventory": "docs/research/MY2025_JL_edmunds_builder_20261114/inventory.json",
+    "my2025_counts": {
+      "styles": 20,
+      "gasoline_styles": 13,
+      "phev_styles": 7,
+      "canonical_configurations": 31,
+      "gasoline_configurations": 24,
+      "phev_configurations": 7,
+      "configurations_with_unreported_aspiration": 12
+    },
+    "my2026_counts": {
+      "styles": 18,
+      "canonical_configurations": 33,
+      "gasoline": 33,
+      "phev": 0
+    },
+    "added_canonical_trims": [
+      "85th Anniversary Edition",
+      "California Edition",
+      "Moab 392",
+      "Rewind",
+      "Willys 392",
+      "Willys 41"
+    ],
+    "discontinued_canonical_trims": [
+      "Backcountry 4xe",
+      "Rubicon 392 Final Edition",
+      "Rubicon 4xe",
+      "Rubicon X 4xe",
+      "Sahara 4xe",
+      "Sport S 4xe",
+      "Willys '41 4xe",
+      "Willys 4xe"
+    ],
+    "retained_canonical_trims": [
+      "Rubicon",
+      "Rubicon X",
+      "Sahara",
+      "Sport",
+      "Sport RHD",
+      "Sport S",
+      "Willys"
+    ],
+    "added_configurations": [
+      {
+        "trim": "85th Anniversary Edition",
+        "door_configuration": "four-door",
+        "engine_profile": "gas_20_turbo",
+        "source_urls": [
+          "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402101163&submodel=SUV",
+          "https://www.edmunds.com/jeep/wrangler/2026/st-402101163/features-specs/"
+        ]
+      },
+      {
+        "trim": "85th Anniversary Edition",
+        "door_configuration": "four-door",
+        "engine_profile": "gas_36_v6",
+        "source_urls": [
+          "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402101163&submodel=SUV",
+          "https://www.edmunds.com/jeep/wrangler/2026/st-402101163/features-specs/"
+        ]
+      },
+      {
+        "trim": "California Edition",
+        "door_configuration": "four-door",
+        "engine_profile": "gas_20_turbo",
+        "source_urls": [
+          "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402112417&submodel=SUV",
+          "https://www.edmunds.com/jeep/wrangler/2026/st-402112417/features-specs/"
+        ]
+      },
+      {
+        "trim": "California Edition",
+        "door_configuration": "four-door",
+        "engine_profile": "gas_36_v6",
+        "source_urls": [
+          "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402112417&submodel=SUV",
+          "https://www.edmunds.com/jeep/wrangler/2026/st-402112417/features-specs/"
+        ]
+      },
+      {
+        "trim": "Moab 392",
+        "door_configuration": "four-door",
+        "engine_profile": "gas_64_v8",
+        "source_urls": [
+          "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402100986&submodel=Moab%20392",
+          "https://www.edmunds.com/jeep/wrangler/2026/st-402100986/features-specs/"
+        ]
+      },
+      {
+        "trim": "Rewind",
+        "door_configuration": "four-door",
+        "engine_profile": "gas_20_turbo",
+        "source_urls": [
+          "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402112416&submodel=SUV",
+          "https://www.edmunds.com/jeep/wrangler/2026/st-402112416/features-specs/"
+        ]
+      },
+      {
+        "trim": "Rewind",
+        "door_configuration": "four-door",
+        "engine_profile": "gas_36_v6",
+        "source_urls": [
+          "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402112416&submodel=SUV",
+          "https://www.edmunds.com/jeep/wrangler/2026/st-402112416/features-specs/"
+        ]
+      },
+      {
+        "trim": "Willys 392",
+        "door_configuration": "four-door",
+        "engine_profile": "gas_64_v8",
+        "source_urls": [
+          "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402112349&submodel=Willys%20392",
+          "https://www.edmunds.com/jeep/wrangler/2026/st-402112349/features-specs/"
+        ]
+      },
+      {
+        "trim": "Willys 41",
+        "door_configuration": "four-door",
+        "engine_profile": "gas_20_turbo",
+        "source_urls": [
+          "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402101072&submodel=SUV",
+          "https://www.edmunds.com/jeep/wrangler/2026/st-402101072/features-specs/"
+        ]
+      },
+      {
+        "trim": "Willys 41",
+        "door_configuration": "four-door",
+        "engine_profile": "gas_36_v6",
+        "source_urls": [
+          "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402076473&styleId=402101072&submodel=SUV",
+          "https://www.edmunds.com/jeep/wrangler/2026/st-402101072/features-specs/"
+        ]
+      }
+    ],
+    "discontinued_configurations": [
+      {
+        "trim": "Backcountry 4xe",
+        "door_configuration": "four-door",
+        "engine_profile": "phev_20_turbo",
+        "my2025_source_urls": [
+          "https://www.edmunds.com/jeep/wrangler-4xe/build/?modelyearId=402049565&styleId=402065578&submodel=SUV",
+          "https://www.edmunds.com/jeep/wrangler-4xe/2025/st-402065578/features-specs/"
+        ]
+      },
+      {
+        "trim": "Rubicon 392 Final Edition",
+        "door_configuration": "four-door",
+        "engine_profile": "gas_64_v8",
+        "my2025_source_urls": [
+          "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402065526&submodel=SUV",
+          "https://www.edmunds.com/jeep/wrangler/2025/st-402065526/features-specs/"
+        ]
+      },
+      {
+        "trim": "Rubicon 4xe",
+        "door_configuration": "four-door",
+        "engine_profile": "phev_20_turbo",
+        "my2025_source_urls": [
+          "https://www.edmunds.com/jeep/wrangler-4xe/build/?modelyearId=402049565&styleId=402050386&submodel=SUV",
+          "https://www.edmunds.com/jeep/wrangler-4xe/2025/st-402050386/features-specs/"
+        ]
+      },
+      {
+        "trim": "Rubicon X 4xe",
+        "door_configuration": "four-door",
+        "engine_profile": "phev_20_turbo",
+        "my2025_source_urls": [
+          "https://www.edmunds.com/jeep/wrangler-4xe/build/?modelyearId=402049565&styleId=402050387&submodel=SUV",
+          "https://www.edmunds.com/jeep/wrangler-4xe/2025/st-402050387/features-specs/"
+        ]
+      },
+      {
+        "trim": "Sahara 4xe",
+        "door_configuration": "four-door",
+        "engine_profile": "phev_20_turbo",
+        "my2025_source_urls": [
+          "https://www.edmunds.com/jeep/wrangler-4xe/build/?modelyearId=402049565&styleId=402050384&submodel=SUV",
+          "https://www.edmunds.com/jeep/wrangler-4xe/2025/st-402050384/features-specs/"
+        ]
+      },
+      {
+        "trim": "Sport S 4xe",
+        "door_configuration": "four-door",
+        "engine_profile": "phev_20_turbo",
+        "my2025_source_urls": [
+          "https://www.edmunds.com/jeep/wrangler-4xe/build/?modelyearId=402049565&styleId=402050383&submodel=SUV",
+          "https://www.edmunds.com/jeep/wrangler-4xe/2025/st-402050383/features-specs/"
+        ]
+      },
+      {
+        "trim": "Willys '41 4xe",
+        "door_configuration": "four-door",
+        "engine_profile": "phev_20_turbo",
+        "my2025_source_urls": [
+          "https://www.edmunds.com/jeep/wrangler-4xe/build/?modelyearId=402049565&styleId=402055439&submodel=SUV",
+          "https://www.edmunds.com/jeep/wrangler-4xe/2025/st-402055439/features-specs/"
+        ]
+      },
+      {
+        "trim": "Willys 4xe",
+        "door_configuration": "four-door",
+        "engine_profile": "phev_20_turbo",
+        "my2025_source_urls": [
+          "https://www.edmunds.com/jeep/wrangler-4xe/build/?modelyearId=402049565&styleId=402050385&submodel=SUV",
+          "https://www.edmunds.com/jeep/wrangler-4xe/2025/st-402050385/features-specs/"
+        ]
+      }
+    ],
+    "retained_configurations": 23,
+    "added_engine_codes": [],
+    "discontinued_engine_codes": [
+      "ECX"
+    ],
+    "retained_engine_codes": [
+      "ERC",
+      "EC1",
+      "ESG"
+    ],
+    "body_availability_changes_for_retained_trims": [],
+    "engine_combination_changes_for_retained_trims": [],
+    "body_counts": {
+      "my2025": {
+        "two-door": 10,
+        "four-door": 21
+      },
+      "my2026": {
+        "two-door": 10,
+        "four-door": 23
+      }
+    },
+    "transmission_price_changes": [
+      "Rubicon/Rubicon X four-door 850RE option is $3,000, versus $2,500 in MY2025.",
+      "Sahara optional V6 is $500, versus $2,000 in MY2025."
+    ],
+    "terminology_note": "Willys 41 is the MY2026 gasoline trim as displayed, not a silent rename or carry-forward of MY2025 Willys '41 4xe."
+  },
+  "phev_availability": {
+    "offered": false,
+    "basis": [
+      "No PHEV type or style appears in any of the MY2026 builder/specification selectors.",
+      "MY2026 overview explicitly states Wrangler 4xe plug-in hybrid has been discontinued.",
+      "MY2026 4xe builder returns Page Not Found."
+    ],
+    "overview_url": "https://www.edmunds.com/jeep/wrangler/2026/",
+    "overview_section": "What's new",
+    "overview_extraction_method": "Public Edmunds page read with web tool; ordinary browser supplied catalogue/type coverage.",
+    "checked_builder_url": "https://www.edmunds.com/jeep/wrangler-4xe/build/?defaultYear=2026",
+    "checked_builder_result": "Page Not Found",
+    "ecx_registry_exists_but_no_my2026_offering": true
+  },
+  "unresolved_source_ambiguities": [
+    {
+      "issue": "Engine codes not printed by Edmunds",
+      "handling": "Codes are the supplied established project associations, not claimed source quotations. Properties and FKs come from existing authored Engine records. No new/unrecognized engine was encountered; no record was created or modified."
+    },
+    {
+      "issue": "Optional-engine transmission pairing",
+      "scope": "15 styles with engine alternatives",
+      "handling": "No cross-product or transmission-only VehicleDefinition identities. Unreported pairings remain null."
+    },
+    {
+      "issue": "Automatic option on automatic-base styles",
+      "scope": [
+        "85th Anniversary Edition",
+        "Willys 41",
+        "Rewind"
+      ],
+      "handling": "Both standard eight-speed and optional 850RE listing retained. Their relationship is unreported and does not split canonical identities."
+    },
+    {
+      "issue": "Cross-trim text in option notes",
+      "handling": "Sahara axle note appears in four V6 option descriptions; M200/camera note names Sport/Sport S/Willys even on California/Anniversary/Willys 41/Rewind. No axle/tire/equipment applicability inferred."
+    },
+    {
+      "issue": "No Mechanical options section on 392 styles",
+      "handling": "Both dedicated 392 builders and exact-style specifications inspected. Standard V8 recorded; no engine alternatives invented."
+    },
+    {
+      "issue": "Unreported standard transmission manufacturer codes and optional-engine fuel grades",
+      "handling": "Retained as unknown; existing Engine properties reused without filling unsupported transmission or octane facts."
+    },
+    {
+      "issue": "Ancillary zero range placeholders",
+      "scope": [
+        "California Edition",
+        "Rewind"
+      ],
+      "handling": "0/0 mi. not treated as authoritative physical measurements."
+    }
+  ],
+  "unrecognized_engine_codes": [],
+  "builder_pages_not_inspected": [],
+  "specification_pages_not_inspected": [],
+  "unavailable_source_pages": [
+    {
+      "url": "https://www.edmunds.com/jeep/wrangler-4xe/build/?defaultYear=2026",
+      "result": "Page Not Found; consistent with discontinued PHEV rather than an uninspected offered style."
+    }
+  ],
+  "preservation": {
+    "database_sha256_before": "f33dcf87c661fc7a37854825999a2a835cb7346153394805c69db343f140042f",
+    "database_sha256_after": "f33dcf87c661fc7a37854825999a2a835cb7346153394805c69db343f140042f",
+    "git_head": "a779a000bdeb261f5b4289aef74e24bb7d33dd9b",
+    "application_code_modified": false,
+    "database_writes": false,
+    "git_index_changed": false
+  }
+}

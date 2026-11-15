@@ -3,6 +3,45 @@ Version: 1.6
 Last Updated: 2026-11-14
 Purpose: Current implementation status and development roadmap
 
+## MY2026 Wrangler JL — registry-backed local publication complete (2026-11-14)
+
+Validated the independent 18-style/33-configuration Edmunds inventory and its exact
+registered Engine references, plus the owner's separately confirmed two-row Jeep.com
+America250 supplement. The original Edmunds artifacts remain byte-identical; the
+supplement is pinned separately and each receipt retains its actual source publisher,
+artifact hash and identity. The bounded `import_my2026_wrangler` command reuses the
+MY2025 safety helpers, registry construction, complete body/powertrain identity and
+family slug conventions. Preview is read-only; execution requires its exact digest,
+fresh transactional state and the local desktop SQLite target. No Engine authoring,
+new parent, migration, ingestion redesign, pricing behavior or Admin slug change.
+
+The original publication created 33 definitions PK1131–1163. America250 adds PK1164
+(ERC PK1) and PK1165 (EC1 PK2), each with the existing four-door body. Final MY2026
+inventory: 35 active definitions, ERC 16/EC1 17/ESG 2, ten two-door/25 four-door and
+35 gasoline/zero PHEV. The incremental preview/execution was two create/33 skip/zero
+block; actual second execution skipped all 35 without changing any definition.
+Supplement operations added two creation and 68 no-op receipts. Every preexisting
+row across all 49 tables remains unchanged, including the original 33 definitions,
+all older years, receipts and Engines. Schema/integrity/FK checks pass.
+Operational totals: 1,150 definitions, 3,591 receipts, seven Engines and two bodies.
+
+All 72 focused MY2025/MY2026 importer, body-group and Engine-registry tests pass using
+`.venv/bin/python` (Python 3.13.1/Django 6.0.7), with system/migration-drift/whitespace
+checks passing. All 19 configurator groups and 35 Specs pages render HTTP 200 with
+correct membership/readable labels through read-only live verification. MY2026 public
+record names now include the existing body designation convention. Original source
+artifacts/unknown supporting details are preserved. No full-suite rerun; the prior
+25 pre-existing label-test failures remain documented. The supplied Jeep URL proves
+ERC; EC1 is explicitly owner-confirmed separately, not attributed to that ERC URL.
+No transmission pairing or standard/optional ranking was inferred. The owner has
+completed human website QA and approved the final 35-configuration inventory,
+including America250, for focused commit preparation (2026-11-14).
+Fresh commit-preparation verification confirms all counts/Engine snapshots and a
+zero-create/35-skip/zero-block preview, 72 passing focused tests, no migration drift
+or pending migrations, valid SQLite integrity/FKs and intact prior definitions.
+The development database remains unchanged during commit preparation and is not staged.
+See [MY2026 completion and verification](tasks/my2026-wrangler-registry-import.md).
+
 ## MY2025 Wrangler JL — registry-backed local publication complete (2026-11-14)
 
 The owner-supplied ERC/EC1/ESG/ECX mappings resolve to existing Engine PK1/2/3/6.
