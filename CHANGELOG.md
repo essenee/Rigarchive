@@ -26,6 +26,37 @@ All notable changes to RigArchive will be documented in this file.
   The isolated visibility snapshot independently passes 217 focused tests and checks.
 
 
+### Homepage Vehicle Platforms administration (2026-11-15)
+
+- Corrected View all vehicles to the reversed selector URL with
+  `destination=generations`, preserving existing routes and model-level card links.
+- Added a small Core homepage configuration with one entry per VehicleModel,
+  enabled state, display order and optional same-model image Generation. Admin
+  supports selection, ordering/visibility changes and scoped generation choices;
+  model saves validate the effective relationship, including partial updates.
+- Reused existing generation static-image resolution, default image preferences
+  and placeholder fallback. No uploads, copied images or canonical identity changes.
+- Migration core 0001 initializes the existing eligible cards/order: 4Runner,
+  Tacoma, Touareg, Wrangler on this snapshot. Applied locally after explicit owner
+  approval and verified backup. Live homepage returns HTTP 200 with original cards,
+  images and model destinations. Existing rows across 49 tables and image hashes
+  are unchanged; only four configuration entries and normal Django metadata added.
+  All 90 focused tests and system/drift/whitespace checks pass. Full suite: 1,089
+  tests, the same 25 known failures, no errors/new failures. Existing rows are
+  unchanged; integrity/FKs pass. See `docs/implementation/tasks/homepage-vehicle-platforms.md`.
+
+- Owner approved the completed implementation for commit preparation. Fresh
+  verification passes 90 focused tests and all requested checks. Owner-customized
+  homepage settings and unrelated staged images are preserved; milestone-only
+  staging uses an isolated index. No database/images included or commit performed.
+
+- Recovered the missing implementation after auditing image-only commit 40730c9.
+  Backed up/reconciled stale visibility index entries without changing owner files
+  or image staging. Prepared a separate 13-file homepage implementation commit;
+  100 focused tests, Django/migration checks and read-only live rendering pass.
+  Mirror homepage entries in normal/isolated indexes to prevent renewed divergence.
+  No database write, commit, push or deployment.
+
 ### VehicleDefinition MSRP and trim ordering (2026-11-15)
 
 - Added optional Decimal(10,2) base MSRP, nonnegative model/database validation,

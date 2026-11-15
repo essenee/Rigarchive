@@ -10,6 +10,7 @@ from django.http import Http404
 from django.test import TestCase, TransactionTestCase
 from django.urls import reverse
 
+from core.models import HomepageVehiclePlatform
 from reference.models import Manufacturer, VehicleModel, Generation, VehicleDefinition, FactoryBodyConfiguration, Engine
 from reference.services import (get_generation_hub_context, get_full_specifications_context,
     get_homepage_context, get_vehicle_context, discover_vehicle_models, discover_manufacturers)
@@ -78,6 +79,7 @@ class PublicVisibilityTests(TestCase):
         self.assertEqual(self.client.get(year_url).status_code,404)
 
     def test_public_coverage_never_combines_different_rows(self):
+        HomepageVehiclePlatform.objects.create(vehicle_model=self.model)
         self.visible.is_active=False;self.visible.save()  # public but inactive; other row active but hidden
         self.assertEqual(list(discover_vehicle_models(populated_only=True)),[])
         self.assertEqual(list(discover_manufacturers(populated_only=True)),[])
@@ -89,6 +91,7 @@ class PublicVisibilityTests(TestCase):
         self.assertContains(selector,self.model.get_absolute_url())
 
     def test_homepage_count_and_year_summary_are_public_only(self):
+        HomepageVehiclePlatform.objects.create(vehicle_model=self.model)
         old=VehicleDefinition.objects.create(generation=self.gen,model_year=2020,trim_name='Older',is_public=False)
         card=get_homepage_context()['featured_platforms'][0]
         self.assertEqual(card['configs_count'],1)

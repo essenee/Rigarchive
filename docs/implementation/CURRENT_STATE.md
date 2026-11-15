@@ -39,6 +39,47 @@ homepage-titled commit contains only images; no history repair or commit perform
 The isolated visibility-only snapshot independently passes 217 focused tests and
 system/drift checks, excluding pending homepage configuration code.
 
+## Homepage Vehicle Platforms — migrated and verified locally (2026-11-15)
+
+Added `core.HomepageVehiclePlatform` presentation configuration, separate from
+canonical VehicleModel: one model entry, order, enabled state, optional same-model
+image Generation. Admin supports selection/list ordering/visibility and scopes image
+choices to the selected model. Model saves validate the pairing outside Admin,
+including partial updates. Only active populated models retain homepage eligibility.
+Existing card destinations stay model-level regardless of image selection.
+
+The homepage now reads configured entries, preserves its layout and existing image
+resolver/default preferences/placeholder, and sends View all vehicles to
+`/select-vehicle/?destination=generations`. No generation image uploads/copies,
+canonical changes, vehicle imports or new application/framework.
+
+Core migration 0001 creates only the new presentation table and initializes the
+current cards in order (4Runner, Tacoma, Touareg, Wrangler), without image overrides.
+The owner approved local application under AGENTS.md §13; core 0001 is now applied.
+Read-only live homepage rendering returns HTTP 200 with the four original cards,
+image URLs, model-level destinations and corrected selector link. All 90 focused tests and
+system/migration-drift/whitespace checks pass. Full suite: 1,089 tests, the same 25 known label/drive failures, no errors/new failures.
+Read-only comparison preserves every existing database row; integrity/FKs pass.
+Post-application comparison preserves all original columns/rows across 49 tables,
+1,150 definitions, eight Engines, owner MSRP and all generation image hashes.
+Four configuration entries plus four permissions/one content type/one migration
+receipt were added. System, drift/state, integrity/FK checks pass. Existing owner prices,
+Engines, generation-image changes and unrelated work are preserved.
+Owner approval for commit preparation is recorded. Fresh 90-test/check/integrity
+verification passes. Current owner settings have five entries, three enabled:
+4Runner, Wrangler, Tacoma; Sprinter/Touareg disabled. These database edits remain
+uncommitted. Milestone-only staging uses an isolated index to preserve the owner's
+unrelated staged images. No commit, push or deployment.
+
+Recovery checkpoint: 40730c9's homepage title masked an image-only commit; the actual
+homepage implementation remained in the working tree. Reconciled 19 stale visibility
+index entries after da5356b, preserving exact owner image staging and all data/files.
+Prepared the missing 13-file homepage implementation, including public-visibility
+fixture integration, as a separate commit. All 100 focused tests/checks pass; live
+homepage HTTP 200, core 0001 applied. Same homepage entries are mirrored in normal
+and isolated commit indexes to avoid stale staging after the owner's later commit.
+Only homepage documentation sections are included; no commit/push/deployment.
+
 ## VehicleDefinition MSRP, trim ordering and controlled slugs (2026-11-15)
 
 Implemented optional descriptive `base_msrp` (Decimal 10,2) with nonnegative

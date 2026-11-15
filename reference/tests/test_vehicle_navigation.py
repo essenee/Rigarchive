@@ -61,6 +61,8 @@ class VehicleNavigationTests(TestCase):
         self.assertEqual(list(discover_manufacturers(manufacturer_slug=self.ford.slug, populated_only=True)), [])
 
     def test_directory_and_homepage_keep_coverage_rules(self):
+        from core.models import HomepageVehiclePlatform
+        HomepageVehiclePlatform.objects.create(vehicle_model=self.model)
         response = self.client.get(reverse("reference:manufacturer-list"))
         self.assertEqual(list(response.context["manufacturers"]), [self.toyota])
         self.assertEqual(response.context["manufacturers"][0].active_vehicle_models, [self.model])

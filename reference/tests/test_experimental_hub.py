@@ -323,6 +323,8 @@ class ExperimentalVehicleHubAndHomepageTests(TestCase):
     # 10. Homepage behavior with populated and missing optional content
     def test_homepage_renders_content_led_design(self) -> None:
         """Homepage exposes populated platforms and available discovery forms."""
+        from core.models import HomepageVehiclePlatform
+        HomepageVehiclePlatform.objects.create(vehicle_model=self.four_runner)
         response = self.client.get(reverse("home"))
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, "Vehicle Platforms")

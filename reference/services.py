@@ -519,15 +519,21 @@ def get_homepage_context(request: Optional[Any] = None) -> Dict[str, Any]:
     Assemble the context for the approved RigArchive homepage.
 
     Surfaces:
-    - Featured vehicle platform cards (Toyota 4Runner, Tacoma, VW Touareg).
+    - Admin-selected vehicle model cards with existing generation image fallback.
     - Hero photograph and schematic metadata.
     - Session-tracked recently viewed generations.
     """
     from reference.views import get_presentation_hero_image_url
+    from core.models import HomepageVehiclePlatform
+
+    selections = list(HomepageVehiclePlatform.objects.filter(is_enabled=True)
+                      .select_related("image_generation__vehicle_model__manufacturer"))
+    selection_by_model = {item.vehicle_model_id: item for item in selections}
 
     # Query active vehicle models populated with canonical definitions
     models_qs = (
         discover_vehicle_models(populated_only=True)
+        .filter(pk__in=selection_by_model)
         .prefetch_related(
             Prefetch(
                 "generations",
@@ -571,6 +577,9 @@ def get_homepage_context(request: Optional[Any] = None) -> Dict[str, Any]:
             )
         if not hero_url and generations:
             hero_url = get_presentation_hero_image_url(generations[-1])
+        override = selection_by_model[vm.pk].image_generation
+        if override and override.vehicle_model_id == vm.pk:
+            hero_url = get_presentation_hero_image_url(override) or hero_url
 
         featured_models.append({
             "model": vm,
@@ -581,9 +590,10 @@ def get_homepage_context(request: Optional[Any] = None) -> Dict[str, Any]:
             "hero_image_url": hero_url,
         })
 
-    # Sort featured models so 4Runner, Tacoma, Touareg match the approved wireframe
-    slug_order = {"4runner": 0, "tacoma": 1, "touareg": 2}
-    featured_models.sort(key=lambda x: slug_order.get(x["model"].slug, 99))
+    featured_models.sort(key=lambda x: (
+        selection_by_model[x["model"].pk].display_order,
+        selection_by_model[x["model"].pk].pk,
+    ))
 
     # Hero featured generation asset lookup (Toyota 4Runner 5th Gen)
     hero_generation_url = get_presentation_hero_image_url(
@@ -597,6 +607,7 @@ def get_homepage_context(request: Optional[Any] = None) -> Dict[str, Any]:
 
     return {
         "featured_platforms": featured_models,
+        "all_vehicles_url": vehicle_selector_url(destination="generations"),
         "hero_image_url": hero_generation_url,
         "recently_viewed": recently_viewed,
     }
