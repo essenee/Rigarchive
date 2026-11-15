@@ -2,6 +2,27 @@
 
 Authority: accepted [ADR-0010](../architecture/ADR/ADR-0010-Generation-Correspondence-Selectable-Factory-Alternatives.md), particularly Milestone 1, together with ADR-0004/0006/0007/0008. Transmission and factory-package persistence remain future work.
 
+## Permanent Engine registry rule (owner-approved 2026-11-14)
+
+Resolve each incoming engine against the existing authored `Engine` registry using
+an established manufacturer/full-code association. Reuse that record and its registered
+displacement, cylinder count, aspiration, fuel and electrification properties for new
+canonical construction. Missing attributes in a configuration source do not require
+independent re-derivation when the established registry association supplies them.
+Do not guess an association from displacement, display text or a code-family prefix.
+
+Ingestion must never automatically create or modify Engine records. Flag unrecognized,
+missing, ambiguous or conflicting engines for human review and manual registry
+authoring/correction. Stop the affected ingestion and resume only after the required
+Engine record exists and its registered identity validates. Do not substitute another
+engine, fabricate properties, or silently alter historical snapshots or associations.
+This rule does not grant canonical write authorization or waive exact preview,
+transaction, stale-state, validation or audit requirements.
+
+The completed [MY2025 Wrangler task](../implementation/tasks/my2025-wrangler-registry-import.md)
+uses the explicitly supplied ERC/EC1/ESG/ECX associations. Its dedicated local command
+is bounded to that inventory; it does not enable unrelated legacy import paths.
+
 ## Wrangler ingestion workflow W2 — Edmunds-first (2026-11-10)
 
 For the remaining Wrangler model years starting MY2022, the owner has approved **Edmunds as the primary provisional working source** for marketed trims, body styles, engines, transmissions, trim-specific Mechanical Options and Quick Order Packages. The working assumption is that Edmunds is likely correct or mostly correct based on prior Wrangler comparisons; this is an explicit provisional source-confidence choice, not completed manufacturer verification. Comprehensive order-guide/revision validation is deferred until usage, time and priorities justify it. Targeted manufacturer evidence remains appropriate for ambiguous, inconsistent or missing relationships.

@@ -1,0 +1,69 @@
+{
+  "date": "2026-11-14",
+  "status": "Published under explicit owner-approved bounded full-suite exception",
+  "interpreter": ".venv/bin/python",
+  "python": "3.13.1",
+  "django": "6.0.7",
+  "resolved_engines": {
+    "ERC": 1,
+    "EC1": 2,
+    "ESG": 3,
+    "ECX": 6
+  },
+  "preview": {
+    "create": 31,
+    "skip": 0,
+    "block": 0,
+    "plan_hash": "sha256:3d07c967c782390f23d26865e49b0c20a34ca75dcc245c25afd15cdfec20581d"
+  },
+  "focused_tests": {
+    "executed": 18,
+    "passed": 18,
+    "command": "RIGARCHIVE_TEST_DB_PATH=:memory: .venv/bin/python manage.py test reference.tests.test_my2025_wrangler_import reference.tests.test_configurator_body_groups --noinput"
+  },
+  "system_check": "passed",
+  "migration_drift": "none",
+  "whitespace_check": "passed",
+  "full_suite": {
+    "executed": 1043,
+    "failure_entries": 25,
+    "failures": [
+      "test_canonical_engine_names_in_database_remain_unchanged (reference.tests.test_configuration_label_formatting.DatabaseIntegrityAndRegressionTests.test_canonical_engine_names_in_database_remain_unchanged)",
+      "test_trim_and_exact_deep_links_show_each_drive_once_without_losing_siblings (reference.tests.test_configurator_drive_wheels.DriveWheelConfiguratorPageTests.test_trim_and_exact_deep_links_show_each_drive_once_without_losing_siblings)",
+      "test_4xe_phev_retains_electrification_without_duplicate_turbo (reference.tests.test_configuration_label_formatting.ConfigurationLabelFormattingTests.test_4xe_phev_retains_electrification_without_duplicate_turbo)",
+      "test_existing_36l_ess_and_etorque_remain_unchanged (reference.tests.test_configuration_label_formatting.ConfigurationLabelFormattingTests.test_existing_36l_ess_and_etorque_remain_unchanged)",
+      "test_labels_without_separate_aspiration_are_not_stripped (reference.tests.test_configuration_label_formatting.ConfigurationLabelFormattingTests.test_labels_without_separate_aspiration_are_not_stripped)",
+      "test_turbo_diesel_formatting_in_configuration_choices (reference.tests.test_configuration_label_formatting.ConfigurationLabelFormattingTests.test_turbo_diesel_formatting_in_configuration_choices)",
+      "test_turbo_redundancy_removal_in_configuration_choices (reference.tests.test_configuration_label_formatting.ConfigurationLabelFormattingTests.test_turbo_redundancy_removal_in_configuration_choices)",
+      "test_conflicting_or_unsupported_values_require_review (reference.tests.test_configurator_drive_wheels.DriveWheelChoiceLabelTests.test_conflicting_or_unsupported_values_require_review) (drive='2WD/4WD')",
+      "test_conflicting_or_unsupported_values_require_review (reference.tests.test_configurator_drive_wheels.DriveWheelChoiceLabelTests.test_conflicting_or_unsupported_values_require_review) (drive='FWD')",
+      "test_conflicting_or_unsupported_values_require_review (reference.tests.test_configurator_drive_wheels.DriveWheelChoiceLabelTests.test_conflicting_or_unsupported_values_require_review) (drive='RWD')",
+      "test_conflicting_or_unsupported_values_require_review (reference.tests.test_configurator_drive_wheels.DriveWheelChoiceLabelTests.test_conflicting_or_unsupported_values_require_review) (drive='4x4')",
+      "test_conflicting_or_unsupported_values_require_review (reference.tests.test_configurator_drive_wheels.DriveWheelChoiceLabelTests.test_conflicting_or_unsupported_values_require_review) (drive='unexpected')",
+      "test_empty_set_and_market_disambiguation_are_preserved (reference.tests.test_configurator_drive_wheels.DriveWheelChoiceLabelTests.test_empty_set_and_market_disambiguation_are_preserved)",
+      "test_front_or_rear_wording_is_not_inferred_from_trim_engine_or_notes (reference.tests.test_configurator_drive_wheels.DriveWheelChoiceLabelTests.test_front_or_rear_wording_is_not_inferred_from_trim_engine_or_notes) (wording='FWD')",
+      "test_front_or_rear_wording_is_not_inferred_from_trim_engine_or_notes (reference.tests.test_configurator_drive_wheels.DriveWheelChoiceLabelTests.test_front_or_rear_wording_is_not_inferred_from_trim_engine_or_notes) (wording='RWD')",
+      "test_front_or_rear_wording_is_not_inferred_from_trim_engine_or_notes (reference.tests.test_configurator_drive_wheels.DriveWheelChoiceLabelTests.test_front_or_rear_wording_is_not_inferred_from_trim_engine_or_notes) (wording='Front-wheel drive')",
+      "test_front_or_rear_wording_is_not_inferred_from_trim_engine_or_notes (reference.tests.test_configurator_drive_wheels.DriveWheelChoiceLabelTests.test_front_or_rear_wording_is_not_inferred_from_trim_engine_or_notes) (wording='Rear-wheel drive')",
+      "test_multiple_modes_remain_separate_from_canonical_4wd (reference.tests.test_configurator_drive_wheels.DriveWheelChoiceLabelTests.test_multiple_modes_remain_separate_from_canonical_4wd)",
+      "test_shared_category_remains_visible_across_different_engines (reference.tests.test_configurator_drive_wheels.DriveWheelChoiceLabelTests.test_shared_category_remains_visible_across_different_engines) (drive='2WD')",
+      "test_shared_category_remains_visible_across_different_engines (reference.tests.test_configurator_drive_wheels.DriveWheelChoiceLabelTests.test_shared_category_remains_visible_across_different_engines) (drive='4WD')",
+      "test_shared_category_remains_visible_across_different_engines (reference.tests.test_configurator_drive_wheels.DriveWheelChoiceLabelTests.test_shared_category_remains_visible_across_different_engines) (drive='AWD')",
+      "test_single_choice_and_different_trims_keep_drive_category (reference.tests.test_configurator_drive_wheels.DriveWheelChoiceLabelTests.test_single_choice_and_different_trims_keep_drive_category)",
+      "test_unknown_or_missing_values_are_explicit_without_guessing (reference.tests.test_configurator_drive_wheels.DriveWheelChoiceLabelTests.test_unknown_or_missing_values_are_explicit_without_guessing) (drive='UNK')",
+      "test_unknown_or_missing_values_are_explicit_without_guessing (reference.tests.test_configurator_drive_wheels.DriveWheelChoiceLabelTests.test_unknown_or_missing_values_are_explicit_without_guessing) (drive='')",
+      "test_unknown_or_missing_values_are_explicit_without_guessing (reference.tests.test_configurator_drive_wheels.DriveWheelChoiceLabelTests.test_unknown_or_missing_values_are_explicit_without_guessing) (drive=None)"
+    ]
+  },
+  "baseline_reproduction": {
+    "executed": 17,
+    "failure_entries": 25,
+    "same_failures_as_full_suite": true,
+    "method": "Restored HEAD VehicleDefinition.__str__ in isolated process memory and ran the two unchanged label test modules; no working-tree reversion."
+  },
+  "development_database_sha256": "f55baae10075b8967b1ffbff2d07fac33bb7525fcac87ac572bb1adc661512fd",
+  "execution": "31 created; rerun 31 skipped",
+  "migrations": [],
+  "development_database_unchanged_before_execution": true,
+  "bounded_test_exception": "Owner explicitly approved proceeding with passing focused tests and Django checks despite 25 reproduced preexisting label-test failures."
+}

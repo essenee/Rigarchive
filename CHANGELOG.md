@@ -4,6 +4,24 @@ All notable changes to RigArchive will be documented in this file.
 
 ## Unreleased
 
+### MY2025 Wrangler registry import (2026-11-14)
+
+- Added a bounded read-only preview and explicit digest-authorized local import
+  command for the 31 approved Edmunds configurations, using authored Engine mappings,
+  separate body/trim identities, atomic create/no-op audit receipts and historical
+  preservation safeguards. Extended MY2024 body-derived public names to MY2025.
+  Published all 31 configurations locally (24 gasoline, seven PHEV); an actual rerun
+  skipped all 31 without changing any definition. All preexisting rows across 49
+  tables remain unchanged; added 31 creation and 31 no-op receipts. No migration.
+  18 focused tests and Django checks pass; the owner explicitly approved a bounded
+  test exception for 25 reproduced pre-existing label-test failure entries. See
+  `docs/implementation/tasks/my2025-wrangler-registry-import.md`.
+- Documented the permanent ingestion rule: resolve established engine associations
+  against the authored registry and reuse its properties; never create/modify Engines
+  automatically. Unrecognized engines require human review/manual registry authoring
+  before ingestion resumes. Commit-preparation checks confirm all 31 Engine links,
+  a 31-skip read-only preview, 50 passing relevant tests and passing Django checks.
+
 ### MY2024 Wrangler publication and presentation — RA-054–RA-058 (2026-11-14)
 
 - Published exactly 31 approved MY2024 US Wrangler JL configurations as one atomic Plan3.1 batch using the recorded RA-056A Approval1; created VehicleDefinitions PK1069–1099 and 31 receipts PK3363–3393. Preserved all historical records, exact marketed trims, body/Engine UUIDs and 31 unique slugs (ten body-pair vectors). Corrected the historical drivetrain dependency and CSV projection scope; added bounded door-aware public names and generic trim/body configurator choices without market/slug labels. Recorded approval/database verification and publication inventories. Retained focused checks passed (128 planning, 38 naming/body, 51 configurator tests); no full-suite rerun. Operational databases/backups and unrelated work are excluded from this source/documentation commit. See RA-057 and RA-058 handoffs.

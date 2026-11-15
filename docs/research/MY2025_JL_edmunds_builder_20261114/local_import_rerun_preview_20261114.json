@@ -1,0 +1,3365 @@
+{
+  "version": "my2025-edmunds-registry/1",
+  "source_sha256": "53e05b5b3c4bb0843f2c1d16436a77a42eceef8cd46352affaaa6258399e92cc",
+  "extraction_date": "2026-11-14",
+  "parents": [
+    {
+      "id": "20",
+      "uuid": "42eefe42-0f2f-4e31-b4b2-f3e520ea0e50",
+      "created_at": "2026-11-04 13:47:36.259250+00:00",
+      "updated_at": "2026-11-04 13:47:36.259269+00:00",
+      "name": "Jeep",
+      "slug": "jeep",
+      "country_code": "",
+      "is_active": "True"
+    },
+    {
+      "id": "21",
+      "uuid": "5ec5f58a-b140-484c-97f0-c90ec9c134d6",
+      "created_at": "2026-11-04 13:47:36.260581+00:00",
+      "updated_at": "2026-11-04 13:47:36.260588+00:00",
+      "manufacturer_id": "20",
+      "name": "Wrangler",
+      "slug": "wrangler",
+      "is_active": "True"
+    },
+    {
+      "id": "32",
+      "uuid": "38d3c3ac-f825-4406-abb5-c2d12b9129a4",
+      "created_at": "2026-11-04 13:47:36.262016+00:00",
+      "updated_at": "2026-11-04 13:47:36.262021+00:00",
+      "vehicle_model_id": "21",
+      "name": "JL",
+      "slug": "jl",
+      "generation_number": null,
+      "start_year": "2018",
+      "end_year": null,
+      "notes": "Reviewed parent taxonomy: Wrangler JL, beginning with model year 2018. The official launch publication dated November 29, 2017 identifies the all-new 2018 Wrangler; its calendar publication date is not its model year:\nhttps://www.media.stellantis.com/em-en/jeep/press/all-new-2018-jeep-wrangler-the-most-capable-suv-ever-debuts-at-the-los-angeles-auto-show\n\nJeep's current Wrangler FAQ identifies continuing JL designation:\nhttps://www.jeep.com/wrangler/faq.html\n\nThe 2018 model-year overlap with JK is intentional. The open-ended range represents the currently known lifecycle, not confirmed future configurations. Active means available for archive use. Manufacturer terminology concerning the 2024 refresh remains inconsistent; no separate Generation is established by this record, and the ordinal remains unset. No VehicleDefinition availability is inferred. These are research references; raw-document retention and generation-correspondence publication have not occurred.",
+      "is_active": "True"
+    }
+  ],
+  "engines": {
+    "gas_36_v6": {
+      "id": "1",
+      "uuid": "f5a7caba-2fdd-43e1-a337-33429399bff3",
+      "created_at": "2026-11-14 16:14:39.903576+00:00",
+      "updated_at": "2026-11-14 16:14:39.903598+00:00",
+      "manufacturer_id": "20",
+      "engine_code": "ERC",
+      "name": "3.6L V6 ESS",
+      "engine_displacement_liters": "3.60",
+      "engine_cylinders": "6",
+      "engine_aspiration": "naturally_aspirated",
+      "fuel_type": "gasoline",
+      "electrification_type": "none"
+    },
+    "gas_20_turbo": {
+      "id": "2",
+      "uuid": "ba7b32b8-f69e-4bc4-952f-c493e0e417f4",
+      "created_at": "2026-11-14 16:14:39.906934+00:00",
+      "updated_at": "2026-11-14 16:14:39.906944+00:00",
+      "manufacturer_id": "20",
+      "engine_code": "EC1",
+      "name": "2.0L I4 Turbo",
+      "engine_displacement_liters": "2.00",
+      "engine_cylinders": "4",
+      "engine_aspiration": "turbocharged",
+      "fuel_type": "gasoline",
+      "electrification_type": "none"
+    },
+    "gas_64_v8": {
+      "id": "3",
+      "uuid": "d56ecfba-5f5d-4166-82a2-77572d4a6f2d",
+      "created_at": "2026-11-14 16:14:39.909469+00:00",
+      "updated_at": "2026-11-14 16:14:39.909476+00:00",
+      "manufacturer_id": "20",
+      "engine_code": "ESG",
+      "name": "6.4L V8 HEMI",
+      "engine_displacement_liters": "6.40",
+      "engine_cylinders": "8",
+      "engine_aspiration": "naturally_aspirated",
+      "fuel_type": "gasoline",
+      "electrification_type": "none"
+    },
+    "phev_20_turbo": {
+      "id": "6",
+      "uuid": "0b84bd7a-2de4-45d9-9f7e-34223e91cb70",
+      "created_at": "2026-11-14 16:14:39.917738+00:00",
+      "updated_at": "2026-11-14 16:14:39.917744+00:00",
+      "manufacturer_id": "20",
+      "engine_code": "ECX",
+      "name": "2.0L I4 Turbo PHEV",
+      "engine_displacement_liters": "2.00",
+      "engine_cylinders": "4",
+      "engine_aspiration": "turbocharged",
+      "fuel_type": "gasoline",
+      "electrification_type": "plug_in_hybrid"
+    }
+  },
+  "bodies": {
+    "two-door": {
+      "id": "1",
+      "uuid": "f9afec73-6dac-4a51-a409-1a764350c3c6",
+      "created_at": "2026-11-14 16:14:39.924838+00:00",
+      "updated_at": "2026-11-14 16:14:39.924850+00:00",
+      "generation_id": "32",
+      "body_style": null,
+      "wheelbase_designation": null,
+      "body_length_designation": null,
+      "roof_height_designation": null,
+      "door_configuration": "two-door",
+      "side_door_arrangement": null,
+      "body_code": null,
+      "body_code_namespace": null
+    },
+    "four-door": {
+      "id": "2",
+      "uuid": "a2fce731-2203-48a0-8ba6-a0e93770f9f0",
+      "created_at": "2026-11-14 16:14:39.929430+00:00",
+      "updated_at": "2026-11-14 16:14:39.929439+00:00",
+      "generation_id": "32",
+      "body_style": null,
+      "wheelbase_designation": null,
+      "body_length_designation": null,
+      "roof_height_designation": null,
+      "door_configuration": "four-door",
+      "side_door_arrangement": null,
+      "body_code": null,
+      "body_code_namespace": null
+    }
+  },
+  "namespace": [
+    {
+      "id": "1100",
+      "uuid": "ec85ebf0-7bdb-4fa8-8ab6-4d86a7bf32ec",
+      "created_at": "2026-11-15 00:37:42.846733+00:00",
+      "updated_at": "2026-11-15 00:37:42.846746+00:00",
+      "generation_id": "32",
+      "factory_body_configuration_id": "1",
+      "engine_id": "1",
+      "model_year": "2025",
+      "trim_name": "Sport",
+      "engine_name": "3.6L V6 ESS",
+      "engine_displacement_liters": "3.60",
+      "engine_cylinders": "6",
+      "engine_aspiration": "naturally_aspirated",
+      "fuel_type": "gasoline",
+      "electrification_type": "none",
+      "drivetrain": "4WD",
+      "market": "US",
+      "slug": "2025-sport-36l-v6-ess-4wd-us-2-door",
+      "notes": "",
+      "is_active": "True"
+    },
+    {
+      "id": "1101",
+      "uuid": "96dc7e44-ed84-451e-8ac8-afab1e2096d1",
+      "created_at": "2026-11-15 00:37:42.852565+00:00",
+      "updated_at": "2026-11-15 00:37:42.852574+00:00",
+      "generation_id": "32",
+      "factory_body_configuration_id": "1",
+      "engine_id": "2",
+      "model_year": "2025",
+      "trim_name": "Sport",
+      "engine_name": "2.0L I4 Turbo",
+      "engine_displacement_liters": "2.00",
+      "engine_cylinders": "4",
+      "engine_aspiration": "turbocharged",
+      "fuel_type": "gasoline",
+      "electrification_type": "none",
+      "drivetrain": "4WD",
+      "market": "US",
+      "slug": "2025-sport-20l-i4-turbo-4wd-us-turbo-2-door",
+      "notes": "",
+      "is_active": "True"
+    },
+    {
+      "id": "1102",
+      "uuid": "7b67286c-c5d3-4755-8698-00b57bfd0e1c",
+      "created_at": "2026-11-15 00:37:42.856725+00:00",
+      "updated_at": "2026-11-15 00:37:42.856733+00:00",
+      "generation_id": "32",
+      "factory_body_configuration_id": "2",
+      "engine_id": "1",
+      "model_year": "2025",
+      "trim_name": "Sport",
+      "engine_name": "3.6L V6 ESS",
+      "engine_displacement_liters": "3.60",
+      "engine_cylinders": "6",
+      "engine_aspiration": "naturally_aspirated",
+      "fuel_type": "gasoline",
+      "electrification_type": "none",
+      "drivetrain": "4WD",
+      "market": "US",
+      "slug": "2025-sport-36l-v6-ess-4wd-us-4-door",
+      "notes": "",
+      "is_active": "True"
+    },
+    {
+      "id": "1103",
+      "uuid": "7d9f1ee8-5049-4add-bb30-03c1a155cf1e",
+      "created_at": "2026-11-15 00:37:42.861253+00:00",
+      "updated_at": "2026-11-15 00:37:42.861261+00:00",
+      "generation_id": "32",
+      "factory_body_configuration_id": "2",
+      "engine_id": "2",
+      "model_year": "2025",
+      "trim_name": "Sport",
+      "engine_name": "2.0L I4 Turbo",
+      "engine_displacement_liters": "2.00",
+      "engine_cylinders": "4",
+      "engine_aspiration": "turbocharged",
+      "fuel_type": "gasoline",
+      "electrification_type": "none",
+      "drivetrain": "4WD",
+      "market": "US",
+      "slug": "2025-sport-20l-i4-turbo-4wd-us-turbo-4-door",
+      "notes": "",
+      "is_active": "True"
+    },
+    {
+      "id": "1104",
+      "uuid": "b176a3ce-a4c0-4567-a4fc-67159b652ea8",
+      "created_at": "2026-11-15 00:37:42.865343+00:00",
+      "updated_at": "2026-11-15 00:37:42.865350+00:00",
+      "generation_id": "32",
+      "factory_body_configuration_id": "1",
+      "engine_id": "1",
+      "model_year": "2025",
+      "trim_name": "Sport S",
+      "engine_name": "3.6L V6 ESS",
+      "engine_displacement_liters": "3.60",
+      "engine_cylinders": "6",
+      "engine_aspiration": "naturally_aspirated",
+      "fuel_type": "gasoline",
+      "electrification_type": "none",
+      "drivetrain": "4WD",
+      "market": "US",
+      "slug": "2025-sport-s-36l-v6-ess-4wd-us-2-door",
+      "notes": "",
+      "is_active": "True"
+    },
+    {
+      "id": "1105",
+      "uuid": "04137c9d-402b-4d04-95e7-7e7873c9d890",
+      "created_at": "2026-11-15 00:37:42.870155+00:00",
+      "updated_at": "2026-11-15 00:37:42.870168+00:00",
+      "generation_id": "32",
+      "factory_body_configuration_id": "1",
+      "engine_id": "2",
+      "model_year": "2025",
+      "trim_name": "Sport S",
+      "engine_name": "2.0L I4 Turbo",
+      "engine_displacement_liters": "2.00",
+      "engine_cylinders": "4",
+      "engine_aspiration": "turbocharged",
+      "fuel_type": "gasoline",
+      "electrification_type": "none",
+      "drivetrain": "4WD",
+      "market": "US",
+      "slug": "2025-sport-s-20l-i4-turbo-4wd-us-turbo-2-door",
+      "notes": "",
+      "is_active": "True"
+    },
+    {
+      "id": "1106",
+      "uuid": "e8f867a3-5b13-4ac9-96ba-dd360744fa8e",
+      "created_at": "2026-11-15 00:37:42.874688+00:00",
+      "updated_at": "2026-11-15 00:37:42.874696+00:00",
+      "generation_id": "32",
+      "factory_body_configuration_id": "2",
+      "engine_id": "1",
+      "model_year": "2025",
+      "trim_name": "Sport S",
+      "engine_name": "3.6L V6 ESS",
+      "engine_displacement_liters": "3.60",
+      "engine_cylinders": "6",
+      "engine_aspiration": "naturally_aspirated",
+      "fuel_type": "gasoline",
+      "electrification_type": "none",
+      "drivetrain": "4WD",
+      "market": "US",
+      "slug": "2025-sport-s-36l-v6-ess-4wd-us-4-door",
+      "notes": "",
+      "is_active": "True"
+    },
+    {
+      "id": "1107",
+      "uuid": "b86f7e41-bcde-45d2-9d37-978d1ab6ed5b",
+      "created_at": "2026-11-15 00:37:42.879119+00:00",
+      "updated_at": "2026-11-15 00:37:42.879128+00:00",
+      "generation_id": "32",
+      "factory_body_configuration_id": "2",
+      "engine_id": "2",
+      "model_year": "2025",
+      "trim_name": "Sport S",
+      "engine_name": "2.0L I4 Turbo",
+      "engine_displacement_liters": "2.00",
+      "engine_cylinders": "4",
+      "engine_aspiration": "turbocharged",
+      "fuel_type": "gasoline",
+      "electrification_type": "none",
+      "drivetrain": "4WD",
+      "market": "US",
+      "slug": "2025-sport-s-20l-i4-turbo-4wd-us-turbo-4-door",
+      "notes": "",
+      "is_active": "True"
+    },
+    {
+      "id": "1108",
+      "uuid": "04e7a751-556a-4fdf-ad26-40fadebfd1fe",
+      "created_at": "2026-11-15 00:37:42.883612+00:00",
+      "updated_at": "2026-11-15 00:37:42.883621+00:00",
+      "generation_id": "32",
+      "factory_body_configuration_id": "1",
+      "engine_id": "1",
+      "model_year": "2025",
+      "trim_name": "Willys",
+      "engine_name": "3.6L V6 ESS",
+      "engine_displacement_liters": "3.60",
+      "engine_cylinders": "6",
+      "engine_aspiration": "naturally_aspirated",
+      "fuel_type": "gasoline",
+      "electrification_type": "none",
+      "drivetrain": "4WD",
+      "market": "US",
+      "slug": "2025-willys-36l-v6-ess-4wd-us-2-door",
+      "notes": "",
+      "is_active": "True"
+    },
+    {
+      "id": "1109",
+      "uuid": "aa7f5a82-2081-4bf6-860d-c8e410ef5698",
+      "created_at": "2026-11-15 00:37:42.887692+00:00",
+      "updated_at": "2026-11-15 00:37:42.887700+00:00",
+      "generation_id": "32",
+      "factory_body_configuration_id": "1",
+      "engine_id": "2",
+      "model_year": "2025",
+      "trim_name": "Willys",
+      "engine_name": "2.0L I4 Turbo",
+      "engine_displacement_liters": "2.00",
+      "engine_cylinders": "4",
+      "engine_aspiration": "turbocharged",
+      "fuel_type": "gasoline",
+      "electrification_type": "none",
+      "drivetrain": "4WD",
+      "market": "US",
+      "slug": "2025-willys-20l-i4-turbo-4wd-us-turbo-2-door",
+      "notes": "",
+      "is_active": "True"
+    },
+    {
+      "id": "1110",
+      "uuid": "dc1cf56a-c30a-455b-b16d-f69b6c9b85d8",
+      "created_at": "2026-11-15 00:37:42.892939+00:00",
+      "updated_at": "2026-11-15 00:37:42.892948+00:00",
+      "generation_id": "32",
+      "factory_body_configuration_id": "2",
+      "engine_id": "1",
+      "model_year": "2025",
+      "trim_name": "Willys",
+      "engine_name": "3.6L V6 ESS",
+      "engine_displacement_liters": "3.60",
+      "engine_cylinders": "6",
+      "engine_aspiration": "naturally_aspirated",
+      "fuel_type": "gasoline",
+      "electrification_type": "none",
+      "drivetrain": "4WD",
+      "market": "US",
+      "slug": "2025-willys-36l-v6-ess-4wd-us-4-door",
+      "notes": "",
+      "is_active": "True"
+    },
+    {
+      "id": "1111",
+      "uuid": "fe93f29d-0129-4d31-8d8a-b342080cdfda",
+      "created_at": "2026-11-15 00:37:42.897212+00:00",
+      "updated_at": "2026-11-15 00:37:42.897219+00:00",
+      "generation_id": "32",
+      "factory_body_configuration_id": "2",
+      "engine_id": "2",
+      "model_year": "2025",
+      "trim_name": "Willys",
+      "engine_name": "2.0L I4 Turbo",
+      "engine_displacement_liters": "2.00",
+      "engine_cylinders": "4",
+      "engine_aspiration": "turbocharged",
+      "fuel_type": "gasoline",
+      "electrification_type": "none",
+      "drivetrain": "4WD",
+      "market": "US",
+      "slug": "2025-willys-20l-i4-turbo-4wd-us-turbo-4-door",
+      "notes": "",
+      "is_active": "True"
+    },
+    {
+      "id": "1112",
+      "uuid": "bbd39988-64ae-416d-99fd-2b3210cb54c5",
+      "created_at": "2026-11-15 00:37:42.901928+00:00",
+      "updated_at": "2026-11-15 00:37:42.901936+00:00",
+      "generation_id": "32",
+      "factory_body_configuration_id": "1",
+      "engine_id": "1",
+      "model_year": "2025",
+      "trim_name": "Rubicon",
+      "engine_name": "3.6L V6 ESS",
+      "engine_displacement_liters": "3.60",
+      "engine_cylinders": "6",
+      "engine_aspiration": "naturally_aspirated",
+      "fuel_type": "gasoline",
+      "electrification_type": "none",
+      "drivetrain": "4WD",
+      "market": "US",
+      "slug": "2025-rubicon-36l-v6-ess-4wd-us-2-door",
+      "notes": "",
+      "is_active": "True"
+    },
+    {
+      "id": "1113",
+      "uuid": "16f320c5-25f3-464b-bd02-b89d725218b7",
+      "created_at": "2026-11-15 00:37:42.906642+00:00",
+      "updated_at": "2026-11-15 00:37:42.906652+00:00",
+      "generation_id": "32",
+      "factory_body_configuration_id": "1",
+      "engine_id": "2",
+      "model_year": "2025",
+      "trim_name": "Rubicon",
+      "engine_name": "2.0L I4 Turbo",
+      "engine_displacement_liters": "2.00",
+      "engine_cylinders": "4",
+      "engine_aspiration": "turbocharged",
+      "fuel_type": "gasoline",
+      "electrification_type": "none",
+      "drivetrain": "4WD",
+      "market": "US",
+      "slug": "2025-rubicon-20l-i4-turbo-4wd-us-turbo-2-door",
+      "notes": "",
+      "is_active": "True"
+    },
+    {
+      "id": "1114",
+      "uuid": "3ebace58-7c9c-4039-8f73-064fda3e761e",
+      "created_at": "2026-11-15 00:37:42.911166+00:00",
+      "updated_at": "2026-11-15 00:37:42.911173+00:00",
+      "generation_id": "32",
+      "factory_body_configuration_id": "2",
+      "engine_id": "1",
+      "model_year": "2025",
+      "trim_name": "Rubicon",
+      "engine_name": "3.6L V6 ESS",
+      "engine_displacement_liters": "3.60",
+      "engine_cylinders": "6",
+      "engine_aspiration": "naturally_aspirated",
+      "fuel_type": "gasoline",
+      "electrification_type": "none",
+      "drivetrain": "4WD",
+      "market": "US",
+      "slug": "2025-rubicon-36l-v6-ess-4wd-us-4-door",
+      "notes": "",
+      "is_active": "True"
+    },
+    {
+      "id": "1115",
+      "uuid": "7fceedb5-a0e6-41c0-a6e3-f1f610de7475",
+      "created_at": "2026-11-15 00:37:42.915284+00:00",
+      "updated_at": "2026-11-15 00:37:42.915292+00:00",
+      "generation_id": "32",
+      "factory_body_configuration_id": "2",
+      "engine_id": "2",
+      "model_year": "2025",
+      "trim_name": "Rubicon",
+      "engine_name": "2.0L I4 Turbo",
+      "engine_displacement_liters": "2.00",
+      "engine_cylinders": "4",
+      "engine_aspiration": "turbocharged",
+      "fuel_type": "gasoline",
+      "electrification_type": "none",
+      "drivetrain": "4WD",
+      "market": "US",
+      "slug": "2025-rubicon-20l-i4-turbo-4wd-us-turbo-4-door",
+      "notes": "",
+      "is_active": "True"
+    },
+    {
+      "id": "1116",
+      "uuid": "35b9cfed-37ce-4555-aa30-d5215041ce4d",
+      "created_at": "2026-11-15 00:37:42.919918+00:00",
+      "updated_at": "2026-11-15 00:37:42.919930+00:00",
+      "generation_id": "32",
+      "factory_body_configuration_id": "2",
+      "engine_id": "2",
+      "model_year": "2025",
+      "trim_name": "Sport RHD",
+      "engine_name": "2.0L I4 Turbo",
+      "engine_displacement_liters": "2.00",
+      "engine_cylinders": "4",
+      "engine_aspiration": "turbocharged",
+      "fuel_type": "gasoline",
+      "electrification_type": "none",
+      "drivetrain": "4WD",
+      "market": "US",
+      "slug": "2025-sport-rhd-20l-i4-turbo-4wd-us-turbo",
+      "notes": "",
+      "is_active": "True"
+    },
+    {
+      "id": "1117",
+      "uuid": "de813c33-c72d-4e32-92fe-b29ec83f61f4",
+      "created_at": "2026-11-15 00:37:42.924385+00:00",
+      "updated_at": "2026-11-15 00:37:42.924393+00:00",
+      "generation_id": "32",
+      "factory_body_configuration_id": "2",
+      "engine_id": "2",
+      "model_year": "2025",
+      "trim_name": "Sahara",
+      "engine_name": "2.0L I4 Turbo",
+      "engine_displacement_liters": "2.00",
+      "engine_cylinders": "4",
+      "engine_aspiration": "turbocharged",
+      "fuel_type": "gasoline",
+      "electrification_type": "none",
+      "drivetrain": "4WD",
+      "market": "US",
+      "slug": "2025-sahara-20l-i4-turbo-4wd-us-turbo",
+      "notes": "",
+      "is_active": "True"
+    },
+    {
+      "id": "1118",
+      "uuid": "1ae96fe9-4f08-4d93-8124-23c89619f1a7",
+      "created_at": "2026-11-15 00:37:42.928432+00:00",
+      "updated_at": "2026-11-15 00:37:42.928439+00:00",
+      "generation_id": "32",
+      "factory_body_configuration_id": "2",
+      "engine_id": "1",
+      "model_year": "2025",
+      "trim_name": "Sahara",
+      "engine_name": "3.6L V6 ESS",
+      "engine_displacement_liters": "3.60",
+      "engine_cylinders": "6",
+      "engine_aspiration": "naturally_aspirated",
+      "fuel_type": "gasoline",
+      "electrification_type": "none",
+      "drivetrain": "4WD",
+      "market": "US",
+      "slug": "2025-sahara-36l-v6-ess-4wd-us",
+      "notes": "",
+      "is_active": "True"
+    },
+    {
+      "id": "1119",
+      "uuid": "56a11b56-3b78-41ad-a193-9c0d5c4ec8c5",
+      "created_at": "2026-11-15 00:37:42.932412+00:00",
+      "updated_at": "2026-11-15 00:37:42.932419+00:00",
+      "generation_id": "32",
+      "factory_body_configuration_id": "1",
+      "engine_id": "1",
+      "model_year": "2025",
+      "trim_name": "Rubicon X",
+      "engine_name": "3.6L V6 ESS",
+      "engine_displacement_liters": "3.60",
+      "engine_cylinders": "6",
+      "engine_aspiration": "naturally_aspirated",
+      "fuel_type": "gasoline",
+      "electrification_type": "none",
+      "drivetrain": "4WD",
+      "market": "US",
+      "slug": "2025-rubicon-x-36l-v6-ess-4wd-us-2-door",
+      "notes": "",
+      "is_active": "True"
+    },
+    {
+      "id": "1120",
+      "uuid": "3a793df1-879d-44bf-bb49-181000daabe0",
+      "created_at": "2026-11-15 00:37:42.936428+00:00",
+      "updated_at": "2026-11-15 00:37:42.936436+00:00",
+      "generation_id": "32",
+      "factory_body_configuration_id": "1",
+      "engine_id": "2",
+      "model_year": "2025",
+      "trim_name": "Rubicon X",
+      "engine_name": "2.0L I4 Turbo",
+      "engine_displacement_liters": "2.00",
+      "engine_cylinders": "4",
+      "engine_aspiration": "turbocharged",
+      "fuel_type": "gasoline",
+      "electrification_type": "none",
+      "drivetrain": "4WD",
+      "market": "US",
+      "slug": "2025-rubicon-x-20l-i4-turbo-4wd-us-turbo-2-door",
+      "notes": "",
+      "is_active": "True"
+    },
+    {
+      "id": "1121",
+      "uuid": "ded46f05-2f61-4402-a913-dffdb00f731f",
+      "created_at": "2026-11-15 00:37:42.940386+00:00",
+      "updated_at": "2026-11-15 00:37:42.940393+00:00",
+      "generation_id": "32",
+      "factory_body_configuration_id": "2",
+      "engine_id": "1",
+      "model_year": "2025",
+      "trim_name": "Rubicon X",
+      "engine_name": "3.6L V6 ESS",
+      "engine_displacement_liters": "3.60",
+      "engine_cylinders": "6",
+      "engine_aspiration": "naturally_aspirated",
+      "fuel_type": "gasoline",
+      "electrification_type": "none",
+      "drivetrain": "4WD",
+      "market": "US",
+      "slug": "2025-rubicon-x-36l-v6-ess-4wd-us-4-door",
+      "notes": "",
+      "is_active": "True"
+    },
+    {
+      "id": "1122",
+      "uuid": "02619a14-277b-4c1f-b969-3ea64120a78e",
+      "created_at": "2026-11-15 00:37:42.944399+00:00",
+      "updated_at": "2026-11-15 00:37:42.944407+00:00",
+      "generation_id": "32",
+      "factory_body_configuration_id": "2",
+      "engine_id": "2",
+      "model_year": "2025",
+      "trim_name": "Rubicon X",
+      "engine_name": "2.0L I4 Turbo",
+      "engine_displacement_liters": "2.00",
+      "engine_cylinders": "4",
+      "engine_aspiration": "turbocharged",
+      "fuel_type": "gasoline",
+      "electrification_type": "none",
+      "drivetrain": "4WD",
+      "market": "US",
+      "slug": "2025-rubicon-x-20l-i4-turbo-4wd-us-turbo-4-door",
+      "notes": "",
+      "is_active": "True"
+    },
+    {
+      "id": "1123",
+      "uuid": "6692f590-885e-4639-886c-c129a3d35357",
+      "created_at": "2026-11-15 00:37:42.948774+00:00",
+      "updated_at": "2026-11-15 00:37:42.948786+00:00",
+      "generation_id": "32",
+      "factory_body_configuration_id": "2",
+      "engine_id": "3",
+      "model_year": "2025",
+      "trim_name": "Rubicon 392 Final Edition",
+      "engine_name": "6.4L V8 HEMI",
+      "engine_displacement_liters": "6.40",
+      "engine_cylinders": "8",
+      "engine_aspiration": "naturally_aspirated",
+      "fuel_type": "gasoline",
+      "electrification_type": "none",
+      "drivetrain": "4WD",
+      "market": "US",
+      "slug": "2025-rubicon-392-final-edition-64l-v8-hemi-4wd-us",
+      "notes": "",
+      "is_active": "True"
+    },
+    {
+      "id": "1124",
+      "uuid": "26c9032e-4eb8-4393-b11e-094865d471a7",
+      "created_at": "2026-11-15 00:37:42.953791+00:00",
+      "updated_at": "2026-11-15 00:37:42.953799+00:00",
+      "generation_id": "32",
+      "factory_body_configuration_id": "2",
+      "engine_id": "6",
+      "model_year": "2025",
+      "trim_name": "Sport S 4xe",
+      "engine_name": "2.0L I4 Turbo PHEV",
+      "engine_displacement_liters": "2.00",
+      "engine_cylinders": "4",
+      "engine_aspiration": "turbocharged",
+      "fuel_type": "gasoline",
+      "electrification_type": "plug_in_hybrid",
+      "drivetrain": "4WD",
+      "market": "US",
+      "slug": "2025-sport-s-4xe-20l-i4-turbo-phev-4wd-us-turbo-phev",
+      "notes": "",
+      "is_active": "True"
+    },
+    {
+      "id": "1125",
+      "uuid": "a2148f56-6c8d-4777-8818-0393b0b2c2ee",
+      "created_at": "2026-11-15 00:37:42.957955+00:00",
+      "updated_at": "2026-11-15 00:37:42.957962+00:00",
+      "generation_id": "32",
+      "factory_body_configuration_id": "2",
+      "engine_id": "6",
+      "model_year": "2025",
+      "trim_name": "Willys 4xe",
+      "engine_name": "2.0L I4 Turbo PHEV",
+      "engine_displacement_liters": "2.00",
+      "engine_cylinders": "4",
+      "engine_aspiration": "turbocharged",
+      "fuel_type": "gasoline",
+      "electrification_type": "plug_in_hybrid",
+      "drivetrain": "4WD",
+      "market": "US",
+      "slug": "2025-willys-4xe-20l-i4-turbo-phev-4wd-us-turbo-phev",
+      "notes": "",
+      "is_active": "True"
+    },
+    {
+      "id": "1126",
+      "uuid": "91919c26-8c90-4bc8-b386-cbafd8e976e5",
+      "created_at": "2026-11-15 00:37:42.961949+00:00",
+      "updated_at": "2026-11-15 00:37:42.961956+00:00",
+      "generation_id": "32",
+      "factory_body_configuration_id": "2",
+      "engine_id": "6",
+      "model_year": "2025",
+      "trim_name": "Sahara 4xe",
+      "engine_name": "2.0L I4 Turbo PHEV",
+      "engine_displacement_liters": "2.00",
+      "engine_cylinders": "4",
+      "engine_aspiration": "turbocharged",
+      "fuel_type": "gasoline",
+      "electrification_type": "plug_in_hybrid",
+      "drivetrain": "4WD",
+      "market": "US",
+      "slug": "2025-sahara-4xe-20l-i4-turbo-phev-4wd-us-turbo-phev",
+      "notes": "",
+      "is_active": "True"
+    },
+    {
+      "id": "1127",
+      "uuid": "01c01bf4-4c99-4e4a-8f66-a474b2e2f63e",
+      "created_at": "2026-11-15 00:37:42.965941+00:00",
+      "updated_at": "2026-11-15 00:37:42.965948+00:00",
+      "generation_id": "32",
+      "factory_body_configuration_id": "2",
+      "engine_id": "6",
+      "model_year": "2025",
+      "trim_name": "Willys '41 4xe",
+      "engine_name": "2.0L I4 Turbo PHEV",
+      "engine_displacement_liters": "2.00",
+      "engine_cylinders": "4",
+      "engine_aspiration": "turbocharged",
+      "fuel_type": "gasoline",
+      "electrification_type": "plug_in_hybrid",
+      "drivetrain": "4WD",
+      "market": "US",
+      "slug": "2025-willys-41-4xe-20l-i4-turbo-phev-4wd-us-turbo-phev",
+      "notes": "",
+      "is_active": "True"
+    },
+    {
+      "id": "1128",
+      "uuid": "fcadd21e-7084-442a-a0b4-3cac6f9d3e0b",
+      "created_at": "2026-11-15 00:37:42.970407+00:00",
+      "updated_at": "2026-11-15 00:37:42.970416+00:00",
+      "generation_id": "32",
+      "factory_body_configuration_id": "2",
+      "engine_id": "6",
+      "model_year": "2025",
+      "trim_name": "Rubicon 4xe",
+      "engine_name": "2.0L I4 Turbo PHEV",
+      "engine_displacement_liters": "2.00",
+      "engine_cylinders": "4",
+      "engine_aspiration": "turbocharged",
+      "fuel_type": "gasoline",
+      "electrification_type": "plug_in_hybrid",
+      "drivetrain": "4WD",
+      "market": "US",
+      "slug": "2025-rubicon-4xe-20l-i4-turbo-phev-4wd-us-turbo-phev",
+      "notes": "",
+      "is_active": "True"
+    },
+    {
+      "id": "1129",
+      "uuid": "5a516319-4607-47fb-afae-87dcfbfa134f",
+      "created_at": "2026-11-15 00:37:42.974901+00:00",
+      "updated_at": "2026-11-15 00:37:42.974910+00:00",
+      "generation_id": "32",
+      "factory_body_configuration_id": "2",
+      "engine_id": "6",
+      "model_year": "2025",
+      "trim_name": "Backcountry 4xe",
+      "engine_name": "2.0L I4 Turbo PHEV",
+      "engine_displacement_liters": "2.00",
+      "engine_cylinders": "4",
+      "engine_aspiration": "turbocharged",
+      "fuel_type": "gasoline",
+      "electrification_type": "plug_in_hybrid",
+      "drivetrain": "4WD",
+      "market": "US",
+      "slug": "2025-backcountry-4xe-20l-i4-turbo-phev-4wd-us-turbo-phev",
+      "notes": "",
+      "is_active": "True"
+    },
+    {
+      "id": "1130",
+      "uuid": "d4e6bc81-85ce-4cf5-bab8-f8884eb7c846",
+      "created_at": "2026-11-15 00:37:42.979146+00:00",
+      "updated_at": "2026-11-15 00:37:42.979156+00:00",
+      "generation_id": "32",
+      "factory_body_configuration_id": "2",
+      "engine_id": "6",
+      "model_year": "2025",
+      "trim_name": "Rubicon X 4xe",
+      "engine_name": "2.0L I4 Turbo PHEV",
+      "engine_displacement_liters": "2.00",
+      "engine_cylinders": "4",
+      "engine_aspiration": "turbocharged",
+      "fuel_type": "gasoline",
+      "electrification_type": "plug_in_hybrid",
+      "drivetrain": "4WD",
+      "market": "US",
+      "slug": "2025-rubicon-x-4xe-20l-i4-turbo-phev-4wd-us-turbo-phev",
+      "notes": "",
+      "is_active": "True"
+    }
+  ],
+  "rows": [
+    {
+      "inventory_id": "402019467:gas_36_v6",
+      "identity_digest": "sha256:f8d4311ab0b90066ee1518633242cb6a71bb5c8500b35f6be2fbc32a4c07e6e4",
+      "edmunds_style_ids": [
+        "402019467"
+      ],
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402019467&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2025/st-402019467/features-specs/"
+      ],
+      "source_fields": {
+        "engine_name": "3.6L V6",
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": null,
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": null,
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2025,
+        "trim_name": "Sport",
+        "factory_body_configuration": {
+          "door_configuration": "two-door"
+        },
+        "drivetrain": "4WD",
+        "market": "US"
+      },
+      "baseline": {
+        "identity_contract": "vehicle-definition-body/2",
+        "scope": {
+          "manufacturer_key": "jeep",
+          "model_key": "wrangler",
+          "generation_key": "jl"
+        },
+        "model_year": 2025,
+        "trim_name": "Sport",
+        "drivetrain": "4WD",
+        "market": "US",
+        "canonical_powertrain": {
+          "engine_displacement_liters": "3.6",
+          "engine_cylinders": 6,
+          "engine_aspiration": "naturally_aspirated",
+          "fuel_type": "gasoline",
+          "electrification_type": "none"
+        },
+        "body_digest": "sha256:e12a446cdd441834252f1818ff6c17fb9ecfa81f014fe693e440a82964d77739",
+        "series": null
+      },
+      "engine_code": "ERC",
+      "fields": {
+        "model_year": 2025,
+        "trim_name": "Sport",
+        "engine_name": "3.6L V6 ESS",
+        "engine_id": 1,
+        "factory_body_configuration_id": 1,
+        "market": "US",
+        "drivetrain": "4WD",
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": "naturally_aspirated",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "slug": "2025-sport-36l-v6-ess-4wd-us-2-door"
+      },
+      "legacy_base_slug": "2025-sport-36l-v6-ess-4wd-us",
+      "body_attributes": {
+        "body_style": null,
+        "wheelbase_designation": null,
+        "body_length_designation": null,
+        "roof_height_designation": null,
+        "door_configuration": "two-door",
+        "side_door_arrangement": null,
+        "body_code": null,
+        "body_code_namespace": null
+      },
+      "candidate_reference": "402019467:gas_36_v6",
+      "action": "skip",
+      "reasons": [],
+      "existing_id": 1100
+    },
+    {
+      "inventory_id": "402019467:gas_20_turbo",
+      "identity_digest": "sha256:50b8f48264eceee5b30974646674a43217805cd4f6ce29fda33f7477cf7e6ff0",
+      "edmunds_style_ids": [
+        "402019467"
+      ],
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402019467&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2025/st-402019467/features-specs/"
+      ],
+      "source_fields": {
+        "engine_name": "2.0L I4 Turbo",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": null,
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2025,
+        "trim_name": "Sport",
+        "factory_body_configuration": {
+          "door_configuration": "two-door"
+        },
+        "drivetrain": "4WD",
+        "market": "US"
+      },
+      "baseline": {
+        "identity_contract": "vehicle-definition-body/2",
+        "scope": {
+          "manufacturer_key": "jeep",
+          "model_key": "wrangler",
+          "generation_key": "jl"
+        },
+        "model_year": 2025,
+        "trim_name": "Sport",
+        "drivetrain": "4WD",
+        "market": "US",
+        "canonical_powertrain": {
+          "engine_displacement_liters": "2",
+          "engine_cylinders": 4,
+          "engine_aspiration": "turbocharged",
+          "fuel_type": "gasoline",
+          "electrification_type": "none"
+        },
+        "body_digest": "sha256:e12a446cdd441834252f1818ff6c17fb9ecfa81f014fe693e440a82964d77739",
+        "series": null
+      },
+      "engine_code": "EC1",
+      "fields": {
+        "model_year": 2025,
+        "trim_name": "Sport",
+        "engine_name": "2.0L I4 Turbo",
+        "engine_id": 2,
+        "factory_body_configuration_id": 1,
+        "market": "US",
+        "drivetrain": "4WD",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "slug": "2025-sport-20l-i4-turbo-4wd-us-turbo-2-door"
+      },
+      "legacy_base_slug": "2025-sport-20l-i4-turbo-4wd-us-turbo",
+      "body_attributes": {
+        "body_style": null,
+        "wheelbase_designation": null,
+        "body_length_designation": null,
+        "roof_height_designation": null,
+        "door_configuration": "two-door",
+        "side_door_arrangement": null,
+        "body_code": null,
+        "body_code_namespace": null
+      },
+      "candidate_reference": "402019467:gas_20_turbo",
+      "action": "skip",
+      "reasons": [],
+      "existing_id": 1101
+    },
+    {
+      "inventory_id": "402049827:gas_36_v6",
+      "identity_digest": "sha256:02e768880618075647070e70936c69b4d09503597624f05c3aa4c9b486fa8b87",
+      "edmunds_style_ids": [
+        "402049827"
+      ],
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049827&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2025/st-402049827/features-specs/"
+      ],
+      "source_fields": {
+        "engine_name": "3.6L V6",
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": null,
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": null,
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2025,
+        "trim_name": "Sport",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "market": "US"
+      },
+      "baseline": {
+        "identity_contract": "vehicle-definition-body/2",
+        "scope": {
+          "manufacturer_key": "jeep",
+          "model_key": "wrangler",
+          "generation_key": "jl"
+        },
+        "model_year": 2025,
+        "trim_name": "Sport",
+        "drivetrain": "4WD",
+        "market": "US",
+        "canonical_powertrain": {
+          "engine_displacement_liters": "3.6",
+          "engine_cylinders": 6,
+          "engine_aspiration": "naturally_aspirated",
+          "fuel_type": "gasoline",
+          "electrification_type": "none"
+        },
+        "body_digest": "sha256:98f93c52c8c997ddc9e5c0af0df48c7e64a6a010d5d15b5cbc634e096728989d",
+        "series": null
+      },
+      "engine_code": "ERC",
+      "fields": {
+        "model_year": 2025,
+        "trim_name": "Sport",
+        "engine_name": "3.6L V6 ESS",
+        "engine_id": 1,
+        "factory_body_configuration_id": 2,
+        "market": "US",
+        "drivetrain": "4WD",
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": "naturally_aspirated",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "slug": "2025-sport-36l-v6-ess-4wd-us-4-door"
+      },
+      "legacy_base_slug": "2025-sport-36l-v6-ess-4wd-us",
+      "body_attributes": {
+        "body_style": null,
+        "wheelbase_designation": null,
+        "body_length_designation": null,
+        "roof_height_designation": null,
+        "door_configuration": "four-door",
+        "side_door_arrangement": null,
+        "body_code": null,
+        "body_code_namespace": null
+      },
+      "candidate_reference": "402049827:gas_36_v6",
+      "action": "skip",
+      "reasons": [],
+      "existing_id": 1102
+    },
+    {
+      "inventory_id": "402049827:gas_20_turbo",
+      "identity_digest": "sha256:71256dfdb8967b087c9b26849dbf94c4452d9f0470f6bf65c5770186502377f8",
+      "edmunds_style_ids": [
+        "402049827"
+      ],
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049827&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2025/st-402049827/features-specs/"
+      ],
+      "source_fields": {
+        "engine_name": "2.0L I4 Turbo",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": null,
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2025,
+        "trim_name": "Sport",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "market": "US"
+      },
+      "baseline": {
+        "identity_contract": "vehicle-definition-body/2",
+        "scope": {
+          "manufacturer_key": "jeep",
+          "model_key": "wrangler",
+          "generation_key": "jl"
+        },
+        "model_year": 2025,
+        "trim_name": "Sport",
+        "drivetrain": "4WD",
+        "market": "US",
+        "canonical_powertrain": {
+          "engine_displacement_liters": "2",
+          "engine_cylinders": 4,
+          "engine_aspiration": "turbocharged",
+          "fuel_type": "gasoline",
+          "electrification_type": "none"
+        },
+        "body_digest": "sha256:98f93c52c8c997ddc9e5c0af0df48c7e64a6a010d5d15b5cbc634e096728989d",
+        "series": null
+      },
+      "engine_code": "EC1",
+      "fields": {
+        "model_year": 2025,
+        "trim_name": "Sport",
+        "engine_name": "2.0L I4 Turbo",
+        "engine_id": 2,
+        "factory_body_configuration_id": 2,
+        "market": "US",
+        "drivetrain": "4WD",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "slug": "2025-sport-20l-i4-turbo-4wd-us-turbo-4-door"
+      },
+      "legacy_base_slug": "2025-sport-20l-i4-turbo-4wd-us-turbo",
+      "body_attributes": {
+        "body_style": null,
+        "wheelbase_designation": null,
+        "body_length_designation": null,
+        "roof_height_designation": null,
+        "door_configuration": "four-door",
+        "side_door_arrangement": null,
+        "body_code": null,
+        "body_code_namespace": null
+      },
+      "candidate_reference": "402049827:gas_20_turbo",
+      "action": "skip",
+      "reasons": [],
+      "existing_id": 1103
+    },
+    {
+      "inventory_id": "402049822:gas_36_v6",
+      "identity_digest": "sha256:1dfe05b9d5da5d3075f7ff771f84a6ce2b805b98f9452ab7ad7aa92314ffeaf1",
+      "edmunds_style_ids": [
+        "402049822"
+      ],
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049822&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2025/st-402049822/features-specs/"
+      ],
+      "source_fields": {
+        "engine_name": "3.6L V6",
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": null,
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": null,
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2025,
+        "trim_name": "Sport S",
+        "factory_body_configuration": {
+          "door_configuration": "two-door"
+        },
+        "drivetrain": "4WD",
+        "market": "US"
+      },
+      "baseline": {
+        "identity_contract": "vehicle-definition-body/2",
+        "scope": {
+          "manufacturer_key": "jeep",
+          "model_key": "wrangler",
+          "generation_key": "jl"
+        },
+        "model_year": 2025,
+        "trim_name": "Sport S",
+        "drivetrain": "4WD",
+        "market": "US",
+        "canonical_powertrain": {
+          "engine_displacement_liters": "3.6",
+          "engine_cylinders": 6,
+          "engine_aspiration": "naturally_aspirated",
+          "fuel_type": "gasoline",
+          "electrification_type": "none"
+        },
+        "body_digest": "sha256:e12a446cdd441834252f1818ff6c17fb9ecfa81f014fe693e440a82964d77739",
+        "series": null
+      },
+      "engine_code": "ERC",
+      "fields": {
+        "model_year": 2025,
+        "trim_name": "Sport S",
+        "engine_name": "3.6L V6 ESS",
+        "engine_id": 1,
+        "factory_body_configuration_id": 1,
+        "market": "US",
+        "drivetrain": "4WD",
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": "naturally_aspirated",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "slug": "2025-sport-s-36l-v6-ess-4wd-us-2-door"
+      },
+      "legacy_base_slug": "2025-sport-s-36l-v6-ess-4wd-us",
+      "body_attributes": {
+        "body_style": null,
+        "wheelbase_designation": null,
+        "body_length_designation": null,
+        "roof_height_designation": null,
+        "door_configuration": "two-door",
+        "side_door_arrangement": null,
+        "body_code": null,
+        "body_code_namespace": null
+      },
+      "candidate_reference": "402049822:gas_36_v6",
+      "action": "skip",
+      "reasons": [],
+      "existing_id": 1104
+    },
+    {
+      "inventory_id": "402049822:gas_20_turbo",
+      "identity_digest": "sha256:39ade8293e3571a62519258ab9ac899f15861f0a3f017ae94488ea9300b7f69a",
+      "edmunds_style_ids": [
+        "402049822"
+      ],
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049822&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2025/st-402049822/features-specs/"
+      ],
+      "source_fields": {
+        "engine_name": "2.0L I4 Turbo",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": null,
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2025,
+        "trim_name": "Sport S",
+        "factory_body_configuration": {
+          "door_configuration": "two-door"
+        },
+        "drivetrain": "4WD",
+        "market": "US"
+      },
+      "baseline": {
+        "identity_contract": "vehicle-definition-body/2",
+        "scope": {
+          "manufacturer_key": "jeep",
+          "model_key": "wrangler",
+          "generation_key": "jl"
+        },
+        "model_year": 2025,
+        "trim_name": "Sport S",
+        "drivetrain": "4WD",
+        "market": "US",
+        "canonical_powertrain": {
+          "engine_displacement_liters": "2",
+          "engine_cylinders": 4,
+          "engine_aspiration": "turbocharged",
+          "fuel_type": "gasoline",
+          "electrification_type": "none"
+        },
+        "body_digest": "sha256:e12a446cdd441834252f1818ff6c17fb9ecfa81f014fe693e440a82964d77739",
+        "series": null
+      },
+      "engine_code": "EC1",
+      "fields": {
+        "model_year": 2025,
+        "trim_name": "Sport S",
+        "engine_name": "2.0L I4 Turbo",
+        "engine_id": 2,
+        "factory_body_configuration_id": 1,
+        "market": "US",
+        "drivetrain": "4WD",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "slug": "2025-sport-s-20l-i4-turbo-4wd-us-turbo-2-door"
+      },
+      "legacy_base_slug": "2025-sport-s-20l-i4-turbo-4wd-us-turbo",
+      "body_attributes": {
+        "body_style": null,
+        "wheelbase_designation": null,
+        "body_length_designation": null,
+        "roof_height_designation": null,
+        "door_configuration": "two-door",
+        "side_door_arrangement": null,
+        "body_code": null,
+        "body_code_namespace": null
+      },
+      "candidate_reference": "402049822:gas_20_turbo",
+      "action": "skip",
+      "reasons": [],
+      "existing_id": 1105
+    },
+    {
+      "inventory_id": "402049823:gas_36_v6",
+      "identity_digest": "sha256:b44a156e6230f70112450bbb0c25c51e71073568c2eaac8860e9563ed0029f22",
+      "edmunds_style_ids": [
+        "402049823"
+      ],
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049823&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2025/st-402049823/features-specs/"
+      ],
+      "source_fields": {
+        "engine_name": "3.6L V6",
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": null,
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": null,
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2025,
+        "trim_name": "Sport S",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "market": "US"
+      },
+      "baseline": {
+        "identity_contract": "vehicle-definition-body/2",
+        "scope": {
+          "manufacturer_key": "jeep",
+          "model_key": "wrangler",
+          "generation_key": "jl"
+        },
+        "model_year": 2025,
+        "trim_name": "Sport S",
+        "drivetrain": "4WD",
+        "market": "US",
+        "canonical_powertrain": {
+          "engine_displacement_liters": "3.6",
+          "engine_cylinders": 6,
+          "engine_aspiration": "naturally_aspirated",
+          "fuel_type": "gasoline",
+          "electrification_type": "none"
+        },
+        "body_digest": "sha256:98f93c52c8c997ddc9e5c0af0df48c7e64a6a010d5d15b5cbc634e096728989d",
+        "series": null
+      },
+      "engine_code": "ERC",
+      "fields": {
+        "model_year": 2025,
+        "trim_name": "Sport S",
+        "engine_name": "3.6L V6 ESS",
+        "engine_id": 1,
+        "factory_body_configuration_id": 2,
+        "market": "US",
+        "drivetrain": "4WD",
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": "naturally_aspirated",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "slug": "2025-sport-s-36l-v6-ess-4wd-us-4-door"
+      },
+      "legacy_base_slug": "2025-sport-s-36l-v6-ess-4wd-us",
+      "body_attributes": {
+        "body_style": null,
+        "wheelbase_designation": null,
+        "body_length_designation": null,
+        "roof_height_designation": null,
+        "door_configuration": "four-door",
+        "side_door_arrangement": null,
+        "body_code": null,
+        "body_code_namespace": null
+      },
+      "candidate_reference": "402049823:gas_36_v6",
+      "action": "skip",
+      "reasons": [],
+      "existing_id": 1106
+    },
+    {
+      "inventory_id": "402049823:gas_20_turbo",
+      "identity_digest": "sha256:f902e1c8e9b257b38cc79e11b4d895d4580bd4046675859f7decd0a396bc5fe1",
+      "edmunds_style_ids": [
+        "402049823"
+      ],
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049823&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2025/st-402049823/features-specs/"
+      ],
+      "source_fields": {
+        "engine_name": "2.0L I4 Turbo",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": null,
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2025,
+        "trim_name": "Sport S",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "market": "US"
+      },
+      "baseline": {
+        "identity_contract": "vehicle-definition-body/2",
+        "scope": {
+          "manufacturer_key": "jeep",
+          "model_key": "wrangler",
+          "generation_key": "jl"
+        },
+        "model_year": 2025,
+        "trim_name": "Sport S",
+        "drivetrain": "4WD",
+        "market": "US",
+        "canonical_powertrain": {
+          "engine_displacement_liters": "2",
+          "engine_cylinders": 4,
+          "engine_aspiration": "turbocharged",
+          "fuel_type": "gasoline",
+          "electrification_type": "none"
+        },
+        "body_digest": "sha256:98f93c52c8c997ddc9e5c0af0df48c7e64a6a010d5d15b5cbc634e096728989d",
+        "series": null
+      },
+      "engine_code": "EC1",
+      "fields": {
+        "model_year": 2025,
+        "trim_name": "Sport S",
+        "engine_name": "2.0L I4 Turbo",
+        "engine_id": 2,
+        "factory_body_configuration_id": 2,
+        "market": "US",
+        "drivetrain": "4WD",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "slug": "2025-sport-s-20l-i4-turbo-4wd-us-turbo-4-door"
+      },
+      "legacy_base_slug": "2025-sport-s-20l-i4-turbo-4wd-us-turbo",
+      "body_attributes": {
+        "body_style": null,
+        "wheelbase_designation": null,
+        "body_length_designation": null,
+        "roof_height_designation": null,
+        "door_configuration": "four-door",
+        "side_door_arrangement": null,
+        "body_code": null,
+        "body_code_namespace": null
+      },
+      "candidate_reference": "402049823:gas_20_turbo",
+      "action": "skip",
+      "reasons": [],
+      "existing_id": 1107
+    },
+    {
+      "inventory_id": "402049831:gas_36_v6",
+      "identity_digest": "sha256:ccb0e40ee167f8c157cbc1f37455f1744435a4f74498c590ea2b5c8d48d59802",
+      "edmunds_style_ids": [
+        "402049831"
+      ],
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049831&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2025/st-402049831/features-specs/"
+      ],
+      "source_fields": {
+        "engine_name": "3.6L V6",
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": null,
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": null,
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2025,
+        "trim_name": "Willys",
+        "factory_body_configuration": {
+          "door_configuration": "two-door"
+        },
+        "drivetrain": "4WD",
+        "market": "US"
+      },
+      "baseline": {
+        "identity_contract": "vehicle-definition-body/2",
+        "scope": {
+          "manufacturer_key": "jeep",
+          "model_key": "wrangler",
+          "generation_key": "jl"
+        },
+        "model_year": 2025,
+        "trim_name": "Willys",
+        "drivetrain": "4WD",
+        "market": "US",
+        "canonical_powertrain": {
+          "engine_displacement_liters": "3.6",
+          "engine_cylinders": 6,
+          "engine_aspiration": "naturally_aspirated",
+          "fuel_type": "gasoline",
+          "electrification_type": "none"
+        },
+        "body_digest": "sha256:e12a446cdd441834252f1818ff6c17fb9ecfa81f014fe693e440a82964d77739",
+        "series": null
+      },
+      "engine_code": "ERC",
+      "fields": {
+        "model_year": 2025,
+        "trim_name": "Willys",
+        "engine_name": "3.6L V6 ESS",
+        "engine_id": 1,
+        "factory_body_configuration_id": 1,
+        "market": "US",
+        "drivetrain": "4WD",
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": "naturally_aspirated",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "slug": "2025-willys-36l-v6-ess-4wd-us-2-door"
+      },
+      "legacy_base_slug": "2025-willys-36l-v6-ess-4wd-us",
+      "body_attributes": {
+        "body_style": null,
+        "wheelbase_designation": null,
+        "body_length_designation": null,
+        "roof_height_designation": null,
+        "door_configuration": "two-door",
+        "side_door_arrangement": null,
+        "body_code": null,
+        "body_code_namespace": null
+      },
+      "candidate_reference": "402049831:gas_36_v6",
+      "action": "skip",
+      "reasons": [],
+      "existing_id": 1108
+    },
+    {
+      "inventory_id": "402049831:gas_20_turbo",
+      "identity_digest": "sha256:f7af8d539700ecbd583601346b83ebaca2bd92b221f01bfacb815ec0bc6df0dc",
+      "edmunds_style_ids": [
+        "402049831"
+      ],
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049831&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2025/st-402049831/features-specs/"
+      ],
+      "source_fields": {
+        "engine_name": "2.0L I4 Turbo",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": null,
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2025,
+        "trim_name": "Willys",
+        "factory_body_configuration": {
+          "door_configuration": "two-door"
+        },
+        "drivetrain": "4WD",
+        "market": "US"
+      },
+      "baseline": {
+        "identity_contract": "vehicle-definition-body/2",
+        "scope": {
+          "manufacturer_key": "jeep",
+          "model_key": "wrangler",
+          "generation_key": "jl"
+        },
+        "model_year": 2025,
+        "trim_name": "Willys",
+        "drivetrain": "4WD",
+        "market": "US",
+        "canonical_powertrain": {
+          "engine_displacement_liters": "2",
+          "engine_cylinders": 4,
+          "engine_aspiration": "turbocharged",
+          "fuel_type": "gasoline",
+          "electrification_type": "none"
+        },
+        "body_digest": "sha256:e12a446cdd441834252f1818ff6c17fb9ecfa81f014fe693e440a82964d77739",
+        "series": null
+      },
+      "engine_code": "EC1",
+      "fields": {
+        "model_year": 2025,
+        "trim_name": "Willys",
+        "engine_name": "2.0L I4 Turbo",
+        "engine_id": 2,
+        "factory_body_configuration_id": 1,
+        "market": "US",
+        "drivetrain": "4WD",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "slug": "2025-willys-20l-i4-turbo-4wd-us-turbo-2-door"
+      },
+      "legacy_base_slug": "2025-willys-20l-i4-turbo-4wd-us-turbo",
+      "body_attributes": {
+        "body_style": null,
+        "wheelbase_designation": null,
+        "body_length_designation": null,
+        "roof_height_designation": null,
+        "door_configuration": "two-door",
+        "side_door_arrangement": null,
+        "body_code": null,
+        "body_code_namespace": null
+      },
+      "candidate_reference": "402049831:gas_20_turbo",
+      "action": "skip",
+      "reasons": [],
+      "existing_id": 1109
+    },
+    {
+      "inventory_id": "402049826:gas_36_v6",
+      "identity_digest": "sha256:ebe73b0c15d07a3f95428a6fb97cec6c330425f090e77c591d5ce675b98ae99c",
+      "edmunds_style_ids": [
+        "402049826"
+      ],
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049826&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2025/st-402049826/features-specs/"
+      ],
+      "source_fields": {
+        "engine_name": "3.6L V6",
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": null,
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": null,
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2025,
+        "trim_name": "Willys",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "market": "US"
+      },
+      "baseline": {
+        "identity_contract": "vehicle-definition-body/2",
+        "scope": {
+          "manufacturer_key": "jeep",
+          "model_key": "wrangler",
+          "generation_key": "jl"
+        },
+        "model_year": 2025,
+        "trim_name": "Willys",
+        "drivetrain": "4WD",
+        "market": "US",
+        "canonical_powertrain": {
+          "engine_displacement_liters": "3.6",
+          "engine_cylinders": 6,
+          "engine_aspiration": "naturally_aspirated",
+          "fuel_type": "gasoline",
+          "electrification_type": "none"
+        },
+        "body_digest": "sha256:98f93c52c8c997ddc9e5c0af0df48c7e64a6a010d5d15b5cbc634e096728989d",
+        "series": null
+      },
+      "engine_code": "ERC",
+      "fields": {
+        "model_year": 2025,
+        "trim_name": "Willys",
+        "engine_name": "3.6L V6 ESS",
+        "engine_id": 1,
+        "factory_body_configuration_id": 2,
+        "market": "US",
+        "drivetrain": "4WD",
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": "naturally_aspirated",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "slug": "2025-willys-36l-v6-ess-4wd-us-4-door"
+      },
+      "legacy_base_slug": "2025-willys-36l-v6-ess-4wd-us",
+      "body_attributes": {
+        "body_style": null,
+        "wheelbase_designation": null,
+        "body_length_designation": null,
+        "roof_height_designation": null,
+        "door_configuration": "four-door",
+        "side_door_arrangement": null,
+        "body_code": null,
+        "body_code_namespace": null
+      },
+      "candidate_reference": "402049826:gas_36_v6",
+      "action": "skip",
+      "reasons": [],
+      "existing_id": 1110
+    },
+    {
+      "inventory_id": "402049826:gas_20_turbo",
+      "identity_digest": "sha256:88974317409f8fcbe9e86957f0120df5d14376440995a3b28131ecc892c015c6",
+      "edmunds_style_ids": [
+        "402049826"
+      ],
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049826&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2025/st-402049826/features-specs/"
+      ],
+      "source_fields": {
+        "engine_name": "2.0L I4 Turbo",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": null,
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2025,
+        "trim_name": "Willys",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "market": "US"
+      },
+      "baseline": {
+        "identity_contract": "vehicle-definition-body/2",
+        "scope": {
+          "manufacturer_key": "jeep",
+          "model_key": "wrangler",
+          "generation_key": "jl"
+        },
+        "model_year": 2025,
+        "trim_name": "Willys",
+        "drivetrain": "4WD",
+        "market": "US",
+        "canonical_powertrain": {
+          "engine_displacement_liters": "2",
+          "engine_cylinders": 4,
+          "engine_aspiration": "turbocharged",
+          "fuel_type": "gasoline",
+          "electrification_type": "none"
+        },
+        "body_digest": "sha256:98f93c52c8c997ddc9e5c0af0df48c7e64a6a010d5d15b5cbc634e096728989d",
+        "series": null
+      },
+      "engine_code": "EC1",
+      "fields": {
+        "model_year": 2025,
+        "trim_name": "Willys",
+        "engine_name": "2.0L I4 Turbo",
+        "engine_id": 2,
+        "factory_body_configuration_id": 2,
+        "market": "US",
+        "drivetrain": "4WD",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "slug": "2025-willys-20l-i4-turbo-4wd-us-turbo-4-door"
+      },
+      "legacy_base_slug": "2025-willys-20l-i4-turbo-4wd-us-turbo",
+      "body_attributes": {
+        "body_style": null,
+        "wheelbase_designation": null,
+        "body_length_designation": null,
+        "roof_height_designation": null,
+        "door_configuration": "four-door",
+        "side_door_arrangement": null,
+        "body_code": null,
+        "body_code_namespace": null
+      },
+      "candidate_reference": "402049826:gas_20_turbo",
+      "action": "skip",
+      "reasons": [],
+      "existing_id": 1111
+    },
+    {
+      "inventory_id": "402049832:gas_36_v6",
+      "identity_digest": "sha256:2c501bcbf04a28b862d682e104dce1a81f593c1ce65da2923101afb715bf3cfd",
+      "edmunds_style_ids": [
+        "402049832"
+      ],
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049832&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2025/st-402049832/features-specs/"
+      ],
+      "source_fields": {
+        "engine_name": "3.6L V6",
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": null,
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": null,
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2025,
+        "trim_name": "Rubicon",
+        "factory_body_configuration": {
+          "door_configuration": "two-door"
+        },
+        "drivetrain": "4WD",
+        "market": "US"
+      },
+      "baseline": {
+        "identity_contract": "vehicle-definition-body/2",
+        "scope": {
+          "manufacturer_key": "jeep",
+          "model_key": "wrangler",
+          "generation_key": "jl"
+        },
+        "model_year": 2025,
+        "trim_name": "Rubicon",
+        "drivetrain": "4WD",
+        "market": "US",
+        "canonical_powertrain": {
+          "engine_displacement_liters": "3.6",
+          "engine_cylinders": 6,
+          "engine_aspiration": "naturally_aspirated",
+          "fuel_type": "gasoline",
+          "electrification_type": "none"
+        },
+        "body_digest": "sha256:e12a446cdd441834252f1818ff6c17fb9ecfa81f014fe693e440a82964d77739",
+        "series": null
+      },
+      "engine_code": "ERC",
+      "fields": {
+        "model_year": 2025,
+        "trim_name": "Rubicon",
+        "engine_name": "3.6L V6 ESS",
+        "engine_id": 1,
+        "factory_body_configuration_id": 1,
+        "market": "US",
+        "drivetrain": "4WD",
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": "naturally_aspirated",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "slug": "2025-rubicon-36l-v6-ess-4wd-us-2-door"
+      },
+      "legacy_base_slug": "2025-rubicon-36l-v6-ess-4wd-us",
+      "body_attributes": {
+        "body_style": null,
+        "wheelbase_designation": null,
+        "body_length_designation": null,
+        "roof_height_designation": null,
+        "door_configuration": "two-door",
+        "side_door_arrangement": null,
+        "body_code": null,
+        "body_code_namespace": null
+      },
+      "candidate_reference": "402049832:gas_36_v6",
+      "action": "skip",
+      "reasons": [],
+      "existing_id": 1112
+    },
+    {
+      "inventory_id": "402049832:gas_20_turbo",
+      "identity_digest": "sha256:3ed23321731f07d504d979e83f8ef3988df1cfc6900b104bf2beb134e6a687ca",
+      "edmunds_style_ids": [
+        "402049832"
+      ],
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049832&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2025/st-402049832/features-specs/"
+      ],
+      "source_fields": {
+        "engine_name": "2.0L I4 Turbo",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": null,
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2025,
+        "trim_name": "Rubicon",
+        "factory_body_configuration": {
+          "door_configuration": "two-door"
+        },
+        "drivetrain": "4WD",
+        "market": "US"
+      },
+      "baseline": {
+        "identity_contract": "vehicle-definition-body/2",
+        "scope": {
+          "manufacturer_key": "jeep",
+          "model_key": "wrangler",
+          "generation_key": "jl"
+        },
+        "model_year": 2025,
+        "trim_name": "Rubicon",
+        "drivetrain": "4WD",
+        "market": "US",
+        "canonical_powertrain": {
+          "engine_displacement_liters": "2",
+          "engine_cylinders": 4,
+          "engine_aspiration": "turbocharged",
+          "fuel_type": "gasoline",
+          "electrification_type": "none"
+        },
+        "body_digest": "sha256:e12a446cdd441834252f1818ff6c17fb9ecfa81f014fe693e440a82964d77739",
+        "series": null
+      },
+      "engine_code": "EC1",
+      "fields": {
+        "model_year": 2025,
+        "trim_name": "Rubicon",
+        "engine_name": "2.0L I4 Turbo",
+        "engine_id": 2,
+        "factory_body_configuration_id": 1,
+        "market": "US",
+        "drivetrain": "4WD",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "slug": "2025-rubicon-20l-i4-turbo-4wd-us-turbo-2-door"
+      },
+      "legacy_base_slug": "2025-rubicon-20l-i4-turbo-4wd-us-turbo",
+      "body_attributes": {
+        "body_style": null,
+        "wheelbase_designation": null,
+        "body_length_designation": null,
+        "roof_height_designation": null,
+        "door_configuration": "two-door",
+        "side_door_arrangement": null,
+        "body_code": null,
+        "body_code_namespace": null
+      },
+      "candidate_reference": "402049832:gas_20_turbo",
+      "action": "skip",
+      "reasons": [],
+      "existing_id": 1113
+    },
+    {
+      "inventory_id": "402049828:gas_36_v6",
+      "identity_digest": "sha256:3a6c335151d05ea0f0a47858abc39682416f4a46d76d36da287730688910545c",
+      "edmunds_style_ids": [
+        "402049828"
+      ],
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049828&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2025/st-402049828/features-specs/"
+      ],
+      "source_fields": {
+        "engine_name": "3.6L V6",
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": null,
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": null,
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2025,
+        "trim_name": "Rubicon",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "market": "US"
+      },
+      "baseline": {
+        "identity_contract": "vehicle-definition-body/2",
+        "scope": {
+          "manufacturer_key": "jeep",
+          "model_key": "wrangler",
+          "generation_key": "jl"
+        },
+        "model_year": 2025,
+        "trim_name": "Rubicon",
+        "drivetrain": "4WD",
+        "market": "US",
+        "canonical_powertrain": {
+          "engine_displacement_liters": "3.6",
+          "engine_cylinders": 6,
+          "engine_aspiration": "naturally_aspirated",
+          "fuel_type": "gasoline",
+          "electrification_type": "none"
+        },
+        "body_digest": "sha256:98f93c52c8c997ddc9e5c0af0df48c7e64a6a010d5d15b5cbc634e096728989d",
+        "series": null
+      },
+      "engine_code": "ERC",
+      "fields": {
+        "model_year": 2025,
+        "trim_name": "Rubicon",
+        "engine_name": "3.6L V6 ESS",
+        "engine_id": 1,
+        "factory_body_configuration_id": 2,
+        "market": "US",
+        "drivetrain": "4WD",
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": "naturally_aspirated",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "slug": "2025-rubicon-36l-v6-ess-4wd-us-4-door"
+      },
+      "legacy_base_slug": "2025-rubicon-36l-v6-ess-4wd-us",
+      "body_attributes": {
+        "body_style": null,
+        "wheelbase_designation": null,
+        "body_length_designation": null,
+        "roof_height_designation": null,
+        "door_configuration": "four-door",
+        "side_door_arrangement": null,
+        "body_code": null,
+        "body_code_namespace": null
+      },
+      "candidate_reference": "402049828:gas_36_v6",
+      "action": "skip",
+      "reasons": [],
+      "existing_id": 1114
+    },
+    {
+      "inventory_id": "402049828:gas_20_turbo",
+      "identity_digest": "sha256:e6478d44ca504143ef5c94286530ff996b7d14e535352e15a3e389d216ac2fbe",
+      "edmunds_style_ids": [
+        "402049828"
+      ],
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049828&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2025/st-402049828/features-specs/"
+      ],
+      "source_fields": {
+        "engine_name": "2.0L I4 Turbo",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": null,
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2025,
+        "trim_name": "Rubicon",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "market": "US"
+      },
+      "baseline": {
+        "identity_contract": "vehicle-definition-body/2",
+        "scope": {
+          "manufacturer_key": "jeep",
+          "model_key": "wrangler",
+          "generation_key": "jl"
+        },
+        "model_year": 2025,
+        "trim_name": "Rubicon",
+        "drivetrain": "4WD",
+        "market": "US",
+        "canonical_powertrain": {
+          "engine_displacement_liters": "2",
+          "engine_cylinders": 4,
+          "engine_aspiration": "turbocharged",
+          "fuel_type": "gasoline",
+          "electrification_type": "none"
+        },
+        "body_digest": "sha256:98f93c52c8c997ddc9e5c0af0df48c7e64a6a010d5d15b5cbc634e096728989d",
+        "series": null
+      },
+      "engine_code": "EC1",
+      "fields": {
+        "model_year": 2025,
+        "trim_name": "Rubicon",
+        "engine_name": "2.0L I4 Turbo",
+        "engine_id": 2,
+        "factory_body_configuration_id": 2,
+        "market": "US",
+        "drivetrain": "4WD",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "slug": "2025-rubicon-20l-i4-turbo-4wd-us-turbo-4-door"
+      },
+      "legacy_base_slug": "2025-rubicon-20l-i4-turbo-4wd-us-turbo",
+      "body_attributes": {
+        "body_style": null,
+        "wheelbase_designation": null,
+        "body_length_designation": null,
+        "roof_height_designation": null,
+        "door_configuration": "four-door",
+        "side_door_arrangement": null,
+        "body_code": null,
+        "body_code_namespace": null
+      },
+      "candidate_reference": "402049828:gas_20_turbo",
+      "action": "skip",
+      "reasons": [],
+      "existing_id": 1115
+    },
+    {
+      "inventory_id": "402049825:gas_20_turbo",
+      "identity_digest": "sha256:7b222fb22e12548563de42a2a32d5cd5d8cf86fddbf98590383a7309a96a3f8a",
+      "edmunds_style_ids": [
+        "402049825"
+      ],
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049825&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2025/st-402049825/features-specs/"
+      ],
+      "source_fields": {
+        "engine_name": "2.0L I4 Turbo",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": null,
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2025,
+        "trim_name": "Sport RHD",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "market": "US"
+      },
+      "baseline": {
+        "identity_contract": "vehicle-definition-body/2",
+        "scope": {
+          "manufacturer_key": "jeep",
+          "model_key": "wrangler",
+          "generation_key": "jl"
+        },
+        "model_year": 2025,
+        "trim_name": "Sport RHD",
+        "drivetrain": "4WD",
+        "market": "US",
+        "canonical_powertrain": {
+          "engine_displacement_liters": "2",
+          "engine_cylinders": 4,
+          "engine_aspiration": "turbocharged",
+          "fuel_type": "gasoline",
+          "electrification_type": "none"
+        },
+        "body_digest": "sha256:98f93c52c8c997ddc9e5c0af0df48c7e64a6a010d5d15b5cbc634e096728989d",
+        "series": null
+      },
+      "engine_code": "EC1",
+      "fields": {
+        "model_year": 2025,
+        "trim_name": "Sport RHD",
+        "engine_name": "2.0L I4 Turbo",
+        "engine_id": 2,
+        "factory_body_configuration_id": 2,
+        "market": "US",
+        "drivetrain": "4WD",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "slug": "2025-sport-rhd-20l-i4-turbo-4wd-us-turbo"
+      },
+      "legacy_base_slug": "2025-sport-rhd-20l-i4-turbo-4wd-us-turbo",
+      "body_attributes": {
+        "body_style": null,
+        "wheelbase_designation": null,
+        "body_length_designation": null,
+        "roof_height_designation": null,
+        "door_configuration": "four-door",
+        "side_door_arrangement": null,
+        "body_code": null,
+        "body_code_namespace": null
+      },
+      "candidate_reference": "402049825:gas_20_turbo",
+      "action": "skip",
+      "reasons": [],
+      "existing_id": 1116
+    },
+    {
+      "inventory_id": "402049821:gas_20_turbo",
+      "identity_digest": "sha256:adcaa0cf1ab28c81d0c9c8853c4b04a613369fc470d0f4dff79f383f372fbe26",
+      "edmunds_style_ids": [
+        "402049821"
+      ],
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049821&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2025/st-402049821/features-specs/"
+      ],
+      "source_fields": {
+        "engine_name": "2.0L I4 Turbo",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": null,
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2025,
+        "trim_name": "Sahara",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "market": "US"
+      },
+      "baseline": {
+        "identity_contract": "vehicle-definition-body/2",
+        "scope": {
+          "manufacturer_key": "jeep",
+          "model_key": "wrangler",
+          "generation_key": "jl"
+        },
+        "model_year": 2025,
+        "trim_name": "Sahara",
+        "drivetrain": "4WD",
+        "market": "US",
+        "canonical_powertrain": {
+          "engine_displacement_liters": "2",
+          "engine_cylinders": 4,
+          "engine_aspiration": "turbocharged",
+          "fuel_type": "gasoline",
+          "electrification_type": "none"
+        },
+        "body_digest": "sha256:98f93c52c8c997ddc9e5c0af0df48c7e64a6a010d5d15b5cbc634e096728989d",
+        "series": null
+      },
+      "engine_code": "EC1",
+      "fields": {
+        "model_year": 2025,
+        "trim_name": "Sahara",
+        "engine_name": "2.0L I4 Turbo",
+        "engine_id": 2,
+        "factory_body_configuration_id": 2,
+        "market": "US",
+        "drivetrain": "4WD",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "slug": "2025-sahara-20l-i4-turbo-4wd-us-turbo"
+      },
+      "legacy_base_slug": "2025-sahara-20l-i4-turbo-4wd-us-turbo",
+      "body_attributes": {
+        "body_style": null,
+        "wheelbase_designation": null,
+        "body_length_designation": null,
+        "roof_height_designation": null,
+        "door_configuration": "four-door",
+        "side_door_arrangement": null,
+        "body_code": null,
+        "body_code_namespace": null
+      },
+      "candidate_reference": "402049821:gas_20_turbo",
+      "action": "skip",
+      "reasons": [],
+      "existing_id": 1117
+    },
+    {
+      "inventory_id": "402049821:gas_36_v6",
+      "identity_digest": "sha256:4557488736798a1529473a441d67ccca4779d64328b1548568d7e77f9b578a6b",
+      "edmunds_style_ids": [
+        "402049821"
+      ],
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049821&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2025/st-402049821/features-specs/"
+      ],
+      "source_fields": {
+        "engine_name": "3.6L V6",
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": null,
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": null,
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2025,
+        "trim_name": "Sahara",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "market": "US"
+      },
+      "baseline": {
+        "identity_contract": "vehicle-definition-body/2",
+        "scope": {
+          "manufacturer_key": "jeep",
+          "model_key": "wrangler",
+          "generation_key": "jl"
+        },
+        "model_year": 2025,
+        "trim_name": "Sahara",
+        "drivetrain": "4WD",
+        "market": "US",
+        "canonical_powertrain": {
+          "engine_displacement_liters": "3.6",
+          "engine_cylinders": 6,
+          "engine_aspiration": "naturally_aspirated",
+          "fuel_type": "gasoline",
+          "electrification_type": "none"
+        },
+        "body_digest": "sha256:98f93c52c8c997ddc9e5c0af0df48c7e64a6a010d5d15b5cbc634e096728989d",
+        "series": null
+      },
+      "engine_code": "ERC",
+      "fields": {
+        "model_year": 2025,
+        "trim_name": "Sahara",
+        "engine_name": "3.6L V6 ESS",
+        "engine_id": 1,
+        "factory_body_configuration_id": 2,
+        "market": "US",
+        "drivetrain": "4WD",
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": "naturally_aspirated",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "slug": "2025-sahara-36l-v6-ess-4wd-us"
+      },
+      "legacy_base_slug": "2025-sahara-36l-v6-ess-4wd-us",
+      "body_attributes": {
+        "body_style": null,
+        "wheelbase_designation": null,
+        "body_length_designation": null,
+        "roof_height_designation": null,
+        "door_configuration": "four-door",
+        "side_door_arrangement": null,
+        "body_code": null,
+        "body_code_namespace": null
+      },
+      "candidate_reference": "402049821:gas_36_v6",
+      "action": "skip",
+      "reasons": [],
+      "existing_id": 1118
+    },
+    {
+      "inventory_id": "402049830:gas_36_v6",
+      "identity_digest": "sha256:cc91c89a3c3bff12dfc89460a2db8ef093db195a785d8c9d0b83d63684a86bc1",
+      "edmunds_style_ids": [
+        "402049830"
+      ],
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049830&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2025/st-402049830/features-specs/"
+      ],
+      "source_fields": {
+        "engine_name": "3.6L V6",
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": null,
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": null,
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2025,
+        "trim_name": "Rubicon X",
+        "factory_body_configuration": {
+          "door_configuration": "two-door"
+        },
+        "drivetrain": "4WD",
+        "market": "US"
+      },
+      "baseline": {
+        "identity_contract": "vehicle-definition-body/2",
+        "scope": {
+          "manufacturer_key": "jeep",
+          "model_key": "wrangler",
+          "generation_key": "jl"
+        },
+        "model_year": 2025,
+        "trim_name": "Rubicon X",
+        "drivetrain": "4WD",
+        "market": "US",
+        "canonical_powertrain": {
+          "engine_displacement_liters": "3.6",
+          "engine_cylinders": 6,
+          "engine_aspiration": "naturally_aspirated",
+          "fuel_type": "gasoline",
+          "electrification_type": "none"
+        },
+        "body_digest": "sha256:e12a446cdd441834252f1818ff6c17fb9ecfa81f014fe693e440a82964d77739",
+        "series": null
+      },
+      "engine_code": "ERC",
+      "fields": {
+        "model_year": 2025,
+        "trim_name": "Rubicon X",
+        "engine_name": "3.6L V6 ESS",
+        "engine_id": 1,
+        "factory_body_configuration_id": 1,
+        "market": "US",
+        "drivetrain": "4WD",
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": "naturally_aspirated",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "slug": "2025-rubicon-x-36l-v6-ess-4wd-us-2-door"
+      },
+      "legacy_base_slug": "2025-rubicon-x-36l-v6-ess-4wd-us",
+      "body_attributes": {
+        "body_style": null,
+        "wheelbase_designation": null,
+        "body_length_designation": null,
+        "roof_height_designation": null,
+        "door_configuration": "two-door",
+        "side_door_arrangement": null,
+        "body_code": null,
+        "body_code_namespace": null
+      },
+      "candidate_reference": "402049830:gas_36_v6",
+      "action": "skip",
+      "reasons": [],
+      "existing_id": 1119
+    },
+    {
+      "inventory_id": "402049830:gas_20_turbo",
+      "identity_digest": "sha256:fc7d88b1bb92f094f3453dd7a8a7ae8183a00f6d2a1450be63bee5bf6015c859",
+      "edmunds_style_ids": [
+        "402049830"
+      ],
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049830&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2025/st-402049830/features-specs/"
+      ],
+      "source_fields": {
+        "engine_name": "2.0L I4 Turbo",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": null,
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2025,
+        "trim_name": "Rubicon X",
+        "factory_body_configuration": {
+          "door_configuration": "two-door"
+        },
+        "drivetrain": "4WD",
+        "market": "US"
+      },
+      "baseline": {
+        "identity_contract": "vehicle-definition-body/2",
+        "scope": {
+          "manufacturer_key": "jeep",
+          "model_key": "wrangler",
+          "generation_key": "jl"
+        },
+        "model_year": 2025,
+        "trim_name": "Rubicon X",
+        "drivetrain": "4WD",
+        "market": "US",
+        "canonical_powertrain": {
+          "engine_displacement_liters": "2",
+          "engine_cylinders": 4,
+          "engine_aspiration": "turbocharged",
+          "fuel_type": "gasoline",
+          "electrification_type": "none"
+        },
+        "body_digest": "sha256:e12a446cdd441834252f1818ff6c17fb9ecfa81f014fe693e440a82964d77739",
+        "series": null
+      },
+      "engine_code": "EC1",
+      "fields": {
+        "model_year": 2025,
+        "trim_name": "Rubicon X",
+        "engine_name": "2.0L I4 Turbo",
+        "engine_id": 2,
+        "factory_body_configuration_id": 1,
+        "market": "US",
+        "drivetrain": "4WD",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "slug": "2025-rubicon-x-20l-i4-turbo-4wd-us-turbo-2-door"
+      },
+      "legacy_base_slug": "2025-rubicon-x-20l-i4-turbo-4wd-us-turbo",
+      "body_attributes": {
+        "body_style": null,
+        "wheelbase_designation": null,
+        "body_length_designation": null,
+        "roof_height_designation": null,
+        "door_configuration": "two-door",
+        "side_door_arrangement": null,
+        "body_code": null,
+        "body_code_namespace": null
+      },
+      "candidate_reference": "402049830:gas_20_turbo",
+      "action": "skip",
+      "reasons": [],
+      "existing_id": 1120
+    },
+    {
+      "inventory_id": "402049824:gas_36_v6",
+      "identity_digest": "sha256:d0db484f9e2cc691bd98d0d50b7f929b5548323f2e1f8aafec81fda309a97905",
+      "edmunds_style_ids": [
+        "402049824"
+      ],
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049824&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2025/st-402049824/features-specs/"
+      ],
+      "source_fields": {
+        "engine_name": "3.6L V6",
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": null,
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": null,
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2025,
+        "trim_name": "Rubicon X",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "market": "US"
+      },
+      "baseline": {
+        "identity_contract": "vehicle-definition-body/2",
+        "scope": {
+          "manufacturer_key": "jeep",
+          "model_key": "wrangler",
+          "generation_key": "jl"
+        },
+        "model_year": 2025,
+        "trim_name": "Rubicon X",
+        "drivetrain": "4WD",
+        "market": "US",
+        "canonical_powertrain": {
+          "engine_displacement_liters": "3.6",
+          "engine_cylinders": 6,
+          "engine_aspiration": "naturally_aspirated",
+          "fuel_type": "gasoline",
+          "electrification_type": "none"
+        },
+        "body_digest": "sha256:98f93c52c8c997ddc9e5c0af0df48c7e64a6a010d5d15b5cbc634e096728989d",
+        "series": null
+      },
+      "engine_code": "ERC",
+      "fields": {
+        "model_year": 2025,
+        "trim_name": "Rubicon X",
+        "engine_name": "3.6L V6 ESS",
+        "engine_id": 1,
+        "factory_body_configuration_id": 2,
+        "market": "US",
+        "drivetrain": "4WD",
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": "naturally_aspirated",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "slug": "2025-rubicon-x-36l-v6-ess-4wd-us-4-door"
+      },
+      "legacy_base_slug": "2025-rubicon-x-36l-v6-ess-4wd-us",
+      "body_attributes": {
+        "body_style": null,
+        "wheelbase_designation": null,
+        "body_length_designation": null,
+        "roof_height_designation": null,
+        "door_configuration": "four-door",
+        "side_door_arrangement": null,
+        "body_code": null,
+        "body_code_namespace": null
+      },
+      "candidate_reference": "402049824:gas_36_v6",
+      "action": "skip",
+      "reasons": [],
+      "existing_id": 1121
+    },
+    {
+      "inventory_id": "402049824:gas_20_turbo",
+      "identity_digest": "sha256:b0e3746817cd981419911e030866b836677014a393c20f9faeac7c1e0bd66879",
+      "edmunds_style_ids": [
+        "402049824"
+      ],
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049824&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2025/st-402049824/features-specs/"
+      ],
+      "source_fields": {
+        "engine_name": "2.0L I4 Turbo",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": null,
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2025,
+        "trim_name": "Rubicon X",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "market": "US"
+      },
+      "baseline": {
+        "identity_contract": "vehicle-definition-body/2",
+        "scope": {
+          "manufacturer_key": "jeep",
+          "model_key": "wrangler",
+          "generation_key": "jl"
+        },
+        "model_year": 2025,
+        "trim_name": "Rubicon X",
+        "drivetrain": "4WD",
+        "market": "US",
+        "canonical_powertrain": {
+          "engine_displacement_liters": "2",
+          "engine_cylinders": 4,
+          "engine_aspiration": "turbocharged",
+          "fuel_type": "gasoline",
+          "electrification_type": "none"
+        },
+        "body_digest": "sha256:98f93c52c8c997ddc9e5c0af0df48c7e64a6a010d5d15b5cbc634e096728989d",
+        "series": null
+      },
+      "engine_code": "EC1",
+      "fields": {
+        "model_year": 2025,
+        "trim_name": "Rubicon X",
+        "engine_name": "2.0L I4 Turbo",
+        "engine_id": 2,
+        "factory_body_configuration_id": 2,
+        "market": "US",
+        "drivetrain": "4WD",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "slug": "2025-rubicon-x-20l-i4-turbo-4wd-us-turbo-4-door"
+      },
+      "legacy_base_slug": "2025-rubicon-x-20l-i4-turbo-4wd-us-turbo",
+      "body_attributes": {
+        "body_style": null,
+        "wheelbase_designation": null,
+        "body_length_designation": null,
+        "roof_height_designation": null,
+        "door_configuration": "four-door",
+        "side_door_arrangement": null,
+        "body_code": null,
+        "body_code_namespace": null
+      },
+      "candidate_reference": "402049824:gas_20_turbo",
+      "action": "skip",
+      "reasons": [],
+      "existing_id": 1122
+    },
+    {
+      "inventory_id": "402065526:gas_64_v8",
+      "identity_digest": "sha256:f9faefebb94dc88b4f001b5ec057810fec60e98354ba039da817a6905fbfa817",
+      "edmunds_style_ids": [
+        "402065526"
+      ],
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402065526&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2025/st-402065526/features-specs/"
+      ],
+      "source_fields": {
+        "engine_name": "6.4L V8",
+        "engine_displacement_liters": "6.4",
+        "engine_cylinders": 8,
+        "engine_aspiration": null,
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": null,
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2025,
+        "trim_name": "Rubicon 392 Final Edition",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "market": "US"
+      },
+      "baseline": {
+        "identity_contract": "vehicle-definition-body/2",
+        "scope": {
+          "manufacturer_key": "jeep",
+          "model_key": "wrangler",
+          "generation_key": "jl"
+        },
+        "model_year": 2025,
+        "trim_name": "Rubicon 392 Final Edition",
+        "drivetrain": "4WD",
+        "market": "US",
+        "canonical_powertrain": {
+          "engine_displacement_liters": "6.4",
+          "engine_cylinders": 8,
+          "engine_aspiration": "naturally_aspirated",
+          "fuel_type": "gasoline",
+          "electrification_type": "none"
+        },
+        "body_digest": "sha256:98f93c52c8c997ddc9e5c0af0df48c7e64a6a010d5d15b5cbc634e096728989d",
+        "series": null
+      },
+      "engine_code": "ESG",
+      "fields": {
+        "model_year": 2025,
+        "trim_name": "Rubicon 392 Final Edition",
+        "engine_name": "6.4L V8 HEMI",
+        "engine_id": 3,
+        "factory_body_configuration_id": 2,
+        "market": "US",
+        "drivetrain": "4WD",
+        "engine_displacement_liters": "6.4",
+        "engine_cylinders": 8,
+        "engine_aspiration": "naturally_aspirated",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "slug": "2025-rubicon-392-final-edition-64l-v8-hemi-4wd-us"
+      },
+      "legacy_base_slug": "2025-rubicon-392-final-edition-64l-v8-hemi-4wd-us",
+      "body_attributes": {
+        "body_style": null,
+        "wheelbase_designation": null,
+        "body_length_designation": null,
+        "roof_height_designation": null,
+        "door_configuration": "four-door",
+        "side_door_arrangement": null,
+        "body_code": null,
+        "body_code_namespace": null
+      },
+      "candidate_reference": "402065526:gas_64_v8",
+      "action": "skip",
+      "reasons": [],
+      "existing_id": 1123
+    },
+    {
+      "inventory_id": "402050383:phev_20_turbo",
+      "identity_digest": "sha256:50fcf78bd188497516e073ca4780d2b6c511c51a69cc250506bc2d9b4f1b6756",
+      "edmunds_style_ids": [
+        "402050383"
+      ],
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler-4xe/build/?modelyearId=402049565&styleId=402050383&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler-4xe/2025/st-402050383/features-specs/"
+      ],
+      "source_fields": {
+        "engine_name": "2.0L I4 Turbo PHEV",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "plug_in_hybrid",
+        "manufacturer_engine_code": null,
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2025,
+        "trim_name": "Sport S 4xe",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "market": "US"
+      },
+      "baseline": {
+        "identity_contract": "vehicle-definition-body/2",
+        "scope": {
+          "manufacturer_key": "jeep",
+          "model_key": "wrangler",
+          "generation_key": "jl"
+        },
+        "model_year": 2025,
+        "trim_name": "Sport S 4xe",
+        "drivetrain": "4WD",
+        "market": "US",
+        "canonical_powertrain": {
+          "engine_displacement_liters": "2",
+          "engine_cylinders": 4,
+          "engine_aspiration": "turbocharged",
+          "fuel_type": "gasoline",
+          "electrification_type": "plug_in_hybrid"
+        },
+        "body_digest": "sha256:98f93c52c8c997ddc9e5c0af0df48c7e64a6a010d5d15b5cbc634e096728989d",
+        "series": null
+      },
+      "engine_code": "ECX",
+      "fields": {
+        "model_year": 2025,
+        "trim_name": "Sport S 4xe",
+        "engine_name": "2.0L I4 Turbo PHEV",
+        "engine_id": 6,
+        "factory_body_configuration_id": 2,
+        "market": "US",
+        "drivetrain": "4WD",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "plug_in_hybrid",
+        "slug": "2025-sport-s-4xe-20l-i4-turbo-phev-4wd-us-turbo-phev"
+      },
+      "legacy_base_slug": "2025-sport-s-4xe-20l-i4-turbo-phev-4wd-us-turbo-phev",
+      "body_attributes": {
+        "body_style": null,
+        "wheelbase_designation": null,
+        "body_length_designation": null,
+        "roof_height_designation": null,
+        "door_configuration": "four-door",
+        "side_door_arrangement": null,
+        "body_code": null,
+        "body_code_namespace": null
+      },
+      "candidate_reference": "402050383:phev_20_turbo",
+      "action": "skip",
+      "reasons": [],
+      "existing_id": 1124
+    },
+    {
+      "inventory_id": "402050385:phev_20_turbo",
+      "identity_digest": "sha256:2c6179ef7ed5533144224509dfe21341966cc6641ccd56119d6b25ed9245f9d5",
+      "edmunds_style_ids": [
+        "402050385"
+      ],
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler-4xe/build/?modelyearId=402049565&styleId=402050385&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler-4xe/2025/st-402050385/features-specs/"
+      ],
+      "source_fields": {
+        "engine_name": "2.0L I4 Turbo PHEV",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "plug_in_hybrid",
+        "manufacturer_engine_code": null,
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2025,
+        "trim_name": "Willys 4xe",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "market": "US"
+      },
+      "baseline": {
+        "identity_contract": "vehicle-definition-body/2",
+        "scope": {
+          "manufacturer_key": "jeep",
+          "model_key": "wrangler",
+          "generation_key": "jl"
+        },
+        "model_year": 2025,
+        "trim_name": "Willys 4xe",
+        "drivetrain": "4WD",
+        "market": "US",
+        "canonical_powertrain": {
+          "engine_displacement_liters": "2",
+          "engine_cylinders": 4,
+          "engine_aspiration": "turbocharged",
+          "fuel_type": "gasoline",
+          "electrification_type": "plug_in_hybrid"
+        },
+        "body_digest": "sha256:98f93c52c8c997ddc9e5c0af0df48c7e64a6a010d5d15b5cbc634e096728989d",
+        "series": null
+      },
+      "engine_code": "ECX",
+      "fields": {
+        "model_year": 2025,
+        "trim_name": "Willys 4xe",
+        "engine_name": "2.0L I4 Turbo PHEV",
+        "engine_id": 6,
+        "factory_body_configuration_id": 2,
+        "market": "US",
+        "drivetrain": "4WD",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "plug_in_hybrid",
+        "slug": "2025-willys-4xe-20l-i4-turbo-phev-4wd-us-turbo-phev"
+      },
+      "legacy_base_slug": "2025-willys-4xe-20l-i4-turbo-phev-4wd-us-turbo-phev",
+      "body_attributes": {
+        "body_style": null,
+        "wheelbase_designation": null,
+        "body_length_designation": null,
+        "roof_height_designation": null,
+        "door_configuration": "four-door",
+        "side_door_arrangement": null,
+        "body_code": null,
+        "body_code_namespace": null
+      },
+      "candidate_reference": "402050385:phev_20_turbo",
+      "action": "skip",
+      "reasons": [],
+      "existing_id": 1125
+    },
+    {
+      "inventory_id": "402050384:phev_20_turbo",
+      "identity_digest": "sha256:7730e5da0ef45b3c910638fe09e21a4fdd0f27a10779e6f282bc72bc0ed431c5",
+      "edmunds_style_ids": [
+        "402050384"
+      ],
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler-4xe/build/?modelyearId=402049565&styleId=402050384&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler-4xe/2025/st-402050384/features-specs/"
+      ],
+      "source_fields": {
+        "engine_name": "2.0L I4 Turbo PHEV",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "plug_in_hybrid",
+        "manufacturer_engine_code": null,
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2025,
+        "trim_name": "Sahara 4xe",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "market": "US"
+      },
+      "baseline": {
+        "identity_contract": "vehicle-definition-body/2",
+        "scope": {
+          "manufacturer_key": "jeep",
+          "model_key": "wrangler",
+          "generation_key": "jl"
+        },
+        "model_year": 2025,
+        "trim_name": "Sahara 4xe",
+        "drivetrain": "4WD",
+        "market": "US",
+        "canonical_powertrain": {
+          "engine_displacement_liters": "2",
+          "engine_cylinders": 4,
+          "engine_aspiration": "turbocharged",
+          "fuel_type": "gasoline",
+          "electrification_type": "plug_in_hybrid"
+        },
+        "body_digest": "sha256:98f93c52c8c997ddc9e5c0af0df48c7e64a6a010d5d15b5cbc634e096728989d",
+        "series": null
+      },
+      "engine_code": "ECX",
+      "fields": {
+        "model_year": 2025,
+        "trim_name": "Sahara 4xe",
+        "engine_name": "2.0L I4 Turbo PHEV",
+        "engine_id": 6,
+        "factory_body_configuration_id": 2,
+        "market": "US",
+        "drivetrain": "4WD",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "plug_in_hybrid",
+        "slug": "2025-sahara-4xe-20l-i4-turbo-phev-4wd-us-turbo-phev"
+      },
+      "legacy_base_slug": "2025-sahara-4xe-20l-i4-turbo-phev-4wd-us-turbo-phev",
+      "body_attributes": {
+        "body_style": null,
+        "wheelbase_designation": null,
+        "body_length_designation": null,
+        "roof_height_designation": null,
+        "door_configuration": "four-door",
+        "side_door_arrangement": null,
+        "body_code": null,
+        "body_code_namespace": null
+      },
+      "candidate_reference": "402050384:phev_20_turbo",
+      "action": "skip",
+      "reasons": [],
+      "existing_id": 1126
+    },
+    {
+      "inventory_id": "402055439:phev_20_turbo",
+      "identity_digest": "sha256:d84cfb73ac5d831387ad71d9340ae4c607f683e83eb718d957529e7cc2ae92c2",
+      "edmunds_style_ids": [
+        "402055439"
+      ],
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler-4xe/build/?modelyearId=402049565&styleId=402055439&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler-4xe/2025/st-402055439/features-specs/"
+      ],
+      "source_fields": {
+        "engine_name": "2.0L I4 Turbo PHEV",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "plug_in_hybrid",
+        "manufacturer_engine_code": null,
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2025,
+        "trim_name": "Willys '41 4xe",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "market": "US"
+      },
+      "baseline": {
+        "identity_contract": "vehicle-definition-body/2",
+        "scope": {
+          "manufacturer_key": "jeep",
+          "model_key": "wrangler",
+          "generation_key": "jl"
+        },
+        "model_year": 2025,
+        "trim_name": "Willys '41 4xe",
+        "drivetrain": "4WD",
+        "market": "US",
+        "canonical_powertrain": {
+          "engine_displacement_liters": "2",
+          "engine_cylinders": 4,
+          "engine_aspiration": "turbocharged",
+          "fuel_type": "gasoline",
+          "electrification_type": "plug_in_hybrid"
+        },
+        "body_digest": "sha256:98f93c52c8c997ddc9e5c0af0df48c7e64a6a010d5d15b5cbc634e096728989d",
+        "series": null
+      },
+      "engine_code": "ECX",
+      "fields": {
+        "model_year": 2025,
+        "trim_name": "Willys '41 4xe",
+        "engine_name": "2.0L I4 Turbo PHEV",
+        "engine_id": 6,
+        "factory_body_configuration_id": 2,
+        "market": "US",
+        "drivetrain": "4WD",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "plug_in_hybrid",
+        "slug": "2025-willys-41-4xe-20l-i4-turbo-phev-4wd-us-turbo-phev"
+      },
+      "legacy_base_slug": "2025-willys-41-4xe-20l-i4-turbo-phev-4wd-us-turbo-phev",
+      "body_attributes": {
+        "body_style": null,
+        "wheelbase_designation": null,
+        "body_length_designation": null,
+        "roof_height_designation": null,
+        "door_configuration": "four-door",
+        "side_door_arrangement": null,
+        "body_code": null,
+        "body_code_namespace": null
+      },
+      "candidate_reference": "402055439:phev_20_turbo",
+      "action": "skip",
+      "reasons": [],
+      "existing_id": 1127
+    },
+    {
+      "inventory_id": "402050386:phev_20_turbo",
+      "identity_digest": "sha256:132e889c9e57ab5e9a7baf669c4b0424d8f99c462f8c0ef9510cc47b38c0a3be",
+      "edmunds_style_ids": [
+        "402050386"
+      ],
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler-4xe/build/?modelyearId=402049565&styleId=402050386&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler-4xe/2025/st-402050386/features-specs/"
+      ],
+      "source_fields": {
+        "engine_name": "2.0L I4 Turbo PHEV",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "plug_in_hybrid",
+        "manufacturer_engine_code": null,
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2025,
+        "trim_name": "Rubicon 4xe",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "market": "US"
+      },
+      "baseline": {
+        "identity_contract": "vehicle-definition-body/2",
+        "scope": {
+          "manufacturer_key": "jeep",
+          "model_key": "wrangler",
+          "generation_key": "jl"
+        },
+        "model_year": 2025,
+        "trim_name": "Rubicon 4xe",
+        "drivetrain": "4WD",
+        "market": "US",
+        "canonical_powertrain": {
+          "engine_displacement_liters": "2",
+          "engine_cylinders": 4,
+          "engine_aspiration": "turbocharged",
+          "fuel_type": "gasoline",
+          "electrification_type": "plug_in_hybrid"
+        },
+        "body_digest": "sha256:98f93c52c8c997ddc9e5c0af0df48c7e64a6a010d5d15b5cbc634e096728989d",
+        "series": null
+      },
+      "engine_code": "ECX",
+      "fields": {
+        "model_year": 2025,
+        "trim_name": "Rubicon 4xe",
+        "engine_name": "2.0L I4 Turbo PHEV",
+        "engine_id": 6,
+        "factory_body_configuration_id": 2,
+        "market": "US",
+        "drivetrain": "4WD",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "plug_in_hybrid",
+        "slug": "2025-rubicon-4xe-20l-i4-turbo-phev-4wd-us-turbo-phev"
+      },
+      "legacy_base_slug": "2025-rubicon-4xe-20l-i4-turbo-phev-4wd-us-turbo-phev",
+      "body_attributes": {
+        "body_style": null,
+        "wheelbase_designation": null,
+        "body_length_designation": null,
+        "roof_height_designation": null,
+        "door_configuration": "four-door",
+        "side_door_arrangement": null,
+        "body_code": null,
+        "body_code_namespace": null
+      },
+      "candidate_reference": "402050386:phev_20_turbo",
+      "action": "skip",
+      "reasons": [],
+      "existing_id": 1128
+    },
+    {
+      "inventory_id": "402065578:phev_20_turbo",
+      "identity_digest": "sha256:279fd9fb485f59d61e7cc3d9bec2c9461adb4d57bc5908b4ca1096ac54be8444",
+      "edmunds_style_ids": [
+        "402065578"
+      ],
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler-4xe/build/?modelyearId=402049565&styleId=402065578&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler-4xe/2025/st-402065578/features-specs/"
+      ],
+      "source_fields": {
+        "engine_name": "2.0L I4 Turbo PHEV",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "plug_in_hybrid",
+        "manufacturer_engine_code": null,
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2025,
+        "trim_name": "Backcountry 4xe",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "market": "US"
+      },
+      "baseline": {
+        "identity_contract": "vehicle-definition-body/2",
+        "scope": {
+          "manufacturer_key": "jeep",
+          "model_key": "wrangler",
+          "generation_key": "jl"
+        },
+        "model_year": 2025,
+        "trim_name": "Backcountry 4xe",
+        "drivetrain": "4WD",
+        "market": "US",
+        "canonical_powertrain": {
+          "engine_displacement_liters": "2",
+          "engine_cylinders": 4,
+          "engine_aspiration": "turbocharged",
+          "fuel_type": "gasoline",
+          "electrification_type": "plug_in_hybrid"
+        },
+        "body_digest": "sha256:98f93c52c8c997ddc9e5c0af0df48c7e64a6a010d5d15b5cbc634e096728989d",
+        "series": null
+      },
+      "engine_code": "ECX",
+      "fields": {
+        "model_year": 2025,
+        "trim_name": "Backcountry 4xe",
+        "engine_name": "2.0L I4 Turbo PHEV",
+        "engine_id": 6,
+        "factory_body_configuration_id": 2,
+        "market": "US",
+        "drivetrain": "4WD",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "plug_in_hybrid",
+        "slug": "2025-backcountry-4xe-20l-i4-turbo-phev-4wd-us-turbo-phev"
+      },
+      "legacy_base_slug": "2025-backcountry-4xe-20l-i4-turbo-phev-4wd-us-turbo-phev",
+      "body_attributes": {
+        "body_style": null,
+        "wheelbase_designation": null,
+        "body_length_designation": null,
+        "roof_height_designation": null,
+        "door_configuration": "four-door",
+        "side_door_arrangement": null,
+        "body_code": null,
+        "body_code_namespace": null
+      },
+      "candidate_reference": "402065578:phev_20_turbo",
+      "action": "skip",
+      "reasons": [],
+      "existing_id": 1129
+    },
+    {
+      "inventory_id": "402050387:phev_20_turbo",
+      "identity_digest": "sha256:c04e23dff19e0753e4d789fa1b45d9803f442144447c2c58993ba764dcff7062",
+      "edmunds_style_ids": [
+        "402050387"
+      ],
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler-4xe/build/?modelyearId=402049565&styleId=402050387&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler-4xe/2025/st-402050387/features-specs/"
+      ],
+      "source_fields": {
+        "engine_name": "2.0L I4 Turbo PHEV",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "plug_in_hybrid",
+        "manufacturer_engine_code": null,
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2025,
+        "trim_name": "Rubicon X 4xe",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "market": "US"
+      },
+      "baseline": {
+        "identity_contract": "vehicle-definition-body/2",
+        "scope": {
+          "manufacturer_key": "jeep",
+          "model_key": "wrangler",
+          "generation_key": "jl"
+        },
+        "model_year": 2025,
+        "trim_name": "Rubicon X 4xe",
+        "drivetrain": "4WD",
+        "market": "US",
+        "canonical_powertrain": {
+          "engine_displacement_liters": "2",
+          "engine_cylinders": 4,
+          "engine_aspiration": "turbocharged",
+          "fuel_type": "gasoline",
+          "electrification_type": "plug_in_hybrid"
+        },
+        "body_digest": "sha256:98f93c52c8c997ddc9e5c0af0df48c7e64a6a010d5d15b5cbc634e096728989d",
+        "series": null
+      },
+      "engine_code": "ECX",
+      "fields": {
+        "model_year": 2025,
+        "trim_name": "Rubicon X 4xe",
+        "engine_name": "2.0L I4 Turbo PHEV",
+        "engine_id": 6,
+        "factory_body_configuration_id": 2,
+        "market": "US",
+        "drivetrain": "4WD",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "plug_in_hybrid",
+        "slug": "2025-rubicon-x-4xe-20l-i4-turbo-phev-4wd-us-turbo-phev"
+      },
+      "legacy_base_slug": "2025-rubicon-x-4xe-20l-i4-turbo-phev-4wd-us-turbo-phev",
+      "body_attributes": {
+        "body_style": null,
+        "wheelbase_designation": null,
+        "body_length_designation": null,
+        "roof_height_designation": null,
+        "door_configuration": "four-door",
+        "side_door_arrangement": null,
+        "body_code": null,
+        "body_code_namespace": null
+      },
+      "candidate_reference": "402050387:phev_20_turbo",
+      "action": "skip",
+      "reasons": [],
+      "existing_id": 1130
+    }
+  ],
+  "counts": {
+    "create": 0,
+    "skip": 31,
+    "block": 0
+  },
+  "plan_hash": "sha256:937149ab096f185f772c5cb881afc9fbc27606466203a98e8a48aeaf6e0d96bb"
+}

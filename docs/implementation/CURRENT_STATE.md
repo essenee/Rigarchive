@@ -3,6 +3,42 @@ Version: 1.6
 Last Updated: 2026-11-14
 Purpose: Current implementation status and development roadmap
 
+## MY2025 Wrangler JL — registry-backed local publication complete (2026-11-14)
+
+The owner-supplied ERC/EC1/ESG/ECX mappings resolve to existing Engine PK1/2/3/6.
+The bounded `import_my2025_wrangler` command previews 31 creates, zero skips/blocks,
+using registered complete properties, existing JL/body parents, exact family identity
+and readable body-qualified slugs. Explicit digest-bound local execution independently
+revalidates state and atomically creates definitions/audit receipts; isolated tests
+verify idempotency, rollback, historical preservation and public grouping. MY2025
+body-derived public record names reuse the MY2024 convention. No schema migration.
+
+Local publication created VehicleDefinitions PK1100–1130 and 31 creation receipts;
+an actual idempotency rerun skipped all 31 definitions and added 31 no-op receipts.
+MY2025 has 24 gasoline and seven PHEV records, ten two-door and 21 four-door records,
+with 20 verified public trim/body groups. Every preexisting row across all 49 tables
+remained unchanged; only 31 definitions and 62 receipts were added. Operational totals
+are 1,115 VehicleDefinitions and 3,455 receipts. Schema/integrity/FK checks pass.
+
+18 focused tests and system/migration-drift/whitespace checks pass using the discovered
+`.venv/bin/python` (Python 3.13.1, Django 6.0.7). The 1,043-test full suite reports 25
+pre-existing label-test failure entries, reproduced identically with HEAD model naming
+in an isolated process. The owner explicitly approved a bounded AGENTS.md §8 exception
+to proceed using the passing focused tests and Django checks. Those unrelated failures
+remain unresolved. Original source nulls are preserved; registry properties supply
+new canonical engine snapshots. Human website factual QA remains. No commit/push/deploy.
+See [task and exact disposition](tasks/my2025-wrangler-registry-import.md).
+
+Commit-preparation verification: all 31 active MY2025 definitions exactly match their
+authored Engine properties (ERC PK1: 11; EC1 PK2: 12; ESG PK3: 1; ECX PK6: 7).
+The fresh read-only preview reports zero creates/blocks and 31 skips. All 50 relevant
+import, body-group and Engine-registry tests pass, as do system/migration-drift checks;
+the development database remained byte-identical during this review. The permanent
+[Engine registry ingestion rule](../development/INGESTION_PROTOCOL.md#permanent-engine-registry-rule-owner-approved-2026-11-14)
+requires lookup/reuse only, human review/manual registry authoring for unrecognized
+engines, and resumption only after the required Engine exists. No automatic Engine
+creation/modification. The prior bounded full-suite exception remains recorded.
+
 ## MY2024 Wrangler JL — published; RA-054 through RA-058 complete (2026-11-14)
 
 All 31 reviewed US MY2024 JL consumer configurations were published atomically under

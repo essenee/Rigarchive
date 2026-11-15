@@ -1,0 +1,2834 @@
+{
+  "extraction_date": "2026-11-14",
+  "status": "Acquisition only; not an approved import plan",
+  "source": "Edmunds JavaScript-rendered public builder and exact-style specifications",
+  "method": "In-app browser normal navigation; expand each Mechanical options section; inspect rendered accessibility/DOM text; open each exact-style specifications page, verify selected style ID, expand Engine; test optional-engine checkbox selections without submitting quote forms.",
+  "scope": {
+    "manufacturer": "Jeep",
+    "vehicle_model": "Wrangler",
+    "generation": "JL",
+    "model_year": 2025,
+    "market": "US"
+  },
+  "enumeration_urls": [
+    "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&submodel=SUV&allStyles",
+    "https://www.edmunds.com/jeep/wrangler-4xe/build/?modelyearId=402049565&submodel=SUV&allStyles"
+  ],
+  "counts": {
+    "styles": 20,
+    "gasoline_styles": 13,
+    "phev_styles": 7,
+    "canonical_configurations": 31,
+    "gasoline_configurations": 24,
+    "phev_configurations": 7,
+    "configurations_with_unreported_aspiration": 12
+  },
+  "normalization_notes": [
+    "Engine profile keys and inventory IDs are artifact-local references, not manufacturer codes or canonical slugs.",
+    "Trim and factory body are separate. Existing 4xe suffix convention retained, including specialty trim names.",
+    "Gas/regular or premium unleaded normalized to gasoline; Gas engine context normalized to electrification none; gas/electric plug-in hybrid normalized to plug_in_hybrid. ESS is not evidence of MHEV.",
+    "No new identities for transmission, axle, tire, or package permutations (ADR-0010). Preserve exact listed descriptions without interpreting bundled equipment as dependencies.",
+    "Only 4WD is canonical drivetrain. Full-time/part-time details remain source descriptions.",
+    "Canonical fields are proposed normalized source inventory, not complete publication-ready records. Nulls are deliberate; no Engine FK, UUID or slug assigned.",
+    "Standard specification output from an earlier unverified selector-navigation attempt was discarded; all final records use exact-style pages with selected ID verified."
+  ],
+  "engine_profiles": {
+    "gas_36_v6": {
+      "engine_name": "3.6L V6",
+      "engine_displacement_liters": "3.6",
+      "engine_cylinders": 6,
+      "engine_aspiration": null,
+      "fuel_type": "gasoline",
+      "electrification_type": "none",
+      "manufacturer_engine_code": null,
+      "source_base_engine_type": "Gas",
+      "source_cylinder_label": "V6",
+      "source_style_engine_label": "3.6L 6cyl 6M"
+    },
+    "gas_20_turbo": {
+      "engine_name": "2.0L I4 Turbo",
+      "engine_displacement_liters": "2",
+      "engine_cylinders": 4,
+      "engine_aspiration": "turbocharged",
+      "fuel_type": "gasoline",
+      "electrification_type": "none",
+      "manufacturer_engine_code": null,
+      "source_base_engine_type": "Gas",
+      "source_cylinder_label": "Inline 4",
+      "source_style_engine_label": "2.0L 4cyl Turbo 8A"
+    },
+    "gas_64_v8": {
+      "engine_name": "6.4L V8",
+      "engine_displacement_liters": "6.4",
+      "engine_cylinders": 8,
+      "engine_aspiration": null,
+      "fuel_type": "gasoline",
+      "electrification_type": "none",
+      "manufacturer_engine_code": null,
+      "source_base_engine_type": "Gas",
+      "source_cylinder_label": "V8",
+      "source_style_engine_label": "6.4L 8cyl 8A"
+    },
+    "phev_20_turbo": {
+      "engine_name": "2.0L I4 Turbo PHEV",
+      "engine_displacement_liters": "2",
+      "engine_cylinders": 4,
+      "engine_aspiration": "turbocharged",
+      "fuel_type": "gasoline",
+      "electrification_type": "plug_in_hybrid",
+      "manufacturer_engine_code": null,
+      "source_base_engine_type": "Plug-in hybrid",
+      "source_cylinder_label": "Inline 4",
+      "source_style_engine_label": "2.0L 4cyl Turbo gas/electric plug-in hybrid 8A"
+    }
+  },
+  "styles": [
+    {
+      "edmunds_style_id": "402019467",
+      "edmunds_modelyear_id": "402019466",
+      "source_model": "wrangler",
+      "marketed_trim": "Sport",
+      "canonical_trim": "Sport",
+      "door_count": 2,
+      "factory_body": {
+        "door_configuration": "two-door"
+      },
+      "builder_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402019467&submodel=SUV",
+      "specifications_url": "https://www.edmunds.com/jeep/wrangler/2025/st-402019467/features-specs/",
+      "displayed_trim_summary": "Sport 2dr SUV 4WD (3.6L 6cyl 6M)",
+      "starting_msrp_usd": 32095,
+      "standard_engine_profile": "gas_36_v6",
+      "optional_engines": [
+        {
+          "engine_profile": "gas_20_turbo",
+          "label": "2.0L I4 DOHC DI Turbo Engine w/ESS",
+          "price_usd": 0,
+          "displayed_description": [
+            "2.0L I4 DOHC turbo engine with 270 hp @ 5250 rpm and 295 lb. ft. of torque @ 3000 rpm",
+            "Auxiliary battery",
+            "Non-lock fuel cap without discriminator",
+            "Stop-start dual battery system"
+          ],
+          "source_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402019467&submodel=SUV",
+          "source_section": "Mechanical options",
+          "manufacturer_engine_code": null
+        }
+      ],
+      "standard_transmission": {
+        "label": "6-speed manual",
+        "manufacturer_code": null,
+        "source_url": "https://www.edmunds.com/jeep/wrangler/2025/st-402019467/features-specs/",
+        "source_section": "Drivetrain"
+      },
+      "optional_transmissions": [
+        {
+          "label": "8-Speed Automatic 850RE Transmission",
+          "price_usd": 2500,
+          "manufacturer_transmission_designation": "850RE",
+          "displayed_description": [
+            "Adaptive cruise control with stop",
+            "4-wheel anti-lock disc brakes",
+            "Selec-Speed Control",
+            "Note: Dana M200 rear axle is included on Sport 4DR, Sport S 4DR, and Willys 4DR."
+          ],
+          "source_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402019467&submodel=SUV",
+          "source_section": "Mechanical options"
+        }
+      ],
+      "standard_drivetrain": {
+        "canonical": "4WD",
+        "displayed_drive_type": "Four wheel drive",
+        "displayed_mode": "Part time 4WD",
+        "availability": "Standard",
+        "source_url": "https://www.edmunds.com/jeep/wrangler/2025/st-402019467/features-specs/"
+      },
+      "source_evidence": {
+        "builder_trim_summary": "Sport 2dr SUV 4WD (3.6L 6cyl 6M)",
+        "specification_selected_style_id": "402019467",
+        "expanded_engine_rows": {
+          "Base engine size": "3.6 L",
+          "Cylinders": "V6",
+          "Base engine type": "Gas",
+          "Horsepower": "285 hp @ 6,400 rpm",
+          "Torque": "260 lb-ft @ 4,800 rpm",
+          "Valves": "24",
+          "Cam type": "Double overhead cam (DOHC)",
+          "Valve timing": "Variable"
+        },
+        "fuel_type_row": "Regular unleaded",
+        "drivetrain_rows": {
+          "Transmission": "6-speed manual",
+          "Drive type": "Four wheel drive",
+          "Part time 4WD": "Standard"
+        },
+        "mechanical_engine_and_transmission_options_exhaustively_inspected": true
+      },
+      "dependencies_and_restrictions": {
+        "explicit_engine_transmission_restrictions": [],
+        "selection_test": "Optional engine checked; no dependency dialog or automatic transmission selection appeared.",
+        "optional_engine_transmission_pairing_established": false
+      },
+      "unresolved": [
+        "Optional engine transmission pairing is not explicitly established; do not construct manual/automatic engine permutations.",
+        "V6/V8 aspiration not explicitly reported in inspected expanded Engine tables or option labels; retained as null.",
+        "Manufacturer engine code not displayed; no registry code inferred."
+      ]
+    },
+    {
+      "edmunds_style_id": "402049827",
+      "edmunds_modelyear_id": "402019466",
+      "source_model": "wrangler",
+      "marketed_trim": "Sport",
+      "canonical_trim": "Sport",
+      "door_count": 4,
+      "factory_body": {
+        "door_configuration": "four-door"
+      },
+      "builder_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049827&submodel=SUV",
+      "specifications_url": "https://www.edmunds.com/jeep/wrangler/2025/st-402049827/features-specs/",
+      "displayed_trim_summary": "Sport 4dr SUV 4WD (3.6L 6cyl 6M)",
+      "starting_msrp_usd": 36695,
+      "standard_engine_profile": "gas_36_v6",
+      "optional_engines": [
+        {
+          "engine_profile": "gas_20_turbo",
+          "label": "2.0L I4 DOHC DI Turbo Engine w/ESS",
+          "price_usd": 0,
+          "displayed_description": [
+            "2.0L I4 DOHC turbo engine with 270 hp @ 5250 rpm and 295 lb. ft. of torque @ 3000 rpm",
+            "Auxiliary battery",
+            "Non-lock fuel cap without discriminator",
+            "Stop-start dual battery system"
+          ],
+          "source_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049827&submodel=SUV",
+          "source_section": "Mechanical options",
+          "manufacturer_engine_code": null
+        }
+      ],
+      "standard_transmission": {
+        "label": "6-speed manual",
+        "manufacturer_code": null,
+        "source_url": "https://www.edmunds.com/jeep/wrangler/2025/st-402049827/features-specs/",
+        "source_section": "Drivetrain"
+      },
+      "optional_transmissions": [
+        {
+          "label": "8-Speed Automatic 850RE Transmission",
+          "price_usd": 2500,
+          "manufacturer_transmission_designation": "850RE",
+          "displayed_description": [
+            "Adaptive cruise control with stop",
+            "4-wheel anti-lock disc brakes",
+            "Selec-Speed Control",
+            "Note: Dana M200 rear axle is included on Sport 4DR, Sport S 4DR, and Willys 4DR."
+          ],
+          "source_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049827&submodel=SUV",
+          "source_section": "Mechanical options"
+        }
+      ],
+      "standard_drivetrain": {
+        "canonical": "4WD",
+        "displayed_drive_type": "Four wheel drive",
+        "displayed_mode": "Part time 4WD",
+        "availability": "Standard",
+        "source_url": "https://www.edmunds.com/jeep/wrangler/2025/st-402049827/features-specs/"
+      },
+      "source_evidence": {
+        "builder_trim_summary": "Sport 4dr SUV 4WD (3.6L 6cyl 6M)",
+        "specification_selected_style_id": "402049827",
+        "expanded_engine_rows": {
+          "Base engine size": "3.6 L",
+          "Cylinders": "V6",
+          "Base engine type": "Gas",
+          "Horsepower": "285 hp @ 6,400 rpm",
+          "Torque": "260 lb-ft @ 4,800 rpm",
+          "Valves": "24",
+          "Cam type": "Double overhead cam (DOHC)",
+          "Valve timing": "Variable"
+        },
+        "fuel_type_row": "Regular unleaded",
+        "drivetrain_rows": {
+          "Transmission": "6-speed manual",
+          "Drive type": "Four wheel drive",
+          "Part time 4WD": "Standard"
+        },
+        "mechanical_engine_and_transmission_options_exhaustively_inspected": true
+      },
+      "dependencies_and_restrictions": {
+        "explicit_engine_transmission_restrictions": [],
+        "selection_test": "Optional engine checked; no dependency dialog or automatic transmission selection appeared.",
+        "optional_engine_transmission_pairing_established": false
+      },
+      "unresolved": [
+        "Optional engine transmission pairing is not explicitly established; do not construct manual/automatic engine permutations.",
+        "V6/V8 aspiration not explicitly reported in inspected expanded Engine tables or option labels; retained as null.",
+        "Manufacturer engine code not displayed; no registry code inferred."
+      ]
+    },
+    {
+      "edmunds_style_id": "402049822",
+      "edmunds_modelyear_id": "402019466",
+      "source_model": "wrangler",
+      "marketed_trim": "Sport S",
+      "canonical_trim": "Sport S",
+      "door_count": 2,
+      "factory_body": {
+        "door_configuration": "two-door"
+      },
+      "builder_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049822&submodel=SUV",
+      "specifications_url": "https://www.edmunds.com/jeep/wrangler/2025/st-402049822/features-specs/",
+      "displayed_trim_summary": "Sport S 2dr SUV 4WD (3.6L 6cyl 6M)",
+      "starting_msrp_usd": 35695,
+      "standard_engine_profile": "gas_36_v6",
+      "optional_engines": [
+        {
+          "engine_profile": "gas_20_turbo",
+          "label": "2.0L I4 DOHC DI Turbo Engine w/ESS",
+          "price_usd": 0,
+          "displayed_description": [
+            "2.0L I4 DOHC turbo engine with 270 hp @ 5250 rpm and 295 lb. ft. of torque @ 3000 rpm",
+            "Auxiliary battery",
+            "Non-lock fuel cap without discriminator",
+            "Stop-start dual battery system"
+          ],
+          "source_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049822&submodel=SUV",
+          "source_section": "Mechanical options",
+          "manufacturer_engine_code": null
+        }
+      ],
+      "standard_transmission": {
+        "label": "6-speed manual",
+        "manufacturer_code": null,
+        "source_url": "https://www.edmunds.com/jeep/wrangler/2025/st-402049822/features-specs/",
+        "source_section": "Drivetrain"
+      },
+      "optional_transmissions": [
+        {
+          "label": "8-Speed Automatic 850RE Transmission",
+          "price_usd": 2500,
+          "manufacturer_transmission_designation": "850RE",
+          "displayed_description": [
+            "Adaptive cruise control with stop",
+            "4-wheel anti-lock disc brakes",
+            "Selec-Speed Control",
+            "Note: Dana M200 rear axle is included on Sport 4DR, Sport S 4DR, and Willys 4DR."
+          ],
+          "source_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049822&submodel=SUV",
+          "source_section": "Mechanical options"
+        }
+      ],
+      "standard_drivetrain": {
+        "canonical": "4WD",
+        "displayed_drive_type": "Four wheel drive",
+        "displayed_mode": "Part time 4WD",
+        "availability": "Standard",
+        "source_url": "https://www.edmunds.com/jeep/wrangler/2025/st-402049822/features-specs/"
+      },
+      "source_evidence": {
+        "builder_trim_summary": "Sport S 2dr SUV 4WD (3.6L 6cyl 6M)",
+        "specification_selected_style_id": "402049822",
+        "expanded_engine_rows": {
+          "Base engine size": "3.6 L",
+          "Cylinders": "V6",
+          "Base engine type": "Gas",
+          "Horsepower": "285 hp @ 6,400 rpm",
+          "Torque": "260 lb-ft @ 4,800 rpm",
+          "Valves": "24",
+          "Cam type": "Double overhead cam (DOHC)",
+          "Valve timing": "Variable"
+        },
+        "fuel_type_row": "Regular unleaded",
+        "drivetrain_rows": {
+          "Transmission": "6-speed manual",
+          "Drive type": "Four wheel drive",
+          "Part time 4WD": "Standard"
+        },
+        "mechanical_engine_and_transmission_options_exhaustively_inspected": true
+      },
+      "dependencies_and_restrictions": {
+        "explicit_engine_transmission_restrictions": [],
+        "selection_test": "Optional engine checked; no dependency dialog or automatic transmission selection appeared.",
+        "optional_engine_transmission_pairing_established": false
+      },
+      "unresolved": [
+        "Optional engine transmission pairing is not explicitly established; do not construct manual/automatic engine permutations.",
+        "V6/V8 aspiration not explicitly reported in inspected expanded Engine tables or option labels; retained as null.",
+        "Manufacturer engine code not displayed; no registry code inferred."
+      ]
+    },
+    {
+      "edmunds_style_id": "402049823",
+      "edmunds_modelyear_id": "402019466",
+      "source_model": "wrangler",
+      "marketed_trim": "Sport S",
+      "canonical_trim": "Sport S",
+      "door_count": 4,
+      "factory_body": {
+        "door_configuration": "four-door"
+      },
+      "builder_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049823&submodel=SUV",
+      "specifications_url": "https://www.edmunds.com/jeep/wrangler/2025/st-402049823/features-specs/",
+      "displayed_trim_summary": "Sport S 4dr SUV 4WD (3.6L 6cyl 6M)",
+      "starting_msrp_usd": 40295,
+      "standard_engine_profile": "gas_36_v6",
+      "optional_engines": [
+        {
+          "engine_profile": "gas_20_turbo",
+          "label": "2.0L I4 DOHC DI Turbo Engine w/ESS",
+          "price_usd": 0,
+          "displayed_description": [
+            "2.0L I4 DOHC turbo engine with 270 hp @ 5250 rpm and 295 lb. ft. of torque @ 3000 rpm",
+            "Auxiliary battery",
+            "Non-lock fuel cap without discriminator",
+            "Stop-start dual battery system"
+          ],
+          "source_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049823&submodel=SUV",
+          "source_section": "Mechanical options",
+          "manufacturer_engine_code": null
+        }
+      ],
+      "standard_transmission": {
+        "label": "6-speed manual",
+        "manufacturer_code": null,
+        "source_url": "https://www.edmunds.com/jeep/wrangler/2025/st-402049823/features-specs/",
+        "source_section": "Drivetrain"
+      },
+      "optional_transmissions": [
+        {
+          "label": "8-Speed Automatic 850RE Transmission",
+          "price_usd": 2500,
+          "manufacturer_transmission_designation": "850RE",
+          "displayed_description": [
+            "Adaptive cruise control with stop",
+            "4-wheel anti-lock disc brakes",
+            "Selec-Speed Control",
+            "Note: Dana M200 rear axle is included on Sport 4DR, Sport S 4DR, and Willys 4DR."
+          ],
+          "source_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049823&submodel=SUV",
+          "source_section": "Mechanical options"
+        }
+      ],
+      "standard_drivetrain": {
+        "canonical": "4WD",
+        "displayed_drive_type": "Four wheel drive",
+        "displayed_mode": "Part time 4WD",
+        "availability": "Standard",
+        "source_url": "https://www.edmunds.com/jeep/wrangler/2025/st-402049823/features-specs/"
+      },
+      "source_evidence": {
+        "builder_trim_summary": "Sport S 4dr SUV 4WD (3.6L 6cyl 6M)",
+        "specification_selected_style_id": "402049823",
+        "expanded_engine_rows": {
+          "Base engine size": "3.6 L",
+          "Cylinders": "V6",
+          "Base engine type": "Gas",
+          "Horsepower": "285 hp @ 6,400 rpm",
+          "Torque": "260 lb-ft @ 4,800 rpm",
+          "Valves": "24",
+          "Cam type": "Double overhead cam (DOHC)",
+          "Valve timing": "Variable"
+        },
+        "fuel_type_row": "Regular unleaded",
+        "drivetrain_rows": {
+          "Transmission": "6-speed manual",
+          "Drive type": "Four wheel drive",
+          "Part time 4WD": "Standard"
+        },
+        "mechanical_engine_and_transmission_options_exhaustively_inspected": true
+      },
+      "dependencies_and_restrictions": {
+        "explicit_engine_transmission_restrictions": [],
+        "selection_test": "Optional engine checked; no dependency dialog or automatic transmission selection appeared.",
+        "optional_engine_transmission_pairing_established": false
+      },
+      "unresolved": [
+        "Optional engine transmission pairing is not explicitly established; do not construct manual/automatic engine permutations.",
+        "V6/V8 aspiration not explicitly reported in inspected expanded Engine tables or option labels; retained as null.",
+        "Manufacturer engine code not displayed; no registry code inferred."
+      ]
+    },
+    {
+      "edmunds_style_id": "402049831",
+      "edmunds_modelyear_id": "402019466",
+      "source_model": "wrangler",
+      "marketed_trim": "Willys",
+      "canonical_trim": "Willys",
+      "door_count": 2,
+      "factory_body": {
+        "door_configuration": "two-door"
+      },
+      "builder_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049831&submodel=SUV",
+      "specifications_url": "https://www.edmunds.com/jeep/wrangler/2025/st-402049831/features-specs/",
+      "displayed_trim_summary": "Willys 2dr SUV 4WD (3.6L 6cyl 6M)",
+      "starting_msrp_usd": 39595,
+      "standard_engine_profile": "gas_36_v6",
+      "optional_engines": [
+        {
+          "engine_profile": "gas_20_turbo",
+          "label": "2.0L I4 DOHC DI Turbo Engine w/ESS",
+          "price_usd": 0,
+          "displayed_description": [
+            "2.0L I4 DOHC turbo engine with 270 hp @ 5250 rpm and 295 lb. ft. of torque @ 3000 rpm",
+            "Auxiliary battery",
+            "Non-lock fuel cap without discriminator",
+            "Stop-start dual battery system"
+          ],
+          "source_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049831&submodel=SUV",
+          "source_section": "Mechanical options",
+          "manufacturer_engine_code": null
+        }
+      ],
+      "standard_transmission": {
+        "label": "6-speed manual",
+        "manufacturer_code": null,
+        "source_url": "https://www.edmunds.com/jeep/wrangler/2025/st-402049831/features-specs/",
+        "source_section": "Drivetrain"
+      },
+      "optional_transmissions": [
+        {
+          "label": "8-Speed Automatic 850RE Transmission",
+          "price_usd": 2500,
+          "manufacturer_transmission_designation": "850RE",
+          "displayed_description": [
+            "Adaptive cruise control with stop",
+            "4-wheel anti-lock disc brakes",
+            "Selec-Speed Control",
+            "Note: Dana M200 rear axle is included on Sport 4DR, Sport S 4DR, and Willys 4DR."
+          ],
+          "source_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049831&submodel=SUV",
+          "source_section": "Mechanical options"
+        }
+      ],
+      "standard_drivetrain": {
+        "canonical": "4WD",
+        "displayed_drive_type": "Four wheel drive",
+        "displayed_mode": "Part time 4WD",
+        "availability": "Standard",
+        "source_url": "https://www.edmunds.com/jeep/wrangler/2025/st-402049831/features-specs/"
+      },
+      "source_evidence": {
+        "builder_trim_summary": "Willys 2dr SUV 4WD (3.6L 6cyl 6M)",
+        "specification_selected_style_id": "402049831",
+        "expanded_engine_rows": {
+          "Base engine size": "3.6 L",
+          "Cylinders": "V6",
+          "Base engine type": "Gas",
+          "Horsepower": "285 hp @ 6,400 rpm",
+          "Torque": "260 lb-ft @ 4,800 rpm",
+          "Valves": "24",
+          "Cam type": "Double overhead cam (DOHC)",
+          "Valve timing": "Variable"
+        },
+        "fuel_type_row": "Regular unleaded",
+        "drivetrain_rows": {
+          "Transmission": "6-speed manual",
+          "Drive type": "Four wheel drive",
+          "Part time 4WD": "Standard"
+        },
+        "mechanical_engine_and_transmission_options_exhaustively_inspected": true
+      },
+      "dependencies_and_restrictions": {
+        "explicit_engine_transmission_restrictions": [],
+        "selection_test": "Optional engine checked; no dependency dialog or automatic transmission selection appeared.",
+        "optional_engine_transmission_pairing_established": false
+      },
+      "unresolved": [
+        "Optional engine transmission pairing is not explicitly established; do not construct manual/automatic engine permutations.",
+        "V6/V8 aspiration not explicitly reported in inspected expanded Engine tables or option labels; retained as null.",
+        "Manufacturer engine code not displayed; no registry code inferred."
+      ]
+    },
+    {
+      "edmunds_style_id": "402049826",
+      "edmunds_modelyear_id": "402019466",
+      "source_model": "wrangler",
+      "marketed_trim": "Willys",
+      "canonical_trim": "Willys",
+      "door_count": 4,
+      "factory_body": {
+        "door_configuration": "four-door"
+      },
+      "builder_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049826&submodel=SUV",
+      "specifications_url": "https://www.edmunds.com/jeep/wrangler/2025/st-402049826/features-specs/",
+      "displayed_trim_summary": "Willys 4dr SUV 4WD (3.6L 6cyl 6M)",
+      "starting_msrp_usd": 44195,
+      "standard_engine_profile": "gas_36_v6",
+      "optional_engines": [
+        {
+          "engine_profile": "gas_20_turbo",
+          "label": "2.0L I4 DOHC DI Turbo Engine w/ESS",
+          "price_usd": 0,
+          "displayed_description": [
+            "2.0L I4 DOHC turbo engine with 270 hp @ 5250 rpm and 295 lb. ft. of torque @ 3000 rpm",
+            "Auxiliary battery",
+            "Non-lock fuel cap without discriminator",
+            "Stop-start dual battery system"
+          ],
+          "source_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049826&submodel=SUV",
+          "source_section": "Mechanical options",
+          "manufacturer_engine_code": null
+        }
+      ],
+      "standard_transmission": {
+        "label": "6-speed manual",
+        "manufacturer_code": null,
+        "source_url": "https://www.edmunds.com/jeep/wrangler/2025/st-402049826/features-specs/",
+        "source_section": "Drivetrain"
+      },
+      "optional_transmissions": [
+        {
+          "label": "8-Speed Automatic 850RE Transmission",
+          "price_usd": 2500,
+          "manufacturer_transmission_designation": "850RE",
+          "displayed_description": [
+            "Adaptive cruise control with stop",
+            "4-wheel anti-lock disc brakes",
+            "Selec-Speed Control",
+            "Note: Dana M200 rear axle is included on Sport 4DR, Sport S 4DR, and Willys 4DR."
+          ],
+          "source_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049826&submodel=SUV",
+          "source_section": "Mechanical options"
+        }
+      ],
+      "standard_drivetrain": {
+        "canonical": "4WD",
+        "displayed_drive_type": "Four wheel drive",
+        "displayed_mode": "Part time 4WD",
+        "availability": "Standard",
+        "source_url": "https://www.edmunds.com/jeep/wrangler/2025/st-402049826/features-specs/"
+      },
+      "source_evidence": {
+        "builder_trim_summary": "Willys 4dr SUV 4WD (3.6L 6cyl 6M)",
+        "specification_selected_style_id": "402049826",
+        "expanded_engine_rows": {
+          "Base engine size": "3.6 L",
+          "Cylinders": "V6",
+          "Base engine type": "Gas",
+          "Horsepower": "285 hp @ 6,400 rpm",
+          "Torque": "260 lb-ft @ 4,800 rpm",
+          "Valves": "24",
+          "Cam type": "Double overhead cam (DOHC)",
+          "Valve timing": "Variable"
+        },
+        "fuel_type_row": "Regular unleaded",
+        "drivetrain_rows": {
+          "Transmission": "6-speed manual",
+          "Drive type": "Four wheel drive",
+          "Part time 4WD": "Standard"
+        },
+        "mechanical_engine_and_transmission_options_exhaustively_inspected": true
+      },
+      "dependencies_and_restrictions": {
+        "explicit_engine_transmission_restrictions": [],
+        "selection_test": "Optional engine checked; no dependency dialog or automatic transmission selection appeared.",
+        "optional_engine_transmission_pairing_established": false
+      },
+      "unresolved": [
+        "Optional engine transmission pairing is not explicitly established; do not construct manual/automatic engine permutations.",
+        "V6/V8 aspiration not explicitly reported in inspected expanded Engine tables or option labels; retained as null.",
+        "Manufacturer engine code not displayed; no registry code inferred."
+      ]
+    },
+    {
+      "edmunds_style_id": "402049832",
+      "edmunds_modelyear_id": "402019466",
+      "source_model": "wrangler",
+      "marketed_trim": "Rubicon",
+      "canonical_trim": "Rubicon",
+      "door_count": 2,
+      "factory_body": {
+        "door_configuration": "two-door"
+      },
+      "builder_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049832&submodel=SUV",
+      "specifications_url": "https://www.edmunds.com/jeep/wrangler/2025/st-402049832/features-specs/",
+      "displayed_trim_summary": "Rubicon 2dr SUV 4WD (3.6L 6cyl 6M)",
+      "starting_msrp_usd": 46955,
+      "standard_engine_profile": "gas_36_v6",
+      "optional_engines": [
+        {
+          "engine_profile": "gas_20_turbo",
+          "label": "2.0L I4 DOHC DI Turbo Engine w/ESS",
+          "price_usd": 0,
+          "displayed_description": [
+            "2.0L I4 DOHC turbo engine with 270 hp @ 5250 rpm and 295 lb. ft. of torque @ 3000 rpm",
+            "17\" x 8.0\" machined wheels with Black pockets",
+            "35\" tire suspension",
+            "4.56 rear axle ratio",
+            "Auxiliary battery",
+            "LT315/70R17C 113/110S tires",
+            "Mopar hinge-gate reinforcement",
+            "Mopar jack spacer",
+            "Mopar tire relocation kit",
+            "Non-lock fuel cap without discriminator",
+            "Stop-start dual battery system",
+            "Wheel flare extensions"
+          ],
+          "source_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049832&submodel=SUV",
+          "source_section": "Mechanical options",
+          "manufacturer_engine_code": null
+        }
+      ],
+      "standard_transmission": {
+        "label": "6-speed manual",
+        "manufacturer_code": null,
+        "source_url": "https://www.edmunds.com/jeep/wrangler/2025/st-402049832/features-specs/",
+        "source_section": "Drivetrain"
+      },
+      "optional_transmissions": [
+        {
+          "label": "8-Speed Automatic 850RE Transmission",
+          "price_usd": 2500,
+          "manufacturer_transmission_designation": "850RE",
+          "displayed_description": [
+            "4:1 Rock-Trac heavy duty full time 4WD system",
+            "Adaptive cruise control with stop",
+            "Remote start system",
+            "Selec-speed control"
+          ],
+          "source_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049832&submodel=SUV",
+          "source_section": "Mechanical options"
+        }
+      ],
+      "standard_drivetrain": {
+        "canonical": "4WD",
+        "displayed_drive_type": "Four wheel drive",
+        "displayed_mode": "Part time 4WD",
+        "availability": "Standard",
+        "source_url": "https://www.edmunds.com/jeep/wrangler/2025/st-402049832/features-specs/"
+      },
+      "source_evidence": {
+        "builder_trim_summary": "Rubicon 2dr SUV 4WD (3.6L 6cyl 6M)",
+        "specification_selected_style_id": "402049832",
+        "expanded_engine_rows": {
+          "Base engine size": "3.6 L",
+          "Cylinders": "V6",
+          "Base engine type": "Gas",
+          "Horsepower": "285 hp @ 6,400 rpm",
+          "Torque": "260 lb-ft @ 4,800 rpm",
+          "Valves": "24",
+          "Cam type": "Double overhead cam (DOHC)",
+          "Valve timing": "Variable"
+        },
+        "fuel_type_row": "Regular unleaded",
+        "drivetrain_rows": {
+          "Transmission": "6-speed manual",
+          "Drive type": "Four wheel drive",
+          "Part time 4WD": "Standard"
+        },
+        "mechanical_engine_and_transmission_options_exhaustively_inspected": true
+      },
+      "dependencies_and_restrictions": {
+        "explicit_engine_transmission_restrictions": [],
+        "selection_test": "Optional engine checked; no dependency dialog or automatic transmission selection appeared.",
+        "optional_engine_transmission_pairing_established": false
+      },
+      "unresolved": [
+        "Optional engine transmission pairing is not explicitly established; do not construct manual/automatic engine permutations.",
+        "V6/V8 aspiration not explicitly reported in inspected expanded Engine tables or option labels; retained as null.",
+        "Manufacturer engine code not displayed; no registry code inferred."
+      ]
+    },
+    {
+      "edmunds_style_id": "402049828",
+      "edmunds_modelyear_id": "402019466",
+      "source_model": "wrangler",
+      "marketed_trim": "Rubicon",
+      "canonical_trim": "Rubicon",
+      "door_count": 4,
+      "factory_body": {
+        "door_configuration": "four-door"
+      },
+      "builder_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049828&submodel=SUV",
+      "specifications_url": "https://www.edmunds.com/jeep/wrangler/2025/st-402049828/features-specs/",
+      "displayed_trim_summary": "Rubicon 4dr SUV 4WD (3.6L 6cyl 6M)",
+      "starting_msrp_usd": 51455,
+      "standard_engine_profile": "gas_36_v6",
+      "optional_engines": [
+        {
+          "engine_profile": "gas_20_turbo",
+          "label": "2.0L I4 DOHC DI Turbo Engine w/ESS",
+          "price_usd": 0,
+          "displayed_description": [
+            "2.0L I4 DOHC turbo engine with 270 hp @ 5250 rpm and 295 lb. ft. of torque @ 3000 rpm",
+            "Auxiliary battery",
+            "Non-lock fuel cap without discriminator",
+            "Stop-start dual battery system"
+          ],
+          "source_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049828&submodel=SUV",
+          "source_section": "Mechanical options",
+          "manufacturer_engine_code": null
+        }
+      ],
+      "standard_transmission": {
+        "label": "6-speed manual",
+        "manufacturer_code": null,
+        "source_url": "https://www.edmunds.com/jeep/wrangler/2025/st-402049828/features-specs/",
+        "source_section": "Drivetrain"
+      },
+      "optional_transmissions": [
+        {
+          "label": "8-Speed Automatic 850RE Transmission",
+          "price_usd": 2500,
+          "manufacturer_transmission_designation": "850RE",
+          "displayed_description": [
+            "17\" x 8.0\" machined wheels with Black pockets",
+            "35\" tire suspension",
+            "4:1 Rock-Trac heavy duty full time 4WD system",
+            "4.56 rear axle ratio",
+            "Adaptive cruise control with stop",
+            "Anti-lock 4-wheel disc performance brakes",
+            "LT315/70R17C 113/110S tires",
+            "Mopar hinge-gate reinforcement",
+            "Mopar jack spacer",
+            "Mopar tire relocation kit",
+            "Remote start system",
+            "Selec-speed control",
+            "Wheel flare extensions"
+          ],
+          "source_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049828&submodel=SUV",
+          "source_section": "Mechanical options"
+        }
+      ],
+      "standard_drivetrain": {
+        "canonical": "4WD",
+        "displayed_drive_type": "Four wheel drive",
+        "displayed_mode": "Part time 4WD",
+        "availability": "Standard",
+        "source_url": "https://www.edmunds.com/jeep/wrangler/2025/st-402049828/features-specs/"
+      },
+      "source_evidence": {
+        "builder_trim_summary": "Rubicon 4dr SUV 4WD (3.6L 6cyl 6M)",
+        "specification_selected_style_id": "402049828",
+        "expanded_engine_rows": {
+          "Base engine size": "3.6 L",
+          "Cylinders": "V6",
+          "Base engine type": "Gas",
+          "Horsepower": "285 hp @ 6,400 rpm",
+          "Torque": "260 lb-ft @ 4,800 rpm",
+          "Valves": "24",
+          "Cam type": "Double overhead cam (DOHC)",
+          "Valve timing": "Variable"
+        },
+        "fuel_type_row": "Regular unleaded",
+        "drivetrain_rows": {
+          "Transmission": "6-speed manual",
+          "Drive type": "Four wheel drive",
+          "Part time 4WD": "Standard"
+        },
+        "mechanical_engine_and_transmission_options_exhaustively_inspected": true
+      },
+      "dependencies_and_restrictions": {
+        "explicit_engine_transmission_restrictions": [],
+        "selection_test": "Optional engine checked; no dependency dialog or automatic transmission selection appeared.",
+        "optional_engine_transmission_pairing_established": false
+      },
+      "unresolved": [
+        "Optional engine transmission pairing is not explicitly established; do not construct manual/automatic engine permutations.",
+        "V6/V8 aspiration not explicitly reported in inspected expanded Engine tables or option labels; retained as null.",
+        "Manufacturer engine code not displayed; no registry code inferred."
+      ]
+    },
+    {
+      "edmunds_style_id": "402049825",
+      "edmunds_modelyear_id": "402019466",
+      "source_model": "wrangler",
+      "marketed_trim": "Sport RHD",
+      "canonical_trim": "Sport RHD",
+      "door_count": 4,
+      "factory_body": {
+        "door_configuration": "four-door"
+      },
+      "builder_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049825&submodel=SUV",
+      "specifications_url": "https://www.edmunds.com/jeep/wrangler/2025/st-402049825/features-specs/",
+      "displayed_trim_summary": "Sport RHD 4dr SUV 4WD (2.0L 4cyl Turbo 8A)",
+      "starting_msrp_usd": 48445,
+      "standard_engine_profile": "gas_20_turbo",
+      "optional_engines": [],
+      "standard_transmission": {
+        "label": "8-speed shiftable automatic",
+        "manufacturer_code": null,
+        "source_url": "https://www.edmunds.com/jeep/wrangler/2025/st-402049825/features-specs/",
+        "source_section": "Drivetrain"
+      },
+      "optional_transmissions": [],
+      "standard_drivetrain": {
+        "canonical": "4WD",
+        "displayed_drive_type": "Four wheel drive",
+        "displayed_mode": "Part time 4WD",
+        "availability": "Standard",
+        "source_url": "https://www.edmunds.com/jeep/wrangler/2025/st-402049825/features-specs/"
+      },
+      "source_evidence": {
+        "builder_trim_summary": "Sport RHD 4dr SUV 4WD (2.0L 4cyl Turbo 8A)",
+        "specification_selected_style_id": "402049825",
+        "expanded_engine_rows": {
+          "Base engine size": "2.0 L",
+          "Cylinders": "Inline 4",
+          "Base engine type": "Gas",
+          "Horsepower": "270 hp @ 5,250 rpm",
+          "Torque": "295 lb-ft @ 3,000 rpm",
+          "Valves": "16",
+          "Cam type": "Double overhead cam (DOHC)",
+          "Valve timing": "Variable",
+          "Direct injection": "Standard"
+        },
+        "fuel_type_row": "Premium unleaded (recommended)",
+        "drivetrain_rows": {
+          "Transmission": "8-speed shiftable automatic",
+          "Drive type": "Four wheel drive",
+          "Part time 4WD": "Standard"
+        },
+        "mechanical_engine_and_transmission_options_exhaustively_inspected": true
+      },
+      "dependencies_and_restrictions": {
+        "explicit_engine_transmission_restrictions": [],
+        "selection_test": "No engine or transmission alternative displayed; selection test not applicable.",
+        "optional_engine_transmission_pairing_established": null
+      },
+      "unresolved": [
+        "Manufacturer engine code not displayed; no registry code inferred."
+      ]
+    },
+    {
+      "edmunds_style_id": "402049821",
+      "edmunds_modelyear_id": "402019466",
+      "source_model": "wrangler",
+      "marketed_trim": "Sahara",
+      "canonical_trim": "Sahara",
+      "door_count": 4,
+      "factory_body": {
+        "door_configuration": "four-door"
+      },
+      "builder_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049821&submodel=SUV",
+      "specifications_url": "https://www.edmunds.com/jeep/wrangler/2025/st-402049821/features-specs/",
+      "displayed_trim_summary": "Sahara 4dr SUV 4WD (2.0L 4cyl Turbo 8A)",
+      "starting_msrp_usd": 49370,
+      "standard_engine_profile": "gas_20_turbo",
+      "optional_engines": [
+        {
+          "engine_profile": "gas_36_v6",
+          "label": "3.6L V6 24V VVT Engine UPG I w/ESS",
+          "price_usd": 2000,
+          "displayed_description": [
+            "3.6L V6 24V VVT Engine UPG I with 285 hp @ 6400 rpm and 260 lb. ft. of torque @ 4800 rpm",
+            "Auxiliary battery",
+            "Engine oil cooler",
+            "Non-lock fuel cap without discriminator",
+            "Stop-start dual battery system"
+          ],
+          "source_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049821&submodel=SUV",
+          "source_section": "Mechanical options",
+          "manufacturer_engine_code": null
+        }
+      ],
+      "standard_transmission": {
+        "label": "8-speed shiftable automatic",
+        "manufacturer_code": null,
+        "source_url": "https://www.edmunds.com/jeep/wrangler/2025/st-402049821/features-specs/",
+        "source_section": "Drivetrain"
+      },
+      "optional_transmissions": [],
+      "standard_drivetrain": {
+        "canonical": "4WD",
+        "displayed_drive_type": "Four wheel drive",
+        "displayed_mode": "Part time 4WD",
+        "availability": "Standard",
+        "source_url": "https://www.edmunds.com/jeep/wrangler/2025/st-402049821/features-specs/"
+      },
+      "source_evidence": {
+        "builder_trim_summary": "Sahara 4dr SUV 4WD (2.0L 4cyl Turbo 8A)",
+        "specification_selected_style_id": "402049821",
+        "expanded_engine_rows": {
+          "Base engine size": "2.0 L",
+          "Cylinders": "Inline 4",
+          "Base engine type": "Gas",
+          "Horsepower": "270 hp @ 5,250 rpm",
+          "Torque": "295 lb-ft @ 3,000 rpm",
+          "Valves": "16",
+          "Cam type": "Double overhead cam (DOHC)",
+          "Valve timing": "Variable",
+          "Direct injection": "Standard"
+        },
+        "fuel_type_row": "Premium unleaded (recommended)",
+        "drivetrain_rows": {
+          "Transmission": "8-speed shiftable automatic",
+          "Drive type": "Four wheel drive",
+          "Part time 4WD": "Standard"
+        },
+        "mechanical_engine_and_transmission_options_exhaustively_inspected": true
+      },
+      "dependencies_and_restrictions": {
+        "explicit_engine_transmission_restrictions": [],
+        "selection_test": "Optional engine checked; no dependency dialog or automatic transmission selection appeared.",
+        "optional_engine_transmission_pairing_established": false
+      },
+      "unresolved": [
+        "Optional engine transmission pairing is not explicitly established; do not construct manual/automatic engine permutations.",
+        "V6/V8 aspiration not explicitly reported in inspected expanded Engine tables or option labels; retained as null.",
+        "Manufacturer engine code not displayed; no registry code inferred."
+      ]
+    },
+    {
+      "edmunds_style_id": "402049830",
+      "edmunds_modelyear_id": "402019466",
+      "source_model": "wrangler",
+      "marketed_trim": "Rubicon X",
+      "canonical_trim": "Rubicon X",
+      "door_count": 2,
+      "factory_body": {
+        "door_configuration": "two-door"
+      },
+      "builder_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049830&submodel=SUV",
+      "specifications_url": "https://www.edmunds.com/jeep/wrangler/2025/st-402049830/features-specs/",
+      "displayed_trim_summary": "Rubicon X 2dr SUV 4WD (3.6L 6cyl 6M)",
+      "starting_msrp_usd": 56905,
+      "standard_engine_profile": "gas_36_v6",
+      "optional_engines": [
+        {
+          "engine_profile": "gas_20_turbo",
+          "label": "2.0L I4 DOHC DI Turbo Engine w/ESS",
+          "price_usd": 0,
+          "displayed_description": [
+            "2.0L I4 DOHC turbo engine with 270 hp @ 5250 rpm and 295 lb. ft. of torque @ 3000 rpm",
+            "17\" x 8.0\" machined wheels with Black pockets",
+            "35\" tire suspension",
+            "4.56 rear axle ratio",
+            "Auxiliary battery",
+            "LT315/70R17C 113/110S tires",
+            "Mopar hinge-gate reinforcement",
+            "Mopar jack spacer",
+            "Mopar tire relocation kit",
+            "Non-lock fuel cap without discriminator",
+            "Stop-start dual battery system",
+            "Wheel flare extensions"
+          ],
+          "source_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049830&submodel=SUV",
+          "source_section": "Mechanical options",
+          "manufacturer_engine_code": null
+        }
+      ],
+      "standard_transmission": {
+        "label": "6-speed manual",
+        "manufacturer_code": null,
+        "source_url": "https://www.edmunds.com/jeep/wrangler/2025/st-402049830/features-specs/",
+        "source_section": "Drivetrain"
+      },
+      "optional_transmissions": [
+        {
+          "label": "8-Speed Automatic 850RE Transmission",
+          "price_usd": 2500,
+          "manufacturer_transmission_designation": "850RE",
+          "displayed_description": [
+            "4:1 Rock-Trac heavy duty full time 4WD system",
+            "Adaptive cruise control with stop",
+            "Remote start system",
+            "Selec-speed control"
+          ],
+          "source_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049830&submodel=SUV",
+          "source_section": "Mechanical options"
+        }
+      ],
+      "standard_drivetrain": {
+        "canonical": "4WD",
+        "displayed_drive_type": "Four wheel drive",
+        "displayed_mode": "Part time 4WD",
+        "availability": "Standard",
+        "source_url": "https://www.edmunds.com/jeep/wrangler/2025/st-402049830/features-specs/"
+      },
+      "source_evidence": {
+        "builder_trim_summary": "Rubicon X 2dr SUV 4WD (3.6L 6cyl 6M)",
+        "specification_selected_style_id": "402049830",
+        "expanded_engine_rows": {
+          "Base engine size": "3.6 L",
+          "Cylinders": "V6",
+          "Base engine type": "Gas",
+          "Horsepower": "285 hp @ 6,400 rpm",
+          "Torque": "260 lb-ft @ 4,800 rpm",
+          "Valves": "24",
+          "Cam type": "Double overhead cam (DOHC)",
+          "Valve timing": "Variable"
+        },
+        "fuel_type_row": "Regular unleaded",
+        "drivetrain_rows": {
+          "Transmission": "6-speed manual",
+          "Drive type": "Four wheel drive",
+          "Part time 4WD": "Standard"
+        },
+        "mechanical_engine_and_transmission_options_exhaustively_inspected": true
+      },
+      "dependencies_and_restrictions": {
+        "explicit_engine_transmission_restrictions": [],
+        "selection_test": "Optional engine checked; no dependency dialog or automatic transmission selection appeared.",
+        "optional_engine_transmission_pairing_established": false
+      },
+      "unresolved": [
+        "Optional engine transmission pairing is not explicitly established; do not construct manual/automatic engine permutations.",
+        "V6/V8 aspiration not explicitly reported in inspected expanded Engine tables or option labels; retained as null.",
+        "Manufacturer engine code not displayed; no registry code inferred."
+      ]
+    },
+    {
+      "edmunds_style_id": "402049824",
+      "edmunds_modelyear_id": "402019466",
+      "source_model": "wrangler",
+      "marketed_trim": "Rubicon X",
+      "canonical_trim": "Rubicon X",
+      "door_count": 4,
+      "factory_body": {
+        "door_configuration": "four-door"
+      },
+      "builder_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049824&submodel=SUV",
+      "specifications_url": "https://www.edmunds.com/jeep/wrangler/2025/st-402049824/features-specs/",
+      "displayed_trim_summary": "Rubicon X 4dr SUV 4WD (3.6L 6cyl 6M)",
+      "starting_msrp_usd": 61405,
+      "standard_engine_profile": "gas_36_v6",
+      "optional_engines": [
+        {
+          "engine_profile": "gas_20_turbo",
+          "label": "2.0L I4 DOHC DI Turbo Engine w/ESS",
+          "price_usd": 0,
+          "displayed_description": [
+            "2.0L I4 DOHC turbo engine with 270 hp @ 5250 rpm and 295 lb. ft. of torque @ 3000 rpm",
+            "Auxiliary battery",
+            "Non-lock fuel cap without discriminator",
+            "Stop-start dual battery system"
+          ],
+          "source_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049824&submodel=SUV",
+          "source_section": "Mechanical options",
+          "manufacturer_engine_code": null
+        }
+      ],
+      "standard_transmission": {
+        "label": "6-speed manual",
+        "manufacturer_code": null,
+        "source_url": "https://www.edmunds.com/jeep/wrangler/2025/st-402049824/features-specs/",
+        "source_section": "Drivetrain"
+      },
+      "optional_transmissions": [
+        {
+          "label": "8-Speed Automatic 850RE Transmission",
+          "price_usd": 2500,
+          "manufacturer_transmission_designation": "850RE",
+          "displayed_description": [
+            "17\" x 8.0\" machined wheels with Black pockets",
+            "35\" tire suspension",
+            "4:1 Rock-Trac heavy duty full time 4WD system",
+            "4.56 rear axle ratio",
+            "Adaptive cruise control with stop",
+            "Anti-lock 4-wheel disc performance brakes",
+            "LT315/70R17C 113/110S tires",
+            "Mopar hinge-gate reinforcement",
+            "Mopar jack spacer",
+            "Mopar tire relocation kit",
+            "Remote start system",
+            "Selec-speed control",
+            "Wheel flare extensions"
+          ],
+          "source_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049824&submodel=SUV",
+          "source_section": "Mechanical options"
+        }
+      ],
+      "standard_drivetrain": {
+        "canonical": "4WD",
+        "displayed_drive_type": "Four wheel drive",
+        "displayed_mode": "Part time 4WD",
+        "availability": "Standard",
+        "source_url": "https://www.edmunds.com/jeep/wrangler/2025/st-402049824/features-specs/"
+      },
+      "source_evidence": {
+        "builder_trim_summary": "Rubicon X 4dr SUV 4WD (3.6L 6cyl 6M)",
+        "specification_selected_style_id": "402049824",
+        "expanded_engine_rows": {
+          "Base engine size": "3.6 L",
+          "Cylinders": "V6",
+          "Base engine type": "Gas",
+          "Horsepower": "285 hp @ 6,400 rpm",
+          "Torque": "260 lb-ft @ 4,800 rpm",
+          "Valves": "24",
+          "Cam type": "Double overhead cam (DOHC)",
+          "Valve timing": "Variable"
+        },
+        "fuel_type_row": "Regular unleaded",
+        "drivetrain_rows": {
+          "Transmission": "6-speed manual",
+          "Drive type": "Four wheel drive",
+          "Part time 4WD": "Standard"
+        },
+        "mechanical_engine_and_transmission_options_exhaustively_inspected": true
+      },
+      "dependencies_and_restrictions": {
+        "explicit_engine_transmission_restrictions": [],
+        "selection_test": "Optional engine checked; no dependency dialog or automatic transmission selection appeared.",
+        "optional_engine_transmission_pairing_established": false
+      },
+      "unresolved": [
+        "Optional engine transmission pairing is not explicitly established; do not construct manual/automatic engine permutations.",
+        "V6/V8 aspiration not explicitly reported in inspected expanded Engine tables or option labels; retained as null.",
+        "Manufacturer engine code not displayed; no registry code inferred."
+      ]
+    },
+    {
+      "edmunds_style_id": "402065526",
+      "edmunds_modelyear_id": "402019466",
+      "source_model": "wrangler",
+      "marketed_trim": "Rubicon 392 Final Edition",
+      "canonical_trim": "Rubicon 392 Final Edition",
+      "door_count": 4,
+      "factory_body": {
+        "door_configuration": "four-door"
+      },
+      "builder_url": "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402065526&submodel=SUV",
+      "specifications_url": "https://www.edmunds.com/jeep/wrangler/2025/st-402065526/features-specs/",
+      "displayed_trim_summary": "Rubicon 392 Final Edition 4dr SUV 4WD (6.4L 8cyl 8A)",
+      "starting_msrp_usd": 99995,
+      "standard_engine_profile": "gas_64_v8",
+      "optional_engines": [],
+      "standard_transmission": {
+        "label": "8-speed shiftable automatic",
+        "manufacturer_code": null,
+        "source_url": "https://www.edmunds.com/jeep/wrangler/2025/st-402065526/features-specs/",
+        "source_section": "Drivetrain"
+      },
+      "optional_transmissions": [],
+      "standard_drivetrain": {
+        "canonical": "4WD",
+        "displayed_drive_type": "Four wheel drive",
+        "displayed_mode": "Full time 4WD",
+        "availability": "Standard",
+        "source_url": "https://www.edmunds.com/jeep/wrangler/2025/st-402065526/features-specs/"
+      },
+      "source_evidence": {
+        "builder_trim_summary": "Rubicon 392 Final Edition 4dr SUV 4WD (6.4L 8cyl 8A)",
+        "specification_selected_style_id": "402065526",
+        "expanded_engine_rows": {
+          "Base engine size": "6.4 L",
+          "Cylinders": "V8",
+          "Base engine type": "Gas",
+          "Horsepower": "470 hp @ 6,000 rpm",
+          "Torque": "470 lb-ft @ 4,300 rpm",
+          "Valves": "16",
+          "Cam type": "Overhead valves (OHV)"
+        },
+        "fuel_type_row": "Premium unleaded (required)",
+        "drivetrain_rows": {
+          "Transmission": "8-speed shiftable automatic",
+          "Drive type": "Four wheel drive",
+          "Full time 4WD": "Standard"
+        },
+        "mechanical_engine_and_transmission_options_exhaustively_inspected": true
+      },
+      "dependencies_and_restrictions": {
+        "explicit_engine_transmission_restrictions": [],
+        "selection_test": "No engine or transmission alternative displayed; selection test not applicable.",
+        "optional_engine_transmission_pairing_established": null
+      },
+      "unresolved": [
+        "V6/V8 aspiration not explicitly reported in inspected expanded Engine tables or option labels; retained as null.",
+        "Manufacturer engine code not displayed; no registry code inferred."
+      ]
+    },
+    {
+      "edmunds_style_id": "402050383",
+      "edmunds_modelyear_id": "402049565",
+      "source_model": "wrangler-4xe",
+      "marketed_trim": "Sport S",
+      "canonical_trim": "Sport S 4xe",
+      "door_count": 4,
+      "factory_body": {
+        "door_configuration": "four-door"
+      },
+      "builder_url": "https://www.edmunds.com/jeep/wrangler-4xe/build/?modelyearId=402049565&styleId=402050383&submodel=SUV",
+      "specifications_url": "https://www.edmunds.com/jeep/wrangler-4xe/2025/st-402050383/features-specs/",
+      "displayed_trim_summary": "Sport S 4dr SUV 4WD (2.0L 4cyl Turbo gas/electric plug-in hybrid 8A)",
+      "starting_msrp_usd": 50695,
+      "standard_engine_profile": "phev_20_turbo",
+      "optional_engines": [],
+      "standard_transmission": {
+        "label": "8-speed shiftable automatic",
+        "manufacturer_code": null,
+        "source_url": "https://www.edmunds.com/jeep/wrangler-4xe/2025/st-402050383/features-specs/",
+        "source_section": "Drivetrain"
+      },
+      "optional_transmissions": [],
+      "standard_drivetrain": {
+        "canonical": "4WD",
+        "displayed_drive_type": "Four wheel drive",
+        "displayed_mode": "Full time 4WD",
+        "availability": "Standard",
+        "source_url": "https://www.edmunds.com/jeep/wrangler-4xe/2025/st-402050383/features-specs/"
+      },
+      "source_evidence": {
+        "builder_trim_summary": "Sport S 4dr SUV 4WD (2.0L 4cyl Turbo gas/electric plug-in hybrid 8A)",
+        "specification_selected_style_id": "402050383",
+        "expanded_engine_rows": {
+          "Base engine size": "2.0 L",
+          "Cylinders": "Inline 4",
+          "Base engine type": "Plug-in hybrid",
+          "Horsepower": "375 hp @ 5,250 rpm",
+          "Torque": "470 lb-ft @ 3,000 rpm",
+          "Valves": "16",
+          "Cam type": "Double overhead cam (DOHC)",
+          "Valve timing": "Variable",
+          "Direct injection": "Standard"
+        },
+        "fuel_type_row": "Regular unleaded",
+        "drivetrain_rows": {
+          "Transmission": "8-speed shiftable automatic",
+          "Drive type": "Four wheel drive",
+          "Full time 4WD": "Standard"
+        },
+        "mechanical_engine_and_transmission_options_exhaustively_inspected": true
+      },
+      "dependencies_and_restrictions": {
+        "explicit_engine_transmission_restrictions": [],
+        "selection_test": "No engine or transmission alternative displayed; selection test not applicable.",
+        "optional_engine_transmission_pairing_established": null
+      },
+      "unresolved": [
+        "Manufacturer engine code not displayed; no registry code inferred."
+      ]
+    },
+    {
+      "edmunds_style_id": "402050385",
+      "edmunds_modelyear_id": "402049565",
+      "source_model": "wrangler-4xe",
+      "marketed_trim": "Willys",
+      "canonical_trim": "Willys 4xe",
+      "door_count": 4,
+      "factory_body": {
+        "door_configuration": "four-door"
+      },
+      "builder_url": "https://www.edmunds.com/jeep/wrangler-4xe/build/?modelyearId=402049565&styleId=402050385&submodel=SUV",
+      "specifications_url": "https://www.edmunds.com/jeep/wrangler-4xe/2025/st-402050385/features-specs/",
+      "displayed_trim_summary": "Willys 4dr SUV 4WD (2.0L 4cyl Turbo gas/electric plug-in hybrid 8A)",
+      "starting_msrp_usd": 55435,
+      "standard_engine_profile": "phev_20_turbo",
+      "optional_engines": [],
+      "standard_transmission": {
+        "label": "8-speed shiftable automatic",
+        "manufacturer_code": null,
+        "source_url": "https://www.edmunds.com/jeep/wrangler-4xe/2025/st-402050385/features-specs/",
+        "source_section": "Drivetrain"
+      },
+      "optional_transmissions": [],
+      "standard_drivetrain": {
+        "canonical": "4WD",
+        "displayed_drive_type": "Four wheel drive",
+        "displayed_mode": "Full time 4WD",
+        "availability": "Standard",
+        "source_url": "https://www.edmunds.com/jeep/wrangler-4xe/2025/st-402050385/features-specs/"
+      },
+      "source_evidence": {
+        "builder_trim_summary": "Willys 4dr SUV 4WD (2.0L 4cyl Turbo gas/electric plug-in hybrid 8A)",
+        "specification_selected_style_id": "402050385",
+        "expanded_engine_rows": {
+          "Base engine size": "2.0 L",
+          "Cylinders": "Inline 4",
+          "Base engine type": "Plug-in hybrid",
+          "Horsepower": "375 hp @ 5,250 rpm",
+          "Torque": "470 lb-ft @ 3,000 rpm",
+          "Valves": "16",
+          "Cam type": "Double overhead cam (DOHC)",
+          "Valve timing": "Variable",
+          "Direct injection": "Standard"
+        },
+        "fuel_type_row": "Regular unleaded",
+        "drivetrain_rows": {
+          "Transmission": "8-speed shiftable automatic",
+          "Drive type": "Four wheel drive",
+          "Full time 4WD": "Standard"
+        },
+        "mechanical_engine_and_transmission_options_exhaustively_inspected": true
+      },
+      "dependencies_and_restrictions": {
+        "explicit_engine_transmission_restrictions": [],
+        "selection_test": "No engine or transmission alternative displayed; selection test not applicable.",
+        "optional_engine_transmission_pairing_established": null
+      },
+      "unresolved": [
+        "Manufacturer engine code not displayed; no registry code inferred."
+      ]
+    },
+    {
+      "edmunds_style_id": "402050384",
+      "edmunds_modelyear_id": "402049565",
+      "source_model": "wrangler-4xe",
+      "marketed_trim": "Sahara",
+      "canonical_trim": "Sahara 4xe",
+      "door_count": 4,
+      "factory_body": {
+        "door_configuration": "four-door"
+      },
+      "builder_url": "https://www.edmunds.com/jeep/wrangler-4xe/build/?modelyearId=402049565&styleId=402050384&submodel=SUV",
+      "specifications_url": "https://www.edmunds.com/jeep/wrangler-4xe/2025/st-402050384/features-specs/",
+      "displayed_trim_summary": "Sahara 4dr SUV 4WD (2.0L 4cyl Turbo gas/electric plug-in hybrid 8A)",
+      "starting_msrp_usd": 57695,
+      "standard_engine_profile": "phev_20_turbo",
+      "optional_engines": [],
+      "standard_transmission": {
+        "label": "8-speed shiftable automatic",
+        "manufacturer_code": null,
+        "source_url": "https://www.edmunds.com/jeep/wrangler-4xe/2025/st-402050384/features-specs/",
+        "source_section": "Drivetrain"
+      },
+      "optional_transmissions": [],
+      "standard_drivetrain": {
+        "canonical": "4WD",
+        "displayed_drive_type": "Four wheel drive",
+        "displayed_mode": "Full time 4WD",
+        "availability": "Standard",
+        "source_url": "https://www.edmunds.com/jeep/wrangler-4xe/2025/st-402050384/features-specs/"
+      },
+      "source_evidence": {
+        "builder_trim_summary": "Sahara 4dr SUV 4WD (2.0L 4cyl Turbo gas/electric plug-in hybrid 8A)",
+        "specification_selected_style_id": "402050384",
+        "expanded_engine_rows": {
+          "Base engine size": "2.0 L",
+          "Cylinders": "Inline 4",
+          "Base engine type": "Plug-in hybrid",
+          "Horsepower": "375 hp @ 5,250 rpm",
+          "Torque": "470 lb-ft @ 3,000 rpm",
+          "Valves": "16",
+          "Cam type": "Double overhead cam (DOHC)",
+          "Valve timing": "Variable",
+          "Direct injection": "Standard"
+        },
+        "fuel_type_row": "Regular unleaded",
+        "drivetrain_rows": {
+          "Transmission": "8-speed shiftable automatic",
+          "Drive type": "Four wheel drive",
+          "Full time 4WD": "Standard"
+        },
+        "mechanical_engine_and_transmission_options_exhaustively_inspected": true
+      },
+      "dependencies_and_restrictions": {
+        "explicit_engine_transmission_restrictions": [],
+        "selection_test": "No engine or transmission alternative displayed; selection test not applicable.",
+        "optional_engine_transmission_pairing_established": null
+      },
+      "unresolved": [
+        "Manufacturer engine code not displayed; no registry code inferred."
+      ]
+    },
+    {
+      "edmunds_style_id": "402055439",
+      "edmunds_modelyear_id": "402049565",
+      "source_model": "wrangler-4xe",
+      "marketed_trim": "Willys '41",
+      "canonical_trim": "Willys '41 4xe",
+      "door_count": 4,
+      "factory_body": {
+        "door_configuration": "four-door"
+      },
+      "builder_url": "https://www.edmunds.com/jeep/wrangler-4xe/build/?modelyearId=402049565&styleId=402055439&submodel=SUV",
+      "specifications_url": "https://www.edmunds.com/jeep/wrangler-4xe/2025/st-402055439/features-specs/",
+      "displayed_trim_summary": "Willys '41 4dr SUV 4WD (2.0L 4cyl Turbo gas/electric plug-in hybrid 8A)",
+      "starting_msrp_usd": 59930,
+      "standard_engine_profile": "phev_20_turbo",
+      "optional_engines": [],
+      "standard_transmission": {
+        "label": "8-speed shiftable automatic",
+        "manufacturer_code": null,
+        "source_url": "https://www.edmunds.com/jeep/wrangler-4xe/2025/st-402055439/features-specs/",
+        "source_section": "Drivetrain"
+      },
+      "optional_transmissions": [],
+      "standard_drivetrain": {
+        "canonical": "4WD",
+        "displayed_drive_type": "Four wheel drive",
+        "displayed_mode": "Full time 4WD",
+        "availability": "Standard",
+        "source_url": "https://www.edmunds.com/jeep/wrangler-4xe/2025/st-402055439/features-specs/"
+      },
+      "source_evidence": {
+        "builder_trim_summary": "Willys '41 4dr SUV 4WD (2.0L 4cyl Turbo gas/electric plug-in hybrid 8A)",
+        "specification_selected_style_id": "402055439",
+        "expanded_engine_rows": {
+          "Base engine size": "2.0 L",
+          "Cylinders": "Inline 4",
+          "Base engine type": "Plug-in hybrid",
+          "Horsepower": "375 hp @ 5,250 rpm",
+          "Torque": "470 lb-ft @ 3,000 rpm",
+          "Valves": "16",
+          "Cam type": "Double overhead cam (DOHC)",
+          "Valve timing": "Variable",
+          "Direct injection": "Standard"
+        },
+        "fuel_type_row": "Regular unleaded",
+        "drivetrain_rows": {
+          "Transmission": "8-speed shiftable automatic",
+          "Drive type": "Four wheel drive",
+          "Full time 4WD": "Standard"
+        },
+        "mechanical_engine_and_transmission_options_exhaustively_inspected": true
+      },
+      "dependencies_and_restrictions": {
+        "explicit_engine_transmission_restrictions": [],
+        "selection_test": "No engine or transmission alternative displayed; selection test not applicable.",
+        "optional_engine_transmission_pairing_established": null
+      },
+      "unresolved": [
+        "Manufacturer engine code not displayed; no registry code inferred."
+      ]
+    },
+    {
+      "edmunds_style_id": "402050386",
+      "edmunds_modelyear_id": "402049565",
+      "source_model": "wrangler-4xe",
+      "marketed_trim": "Rubicon",
+      "canonical_trim": "Rubicon 4xe",
+      "door_count": 4,
+      "factory_body": {
+        "door_configuration": "four-door"
+      },
+      "builder_url": "https://www.edmunds.com/jeep/wrangler-4xe/build/?modelyearId=402049565&styleId=402050386&submodel=SUV",
+      "specifications_url": "https://www.edmunds.com/jeep/wrangler-4xe/2025/st-402050386/features-specs/",
+      "displayed_trim_summary": "Rubicon 4dr SUV 4WD (2.0L 4cyl Turbo gas/electric plug-in hybrid 8A)",
+      "starting_msrp_usd": 61395,
+      "standard_engine_profile": "phev_20_turbo",
+      "optional_engines": [],
+      "standard_transmission": {
+        "label": "8-speed shiftable automatic",
+        "manufacturer_code": null,
+        "source_url": "https://www.edmunds.com/jeep/wrangler-4xe/2025/st-402050386/features-specs/",
+        "source_section": "Drivetrain"
+      },
+      "optional_transmissions": [],
+      "standard_drivetrain": {
+        "canonical": "4WD",
+        "displayed_drive_type": "Four wheel drive",
+        "displayed_mode": "Full time 4WD",
+        "availability": "Standard",
+        "source_url": "https://www.edmunds.com/jeep/wrangler-4xe/2025/st-402050386/features-specs/"
+      },
+      "source_evidence": {
+        "builder_trim_summary": "Rubicon 4dr SUV 4WD (2.0L 4cyl Turbo gas/electric plug-in hybrid 8A)",
+        "specification_selected_style_id": "402050386",
+        "expanded_engine_rows": {
+          "Base engine size": "2.0 L",
+          "Cylinders": "Inline 4",
+          "Base engine type": "Plug-in hybrid",
+          "Horsepower": "375 hp @ 5,250 rpm",
+          "Torque": "470 lb-ft @ 3,000 rpm",
+          "Valves": "16",
+          "Cam type": "Double overhead cam (DOHC)",
+          "Valve timing": "Variable",
+          "Direct injection": "Standard"
+        },
+        "fuel_type_row": "Regular unleaded",
+        "drivetrain_rows": {
+          "Transmission": "8-speed shiftable automatic",
+          "Drive type": "Four wheel drive",
+          "Full time 4WD": "Standard"
+        },
+        "mechanical_engine_and_transmission_options_exhaustively_inspected": true
+      },
+      "dependencies_and_restrictions": {
+        "explicit_engine_transmission_restrictions": [],
+        "selection_test": "No engine or transmission alternative displayed; selection test not applicable.",
+        "optional_engine_transmission_pairing_established": null
+      },
+      "unresolved": [
+        "Manufacturer engine code not displayed; no registry code inferred."
+      ]
+    },
+    {
+      "edmunds_style_id": "402065578",
+      "edmunds_modelyear_id": "402049565",
+      "source_model": "wrangler-4xe",
+      "marketed_trim": "Backcountry",
+      "canonical_trim": "Backcountry 4xe",
+      "door_count": 4,
+      "factory_body": {
+        "door_configuration": "four-door"
+      },
+      "builder_url": "https://www.edmunds.com/jeep/wrangler-4xe/build/?modelyearId=402049565&styleId=402065578&submodel=SUV",
+      "specifications_url": "https://www.edmunds.com/jeep/wrangler-4xe/2025/st-402065578/features-specs/",
+      "displayed_trim_summary": "Backcountry 4dr SUV 4WD (2.0L 4cyl Turbo gas/electric plug-in hybrid 8A)",
+      "starting_msrp_usd": 64290,
+      "standard_engine_profile": "phev_20_turbo",
+      "optional_engines": [],
+      "standard_transmission": {
+        "label": "8-speed shiftable automatic",
+        "manufacturer_code": null,
+        "source_url": "https://www.edmunds.com/jeep/wrangler-4xe/2025/st-402065578/features-specs/",
+        "source_section": "Drivetrain"
+      },
+      "optional_transmissions": [],
+      "standard_drivetrain": {
+        "canonical": "4WD",
+        "displayed_drive_type": "Four wheel drive",
+        "displayed_mode": "Full time 4WD",
+        "availability": "Standard",
+        "source_url": "https://www.edmunds.com/jeep/wrangler-4xe/2025/st-402065578/features-specs/"
+      },
+      "source_evidence": {
+        "builder_trim_summary": "Backcountry 4dr SUV 4WD (2.0L 4cyl Turbo gas/electric plug-in hybrid 8A)",
+        "specification_selected_style_id": "402065578",
+        "expanded_engine_rows": {
+          "Base engine size": "2.0 L",
+          "Cylinders": "Inline 4",
+          "Base engine type": "Plug-in hybrid",
+          "Horsepower": "375 hp @ 5,250 rpm",
+          "Torque": "470 lb-ft @ 3,000 rpm",
+          "Valves": "16",
+          "Cam type": "Double overhead cam (DOHC)",
+          "Valve timing": "Variable",
+          "Direct injection": "Standard"
+        },
+        "fuel_type_row": "Regular unleaded",
+        "drivetrain_rows": {
+          "Transmission": "8-speed shiftable automatic",
+          "Drive type": "Four wheel drive",
+          "Full time 4WD": "Standard"
+        },
+        "mechanical_engine_and_transmission_options_exhaustively_inspected": true
+      },
+      "dependencies_and_restrictions": {
+        "explicit_engine_transmission_restrictions": [],
+        "selection_test": "No engine or transmission alternative displayed; selection test not applicable.",
+        "optional_engine_transmission_pairing_established": null
+      },
+      "unresolved": [
+        "Manufacturer engine code not displayed; no registry code inferred."
+      ]
+    },
+    {
+      "edmunds_style_id": "402050387",
+      "edmunds_modelyear_id": "402049565",
+      "source_model": "wrangler-4xe",
+      "marketed_trim": "Rubicon X",
+      "canonical_trim": "Rubicon X 4xe",
+      "door_count": 4,
+      "factory_body": {
+        "door_configuration": "four-door"
+      },
+      "builder_url": "https://www.edmunds.com/jeep/wrangler-4xe/build/?modelyearId=402049565&styleId=402050387&submodel=SUV",
+      "specifications_url": "https://www.edmunds.com/jeep/wrangler-4xe/2025/st-402050387/features-specs/",
+      "displayed_trim_summary": "Rubicon X 4dr SUV 4WD (2.0L 4cyl Turbo gas/electric plug-in hybrid 8A)",
+      "starting_msrp_usd": 70345,
+      "standard_engine_profile": "phev_20_turbo",
+      "optional_engines": [],
+      "standard_transmission": {
+        "label": "8-speed shiftable automatic",
+        "manufacturer_code": null,
+        "source_url": "https://www.edmunds.com/jeep/wrangler-4xe/2025/st-402050387/features-specs/",
+        "source_section": "Drivetrain"
+      },
+      "optional_transmissions": [],
+      "standard_drivetrain": {
+        "canonical": "4WD",
+        "displayed_drive_type": "Four wheel drive",
+        "displayed_mode": "Full time 4WD",
+        "availability": "Standard",
+        "source_url": "https://www.edmunds.com/jeep/wrangler-4xe/2025/st-402050387/features-specs/"
+      },
+      "source_evidence": {
+        "builder_trim_summary": "Rubicon X 4dr SUV 4WD (2.0L 4cyl Turbo gas/electric plug-in hybrid 8A)",
+        "specification_selected_style_id": "402050387",
+        "expanded_engine_rows": {
+          "Base engine size": "2.0 L",
+          "Cylinders": "Inline 4",
+          "Base engine type": "Plug-in hybrid",
+          "Horsepower": "375 hp @ 5,250 rpm",
+          "Torque": "470 lb-ft @ 3,000 rpm",
+          "Valves": "16",
+          "Cam type": "Double overhead cam (DOHC)",
+          "Valve timing": "Variable",
+          "Direct injection": "Standard"
+        },
+        "fuel_type_row": "Regular unleaded",
+        "drivetrain_rows": {
+          "Transmission": "8-speed shiftable automatic",
+          "Drive type": "Four wheel drive",
+          "Full time 4WD": "Standard"
+        },
+        "mechanical_engine_and_transmission_options_exhaustively_inspected": true
+      },
+      "dependencies_and_restrictions": {
+        "explicit_engine_transmission_restrictions": [],
+        "selection_test": "No engine or transmission alternative displayed; selection test not applicable.",
+        "optional_engine_transmission_pairing_established": null
+      },
+      "unresolved": [
+        "Manufacturer engine code not displayed; no registry code inferred."
+      ]
+    }
+  ],
+  "canonical_configurations": [
+    {
+      "inventory_id": "402019467:gas_36_v6",
+      "edmunds_style_ids": [
+        "402019467"
+      ],
+      "engine_availability": "standard",
+      "engine_profile": "gas_36_v6",
+      "canonical_fields": {
+        "engine_name": "3.6L V6",
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": null,
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": null,
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2025,
+        "trim_name": "Sport",
+        "factory_body_configuration": {
+          "door_configuration": "two-door"
+        },
+        "drivetrain": "4WD",
+        "market": "US"
+      },
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402019467&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2025/st-402019467/features-specs/"
+      ],
+      "engine_evidence_section": "Trim summary; specifications Engine/Fuel & MPG",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": "6-speed manual",
+      "unresolved_fields": [
+        "engine_aspiration"
+      ],
+      "manufacturer_engine_code_not_reported": true
+    },
+    {
+      "inventory_id": "402019467:gas_20_turbo",
+      "edmunds_style_ids": [
+        "402019467"
+      ],
+      "engine_availability": "optional",
+      "engine_profile": "gas_20_turbo",
+      "canonical_fields": {
+        "engine_name": "2.0L I4 Turbo",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": null,
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2025,
+        "trim_name": "Sport",
+        "factory_body_configuration": {
+          "door_configuration": "two-door"
+        },
+        "drivetrain": "4WD",
+        "market": "US"
+      },
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402019467&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2025/st-402019467/features-specs/"
+      ],
+      "engine_evidence_section": "Mechanical options",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": null,
+      "unresolved_fields": [],
+      "manufacturer_engine_code_not_reported": true
+    },
+    {
+      "inventory_id": "402049827:gas_36_v6",
+      "edmunds_style_ids": [
+        "402049827"
+      ],
+      "engine_availability": "standard",
+      "engine_profile": "gas_36_v6",
+      "canonical_fields": {
+        "engine_name": "3.6L V6",
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": null,
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": null,
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2025,
+        "trim_name": "Sport",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "market": "US"
+      },
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049827&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2025/st-402049827/features-specs/"
+      ],
+      "engine_evidence_section": "Trim summary; specifications Engine/Fuel & MPG",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": "6-speed manual",
+      "unresolved_fields": [
+        "engine_aspiration"
+      ],
+      "manufacturer_engine_code_not_reported": true
+    },
+    {
+      "inventory_id": "402049827:gas_20_turbo",
+      "edmunds_style_ids": [
+        "402049827"
+      ],
+      "engine_availability": "optional",
+      "engine_profile": "gas_20_turbo",
+      "canonical_fields": {
+        "engine_name": "2.0L I4 Turbo",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": null,
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2025,
+        "trim_name": "Sport",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "market": "US"
+      },
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049827&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2025/st-402049827/features-specs/"
+      ],
+      "engine_evidence_section": "Mechanical options",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": null,
+      "unresolved_fields": [],
+      "manufacturer_engine_code_not_reported": true
+    },
+    {
+      "inventory_id": "402049822:gas_36_v6",
+      "edmunds_style_ids": [
+        "402049822"
+      ],
+      "engine_availability": "standard",
+      "engine_profile": "gas_36_v6",
+      "canonical_fields": {
+        "engine_name": "3.6L V6",
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": null,
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": null,
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2025,
+        "trim_name": "Sport S",
+        "factory_body_configuration": {
+          "door_configuration": "two-door"
+        },
+        "drivetrain": "4WD",
+        "market": "US"
+      },
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049822&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2025/st-402049822/features-specs/"
+      ],
+      "engine_evidence_section": "Trim summary; specifications Engine/Fuel & MPG",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": "6-speed manual",
+      "unresolved_fields": [
+        "engine_aspiration"
+      ],
+      "manufacturer_engine_code_not_reported": true
+    },
+    {
+      "inventory_id": "402049822:gas_20_turbo",
+      "edmunds_style_ids": [
+        "402049822"
+      ],
+      "engine_availability": "optional",
+      "engine_profile": "gas_20_turbo",
+      "canonical_fields": {
+        "engine_name": "2.0L I4 Turbo",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": null,
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2025,
+        "trim_name": "Sport S",
+        "factory_body_configuration": {
+          "door_configuration": "two-door"
+        },
+        "drivetrain": "4WD",
+        "market": "US"
+      },
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049822&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2025/st-402049822/features-specs/"
+      ],
+      "engine_evidence_section": "Mechanical options",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": null,
+      "unresolved_fields": [],
+      "manufacturer_engine_code_not_reported": true
+    },
+    {
+      "inventory_id": "402049823:gas_36_v6",
+      "edmunds_style_ids": [
+        "402049823"
+      ],
+      "engine_availability": "standard",
+      "engine_profile": "gas_36_v6",
+      "canonical_fields": {
+        "engine_name": "3.6L V6",
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": null,
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": null,
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2025,
+        "trim_name": "Sport S",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "market": "US"
+      },
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049823&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2025/st-402049823/features-specs/"
+      ],
+      "engine_evidence_section": "Trim summary; specifications Engine/Fuel & MPG",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": "6-speed manual",
+      "unresolved_fields": [
+        "engine_aspiration"
+      ],
+      "manufacturer_engine_code_not_reported": true
+    },
+    {
+      "inventory_id": "402049823:gas_20_turbo",
+      "edmunds_style_ids": [
+        "402049823"
+      ],
+      "engine_availability": "optional",
+      "engine_profile": "gas_20_turbo",
+      "canonical_fields": {
+        "engine_name": "2.0L I4 Turbo",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": null,
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2025,
+        "trim_name": "Sport S",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "market": "US"
+      },
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049823&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2025/st-402049823/features-specs/"
+      ],
+      "engine_evidence_section": "Mechanical options",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": null,
+      "unresolved_fields": [],
+      "manufacturer_engine_code_not_reported": true
+    },
+    {
+      "inventory_id": "402049831:gas_36_v6",
+      "edmunds_style_ids": [
+        "402049831"
+      ],
+      "engine_availability": "standard",
+      "engine_profile": "gas_36_v6",
+      "canonical_fields": {
+        "engine_name": "3.6L V6",
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": null,
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": null,
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2025,
+        "trim_name": "Willys",
+        "factory_body_configuration": {
+          "door_configuration": "two-door"
+        },
+        "drivetrain": "4WD",
+        "market": "US"
+      },
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049831&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2025/st-402049831/features-specs/"
+      ],
+      "engine_evidence_section": "Trim summary; specifications Engine/Fuel & MPG",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": "6-speed manual",
+      "unresolved_fields": [
+        "engine_aspiration"
+      ],
+      "manufacturer_engine_code_not_reported": true
+    },
+    {
+      "inventory_id": "402049831:gas_20_turbo",
+      "edmunds_style_ids": [
+        "402049831"
+      ],
+      "engine_availability": "optional",
+      "engine_profile": "gas_20_turbo",
+      "canonical_fields": {
+        "engine_name": "2.0L I4 Turbo",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": null,
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2025,
+        "trim_name": "Willys",
+        "factory_body_configuration": {
+          "door_configuration": "two-door"
+        },
+        "drivetrain": "4WD",
+        "market": "US"
+      },
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049831&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2025/st-402049831/features-specs/"
+      ],
+      "engine_evidence_section": "Mechanical options",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": null,
+      "unresolved_fields": [],
+      "manufacturer_engine_code_not_reported": true
+    },
+    {
+      "inventory_id": "402049826:gas_36_v6",
+      "edmunds_style_ids": [
+        "402049826"
+      ],
+      "engine_availability": "standard",
+      "engine_profile": "gas_36_v6",
+      "canonical_fields": {
+        "engine_name": "3.6L V6",
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": null,
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": null,
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2025,
+        "trim_name": "Willys",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "market": "US"
+      },
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049826&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2025/st-402049826/features-specs/"
+      ],
+      "engine_evidence_section": "Trim summary; specifications Engine/Fuel & MPG",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": "6-speed manual",
+      "unresolved_fields": [
+        "engine_aspiration"
+      ],
+      "manufacturer_engine_code_not_reported": true
+    },
+    {
+      "inventory_id": "402049826:gas_20_turbo",
+      "edmunds_style_ids": [
+        "402049826"
+      ],
+      "engine_availability": "optional",
+      "engine_profile": "gas_20_turbo",
+      "canonical_fields": {
+        "engine_name": "2.0L I4 Turbo",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": null,
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2025,
+        "trim_name": "Willys",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "market": "US"
+      },
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049826&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2025/st-402049826/features-specs/"
+      ],
+      "engine_evidence_section": "Mechanical options",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": null,
+      "unresolved_fields": [],
+      "manufacturer_engine_code_not_reported": true
+    },
+    {
+      "inventory_id": "402049832:gas_36_v6",
+      "edmunds_style_ids": [
+        "402049832"
+      ],
+      "engine_availability": "standard",
+      "engine_profile": "gas_36_v6",
+      "canonical_fields": {
+        "engine_name": "3.6L V6",
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": null,
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": null,
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2025,
+        "trim_name": "Rubicon",
+        "factory_body_configuration": {
+          "door_configuration": "two-door"
+        },
+        "drivetrain": "4WD",
+        "market": "US"
+      },
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049832&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2025/st-402049832/features-specs/"
+      ],
+      "engine_evidence_section": "Trim summary; specifications Engine/Fuel & MPG",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": "6-speed manual",
+      "unresolved_fields": [
+        "engine_aspiration"
+      ],
+      "manufacturer_engine_code_not_reported": true
+    },
+    {
+      "inventory_id": "402049832:gas_20_turbo",
+      "edmunds_style_ids": [
+        "402049832"
+      ],
+      "engine_availability": "optional",
+      "engine_profile": "gas_20_turbo",
+      "canonical_fields": {
+        "engine_name": "2.0L I4 Turbo",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": null,
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2025,
+        "trim_name": "Rubicon",
+        "factory_body_configuration": {
+          "door_configuration": "two-door"
+        },
+        "drivetrain": "4WD",
+        "market": "US"
+      },
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049832&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2025/st-402049832/features-specs/"
+      ],
+      "engine_evidence_section": "Mechanical options",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": null,
+      "unresolved_fields": [],
+      "manufacturer_engine_code_not_reported": true
+    },
+    {
+      "inventory_id": "402049828:gas_36_v6",
+      "edmunds_style_ids": [
+        "402049828"
+      ],
+      "engine_availability": "standard",
+      "engine_profile": "gas_36_v6",
+      "canonical_fields": {
+        "engine_name": "3.6L V6",
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": null,
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": null,
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2025,
+        "trim_name": "Rubicon",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "market": "US"
+      },
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049828&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2025/st-402049828/features-specs/"
+      ],
+      "engine_evidence_section": "Trim summary; specifications Engine/Fuel & MPG",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": "6-speed manual",
+      "unresolved_fields": [
+        "engine_aspiration"
+      ],
+      "manufacturer_engine_code_not_reported": true
+    },
+    {
+      "inventory_id": "402049828:gas_20_turbo",
+      "edmunds_style_ids": [
+        "402049828"
+      ],
+      "engine_availability": "optional",
+      "engine_profile": "gas_20_turbo",
+      "canonical_fields": {
+        "engine_name": "2.0L I4 Turbo",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": null,
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2025,
+        "trim_name": "Rubicon",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "market": "US"
+      },
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049828&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2025/st-402049828/features-specs/"
+      ],
+      "engine_evidence_section": "Mechanical options",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": null,
+      "unresolved_fields": [],
+      "manufacturer_engine_code_not_reported": true
+    },
+    {
+      "inventory_id": "402049825:gas_20_turbo",
+      "edmunds_style_ids": [
+        "402049825"
+      ],
+      "engine_availability": "standard",
+      "engine_profile": "gas_20_turbo",
+      "canonical_fields": {
+        "engine_name": "2.0L I4 Turbo",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": null,
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2025,
+        "trim_name": "Sport RHD",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "market": "US"
+      },
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049825&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2025/st-402049825/features-specs/"
+      ],
+      "engine_evidence_section": "Trim summary; specifications Engine/Fuel & MPG",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": "8-speed shiftable automatic",
+      "unresolved_fields": [],
+      "manufacturer_engine_code_not_reported": true
+    },
+    {
+      "inventory_id": "402049821:gas_20_turbo",
+      "edmunds_style_ids": [
+        "402049821"
+      ],
+      "engine_availability": "standard",
+      "engine_profile": "gas_20_turbo",
+      "canonical_fields": {
+        "engine_name": "2.0L I4 Turbo",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": null,
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2025,
+        "trim_name": "Sahara",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "market": "US"
+      },
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049821&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2025/st-402049821/features-specs/"
+      ],
+      "engine_evidence_section": "Trim summary; specifications Engine/Fuel & MPG",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": "8-speed shiftable automatic",
+      "unresolved_fields": [],
+      "manufacturer_engine_code_not_reported": true
+    },
+    {
+      "inventory_id": "402049821:gas_36_v6",
+      "edmunds_style_ids": [
+        "402049821"
+      ],
+      "engine_availability": "optional",
+      "engine_profile": "gas_36_v6",
+      "canonical_fields": {
+        "engine_name": "3.6L V6",
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": null,
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": null,
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2025,
+        "trim_name": "Sahara",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "market": "US"
+      },
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049821&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2025/st-402049821/features-specs/"
+      ],
+      "engine_evidence_section": "Mechanical options",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": null,
+      "unresolved_fields": [
+        "engine_aspiration"
+      ],
+      "manufacturer_engine_code_not_reported": true
+    },
+    {
+      "inventory_id": "402049830:gas_36_v6",
+      "edmunds_style_ids": [
+        "402049830"
+      ],
+      "engine_availability": "standard",
+      "engine_profile": "gas_36_v6",
+      "canonical_fields": {
+        "engine_name": "3.6L V6",
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": null,
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": null,
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2025,
+        "trim_name": "Rubicon X",
+        "factory_body_configuration": {
+          "door_configuration": "two-door"
+        },
+        "drivetrain": "4WD",
+        "market": "US"
+      },
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049830&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2025/st-402049830/features-specs/"
+      ],
+      "engine_evidence_section": "Trim summary; specifications Engine/Fuel & MPG",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": "6-speed manual",
+      "unresolved_fields": [
+        "engine_aspiration"
+      ],
+      "manufacturer_engine_code_not_reported": true
+    },
+    {
+      "inventory_id": "402049830:gas_20_turbo",
+      "edmunds_style_ids": [
+        "402049830"
+      ],
+      "engine_availability": "optional",
+      "engine_profile": "gas_20_turbo",
+      "canonical_fields": {
+        "engine_name": "2.0L I4 Turbo",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": null,
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2025,
+        "trim_name": "Rubicon X",
+        "factory_body_configuration": {
+          "door_configuration": "two-door"
+        },
+        "drivetrain": "4WD",
+        "market": "US"
+      },
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049830&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2025/st-402049830/features-specs/"
+      ],
+      "engine_evidence_section": "Mechanical options",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": null,
+      "unresolved_fields": [],
+      "manufacturer_engine_code_not_reported": true
+    },
+    {
+      "inventory_id": "402049824:gas_36_v6",
+      "edmunds_style_ids": [
+        "402049824"
+      ],
+      "engine_availability": "standard",
+      "engine_profile": "gas_36_v6",
+      "canonical_fields": {
+        "engine_name": "3.6L V6",
+        "engine_displacement_liters": "3.6",
+        "engine_cylinders": 6,
+        "engine_aspiration": null,
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": null,
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2025,
+        "trim_name": "Rubicon X",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "market": "US"
+      },
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049824&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2025/st-402049824/features-specs/"
+      ],
+      "engine_evidence_section": "Trim summary; specifications Engine/Fuel & MPG",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": "6-speed manual",
+      "unresolved_fields": [
+        "engine_aspiration"
+      ],
+      "manufacturer_engine_code_not_reported": true
+    },
+    {
+      "inventory_id": "402049824:gas_20_turbo",
+      "edmunds_style_ids": [
+        "402049824"
+      ],
+      "engine_availability": "optional",
+      "engine_profile": "gas_20_turbo",
+      "canonical_fields": {
+        "engine_name": "2.0L I4 Turbo",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": null,
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2025,
+        "trim_name": "Rubicon X",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "market": "US"
+      },
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402049824&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2025/st-402049824/features-specs/"
+      ],
+      "engine_evidence_section": "Mechanical options",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": null,
+      "unresolved_fields": [],
+      "manufacturer_engine_code_not_reported": true
+    },
+    {
+      "inventory_id": "402065526:gas_64_v8",
+      "edmunds_style_ids": [
+        "402065526"
+      ],
+      "engine_availability": "standard",
+      "engine_profile": "gas_64_v8",
+      "canonical_fields": {
+        "engine_name": "6.4L V8",
+        "engine_displacement_liters": "6.4",
+        "engine_cylinders": 8,
+        "engine_aspiration": null,
+        "fuel_type": "gasoline",
+        "electrification_type": "none",
+        "manufacturer_engine_code": null,
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2025,
+        "trim_name": "Rubicon 392 Final Edition",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "market": "US"
+      },
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler/build/?modelyearId=402019466&styleId=402065526&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler/2025/st-402065526/features-specs/"
+      ],
+      "engine_evidence_section": "Trim summary; specifications Engine/Fuel & MPG",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": "8-speed shiftable automatic",
+      "unresolved_fields": [
+        "engine_aspiration"
+      ],
+      "manufacturer_engine_code_not_reported": true
+    },
+    {
+      "inventory_id": "402050383:phev_20_turbo",
+      "edmunds_style_ids": [
+        "402050383"
+      ],
+      "engine_availability": "standard",
+      "engine_profile": "phev_20_turbo",
+      "canonical_fields": {
+        "engine_name": "2.0L I4 Turbo PHEV",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "plug_in_hybrid",
+        "manufacturer_engine_code": null,
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2025,
+        "trim_name": "Sport S 4xe",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "market": "US"
+      },
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler-4xe/build/?modelyearId=402049565&styleId=402050383&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler-4xe/2025/st-402050383/features-specs/"
+      ],
+      "engine_evidence_section": "Trim summary; specifications Engine/Fuel & MPG",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": "8-speed shiftable automatic",
+      "unresolved_fields": [],
+      "manufacturer_engine_code_not_reported": true
+    },
+    {
+      "inventory_id": "402050385:phev_20_turbo",
+      "edmunds_style_ids": [
+        "402050385"
+      ],
+      "engine_availability": "standard",
+      "engine_profile": "phev_20_turbo",
+      "canonical_fields": {
+        "engine_name": "2.0L I4 Turbo PHEV",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "plug_in_hybrid",
+        "manufacturer_engine_code": null,
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2025,
+        "trim_name": "Willys 4xe",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "market": "US"
+      },
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler-4xe/build/?modelyearId=402049565&styleId=402050385&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler-4xe/2025/st-402050385/features-specs/"
+      ],
+      "engine_evidence_section": "Trim summary; specifications Engine/Fuel & MPG",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": "8-speed shiftable automatic",
+      "unresolved_fields": [],
+      "manufacturer_engine_code_not_reported": true
+    },
+    {
+      "inventory_id": "402050384:phev_20_turbo",
+      "edmunds_style_ids": [
+        "402050384"
+      ],
+      "engine_availability": "standard",
+      "engine_profile": "phev_20_turbo",
+      "canonical_fields": {
+        "engine_name": "2.0L I4 Turbo PHEV",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "plug_in_hybrid",
+        "manufacturer_engine_code": null,
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2025,
+        "trim_name": "Sahara 4xe",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "market": "US"
+      },
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler-4xe/build/?modelyearId=402049565&styleId=402050384&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler-4xe/2025/st-402050384/features-specs/"
+      ],
+      "engine_evidence_section": "Trim summary; specifications Engine/Fuel & MPG",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": "8-speed shiftable automatic",
+      "unresolved_fields": [],
+      "manufacturer_engine_code_not_reported": true
+    },
+    {
+      "inventory_id": "402055439:phev_20_turbo",
+      "edmunds_style_ids": [
+        "402055439"
+      ],
+      "engine_availability": "standard",
+      "engine_profile": "phev_20_turbo",
+      "canonical_fields": {
+        "engine_name": "2.0L I4 Turbo PHEV",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "plug_in_hybrid",
+        "manufacturer_engine_code": null,
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2025,
+        "trim_name": "Willys '41 4xe",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "market": "US"
+      },
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler-4xe/build/?modelyearId=402049565&styleId=402055439&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler-4xe/2025/st-402055439/features-specs/"
+      ],
+      "engine_evidence_section": "Trim summary; specifications Engine/Fuel & MPG",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": "8-speed shiftable automatic",
+      "unresolved_fields": [],
+      "manufacturer_engine_code_not_reported": true
+    },
+    {
+      "inventory_id": "402050386:phev_20_turbo",
+      "edmunds_style_ids": [
+        "402050386"
+      ],
+      "engine_availability": "standard",
+      "engine_profile": "phev_20_turbo",
+      "canonical_fields": {
+        "engine_name": "2.0L I4 Turbo PHEV",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "plug_in_hybrid",
+        "manufacturer_engine_code": null,
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2025,
+        "trim_name": "Rubicon 4xe",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "market": "US"
+      },
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler-4xe/build/?modelyearId=402049565&styleId=402050386&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler-4xe/2025/st-402050386/features-specs/"
+      ],
+      "engine_evidence_section": "Trim summary; specifications Engine/Fuel & MPG",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": "8-speed shiftable automatic",
+      "unresolved_fields": [],
+      "manufacturer_engine_code_not_reported": true
+    },
+    {
+      "inventory_id": "402065578:phev_20_turbo",
+      "edmunds_style_ids": [
+        "402065578"
+      ],
+      "engine_availability": "standard",
+      "engine_profile": "phev_20_turbo",
+      "canonical_fields": {
+        "engine_name": "2.0L I4 Turbo PHEV",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "plug_in_hybrid",
+        "manufacturer_engine_code": null,
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2025,
+        "trim_name": "Backcountry 4xe",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "market": "US"
+      },
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler-4xe/build/?modelyearId=402049565&styleId=402065578&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler-4xe/2025/st-402065578/features-specs/"
+      ],
+      "engine_evidence_section": "Trim summary; specifications Engine/Fuel & MPG",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": "8-speed shiftable automatic",
+      "unresolved_fields": [],
+      "manufacturer_engine_code_not_reported": true
+    },
+    {
+      "inventory_id": "402050387:phev_20_turbo",
+      "edmunds_style_ids": [
+        "402050387"
+      ],
+      "engine_availability": "standard",
+      "engine_profile": "phev_20_turbo",
+      "canonical_fields": {
+        "engine_name": "2.0L I4 Turbo PHEV",
+        "engine_displacement_liters": "2",
+        "engine_cylinders": 4,
+        "engine_aspiration": "turbocharged",
+        "fuel_type": "gasoline",
+        "electrification_type": "plug_in_hybrid",
+        "manufacturer_engine_code": null,
+        "manufacturer": "Jeep",
+        "vehicle_model": "Wrangler",
+        "generation": "JL",
+        "model_year": 2025,
+        "trim_name": "Rubicon X 4xe",
+        "factory_body_configuration": {
+          "door_configuration": "four-door"
+        },
+        "drivetrain": "4WD",
+        "market": "US"
+      },
+      "source_urls": [
+        "https://www.edmunds.com/jeep/wrangler-4xe/build/?modelyearId=402049565&styleId=402050387&submodel=SUV",
+        "https://www.edmunds.com/jeep/wrangler-4xe/2025/st-402050387/features-specs/"
+      ],
+      "engine_evidence_section": "Trim summary; specifications Engine/Fuel & MPG",
+      "transmission_identity_deduplicated": true,
+      "transmission_pairing": "8-speed shiftable automatic",
+      "unresolved_fields": [],
+      "manufacturer_engine_code_not_reported": true
+    }
+  ],
+  "unresolved_source_ambiguities": [
+    {
+      "issue": "Engine code unavailable",
+      "scope": "All 20 styles / 31 derived configurations",
+      "handling": "manufacturer_engine_code remains null. No EC1/ERC/ESG/ECX association is asserted."
+    },
+    {
+      "issue": "Aspiration unreported for V6/V8",
+      "scope": "12 configurations (11 V6 and one V8)",
+      "handling": "engine_aspiration remains null; naturally aspirated is not inferred from absence of a turbo label. These rows are not complete five-field powertrain inputs."
+    },
+    {
+      "issue": "Optional-engine transmission pairing not enforced or stated",
+      "scope": "11 styles with an optional engine",
+      "handling": "No dependency modal appeared. On ten V6-base styles the automatic checkbox remained unchecked after turbo selection. Sahara has no optional transmission checkbox. Co-listing is not pairing evidence; optional-engine transmission_pairing remains null."
+    },
+    {
+      "issue": "Optional-engine fuel grade and powertrain details",
+      "scope": "11 optional-engine rows",
+      "handling": "Gasoline/nonhybrid categorization follows the gasoline builder context and ordinary engine labels with ESS; it does not establish fuel octane or any unreported mechanical field. No MHEV classification inferred from stop/start batteries."
+    },
+    {
+      "issue": "Manufacturer transmission codes for standard equipment unavailable",
+      "scope": "All standard transmissions",
+      "handling": "Retain displayed speed/type only. 850RE is recorded solely where explicitly named as an option."
+    },
+    {
+      "issue": "4xe prose taxonomy differs from selectable inventory",
+      "scope": "MY2025 4xe overview prose names High Altitude; actual builder and specifications selector list Backcountry and no High Altitude",
+      "handling": "Inventory follows actual builder styles; no High Altitude configuration fabricated. Overview source: https://www.edmunds.com/jeep/wrangler-4xe/"
+    }
+  ],
+  "builder_pages_not_inspected": [],
+  "specification_pages_not_inspected": []
+}
