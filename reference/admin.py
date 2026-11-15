@@ -1,5 +1,6 @@
 from django.contrib import admin, messages
 from django import forms
+from django.core.exceptions import NON_FIELD_ERRORS, ValidationError
 from reference.powertrain import FIELDS
 
 from .models import (
@@ -236,6 +237,24 @@ class FactoryBodyConfigurationAdmin(admin.ModelAdmin):
 
 
 class VehicleDefinitionAdminForm(forms.ModelForm):
+    def _update_errors(self, errors):
+        # Model invariants still apply to snapshots intentionally absent/read-only
+        # in Admin. Django cannot attach a field error to an excluded form field.
+        if hasattr(errors, "error_dict"):
+            mapped = {}
+            for name, problems in errors.error_dict.items():
+                if name == NON_FIELD_ERRORS or name in self.fields:
+                    mapped.setdefault(name, []).extend(problems)
+                else:
+                    for problem in problems:
+                        mapped.setdefault(NON_FIELD_ERRORS, []).extend(
+                            ValidationError(f"{name.replace('_', ' ')}: {message}",
+                                            code=getattr(problem, "code", None))
+                            for message in problem.messages
+                        )
+            errors = ValidationError(mapped)
+        super()._update_errors(errors)
+
     slug_correction = forms.SlugField(
         label="Slug", max_length=180, required=False,
         help_text="Warning: changing this stored slug may invalidate existing public URLs. No redirect is created.",

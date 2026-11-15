@@ -4,6 +4,25 @@ All notable changes to RigArchive will be documented in this file.
 
 ## Unreleased
 
+### VehicleDefinition Admin Engine assignment repair (2026-11-15)
+
+- Report model validation errors for excluded snapshot fields as Admin non-field
+  errors instead of an excluded-field ValueError/HTTP 500; preserve codes and explain
+  conflicts. No snapshot fields exposed merely to bypass validation.
+- Complete only unknown properties on an explicit registered Engine association,
+  preserving known facts/historical aliases and unrelated identity/metadata. Safe
+  partial saves include the completed snapshot; unchanged links never cascade registry
+  edits. Genuine hybrid/other conflicts remain rejected; no model-year exceptions.
+- Reproduced PK890 and non-Wrangler PK16 read-only. All 240 focused tests pass;
+  full suite: 1,119 tests with the same 25 known failures, no errors/new failures.
+  Checks pass; details are in the task report. No migration, registry
+  edits or development data assignments.
+- Owner approved the repair unchanged. Prepare a repair-only isolated commit,
+  preserving normal image staging and unrelated work. Future Full Specs architecture
+  remains separate; no schema fields or variant discriminator implemented. The staged
+  snapshot independently passes 240 focused tests and system/drift checks.
+
+
 ### VehicleDefinition public visibility (2026-11-15)
 
 - Added default-public metadata separate from active lifecycle and canonical identity.

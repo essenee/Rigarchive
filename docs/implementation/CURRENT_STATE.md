@@ -3,6 +3,32 @@ Version: 1.6
 Last Updated: 2026-11-15
 Purpose: Current implementation status and development roadmap
 
+## VehicleDefinition Admin Engine assignment — repaired locally (2026-11-15)
+
+Fixed excluded-snapshot ValidationErrors crashing Django's generated Admin form.
+The custom form maps excluded/read-only field errors to understandable non-field
+errors with preserved codes. Engine registry validation remains enforced outside Admin.
+Explicit Engine associations complete only previously unknown snapshot values from
+that registered Engine; known conflicts/manufacturer mismatches still reject.
+Existing descriptions, PK/UUID/slug, body, MSRP, visibility and lifecycle are preserved.
+Partial saves persist the completed snapshot with the FK. Unchanged associations do
+not cascade registry property edits. No independent Admin copying, Wrangler exception,
+known-fact overwrite, registry edits or migration.
+
+Read-only reproduction: PK890→ERC has a genuine mild_hybrid/none conflict and now
+shows a normal error; PK890→ERG validates. PK16→1GR-FE now validates its missing
+properties in memory. Neither persisted record was assigned an Engine. The entire
+DB and all nine current Engines remain unchanged. All 240 focused regressions pass.
+Full suite: 1,119 tests with the same 25 prior
+label/drive failures, no errors or new failures. Checks pass; no migration drift.
+Details are in
+`docs/implementation/tasks/vehicledefinition-admin-engine-assignment.md`.
+The owner approved this repair unchanged following the architecture assessment.
+Prepare only repair implementation/tests and documentation in a separate index;
+normal image staging and data are preserved. No future Full Specs fields or variants
+implemented. The isolated staged snapshot also passes 240 tests and system/drift
+checks. No historical reconciliation, commit, push or deployment.
+
 ## VehicleDefinition public visibility — implemented and migrated locally (2026-11-15)
 
 Owner-approved `is_public=True` is independent of `is_active`. Active/public records

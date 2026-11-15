@@ -679,9 +679,10 @@ class VehicleDefinition(BaseModel):
             raise ValidationError({"factory_body_configuration": "Body configuration must belong to the vehicle's Generation."})
 
     def _validate_registry_engine(self, stored=None):
-        """New associations use the registry; old snapshots are never cascaded on edits."""
+        """Complete unknowns on explicit association; never overwrite known facts."""
+        synchronized = set()
         if self.engine_id is None:
-            return
+            return synchronized
         from reference.powertrain import record_powertrain, validate_powertrain
         try:
             registry = self.engine
@@ -694,19 +695,28 @@ class VehicleDefinition(BaseModel):
         changed = stored is None or stored.engine_id != self.engine_id or any(
             getattr(stored, key) != getattr(self, key) for key in FIELDS)
         if not changed:
-            return
+            return synchronized
+        new_association = stored is None or stored.engine_id != self.engine_id
         values = record_powertrain(registry)
         validate_powertrain(values, complete=True)
         incoming_values = record_powertrain(self)
         validate_powertrain(incoming_values)
         for key in FIELDS:
             incoming = incoming_values[key]
-            if incoming is None and stored is None:
+            if (incoming is None and new_association
+                    and (stored is None or getattr(stored, key) in (None, ""))):
                 setattr(self, key, getattr(registry, key))
+                synchronized.add(key)
             elif incoming != values[key]:
-                raise ValidationError({key: ValidationError("Vehicle snapshot differs from registered Engine.", code="ENGINE_REGISTRY_CONFLICT")})
-        if not self.engine_name and stored is None:
-            self.engine_name = registry.name
+                raise ValidationError({key: ValidationError(
+                    f"Vehicle snapshot differs from registered Engine. {key}: vehicle {incoming!r}, "
+                    f"registered {registry.engine_code} {values[key]!r}. Known values are not overwritten.",
+                    code="ENGINE_REGISTRY_CONFLICT",
+                )})
+        if not self.engine_name and new_association:
+            self.engine_name = (stored.engine_name if stored is not None and stored.engine_name else registry.name)
+            synchronized.add("engine_name")
+        return synchronized
 
     def save(self, *args, slug_correction_actor=None, **kwargs) -> None:
         using = kwargs.get("using") or self._state.db
@@ -753,7 +763,11 @@ class VehicleDefinition(BaseModel):
                     effective.engine = Engine.objects.using(using).select_for_update().get(pk=effective.engine_id)
                 except Engine.DoesNotExist as exc:
                     raise ValidationError({"engine": "ENGINE_NOT_REGISTERED: Engine record is unavailable."}) from exc
-                effective._validate_registry_engine()
+                synchronized = effective._validate_registry_engine()
+                if fields is not None and synchronized:
+                    for key in synchronized:
+                        setattr(self, key, getattr(effective, key))
+                    kwargs["update_fields"] = fields | synchronized
             if not self.slug:
                 self.slug = self.build_slug()
             super().save(*args, **kwargs)
