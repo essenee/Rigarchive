@@ -1,0 +1,9 @@
+{
+  "backup_path": "/Users/cosmo/dev/Rigarchive/backups/review/my2021_live_snapshot_cleanup_20261116T195023Z/pre_cleanup.sqlite3",
+  "committed": false,
+  "compacted": false,
+  "error": "AssertionError('django_migrations')",
+  "original_database_sha256": "sha256:b42fc13d6f3e24614e789a7d727e8ec1d179b1d5ee4749923b8b7439ba8fb899",
+  "original_hash_after_rollback": "sha256:b42fc13d6f3e24614e789a7d727e8ec1d179b1d5ee4749923b8b7439ba8fb899",
+  "status": "FAILED"
+}

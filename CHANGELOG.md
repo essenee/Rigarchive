@@ -4,6 +4,27 @@ All notable changes to RigArchive will be documented in this file.
 
 ## Unreleased
 
+### MY2021 local receipt snapshot cleanup completed (2026-11-16)
+
+- Applied 73 approved compact snapshots, preserving every canonical row and receipt
+  identity/outcome/timestamp/relationship. All 88 historical proof references remain
+  externally archived; original ZIP and verified full SQLite backups retained.
+- Local DB compacted from 64,679,936 to 32,571,392 bytes: 32,108,544 bytes saved.
+  All 51 tables/schema compared, only selected receipt JSON changed. Integrity/FKs,
+  Django checks and 83 focused tests passed after replacement and after compaction.
+  No application changes, deployment or Git publication. See
+  `docs/research/my2021_live_snapshot_cleanup_20261116T195113Z/README.md`.
+
+### MY2021 canonical revalidation and isolated receipt compaction (2026-11-16)
+
+- Added the bounded approved-Matrix MY2021 evaluation/compact inspection profile and
+  scoped ordinary structured-reader compatibility. All 73 exact agreements; original
+  execution metadata and 88 archival proof references preserved without reconstruction.
+- Isolated copy only: database 64,679,936 → 32,571,392 bytes; snapshot JSON
+  32,170,852 → 488,147 bytes. All canonical rows and unrelated receipt data unchanged.
+  83 focused tests pass. Original DB/archive untouched; live cleanup awaits approval.
+  See `docs/research/my2021_compact_revalidation_20261116T193357Z/README.md`.
+
 ### MY2021 Wrangler JL Engine associations (2026-11-15)
 
 - Assigned 52 uniquely supported Engine associations: 18 EC1, 20 ERG, 10 EXJ,

@@ -71,6 +71,16 @@ def nonidentity_variation(candidate, peer, binding):
         raise ValidationError("Cylinder-layout difference requires review outside the five-field identity.")
     from reference.models import ImportExecutionReceipt
     receipt = ImportExecutionReceipt.objects.get(uuid=binding["receipt_uuid"])
+    from reference.my2021_wrangler_revalidation import PROFILE, validate_compact
+    if receipt.resolution_snapshot_json.get("version") == PROFILE:
+        compact = validate_compact(receipt, peer)
+        for key in ("horsepower", "torque"):
+            old = compact["nonidentity_claim_hashes"][key]
+            new = [a["raw_value"] for doc in candidate.evidence_documents for a in doc["assertions"]
+                   if a["attribute_key"] == key]
+            if old and new and set(old) != {digest(v) for v in new}:
+                raise ValidationError("Sourced output alternatives require tuning/applicability review under JL-D20.")
+        return
     old_docs = receipt.resolution_snapshot_json["generation_resolution"]["documents"]
     for key in ("horsepower", "torque"):
         old = [a["raw_value"] for doc in old_docs for a in doc["assertions"] if a["attribute_key"] == key]
@@ -93,6 +103,9 @@ def assess_peer(record):
     if len(receipts) != 1:
         raise ValidationError("Canonical peer lacks a unique successful creation receipt.")
     receipt = receipts[0]
+    from reference.my2021_wrangler_revalidation import PROFILE, assess_compact_peer
+    if receipt.resolution_snapshot_json.get("version") == PROFILE:
+        return assess_compact_peer(record, receipt)
     if "body_import" in receipt.resolution_snapshot_json:
         raise ValidationError("Body import receipt 3.0.0 requires its versioned body-aware reader; Engine Proof 2.0 is unsupported.")
     fields = target_values(record)

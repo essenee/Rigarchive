@@ -1,7 +1,37 @@
 RigArchive Project Status Document
 Version: 1.9
-Last Updated: 2026-11-15
+Last Updated: 2026-11-16
 Purpose: Current implementation status and development roadmap
+
+## MY2021 local receipt snapshot cleanup — completed (2026-11-16)
+
+Applied exactly 73 approved compact JSON replacements (receipts 3076–3148) after
+fresh archival/backup verification and 73 exact Matrix agreements. Original execution
+metadata and all 1,150 canonical definitions remain unchanged; receipts remain 3,591,
+correspondence revisions 254. All 88 historical proof references remain archival-only.
+Verified SQLite backup and original snapshot ZIP/manifest retained unchanged.
+Local exclusive-lock compaction reduced DB **64,679,936 → 32,571,392 bytes**,
+saving **32,108,544 bytes (49.6422%)**. Snapshot payload 32,170,852 → 488,147 bytes.
+All 51 SQLite tables/schema/receipt scalars compared; only selected JSON changed.
+Integrity/FKs and Django checks passed; 83 focused tests passed after replacement
+and again after compaction. No deployment, migrations, code changes, commit or push.
+Execution/backup/hashes: `docs/research/my2021_live_snapshot_cleanup_20261116T195113Z/README.md`.
+
+## MY2021 compact canonical revalidation — isolated verification only (2026-11-16)
+
+Implemented `my2021-approved-matrix-revalidation/1` against the existing approved
+manufacturer-based Matrix with Edmunds corroboration. All 73 evaluated EXACT_AGREEMENT;
+fixed Generation/parents, identity tuples, receipt/candidate/source pins and uniqueness
+verified without generation resolution or historical peer assessment by the evaluator.
+Original archive unchanged; all 88 historical proof references have explicit archival-only
+treatment after endpoint agreement. Scoped compact inspection/structured-reader branches
+use the new basis, not historical hash reconstruction. Original execution metadata preserved.
+Only an isolated database was changed/compacted: 64,679,936 → 32,571,392 bytes;
+73 snapshot payloads 32,170,852 → 488,147 bytes. All canonical/reference rows,
+other receipts and metadata unchanged. 83 focused tests and checks passed.
+Live DB remains unchanged; no live cleanup, migration, deployment, commit or push.
+Historical generation-based Matrix re-execution is not the compact inspection route.
+Report: `docs/research/my2021_compact_revalidation_20261116T193357Z/README.md`.
 
 ## MY2021 Wrangler JL Engine associations — completed (2026-11-15)
 

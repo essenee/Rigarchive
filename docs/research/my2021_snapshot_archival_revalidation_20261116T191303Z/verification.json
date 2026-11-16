@@ -1,0 +1,25 @@
+{
+  "archive_restoration_verified": 73,
+  "baseline_copy_all_application_tables_identical": true,
+  "baseline_copy_foreign_key_violations": 0,
+  "baseline_copy_integrity": "ok",
+  "cleanup_applied_to_original": false,
+  "cleanup_simulation": "Not performed: zero eligible rows and mandatory identity/approval-policy review boundary reached. Untouched baseline copy retained.",
+  "compact_replacements_generated": 0,
+  "compared_tables": 50,
+  "current_matrix_identity_comparison_equal": 73,
+  "database_sha256_unchanged": true,
+  "django_system_checks": "passed",
+  "focused_test_modules": [
+    "test_generation_projection_completeness",
+    "test_generation_correspondence",
+    "test_canonical_import",
+    "test_my2025_wrangler_import",
+    "test_my2026_wrangler_import"
+  ],
+  "focused_tests_passed": 112,
+  "normal_evaluations_blocked": 73,
+  "normal_evaluations_successful": 0,
+  "preexisting_working_files_unchanged": true,
+  "whitespace_check": "passed"
+}

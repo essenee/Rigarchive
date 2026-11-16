@@ -1,0 +1,37 @@
+{
+  "canonical_identity": {
+    "slug": "2021-unlimited-sahara-36l-v6-4wd-us-mhev",
+    "vehicle_pk": 936,
+    "vehicle_uuid": "4b8dcd9d3706453ba7d2aa15ad9114e7"
+  },
+  "current_revalidation": {
+    "code_revision": "a28a50815b331039c74840e72a528ab00e5c974b",
+    "issues": [
+      "No retained approved MY2021 normal Edmunds-profile inventory/evaluator exists; manufacturer-derived matrix only has secondary Edmunds corroboration.",
+      "Generic structured identity/exact-match evaluation requires receipt-based assess_peer; no ordinary-only bypass currently exists.",
+      "Extending bounded MY2025/MY2026 profile or replacing RA-044 proof sufficiency requires scope/approval-policy review."
+    ],
+    "normal_evaluator_invoked": false,
+    "performed_at_utc": "2026-11-16T19:13:03.305844+00:00",
+    "result": "EVALUATION_BLOCKED",
+    "retained_matrix_field_comparison": "ALL_EQUAL; not a new normal evaluation"
+  },
+  "original_execution": {
+    "candidate_hash": "sha256:66a8a89331560071215c41ab6a88004b0091fad65f24ed6f2cd2ca0c1d6367c3",
+    "historical_columns": "Preserve original executed_at/operator/channel and all identity/FK mirrors unchanged",
+    "historical_snapshot_sha256": "sha256:f439a4e539f50761819a104f3947afe41ba5b558444033ec2c16142ecf146a4c",
+    "manifest_reference": {
+      "path": "docs/implementation/handoffs/MY2021_JL/canonical_execution_20261109/resumed_20261109/attempts/matrix-2021-7ns4m4pv/0059.manifest.json",
+      "sha256": "sha256:365db8f0b69703d04f18b85e197cee8c0471c00476fcf5772b91d7d2cd2ac065"
+    },
+    "matrix_digest": "sha256:6926df6c06e4bd471bbda02c67257cf7a7e2999cf5cdfebfc8b06ead31a9996e",
+    "matrix_row_id": "JL21-60",
+    "operation_type": "vehicle_definition_import",
+    "outcome": "created",
+    "receipt_pk": 3135,
+    "receipt_uuid": "d6e1e56bb62244338b684ee2ceb7f416"
+  },
+  "policy": "No archived historical snapshot reconstruction by deployed application; no successful classification invented.",
+  "proposed_record_family": "ordinary_canonical_revalidation",
+  "status": "ILLUSTRATIVE_ONLY_NOT_ELIGIBLE_FOR_RECEIPT_REPLACEMENT"
+}
