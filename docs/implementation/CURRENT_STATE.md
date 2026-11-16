@@ -1,7 +1,19 @@
 RigArchive Project Status Document
-Version: 1.6
+Version: 1.9
 Last Updated: 2026-11-15
 Purpose: Current implementation status and development roadmap
+
+## MY2021 Wrangler JL Engine associations — completed (2026-11-15)
+
+All 73 MY2021 US Wrangler JL VehicleDefinitions are linked to registered Engines.
+The owner-authorized operation added 52 associations (18 EC1, 20 ERG, 10 EXJ,
+3 ECX, 1 ESG), preserving PK 926 → Engine PK 7 and all historical identity fields.
+Current verified totals: 1,150 definitions, 692 linked / 458 unlinked, ten Engines.
+No unknown powertrain fields required completion. Backup/clone rehearsal, rollback,
+full-field preservation, SQLite integrity/FKs and 37 focused tests passed.
+Execution record: `docs/research/my2021_jl_engine_associations_20261115.md`.
+The earlier implementation checkpoint was committed as `92253b3`; the counts and
+staging descriptions below record that earlier milestone, not current Git state.
 
 ## Engine registry display and approved assignments (2026-11-15)
 
@@ -20,7 +32,7 @@ assignments / 507 already applied; row-state digests unchanged. Exceptions remai
 No further bulk assignments were performed. The owner subsequently assigned MY2021
 Unlimited Willys PK 926 / UUID caca5d4e-e661-4309-b735-dde058ad46f4 to EXJ Engine
 PK 7 / UUID 16b0027f-72a9-49cb-9fd2-c55f064c88ed. This intentional compatible
-relationship is preserved. Current read-only totals: 612 linked / 538 unlinked;
+relationship is preserved. At that historical review: 612 linked / 538 unlinked;
 61 conflicts, 411 insufficient correspondence, 66 without manufacturer registry.
 This one-row authorization does not propagate to other diesels.
 
@@ -44,7 +56,6 @@ Existing live MY2025/MY2026 importer mutable-name/identity coupling remains outs
 this task. Unrelated working-tree work and the two owner-staged JK image operations
 are preserved. Milestone finalization uses a separate Git index to exclude unrelated
 owner work. No additional assignments, registry edits, push or deployment.
-
 
 ## VehicleDefinition Admin Engine assignment — repaired locally (2026-11-15)
 
@@ -553,6 +564,96 @@ Only pure identity/contract foundations and isolated tests are authorized at thi
 checkpoint; completion is not yet claimed. Operational migrations, body/series record
 creation, MY2024 candidate regeneration, correspondence publication and canonical
 imports remain unauthorized. Persistence, execution and presentation are not integrated.
+
+## MY2024 JL continuation — final readiness blocked by canonical body identity (2026-11-13)
+
+The [continuation audit](handoffs/MY2024_JL/lightweight_ingestion_review_20261113/CONTINUATION_REVIEW_20261113.md)
+verifies the 147-entry preserved checkpoint and 31 active (10 two-door / 21 four-door),
+two quarantined and one deferred RHD inventory. The owner now requires marketed
+trim without Unlimited and doors as a separate dimension. Current Candidate 2.1.0,
+VehicleDefinition persistence, structured peer identity and slug construction omit
+body identity: applying that normalization would create ten cross-body collision
+pairs, leaving only 21 unique slugs. Candidate/source/review payloads were preserved;
+no unsupported normalization or schema/identity workaround was implemented. The old
+handoff's simulated all-eligible claim is superseded by an explicit blocked-state
+review and generator guard, pending a separately authorized body-aware path.
+
+Actual read-only planning returns 31 requires-review; all 13 correspondence reviews
+and 31 proposed adjudications remain unpublished/unapproved. Original MY2024 guide
+PDFs were not located; local transcription hash checks do not establish original-PDF
+verification. ECE-002/ECE-003 now describe initial inventory/extraction gaps; Jeep
+Beach is present on Edmunds' broader trim page. Forty isolated structured-powertrain
+tests, system check and migration dry-run passed; no full-suite run. The continuation
+preserves its live DB baseline hash at 1,053 definitions / 3,350 receipts / 242
+correspondences, with zero MY2024 JL definitions or published correspondences. Its
+hash differs from the archived report, so historical whole-file equality is not
+claimed. No migrations, classifications, publication, canonical imports, commits or
+pushes were performed. See the handoff for the exact owner approval queue.
+
+## MY2023 US Wrangler JL — Canonical Reference Import Executed and Verified (2026-11-12)
+
+Under explicit Project Owner authorization, all **64** approved MY2023 US-market Jeep Wrangler JL consumer configurations (18 two-door + 46 four-door) were atomically imported into the operational database (`db.sqlite3`):
+- **Pre-Import Database Snapshot**: Captured and verified physical database snapshot `backups/snapshots/db_snapshot_pre_my2023_canonical_import_20261113T044838Z.sqlite3` (`54,439,936` bytes, SHA-256 `46dfd4b38c7f6c4a90af7a28eb3806a9181df861e71f0590d2b8785d65bbef53`, `PRAGMA integrity_check = ok`, `PRAGMA foreign_key_check = []`) prior to execution.
+- **Execution Mechanism**: Executed via the accepted atomic Matrix workflow (`execute_matrix_year`, Matrix 2.1 digest `sha256:f28d99f7f086310ff3c3ef608781cfe8424117852cd0c314a0ea512f99e41cc4`, attempt directory `docs/implementation/handoffs/MY2023_JL/canonical_import_execution_20261112/attempts/matrix-2023-x3ns1i3c`) inside a single outer durable transaction with fresh per-row planning (`plan_candidate_import`), resolution revalidation (`revalidate_resolution`), stale-plan guards, and pre-commit reconciliation.
+- **Attribution**: Human director `project_owner`, execution agent `codex`, execution channel `cli`.
+- **Operational Database Totals**:
+  - `VehicleDefinition`: **1,053** (+64 new MY2023 Wrangler JL records, PK `1005`–`1068`, up from `989`).
+  - `ImportExecutionReceipt`: **3,350** (+64 new `vehicle_definition_import` receipts, PK `3287`–`3350`, up from `3,286`; `3,108` `vehicle_definition_import` + `242` `correspondence_publication`).
+  - `GenerationCorrespondenceRevision`: **242** (strictly unchanged; 11 MY2023 JL revisions PK `232`–`242` preserved).
+  - Post-import `db.sqlite3` SHA-256: `24f23a05391b4600bdf2f5b687694bc36f93d8e3403983c95f25e1b92b68ce55`.
+- **Creation Basis & Powertrain Distribution**:
+  - Creation bases across the 64 new records: `1` `first_representation`, `24` `source_established_grade`, and `39` `mechanical_dimension`.
+  - Powertrain family distribution: `16` `EC1` (2.0L turbo gas I4), `13` `ERC` (3.6L NA gas V6 ESS, non-hybrid), `17` `ERG` (3.6L NA gas V6 eTorque mild hybrid), `11` `EXJ` (3.0L EcoDiesel turbo V6), `5` `ECX` (2.0L turbo gas I4 4xe PHEV), `2` `ESG` (6.4L NA gas V8 392).
+- **Special Scope Verifications & Exclusions**:
+  - `JL23-ADD-01` (`Unlimited Freedom`, QOP `26F`, model code `JLJL74`, 3.0L EcoDiesel V6 `EXJ` + 8-speed automatic `DFV`): Imported as `VehicleDefinition` PK `1068` (UUID `2771f761-8c25-4cc0-983c-1263c9a69c7a`, slug `2023-unlimited-freedom-30l-v6-turbo-diesel-4wd-us-turbo-diesel`, receipt PK `3350`, bound to correspondence revision PK `232` / UUID `6195b3ad-df3a-5ee7-8646-d79c88dfc057`), and recorded as **ECE-001** in `docs/research/edmunds_coverage_exceptions.md`.
+  - `JL23-61` (`Unlimited Willys 4xe`, QOP `29W`, model code `JLXL74`, 2.0L 4xe PHEV `ECX` + `DFY`): Imported as `VehicleDefinition` PK `1063` (UUID `cffd37c2-aff8-4457-bb57-64d9d68cc40c`, slug `2023-unlimited-willys-4xe-20l-i4-turbo-phev-4wd-us-turbo-phev`, receipt PK `3345`, bound to correspondence revision PK `239` / UUID `dc793ec9-1373-5e8d-b707-c5125aed4eb0`).
+  - Quarantined manual Sahara candidates (`JL23-44`, `JL23-48`) and deferred commercial RHD candidate (`JL23-66` / `JLUL74`) confirmed strictly absent from `VehicleDefinition`.
+  - All 989 pre-existing `VehicleDefinition` rows (including all 55 MY2022 JL rows) verified 100% unchanged.
+- **Handoff & Documentation Artifacts**: Persisted under `docs/implementation/handoffs/MY2023_JL/canonical_import_execution_20261112/` and `docs/research/edmunds_coverage_exceptions.md`.
+
+## MY2023 US Wrangler JL — Publication Blocker Remediation, Classification Adjudication Application, Correspondence Publication, and Read-Only Import Planning Completed (2026-11-12)
+
+- **`JL23-61` Model-Code Remediation**: Corrected candidate `JL23-61` (`Unlimited Willys 4xe`, QOP `29W`, engine `ECX`, trans `DFY`) from erroneous manufacturer model code `JLXP74` to `JLXL74` in both the candidate document (`JL23-61.provisional-r1.candidate.2.1.0.json`) and its paired assertion set (`JL23-61-edmunds-transcription.source_assertion_set.1.1.0.json`), without modifying any of the other 63 active base candidate documents. Verified that `JLXL74` maps exclusively to `JL23-61` and `JLXP74` maps exclusively to `JL23-62` (`Unlimited Sahara 4xe`) and `JL23-65` (`Unlimited High Altitude 4xe`).
+- **Source-Scoped Generation Correspondence Evidence & Payloads**: Constructed and validated **11** shared model-code selector `EvidenceDocument`s and **11** schema-valid `review_version: "1.0"` correspondence payloads covering the **10** approved manufacturer model codes across their true source namespaces (`9` revisions under `rigarchive_MY2023_edmunds_reconciliation` covering `JLJL72`, `JLJS72`, `JLJL74`, `JLJP74`, `JLJS74`, `JLJX74`, `JLXL74`, `JLXP74`, `JLXS74`, plus `2` revisions under `4-door-9-14-22-pdf` covering factory addition `JL23-ADD-01` on `JLJL74` and deferred commercial RHD `JL23-66` on `JLUL74`). All 11 payloads pass `validate_review_payload` and `validate_documents(..., verify_bytes=True)`.
+- **Powertrain Classification Adjudications Applied**: Constructed and validated **64** schema-valid `CanonicalImportAdjudication` `1.1` artifacts covering all **127** owner-approved powertrain attribute classifications across the 12 review groups (`GRP-01`..`GRP-12`), anchored to retained FCA US / Stellantis technical specifications (`2022_JP_Wrangler_SP.pdf`, `sha256:e71292bb3e8fd98cff9b2b9478eade0490e01a93dc404f12e89d66f22d8323a9`) and candidate assertions. Applied all 64 adjudications through `apply_classification_adjudication` to regenerate **64** post-adjudication `CandidateConfigurationDocument` `2.1.0` artifacts (100% complete 5-field powertrains with zero null fields) and **64** `EngineProof` `2.0` artifacts. Derived all group memberships directly from the candidate JSONs (confirming `JL23-39` in `ERC`, `JL23-41` in `EXJ`, and `JL23-45` in `ERG`) and synchronized all review tables and proposal JSONs in `final_adjudication_review_20261112/`.
+- **Physical Database Snapshot & Atomic Correspondence Publication**: Captured and verified pre-mutation physical snapshot `backups/snapshots/db_snapshot_pre_my2023_correspondence_20261113T042650Z.sqlite3` (`sha256:db8b79a14a3f2bce89d2a0edc32365545a7805e08bfa5388937cbf18d18076d7`, `PRAGMA integrity_check = ok`, `PRAGMA foreign_key_check = []`). Atomically published the **11** `GenerationCorrespondenceRevision` records targeting Generation PK `32` (`38d3c3ac-f825-4406-abb5-c2d12b9129a4`, Jeep Wrangler JL, US market, MY2023) with operator `project_owner` and execution agent `codex` (revisions PK `232`–`242`, receipts PK `3276`–`3286`).
+- **Operational Database Totals**:
+  - `VehicleDefinition`: **989** (strictly unchanged; **0** MY2023 JL records; canonical import NOT authorized).
+  - `GenerationCorrespondenceRevision`: **242** (+11 MY2023 JL revisions, up from 231).
+  - `ImportExecutionReceipt`: **3,286** (+11 `correspondence_publication` receipts, up from 3,275; `vehicle_definition_import` receipts unchanged at 3,044).
+  - Post-publication `db.sqlite3` SHA-256: `f765c507a4fbb96b657679bb0fee68f87c203982153db118ce2da0a22d0773e2`.
+- **Read-Only Canonical Import Planning**: Evaluated all **64** active consumer candidates (18 two-door + 46 four-door) via `plan_candidate_import`, `revalidate_resolution`, and `validate_bound_plan`. **64 / 64** evaluate to `eligibility_status = "eligible"`, `planned_action = "create"`, `create_basis = "first_representation"`, resolving to Generation PK `32` via `reviewed_source_correspondence`, with **64** unique target slugs, **0** internal collisions, and **0** database collisions. Quarantined candidates (`JL23-44`, `JL23-48`) and deferred commercial RHD (`JL23-66` / `JLUL74`) remain strictly excluded.
+- **Handoff Artifacts**: Complete deliverables persisted under `docs/implementation/handoffs/MY2023_JL/publication_and_import_readiness_20261112/`. Canonical `VehicleDefinition` import remains unauthorized and awaits separate owner sign-off.
+
+## MY2023 US Wrangler JL — Candidate Inventory Corrected and Final Pre-Publication Adjudication Package Prepared (2026-11-12)
+
+- **Approved Quarantines Executed**: Formally quarantined provisional candidates `JL23-44` (Unlimited Sahara ERC manual) and `JL23-48` (Unlimited Sahara Altitude ERC manual). Authentic factory Customer Preferred Code Guides proved that model code `JLJP74` (Sahara line) was 100% automatic-only in MY2023 with zero manual transmission availability. Preserved original candidate JSONs and source assertions in `quarantined_candidates/` and documented reasons in `quarantined_candidates.csv`.
+- **Approved Factory Addition Serialized**: Constructed, validated, and serialized `JL23-ADD-01` (Unlimited Freedom Edition EcoDiesel, QOP `26F`, model `JLJL74`, 3.0L EcoDiesel V6 + 8-speed automatic DFV) under `CandidateConfigurationDocument` 2.1.0 with dedicated source assertion set `JL23-ADD-01-order-guide-transcription` derived from page 2 of the September 14, 2022 ordering guide. Documented in `candidate_additions.csv`.
+- **Active Candidate Inventory Rebuilt & Validated**: Finalized active consumer inventory at exactly **64 configurations** (18 2-Door + 46 4-Door, including 10 EcoDiesel configurations) in `candidate_inventory_final.csv`. 100% of candidate documents pass `validate_candidate_configuration` and `candidate_powertrain(verify_bytes=True)`. Excluded commercial fleet RHD candidate `JL23-66` as deferred.
+- **Powertrain Classification Adjudication Package**: Recalculated unresolved attribute instances from 132 to **127 instances** across **12 review groups** (32 aspiration, 53 fuel, 42 electrification), incorporating the -6 instances from quarantined candidates and +1 instance from `JL23-ADD-01`. Emitted machine-readable proposals in `powertrain_adjudication_proposals.json` and human review in `powertrain_adjudication_review.md`. Zero adjudications were published to the database.
+- **Generation Correspondence Adjudication Package**: Formulated source-scoped correspondence proposals for all **10 source model codes** binding to Generation PK 32 (`38d3c3ac-f825-4406-abb5-c2d12b9129a4`) in `generation_correspondence_proposals.json` and `generation_correspondence_review.md`. Zero revisions were published to the database.
+- **Read-Only Canonical Import Planning**: Evaluated all 64 active candidates via `plan_candidate_import`. Confirmed 100% evaluate to `requires_review` and correctly halt at the unpublished generation correspondence barrier (`Missing reviewed generation correspondence.`). Emitted proposed import manifest in `proposed_import_manifest.json` (strictly marked `unapproved = True`). Documented candidate-level readiness in `canonical_import_readiness.csv`.
+- **Database Preservation**: Absolute immutability maintained. Zero database writes, zero schema modifications. `db.sqlite3` SHA-256 verified unchanged at `45164ff040c1ad06619317a2e7ed632e9f91f650e6281750b66333b0f71fc473`. Baseline counts remain 989 `VehicleDefinition`, 3,275 `ImportExecutionReceipt`, and 231 `GenerationCorrespondenceRevision`.
+- **Verification & Test Suite**: `validate_final_package.py` passed with 0 errors. Django system checks pass with 0 issues. Migration dry-run detects 0 changes. Full project test suite passes 742/742 tests (`OK`).
+- **Handoff Artifacts**: Complete deliverables persisted under `docs/implementation/handoffs/MY2023_JL/final_adjudication_review_20261112/`. Execution strictly halted at the owner authorization boundary.
+
+## MY2023 US Wrangler JL — Factory Ordering Guide Evidence Reconciliation Completed (2026-11-12)
+
+- **Factory Evidence Ingestion & Source Registration**: Reconciled the provisional MY2023 Jeep Wrangler JL configuration inventory against three authentic Stellantis / FCA US Customer Preferred Code Guides:
+  - `4 door 6-13-22 JLU Wrangler Order Guide.pdf` (June 13, 2022; 38 pages; SHA-256 `d36333c58b01066ea8afa781a442db67c5dcc6162bbd38add91461c64703e5ce`).
+  - `4 door 9-14-22 JLU Wrangler Order Guide.pdf` (September 14, 2022; 43 pages; SHA-256 `f13bb9732eea7bf31b1a0ca1af7c9576fc2ad975eaff742f4ac248ba8c6a1f10`).
+  - `4-door-11-10-22-jlu-wrangler-order-guide.pdf` (November 10, 2022; 44 pages; SHA-256 `e7d49d75719035715e8b7ddbb19937d19665663382dc3ed8cef7bd66f07e9113`).
+- **Factory Configuration Union**: Established the complete 44-configuration union (43 consumer JLU configurations + 1 commercial fleet RHD `JLUL74`) across model codes `JLJL74`, `JLJP74`, `JLJS74`, `JLJX74`, `JLUL74`, `JLXL74`, `JLXP74`, `JLXS74`.
+- **EcoDiesel Ordering Lifecycle Vindicated**: Confirmed that the 3.0L EcoDiesel V6 (`EXJ` + `DFV` 8HP75 automatic) was available during MY2023 across Sport, Willys, Sahara, and Rubicon trims in both June and September 2022 guides, commemorated by the Rubicon FarOut edition (Sept 2022 Stellantis announcement), and offered on the newly discovered Freedom Edition (`26F`). The 10 provisional EcoDiesel configurations are fully verified.
+- **Factory Contradictions Quarantined**: Direct examination confirmed model `JLJP74` (Sahara line) was strictly automatic-only in MY2023. Candidates `JL23-44` (Unlimited Sahara ERC manual) and `JL23-48` (Unlimited Sahara Altitude ERC manual) are contradicted by manufacturer evidence and flagged for quarantine.
+- **New Factory Configuration Identified**: Page 2 of the September 14, 2022 guide explicitly establishes Quick Order Package `26F` under `JLJL74` (Unlimited Freedom EcoDiesel 8-speed automatic 4WD), staged as candidate addition `JL23-ADD-01`.
+- **Standard Equipment Continuity**: Comparative audit across all three ordering guide revisions revealed zero material standard-equipment changes to existing models, confirming that no mid-year split `VehicleDefinition` records are warranted.
+- **Powertrain Classification Review**: Resolved all 132 null attribute instances across 12 review groups with factory-grounded engineering classifications in `powertrain_classification_review.csv`.
+- **Generation Correspondence Preparation**: Drafted source-scoped review proposals in `generation_correspondence_review.md` binding 10 source model codes to Generation PK 32 (`38d3c3ac-f825-4406-abb5-c2d12b9129a4`). Zero revisions were published to the database.
+- **Read-Only Import Planning**: Evaluated candidate set using `reference.ingestion.importing.planner.plan_candidate_import`, confirming all halt at the generation correspondence review gate (`requires_review` / `Missing reviewed generation correspondence.`).
+- **Owner Approval Queue & Manifest**: Prepared `owner_approval_queue.md` itemizing all decisions requiring owner sign-off and generated `artifact_hashes.json` with SHA-256 digests.
+- **Database Preservation**: Absolute immutability maintained. Zero database writes, zero schema modifications. `db.sqlite3` SHA-256 verified unchanged at `45164ff040c1ad06619317a2e7ed632e9f91f650e6281750b66333b0f71fc473`. Baseline counts remain 989 `VehicleDefinition`, 3,275 `ImportExecutionReceipt`, and 231 `GenerationCorrespondenceRevision`.
+- **Handoff Artifacts**: Complete deliverables persisted under `docs/implementation/handoffs/MY2023_JL/factory_reconciliation_20261112/`. Halted at owner authorization boundary.
 
 ## Configuration Browser — Redundant Turbo Label Presentation Formatting Corrected (2026-11-12)
 

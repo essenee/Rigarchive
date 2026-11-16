@@ -80,3 +80,15 @@ htmlcov/
 .codex-*-test
 # Local audit attribution settings
 /.rigarchive.toml
+
+
+# Implementation artifacts
+/docs/implementation/handoffs/
+
+# Temporary local scripts
+/scratch/
+/run_readonly_plans.py
+
+# Generated reconciliation previews
+/docs/research/engine_registry_reconciliation_20261115/post_assignment_preview.json
+/docs/research/MY2025_JL_edmunds_builder_20261114/local_import_blocked_preview_20261114.json
