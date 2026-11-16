@@ -4,6 +4,40 @@ All notable changes to RigArchive will be documented in this file.
 
 ## Unreleased
 
+### Approved Engine registry associations (2026-11-15)
+
+- Added a local-only, explicitly invoked transactional assignment command pinned to
+  the approved preview, with stale-state/model validation, verified SQLite backups,
+  full-field preservation checks, execution receipts and safe reruns.
+- Executed only the approved 485 exact-name and 22 JL ESS alias assignments: 611
+  linked / 539 unlinked of 1,150 definitions. Filled 335 unknown attributes per
+  powertrain field; all ten Engines, identities, known facts and unrelated fields
+  remain unchanged. Second execution assigned zero / retained 507 approved links.
+- Verified ESS-free names for 116 linked non-hybrid ERC JL choices, distinct
+  eTorque/MHEV labels and unchanged Configurator trim/body groups/navigation.
+- Passed 168 focused tests and system/migration/integrity/FK checks. The 1,144-test
+  full suite retains the same 25 documented failures and no new failures. Unresolved
+  539 exceptions and separate historical importer name coupling remain out of scope.
+  Bulk-execution counts are historical: a subsequent owner-authored EXJ assignment
+  on MY2021 Unlimited Willys PK 926 is preserved, giving current totals 612 linked /
+  538 unlinked (61 conflict / 411 insufficient / 66 no registry). Finalization
+  reverified 168 focused tests and system/migration checks; no new assignments,
+  migrations, push or deployment. See the assignment execution task report.
+
+### Engine registry Configurator names and reconciliation preview (2026-11-15)
+
+- Linked Configurator labels use registered Engine.name, preserving unlinked
+  fallback and long Specs behavior. No ESS stripping, descriptor/slug or registry edits.
+- Added read-only JSON preview/command for 1,150 definitions: 104 linked, 1,046
+  unlinked, ten Engines; 507 compatible proposals (22 scoped ESS aliases), 539
+  exceptions. Complete row-level evidence, hierarchy groups and grouped exceptions
+  retained for owner review. No bulk assignment executor or assignments.
+- All 151 focused tests pass; the 1,128-test full suite retains the same 25
+  documented failures with no new failures. Separate live importer name/identity coupling and
+  observed session-related database file change are documented in the task report.
+  Canonical inventory and owner staging preserved; no migration, commit or deployment.
+
+
 ### VehicleDefinition Admin Engine assignment repair (2026-11-15)
 
 - Report model validation errors for excluded snapshot fields as Admin non-field

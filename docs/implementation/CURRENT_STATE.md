@@ -3,6 +3,49 @@ Version: 1.6
 Last Updated: 2026-11-15
 Purpose: Current implementation status and development roadmap
 
+## Engine registry display and approved assignments (2026-11-15)
+
+Linked Configurator choices use registered Engine.name; unlinked fallback and long
+Specs descriptors remain historical. No ESS stripping or canonical descriptor/slug
+rewriting. The approved pinned reconciliation batch executed locally: 485 exact-name
+matches and 22 scoped Wrangler JL non-hybrid ESS aliases, including five archived
+records. No Engine authoring or assignments outside the approved 507-record set.
+
+At bulk-execution completion, all 1,150 VehicleDefinitions remained: 611 linked / 539 unlinked; all ten Engines were
+unchanged. Completed 335 unknown values in each of the five powertrain fields
+(1,675 attributes). Full-field backup comparisons prove preservation of all identities,
+known values, lifecycle/public visibility, MSRP and unrelated fields. Rerun: zero
+assignments / 507 already applied; row-state digests unchanged. Exceptions remain
+61 conflicts, 412 insufficient correspondence and 66 without manufacturer registry.
+No further bulk assignments were performed. The owner subsequently assigned MY2021
+Unlimited Willys PK 926 / UUID caca5d4e-e661-4309-b735-dde058ad46f4 to EXJ Engine
+PK 7 / UUID 16b0027f-72a9-49cb-9fd2-c55f064c88ed. This intentional compatible
+relationship is preserved. Current read-only totals: 612 linked / 538 unlinked;
+61 conflicts, 411 insufficient correspondence, 66 without manufacturer registry.
+This one-row authorization does not propagate to other diesels.
+
+New `assign_registered_engines` command previews by default and requires explicit
+`--execute --receipt <new-file>` against local development SQLite. It pins the original
+artifact, revalidates PK/UUID, manufacturer, match uniqueness, registry and model state,
+backs up and captures every canonical field, then saves through existing model
+validation in one transaction with a full-field preservation guard and durable receipt.
+No bulk SQL assignments, registry writes, schema changes or variant discriminator.
+
+All 168 focused tests pass; 1,144 full-suite tests reproduce exactly the same 25 known
+failures with no new failures. Django system/migration checks and SQLite integrity/FK
+checks pass. All 116 linked non-hybrid ERC JL choices omit ESS, while 32 linked ERG
+choices retain eTorque/MHEV. MY2022/2023/2025/2026 Configurator trim/body group membership
+and labels are unchanged; navigation and exact selection verified.
+
+Execution, backup locations, receipts and preservation details:
+`docs/implementation/tasks/engine-registry-assignment-execution.md`.
+The original preview remains intact; a separate post-assignment preview is retained.
+Existing live MY2025/MY2026 importer mutable-name/identity coupling remains outside
+this task. Unrelated working-tree work and the two owner-staged JK image operations
+are preserved. Milestone finalization uses a separate Git index to exclude unrelated
+owner work. No additional assignments, registry edits, push or deployment.
+
+
 ## VehicleDefinition Admin Engine assignment — repaired locally (2026-11-15)
 
 Fixed excluded-snapshot ValidationErrors crashing Django's generated Admin form.

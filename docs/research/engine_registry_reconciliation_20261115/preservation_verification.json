@@ -1,0 +1,62 @@
+{
+  "authorized_changed_rows": 507,
+  "configurator_navigation": {
+    "2022": {
+      "selected_group_choices": 3,
+      "selected_pk": 962,
+      "trim_groups": 19
+    },
+    "2023": {
+      "selected_group_choices": 3,
+      "selected_pk": 1014,
+      "trim_groups": 25
+    },
+    "2025": {
+      "selected_group_choices": 1,
+      "selected_pk": 1129,
+      "trim_groups": 19
+    },
+    "2026": {
+      "selected_group_choices": 2,
+      "selected_pk": 1132,
+      "trim_groups": 18
+    }
+  },
+  "configurator_trim_body_groups_preserved": true,
+  "engine_records_preserved": 10,
+  "foreign_key_violations": [],
+  "identities_and_unrelated_fields_preserved": true,
+  "integrity": "ok",
+  "linked_jl_etorque_choices_preserved": 32,
+  "linked_nonhybrid_jl_v6_choices_without_ess": 116,
+  "post_totals": {
+    "linked": 611,
+    "linked_with_conflicts": 0,
+    "proposed_active": 0,
+    "proposed_archived": 0,
+    "proposed_compatible": 0,
+    "registered_engines": 10,
+    "rows_with_binding_errors": 0,
+    "statuses": {
+      "ALREADY_LINKED": 611,
+      "CONFLICT": 61,
+      "INSUFFICIENT_EVIDENCE": 412,
+      "NO_REGISTERED_ENGINE": 66
+    },
+    "unlinked": 539,
+    "vehicle_definitions": 1150
+  },
+  "rerun": {
+    "assign": 0,
+    "block": 0,
+    "skip": 507
+  },
+  "unknown_attributes_completed": {
+    "electrification_type": 335,
+    "engine_aspiration": 335,
+    "engine_cylinders": 335,
+    "engine_displacement_liters": 335,
+    "fuel_type": 335
+  },
+  "vehicle_definitions": 1150
+}

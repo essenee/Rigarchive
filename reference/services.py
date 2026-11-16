@@ -295,9 +295,12 @@ def _label_configuration_choices(configurations, group_labels=None):
     choices = list(configurations)
     group_labels = group_labels or {}
     show_group = len({group_labels.get(vd.pk, vd.trim_name or "") for vd in choices}) > 1
+    engine_labels = [engine_label(vd, short=True,
+                                  display_name=vd.engine.name if vd.engine_id else None)
+                     for vd in choices]
     labels = [" · ".join(filter(None, [group_labels.get(vd.pk, vd.trim_name or "") if show_group else "",
-                                      engine_label(vd, short=True)])) or "Factory configuration" for vd in choices]
-    if (not show_group and len({engine_label(vd, short=True) for vd in choices}) == 1
+                                      label])) or "Factory configuration" for vd, label in zip(choices, engine_labels)]
+    if (not show_group and len(set(engine_labels)) == 1
             and len({_drive_wheel_label(vd) for vd in choices}) > 1):
         labels = [_drive_wheel_label(vd) for vd in choices]
     fields = [(lambda vd: _drive_wheel_label(vd)),

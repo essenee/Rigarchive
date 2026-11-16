@@ -1,0 +1,20 @@
+{
+  "after_digest": "sha256:f2c560fce7de6a49b067ea174f006cefe5159aa36221c7386600cddd92da7b24",
+  "approval_digest": "sha256:7ab06c7f7afa590ff7bcd4172e196b5e4b19e596305987467c76ed2b3676bbb8",
+  "assigned": 0,
+  "assignments_by_method": {},
+  "authorization": "Owner-approved 485 exact + 22 JL ESS aliases",
+  "backup": "/Users/cosmo/dev/Rigarchive/backups/snapshots/engine_assignments_20261116T024634002947Z.sqlite3",
+  "backup_foreign_keys": [],
+  "backup_integrity": "ok",
+  "baseline": "/Users/cosmo/dev/Rigarchive/backups/review/engine_assignments/20261116T024634002947Z/baseline.json",
+  "before_digest": "sha256:f2c560fce7de6a49b067ea174f006cefe5159aa36221c7386600cddd92da7b24",
+  "changes": [],
+  "engines_preserved": true,
+  "executed_at": "2026-11-16T02:46:35.518419+00:00",
+  "failed": 0,
+  "identities_and_unrelated_fields_preserved": true,
+  "schema_version": "engine-assignment-execution/1",
+  "skipped_already_applied": 507,
+  "unknown_attributes_completed": {}
+}

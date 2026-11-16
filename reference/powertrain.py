@@ -94,8 +94,10 @@ def _clean_engine_name(record, label):
     return label
 
 
-def engine_label(record, *, short=False):
-    raw_label = record.engine_name or "Engine not specified"
+def engine_label(record, *, short=False, display_name=None):
+    # Only callers explicitly opting into registry display override the historical
+    # descriptor. Specs and existing fallback callers retain their prior behavior.
+    raw_label = (record.engine_name if display_name is None else display_name) or "Engine not specified"
     label = _clean_engine_name(record, raw_label)
     extras = [ASPIRATION.get(record.engine_aspiration) if record.engine_aspiration not in (None, "naturally_aspirated") else None,
               FUEL.get(record.fuel_type) if record.fuel_type == "diesel" else None]
