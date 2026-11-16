@@ -3,6 +3,33 @@ Version: 1.9
 Last Updated: 2026-11-16
 Purpose: Current implementation status and development roadmap
 
+## MY2022 local receipt snapshot cleanup — completed (2026-11-16)
+
+Applied exactly 55 reviewed compact replacements (receipts 3221–3275) after fresh
+full-backup/archive verification and 55 exact Matrix agreements. Only selected JSON
+changed; all 51 SQLite tables/schema, canonical rows, receipt metadata and unrelated
+snapshots preserved. All 73 MY2021 compact records still validate; all 66 MY2022
+historical proof references remain archived and accounted for. Backup/ZIP retained.
+Local DB compacted **32,571,392 → 25,890,816 bytes**, saving **6,680,576 bytes
+(20.5106%)**. Selected JSON **7,021,733 → 336,021 bytes**. Integrity/FKs and Django
+checks pass; 107 focused tests passed after replacement and after compaction.
+No application changes, migrations, canonical imports, Git publication or deployment.
+Execution/backup/hashes: `docs/research/my2022_live_snapshot_cleanup_20261116T221759Z/README.md`.
+
+## MY2022 compact revalidation — isolated simulation only (2026-11-16)
+
+Implemented independently pinned `my2022-approved-matrix-revalidation/1` against the
+existing approved manufacturer-based Matrix with Edmunds corroboration. All 55
+EXACT_AGREEMENT; all 66 original proof references archived and accounted for.
+Verified 55-snapshot compressed archive/manifest and consistent baseline backup retained.
+Only the isolated copy was changed: DB **32,571,392 → 25,890,816 bytes**;
+selected JSON **7,021,733 → 336,021 bytes**. All canonical data, receipt metadata,
+unrelated snapshots and 73 MY2021 compact records preserved; all 51 tables compared.
+107 focused tests and checks passed. Scoped MY2022 consumer handling added; no
+new generalized framework, generation-resolution change, migration or deployment.
+Original database remains unchanged. Live cleanup needs separate owner approval.
+Report: `docs/research/my2022_snapshot_revalidation_20261116T215017Z/README.md`.
+
 ## MY2021 local receipt snapshot cleanup — completed (2026-11-16)
 
 Applied exactly 73 approved compact JSON replacements (receipts 3076–3148) after

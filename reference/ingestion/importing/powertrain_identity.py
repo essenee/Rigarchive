@@ -72,8 +72,11 @@ def nonidentity_variation(candidate, peer, binding):
     from reference.models import ImportExecutionReceipt
     receipt = ImportExecutionReceipt.objects.get(uuid=binding["receipt_uuid"])
     from reference.my2021_wrangler_revalidation import PROFILE, validate_compact
-    if receipt.resolution_snapshot_json.get("version") == PROFILE:
-        compact = validate_compact(receipt, peer)
+    from reference.my2022_wrangler_revalidation import PROFILE as MY2022_PROFILE, validate_compact as validate_my2022
+    version = receipt.resolution_snapshot_json.get("version")
+    if version in (PROFILE, MY2022_PROFILE):
+        validator = validate_my2022 if version == MY2022_PROFILE else validate_compact
+        compact = validator(receipt, peer)
         for key in ("horsepower", "torque"):
             old = compact["nonidentity_claim_hashes"][key]
             new = [a["raw_value"] for doc in candidate.evidence_documents for a in doc["assertions"]
@@ -104,6 +107,9 @@ def assess_peer(record):
         raise ValidationError("Canonical peer lacks a unique successful creation receipt.")
     receipt = receipts[0]
     from reference.my2021_wrangler_revalidation import PROFILE, assess_compact_peer
+    from reference.my2022_wrangler_revalidation import PROFILE as MY2022_PROFILE, assess_compact_peer as assess_my2022
+    if receipt.resolution_snapshot_json.get("version") == MY2022_PROFILE:
+        return assess_my2022(record, receipt)
     if receipt.resolution_snapshot_json.get("version") == PROFILE:
         return assess_compact_peer(record, receipt)
     if "body_import" in receipt.resolution_snapshot_json:

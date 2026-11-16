@@ -4,6 +4,26 @@ All notable changes to RigArchive will be documented in this file.
 
 ## Unreleased
 
+### MY2022 local SQLite snapshot cleanup completed (2026-11-16)
+
+- Applied exactly 55 approved compact snapshots; original receipt metadata and all
+  canonical data remain unchanged. All 66 historical proof references remain archived,
+  and all 73 previously compacted MY2021 receipts still validate. Verified backup retained.
+- Local DB compacted 32,571,392 → 25,890,816 bytes: 6,680,576 bytes (6.37 MiB) saved.
+  Selected JSON 7,021,733 → 336,021 bytes. Integrity/FKs, Django checks and 107 focused
+  tests passed after replacement and after compaction. No code changes or deployment.
+  Report: `docs/research/my2022_live_snapshot_cleanup_20261116T221759Z/README.md`.
+
+### MY2022 approved-Matrix revalidation and isolated receipt cleanup (2026-11-16)
+
+- Archived/verified 55 original MY2022 JL creation snapshots and 66 historical proof
+  references; implemented the MY2022-only current-Matrix profile and scoped readers.
+  All 55 exact agreements; all canonical data and original execution metadata preserved.
+- Isolated copy: DB 32,571,392 → 25,890,816 bytes; selected JSON 7,021,733 → 336,021
+  bytes. All 51 tables compared; 107 focused tests/checks pass, including MY2021 and
+  MY2025/MY2026 regressions. Original DB unchanged; live cleanup not authorized.
+  Report: `docs/research/my2022_snapshot_revalidation_20261116T215017Z/README.md`.
+
 ### MY2021 local receipt snapshot cleanup completed (2026-11-16)
 
 - Applied 73 approved compact snapshots, preserving every canonical row and receipt
