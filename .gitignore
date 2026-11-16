@@ -92,3 +92,9 @@ htmlcov/
 # Generated reconciliation previews
 /docs/research/engine_registry_reconciliation_20261115/post_assignment_preview.json
 /docs/research/MY2025_JL_edmunds_builder_20261114/local_import_blocked_preview_20261114.json
+
+# Local Engine reconciliation analysis artifacts
+/docs/research/engine_registry_remaining_assignments_20261115/*.json
+
+# Handoff-dependent test awaiting portability review
+/reference/tests/test_ra050_evidence_preparation.py
