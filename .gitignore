@@ -96,3 +96,6 @@ htmlcov/
 
 # Handoff-dependent test awaiting portability review
 /reference/tests/test_ra050_evidence_preparation.py
+
+# Temporary implementation task instructions
+/docs/implementation/tasks/
