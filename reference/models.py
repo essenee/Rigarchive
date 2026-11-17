@@ -191,6 +191,61 @@ class Engine(BaseModel):
         return f"{self.manufacturer} {self.engine_code} — {self.name}"
 
 
+class EngineCorrectionQuerySet(models.QuerySet):
+    def update(self, **kwargs):
+        raise ValidationError("Engine correction audit records are append-only.")
+
+    def delete(self):
+        raise ValidationError("Engine correction audit records cannot be deleted.")
+
+    def bulk_create(self, *args, **kwargs):
+        raise ValidationError("Use the reviewed Engine correction service.")
+
+    def bulk_update(self, *args, **kwargs):
+        raise ValidationError("Engine correction audit records are append-only.")
+
+
+class EngineIdentityCorrection(BaseModel):
+    """Immutable before/after evidence of one protected in-place correction."""
+    engine = models.ForeignKey(Engine, on_delete=models.PROTECT, related_name="identity_corrections")
+    engine_pk_snapshot = models.PositiveBigIntegerField()
+    engine_uuid_snapshot = models.UUIDField()
+    actor = models.ForeignKey('accounts.User', on_delete=models.PROTECT)
+    actor_label = models.CharField(max_length=255)
+    request_reference = models.UUIDField(unique=True)
+    review_digest = models.CharField(max_length=71)
+    reason = models.TextField()
+    before_state = models.JSONField()
+    after_state = models.JSONField()
+    impact = models.JSONField()
+
+    objects = EngineCorrectionQuerySet.as_manager()
+
+    class Meta:
+        ordering = ('-created_at', '-pk')
+        default_permissions = ('view',)
+        permissions = [('correct_engine_identity', 'Can perform reviewed Engine identity corrections')]
+
+    def save(self, *args, **kwargs):
+        if not self._state.adding:
+            raise ValidationError("Engine correction audit records are append-only.")
+        if not self.reason.strip() or not self.actor_label.strip():
+            raise ValidationError("A correction reason and actor snapshot are required.")
+        if (self.before_state.get('id') != self.engine_pk_snapshot
+                or self.after_state.get('id') != self.engine_pk_snapshot
+                or str(self.engine_uuid_snapshot) != self.before_state.get('uuid')
+                or self.after_state.get('uuid') != self.before_state.get('uuid')
+                or self.before_state.get('internal_variant_key') == self.after_state.get('internal_variant_key')
+                or {k:v for k,v in self.before_state.items() if k != 'internal_variant_key'}
+                   != {k:v for k,v in self.after_state.items() if k != 'internal_variant_key'}):
+            raise ValidationError("Correction audit must describe only one variant-key change.")
+        self.full_clean()
+        return super().save(*args, **kwargs)
+
+    def delete(self, *args, **kwargs):
+        raise ValidationError("Engine correction audit records cannot be deleted.")
+
+
 class VehicleModel(BaseModel):
     """
     Represents a named vehicle model produced by a manufacturer.

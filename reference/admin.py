@@ -3,11 +3,16 @@ from django import forms
 from django.contrib.admin.views.autocomplete import AutocompleteJsonView
 from django.contrib.admin.widgets import AutocompleteSelect
 from django.urls import path, reverse
+from django.core import signing
+from django.http import Http404, HttpResponseRedirect
+from django.template.response import TemplateResponse
+from django.db import DatabaseError
 from django.core.exceptions import NON_FIELD_ERRORS, ValidationError, PermissionDenied
 from reference.powertrain import FIELDS
 
 from .models import (
     Engine,
+    EngineIdentityCorrection,
     FactoryBodyConfiguration,
     BODY_ATTRIBUTES,
     GenerationCorrespondenceRevision,
@@ -227,8 +232,70 @@ class EngineAutocompleteSelect(AutocompleteSelect):
         return reverse(f'{self.admin_site.name}:reference_engine_variant_autocomplete')
 
 
+class EngineIdentityCorrectionForm(forms.Form):
+    proposed_key = forms.CharField(max_length=100, required=False, strip=False,
+        help_text='Explicitly enter the reviewed key. Empty means no discriminator is established.')
+    reason = forms.CharField(widget=forms.Textarea, label='Correction explanation')
+    acknowledgment = forms.BooleanField(label='I acknowledge this changes an established Engine registry identity.')
+
+    def clean_proposed_key(self):
+        from reference.models import normalize_internal_variant_key
+        if 'proposed_key' not in self.data:
+            raise ValidationError('Explicit proposed-key entry is required.')
+        return normalize_internal_variant_key(self.cleaned_data['proposed_key'])
+
+
 @admin.register(Engine)
 class EngineAdmin(admin.ModelAdmin):
+    change_form_template = 'admin/reference/engine/change_form.html'
+
+    def change_view(self, request, object_id, form_url='', extra_context=None):
+        from reference.engine_identity_correction import require_authorized
+        try:
+            require_authorized(request.user); allowed = True
+        except PermissionDenied:
+            allowed = False
+        return super().change_view(request, object_id, form_url,
+            {**(extra_context or {}), 'can_correct_engine_identity': allowed})
+
+    def correct_identity_view(self, request, object_id):
+        from reference.engine_identity_correction import require_authorized, preview_correction, execute_correction
+        require_authorized(request.user)
+        engine = self.get_object(request, object_id)
+        if engine is None:
+            raise Http404
+        if not self.has_change_permission(request, engine):
+            raise PermissionDenied
+        review = None; token = None
+        form = EngineIdentityCorrectionForm(request.POST if request.method == 'POST' else None)
+        if request.method == 'POST':
+            if 'confirm' in request.POST:
+                try:
+                    acknowledgment = forms.BooleanField(required=True).clean(request.POST.get('acknowledgment'))
+                    review = signing.loads(request.POST.get('review_token', ''), salt='engine-identity-correction', max_age=900)
+                    if (review.get('before', {}).get('id') != engine.pk
+                            or review.get('before', {}).get('uuid') != str(engine.uuid)):
+                        raise ValidationError('This preview belongs to a different Engine; review again.')
+                    audit = execute_correction(review, actor=request.user, acknowledged=acknowledgment, confirmed=True)
+                    self.message_user(request, f'Engine identity corrected; durable audit {audit.uuid}.', messages.SUCCESS)
+                    return HttpResponseRedirect(reverse('admin:reference_engine_change', args=[engine.pk]))
+                except (signing.BadSignature, ValidationError, DatabaseError) as exc:
+                    # No success response until the atomic key+audit operation commits.
+                    form.add_error(None, 'Correction not executed. Review again: ' + str(exc))
+                    review = None
+            elif form.is_valid():
+                try:
+                    review = preview_correction(engine.pk, proposed_key=form.cleaned_data['proposed_key'],
+                        reason=form.cleaned_data['reason'], actor=request.user)
+                    token = signing.dumps(review, salt='engine-identity-correction', compress=True)
+                except (ValidationError, DatabaseError) as exc:
+                    form.add_error(None, str(exc))
+        return TemplateResponse(request, 'admin/reference/engine/correct_identity.html', {
+            **self.admin_site.each_context(request), 'opts':self.model._meta, 'original':engine,
+            'title':'Correct Engine Identity', 'form':form, 'review':review, 'review_token':token,
+            'association_count':engine.vehicle_definitions.count(),
+        })
+
     list_display = ("manufacturer", "engine_code", "internal_variant_key", "name", *FIELDS)
     list_filter = ("manufacturer",)
     search_fields = ("manufacturer__name", "engine_code", "internal_variant_key", "name")
@@ -239,9 +306,26 @@ class EngineAdmin(admin.ModelAdmin):
         return self.readonly_fields + (("manufacturer", "engine_code", "internal_variant_key") if obj else ())
 
     def get_urls(self):
-        return [path('variant-autocomplete/', self.admin_site.admin_view(
+        return [path('<path:object_id>/correct-identity/', self.admin_site.admin_view(self.correct_identity_view),
+                     name='reference_engine_correct_identity'), path('variant-autocomplete/', self.admin_site.admin_view(
             EngineAutocompleteJsonView.as_view(admin_site=self.admin_site)),
             name='reference_engine_variant_autocomplete')] + super().get_urls()
+
+
+@admin.register(EngineIdentityCorrection)
+class EngineIdentityCorrectionAdmin(admin.ModelAdmin):
+    list_display = ('created_at', 'engine_pk_snapshot', 'engine_uuid_snapshot', 'actor_label', 'request_reference')
+    readonly_fields = tuple(field.name for field in EngineIdentityCorrection._meta.fields)
+    search_fields = ('engine_uuid_snapshot', 'request_reference', 'actor_label', 'reason')
+
+    def has_add_permission(self, request):
+        return False
+
+    def has_change_permission(self, request, obj=None):
+        return False
+
+    def has_delete_permission(self, request, obj=None):
+        return False
 
 
 @admin.register(FactoryBodyConfiguration)

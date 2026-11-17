@@ -220,7 +220,12 @@ class VariantMigrationTests(TransactionTestCase):
             variant=Engine.objects.create(manufacturer_id=maker.pk,engine_code='CODE',internal_variant_key='reviewed',name='After',**PT)
             with self.assertRaises(IrreversibleError): MigrationExecutor(connection).migrate(old)
             self.assertTrue(Engine.objects.filter(pk=variant.pk,internal_variant_key='reviewed').exists())
-            variant.delete()
+            # A failed reverse can already have removed later migrations. Use
+            # the actual 0015 state, not today's model with future audit relations.
+            historical_engine = MigrationExecutor(connection).loader.project_state(
+                [('reference', '0015_engine_internal_variant_key')]
+            ).apps.get_model('reference', 'Engine')
+            historical_engine.objects.get(pk=variant.pk).delete()
             MigrationExecutor(connection).migrate(old)
             self.assertEqual(MigrationExecutor(connection).loader.project_state(old).apps.get_model('reference','Engine').objects.count(), 1)
         finally:

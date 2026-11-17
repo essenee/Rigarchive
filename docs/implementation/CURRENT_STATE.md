@@ -18,7 +18,27 @@ Verified Stage 2 backup:
 `backups/review/my2026_4runner_direct_names_20261117T192059481070Z/pre_execution.sqlite3`
 (SHA-256 `b504172daf518c7987c345d15ef03f2fc6134d070260beca5a93a7be1de562dc`).
 
-## Engine internal variant identity — implemented, live migration pending (2026-11-16)
+## Protected Engine variant-key corrections — operational (2026-11-17)
+
+Migration **0016_engine_identity_correction** is applied. Active staff with both
+change_engine and correct_engine_identity can preview and confirm a variant-key-only
+correction. Signed previews are actor/Engine-URL bound, expire after 15 minutes,
+retain full timestamp precision and reject stale state, collisions or historical
+binding conflicts. Ordinary identity edits remain protected; key changes and their
+append-only audits commit atomically without reassigning vehicles.
+
+The owner corrected Toyota Engine **10**, UUID
+`f65ff3d3-2a11-4934-888c-cbeb647ede61`, T24A-FTS, **empty → non-hybrid**.
+Audit **1** (`6a3db20f-b7f1-4c63-81ee-31b9be3a510e`) has verified actor/reason,
+before/after snapshots and review/dependency hashes. A subsequent same-actor Admin
+save with no changed fields advanced only updated_at, confirmed by its Admin log.
+Engine 13/i-force-max, all 14 vehicle associations, structured fields, prices,
+identities, historical receipts and public labels are preserved. No replacement
+Engine or historical proof repair was made. Old empty-key references are not aliases;
+registry-sensitive pending plans must be refreshed. Original Engine Proof warnings
+remain separately unresolved.
+
+## Engine internal variant identity — implemented; local 0015 applied (2026-11-17)
 
 `Engine.internal_variant_key` adds an explicitly reviewed, normalized ASCII internal
 discriminator (empty means unestablished). Manufacturer/full code/key uniqueness,
@@ -28,10 +48,12 @@ no property-based choice among shared-code variants is introduced. Admin creatio
 list/search and permission-checked autocomplete expose keys only within Admin.
 Public names, vehicle identities/slugs and five-field semantics are unchanged.
 
-Migration **reference.0015_engine_internal_variant_key** is created and rehearsed
-only on a disposable SQLite backup. Live development remains at **0014**, with no
-variant column; this feature is **not operational on live development** until separate
-migration authorization. Reversing 0015 refuses to discard any nonempty variant key.
+Migration **reference.0015_engine_internal_variant_key** was separately authorized
+and applied locally on 2026-11-17 with verified backup and 51-table preservation.
+Live development is now at **0016** after separate audit-storage authorization;
+the owner has completed Engine 10's audited key correction described above.
+Reversing 0015 refuses to discard any nonempty variant key. Ordinary key immutability
+now has only the dedicated, audited correction exception described above.
 No variants or VehicleDefinition assignments were authored by this task.
 
 MY2025/MY2026 historical authorization projections are explicit and preserve the six
@@ -419,8 +441,7 @@ powertrain definitions, UUID/timestamps and ordinary human Admin authoring. Code
 normalization trims outer whitespace and uppercases ASCII, preserving hyphens and
 variant suffixes: EA888-CJXC and EA888-CHHB remain distinct, with no family-prefix
 lookup. Manufacturer/code/UUID and the new variant key are immutable on saved instances.
-Live 0014 enforces manufacturer/code uniqueness; pending 0015 replaces it with
-manufacturer/code/key uniqueness as described above. `VehicleDefinition.engine` is nullable/
+Applied 0015 enforces manufacturer/code/key uniqueness as described above. `VehicleDefinition.engine` is nullable/
 PROTECT; new associations use registry properties while historical snapshots, slugs
 and receipts remain unchanged. Lookup never researches or creates Engine records.
 Registered parameters are reused across models/years; unknown codes require human
@@ -428,8 +449,8 @@ authoring and concrete conflicts are reported. No new import executor or review 
 
 The Project Owner accepted the implementation following final verification.
 At the original checkpoint 0012 was isolated-tested only. Current read-only verification
-confirms local migrations through 0014 applied and a human-authored registry in use;
-only the new 0015 remains pending. The unchanged seven-code Jeep seed proposal includes additional EXJ.
+confirms local migrations through 0016 applied and a human-authored registry in use;
+the protected key correction is operational. The unchanged seven-code Jeep seed proposal includes additional EXJ.
 Volkswagen examples are isolated tests only.
 
 The Project Owner accepted the bounded registry-aware 3.1.0 integration on 2026-11-14. It binds

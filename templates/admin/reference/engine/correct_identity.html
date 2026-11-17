@@ -1,0 +1,30 @@
+{% extends "admin/base_site.html" %}
+{% block content %}
+<p class="errornote">Warning: this changes an established Engine registry identity. It is not an ordinary wording edit. Existing records, associations and historical evidence must remain intact.</p>
+<table><tbody>
+<tr><th>Engine PK / UUID</th><td>{{ original.pk }} / {{ original.uuid }}</td></tr>
+<tr><th>Manufacturer / code</th><td>{{ original.manufacturer }} / {{ original.engine_code }}</td></tr>
+<tr><th>Engine name</th><td>{{ original.name }}</td></tr>
+<tr><th>Current variant key</th><td>{{ original.internal_variant_key|default:"(empty — no explicit discriminator)" }}</td></tr>
+<tr><th>Associated VehicleDefinitions</th><td>{{ association_count }}</td></tr>
+</tbody></table>
+{% if review %}
+<h2>Review proposed correction</h2>
+<p>Proposed key: <strong>{{ review.after.internal_variant_key|default:"(empty — no explicit discriminator)" }}</strong></p>
+<p>Explanation: {{ review.reason }}</p>
+<p>Request reference: {{ review.request_reference }}</p>
+<h3>Historical-contract findings</h3>
+<ul>{% for item in review.impact.retained_authorizations %}<li>{{ item.reference }} — engine bound: {{ item.engine_bound|default:"No approved assignment to this Engine" }}</li>{% endfor %}
+{% for item in review.impact.receipt_dependencies %}<li>Receipt {{ item.receipt_pk }}: {{ item.disposition }}</li>{% endfor %}</ul>
+<p>{{ review.impact.historical_policy }}</p>
+{% if review.impact.blockers %}<ul class="errorlist">{% for issue in review.impact.blockers %}<li>{{ issue }}</li>{% endfor %}</ul>{% endif %}
+{% if review.impact.eligible %}
+<form method="post">{% csrf_token %}
+<input type="hidden" name="review_token" value="{{ review_token }}">
+<p><label><input type="checkbox" name="acknowledgment" required> I confirm this reviewed change to an established identity.</label></p>
+<button type="submit" name="confirm" value="1">Confirm Engine identity correction</button>
+</form>{% endif %}
+{% else %}
+<form method="post">{% csrf_token %}{{ form.as_p }}<button type="submit" name="preview" value="1">Review correction</button></form>
+{% endif %}
+{% endblock %}

@@ -6,6 +6,11 @@ All notable changes to RigArchive will be documented in this file.
 
 ### Changed
 
+- Applied Engine correction audit migration 0016 under separate owner authorization;
+  verified backup, exact expected schema/bookkeeping changes and unchanged existing
+  data. The owner subsequently corrected Engine 10 to non-hybrid with a verified
+  immutable audit; Engine 13 and every VehicleDefinition remain unchanged.
+
 - Completed MY2026 4Runner Engine associations, eight name corrections and fourteen
   manufacturer MSRP updates; Trailhunter remains hybrid-linked at $68,400.
 - Fixed configurator Engine/drivetrain labels with legacy fallback and deep links.
@@ -15,9 +20,24 @@ All notable changes to RigArchive will be documented in this file.
 
 ### Added
 
+- Protected Engine variant-key correction with permission-controlled Admin review,
+  explicit confirmation, stale-state checks and an atomic append-only before/after
+  audit. Migration 0016 is applied; ordinary Engine identity edits remain protected.
+
+### Changed
+
+- Signed Admin confirmation matches its Engine URL; stale-state fingerprints retain
+  full timestamp precision. Legacy historical bindings fail closed; original evidence
+  and approval hashes remain immutable. A later ordinary no-field-change Admin save
+  explains Engine 10's updated_at advance after its audited correction.
+- Recorded the separately authorized local application of migration 0015.
+
+
+### Added
+
 - Engine internal variant identity, immutable reviewed keys, composite uniqueness and
-  migration 0015 with fail-closed reversal after nonempty key authoring. Migration is
-  isolated-tested only; live application requires separate authorization.
+  migration 0015 with fail-closed reversal after nonempty key authoring. After isolated
+  verification, local application was separately authorized and completed on 2026-11-17.
 - Admin-only variant creation/list/search and distinguishable permission-checked
   Engine autocomplete choices; public names and vehicle identities are unchanged.
 

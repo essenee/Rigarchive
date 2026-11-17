@@ -1,14 +1,28 @@
 # Canonical Import Contract Registry
 
 Created: 2026-11-16
-Last Updated: 2026-11-16
-Status: Technical reference; bounded Engine compatibility corrections implemented, live migration pending; other recommendations remain proposed
+Last Updated: 2026-11-17
+Status: Technical reference; protected Engine corrections implemented; local 0015/0016 applied; other recommendations remain proposed
+
+## Protected identity corrections — 2026-11-17
+
+A separately permissioned Admin/service operation can correct only an Engine variant
+key with an actor-bound signed preview, fresh exact-state/uniqueness/dependency
+checks and an atomic append-only audit (applied migration 0016). Ordinary identity
+edits stay protected. See `reference/engine_identity_correction.py`.
+
+This is not a canonical import contract/version or reusable assignment approval.
+Legacy registry bindings and unknown Engine-referencing formats block incompatible
+corrections; original source/approval/receipt bytes retain their meaning. Unused
+registry observations do not authorize assignments, empty keys are not aliases, and
+registry-sensitive pending plans require fresh review after a correction. No import
+serializer or historical proof reader is weakened by this operation.
 
 ## Engine variant compatibility update — 2026-11-16
 
 The owner-authorized Engine implementation adds migration
-`reference.0015_engine_internal_variant_key`; it is **isolated-tested, not applied to
-live development**. No wire version or historical artifact is changed.
+`reference.0015_engine_internal_variant_key`; it was **applied locally under separate
+authorization on 2026-11-17**, after the isolated rehearsal. No wire version or historical artifact is changed.
 
 - `Engine` identity is manufacturer / normalized full code / normalized immutable
   internal key. Empty means no explicit discriminator, never a preferred variant.
