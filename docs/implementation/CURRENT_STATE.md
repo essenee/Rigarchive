@@ -3,6 +3,31 @@ Version: 1.9
 Last Updated: 2026-11-16
 Purpose: Current implementation status and development roadmap
 
+## Engine internal variant identity — implemented, live migration pending (2026-11-16)
+
+`Engine.internal_variant_key` adds an explicitly reviewed, normalized ASCII internal
+discriminator (empty means unestablished). Manufacturer/full code/key uniqueness,
+canonical storage checks, immutable saved keys and fail-closed code-only resolution
+are implemented. Exact authorized PK/UUID references retain their selected Engine;
+no property-based choice among shared-code variants is introduced. Admin creation,
+list/search and permission-checked autocomplete expose keys only within Admin.
+Public names, vehicle identities/slugs and five-field semantics are unchanged.
+
+Migration **reference.0015_engine_internal_variant_key** is created and rehearsed
+only on a disposable SQLite backup. Live development remains at **0014**, with no
+variant column; this feature is **not operational on live development** until separate
+migration authorization. Reversing 0015 refuses to discard any nonempty variant key.
+No variants or VehicleDefinition assignments were authored by this task.
+
+MY2025/MY2026 historical authorization projections are explicit and preserve the six
+retained approval hashes. Body3.1 readers validate exact Engine references without
+code-only ambiguity; legacy formats reject nonempty variants. Full-field preservation
+remains exhaustive. Receipt-metadata/dataclass schema hardening and future
+variant-aware ingestion remain deferred; no wire versions are introduced.
+
+Verification and exact capture/rehearsal details:
+[tasks/engine-internal-variant-key.md](tasks/engine-internal-variant-key.md).
+
 ## MY2022 local receipt snapshot cleanup — completed (2026-11-16)
 
 Applied exactly 55 reviewed compact replacements (receipts 3221–3275) after fresh
@@ -372,22 +397,24 @@ Verified 51 focused tests and actual read-only Django responses for all four Wil
 records/Specs links, with no migration or operational writes. No representative van
 inventory was validated. See [RA-058 handoff](handoffs/RA058_configurator_body_aware_labels/README.md).
 
-## Human-maintained Engine registry — accepted, undeployed (2026-11-14)
+## Human-maintained Engine registry — accepted (original checkpoint 2026-11-14)
 
 `Engine` provides protected manufacturer/complete-code identity, existing five-field
 powertrain definitions, UUID/timestamps and ordinary human Admin authoring. Code
 normalization trims outer whitespace and uppercases ASCII, preserving hyphens and
 variant suffixes: EA888-CJXC and EA888-CHHB remain distinct, with no family-prefix
-lookup. Manufacturer/code/UUID are immutable on saved instances; normalized-code
-uniqueness is enforced per manufacturer. `VehicleDefinition.engine` is nullable/
+lookup. Manufacturer/code/UUID and the new variant key are immutable on saved instances.
+Live 0014 enforces manufacturer/code uniqueness; pending 0015 replaces it with
+manufacturer/code/key uniqueness as described above. `VehicleDefinition.engine` is nullable/
 PROTECT; new associations use registry properties while historical snapshots, slugs
 and receipts remain unchanged. Lookup never researches or creates Engine records.
 Registered parameters are reused across models/years; unknown codes require human
 authoring and concrete conflicts are reported. No new import executor or review system.
 
 The Project Owner accepted the implementation following final verification.
-Migration 0012 is generated and isolated-tested only; no operational migration or
-population. The unchanged seven-code Jeep seed proposal includes additional EXJ.
+At the original checkpoint 0012 was isolated-tested only. Current read-only verification
+confirms local migrations through 0014 applied and a human-authored registry in use;
+only the new 0015 remains pending. The unchanged seven-code Jeep seed proposal includes additional EXJ.
 Volkswagen examples are isolated tests only.
 
 The Project Owner accepted the bounded registry-aware 3.1.0 integration on 2026-11-14. It binds

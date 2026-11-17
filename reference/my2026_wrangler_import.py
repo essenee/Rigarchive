@@ -15,7 +15,7 @@ from django.db import transaction
 from django.db.models import Q
 
 from reference.body_identity import baseline_preimage, body_preimage, semantic_digest
-from reference.engine_registry import prepare_registered_vehicle, resolve_engine
+from reference.engine_registry import prepare_registered_vehicle, resolve_engine, validate_engine_properties
 from reference.ingestion.importing.body_identity import family_slugs
 from reference.models import (
     BODY_ATTRIBUTES, Engine, FactoryBodyConfiguration, Generation,
@@ -130,16 +130,15 @@ def preview():
         .values_list('pk', flat=True)) == [generation.pk], 'MY2026 Generation is ambiguous.')
     engines = {}
     for profile, code in ENGINE_CODES.items():
-        require(Engine.objects.filter(manufacturer=manufacturer, engine_code=code).count() == 1,
-                f'Engine {code} missing or duplicated.')
-        engine = resolve_engine(manufacturer, code)
         reference = inventory['engine_profiles'][profile]
+        engine = resolve_engine(manufacturer, code, engine_pk=reference['registered_engine_pk'],
+                                engine_uuid=reference['registered_engine_uuid'])
         require(engine.pk == EXPECTED_ENGINE_PKS[code] == reference['registered_engine_pk']
                 and str(engine.uuid) == reference['registered_engine_uuid']
                 and reference['manufacturer_engine_code'] == code,
                 f'Engine {code} differs from its approved registry reference.')
         incoming = {k: inventory['engine_profiles'][profile][k] for k in FIELDS}
-        resolve_engine(manufacturer, code, incoming_powertrain=incoming)
+        validate_engine_properties(engine, incoming_powertrain=incoming)
         engines[profile] = engine
     bodies = {}
     for doors in ('two-door', 'four-door'):
@@ -162,11 +161,11 @@ def preview():
                 and source['registered_engine_pk'] == engine.pk
                 and source['registered_engine_uuid'] == str(engine.uuid),
                 'Inventory engine association conflicts with the existing registry.')
-        resolve_engine(manufacturer, engine.engine_code,
+        validate_engine_properties(engine,
                        incoming_powertrain={k: original[k] for k in FIELDS})
         body = bodies[original['factory_body_configuration']['door_configuration']]
         vehicle = prepare_registered_vehicle(
-            manufacturer, engine.engine_code, generation=generation, model_year=2026,
+            manufacturer, engine.engine_code, engine_pk=engine.pk, engine_uuid=engine.uuid, generation=generation, model_year=2026,
             market='US', drivetrain='4WD', trim_name=original['trim_name'],
             factory_body_configuration=body,
         )

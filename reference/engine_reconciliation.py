@@ -154,10 +154,19 @@ def preview_engine_assignments():
                          and record_powertrain(e)['engine_displacement_liters']=='3.6'
                          and e.engine_cylinders==6 and e.electrification_type=='none']
                 method='WRANGLER_JL_NONHYBRID_36_ESS'
+            # A name or partial tuple cannot discriminate shared authentic codes.
+            # Existing FKs and reviewed receipt pins above remain authoritative.
+            shared_codes = {e.engine_code for e in matches
+                            if sum(peer.engine_code == e.engine_code for peer in candidates) > 1}
+            if shared_codes:
+                matches = [e for e in candidates if e in matches or e.engine_code in shared_codes]
             checked=[(e,compatibility(v,e)) for e in matches]
             compatible=[(e,c) for e,c in checked if c['result']=='COMPATIBLE']
             row['candidates']=[dict(**_engine(e),compatibility=c) for e,c in checked]
-            if len(compatible)==1:
+            if shared_codes:
+                row.update(status='AMBIGUOUS', match_method=method,
+                           reason='Shared manufacturer code requires an exact reviewed Engine reference; names and partial properties cannot choose a variant.')
+            elif len(compatible)==1:
                 engine,comp=compatible[0]
                 row.update(status='EXACT_MATCH' if method=='EXACT_NAME' else 'APPROVED_ALIAS_MATCH',
                     match_method=method, proposed_engine=_engine(engine),compatibility=comp,

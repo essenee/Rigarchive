@@ -28,6 +28,17 @@ class RegistryBodyImportTests(TestCase):
         return execute_body_import_batch(manifest or self.authorize(plans),plans,self.fx.release,
             operator='project-owner',execution_agent='implementation-agent',confirmed=True,**kwargs)
 
+    def test_published_exact_binding_survives_another_same_code_variant(self):
+        wrapped = self.fx.candidates['JL24-01']
+        bound = Engine.objects.get(pk=wrapped['binding']['engine']['pk'])
+        from reference.powertrain import record_powertrain
+        Engine.objects.create(manufacturer=bound.manufacturer, engine_code=bound.engine_code,
+                              internal_variant_key='reviewed-other', name=bound.name, **record_powertrain(bound))
+        plan = plan_candidate_import(wrapped, body_release=self.fx.release)
+        self.assertEqual(r.subject(plan)['binding'], wrapped['binding'])
+        with self.assertRaises(EngineRegistryError):
+            r.prepare_registry_candidate(wrapped['candidate'], wrapped['code_reference'], root=self.fx.root)
+
     def test_registry_properties_without_repeated_source_assertions(self):
         wrapped=self.fx.candidates['JL24-01']
         candidate=wrapped['candidate']

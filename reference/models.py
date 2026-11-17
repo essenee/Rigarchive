@@ -6,7 +6,7 @@ from django.core.validators import MinValueValidator, RegexValidator
 from reference.powertrain import ASPIRATION, FUEL, ELECTRIFICATION, FIELDS, TAXONOMIES, engine_label
 from django.db import models, transaction
 from django.db.models.functions import Coalesce
-from django.db.models.functions import Upper, Trim
+from django.db.models.functions import Upper, Trim, Lower, Length
 from reference.body_identity import TOKEN
 from django.urls import reverse
 from django.utils.text import slugify
@@ -78,6 +78,17 @@ def normalize_engine_code(value):
     return value
 
 
+def normalize_internal_variant_key(value):
+    """Normalize only an explicitly reviewed discriminator, never derive one."""
+    import re
+    if not isinstance(value, str) or not value.isascii():
+        raise ValidationError("Internal variant key must be an ASCII string.")
+    value = value.strip().lower()
+    if not re.fullmatch(r"[a-z0-9_-]{0,100}", value):
+        raise ValidationError("Use at most 100 lowercase letters, digits, hyphens or underscores.")
+    return value
+
+
 class EngineCodeCharacters(models.Func):
     """Keep both uses of the code expression paired with their SQL parameters."""
 
@@ -110,9 +121,13 @@ class EngineQuerySet(models.QuerySet):
 
 
 class Engine(BaseModel):
-    """Human-maintained manufacturer/code identity, reused across models and years."""
+    """Human-maintained manufacturer/code/variant identity, reused across models and years."""
     manufacturer = models.ForeignKey(Manufacturer, on_delete=models.PROTECT, related_name="engines")
     engine_code = models.CharField(max_length=100)
+    internal_variant_key = models.CharField(
+        max_length=100, blank=True, null=False, default="",
+        help_text="Reviewed internal discriminator; empty means no explicit discriminator is established.",
+    )
     name = models.CharField(max_length=100)
     engine_displacement_liters = models.DecimalField(
         max_digits=5, decimal_places=2, null=True, blank=True,
@@ -133,7 +148,8 @@ class Engine(BaseModel):
     class Meta:
         ordering = ("manufacturer__name", "engine_code")
         constraints = [
-            models.UniqueConstraint(models.F("manufacturer"), Upper(Trim("engine_code")), name="reference_unique_engine_manufacturer_code"),
+            models.UniqueConstraint(models.F("manufacturer"), Upper(Trim("engine_code")), Lower(Trim("internal_variant_key")), name="reference_unique_engine_manufacturer_code_variant"),
+            models.CheckConstraint(condition=models.Func("internal_variant_key", template="(%(expressions)s NOT GLOB '*[^a-z0-9_-]*')", output_field=models.BooleanField()) & models.Func("internal_variant_key", template="(INSTR(%(expressions)s, CHAR(0)) = 0)", output_field=models.BooleanField()) & models.lookups.LessThanOrEqual(Length("internal_variant_key"), 100), name="reference_engine_variant_normalized"),
             models.CheckConstraint(condition=models.Q(engine_code=Upper(Trim("engine_code"))) & EngineCodeCharacters("engine_code", template="(%(expressions)s GLOB '[A-Z0-9]*' AND %(expressions)s NOT GLOB '*[^A-Z0-9._-]*')", output_field=models.BooleanField()), name="reference_engine_code_normalized"),
             models.CheckConstraint(condition=~models.Q(name=""), name="reference_engine_name_nonempty"),
             models.CheckConstraint(condition=models.Q(engine_displacement_liters__isnull=True) | models.Q(engine_displacement_liters__gt=0), name="reference_engine_displacement_positive"),
@@ -143,6 +159,7 @@ class Engine(BaseModel):
 
     def clean_fields(self, exclude=None):
         self.engine_code = normalize_engine_code(self.engine_code)
+        self.internal_variant_key = normalize_internal_variant_key(self.internal_variant_key)
         for key in FIELDS:
             if isinstance(getattr(self, key), bool):
                 raise ValidationError({key: "Boolean is not a powertrain value."})
@@ -158,8 +175,8 @@ class Engine(BaseModel):
             raise ValidationError({"name": "Engine name must not be blank."})
         if self.pk:
             old = type(self).objects.using(self._state.db).filter(pk=self.pk).first()
-            if old and (old.manufacturer_id != self.manufacturer_id or old.engine_code != self.engine_code or old.uuid != self.uuid):
-                raise ValidationError("Engine manufacturer and code are immutable; create a distinct record for a different identity.")
+            if old and (old.manufacturer_id != self.manufacturer_id or old.engine_code != self.engine_code or old.uuid != self.uuid or old.internal_variant_key != self.internal_variant_key):
+                raise ValidationError("Engine manufacturer, code and internal variant key are immutable; create a distinct record for a different identity.")
 
     def save(self, *args, **kwargs):
         if kwargs.get("update_fields") is not None:

@@ -1,6 +1,9 @@
 from django.contrib import admin, messages
 from django import forms
-from django.core.exceptions import NON_FIELD_ERRORS, ValidationError
+from django.contrib.admin.views.autocomplete import AutocompleteJsonView
+from django.contrib.admin.widgets import AutocompleteSelect
+from django.urls import path, reverse
+from django.core.exceptions import NON_FIELD_ERRORS, ValidationError, PermissionDenied
 from reference.powertrain import FIELDS
 
 from .models import (
@@ -204,16 +207,41 @@ class GenerationAdmin(admin.ModelAdmin):
     )
 
 
+class EngineAutocompleteJsonView(AutocompleteJsonView):
+    def process_request(self, request):
+        result = super().process_request(request)
+        if result[1].model is not Engine:
+            raise PermissionDenied
+        return result
+
+    def serialize_result(self, obj, to_field_name):
+        result = super().serialize_result(obj, to_field_name)
+        # Admin-only discriminator: public names and Engine.__str__ remain stable.
+        key = obj.internal_variant_key or 'no explicit discriminator'
+        result['text'] = f"{obj} [{key}] (PK {obj.pk})"
+        return result
+
+
+class EngineAutocompleteSelect(AutocompleteSelect):
+    def get_url(self):
+        return reverse(f'{self.admin_site.name}:reference_engine_variant_autocomplete')
+
+
 @admin.register(Engine)
 class EngineAdmin(admin.ModelAdmin):
-    list_display = ("manufacturer", "engine_code", "name", *FIELDS)
+    list_display = ("manufacturer", "engine_code", "internal_variant_key", "name", *FIELDS)
     list_filter = ("manufacturer",)
-    search_fields = ("manufacturer__name", "engine_code", "name")
+    search_fields = ("manufacturer__name", "engine_code", "internal_variant_key", "name")
     autocomplete_fields = ("manufacturer",)
     readonly_fields = ("uuid", "created_at", "updated_at")
 
     def get_readonly_fields(self, request, obj=None):
-        return self.readonly_fields + (("manufacturer", "engine_code") if obj else ())
+        return self.readonly_fields + (("manufacturer", "engine_code", "internal_variant_key") if obj else ())
+
+    def get_urls(self):
+        return [path('variant-autocomplete/', self.admin_site.admin_view(
+            EngineAutocompleteJsonView.as_view(admin_site=self.admin_site)),
+            name='reference_engine_variant_autocomplete')] + super().get_urls()
 
 
 @admin.register(FactoryBodyConfiguration)
@@ -288,6 +316,12 @@ class VehicleDefinitionAdminForm(forms.ModelForm):
 
 @admin.register(VehicleDefinition)
 class VehicleDefinitionAdmin(admin.ModelAdmin):
+    def formfield_for_foreignkey(self, db_field, request, **kwargs):
+        if db_field.name == 'engine':
+            kwargs['widget'] = EngineAutocompleteSelect(db_field, self.admin_site,
+                                                       using=kwargs.get('using'))
+        return super().formfield_for_foreignkey(db_field, request, **kwargs)
+
     form = VehicleDefinitionAdminForm
 
     def get_form(self, request, obj=None, **kwargs):

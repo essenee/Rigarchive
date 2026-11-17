@@ -4,6 +4,23 @@ All notable changes to RigArchive will be documented in this file.
 
 ## Unreleased
 
+### Added
+
+- Engine internal variant identity, immutable reviewed keys, composite uniqueness and
+  migration 0015 with fail-closed reversal after nonempty key authoring. Migration is
+  isolated-tested only; live application requires separate authorization.
+- Admin-only variant creation/list/search and distinguishable permission-checked
+  Engine autocomplete choices; public names and vehicle identities are unchanged.
+
+### Fixed
+
+- Fail-closed shared-code Engine resolution and exact PK/UUID consumers, preserving
+  separate incoming property checks and historical Body3.1 bindings.
+- MY2025/MY2026 authorization serialization now uses exact historical field projections,
+  independent of future Engine/model columns. Legacy formats reject nonempty variants;
+  full current-state preservation and historical artifact hashes remain intact.
+
+
 ### MY2022 local SQLite snapshot cleanup completed (2026-11-16)
 
 - Applied exactly 55 approved compact snapshots; original receipt metadata and all

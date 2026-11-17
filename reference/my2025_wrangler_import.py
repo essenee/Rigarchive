@@ -15,7 +15,7 @@ from django.db import connection, transaction
 from django.db.models import Q
 
 from reference.body_identity import baseline_preimage, body_preimage, semantic_digest
-from reference.engine_registry import prepare_registered_vehicle, resolve_engine
+from reference.engine_registry import prepare_registered_vehicle, resolve_engine, validate_engine_properties
 from reference.ingestion.importing.body_identity import family_slugs
 from reference.models import (
     BODY_ATTRIBUTES, Engine, FactoryBodyConfiguration, Generation,
@@ -43,10 +43,45 @@ def require(condition, message):
         raise ValidationError(message)
 
 
+# Historical MY2025 /1 and MY2026 /1,/2 authorization shapes. Retained
+# approval preimages establish these fields, order and all-string value encoding.
+# Complete current-state preservation uses separate exhaustive baselines.
+HISTORICAL_SNAPSHOT_FIELDS = {
+    'manufacturer': (
+        'id', 'uuid', 'created_at', 'updated_at', 'name', 'slug', 'country_code', 'is_active',
+    ),
+    'vehiclemodel': (
+        'id', 'uuid', 'created_at', 'updated_at', 'manufacturer_id', 'name', 'slug', 'is_active',
+    ),
+    'generation': (
+        'id', 'uuid', 'created_at', 'updated_at', 'vehicle_model_id', 'name', 'slug',
+        'generation_number', 'start_year', 'end_year', 'notes', 'is_active',
+    ),
+    'engine': (
+        'id', 'uuid', 'created_at', 'updated_at', 'manufacturer_id', 'engine_code', 'name',
+        'engine_displacement_liters', 'engine_cylinders', 'engine_aspiration', 'fuel_type',
+        'electrification_type',
+    ),
+    'factorybodyconfiguration': (
+        'id', 'uuid', 'created_at', 'updated_at', 'generation_id', 'body_style',
+        'wheelbase_designation', 'body_length_designation', 'roof_height_designation',
+        'door_configuration', 'side_door_arrangement', 'body_code', 'body_code_namespace',
+    ),
+    'vehicledefinition': (
+        'id', 'uuid', 'created_at', 'updated_at', 'generation_id',
+        'factory_body_configuration_id', 'engine_id', 'model_year', 'trim_name', 'engine_name',
+        'engine_displacement_liters', 'engine_cylinders', 'engine_aspiration', 'fuel_type',
+        'electrification_type', 'drivetrain', 'market', 'slug', 'notes', 'is_active',
+    ),
+}
+
+
 def snapshot(obj):
-    """Bind all stored parent/registry fields, including UUID and update time."""
-    return {f.attname: str(getattr(obj, f.attname)) if getattr(obj, f.attname) is not None else None
-            for f in obj._meta.concrete_fields}
+    if isinstance(obj, Engine):
+        require(obj.internal_variant_key == '', 'This historical import format cannot authorize nonempty Engine variants.')
+    fields = HISTORICAL_SNAPSHOT_FIELDS[obj._meta.model_name]
+    return {name: str(getattr(obj, name)) if getattr(obj, name) is not None else None
+            for name in fields}
 
 
 def _vehicle(row, generation):
@@ -78,7 +113,7 @@ def preview():
                 f'Engine {code} missing or duplicated.')
         engine = resolve_engine(manufacturer, code)
         incoming = {k: inventory['engine_profiles'][profile][k] for k in FIELDS}
-        resolve_engine(manufacturer, code, incoming_powertrain=incoming)
+        validate_engine_properties(engine, incoming_powertrain=incoming)
         engines[profile] = engine
     bodies = {}
     for doors in ('two-door', 'four-door'):
@@ -97,11 +132,11 @@ def preview():
         }.items()), 'Inventory row outside approved scope.')
         profile = source['engine_profile']
         engine = engines[profile]
-        resolve_engine(manufacturer, engine.engine_code,
+        validate_engine_properties(engine,
                        incoming_powertrain={k: original[k] for k in FIELDS})
         body = bodies[original['factory_body_configuration']['door_configuration']]
         vehicle = prepare_registered_vehicle(
-            manufacturer, engine.engine_code, generation=generation, model_year=2025,
+            manufacturer, engine.engine_code, engine_pk=engine.pk, engine_uuid=engine.uuid, generation=generation, model_year=2025,
             market='US', drivetrain='4WD', trim_name=original['trim_name'],
             factory_body_configuration=body,
         )

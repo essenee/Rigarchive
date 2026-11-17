@@ -198,9 +198,17 @@ class My2026WranglerImportTests(TestCase):
             self.publish(plan)
         self.assertEqual(ImportExecutionReceipt.objects.count(), 0)
 
+    def test_authorized_exact_reference_survives_unrelated_same_code_variant(self):
+        before = importer.preview()
+        engine = Engine.objects.get(engine_code='ERC')
+        from reference.powertrain import record_powertrain
+        Engine.objects.create(manufacturer=engine.manufacturer, engine_code=engine.engine_code,
+                              internal_variant_key='reviewed-other', name=engine.name, **record_powertrain(engine))
+        self.assertEqual(importer.preview(), before)
+
     def test_missing_engine_fails_closed(self):
         Engine.objects.get(engine_code='ERC').delete()
-        with self.assertRaisesRegex(ValidationError, 'missing or duplicated'):
+        with self.assertRaisesRegex(ValidationError, 'Pinned Engine is unavailable'):
             importer.preview()
 
     def test_conflicting_registry_properties_fail_closed(self):

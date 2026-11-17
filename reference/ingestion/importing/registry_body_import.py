@@ -11,7 +11,7 @@ from django.core.exceptions import ValidationError
 from django.db import OperationalError
 
 from reference import candidate_v3 as wire
-from reference.engine_registry import resolve_engine, EngineRegistryError
+from reference.engine_registry import resolve_engine, validate_engine_properties, EngineRegistryError
 from reference.models import Engine, Manufacturer, VehicleDefinition, normalize_engine_code
 from reference.powertrain import FIELDS, record_powertrain, TAXONOMIES
 from reference.ingestion import body_import_contracts as c
@@ -126,6 +126,7 @@ def serialize(kind,value):
 
 
 def engine_binding(engine):
+    need(engine.internal_variant_key == '', 'ENGINE_VARIANT_UNSUPPORTED', 'Registry 3.1.0 cannot authorize nonempty Engine variants.')
     return seal('Binding',{'manufacturer':{'pk':engine.manufacturer_id,'uuid':str(engine.manufacturer.uuid)},
         'engine':{'pk':engine.pk,'uuid':str(engine.uuid)},'engine_code':engine.engine_code,'name':engine.name,
         'properties':record_powertrain(engine),'updated_at':stamp(engine.updated_at)})
@@ -152,7 +153,7 @@ def _conflicts(candidate,engine,code_reference):
     for i in candidate['normalized_assertions']:
         if i['target_attribute_key'] in FIELDS and i['mapping_status']=='mapped':claims.append({i['target_attribute_key']:i['normalized_concept']})
     for claim in claims:
-        resolve_engine(engine.manufacturer,engine.engine_code,incoming_powertrain=claim)
+        validate_engine_properties(engine,incoming_powertrain=claim)
     # Only explicit, recognized source claims can contradict a registry value.
     # Missing assertions or different raw spelling are never a conflict.
     from reference.powertrain_evidence import supports
@@ -226,7 +227,8 @@ class RegistryRelease(Release):
             pin=wrapped['source_candidate'];read_retained(self.root,pin['reference'],pin['byte_hash'])
         code_from_candidate(candidate,wrapped['code_reference'],binding['engine_code'])
         verify_code_bytes(self.root,candidate,wrapped['code_reference'],binding['engine_code'])
-        try:engine=resolve_engine(binding['manufacturer']['pk'],binding['engine_code'])
+        try:engine=resolve_engine(binding['manufacturer']['pk'],binding['engine_code'],
+                                  engine_pk=binding['engine']['pk'],engine_uuid=binding['engine']['uuid'])
         except EngineRegistryError as exc:raise ResolutionError(exc.code,str(exc),stage='dependency') from exc
         try:_conflicts(candidate,engine,wrapped['code_reference'])
         except EngineRegistryError as exc:raise ResolutionError(exc.code,str(exc),stage='evidence') from exc
