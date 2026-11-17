@@ -298,16 +298,22 @@ def _label_configuration_choices(configurations, group_labels=None):
     engine_labels = [engine_label(vd, short=True,
                                   display_name=vd.engine.name if vd.engine_id else None)
                      for vd in choices]
-    labels = [" · ".join(filter(None, [group_labels.get(vd.pk, vd.trim_name or "") if show_group else "",
-                                      label])) or "Factory configuration" for vd, label in zip(choices, engine_labels)]
-    if (not show_group and len(set(engine_labels)) == 1
-            and len({_drive_wheel_label(vd) for vd in choices}) > 1):
-        labels = [_drive_wheel_label(vd) for vd in choices]
-    fields = [(lambda vd: _drive_wheel_label(vd)),
-              (lambda vd: vd.engine.engine_code if vd.engine_id else ""),
+    # Legacy choices retain the approved varying-dimension shorthand. Registered
+    # Engine names are current presentation authority and must never disappear.
+    legacy_common_engine = not any(vd.engine_id for vd in choices) and len(set(engine_labels)) == 1
+    drive_only = legacy_common_engine and not show_group and len({_drive_wheel_label(vd) for vd in choices}) > 1
+    labels = []
+    for vd, label in zip(choices, engine_labels):
+        parts = [group_labels.get(vd.pk, vd.trim_name or "")] if show_group else []
+        if not drive_only and not (legacy_common_engine and show_group):
+            parts.append(label)
+        parts.append(_drive_wheel_label(vd))
+        labels.append(" · ".join(filter(None, parts)))
+    fields = [(lambda vd: vd.engine.engine_code if vd.engine_id else ""),
               (lambda vd: vd.get_engine_aspiration_display() if vd.engine_aspiration else ""),
               (lambda vd: vd.get_fuel_type_display() if vd.fuel_type else ""),
-              (lambda vd: vd.get_electrification_type_display() if vd.electrification_type else "")]
+              (lambda vd: vd.get_electrification_type_display() if vd.electrification_type else ""),
+              (lambda vd: f"{vd.get_market_display()} ({vd.market})" if vd.market else "")]
     for attribute in fields:
         counts = Counter(labels)
         for label in set(labels):

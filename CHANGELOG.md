@@ -4,6 +4,15 @@ All notable changes to RigArchive will be documented in this file.
 
 ## Unreleased
 
+### Changed
+
+- Completed MY2026 4Runner Engine associations, eight name corrections and fourteen
+  manufacturer MSRP updates; Trailhunter remains hybrid-linked at $68,400.
+- Fixed configurator Engine/drivetrain labels with legacy fallback and deep links.
+  Removed superseded one-off correction code; historical proof limitations remain.
+- Ignore generated local research/database artifacts and document the lightweight
+  default workflow; preserve tracked history and required integrity/audit controls.
+
 ### Added
 
 - Engine internal variant identity, immutable reviewed keys, composite uniqueness and

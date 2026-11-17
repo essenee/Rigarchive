@@ -537,16 +537,16 @@ class ExperimentalVehicleHubAndHomepageTests(TestCase):
         self.assertEqual(response.context["selected_config"].market, "US")
         self.assertContains(self.client.get(sibling.get_absolute_url()), "United States")
 
-    def test_market_only_duplicates_are_reported_without_market_labels(self):
+    def test_market_only_duplicates_use_market_disambiguation(self):
         canadian = VehicleDefinition.objects.create(generation=self.fourth_generation,
                     model_year=2003, trim_name="SR5", engine_name="4.0L V6", drivetrain="2WD", market="CA")
         response = self.client.get(self.fourth_generation.get_absolute_url(), {"year": 2003, "trim": "SR5"})
         choices = response.context["configuration_browser_choices"]
         self.assertEqual({c.pk for c in choices}, {canadian.pk, self.vd_2003_v6.pk})
-        self.assertTrue(response.context["configuration_label_ambiguity"])
-        self.assertTrue(all(c.choice_ambiguous for c in choices))
-        self.assertTrue(all("Canada" not in c.choice_label and "United States" not in c.choice_label for c in choices))
-        self.assertContains(response, "Some factory records share the same public attributes")
+        self.assertFalse(response.context["configuration_label_ambiguity"])
+        self.assertTrue(all(not c.choice_ambiguous for c in choices))
+        self.assertEqual({c.choice_label for c in choices},
+                         {"4.0L V6 · 2WD · Canada (CA)", "4.0L V6 · 2WD · United States (US)"})
 
     def test_identical_attributes_remain_separate_without_identifier_labels(self):
         duplicate = VehicleDefinition.objects.create(generation=self.fourth_generation,

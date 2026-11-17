@@ -115,17 +115,17 @@ class EngineReconciliationTests(TestCase):
         row=self.vehicle(engine=self.erc,engine_name='3.6L V6 with ESS')
         original=(row.pk,row.uuid,row.slug,row.engine_name)
         choices=_label_configuration_choices([row])
-        self.assertEqual(choices[0].choice_label,'3.6L V6')
+        self.assertEqual(choices[0].choice_label,'3.6L V6 · Drive wheels not specified')
         self.assertIn('ESS',row.engine_description)  # shared long Specs caller unchanged
         self.assertIn('ESS',engine_label(row,short=True))  # legacy API default unchanged
         self.erc.name='Owner corrected name';self.erc.save()
         fresh=VehicleDefinition.objects.select_related('engine').get(pk=row.pk)
-        self.assertEqual(_label_configuration_choices([fresh])[0].choice_label,'Owner corrected name')
+        self.assertEqual(_label_configuration_choices([fresh])[0].choice_label,'Owner corrected name · Drive wheels not specified')
         row.refresh_from_db();self.assertEqual((row.pk,row.uuid,row.slug,row.engine_name),original)
 
     def test_unlinked_fallback_hybrid_distinction_grouping_and_selection(self):
         legacy=self.vehicle(engine_name='3.6L V6 with ESS')
-        self.assertEqual(_label_configuration_choices([legacy])[0].choice_label,'3.6L V6 with ESS')
+        self.assertEqual(_label_configuration_choices([legacy])[0].choice_label,'3.6L V6 with ESS · Drive wheels not specified')
         hybrid=self.vehicle(engine=self.erg,trim_name='Other')
         linked=self.vehicle(engine=self.erc)
         context=get_generation_hub_context(self.gen,model_year='2021')

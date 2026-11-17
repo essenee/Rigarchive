@@ -202,6 +202,23 @@ When requirements are ambiguous in ways that affect architecture, data integrity
 
 For read-only assessments, do not create files or perform implementation-related documentation updates.
 
+### Lightweight routine vehicle-data workflow
+
+For routine authoring and corrections, inspect relevant data/code and choose the
+smallest correct change. Obtain owner approval before live writes, create a verified
+backup, apply only approved changes, verify exact before/after differences and
+invariants, run appropriate tests, and report concisely. Commit necessary code,
+tests and documentation only when authorized. Prefer existing Django facilities.
+
+Use concise CURRENT_STATE.md and/or CHANGELOG.md updates. Do not routinely create
+research directories, multiple task documents, JSON inventories, redundant snapshots,
+separate approval manifests, extra execution receipts or one-time correction
+frameworks unless explicitly requested or required by accepted architecture. Major
+architecture, new ingestion contracts, irreversible bulk imports and historical
+provenance changes still require their applicable rigorous review and audit process.
+Preserve established historical records, accepted ADRs, canonical identity, source
+integrity and transaction guarantees; justify complexity by actual risk.
+
 ## 8. Verification
 
 For implementation tasks, run the applicable project checks:

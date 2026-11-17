@@ -1,7 +1,22 @@
 RigArchive Project Status Document
 Version: 1.9
-Last Updated: 2026-11-16
+Last Updated: 2026-11-17
 Purpose: Current implementation status and development roadmap
+
+## MY2026 Toyota 4Runner — authoring complete (2026-11-17)
+
+Completed the 14 existing MY2026 US configurations (PKs 700–713): eight Engine
+associations, forty structured-field completions and fourteen manufacturer MSRP
+updates. The separately authorized atomic name-only correction changed PKs 700–707
+from `2.4L Turbo I4` to registered `2.4L 4-Cyl. Turbo`; a 51-table comparison
+confirmed all other fields/records unchanged. PK 713 remains Engine 13 at $68,400.
+Configurator choices retain registered Engine labels and drivetrain context,
+with legacy fallback and deep links preserved. Obsolete one-off correction code
+was removed; no historical receipt, approval or proof reader was rewritten.
+Original manifest authentication and legacy Engine Proof warnings remain unresolved.
+Verified Stage 2 backup:
+`backups/review/my2026_4runner_direct_names_20261117T192059481070Z/pre_execution.sqlite3`
+(SHA-256 `b504172daf518c7987c345d15ef03f2fc6134d070260beca5a93a7be1de562dc`).
 
 ## Engine internal variant identity — implemented, live migration pending (2026-11-16)
 

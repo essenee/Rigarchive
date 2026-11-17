@@ -58,7 +58,7 @@ class ApprovedEngineAssignmentTests(TestCase):
         self.assertIsNone(excluded.engine_id)
         self.assertEqual(alias.engine_name, '3.6L V6 ESS')
         self.assertEqual(alias.slug, 'preserved-1')
-        self.assertEqual(_label_configuration_choices([alias])[0].choice_label, '3.6L V6')
+        self.assertEqual(_label_configuration_choices([alias])[0].choice_label, '3.6L V6 · Drive wheels not specified')
         self.assertEqual(before['engines'], service.canonical_state()['engines'])
 
     def test_alias_with_ess_spelling_and_hybrid_distinction(self):
