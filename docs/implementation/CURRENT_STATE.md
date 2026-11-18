@@ -3,6 +3,20 @@ Version: 1.9
 Last Updated: 2026-11-17
 Purpose: Current implementation status and development roadmap
 
+## MY2010–2024 Toyota 4Runner — active records authored (2026-11-17)
+
+Authored **137** configuration-specific base MSRPs using Toyota pricing tables and
+Cars.com national configuration listings where retrieved Edmunds pages omitted MSRP.
+PK **558** now has registered name `2.7L 4-Cyl.` (set before Engine **14**, 2TR-FE)
+and five registry-validated powertrain fields. All **140** existing Engine-9 V6
+associations remain intact; MY2010 SR5 I4/V6 identities remain distinct. Superseded
+inactive AWD PKs **23, 25, 34, 36** were left untouched. Atomic execution and a
+52-table comparison verified exactly **144** field changes, preserving all other
+data, identities, statuses, timestamps and historical receipts. SQLite integrity,
+foreign-key and Django checks pass; **95 focused and 1,225 full-suite tests pass**
+using isolated test databases; the live database hash remained unchanged by tests.
+Backup: `backups/snapshots/pre_my2010_2024_4runner_authoring_20261118T010057210085Z.sqlite3`.
+
 ## MY2025 Toyota 4Runner — active records authored (2026-11-17)
 
 Updated only active PKs **686–699**: ten Engine-10 nonhybrid and four Engine-13
