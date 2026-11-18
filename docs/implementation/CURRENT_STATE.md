@@ -3,6 +3,24 @@ Version: 1.9
 Last Updated: 2026-11-17
 Purpose: Current implementation status and development roadmap
 
+## MY2025 Toyota 4Runner — active records authored (2026-11-17)
+
+Updated only active PKs **686–699**: ten Engine-10 nonhybrid and four Engine-13
+hybrid assignments, with registered names set before FKs; seventy unknown powertrain
+fields completed and fourteen base MSRPs verified against Edmunds configuration
+specifications. Retired PKs 672–684 and all MY2026 rows remain unchanged. Atomic ORM
+execution and a 52-table comparison verified exactly 112 authorized field changes,
+preserving identities, slugs, timestamps, Engine records and historical receipts.
+89 focused tests, Django and SQLite integrity/FK checks pass. No code or migration.
+Backup: `backups/snapshots/pre_my2025_4runner_authoring_20261117T214552691034Z.sqlite3`.
+
+The owner subsequently deleted erroneous historical PKs **672–677, 680–684** and
+reactivated/authored **678–679**. Authorized cleanup removed only their eleven
+exclusive creation receipts **2712–2717, 2720–2724** (3,591 → 3,580 receipts).
+All other data remained identical across 52 tables; receipts 2718/2719, shared
+correction audits and source evidence were preserved. Integrity/FK/Django checks pass.
+Backup: `backups/snapshots/pre_my2025_4runner_receipt_cleanup_20261117T221230051086Z.sqlite3`.
+
 ## MY2026 Toyota 4Runner — authoring complete (2026-11-17)
 
 Completed the 14 existing MY2026 US configurations (PKs 700–713): eight Engine
