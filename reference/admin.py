@@ -212,6 +212,69 @@ class GenerationAdmin(admin.ModelAdmin):
     )
 
 
+def factory_body_configuration_label(body):
+    """Admin-only sparse label; retain distinguishing keys/tokens on collisions."""
+    fields = ('door_configuration', *(f for f in BODY_ATTRIBUTES if f != 'door_configuration'))
+
+    def display(field, value):
+        return value.upper() if field in ('body_code', 'body_code_namespace') else value.replace('-', ' ').replace('_', ' ').title()
+
+    def simple(item):
+        return ', '.join(display(f, getattr(item, f)) for f in fields if getattr(item, f))
+
+    label = simple(body)
+    peers = [body, *(other for other in FactoryBodyConfiguration.objects.filter(generation_id=body.generation_id)
+                     if other.pk != body.pk and simple(other) == label)]
+    if len(peers) == 1:
+        return label
+    parts = []
+    for field in fields:
+        value = getattr(body, field)
+        if not value:
+            continue
+        values = {getattr(peer, field) for peer in peers}
+        shown = display(field, value)
+        if len(values) > 1:
+            # Preserve raw spelling if humanization itself collapsed distinct tokens.
+            if any(v and v != value and display(field, v) == shown for v in values):
+                shown = value
+            key = field.replace('_designation', '').replace('_configuration', '').replace('_', ' ').title()
+            shown = f'{key}: {shown}'
+        parts.append(shown)
+    return ', '.join(parts)
+
+
+class FactoryBodyChoiceField(forms.ModelChoiceField):
+    def label_from_instance(self, obj):
+        return factory_body_configuration_label(obj)
+
+
+class FactoryBodyAutocompleteJsonView(AutocompleteJsonView):
+    def process_request(self, request):
+        result = super().process_request(request)
+        if result[1].model is not FactoryBodyConfiguration:
+            raise PermissionDenied
+        return result
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        try:
+            generation_id = int(self.request.GET.get('generation', ''))
+        except (TypeError, ValueError):
+            return queryset.none()
+        return queryset.filter(generation_id=generation_id).order_by('pk')
+
+    def serialize_result(self, obj, to_field_name):
+        result = super().serialize_result(obj, to_field_name)
+        result['text'] = factory_body_configuration_label(obj)
+        return result
+
+
+class FactoryBodyAutocompleteSelect(AutocompleteSelect):
+    def get_url(self):
+        return reverse(f'{self.admin_site.name}:reference_factorybodyconfiguration_scoped_autocomplete')
+
+
 class EngineAutocompleteJsonView(AutocompleteJsonView):
     def get_queryset(self):
         queryset = super().get_queryset()
@@ -368,6 +431,11 @@ class EngineIdentityCorrectionAdmin(admin.ModelAdmin):
 
 @admin.register(FactoryBodyConfiguration)
 class FactoryBodyConfigurationAdmin(admin.ModelAdmin):
+    def get_urls(self):
+        return [path('scoped-autocomplete/', self.admin_site.admin_view(
+            FactoryBodyAutocompleteJsonView.as_view(admin_site=self.admin_site)),
+            name='reference_factorybodyconfiguration_scoped_autocomplete')] + super().get_urls()
+
     list_display = ("generation", *BODY_ATTRIBUTES)
     list_filter = ("generation",)
     search_fields = ("generation__name", "generation__vehicle_model__name", *BODY_ATTRIBUTES)
@@ -416,13 +484,17 @@ class VehicleDefinitionAdminForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        if 'engine' in self.fields:
+        if 'engine' in self.fields or 'factory_body_configuration' in self.fields:
             generation_id = (self.data.get(self.add_prefix('generation')) if self.is_bound
                              else self.initial.get('generation', self.instance.generation_id))
             try:
                 generation_id = int(getattr(generation_id, 'pk', generation_id))
             except (TypeError, ValueError):
                 generation_id = None
+        if 'factory_body_configuration' in self.fields:
+            self.fields['factory_body_configuration'].queryset = FactoryBodyConfiguration.objects.filter(
+                generation_id=generation_id) if generation_id is not None else FactoryBodyConfiguration.objects.none()
+        if 'engine' in self.fields:
             manufacturer_id = Generation.objects.filter(pk=generation_id).values_list(
                 'vehicle_model__manufacturer_id', flat=True).first()
             engines = Engine.objects.available_for_manufacturer(manufacturer_id)
@@ -469,6 +541,10 @@ class VehicleDefinitionAdmin(admin.ModelAdmin):
         if db_field.name == 'engine':
             kwargs['widget'] = EngineAutocompleteSelect(db_field, self.admin_site,
                                                        using=kwargs.get('using'))
+        elif db_field.name == 'factory_body_configuration':
+            kwargs['form_class'] = FactoryBodyChoiceField
+            kwargs['widget'] = FactoryBodyAutocompleteSelect(db_field, self.admin_site,
+                                                            using=kwargs.get('using'))
         return super().formfield_for_foreignkey(db_field, request, **kwargs)
 
     form = VehicleDefinitionAdminForm
@@ -512,7 +588,7 @@ class VehicleDefinitionAdmin(admin.ModelAdmin):
     list_display = (
         "model_year",
         "generation",
-        "factory_body_configuration",
+        "factory_body_configuration_label",
         "engine",
         "trim_name",
         "engine_name",
@@ -531,6 +607,14 @@ class VehicleDefinitionAdmin(admin.ModelAdmin):
         "is_active",
         "market",
     )
+
+    @admin.display(description='Body configuration', ordering='factory_body_configuration')
+    def factory_body_configuration_label(self, obj):
+        if obj.factory_body_configuration_id:
+            return factory_body_configuration_label(obj.factory_body_configuration)
+        return None
+
+    list_select_related = ('generation__vehicle_model__manufacturer', 'factory_body_configuration', 'engine')
 
     search_fields = (
         "trim_name",

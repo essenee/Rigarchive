@@ -168,29 +168,42 @@ const assert = require('node:assert/strict');
 const generation = {value: ''};
 const autocompleteUrl = '/admin/reference/engine/variant-autocomplete/';
 const engine = {value: 'old', getAttribute: name => name === 'data-ajax--url' ? autocompleteUrl : null};
-let prefilter, changed;
+const bodyUrl = '/admin/reference/factorybodyconfiguration/scoped-autocomplete/';
+const body = {value: 'old-body', getAttribute: name => name === 'data-ajax--url' ? bodyUrl : null};
+const prefilters = [], handlers = [];
+function prefilter(...args) { prefilters.forEach(fn => fn(...args)); }
+function changed() { handlers.forEach(fn => fn()); }
 function $(item) {
     if (typeof item === 'function') { item(); return; }
-    return {on: (event, fn) => {changed = fn;}, select2: () => {},
+    return {on: (event, fn) => {handlers.push(fn);}, select2: () => {},
             val: value => {item.value = value; return $(item);}, trigger: () => {}};
 }
-$.ajaxPrefilter = fn => {prefilter = fn;};
+$.ajaxPrefilter = fn => {prefilters.push(fn);};
 global.django = {jQuery: $};
-global.document = {getElementById: id => id === 'id_generation' ? generation : engine};
+global.document = {getElementById: id => id === 'id_generation' ? generation : id === 'id_engine' ? engine : body};
 require(process.argv[1]);
 assert.equal(engine.disabled, true);
+assert.equal(body.disabled, true);
 generation.value = '42'; changed();
 assert.equal(engine.disabled, false); assert.equal(engine.value, null);
+assert.equal(body.disabled, false); assert.equal(body.value, null);
+body.value = 'body42'; changed();
+assert.equal(body.value, 'body42'); // Same eligible Generation preserves selection.
 let aborted = false;
 let request = {url: autocompleteUrl, data: 'term=CODE&page=2'};
 prefilter(request, {}, {abort: () => {aborted = true;}});
 assert.equal(request.data, 'term=CODE&page=2&generation=42');
+let bodyAborted = false;
+request = {url: bodyUrl, data: 'term=four'};
+prefilter(request, {}, {abort: () => {bodyAborted = true;}});
+assert.equal(request.data, 'term=four&generation=42');
 generation.value = '43'; changed();
 assert.equal(aborted, true);
+assert.equal(bodyAborted, true); assert.equal(body.value, null);
 request = {url: autocompleteUrl, data: 'term=CODE'};
 prefilter(request); assert.equal(request.data, 'term=CODE&generation=43');
 request = {url: '/other/', data: 'term=CODE'};
 prefilter(request); assert.equal(request.data, 'term=CODE');
-generation.value = ''; changed(); assert.equal(engine.disabled, true);
+generation.value = ''; changed(); assert.equal(engine.disabled, true); assert.equal(body.disabled, true);
 ''', str(script)], capture_output=True, text=True)
         self.assertEqual(result.returncode, 0, result.stderr)

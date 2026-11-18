@@ -3,6 +3,18 @@ Version: 1.9
 Last Updated: 2026-11-17
 Purpose: Current implementation status and development roadmap
 
+## Factory Body Configuration Admin usability (2026-11-17)
+
+VehicleDefinition body choices and autocomplete are scoped to the selected
+Generation, including unsaved add forms; unknown Generation offers no choices.
+Existing cross-generation model validation is unchanged; none were found in the
+live preflight. The dependent selector preserves eligible selections and clears
+them on Generation changes. Dropdown and changelist share concise property labels
+with distinguishing keys/tokens retained where needed; global model labels remain
+unchanged. Verification: **61 focused tests pass**, one CLI-Node test skipped with
+the combined Engine/body JavaScript regression passing separately. Django/migration
+checks pass; no schema change or live database write was performed.
+
 ## Manufacturer-aware Engine availability — implemented; local migration applied (2026-11-17)
 
 Engine has an optional additional-manufacturers relationship, maintained through
