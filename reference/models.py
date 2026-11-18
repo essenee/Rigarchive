@@ -5,11 +5,13 @@ from django.core.exceptions import ValidationError
 from django.core.validators import MinValueValidator, RegexValidator
 from reference.powertrain import ASPIRATION, FUEL, ELECTRIFICATION, FIELDS, TAXONOMIES, engine_label
 from django.db import models, transaction
+from django.db.models.signals import m2m_changed
 from django.db.models.functions import Coalesce
 from django.db.models.functions import Upper, Trim, Lower, Length
 from reference.body_identity import TOKEN
 from django.urls import reverse
 from django.utils.text import slugify
+from django.dispatch import receiver
 
 from core.models import BaseModel
 
@@ -110,6 +112,12 @@ class EngineCodeCharacters(models.Func):
 
 
 class EngineQuerySet(models.QuerySet):
+    def available_for_manufacturer(self, manufacturer_id):
+        return self.filter(
+            models.Q(manufacturer_id=manufacturer_id)
+            | models.Q(also_available_for_manufacturers__pk=manufacturer_id)
+        ).distinct() if manufacturer_id is not None else self.none()
+
     def update(self, **kwargs):
         raise ValidationError("Maintain Engine records through validated individual saves.")
 
@@ -123,6 +131,10 @@ class EngineQuerySet(models.QuerySet):
 class Engine(BaseModel):
     """Human-maintained manufacturer/code/variant identity, reused across models and years."""
     manufacturer = models.ForeignKey(Manufacturer, on_delete=models.PROTECT, related_name="engines")
+    also_available_for_manufacturers = models.ManyToManyField(
+        Manufacturer, blank=True, related_name="additional_available_engines",
+        verbose_name="Also available for manufacturers",
+    )
     engine_code = models.CharField(max_length=100)
     internal_variant_key = models.CharField(
         max_length=100, blank=True, null=False, default="",
@@ -189,6 +201,16 @@ class Engine(BaseModel):
 
     def __str__(self):
         return f"{self.manufacturer} {self.engine_code} — {self.name}"
+
+
+@receiver(m2m_changed, sender=Engine.also_available_for_manufacturers.through)
+def reject_primary_engine_manufacturer(sender, instance, action, reverse, pk_set, using, **kwargs):
+    if action != 'pre_add':
+        return
+    redundant = (Engine.objects.using(using).filter(pk__in=pk_set, manufacturer_id=instance.pk).exists()
+                 if reverse else instance.manufacturer_id in pk_set)
+    if redundant:
+        raise ValidationError("The primary manufacturer cannot also be an additional manufacturer.")
 
 
 class EngineCorrectionQuerySet(models.QuerySet):
@@ -760,10 +782,13 @@ class VehicleDefinition(BaseModel):
             registry = self.engine
         except Engine.DoesNotExist as exc:
             raise ValidationError({"engine": "ENGINE_NOT_REGISTERED: Engine record is unavailable."}) from exc
-        if self.generation_id and registry.manufacturer_id != self.generation.vehicle_model.manufacturer_id:
-            raise ValidationError({"engine": "Engine manufacturer must match the vehicle manufacturer."})
         if stored is None and self.pk:
             stored = type(self).objects.using(self._state.db).get(pk=self.pk)
+        assignment_changed = (stored is None or stored.engine_id != self.engine_id
+                              or stored.generation_id != self.generation_id)
+        if assignment_changed and self.generation_id and not Engine.objects.using(self._state.db).available_for_manufacturer(
+                self.generation.vehicle_model.manufacturer_id).filter(pk=registry.pk).exists():
+            raise ValidationError({"engine": "Engine is not available for the vehicle manufacturer."})
         changed = stored is None or stored.engine_id != self.engine_id or any(
             getattr(stored, key) != getattr(self, key) for key in FIELDS)
         if not changed:

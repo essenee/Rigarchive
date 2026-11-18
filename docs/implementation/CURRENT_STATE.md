@@ -3,6 +3,25 @@ Version: 1.9
 Last Updated: 2026-11-17
 Purpose: Current implementation status and development roadmap
 
+## Manufacturer-aware Engine availability — implemented; local migration applied (2026-11-17)
+
+Engine has an optional additional-manufacturers relationship, maintained through
+a searchable Admin multi-select with redundant primary-manufacturer validation.
+VehicleDefinition Admin scopes Engine searches and submitted choices through the
+selected Generation's manufacturer, including explicitly shared Engines; unknown
+Generation shows no choices. Generation changes clear selections and abort stale
+searches. Model validation rejects ineligible new/changed associations while
+preserving unrelated edits to unchanged historical associations. New/changed Admin
+assignments require the registered Engine name; historical alias workflows and
+protected Engine identity correction remain intact. Schema-only migration
+**0017_engine_also_available_for_manufacturers** is **applied locally** following separate owner authorization;
+no sharing or canonical data was authored. Verification: **99 focused tests pass**
+(one CLI-Node test skipped; its JavaScript regression passed in the available Node
+runtime separately), Django and migration consistency checks pass. Migration comparison
+preserved all records in the 52 existing tables, adding only an empty sharing table
+and migration bookkeeping. PK721's Admin form/Engine widget renders successfully.
+Verified backup: `backups/snapshots/pre_engine_availability_0017_20261118T024326676870Z.sqlite3`.
+
 ## MY2010–2024 Toyota 4Runner — active records authored (2026-11-17)
 
 Authored **137** configuration-specific base MSRPs using Toyota pricing tables and

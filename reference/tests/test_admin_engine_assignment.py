@@ -53,8 +53,8 @@ class AdminEngineAssignmentTests(TestCase):
         for key,value in before.items():
             if key not in allowed:self.assertEqual(after[key],value,key)
 
-    def test_initial_pre2022_assignment_fills_only_unknowns_preserving_alias_and_identity(self):
-        row=self.legacy(engine_displacement_liters=Decimal('3.6'),engine_cylinders=6)
+    def test_initial_pre2022_assignment_fills_only_unknowns_preserving_name_and_identity(self):
+        row=self.legacy(engine_name=self.erc.name,engine_displacement_liters=Decimal('3.6'),engine_cylinders=6)
         before=VehicleDefinition.objects.values().get(pk=row.pk)
         engines=list(Engine.objects.order_by('pk').values())
         self.assertEqual(self.submit(row,self.erc).status_code,302)
@@ -70,15 +70,19 @@ class AdminEngineAssignmentTests(TestCase):
         row.refresh_from_db()
         self.assertEqual(record_powertrain(row),record_powertrain(self.toyota_engine))
 
-    def test_assignment_retry_with_missing_description_preserves_known_alias(self):
+    def test_assignment_requires_registered_name_before_fk(self):
         row=self.legacy()
         alias=row.engine_name
-        self.assertEqual(self.submit(row,self.erc,engine_name='').status_code,302)
+        self.assertEqual(self.submit(row,self.erc,engine_name='').status_code,200)
         row.refresh_from_db()
         self.assertEqual(row.engine_name,alias)
+        self.assertIsNone(row.engine_id)
+        self.assertEqual(self.submit(row,self.erc,engine_name=self.erc.name).status_code,302)
+        row.refresh_from_db()
+        self.assertEqual(row.engine_name,self.erc.name)
 
     def test_electrification_conflict_is_normal_nonfield_error_and_matching_engine_succeeds(self):
-        row=self.legacy(**(self.pt|{'electrification_type':'mild_hybrid'}))
+        row=self.legacy(engine_name=self.erg.name,**(self.pt|{'electrification_type':'mild_hybrid'}))
         response=self.submit(row,self.erc)
         self.assertEqual(response.status_code,200)
         form=response.context['adminform'].form
@@ -103,12 +107,13 @@ class AdminEngineAssignmentTests(TestCase):
                 self.assertEqual(VehicleDefinition.objects.values().get(pk=row.pk),before)
 
     def test_changing_existing_engine_accepts_compatible_properties_and_rejects_conflicts(self):
-        row=self.legacy(engine=self.erc,**self.pt)
+        compatible=Engine.objects.create(manufacturer=self.jeep,engine_code='ERC2',name=self.erc.name,**self.pt)
+        row=self.legacy(engine=self.erc,engine_name=self.erc.name,**self.pt)
         original=row.slug
-        self.assertEqual(self.submit(row,self.alias).status_code,302)
-        row.refresh_from_db();self.assertEqual(row.engine_id,self.alias.pk)
+        self.assertEqual(self.submit(row,compatible).status_code,302)
+        row.refresh_from_db();self.assertEqual(row.engine_id,compatible.pk)
         self.assertEqual(self.submit(row,self.erg).status_code,200)
-        row.refresh_from_db();self.assertEqual(row.engine_id,self.alias.pk)
+        row.refresh_from_db();self.assertEqual(row.engine_id,compatible.pk)
         self.assertEqual(row.electrification_type,'none');self.assertEqual(row.slug,original)
 
     def test_unchanged_relationship_does_not_cascade_registry_edits(self):

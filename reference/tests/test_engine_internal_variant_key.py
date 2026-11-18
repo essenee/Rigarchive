@@ -152,7 +152,8 @@ class EngineVariantTests(TestCase):
         found, _ = model_admin.get_search_results(request, Engine.objects.all(), 'reviewed')
         self.assertEqual(list(found), [other])
         url = reverse('admin:reference_engine_variant_autocomplete')
-        query = dict(app_label='reference', model_name='vehicledefinition', field_name='engine', term='CODE')
+        query = dict(app_label='reference', model_name='vehicledefinition', field_name='engine', term='CODE',
+                     generation=self.generation.pk)
         self.assertNotEqual(self.client.get(url, query).status_code, 200)
         self.client.force_login(user)
         response = self.client.get(url, query)
@@ -162,7 +163,9 @@ class EngineVariantTests(TestCase):
         results = response.json()['results']
         self.assertEqual(len(results), 2)
         self.assertNotEqual(results[0]['text'], results[1]['text'])
-        self.assertTrue(any('[reviewed]' in row['text'] for row in results))
+        labels = {row['id']: row['text'] for row in results}
+        self.assertEqual(labels[str(self.engine.pk)], f'{self.engine} (PK {self.engine.pk})')
+        self.assertEqual(labels[str(other.pk)], f'{other} [reviewed] (PK {other.pk})')
         form = admin.site._registry[VehicleDefinition].get_form(request)()
         self.assertIn(url, form.fields['engine'].widget.widget.get_url())
 

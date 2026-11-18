@@ -213,6 +213,16 @@ class GenerationAdmin(admin.ModelAdmin):
 
 
 class EngineAutocompleteJsonView(AutocompleteJsonView):
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        try:
+            generation_id = int(self.request.GET.get('generation', ''))
+        except (TypeError, ValueError):
+            return queryset.none()
+        manufacturer_id = Generation.objects.filter(pk=generation_id).values_list(
+            'vehicle_model__manufacturer_id', flat=True).first()
+        return queryset.available_for_manufacturer(manufacturer_id)
+
     def process_request(self, request):
         result = super().process_request(request)
         if result[1].model is not Engine:
@@ -222,14 +232,34 @@ class EngineAutocompleteJsonView(AutocompleteJsonView):
     def serialize_result(self, obj, to_field_name):
         result = super().serialize_result(obj, to_field_name)
         # Admin-only discriminator: public names and Engine.__str__ remain stable.
-        key = obj.internal_variant_key or 'no explicit discriminator'
-        result['text'] = f"{obj} [{key}] (PK {obj.pk})"
+        discriminator = f" [{obj.internal_variant_key}]" if obj.internal_variant_key else ""
+        result['text'] = f"{obj}{discriminator} (PK {obj.pk})"
         return result
 
 
 class EngineAutocompleteSelect(AutocompleteSelect):
     def get_url(self):
         return reverse(f'{self.admin_site.name}:reference_engine_variant_autocomplete')
+
+
+class EngineAdminForm(forms.ModelForm):
+    class Meta:
+        model = Engine
+        fields = '__all__'
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        if self.instance.manufacturer_id:
+            self.fields['also_available_for_manufacturers'].queryset = Manufacturer.objects.exclude(
+                pk=self.instance.manufacturer_id)
+
+    def clean(self):
+        cleaned = super().clean()
+        manufacturer = cleaned.get('manufacturer') or (self.instance.manufacturer if self.instance.manufacturer_id else None)
+        additional = cleaned.get('also_available_for_manufacturers')
+        if manufacturer and additional is not None and additional.filter(pk=manufacturer.pk).exists():
+            self.add_error('also_available_for_manufacturers', 'Do not include the primary manufacturer.')
+        return cleaned
 
 
 class EngineIdentityCorrectionForm(forms.Form):
@@ -300,7 +330,15 @@ class EngineAdmin(admin.ModelAdmin):
     list_filter = ("manufacturer",)
     search_fields = ("manufacturer__name", "engine_code", "internal_variant_key", "name")
     autocomplete_fields = ("manufacturer",)
+    form = EngineAdminForm
+    filter_horizontal = ('also_available_for_manufacturers',)
     readonly_fields = ("uuid", "created_at", "updated_at")
+
+    def get_fields(self, request, obj=None):
+        fields = list(super().get_fields(request, obj))
+        fields.remove('also_available_for_manufacturers')
+        fields.append('also_available_for_manufacturers')
+        return fields
 
     def get_readonly_fields(self, request, obj=None):
         return self.readonly_fields + (("manufacturer", "engine_code", "internal_variant_key") if obj else ())
@@ -378,6 +416,20 @@ class VehicleDefinitionAdminForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+        if 'engine' in self.fields:
+            generation_id = (self.data.get(self.add_prefix('generation')) if self.is_bound
+                             else self.initial.get('generation', self.instance.generation_id))
+            try:
+                generation_id = int(getattr(generation_id, 'pk', generation_id))
+            except (TypeError, ValueError):
+                generation_id = None
+            manufacturer_id = Generation.objects.filter(pk=generation_id).values_list(
+                'vehicle_model__manufacturer_id', flat=True).first()
+            engines = Engine.objects.available_for_manufacturer(manufacturer_id)
+            # Retain an unchanged historical selection even if availability was removed.
+            if self.instance.pk and self.instance.generation_id == generation_id and self.instance.engine_id:
+                engines = (engines | Engine.objects.filter(pk=self.instance.engine_id).distinct()).distinct()
+            self.fields['engine'].queryset = engines
         if self.instance.pk:
             self.initial["slug_correction"] = self.instance.slug
             # Older Admin submissions omit this new input; omission is not a correction.
@@ -385,6 +437,15 @@ class VehicleDefinitionAdminForm(forms.ModelForm):
             if self.is_bound and key not in self.data:
                 self.data = self.data.copy()
                 self.data[key] = self.instance.slug
+
+    def clean(self):
+        cleaned = super().clean()
+        engine = cleaned.get('engine')
+        if engine and (not self.instance.pk or engine.pk != self.instance.engine_id):
+            name = cleaned.get('engine_name', self.instance.engine_name)
+            if name != engine.name:
+                self.add_error(None, 'Set Engine name to the exact registered Engine name before assigning the Engine.')
+        return cleaned
 
     def clean_slug_correction(self):
         if self.add_prefix("slug_correction") not in self.data:
@@ -400,6 +461,10 @@ class VehicleDefinitionAdminForm(forms.ModelForm):
 
 @admin.register(VehicleDefinition)
 class VehicleDefinitionAdmin(admin.ModelAdmin):
+    class Media:
+        js = ('admin/js/jquery.init.js', 'admin/js/autocomplete.js',
+              'js/admin_engine_availability.js')
+
     def formfield_for_foreignkey(self, db_field, request, **kwargs):
         if db_field.name == 'engine':
             kwargs['widget'] = EngineAutocompleteSelect(db_field, self.admin_site,
@@ -459,12 +524,12 @@ class VehicleDefinitionAdmin(admin.ModelAdmin):
     )
 
     list_filter = (
+        "generation__vehicle_model__manufacturer",
+        "drivetrain",
+        "model_year",
         "is_public",
         "is_active",
         "market",
-        "drivetrain",
-        "model_year",
-        "generation__vehicle_model__manufacturer",
     )
 
     search_fields = (
