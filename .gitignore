@@ -99,3 +99,6 @@ htmlcov/
 
 # Temporary implementation task instructions
 /docs/implementation/tasks/
+
+# Local Configuration Logic OAuth credentials and publication registry
+/.configuration-logic/

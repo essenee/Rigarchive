@@ -3,6 +3,23 @@ Version: 1.9
 Last Updated: 2026-11-19
 Purpose: Current implementation status and development roadmap
 
+## Generation Configuration Logic (2026-11-19)
+
+Generation export and Google publication share a structured draft. Tacoma
+Fourth Generation has MY2026 and MY2025 database-derived review tabs, an
+empty MY2024 research draft and consolidated Source References. The
+publisher uses desktop OAuth, an explicit local spreadsheet registry and
+draft fingerprints. Pending creation reservations can be inspected offline,
+reconciled to a verified spreadsheet ID, or released with explicit owner
+confirmation and a local audit record. The local export and dry run work offline.
+The owner confirmed the first live Tacoma workbook has the four expected tabs and
+a subsequent remote dry run reported `Remote draft already matches`. The
+registered workbook remains a draft. Final repository review hardened validation
+of incomplete reservations and fixed the MY2025 legacy XLSX evidence comparison.
+Django checks and migration consistency passed, along with 21 focused tests
+and the full 1,279-test suite (one skip, zero failures).
+See the [publication guide](../development/CONFIGURATION_LOGIC.md).
+
 ## MY2026 Toyota Tacoma — base MSRP completion (2026-11-19)
 
 All **24 active US Tacoma definitions** now have base MSRPs. Filled 19 blank

@@ -1,6 +1,9 @@
+import hashlib
 import importlib.util
+import json
 from pathlib import Path
 from tempfile import TemporaryDirectory
+from types import SimpleNamespace
 from unittest import skipUnless
 from unittest.mock import patch
 
@@ -8,6 +11,7 @@ from django.core.management import call_command
 from django.core.management.base import CommandError
 from django.test import TestCase
 
+from reference.management.commands.export_configuration_logic import source_rows
 from reference.models import FactoryBodyConfiguration, Generation, Manufacturer, VehicleDefinition, VehicleModel
 
 
@@ -50,20 +54,39 @@ class ConfigurationLogicWorkbookTests(TestCase):
         inventory, options, logic, sources = workbook.worksheets
         self.assertEqual(inventory["A3"].value, "4 canonical configurations  ·  3 trim/body groups")
         data = list(inventory.iter_rows(min_row=6, values_only=True))
-        expected = [beta, alpha_2wd, alpha_4wd, unknown]
+        expected = [beta, alpha_4wd, alpha_2wd, unknown]
         self.assertEqual([(row[0], row[7], row[8]) for row in data],
                          [(n, v.pk, v.slug) for n, v in enumerate(expected, 1)])
         self.assertEqual(data[0][5], "Unresolved")
-        self.assertEqual([row[10] for row in data], [30000.50, None, 40000, None])
+        self.assertEqual([row[10] for row in data], [30000.50, 40000, None, None])
         self.assertEqual(inventory.auto_filter.ref, "A5:K9")
         self.assertFalse(inventory.merged_cells)
         self.assertFalse(options.merged_cells)
-        self.assertEqual([cell[0].value for cell in options["A6:A10"]], [1, 2, 2, 3, 4])
+        self.assertEqual([cell[0].value for cell in options["A6:A10"]], [1, 2, 3, 3, 4])
         self.assertEqual({str(item) for item in logic.merged_cells.ranges},
-                         {f"{column}7:{column}8" for column in "ABCDEFGHIJK"})
-        self.assertEqual([cell[0].value for cell in logic["A6:A10"]], [1, 2, None, 3, 4])
-        self.assertEqual((logic["L7"].value, logic["P8"].value), ("8-speed automatic", "Tow Package"))
-        self.assertIsNone(logic["P7"].value)
-        self.assertIsNone(logic["L8"].value)
+                         {f"{column}8:{column}9" for column in "ABCDEFGHIJK"})
+        self.assertEqual([cell[0].value for cell in logic["A6:A10"]], [1, 2, 3, None, 4])
+        self.assertEqual((logic["L8"].value, logic["P9"].value), ("8-speed automatic", "Tow Package"))
+        self.assertIsNone(logic["P8"].value)
+        self.assertIsNone(logic["L9"].value)
         self.assertEqual(sources["E6"].value, 4)
         self.assertEqual(VehicleDefinition.objects.count(), 5)
+
+    def test_year_comparison_counts_selected_models_without_counting_alternatives(self):
+        review = {
+            "observed_on": "2026-11-18", "scope": "Reviewed scope", "sources": [],
+            "configurations": [
+                {"selected_toyota_model": {"trim": "SR", "cab": "Double Cab", "bed": "5-ft"},
+                 "alternate_toyota_models": [{"code": "7547"}]},
+                {"manufacturer_marketed_trim": "SR", "cab": "Double Cab", "bed": "5-ft"},
+            ],
+        }
+        raw = json.dumps(review).encode()
+        receipt = SimpleNamespace(raw_artifact_hash="sha256:" + hashlib.sha256(raw).hexdigest(),
+                                  raw_artifact_reference="review.json")
+        with TemporaryDirectory() as directory:
+            path = Path(directory) / "review.json"
+            path.write_bytes(raw)
+            rows = list(source_rows(2025, 2, 1, path, {1: receipt}))
+        self.assertEqual(rows[1][4:6], (2, 1))
+        self.assertEqual(rows[2][4:6], (0, 0))

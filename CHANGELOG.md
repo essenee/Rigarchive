@@ -28,6 +28,13 @@ All notable changes to RigArchive will be documented in this file.
 
 ### Added
 
+- Added generation-level Configuration Logic XLSX export and a guarded Google
+  Sheets draft publisher with offline planning, desktop OAuth and local
+  publication fingerprints. Added explicit, audited recovery for interrupted
+  first creation and safe operation-specific Google error diagnostics.
+  Final review tightened reservation validation, kept remote dry runs from
+  persisting refreshed tokens, and fixed MY2025 evidence counts in year exports.
+
 - Added nominal pickup cab/bed support in migration 0018 and generation-scoped
   Admin choices. Pickup authoring uses body-aware identity and records reviewed
   evidence; historical wire formats retain their existing scope.
