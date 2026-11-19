@@ -311,11 +311,12 @@ def sheet_requests(table, sheet_id, sheet, previous, index):
 
 def publish(api, draft, path, state, *, dry_run=False, allow_shrink=False, report=None):
     if "working_revision" in state:
-        from reference.configuration_logic_revisions import check_working_remote, load_revision
+        from reference.configuration_logic_revisions import check_working_remote, load_layout, load_revision
 
         previous = load_revision(state, path)
-        remote = check_working_remote(api, draft, state, previous, report=report)
-        if any(remote_values(remote[table.name]) != desired_values(table) for table in draft.sheets):
+        check_working_remote(api, draft, state, previous, report=report,
+                             flexible=load_layout(state, path) is not None)
+        if any(remote_values(previous[table.name]) != desired_values(table) for table in draft.sheets):
             raise CommandError("Working revision is registered. Use a revision-bound --edits plan.")
         return []
 

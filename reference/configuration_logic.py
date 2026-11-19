@@ -202,6 +202,7 @@ def generation_draft(generation):
 
 def export_generation(options):
     from openpyxl import Workbook
+    from openpyxl.comments import Comment
     from openpyxl.styles import Alignment, Font, PatternFill
     from openpyxl.utils import get_column_letter
 
@@ -209,11 +210,12 @@ def export_generation(options):
         raise CommandError("Generation export uses receipt-pinned evidence; --reviewed-observations applies to --year.")
     generation = select_generation(options["manufacturer"], options["model"], options["generation"])
     from reference.configuration_logic_google import read_registry
-    from reference.configuration_logic_revisions import current_draft
+    from reference.configuration_logic_revisions import current_draft, load_revision, sheet_cells
 
     registry = Path(settings.BASE_DIR) / ".configuration-logic" / f"{generation.uuid}.json"
     state = read_registry(registry, str(generation.uuid), allow_pending=True)
     draft = current_draft(generation, registry, state)
+    captured = load_revision(state, registry) or {}
     workbook = Workbook()
     workbook.remove(workbook.active)
     workbook.properties.title = draft.title
@@ -232,8 +234,23 @@ def export_generation(options):
                     cell.fill = PatternFill("solid", fgColor="23445D")
                 elif cell.row > 4 and cell.column - 1 in table.prices:
                     cell.number_format = "#,##0.00"
-        sheet["A1"].font = Font(size=16, bold=True, color="17324D")
-        sheet["A2"].font = Font(bold=True)
+        for cell in sheet[1]:
+            if cell.value is not None:
+                cell.font = Font(size=16, bold=True, color="17324D")
+        for cell in sheet[2]:
+            if cell.value is not None:
+                cell.font = Font(bold=True)
+        if table.name in captured:
+            for (row, col), data in sheet_cells(captured[table.name]).items():
+                if col >= len(table.widths):
+                    continue
+                cell = sheet.cell(row + 1, col + 1)
+                if data.get("note"):
+                    cell.comment = Comment(data["note"], "RigArchive")
+                number_format = data.get("userEnteredFormat", {}).get("numberFormat", {})
+                if number_format.get("type") in {"NUMBER", "CURRENCY", "PERCENT", "DATE", "TIME", "DATE_TIME", "SCIENTIFIC", "TEXT"}:
+                    if number_format.get("pattern"):
+                        cell.number_format = number_format["pattern"]
         sheet.freeze_panes = "A5"
         sheet.sheet_view.showGridLines = False
         for index, width in enumerate(table.widths, 1):

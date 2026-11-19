@@ -12,7 +12,13 @@ from captured values. The owner completed live B2 acceptance at working
 revision `ea49a12304c74edfab951dc40101491a`. The follow-up separates cosmetic
 presentation changes from blocking content, note, and structural differences.
 No-op publication preserves formatting without advancing the registry.
-Column rearrangement and approval are outside this scope.
+B3 adds verified same-tab column permutations, stable working-row bindings,
+logical edit plans, layout-aware XLSX export, and optional automatic Change Log
+synchronization after owner enablement. B2 revisions remain readable. Tacoma
+layout enrollment, Change Log activation, and live B3 acceptance are complete.
+The registered cleanup revision `5d61b67182af454e871012dc2f10f1b2` preserves
+the accepted column order and human formatting. Approval remains outside this
+scope.
 See the [publication and capture guide](../development/CONFIGURATION_LOGIC.md).
 
 ## Generation Configuration Logic (2026-11-19)

@@ -150,6 +150,14 @@ separately, so pause spreadsheet editing before saving. Save rechecks the
 remote state immediately before registering; Google does not offer an atomic
 read-and-register operation spanning Sheets and the local filesystem.
 
+A human handoff can explicitly authorize Codex to inspect and register the
+latest workbook for a named generation in one workflow. Include the expected
+edits or the scope of acceptable differences. Codex can proceed from inspection
+to capture when the observed changes match that authorization. This also allows
+the enabled Change Log to synchronize. Targeted agent publication, manufacturer
+Configuration Logic approval, and canonical database changes require separate
+authorization.
+
 ### Local revisions and recovery
 
 Revisions live under
@@ -179,8 +187,8 @@ of a working artifact into Git requires separate owner review. Registration
 does not approve a snapshot, change evidence classification, or authorize any
 Django reconciliation. The API does not reliably identify the editor of each
 individual change. The receipt records the explicit local operation, not an
-inferred editor. `--history` provides the local change log. A remote Change Log
-worksheet is deferred.
+inferred editor. `--history` provides the local history. The separate Change Log
+projection below is available after explicit enablement.
 
 ### Resume from the registered working revision
 
@@ -208,15 +216,17 @@ registered content and structure, and the resulting schema. It sends only the
 intended values and verifies the returned values and captured metadata before
 registering the successor. Unregistered changes to values, source references,
 or research notes block publication. Supported content changes must be
-explicitly captured before preparing a new edit plan. Unsupported changes
-such as reordering columns must be resolved in Sheets before capture.
+explicitly captured before preparing a new edit plan. Whole-column reordering is supported after layout enrollment. Unsupported
+column changes must be resolved in Sheets before capture.
 
 Each comparison derives separate content, structure and presentation views
 from the registered snapshot and the current remote grid. This works with
 existing revision files and leaves their integrity hashes intact.
 Presentation-only differences are reported and do not require a new revision.
 A no-op leaves the working pointer and fingerprints intact. An explicit
-`--save --confirm` may capture presentation alone. A successful targeted
+`--save --confirm` may capture presentation alone, including widths, alignment,
+wrapping, and number formats. Presentation alone creates no semantic Change Log
+entry. A successful targeted
 value edit captures the preserved presentation in its successor revision.
 
 | Surface | Working revision behavior |
@@ -229,7 +239,7 @@ value edit captures the preserved presentation in its successor revision.
 | Hidden or grouped dimensions | Changes block publication because rows or columns can disappear from review. |
 | Conditional formatting | Rule changes block publication because rules can carry review cues. A previously unrecorded rule or hidden dimension on a legacy revision requires an explicit capture. |
 | Merged cells | A change to any merge blocks publication. Decorative merges entirely above the column headers can be explicitly captured. Header or data merges are refused even during capture. |
-| Headers, column order, rows, and worksheet identity | Missing, renamed, duplicated, or moved headers, changed row placement or count, and changed worksheet identity block publication. Capture still requires exact ordered headers and stable tab IDs. |
+| Headers, column order, rows, and worksheet identity | Enrolled revisions accept complete same-tab column moves that preserve field-bound content. Missing, renamed, duplicated or unknown headers, changes to row placement or count, and changed worksheet identity block publication. Legacy coordinate plans require the registered column order. |
 | Drive comments and sharing settings | Outside the comparison. Targeted writes do not change them. |
 
 Milestone A setup and pre-capture publication still use their existing sheet
@@ -237,11 +247,130 @@ formatting requests. The value-only guarantees above apply to the captured
 working-revision path. The publisher rechecks the remote state immediately
 before writing. Concurrent edits can still land between the read and the write.
 If post-write verification finds any unexpected captured change, the registry
-does not advance. The generation XLSX is a data projection. It does not
-reproduce the captured Google presentation or notes.
+does not advance. The generation XLSX projects data in the registered column order and retains
+cell notes, supported number-format patterns, and approximate column widths.
+Other Google presentation is not reproduced exactly.
 
 Continue to use Source Selection Protocol v1.0 for research. Human edits retain
 the source and applicability cells supplied in the workbook, but are not
 automatically manufacturer-direct. The current workbook has source references
 and provenance notes. It does not yet encode a complete assertion-level evidence
 graph or an approved-snapshot contract.
+
+## B3 layout enrollment and logical publication
+
+After reviewing the existing registered draft, an owner can enroll it without
+writing Sheets values. Use the same scope arguments above.
+
+```bash
+.venv/bin/python manage.py save_configuration_logic "${scope[@]}" --inspect
+.venv/bin/python manage.py save_configuration_logic "${scope[@]}" --save --confirm --enroll-layout
+```
+
+The enrolled successor pins a versioned `layout.json` alongside the captured
+grid. Old B2 manifests and CSVs remain readable and are never rewritten.
+The descriptor maps logical field IDs to the required unique headers, sheet IDs,
+physical columns, row IDs, and parent relationships. It records logical content,
+structure, and presentation hashes. CSV files retain observed display order.
+An enrolled generation XLSX exports that registered order; compatible remote
+moves appear in the XLSX after capture. Google-specific protections, filters,
+conditional rules and rich text are not reproduced by the XLSX projection.
+
+Move whole columns within their original tab. The move must carry every value,
+note, validation and noncosmetic property with its header. Unknown populated
+columns, column copies, header renames or deletions, cross-tab moves and
+header/data merges are refused. Unregistered semantic edits combined with a
+move on the same tab are refused during capture. Capture those changes separately.
+During capture and targeted-publication preflight, a move must preserve the
+logical fields covered by filter ranges and frozen columns, and the field
+bindings of supported sort keys and filter criteria. A raw column index that
+now points to a different logical field fails this check. Unverifiable metadata,
+such as charts, groups, and formula-based filter criteria, blocks a column move.
+
+Working-row IDs are opaque. Continuity compares exact configuration witnesses
+using trim, body, cab, bed, drivetrain, Engine and market. For alternatives,
+the witness includes the parent and factory alternative fields. For sources,
+it uses year, organization, title, locator and evidence identifier. IDs carry
+forward when a unique witness matches and retained rows remain in order.
+A capture may add or remove unambiguous rows, but a mixture of unmatched old and
+new identities, duplicate witnesses or reordering is refused for owner
+adjudication. A correction to a witness can require such review. There is no
+automatic identity override. Human-visible numbers, Toyota codes and canonical
+database identifiers remain separate from the opaque IDs.
+
+For a logical edit, use schema 2 and pick a row ID and field ID from the
+registered layout. The numbers below are illustrative only.
+
+```json
+{
+  "schema": 2,
+  "base_revision": "REGISTERED_REVISION_ID",
+  "edits": [
+    {"sheet_id": 1, "row_id": "WORKING_ROW_ID", "field_id": "configuration.base_msrp", "before": 31590, "value": 31600}
+  ]
+}
+```
+
+Use the existing `--publish --edits PLAN.json` command only with authorization
+for the exact edit. For example, if Base MSRP moves from L to H, the publisher
+resolves the field to H immediately before writing. It checks the registered
+base revision, logical contents, row order, field identity and typed expected
+prior value. The post-write comparison verifies the complete expected visible
+values and captured presentation. Legacy schema 1 physical coordinates still
+work only in the exact registered column order. A compatible move or cosmetic
+edit by itself causes no publication and does not advance the revision.
+A move after the final read remains a race; pause collaborative editing.
+
+## B3 editable Change Log projection
+
+Enable this feature separately after inspecting the live workbook. This command
+can create the fifth worksheet, so it requires owner authorization.
+
+```bash
+.venv/bin/python manage.py save_configuration_logic "${scope[@]}" --sync-change-log --confirm
+```
+
+`Change Log` is appended after Source References. Existing configuration tab
+IDs stay intact. The first six columns contain machine-managed revision ID,
+recorded date, operation origin, affected worksheets, generated summary and
+author. Unrecorded attribution or timestamps display as such. The last two
+columns, Description and Additional notes, are free text and stay editable.
+Machine fields have a warning-only protection request in Sheets and are
+verified independently. Use Description for an explanation or a summary override.
+
+The projection reads verified local revision manifests, change records and
+receipts. It appends one entry per meaningful revision and summarizes larger
+diffs. Cell changes, source changes, research notes and record additions or
+removals appear in it. Initial captures without a comparison and layout-only
+revisions have no semantic entry. A matching entry is reused by revision ID.
+Existing human-created descriptions and notes are preserved.
+
+After enablement, a successful save or agent edit automatically attempts
+synchronization. Failure leaves the committed working revision usable and
+reports projection staleness. The isolated local `<generation-uuid>.change-log.json`
+records the managed sheet ID, generated entries, last synchronized revision,
+and the observed and intended machine-managed states for pending operations.
+Include it when backing up local state.
+The projection is excluded from content capture; log updates create no
+working revision. A missing, stale, or conflicting log does not prevent work
+on the registered configuration tabs.
+
+Retry with the same explicit synchronization command after inspecting an
+interruption. A pending operation is acknowledged without another write when
+the exact intended managed entries are already present. The same reserved
+sheet ID is reused for a creation retry only when the observed state shows
+no applied change. A pending repair retries when the machine-managed fields
+still match the recorded pre-operation state. If they match neither state,
+synchronization stops for reconciliation. Retries update only machine-managed
+fields and preserve newer edits to Description and Additional notes.
+The publisher does not
+adopt a conflicting tab named Change Log. To repair edited machine fields on
+the registered tab, review its entries and add `--rebuild-change-log` to the
+explicit synchronization command. Rebuild requires the existing entry IDs to
+match uniquely and repairs only verified machine columns. Deleted tabs, missing
+or duplicate IDs and unknown entries require owner reconciliation or recovery
+from a trusted workbook copy to protect human annotations.
+
+Local revisions remain the authority. A Change Log annotation does not change
+the underlying diff, evidence classification, approval state, or canonical data.
+Source Selection Protocol v1.0 continues to apply.

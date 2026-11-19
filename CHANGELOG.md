@@ -28,6 +28,14 @@ All notable changes to RigArchive will be documented in this file.
 
 ### Added
 
+- Added layout-enrolled Configuration Logic revisions with stable logical
+  fields, working-row identities, logical edit plans, and registered XLSX order.
+- Added an editable Change Log projection that preserves annotation fields and
+  synchronizes semantic revisions after explicit owner enablement.
+- Validate filter and frozen-column bindings by logical field during column
+  moves, and recover interrupted Change Log repairs from verified before and
+  after states.
+
 - Added working-revision inspection, capture and history for registered Google
   Sheets drafts. Resumed exports use the captured revision, and explicitly
   revision-bound publications update only the specified cell values. Compatible

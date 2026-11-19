@@ -6,9 +6,10 @@ from django.conf import settings
 from django.core.management.base import BaseCommand, CommandError
 
 from reference.configuration_logic import select_generation
+from reference.configuration_logic_changelog import sync_after_revision, sync_change_log
 from reference.configuration_logic_google import connect, read_registry, registry_lock
 from reference.configuration_logic_revisions import (
-    capture_remote, changes_between, current_draft, load_revision, save_remote, validated_rows, working_history,
+    capture_remote, changes_between, current_draft, load_layout, load_revision, save_remote, validated_rows, working_history,
 )
 
 
@@ -22,18 +23,26 @@ class Command(BaseCommand):
         mode = parser.add_mutually_exclusive_group(required=True)
         mode.add_argument("--inspect", action="store_true")
         mode.add_argument("--save", action="store_true")
+        mode.add_argument("--sync-change-log", action="store_true",
+                          help="Enable or retry the separate Change Log projection.")
         mode.add_argument("--history", action="store_true", help="List locally registered working revisions.")
         parser.add_argument("--confirm", action="store_true")
+        parser.add_argument("--enroll-layout", action="store_true")
+        parser.add_argument("--rebuild-change-log", action="store_true")
 
     def handle(self, *args, **options):
-        if options["save"] != options["confirm"]:
-            raise CommandError("Use --save --confirm to register a working revision.")
+        if options["rebuild_change_log"] and not options["sync_change_log"]:
+            raise CommandError("--rebuild-change-log requires --sync-change-log --confirm.")
+        if options["enroll_layout"] and not options["save"]:
+            raise CommandError("--enroll-layout requires --save --confirm.")
+        if (options["save"] or options["sync_change_log"]) != options["confirm"]:
+            raise CommandError("Use --save --confirm to register a working revision or --sync-change-log --confirm to enable synchronization.")
         generation = select_generation(options["manufacturer"], options["model"], options["generation"])
         directory = Path(settings.BASE_DIR) / ".configuration-logic"
         key = str(generation.uuid)
         path = directory / f"{key}.json"
         try:
-            with registry_lock(path) if options["save"] else nullcontext():
+            with registry_lock(path) if options["save"] or options["sync_change_log"] else nullcontext():
                 state = read_registry(path, key)
                 if not state or not state["sheets"]:
                     raise CommandError("A registered workbook with worksheet IDs is required.")
@@ -47,14 +56,23 @@ class Command(BaseCommand):
                 draft = current_draft(generation, path, state)
                 previous = load_revision(state, path)
                 api = connect(directory, persist=False)
+                if options["sync_change_log"]:
+                    if previous is None:
+                        raise CommandError("Register a working revision before enabling Change Log synchronization.")
+                    self.stdout.write(sync_change_log(api, draft, path, state, enable=True,
+                                                      rebuild=options["rebuild_change_log"]))
+                    return
                 remote = capture_remote(api, draft, state)
                 if options["save"]:
-                    revision = save_remote(api, draft, path, state, remote, previous)
+                    revision = save_remote(api, draft, path, state, remote, previous, enroll=options["enroll_layout"])
                     self.stdout.write(f"Registered working revision {revision}." if revision else "No new revision needed.")
+                    if revision:
+                        sync_after_revision(api, draft, path, read_registry(path, key), self.stdout.write)
                     return
                 if previous is None:
                     self.stdout.write("No trustworthy local comparison baseline exists. Current values can be inspected, but prior edits cannot be reconstructed.")
-                changes = changes_between(previous, remote, draft.sheets)
+                flexible = load_layout(state, path) is not None
+                changes = changes_between(previous, remote, draft.sheets, flexible=flexible)
                 for table in draft.sheets:
                     name = table.name
                     change = changes[name]
@@ -64,6 +82,8 @@ class Command(BaseCommand):
                     else:
                         self.stdout.write(f"  Values changed: {len(change['cells'])}; notes changed: {len(change['notes'])}; "
                                           f"headers changed: {change['headers_changed']}; metadata changed: {change['sheet_metadata_changed']}")
+                        if change["column_order_changed"]:
+                            self.stdout.write("  Managed column order changed.")
                         if change["fingerprint_changed"] and not (change["cells"] or change["notes"]):
                             self.stdout.write("  Captured formatting or sheet metadata changed.")
                         for kind, old_start, old_size, new_start, new_size in change["row_changes"]:
@@ -73,7 +93,7 @@ class Command(BaseCommand):
                                 self.stdout.write(f"  {kind} R{item['row']}C{item['column']}: "
                                                   f"{item['before']!r} → {item['after']!r}")
                     try:
-                        validated_rows(table, remote[name])
+                        validated_rows(table, remote[name], flexible=flexible)
                     except CommandError as exc:
                         self.stdout.write(f"  Incompatible: {exc}")
         except OSError as exc:

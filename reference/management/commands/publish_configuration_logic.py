@@ -5,6 +5,7 @@ from django.conf import settings
 from django.core.management.base import BaseCommand, CommandError
 
 from reference.configuration_logic import select_generation
+from reference.configuration_logic_changelog import sync_after_revision
 from reference.configuration_logic_google import (
     RECOVERY_CAUTION, connect, create, publish, read_registry, recover_registry, registry_lock, release_reservation,
 )
@@ -124,10 +125,11 @@ class Command(BaseCommand):
                 if options["edits"]:
                     if not state or not state.get("working_revision"):
                         raise CommandError("Register a working revision before publishing a targeted edit.")
-                    revision = publish_working_edits(
-                        connect(directory, persist=False), draft, path, state, options["edits"], report=self.stdout.write,
-                    )
+                    api = connect(directory, persist=False)
+                    revision = publish_working_edits(api, draft, path, state, options["edits"], report=self.stdout.write)
                     self.stdout.write(f"Published and registered working revision {revision}." if revision else "No cell changes needed.")
+                    if revision:
+                        sync_after_revision(api, draft, path, read_registry(path, key), self.stdout.write)
                     return
                 api = connect(directory)
                 if state is None or released:
