@@ -250,6 +250,10 @@ def _body_dimension_label(key, value):
         return key.replace("_designation", "").replace("_", " ").capitalize() + " unspecified"
     if key == "body_code":
         return f"Body {value[1]} ({value[0]})"
+    if key == 'cab_configuration':
+        return {'xtracab': 'XtraCab', 'double-cab': 'Double Cab'}.get(value, value)
+    if key == 'bed_length':
+        return value + ' Bed'
     if key == "door_configuration":
         return {"two-door": "2-Door", "four-door": "4-Door"}.get(value, value.replace("-", " ").title())
     text = value.replace("-", " ").title()
@@ -271,12 +275,23 @@ def _trim_body_groups(configurations):
         group = groups.setdefault(key, {"key": key, "trim": trim, "body": body, "pks": []})
         group["pks"].append(vd.pk)
     dimensions = {key: _body_dimensions(group["body"]) for key, group in groups.items()}
-    fields = tuple(_body_dimensions(next((g["body"] for g in groups.values() if g["body"]), None)))
+    pickup = any(g['body'] and (g['body'].cab_configuration or g['body'].bed_length_id)
+                 for g in groups.values())
+    if pickup:
+        # Keep every known cab/bed distinction visible even within a single trim.
+        for key, group in groups.items():
+            body = group['body']
+            dimensions[key] |= {'cab_configuration': body.cab_configuration if body else None,
+                                'bed_length': body.bed_length.designation if body and body.bed_length_id else None}
+    fields = tuple(dict.fromkeys(field for values in dimensions.values() for field in values))
     global_varying = [field for field in fields if len({d.get(field) for d in dimensions.values()}) > 1]
     for key, group in groups.items():
         peers = [dimensions[k] for k, g in groups.items() if g["trim"] == group["trim"]]
         varying = [field for field in fields if len({d.get(field) for d in peers}) > 1]
         selected = varying or [field for field in global_varying if dimensions[key].get(field) is not None]
+        if group['body'] and (group['body'].cab_configuration or group['body'].bed_length_id):
+            selected = [f for f in selected if f not in ('door_configuration', 'cab_configuration', 'bed_length')]
+            selected += [f for f in ('cab_configuration', 'bed_length') if dimensions[key].get(f)]
         if not group["trim"] and not selected:
             selected = [field for field, value in dimensions[key].items() if value is not None]
         parts = ([group["trim"]] if group["trim"] else []) + [
@@ -349,7 +364,7 @@ def get_generation_hub_context(
     # 1. Retrieve all active canonical configurations for this generation
     active_defs = (
         generation.vehicle_definitions.publicly_visible()
-        .select_related("generation__vehicle_model__manufacturer", "factory_body_configuration", "engine")
+        .select_related("generation__vehicle_model__manufacturer", "factory_body_configuration__bed_length", "engine")
         .order_by("-model_year", "trim_name", "drivetrain", "engine_name", "market", "slug")
     )
 

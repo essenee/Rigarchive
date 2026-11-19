@@ -96,5 +96,15 @@ class AdminBodyConfigurationTests(TestCase):
         length=FactoryBodyConfiguration.objects.create(generation=self.generation,body_length_designation='long')
         self.assertEqual(factory_body_configuration_label(wheelbase),'Wheelbase: Long')
         self.assertEqual(factory_body_configuration_label(length),'Body Length: Long')
-        alternate=FactoryBodyConfiguration.objects.create(generation=self.generation,door_configuration='four_door')
-        self.assertNotEqual(factory_body_configuration_label(alternate),factory_body_configuration_label(self.four))
+        first=FactoryBodyConfiguration.objects.create(generation=self.generation,body_style='long-body')
+        alternate=FactoryBodyConfiguration.objects.create(generation=self.generation,body_style='long_body')
+        self.assertNotEqual(factory_body_configuration_label(alternate),factory_body_configuration_label(first))
+
+    def test_vehicle_pk_is_visible_and_read_only(self):
+        row = self.vehicle()
+        listing = self.client.get(reverse('admin:reference_vehicledefinition_changelist'))
+        self.assertContains(listing, 'column-record_pk')
+        self.assertContains(listing, f'class="field-record_pk">{row.pk}</td>')
+        detail = self.client.get(reverse('admin:reference_vehicledefinition_change', args=[row.pk]))
+        self.assertContains(detail, f'<div class="readonly">{row.pk}</div>', html=True)
+        self.assertNotIn('record_pk', detail.context['adminform'].form.fields)

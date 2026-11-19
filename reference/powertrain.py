@@ -64,6 +64,8 @@ def qualified_slug(base, values, engine_name):
     validate_powertrain(values, complete=True)
     liters = re.findall(r"(?<![\w.])(\d+(?:\.\d+)?)\s*L\b", engine_name, re.I)
     cylinders = re.findall(r"\b[VI][- ]?([1-9]\d*)\b", engine_name, re.I)
+    if not cylinders:
+        cylinders = re.findall(r"\b([1-9]\d*)[- ]Cyl(?:inder)?s?\b", engine_name, re.I)
     if (len(liters) != 1 or len(cylinders) != 1
             or Decimal(liters[0]) != Decimal(values[FIELDS[0]])
             or int(cylinders[0]) != values[FIELDS[1]]):

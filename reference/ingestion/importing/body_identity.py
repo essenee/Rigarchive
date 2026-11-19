@@ -58,6 +58,8 @@ def read_retained(root, reference, expected=None):
 
 
 def body_state(body):
+    need(not body.cab_configuration and not body.bed_length_id,
+         'UNSUPPORTED_BODY_DIMENSION', 'This historical body contract does not represent pickup cab/bed properties.')
     attrs = {k: getattr(body, k) for k in c.ATTRIBUTES}
     pre = c.tuple_preimage(SCOPE, attrs)
     return c.validate("BodyState", {"pk": body.pk, "uuid": str(body.uuid), "generation_uuid": str(body.generation.uuid), "attributes": attrs,

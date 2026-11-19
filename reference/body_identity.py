@@ -25,6 +25,48 @@ TOKEN = re.compile(r"[a-z0-9]+(?:[-._][a-z0-9]+)*", re.ASCII)
 HASH = re.compile(r"sha256:[0-9a-f]{64}", re.ASCII)
 
 
+def authoring_body_dimensions(body):
+    """Current ORM authoring tuple, separate from frozen /2 wire projections.
+
+    Nominal bed designations carry meaning; database PKs/UUIDs do not substitute
+    for them. This does not extend DIMENSIONS or reinterpret old proof hashes.
+    """
+    if body is None:
+        return None
+    from reference.models import BODY_ATTRIBUTES
+    values = {key: getattr(body, key) or None for key in BODY_ATTRIBUTES}
+    values['cab_configuration'] = body.cab_configuration or None
+    values['bed_length'] = body.bed_length.designation if body.bed_length_id else None
+    return values
+
+
+def pickup_slug_suffix(body):
+    """Readable, deterministic qualifiers for newly authored pickup URLs only."""
+    from django.utils.text import slugify
+    if not (body.cab_configuration or body.bed_length_id):
+        return ''
+    values = authoring_body_dimensions(body)
+    bed = values.pop('bed_length')
+    parts = [values.pop('cab_configuration'), bed + '-bed' if bed else None]
+    redundant_door = {'xtracab': 'two-door', 'double-cab': 'four-door'}.get(body.cab_configuration)
+    if redundant_door and values['door_configuration'] == redundant_door:
+        values.pop('door_configuration')
+    parts.extend(key.replace('_', '-') + '-' + value for key, value in values.items() if value)
+    return slugify('-'.join(part for part in parts if part))
+
+
+def authoring_configuration_key(vehicle):
+    """Current human-authoring identity; transmission/output variants are not keys."""
+    from reference.powertrain import record_powertrain
+    powertrain = record_powertrain(vehicle)
+    validate_powertrain(powertrain, complete=True)
+    return canonical_json({
+        'generation_uuid': str(vehicle.generation.uuid), 'model_year': vehicle.model_year,
+        'market': vehicle.market, 'trim_name': vehicle.trim_name, 'drivetrain': vehicle.drivetrain,
+        'powertrain': powertrain, 'body': authoring_body_dimensions(vehicle.factory_body_configuration),
+    })
+
+
 def _require(condition, message):
     if not condition:
         raise ValidationError(message)

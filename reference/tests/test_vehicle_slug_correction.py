@@ -68,7 +68,9 @@ class VehicleSlugCorrectionTests(TestCase):
         url = reverse('admin:reference_vehicledefinition_add')
         form = self.client.get(url).context['adminform'].form
         self.assertNotIn('slug_correction', form.fields)
-        response = self.client.post(url, self.data(trim_name='New trim', engine_name='', slug_correction='injected'))
+        response = self.client.post(
+            url, self.data(trim_name='New trim', engine_name=self.engine.name, slug_correction='injected')
+        )
         self.assertEqual(response.status_code, 302)
         new = VehicleDefinition.objects.get(trim_name='New trim')
         self.assertTrue(new.slug)

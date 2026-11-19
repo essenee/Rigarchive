@@ -423,6 +423,24 @@ BODY_ATTRIBUTES = (
     "roof_height_designation", "door_configuration", "side_door_arrangement",
     "body_code", "body_code_namespace",
 )
+# Preserve BODY_ATTRIBUTES as the frozen historical import projection.
+BODY_AUTHORING_ATTRIBUTES = (*BODY_ATTRIBUTES, 'cab_configuration', 'bed_length')
+
+
+class NominalBedLength(BaseModel):
+    """Manufacturer nominal category, not a precise physical measurement."""
+    designation = models.CharField(max_length=128, unique=True,
+        validators=[RegexValidator(r"\A[1-9][0-9]*(?:\.[0-9]+)?-ft\Z", "Use a nominal foot category, e.g. 5.5-ft.")])
+
+    class Meta:
+        ordering = ('designation',)
+
+    def save(self, *args, **kwargs):
+        self.full_clean()
+        return super().save(*args, **kwargs)
+
+    def __str__(self):
+        return f'{self.designation} Bed'
 
 
 class FactoryBodyQuerySet(models.QuerySet):
@@ -442,6 +460,18 @@ class FactoryBodyConfiguration(BaseModel):
     generation = models.ForeignKey(
         Generation, on_delete=models.PROTECT, related_name="factory_body_configurations",
     )
+    class CabConfiguration(models.TextChoices):
+        XTRACAB = 'xtracab', 'XtraCab'
+        DOUBLE_CAB = 'double-cab', 'Double Cab'
+
+    class DoorConfiguration(models.TextChoices):
+        TWO_DOOR = 'two-door', '2-Door'
+        FOUR_DOOR = 'four-door', '4-Door'
+
+    cab_configuration = models.CharField(max_length=128, null=True, blank=True,
+                                        choices=CabConfiguration.choices)
+    bed_length = models.ForeignKey(NominalBedLength, on_delete=models.PROTECT,
+                                  null=True, blank=True, related_name='body_configurations')
     body_style = models.CharField(max_length=128, null=True, blank=True,
         validators=[RegexValidator(r"\A" + TOKEN.pattern + r"\Z", "Use a reviewed canonical designation token.")])
     wheelbase_designation = models.CharField(max_length=128, null=True, blank=True,
@@ -451,6 +481,7 @@ class FactoryBodyConfiguration(BaseModel):
     roof_height_designation = models.CharField(max_length=128, null=True, blank=True,
         validators=[RegexValidator(r"\A" + TOKEN.pattern + r"\Z", "Use a reviewed canonical designation token.")])
     door_configuration = models.CharField(max_length=128, null=True, blank=True,
+        choices=DoorConfiguration.choices,
         validators=[RegexValidator(r"\A" + TOKEN.pattern + r"\Z", "Use a reviewed canonical designation token.")])
     side_door_arrangement = models.CharField(max_length=128, null=True, blank=True,
         validators=[RegexValidator(r"\A" + TOKEN.pattern + r"\Z", "Use a reviewed canonical designation token.")])
@@ -475,9 +506,15 @@ class FactoryBodyConfiguration(BaseModel):
                     | models.Q(roof_height_designation__isnull=False)
                     | models.Q(door_configuration__isnull=False)
                     | models.Q(side_door_arrangement__isnull=False)
-                    | models.Q(body_code__isnull=False)),
+                    | models.Q(body_code__isnull=False)
+                    | models.Q(cab_configuration__isnull=False)
+                    | models.Q(bed_length__isnull=False)),
                 name="reference_body_has_dimension",
             ),
+            models.CheckConstraint(condition=models.Q(cab_configuration__isnull=True)
+                | models.Q(cab_configuration__in=['xtracab', 'double-cab']), name='reference_body_cab_choice'),
+            models.CheckConstraint(condition=models.Q(door_configuration__isnull=True)
+                | models.Q(door_configuration__in=['two-door', 'four-door']), name='reference_body_door_choice'),
             *[models.CheckConstraint(
                 condition=models.Q(**{field + "__isnull": True}) | ~models.Q(**{field: ""}),
                 name="reference_body_nonempty_" + field,
@@ -485,11 +522,15 @@ class FactoryBodyConfiguration(BaseModel):
             models.UniqueConstraint(
                 models.F("generation"),
                 *[Coalesce(field, models.Value("")) for field in BODY_ATTRIBUTES],
+                Coalesce('cab_configuration', models.Value('')),
+                Coalesce('bed_length', models.Value(0), output_field=models.BigIntegerField()),
                 name="reference_body_exact_tuple",
             ),
         ]
 
     def clean_fields(self, exclude=None):
+        if self.cab_configuration == '':
+            self.cab_configuration = None
         for field in BODY_ATTRIBUTES:
             if field in (exclude or ()):
                 continue
@@ -502,6 +543,9 @@ class FactoryBodyConfiguration(BaseModel):
 
     def clean(self):
         super().clean()
+        doors = {'xtracab': 'two-door', 'double-cab': 'four-door'}.get(self.cab_configuration)
+        if doors and self.door_configuration and self.door_configuration != doors:
+            raise ValidationError({'door_configuration': 'Door configuration contradicts the selected cab.'})
         if self.pk and self.vehicle_definitions.exclude(generation_id=self.generation_id).exists():
             raise ValidationError({"generation": "Generation must match every referencing VehicleDefinition."})
 
@@ -516,7 +560,7 @@ class FactoryBodyConfiguration(BaseModel):
             return super().save(*args, **kwargs)
 
     def __str__(self):
-        attributes = ", ".join(f"{field}: {getattr(self, field)}" for field in BODY_ATTRIBUTES if getattr(self, field))
+        attributes = ", ".join(f"{field}: {getattr(self, field)}" for field in BODY_AUTHORING_ATTRIBUTES if getattr(self, field))
         return f"{self.generation} — {attributes}"
 
 
@@ -761,7 +805,14 @@ class VehicleDefinition(BaseModel):
         base = slugify(source)
         if all(getattr(self, key) is not None for key in FIELDS):
             from reference.powertrain import qualified_slug, record_powertrain
-            return qualified_slug(base, record_powertrain(self), self.engine_name)
+            base = qualified_slug(base, record_powertrain(self), self.engine_name)
+        if self.factory_body_configuration_id:
+            from reference.body_identity import pickup_slug_suffix
+            suffix = pickup_slug_suffix(self.factory_body_configuration)
+            if suffix:
+                base += '-' + suffix
+        if len(base) > 180:
+            raise ValidationError({'slug': 'Configuration slug exceeds 180 characters.'})
         return base
 
     def _validate_body_scope(self, generation_id=None, body_id=None):

@@ -1,7 +1,146 @@
 RigArchive Project Status Document
 Version: 1.9
-Last Updated: 2026-11-17
+Last Updated: 2026-11-19
 Purpose: Current implementation status and development roadmap
+
+## MY2026 Toyota Tacoma — base MSRP completion (2026-11-19)
+
+All **24 active US Tacoma definitions** now have base MSRPs. Filled 19 blank
+prices from the local Toyota model-code pricing workbook after matching PK, slug,
+trim, cab/bed, drivetrain and Engine variant. Existing prices and inactive rows
+were preserved during the MSRP write. The current 24 active rows include five
+legacy PKs (393, 397, 398, 400, 403). PKs 1170, 1178 and 1181 are inactive
+and match the pre-MY2025 snapshot. Six earlier MY2026 legacy PKs (394, 395,
+396, 399, 401, 402) were present before the November 18 reconciliation and
+already absent in that later snapshot. This checkpoint takes the current database
+as-is; those prior removals are outside the MSRP write. A 54-table and schema
+comparison of the MSRP transaction verified that only the 19
+`base_msrp` fields changed. SQLite integrity and foreign-key checks passed.
+Backup: `backups/snapshots/pre_my2026_tacoma_msrp_20261119T125501853175Z.sqlite3`,
+SHA-256 `8c7442001a78ce50c163595116127af585ef90d8b8c4fecc90d1113ddd608f79`.
+
+## MY2025 Toyota Tacoma — selected-model authoring (2026-11-18)
+
+US Generation 28 now has **24 active VehicleDefinitions across 17 trim/body
+groups** (PKs 1189–1212). Each has a registered Engine, a factory body and a base
+MSRP from Toyota's November 5, 2025 schedule. Eleven overlapping legacy rows
+(PKs 382–392) were deactivated; their fields and history were preserved.
+Of 27 Toyota model codes, three are retained as transmission alternatives in
+the reviewed observations. Selected SR code 7594 wins its price tie as the
+automatic; manual codes 7543 and 7545 have the lower MSRP for their respective
+TRD Sport and TRD Off-Road configurations.
+
+A 54-table and schema comparison verified exactly 24 new definitions, 24
+receipts (3616–3639), 11 active-flag changes and the corresponding SQLite
+sequences. SQLite integrity and foreign-key checks passed. The verified backup
+is `backups/snapshots/pre_my2025_tacoma_authoring_20261119T042045732713Z.sqlite3`
+with SHA-256 `721c2ed186c62058839090905c365ce1f5ae4d13dd334442894d74ec56ff4194`.
+Preserve the receipt-pinned local [observations](tasks/my2025-tacoma-authoring-observations.json)
+with the database. The regenerated local workbook maps the 24 selected codes
+to their canonical PKs and labels the three alternatives.
+
+## Model-year configuration logic workbooks (2026-11-18)
+
+`export_configuration_logic --manufacturer Toyota --model Tacoma --year 2026`
+exports active definitions, factory options, a grouped presentation, and source
+references. It uses optional `openpyxl` and writes to `scratch/` by default.
+Use `--output` for a different XLSX destination and `--reviewed-observations`
+for retained, receipt-pinned manufacturer comparison evidence. VehicleDefinition
+Admin displays the PK in the changelist and as a read-only field on the change page.
+
+The inventory and grouped view show each definition's stored base MSRP. Trims
+stay together and sort by their lowest recorded price, with unpriced trims last.
+The initial Tacoma pilot was run before the current active set and MSRP completion.
+The standalone Toyota-priced workbooks are local artifacts. Toyota model codes
+and sourced comparison prices in those workbooks are evidence, while the
+management command exports the current stored MSRP. There are no published
+Tacoma transmission or factory-package offerings in scope. The exporter reads
+the database without changing records or schema.
+Django checks, migration consistency and eight focused tests passed. The full
+suite ran 1,259 tests with one skip and one failure in the Admin slug-creation test.
+That failure also reproduces with the PK display changes disabled. The test posts
+an Engine assignment with a blank Engine name, which fails the existing validation.
+
+## MY2026 Tacoma — initial pickup-aware reconciliation (2026-11-18)
+
+At the end of the initial run, Toyota's US MY2026 builder scope was **24 active configurations / 17 marketed
+trim-body choices**: **22 created (PK1167–1188)** and **2 exact identities reused
+(397 PreRunner, 403 TRD Pro)**. At that point nine ambiguous legacy rows were
+inactive and unchanged; the initial run did not delete records. Three
+manual-capable configurations (1170,1178,1181) have complete shared powertrain
+fields but deliberately no forced Engine output FK; both reviewed output options
+are retained. The other 21 had exact existing Engine links. New MSRP was unknown at that
+point; the current roster and pricing are documented above.
+
+Current ORM authoring compares all body attributes including nominal cab/bed,
+derives readable pickup qualifiers only for new slugs, and writes atomic compact
+`human-body-authoring/1` receipts (3592–3615). Historical Candidate/body/registry
+wire formats and hashes are unchanged. Public Configurator groups distinguish cab
+and bed without synthetic trim suffixes; actual Toyota i-FORCE MAX labels remain.
+No new schema migration was needed. **295 regression tests + 21 post-write tests
+pass**; Django checks and migration consistency pass. A 54-table/schema comparison
+verified only 22 new definitions, two active flags, 24 receipts and sequence changes;
+all other data, timestamps, identities and historical provenance remained identical.
+SQLite integrity/FK checks and all 17 groups/switches/deep links/hash pins pass.
+Backup: `backups/snapshots/pre_my2026_tacoma_reconciliation_20261118T155513999646Z.sqlite3`,
+SHA-256 `9e4f1f92bc9f3de44f54133c42e5d5fce5b8071af004628bb4bca528be613dc9`.
+[Execution and exact legacy dependencies](tasks/my2026-tacoma-reconciliation.md).
+That report and its receipt-pinned observation JSON are local ignored artifacts;
+preserve both with any future database checkpoint (existing ignore rules unchanged).
+The instructed `venv/py313/bin/python` is absent; verification used the available
+`.venv/bin/python` (Python3.13.1/Django6.0.7), without dependency changes.
+
+## Pickup body authoring and controlled Admin choices (2026-11-18)
+
+FactoryBodyConfiguration now has optional cab choices and a protected nominal
+bed-length FK. Native Admin dropdowns cover cab, doors and nominal bed length;
+other open designations/codes remain token-validated text. Administrators can add
+nominal categories such as 5.5-ft, 6.5-ft and 8-ft without another code/schema change.
+Concise pickup labels show cab/bed and retain structured doors without redundancy;
+Wrangler labels and Generation-scoped filtering remain intact. Frozen historical
+body projections are unchanged and reject unsupported pickup dimensions explicitly.
+Migration **0018_nominalbedlength_and_more** is applied. Nominal 5-ft/6-ft categories
+and Tacoma Generation-28 bodies **5–7** (XtraCab/6-ft; Double Cab/5-ft; Double Cab/6-ft)
+were created before any VehicleDefinition assignments in that migration step. All existing values across
+53 tables were preserved, including Wrangler bodies, Engines, MSRPs and receipts;
+only the new registry/bodies and expected migration/permission bookkeeping were added.
+**86 focused and 103 compatibility test executions pass**; Admin rendering, Django,
+migration consistency and SQLite integrity/FK checks pass.
+Backup: `backups/snapshots/pre_pickup_body_support_20261118T151127043194Z.sqlite3`.
+
+## MY2026 Toyota Tacoma — bounded Engine/MSRP authoring (2026-11-18)
+
+Inspected **11 inactive** records (PKs 393–403). Owner clarified use of existing
+Engine variant keys: assigned PK393 → **17** (228 hp), PKs395–398 → **10** (278 hp),
+PK402 → **15** (Trailhunter 323 hp), and PK403 → **13** (MAX 326 hp). Registered
+names were set before FKs; model validation completed **35** unknown powertrain
+fields. No uniquely manual configuration supports Engine16/270 hp. PKs **394,
+399–401** retain null Engine links because transmission/hybrid distinctions remain
+unresolved in retained evidence. Toyota MY2026 specifications support assigned
+variants; its current configuration pricing supports **$39,135** for PK397 and
+**$64,750** for PK403. Nine other prices remain null pending exact configurations.
+Atomic comparison of **53 tables** verified exactly **51** permitted field changes;
+inactive statuses, identities, timestamps, Engines/sharing, receipts, audits and
+all other data/schema preserved. **89 focused tests**, Django and SQLite integrity/FK
+checks pass. Existing staged contents preserved; no code or migration.
+Backup: `backups/snapshots/pre_my2026_tacoma_authoring_20261118T133841558057Z.sqlite3`.
+
+## MY2003–2009 Toyota 4Runner — fourth-generation authoring (2026-11-17)
+
+Inspected **85** active Generation-23 records. Preserved **43** Engine-9 V6 links
+and two existing Engine-11 V8 links; assigned the remaining **40** V8s to Engine
+**11**, `2UZ-FE`, `4.7L V8`, with exact names set before FKs and **200** null
+powertrain fields completed through model validation. Authored **84** base MSRPs
+(12 per model year), using exact national Cars.com configurations and corroborating
+Toyota US pricing tables where retrieved Edmunds pages omitted original MSRP.
+MY2008 uses the secondary catalog schedule, $400 above the earlier Toyota brochure.
+PK **126**, MY2009 Trail Edition, retains its correct V6 link and null MSRP: no
+independent configuration base price was verified for that package-based identity.
+Atomic execution and a **53-table** comparison verified exactly **324** authorized
+field changes; all other data/schema, identities, timestamps, Engine sharing,
+receipts and audits preserved. **95 focused tests**, Django and SQLite integrity/FK
+checks pass. No code or migration.
+Backup: `backups/snapshots/pre_my2003_2009_4runner_authoring_20261118T034741661750Z.sqlite3`.
 
 ## Factory Body Configuration Admin usability (2026-11-17)
 

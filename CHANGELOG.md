@@ -6,6 +6,14 @@ All notable changes to RigArchive will be documented in this file.
 
 ### Changed
 
+- Completed pickup-aware MY2026 US Tacoma authoring and filled 19 missing
+  base MSRPs from Toyota's model-code pricing. MY2025 and MY2026 each have
+  24 active, fully priced definitions across 17 trim/body groups.
+
+- Authored 24 MY2025 US Tacoma VehicleDefinitions with registered Engines,
+  factory bodies and Toyota base MSRPs. Deactivated 11 overlapping legacy rows
+  and retained all 27 Toyota model codes in the authoring evidence.
+
 - Applied Engine correction audit migration 0016 under separate owner authorization;
   verified backup, exact expected schema/bookkeeping changes and unchanged existing
   data. The owner subsequently corrected Engine 10 to non-hybrid with a verified
@@ -19,6 +27,16 @@ All notable changes to RigArchive will be documented in this file.
   default workflow; preserve tracked history and required integrity/audit controls.
 
 ### Added
+
+- Added nominal pickup cab/bed support in migration 0018 and generation-scoped
+  Admin choices. Pickup authoring uses body-aware identity and records reviewed
+  evidence; historical wire formats retain their existing scope.
+
+- Added read-only model-year configuration logic XLSX export with a canonical
+  inventory, factory option rows, grouped presentation and source comparison.
+  The inventory and grouped view show base MSRP and order trims by their lowest
+  recorded price.
+- Show the VehicleDefinition PK in the Admin changelist and change page.
 
 - Protected Engine variant-key correction with permission-controlled Admin review,
   explicit confirmation, stale-state checks and an atomic append-only before/after

@@ -15,6 +15,8 @@ from .models import (
     EngineIdentityCorrection,
     FactoryBodyConfiguration,
     BODY_ATTRIBUTES,
+    BODY_AUTHORING_ATTRIBUTES,
+    NominalBedLength,
     GenerationCorrespondenceRevision,
     CanonicalRecordCorrection,
     Generation,
@@ -214,16 +216,22 @@ class GenerationAdmin(admin.ModelAdmin):
 
 def factory_body_configuration_label(body):
     """Admin-only sparse label; retain distinguishing keys/tokens on collisions."""
-    fields = ('door_configuration', *(f for f in BODY_ATTRIBUTES if f != 'door_configuration'))
+    fields = ('cab_configuration', 'bed_length', 'door_configuration',
+              *(f for f in BODY_ATTRIBUTES if f != 'door_configuration'))
 
     def display(field, value):
+        if field == 'cab_configuration':
+            return dict(FactoryBodyConfiguration.CabConfiguration.choices)[value]
+        if field == 'bed_length':
+            return str(value)
         return value.upper() if field in ('body_code', 'body_code_namespace') else value.replace('-', ' ').replace('_', ' ').title()
 
     def simple(item):
-        return ', '.join(display(f, getattr(item, f)) for f in fields if getattr(item, f))
+        return ', '.join(display(f, getattr(item, f)) for f in fields if getattr(item, f)
+                         and not (f == 'door_configuration' and item.cab_configuration))
 
     label = simple(body)
-    peers = [body, *(other for other in FactoryBodyConfiguration.objects.filter(generation_id=body.generation_id)
+    peers = [body, *(other for other in FactoryBodyConfiguration.objects.filter(generation_id=body.generation_id).select_related('bed_length')
                      if other.pk != body.pk and simple(other) == label)]
     if len(peers) == 1:
         return label
@@ -233,6 +241,8 @@ def factory_body_configuration_label(body):
         if not value:
             continue
         values = {getattr(peer, field) for peer in peers}
+        if field == 'door_configuration' and body.cab_configuration and len(values) == 1:
+            continue
         shown = display(field, value)
         if len(values) > 1:
             # Preserve raw spelling if humanization itself collapsed distinct tokens.
@@ -436,9 +446,10 @@ class FactoryBodyConfigurationAdmin(admin.ModelAdmin):
             FactoryBodyAutocompleteJsonView.as_view(admin_site=self.admin_site)),
             name='reference_factorybodyconfiguration_scoped_autocomplete')] + super().get_urls()
 
-    list_display = ("generation", *BODY_ATTRIBUTES)
+    list_display = ("generation", *BODY_AUTHORING_ATTRIBUTES)
     list_filter = ("generation",)
-    search_fields = ("generation__name", "generation__vehicle_model__name", *BODY_ATTRIBUTES)
+    search_fields = ("generation__name", "generation__vehicle_model__name", *BODY_ATTRIBUTES,
+                     'cab_configuration', 'bed_length__designation')
     autocomplete_fields = ("generation",)
     readonly_fields = ("uuid", "created_at", "updated_at")
 
@@ -452,6 +463,13 @@ class FactoryBodyConfigurationAdmin(admin.ModelAdmin):
                     "Prefer correcting an incorrect vehicle body association or creating a distinct body configuration.",
                     level=messages.WARNING)
         return super().change_view(request, object_id, form_url, extra_context)
+
+
+@admin.register(NominalBedLength)
+class NominalBedLengthAdmin(admin.ModelAdmin):
+    list_display = ('designation',)
+    search_fields = ('designation',)
+    readonly_fields = ('uuid', 'created_at', 'updated_at')
 
 
 class VehicleDefinitionAdminForm(forms.ModelForm):
@@ -587,6 +605,7 @@ class VehicleDefinitionAdmin(admin.ModelAdmin):
 
     list_display = (
         "model_year",
+        "record_pk",
         "generation",
         "factory_body_configuration_label",
         "engine",
@@ -598,6 +617,10 @@ class VehicleDefinitionAdmin(admin.ModelAdmin):
         "is_active",
         "is_public",
     )
+
+    @admin.display(description="PK", ordering="pk")
+    def record_pk(self, obj):
+        return obj.pk
 
     list_filter = (
         "generation__vehicle_model__manufacturer",
@@ -632,6 +655,7 @@ class VehicleDefinitionAdmin(admin.ModelAdmin):
     )
 
     readonly_fields = (
+        "record_pk",
         "uuid",
         "slug",
         "created_at",
@@ -643,6 +667,7 @@ class VehicleDefinitionAdmin(admin.ModelAdmin):
             "Vehicle configuration",
             {
                 "fields": (
+                    "record_pk",
                     "generation",
                     "factory_body_configuration",
                     "engine",
