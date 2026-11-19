@@ -28,6 +28,12 @@ All notable changes to RigArchive will be documented in this file.
 
 ### Added
 
+- Added working-revision inspection, capture and history for registered Google
+  Sheets drafts. Resumed exports use the captured revision, and explicitly
+  revision-bound publications update only the specified cell values. Compatible
+  presentation changes are preserved without a prerequisite capture. Content,
+  annotation, and structural conflicts still block publication.
+
 - Added generation-level Configuration Logic XLSX export and a guarded Google
   Sheets draft publisher with offline planning, desktop OAuth and local
   publication fingerprints. Added explicit, audited recovery for interrupted

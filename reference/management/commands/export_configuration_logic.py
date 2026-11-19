@@ -210,6 +210,15 @@ class Command(BaseCommand):
         if len({vehicle.generation.vehicle_model_id for vehicle in configurations}) != 1:
             raise CommandError("More than one vehicle model matches the supplied manufacturer and model.")
 
+        from reference.configuration_logic_google import read_registry
+        from reference.configuration_logic_revisions import load_revision
+
+        for generation in {vehicle.generation for vehicle in configurations}:
+            key = str(generation.uuid)
+            registry = Path(settings.BASE_DIR) / ".configuration-logic" / f"{key}.json"
+            if load_revision(read_registry(registry, key, allow_pending=True), registry) is not None:
+                raise CommandError("A working revision exists. Use --generation to export its registered data.")
+
         output = options["output"] or (
             settings.BASE_DIR / "scratch" / f"{slugify(manufacturer)}-{slugify(model)}-{year}-configuration-logic.xlsx"
         )

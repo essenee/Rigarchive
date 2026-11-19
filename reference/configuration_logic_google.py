@@ -216,8 +216,8 @@ def fingerprint(sheet):
     return digest(sheet)
 
 
-def read_remote(api, spreadsheet_id, title):
-    response = api_call("spreadsheets.get", api.get, spreadsheetId=spreadsheet_id, includeGridData=True, fields=FIELDS)
+def read_remote(api, spreadsheet_id, title, *, fields=FIELDS):
+    response = api_call("spreadsheets.get", api.get, spreadsheetId=spreadsheet_id, includeGridData=True, fields=fields)
     if response.get("spreadsheetId") != spreadsheet_id or response.get("properties", {}).get("title") != title:
         raise CommandError("Registered spreadsheet identity or title differs. Publication stopped.")
     sheets = response.get("sheets", [])
@@ -309,7 +309,16 @@ def sheet_requests(table, sheet_id, sheet, previous, index):
     return requests
 
 
-def publish(api, draft, path, state, *, dry_run=False, allow_shrink=False):
+def publish(api, draft, path, state, *, dry_run=False, allow_shrink=False, report=None):
+    if "working_revision" in state:
+        from reference.configuration_logic_revisions import check_working_remote, load_revision
+
+        previous = load_revision(state, path)
+        remote = check_working_remote(api, draft, state, previous, report=report)
+        if any(remote_values(remote[table.name]) != desired_values(table) for table in draft.sheets):
+            raise CommandError("Working revision is registered. Use a revision-bound --edits plan.")
+        return []
+
     spreadsheet_id = state["spreadsheet"]
     remote = read_remote(api, spreadsheet_id, draft.title)
     prior = state["sheets"]

@@ -172,10 +172,14 @@ def draft_year(title, year, configurations, *, authored_rows=(), authored_source
     return Sheet(f"MY{year}", ((title,), (status,), (), HEADERS, *data), WIDTHS, (11, 17)), sources
 
 
-def generation_draft(generation):
+def generation_title(generation):
     model = generation.vehicle_model
     generation_name = "4th Generation" if generation.name.casefold() == "fourth generation" else generation.name
-    title = f"{model.manufacturer.name} {model.name} — {generation_name} — Configuration Logic"
+    return f"{model.manufacturer.name} {model.name} — {generation_name} — Configuration Logic"
+
+
+def generation_draft(generation):
+    title = generation_title(generation)
     by_year = {}
     for vehicle in generation.vehicle_definitions.filter(is_active=True).select_related(
         "generation", "engine", "factory_body_configuration__bed_length",
@@ -204,7 +208,12 @@ def export_generation(options):
     if options["reviewed_observations"] is not None:
         raise CommandError("Generation export uses receipt-pinned evidence; --reviewed-observations applies to --year.")
     generation = select_generation(options["manufacturer"], options["model"], options["generation"])
-    draft = generation_draft(generation)
+    from reference.configuration_logic_google import read_registry
+    from reference.configuration_logic_revisions import current_draft
+
+    registry = Path(settings.BASE_DIR) / ".configuration-logic" / f"{generation.uuid}.json"
+    state = read_registry(registry, str(generation.uuid), allow_pending=True)
+    draft = current_draft(generation, registry, state)
     workbook = Workbook()
     workbook.remove(workbook.active)
     workbook.properties.title = draft.title

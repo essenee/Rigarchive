@@ -3,6 +3,18 @@ Version: 1.9
 Last Updated: 2026-11-19
 Purpose: Current implementation status and development roadmap
 
+## Configuration Logic working revisions (Milestone B2)
+
+The registered draft can be inspected and explicitly captured as a versioned
+local working revision. The registry advances the revision pin and remote
+fingerprints together. Generation export and revision-bound publication resume
+from captured values. The owner completed live B2 acceptance at working
+revision `ea49a12304c74edfab951dc40101491a`. The follow-up separates cosmetic
+presentation changes from blocking content, note, and structural differences.
+No-op publication preserves formatting without advancing the registry.
+Column rearrangement and approval are outside this scope.
+See the [publication and capture guide](../development/CONFIGURATION_LOGIC.md).
+
 ## Generation Configuration Logic (2026-11-19)
 
 Generation export and Google publication share a structured draft. Tacoma
