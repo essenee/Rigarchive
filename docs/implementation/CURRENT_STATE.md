@@ -21,11 +21,16 @@ the accepted column order and human formatting. Approval remains outside this
 scope.
 See the [publication and capture guide](../development/CONFIGURATION_LOGIC.md).
 
+The Tacoma Inactive migration added the live column and three inactive
+MY2026 inventory rows. The explicit status refresh uses verified canonical
+PK correspondence and keeps activation state outside manufacturer-semantic
+changes.
+
 ## Generation Configuration Logic (2026-11-19)
 
 Generation export and Google publication share a structured draft. Tacoma
-Fourth Generation has MY2026 and MY2025 database-derived review tabs, an
-empty MY2024 research draft and consolidated Source References. The
+Fourth Generation has MY2026 and MY2025 database-derived review tabs, a
+populated MY2024 research draft and consolidated Source References. The
 publisher uses desktop OAuth, an explicit local spreadsheet registry and
 draft fingerprints. Pending creation reservations can be inspected offline,
 reconciled to a verified spreadsheet ID, or released with explicit owner
@@ -37,6 +42,34 @@ of incomplete reservations and fixed the MY2025 legacy XLSX evidence comparison.
 Django checks and migration consistency passed, along with 21 focused tests
 and the full 1,279-test suite (one skip, zero failures).
 See the [publication guide](../development/CONFIGURATION_LOGIC.md).
+
+### Tacoma MY2024–MY2026 — Optional Transmission Representation Experiment
+
+Registered working revision `e935d94a60ff4168813661c878c40837` preserves
+three intentional model-year arrangements:
+
+- **MY2024** has 27 worksheet rows: 24 research parent rows and three
+  immediately following alternative rows. Each alternative repeats its
+  parent's configuration number, leaves canonical PK and main model-code
+  cells blank, and uses Transmission, Conditional Output Variant, Alternate
+  Model Code, and Alternate MSRP. The SR parent is automatic, with manual
+  code `7547` as the alternative. TRD Sport `7543` and TRD Off-Road `7545`
+  are manual parents, with automatic alternatives `7542` and `7544`.
+- **MY2025** has 24 active canonical parent rows and three linked
+  transmission-alternative rows, for 27 worksheet rows. The SR manual
+  `7547` appears only as an alternative to the automatic parent. TRD Sport
+  `7543` and TRD Off-Road `7545` are active manual parent definitions
+  (PKs `1202` and `1204`), with automatic alternatives.
+- **MY2026** has 27 configuration rows: 24 active definitions and three
+  separate manual definitions marked `Inactive = Yes`. The inactive rows
+  are SR (PK `1170`), TRD Sport (PK `1178`), and TRD Off-Road (PK `1181`).
+
+The project has yet to choose a standard worksheet representation for
+selectable transmissions. Future implementation should evaluate all three
+arrangements and keep manufacturer configuration evidence, canonical
+VehicleDefinition identity, and user-selectable transmission options distinct.
+This documentation update preserves existing canonical records, worksheet
+row identities, inactive states, and revision history.
 
 ## MY2026 Toyota Tacoma — base MSRP completion (2026-11-19)
 

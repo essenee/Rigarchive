@@ -61,7 +61,8 @@ def generated_rows(registry, state):
         if not summaries:
             continue
         operation = receipt.get("operation")
-        origin = {"capture": "Human capture", "targeted-publication": "Agent publication"}.get(operation, "Not recorded")
+        origin = {"capture": "Human capture", "targeted-publication": "Agent publication",
+                  "inactive-migration": "Canonical inventory migration"}.get(operation, "Not recorded")
         entries[identifier] = [
             identifier, receipt.get("time") or manifest.get("captured_at") or "Not recorded",
             origin, ", ".join(name for name, _ in summaries),

@@ -37,6 +37,12 @@ class Sheet:
     rows: tuple
     widths: tuple
     prices: tuple = ()
+    header_row: int = 4
+    workbook_title: str | None = None
+
+    @property
+    def title(self):
+        return self.workbook_title or self.rows[0][0]
 
 
 @dataclass(frozen=True)
@@ -227,19 +233,20 @@ def export_generation(options):
             for cell in row:
                 if isinstance(cell.value, str):
                     cell.data_type = "s"
-                if cell.row >= 4:
+                if cell.row >= table.header_row:
                     cell.alignment = Alignment(wrap_text=True, vertical="center")
-                if cell.row == 4:
+                if cell.row == table.header_row:
                     cell.font = Font(bold=True, color="FFFFFF")
                     cell.fill = PatternFill("solid", fgColor="23445D")
-                elif cell.row > 4 and cell.column - 1 in table.prices:
+                elif cell.row > table.header_row and cell.column - 1 in table.prices:
                     cell.number_format = "#,##0.00"
-        for cell in sheet[1]:
-            if cell.value is not None:
-                cell.font = Font(size=16, bold=True, color="17324D")
-        for cell in sheet[2]:
-            if cell.value is not None:
-                cell.font = Font(bold=True)
+        if table.header_row > 1:
+            for cell in sheet[1]:
+                if cell.value is not None:
+                    cell.font = Font(size=16, bold=True, color="17324D")
+            for cell in sheet[2]:
+                if cell.value is not None:
+                    cell.font = Font(bold=True)
         if table.name in captured:
             for (row, col), data in sheet_cells(captured[table.name]).items():
                 if col >= len(table.widths):
@@ -251,13 +258,13 @@ def export_generation(options):
                 if number_format.get("type") in {"NUMBER", "CURRENCY", "PERCENT", "DATE", "TIME", "DATE_TIME", "SCIENTIFIC", "TEXT"}:
                     if number_format.get("pattern"):
                         cell.number_format = number_format["pattern"]
-        sheet.freeze_panes = "A5"
+        sheet.freeze_panes = f"A{table.header_row + 1}"
         sheet.sheet_view.showGridLines = False
         for index, width in enumerate(table.widths, 1):
             sheet.column_dimensions[get_column_letter(index)].width = width
-        sheet.auto_filter.ref = f"A4:{get_column_letter(len(table.widths))}{len(table.rows)}"
-        sheet.print_title_rows = "1:4"
-        for row in range(4, len(table.rows) + 1):
+        sheet.auto_filter.ref = f"A{table.header_row}:{get_column_letter(len(table.widths))}{len(table.rows)}"
+        sheet.print_title_rows = f"1:{table.header_row}"
+        for row in range(table.header_row, len(table.rows) + 1):
             sheet.row_dimensions[row].height = 32 if table.prices else 48
     model = generation.vehicle_model
     output = options["output"] or (

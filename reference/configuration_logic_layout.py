@@ -13,6 +13,10 @@ CONFIG_FIELDS = (
     "conditional_output", "alternate_model_code", "alternate_msrp", "package",
     "applicability", "provenance",
 )
+INACTIVE_FIELD = "configuration.inactive"
+INACTIVE_HEADER = "Inactive"
+INACTIVE_INDEX = len(CONFIG_FIELDS)
+
 SOURCE_FIELDS = ("model_year", "organization", "title", "locator", "reviewed_at",
                  "source_type", "evidence_id", "verification", "notes")
 
@@ -20,7 +24,17 @@ SOURCE_FIELDS = ("model_year", "organization", "title", "locator", "reviewed_at"
 def catalog(name):
     if name == "Source References":
         return tuple(zip((f"source.{f}" for f in SOURCE_FIELDS), SOURCE_HEADERS, strict=True))
-    return tuple(zip((f"configuration.{f}" for f in CONFIG_FIELDS), HEADERS, strict=True))
+    return (*zip((f"configuration.{f}" for f in CONFIG_FIELDS), HEADERS, strict=True),
+            (INACTIVE_FIELD, INACTIVE_HEADER))
+
+
+def header_index(name, sheet):
+    """Allow a compact header at row 1 only on model-year worksheets."""
+    if name.startswith("MY") and name[2:].isdigit():
+        values = remote_values(sheet)
+        if any(r == 0 and value == {"stringValue": "#"} for (r, _), value in values.items()):
+            return 0
+    return 3
 
 
 def column_order(name, sheet):
@@ -28,21 +42,27 @@ def column_order(name, sheet):
     fields = catalog(name)
     index = {header: i for i, (_, header) in enumerate(fields)}
     values = remote_values(sheet)
-    headers = {c: value.get("stringValue") for (r, c), value in values.items() if r == 3}
-    if set(headers) != set(range(len(fields))) or set(headers.values()) != set(index):
+    header = header_index(name, sheet)
+    headers = {c: value.get("stringValue") for (r, c), value in values.items() if r == header}
+    if name.startswith("MY"):
+        headers = {c: "VehicleDefinition PK" if label == "Vehicle Definition PK" else label
+                   for c, label in headers.items()}
+    if name != "Source References" and INACTIVE_HEADER not in headers.values():
+        index.pop(INACTIVE_HEADER)
+    if set(headers) != set(range(len(index))) or set(headers.values()) != set(index):
         raise CommandError(f"{name} column headers are missing, duplicated, or renamed.")
-    return tuple(index[headers[col]] for col in range(len(fields)))
+    return tuple(index[headers[col]] for col in range(len(index)))
 
 
 def canonical_row(row, order):
     return tuple(row[order.index(index)] for index in range(len(order)))
 
 
-def row_witnesses(name, rows):
+def row_witnesses(name, rows, header=3):
     """Conservative continuity witnesses. These hashes are not the opaque row IDs."""
     parents = {}
     result = []
-    for position, row in enumerate(rows[4:], 5):
+    for position, row in enumerate(rows[header + 1:], header + 2):
         if not any(value is not None and value != "" for value in row):
             continue
         parent = None
@@ -61,8 +81,8 @@ def row_witnesses(name, rows):
     return result
 
 
-def bind_rows(name, rows, prior):
-    witnesses = row_witnesses(name, rows)
+def bind_rows(name, rows, prior, *, header=3):
+    witnesses = row_witnesses(name, rows, header)
     prior_by_key = {row["witness"]: row for row in prior}
     keys = {signature for _, signature, _ in witnesses}
     removed = [row for row in prior if row["witness"] not in keys]

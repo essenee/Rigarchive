@@ -57,6 +57,43 @@ class LayoutAndLogTests(SimpleTestCase):
         self.assertEqual([key for key, _ in working_history(self.path, self.state)], [second, first, old_revision])
         self.assertNotIn(second, generated_rows(self.path, self.state))
 
+    def test_compact_header_capture_preserves_identity_and_resolves_physical_rows(self):
+        initial = self.save(enroll=True)
+        row_id = load_layout(self.state, self.path)["sheets"]["MY2025"]["rows"][0]["id"]
+        rows = self.data("MY2025")
+        del rows[:3]
+        rows[0]["values"][1]["userEnteredValue"]["stringValue"] = "Vehicle Definition PK"
+        state = load_revision(self.state, self.path)
+        with self.assertRaisesMessage(CommandError, "header row changed"):
+            check_working_remote(self.api, self.draft, self.state, state, flexible=True)
+        values = rows[1]["values"][11]["userEnteredValue"]
+        values["numberValue"] = 501
+        with self.assertRaisesMessage(CommandError, "changes data during a header-row transition"):
+            self.save()
+        values["numberValue"] = 500
+        with self.assertRaisesMessage(CommandError, "changes structural bindings"):
+            self.save()
+        self.remote["MY2025"]["properties"]["gridProperties"]["frozenRowCount"] = 1
+        revision = self.save()
+        layout = load_layout(self.state, self.path)
+        self.assertEqual(layout["sheets"]["MY2025"]["header_row"], 1)
+        self.assertEqual(layout["sheets"]["MY2025"]["rows"][0]["row"], 2)
+        self.assertEqual(layout["sheets"]["MY2025"]["rows"][0]["id"], row_id)
+        self.assertNotIn(revision, generated_rows(self.path, self.state))
+        self.assertNotEqual(revision, initial)
+        draft = current_draft(self.generation, self.path, self.state)
+        self.assertEqual(draft.sheets[0].rows[0][1], "Vehicle Definition PK")
+        plan = self.base / "compact.json"
+        plan.write_text(json.dumps({"schema": 2, "base_revision": revision, "edits": [
+            {"sheet_id": 1, "row_id": row_id, "field_id": "configuration.base_msrp", "before": 500, "value": 510},
+        ]}))
+        def apply(**_):
+            update, = self.api.batchUpdate.call_args.kwargs["body"]["requests"]
+            self.assertEqual(update["updateCells"]["start"], {"sheetId": 1, "rowIndex": 1, "columnIndex": 11})
+            values["numberValue"] = 510
+        self.api.batchUpdate.return_value.execute.side_effect = apply
+        self.assertTrue(publish_working_edits(self.api, draft, self.path, self.state, plan))
+
     def test_partial_moves_unknown_columns_and_mixed_edits_refused(self):
         self.save(enroll=True)
         original = deepcopy(self.remote)

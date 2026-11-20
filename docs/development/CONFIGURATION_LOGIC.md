@@ -276,6 +276,13 @@ An enrolled generation XLSX exports that registered order; compatible remote
 moves appear in the XLSX after capture. Google-specific protections, filters,
 conditional rules and rich text are not reproduced by the XLSX projection.
 
+Enrolled model-year tabs also support compact headers on row 1 after deletion
+of the three preamble rows. Both `VehicleDefinition PK` and
+`Vehicle Definition PK` resolve to the same field. Register this layout change
+separately from any data edits. Capture checks that data and supported grid
+bindings shift together, preserves working-row IDs, and records the new physical
+row addresses. Source References retains its row-4 header.
+
 Move whole columns within their original tab. The move must carry every value,
 note, validation and noncosmetic property with its header. Unknown populated
 columns, column copies, header renames or deletions, cross-tab moves and
@@ -374,3 +381,49 @@ from a trusted workbook copy to protect human annotations.
 Local revisions remain the authority. A Change Log annotation does not change
 the underlying diff, evidence classification, approval state, or canonical data.
 Source Selection Protocol v1.0 continues to apply.
+
+## Tacoma Inactive migration and refresh
+
+`Inactive` is the operational field `configuration.inactive`. It reflects
+Django Admin's canonical VehicleDefinition activation state. A verified inactive
+configuration displays `Yes`. Active configurations and rows without a
+canonical PK link stay blank. Refresh verifies the PK within the generation and
+cross-checks model year, market, slug, trim, body, drivetrain, and Engine.
+Missing or conflicting explicit PK links stop the operation for review.
+
+Preview the one-time migration while collaborative edits are paused.
+
+```bash
+.venv/bin/python manage.py refresh_configuration_inactive --migrate
+.venv/bin/python manage.py refresh_configuration_inactive --migrate --apply REVIEWED_PREVIEW_HASH
+```
+
+Use the second command only after explicit owner approval of the current
+preview. It inserts a column after Base MSRP on each model-year tab and
+appends the three missing inactive MY2026 canonical configurations (PKs 1170,
+1178 and 1181). Their manufacturer model code and transmission claims remain
+blank. The migration preserves prior row IDs and records the new inventory
+rows as one Change Log entry. Those additions are canonical inventory context,
+with no manufacturer approval. The successor layout is versioned and
+historical revision files remain intact.
+
+For subsequent refreshes, preview and explicitly approve the new hash.
+
+```bash
+.venv/bin/python manage.py refresh_configuration_inactive
+.venv/bin/python manage.py refresh_configuration_inactive --apply REVIEWED_PREVIEW_HASH
+```
+
+Refresh resolves the registered logical field even after a supported column
+move and updates only status values. Status-only changes are excluded from
+manufacturer-semantic hashes and Change Log entries. Revision snapshots still
+pin the displayed status. Admin saves cause no Sheets writes. Ordinary
+working-revision capture and agent edit plans refuse direct status edits.
+
+The hash binds the registered revision, captured grid, and exact batch.
+After applying, inspect the workbook and export the new working revision.
+If Sheets returns an ambiguous response or post-write verification fails,
+stop and inspect the grid and registry before making any further writes. A
+request with a stale base or a workbook changed outside the registry is refused.
+Verify whether the batch landed before separately authorizing reconciliation.
+Google Sheets has no atomic preflight-and-write comparison across requests.
