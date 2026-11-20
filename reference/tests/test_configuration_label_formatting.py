@@ -1,8 +1,8 @@
 """Tests for redundant turbocharger presentation formatting in configuration labels.
 
 Covers:
-- Removal of redundant standalone 'Turbo' from configuration choices when aspiration is 'Turbocharged'
-- Clean formatting of '3.0L V6 Turbo Diesel' into '3.0L V6 · Turbocharged · Diesel · 4WD'
+- Preservation of authored 'Turbo' in configuration choices
+- Preservation of authored '3.0L V6 Turbo Diesel'
 - Preservation of electrification designations on 4xe PHEV configurations without duplicate turbo
 - Invariance of 3.6L ESS, 3.6L eTorque (MHEV), and 6.4L HEMI configurations
 - Preservation of meaningful descriptors when aspiration is not separately displayed
@@ -17,8 +17,8 @@ from reference.services import _label_configuration_choices
 class ConfigurationLabelFormattingTests(SimpleTestCase):
     """Presentation formatting tests using in-memory model instances without database persistence."""
 
-    def test_turbo_redundancy_removal_in_configuration_choices(self):
-        """2.0L I4 Turbo · Turbocharged · 4WD becomes 2.0L I4 · Turbocharged · 4WD."""
+    def test_authored_turbo_preserved_in_configuration_choices(self):
+        """The choice retains the authored engine name and the drivetrain."""
         record = VehicleDefinition(
             model_year=2022,
             trim_name="Sport",
@@ -30,10 +30,10 @@ class ConfigurationLabelFormattingTests(SimpleTestCase):
             market="US",
         )
         labeled = _label_configuration_choices([record])
-        self.assertEqual(labeled[0].choice_label, "2.0L I4 · Turbocharged · 4WD")
+        self.assertEqual(labeled[0].choice_label, "2.0L I4 Turbo · 4WD")
 
     def test_turbo_diesel_formatting_in_configuration_choices(self):
-        """3.0L V6 Turbo Diesel · Turbocharged · Diesel · 4WD becomes 3.0L V6 · Turbocharged · Diesel · 4WD."""
+        """The choice retains the authored diesel wording without duplicating it."""
         record = VehicleDefinition(
             model_year=2022,
             trim_name="Unlimited Sport",
@@ -45,7 +45,7 @@ class ConfigurationLabelFormattingTests(SimpleTestCase):
             market="US",
         )
         labeled = _label_configuration_choices([record])
-        self.assertEqual(labeled[0].choice_label, "3.0L V6 · Turbocharged · Diesel · 4WD")
+        self.assertEqual(labeled[0].choice_label, "3.0L V6 Turbo Diesel · 4WD")
 
     def test_4xe_phev_retains_electrification_without_duplicate_turbo(self):
         """4xe PHEV labels retain their electrification designation while avoiding duplicate turbo terminology."""
@@ -60,7 +60,7 @@ class ConfigurationLabelFormattingTests(SimpleTestCase):
             market="US",
         )
         labeled = _label_configuration_choices([record])
-        self.assertEqual(labeled[0].choice_label, "2.0L I4 · Turbocharged · PHEV · 4WD")
+        self.assertEqual(labeled[0].choice_label, "2.0L I4 Turbo PHEV · 4WD")
 
         # Long form engine description
         self.assertEqual(record.engine_description, "2.0L I4, Turbocharged, Plug-in hybrid (PHEV)")
@@ -220,15 +220,15 @@ class DatabaseIntegrityAndRegressionTests(TestCase):
         self.assertEqual(diesel_record.engine_name, "3.0L V6 Turbo Diesel")
         self.assertEqual(phev_record.engine_name, "2.0L I4 Turbo PHEV")
 
-        # When formatted through choice labeling, redundant words are removed in presentation only
+        # Choice labels preserve the authored engine names.
         labeled_gas = _label_configuration_choices([gas_record])
-        self.assertEqual(labeled_gas[0].choice_label, "2.0L I4 · Turbocharged · 4WD")
+        self.assertEqual(labeled_gas[0].choice_label, "2.0L I4 Turbo · 4WD")
         self.assertEqual(labeled_gas[0].engine_name, "2.0L I4 Turbo")
 
         labeled_diesel = _label_configuration_choices([diesel_record])
-        self.assertEqual(labeled_diesel[0].choice_label, "3.0L V6 · Turbocharged · Diesel · 4WD")
+        self.assertEqual(labeled_diesel[0].choice_label, "3.0L V6 Turbo Diesel · 4WD")
         self.assertEqual(labeled_diesel[0].engine_name, "3.0L V6 Turbo Diesel")
 
         labeled_phev = _label_configuration_choices([phev_record])
-        self.assertEqual(labeled_phev[0].choice_label, "2.0L I4 · Turbocharged · PHEV · 4WD")
+        self.assertEqual(labeled_phev[0].choice_label, "2.0L I4 Turbo PHEV · 4WD")
         self.assertEqual(labeled_phev[0].engine_name, "2.0L I4 Turbo PHEV")

@@ -6,6 +6,15 @@ All notable changes to RigArchive will be documented in this file.
 
 ### Changed
 
+- B3 preflight, capture consistency and post-write verification ignore
+  presentation-only changes, including number formats and concurrent column
+  resizing. Targeted edits still write only cell values.
+- Reconciled the owner’s Tacoma workbook Engine names, MY2024 Transmission
+  column position, and MY2024 formatting. Published 27 standalone MY2025
+  configurations and MY2025–MY2026 Transmission values. Development authoring
+  created three MY2025 definitions with receipts and updated 51 existing
+  Transmission values, preserving the three inactive MY2026 manuals.
+
 - Completed pickup-aware MY2026 US Tacoma authoring and filled 19 missing
   base MSRPs from Toyota's model-code pricing. MY2025 and MY2026 each have
   24 active, fully priced definitions across 17 trim/body groups.
@@ -28,6 +37,9 @@ All notable changes to RigArchive will be documented in this file.
 
 ### Added
 
+- Added receipt-bound B3 publication for the three approved MY2025 Tacoma
+  standalone row conversions, with stable working-row IDs and sequential
+  configuration numbers.
 - Added layout-enrolled Configuration Logic revisions with stable logical
   fields, working-row identities, logical edit plans, and registered XLSX order.
 - Added an editable Change Log projection that preserves annotation fields and

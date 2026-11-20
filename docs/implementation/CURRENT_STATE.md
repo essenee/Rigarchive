@@ -1,6 +1,6 @@
 RigArchive Project Status Document
 Version: 1.9
-Last Updated: 2026-11-19
+Last Updated: 2026-11-20
 Purpose: Current implementation status and development roadmap
 
 ## Configuration Logic working revisions (Milestone B2)
@@ -21,10 +21,42 @@ the accepted column order and human formatting. Approval remains outside this
 scope.
 See the [publication and capture guide](../development/CONFIGURATION_LOGIC.md).
 
+B3 ignores presentation-only cell formats and dimension sizes during semantic
+validation, targeted publication and capture consistency checks. Targeted
+updates write only cell values and resolve enrolled columns by logical field.
+
 The Tacoma Inactive migration added the live column and three inactive
 MY2026 inventory rows. The explicit status refresh uses verified canonical
 PK correspondence and keeps activation state outside manufacturer-semantic
 changes.
+
+The Tacoma workbook is registered at `742fb1624f394b178fb803337b16b745`.
+Capture `8ffcf8922c0f4966ad6c12aa415a064a` registered 75 Engine display
+edits, 1,564 MY2024 cell-format changes and 14 MY2024 column-width changes.
+Capture `55493e4270bd46a795ebc8f6ab8dbea9` registered the MY2024 Transmission
+move from P to L. Publication `c0501f99b41c4faa9750d94bdec18701` converted
+three MY2025 alternatives into standalone rows without changing their working
+IDs. Publication `742fb1624f394b178fb803337b16b745` applied 51 remaining
+Transmission cell edits. The MY2024 workbook and Source References match
+the reconciled baseline.
+
+Development authoring created PKs 1240, 1241 and 1242 for Toyota codes
+7547, 7542 and 7544, with receipts 3691–3693, and updated exactly 51
+existing Transmission fields. MY2025 has 27 active standalone configurations
+numbered 1–27 in the workbook. MY2026 has 24 active automatic configurations and
+three manuals (PKs 1170, 1178 and 1181) that remained inactive. All prior canonical
+identities, Engine data, historical receipts and MY2024 records were preserved.
+
+The verified pre-execution backup under `backups/snapshots/` is
+`pre_my2025_my2026_tacoma_transmission_live_20261120T141509628842Z.sqlite3`,
+SHA-256 `8b8df548151cf65817b472adaccce94a46f6a0d0375555b992fbc2ba2b3c0d1e`.
+Preserve the receipt-pinned `my2025-create-observations.json` and
+`my2025-source.json` in `scratch/tacoma-transmission-review/` alongside the
+database and registered workbook history. The same directory contains the
+execution record and the revision-bound plan. Backup restore, rollback,
+and stale-plan rejection passed during authoring. The latest checkpoint passed
+48 focused tests and the full suite of 1,316 tests with one skip and zero
+failures. SQLite integrity and foreign-key checks passed.
 
 ## Generation Configuration Logic (2026-11-19)
 
@@ -43,10 +75,10 @@ Django checks and migration consistency passed, along with 21 focused tests
 and the full 1,279-test suite (one skip, zero failures).
 See the [publication guide](../development/CONFIGURATION_LOGIC.md).
 
-### Tacoma MY2024–MY2026 — Optional Transmission Representation Experiment
+### Historical Tacoma MY2024–MY2026 workbook arrangements
 
-Registered working revision `e935d94a60ff4168813661c878c40837` preserves
-three intentional model-year arrangements:
+Historical revision `e935d94a60ff4168813661c878c40837` captured three
+model-year arrangements before live MY2025–MY2026 Transmission authoring:
 
 - **MY2024** has 27 worksheet rows: 24 research parent rows and three
   immediately following alternative rows. Each alternative repeats its
@@ -55,21 +87,15 @@ three intentional model-year arrangements:
   Model Code, and Alternate MSRP. The SR parent is automatic, with manual
   code `7547` as the alternative. TRD Sport `7543` and TRD Off-Road `7545`
   are manual parents, with automatic alternatives `7542` and `7544`.
-- **MY2025** has 24 active canonical parent rows and three linked
+- **MY2025** had 24 active canonical parent rows and three linked
   transmission-alternative rows, for 27 worksheet rows. The SR manual
-  `7547` appears only as an alternative to the automatic parent. TRD Sport
-  `7543` and TRD Off-Road `7545` are active manual parent definitions
+  `7547` appeared only as an alternative to the automatic parent. TRD Sport
+  `7543` and TRD Off-Road `7545` were active manual parent definitions
   (PKs `1202` and `1204`), with automatic alternatives.
 - **MY2026** has 27 configuration rows: 24 active definitions and three
   separate manual definitions marked `Inactive = Yes`. The inactive rows
   are SR (PK `1170`), TRD Sport (PK `1178`), and TRD Off-Road (PK `1181`).
 
-The project has yet to choose a standard worksheet representation for
-selectable transmissions. Future implementation should evaluate all three
-arrangements and keep manufacturer configuration evidence, canonical
-VehicleDefinition identity, and user-selectable transmission options distinct.
-This documentation update preserves existing canonical records, worksheet
-row identities, inactive states, and revision history.
 
 ### Factory Transmission designation
 
@@ -80,15 +106,11 @@ blank and cannot clear an overlap. The configurator displays the designation
 in the existing Factory Configurations list. Detailed transmission hardware
 remains in Full Specs.
 
-Migration 0019 adds the blank-compatible field and performs no backfill.
-The three registered Tacoma worksheet arrangements above remain in place.
-The MY2024 replacement is a separate operation requiring a fresh review and
-explicit authorization.
-
-Migration 0019 is applied to the development database. A verified backup and
-before-and-after comparison confirmed that all 1,178 existing vehicle
-definitions and other application rows were preserved. Existing transmission
-values are blank.
+Migration 0019 added the blank-compatible field without a backfill. A verified
+backup and comparison confirmed that the migration preserved all 1,178 vehicle
+definitions and other application rows. Subsequent authorized authoring
+populated Transmission for MY2024 and completed the MY2025–MY2026 work
+recorded above.
 
 On 2026-11-19, the approved MY2024 Tacoma replacement was
 committed and verified in development under review digest
@@ -155,11 +177,11 @@ SHA-256 `8c7442001a78ce50c163595116127af585ef90d8b8c4fecc90d1113ddd608f79`.
 
 ## MY2025 Toyota Tacoma — selected-model authoring (2026-11-18)
 
-US Generation 28 now has **24 active VehicleDefinitions across 17 trim/body
-groups** (PKs 1189–1212). Each has a registered Engine, a factory body and a base
+This initial authoring created **24 active VehicleDefinitions across 17 trim/body
+groups** (PKs 1189–1212) for U.S. Generation 28. Each has a registered Engine, a factory body and a base
 MSRP from Toyota's November 5, 2025 schedule. Eleven overlapping legacy rows
 (PKs 382–392) were deactivated; their fields and history were preserved.
-Of 27 Toyota model codes, three are retained as transmission alternatives in
+Of 27 Toyota model codes, three were retained as transmission alternatives in
 the reviewed observations. Selected SR code 7594 wins its price tie as the
 automatic; manual codes 7543 and 7545 have the lower MSRP for their respective
 TRD Sport and TRD Off-Road configurations.
@@ -170,8 +192,10 @@ sequences. SQLite integrity and foreign-key checks passed. The verified backup
 is `backups/snapshots/pre_my2025_tacoma_authoring_20261119T042045732713Z.sqlite3`
 with SHA-256 `721c2ed186c62058839090905c365ce1f5ae4d13dd334442894d74ec56ff4194`.
 Preserve the receipt-pinned local [observations](tasks/my2025-tacoma-authoring-observations.json)
-with the database. The regenerated local workbook maps the 24 selected codes
-to their canonical PKs and labels the three alternatives.
+with the database. The local workbook from that run mapped the 24 selected
+codes to their canonical PKs and labeled the three alternatives. The completed
+Transmission authoring subsequently created PKs 1240–1242 for those three
+alternatives and registered all 27 as standalone rows.
 
 ## Model-year configuration logic workbooks (2026-11-18)
 

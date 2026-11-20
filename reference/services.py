@@ -311,7 +311,8 @@ def _label_configuration_choices(configurations, group_labels=None):
     group_labels = group_labels or {}
     show_group = len({group_labels.get(vd.pk, vd.trim_name or "") for vd in choices}) > 1
     engine_labels = [engine_label(vd, short=True,
-                                  display_name=vd.engine.name if vd.engine_id else None)
+                                  display_name=vd.engine.name if vd.engine_id else None,
+                                  preserve_authored_turbo=True)
                      for vd in choices]
     # Legacy choices retain the approved varying-dimension shorthand. Registered
     # Engine names are current presentation authority and must never disappear.

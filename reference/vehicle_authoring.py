@@ -18,7 +18,7 @@ from reference.body_identity import (
 )
 from reference.models import Engine, FactoryBodyConfiguration, ImportExecutionReceipt, VehicleDefinition
 from reference.powertrain import FIELDS, record_powertrain
-from reference.transmission import normalize_source_transmission
+from reference.transmission import normalize_source_transmission, transmission_identity
 
 
 def _require(condition, message):
@@ -31,7 +31,8 @@ def _overlaps(left, right):
     if any(getattr(left, f) != getattr(right, f) for f in
            ('generation_id', 'model_year', 'market', 'trim_name', 'drivetrain')):
         return False
-    if left.transmission and right.transmission and left.transmission != right.transmission:
+    if (left.transmission and right.transmission
+            and transmission_identity(left.transmission) != transmission_identity(right.transmission)):
         return False
     a, b = record_powertrain(left), record_powertrain(right)
     if any(a[f] is not None and b[f] is not None and a[f] != b[f] for f in FIELDS):
@@ -148,7 +149,7 @@ def author_configurations(rows, *, evidence_reference, evidence_hash, authorizat
                     b3_evidence[source_key] = {item["identity"]: item for item in reviewed["configurations"]}
                 _require(b3_evidence[source_key].get(key) == observation,
                          "Reviewed transmission observation differs from the registered B3 offer.")
-            _require(normalize_source_transmission(offer.get('transmission')) == proposed.transmission
+            _require(normalize_source_transmission(offer.get('transmission')) == transmission_identity(proposed.transmission)
                      and bool(offer.get('code')) and proposed.engine_id is not None
                      and offer.get('variant') == proposed.engine.internal_variant_key
                      and bool(proof),

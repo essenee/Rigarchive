@@ -96,15 +96,22 @@ def _clean_engine_name(record, label):
     return label
 
 
-def engine_label(record, *, short=False, display_name=None):
+def engine_label(record, *, short=False, display_name=None, preserve_authored_turbo=False):
     # Only callers explicitly opting into registry display override the historical
     # descriptor. Specs and existing fallback callers retain their prior behavior.
     raw_label = (record.engine_name if display_name is None else display_name) or "Engine not specified"
-    label = _clean_engine_name(record, raw_label)
-    extras = [ASPIRATION.get(record.engine_aspiration) if record.engine_aspiration not in (None, "naturally_aspirated") else None,
+    keep_turbo = (preserve_authored_turbo and record.engine_aspiration == "turbocharged"
+                  and re.search(r"\bturbo\b", raw_label, flags=re.IGNORECASE))
+    label = raw_label if keep_turbo else _clean_engine_name(record, raw_label)
+    extras = [ASPIRATION.get(record.engine_aspiration)
+              if not keep_turbo and record.engine_aspiration != "naturally_aspirated" else None,
               FUEL.get(record.fuel_type) if record.fuel_type == "diesel" else None]
     if short:
         extras.append(ELECTRIFICATION.get(record.electrification_type, ("", ""))[1])
+        if keep_turbo:
+            extras = [extra for extra in extras if extra and not re.search(
+                rf"\b{re.escape(extra)}\b", label, flags=re.IGNORECASE
+            )]
         return " · ".join([label] + [s for s in extras if s])
     if record.electrification_type not in (None, "none"):
         extras.append(ELECTRIFICATION.get(record.electrification_type, ("", ""))[0])

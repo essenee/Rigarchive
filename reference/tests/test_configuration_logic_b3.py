@@ -236,6 +236,75 @@ class LayoutAndLogTests(SimpleTestCase):
         with self.assertRaisesMessage(CommandError, "current base_revision"):
             publish_working_edits(self.api, self.draft, self.path, self.state, plan)
 
+    def test_my2024_transmission_move_and_formatting_do_not_block_value_publication(self):
+        from reference.configuration_logic_google import entered
+
+        name = "MY2024"
+        row = deepcopy(self.data("MY2025")[4])
+        row["values"].extend({} for _ in range(21 - len(row["values"])))
+        row["values"][14] = {"userEnteredValue": entered("8-speed automatic")}
+        self.data(name).append(row)
+        self.save(enroll=True)
+        self.move(name, 14, 15)
+        baseline = self.save()
+        binding = load_layout(self.state, self.path)["sheets"][name]
+        row_id = binding["rows"][0]["id"]
+        self.assertEqual(binding["columns"]["configuration.transmission"], 16)
+
+        self.move(name, 15, 11)
+        before_format = {"horizontalAlignment": "LEFT", "wrapStrategy": "WRAP",
+                         "numberFormat": {"type": "TEXT"}, "textFormat": {"bold": True}}
+        cell = self.data(name)[4]["values"][11]
+        cell["userEnteredFormat"] = before_format.copy()
+        grid = self.remote[name]["data"][0]
+        grid["columnMetadata"] = [{} for _ in range(11)] + [{"pixelSize": 134}]
+        plan = self.base / "transmission.json"
+        edit = {"sheet_id": binding["sheet_id"], "row_id": row_id, "field_id": "configuration.transmission",
+                "before": "8-speed automatic", "value": "8-speed automatic"}
+        plan.write_text(json.dumps({"schema": 2, "base_revision": baseline, "edits": [edit]}))
+        pin = self.path.read_bytes()
+        self.assertIsNone(publish_working_edits(self.api, self.draft, self.path, self.state, plan))
+        self.assertEqual(self.path.read_bytes(), pin)
+        self.api.batchUpdate.assert_not_called()
+
+        edit["value"] = "8-Spd Auto"
+        plan.write_text(json.dumps({"schema": 2, "base_revision": baseline, "edits": [edit]}))
+
+        def apply(**_):
+            request, = self.api.batchUpdate.call_args.kwargs["body"]["requests"]
+            update = request["updateCells"]
+            self.assertEqual(update["start"], {"sheetId": binding["sheet_id"], "rowIndex": 4, "columnIndex": 11})
+            self.assertEqual(update["fields"], "userEnteredValue")
+            cell.update(update["rows"][0]["values"][0])
+            # Formatting can also change while a value publication is in progress.
+            cell["userEnteredFormat"]["wrapStrategy"] = "CLIP"
+            grid["columnMetadata"][11]["pixelSize"] = 160
+
+        self.api.batchUpdate.return_value.execute.side_effect = apply
+        reads = 0
+
+        def read(**_):
+            nonlocal reads
+            reads += 1
+            if reads == 4:
+                grid["columnMetadata"][11]["pixelSize"] = 166
+            return self.response()
+
+        self.api.get.return_value.execute.side_effect = read
+        successor = publish_working_edits(self.api, self.draft, self.path, self.state, plan)
+        self.state = read_registry(self.path, self.draft.key)
+        final_binding = load_layout(self.state, self.path)["sheets"][name]
+        self.assertEqual(final_binding["rows"], binding["rows"])
+        self.assertEqual(final_binding["columns"]["configuration.transmission"], 12)
+        snapshot = load_revision(self.state, self.path)[name]["data"][0]
+        self.assertEqual(snapshot["rowData"][4]["values"][11], {
+            "userEnteredValue": entered("8-Spd Auto"),
+            "userEnteredFormat": {**before_format, "wrapStrategy": "CLIP"},
+        })
+        self.assertEqual(snapshot["columnMetadata"][11]["pixelSize"], 160)
+        self.assertEqual(grid["columnMetadata"][11]["pixelSize"], 166)
+        self.assertEqual(generated_rows(self.path, self.state)[successor][4], "MY2024 — 1 value changes (Transmission)")
+
     def test_working_row_continuity_alternatives_additions_and_removals(self):
         cells = [{} for _ in range(21)]
         for index, value in ((0, 1), (1, 21), (14, "Manual")):
@@ -412,3 +481,117 @@ class LayoutAndLogTests(SimpleTestCase):
         self.data("MY2025")[4]["values"][11]["note"] = "New evidence"
         self.assertIsNotNone(self.save())
         self.api.batchUpdate.assert_not_called()
+
+
+class StandaloneConversionTests(SimpleTestCase):
+    setUp = b2.WorkingRevisionTests.setUp
+    response = b2.WorkingRevisionTests.response
+    data = b2.WorkingRevisionTests.data
+
+    def test_revision_bound_conversion_keeps_ids_and_protects_unrelated_pks(self):
+        from types import SimpleNamespace
+
+        from reference.configuration_logic_conversion import APPROVED, TACOMA_GENERATION
+        from reference.configuration_logic_google import entered
+        from reference.configuration_logic_revisions import revision_root
+
+        parent_template = [None] * 21
+        parent_template[4:11] = ["Double Cab, 5-ft Bed", "Double Cab", "5-ft", "4WD",
+                                 "T24A-FTS", "original-variant", "2.4L 4-Cyl Turbo"]
+        parent_template[13:15] = ["United States", "8-speed automatic"]
+        parents = []
+        pins = []
+        vehicles = {}
+        for number in range(1, 25):
+            parent = parent_template.copy()
+            parent[:4] = [number, number, str(8000 + number), f"Trim {number}"]
+            parent[11:13] = [100, f"original-{number}"]
+            parents.append(parent)
+            if number <= 3:
+                row_id, (parent_id, code, transmission) = list(APPROVED.items())[number - 1]
+                alternative = [None] * 21
+                alternative[:2] = [number, number]
+                alternative[14:18] = [transmission, f"alternative-{number}", code, 200]
+                alternative[19:21] = ["Reviewed alternative", f"Evidence {code}"]
+                parents.append(alternative)
+                pins.append({"row_id": row_id, "vehicle_pk": 100 + number, "receipt_pk": 200 + number,
+                             "vehicle_uuid": f"uuid-{number}"})
+                vehicles[code] = SimpleNamespace(
+                    pk=100 + number, slug=f"created-{number}", trim_name=parent[3], drivetrain="4WD",
+                    engine=SimpleNamespace(engine_code="T24A-FTS", internal_variant_key=alternative[15]),
+                    base_msrp=200, transmission=transmission, factory_body_configuration_id=1,
+                    factory_body_configuration=object(),
+                )
+        self.data("MY2025")[4:] = [
+            {"values": [{"userEnteredValue": entered(value)} if entered(value) else {} for value in row]}
+            for row in parents
+        ]
+        first = save_remote(self.api, self.draft, self.path, self.state,
+                            capture_remote(self.api, self.draft, self.state), None, enroll=True)
+        state = read_registry(self.path, self.draft.key)
+        # The fixture's predecessor carries the same stable IDs as the approved scope.
+        import hashlib
+        directory = revision_root(self.path) / first
+        layout_file = directory / "layout.json"
+        layout = load_layout(state, self.path)
+        for number, (row_id, (parent_id, _, _)) in enumerate(APPROVED.items()):
+            parent, alternative = layout["sheets"]["MY2025"]["rows"][number * 2:number * 2 + 2]
+            parent["id"] = parent_id
+            alternative.update(id=row_id, parent_id=parent_id)
+        layout_file.write_text(json.dumps(layout))
+        manifest_file = directory / "manifest.json"
+        manifest = json.loads(manifest_file.read_text())
+        manifest["files"]["layout.json"] = hashlib.sha256(layout_file.read_bytes()).hexdigest()
+        manifest["generation"] = state["generation"] = TACOMA_GENERATION
+        manifest_file.write_text(json.dumps(manifest))
+        state["working_revision"]["manifest_sha256"] = hashlib.sha256(manifest_file.read_bytes()).hexdigest()
+        plan = self.base / "conversion.json"
+        payload = {"schema": 2, "base_revision": first, "standalone_conversions": pins}
+
+        def apply(**_):
+            for request in self.api.batchUpdate.call_args.kwargs["body"]["requests"]:
+                update = request["updateCells"]
+                start = update["start"]
+                cell = self.data("MY2025")[start["rowIndex"]]["values"][start["columnIndex"]]
+                cell.clear()
+                cell.update(update["rows"][0]["values"][0])
+
+        self.api.batchUpdate.return_value.execute.side_effect = apply
+        with patch("reference.configuration_logic_conversion.created_vehicle",
+                   side_effect=lambda pin, revision, row_id, parent_id, code: vehicles[code]), patch(
+            "reference.configuration_logic_conversion.factory_body_configuration_label",
+            return_value=parent_template[4],
+        ):
+            plan.write_text(json.dumps({**payload, "base_revision": "stale"}))
+            with self.assertRaisesMessage(CommandError, "current base_revision"):
+                publish_working_edits(self.api, self.draft, self.path, state, plan)
+            plan.write_text(json.dumps({**payload, "edits": [{"field_id": "configuration.pk"}]}))
+            with self.assertRaisesMessage(CommandError, "dedicated schema 2"):
+                publish_working_edits(self.api, self.draft, self.path, state, plan)
+            plan.write_text(json.dumps({**payload, "standalone_conversions": [
+                {**pins[0], "row_id": "unrelated"}, *pins[1:],
+            ]}))
+            with self.assertRaisesMessage(CommandError, "three approved Tacoma rows"):
+                publish_working_edits(self.api, self.draft, self.path, state, plan)
+            self.api.batchUpdate.assert_not_called()
+            plan.write_text(json.dumps(payload))
+            revision = publish_working_edits(self.api, self.draft, self.path, state, plan)
+
+        successor = read_registry(self.path, TACOMA_GENERATION)
+        self.assertEqual(successor["working_revision"]["id"], revision)
+        bindings = load_layout(successor, self.path)["sheets"]["MY2025"]["rows"]
+        self.assertEqual([row["id"] for row in bindings],
+                         [row["id"] for row in layout["sheets"]["MY2025"]["rows"]])
+        self.assertTrue(all(row["parent_id"] is None for row in bindings))
+        rows = self.data("MY2025")[4:]
+        self.assertEqual([row["values"][0]["userEnteredValue"]["numberValue"] for row in rows],
+                         list(range(1, 28)))
+        for number, (_, code, transmission) in enumerate(APPROVED.values()):
+            values = rows[number * 2 + 1]["values"]
+            self.assertEqual(values[1]["userEnteredValue"]["numberValue"], 101 + number)
+            self.assertEqual(values[2]["userEnteredValue"]["stringValue"], code)
+            self.assertEqual(values[10]["userEnteredValue"]["stringValue"], "2.4L 4-Cyl Turbo")
+            self.assertEqual(values[14]["userEnteredValue"]["stringValue"], transmission)
+            self.assertEqual(values[20]["userEnteredValue"]["stringValue"], f"Evidence {code}")
+            self.assertEqual(values[15:18], [{}, {}, {}])
+        self.assertTrue(load_revision(state, self.path))

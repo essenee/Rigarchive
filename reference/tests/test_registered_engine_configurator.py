@@ -31,7 +31,7 @@ class RegisteredEngineConfiguratorTests(TestCase):
             choices = response.context["configuration_browser_choices"]
             self.assertEqual({row.pk for row in choices}, {row.pk for row in self.rows})
             for row in choices:
-                self.assertEqual(row.choice_label, f"2.4L 4-Cyl. · Turbocharged · {row.drivetrain}")
+                self.assertEqual(row.choice_label, f"2.4L 4-Cyl. Turbo · {row.drivetrain}")
                 self.assertContains(response, row.choice_label)
                 self.assertNotIn("Turbo I4", row.choice_label)
                 self.assertFalse(row.choice_ambiguous)

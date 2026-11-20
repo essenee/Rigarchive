@@ -62,6 +62,7 @@ def generated_rows(registry, state):
             continue
         operation = receipt.get("operation")
         origin = {"capture": "Human capture", "targeted-publication": "Agent publication",
+                  "standalone-conversion": "Canonical row conversion",
                   "inactive-migration": "Canonical inventory migration"}.get(operation, "Not recorded")
         entries[identifier] = [
             identifier, receipt.get("time") or manifest.get("captured_at") or "Not recorded",

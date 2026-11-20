@@ -59,6 +59,17 @@ class VehicleTransmissionTests(TestCase):
         context = get_generation_hub_context(self.gen, config_slug=manual.slug)
         self.assertEqual(context["selected_config"].pk, manual.pk)
         self.assertTrue(any("6-spd Man · 4WD" in row.choice_label for row in context["configuration_browser_choices"]))
+        original_key = authoring_configuration_key(manual)
+        original_slug = manual.slug
+        manual.transmission = "6-Spd Man"
+        manual.save(update_fields=["transmission"])
+        manual.refresh_from_db()
+        self.assertEqual(authoring_configuration_key(manual), original_key)
+        self.assertEqual(manual.slug, original_slug)
+        with self.assertRaisesMessage(ValidationError, "overlapping transmission"):
+            self.proposal(transmission="6-spd Man").save()
+        context = get_generation_hub_context(self.gen, config_slug=manual.slug)
+        self.assertTrue(any("6-Spd Man · 4WD" in row.choice_label for row in context["configuration_browser_choices"]))
         manual.is_active = False
         manual.save(update_fields=["is_active"])
         self.assertFalse(any(row.pk == manual.pk for row in get_generation_hub_context(

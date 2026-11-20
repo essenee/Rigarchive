@@ -13,6 +13,7 @@ from django.utils.timezone import now
 from reference.configuration_logic import GenerationDraft, HEADERS, SOURCE_HEADERS, Sheet, WIDTHS, generation_draft
 from reference.configuration_logic_layout import (
     INACTIVE_FIELD, INACTIVE_INDEX, bind_rows, canonical_row, catalog, column_order, header_index,
+    row_witnesses,
 )
 from reference.configuration_logic_google import (
     FIELDS, api_call, desired_values, digest, entered, fingerprint,
@@ -336,12 +337,19 @@ def classify_sheet(sheet, name, order=None, *, capture=False):
         if position[1] == INACTIVE_INDEX and order is not None:
             content.pop("userEnteredValue", None)
         fmt = cell.get("userEnteredFormat", {})
-        paint = {key: value for key, value in fmt.items() if key in cosmetic_format}
-        other = {key: value for key, value in fmt.items()
-                 if key not in cosmetic_format and key != "textFormat"}
         font = fmt.get("textFormat", {})
-        paint_font = {key: value for key, value in font.items() if key in COSMETIC_TEXT_FORMAT}
-        other_font = {key: value for key, value in font.items() if key not in COSMETIC_TEXT_FORMAT}
+        if order is None:
+            paint = {key: value for key, value in fmt.items() if key in cosmetic_format}
+            other = {key: value for key, value in fmt.items()
+                     if key not in cosmetic_format and key != "textFormat"}
+            paint_font = {key: value for key, value in font.items() if key in COSMETIC_TEXT_FORMAT}
+            other_font = {key: value for key, value in font.items() if key not in COSMETIC_TEXT_FORMAT}
+        else:
+            paint = {key: value for key, value in fmt.items() if key != "textFormat"}
+            paint_font = {key: value for key, value in font.items() if key != "link"}
+            other = {}
+            # Links can change the cell's behavior even though Sheets stores them in its format.
+            other_font = {"link": font["link"]} if "link" in font else {}
         if paint_font:
             paint["textFormat"] = paint_font
         if other_font:
@@ -527,6 +535,18 @@ def nonvalue_state(sheet):
             {p: metadata for p, metadata in cells.items() if metadata}, [block for block in dimensions if block])
 
 
+def working_nonvalue_state(sheet, name, *, flexible):
+    """Compare behavior independently of static presentation on an enrolled sheet."""
+    if not flexible:
+        return nonvalue_state(sheet)
+    order = column_order(name, sheet)
+    content, structure, _ = classify_sheet(sheet, name, order)
+    metadata = {position: {key: value for key, value in cell.items() if key != "userEnteredValue"}
+                for position, cell in content.items() if cell.keys() - {"userEnteredValue"}}
+    # The physical value comparison checks headers, row identities and status cells.
+    return order, structure[0], structure[-1], metadata
+
+
 def persist_revision(path, state, draft, remote, rows, changes, operation, recheck, layout):
     root = revision_root(path)
     root.mkdir(parents=True, exist_ok=True, mode=0o700)
@@ -623,10 +643,25 @@ def verified_row_permutation(table, before, after, prior):
     return [by_position[old[pk][0]] for pk in new]
 
 
+def conversion_bindings(rows, prior, header, converted_row_ids):
+    """Carry forward approved row IDs after verifying the exact standalone layout."""
+    witnesses = row_witnesses("MY2025", rows, header)
+    if ([row[0] for row in rows[header + 1:]] != list(range(1, 28))
+            or any(parent for _, _, parent in witnesses)
+            or [position for position, _, _ in witnesses] != [row["row"] for row in prior]
+            or {row["id"] for row in prior if row["parent_id"]} != set(converted_row_ids)):
+        raise CommandError("Conversion must leave 27 standalone rows in registered order.")
+    return [
+        {**row, "witness": witness, "parent_id": None} if row["id"] in converted_row_ids else row
+        for row, (_, witness, _) in zip(prior, witnesses, strict=True)
+    ]
+
+
 def save_remote(api, draft, path, state, remote, previous, *, operation="capture", enroll=False,
-                approved_row_permutation=None):
+                approved_row_permutation=None, standalone_conversions=()):
     prior_layout = load_layout(state, path)
     flexible = prior_layout is not None or enroll
+    converted_row_ids = {item["row_id"] for item in standalone_conversions}
     rows, logical, layout_sheets = {}, {}, {}
     if approved_row_permutation and (not prior_layout or previous is None or approved_row_permutation not in previous
                                     or any(remote[name] != sheet for name, sheet in previous.items()
@@ -652,7 +687,7 @@ def save_remote(api, draft, path, state, remote, previous, *, operation="capture
         if previous and order != old_order and not migration:
             old_content, old_structure, _ = classify_sheet(previous[name], name, old_order, capture=True)
             validate_move_structure(name, old_structure, structure, old_order, order, old_content)
-            if operation != "targeted-publication" and old_content != content:
+            if operation not in {"targeted-publication", "standalone-conversion"} and old_content != content:
                 raise CommandError(f"{name} changes logical content during a column move. Capture content and layout separately.")
         header = header_index(name, remote[name])
         if previous and header != header_index(name, previous[name]):
@@ -676,7 +711,10 @@ def save_remote(api, draft, path, state, remote, previous, *, operation="capture
         prior_rows = prior_layout["sheets"][name]["rows"] if prior_layout else ()
         if name == approved_row_permutation:
             prior_rows = verified_row_permutation(table, previous[name], remote[name], prior_rows)
-        bound, removed = bind_rows(name, validated_rows(table, remote[name], flexible=True), prior_rows, header=header)
+        canonical = validated_rows(table, remote[name], flexible=True)
+        if converted_row_ids and name == "MY2025":
+            prior_rows = conversion_bindings(canonical, prior_rows, header, converted_row_ids)
+        bound, removed = bind_rows(name, canonical, prior_rows, header=header)
         fields = catalog(name)[:len(order)]
         layout_sheets[name] = {
             "sheet_id": remote[name]["properties"]["sheetId"], "header_row": header + 1,
@@ -696,13 +734,25 @@ def save_remote(api, draft, path, state, remote, previous, *, operation="capture
             layout["operational_fields"] = operational
 
     def recheck():
-        if capture_remote(api, draft, state) != remote:
+        latest = capture_remote(api, draft, state)
+        changed = any(remote_values(sheet) != remote_values(latest[name])
+                      or working_nonvalue_state(sheet, name, flexible=True)
+                      != working_nonvalue_state(latest[name], name, flexible=True)
+                      for name, sheet in remote.items()) if flexible else latest != remote
+        if changed:
             raise CommandError("Remote workbook changed during capture. No working revision was registered.")
 
     if previous == remote and not (enroll and prior_layout is None):
         recheck()
         return None
     changes = changes_between(previous, remote, draft.sheets, flexible=flexible)
+    if converted_row_ids:
+        former_parents = {row["id"]: row["parent_id"] for row in prior_layout["sheets"]["MY2025"]["rows"]}
+        changes["MY2025"]["standalone_conversions"] = [
+            {"row_id": pin["row_id"], "former_parent_id": former_parents[pin["row_id"]],
+             "vehicle_pk": pin["vehicle_pk"], "vehicle_uuid": pin["vehicle_uuid"], "receipt_pk": pin["receipt_pk"]}
+            for pin in standalone_conversions
+        ]
     if approved_row_permutation:
         name = approved_row_permutation
         before = {row["id"]: row["row"] for row in prior_layout["sheets"][name]["rows"]}
@@ -739,8 +789,12 @@ def publish_working_edits(api, draft, path, state, edit_path, *, report=None):
         raise CommandError("Register a working revision before publishing a targeted edit.")
     try:
         plan = json.loads(Path(edit_path).read_text())
-        edits = plan["edits"]
-        if plan["base_revision"] != state["working_revision"]["id"] or not isinstance(edits, list) or not edits:
+        if not isinstance(plan, dict):
+            raise ValueError
+        conversions = plan.get("standalone_conversions")
+        edits = plan.get("edits", [])
+        if (plan["base_revision"] != state["working_revision"]["id"] or not isinstance(edits, list)
+                or (not edits and not isinstance(conversions, list))):
             raise ValueError
     except (OSError, ValueError, TypeError, KeyError) as exc:
         raise CommandError("Edit plan requires the current base_revision and a nonempty edits list.") from exc
@@ -748,24 +802,38 @@ def publish_working_edits(api, draft, path, state, edit_path, *, report=None):
     schema = plan.get("schema", 1)
     if type(schema) is not int or schema not in (1, 2) or (schema == 2 and layout is None):
         raise CommandError("Logical edit plans require an enrolled layout and schema 2.")
+    converted_row_ids = ()
+    if conversions is not None:
+        from reference.configuration_logic_conversion import SHEET, conversion_edits
+
+        if schema != 2 or edits or not isinstance(conversions, list) or SHEET not in layout["sheets"]:
+            raise CommandError("Standalone conversion requires a dedicated schema 2 plan.")
+        table = next(table for table in draft.sheets if table.name == SHEET)
+        edits = conversion_edits(state, layout["sheets"][SHEET],
+                                 validated_rows(table, previous[SHEET], flexible=True), conversions)
+        converted_row_ids = tuple(item["row_id"] for item in conversions)
     options = {"flexible": bool(layout), "coordinate_plan": schema == 1}
     remote = check_working_remote(api, draft, state, previous, report=report, **options)
-    expected, requests = plan_updates(draft, state, remote, edits, layout, schema)
+    expected, requests = plan_updates(draft, state, remote, edits, layout, schema, converted_row_ids)
     if not requests:
         return None
     latest = check_working_remote(api, draft, state, previous, **options)
     if latest != remote and report:
         report("Rechecked the workbook before writing and resolved the latest compatible layout.")
-    expected, requests = plan_updates(draft, state, latest, edits, layout, schema)
+    expected, requests = plan_updates(draft, state, latest, edits, layout, schema, converted_row_ids)
     api_call("spreadsheets.batchUpdate", api.batchUpdate, spreadsheetId=state["spreadsheet"], body={"requests": requests})
     result = capture_remote(api, draft, state)
-    if any(remote_values(sheet) != expected[name] or nonvalue_state(sheet) != nonvalue_state(latest[name])
+    if any(remote_values(sheet) != expected[name]
+           or working_nonvalue_state(sheet, name, flexible=bool(layout))
+           != working_nonvalue_state(latest[name], name, flexible=bool(layout))
            for name, sheet in result.items()):
         raise CommandError("Post-write values or captured metadata differ. Inspect and explicitly capture the remote draft.")
-    return save_remote(api, draft, path, state, result, previous, operation="targeted-publication")
+    operation = "standalone-conversion" if converted_row_ids else "targeted-publication"
+    return save_remote(api, draft, path, state, result, previous, operation=operation,
+                       standalone_conversions=conversions or ())
 
 
-def plan_updates(draft, state, remote, edits, layout, schema):
+def plan_updates(draft, state, remote, edits, layout, schema, converted_row_ids=()):
     tables = {table.name: table for table in draft.sheets}
     expected = {name: remote_values(sheet) for name, sheet in remote.items()}
     desired_rows = {name: [list(row) for row in validated_rows(tables[name], sheet, flexible=bool(layout), physical=True)] for name, sheet in remote.items()}
@@ -798,7 +866,9 @@ def plan_updates(draft, state, remote, edits, layout, schema):
         canonical_column = column_order(name, remote[name])[column - 1] + 1 if layout else column
         if name != "Source References" and canonical_column == INACTIVE_INDEX + 1:
             raise CommandError("Inactive is machine-managed. Use the controlled refresh.")
-        if name != "Source References" and canonical_column in (1, 2, 13):
+        allowed_conversion = (converted_row_ids and name == "MY2025"
+                              and (canonical_column == 1 or edit["row_id"] in converted_row_ids))
+        if name != "Source References" and canonical_column in (1, 2, 13) and not allowed_conversion:
             raise CommandError("Targeted edits cannot change configuration numbers, canonical PKs, or slugs.")
         if cell_metadata[name].get(position, {}).get("textFormatRuns"):
             raise CommandError("This cell has rich text runs. Edit it in Sheets and capture a working revision.")
@@ -821,7 +891,10 @@ def plan_updates(draft, state, remote, edits, layout, schema):
         logical_rows = validated_rows(tables[name], synthetic, flexible=bool(layout))
         if layout:
             prior_rows = layout["sheets"][name]["rows"]
-            bound, removed = bind_rows(name, logical_rows, prior_rows, header=layout["sheets"][name]["header_row"] - 1)
+            header = layout["sheets"][name]["header_row"] - 1
+            if converted_row_ids and name == "MY2025":
+                prior_rows = conversion_bindings(logical_rows, prior_rows, header, converted_row_ids)
+            bound, removed = bind_rows(name, logical_rows, prior_rows, header=header)
             if removed or bound != prior_rows:
                 raise CommandError("Targeted edits cannot change working-row identity or order.")
     return expected, requests

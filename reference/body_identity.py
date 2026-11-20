@@ -11,6 +11,7 @@ import re
 from django.core.exceptions import ValidationError
 
 from reference.powertrain import validate_powertrain
+from reference.transmission import transmission_identity
 
 
 BODY_CONTRACT = "factory-body-semantic/2"
@@ -66,7 +67,7 @@ def authoring_configuration_key(vehicle):
         'powertrain': powertrain, 'body': authoring_body_dimensions(vehicle.factory_body_configuration),
     }
     if vehicle.transmission:
-        identity['transmission'] = vehicle.transmission
+        identity['transmission'] = transmission_identity(vehicle.transmission)
     return canonical_json(identity)
 
 

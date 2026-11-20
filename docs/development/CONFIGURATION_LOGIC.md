@@ -231,9 +231,9 @@ value edit captures the preserved presentation in its successor revision.
 
 | Surface | Working revision behavior |
 |---|---|
-| Text wrapping, fonts, colors, borders, alignment, padding, text rotation and direction | Nonblocking. Compared separately from content. Targeted writes preserve them. |
+| Cell formatting, including wrapping, fonts, colors, borders, alignment, padding, rotation, direction and number formats | Nonblocking for enrolled B3 revisions. Targeted writes preserve it. Legacy B2 publication still checks number formats. |
 | Column widths and row heights | Nonblocking. Compared by dimension position independently of visibility. |
-| Number formats, links, rich text, cell validation, and notes | Changes block publication. A targeted edit to a cell with rich-text runs is refused even when those runs were already registered. |
+| Links, rich text, cell validation, and notes | Changes block publication. A targeted edit to a cell with rich-text runs is refused even when those runs were already registered. |
 | Frozen panes | Changes block publication. The freeze boundary remains part of the registered layout. |
 | Filters and sort specifications | Changes block publication. Physical row sorting can move data to different edit coordinates and also blocks. |
 | Hidden or grouped dimensions | Changes block publication because rows or columns can disappear from review. |
@@ -246,8 +246,9 @@ Milestone A setup and pre-capture publication still use their existing sheet
 formatting requests. The value-only guarantees above apply to the captured
 working-revision path. The publisher rechecks the remote state immediately
 before writing. Concurrent edits can still land between the read and the write.
-If post-write verification finds any unexpected captured change, the registry
-does not advance. The generation XLSX projects data in the registered column order and retains
+For enrolled B3 revisions, preflight and post-write verification ignore
+presentation-only differences. Unexpected value, structural or behavioral
+changes prevent the registry from advancing. The generation XLSX projects data in the registered column order and retains
 cell notes, supported number-format patterns, and approximate column widths.
 Other Google presentation is not reproduced exactly.
 
@@ -322,8 +323,8 @@ Use the existing `--publish --edits PLAN.json` command only with authorization
 for the exact edit. For example, if Base MSRP moves from L to H, the publisher
 resolves the field to H immediately before writing. It checks the registered
 base revision, logical contents, row order, field identity and typed expected
-prior value. The post-write comparison verifies the complete expected visible
-values and captured presentation. Legacy schema 1 physical coordinates still
+prior value. The post-write comparison verifies the complete expected entered
+values and unchanged structural and behavioral metadata. Legacy schema 1 physical coordinates still
 work only in the exact registered column order. A compatible move or cosmetic
 edit by itself causes no publication and does not advance the revision.
 A move after the final read remains a race; pause collaborative editing.
@@ -451,3 +452,31 @@ defer a potential transmission-aware overlap to review.
 Do not rewrite historical workbook revisions or normalize Tacoma's three
 worksheet representations. Preparing a candidate does not authorize writing
 SQLite, adopting a manufacturer approval, or replacing legacy records.
+
+### MY2025 Tacoma standalone conversion
+
+The targeted publisher supports a dedicated schema 2 conversion plan for the
+three reviewed Tacoma alternatives. The plan uses the current
+`base_revision` and a `standalone_conversions` list. Each entry supplies
+`row_id`, `vehicle_pk`, `vehicle_uuid`, and `receipt_pk` from the canonical
+creation transaction. The publisher checks the creation receipt against the
+registered revision, Toyota model code, source row and former parent. It derives
+the replacement values and the 1–27 numbering from the registered rows. The
+successor retains the working-row IDs and records the former parent links in
+its change record. Ordinary edit plans retain their existing field protections.
+
+First reconcile and register any reviewed workbook drift. Run a remote
+preflight and rehearse the approved database transaction from a verified
+backup. Commit the canonical Transmission updates and the three creations
+with their receipts in one SQLite transaction. Retain the committed receipt
+and identity pins, then publish the dedicated conversion plan using
+`publish_configuration_logic --publish --edits` with the Tacoma scope.
+Verify the successor revision and the unchanged contents of the other tabs.
+
+If Sheets rejects or ambiguously acknowledges the publication, retain the
+committed database records and inspect the live workbook and registry before
+retrying. If the old revision is still pinned and the live worksheet is still
+at the exact baseline, the same verified plan can be published using the
+existing receipts. If the cells already changed or the grid has diverged,
+reconcile the verified live state with the pending plan before advancing the
+registry. Do not rerun canonical creation.

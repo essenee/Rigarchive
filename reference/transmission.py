@@ -2,11 +2,16 @@
 import re
 
 from django.core.exceptions import ValidationError
-DESIGNATION = re.compile(r"(?:[1-9][0-9]?-spd (?:Auto|Man|DCT|AMT)|CVT|eCVT)")
+DESIGNATION = re.compile(r"(?:[1-9][0-9]?-[Ss]pd (?:Auto|Man|DCT|AMT)|CVT|eCVT)")
 SOURCE_SPEED_TYPE = re.compile(
     r"([1-9][0-9]?)[ -]+(?:speed|spd)\s+(automatic|manual|auto|man|dct|amt)(?: transmission)?",
     re.IGNORECASE,
 )
+
+
+def transmission_identity(designation):
+    """Keep canonical keys stable across the accepted display spellings."""
+    return designation.replace("-Spd ", "-spd ")
 
 
 def validate_transmission(value):

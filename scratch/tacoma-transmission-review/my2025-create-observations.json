@@ -1,0 +1,152 @@
+{
+  "record_type": "human-reviewed-factory-observations",
+  "configurations": [
+    {
+      "identity": "{\"body\":{\"bed_length\":\"5-ft\",\"body_code\":null,\"body_code_namespace\":null,\"body_length_designation\":null,\"body_style\":null,\"cab_configuration\":\"double-cab\",\"door_configuration\":\"four-door\",\"roof_height_designation\":null,\"side_door_arrangement\":null,\"wheelbase_designation\":null},\"drivetrain\":\"4WD\",\"generation_uuid\":\"d596373d-196b-4dee-82c8-4fbd0cfbfe8f\",\"market\":\"US\",\"model_year\":2025,\"powertrain\":{\"electrification_type\":\"none\",\"engine_aspiration\":\"turbocharged\",\"engine_cylinders\":4,\"engine_displacement_liters\":\"2.4\",\"fuel_type\":\"gasoline\"},\"transmission\":\"6-spd Man\",\"trim_name\":\"SR\"}",
+      "engine_name": "2.4L 4-Cyl Turbo",
+      "base_msrp": "36990.00",
+      "selected_toyota_model": {
+        "code": "7547",
+        "variant": "i-force-270hp",
+        "transmission": "6-spd Man"
+      },
+      "transmission_evidence": {
+        "working_revision": {
+          "id": "55493e4270bd46a795ebc8f6ab8dbea9",
+          "manifest_sha256": "5a4827639c87613b741fa51af43ed5c4d671dcbb3494ac56e0fd5164a90f35b5"
+        },
+        "row_id": "f018b10317df4711a75633ba27b52247",
+        "parent_row_id": "8e47e0c3c2284643a8f8f8068ea98aa8",
+        "source_evidence": {
+          "code": "7547",
+          "grade": "SR",
+          "cab": "Double Cab",
+          "bed": 5,
+          "drivetrain": "4WD",
+          "variant": "i-force-270hp",
+          "msrp": 36990,
+          "transmission": "6-speed manual",
+          "code_evidence": "Toyota Full Line Pricing, 2025-11-05, pp. 6\u20137",
+          "price_evidence": "Toyota Full Line Pricing, 2025-11-05, pp. 6\u20137",
+          "output_evidence": "Retained selected and alternative Toyota model observations in docs/implementation/tasks/my2025-tacoma-authoring-observations.json"
+        },
+        "reference": "scratch/tacoma-transmission-review/my2025-source.json",
+        "sha256": "sha256:e6bc2d4205d8a53f9d52cd91a9d6a4eba4406d8fb6e23ecbe97ba649ad453d32"
+      },
+      "engine_options": [
+        {
+          "pk": 16,
+          "uuid": "a9e1363d-c0df-4ed2-8966-705e687f3656",
+          "name": "2.4L 4-Cyl Turbo",
+          "engine_code": "T24A-FTS",
+          "internal_variant_key": "i-force-270hp",
+          "powertrain": {
+            "engine_displacement_liters": "2.4",
+            "engine_cylinders": 4,
+            "engine_aspiration": "turbocharged",
+            "fuel_type": "gasoline",
+            "electrification_type": "none"
+          }
+        }
+      ]
+    },
+    {
+      "identity": "{\"body\":{\"bed_length\":\"5-ft\",\"body_code\":null,\"body_code_namespace\":null,\"body_length_designation\":null,\"body_style\":null,\"cab_configuration\":\"double-cab\",\"door_configuration\":\"four-door\",\"roof_height_designation\":null,\"side_door_arrangement\":null,\"wheelbase_designation\":null},\"drivetrain\":\"4WD\",\"generation_uuid\":\"d596373d-196b-4dee-82c8-4fbd0cfbfe8f\",\"market\":\"US\",\"model_year\":2025,\"powertrain\":{\"electrification_type\":\"none\",\"engine_aspiration\":\"turbocharged\",\"engine_cylinders\":4,\"engine_displacement_liters\":\"2.4\",\"fuel_type\":\"gasoline\"},\"transmission\":\"8-spd Auto\",\"trim_name\":\"TRD Sport\"}",
+      "engine_name": "2.4L 4-Cyl Turbo",
+      "base_msrp": "43000.00",
+      "selected_toyota_model": {
+        "code": "7542",
+        "variant": "i-force-278hp",
+        "transmission": "8-spd Auto"
+      },
+      "transmission_evidence": {
+        "working_revision": {
+          "id": "55493e4270bd46a795ebc8f6ab8dbea9",
+          "manifest_sha256": "5a4827639c87613b741fa51af43ed5c4d671dcbb3494ac56e0fd5164a90f35b5"
+        },
+        "row_id": "924358b38fa242d59b55e05714c8bad3",
+        "parent_row_id": "e7ba530ed4384acabe235167e901b912",
+        "source_evidence": {
+          "code": "7542",
+          "grade": "TRD Sport",
+          "cab": "Double Cab",
+          "bed": 5,
+          "drivetrain": "4WD",
+          "variant": "i-force-278hp",
+          "msrp": 43000,
+          "transmission": "8-speed automatic",
+          "code_evidence": "Toyota Full Line Pricing, 2025-11-05, pp. 6\u20137",
+          "price_evidence": "Toyota Full Line Pricing, 2025-11-05, pp. 6\u20137",
+          "output_evidence": "Retained selected and alternative Toyota model observations in docs/implementation/tasks/my2025-tacoma-authoring-observations.json"
+        },
+        "reference": "scratch/tacoma-transmission-review/my2025-source.json",
+        "sha256": "sha256:e6bc2d4205d8a53f9d52cd91a9d6a4eba4406d8fb6e23ecbe97ba649ad453d32"
+      },
+      "engine_options": [
+        {
+          "pk": 10,
+          "uuid": "f65ff3d3-2a11-4934-888c-cbeb647ede61",
+          "name": "2.4L 4-Cyl Turbo",
+          "engine_code": "T24A-FTS",
+          "internal_variant_key": "i-force-278hp",
+          "powertrain": {
+            "engine_displacement_liters": "2.4",
+            "engine_cylinders": 4,
+            "engine_aspiration": "turbocharged",
+            "fuel_type": "gasoline",
+            "electrification_type": "none"
+          }
+        }
+      ]
+    },
+    {
+      "identity": "{\"body\":{\"bed_length\":\"5-ft\",\"body_code\":null,\"body_code_namespace\":null,\"body_length_designation\":null,\"body_style\":null,\"cab_configuration\":\"double-cab\",\"door_configuration\":\"four-door\",\"roof_height_designation\":null,\"side_door_arrangement\":null,\"wheelbase_designation\":null},\"drivetrain\":\"4WD\",\"generation_uuid\":\"d596373d-196b-4dee-82c8-4fbd0cfbfe8f\",\"market\":\"US\",\"model_year\":2025,\"powertrain\":{\"electrification_type\":\"none\",\"engine_aspiration\":\"turbocharged\",\"engine_cylinders\":4,\"engine_displacement_liters\":\"2.4\",\"fuel_type\":\"gasoline\"},\"transmission\":\"8-spd Auto\",\"trim_name\":\"TRD Off-Road\"}",
+      "engine_name": "2.4L 4-Cyl Turbo",
+      "base_msrp": "43300.00",
+      "selected_toyota_model": {
+        "code": "7544",
+        "variant": "i-force-278hp",
+        "transmission": "8-spd Auto"
+      },
+      "transmission_evidence": {
+        "working_revision": {
+          "id": "55493e4270bd46a795ebc8f6ab8dbea9",
+          "manifest_sha256": "5a4827639c87613b741fa51af43ed5c4d671dcbb3494ac56e0fd5164a90f35b5"
+        },
+        "row_id": "04e949d1937e4a08b508ed07ce7684a9",
+        "parent_row_id": "33dff6f9a2f04c85ac8fd70cbc1eb384",
+        "source_evidence": {
+          "code": "7544",
+          "grade": "TRD Off-Road",
+          "cab": "Double Cab",
+          "bed": 5,
+          "drivetrain": "4WD",
+          "variant": "i-force-278hp",
+          "msrp": 43300,
+          "transmission": "8-speed automatic",
+          "code_evidence": "Toyota Full Line Pricing, 2025-11-05, pp. 6\u20137",
+          "price_evidence": "Toyota Full Line Pricing, 2025-11-05, pp. 6\u20137",
+          "output_evidence": "Retained selected and alternative Toyota model observations in docs/implementation/tasks/my2025-tacoma-authoring-observations.json"
+        },
+        "reference": "scratch/tacoma-transmission-review/my2025-source.json",
+        "sha256": "sha256:e6bc2d4205d8a53f9d52cd91a9d6a4eba4406d8fb6e23ecbe97ba649ad453d32"
+      },
+      "engine_options": [
+        {
+          "pk": 10,
+          "uuid": "f65ff3d3-2a11-4934-888c-cbeb647ede61",
+          "name": "2.4L 4-Cyl Turbo",
+          "engine_code": "T24A-FTS",
+          "internal_variant_key": "i-force-278hp",
+          "powertrain": {
+            "engine_displacement_liters": "2.4",
+            "engine_cylinders": 4,
+            "engine_aspiration": "turbocharged",
+            "fuel_type": "gasoline",
+            "electrification_type": "none"
+          }
+        }
+      ]
+    }
+  ]
+}

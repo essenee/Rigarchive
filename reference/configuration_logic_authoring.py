@@ -9,6 +9,7 @@ from django.core.exceptions import ValidationError
 
 from reference.admin import factory_body_configuration_label
 from reference.body_identity import authoring_configuration_key
+from reference.configuration_logic_conversion import TACOMA_GENERATION
 from reference.configuration_logic_google import read_registry
 from reference.configuration_logic_revisions import current_draft, load_layout
 from reference.models import Engine, FactoryBodyConfiguration, VehicleDefinition
@@ -114,11 +115,15 @@ def prepare_b3_authoring(generation, year, evidence_reference, evidence_hash):
                       and factory_body_configuration_label(body) == offer["body"]]
         engine_links = [engine for engine in engines if engine.engine_code == offer["engine_code"]
                         and engine.internal_variant_key == offer["variant"]]
-        if len(body_links) != 1 or len(engine_links) != 1 or (
-            offer["recorded_engine_name"] and offer["recorded_engine_name"] != engine_links[0].name
-        ):
+        if len(body_links) != 1 or len(engine_links) != 1:
             raise ValidationError(f"Toyota offer {offer['code']} has ambiguous or missing registry references.")
         body, engine = body_links[0], engine_links[0]
+        sheet_name, registry_name = offer["recorded_engine_name"], engine.name
+        if str(generation.uuid) == TACOMA_GENERATION and year in (2025, 2026):
+            sheet_name = sheet_name.replace("4-Cyl.", "4-Cyl") if sheet_name else sheet_name
+            registry_name = registry_name.replace("4-Cyl.", "4-Cyl")
+        if sheet_name and sheet_name != registry_name:
+            raise ValidationError(f"Toyota offer {offer['code']} has ambiguous or missing registry references.")
         vehicle = VehicleDefinition(
             generation=generation, model_year=year, market="US", trim_name=offer["trim"],
             drivetrain=offer["drivetrain"], factory_body_configuration=body, engine=engine, engine_name=engine.name,
