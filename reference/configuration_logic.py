@@ -130,7 +130,7 @@ def draft_year(title, year, configurations, *, authored_rows=(), authored_source
                 vehicle.slug, vehicle.get_market_display(),
             )
             evidence = f"Authoring receipt {receipt.pk}" if observation else "RigArchive database; source match unavailable"
-            data.append((*parent, selected.get("transmission"), None, None, None, None,
+            data.append((*parent, vehicle.transmission or selected.get("transmission"), None, None, None, None,
                          "Stored configuration" if not selected else "Recorded model selection", evidence))
             alternatives = observation.get("alternate_toyota_models", ())
             for model in alternatives:

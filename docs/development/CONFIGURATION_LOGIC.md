@@ -427,3 +427,27 @@ stop and inspect the grid and registry before making any further writes. A
 request with a stale base or a workbook changed outside the registry is refused.
 Verify whether the batch landed before separately authorizing reconciliation.
 Google Sheets has no atomic preflight-and-write comparison across requests.
+
+## Transmission-aware canonical authoring
+
+The worksheet Transmission cell can preserve Toyota's full designation.
+VehicleDefinition stores the controlled factory label (for example
+`8-spd Auto`, `6-spd Man`, `CVT`, or `eCVT`). The factory label does not identify
+hardware, ratios, or interchangeability. Detailed data remains under Full Specs.
+
+Use `prepare_b3_authoring` against a pinned registered revision and retained
+reviewed evidence. It reads the registered field map and expands only the
+linked alternative rows. Each alternative inherits verified shared attributes
+and must supply its own transmission, order code, price and Engine variant.
+The Toyota order code remains model-code evidence. The helper projects
+proposals and observations without writing. Retain those observations, review
+the exact scope and peer snapshot from `reviewed_transmission_manifest`, and
+supply the expressly approved digest to the existing authoring service.
+The `human-body-authoring/2` path revalidates scope, workbook revision and source
+evidence and records transmission in the canonical identity, slug and receipt.
+Older authoring and importer wire contracts retain their previous meaning and
+defer a potential transmission-aware overlap to review.
+
+Do not rewrite historical workbook revisions or normalize Tacoma's three
+worksheet representations. Preparing a candidate does not authorize writing
+SQLite, adopting a manufacturer approval, or replacing legacy records.

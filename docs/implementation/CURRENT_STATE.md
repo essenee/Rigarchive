@@ -71,6 +71,20 @@ VehicleDefinition identity, and user-selectable transmission options distinct.
 This documentation update preserves existing canonical records, worksheet
 row identities, inactive states, and revision history.
 
+### Factory Transmission designation
+
+VehicleDefinition now supports a controlled factory transmission designation
+such as `6-spd Man`, `8-spd Auto`, `CVT`, or `eCVT`. A verified designation can
+distinguish otherwise identical configurations. Unknown transmissions remain
+blank and cannot clear an overlap. The configurator displays the designation
+in the existing Factory Configurations list. Detailed transmission hardware
+remains in Full Specs.
+
+Migration 0019 adds the blank-compatible field and performs no backfill.
+The three registered Tacoma worksheet arrangements above remain in place.
+The MY2024 replacement is a separate operation requiring a fresh review and
+explicit authorization.
+
 ## MY2026 Toyota Tacoma — base MSRP completion (2026-11-19)
 
 All **24 active US Tacoma definitions** now have base MSRPs. Filled 19 blank

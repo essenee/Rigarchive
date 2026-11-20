@@ -2,10 +2,29 @@
 
 - **Status**: Accepted
 - **Date**: 2026-11-03
+- **Last Updated**: 2026-11-19
 - **Approval**: Accepted by the project director on 2026-11-03 after architectural review, without substantive changes; implementation requires separate authorization
 - **Scope**: Architecture documentation only; no implementation or development-database write authorization
 - **Supersession**: ADR-0005, Decision 2, only as specified below
 - **Related decisions**: ADR-0001 through ADR-0009 remain historical records and are not edited by this decision
+
+## Scoped amendment — factory Transmission designation (2026-11-19)
+
+A verified factory transmission difference may distinguish otherwise identical
+VehicleDefinitions. This supersedes only the earlier prohibition against
+transmission-only canonical distinctions. The manufacturer configuration and
+its applicable transmission must be supported by evidence. An ordering code
+alone does not establish that distinction. Unknown transmission is unresolved
+for overlap checks. Equal designations establish neither hardware identity nor
+parts interchangeability.
+
+Store the controlled designation directly on VehicleDefinition. Keep Full
+Specs hardware descriptions, ratios, manufacturer hardware codes and evidence
+in their existing catalogue domain. Preserve existing PKs, UUIDs, immutable
+slugs and the interpretation of historical identity and receipt contracts.
+Transmission-aware authoring uses a successor contract. Factory packages remain
+in Full Specs. Treat a package with an engine upgrade as a trim under the current
+project rule, subject to applicable manufacturer evidence.
 
 ## Context
 

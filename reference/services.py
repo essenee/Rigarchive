@@ -317,11 +317,14 @@ def _label_configuration_choices(configurations, group_labels=None):
     # Engine names are current presentation authority and must never disappear.
     legacy_common_engine = not any(vd.engine_id for vd in choices) and len(set(engine_labels)) == 1
     drive_only = legacy_common_engine and not show_group and len({_drive_wheel_label(vd) for vd in choices}) > 1
+    show_transmission = any(vd.transmission for vd in choices)
     labels = []
     for vd, label in zip(choices, engine_labels):
         parts = [group_labels.get(vd.pk, vd.trim_name or "")] if show_group else []
         if not drive_only and not (legacy_common_engine and show_group):
             parts.append(label)
+        if show_transmission:
+            parts.append(vd.transmission or "Transmission not specified")
         parts.append(_drive_wheel_label(vd))
         labels.append(" · ".join(filter(None, parts)))
     fields = [(lambda vd: vd.engine.engine_code if vd.engine_id else ""),

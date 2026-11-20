@@ -387,6 +387,8 @@ def _peer(vehicle, candidate, release):
     if vehicle.trim_name != ci["trim_name"] or vehicle.drivetrain != candidate["drivetrain"]:
         result["relation"] = "irrelevant"
         return result
+    if vehicle.transmission:
+        return result  # Frozen body contracts cannot establish equality for this dimension.
     receipts = list(ImportExecutionReceipt.objects.filter(created_vehicle_definition=vehicle, execution_outcome="created", operation_type="vehicle_definition_import")[:2])
     if len(receipts) != 1:
         return result

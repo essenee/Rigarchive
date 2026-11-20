@@ -42,13 +42,15 @@ def authored_observations(configurations):
         if vehicle is None or pk in matching:
             continue
         snapshot = receipt.resolution_snapshot_json
-        if (snapshot.get("profile") != "human-body-authoring/1"
+        if (snapshot.get("profile") not in {"human-body-authoring/1", "human-body-authoring/2"}
                 or snapshot.get("vehicle_uuid") != str(vehicle.uuid)):
             continue
         try:
             identity = json.loads(authoring_configuration_key(vehicle))
         except ValidationError:
             continue
+        if snapshot.get("profile") == "human-body-authoring/1":
+            identity.pop("transmission", None)
         if snapshot.get("identity") == identity:
             matching[pk] = receipt
     return matching

@@ -218,7 +218,10 @@ class VariantMigrationTests(TransactionTestCase):
             with connection.cursor() as cursor:
                 cursor.execute('select '+','.join(f.column for f in OldEngine._meta.concrete_fields)+' from reference_engine')
                 self.assertEqual(cursor.fetchall(), before)
-                cursor.execute('select * from reference_vehicledefinition'); self.assertEqual(cursor.fetchall(), vehicles)
+                cursor.execute('select '+','.join(f.column for f in Vehicle._meta.concrete_fields)+' from reference_vehicledefinition')
+                self.assertEqual(cursor.fetchall(), vehicles)
+                cursor.execute('select transmission from reference_vehicledefinition')
+                self.assertEqual(cursor.fetchall(), [('',)])
             current = Engine.objects.get(pk=engine.pk); self.assertEqual(current.internal_variant_key, '')
             variant=Engine.objects.create(manufacturer_id=maker.pk,engine_code='CODE',internal_variant_key='reviewed',name='After',**PT)
             with self.assertRaises(IrreversibleError): MigrationExecutor(connection).migrate(old)

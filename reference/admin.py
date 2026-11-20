@@ -521,6 +521,10 @@ class VehicleDefinitionAdminForm(forms.ModelForm):
                 engines = (engines | Engine.objects.filter(pk=self.instance.engine_id).distinct()).distinct()
             self.fields['engine'].queryset = engines
         if self.instance.pk:
+            transmission_key = self.add_prefix("transmission")
+            if self.is_bound and "transmission" in self.fields and transmission_key not in self.data:
+                self.data = self.data.copy()
+                self.data[transmission_key] = self.instance.transmission
             self.initial["slug_correction"] = self.instance.slug
             # Older Admin submissions omit this new input; omission is not a correction.
             key = self.add_prefix("slug_correction")
@@ -611,6 +615,7 @@ class VehicleDefinitionAdmin(admin.ModelAdmin):
         "engine",
         "trim_name",
         "engine_name",
+        "transmission",
         "drivetrain",
         "market",
         "base_msrp",

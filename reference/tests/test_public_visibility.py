@@ -146,5 +146,6 @@ class PublicVisibilityMigrationTests(TransactionTestCase):
             MigrationExecutor(connection).migrate(latest)
             after=VehicleDefinition.objects.values().get(pk=vd.pk)
             self.assertTrue(after.pop('is_public'))
+            self.assertEqual(after.pop('transmission'), '')
             self.assertEqual(after,original)
         finally:MigrationExecutor(connection).migrate(latest)

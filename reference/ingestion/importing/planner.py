@@ -79,6 +79,8 @@ def _format_engine_name(displacement: Any, cylinders: Any, *, structured=False) 
 
 def _fields_match_exact(vd: VehicleDefinition, target_fields: Dict[str, Any]) -> bool:
     from reference.powertrain import BASE_FIELDS, FIELDS
+    if vd.transmission != target_fields.get("transmission", ""):
+        return False
     if not all(getattr(vd, k) == target_fields.get(k) for k in BASE_FIELDS):
         return False
     if FIELDS[0] in target_fields:
@@ -327,6 +329,17 @@ def _plan_candidate_import(
                 target_slug=target_slug,
                 reasons=rar_reasons,
             )
+
+    if VehicleDefinition.objects.filter(
+        generation=resolved_gen, model_year=target_fields["model_year"], market=target_fields["market"],
+        trim_name=target_fields["trim_name"], drivetrain=target_fields["drivetrain"], is_active=True,
+    ).exclude(transmission="").exists():
+        return CanonicalImportPlan(
+            candidate_reference=ref_id, eligibility_status=ImportEligibilityStatus.REQUIRES_REVIEW,
+            planned_action=ImportPlannedAction.FLAG_REVIEW,
+            reasons=["Legacy candidate cannot resolve an established transmission dimension."],
+            resolved_manufacturer_id=mfr.pk, resolved_vehicle_model_id=vm.pk, resolved_generation_id=resolved_gen.pk,
+        )
 
     if candidate.envelope.schema_version == "2.1.0":
         from reference.ingestion.importing.powertrain_identity import plan_structured_identity

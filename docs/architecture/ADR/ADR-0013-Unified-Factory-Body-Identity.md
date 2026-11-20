@@ -1,7 +1,7 @@
 # ADR-0013 — Unified factory body identity
 
 Created: 2026-11-13
-Last Updated: 2026-11-13
+Last Updated: 2026-11-19
 Status: Accepted
 Date: 2026-11-13
 Accepted: 2026-11-13
@@ -12,6 +12,24 @@ decision and its narrow amendments to ADR-0010/0011/0012. A first bounded pure
 identity/contract-foundation implementation phase is separately authorized. No
 operational migration, parent publication, candidate regeneration or canonical write
 is authorized.
+
+## Scoped amendment — factory Transmission designation (2026-11-19)
+
+A verified factory transmission difference may distinguish otherwise identical
+VehicleDefinitions. This supersedes only the earlier prohibition against
+transmission-only canonical distinctions. The manufacturer configuration and
+its applicable transmission must be supported by evidence. An ordering code
+alone does not establish that distinction. Unknown transmission is unresolved
+for overlap checks. Equal designations establish neither hardware identity nor
+parts interchangeability.
+
+Store the controlled designation directly on VehicleDefinition. Keep Full
+Specs hardware descriptions, ratios, manufacturer hardware codes and evidence
+in their existing catalogue domain. Preserve existing PKs, UUIDs, immutable
+slugs and the interpretation of historical identity and receipt contracts.
+Transmission-aware authoring uses a successor contract. Factory packages remain
+in Full Specs. Treat a package with an engine upgrade as a trim under the current
+project rule, subject to applicable manufacturer evidence.
 
 ## Context
 

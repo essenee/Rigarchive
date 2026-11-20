@@ -9,6 +9,7 @@ from django.db.models.signals import m2m_changed
 from django.db.models.functions import Coalesce
 from django.db.models.functions import Upper, Trim, Lower, Length
 from reference.body_identity import TOKEN
+from reference.transmission import validate_transmission
 from django.urls import reverse
 from django.utils.text import slugify
 from django.dispatch import receiver
@@ -574,6 +575,8 @@ class VehicleDefinitionQuerySet(models.QuerySet):
         )
 
     def update(self, **kwargs):
+        if "transmission" in kwargs:
+            raise ValidationError("Assign transmissions through individual validated saves.")
         if "slug" in kwargs:
             raise ValidationError("Correct stored slugs through authorized individual Admin saves.")
         if {"engine", "engine_id"} & kwargs.keys():
@@ -592,6 +595,8 @@ class VehicleDefinitionQuerySet(models.QuerySet):
             kwargs["update_fields"] = tuple(kwargs["update_fields"])
         if kwargs.get("update_conflicts") and "slug" in (kwargs.get("update_fields") or ()):
             raise ValidationError("Bulk conflict updates cannot correct stored slugs.")
+        if any(obj.transmission for obj in objs) or "transmission" in (kwargs.get("update_fields") or ()):
+            raise ValidationError("Author transmission-specific vehicles through individual validated saves.")
         if any(obj.engine_id is not None for obj in objs):
             raise ValidationError("Create engine-associated vehicles through individual validated saves.")
         if kwargs.get("update_conflicts") and (set(FIELDS) | {"engine", "engine_id", "generation", "generation_id"}) & set(kwargs.get("update_fields") or ()):
@@ -689,6 +694,11 @@ class VehicleDefinition(BaseModel):
         default=Drivetrain.UNKNOWN,
     )
 
+    transmission = models.CharField(
+        max_length=32, blank=True, default="", validators=[validate_transmission],
+        help_text="Verified factory designation, for example 8-spd Auto, 6-spd Man, CVT or eCVT.",
+    )
+
     market = models.CharField(
         max_length=2,
         choices=Market,
@@ -753,6 +763,7 @@ class VehicleDefinition(BaseModel):
 
         self._validate_body_scope()
         self._validate_registry_engine()
+        self._validate_transmission_overlap()
 
         if not self.generation_id:
             return
@@ -811,9 +822,25 @@ class VehicleDefinition(BaseModel):
             suffix = pickup_slug_suffix(self.factory_body_configuration)
             if suffix:
                 base += '-' + suffix
+        if self.transmission:
+            base += '-' + slugify(self.transmission)
         if len(base) > 180:
             raise ValidationError({'slug': 'Configuration slug exceeds 180 characters.'})
         return base
+
+    def _validate_transmission_overlap(self, using=None):
+        if not self.generation_id or not self.is_active:
+            return
+        from reference.vehicle_authoring import _overlaps
+
+        peers = type(self).objects.using(using or self._state.db).filter(
+            generation_id=self.generation_id, model_year=self.model_year, market=self.market,
+            trim_name=self.trim_name, drivetrain=self.drivetrain, is_active=True,
+        ).exclude(pk=self.pk)
+        if not self.transmission:
+            peers = peers.exclude(transmission="")
+        if any(_overlaps(peer, self) for peer in peers.select_related("factory_body_configuration__bed_length")):
+            raise ValidationError({"transmission": "An active factory configuration has an overlapping transmission identity."})
 
     def _validate_body_scope(self, generation_id=None, body_id=None):
         generation_id = self.generation_id if generation_id is None else generation_id
@@ -871,6 +898,7 @@ class VehicleDefinition(BaseModel):
         with transaction.atomic(using=using):
             if kwargs.get("update_fields") is not None:
                 kwargs["update_fields"] = frozenset(kwargs["update_fields"])
+            previous = None
             if self.pk:
                 previous = type(self).objects.using(using).select_for_update().filter(pk=self.pk).first()
                 saving_slug = kwargs.get("update_fields") is None or "slug" in kwargs["update_fields"]
@@ -916,6 +944,12 @@ class VehicleDefinition(BaseModel):
                     for key in synchronized:
                         setattr(self, key, getattr(effective, key))
                     kwargs["update_fields"] = fields | synchronized
+            if effective.transmission:
+                validate_transmission(effective.transmission)
+            identity_fields = {"generation_id", "model_year", "market", "trim_name", "drivetrain",
+                               "transmission", "is_active", "factory_body_configuration_id", *FIELDS}
+            if previous is None or any(getattr(effective, name) != getattr(previous, name) for name in identity_fields):
+                effective._validate_transmission_overlap(using)
             if not self.slug:
                 self.slug = self.build_slug()
             super().save(*args, **kwargs)

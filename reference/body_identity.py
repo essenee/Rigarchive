@@ -56,15 +56,18 @@ def pickup_slug_suffix(body):
 
 
 def authoring_configuration_key(vehicle):
-    """Current human-authoring identity; transmission/output variants are not keys."""
+    """Keep legacy keys byte-stable; append only an established transmission."""
     from reference.powertrain import record_powertrain
     powertrain = record_powertrain(vehicle)
     validate_powertrain(powertrain, complete=True)
-    return canonical_json({
+    identity = {
         'generation_uuid': str(vehicle.generation.uuid), 'model_year': vehicle.model_year,
         'market': vehicle.market, 'trim_name': vehicle.trim_name, 'drivetrain': vehicle.drivetrain,
         'powertrain': powertrain, 'body': authoring_body_dimensions(vehicle.factory_body_configuration),
-    })
+    }
+    if vehicle.transmission:
+        identity['transmission'] = vehicle.transmission
+    return canonical_json(identity)
 
 
 def _require(condition, message):

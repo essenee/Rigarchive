@@ -18,6 +18,7 @@ from reference.body_identity import (
 )
 from reference.models import Engine, FactoryBodyConfiguration, ImportExecutionReceipt, VehicleDefinition
 from reference.powertrain import FIELDS, record_powertrain
+from reference.transmission import normalize_source_transmission
 
 
 def _require(condition, message):
@@ -30,6 +31,8 @@ def _overlaps(left, right):
     if any(getattr(left, f) != getattr(right, f) for f in
            ('generation_id', 'model_year', 'market', 'trim_name', 'drivetrain')):
         return False
+    if left.transmission and right.transmission and left.transmission != right.transmission:
+        return False
     a, b = record_powertrain(left), record_powertrain(right)
     if any(a[f] is not None and b[f] is not None and a[f] != b[f] for f in FIELDS):
         return False
@@ -39,8 +42,39 @@ def _overlaps(left, right):
                    for f in a.keys() | b.keys())
 
 
+def reviewed_transmission_manifest(rows, *, evidence_hash, authorization, lock=False):
+    """Bind exact authoring scope and peers for the transmission-aware receipt contract."""
+    vehicles = []
+    scopes = {}
+    for proposal, pk in rows:
+        key = (proposal.generation_id, proposal.model_year, proposal.market)
+        scopes[key] = None
+        vehicles.append({"identity": authoring_configuration_key(proposal), "reuse_pk": pk,
+                         "engine_uuid": str(proposal.engine.uuid) if proposal.engine_id else None,
+                         "body_uuid": str(proposal.factory_body_configuration.uuid),
+                         "slug": proposal.build_slug() if pk is None else None,
+                         "is_public": proposal.is_public})
+    for key in sorted(scopes):
+        generation, year, market = key
+        peers = VehicleDefinition.objects.filter(generation_id=generation, model_year=year, market=market)
+        if lock:
+            peers = peers.select_for_update()
+        scopes[key] = list(peers.order_by("pk").values(
+            "pk", "uuid", "slug", "trim_name", "drivetrain", "transmission", "is_active",
+            "is_public", "base_msrp", "factory_body_configuration_id", "engine_id", "engine_name", *FIELDS,
+        ))
+    payload = {
+        "profile": "human-body-authoring/2", "observations": evidence_hash, "authorization": authorization,
+        "rows": vehicles, "scopes": [{"scope": key, "peers": peers} for key, peers in sorted(scopes.items())],
+    }
+    # UUID and Decimal scalar snapshots are serialized as their exact string representations.
+    raw = json.dumps(payload, sort_keys=True, ensure_ascii=False, separators=(",", ":"), default=str)
+    return {**json.loads(raw), "manifest_hash": "sha256:" + hashlib.sha256(raw.encode()).hexdigest()}
+
+
 @transaction.atomic
-def author_configurations(rows, *, evidence_reference, evidence_hash, authorization, operator_label):
+def author_configurations(rows, *, evidence_reference, evidence_hash, authorization, operator_label,
+                          approved_manifest_hash=None):
     """Create/reuse exactly reviewed rows, recording compact receipts atomically.
 
     rows: (unsaved proposed VehicleDefinition, optional existing PK) pairs. Reuse
@@ -72,7 +106,12 @@ def author_configurations(rows, *, evidence_reference, evidence_hash, authorizat
         'observations': digest, 'authorization': authorization,
         'rows': [{'identity': key, 'reuse_pk': pk} for key, (_, pk) in zip(keys, rows)],
     }).encode()).hexdigest()
+    if any(v.transmission for v, _ in rows):
+        review = reviewed_transmission_manifest(rows, evidence_hash=digest, authorization=authorization, lock=True)
+        _require(approved_manifest_hash == review["manifest_hash"], 'Transmission authoring manifest is stale or not approved.')
+        manifest_hash = review["manifest_hash"]
     prepared = []
+    b3_evidence = {}
     # Validate the entire set before the first write; rollback covers every receipt.
     for key, (proposed, reuse_pk) in zip(keys, rows):
         _require(proposed._state.adding and proposed.pk is None and proposed.is_active,
@@ -88,6 +127,32 @@ def author_configurations(rows, *, evidence_reference, evidence_hash, authorizat
         _require(proposed.engine_name == observation['engine_name'] and
                  (str(proposed.base_msrp) if proposed.base_msrp is not None else None) == observation['base_msrp'],
                  'Reviewed presentation name or price differs.')
+        if proposed.transmission:
+            offer = observation.get('selected_toyota_model') or {}
+            proof = observation.get('transmission_evidence') or {}
+            if proof.get("working_revision"):
+                from reference.configuration_logic_google import read_registry
+                from reference.configuration_logic_authoring import prepare_b3_authoring
+                generation = str(proposed.generation.uuid)
+                registry = read_registry(root / ".configuration-logic" / f"{generation}.json", generation)
+                _require(registry and registry.get("working_revision") == proof["working_revision"],
+                         "B3 working revision changed after review.")
+                source_path = (root / proof["reference"]).resolve()
+                _require(source_path.is_relative_to(root) and source_path.is_file() and
+                         "sha256:" + hashlib.sha256(source_path.read_bytes()).hexdigest() == proof["sha256"],
+                         "B3 source evidence changed after review.")
+                source_key = (generation, proposed.model_year, proof["reference"], proof["sha256"])
+                if source_key not in b3_evidence:
+                    _, reviewed = prepare_b3_authoring(proposed.generation, proposed.model_year,
+                                                       proof["reference"], proof["sha256"])
+                    b3_evidence[source_key] = {item["identity"]: item for item in reviewed["configurations"]}
+                _require(b3_evidence[source_key].get(key) == observation,
+                         "Reviewed transmission observation differs from the registered B3 offer.")
+            _require(normalize_source_transmission(offer.get('transmission')) == proposed.transmission
+                     and bool(offer.get('code')) and proposed.engine_id is not None
+                     and offer.get('variant') == proposed.engine.internal_variant_key
+                     and bool(proof),
+                     'Reviewed factory transmission and exact Engine evidence are required.')
         engines = []
         for pin in observation['engine_options']:
             engine = Engine.objects.select_for_update().get(pk=pin['pk'], uuid=pin['uuid'])
@@ -136,7 +201,8 @@ def author_configurations(rows, *, evidence_reference, evidence_hash, authorizat
             vehicle.save(force_insert=True)
             outcome = 'created'
         fields = json.loads(key)
-        snapshot = {'profile': 'human-body-authoring/1', 'identity': fields,
+        snapshot = {'profile': 'human-body-authoring/2' if vehicle.transmission else 'human-body-authoring/1',
+                    'identity': fields,
                     'evidence_reference': evidence_reference, 'evidence_hash': digest,
                     'observation': observations[key], 'authorization': authorization,
                     'engine_uuid': str(vehicle.engine.uuid) if vehicle.engine_id else None,
@@ -148,7 +214,9 @@ def author_configurations(rows, *, evidence_reference, evidence_hash, authorizat
             candidate_reference='human-authoring:' + str(vehicle.uuid), planned_action='create' if not existing else 'reuse',
             create_basis='reviewed_factory_configuration', source_id='human-reviewed-observations',
             raw_artifact_hash=digest, raw_artifact_reference=evidence_reference,
-            source_identity_type='reviewed_observation', native_identifier=str(vehicle.uuid),
+            source_identity_type='model_code' if vehicle.transmission else 'reviewed_observation',
+            native_identifier=(observations[key]['selected_toyota_model']['code']
+                               if vehicle.transmission else str(vehicle.uuid)),
             resolved_generation_id=vehicle.generation_id, target_slug=vehicle.slug,
             target_model_year=vehicle.model_year, target_trim_name=vehicle.trim_name,
             target_engine_name=vehicle.engine_name, target_drivetrain=vehicle.drivetrain,
