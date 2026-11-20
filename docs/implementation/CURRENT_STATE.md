@@ -85,6 +85,58 @@ The three registered Tacoma worksheet arrangements above remain in place.
 The MY2024 replacement is a separate operation requiring a fresh review and
 explicit authorization.
 
+Migration 0019 is applied to the development database. A verified backup and
+before-and-after comparison confirmed that all 1,178 existing vehicle
+definitions and other application rows were preserved. Existing transmission
+values are blank.
+
+On 2026-11-19, the approved MY2024 Tacoma replacement was
+committed and verified in development under review digest
+`sha256:bf15c1ba996529f2475588854dba6a86ee3bfbb900489892f69004ee033790e6`. The
+verified pre-execution backup is `pre_my2024_tacoma_replacement_20261120T043622Z.sqlite3` with digest
+`sha256:a1ba4bb4c6d6ca70e79742b71483c1b95fc8352079125d08071982fda36c14cd`.
+
+The transaction deleted legacy VehicleDefinition PKs 371–381 and created
+27 active configurations and 27 authoring receipts. The development vehicle
+count rose from 1,178 to 1,194. Exactly 11 creation links and 55 existing-record
+links were cleared via SET_NULL. All historical receipt rows and their other
+fields were preserved. Other VehicleDefinitions and application records,
+including the 24 MY2026 model-code receipts, were unchanged. SQLite integrity
+and foreign-key checks passed before and after commit. Hybrid model codes
+7532, 7534, 7536, 7538, and 7598 remain Pending Manufacturer Confirmation.
+Production and the registered workbook were unchanged. The 20 focused tests
+passed. The full Django suite ran 1,314 tests with one skip and zero failures.
+
+| Created VehicleDefinition PK | UUID | Authoring receipt PK |
+| --- | --- | --- |
+| 1213 | `c2ad6c15-2868-4ec1-814d-355c5c59be70` | 3664 |
+| 1214 | `ecd75591-c729-416b-a324-9f493549ec24` | 3665 |
+| 1215 | `de29dbea-d4dc-4edb-90aa-14a39dfbcf8c` | 3666 |
+| 1216 | `46c38d9e-9d13-4760-b1ac-7f6088137276` | 3667 |
+| 1217 | `9ea50399-1a4f-47c7-9c97-5b2bfd85a25d` | 3668 |
+| 1218 | `f829cc8b-bbd8-4d61-8201-933ae2a2b893` | 3669 |
+| 1219 | `1cbd18d5-ec70-4773-9f16-627178dd9677` | 3670 |
+| 1220 | `6cf7bb1b-363f-4b4e-b77c-ac21ec930230` | 3671 |
+| 1221 | `b0791777-22a5-4590-b913-ed9c4b603c3c` | 3672 |
+| 1222 | `70312438-f12f-44b5-8df7-44255f5bf8ea` | 3673 |
+| 1223 | `a097dc03-05a8-4cba-a3b4-777eee42de7f` | 3674 |
+| 1224 | `38293950-953c-4d8c-84f4-12ecb5184536` | 3675 |
+| 1225 | `906c9e57-9ee9-4a7b-a5c0-a8358c29ba9e` | 3676 |
+| 1226 | `15d32de1-c0b3-40f0-a159-5fefa4e0cc89` | 3677 |
+| 1227 | `52462dd9-d75a-4790-9894-3cce81c84e7e` | 3678 |
+| 1228 | `0bdf99f0-b843-4f37-b497-bfa19d9f6b3c` | 3679 |
+| 1229 | `42080b6f-43ad-41aa-94d1-06201fa09bb5` | 3680 |
+| 1230 | `12425b9d-5d6d-48bb-88ce-67dc0997dde9` | 3681 |
+| 1231 | `62a4cee6-999a-4693-be4f-26533624dc8b` | 3682 |
+| 1232 | `b86f21f6-4779-414d-93a6-1f3700a0c0cc` | 3683 |
+| 1233 | `fdce3b37-b7e7-4509-b6fd-5087edeedfdf` | 3684 |
+| 1234 | `6322be22-1df4-4cac-9fb7-661ec518fe9e` | 3685 |
+| 1235 | `1c3d7176-5d9e-4663-a0b4-43d99a7df67f` | 3686 |
+| 1236 | `cc109c68-9a24-4906-bb0f-90b48a501b86` | 3687 |
+| 1237 | `794a1c4b-2f58-4451-a175-b0fded9fc2db` | 3688 |
+| 1238 | `0dd5d1c9-470e-4766-8236-c1c838ff2276` | 3689 |
+| 1239 | `81d4fe61-5698-4e44-82a2-e6a724b05763` | 3690 |
+
 ## MY2026 Toyota Tacoma — base MSRP completion (2026-11-19)
 
 All **24 active US Tacoma definitions** now have base MSRPs. Filled 19 blank
