@@ -55,6 +55,10 @@ identify the exact code. Use `Evidence gap: …` for an unsupported assertion
 and `Lineage: …` for the corresponding authoring receipt or internal
 observation. An internal receipt records an authoring action.
 
+When primary and third-party sources conflict, record the accepted and
+rejected assertions and retain both references. Evaluate an announcement's
+production applicability under the [publication-stage evidence policy](INGESTION_PROTOCOL.md#publication-stage-and-production-applicability).
+
 Source References resolves each readable ID to one document or document
 revision. A document reused across model years has one alias entry, with each
 year's applicability, review date, notes, and observation hash in Notes. A
@@ -424,8 +428,17 @@ canonical update.
 ```
 
 Use the preview hash after reviewing the assignments and taking a verified
-SQLite snapshot. The apply command rechecks the worksheet and updates only
-Configurator # values in one transaction. The workbook remains read-only.
+SQLite snapshot. By default, apply updates only Configurator # values.
+
+For an approved combined sync, pass `--transmission --revision REVISION_ID`
+to both preview and apply. This mode requires the exact registered revision
+and cell order and verifies Engine correspondence where the worksheet specifies
+it. It fills blank canonical transmissions with the normalized CL designations
+and reports existing matches, conflicts, and unresolved cells. Conflicting
+or unresolved transmission values stay as stored while valid order assignments
+can proceed. The combined changes run in one SQLite transaction. Use
+`--json` to retain the row IDs, canonical identities and exact before/target
+values for audit. The workbook remains read-only in both modes.
 
 For a logical edit, use schema 2 and pick a row ID and field ID from the
 registered layout. The numbers below are illustrative only.

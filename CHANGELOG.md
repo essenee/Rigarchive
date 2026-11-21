@@ -6,6 +6,11 @@ All notable changes to RigArchive will be documented in this file.
 
 ### Changed
 
+- Synchronized 138 fifth-generation 4Runner Configurator numbers and 136
+  transmissions from the registered MY2010–MY2024 CL worksheets.
+- Resolved the two MY2012 4Runner SR5 transmission gaps using exact production
+  specifications from Edmunds. Retained the conflicting Toyota announcement
+  and documented the production-evidence policy.
 - Public configurators use the VehicleDefinition Configurator # when assigned.
   Synced all 32 MY2025–MY2026 sixth-generation 4Runner values from the registered
   Configuration Logic workbook while preserving canonical identities.

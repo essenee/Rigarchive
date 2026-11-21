@@ -62,6 +62,27 @@ Retained assertion binding supports original SourceAssertionSet v1 (schema 1.0.0
 
 ## Evidence and interpretation boundaries
 
+### Publication stage and production applicability
+
+Pre-release manufacturer announcements are provisional evidence of intended
+specifications. Manufacturer origin establishes source authenticity. Final
+production accuracy depends on publication stage, model-year and market
+applicability, configuration specificity, and corroboration.
+
+Pre-release announcements can carry preliminary grades, equipment,
+transmissions, engines, prices, and model codes. Give final production
+pricing sheets, product specifications, ordering guides, and applicable
+technical documentation precedence when they directly address the disputed
+attribute. Verified production-era third-party evidence may outweigh a
+preliminary announcement when it establishes the exact configuration and
+attribute and the adjudication explains why.
+
+Retain conflicting sources and document which claims the adjudication accepts
+or rejects and why. One rejected claim does not invalidate independent claims
+in the same document. Apply this rule prospectively across manufacturers.
+Evaluate each document on its own publication stage and scope, including
+finalized documents and pre-release announcements hosted on Toyota Pressroom.
+
 ### Owner-approved classification adjudication policy (2026-11-08)
 
 Manufacturer technical specifications are preferred evidence, not mandatory.

@@ -1,6 +1,17 @@
+from copy import deepcopy
+from io import StringIO
+import json
+from pathlib import Path
+from tempfile import TemporaryDirectory
+from unittest.mock import patch
+
+from django.contrib.auth import get_user_model
+from django.contrib.sessions.models import Session
+from django.core.management import call_command
 from django.core.management.base import CommandError
-from django.test import TestCase
+from django.test import TestCase, override_settings
 from django.urls import reverse
+from django.utils.timezone import now
 
 from reference.configuration_logic import GENERATION_COLUMN_ORDER, HEADERS, WIDTHS, GenerationDraft, Sheet
 from reference.configuration_logic_google import desired_values
@@ -23,7 +34,7 @@ class ConfiguratorOrderTests(TestCase):
                     base_msrp=20000 + index,
                 )
 
-    def workbook(self, order_by_year):
+    def workbook(self, order_by_year, transmissions=None):
         sheets, remote = [], {}
         for year, records in order_by_year.items():
             name, title = f"MY{year}", "Toyota 4Runner"
@@ -31,7 +42,8 @@ class ConfiguratorOrderTests(TestCase):
             rows = [(title,), ("Draft",), (), headers]
             for position, vehicle in enumerate(records, 1):
                 row = {0: position, 1: vehicle.pk, 2: str(vehicle.pk), 3: vehicle.trim_name,
-                       7: vehicle.drivetrain, 12: vehicle.slug, 13: vehicle.get_market_display()}
+                       7: vehicle.drivetrain, 12: vehicle.slug, 13: vehicle.get_market_display(),
+                       14: (transmissions or {}).get(vehicle.pk)}
                 rows.append(tuple(row.get(i) for i in GENERATION_COLUMN_ORDER))
             sheet = Sheet(name, tuple(rows), tuple(WIDTHS[i] for i in GENERATION_COLUMN_ORDER), numbering=True)
             sheets.append(sheet)
@@ -95,3 +107,80 @@ class ConfiguratorOrderTests(TestCase):
         self.assertEqual(response.context["available_trims"], ["Trim 07", *(f"Trim {i:02}" for i in range(7))])
         response = self.client.get(self.url, {"year": 2025, "trim": "Trim 07"})
         self.assertEqual([v.drivetrain for v in response.context["configuration_browser_choices"]], ["4WD", "2WD"])
+
+    def test_pinned_combined_sync_matches_138_rows_and_preserves_conflicts_and_other_data(self):
+        counts = (6, 5, 5, 5, 8, 9, 9, 9, 9, 11, 12, 14, 13, 12, 11)
+        by_year = {
+            year: [VehicleDefinition.objects.create(
+                generation=self.generation, model_year=year, trim_name=f"Grade {index:02}", drivetrain="4WD",
+            ) for index in range(count)]
+            for year, count in zip(range(2010, 2025), counts, strict=True)
+        }
+        unresolved = [v.pk for v in by_year[2012][:2]]
+        conflict, matching, four_speed = by_year[2010][:3]
+        conflict.transmission = "6-spd Man"
+        conflict.save(update_fields=["transmission"])
+        matching.transmission = "5-Spd Auto"
+        matching.save(update_fields=["transmission"])
+        inactive = VehicleDefinition.objects.create(
+            generation=self.generation, model_year=2019, trim_name="Historical", is_active=False,
+        )
+        get_user_model().objects.create_user(username="ordering-test", password="isolated-test")
+        Session.objects.create(session_key="ordering-test", session_data="fixture", expire_date=now())
+        auth_before = (list(get_user_model().objects.values()), list(Session.objects.values()))
+        values = {v.pk: "5-Spd Auto" for rows in by_year.values() for v in rows if v.pk not in unresolved}
+        values[four_speed.pk] = "4-Speed Automatic"
+        values[unresolved[1]] = "Unresolved"
+        draft, baseline = self.workbook(by_year, values)
+        layout = {"sheets": {name: {"rows": [
+            {"row": i, "id": f"{name}-{i}"} for i in range(5, len(table.rows) + 1)
+        ]} for name, table in ((t.name, t) for t in draft.sheets)}}
+        state = {"spreadsheet": "known-sheet", "working_revision": {"id": "approved"}}
+        command = "reference.management.commands.sync_configurator_order"
+        options = {"manufacturer": "Toyota", "model": "4Runner", "generation": str(self.generation.pk),
+                   "transmission": True, "revision": "approved", "json": True}
+        years = [argument for year in by_year for argument in ("--year", str(year))]
+
+        def run(**mode):
+            out = StringIO()
+            call_command("sync_configurator_order", *years, **{**options, **mode}, stdout=out)
+            return json.loads(out.getvalue())
+
+        before = {v["id"]: v for v in VehicleDefinition.objects.values()}
+        with TemporaryDirectory() as directory, override_settings(BASE_DIR=Path(directory)), patch(
+            f"{command}.read_registry", return_value=state,
+        ), patch(f"{command}.load_layout", return_value=layout), patch(
+            f"{command}.load_revision", return_value=baseline,
+        ), patch(f"{command}.current_draft", return_value=draft), patch(f"{command}.connect"), patch(
+            f"{command}.check_working_remote", return_value=baseline,
+        ) as live:
+            with self.assertRaisesMessage(CommandError, "not the registered head"):
+                run(dry_run=True, revision="stale")
+            preview = run(dry_run=True)
+            self.assertEqual(len(preview["rows"]), 138)
+            self.assertEqual(preview["order_changes"], 138)
+            self.assertEqual(preview["transmissions"], {"populate": 134, "conflict": 1, "matching": 1, "unresolved": 2})
+            self.assertEqual(preview["out_of_scope_pks"], [inactive.pk])
+            self.assertEqual(len({r["row_id"] for r in preview["rows"]}), 138)
+            altered = deepcopy(baseline)
+            cells = altered["MY2010"]["data"][0]["rowData"]
+            cells[4], cells[5] = cells[5], cells[4]
+            live.return_value = altered
+            with self.assertRaisesMessage(CommandError, "differs from the exact registered revision"):
+                run(apply=preview["preview_hash"])
+            self.assertEqual({v["id"]: v for v in VehicleDefinition.objects.values()}, before)
+            live.return_value = baseline
+            report = run(apply=preview["preview_hash"])
+            rerun = run(dry_run=True)
+            self.assertTrue(report["applied"])
+            self.assertEqual(rerun["order_changes"], 0)
+            self.assertEqual(rerun["transmissions"], {"matching": 135, "conflict": 1, "unresolved": 2})
+            run(apply=rerun["preview_hash"])
+        for entry in preview["rows"]:
+            row = before[entry["pk"]]
+            row["configurator_order"] = entry["number"]
+            if entry["transmission_status"] == "populate":
+                row["transmission"] = entry["transmission_target"]
+        self.assertEqual(before[four_speed.pk]["transmission"], "4-spd Auto")
+        self.assertEqual({v["id"]: v for v in VehicleDefinition.objects.values()}, before)
+        self.assertEqual((list(get_user_model().objects.values()), list(Session.objects.values())), auth_before)

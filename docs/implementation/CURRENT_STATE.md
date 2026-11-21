@@ -385,6 +385,31 @@ foreign-key and Django checks pass; **95 focused and 1,225 full-suite tests pass
 using isolated test databases; the live database hash remained unchanged by tests.
 Backup: `backups/snapshots/pre_my2010_2024_4runner_authoring_20261118T010057210085Z.sqlite3`.
 
+The standalone [fifth-generation 4Runner Configuration Logic workbook](https://docs.google.com/spreadsheets/d/1v5usvv3wEw96LUrSagPOtxivOSq3Er6FyU_T2k4cw_I/edit)
+is registered as B3 working revision `9e84543e7b87455eb8d26cf7fb858af1`.
+Its predecessor `4c4477c315f044d8bdb9e9c50904b359` captured column visibility
+changes on MY2010 and MY2024 and a duplicated MY2010 draft label. All
+configuration cells, formulas, Source References, and working-row IDs stayed intact.
+Its 15 MY2010–MY2024 worksheets contain 138 active canonical correspondences,
+72 verified Toyota model codes and calculated configuration numbers. Source
+References contains 52 entries. Two inactive MY2019 AWD records remain in the
+canonical review inventory outside the proposed order. MSRP review flags carry
+forward.
+
+The pinned canonical sync populated 138 Configurator # values and 136 blank
+transmissions. PK 558 received `4-spd Auto`, and 135 VehicleDefinitions
+received `5-spd Auto`. The follow-up adjudication filled MY2012 SR5 PKs
+568 (2WD) and 569 (4WD) with `5-spd Auto` from exact Edmunds production
+specifications. Source References retains Toyota's preliminary 5MT claim
+as rejected transmission evidence and preserves its independent grade,
+code, drivetrain, and pricing provenance. All 138 transmissions are now
+synchronized. All 15 fifth-generation model years rendered in CL order
+with verified configuration links. Both sixth-generation years also
+rendered correctly. The sync preserved all canonical identities, unrelated
+rows, authentication and sessions. The workbook was read-only.
+Verified initial sync backup: `backups/snapshots/db_snapshot_20261121_041722.sqlite3`.
+Verified adjudication backup: `backups/snapshots/db_snapshot_20261121_043943.sqlite3`.
+
 ## MY2025 Toyota 4Runner — active records authored (2026-11-17)
 
 Updated only active PKs **686–699**: ten Engine-10 nonhybrid and four Engine-13
