@@ -403,6 +403,30 @@ using the same manufacturer, model and generation arguments as the publisher.
 Use the exact hash from the dry run. If a migration is interrupted, inspect
 the live formula and registered revision before issuing any further write.
 
+### Public configurator order
+
+VehicleDefinition stores a nullable **Configurator #**. A trim's first
+numbered configuration determines its position in the public selector.
+Configurations within a trim follow their own numbers. Unassigned trims
+and configurations follow the established fallback order.
+
+Use an explicit sync to copy calculated numbers from complete standalone
+CL correspondences into the selected canonical model years. The preview
+verifies the live workbook against its B3 revision and checks each row's PK,
+year, slug, trim, market and drivetrain. A verified physical row move changes
+the calculated number. The stable working-row and canonical identities carry
+forward. Opening, exporting or capturing the workbook does not apply the
+canonical update.
+
+```bash
+.venv/bin/python manage.py sync_configurator_order --manufacturer Toyota --model 4Runner --generation 30 --year 2025 --year 2026 --dry-run
+.venv/bin/python manage.py sync_configurator_order --manufacturer Toyota --model 4Runner --generation 30 --year 2025 --year 2026 --apply PREVIEW_HASH
+```
+
+Use the preview hash after reviewing the assignments and taking a verified
+SQLite snapshot. The apply command rechecks the worksheet and updates only
+Configurator # values in one transaction. The workbook remains read-only.
+
 For a logical edit, use schema 2 and pick a row ID and field ID from the
 registered layout. The numbers below are illustrative only.
 

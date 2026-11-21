@@ -6,6 +6,9 @@ All notable changes to RigArchive will be documented in this file.
 
 ### Changed
 
+- Public configurators use the VehicleDefinition Configurator # when assigned.
+  Synced all 32 MY2025–MY2026 sixth-generation 4Runner values from the registered
+  Configuration Logic workbook while preserving canonical identities.
 - Reconciled the 32 U.S. sixth-generation 4Runner configurations for MY2025–2026.
   Filled 30 existing transmissions, updated four hybrid trim labels and created
   MY2026 codes 8628 and 8630 with receipts. B3 retained stable row IDs and

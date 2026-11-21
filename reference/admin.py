@@ -740,6 +740,7 @@ class VehicleDefinitionAdmin(admin.ModelAdmin):
                     "engine",
                     "model_year",
                     "trim_name",
+                    "configurator_order",
                     "engine_name",
                     "drivetrain",
                     "market",

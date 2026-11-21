@@ -10,7 +10,7 @@ from collections import Counter
 from dataclasses import dataclass
 from urllib.parse import urlencode
 from typing import Any, Dict, List, Optional
-from django.db.models import Prefetch, Q, prefetch_related_objects
+from django.db.models import F, Prefetch, Q, prefetch_related_objects
 from django.http import Http404
 from django.shortcuts import get_object_or_404
 from django.urls import reverse
@@ -266,14 +266,19 @@ def _trim_body_groups(configurations):
     """Group only actual rows; labels are separate from exact selection keys."""
     groups = {}
     trim_prices = {}
+    trim_orders = {}
     for vd in configurations:
         body = vd.factory_body_configuration
         trim = vd.trim_name or ""
         if vd.base_msrp is not None:
             trim_prices[trim] = min(trim_prices.get(trim, vd.base_msrp), vd.base_msrp)
         key = f"body:{body.uuid}:{trim}" if body else trim
-        group = groups.setdefault(key, {"key": key, "trim": trim, "body": body, "pks": []})
+        group = groups.setdefault(key, {"key": key, "trim": trim, "body": body, "pks": [], "order": None})
         group["pks"].append(vd.pk)
+        if vd.configurator_order is not None:
+            order = vd.configurator_order
+            trim_orders[trim] = min(trim_orders.get(trim, order), order)
+            group["order"] = order if group["order"] is None else min(group["order"], order)
     dimensions = {key: _body_dimensions(group["body"]) for key, group in groups.items()}
     pickup = any(g['body'] and (g['body'].cab_configuration or g['body'].bed_length_id)
                  for g in groups.values())
@@ -297,11 +302,12 @@ def _trim_body_groups(configurations):
         parts = ([group["trim"]] if group["trim"] else []) + [
             _body_dimension_label(field, dimensions[key].get(field)) for field in selected]
         group["label"] = " · ".join(parts) or "Factory configuration"
-    # Price the marketed trim across all its bodies and engines. Body groups stay
-    # contiguous, with their established ordering; all-unknown years sort as before.
+    # Keep trim/body navigation intact and use legacy pricing for unnumbered trims.
     return sorted(groups.values(), key=lambda g: (
-        g["trim"] not in trim_prices, trim_prices.get(g["trim"], 0),
-        g["trim"], g["label"], g["key"],
+        g["trim"] not in trim_orders, trim_orders.get(g["trim"], 0),
+        g["trim"] not in trim_prices if g["trim"] not in trim_orders else False,
+        trim_prices.get(g["trim"], 0) if g["trim"] not in trim_orders else 0,
+        g["trim"], g["order"] is None, g["order"] or 0, g["label"], g["key"],
     ))
 
 
@@ -394,6 +400,10 @@ def get_generation_hub_context(
         selected_year = candidate.model_year
 
     year_filtered_defs = active_defs.filter(model_year=selected_year) if selected_year is not None else active_defs
+    if selected_year is not None:
+        year_filtered_defs = year_filtered_defs.order_by(
+            F("configurator_order").asc(nulls_last=True), "trim_name", "drivetrain", "engine_name", "market", "slug",
+        )
     trim_groups = _trim_body_groups(year_filtered_defs) if selected_year is not None else []
     groups_by_key = {group["key"]: group for group in trim_groups}
     group_for_pk = {pk: group["key"] for group in trim_groups for pk in group["pks"]}

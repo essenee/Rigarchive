@@ -53,6 +53,14 @@ canonical correspondence. Trim capture `45c9a860cf55478da2b3522fd96c3d67`
 and correspondence publication retained the working-row IDs.
 Existing canonical identities, Engine assignments, and prices were preserved.
 PK 679's MSRP and the MY2025 Trailhunter Engine correspondence remain under review.
+Migration `reference.0020_vehicledefinition_configurator_order` adds the nullable
+Configurator #. The scoped sync verified revision `1dc3b56df30746ac95de1f8eafe4b199`
+and populated all 16 MY2025 and 16 MY2026 VehicleDefinitions from their calculated
+CL row numbers. Both public trim selectors and their configuration links were
+verified through rendered responses. Existing identities, Engines, prices, and
+local authentication state were preserved. The workbook was read-only.
+The verified pre-migration SQLite snapshot is
+`backups/snapshots/db_snapshot_20261121_024825.sqlite3`.
 The verified pre-write snapshot is `backups/snapshots/db_snapshot_20261121_010117.sqlite3`
 (SHA-256 `455873eb90055f497295b88666bfadd6aacfd40bc42ffc9bc436a7f30f6f59a8`).
 Keep the execution plan, observations, and receipt evidence in

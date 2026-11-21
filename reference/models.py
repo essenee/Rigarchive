@@ -645,6 +645,7 @@ class VehicleDefinition(BaseModel):
     objects = VehicleDefinitionQuerySet.as_manager()
 
     model_year = models.PositiveSmallIntegerField()
+    configurator_order = models.PositiveIntegerField("Configurator #", null=True, blank=True)
 
     base_msrp = models.DecimalField(
         max_digits=10, decimal_places=2, null=True, blank=True,
