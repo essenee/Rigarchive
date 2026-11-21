@@ -1,6 +1,7 @@
 from django.contrib import admin, messages
 from django import forms
 from django.contrib.admin.views.autocomplete import AutocompleteJsonView
+from django.contrib.admin.views.main import PAGE_VAR, ChangeList
 from django.contrib.admin.widgets import AutocompleteSelect
 from django.urls import path, reverse
 from django.core import signing
@@ -553,6 +554,63 @@ class VehicleDefinitionAdminForm(forms.ModelForm):
         return value
 
 
+VEHICLE_MANUFACTURER_FILTER = "generation__vehicle_model__manufacturer"
+
+
+class VehicleDefinitionModelFilter(admin.SimpleListFilter):
+    title = "Model"
+    parameter_name = "vehicle_model"
+
+    def lookups(self, request, model_admin):
+        manufacturer_field = VehicleModel._meta.get_field("manufacturer")
+        manufacturer_lookup = f"{VEHICLE_MANUFACTURER_FILTER}__{manufacturer_field.target_field.name}__exact"
+        manufacturer = request.GET.get(manufacturer_lookup)
+        represented = model_admin.get_queryset(request).order_by().values("generation__vehicle_model_id")
+        models = VehicleModel.objects.filter(pk__in=represented).select_related("manufacturer")
+        if manufacturer is not None:
+            try:
+                models = models.filter(manufacturer_id=int(manufacturer))
+            except ValueError:
+                return ()
+        return [(model.pk, str(model)) for model in models]
+
+    def has_output(self):
+        return self.value() is not None or super().has_output()
+
+    def queryset(self, request, queryset):
+        if self.value() is None:
+            return queryset
+        try:
+            return queryset.filter(generation__vehicle_model_id=int(self.value()))
+        except ValueError:
+            return queryset.none()
+
+
+class VehicleDefinitionYearFilter(admin.AllValuesFieldListFilter):
+    template = "admin/reference/vehicledefinition/year_filter.html"
+    order_parameter = "year_filter_order"
+
+    def __init__(self, field, request, params, model, model_admin, field_path):
+        # Sidebar order is presentation state, so consume it before ORM filtering.
+        params.pop(self.order_parameter, None)
+        self.oldest_first = request.GET.get(self.order_parameter) == "asc"
+        super().__init__(field, request, params, model, model_admin, field_path)
+        if not self.oldest_first:
+            self.lookup_choices = self.lookup_choices.reverse()
+
+    def choices(self, changelist):
+        params = {self.order_parameter: None if self.oldest_first else "asc"}
+        if changelist.page_num > 1:
+            params[PAGE_VAR] = changelist.page_num
+        self.toggle_url = changelist.get_query_string(params)
+        return super().choices(changelist)
+
+
+class VehicleDefinitionChangeList(ChangeList):
+    def _get_default_ordering(self):
+        return ("-model_year", "pk")
+
+
 @admin.register(VehicleDefinition)
 class VehicleDefinitionAdmin(admin.ModelAdmin):
     class Media:
@@ -607,6 +665,9 @@ class VehicleDefinitionAdmin(admin.ModelAdmin):
         # Registered properties are maintained once, on Engine, not per vehicle.
         return self.readonly_fields + (("engine_name", *FIELDS) if obj and obj.engine_id else ())
 
+    def get_changelist(self, request, **kwargs):
+        return VehicleDefinitionChangeList
+
     list_display = (
         "model_year",
         "record_pk",
@@ -628,9 +689,10 @@ class VehicleDefinitionAdmin(admin.ModelAdmin):
         return obj.pk
 
     list_filter = (
-        "generation__vehicle_model__manufacturer",
+        VEHICLE_MANUFACTURER_FILTER,
+        VehicleDefinitionModelFilter,
         "drivetrain",
-        "model_year",
+        ("model_year", VehicleDefinitionYearFilter),
         "is_public",
         "is_active",
         "market",

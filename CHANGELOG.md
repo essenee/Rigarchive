@@ -13,6 +13,9 @@ All notable changes to RigArchive will be documented in this file.
 - B3 preserves standalone row IDs through verified trim-only edits and fills
   empty canonical correspondences from exact creation receipts. Reviewed
   single-body generations can be authored with an implicit factory body.
+- Vehicle Definitions Admin now offers a Manufacturer-dependent Model filter
+  and opens newest model year first. The model-year sidebar filter lists years
+  newest first and has its own toggle that preserves active filters and search terms.
 - B3 preflight, capture consistency and post-write verification ignore
   presentation-only changes, including number formats and concurrent column
   resizing. Targeted edits still write only cell values.

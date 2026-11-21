@@ -1,0 +1,24 @@
+{% load i18n %}
+<details data-filter-title="{{ title }}" open>
+  <summary>
+    {% blocktranslate with filter_title=title %} By {{ filter_title }} {% endblocktranslate %}
+  </summary>
+  <ul>
+    <li>
+      <a id="year-filter-order-toggle" href="{{ spec.toggle_url|iriencode }}">
+        {% if spec.oldest_first %}
+          {% translate "Oldest first ↑" %}
+        {% else %}
+          {% translate "Newest first ↓" %}
+        {% endif %}
+      </a>
+    </li>
+  </ul>
+  <ul>
+    {% for choice in choices %}
+      <li{% if choice.selected %} class="selected"{% endif %}>
+        <a href="{{ choice.query_string|iriencode }}">{{ choice.display }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</details>

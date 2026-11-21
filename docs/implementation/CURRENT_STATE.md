@@ -3,6 +3,14 @@ Version: 1.9
 Last Updated: 2026-11-20
 Purpose: Current implementation status and development roadmap
 
+## Vehicle Definitions Admin
+
+The changelist offers a Model filter scoped by the selected Manufacturer.
+Incompatible filter combinations return no records. The default order is
+descending model year with ascending PK for ties. The model-year sidebar
+filter lists years newest first. Its toggle reverses the choices while preserving
+the table order, active filters, and search.
+
 ## Configuration Logic working revisions (Milestone B2)
 
 The registered draft can be inspected and explicitly captured as a versioned
