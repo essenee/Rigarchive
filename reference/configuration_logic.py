@@ -11,6 +11,9 @@ from django.db.models import Q
 
 from reference.admin import factory_body_configuration_label
 from reference.body_identity import canonical_json
+from reference.configuration_logic_provenance import (
+    consolidate_source_rows, provenance, readable_source_id, register_source_alias, source_descriptor,
+)
 from reference.configuration_logic_queries import (
     authored_observations, catalogue_options, option_rows, sort_by_trim_price,
 )
@@ -97,16 +100,21 @@ def pinned_review(receipt):
     return None
 
 
-def draft_year(title, year, configurations, *, authored_rows=(), authored_sources=()):
+def draft_year(title, year, configurations, *, authored_rows=(), authored_sources=(), source_registry=None):
     """Research drafts can supply validated display rows without ORM insertion."""
     status = "Draft — awaiting research and review"
     data, sources = [], []
+    registry = {} if source_registry is None else source_registry
     if configurations:
         status = "Draft — database-derived; review pending"
         configs = sort_by_trim_price(configurations)
         receipts = authored_observations(configs)
         catalogue = catalogue_options(configs)
         reviews = {}
+        for receipt in receipts.values():
+            pin = (receipt.raw_artifact_reference, receipt.raw_artifact_hash)
+            if pin not in reviews:
+                reviews[pin] = pinned_review(receipt)
         labels = {}
         for number, vehicle in enumerate(configs, 1):
             engine = vehicle.engine
@@ -117,8 +125,6 @@ def draft_year(title, year, configurations, *, authored_rows=(), authored_source
             observation = {}
             if receipt:
                 pin = (receipt.raw_artifact_reference, receipt.raw_artifact_hash)
-                if pin not in reviews:
-                    reviews[pin] = pinned_review(receipt)
                 if reviews[pin] is not None:
                     observation = verified_observation(receipt, reviews[pin])
             selected = observation.get("selected_toyota_model") or {}
@@ -133,42 +139,59 @@ def draft_year(title, year, configurations, *, authored_rows=(), authored_source
                 float(vehicle.base_msrp) if vehicle.base_msrp is not None else None,
                 vehicle.slug, vehicle.get_market_display(),
             )
-            evidence = f"Authoring receipt {receipt.pk}" if observation else "RigArchive database; source match unavailable"
+            lineage = f"Authoring receipt {receipt.pk}" if observation else "RigArchive database"
+            source_ids = {source["evidence_id"] for source in (reviews[pin] or {}).get("sources", ())
+                          if readable_source_id(source.get("evidence_id"))} if receipt else set()
+            evidence = provenance(selected.get("citations", ()), source_ids, lineage=lineage)
             data.append((*parent, vehicle.transmission or selected.get("transmission"), None, None, None, None,
                          "Stored configuration" if not selected else "Recorded model selection", evidence))
             alternatives = observation.get("alternate_toyota_models", ())
             for model in alternatives:
                 data.append((number, vehicle.pk, None, *([None] * 11), model.get("transmission"),
                              model.get("variant"), model.get("code"), float(model["price"]), None,
-                             "Reviewed transmission alternative", evidence))
+                             "Reviewed transmission alternative",
+                             provenance(model.get("citations", ()), source_ids, lineage=lineage)))
             children = option_rows(vehicle, catalogue.get(vehicle.pk, []), receipt if observation else None)
             for transmission, variant, _, _, package, note, source in children:
                 if source is not None:
                     data.append((number, vehicle.pk, None, *([None] * 11), transmission, variant,
-                                 None, None, package, note, source))
-        sources.append((year, "RigArchive", "Active VehicleDefinitions", None, None, "Derived database draft",
+                                 None, None, package, note, provenance((), (), lineage=source)))
+        model_name = configs[0].generation.vehicle_model.name
+        sources.append((year, "RigArchive", "Active VehicleDefinitions", None, None,
+                        f"RigArchive MY{year} {model_name} Canonical VehicleDefinition Records",
                         None, "Review pending", f"{len(configs)} definitions. Blank model codes indicate missing linked evidence."))
         for (file, digest), review in reviews.items():
             if review is None:
                 sources.append((year, "RigArchive", "Retained observation unavailable or invalid", file, None,
-                                "Observation", digest, "Evidence gap", "Observation fields were omitted."))
+                                f"RigArchive MY{year} {model_name} Factory Observation Record",
+                                digest, "Evidence gap", "Observation fields were omitted."))
                 continue
             sources.append((year, "RigArchive", "Retained factory observations", file, review.get("observed_on"),
-                            "Human observation", digest, "Receipt hash verified", review.get("scope")))
+                            f"RigArchive MY{year} {model_name} Factory Observations",
+                            digest, "Receipt hash verified", review.get("scope")))
             for source in review.get("sources", ()):
                 url = source.get("url")
                 host = urlparse(url).hostname if url else None
                 official = bool(host and (host == "toyota.com" or host.endswith(".toyota.com")))
                 source_title = source.get("title")
                 archived = source_title == "Toyota Full Line Pricing" and not official
-                organization = "Toyota" if official or archived else None
-                kind = ("Manufacturer reference" if official else
-                        "Manufacturer schedule on third-party host" if archived else "Reference cited by observation")
+                organization = source.get("organization") or ("Toyota" if official or archived else None)
+                kind = source_descriptor(year, source_title, organization=organization, url=url,
+                                         reviewed=source.get("descriptor"))
                 note = source.get("observation")
+                if archived:
+                    note = f"Manufacturer schedule on third-party host. {note or ''}".strip()
                 if source.get("revision_date"):
                     note = f"Document revision {source['revision_date']}. {note or ''}"
+                alias = source.get("evidence_id")
+                if readable_source_id(alias):
+                    register_source_alias(registry, alias, (organization, source_title, url, source.get("revision_date")),
+                                          str(source.get("descriptor") or "").strip() or None)
+                else:
+                    alias = None
                 sources.append((year, organization, source_title, url, review.get("observed_on"),
-                                kind, digest, "Original bytes not verified", note))
+                                kind, alias, "Original bytes not verified",
+                                f"{note or ''} Retained observation: {digest}".strip()))
     elif authored_rows:
         status = "Draft — supplied research; review pending"
         data.extend(authored_rows)
@@ -179,6 +202,8 @@ def draft_year(title, year, configurations, *, authored_rows=(), authored_source
     else:
         sources.append((year, None, "Research pending", None, None, None, None, "Evidence gap",
                         "No generation-level draft was verified for this model year."))
+    if source_registry is None:
+        sources = consolidate_source_rows(sources, registry)
     return Sheet(f"MY{year}", ((title,), (status,), (), HEADERS, *data), WIDTHS, (11, 17)), sources
 
 
@@ -196,15 +221,24 @@ def generation_draft(generation):
     ).order_by("pk"):
         by_year.setdefault(vehicle.model_year, []).append(vehicle)
     last = max(by_year, default=generation.start_year)
-    sheets, sources = [], []
+    show_body = len({v.factory_body_configuration_id for configs in by_year.values()
+                     for v in configs if v.factory_body_configuration_id}) > 1
+    sheets, sources, source_registry = [], [], {}
     for year in range(last, generation.start_year - 1, -1):
         configurations = by_year.get(year, [])
         # Sparse legacy rows lack the body and registry evidence needed for this review.
-        if configurations and not any(v.engine_id and v.factory_body_configuration_id for v in configurations):
+        if configurations and not any(v.engine_id for v in configurations):
             configurations = []
-        sheet, evidence = draft_year(title, year, configurations)
-        sheets.append(sheet)
+        sheet, evidence = draft_year(title, year, configurations, source_registry=source_registry)
+        order = GENERATION_COLUMN_ORDER
+        rows = tuple(tuple(row[i] if i < len(row) and (i != 4 or show_body or r <= 3) else None
+                           for i in order) for r, row in enumerate(sheet.rows))
+        sequential = tuple((number, *row[1:]) for number, row in enumerate(rows[4:], 1))
+        sheets.append(Sheet(sheet.name, (*rows[:4], *sequential), tuple(sheet.widths[i] for i in order),
+                            tuple(order.index(i) for i in sheet.prices),
+                            hidden_columns=() if show_body else (order.index(4),), numbering=True))
         sources.extend(evidence)
+    sources = consolidate_source_rows(sources, source_registry)
     sheets.append(Sheet("Source References", ((title,), ("Draft provenance",), (), SOURCE_HEADERS, *sources),
                         (14, 18, 32, 60, 20, 29, 42, 28, 65)))
     return GenerationDraft(str(generation.uuid), title, tuple(sheets))
@@ -266,6 +300,8 @@ def export_generation(options):
         sheet.sheet_view.showGridLines = False
         for index, width in enumerate(table.widths, 1):
             sheet.column_dimensions[get_column_letter(index)].width = width
+        for index in table.hidden_columns:
+            sheet.column_dimensions[get_column_letter(index + 1)].hidden = True
         sheet.auto_filter.ref = f"A{table.header_row}:{get_column_letter(len(table.widths))}{len(table.rows)}"
         sheet.print_title_rows = f"1:{table.header_row}"
         for row in range(table.header_row, len(table.rows) + 1):

@@ -89,5 +89,6 @@ def conversion_edits(state, binding, rows, pins):
                          applicability="Recorded model selection")
         edits.extend({"sheet_id": binding["sheet_id"], "row_id": row_id,
                       "field_id": f"configuration.{field}", "before": old, "value": after[field]}
-                     for field, old in before.items() if entered(old) != entered(after[field]))
+                     for field, old in before.items()
+                     if f"configuration.{field}" in binding["display_order"] and entered(old) != entered(after[field]))
     return edits

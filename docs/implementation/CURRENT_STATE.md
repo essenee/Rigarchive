@@ -38,9 +38,12 @@ MY2026 inventory rows. The explicit status refresh uses verified canonical
 PK correspondence and keeps activation state outside manufacturer-semantic
 changes.
 
-The Tacoma workbook is registered at `742fb1624f394b178fb803337b16b745`.
+The Tacoma workbook is registered at `99569962cb144e85857e9b406a660f8e`.
 The sixth-generation 4Runner workbook is registered at
-`1dc3b56df30746ac95de1f8eafe4b199`.
+`1dc3b56df30746ac95de1f8eafe4b199`. The five model-year tabs contain 113
+assertion-labeled provenance cells with readable Source References IDs,
+expandable Source Type descriptors, and separate internal lineage. The three
+Tacoma manual model-code cells remain blank.
 
 Sixth-generation U.S. 4Runner reconciliation filled 30 existing transmissions
 with `8-spd Auto` and added the `i-FORCE MAX` trim suffix to PKs 678, 679,
@@ -54,6 +57,11 @@ The verified pre-write snapshot is `backups/snapshots/db_snapshot_20261121_01011
 (SHA-256 `455873eb90055f497295b88666bfadd6aacfd40bc42ffc9bc436a7f30f6f59a8`).
 Keep the execution plan, observations, and receipt evidence in
 `scratch/4runner-cl/reconciliation/` with the B3 revision history.
+
+Their five model-year tabs use automatic
+numbering in the `#` column. Live checks verified three Tacoma tabs at
+27 rows each and two 4Runner tabs at 16 rows each. The migration retained
+working-row IDs and the existing physical row order in both workbooks.
 
 Capture `8ffcf8922c0f4966ad6c12aa415a064a` registered 75 Engine display
 edits, 1,564 MY2024 cell-format changes and 14 MY2024 column-width changes.

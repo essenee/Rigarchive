@@ -4,6 +4,7 @@ from copy import deepcopy
 from django.core.management.base import CommandError
 
 from reference.admin import factory_body_configuration_label
+from reference.configuration_logic import LEGACY_BODY_COLUMNS
 from reference.configuration_logic_google import entered
 from reference.configuration_logic_layout import INACTIVE_INDEX, canonical_row, column_order, header_index
 from reference.configuration_logic_revisions import sheet_cells, validated_rows
@@ -24,14 +25,17 @@ def canonical_attributes(vehicle):
     )
 
 
-def canonical_status(row, vehicles, year):
+def canonical_status(row, vehicles, year, *, compact_body=False):
     """Resolve only explicit PK links in the selected generation."""
     if not row[3] or row[1] is None:
         return None
     if row[1] not in vehicles:
         raise CommandError(f"VehicleDefinition PK {row[1]} is outside the registered generation or missing.")
     vehicle = vehicles[row[1]]
-    if (vehicle.model_year != year or tuple(row[3:11]) != canonical_attributes(vehicle)
+    attributes = canonical_attributes(vehicle)
+    if compact_body:
+        attributes = (*attributes[:2], None, None, *attributes[4:])
+    if (vehicle.model_year != year or tuple(row[3:11]) != attributes
             or tuple(row[12:14]) != (vehicle.slug, vehicle.get_market_display())):
         raise CommandError(f"Stale or ambiguous VehicleDefinition correspondence for PK {row[1]}.")
     return None if vehicle.is_active else "Yes"
@@ -127,7 +131,8 @@ def plan_inactive(draft, remote, vehicles, *, migrate=False):
             column = order.index(INACTIVE_INDEX)
             canonical = [canonical_row(row, order) for row in rows[header + 1:]]
         for r, row in enumerate(canonical, header + 1):
-            value = canonical_status(row, vehicles, int(name[2:]))
+            value = canonical_status(row, vehicles, int(name[2:]),
+                                     compact_body=LEGACY_BODY_COLUMNS.isdisjoint(order))
             position = r, column
             old_cell = cells.get(position, {})
             if old_cell.get("userEnteredValue") != (entered(value) or None):

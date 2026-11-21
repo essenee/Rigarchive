@@ -93,6 +93,29 @@ class LayoutAndLogTests(SimpleTestCase):
             with self.assertRaisesMessage(CommandError, "empty standalone"):
                 publish_working_edits(self.api, self.draft, self.path, state, plan)
 
+    def test_source_alias_preserves_document_hash_status_and_id(self):
+        from reference.configuration_logic_layout import bind_rows
+        from reference.configuration_logic_revisions import source_alias_bindings
+
+        fingerprint = "sha256:" + "a" * 64
+        header = ("Model Year", "Organization", "Source", "URL / Document ID", "Acquired / Reviewed",
+                  "Source Type", "Evidence ID", "Verification Status", "Notes")
+        source = (2025, "Toyota", "Pricing", "https://toyota.com/pricing", "2026-11-20", "Schedule",
+                  fingerprint, "Original bytes not verified", "Pricing table.")
+        after = (*source[:6], "T25-L", source[7], f"{source[8]} Previous Evidence ID: {fingerprint}.")
+        old_rows, new_rows = (header, source), (header, after)
+        before, _ = bind_rows("Source References", old_rows, (), header=0)
+        rebased = source_alias_bindings(old_rows, new_rows, before, 0)
+        new, removed = bind_rows("Source References", new_rows, rebased, header=0)
+        self.assertEqual(new[0]["id"], before[0]["id"])
+        self.assertEqual(removed, [])
+        for unsafe in ((*after[:-1], "Pricing table."),
+                       (*after[:7], "Original bytes verified", after[8])):
+            with self.assertRaisesMessage(CommandError, "must preserve"):
+                source_alias_bindings(old_rows, (header, unsafe), before, 0)
+        with self.assertRaisesMessage(CommandError, "duplicate readable"):
+            source_alias_bindings(old_rows, (header, after, after), before, 0)
+
     def save(self, *, enroll=False):
         old = load_revision(self.state, self.path)
         remote = capture_remote(self.api, self.draft, self.state)
@@ -127,6 +150,191 @@ class LayoutAndLogTests(SimpleTestCase):
         self.assertEqual(legacy.read_bytes(), legacy_bytes)
         self.assertEqual([key for key, _ in working_history(self.path, self.state)], [second, first, old_revision])
         self.assertNotIn(second, generated_rows(self.path, self.state))
+
+    def test_registered_spreadsheet_title_can_differ_from_tab_preamble(self):
+        from dataclasses import replace
+
+        preamble = self.draft.title
+        self.draft = replace(self.draft, title="Owner's standalone configuration workbook")
+        self.save(enroll=True)
+        draft = current_draft(self.generation, self.path, self.state)
+        self.assertEqual(draft.title, self.draft.title)
+        self.assertEqual(draft.sheets[0].title, preamble)
+        self.assertEqual(check_working_remote(self.api, draft, self.state, load_revision(self.state, self.path),
+                                              flexible=True), self.remote)
+
+    def test_owner_removed_body_columns_survive_targeted_publish_with_stable_ids(self):
+        name = "MY2025"
+        cells = self.data(name)[4]["values"]
+        cells[4:7] = [{"userEnteredValue": {"stringValue": value}}
+                      for value in ("Double Cab, 5-ft Bed", "Double Cab", "5-ft")]
+        revision = self.save(enroll=True)
+        before = load_layout(self.state, self.path)["sheets"][name]["rows"]
+        for row in self.data(name):
+            values = row["values"]
+            del values[5:7]
+        self.data(name)[3]["values"][1]["userEnteredValue"]["stringValue"] = "Vehicle Definition PK"
+        grid = self.remote[name]["data"][0]
+        grid["columnMetadata"] = [{} for _ in range(4)] + [{"hiddenByUser": True, "pixelSize": 167}]
+        cell = self.data(name)[4]["values"][9]
+        cell["userEnteredFormat"] = {"wrapStrategy": "WRAP", "horizontalAlignment": "LEFT"}
+        plan = self.base / "compact-body.json"
+        plan.write_text(json.dumps({"schema": 2, "base_revision": revision, "edits": [
+            {"sheet_id": 1, "row_id": before[0]["id"], "field_id": "configuration.base_msrp",
+             "before": 500, "value": 510},
+        ]}))
+
+        def apply(**_):
+            request, = self.api.batchUpdate.call_args.kwargs["body"]["requests"]
+            update = request["updateCells"]
+            self.assertEqual(update["start"]["columnIndex"], 9)
+            self.assertEqual(update["fields"], "userEnteredValue")
+            cell.update(update["rows"][0]["values"][0])
+
+        self.api.batchUpdate.return_value.execute.side_effect = apply
+        self.assertTrue(publish_working_edits(self.api, self.draft, self.path, self.state, plan))
+        self.state = read_registry(self.path, self.draft.key)
+        binding = load_layout(self.state, self.path)["sheets"][name]
+        self.assertEqual([row["id"] for row in binding["rows"]], [row["id"] for row in before])
+        self.assertNotIn("configuration.cab", binding["columns"])
+        self.assertNotIn("configuration.nominal_bed", binding["columns"])
+        snapshot = load_revision(self.state, self.path)[name]["data"][0]
+        self.assertEqual(snapshot["columnMetadata"][4], {"hiddenByUser": True, "pixelSize": 167})
+        self.assertEqual(snapshot["rowData"][4]["values"][9], cell)
+
+    def test_numbering_migration_and_row_moves_preserve_identity_and_formula(self):
+        from reference.configuration_logic_google import entered
+        from reference.configuration_logic_numbering import plan_numbering
+        from reference.configuration_logic_revisions import validated_rows
+
+        name = "MY2025"
+        grid = self.data(name)
+        grid[4]["values"][2] = {"userEnteredValue": entered("111")}
+        other = deepcopy(grid[4])
+        for index, value in ((0, 2), (1, 22), (2, "222"), (3, "Other"), (11, 550)):
+            other["values"][index] = {"userEnteredValue": entered(value)}
+        grid.append(other)
+        self.save(enroll=True)
+        baseline = load_revision(self.state, self.path)
+        bindings = load_layout(self.state, self.path)["sheets"][name]["rows"]
+        grid[4:6] = reversed(grid[4:6])
+        projected, requests = plan_numbering(self.draft, baseline, self.remote)
+        self.assertTrue(all(req["updateCells"]["fields"] == "userEnteredValue" for req in requests))
+        self.remote = projected
+        revision = save_remote(self.api, self.draft, self.path, self.state, self.remote, baseline,
+                               operation="numbering-migration")
+        self.state = read_registry(self.path, self.draft.key)
+        rows = load_layout(self.state, self.path)["sheets"][name]["rows"]
+        self.assertEqual([row["id"] for row in rows], [row["id"] for row in reversed(bindings)])
+        numbered = current_draft(self.generation, self.path, self.state)
+        self.assertEqual([r[:3] for r in numbered.sheets[0].rows[4:]], [(1, 22, "222"), (2, 21, "111")])
+        cells = self.data(name)
+        formula = deepcopy(cells[3]["values"][0])
+        cells[4:6] = reversed(cells[4:6])
+        plan = self.base / "moved-row.json"
+        plan.write_text(json.dumps({"schema": 2, "base_revision": revision, "edits": [
+            {"sheet_id": 1, "row_id": bindings[0]["id"], "field_id": "configuration.base_msrp",
+             "before": 500, "value": 525},
+        ]}))
+
+        def apply(**_):
+            request, = self.api.batchUpdate.call_args.kwargs["body"]["requests"]
+            update = request["updateCells"]
+            self.assertEqual(update["start"]["rowIndex"], 4)
+            self.assertEqual(update["start"]["columnIndex"], 11)
+            cells[4]["values"][11].update(update["rows"][0]["values"][0])
+
+        self.api.batchUpdate.return_value.execute.side_effect = apply
+        self.assertTrue(publish_working_edits(self.api, numbered, self.path, self.state, plan))
+        self.assertEqual(cells[3]["values"][0], formula)
+        self.assertEqual([r[:3] for r in validated_rows(numbered.sheets[0], self.remote[name], flexible=True)[4:]],
+                         [(1, 21, "111"), (2, 22, "222")])
+        self.state = read_registry(self.path, self.draft.key)
+        registered = load_revision(self.state, self.path)
+        cells[4:6] = reversed(cells[4:6])
+        old_code = cells[4]["values"][2]["userEnteredValue"]
+        cells[4]["values"][2]["userEnteredValue"] = entered("333")
+        with self.assertRaisesMessage(CommandError, "Unexpected external change"):
+            check_working_remote(self.api, numbered, self.state, registered, flexible=True)
+        cells[4]["values"][2]["userEnteredValue"] = old_code
+        cells[4:6] = reversed(cells[4:6])
+        cells.insert(5, {"values": []})
+        self.assertEqual([r[0] for r in validated_rows(numbered.sheets[0], self.remote[name], flexible=True)[4:]],
+                         [1, None, 2])
+        cells.pop(4)
+        self.assertEqual([r[0] for r in validated_rows(numbered.sheets[0], self.remote[name], flexible=True)[4:]],
+                         [None, 1])
+        duplicate = deepcopy(cells[-1])
+        duplicate["values"][1] = {"userEnteredValue": entered(23)}
+        duplicate["values"][3] = {"userEnteredValue": entered("Duplicate")}
+        cells.append(duplicate)
+        with self.assertRaisesMessage(CommandError, "duplicate manufacturer"):
+            validated_rows(numbered.sheets[0], self.remote[name], flexible=True)
+
+    def test_numbering_command_previews_publishes_and_verifies_successor(self):
+        from io import StringIO
+
+        from django.core.management import call_command
+        from reference.configuration_logic_google import entered, remote_values
+        from reference.configuration_logic_layout import column_order, numbering_formula, uses_numbering
+
+        name = "MY2025"
+        self.data(name)[4]["values"][0]["userEnteredFormat"] = {"backgroundColor": {"red": 1}}
+        self.data(name)[4]["values"][2] = {"userEnteredValue": entered("111")}
+        self.data(name)[4]["values"][20] = {"userEnteredValue": entered("MSRP: TT-P p. 2"), "note": "Keep evidence"}
+        already = self.remote["MY2024"]
+        self.data("MY2024")[3]["values"][0]["userEnteredValue"] = {
+            "formulaValue": numbering_formula(column_order("MY2024", already)),
+        }
+        first = self.save(enroll=True)
+        baseline = load_revision(self.state, self.path)
+        ids = load_layout(self.state, self.path)["sheets"][name]["rows"]
+        command = "reference.management.commands.migrate_configuration_logic_numbering"
+        args = {"manufacturer": "Maker", "model": "Truck", "generation": "4"}
+
+        def apply(**_):
+            request, = self.api.batchUpdate.call_args.kwargs["body"]["requests"]
+            update = request["updateCells"]
+            self.assertEqual(update["start"]["sheetId"], 1)
+            self.assertEqual(update["fields"], "userEnteredValue")
+            for i, row in enumerate(update["rows"], update["start"]["rowIndex"]):
+                cell = self.data(name)[i]["values"][update["start"]["columnIndex"]]
+                cell.pop("userEnteredValue")
+                cell.update(row["values"][0])
+
+        self.api.batchUpdate.return_value.execute.side_effect = apply
+        with override_settings(BASE_DIR=self.base), patch(f"{command}.select_generation", return_value=self.generation), patch(
+            f"{command}.connect", return_value=self.api,
+        ):
+            output = StringIO()
+            call_command("migrate_configuration_logic_numbering", **args, dry_run=True, stdout=output)
+            self.assertIn(f"Base {first}, 1 model-year tabs", output.getvalue())
+            token = output.getvalue().strip().splitlines()[-1].split()[-1]
+            self.api.batchUpdate.assert_not_called()
+            self.assertEqual(read_registry(self.path, self.draft.key)["working_revision"]["id"], first)
+            with self.assertRaisesMessage(CommandError, "preview is stale"):
+                call_command("migrate_configuration_logic_numbering", **args, apply="stale")
+            self.api.batchUpdate.assert_not_called()
+            output = StringIO()
+            call_command("migrate_configuration_logic_numbering", **args, apply=token, stdout=output)
+            successor = read_registry(self.path, self.draft.key)
+            self.assertIn(successor["working_revision"]["id"], output.getvalue())
+            self.assertNotEqual(successor["working_revision"]["id"], first)
+            recorded = load_revision(successor, self.path)
+            self.assertTrue(uses_numbering(name, recorded[name]))
+            self.assertEqual(load_layout(successor, self.path)["sheets"][name]["rows"], ids)
+            self.assertEqual(recorded["MY2024"], baseline["MY2024"])
+            self.assertEqual(recorded["Source References"], baseline["Source References"])
+            before = remote_values(baseline[name])
+            after = remote_values(recorded[name])
+            self.assertEqual({k: v for k, v in before.items() if k[1] != 0},
+                             {k: v for k, v in after.items() if k[1] != 0})
+            self.assertEqual(self.data(name)[4]["values"][0]["userEnteredFormat"], {"backgroundColor": {"red": 1}})
+            self.assertEqual(self.data(name)[4]["values"][20]["note"], "Keep evidence")
+            output = StringIO()
+            call_command("migrate_configuration_logic_numbering", **args, apply=token, stdout=output)
+            self.assertIn("already use automatic numbering", output.getvalue())
+            self.api.batchUpdate.assert_called_once()
 
     def test_compact_header_capture_preserves_identity_and_resolves_physical_rows(self):
         initial = self.save(enroll=True)

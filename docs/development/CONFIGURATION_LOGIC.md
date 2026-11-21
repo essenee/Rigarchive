@@ -15,6 +15,74 @@ XLSX file. Existing files are preserved. The publisher uses the same draft data
 directly. The offline dry run requires no optional packages or credentials.
 The existing `--year` interface remains available.
 
+Configuration Logic identifies factory configurations and the dimensions that
+distinguish them. Product Data is the detailed attribute layer associated with
+those configurations. The generation workbook uses one **Body Configuration**
+column for registered body variants. Cab and nominal bed remain canonical
+attributes and manufacturer evidence, and have no separate columns in new
+generation workbooks. Where the generation has no meaningful registered body
+variation, Body Configuration stays blank and is hidden in the initial
+worksheet. Later visibility and formatting belong to the owner.
+
+Transmission sits immediately before Base MSRP. Canonical trim groups stay
+contiguous and are ordered by their lowest Base MSRP. Within each group,
+configurations are ordered by individual Base MSRP.
+
+In newly published model-year tabs, **#** is calculated presentation. It
+shows the current physical order of configuration rows and carries no
+canonical identity. A single Sheets formula in the header displays `#` and
+spills sequential numbers below it. It scans the whole columns for the trim
+and linked-alternative fields, counts populated rows, and leaves blank rows
+empty. It recalculates after complete-row moves, insertion, deletion or sorting.
+Number-column cells are reserved for the formula output. The XLSX export
+projects the displayed numbers as values.
+
+### Configuration provenance
+
+Write Provenance as `Assertion: Source-ID locator; Assertion: Source-ID locator`.
+Use the smallest set of citations that establishes the distinguishing
+configuration. Group assertions that use the same source and locator.
+For example, MY2024 Tacoma SR code 7162 uses
+`Model code/body/drivetrain/transmission: T24-S p. 1; MSRP: T24-L p. 6; Engine output by transmission: T24-P p. 1`.
+The sourcebook names the order code, XtraCab, long bed, 2WD and 8AT. The
+pricing schedule lists that order code and MSRP. The output table describes
+the SR automatic powertrain group.
+
+Use page or table numbers for PDFs, named sections for web pages, and a
+section plus selection or model code for interactive specifications. Clearly
+label grade-level or powertrain-family support when a source does not
+identify the exact code. Use `Evidence gap: …` for an unsupported assertion
+and `Lineage: …` for the corresponding authoring receipt or internal
+observation. An internal receipt records an authoring action.
+
+Source References resolves each readable ID to one document or document
+revision. A document reused across model years has one alias entry, with each
+year's applicability, review date, notes, and observation hash in Notes. A
+shared alias with a different publisher, title, locator, or edition is
+rejected. Keep the retrieved-byte hash, observation hash, and receipt
+where they are verified. When replacing a hash in Evidence ID with a readable
+alias, retain the exact previous hash in Notes and preserve the verification
+status. B3 retains the source's stable working-row ID for this alias change
+and rejects duplicate aliases.
+
+Source Type is the expandable document descriptor. Include the applicable
+model year or year range, manufacturer, model or scope, document name, and
+format when useful. For example, `T24-P` resolves to
+`2024 Toyota Tacoma Product Information PDF`, so
+`Engine output: T24-P p. 1` can expand to
+`Engine output: 2024 Toyota Tacoma Product Information PDF, p. 1`.
+Use the actual applicable year range and distinguish mirrored text from
+retained PDF bytes. Preserve the actual title in Source and keep acquisition
+details and evidence limitations in Verification Status and Notes. Internal
+records use RigArchive descriptors.
+
+New generation drafts render explicitly reviewed `citations` on selected or
+alternate offers using `assertion`, `source_id` and `locator`. The pinned
+review's source entries declare their readable `evidence_id` values and can
+supply a verified `descriptor`. Otherwise, CL derives Source Type from the
+reviewed title, year, known publisher and document URL. The renderer combines
+shared locators and flags missing or unresolved support.
+
 ## First Google publication
 
 1. In Google Cloud Console, enable Google Sheets API for the project. The
@@ -236,10 +304,10 @@ value edit captures the preserved presentation in its successor revision.
 | Links, rich text, cell validation, and notes | Changes block publication. A targeted edit to a cell with rich-text runs is refused even when those runs were already registered. |
 | Frozen panes | Changes block publication. The freeze boundary remains part of the registered layout. |
 | Filters and sort specifications | Changes block publication. Physical row sorting can move data to different edit coordinates and also blocks. |
-| Hidden or grouped dimensions | Changes block publication because rows or columns can disappear from review. |
+| Hidden or grouped dimensions | User visibility of Body Configuration is preserved and does not block B3. Other hidden or grouped dimensions remain structural safeguards. |
 | Conditional formatting | Rule changes block publication because rules can carry review cues. A previously unrecorded rule or hidden dimension on a legacy revision requires an explicit capture. |
 | Merged cells | A change to any merge blocks publication. Decorative merges entirely above the column headers can be explicitly captured. Header or data merges are refused even during capture. |
-| Headers, column order, rows, and worksheet identity | Enrolled revisions accept complete same-tab column moves that preserve field-bound content. Missing, renamed, duplicated or unknown headers, changes to row placement or count, and changed worksheet identity block publication. Legacy coordinate plans require the registered column order. |
+| Headers, column order, rows, and worksheet identity | Enrolled revisions accept complete same-tab column moves that preserve field-bound content and the paired removal of Cab and Nominal Bed. Other missing, renamed, duplicated or unknown headers, changes to row placement or count, and changed worksheet identity block publication. Legacy coordinate plans require the registered column order. |
 | Drive comments and sharing settings | Outside the comparison. Targeted writes do not change them. |
 
 Milestone A setup and pre-capture publication still use their existing sheet
@@ -299,12 +367,41 @@ Working-row IDs are opaque. Continuity compares exact configuration witnesses
 using trim, body, cab, bed, drivetrain, Engine and market. For alternatives,
 the witness includes the parent and factory alternative fields. For sources,
 it uses year, organization, title, locator and evidence identifier. IDs carry
-forward when a unique witness matches and retained rows remain in order.
-A capture may add or remove unambiguous rows, but a mixture of unmatched old and
-new identities, duplicate witnesses or reordering is refused for owner
-adjudication. A correction to a witness can require such review. There is no
+forward when a unique witness matches. On numbered model-year tabs, a
+complete-row permutation also has to preserve each model code, PK, value,
+and behavioral metadata. A schema 2 edit resolves its stable row ID against
+the verified live position. Move a parent and its linked alternatives as a
+contiguous block so their relationship is retained.
+
+On an enrolled workbook, Cab and Nominal Bed may be removed together.
+B3 checks that the consolidated Body Configuration still distinguishes the
+former cab and bed combinations and carries the existing working-row IDs
+forward. The pair can be retired during capture or a logical value publication
+without adding the columns back. Pickup authoring resolves the consolidated
+label to one registered body and verifies its underlying cab and nominal bed
+against the retained manufacturer evidence. Older revisions and their receipt
+interpretation remain readable.
+A capture may add or remove unambiguous rows. A mixture of unmatched old and
+new identities, duplicate witnesses, or reordering combined with changes to
+configuration identity is refused for owner adjudication. Legacy static-number
+revisions retain their original row-continuity rules. A correction to a witness can require such review. There is no
 automatic identity override. Human-visible numbers, Toyota codes and canonical
 database identifiers remain separate from the opaque IDs.
+
+The numbering migration changes only entered values in the number column.
+It verifies the live grid against the enrolled baseline with row order and
+number values projected out, then registers the verified formula-bearing
+successor and re-reads it for verification. Tabs with registered calculated
+numbering are skipped. Preview under `migrate_configuration_logic_numbering`
+using the same manufacturer, model and generation arguments as the publisher.
+
+```bash
+.venv/bin/python manage.py migrate_configuration_logic_numbering --manufacturer Toyota --model 4Runner --generation 30 --dry-run
+.venv/bin/python manage.py migrate_configuration_logic_numbering --manufacturer Toyota --model 4Runner --generation 30 --apply PREVIEW_HASH
+```
+
+Use the exact hash from the dry run. If a migration is interrupted, inspect
+the live formula and registered revision before issuing any further write.
 
 For a logical edit, use schema 2 and pick a row ID and field ID from the
 registered layout. The numbers below are illustrative only.

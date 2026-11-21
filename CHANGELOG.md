@@ -16,6 +16,10 @@ All notable changes to RigArchive will be documented in this file.
 - Vehicle Definitions Admin now offers a Manufacturer-dependent Model filter
   and opens newest model year first. The model-year sidebar filter lists years
   newest first and has its own toggle that preserves active filters and search terms.
+- Configuration Logic drafts use compact body columns and calculated numbering.
+  The B3 numbering command previews existing tabs, updates only static number
+  columns, and verifies the successor. Source References consolidates identical
+  documents across model years while retaining assertion citations and review scope.
 - B3 preflight, capture consistency and post-write verification ignore
   presentation-only changes, including number formats and concurrent column
   resizing. Targeted edits still write only cell values.

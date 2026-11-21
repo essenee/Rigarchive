@@ -18,6 +18,7 @@ from reference.configuration_logic_layout import (
     INACTIVE_FIELD, INACTIVE_INDEX, bind_rows, canonical_row, catalog, column_order, header_index,
     numbering_formula, NUMBERING_FIELDS, row_witnesses, uses_numbering,
 )
+from reference.configuration_logic_provenance import EVIDENCE_HASH, readable_source_id
 from reference.configuration_logic_google import (
     FIELDS, api_call, desired_values, digest, entered, fingerprint,
     read_remote, remote_values, write_private,
@@ -817,6 +818,30 @@ def compact_body_bindings(table, sheet, prior):
             for binding, (_, witness, _) in zip(prior, witnesses, strict=True)]
 
 
+def source_alias_bindings(before, after, prior, header):
+    """Adopt an alias on the same document only, retaining any displaced hash."""
+    ids = [row[6] for row in after[header + 1:] if readable_source_id(row[6])]
+    if len(ids) != len(set(ids)):
+        raise CommandError("Source References contains duplicate readable Evidence IDs.")
+    witnesses = {position: witness for position, witness, _ in row_witnesses("Source References", after, header)}
+    updated = []
+    for binding in prior:
+        i = binding["row"] - 1
+        old, new = before[i], after[i]
+        if old[6] != new[6]:
+            old_id = old[6]
+            if (not readable_source_id(new[6]) or old[:6] != new[:6] or old[7] != new[7]
+                    or (old[8] and (not isinstance(new[8], str) or old[8] not in new[8]))
+                    or (old_id is not None and (
+                        not isinstance(old_id, str) or not EVIDENCE_HASH.fullmatch(old_id)
+                        or not isinstance(new[8], str) or old_id not in new[8]
+                    ))):
+                raise CommandError("A source alias must preserve the document, verification status, notes, and evidence hash.")
+            binding = {**binding, "witness": witnesses[i + 1]}
+        updated.append(binding)
+    return updated
+
+
 def trim_rename_bindings(name, before, after, prior, header, *, numbered):
     """Retain standalone row IDs for trim-only changes with pinned identities."""
     if len(before) != len(after):
@@ -927,6 +952,9 @@ def save_remote(api, draft, path, state, remote, previous, *, operation="capture
                 name, validated_rows(table, previous[name], flexible=True), canonical,
                 prior_rows, header, numbered=numbered,
             )
+        if name == "Source References" and prior_rows and operation == "targeted-publication":
+            prior_rows = source_alias_bindings(validated_rows(table, previous[name], flexible=True),
+                                               canonical, prior_rows, header)
         if converted_row_ids and name == "MY2025":
             prior_rows = conversion_bindings(canonical, prior_rows, header, converted_row_ids)
         bound, removed = bind_rows(name, canonical, prior_rows, header=header,
@@ -1172,6 +1200,9 @@ def plan_updates(draft, state, remote, edits, layout, schema, converted_row_ids=
                 prior_rows = compact_body_bindings(tables[name], previous[name], prior_rows)
             if converted_row_ids and name == "MY2025":
                 prior_rows = conversion_bindings(logical_rows, prior_rows, header, converted_row_ids)
+            if name == "Source References" and previous:
+                prior_rows = source_alias_bindings(validated_rows(tables[name], previous[name], flexible=True),
+                                                   logical_rows, prior_rows, header)
             if numbered:
                 positions = numbered_rows[name]
                 prior_rows = sorted(({**row, "row": positions[row["row"] - 1] + 1} for row in prior_rows),
