@@ -1,7 +1,7 @@
 # RA-045 — FactoryBodyConfiguration: Unified Factory Body Identity Architecture
 
 Created: 2026-11-13
-Last Updated: 2026-11-13
+Last Updated: 2026-11-20
 Status: Approved
 
 **Authority:** Explicit Project Owner approval on 2026-11-13.
@@ -576,6 +576,12 @@ no selector and no suffix. This applies to a legitimate new no-body candidate as
 well as existing rows; no finding across seven dimensions is required. Null is not
 a claim that research has proved only one factory body ever existed. If a real
 supported distinction is discovered later, handle that evidence then, not today.
+
+The reviewed sixth-generation U.S. 4Runner scope applies the same optional
+association rule. Its B3 authoring path recognizes the generation by UUID
+and checks the retained offer evidence for implicit body applicability.
+The absence of registered bodies is insufficient to establish applicability.
+The authoring receipt records a null body identity for this scope.
 
 ### B. 2024 Wrangler Sport, same proposed engine, different doors
 

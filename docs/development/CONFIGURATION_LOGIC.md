@@ -429,6 +429,24 @@ request with a stale base or a workbook changed outside the registry is refused.
 Verify whether the batch landed before separately authorizing reconciliation.
 Google Sheets has no atomic preflight-and-write comparison across requests.
 
+### Standalone trim continuity and canonical correspondence
+
+An enrolled capture retains a standalone row ID through a trim-only edit
+when the row's unique manufacturer model code, model-year worksheet,
+correspondence and remaining configuration fields agree with the baseline.
+This also supports a standalone row with both correspondence cells empty.
+Existing PK and slug links are protected during capture.
+
+A schema 2 targeted publication can supply `canonical_correspondences` in
+place of `edits`. Each entry supplies `sheet`, the stable `row_id`, and
+the committed `receipt_pk`. B3 verifies the receipt against the base revision,
+row identity, model code, canonical generation, market and configuration.
+It fills the empty PK and slug pair, removes exact obsolete missing-match
+notes, and records the receipts in the successor change record. A linked row
+or stale revision is refused. After a publication failure, verify the live
+grid and registry before retrying the receipt plan. The committed SQLite
+identities carry forward.
+
 ## Transmission-aware canonical authoring
 
 The worksheet Transmission cell can preserve Toyota's full designation.
@@ -448,6 +466,14 @@ The `human-body-authoring/2` path revalidates scope, workbook revision and sourc
 evidence and records transmission in the canonical identity, slug and receipt.
 Older authoring and importer wire contracts retain their previous meaning and
 defer a potential transmission-aware overlap to review.
+
+Factory-body identity is required where body is a distinguishing generation
+dimension. The reviewed sixth-generation 4Runner U.S. configuration scope
+has one implicit body, so its offers and receipts can carry a null body
+reference. The generation rule is pinned by UUID and B3 checks the retained
+offer evidence for implicit applicability. An empty body registry alone
+does not establish this rule. Pickup and other body-distinguished workflows
+still require the appropriate registered body.
 
 Do not rewrite historical workbook revisions or normalize Tacoma's three
 worksheet representations. Preparing a candidate does not authorize writing

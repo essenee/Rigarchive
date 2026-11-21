@@ -196,8 +196,19 @@ def entered(value):
 
 
 def desired_values(table):
-    return {(r, c): entered(value) for r, row in enumerate(table.rows)
-            for c, value in enumerate(row) if entered(value)}
+    values = {(r, c): entered(value) for r, row in enumerate(table.rows)
+              for c, value in enumerate(row) if entered(value)}
+    if table.numbering:
+        from reference.configuration_logic_layout import catalog, numbering_formula
+
+        header = table.header_row - 1
+        headers = [label for _, label in catalog(table.name)]
+        order = [headers.index("VehicleDefinition PK" if label == "Vehicle Definition PK" else label)
+                 for label in table.rows[header]]
+        column = order.index(0)
+        values = {(r, c): value for (r, c), value in values.items() if c != column or r < header}
+        values[header, column] = {"formulaValue": numbering_formula(order)}
+    return values
 
 
 def remote_values(sheet):
@@ -278,10 +289,11 @@ def sheet_requests(table, sheet_id, sheet, previous, index):
         requests.append({"addSheet": {"properties": {**properties, "title": table.name, "index": index}}})
     else:
         requests.append({"updateSheetProperties": {"properties": properties, "fields": "gridProperties"}})
+    values = desired_values(table)
     requests.append({"updateCells": {
         "range": managed,
-        "rows": [{"values": [{"userEnteredValue": item} if (item := entered(value)) else {}
-                             for value in row]} for row in table.rows],
+        "rows": [{"values": [{"userEnteredValue": values[r, c]} if (r, c) in values else {}
+                             for c in range(len(row))]} for r, row in enumerate(table.rows)],
         "fields": "userEnteredValue",
     }})
     header = {"sheetId": sheet_id, "startRowIndex": 3, "endRowIndex": 4, "endColumnIndex": columns}
@@ -302,9 +314,11 @@ def sheet_requests(table, sheet_id, sheet, previous, index):
                 "fields": "userEnteredFormat.numberFormat",
             }})
     for col, width in enumerate(table.widths):
+        hide = not previous and col in table.hidden_columns
         requests.append({"updateDimensionProperties": {
             "range": {"sheetId": sheet_id, "dimension": "COLUMNS", "startIndex": col, "endIndex": col + 1},
-            "properties": {"pixelSize": width * 8}, "fields": "pixelSize",
+            "properties": {"pixelSize": width * 8, **({"hiddenByUser": True} if hide else {})},
+            "fields": "pixelSize,hiddenByUser" if hide else "pixelSize",
         }})
     return requests
 

@@ -31,6 +31,22 @@ PK correspondence and keeps activation state outside manufacturer-semantic
 changes.
 
 The Tacoma workbook is registered at `742fb1624f394b178fb803337b16b745`.
+The sixth-generation 4Runner workbook is registered at
+`1dc3b56df30746ac95de1f8eafe4b199`.
+
+Sixth-generation U.S. 4Runner reconciliation filled 30 existing transmissions
+with `8-spd Auto` and added the `i-FORCE MAX` trim suffix to PKs 678, 679,
+696 and 710. It created MY2026 codes 8628 and 8630 as PKs 1243 and 1244 with
+Engine PK 13 and receipts 3694 and 3695. All 32 CL configurations have
+canonical correspondence. Trim capture `45c9a860cf55478da2b3522fd96c3d67`
+and correspondence publication retained the working-row IDs.
+Existing canonical identities, Engine assignments, and prices were preserved.
+PK 679's MSRP and the MY2025 Trailhunter Engine correspondence remain under review.
+The verified pre-write snapshot is `backups/snapshots/db_snapshot_20261121_010117.sqlite3`
+(SHA-256 `455873eb90055f497295b88666bfadd6aacfd40bc42ffc9bc436a7f30f6f59a8`).
+Keep the execution plan, observations, and receipt evidence in
+`scratch/4runner-cl/reconciliation/` with the B3 revision history.
+
 Capture `8ffcf8922c0f4966ad6c12aa415a064a` registered 75 Engine display
 edits, 1,564 MY2024 cell-format changes and 14 MY2024 column-width changes.
 Capture `55493e4270bd46a795ebc8f6ab8dbea9` registered the MY2024 Transmission

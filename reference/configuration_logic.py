@@ -25,6 +25,8 @@ HEADERS = (
     "Applicability", "Provenance",
 )
 WIDTHS = (6, 19, 21, 26, 24, 16, 14, 14, 15, 24, 24, 15, 40, 18, 22, 24, 18, 16, 24, 48, 44)
+LEGACY_BODY_COLUMNS = frozenset({5, 6})
+GENERATION_COLUMN_ORDER = (0, 1, 2, 3, 4, 7, 8, 9, 10, 14, 11, 12, 13, 15, 16, 17, 18, 19, 20)
 SOURCE_HEADERS = (
     "Model Year", "Organization", "Source", "URL / Document ID", "Acquired / Reviewed",
     "Source Type", "Evidence ID", "Verification Status", "Notes",
@@ -39,6 +41,8 @@ class Sheet:
     prices: tuple = ()
     header_row: int = 4
     workbook_title: str | None = None
+    hidden_columns: tuple = ()
+    numbering: bool = False
 
     @property
     def title(self):

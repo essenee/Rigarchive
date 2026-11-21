@@ -89,6 +89,22 @@ class PickupAuthoringTests(TestCase):
             self.assertIn('Test owner', snapshot['authorization'])
             self.assertEqual(snapshot['engine_uuid'], str(self.engine.uuid))
 
+    def test_implicit_body_authoring_is_generation_specific_and_prevents_duplicates(self):
+        model = VehicleModel.objects.create(manufacturer=self.maker, name="Implicit body fixture")
+        generation = Generation.objects.create(vehicle_model=model, name="Current", start_year=2025,
+                                               uuid="9b0d045b-75c1-49de-addf-c33c781b25a8")
+        vehicle, receipt = self.run_authoring([
+            (self.proposal(generation=generation, factory_body_configuration=None), None),
+        ])[0]
+        self.assertIsNone(vehicle.factory_body_configuration_id)
+        self.assertIsNone(receipt.resolution_snapshot_json["identity"]["body"])
+        with self.assertRaisesMessage(ValidationError, "overlaps"):
+            self.run_authoring([(self.proposal(generation=generation, factory_body_configuration=None), None)])
+        with self.assertRaisesMessage(ValidationError, "requires a reviewed body parent"):
+            self.run_authoring([(self.proposal(factory_body_configuration=None), None)])
+        self.assertEqual(VehicleDefinition.objects.count(), 1)
+        self.assertEqual(ImportExecutionReceipt.objects.count(), 1)
+
     def test_reuse_only_activates_exact_record_and_keeps_timestamp_slug_uuid(self):
         old = self.proposal(is_active=False, slug='old-url'); old.save()
         before = VehicleDefinition.objects.filter(pk=old.pk).values().get()

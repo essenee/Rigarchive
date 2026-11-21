@@ -22,6 +22,77 @@ class LayoutAndLogTests(SimpleTestCase):
     register = b2.WorkingRevisionTests.register
     edit_plan = b2.WorkingRevisionTests.edit_plan
 
+    def test_trim_rename_retains_working_identity_and_rejects_identity_changes(self):
+        cells = self.data("MY2025")[4]["values"]
+        cells[2] = {"userEnteredValue": {"stringValue": "8628"}}
+        self.save(enroll=True)
+        row_id = load_layout(self.state, self.path)["sheets"]["MY2025"]["rows"][0]["id"]
+        cells[3]["userEnteredValue"]["stringValue"] = "Base i-FORCE MAX"
+        self.save()
+        self.assertEqual(load_layout(self.state, self.path)["sheets"]["MY2025"]["rows"][0]["id"], row_id)
+        for index, value in ((1, {"numberValue": 42}), (7, {"stringValue": "2WD"}), (12, {"stringValue": "replaced"})):
+            with self.subTest(index=index):
+                original = cells[index]
+                cells[index] = {"userEnteredValue": value}
+                with self.assertRaises(CommandError):
+                    self.save()
+                cells[index] = original
+
+    def test_blank_correspondence_publication_requires_the_exact_creation_receipt(self):
+        from types import SimpleNamespace
+        from reference.configuration_logic_google import entered
+
+        name = "MY2025"
+        cells = self.data(name)[4]["values"]
+        row = [1, None, "8628", "Base", None, None, None, "4WD", "T24A-FTS", "hybrid",
+               "Hybrid", 500, None, "United States", "8-Spd Auto"]
+        for i, value in enumerate(row):
+            cells[i] = {"userEnteredValue": entered(value)} if value is not None else {}
+        first = self.save(enroll=True)
+        binding = load_layout(self.state, self.path)["sheets"][name]
+        row_id = binding["rows"][0]["id"]
+        vehicle = SimpleNamespace(pk=101, uuid="vehicle-uuid", slug="immutable-slug", model_year=2025,
+                                  generation=self.generation, market="US", is_active=True, engine_id=1,
+                                  trim_name="Base", drivetrain="4WD", transmission="8-spd Auto",
+                                  base_msrp=500, factory_body_configuration_id=None,
+                                  engine=SimpleNamespace(engine_code="T24A-FTS", internal_variant_key="hybrid"))
+        proof = {"working_revision": self.state["working_revision"], "row_id": "unrelated", "parent_row_id": None}
+        receipt = SimpleNamespace(
+            created_vehicle_definition=vehicle, created_vehicle_definition_pk_snapshot=101,
+            created_vehicle_definition_uuid_snapshot="vehicle-uuid",
+            created_vehicle_definition_slug_snapshot="immutable-slug",
+            resolution_snapshot_json={"profile": "human-body-authoring/2",
+                                      "observation": {"transmission_evidence": proof}},
+        )
+        plan = self.base / "correspondence.json"
+        payload = {"schema": 2, "base_revision": first, "canonical_correspondences": [
+            {"sheet": name, "row_id": row_id, "receipt_pk": 7},
+        ]}
+        plan.write_text(json.dumps(payload))
+
+        def apply(**_):
+            for request in self.api.batchUpdate.call_args.kwargs["body"]["requests"]:
+                update = request["updateCells"]
+                cells[update["start"]["columnIndex"]] = update["rows"][0]["values"][0]
+
+        self.api.batchUpdate.return_value.execute.side_effect = apply
+        with patch("reference.configuration_logic_correspondence.ImportExecutionReceipt.objects.select_related") as query:
+            query.return_value.get.return_value = receipt
+            with self.assertRaisesMessage(CommandError, "exact B3 creation receipt"):
+                publish_working_edits(self.api, self.draft, self.path, self.state, plan)
+            self.api.batchUpdate.assert_not_called()
+            proof["row_id"] = row_id
+            successor = publish_working_edits(self.api, self.draft, self.path, self.state, plan)
+            state = read_registry(self.path, self.draft.key)
+            self.assertEqual(cells[1]["userEnteredValue"], {"numberValue": 101})
+            self.assertEqual(cells[12]["userEnteredValue"], {"stringValue": "immutable-slug"})
+            self.assertEqual(load_layout(state, self.path)["sheets"][name]["rows"], binding["rows"])
+            with self.assertRaisesMessage(CommandError, "current base_revision"):
+                publish_working_edits(self.api, self.draft, self.path, state, plan)
+            plan.write_text(json.dumps({**payload, "base_revision": successor}))
+            with self.assertRaisesMessage(CommandError, "empty standalone"):
+                publish_working_edits(self.api, self.draft, self.path, state, plan)
+
     def save(self, *, enroll=False):
         old = load_revision(self.state, self.path)
         remote = capture_remote(self.api, self.draft, self.state)

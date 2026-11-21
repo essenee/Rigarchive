@@ -14,7 +14,7 @@ from django.core.exceptions import ValidationError
 from django.db import transaction
 
 from reference.body_identity import (
-    authoring_body_dimensions, authoring_configuration_key, canonical_json,
+    authoring_body_dimensions, authoring_configuration_key, canonical_json, has_implicit_factory_body,
 )
 from reference.models import Engine, FactoryBodyConfiguration, ImportExecutionReceipt, VehicleDefinition
 from reference.powertrain import FIELDS, record_powertrain
@@ -52,7 +52,8 @@ def reviewed_transmission_manifest(rows, *, evidence_hash, authorization, lock=F
         scopes[key] = None
         vehicles.append({"identity": authoring_configuration_key(proposal), "reuse_pk": pk,
                          "engine_uuid": str(proposal.engine.uuid) if proposal.engine_id else None,
-                         "body_uuid": str(proposal.factory_body_configuration.uuid),
+                         "body_uuid": (str(proposal.factory_body_configuration.uuid)
+                                       if proposal.factory_body_configuration_id else None),
                          "slug": proposal.build_slug() if pk is None else None,
                          "is_public": proposal.is_public})
     for key in sorted(scopes):
@@ -117,13 +118,18 @@ def author_configurations(rows, *, evidence_reference, evidence_hash, authorizat
     for key, (proposed, reuse_pk) in zip(keys, rows):
         _require(proposed._state.adding and proposed.pk is None and proposed.is_active,
                  'Expected an unsaved active proposal.')
-        body = FactoryBodyConfiguration.objects.select_for_update().select_related('bed_length').get(
-            pk=proposed.factory_body_configuration_id)
-        _require(body.generation_id == proposed.generation_id and
-                 authoring_body_dimensions(body) == authoring_body_dimensions(proposed.factory_body_configuration),
-                 'Body parent changed or belongs to another Generation.')
-        body.full_clean()
-        proposed.factory_body_configuration = body
+        if proposed.factory_body_configuration_id:
+            body = FactoryBodyConfiguration.objects.select_for_update().select_related('bed_length').get(
+                pk=proposed.factory_body_configuration_id)
+            _require(body.generation_id == proposed.generation_id and
+                     authoring_body_dimensions(body) == authoring_body_dimensions(proposed.factory_body_configuration),
+                     'Body parent changed or belongs to another Generation.')
+            body.full_clean()
+            proposed.factory_body_configuration = body
+        else:
+            _require(has_implicit_factory_body(proposed.generation)
+                     and not FactoryBodyConfiguration.objects.filter(generation=proposed.generation).exists(),
+                     'This Generation requires a reviewed body parent.')
         observation = observations[key]
         _require(proposed.engine_name == observation['engine_name'] and
                  (str(proposed.base_msrp) if proposed.base_msrp is not None else None) == observation['base_msrp'],

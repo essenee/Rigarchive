@@ -26,6 +26,11 @@ TOKEN = re.compile(r"[a-z0-9]+(?:[-._][a-z0-9]+)*", re.ASCII)
 HASH = re.compile(r"sha256:[0-9a-f]{64}", re.ASCII)
 
 
+def has_implicit_factory_body(generation):
+    """Recognize the evidence-reviewed sixth-generation 4Runner body scope."""
+    return str(generation.uuid) == "9b0d045b-75c1-49de-addf-c33c781b25a8"
+
+
 def authoring_body_dimensions(body):
     """Current ORM authoring tuple, separate from frozen /2 wire projections.
 
